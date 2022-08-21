@@ -21,16 +21,15 @@ value converted to upper case, according to any locale-specific case mappings.
 
 ```js
 toLocaleUpperCase()
-toLocaleUpperCase(locale)
-toLocaleUpperCase([locale1, locale2, ...])
+toLocaleUpperCase(locales)
 ```
 
 ### Parameters
 
-- `locale` {{optional_inline}}
-  - : The `locale` parameter indicates the locale to be used to convert to
+- `locales` {{optional_inline}}
+  - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to
     upper case according to any locale-specific case mappings. If multiple locales are
-    given in an {{jsxref("Array")}}, the [best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment's current locale.
+    given in an {{jsxref("Array")}}, the [best available locale](https://tc39.es/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment's current locale.
 
 ### Return value
 
@@ -71,7 +70,7 @@ implies that the conversion is not stable, so i.E. the following can return
 
 'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
+const locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 'i\u0307'.toLocaleUpperCase(locales); // 'I'
 ```
 

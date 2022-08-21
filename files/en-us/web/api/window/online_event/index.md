@@ -1,6 +1,7 @@
 ---
 title: 'Window: online event'
 slug: Web/API/Window/online_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -15,28 +16,26 @@ The **`online`** event of the {{domxref("Window")}} interface is fired when the 
 
 > **Note:** This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.ononline", "ononline")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('online', (event) => { });
+ononline = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `ononline` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Examples
 

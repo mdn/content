@@ -31,13 +31,15 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ## Syntax
 
-{{csssyntax}}
+```
+::slotted( <compound-selector> )
+```
 
 ## Examples
 
 ### Highlighting slotted elements
 
-The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
+The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/main/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
 
 In this demo we use a simple template with three slots:
 

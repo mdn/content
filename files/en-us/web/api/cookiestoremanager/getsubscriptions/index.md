@@ -1,15 +1,17 @@
 ---
 title: CookieStoreManager.getSubscriptions()
 slug: Web/API/CookieStoreManager/getSubscriptions
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - getSubscriptions
   - CookieStoreManager
+  - Experimental
 browser-compat: api.CookieStoreManager.getSubscriptions
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
 
 The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} interface returns a list of all the cookie change subscriptions for this {{domxref("ServiceWorkerRegistration")}}.
 
@@ -18,6 +20,10 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 ```js
 getSubscriptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

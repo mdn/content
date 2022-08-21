@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.bound()
 slug: Web/API/IDBKeyRange/bound
+page-type: web-api-static-method
 tags:
   - API
   - Database
@@ -31,14 +32,14 @@ bound(lower, upper, lowerOpen, upperOpen)
 
 ### Parameters
 
-- lower
+- `lower`
   - : specifies the lower bound of the new key range.
-- upper
+- `upper`
   - : specifies the upper bound of the new key range.
-- lowerOpen {{optional_inline}}
+- `lowerOpen` {{optional_inline}}
   - : indicates whether the lower bound excludes the endpoint value. The default is
     false.
-- upperOpen {{optional_inline}}
+- `upperOpen` {{optional_inline}}
   - : Indicates whether the upper bound excludes the endpoint value. The default is
     false.
 
@@ -48,32 +49,11 @@ bound(lower, upper, lowerOpen, upperOpen)
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of
-the following type:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        <p>The following conditions raise an exception:</p>
-        <ul>
-          <li>The lower or upper parameters were not passed a valid key.</li>
-          <li>The lower key is greater than the upper key.</li>
-          <li>
-            The lower key and upper key match and either of the bounds are open.
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown when one of the following conditions is met:
+    - The lower or upper parameters were not passed a valid key.
+    - The lower key is greater than the upper key.
+    - The lower key and upper key match and either of the bounds are open.
 
 ## Examples
 
@@ -88,22 +68,20 @@ used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at the idbkeyrange directory [in the
-> indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo ([view the example live
-> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo. (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("A", "F");
+  const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+      if (cursor) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -130,5 +108,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

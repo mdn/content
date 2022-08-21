@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Constraint Validation API
@@ -22,6 +23,14 @@ element, and then returns `false`.
 ```js
 checkValidity()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

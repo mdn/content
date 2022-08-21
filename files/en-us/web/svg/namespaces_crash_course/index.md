@@ -184,7 +184,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
     </tr>
     <tr>
       <td>
-        <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#"
+        <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr"
           >hasAttribute</a
         >
       </td>
@@ -294,9 +294,9 @@ elt.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg')
 As a final example, here's a demonstration of how you should dynamically create an `<image>` element using script:
 
 ```javascript
-var SVG_NS = 'http://www.w3.org/2000/svg';
-var XLink_NS = 'http://www.w3.org/1999/xlink';
-var image = document.createElementNS(SVG_NS, 'image');
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const XLink_NS = 'http://www.w3.org/1999/xlink';
+const image = document.createElementNS(SVG_NS, 'image');
 image.setAttributeNS(null, 'width', '100');
 image.setAttributeNS(null, 'height', '100');
 image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');

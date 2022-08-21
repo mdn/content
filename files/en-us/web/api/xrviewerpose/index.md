@@ -1,6 +1,7 @@
 ---
 title: XRViewerPose
 slug: Web/API/XRViewerPose
+page-type: web-api-interface
 tags:
   - 3D
   - API
@@ -55,18 +56,18 @@ returned, the frame is rendered by clearing the backbuffer and then rendering ea
 the views in the pose; these are most likely the views for the left and right eyes.
 
 ```js
-let pose = frame.getViewerPose(xrReferenceSpace);
+const pose = frame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
-  let glLayer = xrSession.renderState.baseLayer;
+  const glLayer = xrSession.renderState.baseLayer;
 
   gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
   gl.clearColor(0, 0, 0, 1);
   gl.clearDepth(1);
   gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 
-  for (let view of pose.views) {
-    let viewport = glLayer.getViewport(view);
+  for (const view of pose.views) {
+    const viewport = glLayer.getViewport(view);
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     /* render the scene for the eye view.eye */

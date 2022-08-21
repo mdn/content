@@ -77,9 +77,9 @@ We're going to add the build command to our `package.json` file as an npm script
 1. Open the `package.json` file in your project's root directory, and find the `scripts` property.
 2. We'll add a `build` command that we can run to build our code. Add the following line to your project now:
 
-    ```bash
+    ```json
     "scripts": {
-      ...
+      // …
       "build": "parcel build src/index.html"
     }
     ```
@@ -188,7 +188,7 @@ So with our project committed in git and pushed to our GitHub repository, the ne
 
 Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.
 
-> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/tags/tutorial/) to help you improve your development workflow.
+> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/blog/tags/tutorial/) to help you improve your development workflow.
 
 Let's get this done:
 
@@ -310,10 +310,10 @@ That's it for our sample case study, and for the module! We hope you found it us
 
 Let's summarize all the parts of the toolchain:
 
-- Code quality and maintenance are performed by eslint and prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react` (the eslint plugin is needed because this particular project uses React).
+- Code quality and maintenance are performed by ESLint and Prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react` (the ESLint plugin is needed because this particular project uses React).
 - There are two configuration files that the code quality tools read: `.eslintrc` and `.prettierrc`.
 - During development, we use Parcel to handle our dependencies. `parcel src/index.html` is running in the background to watch for changes and to automatically build our source.
-- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is [near-misses.netlify.com](https://near-misses.netlify.com); you will have your own unique URL.
+- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is [near-misses.netlify.com](https://near-misses.netlify.app/); you will have your own unique URL.
 - We also have a simple test that blocks the building and deployment of the site if the NASA API feed isn't giving us the correct data format.
 
 For those of you wanting a challenge, consider whether you can optimize some part of this toolchain. Some questions to ask yourself:

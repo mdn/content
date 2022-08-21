@@ -1,6 +1,7 @@
 ---
 title: DocumentType.after()
 slug: Web/API/DocumentType/after
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,20 +13,26 @@ browser-compat: api.DocumentType.after
 {{APIRef("DOM")}}
 
 The **`DocumentType.after()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+{{domxref("Node")}} objects or strings in the children list of the
 `DocumentType`'s parent, just after the `DocumentType`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-after(... nodes)
+after(param1)
+after(param1, param2)
+after(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} objects or strings to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

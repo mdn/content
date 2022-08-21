@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -34,15 +35,15 @@ The following example shows the use of updateViaCache.
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service-worker.js', {
     updateViaCache: 'none'
-  }).then(function(registration) {
-    registration.addEventListener('updatefound', function() {
+  }).then((registration) => {
+    registration.addEventListener('updatefound', () => {
       // If updatefound is fired, it means that there's
       // a new service worker being installed.
-      console.log('Value of updateViaCache:', registration.updateViaCache);
+      console.log(`Value of updateViaCache: ${registration.updateViaCache}`);
     });
   })
-  .catch(function(error) {
-    console.log('Service worker registration failed:', error);
+  .catch((error) => {
+    console.error(`Service worker registration failed: ${error}`);
   });
 }
 ```

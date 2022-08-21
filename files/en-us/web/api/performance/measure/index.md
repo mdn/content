@@ -1,6 +1,7 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -88,7 +89,7 @@ The returned _measure_ will have the following property values:
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : This can be thrown in any case where the start, end or duration might be ambiguous:
 
     - Both `endMark` and `MeasureOptions` are specified.
@@ -106,7 +107,7 @@ The returned _measure_ will have the following property values:
 - `DataCloneError` {{domxref("DOMException")}}
   - : The `MeasureOptions.detail` value is non-`null` and cannot be serialized using the HTML "StructuredSerialize" algorithm.
 
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : The `MeasureOptions.detail` value is non-`null` and memory cannot be allocated during serialization using the HTML "StructuredSerialize" algorithm.
 
 ## Examples
@@ -119,10 +120,9 @@ const markerNameB = "example-marker-b"
 
 // Run some nested timeouts, and create a PerformanceMark for each.
 performance.mark(markerNameA);
-setTimeout(function() {
+setTimeout(() => {
   performance.mark(markerNameB);
-  setTimeout(function() {
-
+  setTimeout(() => {
     // Create a variety of measurements.
     performance.measure("measure a to b", markerNameA, markerNameB);
     performance.measure("measure a to now", markerNameA);

@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
+page-type: web-api-static-method
 tags:
   - API
   - Method
@@ -53,15 +54,15 @@ a not a user-verifying platform authenticator is available.
 
 ```js
 PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
-  .then(function(available){
-    if(available){
+  .then((available) => {
+    if (available) {
       // We can proceed with the creation of a PublicKeyCredential
       // with this authenticator
     } else {
       // Use another kind of authenticator or a classical login/password
       // workflow
     }
-  }).catch(function(err){
+  }).catch((err) => {
     // Something went wrong
     console.error(err);
   });
@@ -77,8 +78,5 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 
 ## See also
 
-- [Windows
-  Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)
-- [Web
-  Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/web-authentication) and especially the [special
-  considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/web-authentication#special-considerations-for-windows-hello)
+- [Windows Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello)
+- [Web Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) and especially the [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)

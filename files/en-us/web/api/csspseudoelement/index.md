@@ -1,6 +1,7 @@
 ---
 title: CSSPseudoElement
 slug: Web/API/CSSPseudoElement
+page-type: web-api-interface
 tags:
   - API
   - CSSPseudoElement
@@ -18,10 +19,10 @@ The **`CSSPseudoElement`** interface represents a pseudo-element that may be the
 
 ## Properties
 
-- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{readOnlyInline}}
+- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
-- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{readOnlyInline}}
-  - : Returns the pseudo-element selector as a {{DOMxRef('CSSOMString')}}.
+- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the pseudo-element selector as a string.
 
 ## Methods
 

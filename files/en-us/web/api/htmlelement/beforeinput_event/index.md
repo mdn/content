@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -13,44 +14,40 @@ browser-compat: api.HTMLElement.beforeinput_event
 ---
 {{APIRef}}
 
-The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
+The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}}, or {{HTMLElement("textarea")}} element is about to be modified. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
 
 This allows web apps to override text edit behavior before the browser modifies the DOM tree, and provides more control over input events to improve performance.
 
 In the case of `contenteditable` and `designMode`, the event target is the **editing host**. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("InputEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th>Composed</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Default Action</th>
-      <td>Update the DOM element</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('beforeinput', (event) => {});
+
+onbeforeinput = (event) => { };
+```
+
+## Event type
+
+An {{domxref("InputEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("InputEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
+
+- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
+  - : Returns a string with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example).
+- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
+  - : Returns a {{DOMxRef("DataTransfer")}} object containing information about richtext or plaintext data being added to or removed from editable content.
+- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
+  - : Returns the type of change for editable content such as, for example, inserting, deleting, or formatting text. See the property page for a complete list of input types.
+- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
+  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Examples
 

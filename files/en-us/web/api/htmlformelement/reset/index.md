@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -31,6 +32,14 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 ```js
 reset()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

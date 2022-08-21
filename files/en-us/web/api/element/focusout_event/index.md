@@ -1,6 +1,7 @@
 ---
 title: 'Element: focusout event'
 slug: Web/API/Element/focusout_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -18,36 +19,28 @@ The **`focusout`** event fires when an element is about to lose focus. The main 
 
 The opposite of `focusout` is {{domxref("Element/focusin_event", "focusin")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocusout", "onfocusout")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('focusout', (event) => {});
+
+onfocusout = (event) => { };
+```
+
+## Event type
+
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## Event properties
+
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}_.
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
 ## Examples
 

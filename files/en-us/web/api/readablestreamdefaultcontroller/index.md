@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -20,7 +21,7 @@ None. `ReadableStreamDefaultController` instances are created automatically duri
 
 ## Properties
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
 ## Methods
@@ -55,7 +56,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

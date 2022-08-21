@@ -1,6 +1,7 @@
 ---
 title: Element.ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface r
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : More than one item may be selected at a time.

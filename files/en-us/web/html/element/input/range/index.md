@@ -12,7 +12,7 @@ tags:
   - Reference
   - Web
   - slider
-browser-compat: html.elements.input.input-range
+browser-compat: html.elements.input.type_range
 ---
 
 {{HTMLRef("Input_types")}}
@@ -30,7 +30,7 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} containing the string representation
+        A string containing the string representation
         of the selected numeric value; use
         {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
         to get the value as a number.
@@ -84,7 +84,7 @@ There is no pattern validation available; however, the following forms of automa
 
 ### Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
@@ -123,7 +123,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,... in the positive direction and -0.5, -1.5, -2.5,... in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
+The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
 ## Non Standard Attributes
 
@@ -497,5 +497,5 @@ input[type="range"] {
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
+- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

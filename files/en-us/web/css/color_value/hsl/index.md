@@ -15,6 +15,8 @@ browser-compat: css.types.color.hsl
 
 The **`hsl()`** functional notation expresses an {{glossary("RGB", "sRGB")}} color according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
+{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+
 Defining _complementary colors_ with `hsl()` can be done with a single formula, as they are positioned on the same diameter of the {{glossary("color wheel")}}. If `theta` is the angle of a color, its complementary one will have `180deg-theta` as its _hue_ coordinate.
 
 ## Syntax
@@ -36,8 +38,8 @@ hsl(hue, saturation, lightness, alpha)
 
 - `saturation`
   - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
-  
-- `lightness`  
+
+- `lightness`
   - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is white, `0%` is black, and `50%` is "normal".
 
 - `alpha` {{optional_inline}}

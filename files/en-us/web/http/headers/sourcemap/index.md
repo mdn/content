@@ -46,9 +46,7 @@ SourceMap: /path/to/file.js.map
 
 ## Specifications
 
-| Specification                                       | Title                          |
-| --------------------------------------------------- | ------------------------------ |
-| [Draft document](https://sourcemaps.info/spec.html) | Source Map Revision 3 Proposal |
+{{Specifications}}
 
 ## Browser compatibility
 

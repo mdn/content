@@ -1,6 +1,7 @@
 ---
 title: XRCylinderLayer
 slug: Web/API/XRCylinderLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

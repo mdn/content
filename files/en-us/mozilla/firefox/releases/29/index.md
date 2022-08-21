@@ -46,7 +46,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 ### JavaScript
 
 - New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ({{bug("918879")}}).
-- The [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
+- The [ECMAScript Internationalization API (ECMA-402)](https://402.ecma-international.org/1.0/) has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
 
   - New objects in the new {{jsxref("Intl")}} object namespace:
 
@@ -74,7 +74,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 - The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of a URL ({{bug(887836)}}). The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor allows easier parsing of query strings.
 - The {{domxref("WorkerNavigator.onLine", "navigator.onLine")}} property is now supported on {{domxref("WorkerNavigator")}}, allowing to know the online/offline status in workers ({{bug(925437)}}).
 - As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ({{bug(887538)}})
-- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("DOMString")}} but a {{domxref("DOMTokenList")}} ({{bug(845057)}}).
+- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a string but a {{domxref("DOMTokenList")}} ({{bug(845057)}}).
 - On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ({{bug(913597)}}).
 - The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ({{bug(959958)}})
 - The property {{domxref("WorkerLocation.origin", "location.origin")}} is now available in workers (via {{domxref("WorkerLocation")}}) ({{bug(964148)}}).

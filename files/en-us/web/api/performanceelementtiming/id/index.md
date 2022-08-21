@@ -1,21 +1,23 @@
 ---
 title: PerformanceElementTiming.id
 slug: Web/API/PerformanceElementTiming/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - id
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.id
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -27,7 +29,7 @@ In this example calling `entry.id` will log to the console `myImage`, this being
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.id);
     }

@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
+page-type: web-api-interface
 tags:
   - API
   - Database
@@ -47,13 +48,13 @@ A key is in a key range if the following conditions are true:
 
 ## Properties
 
-- {{domxref("IDBKeyRange.lower")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.lower")}} {{ReadOnlyInline}}
   - : Lower bound of the key range.
-- {{domxref("IDBKeyRange.upper")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.upper")}} {{ReadOnlyInline}}
   - : Upper bound of the key range.
-- {{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.lowerOpen")}} {{ReadOnlyInline}}
   - : Returns false if the lower-bound value is included in the key range.
-- {{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.upperOpen")}} {{ReadOnlyInline}}
   - : Returns false if the upper-bound value is included in the key range.
 
 ## Methods
@@ -79,20 +80,20 @@ A key is in a key range if the following conditions are true:
 The following example illustrates how you'd use a key range. Here we declare a `keyRangeValue` as a range between values of `"A"` and `"F"`. We open a transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a cursor with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its optional key range value. This means that the cursor will only retrieve records with keys inside that range. This range includes the values `"A"` and `"F"`, as we haven't declared that they should be open bounds.
 If we used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not include `"A"` and `"F"`, only the values between them.
 
-> **Note:** For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> **Note:** For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("A", "F");
+  const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
       list.appendChild(listItem);
 
       cursor.continue();

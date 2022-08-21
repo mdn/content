@@ -30,7 +30,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 #### Web console
 
-- In [multi-line mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode), code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twistie"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).
+- In [multi-line mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode), code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twisty"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).
 - DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the [Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) ({{bug(1612276)}}).
 
 #### Remote debugging
@@ -43,7 +43,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### CSS
 
-- Firefox now supports [CSS4 system colors](/en-US/docs/Web/CSS/color_value#system_colors) ({{bug(1590894)}}).
+- Firefox now supports [CSS colors level 4 system colors](https://www.w3.org/TR/css-color-4/#typedef-system-color) ({{bug(1590894)}}).
 
 ### SVG
 

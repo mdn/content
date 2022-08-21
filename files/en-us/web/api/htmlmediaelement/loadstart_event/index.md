@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: loadstart event'
 slug: Web/API/HTMLMediaElement/loadstart_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -14,28 +15,19 @@ browser-compat: api.HTMLMediaElement.loadstart_event
 
 The **`loadstart`** event is fired when the browser has started to load a resource.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('loadstart', (event) => {});
+
+onloadstart = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -50,8 +42,8 @@ The **`loadstart`** event is fired when the browser has started to load a resour
     <video controls width="250"></video>
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
 </div>
@@ -101,7 +93,7 @@ const eventLog = document.querySelector('.event-log-contents');
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+    eventLog.textContent += `${event.type}\n`;
 }
 
 video.addEventListener('loadstart', handleEvent);

@@ -138,7 +138,7 @@ Across a site, it is usual for all pages to have a common structure, including s
 
 For example, the base template **layout.pug** created in our [skeleton project](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website) looks like this:
 
-```plain
+```pug
 doctype html
 html
   head
@@ -152,7 +152,7 @@ The `block` tag is used to mark up sections of content that may be replaced in a
 
 The default **index.pug** (created for our skeleton project) shows how we override the base template. The `extends` tag identifies the base template to use, and then we use `block section_name` to indicate the new content of the section that we will override.
 
-```plain
+```pug
 extends layout
 
 block content

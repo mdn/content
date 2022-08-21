@@ -29,7 +29,7 @@ Values of this type are objects. They contain the following properties:
 
 - `certificateTransparencyStatus` {{optional_inline}}
 
-  - : `String`. Indicates the [Certificate Transparency](https://www.certificate-transparency.org/) status for the connection. This may take any one of the following values:
+  - : `String`. Indicates the [Certificate Transparency](https://certificate.transparency.dev/) status for the connection. This may take any one of the following values:
 
     - "not_applicable"
     - "policy_compliant"
@@ -44,8 +44,6 @@ Values of this type are objects. They contain the following properties:
 
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
-- `hpkp` {{optional_inline}}
-  - : `Boolean`. `true` if the host uses [Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning), `false` otherwise.
 - `hsts` {{optional_inline}}
   - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security), `false` otherwise.
 - `isDomainMismatch` {{optional_inline}}

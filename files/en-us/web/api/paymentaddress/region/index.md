@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.region
 slug: Web/API/PaymentAddress/region
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -17,9 +18,11 @@ tags:
   - paymentAddress
   - region
   - state
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.region
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`region`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the top-level
@@ -28,7 +31,7 @@ this may be a state, province, oblast, or prefecture.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the top-level administrative subdivision within
+A string specifying the top-level administrative subdivision within
 the country in which the address is located. This region has different names in
 different countries, such as: state, province, oblast, prefecture, or county.
 

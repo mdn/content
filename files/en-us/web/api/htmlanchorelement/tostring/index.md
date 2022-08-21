@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.toString()
 slug: Web/API/HTMLAnchorElement/toString
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLAnchorElement
@@ -19,6 +20,14 @@ version of {{domxref("HTMLAnchorElement.href")}}.
 ```js
 toString()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

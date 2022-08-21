@@ -47,18 +47,17 @@ color-mix(in srgb, #34c9eb 20%, white);
 
 ```css hidden
 ul {
-    display: flex;
-    list-style-type: none;
-    font-size: 150%;
-    gap: 10px;
-    border: 2px solid #34c9eb;
-    padding: 10px;
-  }
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid #34c9eb;
+  padding: 10px;
+}
 
-  li {
-    padding: 10px;
-  }
-
+li {
+  padding: 10px;
+}
 ```
 
 ```css

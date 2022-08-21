@@ -13,5 +13,5 @@ tags:
 
 - [XPath documentation on MDN](/en-US/docs/Web/XPath)
 - [XPath specification](https://www.w3.org/TR/xpath-30/)
-- [Official website](https://www.w3.org/standards/techs/xpath#w3c_all)
-- {{Interwiki("wikipedia", "XPath")}} on Wikipedia
+- [Official website](https://www.w3.org/TR/?tag=xml)
+- [XPath](https://en.wikipedia.org/wiki/XPath) on Wikipedia

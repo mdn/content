@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getRectValue()
 slug: Web/API/CSSPrimitiveValue/getRectValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -31,6 +32,10 @@ Modification to the corresponding style property can be achieved using the
 getRectValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Rect")}} object representing the rect value.
@@ -44,14 +49,14 @@ A {{domxref("Rect")}} object representing the rect value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.getElementById("clippedDiv"));
-var cssValue = cs.getPropertyCSSValue("clip");
+const cs = window.getComputedStyle(document.getElementById("clippedDiv"));
+const cssValue = cs.getPropertyCSSValue("clip");
 console.log(cssValue.getRectValue());
 ```
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](CSS_Typed_OM_API) that is now on the standard track.

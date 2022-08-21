@@ -168,7 +168,7 @@ When calling `tabs.remove()`:
 
 #### DeclarativeContent API
 
-- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/extensions/declarativeContent) API [has not yet been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864). In addition, Firefox [will not be supporting](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
+- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/docs/extensions/reference/declarativeContent/) API [has not yet been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864). In addition, Firefox [will not be supporting](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
 
 ### Miscellaneous incompatibilities
 
@@ -189,7 +189,7 @@ When calling `tabs.remove()`:
 #### Manifest "key" property
 
 - **In Firefox:** Since Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported.
-- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/extensions/manifest/key) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
+- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/docs/extensions/mv3/manifest/key/) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
 
 #### Content script HTTP(S) requests
 
@@ -239,7 +239,11 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 ### App manifest location
 
-- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location) in the Chrome docs.
+- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location) in the Chrome docs.
+
+### App persistance
+
+- **In Firefox:** When a native messaging connection is closed, Firefox kills the subprocesses if they do not break away. On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. Suppose the native application launches other processes and wants them to remain open after the native application is killed. In that case, the native application must use `CreateProcess`, instead of `ShellExecute`, to launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
 
 ## Data cloning algorithm
 

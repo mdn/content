@@ -60,7 +60,7 @@ Events have three functions:
 An example of how the listener might be used:
 
 ```js
-browser.userScripts.onBeforeScript.addListener(function (script) {
+browser.userScripts.onBeforeScript.addListener((script) => {
 
   script // This is an API object that represents the user script
          // that is going to be executed.
@@ -78,11 +78,11 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
     myCustomAPIMethod(param1, param2) {
       // Custom methods exported from the API script can use
       // the WebExtensions APIs available to content scripts.
-      browser.runtime.sendMessage(...);
-      ...
+      browser.runtime.sendMessage(/* … */);
+      // …
 
       return 123; // primitive values can be returned directly
-      ...
+      // …
 
       // Non primitive values have to be exported explicitly
       // using the export method provided by the script API
@@ -92,11 +92,11 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
           nestedProp: "nestedValue",
         },
         // Explicitly exported objects can also provide methods.
-        objMethod() { ... }
+        objMethod() { /* … */ }
       })
     },
 
-    async myAsyncMethod(param1, param2, param2) {
+    async myAsyncMethod(param1, param2, param3) {
     // exported methods can also be declared as async
     },
   });

@@ -1,6 +1,7 @@
 ---
 title: FontFace.lineGapOverride
 slug: Web/API/FontFace/lineGapOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,14 +16,18 @@ The **`lineGapOverride`** property of the {{domxref("FontFace")}} interface retu
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 
-```css
-let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)', {'lineGapOverride':'90%'});
+```js
+let fontFace = new FontFace(
+  "Roboto",
+  "url(https://fonts.example.com/roboto.woff2)",
+  { lineGapOverride: "90%" }
+);
 console.log(fontFace.lineGapOverride); // 90%
-fontFace.lineGapOverride = 'normal';
+fontFace.lineGapOverride = "normal";
 console.log(fontFace.lineGapOverride); // 'normal'
 ```
 

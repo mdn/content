@@ -15,7 +15,7 @@ to be parsed as JSON.
 
 ## Message
 
-```js
+```
 SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal
@@ -47,7 +47,6 @@ SyntaxError: JSON.parse: property names must be double-quoted strings
 SyntaxError: JSON.parse: expected property name or '}'
 SyntaxError: JSON.parse: unexpected character
 SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
-SyntaxError: JSON.parse Error: Invalid character at position {0} (Edge)
 ```
 
 ## Error type
@@ -61,7 +60,7 @@ and will throw this error if incorrect syntax was encountered.
 
 ## Examples
 
-### `JSON.parse()` does not allow trailing commas
+### JSON.parse() does not allow trailing commas
 
 Both lines will throw a SyntaxError:
 

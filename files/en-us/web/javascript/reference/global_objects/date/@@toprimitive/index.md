@@ -14,6 +14,8 @@ browser-compat: javascript.builtins.Date.@@toPrimitive
 The **`[@@toPrimitive]()`** method converts a `Date`
 object to a primitive value.
 
+{{EmbedInteractiveExample("pages/js/date-toprimitive.html")}}
+
 ## Syntax
 
 ```js

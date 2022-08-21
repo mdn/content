@@ -1,6 +1,7 @@
 ---
 title: PresentationConnectionCloseEvent
 slug: Web/API/PresentationConnectionCloseEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -24,9 +25,9 @@ The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/
 
 ## Properties
 
-- {{DOMxRef("PresentationConnectionCloseEvent.message")}} {{readonlyinline}}
+- {{DOMxRef("PresentationConnectionCloseEvent.message")}} {{ReadOnlyInline}}
   - : A human-readable message that provides more information about why the connection was closed.
-- {{DOMxRef("PresentationConnectionCloseEvent.reason")}} {{readonlyinline}}
+- {{DOMxRef("PresentationConnectionCloseEvent.reason")}} {{ReadOnlyInline}}
   - : Indicates why the connection was closed. This property takes one of the following values: `error`, `closed`, or `wentaway`.
 
 ## Specifications

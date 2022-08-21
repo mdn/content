@@ -1,6 +1,7 @@
 ---
 title: USBDevice
 slug: Web/API/USBDevice
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - USBDevice
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USBDevice
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
@@ -16,39 +18,39 @@ The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API
 
 ## Properties
 
-- {{domxref("USBDevice.configuration")}} {{readonlyinline}}
+- {{domxref("USBDevice.configuration")}} {{ReadOnlyInline}}
   - : A {{domxref("USBConfiguration")}} object for the currently selected interface for a paired USB device.
-- {{domxref("USBDevice.configurations")}} {{readonlyinline}}
+- {{domxref("USBDevice.configurations")}} {{ReadOnlyInline}}
   - : An {{jsxref("array")}} of device-specific interfaces for controlling a paired USB device.
-- {{domxref("USBDevice.deviceClass")}} {{readonlyinline}}
+- {{domxref("USBDevice.deviceClass")}} {{ReadOnlyInline}}
   - : One of three properties that identify USB devices for the purpose of loading a USB driver that will work with that device. The other two properties are `USBDevice.deviceSubclass` and `USBDevice.deviceProtocol`.
-- {{domxref("USBDevice.deviceProtocol")}} {{readonlyinline}}
+- {{domxref("USBDevice.deviceProtocol")}} {{ReadOnlyInline}}
   - : One of three properties that identify USB devices for the purpose of loading a USB driver that will work with that device. The other two properties are `USBDevice.deviceClass` and `USBDevice.deviceSubclass`.
-- {{domxref("USBDevice.deviceSubclass")}} {{readonlyinline}}
+- {{domxref("USBDevice.deviceSubclass")}} {{ReadOnlyInline}}
   - : One of three properties that identify USB devices for the purpose of loading a USB driver that will work with that device. The other two properties are `USBDevice.deviceClass` and `USBDevice.deviceProtocol`.
-- {{domxref("USBDevice.deviceVersionMajor")}} {{readonlyinline}}
+- {{domxref("USBDevice.deviceVersionMajor")}} {{ReadOnlyInline}}
   - : The major version number of the device in a semantic versioning scheme.
-- {{domxref("USBDevice.deviceVersionMinor")}} {{readonlyinline}}
+- {{domxref("USBDevice.deviceVersionMinor")}} {{ReadOnlyInline}}
   - : The minor version number of the device in a semantic versioning scheme.
-- {{domxref("USBDevice.deviceVersionSubminor")}} {{readonlyinline}}
+- {{domxref("USBDevice.deviceVersionSubminor")}} {{ReadOnlyInline}}
   - : The patch version number of the device in a semantic versioning scheme.
-- {{domxref("USBDevice.manufacturerName")}} {{readonlyinline}}
+- {{domxref("USBDevice.manufacturerName")}} {{ReadOnlyInline}}
   - : The of the organization that manufactured the USB device.
-- {{domxref("USBDevice.opened")}} {{readonlyinline}}
+- {{domxref("USBDevice.opened")}} {{ReadOnlyInline}}
   - : Indicates whether a session has been started with a paired USB device.
-- {{domxref("USBDevice.productId")}} {{readonlyinline}}
+- {{domxref("USBDevice.productId")}} {{ReadOnlyInline}}
   - : The manufacturer-defined code that identifies a USB device.
-- {{domxref("USBDevice.productName")}} {{readonlyinline}}
+- {{domxref("USBDevice.productName")}} {{ReadOnlyInline}}
   - : The manufacturer-defined name that identifies a USB device.
-- {{domxref("USBDevice.serialNumber")}} {{readonlyinline}}
+- {{domxref("USBDevice.serialNumber")}} {{ReadOnlyInline}}
   - : The manufacturer-defined serial number for the specific USB device.
-- {{domxref("USBDevice.usbVersionMajor")}} {{readonlyinline}}
+- {{domxref("USBDevice.usbVersionMajor")}} {{ReadOnlyInline}}
   - : One of three properties that declare the USB protocol version supported by the device. The other two properties are `USBDevice.usbVersionMinor` and `USBDevice.usbVersionSubminor`.
-- {{domxref("USBDevice.usbVersionMinor")}} {{readonlyinline}}
+- {{domxref("USBDevice.usbVersionMinor")}} {{ReadOnlyInline}}
   - : One of three properties that declare the USB protocol version supported by the device. The other two properties are `USBDevice.usbVersionMajor` and `USBDevice.usbVersionSubminor`.
-- {{domxref("USBDevice.usbVersionSubminor")}} {{readonlyinline}}
+- {{domxref("USBDevice.usbVersionSubminor")}} {{ReadOnlyInline}}
   - : One of three properties that declare the USB protocol version supported by the device. The other two properties are `USBDevice.usbVersionMajor` and `USBDevice.usbVersionMinor`.
-- {{domxref("USBDevice.vendorId")}} {{readonlyinline}}
+- {{domxref("USBDevice.vendorId")}} {{ReadOnlyInline}}
   - : The official usg.org-assigned vendor ID.
 
 ## Methods

@@ -1,6 +1,7 @@
 ---
-title: Window.convertPointFromPageToNode
+title: Window.convertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,7 +29,7 @@ system of the specified DOM {{domxref("Node")}}.
 ## Syntax
 
 ```js
-Point = Window.convertPointFromPageToNode(node, pagePoint);
+convertPointFromPageToNode(node, pagePoint)
 ```
 
 ### Parameters
@@ -46,8 +47,7 @@ system.
 
 ## Specifications
 
-This method was specified in [the defunct 20 March
-2009 Working Draft of CSS 2D Transforms Module Level 3](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/). It is not present in the
+This method was specified in [the defunct 20 March 2009 Working Draft of CSS 2D Transforms Module Level 3](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/). It is not present in the
 current CSS Transforms Module Level 1 Working Draft.
 
 ## Browser compatibility
@@ -58,5 +58,4 @@ current CSS Transforms Module Level 1 Working Draft.
 
 - {{domxref("Window.webkitConvertPointFromNodeToPage")}}
 - Mozilla implementation bug: {{bug(850808)}}
-- [`webkitConvertPointFromPageToNode`
-  documentation at IE Dev Center](<https://msdn.microsoft.com/library/ie/dn760735(v=vs.85).aspx>)
+- [`webkitConvertPointFromPageToNode` documentation at IE Dev Center](<https://msdn.microsoft.com/library/ie/dn760735(v=vs.85).aspx>)

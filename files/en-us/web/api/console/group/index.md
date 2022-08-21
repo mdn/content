@@ -1,6 +1,7 @@
 ---
 title: console.group()
 slug: Web/API/console/group
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,8 +13,7 @@ browser-compat: api.console.group
 ---
 {{APIRef("Console API")}}
 
-The **`console.group()`** method creates a new inline group in the [Web
-console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) log, causing any subsequent console messages to be indented by an additional level,
+The **`console.group()`** method creates a new inline group in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) log, causing any subsequent console messages to be indented by an additional level,
 until {{domxref("console.groupEnd()")}} is called.
 
 {{AvailableInWorkers}}
@@ -27,9 +27,12 @@ group(label)
 
 ### Parameters
 
-- `label`
-  - : Label for the group. Optional. (Chrome 59 tested) Does not work with
-    `console.groupEnd()`.
+- `label` {{optional_inline}}
+  - : Label for the group.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -67,3 +70,7 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.groupEnd()")}}

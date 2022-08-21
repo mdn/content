@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.range
 slug: Web/API/CSSCounterStyleRule/range
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`range`** property of the {{domxref("CSSCounterStyleRule")}} interface get
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

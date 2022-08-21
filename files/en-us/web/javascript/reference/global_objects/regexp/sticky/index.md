@@ -20,7 +20,7 @@ The **`sticky`** property reflects whether or not the search is sticky (searches
 
 ## Description
 
-The value of `sticky` is a {{jsxref("Boolean")}} and true if the "`y`" flag was used; otherwise, false. The "`y`" flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes). A regular expression defined as both `sticky` and `global` ignores the `global` flag.
+The value of `sticky` is a {{jsxref("Boolean")}} and true if the `y` flag was used; otherwise, false. The `y` flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes). A regular expression defined as both `sticky` and `global` ignores the `global` flag.
 
 You cannot change this property directly. It is read-only.
 
@@ -29,8 +29,8 @@ You cannot change this property directly. It is read-only.
 ### Using a regular expression with the sticky flag
 
 ```js
-var str = '#foo#';
-var regex = /foo/y;
+const str = '#foo#';
+const regex = /foo/y;
 
 regex.lastIndex = 1;
 regex.test(str); // true
@@ -41,18 +41,18 @@ regex.lastIndex; // 0 (reset after match failure)
 
 ### Anchored sticky flag
 
-For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the ES2015 specification [specifically calls out](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) the fact that:
+For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the specification [specifically calls out](https://tc39.es/ecma262/#sec-compileassertion) the fact that:
 
-> When the `y` flag is used with a pattern, ^ always matches only at the beginning of the input, or (if `multiline` is `true`) at the beginning of a line.
+> Even when the `y` flag is used with a pattern, `^` always matches only at the beginning of _Input_, or (if _rer_.[[Multiline]] is `true`) at the beginning of a line.
 
 Examples of correct behavior:
 
 ```js
-var regex = /^foo/y;
+const regex = /^foo/y;
 regex.lastIndex = 2;
 regex.test('..foo');   // false - index 2 is not the beginning of the string
 
-var regex2 = /^foo/my;
+const regex2 = /^foo/my;
 regex2.lastIndex = 2;
 regex2.test('..foo');  // false - index 2 is not the beginning of the string or line
 regex2.lastIndex = 2;

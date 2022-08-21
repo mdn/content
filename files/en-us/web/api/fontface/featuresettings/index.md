@@ -1,6 +1,7 @@
 ---
 title: FontFace.featureSettings
 slug: Web/API/FontFace/featureSettings
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -21,7 +22,7 @@ are not available from a font's variant properties. It is equivalent to the
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing a descriptor.
+A string containing a descriptor.
 
 ## Specifications
 

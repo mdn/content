@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getVertexAttribOffset()
 slug: Web/API/WebGLRenderingContext/getVertexAttribOffset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,14 +19,14 @@ specified vertex attribute.
 ## Syntax
 
 ```js
-GLintptr gl.getVertexAttribOffset(index, pname);
+getVertexAttribOffset(index, pname)
 ```
 
 ### Parameters
 
-- index
+- `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute.
-- pname
+- `pname`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} which must be `gl.VERTEX_ATTRIB_ARRAY_POINTER`.
 
 ### Return value

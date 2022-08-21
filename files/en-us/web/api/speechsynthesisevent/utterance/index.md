@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.utterance
 slug: Web/API/SpeechSynthesisEvent/utterance
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -23,10 +24,9 @@ A {{domxref("SpeechSynthesisUtterance")}} object.
 ## Examples
 
 ```js
-utterThis.onpause = function(event) {
-  var char = event.utterance.text.charAt(event.charIndex);
-  console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
+utterThis.onpause = (event) => {
+  const char = event.utterance.text.charAt(event.charIndex);
+  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
 }
 ```
 

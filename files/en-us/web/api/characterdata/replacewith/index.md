@@ -1,6 +1,7 @@
 ---
 title: CharacterData.replaceWith()
 slug: Web/API/CharacterData/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -30,6 +31,10 @@ replaceWith(nodes)
 
 > **Note:** If there no argument is passed, this method acts just remove the node from the DOM tree.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
@@ -49,7 +54,7 @@ em.textContent = "Italic text";
 text.replaceWith(em); // Replace `Some text` by `Italic text`
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

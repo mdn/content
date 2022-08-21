@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -45,7 +46,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.entries();
 
-for (let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value})`;
 }
 ```

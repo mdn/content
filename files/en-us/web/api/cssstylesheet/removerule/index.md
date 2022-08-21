@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -45,7 +46,7 @@ removeRule(index)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -72,6 +73,5 @@ myStyles.deleteRule(0);
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}

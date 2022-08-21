@@ -1,6 +1,7 @@
 ---
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
+page-type: web-api-instance-method
 tags:
   - API
   - File API
@@ -21,6 +22,14 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 ```js
 abort()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

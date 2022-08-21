@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.colorMask()
 slug: Web/API/WebGLRenderingContext/colorMask
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer"
 ## Syntax
 
 ```js
-void gl.colorMask(red, green, blue, alpha);
+colorMask(red, green, blue, alpha)
 ```
 
 ### Parameters
@@ -37,7 +38,7 @@ void gl.colorMask(red, green, blue, alpha);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

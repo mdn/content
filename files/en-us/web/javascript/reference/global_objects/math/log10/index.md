@@ -83,16 +83,6 @@ Math.log10(-2);     // NaN
 Math.log10(100000); // 5
 ```
 
-## Polyfill
-
-This can be emulated with the following function:
-
-```js
-Math.log10 = Math.log10 || function(x) {
-  return Math.log(x) * Math.LOG10E;
-};
-```
-
 ## Specifications
 
 {{Specifications}}

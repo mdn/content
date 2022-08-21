@@ -1,9 +1,9 @@
 ---
 title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -37,7 +37,7 @@ many targeted elements are currently intersecting with the
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       intersectingCount += 1;
     } else {

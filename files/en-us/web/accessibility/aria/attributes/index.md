@@ -10,9 +10,9 @@ tags:
   - States
   - Properties
 ---
-This page lists reference pages covering all the WAI-ARIA attributes discussed on MDN.
+This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attributes discussed on MDN.
 
-ARIA attributes enable modifying an element's states and properties as defined in the accessibility tree.
+<abbr>ARIA</abbr> attributes enable modifying an element's states and properties as defined in the accessibility tree.
 
 > **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
 
@@ -108,11 +108,11 @@ Many of the above attributes are global, meaning they can be included on any ele
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-By "specifically disallowed," all the above attributes are global except for the `aria-label` and `aria-labelledby` properties, which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) nor its synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role) role.
+By "specifically disallowed," all the above attributes are global except for the `aria-label` and `aria-labelledby` properties, which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) nor its synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role) role.
 
 ## States and properties defined on MDN
 
-The following are the reference pages covering the WAI-ARIA states and properties discussed on <abbr title="Mozilla Developer Network">MDN</abbr>.
+The following are the reference pages covering the <abbr>WAI-ARIA</abbr> states and properties discussed on <abbr>MDN</abbr>.
 
 {{SubpagesWithSummaries}}
 
@@ -122,7 +122,7 @@ The following are the reference pages covering the WAI-ARIA states and propertie
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA attributes**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+1. [**<abbr>WAI-ARIA</abbr> attributes**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
     {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 

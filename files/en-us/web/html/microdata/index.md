@@ -45,7 +45,7 @@ Major search engine operators like Google, Microsoft, and Yahoo! rely on the [sc
 
 ## Localization
 
-In some cases, search engines covering specific regions may provide locally-specific extensions of microdata. For example, [Yandex](https://www.yandex.com/), a major search engine in Russia, supports microformats such as hCard (company contact information), hRecipe (food recipe), hReview (market reviews) and hProduct (product data) and provides its own format for the definition of the terms and encyclopedic articles. This extension was made to solve transliteration problems between the Cyrillic and Latin alphabets. Due to the implementation of additional marking parameters of Schema's vocabulary, the indexation of information in Russian-language web-pages became considerably more successful.
+In some cases, search engines covering specific regions may provide locally-specific extensions of microdata. For example, [Yandex](https://yandex.com/), a major search engine in Russia, supports microformats such as hCard (company contact information), hRecipe (food recipe), hReview (market reviews) and hProduct (product data) and provides its own format for the definition of the terms and encyclopedic articles. This extension was made to solve transliteration problems between the Cyrillic and Latin alphabets. Due to the implementation of additional marking parameters of Schema's vocabulary, the indexation of information in Russian-language web-pages became considerably more successful.
 
 ## Global attributes
 
@@ -144,7 +144,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 ### Result
 
-{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}
+{{ EmbedLiveSample('HTML', '', '100') }}
 
 > **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data). Try it on the HTML shown above.
 

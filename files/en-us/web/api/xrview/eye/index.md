@@ -1,6 +1,7 @@
 ---
 title: XRView.eye
 slug: Web/API/XRView/eye
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -57,12 +58,12 @@ gl.clearColor(0,0, 0, 1.0);
 gl.clearDepth(1.0);
 gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 
-for (let view of xrPose.views) {
+for (const view of xrPose.views) {
   let skipView = false;
 
-  if (view.eye == "left" && body.leftEye.injured) ||
+  if (view.eye === "left" && body.leftEye.injured) {
     skipView = updateInjury(body.leftEye);
-  } else if (view.eye == "right" && body.rightEye.injured) {
+  } else if (view.eye === "right" && body.rightEye.injured) {
     skipView = updateInjury(body.rightEye);
   }
 
@@ -74,7 +75,7 @@ for (let view of xrPose.views) {
 }
 ```
 
-For each of the views, the value of `eye` is checked and  if it's either
+For each of the views, the value of `eye` is checked and if it's either
 `left` or `right`, we check to see if the
 `body.leftEye.injured` or `body.rightEye.injured` property is
 `true`; if so, we call a function `updateInjury()` on that eye to
@@ -82,7 +83,7 @@ do things such as allow a bit of healing to occur, track the progress of a poiso
 effect, or the like, as appropriate for the game's needs.
 
 `updateInjury()` returns `true` if the eye is still injured or
-`false` if the eye has been restored to health by the function,. If the
+`false` if the eye has been restored to health by the function. If the
 result is `false`, indicating that the eye is now healthy, we render the
 scene for that eye. Otherwise, we don't.
 

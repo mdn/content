@@ -206,11 +206,11 @@ While the version number for Firefox OS is not included in the UA string, it is 
 
 > **Note:** It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
 
-Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
+Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 
 ## Firefox for iOS
 
-Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/multidevice/user-agent#chrome_for_ios_user_agent).
+Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/docs/multidevice/user-agent/#chrome_for_ios_user_agent).
 
 | Form factor | Firefox for iOS user agent string                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |

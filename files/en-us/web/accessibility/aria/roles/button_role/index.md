@@ -8,6 +8,9 @@ tags:
   - Accessibility
   - Button Role
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#button
+  - https://w3c.github.io/aria-practices/#button
 ---
 
 The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead.
@@ -28,7 +31,7 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 <button type="button" id="saveChanges">Save</button>
 ```
 
-> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{event("click")}} and {{event("keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
 In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element.
 
@@ -61,7 +64,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated ARIA roles, states, and properties
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-  - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.  
+  - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed. If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
@@ -87,7 +90,7 @@ As an example, the mute button on an audio player labeled "mute" could indicate 
 | <kbd>Enter</kbd> | Activates the button. |
 | <kbd>Space</kbd> | Activates the button  |
 
-Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, , such as muting and unmuting an audio file, then focus typically remains on the button.
+Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, such as muting and unmuting an audio file, then focus typically remains on the button.
 
 ### Required JavaScript Features
 
@@ -159,7 +162,7 @@ function handleCommand(event) {
     newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
     // Don't add blank entries to the list.
-    if(name.length > 0) {
+    if (name.length > 0) {
         listItem = document.createElement('li');
         listItem.appendChild(document.createTextNode(name));
 
@@ -227,13 +230,16 @@ function handleBtnKeyDown(event) {
 }
 
 function toggleButton(element) {
-  var audio = document.getElementById('audio');
+  const audio = document.getElementById('audio');
+
   // Check to see if the button is pressed
-  var pressed = (element.getAttribute("aria-pressed") === "true");
+  const pressed = element.getAttribute("aria-pressed") === "true";
+  
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
-  // toggle the play state of the audio file
-  if(pressed) {
+  
+  // Toggle the play state of the audio file
+  if (pressed) {
      audio.pause();
   } else {
      audio.play();
@@ -259,10 +265,7 @@ If a link performs the action of a button, giving the element `role="button"` he
 
 ## Specifications
 
-| Specification                                                                    | Status                                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#button","button")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -274,7 +277,7 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
 - [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
-- [Strong native semantics in HTML5](https://www.w3.org/TR/html5/dom.html#aria-usage-note)
+- [Strong native semantics in HTML5](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 - [Official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
 

@@ -153,7 +153,7 @@ Firefox also offers some unique features that you can use to build more secure, 
       </td>
       <td>
         <img
-          alt="Illustration of example code used to inject a  content script on demand"
+          alt="Illustration of example code used to inject a content script on demand"
           src="script_inject.png"
         />
       </td>
@@ -213,4 +213,4 @@ Firefox also offers some unique features that you can use to build more secure, 
   </tbody>
 </table>
 
-Icons from [icon8](https://www.icons8.com)
+Icons from [icon8](https://icons8.com/)

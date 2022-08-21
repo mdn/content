@@ -1,6 +1,7 @@
 ---
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -55,14 +56,14 @@ An {{domxref("Element")}} object describing the DOM element object matching the 
 
 ```js
 function changeColor(newColor) {
-  var elem = document.getElementById('para');
+  const elem = document.getElementById('para');
   elem.style.color = newColor;
 }
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 250, 100) }}
+{{ EmbedLiveSample('Examples', 250, 120) }}
 
 ## Usage notes
 
@@ -70,11 +71,11 @@ The capitalization of `"Id"` in the name of this method _must_ be correct for th
 
 Unlike some other element-lookup methods such as {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, `getElementById()` is only available as a method of the global `document` object, and _not_ available as a method on all element objects in the DOM. Because ID values must be unique throughout the entire document, there is no need for "local" versions of the function.
 
-## Example
+### Example
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -87,8 +88,8 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
         <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById('parent-id');
-        var test1 = parentDOM.getElementById('test1');
+        const parentDOM = document.getElementById('parent-id');
+        const test1 = parentDOM.getElementById('test1');
         //throw error
         //Uncaught TypeError: parentDOM.getElementById is not a function
     </script>
@@ -101,9 +102,9 @@ If there is no element with the given `id`, this function returns `null`. Note t
 **Elements not in the document** are not searched by `getElementById()`. When creating an element and assigning it an ID, you have to insert the element into the document tree with {{domxref("Node.insertBefore()")}} or a similar method before you can access it with `getElementById()`:
 
 ```js
-var element = document.createElement('div');
+const element = document.createElement('div');
 element.id = 'testqq';
-var el = document.getElementById('testqq'); // el will be null!
+const el = document.getElementById('testqq'); // el will be null!
 ```
 
 **Non-HTML documents**. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The `id` attribute is defined to be of ID type in the common cases of [XHTML](/en-US/docs/Glossary/XHTML), XUL, and other. Implementations that do not know whether attributes are of type ID or not are expected to return `null`.

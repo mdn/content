@@ -1,6 +1,7 @@
 ---
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -20,6 +21,10 @@ binary data contained in an {{jsxref("ArrayBuffer")}}.
 ```js
 arrayBuffer()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

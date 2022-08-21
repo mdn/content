@@ -1,6 +1,7 @@
 ---
 title: SVGFilterElement
 slug: Web/API/SVGFilterElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -23,7 +24,7 @@ A new static [normalized TimeRanges object](/en-US/docs/Web/API/TimeRanges#norma
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.buffered); // TimeRanges { length: 0 }
 ```
 

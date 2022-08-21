@@ -1,6 +1,7 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -35,6 +36,10 @@ surroundContents(newParent)
 - `newParent`
   - : A {{ domxref("Node") }} with which to surround the contents.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML
@@ -55,7 +60,7 @@ range.surroundContents(newParent);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
+page-type: web-api-instance-method
 tags:
   - API
   - ICE
@@ -100,7 +101,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
         Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
 
-    The method will throw a `TypeError` exception if both `sdpMid` and `sdpMLineIndex` are `null`.
+    The method will throw a {{jsxref("TypeError")}} exception if both `sdpMid` and `sdpMLineIndex` are `null`.
 
     The contents of the object should be constructed from a message received over the signaling channel, describing a newly received ICE candidate that's ready to be delivered to the local ICE agent.
 
@@ -137,7 +138,7 @@ When an error occurs while attempting to add the ICE candidate, the
 below as the {{domxref("DOMException.name", "name")}} attribute in the specified
 {{domxref("DOMException")}} object passed to the rejection handler.
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified candidate's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} and
     {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} are both `null`.
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -165,7 +166,7 @@ channel.
 ```js
 // This example assumes that the other peer is using a signaling channel as follows:
 //
-// pc.onicecandidate = event => {
+// pc.onicecandidate = (event) => {
 //   if (event.candidate) {
 //     signalingChannel.send(JSON.stringify({ice: event.candidate})); // "ice" is arbitrary
 //   } else {
@@ -173,17 +174,17 @@ channel.
 //   }
 // }
 
-signalingChannel.onmessage = receivedString => {
+signalingChannel.onmessage = (receivedString) => {
   const message = JSON.parse(receivedString);
   if (message.ice) {
     // A typical value of ice here might look something like this:
     //
-    // {candidate: "candidate:0 1 UDP 2122154243 192.168.1.9 53421 typ host", sdpMid: "0", ...}
+    // {candidate: "candidate:0 1 UDP 2122154243 192.168.1.9 53421 typ host", sdpMid: "0", …}
     //
     // Pass the whole thing to addIceCandidate:
 
-    pc.addIceCandidate(message.ice).catch(e => {
-      console.log("Failure during addIceCandidate(): " + e.name);
+    pc.addIceCandidate(message.ice).catch((e) => {
+      console.log(`Failure during addIceCandidate(): ${e.name}`);
     });
   } else {
     // handle other things you might be signaling, like sdp

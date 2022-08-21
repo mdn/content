@@ -1,6 +1,7 @@
 ---
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -39,6 +40,10 @@ scrollBy(options)
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

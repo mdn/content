@@ -62,8 +62,7 @@ Listen for and log tab activation events:
 
 ```js
 function handleActivated(activeInfo) {
-  console.log("Tab " + activeInfo.tabId +
-              " was activated");
+  console.log(`Tab ${activeInfo.tabId} was activated`);
 }
 
 browser.tabs.onActivated.addListener(handleActivated);
@@ -75,7 +74,7 @@ browser.tabs.onActivated.addListener(handleActivated);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.dtmf
 slug: Web/API/RTCRtpSender/dtmf
+page-type: web-api-instance-property
 tags:
   - DTMF
   - Media

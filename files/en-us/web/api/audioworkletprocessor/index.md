@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -25,7 +26,7 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 
 ## Properties
 
-- {{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}
+- {{domxref("AudioWorkletProcessor.port", "port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the processor and the {{domxref("AudioWorkletNode")}} which it belongs to. The other end is available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
 ## Methods
@@ -71,7 +72,7 @@ First, we need to define a custom `AudioWorkletProcessor`, which will output whi
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel => {
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
         channel[i] = Math.random() * 2 - 1
       }
@@ -104,3 +105,4 @@ whiteNoiseNode.connect(audioContext.destination)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using AudioWorklet](/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)

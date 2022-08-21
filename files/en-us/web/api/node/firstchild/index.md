@@ -1,6 +1,7 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

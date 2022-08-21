@@ -42,19 +42,21 @@ You can examine the stored data under the Extension Storage item in the [Storage
 
 ## Properties
 
-`storage` has three properties, which represent the different types of available storage area.
+`storage` has four properties, which represent the different types of available storage area.
 
-- {{WebExtAPIRef("storage.sync")}}
-  - : Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into, across different devices.
 - {{WebExtAPIRef("storage.local")}}
   - : Represents the `local` storage area. Items in `local` storage are local to the machine the extension was installed on.
 - {{WebExtAPIRef("storage.managed")}}
   - : Represents the `managed` storage area. Items in `managed` storage are set by the domain administrator and are read-only for the extension. Trying to modify this namespace results in an error.
+- {{WebExtAPIRef("storage.session")}}
+  - : Represents the `session` storage area. Items in `session` storage are stored in memory and are not persisted to disk.
+- {{WebExtAPIRef("storage.sync")}}
+  - : Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into, across different devices.
 
 ## Events
 
 - {{WebExtAPIRef("storage.onChanged")}}
-  - : Fired when one or more items change in a storage area.
+  - : Fired when one or more items change in any of the storage areas.
 
 ## Browser compatibility
 
@@ -62,7 +64,7 @@ You can examine the stored data under the Extension Storage item in the [Storage
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

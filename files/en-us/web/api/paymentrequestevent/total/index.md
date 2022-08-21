@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.total
 slug: Web/API/PaymentRequestEvent/total
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API
@@ -9,6 +10,7 @@ tags:
   - Reference
   - payment
   - total
+  - Experimental
 browser-compat: api.PaymentRequestEvent.total
 ---
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}

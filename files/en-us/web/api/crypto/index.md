@@ -1,6 +1,7 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
+page-type: web-api-interface
 tags:
   - API
   - Code
@@ -27,7 +28,7 @@ The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is accessed through the
 
 _This interface implements properties defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
 
-- {{domxref("Crypto.subtle")}} {{readOnlyInline}} {{SecureContext_inline}}
+- {{domxref("Crypto.subtle")}} {{ReadOnlyInline}} {{SecureContext_inline}}
   - : Returns a {{domxref("SubtleCrypto")}} object providing access to common cryptographic primitives, like hashing, signing, encryption, or decryption.
 
 ## Methods

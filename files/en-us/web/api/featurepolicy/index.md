@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy
 slug: Web/API/FeaturePolicy
+page-type: web-api-interface
 tags:
   - API
   - Feature Policy

@@ -1,10 +1,10 @@
 ---
 title: SecurityPolicyViolationEvent.documentURI
 slug: Web/API/SecurityPolicyViolationEvent/documentURI
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -13,15 +13,15 @@ tags:
   - documentURI
 browser-compat: api.SecurityPolicyViolationEvent.documentURI
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`documentURI`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
+{{domxref("SecurityPolicyViolationEvent")}} interface is a string
 representing the URI of the document or worker in which the violation was found.
 
 ## Value
 
-A {{domxref("USVString")}} representing the URI of the document or worker in which the
+A string representing the URI of the document or worker in which the
 violation was found.
 
 ## Examples

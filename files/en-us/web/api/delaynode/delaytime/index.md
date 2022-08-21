@@ -1,6 +1,7 @@
 ---
 title: DelayNode.delayTime
 slug: Web/API/DelayNode/delayTime
+page-type: web-api-instance-property
 tags:
   - API
   - DelayNode

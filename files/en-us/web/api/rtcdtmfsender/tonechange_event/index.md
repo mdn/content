@@ -1,6 +1,7 @@
 ---
 title: 'RTCDTMFSender: tonechange event'
 slug: Web/API/RTCDTMFSender/tonechange_event
+page-type: web-api-event
 tags:
   - DTMF
   - RTCDTMFSender
@@ -25,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('tonechange', event => { });
+addEventListener('tonechange', (event) => { });
 
-ontonechange = event => { };
+ontonechange = (event) => { };
 ```
 
 ## Event type
@@ -40,8 +41,8 @@ An {{domxref("RTCDTMFToneChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
-- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
+  - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Examples
 
@@ -50,7 +51,7 @@ This example establishes a handler for the [`tonechange`](/en-US/docs/Web/API/RT
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener("tonechange", ev => {
+dtmfSender.addEventListener("tonechange", (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;";
@@ -63,7 +64,7 @@ dtmfSender.addEventListener("tonechange", ev => {
 You can also just set the `ontonechange` event handler property directly:
 
 ```js
-dtmfSender.ontonechange = function( ev ) {
+dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;"

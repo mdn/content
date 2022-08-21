@@ -1,6 +1,7 @@
 ---
 title: structuredClone()
 slug: Web/API/structuredClone
+page-type: web-api-global-function
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ Transferred objects are detached from the original object and attached to the ne
 
 ```js
 structuredClone(value)
-structuredClone(value, { transfer })
+structuredClone(value, transferables)
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ structuredClone(value, { transfer })
 - `value`
   - : The object to be cloned.
     This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
-- `transfer` {{optional_inline}}
+- `transferables` {{optional_inline}}
   - : An array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
 
 ### Return value
@@ -73,8 +74,8 @@ The following code shows how to clone an array and transfer its underlying resou
 On return, the original `uInt8Array.buffer` will be cleared.
 
 ```js
-var uInt8Array = new Uint8Array(1024 * 1024 * 16); // 16MB
-for (var i = 0; i < uInt8Array.length; ++i) {
+const uInt8Array = new Uint8Array(1024 * 1024 * 16); // 16MB
+for (let i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 

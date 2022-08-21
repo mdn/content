@@ -1,6 +1,7 @@
 ---
 title: location.replace()
 slug: Web/API/Location/replace
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -36,7 +37,11 @@ replace(url)
 ### Parameters
 
 - `url`
-  - : Is a string containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

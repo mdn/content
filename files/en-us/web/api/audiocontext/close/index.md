@@ -1,6 +1,7 @@
 ---
 title: AudioContext.close()
 slug: Web/API/AudioContext/close
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -23,6 +24,10 @@ This function does not automatically release all `AudioContext`-created objects,
 close()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
@@ -32,8 +37,8 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the stop button is clicked, `close()` is called. When the promise resolves, the example is reset to its beginning state.
 
 ```js
-stopBtn.onclick = function() {
-  audioCtx.close().then(function() {
+stopBtn.onclick = () => {
+  audioCtx.close().then(() => {
     startBtn.removeAttribute('disabled');
     susresBtn.setAttribute('disabled', 'disabled');
     stopBtn.setAttribute('disabled', 'disabled');

@@ -16,8 +16,9 @@ browser-compat: javascript.statements.for_await_of
 
 The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
 
-> **Note:** `for await...of` doesn't work with async iterators that are not async
-> iterables.
+{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+
+> **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
 
 ## Syntax
 
@@ -93,11 +94,9 @@ async function* asyncGenerator() {
 // 2
 ```
 
-For a more concrete example of iterating over an async generator using
-`for await...of`, consider iterating over data from an API.
+For a more concrete example of iterating over an async generator using `for await...of`, consider iterating over data from an API.
 
-This example first creates an async iterable for a stream of data, then uses it to find
-the size of the response from the API.
+This example first creates an async iterable for a stream of data, then uses it to find the size of the response from the API.
 
 ```js
 async function* streamAsyncIterable(stream) {
@@ -222,7 +221,7 @@ try {
 ```
 
 To make  `finally` blocks of a sync generator to be always called use
-appropriate form of the loop, `for await...of` for the async generator and
+the appropriate form of the loop, `for await...of` for the async generator and
 `for...of` for the sync one and await yielded promises explicitly inside the
 loop.
 

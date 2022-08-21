@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -31,7 +32,7 @@ getFloatFrequencyData(array)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

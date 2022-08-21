@@ -13,9 +13,10 @@ The JavaScript exception "invalid Array.prototype.sort argument" occurs when the
 
 ## Message
 
-```html
-TypeError: argument is not a function object (Edge)
+```
+TypeError: The comparison function must be either a function or undefined (V8-based)
 TypeError: invalid Array.prototype.sort argument (Firefox)
+TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)
 ```
 
 ## Error type
@@ -33,7 +34,7 @@ The argument of {{jsxref("Array.prototype.sort()")}} is expected to be either {{
 ```js example-bad
 [1, 3, 2].sort(5);  // TypeError
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
+const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
 [1, 3, 2].sort(cmp[this.key] || 'asc');  // TypeError
 ```
 
@@ -42,7 +43,7 @@ var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
 ```js example-good
 [1, 3, 2].sort();   // [1, 2, 3]
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
+const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
 [1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters.password
 slug: Web/API/RTCIceParameters/password
+page-type: web-api-instance-property
 tags:
   - API
   - Candidates
@@ -25,7 +26,7 @@ duration.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the password that corresponds to the transport's
+A string containing the password that corresponds to the transport's
 `usernameFragment` string
 
 ## Specifications

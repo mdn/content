@@ -94,7 +94,7 @@ So when we call `myObject.toString()`, the browser:
 What is the prototype for `myObject`? To find out, we can use the function `Object.getPrototypeOf()`:
 
 ```js
-Object.getPrototypeOf(myObject); // Object {...}
+Object.getPrototypeOf(myObject); // Object { }
 ```
 
 This is an object called `Object.prototype`, and it is the most basic prototype, that all objects have by default. The prototype of `Object.prototype` is `null`, so it's at the end of the prototype chain:
@@ -113,7 +113,7 @@ do {
 } while (object);
 
 // Date.prototype
-// Object {...}
+// Object { }
 // null
 ```
 
@@ -184,8 +184,9 @@ function Person(name) {
   this.name = name;
 }
 
-Person.prototype = personPrototype;
-Person.prototype.constructor = Person;
+Object.assign(Person.prototype, personPrototype);
+// or
+// Person.prototype.greet = personPrototype.greet;
 ```
 
 Here we create:
@@ -193,12 +194,9 @@ Here we create:
 - an object `personPrototype`, which has a `greet()` method
 - a `Person()` constructor function which initializes the name of the person to create.
 
-We then set the `Person` function's `prototype` property to point to `personPrototype`.
+We then put the methods defined in `personPrototype` onto the `Person` function's `prototype` property using [Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
 
-The last line (`Person.prototype.constructor = Person;`) sets the prototype's `constructor` property to the function used to create `Person` objects.
-This is required because after setting `Person.prototype = personPrototype;` the property points to the constructor for the `personPrototype`, which is `Object` rather than `Person` (because `personPrototype` was constructed as an object literal).
-
-After this code, objects created using `Person()` will get `personPrototype` as their prototype.
+After this code, objects created using `Person()` will get `Person.prototype` as their prototype, which automatically contains the `greet` method.
 
 ```js
 const reuben = new Person('Reuben');
@@ -216,7 +214,7 @@ The objects we create using the `Person` constructor above have two properties:
 
 It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. That's because methods are usually the same for every object we create, while we often want each object to have its own value for its data properties (just as here where every person has a different name).
 
-Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static  {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
+Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
 
 ```js
 const irma = new Person('Irma');

@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.deleteRule()
 slug: Web/API/CSSKeyframesRule/deleteRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -33,7 +34,7 @@ deleteRule(select)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

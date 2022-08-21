@@ -88,7 +88,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<sub>` element should be used only for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-For example, using `<sub>` to style the name of a company which uses altered baselines in their {{interwiki("wikipedia", "wordmark")}} would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property, such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
+For example, using `<sub>` to style the name of a company which uses altered baselines in their [wordmark](https://en.wikipedia.org/wiki/Wordmark) would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property, such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
 
 Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
@@ -134,7 +134,7 @@ In mathematics, families of variables related to the same concept (such as dista
 
 ```html
 <p>The horizontal coordinates' positions along the X-axis are
-represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
+represented as <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.</p>
 ```
 
 The resulting output:

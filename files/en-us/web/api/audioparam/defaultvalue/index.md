@@ -1,6 +1,7 @@
 ---
 title: AudioParam.defaultValue
 slug: Web/API/AudioParam/defaultValue
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam

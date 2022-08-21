@@ -1,6 +1,7 @@
 ---
 title: console.count()
 slug: Web/API/console/count
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -32,6 +33,10 @@ count(label)
     times it has been called with that label. If omitted, `count()` behaves as
     though it was called with the "default" label.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 For example, given code like this:
@@ -41,7 +46,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -71,7 +76,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

@@ -23,7 +23,6 @@ Content-Length: 113
 Date: Fri, 30 Mar 2018 15:30:51 GMT
 
 {"value":{"error":"unknown command","message":"POST /session/asd did not match a known command","stacktrace":""}}
-
 ```
 
 ## See also

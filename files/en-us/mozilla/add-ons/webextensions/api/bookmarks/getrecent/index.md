@@ -42,7 +42,7 @@ This example logs the URL for the most recently added bookmark:
 
 ```js
 function onFulfilled(bookmarks) {
-  for (bookmark of bookmarks) {
+  for (const bookmark of bookmarks) {
     console.log(bookmark.url);
   }
 }
@@ -51,8 +51,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let gettingRecent = browser.bookmarks.getRecent(1);
-gettingRecent.then(onFulfilled, onRejected);
+browser.bookmarks.getRecent(1).then(onFulfilled, onRejected);
 ```
 
 {{WebExtExamples}}
@@ -61,7 +60,7 @@ gettingRecent.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getRecent) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getRecent) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

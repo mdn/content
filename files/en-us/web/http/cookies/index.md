@@ -71,7 +71,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 > **Note:** Here's how to use the `Set-Cookie` header in various server-side applications:
 >
-> - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
+> - [PHP](https://www.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
 > - [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
@@ -103,7 +103,7 @@ A cookie with the `HttpOnly` attribute is inaccessible to the JavaScript {{domxr
 
 Here's an example:
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 ```
 
@@ -148,7 +148,7 @@ If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
 Here's an example:
 
-```
+```http
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 

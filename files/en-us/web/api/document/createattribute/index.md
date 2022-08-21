@@ -1,6 +1,7 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ browser-compat: api.Document.createAttribute
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
-attribute node, and returns it. The object created a node implementing the
+attribute node, and returns it. The object created is a node implementing the
 {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
 added to a particular element in this manner.
 
@@ -39,8 +40,8 @@ A {{domxref("Attr")}} node.
 ## Examples
 
 ```js
-var node = document.getElementById("div1");
-var a = document.createAttribute("my_attrib");
+const node = document.getElementById("div1");
+const a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
@@ -56,4 +57,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## See also
 
+- {{domxref("Document.createAttributeNS()")}}
 - {{domxref("Document.createElement()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.setAttributeNode()")}}

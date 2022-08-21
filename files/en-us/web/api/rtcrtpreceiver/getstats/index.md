@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getStats()
 slug: Web/API/RTCRtpReceiver/getStats
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -28,6 +29,10 @@ results are available.
 getStats()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A JavaScript {{jsxref("Promise")}} which is fulfilled once the statistics are
@@ -44,9 +49,8 @@ updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to displa
 packets lost.
 
 ```js
-receiver.getStats().then(function(stats) {
-  document.getElementById("lostpackets").innerText =
-          stats.packetsLost;
+receiver.getStats().then((stats) => {
+  document.getElementById("lostpackets").innerText = stats.packetsLost;
 });
 ```
 

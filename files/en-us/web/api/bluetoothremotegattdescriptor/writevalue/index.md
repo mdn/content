@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor.writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -13,7 +14,7 @@ tags:
   - writeValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
 method sets the value property to the bytes contained in
@@ -27,7 +28,7 @@ writeValue(array)
 
 ### Parameters
 
-- array
+- `array`
   - : Sets the value with the bytes contained in the array.
 
 ### Return value

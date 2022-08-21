@@ -67,7 +67,7 @@ This will tend to be specific to the service provider, but in general it means c
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/extensions/identity) API.
+> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

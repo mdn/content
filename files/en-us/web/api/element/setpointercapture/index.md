@@ -1,6 +1,7 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -49,7 +50,7 @@ setPointerCapture(pointerId)
 
 ### Return value
 
-This method returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -59,7 +60,7 @@ This method returns {{jsxref("undefined")}}.
 ## Examples
 
 This example sets pointer capture on a {{HtmlElement("div")}} when you press down on
-it. This lets you slide the element horizontally, even when you pointer moves outside of
+it. This lets you slide the element horizontally, even when your pointer moves outside of
 its boundaries.
 
 ### HTML
@@ -106,7 +107,7 @@ slider.onpointerup = stopSliding;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

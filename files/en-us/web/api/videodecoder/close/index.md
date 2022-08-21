@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.close()
 slug: Web/API/VideoDecoder/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,16 +17,16 @@ The **`close()`** method of the {{domxref("VideoDecoder")}} interface ends all p
 ## Syntax
 
 ```js
-VideoDecoder.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

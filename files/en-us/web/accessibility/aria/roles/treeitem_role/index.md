@@ -1,13 +1,16 @@
 ---
 title: 'ARIA: treeitem role'
 slug: Web/Accessibility/ARIA/Roles/treeitem_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
   - treeitem
+spec-urls:
+  - https://w3c.github.io/aria/#treeitem
+  - https://w3c.github.io/aria-practices/#TreeView
 ---
 
 A `treeitem` is an item in a `tree`.
@@ -22,7 +25,7 @@ In a tree hierarchy, the *root node* has the role `tree`. All other nodes, other
 
 Tree items that have children can be expanded or collapsed, showing and hiding their children. A parent node that is expanded so its child nodes are visible is an **open node**. A parent node that is collapsed so the child nodes are not visible is a **closed node**.
 
-Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they  should be enclosed in an element with the `group` role.
+Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they should be enclosed in an element with the `group` role.
 
 Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
 
@@ -58,14 +61,14 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Identifies a set of `treeitem` child nodes.
-  
+
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Set on the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
   - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
   - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
-  
+
 ### Keyboard interactions
 
 For a vertically oriented `tree`, which is the default orientation:
@@ -228,18 +231,15 @@ The following is how one might mark up a directory listing of web development co
 
 The above provides the semantics for a tree view, but does not provide any of the interactivity. That must be added in with JavaScript.
 
-If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.  
+If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.
 
-All the keyboard functionality in Keyboard interactions and all pointer events need to be programmed, including focus management, going up and down the tree, expanding and collapsing parent nodes, and selection management.  
+All the keyboard functionality in Keyboard interactions and all pointer events need to be programmed, including focus management, going up and down the tree, expanding and collapsing parent nodes, and selection management.
 
 If the tree has more than 7 tree items, including type ahead functionality is recommended.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#treeitem","ARIA: treeitem role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_treeitem_role","treeitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

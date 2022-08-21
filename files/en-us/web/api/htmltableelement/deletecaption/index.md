@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -22,6 +23,14 @@ nothing.
 ```js
 deleteCaption()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -46,7 +55,7 @@ table.deleteCaption();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

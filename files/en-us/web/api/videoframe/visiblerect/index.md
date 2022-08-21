@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.visibleRect
 slug: Web/API/VideoFrame/visibleRect
+page-type: web-api-instance-property
 tags:
   - API
   - Property

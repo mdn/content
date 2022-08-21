@@ -1,6 +1,7 @@
 ---
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,6 +22,14 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 ```js
 deleteContents()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

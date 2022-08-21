@@ -12,4 +12,4 @@ In an operating system a directory is a namespace. Each file or subdirectory has
 
 ## See also
 
-- {{Interwiki("wikipedia", "Namespace")}} on Wikipedia
+- [Namespace](https://en.wikipedia.org/wiki/Namespace) on Wikipedia

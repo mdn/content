@@ -1,6 +1,7 @@
 ---
 title: CSSStyleRule.style
 slug: Web/API/CSSStyleRule/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

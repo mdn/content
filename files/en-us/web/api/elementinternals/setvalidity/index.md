@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.setValidity()
 slug: Web/API/ElementInternals/setValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ setValidity(flags, message, anchor)
 
 ### Parameters
 
-- `flags`{{Optional_Inline}}
+- `flags` {{Optional_Inline}}
 
   - : A dictionary object containing one or more flags indicating the validity state of the element:
 
@@ -50,20 +51,20 @@ setValidity(flags, message, anchor)
 
     > **Note:** To set all flags to `false`, indicating that this element passes all constraints validation, pass in an empty object `{}`. In this case, you do not need to also pass a `message`.
 
-- `message`{{Optional_Inline}}
-  - : A {{domxref("DOMString","string")}} containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.
-- `anchor`{{Optional_Inline}}
+- `message` {{Optional_Inline}}
+  - : A string containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.
+- `anchor` {{Optional_Inline}}
   - : An {{domxref("HTMLElement")}} which can be used by the user agent to report problems with this form submission.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one or more `flags` is `true`.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if `anchor` is given, but the anchor is not a shadow-including descendant of the element.

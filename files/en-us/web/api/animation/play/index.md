@@ -1,6 +1,7 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -37,7 +38,7 @@ In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ
 
 ```js
 // The cake has its own animation:
-var nommingCake = document.getElementById('eat-me_sprite').animate(
+const nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -51,7 +52,7 @@ var nommingCake = document.getElementById('eat-me_sprite').animate(
 nommingCake.pause();
 
 // This function will play when ever a user clicks or taps
-var growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();

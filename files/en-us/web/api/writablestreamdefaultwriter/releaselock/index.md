@@ -1,9 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -11,7 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface releases the writer's lock on the
@@ -22,7 +22,7 @@ in the same way from now on; otherwise, the writer will appear closed.
 ## Syntax
 
 ```js
-writableStreamDefaultWriter.releaseLock()
+releaseLock()
 ```
 
 ### Parameters
@@ -31,28 +31,28 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // release writer's lock on the stream when desired
 writer.releaseLock();

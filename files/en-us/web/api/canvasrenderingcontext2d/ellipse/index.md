@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -49,6 +50,10 @@ the direction given by `counterclockwise` (defaulting to clockwise).
   - : An optional boolean value which, if `true`, draws the ellipse
     counterclockwise (anticlockwise). The default value is `false`
     (clockwise).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -35,7 +35,7 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains 
 - [Introduction to color and accessibility](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : This article discusses our perception of light and color, provides a foundation for the use of color in accessible designs, and demonstrates best practices for visual and readable content.
 - [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Until now, web developers who wanted to make their styled `<div&>`- and `<span>`-based widgets accessible have lacked proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements, which a developer should be aware of.
+  - : Until now, web developers who wanted to make their styled `<div>`- and `<span>`-based widgets accessible have lacked proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements, which a developer should be aware of.
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
   - : This is a collection of articles to learn how to use Accessible Rich Internet Applications (ARIA) to make your HTML documents more accessible.
 - [Mobile accessibility checklist](/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist)
@@ -47,6 +47,5 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains 
 
 ## See also
 
-- [WAI Interest Group](https://www.w3.org/WAI/IG/)
+- [WAI Interest Group](https://www.w3.org/WAI/about/groups/waiig/)
 - [Developer guides](/en-US/docs/Web/Guide)
-- [Accessibility and Mozilla](/en-US/docs/Mozilla/Accessibility)

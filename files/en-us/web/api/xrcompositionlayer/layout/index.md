@@ -1,6 +1,7 @@
 ---
 title: XRCompositionLayer.layout
 slug: Web/API/XRCompositionLayer/layout
+page-type: web-api-instance-property
 tags:
   - API
   - Property

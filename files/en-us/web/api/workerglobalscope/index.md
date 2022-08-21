@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,34 +20,37 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 ## Properties
 
-_This interface inherits properties from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
 ### Standard properties
 
-- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
-- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
 ### Non-standard properties
 
-- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
+- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
-- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}} {{Non-standard_inline}}
+- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 
 ### Properties implemented from elsewhere
 
-- {{domxref("caches")}} {{readOnlyinline}}
+- {{domxref("caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("indexedDB")}} {{readonlyInline}}
+- {{domxref("indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("isSecureContext")}} {{readOnlyinline}}
+- {{domxref("isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
-- {{domxref("origin")}} {{readOnlyinline}}
-  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
+- {{domxref("origin")}} {{ReadOnlyInline}}
+  - : Returns the global object's origin, serialized as a string.
+- [`scheduler`](/en-US/docs/Web/API/Window/scheduler) {{ReadOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
+    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 ## Events
 
@@ -65,7 +69,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 ## Methods
 
-_This interface inherits methods from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Standard methods
 
@@ -119,6 +123,6 @@ console.log(navigator);
 
 ## See also
 
-- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}
-- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.
-- [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}}
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

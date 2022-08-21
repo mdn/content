@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: tree role'
 slug: Web/Accessibility/ARIA/Roles/tree_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -10,6 +10,9 @@ tags:
   - Tree role
   - composite widget role
   - needs example
+spec-urls:
+  - https://w3c.github.io/aria/#tree
+  - https://w3c.github.io/aria-practices/#TreeView
 ---
 
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
@@ -18,7 +21,7 @@ A `tree` is a widget that allows the user to select one or more items from a hie
 
 A `tree` widget is a hierarchical list with parent and child nodes that can expand and collapse. Any item in the hierarchy may have child tree items, set with [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role). Tree items that have children can be expanded or collapsed, showing and hiding their children.
 
-An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder -- which may be files, folders, or both -- and collapsed, hiding its contents.
+An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder — which may be files, folders, or both — and collapsed, hiding its contents.
 
 ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need.
 
@@ -44,7 +47,7 @@ Each element serving as a tree node has role `treeitem`, except for the root tre
 
 `treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collections of treeitem elements.
 
-Do not include `aria-expanded` on end nodes -- those without tree item children -- as that would incorrectly describe the node as a parent node to assistive technologies.
+Do not include `aria-expanded` on end nodes — those without tree item children — as that would incorrectly describe the node as a parent node to assistive technologies.
 
 ### DOM placement and presence
 
@@ -238,10 +241,7 @@ The alternative multi-selection model is a modifier key model in which moving fo
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tree","ARIA: tree role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#TreeView","tree view")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

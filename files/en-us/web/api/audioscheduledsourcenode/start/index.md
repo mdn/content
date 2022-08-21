@@ -1,6 +1,7 @@
 ---
 title: AudioScheduledSourceNode.start()
 slug: Web/API/AudioScheduledSourceNode/start
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -41,16 +42,16 @@ start(when)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateNode`
-  - : The node has already been started. This error occurs even if the node is no longer
+- `InvalidStateNode` {{domxref("DOMException")}}
+  - : Thrown if the node has already been started. This error occurs even if the node is no longer
     running because of a prior call to {{domxref("AudioScheduledSourceNode.stop",
     "stop()")}}.
-- `RangeError`
-  - : The value specified for `when` is negative.
+- {{jsxref("RangeError")}}
+  - : Thrown if the value specified for `when` is negative.
 
 ## Examples
 

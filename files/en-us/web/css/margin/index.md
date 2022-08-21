@@ -18,10 +18,10 @@ The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin 
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-right")}}
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
 
 ## Syntax
 

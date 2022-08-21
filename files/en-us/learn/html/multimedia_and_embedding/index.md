@@ -1,5 +1,5 @@
 ---
-title: Multimedia and Embedding
+title: Multimedia and embedding
 slug: Learn/HTML/Multimedia_and_embedding
 tags:
   - Assessment
@@ -49,7 +49,7 @@ This module contains the following articles, which will take you through all the
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
   - : There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element used to embed a simple image in a webpage. In this article we'll look at how to use it in more depth, including basics, annotating it with captions using {{htmlelement("figure")}}, and how it relates to CSS background images.
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : Next, we'll look at how to use the HTML5 {{htmlelement("video")}} and {{htmlelement("audio")}} elements to embed video and audio on our pages, including basics, providing access to different file formats to different browsers, adding captions and subtitles, and how to add fallbacks for older browsers.
+  - : Next, we'll look at how to use the HTML {{htmlelement("video")}} and {{htmlelement("audio")}} elements to embed video and audio on our pages, including basics, providing access to different file formats to different browsers, adding captions and subtitles, and how to add fallbacks for older browsers.
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
   - : At this point we'd like to take somewhat of a sideways step, looking at a couple of elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed PDFs, SVG, and even Flash — a technology on its way out, but which you may still see semi-regularly.
 - [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)

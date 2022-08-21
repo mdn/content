@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -32,6 +33,10 @@ or {{domxref("IDBKeyRange")}}.
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this
@@ -39,34 +44,10 @@ operation are fired.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of one of the following types:
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
-      <td>
-        The transaction associated with this operation is in read-only <a
-          href="/en-US/docs/Web/API/IDBTransaction#mode_constants"
-          >mode</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        This {{domxref("IDBObjectStore")}}'s transaction is
-        inactive.<br />
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `ReadOnlyError` {{domxref("DOMException")}}
+  - : Thrown if the transaction associated with this operation is in read-only [mode](/en-US/docs/Web/API/IDBTransaction/mode).
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 
 ## Examples
 
@@ -77,9 +58,9 @@ full working example, see our [To-do Notifications](https://github.com/mdn/to-do
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -92,24 +73,24 @@ DBOpenRequest.onsuccess = function(event) {
 
 function clearData() {
   // open a read/write db transaction, ready for clearing the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed.</li>';
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
+  transaction.onerror = (event) => {
+    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
 
   // Make a request to clear all the data out of the object store
-  var objectStoreRequest = objectStore.clear();
+  const objectStoreRequest = objectStore.clear();
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
   };
@@ -132,5 +113,4 @@ function clearData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

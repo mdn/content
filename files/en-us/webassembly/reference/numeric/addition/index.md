@@ -12,7 +12,7 @@ tags:
 
 The **`add`** instructions, are used for adding up two numbers, similar to the **`+`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/add.html")}}
+{{EmbedInteractiveExample("pages/wat/add.html", "tabbed-taller")}}
 
 ## Syntax
 

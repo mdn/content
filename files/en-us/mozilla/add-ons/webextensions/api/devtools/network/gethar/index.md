@@ -42,7 +42,7 @@ Log the URLs of requests contained in the HAR log:
 async function logRequests() {
   let harLog = await browser.devtools.network.getHAR();
   console.log(`HAR version: ${harLog.version}`);
-  for (let entry of harLog.entries) {
+  for (const entry of harLog.entries) {
     console.log(entry.request.url);
   }
 }
@@ -52,7 +52,7 @@ logRequestsButton.addEventListener("click", logRequests);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/devtools_network/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

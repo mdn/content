@@ -1,6 +1,7 @@
 ---
 title: Window.openDialog()
 slug: Web/API/Window/openDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -21,7 +22,7 @@ differently.
 The optional parameters, if present, are bundled up in a JavaScript {{jsxref("Array")}}
 object and added to the newly created window as a property named
 {{domxref("window.arguments")}}. They may be referenced in the JavaScript of the window
-at any time, including during the execution of a {{event("load")}} handler. These
+at any time, including during the execution of a {{domxref("Window/load_event", "load")}} handler. These
 parameters may be used, then, to pass arguments to and from the dialog window.
 
 The call to `openDialog()` returns immediately. If you want the call to
@@ -32,25 +33,31 @@ to interact with the opener window until they close the modal dialog.
 ## Syntax
 
 ```js
-newWindow = openDialog(url, name, features, arg1, arg2, ...)
+openDialog(url)
+openDialog(url, name)
+openDialog(url, name, features)
+openDialog(url, name, features, arg0, arg1, /* … ,*/ argN)
 ```
 
-- `newWindow`
-  - : The opened window
+### Parameters
+
 - `url`
   - : The URL to be loaded in the newly opened window.
-- `name`
-  - : The window name (optional). See {{domxref("window.open()")}} description for
-    detailed information.
-- `features`
+- `name` {{optional_inline}}
+  - : The window name. See {{domxref("window.open()")}} description for detailed information.
+- `features` {{optional_inline}}
   - : See {{domxref("window.open()")}} for details.
-- `arg1`, `arg2`, ...
+- `arg1`, `arg2`, …
   - : The arguments to be passed to the new window (optional).
 
-## Example
+### Return value
+
+The opened window.
+
+## Examples
 
 ```js
-var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+const win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 ```
 
 ## Notes
@@ -93,12 +100,12 @@ window.
 To access these extra parameters from within dialog code, use the following scheme:
 
 ```js
-var food  = window.arguments[0];
-var price = window.arguments[1];
+const food  = window.arguments[0];
+const price = window.arguments[1];
 ```
 
-Note that you can access this property from within anywhere in the dialog code. ([Another
-example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+Note that you can access this property from within anywhere in the dialog code.
+([Another example](/en-US/docs/Mozilla/Add-ons/Code_snippets/Dialogs_and_Prompts#passing_arguments_and_displaying_a_dialog)).
 
 #### Returning values from the dialog
 
@@ -113,7 +120,7 @@ properties on it, containing the values you want to return or preserve past the
 `window.close()` operation.
 
 ```js
-var retVals = { address: null, delivery: null };
+const retVals = { address: null, delivery: null };
 openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98,
     retVals);
 ```
@@ -125,7 +132,7 @@ described below, you can now access them via the `retVals` array after the
 Inside the dialog code, you can set the properties as follows:
 
 ```js
-var retVals = window.arguments[2];
+const retVals = window.arguments[2];
 retVals.address  = enteredAddress;
 retVals.delivery = "immediate";
 ```
@@ -140,7 +147,6 @@ This is not part of any specification.
 
 ## See also
 
-- [Another
-  example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)
+- [Another example](/en-US/docs/Mozilla/Add-ons/Code_snippets/Dialogs_and_Prompts#passing_arguments_and_displaying_a_dialog)
 - [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog)
   (mobile) {{deprecated_inline}}

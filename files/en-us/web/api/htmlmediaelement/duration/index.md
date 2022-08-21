@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -29,7 +30,7 @@ of `duration` is `+Infinity`.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.duration); // NaN
 ```
 

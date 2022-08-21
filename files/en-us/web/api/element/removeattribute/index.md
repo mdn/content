@@ -1,6 +1,7 @@
 ---
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -32,7 +33,7 @@ removeAttribute(attrName)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -21,6 +22,14 @@ that includes a text field.
 ```js
 select()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -46,7 +55,7 @@ function selectText() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

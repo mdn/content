@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletGlobalScope.registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -38,7 +39,7 @@ registerProcessor(name, processorCtor)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -50,7 +51,7 @@ registerProcessor(name, processorCtor)
     - A constructor under the given _name_ is already registered. Registering
       the same name twice is not allowed.
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
 
   - : Thrown under the following conditions:
 

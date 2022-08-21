@@ -58,7 +58,7 @@ There are several SFTP clients out there. Our demo covers [FileZilla](https://fi
 
 Open the FileZilla application; you should see something like this:
 
-![](filezilla-ui.png)
+![Screenshot of the user interface of Filezilla FTP application. Host input has focus.](filezilla-ui.png)
 
 ### Logging in
 
@@ -88,7 +88,7 @@ Let's first look at `http://demozilla.examplehostingprovider.net/` — as you ca
 
 To connect your SFTP client to the distant server, follow these steps:
 
-1. Choose _File > Site Manager..._ from the main menu.
+1. Choose _File > Site Manager…_ from the main menu.
 2. In the _Site Manager_ window, press the _New Site_ button, then fill in the site name as **demozilla** in the provided space.
 3. Fill in the SFTP server your host provided in the _Host:_ field.
 4. In the _Logon Type:_ drop down, choose _Normal_, then fill in your provided username and password in the relevant fields.
@@ -96,7 +96,7 @@ To connect your SFTP client to the distant server, follow these steps:
 
 Your window should look something like this:
 
-![](site-manager.png)
+![Screenshot of default landing page of a fictitious website when the file directory is empty](site-manager.png)
 
 Now press _Connect_ to connect to the SFTP server.
 
@@ -106,7 +106,7 @@ Note: Make sure your hosting provider offers SFTP (Secure FTP) connection to you
 
 Once connected, your screen should look something like this (we've connected to an example of our own to give you an idea):
 
-![](connected.png)
+![SFTP client displaying website contents once it has been connected to the SFTP server. Local files are on the left. Remote files are on the right.](connected.png)
 
 Let's examine what you're seeing:
 
@@ -146,7 +146,7 @@ rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 
 You'd need to get such details from your hosting provider.
 
-For more information and further examples, see [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/).
+For more information and further examples, see [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/vps-hosting/how-to-use-rsync-copy-sync-files-servers/).
 
 Of course, it is a good idea to use a secure connection, as with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the `-e` option. For example:
 

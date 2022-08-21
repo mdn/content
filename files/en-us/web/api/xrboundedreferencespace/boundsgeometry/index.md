@@ -1,6 +1,7 @@
 ---
 title: XRBoundedReferenceSpace.boundsGeometry
 slug: Web/API/XRBoundedReferenceSpace/boundsGeometry
+page-type: web-api-instance-property
 tags:
   - API
   - AR

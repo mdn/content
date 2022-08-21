@@ -1,6 +1,7 @@
 ---
 title: DocumentType.before()
 slug: Web/API/DocumentType/before
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,9 +13,9 @@ browser-compat: api.DocumentType.before
 {{APIRef("DOM")}}
 
 The **`DocumentType.before()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+{{domxref("Node")}} objects or strings in the children list of the
 `DocumentType`'s parent, just before the `DocumentType`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 > **Note:** Putting nodes before the document's doctype will set the rendering mode to
 > [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
@@ -23,13 +24,19 @@ The **`DocumentType.before()`** method inserts a set of
 ## Syntax
 
 ```js
-before(... nodes)
+before(param1)
+before(param1, param2)
+before(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} objects or strings to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

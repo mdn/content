@@ -1,6 +1,7 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
+page-type: web-api-instance-method
 tags:
   - API
   - Boundary
@@ -35,6 +36,10 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 ```js
 getBoundingClientRect()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -77,22 +82,6 @@ properties (these can be obtained using {{domxref("window.scrollX")}} and
 {{domxref("window.scrollY")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
 
-### Cross-browser fallback
-
-Scripts requiring high cross-browser compatibility can use
-{{domxref("window.pageXOffset")}} and {{domxref("window.pageYOffset")}} instead of
-`window.scrollX` and `window.scrollY.` Scripts without access to
-these properties can use code like this:
-
-```js
-// For scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// For scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
-```
-
 ## Examples
 
 ### Basic
@@ -118,10 +107,10 @@ div {
 ```js
 let elem = document.querySelector('div');
 let rect = elem.getBoundingClientRect();
-for (var key in rect) {
-  if(typeof rect[key] !== 'function') {
+for (const key in rect) {
+  if (typeof rect[key] !== 'function') {
     let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+    para.textContent  = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -137,7 +126,7 @@ Also note how the values of `x`/`left`,
 to the absolute distance from the relevant edge of the viewport to that side of the
 element, in each case.
 
-#### Scrolling
+### Scrolling
 
 This example demonstrates how bounding client rect is changing when document is scrolled.
 
@@ -166,10 +155,10 @@ function update() {
   const rect = elem.getBoundingClientRect();
 
   container.innerHTML = '';
-  for (let key in rect) {
-    if(typeof rect[key] !== 'function') {
+  for (const key in rect) {
+    if (typeof rect[key] !== 'function') {
       let para = document.createElement('p');
-      para.textContent  = `${ key } : ${ rect[key] }`;
+      para.textContent  = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
@@ -185,34 +174,6 @@ update();
 
 {{Specifications}}
 
-### Notes
-
-The returned `DOMRect` object can be modified in modern browsers. This was
-not true with older versions which effectively returned `DOMRectReadOnly`.
-With IE and Edge, not being able to add missing properties to their returned [`ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>),
-object prevents backfilling `x` and `y`.
-
-Due to compatibility problems (see below), it is safest to rely on only properties
-`left`, `top`, `right`, and `bottom`.
-
-Properties in the returned `DOMRect` object are not own properties. While
-the `in` operator and `for...in` will find returned properties,
-other APIs such as `Object.keys()` will fail. Moreover, and unexpectedly, the
-ES2015 and newer features such as `Object.assign()` and object rest/spread
-will fail to copy returned properties.
-
-```js
-rect = elt.getBoundingClientRect()
-// The result in emptyObj is {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
-```
-
-`DOMRect` properties `top`, `left`,
-`right`, and `bottom` are computed using the values of the
-object's other properties.
-
 ## Browser compatibility
 
 {{Compat}}
@@ -220,7 +181,5 @@ object's other properties.
 ## See also
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN:
-  `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
-- [MSDN:
-  `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`

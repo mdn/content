@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.append()
 slug: Web/API/StylePropertyMap/append
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,22 +21,22 @@ The **`append()`** method of the
 ## Syntax
 
 ```js
-StylePropertyMap.append(property,value)
+append(property, value)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : An identifier indicating the stylistic feature (e.g. font, width, background
     color) to add.
-- value
+- `value`
   - : The value the given property should have.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows an extra background image value being added to the
 {{cssxref('background-image')}} property of the element, using

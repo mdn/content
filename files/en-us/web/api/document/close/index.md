@@ -1,6 +1,7 @@
 ---
 title: Document.close()
 slug: Web/API/Document/close
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -19,6 +20,14 @@ document, opened with {{domxref("Document.open()")}}.
 ```js
 close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

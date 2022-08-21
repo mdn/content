@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.equals()
 slug: Web/API/CSSNumericValue/equals
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -28,12 +29,12 @@ equals(number)
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
-A {{jsxref('Boolean')}}.
+A boolean value.
 
 ### Exceptions
 

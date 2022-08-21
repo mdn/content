@@ -1,6 +1,7 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -28,6 +29,10 @@ createProcessingInstruction(target, data)
 - `target` is a string containing the first part of the processing instruction (i.e., `<?target … ?>`)
 - `data` is a string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
@@ -40,8 +45,8 @@ createProcessingInstruction(target, data)
 ## Examples
 
 ```js
-var doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-var pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
+const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css"');
 
 doc.insertBefore(pi, doc.firstChild);
 

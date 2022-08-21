@@ -33,7 +33,7 @@ Our final Ember article provides you with a list of resources that you can use t
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -54,7 +54,7 @@ Our final Ember article provides you with a list of resources that you can use t
   - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
 - [Ember.JS API Documentation](https://api.emberjs.com/ember/release)
-- [Ember.JS Discord Server](https://discord.gg/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
+- [Ember.JS Discord Server](https://discord.com/invite/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
 
 ## General troubleshooting, gotchas, and misconceptions
 
@@ -68,7 +68,7 @@ For _framework-specific_ things, there is the [ember-inspector add-on](https://g
 - Components
 - Services
 - Promises
-- Data (i.e: from a remote API — from ember-data, by default)
+- Data (i.e., from a remote API — from ember-data, by default)
 - Deprecation Information
 - Render Performance
 
@@ -85,7 +85,7 @@ Not at all. While `ember-data` solves _the most common problems_ that any app de
 data will run in to, it is possible to roll your own front-end data client. A common
 alternative is to any fully-featured front-end data client is [The Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-Using the design patterns provided by the framework, a `Route` using `fetch()` would look something  like this:
+Using the design patterns provided by the framework, a `Route` using `fetch()` would look something like this:
 
 ```js
 import Route from '@ember/routing/route';
@@ -120,7 +120,7 @@ See also: [ReactiveConf 2017: Secrets of the Glimmer VM](https://www.youtube.com
 
 More concretely, using `mut` allows for template-only settings functions to be declared:
 
-```js
+```html
 <Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{fn (mut this.someData) (not this.someData)}}
@@ -146,11 +146,11 @@ export default class Example extends Component {
 
 Which would then be called in the template like so:
 
-```js
+```html
 <Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} />
 ```
 
-Due to the conciseness of using `mut`, it may be desireable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
+Due to the conciseness of using `mut`, it may be desirable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
 
 There have been a couple of new ideas put together into the form of addons that use the public APIs, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
 by introducing more obvious / "less magic" concepts, avoiding build-time transforms and
@@ -158,7 +158,7 @@ implicit Glimmer VM behavior.
 
 With `ember-set-helper`:
 
-```js
+```html
 <Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{set this "someData" (not this.someData)}}
@@ -167,7 +167,7 @@ With `ember-set-helper`:
 
 With `ember-box`:
 
-```js
+```html
 \{{#let (box this.someData) as |someData|}}
   <Checkbox
     @value=\{{unwrap someData}}

@@ -107,7 +107,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
           </li>
           <li>
             Blog posts and comments need only display plain text.
-            There is no need to support any sort of HTML markup (e.g. links, images, bold/italic, etc).
+            There is no need to support any sort of HTML markup (e.g. links, images, bold/italic, etc.).
           </li>
         </ul>
       </td>
@@ -301,7 +301,7 @@ We briefly talked about passing a context to the template in a class-based view 
 
 ```python
 class SomeView(generic.ListView):
-    ...
+    # …
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context

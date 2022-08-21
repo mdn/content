@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.initMouseEvent
 ---
-{{APIRef("DOM Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the
 value of a mouse event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).
@@ -65,22 +66,22 @@ initMouseEvent(type, canBubble, cancelable, view,
     {{domxref("MouseEvent.clientY")}}.
 - `ctrlKey`
 
-  - : whether or not <kbd>control</kbd> key was depressed during the Event. Sets the value
+  - : whether or not <kbd>control</kbd> key was pressed during the Event. Sets the value
     of {{domxref("MouseEvent.ctrlKey")}}.
 
 - `altKey`
 
-  - : whether or not <kbd>alt</kbd> key was depressed during the Event. Sets the value of
+  - : whether or not <kbd>alt</kbd> key was pressed during the Event. Sets the value of
     {{domxref("MouseEvent.altKey")}}.
 
 - `shiftKey`
 
-  - : whether or not <kbd>shift</kbd> key was depressed during the Event. Sets the value
+  - : whether or not <kbd>shift</kbd> key was pressed during the Event. Sets the value
     of {{domxref("MouseEvent.shiftKey")}}.
 
 - `metaKey`
 
-  - : whether or not <kbd>meta</kbd> key was depressed during the Event. Sets the value of
+  - : whether or not <kbd>meta</kbd> key was pressed during the Event. Sets the value of
     {{domxref("MouseEvent.metaKey")}}.
 
 - `button`
@@ -89,6 +90,10 @@ initMouseEvent(type, canBubble, cancelable, view,
   - : the event's [related EventTarget](/en-US/docs/Web/API/MouseEvent/relatedTarget). Only used
     with some event types (e.g., `mouseover` and `mouseout`). In
     other cases, pass `null`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -104,16 +109,15 @@ initMouseEvent(type, canBubble, cancelable, view,
 ### JavaScript
 
 ```js
-document.body.onclick = function(){
-  e = arguments[0];
-  var dt = e.target,stag = dt.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = stag;
+document.body.onclick = (event) => {
+  const elementTag = event.target.tagName.toLowerCase();
+  document.getElementById("out").innerHTML = elementTag;
 };
 
-var simulateClick = function(){
-  var evt = document.createEvent("MouseEvents");
-  evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
-  document.body.dispatchEvent(evt);
+const simulateClick = () => {
+  const event = document.createEvent("MouseEvents");
+  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  document.body.dispatchEvent(event);
 }
 
 simulateClick();
@@ -121,7 +125,7 @@ simulateClick();
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

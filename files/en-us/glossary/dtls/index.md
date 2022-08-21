@@ -11,7 +11,7 @@ These features are especially useful for one of the most common areas in which D
 
 ## See also
 
-- {{Interwiki("wikipedia", "Datagram Transport Layer Security")}} on Wikipedia
+- [Datagram Transport Layer Security](https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) on Wikipedia
 - Specifications:
 
   - {{RFC(6347, "Datagram Transport Layer Security Version 1.2")}}

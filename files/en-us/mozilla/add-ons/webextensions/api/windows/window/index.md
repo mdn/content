@@ -25,30 +25,30 @@ Values of this type are `objects`. They contain the following properties:
   - : `boolean`. Whether the window is set to be always on top.
 - `focused`
   - : `boolean`. Whether the window is currently the focused window.
-- `height`{{optional_inline}}
+- `height` {{optional_inline}}
   - : `integer`. The height of the window, including the frame, in pixels.
 
 <!---->
 
-- `id`{{optional_inline}}
+- `id` {{optional_inline}}
   - : `integer`. The ID of the window. Window IDs are unique within a browser session.
 - `incognito`
   - : `boolean`. Whether the window is incognito (private).
-- `left`{{optional_inline}}
+- `left` {{optional_inline}}
   - : `integer`. The offset of the window from the left edge of the screen in pixels.
-- `sessionId`{{optional_inline}}
+- `sessionId` {{optional_inline}}
   - : `string`. The session ID used to uniquely identify a Window obtained from the {{WebExtAPIRef('sessions')}} API.
-- `state`{{optional_inline}}
+- `state` {{optional_inline}}
   - : A {{WebExtAPIRef('windows.WindowState')}} value representing the state of this browser window — maximized, minimized, etc.
-- `tabs`{{optional_inline}}
+- `tabs` {{optional_inline}}
   - : Array of {{WebExtAPIRef('tabs.Tab')}} objects representing the current tabs in the window.
-- `title`{{optional_inline}}
+- `title` {{optional_inline}}
   - : The title of the browser window. Requires "tabs" permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the active tab's URL. Read only.
-- `top`{{optional_inline}}
+- `top` {{optional_inline}}
   - : `integer`. The offset of the window from the top edge of the screen in pixels.
-- `type`{{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{WebExtAPIRef('windows.WindowType')}} value representing the type of browser window this is — normal browser window, popup, etc.
-- `width`{{optional_inline}}
+- `width` {{optional_inline}}
   - : `integer`. The width of the window, including the frame, in pixels.
 
 ## Browser compatibility
@@ -57,7 +57,7 @@ Values of this type are `objects`. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-Window) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-Window) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

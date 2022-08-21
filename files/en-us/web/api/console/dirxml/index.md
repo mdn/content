@@ -1,6 +1,7 @@
 ---
 title: console.dirxml()
 slug: Web/API/console/dirxml
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -27,6 +28,10 @@ dirxml(object)
 
 - `object`
   - : A JavaScript object whose properties should be output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

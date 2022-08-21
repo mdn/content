@@ -160,7 +160,7 @@ remove(item) {
 }
 ```
 
-The `remove()` method uses the JavaScript `Array.splice()` method to remove one item at at the `indexOf` the relevant item.
+The `remove()` method uses the JavaScript `Array.splice()` method to remove one item at the `indexOf` the relevant item.
 In plain English, this means that the `splice()` method removes the item from the array.
 For more information on the `splice()` method, see the MDN Web Docs article on [`Array.prototype.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 

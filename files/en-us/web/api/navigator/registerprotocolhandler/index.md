@@ -1,6 +1,7 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -49,9 +50,13 @@ registerProtocolHandler(scheme, url, title)
     > The `title` should still be set because some browsers **still require it** (see the [compatibility table below](#browser_compatibility)).
     > Browsers that support the updated spec most likely will be accept but ignore the title.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
-- {{Exception("SecurityError")}}
+- `SecurityError` {{domxref("DOMException")}}
   - : The user agent blocked the registration.
     This might happen if:
 
@@ -60,7 +65,7 @@ registerProtocolHandler(scheme, url, title)
     - The browser requires that this function is called from a secure context.
     - The browser requires that the handler's URL be over HTTPS.
 
-- {{Exception("SyntaxError")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : The `%s` placeholder is missing from the handler URL.
 
 ## Permitted schemes
@@ -73,7 +78,7 @@ A **custom scheme** may be registered as long as:
 - The custom scheme's name includes at least 1 letter after the `web+` prefix
 - The custom scheme has only lowercase ASCII letters in its name.
 
-For example, `web+burger`, as shown in the [Example](#example) below.
+For example, `web+burger`, as shown in the [Example](#examples) below.
 
 Otherwise, the scheme must be one of the following:
 

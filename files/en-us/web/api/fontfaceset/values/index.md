@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.values()
 slug: Web/API/FontFaceSet/values
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,6 +19,10 @@ The **`values()`** method of the {{domxref("FontFaceSet")}} interface returns a 
 ```js
 values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

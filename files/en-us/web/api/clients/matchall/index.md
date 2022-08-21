@@ -1,10 +1,10 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
+page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -23,6 +23,7 @@ service worker.
 ## Syntax
 
 ```js
+matchAll()
 matchAll(options)
 ```
 
@@ -33,14 +34,16 @@ matchAll(options)
   - : An options object allowing you to set options for the matching operation. Available
     options are:
 
-    - `includeUncontrolled`: A boolean value — if set to
-      `true`, the matching operation will return all service worker clients
-      who share the same origin as the current service worker. Otherwise, it returns
-      only the service worker clients controlled by the current service worker. The
-      default is `false`.
-    - `type`: Sets the type of clients you want matched. Available values
-      are `"window"`, `"worker"`, `"sharedworker"`, and
-      `"all"`. The default is `"window"`.
+    - `includeUncontrolled`
+      - : A boolean value — if set to
+        `true`, the matching operation will return all service worker clients
+        who share the same origin as the current service worker. Otherwise, it returns
+        only the service worker clients controlled by the current service worker. The
+        default is `false`.
+    - `type`
+      - : Sets the type of clients you want matched. Available values
+        are `"window"`, `"worker"`, `"sharedworker"`, and
+        `"all"`. The default is `"window"`.
 
 ### Return value
 
@@ -51,10 +54,10 @@ order, correct as per spec.
 ## Examples
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for (var i = 0 ; i < clientList.length ; i++) {
-    if (clientList[i].url === 'index.html') {
-      clients.openWindow(clientList[i]);
+clients.matchAll(options).then((clientList) => {
+  for (const client of clientList) {
+    if (client.url === 'index.html') {
+      clients.openWindow(client);
       // or do something else involving the matching client
     }
   }

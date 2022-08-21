@@ -13,7 +13,7 @@ Hoisting allows functions to be safely used in code before they are declared.
 Variable and class _declarations_ are also hoisted, so they too can be referenced before they are declared.
 Note that doing so can lead to unexpected errors, and is not generally recommended.
 
-> **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html).
+> **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://262.ecma-international.org/6.0/).
 > Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.
 
 ## Function hoisting
@@ -24,7 +24,7 @@ One of the advantages of hoisting is that it lets you use a function before you 
 catName("Tiger");
 
 function catName(name) {
-  console.log("My cat's name is " + name);
+  console.log(`My cat's name is ${name}`);
 }
 /*
 The result of the code above is: "My cat's name is Tiger"
@@ -35,7 +35,7 @@ Without hoisting you would _have_ to write the same code like this:
 
 ```js
 function catName(name) {
-  console.log("My cat's name is " + name);
+  console.log(`My cat's name is ${name}`);
 }
 
 catName("Tiger");
@@ -92,7 +92,7 @@ The code snippet below will work, because even though it isn't hoisted, the vari
 a = 'Cran'; // Initialize a
 b = 'berry'; // Initialize b
 
-console.log(a + "" + b); // 'Cranberry'
+console.log(`${a}${b}`); // 'Cranberry'
 ```
 
 ### `let` and `const` hoisting

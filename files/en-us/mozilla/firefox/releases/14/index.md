@@ -31,7 +31,7 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 - The `GeoPositionAddress` interface, an obsolete part of the [Geolocation](/en-US/docs/Web/API/Geolocation_API) API, has been removed.
 - {{domxref("Storage", "localStorage/sessionStorage")}} now correctly return `undefined` instead of `null` for undeclared keys through property access.ff
 - The {{domxref("ImageData")}} object has been implemented ({{bug(550309)}}).
-- Attributes and methods related to child nodes on {{domxref("Attr")}} interface where obsoleted ({{bug(737122)}}).
+- Attributes and methods related to child nodes on {{domxref("Attr")}} interface were obsoleted ({{bug(737122)}}).
 
 ### CSS
 
@@ -64,7 +64,7 @@ _No change._
 
 ### XUL
 
-- Added the new {{XULAttr("fullscreenbutton")}} attribute to the {{XULElem("window")}} element; setting this to `true` adds a button to the window's chrome to enable full screen mode.
+- Added the new `fullscreenbutton` attribute to the `<window>` element; setting this to `true` adds a button to the window's chrome to enable full screen mode.
 
 ### Interfaces
 
@@ -75,7 +75,7 @@ _No change._
 
 ### Spellchecking
 
-- Dictionary names are now parsed as full [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
+- Dictionary names are now parsed as full [BCP 47](https://www.rfc-editor.org/info/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
 
 ## See also
 

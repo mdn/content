@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -29,7 +30,7 @@ setCustomValidity(message)
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.form
 slug: Web/API/HTMLSelectElement/form
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSelectElement

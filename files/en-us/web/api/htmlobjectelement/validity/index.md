@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.validity
 slug: Web/API/HTMLObjectElement/validity
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

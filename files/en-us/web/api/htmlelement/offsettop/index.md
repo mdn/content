@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -24,8 +25,8 @@ A number.
 ## Examples
 
 ```js
-var d = document.getElementById("div1");
-var topPos = d.offsetTop;
+const d = document.getElementById("div1");
+const topPos = d.offsetTop;
 
 if (topPos > 10) {
   // object offset is more

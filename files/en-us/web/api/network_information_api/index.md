@@ -1,17 +1,20 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
   - Network Information API
   - Reference
   - WebAPI
-browser-compat: api.NetworkInformation
+browser-compat:
+  - api.NetworkInformation
+  - api.Navigator.connection
 ---
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
-The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.).
+The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
 This can be used to select high definition content or low definition content based on the user's connection.
 
 The interface consists of a single {{domxref("NetworkInformation")}} object, an instance of which is returned by the {{domxref("Navigator.connection")}} property.
@@ -30,15 +33,14 @@ The interface consists of a single {{domxref("NetworkInformation")}} object, an 
 This example watches for changes to the user's connection.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var type = connection.effectiveType;
+let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log("Connection type changed from " + type + " to " + connection.effectiveType);
-  type = connection.effectiveType;
+  console.log(`Connection type changed from ${type} to ${navigator.connection.effectiveType}`);
+  type = navigator.connection.effectiveType;
 }
 
-connection.addEventListener('change', updateConnectionStatus);
+navigator.connection.addEventListener('change', updateConnectionStatus);
 ```
 
 ### Preload large resources
@@ -47,7 +49,7 @@ The connection object is useful for deciding whether to preload resources that t
 
 ```js
 let preloadVideo = true;
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const connection = navigator.connection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
     preloadVideo = false;
@@ -59,18 +61,10 @@ if (connection) {
 
 {{Specifications}}
 
-{{Specifications("api.Navigator.connection")}}
-
 ## Browser compatibility
-
-### NetworkInformation
 
 {{Compat}}
 
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
-
 ## See also
 
-- [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)

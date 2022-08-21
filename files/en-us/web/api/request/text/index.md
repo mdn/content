@@ -1,6 +1,7 @@
 ---
 title: Request.text()
 slug: Web/API/Request/text
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -19,9 +20,7 @@ The response is *always* decoded using UTF-8.
 ## Syntax
 
 ```js
-request.text().then(function (text) {
-  // do something with the text sent in the request
-});
+text()
 ```
 
 ### Parameters
@@ -42,7 +41,7 @@ const request = new Request('/myEndpoint', {
   body: text
 });
 
-request.text().then(function(text) {
+request.text().then((text) => {
   // do something with the text sent in the request
 });
 ```

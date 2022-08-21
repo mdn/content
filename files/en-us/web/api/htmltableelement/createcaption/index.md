@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -27,6 +28,10 @@ it, and then returns it.
 ```js
 createCaption()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -55,7 +60,7 @@ caption.textContent = 'This caption was created by JavaScript!';
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

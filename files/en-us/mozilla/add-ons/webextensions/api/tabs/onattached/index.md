@@ -65,9 +65,9 @@ Listen for attach events, and log the info:
 
 ```js
 function handleAttached(tabId, attachInfo) {
-  console.log("Tab: " + tabId + " attached");
-  console.log("New window: " + attachInfo.newWindowId);
-  console.log("New index: " + attachInfo.newPosition);
+  console.log(`Tab: ${tabId} attached`);
+  console.log(`New window: ${attachInfo.newWindowId}`);
+  console.log(`New index: ${attachInfo.newPosition}`);
 }
 
 browser.tabs.onAttached.addListener(handleAttached);
@@ -79,7 +79,7 @@ browser.tabs.onAttached.addListener(handleAttached);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onAttached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onAttached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

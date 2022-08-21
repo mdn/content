@@ -128,7 +128,7 @@ a[href="http://example.com"] {
 
 {{Specifications}}
 
-Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
+Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](https://wiki.csswg.org/spec/css4-ui#pointer-events).
 
 ## Browser compatibility
 
@@ -138,5 +138,5 @@ Its extension to HTML elements, though present in early drafts of CSS Basic User
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
 - The SVG attribute {{SVGAttr("visibility")}}
-- [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
+- [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
 - {{cssxref("user-select")}} - controls whether the user can select text

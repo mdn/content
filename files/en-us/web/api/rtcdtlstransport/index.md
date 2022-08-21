@@ -1,10 +1,10 @@
 ---
 title: RTCDtlsTransport
 slug: Web/API/RTCDtlsTransport
+page-type: web-api-interface
 tags:
   - API
   - Draft
-  - Experimental
   - Interface
   - NeedsContent
   - NeedsExample
@@ -37,13 +37,13 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 ### Event handlers
 
 - {{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function the browser calls
-    when the{{DOMxRef("RTCDtlsTransport.error_event", "error")}} event is received.
+    when the {{DOMxRef("RTCDtlsTransport.error_event", "error")}} event is received.
 - {{DOMxRef("RTCDtlsTransport.onstatechange", "onstatechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function the browser calls
-    when the{{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}} event is received.
+    when the {{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}} event is received.
 
 ## Methods
 
@@ -106,7 +106,7 @@ This example presents a function, `tallySenders()`, which iterates over an `RTCP
 ```js
 let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });
 
-/* ... */
+// …
 
 function tallySenders(pc) {
   let results = {
@@ -119,7 +119,7 @@ function tallySenders(pc) {
   };
 
   let senderList = pc.getSenders();
-  senderList.forEach(sender => {
+  senderList.forEach((sender) => {
     let transport = sender.transport;
 
     if (!transport) {

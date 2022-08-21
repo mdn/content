@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -24,6 +25,10 @@ remove(index)
 
 - `index` is a zero-based long for the index of the {{ domxref("HTMLOptionElement") }}
   to remove from the collection. If the index is not found the method has no effect.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

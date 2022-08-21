@@ -1,12 +1,14 @@
 ---
 title: EcdhKeyDeriveParams
 slug: Web/API/EcdhKeyDeriveParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
   - EcdhKeyDeriveParams
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdhKeyDeriveParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -19,7 +21,7 @@ The parameters for ECDH `deriveKey()` therefore include the other entity's publi
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `ECDH`.
+  - : A string. This should be set to `ECDH`.
 - `public`
   - : A {{domxref("CryptoKey")}} object representing the public key of the other entity.
 
@@ -29,22 +31,7 @@ See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-EcdhKeyDeriveParams', 'SubtleCrypto.EcdhKeyDeriveParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -12,7 +12,7 @@ tags:
 
 The **`nearest`** instructions, are used for getting the value of a number rounded to the nearest integer.
 
-{{EmbedInteractiveExample("pages/wat/nearest.html")}}
+{{EmbedInteractiveExample("pages/wat/nearest.html", "tabbed-standard")}}
 
 ## Syntax
 

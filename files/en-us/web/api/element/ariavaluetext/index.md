@@ -1,6 +1,7 @@
 ---
 title: Element.ariaValueText
 slug: Web/API/Element/ariaValueText
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,14 +18,14 @@ The **`ariaValueText`** property of the {{domxref("Element")}} interface reflect
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
 In this example the `aria-valuetext` attribute on the element with an ID of `slider` is set to "Sunday" to give a human-readable value for the range. Using `ariaValueText` we update the value to "Monday".
 
 ```html
-<div role="slider" aria-valuenow="1"
+<div id="slider" role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
   aria-valuetext="Sunday">
 ```

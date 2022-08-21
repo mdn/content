@@ -53,9 +53,9 @@ let urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
-    console.log(urlToRemove  + " was removed");
+    console.log(`${urlToRemove} was removed`);
   } else {
-    console.log(urlToRemove  + " was not removed");
+    console.log(`${urlToRemove} was not removed`);
   }
 }
 
@@ -78,7 +78,7 @@ Remove the last-visited page from history, with a listener to {{WebExtAPIRef("hi
 ```js
 function onRemoved(removeInfo) {
   if (removeInfo.urls.length) {
-    console.log("Removed: " + removeInfo.urls[0]);
+    console.log(`Removed: ${removeInfo.urls[0]}`);
   }
 }
 
@@ -86,7 +86,7 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 
 function onGot(results) {
   if (results.length) {
-    console.log("Removing: " + results[0].url);
+    console.log(`Removing: ${results[0].url}`);
     browser.history.deleteUrl({url: results[0].url});
   }
 }
@@ -102,7 +102,7 @@ searching.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-deleteUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

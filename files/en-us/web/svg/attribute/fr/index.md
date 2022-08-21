@@ -46,8 +46,7 @@ The following example presents two circles: the first one has `fr` set to `5%` w
 </svg>
 ```
 
-{{EmbedLiveSample("Changing the gradient's radius", "480", "200")}}
-
+{{EmbedLiveSample("changing_the_value_of_fr", "480", "200")}}
 
 ### The focal point's relationship to `(fx, fy)`
 
@@ -74,7 +73,7 @@ This example has `fr` equal to `5%` and is representing how the attributes `fx` 
 </svg>
 ```
 
-{{EmbedLiveSample("The radial gradient's relationship to (fx, fy)", "200", "200")}}
+{{EmbedLiveSample("the_focal_points_relationship_to_fx_fy", "200", "200")}}
 
 ## Usage notes
 
@@ -97,24 +96,7 @@ This example has `fr` equal to `5%` and is representing how the attributes `fx` 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementFRAttribute", "fr")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

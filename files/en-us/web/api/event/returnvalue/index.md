@@ -1,13 +1,14 @@
 ---
 title: Event.returnValue
 slug: Web/API/Event/returnValue
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Deprecated
 browser-compat: api.Event.returnValue
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{domxref("Event")}} property
 **`returnValue`** indicates whether the default action for

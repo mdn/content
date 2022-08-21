@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -24,6 +25,14 @@ events.
 ```js
 click()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -58,6 +67,6 @@ function myFunction() {
 
 - Related event handlers
 
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
-  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("Element.click_event", "Element.onclick")}}
+  - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
+  - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

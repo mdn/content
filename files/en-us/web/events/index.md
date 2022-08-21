@@ -5,6 +5,7 @@ tags:
   - Event
   - Overview
   - Reference
+spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
 [Events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
 
@@ -1111,9 +1112,9 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("IDBDatabase")}}
 
-  - [abort event](/en-US/docs/Web/API/IDBDatabase/abort_event)
+  - [abort event](/en-US/docs/Web/API/IDBTransaction/abort_event)
   - [close event](/en-US/docs/Web/API/IDBDatabase/close_event)
-  - [error event](/en-US/docs/Web/API/IDBDatabase/error_event)
+  - [error event](/en-US/docs/Web/API/IDBTransaction/error_event)
   - [versionchange event](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}
@@ -1407,9 +1408,10 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 ## Specifications
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#event-handler-attributes', 'event handlers')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'webappapis.html#event-handler-attributes', 'event handlers')}}     | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul>{{ListSubpages}}</section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ol>{{ListSubpages}}
+</section>

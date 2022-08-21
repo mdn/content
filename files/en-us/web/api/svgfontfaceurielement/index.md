@@ -1,6 +1,7 @@
 ---
 title: SVGFontFaceUriElement
 slug: Web/API/SVGFontFaceUriElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

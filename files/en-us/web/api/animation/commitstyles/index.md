@@ -1,6 +1,7 @@
 ---
 title: Animation.commitStyles()
 slug: Web/API/Animation/commitStyles
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -26,16 +27,16 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt => {
+document.body.addEventListener('mousemove', (evt) => {
   let anim = divElem.animate(
-    { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
+    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
   );
 

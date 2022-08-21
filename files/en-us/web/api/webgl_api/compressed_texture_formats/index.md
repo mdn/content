@@ -1,6 +1,7 @@
 ---
 title: Compressed texture formats
 slug: Web/API/WebGL_API/Compressed_texture_formats
+page-type: guide
 ---
 The WebGL API provides methods to use compressed texture formats. These are useful to increase texture detail while limiting the additional video memory necessary. By default, no compressed formats are available: a corresponding compressed texture format extension must first be enabled.
 
@@ -37,7 +38,7 @@ async function getCompressedTextureIfAvailable(gl) {
   if (ext) {
     // the file is already in the correct compressed format
     const dataArrayBuffer = await fetch('/textures/foobar512x512.RGBA_S3TC_DXT1')
-      .then(response => response.arrayBuffer());
+      .then((response) => response.arrayBuffer());
     gl.compressedTexImage2D(gl.TEXTURE_2D,
       0, // set the base image level
       ext.COMPRESSED_RGBA_S3TC_DXT1_EXT, // the compressed format we are using

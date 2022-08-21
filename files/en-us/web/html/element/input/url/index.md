@@ -15,7 +15,7 @@ tags:
   - Text
   - URL
   - control
-browser-compat: html.elements.input.input-url
+browser-compat: html.elements.input.type_url
 ---
 
 {{HTMLRef("Input_types")}}
@@ -32,7 +32,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} representing a URL, or empty</td>
+      <td>A string representing a URL, or empty</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -80,7 +80,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
 2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
@@ -167,11 +167,9 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 
 ### mozactionhint
 
-A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
+A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-> **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
-
-Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
+This attribute has been deprecated: use the {{htmlattrxref("enterkeyhint")}} global attribute instead.
 
 ## Using URL inputs
 
@@ -330,26 +328,27 @@ Since inputs of type `url` validate against both the standard URL validation _an
 div {
   margin-bottom: 10px;
   position: relative;
-  }
+}
 
-  input[type="number"] {
-    width: 100px;
-  }
+input[type="number"] {
+  width: 100px;
+}
 
-  input + span {
-    padding-right: 30px;
-  }
+input + span {
+  padding-right: 30px;
+}
 
-  input:invalid+span:after {
-    position: absolute; content: '✖';
-    padding-left: 5px;
-  }
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
 
-  input:valid+span:after {
-    position: absolute;
-    content: '✓';
-    padding-left: 5px;
-  }
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 ```html

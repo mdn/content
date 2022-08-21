@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.values()
 slug: Web/API/CSSTransformValue/values
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -27,7 +28,7 @@ values()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

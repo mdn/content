@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -64,6 +65,10 @@ transformation matrix to set:
 The newer type consists of a single parameter, `matrix`, representing a 2D
 transformation matrix to set (technically, a `DOMMatrixInit` object; any
 object will do as long as it contains the above components as properties).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

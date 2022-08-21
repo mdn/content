@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.manufacturer
 slug: Web/API/MIDIPort/manufacturer
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,15 +16,15 @@ The **`manufacturer`** read-only property of the {{domxref("MIDIPort")}} interfa
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the manufacturer of the port.
+A string containing the manufacturer of the port.
 
 ## Examples
 
 The following example loops through all input ports and prints the manufacturer of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.manufacturer);
 }
 ```

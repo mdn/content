@@ -8,7 +8,7 @@ tags:
   - Reference
   - Roles
 ---
-ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. ARIA roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
+ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
 
 By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return *null*. The `role` attribute can provide semantics.
 
@@ -56,7 +56,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) (use {{HTMLElement('table')}})
 - [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) (use {{HTMLElement('dfn')}})
 
-These and  [`associationlist`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`blockquote`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles) are included for completeness, but in most cases are rarely, if ever, useful.
+These and [`associationlist`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`blockquote`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles) are included for completeness, but in most cases are rarely, if ever, useful.
 
 ### 2. Widget roles
 
@@ -72,7 +72,7 @@ The various widget role are used to define common interactive patterns. Similar 
 - [tabpanel](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
 - [treeitem](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
-Avoid using [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role), [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [gridcell](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [link](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role), [menuitem](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [menuitemcheckbox](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), [menuitemradio](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [progressbar](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), [radio](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [textbox](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), which we've  included for completeness. For most, semantic equivalents with accessible interactivity are available and supported. See the individual role documentation for more information.
+Avoid using [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role), [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [gridcell](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [link](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role), [menuitem](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [menuitemcheckbox](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), [menuitemradio](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [progressbar](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), [radio](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [textbox](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), which we've included for completeness. For most, semantic equivalents with accessible interactivity are available and supported. See the individual role documentation for more information.
 
 #### Composite widget roles
 
@@ -125,11 +125,11 @@ Avoid using [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [c
 
 > **Note:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only.
 
-> **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The WAI-ARIA specification
+> **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The <abbr>WAI-ARIA</abbr> specification
 
 ## Roles defined on MDN
 
-The following are the reference pages covering the WAI-ARIA roles discussed on <abbr title="Mozilla Developer Network">MDN</abbr>.
+The following are the reference pages covering the WAI-ARIA roles discussed on <abbr>MDN</abbr>.
 
 {{SubpagesWithSummaries}}
 

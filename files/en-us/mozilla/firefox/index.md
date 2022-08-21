@@ -31,7 +31,7 @@ Firefox is available in five **channels**.
 
 Each night we build Firefox from the latest code in [mozilla-central](https://hg.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
 
-[Download Firefox Nightly](https://nightly.mozilla.org/)
+[Download Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
 
 ### Firefox Developer Edition
 
@@ -55,7 +55,7 @@ After stabilizing for another four weeks in Beta, we're ready to ship the new fe
 
 Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.
 
-[Download Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
+[Download Firefox ESR](https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr)
 
 ## Contents
 

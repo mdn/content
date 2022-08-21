@@ -1,6 +1,7 @@
 ---
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
+page-type: web-api-static-method
 tags:
   - Barcode Detection API
   - BarcodeDetector
@@ -19,7 +20,7 @@ fulfills with an {{jsxref('Array')}} of supported barcode format types.
 ## Syntax
 
 ```js
-var supportedFormats = BarcodeDetector.getSupportedFormats();
+getSupportedFormats();
 ```
 
 ### Parameters
@@ -28,8 +29,8 @@ This method receives no parameters.
 
 ### Return value
 
-An {{jsxref('Array')}} of [supported
-barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
+A {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of
+[supported barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ### Exceptions
 
@@ -43,8 +44,8 @@ the results to the console.
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
+  .then((supportedFormats) => {
+    supportedFormats.forEach((format) => console.log(format));
   });
 ```
 

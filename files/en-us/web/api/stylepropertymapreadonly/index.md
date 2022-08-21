@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -13,12 +14,12 @@ browser-compat: api.StylePropertyMapReadOnly
 ---
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
+The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
 ## Properties
 
 - {{domxref('StylePropertyMapReadOnly.size')}}
-  - : Returns an unsinged long integer containing the size of the `StylePropertyMapReadOnly` object.
+  - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Methods
 

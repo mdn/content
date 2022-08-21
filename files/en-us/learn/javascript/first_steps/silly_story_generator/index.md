@@ -55,7 +55,7 @@ You have been provided with some raw HTML/CSS and a few text strings and JavaScr
 - Generates a silly story when the "Generate random story" button is pressed.
 - Replaces the default name "Bob" in the story with a custom name, only if a custom name is entered into the "Enter custom name" text field before the generate button is pressed.
 - Converts the default US weight and temperature quantities and units in the story into UK equivalents if the UK radio button is checked before the generate button is pressed.
-- Will generate another random silly story if you press the button again (and again...)
+- Generates a new random silly story every time the button is pressed.
 
 The following screenshot shows an example of what the finished program should output:
 
@@ -122,7 +122,7 @@ Completing the `result()` function:
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Silly story generator".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

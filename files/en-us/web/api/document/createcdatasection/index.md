@@ -1,6 +1,7 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ createCDATASection(data)
 
 ### Parameters
 
-- _data_ 
+- `data`
   - : A string containing the data to be added to the CDATA Section.
 
 ### Return value
@@ -31,9 +32,9 @@ A [CDATA Section](/en-US/docs/Web/API/CDATASection) node.
 ## Examples
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')
+const docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')
 
-var cdata = docu.createCDATASection('Some <CDATA> data & then some');
+const cdata = docu.createCDATASection('Some <CDATA> data & then some');
 
 docu.getElementsByTagName('xml')[0].appendChild(cdata);
 

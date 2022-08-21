@@ -1,6 +1,7 @@
 ---
 title: Gyroscope
 slug: Web/API/Gyroscope
+page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API
@@ -30,11 +31,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Properties
 
-- {{domxref('Gyroscope.x')}} {{readonlyinline}}
+- {{domxref('Gyroscope.x')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's x axis.
-- {{domxref('Gyroscope.y')}} {{readonlyinline}}
+- {{domxref('Gyroscope.y')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's y axis.
-- {{domxref('Gyroscope.z')}} {{readonlyinline}}
+- {{domxref('Gyroscope.z')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's z axis.
 
 ## Methods
@@ -52,10 +53,10 @@ The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'readin
 ```js
 let gyroscope = new Gyroscope({frequency: 60});
 
-gyroscope.addEventListener('reading', e => {
-  console.log("Angular velocity along the X-axis " + gyroscope.x);
-  console.log("Angular velocity along the Y-axis " + gyroscope.y);
-  console.log("Angular velocity along the Z-axis " + gyroscope.z);
+gyroscope.addEventListener('reading', (e) => {
+  console.log(`Angular velocity along the X-axis ${gyroscope.x}`);
+  console.log(`Angular velocity along the Y-axis ${gyroscope.y}`);
+  console.log(`Angular velocity along the Z-axis ${gyroscope.z}`);
 });
 gyroscope.start();
 ```

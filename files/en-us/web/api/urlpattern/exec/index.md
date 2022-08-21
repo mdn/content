@@ -1,6 +1,7 @@
 ---
 title: URLPattern.exec()
 slug: Web/API/URLPattern/exec
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,22 +25,22 @@ pattern.
 ## Syntax
 
 ```js
-exec(input);
-exec(input, baseURL);
+exec(input)
+exec(input, baseURL)
 ```
 
 ### Parameters
 
 - `input`
   - : The URL or URL parts to match against. This can either be a
-    {{domxref("USVString")}}, or an object providing the individual URL parts.
+    string, or an object providing the individual URL parts.
     The object members can be any of `protocol`, `username`, `password`,
     `hostname`, `port`, `pathname`, `search`, `hash`, or `baseURL`. Omitted
     parts in the object will be treated as empty strings. If the input cannot be
     parsed, or a relative URL without a base is provided, the method will return
     `null`.
 - `baseURL` {{optional_inline}}
-  - : A {{domxref("USVString")}} representing the base URL to use in cases where
+  - : A string representing the base URL to use in cases where
     `input` is a relative URL. If not specified, it defaults to `undefined`. If
     this parameter cannot be parsed, the method will return `null`.
 

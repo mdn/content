@@ -7,7 +7,7 @@ tags:
   - Constraint Validation API
   - HTML
   - Reference
-spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-pattern
+browser-compat: html.elements.input.pattern
 ---
 
 {{HTMLSidebar}}
@@ -99,13 +99,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
@@ -128,7 +128,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## See also
 

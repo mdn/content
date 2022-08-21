@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.toMatrix()
 slug: Web/API/CSSTransformValue/toMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -25,7 +26,7 @@ toMatrix()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

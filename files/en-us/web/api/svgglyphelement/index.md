@@ -1,6 +1,7 @@
 ---
 title: SVGGlyphElement
 slug: Web/API/SVGGlyphElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: treegrid role'
 slug: Web/Accessibility/ARIA/Roles/treegrid_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -10,6 +10,9 @@ tags:
   - Treegrid role
   - composite widget role
   - treegrid
+spec-urls:
+  - https://w3c.github.io/aria/#treegrid
+  - https://w3c.github.io/aria-practices/#treegrid
 ---
 
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
@@ -21,7 +24,7 @@ The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility
 
 A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row.
 
-The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are not hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent.
+The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent.
 
 When your grid UI calls for rows supporting `aria-expanded` or if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), use `treegrid` and not `grid`.
 
@@ -31,7 +34,7 @@ Each `row` or `gridcell` in a row should be keyboard focusable, and keyboard foc
 
 If the `treegrid` allows the user to choose just one item for an action, then it is known as a **single-select** treegrid. In single-select treegrids, the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
 
-If the treegrid supports selection of more than one row or cell, it is a **multi-select** treegrid. In the multi-select treegrid, the selected state is independent of the focus. The visual design and assistive technologies must distinguish between items that are selected and the item that has focus.  
+If the treegrid supports selection of more than one row or cell, it is a **multi-select** treegrid. In the multi-select treegrid, the selected state is independent of the focus. The visual design and assistive technologies must distinguish between items that are selected and the item that has focus.
 
 For multi-select treegrids, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the element with the `treegrid` role.  All selected rows or cells have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to true. All rows and cells that are selectable but not currently selected have `aria-selected` set to `false`. Don't include the `aria-selected` attribute on rows and cells that are not individually selectable as the presence of the attribute indicates to assistive technologies that the row or cell is selectable.
 
@@ -97,7 +100,7 @@ The following keyboard interactions need to be supported when an element in the 
 - <kbd>Enter</kbd>
   - : If cell-only focus is enabled and focus is on the first cell with the `aria-expanded` property, opens or closes the child rows. Otherwise, performs the default action for the cell.
 - <kbd>Tab</kbd>
-  - : If the row containing focus contains focusable elements such as an {{HTMLElement('input')}}, {{HTMLElement('button')}} or {{HTMLElement('a')}}, ,moves the focus to the next input in the row. If focus is on the last focusable element in the row, moves focus out of the treegrid widget to the next focusable element.
+  - : If the row containing focus contains focusable elements such as an {{HTMLElement('input')}}, {{HTMLElement('button')}} or {{HTMLElement('a')}}, moves the focus to the next input in the row. If focus is on the last focusable element in the row, moves focus out of the treegrid widget to the next focusable element.
 - <kbd>Right Arrow</kbd>
   - : If focus is on a collapsed row, expand the row. If focus is on an expanded row or is on a row that does not have child rows, moves focus to the first cell in the row. If focus is on the right-most cell in a row, focus does not move. If focus is on any other cell, moves focus one cell to the right.
 - <kbd>Left Arrow</kbd>
@@ -154,10 +157,7 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#treegrid","ARIA: treegrid role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#treegrid","treegrid role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

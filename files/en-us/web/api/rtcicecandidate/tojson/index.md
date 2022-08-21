@@ -1,6 +1,7 @@
 ---
-title: RTCIceCandidate. toJSON()
+title: RTCIceCandidate.toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Candidate
@@ -26,6 +27,10 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 ```js
 toJSON()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

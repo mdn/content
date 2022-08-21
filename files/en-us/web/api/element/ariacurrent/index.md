@@ -1,6 +1,7 @@
 ---
 title: Element.ariaCurrent
 slug: Web/API/Element/ariaCurrent
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects 
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"page"`
   - : Represents the current page within a set of pages.
@@ -36,7 +37,7 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screenreader announcement. Using `ariaCurrent` we can update that value.
+In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screen reader announcement. Using `ariaCurrent` we can update that value.
 
 ```html
 <nav>

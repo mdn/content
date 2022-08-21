@@ -1,6 +1,6 @@
 ---
 title: Accessible dynamic content
-slug: Web/Accessibility/Accessible_dynamic_content 
+slug: Web/Accessibility/Accessible_dynamic_content
 tags:
   - Accessibility
 ---

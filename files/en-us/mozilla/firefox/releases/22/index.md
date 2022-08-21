@@ -39,8 +39,8 @@ tags:
 - The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ({{bug("847370")}} and {{bug("850346")}}).
 - WebRTC: the Media Stream API and Peer Connection API are now supported by default.
 - Web Components: the {{domxref("Document.register")}} method has been implemented ({{bug("783129")}}).
-- The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construct and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
-- Manipulated data associated with a {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
+- The `ProgressEvent.initProgressEvent()` constructor method has been removed. Use the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construct and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
+- Manipulated data associated with a {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, or {{domxref("Element/paste_event", "paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
 - The {{domxref("HTMLTimeElement")}} interface has been implemented ({{bug("629801")}}).
 - When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type `SECURITY_ERR` ({{bug("587251")}}).
 
@@ -53,8 +53,8 @@ tags:
 
 ## Changes for add-on and Mozilla developers
 
-- The `properties` parameter has been removed from the {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} and {{ifmethod('nsITreeView','getRowProperties')}} methods of {{interface('nsITreeView')}}. These methods should now return a string of space-separated property names. ({{bug('407956')}})
-- The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
+- The `properties` parameter has been removed from the `nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names. ({{bug('407956')}})
+- The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
 - See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 
 ### Firefox Developer Tools

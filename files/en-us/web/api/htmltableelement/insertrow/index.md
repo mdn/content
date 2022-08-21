@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -100,7 +101,7 @@ addRow('my-table');
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

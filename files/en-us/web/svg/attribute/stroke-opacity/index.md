@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.stroke-opacity
 ---
 {{SVGRef}}
 
-The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc) applied to the stroke of a shape.
+The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc.) applied to the stroke of a shape.
 
 > **Note:** As a presentation attribute `stroke-opacity` can be used as a CSS property.
 
@@ -86,31 +86,7 @@ It's important to know that the stroke partially covers the fill of a shape, so 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeOpacityProperty", "stroke-opacity")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeOpacityProperty", "stroke-opacity")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

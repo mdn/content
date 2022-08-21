@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -24,7 +25,7 @@ The **`getVideoTracks()`** method of the
 ## Syntax
 
 ```js
-var mediaStreamTracks[] = mediaStream.getVideoTracks();
+getVideoTracks()
 ```
 
 ### Parameters
@@ -45,7 +46,7 @@ Early versions of this API included a special `VideoStreamTrack` interface
 which was used as the type for each entry in the list of video streams; however, this
 has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
-## Example
+## Examples
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses `getVideoTracks()` to
@@ -53,10 +54,10 @@ retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
   "ImageCapture()")}} constructor.
 
 ```js
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];

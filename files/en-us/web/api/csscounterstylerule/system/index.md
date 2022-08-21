@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.system
 slug: Web/API/CSSCounterStyleRule/system
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`system`** property of the {{domxref("CSSCounterStyleRule")}} interface ge
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

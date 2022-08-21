@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -42,44 +43,15 @@ createObjectStore(name, options)
 
   - : An options object whose attributes are optional parameters to the method. It
     includes the following properties:
-
-    <table class="no-markdown">
-      <thead>
-        <tr>
-          <th scope="col">Attribute</th>
-          <th scope="col">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>keyPath</code></td>
-          <td>
-            The
-            <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path"
-              >key path</a
-            >
-            to be used by the new object store. If empty or not specified, the
-            object store is created without a key path and uses
-            <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key"
-              >out-of-line keys</a
-            >. You can also pass in an array as a <code>keyPath</code>.
-          </td>
-        </tr>
-        <tr>
-          <td><code>autoIncrement</code></td>
-          <td>
-            If <code>true</code>, the object store has a
-            <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator"
-              >key generator</a
-            >. Defaults to <code>false</code>.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    Unknown parameters are ignored.
+    - `keyPath` {{optional_inline}}
+      - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path)
+        to be used by the new object store. If empty or not specified, the
+        object store is created without a key path and uses
+        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key").
+        You can also pass in an array as a `keyPath`.
+    - `autoIncrement` {{optional_inline}}
+      - : If `true`, the object store has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator).
+        Defaults to <code>false</code>.
 
 ### Return value
 
@@ -109,23 +81,23 @@ one of the following types:
 
 ```js
 // Let us open our database
-var request = window.indexedDB.open("toDoList", 4);
+const request = window.indexedDB.open("toDoList", 4);
 
 // This handler is called when a new version of the database
 // is created, either when one has not been created before
 // or when a new version number is submitted by calling
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
-request.onupgradeneeded = event => {
-  var db = event.target.result;
+request.onupgradeneeded = (event) => {
+  const db = event.target.result;
 
-  db.onerror = event => {
+  db.onerror = (event) => {
     note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 

@@ -115,7 +115,7 @@ To internationalize strings, specify them like this:
 "description": "__MSG_extensionDescription__",
 ```
 
-Here, we are retrieving message strings dependant on the browser's locale, rather than just including static strings.
+Here, we are retrieving message strings dependent on the browser's locale, rather than just including static strings.
 
 To call a message string like this, you need to specify it like this:
 
@@ -247,19 +247,19 @@ Take the following example:
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "color", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, ...}`
+        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
 

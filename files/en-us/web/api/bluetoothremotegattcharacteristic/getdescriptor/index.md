@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.getDescriptor()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,7 +13,7 @@ tags:
   - getDescriptor()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptor
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.getDescriptor()`** method
 returns a {{jsxref("Promise")}} that resolves to the
@@ -23,6 +24,10 @@ first {{domxref("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.
 ```js
 getDescriptor(bluetoothDescriptorUUID)
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: Navigator.taintEnabled()
 slug: Web/API/Navigator/taintEnabled
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -23,6 +24,14 @@ method only stays for maintaining compatibility with very old scripts.
 ```js
 taintEnabled()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

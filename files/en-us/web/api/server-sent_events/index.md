@@ -1,11 +1,13 @@
 ---
 title: Server-sent events
 slug: Web/API/Server-sent_events
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - SSE
   - Server-sent events
+spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -30,9 +32,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Specifications
 
-| Specification                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------ |
-| [HTML Living Standard # server-sent-events](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events) |
+{{Specifications}}
 
 ## See also
 
@@ -54,5 +54,4 @@ To learn how to use server-sent events, see our article [Using server-sent event
 ### Other resources
 
 - A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Server-sent events using Asp.Net](https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)

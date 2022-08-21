@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 82 that will affe
 
 - Support for the new {{CSSxRef("::file-selector-button", "::file-selector-button")}} pseudo-element has been added. This pseudo-element represents the file selection button inside an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element ({{bug(1635675)}}, {{bug(1662478)}}).
 - We have improved error recovery for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes. These pseudo-classes now accept a forgiving selector list, where an invalid selector in the list will not render the entire list invalid ({{bug(1664718)}}).
-- `appearance: button` now applies only to buttons; the `button` value of  {{CSSxRef("appearance")}} will otherwise behave as `auto` ({{bug(1662703)}}).
+- `appearance: button` now applies only to buttons; the `button` value of {{CSSxRef("appearance")}} will otherwise behave as `auto` ({{bug(1662703)}}).
 
 #### Removals
 

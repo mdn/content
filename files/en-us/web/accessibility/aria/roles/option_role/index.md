@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - option role
+spec-urls:
+  - https://w3c.github.io/aria/#option
+  - https://w3c.github.io/aria-practices/#Listbox
 ---
 The `option` role is used for selectable items in a `listbox`.
 
@@ -21,7 +24,7 @@ The `option` role is for identifying selectable choices of a `listbox`. Options 
 
 Authors can also explicitly provide an accessible name by specifying [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the element with the `option` role. If using `aria-label` or `aria-labelledby`, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.
 
-It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
+It is highly recommended to use a {{HTMLElement('select')}} element or an {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
 
 ### All descendants are presentational
 
@@ -88,22 +91,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Specifications
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("ARIA","#option","ARIA option role")}}</td>
-      <td>{{Spec2('ARIA')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}}</td>
-      <td>{{Spec2('ARIA Authoring Practices 1.2')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

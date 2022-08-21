@@ -1,15 +1,17 @@
 ---
 title: BluetoothUUID.canonicalUUID()
 slug: Web/API/BluetoothUUID/canonicalUUID
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
+  - Experimental
   - canonicalUUID()
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.canonicalUUID
 ---
-{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`canonicalUUID()`**  method of the {{domxref("BluetoothUUID")}} interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
 
@@ -22,7 +24,7 @@ canonicalUUID(alias)
 ### Parameters
 
 - `alias`
-  - : A {{domxref("DOMString","string")}} containing a 16- or 32- bit UUID alias.
+  - : A string containing a 16-bit or 32-bit UUID alias.
 
 ### Return value
 

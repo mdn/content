@@ -1,6 +1,7 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -44,6 +45,10 @@ profileEnd(profileName)
 
 - `profileName`
   - : The name to give the profile. This parameter is optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Browser compatibility
 

@@ -21,7 +21,7 @@ The **`source`** property returns a {{jsxref("String")}} containing the source t
 ### Using source
 
 ```js
-var regex = /fooBar/ig;
+const regex = /fooBar/ig;
 
 console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
 ```

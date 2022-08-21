@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.summary
 slug: Web/API/HTMLTableElement/summary
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

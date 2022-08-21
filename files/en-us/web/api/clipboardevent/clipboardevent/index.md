@@ -1,6 +1,7 @@
 ---
 title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
+page-type: web-api-constructor
 tags:
   - API
   - Clipboard
@@ -15,9 +16,9 @@ browser-compat: api.ClipboardEvent.ClipboardEvent
 ---
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent()`** constructor returns a newly created
-{{domxref("ClipboardEvent")}}, representing an event providing information related to
-modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and
+The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}},
+representing an event providing information related to modification of the clipboard,
+that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and
 {{domxref("Element/paste_event", "paste")}} events.
 
 ## Syntax
@@ -29,18 +30,21 @@ new ClipboardEvent(type, options)
 
 ### Parameters
 
-_The `ClipboardEvent()` constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}._
+- `type`
+  - : A string with the name of the type of the `ClipboardEvent`.
+    It is case-sensitive and browsers set it to `copy`, `cut`, or `paste`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `clipboardData` {{optional_inline}}
+      - : A {{domxref("DataTransfer")}} object containing the data concerned by the clipboard event. It defaults to `null`.
+    - `dataType` {{non-standard_inline}} {{optional_inline}}
+      - : A string containing the MIME-type of the data contained in the `data` argument. It defaults to `""`.
+    - `data` {{non-standard_inline}} {{optional_inline}}
+      - : A string containing the data concerned by the clipboard event. It defaults to `""`.
 
-- _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the type of the `ClipboardEvent`.
-    It is case-sensitive and can be: `'copy'`, `'cut'`, or `'paste'`.
-- *options* {{optional_inline}}
+### Return value
 
-  - : Options are as follows:
-
-    - `clipboardData`: A {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
-    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the `data` argument.
-    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.
+A new {{domxref("ClipboardEvent")}} object.
 
 ## Specifications
 

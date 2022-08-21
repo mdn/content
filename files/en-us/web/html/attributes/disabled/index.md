@@ -1,5 +1,5 @@
 ---
-title: disabled
+title: 'HTML attribute: disabled'
 slug: Web/HTML/Attributes/disabled
 tags:
   - Attribute
@@ -7,7 +7,14 @@ tags:
   - Constraint validation
   - Forms
   - required
-spec-urls: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
+browser-compat:
+  - html.elements.button.disabled
+  - html.elements.fieldset.disabled
+  - html.elements.input.disabled
+  - html.elements.optgroup.disabled
+  - html.elements.option.disabled
+  - html.elements.select.disabled
+  - html.elements.textarea.disabled
 ---
 
 {{HTMLSidebar}}
@@ -24,9 +31,9 @@ This Boolean disabled attribute indicates that the user cannot interact with the
 
 When a supporting element has the `disabled` attribute applied, the {{cssxref(":disabled")}} pseudo-class also applies to it. Conversely, elements that support the `disabled` attribute but don't have the attribute set match the {{cssxref(":enabled")}} pseudo-class.
 
-This Boolean attribute prevents the user from interacting with the button. If this attribute isn't set, the button can still be disabled from a containing element, for example `{{htmlelement('fieldset')}}`; if there is no containing element with the `disabled` attribute set, then the button is enabled.
+This Boolean attribute prevents the user from interacting with the button. If this attribute isn't set, the button can still be disabled from a containing element, for example {{htmlelement('fieldset')}}; if there is no containing element with the `disabled` attribute set, then the button is enabled.
 
-Firefox will, unlike other browsers, persist the dynamic disabled state of a `{{htmlelement('button')}}` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Attribute/autocomplete) attribute to control this feature.
+Firefox will, unlike other browsers, persist the dynamic disabled state of a {{htmlelement('button')}} across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to control this feature.
 
 ### Attribute interactions
 
@@ -110,7 +117,7 @@ When form controls are disabled, many browsers will display them in a lighter, g
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## See also
 

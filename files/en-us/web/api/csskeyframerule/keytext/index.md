@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframeRule.keyText
 slug: Web/API/CSSKeyframeRule/keyText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -16,7 +17,7 @@ The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface repre
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ### Exceptions
 

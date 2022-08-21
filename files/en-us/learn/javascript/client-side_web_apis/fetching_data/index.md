@@ -55,7 +55,7 @@ A web page consists of an HTML page and (usually) various other files, such as s
 
 ![Traditional page loading](traditional-loading.svg)
 
-This model works perfectly well for many sites. But consider a website that's very data-driven. For example, a library website like the [Vancouver Public Library](https://vpl.ca). Among other things you could think of a site like this as a user interface to a database. It might let you search for a particular genre of book, or might show you recommendations for books you might like, based on books you've previously borrowed. When you do this, it needs to update the page with the new set of books to display. But note that most of the page content — including items like the page header, sidebar, and footer — stays the same.
+This model works perfectly well for many sites. But consider a website that's very data-driven. For example, a library website like the [Vancouver Public Library](https://www.vpl.ca/). Among other things you could think of a site like this as a user interface to a database. It might let you search for a particular genre of book, or might show you recommendations for books you might like, based on books you've previously borrowed. When you do this, it needs to update the page with the new set of books to display. But note that most of the page content — including items like the page header, sidebar, and footer — stays the same.
 
 The trouble with the traditional model here is that we'd have to fetch and load the entire page, even when we only need to update one part of it. This is inefficient and can result in a poor user experience.
 
@@ -63,12 +63,12 @@ So instead of the traditional model, many websites use JavaScript APIs to reques
 
 ![Using fetch to update pages](fetch-update.svg)
 
-The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON). which is a good format for transferring structured data, but can also be HTML or just text.
+The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON), which is a good format for transferring structured data, but can also be HTML or just text.
 
 This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, and so on. With this model:
 
 - Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.
-- Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in countries that don't have ubiquitous fast Internet service.
+- Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in countries that don't have ubiquitous fast internet service.
 
 > **Note:** In the early days, this general technique was known as [Asynchronous](/en-US/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/en-US/docs/Glossary/AJAX)), because it tended to request XML data. This is normally not the case these days (you'd be more likely to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.
 
@@ -122,7 +122,7 @@ Finally we're ready to use the Fetch API:
 fetch(url)
   // fetch() returns a promise. When we have received a response from the server,
   // the promise's `then()` handler is called with the response.
-  .then( response => {
+  .then((response) => {
     // Our handler throws an error if the request did not succeed.
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -134,10 +134,10 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then( text => poemDisplay.textContent = text )
+  .then((text) => poemDisplay.textContent = text)
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch( error => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
 ```
 
 There's quite a lot to unpack in here.
@@ -146,9 +146,9 @@ First, the entry point to the Fetch API is a global function called {{domxref("f
 
 Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that article also talks about the `fetch()` API!
 
-So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} function of the returned promise. This function will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
+So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} method of the returned promise. This method will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
 
-It turns out that `response.text()` is _also_ asynchronous, so we return the promise it returns, and pass a function into the `then()` function of this new promise. This function will be called when the response text is ready, and inside it we will update our `<pre>` block with the text.
+It turns out that `response.text()` is _also_ asynchronous, so we return the promise it returns, and pass a function into the `then()` method of this new promise. This function will be called when the response text is ready, and inside it we will update our `<pre>` block with the text.
 
 Finally, we chain a {{jsxref("Promise/catch", "catch()")}} handler at the end, to catch any errors thrown in either of the asynchronous functions we called or their handlers.
 
@@ -169,9 +169,9 @@ To get around this, we need to test the example by running it through a local we
 
 In this example we have created a sample site called The Can Store — it's a fictional supermarket that only sells canned goods. You can find this [example live on GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/), and [see the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store).
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
+![A fake ecommerce site showing search options in the left hand column, and product search results in the right-hand column.](can-store.png)
 
-By default, the site displays all the products, but you can use the form controls in the left hand column to filter them by category, or search term, or both.
+By default, the site displays all the products, but you can use the form controls in the left-hand column to filter them by category, or search term, or both.
 
 There is quite a lot of complex code that deals with filtering the products by category and search terms, manipulating strings so the data displays correctly in the UI, etc. We won't discuss all of it in the article, but you can find extensive comments in the code (see [can-script.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)).
 
@@ -181,14 +181,14 @@ The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
 fetch('products.json')
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
@@ -215,14 +215,14 @@ The second Fetch block can be found inside the `fetchBlob()` function:
 
 ```js
 fetch(url)
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.blob();
   })
-  .then( blob => showProduct(blob, product) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((blob) => showProduct(blob, product))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 This works in much the same way as the previous one, except that instead of using {{domxref("Response.json","json()")}}, we use {{domxref("Response.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is [Blob](/en-US/docs/Web/API/Blob) (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).
@@ -246,7 +246,7 @@ try {
 
   request.send();
 
-} catch(error) {
+} catch (error) {
   console.error(`XHR error ${request.status}`);
 }
 ```

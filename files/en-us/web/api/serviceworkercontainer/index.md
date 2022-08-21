@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
+page-type: web-api-interface
 tags:
   - API
   - Draft
@@ -23,16 +24,16 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 ## Properties
 
-- {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
-- {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerContainer.ready")}} {{ReadOnlyInline}}
   - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 
 ## Events
 
 - [`controllerchange`](/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
   - : Occurs when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-- [`error`](/en-US/docs/Web/API/ServiceWorkerContainer/error_event)
+- [`error`](/en-US/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired whenever an error occurs in the associated service workers.
 - [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
   - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
@@ -56,13 +57,13 @@ The example below first checks to see if the browser supports service workers. I
 if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+  navigator.serviceWorker.register('/sw.js').then((registration) => {
     console.log('Service worker registration succeeded:', registration);
 
     // At this point, you can optionally do something
     // with registration. See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
-  }).catch(function(error) {
-    console.log('Service worker registration failed:', error);
+  }).catch((error) => {
+    console.error(`Service worker registration failed: ${error}`);
   });
 
   // Independent of the registration, let's also display
@@ -78,8 +79,8 @@ if ('serviceWorker' in navigator) {
 
   // Then, register a handler to detect when a new or
   // updated service worker takes control.
-  navigator.serviceWorker.oncontrollerchange = function() {
-    console.log('This page is now controlled by:', navigator.serviceWorker.controller);
+  navigator.serviceWorker.oncontrollerchange = () => {
+    console.log('This page is now controlled by', navigator.serviceWorker.controller);
   };
 } else {
   console.log('Service workers are not supported.');

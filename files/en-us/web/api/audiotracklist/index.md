@@ -1,6 +1,7 @@
 ---
 title: AudioTrackList
 slug: Web/API/AudioTrackList
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -47,7 +48,7 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 
 ## Usage notes
 
-In addition to being able to obtain direct access to the audio tracks present on a media element, `AudioTrackList` lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream. See the {{domxref("AudioTrackList.addtrack_event", "addtrack")}} and {{domxref("AudioTrackList.removetrack_event", "removetrack")}} events for details and examples.
+In addition to being able to obtain direct access to the audio tracks present on a media element, `AudioTrackList` lets you set event handlers on the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream. See the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events for details and examples.
 
 ## Examples
 
@@ -56,12 +57,12 @@ In addition to being able to obtain direct access to the audio tracks present on
 To get a media element's {{domxref("AudioTrackList")}}, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
 
 ```js
-var audioTracks = document.querySelector("video").audioTracks;
+const audioTracks = document.querySelector("video").audioTracks;
 ```
 
 ### Monitoring track count changes
 
-In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.
+In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events are set up.
 
 ```js
 audioTracks.onaddtrack = updateTrackCount;

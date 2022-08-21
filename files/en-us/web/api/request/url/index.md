@@ -1,6 +1,7 @@
 ---
 title: Request.url
 slug: Web/API/Request/url
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -17,7 +18,7 @@ interface contains the URL of the request.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the URL of the request.
+A string indicating the URL of the request.
 
 ## Examples
 
@@ -26,8 +27,8 @@ In the following snippet, we create a new request using the
 the script), then save the URL of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
+const myRequest = new Request('flowers.jpg');
+const myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
 ```
 
 ## Specifications

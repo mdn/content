@@ -1,6 +1,7 @@
 ---
 title: History
 slug: Web/API/History
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -17,11 +18,11 @@ The **`History`** interface allows manipulation of the browser _session history_
 
 _The `History` interface doesn't inherit any property._
 
-- {{domxref("History.length","length")}} {{readOnlyInline}}
+- {{domxref("History.length","length")}} {{ReadOnlyInline}}
   - : Returns an `Integer` representing the number of elements in the session history, including the currently loaded page. For example, for a page loaded in a new tab this property returns `1`.
 - {{domxref("History.scrollRestoration","scrollRestoration")}}
   - : Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either `auto` or `manual`.
-- {{domxref("History.state","state")}} {{readOnlyInline}}
+- {{domxref("History.state","state")}} {{ReadOnlyInline}}
   - : Returns an `any` value representing the state at the top of the history stack. This is a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 
 ## Methods

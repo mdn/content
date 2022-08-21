@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation
 slug: Web/API/NetworkInformation
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -23,17 +24,17 @@ The `NetworkInformation` interface cannot be instantiated. It is instead accesse
 
 _This interface also inherits properties of its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("NetworkInformation.downlink")}} {{readonlyinline}}
+- {{domxref("NetworkInformation.downlink")}} {{ReadOnlyInline}}
   - : Returns the effective bandwidth estimate in megabits per second, rounded to the nearest multiple of 25 kilobits per seconds.
-- {{domxref("NetworkInformation.downlinkMax")}} {{readonlyinline}}
+- {{domxref("NetworkInformation.downlinkMax")}} {{ReadOnlyInline}}
   - : Returns the maximum downlink speed, in megabits per second (Mbps), for the underlying connection technology.
-- {{domxref("NetworkInformation.effectiveType")}} {{readonlyinline}}
+- {{domxref("NetworkInformation.effectiveType")}} {{ReadOnlyInline}}
   - : Returns the effective type of the connection meaning one of 'slow-2g', '2g', '3g', or '4g'. This value is determined using a combination of recently observed round-trip time and downlink values.
-- {{domxref("NetworkInformation.rtt")}} {{readonlyinline}}
+- {{domxref("NetworkInformation.rtt")}} {{ReadOnlyInline}}
   - : Returns the estimated effective round-trip time of the current connection, rounded to the nearest multiple of 25 milliseconds.
-- {{domxref("NetworkInformation.saveData")}} {{readonlyinline}}
+- {{domxref("NetworkInformation.saveData")}} {{ReadOnlyInline}}
   - : Returns `true` if the user has set a reduced data usage option on the user agent.
-- {{domxref("NetworkInformation.type")}} {{readonlyinline}}
+- {{domxref("NetworkInformation.type")}} {{ReadOnlyInline}}
 
   - : Returns the type of connection a device is using to communicate with the network. It will be one of the following values:
 
@@ -65,4 +66,4 @@ _This interface also inherits methods of its parent, {{domxref("EventTarget")}}.
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)

@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.TypedArray.forEach
 The **`forEach()`** method executes a provided function once
 per array element. This method has the same algorithm as
 {{jsxref("Array.prototype.forEach()")}}. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 ## Syntax
 
@@ -102,7 +102,7 @@ The following code logs a line for each element in a typed array:
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+  console.log(`a[${index}] = ${element}`);
 }
 
 new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);

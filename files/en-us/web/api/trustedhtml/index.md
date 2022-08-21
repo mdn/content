@@ -1,6 +1,7 @@
 ---
 title: TrustedHTML
 slug: Web/API/TrustedHTML
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,7 +20,7 @@ The value of a **TrustedHTML** object is set when the object is created and cann
 - {{domxref("TrustedHTML.toJSON()")}}
   - : Returns a JSON representation of the stored data.
 - {{domxref("TrustedHTML.toString()")}}
-  - : A {{domxref("DOMString","string")}} containing the sanitized HTML.
+  - : A string containing the sanitized HTML.
 
 ## Examples
 
@@ -33,7 +34,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 
 let el = document.getElementById("myDiv");

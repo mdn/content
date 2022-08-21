@@ -53,22 +53,22 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### Events
 
-- CSS Transitions: The {{event("transitionstart")}}, {{event("transitionrun")}}, and {{event("transitioncancel")}} events have been implemented (see {{bug(1264125)}} and {{bug(1287983)}}).
+- CSS Transitions: The {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, and {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} events have been implemented (see {{bug(1264125)}} and {{bug(1287983)}}).
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see {{bug(1002256)}}).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see {{bug(424390)}}).
-- The {{Event("auxclick")}} event and corresponding {{domxref("GlobalEventHandlers.onauxclick")}} handler have been implemented (see {{bug(1304044)}}).
-- The {{Event("transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. See {{domxref("GlobalEventHandlers.ontransitioncancel")}} for more details and an example ({{bug("1264125")}}).
+- The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see {{bug(1304044)}}).
+- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled.
 
 ### DOM
 
 - The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ({{bug(1310483)}}).
-- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a {{domxref("USVString")}} or sequence of {{domxref("USVString")}}s as an init object ({{bug("1330678")}}).
+- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ({{bug("1330678")}}).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see {{bug(1321623)}}).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see {{bug(1274596)}}).
 - {{domxref("Node.getRootNode()")}} has been implemented, replacing the deprecated `Node.rootNode` property ({{bug(1269155)}}).
 - Own properties of {{domxref("Plugin")}} and {{domxref("PluginArray")}} objects are no longer enumerable ({{bug("1270366")}}).
 - Named properties of {{domxref("MimeTypeArray")}} objects are no longer enumerable ({{bug("1270364")}}).
-- The [Permissions API](/en-US/docs/Web/API/Permissions_API) now has a new permission name available — `persistent-storage` — as used when making a {{domxref("Permissions.query()")}} (see {{bug(1270038)}}). This allows an origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
+- The [Permissions API](/en-US/docs/Web/API/Permissions_API) now has a new permission name available — `persistent-storage` — as used when making a {{domxref("Permissions.query()")}} (see {{bug(1270038)}}). This allows an origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 - The {{domxref("Performance.timeOrigin")}} property has been implemented ({{bug(1313420)}}).
 
 ### Workers and service workers
@@ -130,9 +130,9 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### CSS
 
-- Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref(":dir", ":dir()")}} pseudo-class ({{bug(1270406)}}).
+- Removed `-moz` prefixed variant of {{cssxref(":dir", ":dir()")}} pseudo-class ({{bug(1270406)}}).
 - The `-moz` prefixed version of {{cssxref("text-align-last")}} got removed ({{bug(1276808)}}).
-- Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref("calc", "calc()")}} method ({{bug(1331296)}}).
+- Removed `-moz` prefixed variant of {{cssxref("calc", "calc()")}} method ({{bug(1331296)}}).
 - The proprietary `-moz-samplesize` media fragment (added to aid in delivery of downsampled images to low memory Firefox OS devices; see {{bug(854795)}}) has been removed ({{bug(1311246)}}).
 
 ### JavaScript
@@ -141,7 +141,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### APIs
 
-- The [Wifi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see {{bug(1313788)}}, {{bug(1317853)}}, {{bug(1313789)}}, and {{bug(1313155)}} respectively).
+- The [Wi-Fi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see {{bug(1313788)}}, {{bug(1317853)}}, {{bug(1313789)}}, and {{bug(1313155)}} respectively).
 
 ### Other
 

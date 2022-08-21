@@ -7,6 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.7
 ---
 {{HTTPSidebar}}
 
@@ -33,9 +34,7 @@ use HTTP pre-connection mechanisms to speed up surfing.
 
 ## Specifications
 
-| Specification                                                    | Title                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

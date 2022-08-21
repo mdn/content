@@ -57,7 +57,7 @@ _No change._
 - Unreachable code after {{jsxref("Statements/return", "return")}} statement (including unreachable expression after {{jsxref("Statements/return", "semicolon-less return statements", "#Automatic_semicolon_insertion", 1)}}) will now show a warning in the console ({{bug(1005110)}}, {{bug(1151931)}}).
 - {{jsxref("Symbol.match")}} has been added ({{bug(1054755)}}).
 - Passing an object which has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value to {{jsxref("String.prototype.startsWith")}}, {{jsxref("String.prototype.endsWith")}}, and `String.prototype.contains` now throws a {{jsxref("TypeError")}} ({{bug(1054755)}}).
-- {{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("Operators/new", "new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's `constructor` property equals to  {{jsxref("RegExp")}} function. ({{bug(1147817)}}).
+- {{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("Operators/new", "new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's `constructor` property equals to {{jsxref("RegExp")}} function. ({{bug(1147817)}}).
 - Support for the non-standard JS1.7 destructuring for-in has been dropped ({{bug(1083498)}}).
 - [Non-standard initializer expressions](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#firefox-specific_notes) in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops are now ignored and will present a warning in the console. ({{bug(748550)}} and {{bug(1164741)}}).
 - [`\u{xxxxxx}`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) Unicode code point escapes have been added ({{bug(320500)}}).
@@ -112,7 +112,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 #### IndexedDB
 
-- {{domxref("IDBTransaction")}} are now non-durable by default ({{bug(1112702)}}). This favors performance over reliability and matches what other browsers are doing. For more information, read our [durability definition](/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#durable).
+- {{domxref("IDBTransaction")}} are now non-durable by default ({{bug(1112702)}}). This favors performance over reliability and matches what other browsers are doing. For more information, read our [durability definition](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#durable).
 
 #### Dev Tools
 

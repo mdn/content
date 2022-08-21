@@ -18,8 +18,6 @@ The **track** refers to the background of the scrollbar, which is generally fixe
 
 The **thumb** refers to the moving part of the scrollbar, which usually floats on top of the track.
 
-{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}
-
 ## Syntax
 
 ```css

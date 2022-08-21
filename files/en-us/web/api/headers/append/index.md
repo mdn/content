@@ -1,6 +1,7 @@
 ---
 title: Headers.append()
 slug: Web/API/Headers/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append
@@ -40,14 +41,14 @@ append(name, value)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using `append()`:

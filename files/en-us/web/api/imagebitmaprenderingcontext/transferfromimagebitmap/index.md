@@ -1,9 +1,9 @@
 ---
 title: ImageBitmapRenderingContext.transferFromImageBitmap()
 slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - ImageBitmapRenderingContext
   - Method
   - OffscreenCanvas
@@ -11,7 +11,7 @@ tags:
   - transferFromImageBitmap
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`ImageBitmapRenderingContext.transferFromImageBitmap()`**
 method displays the given {{domxref("ImageBitmap")}} in the canvas associated with this
@@ -32,6 +32,10 @@ transferFromImageBitmap(bitmap)
 - `bitmap`
   - : An {{domxref("ImageBitmap")}} object to transfer.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML
@@ -43,16 +47,16 @@ transferFromImageBitmap(bitmap)
 ### JavaScript
 
 ```js
-var htmlCanvas = document.getElementById("htmlCanvas").getContext("bitmaprenderer");
+const htmlCanvas = document.getElementById("htmlCanvas").getContext("bitmaprenderer");
 
 // Draw a WebGL scene offscreen
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
 // Transfer the current frame to the visible canvas
-var bitmap = offscreen.transferToImageBitmap();
+const bitmap = offscreen.transferToImageBitmap();
 htmlCanvas.transferFromImageBitmap(bitmap);
 ```
 

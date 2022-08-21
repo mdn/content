@@ -23,7 +23,7 @@ p {
   color: yellow;
 
   /* The "background-color" property defines the background color, in this case black. */
-  background-color: black
+  background-color: black;
 }
 ```
 
@@ -32,6 +32,6 @@ p {
 ## See also
 
 - [Learn CSS](/en-US/docs/Learn/CSS)
-- {{interwiki("wikipedia", "CSS")}} on Wikipedia
+- [CSS](https://en.wikipedia.org/wiki/CSS) on Wikipedia
 - [The CSS documentation on MDN](/en-US/docs/Web/CSS)
 - [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work)

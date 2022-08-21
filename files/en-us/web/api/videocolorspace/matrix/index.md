@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace.matrix
 slug: Web/API/VideoColorSpace/matrix
+page-type: web-api-instance-property
 tags:
   - API
   - Property

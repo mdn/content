@@ -1,6 +1,7 @@
 ---
 title: Lighting a WebXR setting
 slug: Web/API/WebXR_Device_API/Lighting
+page-type: guide
 tags:
   - 3D
   - API
@@ -29,9 +30,9 @@ Although this article isn't a comprehensive guide to lighting a 3D scene, it's u
 **Figure: A diagram showing how the angle of reflection corresponds to the angle of incidence.**
 ![A diagram showing how the angle of reflection corresponds to the angle of incidence.](law-of-reflection.svg)
 
-Every object we see, we see because the object either emits or reflects light (or both). The incoming light ray—the **incident ray**—arrives at an angle known as the **angle of incidence**. The angle of incidence, Θᵢ, is the angle between the incident ray and the surface's {{interwiki("wikipedia", "normal vector")}}.
+Every object we see, we see because the object either emits or reflects light (or both). The incoming light ray—the **incident ray**—arrives at an angle known as the **angle of incidence**. The angle of incidence, Θᵢ, is the angle between the incident ray and the surface's [normal vector](https://en.wikipedia.org/wiki/Normal_vector).
 
-For rough surfaces, light is reflected equally in every direction. However, glossy, mirror-like surfaces reflect most of the light in a direction whose **angle of reflection**, Θᵣ, is equal to the angle of incidence, except it's on the opposite side of the normal vector. The **reflected ray**, then, departs along at that angle off the normal. This is the **{{interwiki("wikipedia", "law of reflection")}}**. This is the foundation for much of what's involved in shading a scene, and comes into play in terms of how different types of light source behave.
+For rough surfaces, light is reflected equally in every direction. However, glossy, mirror-like surfaces reflect most of the light in a direction whose **angle of reflection**, Θᵣ, is equal to the angle of incidence, except it's on the opposite side of the normal vector. The **reflected ray**, then, departs along at that angle off the normal. This is the **[law of reflection](https://en.wikipedia.org/wiki/Law_of_reflection)**. This is the foundation for much of what's involved in shading a scene, and comes into play in terms of how different types of light source behave.
 
 The reflected light ray's color may, of course, be altered in intensity and/or hue due to the light's interaction with the surface, but the angle is always the same.
 
@@ -61,7 +62,7 @@ Ambient light can also be used to apply a color tint to a scene; for example, in
 **Figure: Saturn's fifth-largest moon, Tethys, bathed in sunlight, coming from the lower left.**
 ![Saturn's fifth-largest moon, Tethys, is lit primarily by the sun, with some light reflected from Saturn. This is diffuse lighting.](tethys.jpg)
 
-Because the intensity of diffuse light depends on the {{interwiki("wikipedia", "angle of incidence")}} (the angle between the vector representing the direction from which the light reaches the surface and the surface's normal vector or the vector perpendicular to the surface), the intensity or brightness of the light reflected by an object varies depending on the surface's orientation relative to the light source.
+Because the intensity of diffuse light depends on the [angle of incidence](https://en.wikipedia.org/wiki/Angle_of_incidence) (the angle between the vector representing the direction from which the light reaches the surface and the surface's normal vector or the vector perpendicular to the surface), the intensity or brightness of the light reflected by an object varies depending on the surface's orientation relative to the light source.
 
 #### Specular light
 
@@ -144,7 +145,7 @@ Try to place light sources in realistic locations for the setting and the mood y
 
 ### Realism in player interactions with light
 
-If your light source is located within the scene, you probably should try to ensure the viewer's avatar can't physically intersect with the light source. The results could be... strange.
+If your light source is located within the scene, you probably should try to ensure the viewer's avatar can't physically intersect with the light source. The results could be strange.
 
 If the viewer's avatar is meant to have physical form, it should have a model, even if the viewer can never see it, so that light interacts with the avatar correctly. Minimally, this means the avatar should cast an appropriate shadow; however, depending on factors such as whether or not the avatar can be seen and the materials, texturing, and other attributes of the its model—including, especially, its reflectivity—the avatar may also need to reflect light, as well as potentially affect the coloration of the light reflected off of it.
 
@@ -168,7 +169,7 @@ The specifics of how lighting estimation works, especially in the context of the
 
 There are a number of potential security issues involved with collecting all of this data in order to generate and apply lighting to your virtual objects using real-world data.
 
-Of course, many AR applications make it pretty clear where the user is located. If the user is running an app called _Touring the Louvre_, there's a very good chance the user is located in the [Musée du Louvre](https://louvre.fr/) in Paris, France. But browsers are required to take a number of steps to make it difficult to physically locate the user without their consent.
+Of course, many AR applications make it pretty clear where the user is located. If the user is running an app called _Touring the Louvre_, there's a very good chance the user is located in the [Musée du Louvre](https://www.louvre.fr/en) in Paris, France. But browsers are required to take a number of steps to make it difficult to physically locate the user without their consent.
 
 ### Ambient Light Sensor API
 
@@ -183,7 +184,7 @@ In order to help mitigate these risks, browsers are required by the WebXR Lighti
 
 #### Spherical harmonics precision
 
-Browsers can mitigate the risk of fingerprinting by reducing the precision of {{interwiki("wikipedia", "spherical harmonics")}}. When performing real-time rendering—as is the case with any virtual or augmented reality application—{{interwiki("wikipedia", "spherical harmonic lighting")}} is used to simplify and accelerate the process of generating highly realistic shadows and shading. By altering the accuracy of these functions, the browser makes the data less consistent, and, importantly, makes the data generated by two computers differ, even in the same setting.
+Browsers can mitigate the risk of fingerprinting by reducing the precision of [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics). When performing real-time rendering—as is the case with any virtual or augmented reality application—[spherical harmonic lighting](https://en.wikipedia.org/wiki/Spherical_harmonic_lighting) is used to simplify and accelerate the process of generating highly realistic shadows and shading. By altering the accuracy of these functions, the browser makes the data less consistent, and, importantly, makes the data generated by two computers differ, even in the same setting.
 
 #### Decoupling orientation from lighting
 
@@ -197,7 +198,7 @@ Consider an attack that uses a building's automated lighting system to flash the
 
 Another scenario in which lighting estimation can be used to obtain information about the user without permission: if the light sensor is close enough to the user's display to detect lighting changes caused by the contents of the display, an algorithm could be used to determine whether or not the user is watching a particular video—or even to potentially identify which of a number of videos the user is watching.
 
-The Lighting Estimation API specification mandates that all {{Glossary("user agent", "user agents")}} perform temporal and spatial filtering to fuzz the data in a manner that reduces its usefulness for the purpose of locating the user or performing {{interwiki("wikipedia", "side-channel attack", "side-channel attacks")}}.
+The Lighting Estimation API specification mandates that all {{Glossary("user agent", "user agents")}} perform temporal and spatial filtering to fuzz the data in a manner that reduces its usefulness for the purpose of locating the user or performing [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack).
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -32,7 +33,7 @@ unobserve(target)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -40,10 +41,10 @@ This snippet shows an observer being created, an element being observed, and the
 unobserved.
 
 ```js
-var observer = new IntersectionObserver(callback);
+const observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById("elementToObserve"));
 
-/* ... */
+// …
 
 observer.unobserve(document.getElementById("elementToObserve"));
 ```
@@ -58,6 +59,5 @@ observer.unobserve(document.getElementById("elementToObserve"));
 
 ## See also
 
-- [Intersection Observer
-  API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
 - {{domxref("IntersectionObserver.observe()")}}

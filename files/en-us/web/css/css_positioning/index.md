@@ -15,16 +15,17 @@ spec-urls: https://drafts.csswg.org/css-position/
 
 ## Reference
 
-### CSS properties
+### Properties
 
-- {{cssxref("bottom")}}
-- {{cssxref("clear")}}
-- {{cssxref("float")}}
-- {{cssxref("left")}}
-- {{cssxref("position")}}
-- {{cssxref("right")}}
 - {{cssxref("top")}}
+- {{cssxref("right")}}
+- {{cssxref("bottom")}}
+- {{cssxref("left")}}
+- {{cssxref("float")}}
+- {{cssxref("clear")}}
+- {{cssxref("position")}}
 - {{cssxref("z-index")}}
+- {{cssxref("transform")}}
 
 ## Guides
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.toString()
 slug: Web/API/HTMLAreaElement/toString
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLAreaElement
@@ -19,6 +20,14 @@ version of {{domxref("HTMLAreaElement.href")}}.
 ```js
 toString()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

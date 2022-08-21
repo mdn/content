@@ -1,5 +1,5 @@
 ---
-title: Masonry Layout
+title: Masonry layout
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 tags:
   - CSS
@@ -28,7 +28,7 @@ To create the most common masonry layout, your columns will be the grid axis and
 }
 ```
 
-The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout autoplacement. However, as they move onto a new row the items will display according to the masonry algorithm. Items will load into the column with the most room causing a tightly packed layout without strict row tracks.
+The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement. However, as they move onto a new row the items will display according to the masonry algorithm. Items will load into the column with the most room causing a tightly packed layout without strict row tracks.
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/block-axis.html", '100%', 800)}}
 

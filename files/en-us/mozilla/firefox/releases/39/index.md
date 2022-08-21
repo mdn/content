@@ -14,6 +14,7 @@ Firefox 39 was released on July 2, 2015. This article lists key changes that are
 ### Developer Tools
 
 Highlights:
+
 - _WebIDE_ now supports debugging Firefox OS devices over Wi-Fi
 - _WebIDE_ now supports Cordova projects
 - [Animations view: rewind, fast-forward, and jump to a specific time](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
@@ -78,8 +79,8 @@ _No change._
 ### Miscellaneous
 
 - [WOFF2](/en-US/docs/Web/Guide/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ({{bug(1084026)}}).
-- The [`-remote`](/en-US/docs/Mozilla/Command_Line_Options#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
-- Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) ({{bug(1153460)}}).
+- The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
+- Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ({{bug(1153460)}}).
 
 ## Networking
 

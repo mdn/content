@@ -1,6 +1,7 @@
 ---
 title: Element.remove()
 slug: Web/API/Element/remove
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -17,6 +18,14 @@ The **`Element.remove()`** method removes the element from the DOM.
 ```js
 remove()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

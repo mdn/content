@@ -1,6 +1,7 @@
 ---
 title: XRSession.depthDataFormat
 slug: Web/API/XRSession/depthDataFormat
+page-type: web-api-instance-property
 tags:
   - API
   - AR

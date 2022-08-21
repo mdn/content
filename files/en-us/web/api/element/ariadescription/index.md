@@ -1,6 +1,7 @@
 ---
 title: Element.ariaDescription
 slug: Web/API/Element/ariaDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaDescription`** property of the {{domxref("Element")}} interface refle
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

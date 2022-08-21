@@ -1,10 +1,10 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
+page-type: web-api-interface
 tags:
   - API
   - AbortController
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.AbortController
@@ -22,7 +22,7 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 
 ## Properties
 
-- {{domxref("AbortController.signal")}} {{readonlyInline}}
+- {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.
 
 ## Methods
@@ -42,27 +42,29 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 
 ```js
 let controller;
-const url = "video.mp4";
+const url = 'video.mp4';
 
 const downloadBtn = document.querySelector('.download');
 const abortBtn = document.querySelector('.abort');
 
 downloadBtn.addEventListener('click', fetchVideo);
 
-abortBtn.addEventListener('click', function() {
-  if (controller) controller.abort();
-  console.log('Download aborted');
+abortBtn.addEventListener('click', () => {
+  if (controller) {
+    controller.abort();
+    console.log('Download aborted');
+  }
 });
 
 function fetchVideo() {
   controller = new AbortController();
   const signal = controller.signal;
   fetch(url, { signal })
-    .then(function(response) {
+    .then((response) => {
       console.log('Download complete', response);
     })
-    .catch(function(e) {
-      console.log('Download error: ' + e.message);
+    .catch((err) => {
+      console.error(`Download error: ${err.message}`);
     });
 }
 ```
@@ -82,4 +84,4 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald

@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.src
 slug: Web/API/HTMLIFrameElement/src
+page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.src
 ---
 {{APIRef}}
@@ -20,9 +21,9 @@ iframeElt.src= refStr;
 ## Example
 
 ```js
-var iframe = document.createElement("iframe");
+const iframe = document.createElement("iframe");
 iframe.src = "/";
-var body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 body.appendChild(iframe); // Fetch the image using the complete URL as the referrer
 ```
 

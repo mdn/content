@@ -1,6 +1,7 @@
 ---
 title: Blob.stream()
 slug: Web/API/Blob/stream
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -20,6 +21,10 @@ which upon reading returns the data contained within the `Blob`.
 ```js
 stream()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

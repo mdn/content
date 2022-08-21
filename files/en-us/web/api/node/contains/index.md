@@ -1,6 +1,7 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

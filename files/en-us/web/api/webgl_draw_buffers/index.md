@@ -1,6 +1,7 @@
 ---
 title: WEBGL_draw_buffers
 slug: Web/API/WEBGL_draw_buffers
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -41,13 +42,13 @@ This extension exposes one new method.
 Enabling the extension:
 
 ```js
-var ext = gl.getExtension('WEBGL_draw_buffers');
+const ext = gl.getExtension('WEBGL_draw_buffers');
 ```
 
 Binding multiple textures (to a `tx[]` array) to different framebuffer color attachments:
 
 ```js
-var fb = gl.createFramebuffer();
+const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT0_WEBGL, gl.TEXTURE_2D, tx[0], 0);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT1_WEBGL, gl.TEXTURE_2D, tx[1], 0);

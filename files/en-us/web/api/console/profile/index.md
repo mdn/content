@@ -1,6 +1,7 @@
 ---
 title: console.profile()
 slug: Web/API/console/profile
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -35,6 +36,10 @@ profile(profileName)
 
 - `profileName`
   - : The name to give the profile. Optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Browser compatibility
 

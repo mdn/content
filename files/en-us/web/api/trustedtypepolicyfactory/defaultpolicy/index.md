@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.defaultPolicy
 slug: Web/API/TrustedTypePolicyFactory/defaultPolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Property

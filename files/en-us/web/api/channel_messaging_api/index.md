@@ -1,12 +1,16 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
+page-type: web-api-overview
 tags:
   - API
   - Channel messaging
   - HTML API
   - Overview
   - Reference
+browser-compat:
+  - api.MessageChannel
+  - api.MessagePort
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 
@@ -32,8 +36,6 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
   - : Creates a new message channel to send messages across.
 - {{domxref("MessagePort")}}
   - : Controls the ports on the message channel, allowing sending of messages from one port and listening out for them arriving at the other.
-- {{domxref("PortCollection")}}
-  - : An array of `MessagePort`s; an experimental solution to allow broadcasting of a message to multiple ports simultaneously.
 
 ## Examples
 
@@ -42,17 +44,11 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
 
 ## Specifications
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## See also
 

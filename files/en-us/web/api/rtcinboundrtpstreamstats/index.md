@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats
 slug: Web/API/RTCInboundRtpStreamStats
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

@@ -1,6 +1,7 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -33,15 +34,15 @@ None.
 ```
 
 ```js
-let wrapper = document.createElement("div");
+const wrapper = document.createElement("div");
 
-wrapper.appendChild( document.createTextNode("Part 1 ") );
-wrapper.appendChild( document.createTextNode("Part 2 ") );
+wrapper.appendChild(document.createTextNode("Part 1 "));
+wrapper.appendChild(document.createTextNode("Part 2 "));
 
 let node = wrapper.firstChild;
 let result = "Before normalization:<br/>";
 while (node) {
-  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 
@@ -50,7 +51,7 @@ wrapper.normalize();
 node = wrapper.firstChild;
 result += "<br/><br/>After normalization:<br/>";
 while (node) {
-  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 

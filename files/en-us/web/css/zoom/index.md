@@ -13,6 +13,8 @@ browser-compat: css.properties.zoom
 
 The non-standard **_`zoom`_** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
 
+## Syntax
+
 ```css
 /* Keyword values */
 zoom: normal;
@@ -33,8 +35,6 @@ zoom: revert;
 zoom: revert-layer;
 zoom: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -135,7 +135,7 @@ div#c {
 
 ## Specifications
 
-Not part of any standard. This property originated in Internet Explorer. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov of Microsoft has [an unofficial draft specification proposal on GitHub](https://cdn.jsdelivr.net/gh/atanassov/css-zoom@master/Overview.html).
+Not part of any standard. This property originated in Internet Explorer. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov of Microsoft has [an unofficial draft specification proposal on GitHub](https://cdn.jsdelivr.net/gh/atanassov/css-zoom@master/Overview.html).
 
 ## Browser compatibility
 

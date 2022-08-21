@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas.convertToBlob()
 slug: Web/API/OffscreenCanvas/convertToBlob
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -16,7 +17,7 @@ The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} o
 
 The desired file format and image quality may be specified.
 If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
-Browsers are required to support `image/png`; many will support additional formats including `image/jpg` and `image/webp`.
+Browsers are required to support `image/png`; many will support additional formats including `image/jpeg` and `image/webp`.
 
 The created image will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
@@ -29,7 +30,7 @@ convertToBlob(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with the following properties:
     - `type`
@@ -65,9 +66,9 @@ The promise may be rejected with the following exceptions:
 const offscreen = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext("webgl");
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
-offscreen.convertToBlob().then( blob => console.log(blob));
+offscreen.convertToBlob().then((blob) => console.log(blob));
 // Blob { size: 334, type: "image/png" }
 ```
 

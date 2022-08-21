@@ -1,6 +1,7 @@
 ---
 title: Element.ariaOrientation
 slug: Web/API/Element/ariaOrientation
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaOrientation`** property of the {{domxref("Element")}} interface refle
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"horizontal"`
   - : The element is horizontal.

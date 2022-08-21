@@ -1,6 +1,7 @@
 ---
 title: CSSStyleRule
 slug: Web/API/CSSStyleRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -21,9 +22,9 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSStyleRule.selectorText")}}
   - : Returns the textual representation of the selector for this rule, e.g. `"h1,h2"`.
-- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
+- {{domxref("CSSStyleRule.style")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CSSStyleDeclaration")}} object for the rule.
-- {{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}
+- {{domxref("CSSStyleRule.styleMap")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StylePropertyMap')}} object which provides access to the rule's property-value pairs.
 
 ## Methods

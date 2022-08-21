@@ -1,10 +1,10 @@
 ---
 title: MediaKeySession.expiration
 slug: Web/API/MediaKeySession/expiration
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - NeedsExample
   - Property

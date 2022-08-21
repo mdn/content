@@ -1,6 +1,7 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -33,6 +34,10 @@ countReset(label)
     that label to 0. If omitted, `countReset()` resets the default counter to
     0\.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 For example, given code like this:
@@ -42,7 +47,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -76,7 +81,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

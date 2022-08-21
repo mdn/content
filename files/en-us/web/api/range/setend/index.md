@@ -1,6 +1,7 @@
 ---
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -34,7 +35,7 @@ setEnd(endNode, endOffset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

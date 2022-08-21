@@ -1,6 +1,7 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Coordinates
@@ -84,7 +85,7 @@ one to change the color to blue, and another to change the color to red.
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 100)}}
+{{EmbedLiveSample('Examples', 400, 120)}}
 
 ## Specifications
 

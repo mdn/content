@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.remoteCandidateId
 slug: Web/API/RTCIceCandidatePairStats/remoteCandidateId
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -28,7 +29,7 @@ candidates.
 
 ## Value
 
-A {{domxref("DOMString")}} uniquely identifies the remote {{Glossary("ICE")}}
+A string uniquely identifies the remote {{Glossary("ICE")}}
 candidate—that is, the candidate describing a configuration for the remote peer—which is
 represented by the remote end of these statistics.
 

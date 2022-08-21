@@ -1,6 +1,7 @@
 ---
 title: DelayNode
 slug: Web/API/DelayNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -56,8 +57,8 @@ When creating a graph that has a cycle, it is mandatory to have at least one `De
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}._
 
-- {{domxref("DelayNode.delayTime")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.
+- {{domxref("DelayNode.delayTime")}} {{ReadOnlyInline}}
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.
 
 ## Methods
 

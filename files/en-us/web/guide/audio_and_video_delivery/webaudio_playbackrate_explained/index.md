@@ -14,13 +14,13 @@ The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement
 
 Let's starting by looking at a brief example of `playbackRate` usage:
 
-```java
-var myAudio = document.createElement('audio');
-myAudio.setAttribute('src','audiofile.mp3');
-myAudio.playbackRate = 0.5;
+```js
+const audio = document.createElement('audio');
+audio.setAttribute('src','audiofile.mp3');
+audio.playbackRate = 0.5;
 ```
 
-Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate.)
+Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate).
 
 ## A complete example
 
@@ -41,16 +41,15 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 And apply some JavaScript to it:
 
 ```js
-window.onload = function () {
+window.onload = () => {
+  const v = document.getElementById("myVideo");
+  const p = document.getElementById("pbr");
+  const c = document.getElementById("currentPbr");
 
-  var v = document.getElementById("myVideo");
-  var p = document.getElementById("pbr");
-  var c = document.getElementById("currentPbr");
-
-  p.addEventListener('input',function(){
+  p.addEventListener('input', () => {
     c.innerHTML = p.value;
     v.playbackRate = p.value;
-  },false);
+  }, false);
 
 };
 ```

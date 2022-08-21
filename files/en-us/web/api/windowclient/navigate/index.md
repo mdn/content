@@ -1,10 +1,10 @@
 ---
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
+page-type: web-api-instance-method
 tags:
   - API
   - Client
-  - Experimental
   - Method
   - Navigate
   - Reference
@@ -21,9 +21,7 @@ interface loads a specified URL into a controlled client page then returns a
 ## Syntax
 
 ```js
-windowClient.navigate(url).then(function(windowClient) {
-  // do something with your WindowClient after navigation
-});
+navigate(url)
 ```
 
 ### Parameters

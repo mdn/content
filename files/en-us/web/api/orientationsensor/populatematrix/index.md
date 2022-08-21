@@ -1,6 +1,7 @@
 ---
 title: OrientationSensor.populateMatrix()
 slug: Web/API/OrientationSensor/populateMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API
@@ -46,12 +47,12 @@ may only be read from one of its derived classes.
 
 ### Parameters
 
-- _targetMatrix_
+- `targetMatrix`
   - : TBD
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

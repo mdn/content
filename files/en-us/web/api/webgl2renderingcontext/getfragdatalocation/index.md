@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getFragDataLocation()
 slug: Web/API/WebGL2RenderingContext/getFragDataLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,15 +19,15 @@ color numbers to user-defined varying out variables.
 ## Syntax
 
 ```js
-GLint gl.getFragDataLocation(program, name);
+getFragDataLocation(program, name)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to query.
-- name
-  - : A {{domxref("DOMString")}} specifying the name of the user-defined varying out
+- `name`
+  - : A string specifying the name of the user-defined varying out
     variable.
 
 ### Return value

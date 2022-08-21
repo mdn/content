@@ -1,6 +1,7 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -26,9 +27,9 @@ caretRangeFromPoint(x, y)
 
 ### Parameters
 
-- _x_
+- `x`
   - : A horizontal position within the current viewport.
-- _y_
+- `y`
   - : A vertical position within the current viewport.
 
 ### Return value
@@ -45,7 +46,7 @@ Click anywhere in the **Demo** paragraph below to insert a line break at the poi
 
 ### Demo
 
-{{EmbedLiveSample('Example', '100%', '100px')}}
+{{EmbedLiveSample('Examples')}}
 
 The code below first checks for `document.caretRangeFromPoint` support, but if the browser doesn't support that, the code then checks for {{domxref("Document.caretPositionFromPoint", "document.caretPositionFromPoint")}}, and uses that instead.
 
@@ -72,7 +73,7 @@ function insertBreakAtPoint(e) {
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode && textNode.nodeType == 3) {
+  if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);

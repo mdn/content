@@ -1,5 +1,5 @@
 ---
-title: WebAssembly numeric comparison
+title: WebAssembly variable instructions
 slug: WebAssembly/Reference/Variables
 tags:
   - WebAssembly

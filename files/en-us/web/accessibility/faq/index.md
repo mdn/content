@@ -11,7 +11,7 @@ tags:
 
 ## Which assistive technologies support Firefox and Thunderbird?
 
-[Assistive Technology Compatibility](https://support.mozilla.org/en-US/kb/Assistive%20technology%20compatibility) - Documents assistive technologies for Windows, Linux, UNIX, Mac OS X and the degree of compatibility with Firefox
+[Assistive Technology Compatibility](https://support.mozilla.org/en-US/kb/Assistive%20technology%20compatibility) - Documents assistive technologies for Windows, Linux, UNIX, macOS and the degree of compatibility with Firefox
 
 ## What can I do to make sure my Mozilla extensions are accessible?
 

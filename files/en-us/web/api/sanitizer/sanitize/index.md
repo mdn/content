@@ -1,6 +1,7 @@
 ---
 title: Sanitizer.sanitize()
 slug: Web/API/Sanitizer/sanitize
+page-type: web-api-instance-method
 tags:
   - HTML Sanitizer API
   - Method
@@ -29,7 +30,7 @@ sanitize(input)
 ### Parameters
 
 - `input`
-  - : A  {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
+  - : A {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
 
 ### Return value
 

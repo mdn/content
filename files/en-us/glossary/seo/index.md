@@ -25,5 +25,5 @@ SEO methods fall into three broad classes:
 
 ## See also
 
-- {{Interwiki("wikipedia", "SEO")}} on Wikipedia
+- [SEO](https://en.wikipedia.org/wiki/SEO) on Wikipedia
 - [Google Search Central](https://developers.google.com/search/docs)

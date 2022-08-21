@@ -1,6 +1,7 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM Views
@@ -16,8 +17,8 @@ browser-compat: api.Element.scrollIntoView
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} interface's
-**`scrollIntoView()`** method scrolls the element's parent
-container such that the element on which `scrollIntoView()` is called is
+**`scrollIntoView()`** method scrolls the element's ancestor
+containers such that the element on which `scrollIntoView()` is called is
 visible to the user.
 
 ## Syntax
@@ -32,7 +33,7 @@ scrollIntoView(scrollIntoViewOptions)
 
 - `alignToTop` {{optional_inline}}
 
-  - : Is a boolean value:
+  - : A boolean value:
 
     - If `true`, the top of the element will be aligned to the top of the
       visible area of the scrollable ancestor. Corresponds to
@@ -45,7 +46,7 @@ scrollIntoView(scrollIntoViewOptions)
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
 
-  - : Is an Object with the following properties:
+  - : An Object with the following properties:
 
     - `behavior` {{optional_inline}}
       - : Defines the transition animation.
@@ -59,10 +60,14 @@ scrollIntoView(scrollIntoViewOptions)
         One of `start`, `center`, `end`, or
         `nearest`. Defaults to `nearest`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
-var element = document.getElementById("box");
+const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);

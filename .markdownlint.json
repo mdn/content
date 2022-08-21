@@ -7,6 +7,9 @@
   "MD007": {
     "indent": 2
   },
+  "MD010": {
+    "spaces_per_tab": 2
+  },
   "MD013": false,
   "MD014": false,
   "MD023": false,
@@ -24,7 +27,6 @@
       "base",
       "br",
       "caption",
-      "cite",
       "code",
       "col",
       "colgroup",
@@ -72,7 +74,6 @@
       "ol",
       "p",
       "pre",
-      "q",
       "section",
       "semantics",
       "strong",

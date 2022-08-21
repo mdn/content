@@ -1,15 +1,17 @@
 ---
 title: IdleDetector.start()
 slug: Web/API/IdleDetector/start
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - start
   - IdleDetector
+  - Experimental
 browser-compat: api.IdleDetector.start
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`start()`** method of the {{domxref("IdleDetector")}} interface returns a
 {{jsxref("Promise")}} that resolves when the detector starts listening for changes in the
@@ -27,10 +29,12 @@ start(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : An object with the following properties:
-    - `threshold`: The minimum number of idle milliseconds before reporting should begin.
-    - `signal`: A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
+    - `threshold`
+      - : The minimum number of idle milliseconds before reporting should begin.
+    - `signal`
+      - : A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
+page-type: web-api-instance-method
 tags:
   - API
   - Battery API
@@ -27,6 +28,10 @@ documentation for additional details, a guide to using the API, and sample code.
 getBattery()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{JSxRef("Promise")}} which, when resolved, calls its fulfillment handler with a
@@ -52,16 +57,16 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
 ## Examples
 
 This example fetches the current charging state of the battery and establishes a
-handler for the {{Event("chargingchange")}} event, so that the charging state is
+handler for the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event, so that the charging state is
 recorded whenever it changes.
 
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener('chargingchange', () => {
     batteryIsCharging = battery.charging;
   });
 });

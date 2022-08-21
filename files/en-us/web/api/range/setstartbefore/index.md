@@ -1,6 +1,7 @@
 ---
 title: Range.setStartBefore()
 slug: Web/API/Range/setStartBefore
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,14 +24,18 @@ setStartBefore(referenceNode)
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} before which the {{domxref("Range")}} should start.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var range = document.createRange();
-var referenceNode = document.getElementsByTagName("div").item(0);
+const range = document.createRange();
+const referenceNode = document.getElementsByTagName("div").item(0);
 
 range.setStartBefore(referenceNode);
 ```

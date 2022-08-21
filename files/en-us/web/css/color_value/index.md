@@ -26,20 +26,20 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 
 A `<color>` can be defined in any of the following ways:
 
-- Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+- Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl","hsl()")}} and {{cssxref("color_value/hsla","hsla()")}} functional notations).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb","hwb()")}} functional notation).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC), via the {{cssxref("color_value/lch","lch()")}} functional notation.
   This can specify any visible color.
 - Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab","lab()")}} functional notation.
   This can specify any visible color.
 - Using the {{cssxref("color_value/color","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
 
-> **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
+> **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
 
 ## Syntax
 
@@ -49,7 +49,7 @@ The `<color>` data type is specified using one of the options listed below.
 
 ### Color keywords
 
-Color keywords are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describes their respective colors, they are essentially artificial, without a strict rationale behind the names used.
+Color keywords are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the names used.
 
 The complete list of such keywords is available [here](/en-US/docs/Web/CSS/color_value/color_keywords).
 
@@ -61,68 +61,51 @@ The `transparent` keyword represents a fully transparent color. This makes the b
 
 > **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 
-### currentColor keyword
+### currentcolor keyword
 
-The `currentColor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
+The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
-If `currentColor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
-
-#### currentColor example
+If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
-<div style="color:blue; border: 1px dashed currentColor;">
+<div style="color: blue; border: 1px dashed currentcolor;">
   The color of this text is blue.
-  <div style="background:currentColor; height:9px;"></div>
+  <div style="background: currentcolor; height:9px;"></div>
   This block is surrounded by a blue border.
 </div>
 ```
 
-{{EmbedLiveSample('currentColor_example', 600, 80)}}
+{{EmbedLiveSample('currentcolor_keyword', 600, 80)}}
 
-### RGB colors
+### RGB color model
 
 The RGB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-#### Syntax
-
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-> **Note:** As of CSS Colors Level 4, `rgba()` is an alias for `rgb()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
-
-- Hexadecimal notation: `#RRGGBB[AA]`
-  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`.
-- Hexadecimal notation: `#RGB[A]`
-  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- Functional notation: `rgb[a](R, G, B[, A])`
+- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
+  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
-- Functional notation: `rgb[a](R G B[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
-### HSL colors
+### HSL color model
 
 The HSL color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
 
 Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 However, using HSL to create color variations can produce surprising results, as it is not [perceptually uniform](https://en.wikipedia.org/wiki/Color_difference#Tolerance). For example, both `hsl(240 100% 50%)` and `hsl(60 100% 50%)` have the same lightness, even though the former is much darker than the latter.
 
-#### Syntax
-
 HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
-> **Note:** As of CSS Colors Level 4, `hsla()` is an alias for `hsl()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
+- [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) or [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla): `hsl[a](H, S, L[, A])` or `hsl[a](H S L[ / A])`
 
-- Functional notation: `hsl[a](H, S, L[, A])`
+  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
-
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
+    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal".
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
-- Functional notation: `hsl[a](H S L[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
-
-### HWB colors
+### HWB color model
 
 Similar to HSL color model, the HWB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, whiteness and blackness components.
 
@@ -130,15 +113,13 @@ As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in th
 
 > **Note:** There is **no** separate `hwba()` function as there is with HSL, the alpha value is an optional parameter, if it is not specified an alpha value of 1 (or 100%) is used. To specify this value a forward slash (`/`) must follow the blackness value before the alpha value is specified.
 
-#### Syntax
-
 HWB colors are expressed through the functional `hwb()` notation.
 
-> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
+> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions.
 
-- Functional notation: `hwb(H W B[ / A])`
+- [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
-  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
     `W` (whiteness) and `B` (blackness) are percentages. These two colors mix, so you would need `0%` **whiteness** and `100%` **blackness** to produce the color black. And vice versa `100%` whiteness and `0%` blackness for the color white. `50%` of both values renders a mid grey and any other variations a shade of the hue specified.
 
@@ -158,7 +139,7 @@ CSS Color 4 introduced Lab colors.
 Lab colors are specified via the {{cssxref("color_value/lab","lab()")}} functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.
 
-### LCH colors
+### LCH color model
 
 CSS Color 4 introduced LCH colors.
 LCH colors are specified via the {{cssxref("color_value/lch","lch()")}} functional notation.
@@ -179,11 +160,15 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
 
 ## Accessibility considerations
 
 Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast) for more information.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -228,7 +213,7 @@ function validTextColor(stringToTest) {
 }
 
 inputElem.addEventListener('change', () => {
-  if(validTextColor(inputElem.value)) {
+  if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
     divElem.textContent = '';
   } else {
@@ -534,4 +519,4 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 
 - The {{Cssxref("opacity")}} property lets you define transparency at the element level.
 - Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

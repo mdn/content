@@ -1,6 +1,7 @@
 ---
 title: Animation.finish()
 slug: Web/API/Animation/finish
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -43,13 +44,15 @@ None.
 The following example shows how to use the `finish()` method and catch an `InvalidState` error.
 
 ```js
-interfaceElement.addEventListener("mousedown", function() {
+interfaceElement.addEventListener("mousedown", () => {
   try {
     player.finish();
-  } catch(e if e instanceof InvalidState) {
-    console.log("finish() called on paused or finished animation.");
-  } catch(e);
-    logMyErrors(e); //pass exception object to error handler
+  } catch (e) {
+    if (e instanceof InvalidState) {
+      console.log("finish() called on paused or finished animation.");
+    } else {
+      logMyErrors(e); //pass exception object to error handler
+    }
   }
 });
 ```
@@ -57,11 +60,7 @@ interfaceElement.addEventListener("mousedown", function() {
 The following example finishes all the animations on a single element, regardless of their direction of playback.
 
 ```js
-elem.getAnimations().forEach(
-  function(animation){
-    return animation.finish();
-  }
-);
+elem.getAnimations().forEach((animation) => animation.finish());
 ```
 
 ## Specifications

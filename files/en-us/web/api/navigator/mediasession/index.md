@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaSession
 slug: Web/API/Navigator/mediaSession
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

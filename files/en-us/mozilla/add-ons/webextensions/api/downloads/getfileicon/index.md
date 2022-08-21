@@ -36,11 +36,11 @@ let gettingIcon = browser.downloads.getFileIcon(
 
 - `downloadId`
   - : An `integer` representing the ID of the download.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options `object` representing preferences for the icon to be retrieved. It can take the following properties:
 
-    - `size`{{optional_inline}}
+    - `size` {{optional_inline}}
       - : An `integer` representing the size of the icon. The returned icon's size will be the provided size squared (in pixels). If omitted, the default size for the icon is 32x32 pixels.
 
 ### Return value
@@ -82,7 +82,7 @@ searching.then(getIcon, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-getFileIcon) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-getFileIcon) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

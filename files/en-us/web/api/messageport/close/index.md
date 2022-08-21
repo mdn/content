@@ -1,6 +1,7 @@
 ---
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
+page-type: web-api-instance-method
 tags:
   - API
   - Channel messaging
@@ -24,13 +25,13 @@ messages to that port.
 close()
 ```
 
-### Return value
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -64,5 +65,4 @@ channel.port1.close();
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

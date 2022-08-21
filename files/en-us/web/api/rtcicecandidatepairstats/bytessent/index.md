@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.bytesSent
 slug: Web/API/RTCIceCandidatePairStats/bytesSent
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

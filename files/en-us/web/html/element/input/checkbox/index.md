@@ -10,7 +10,7 @@ tags:
   - Reference
   - checkbox
   - form
-browser-compat: html.elements.input.input-checkbox
+browser-compat: html.elements.input.type_checkbox
 ---
 
 {{HTMLRef}}
@@ -26,13 +26,13 @@ browser-compat: html.elements.input.input-checkbox
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value of the
+        A string representing the value of the
         checkbox.
       </td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
@@ -61,7 +61,7 @@ browser-compat: html.elements.input.input-checkbox
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the checkbox. This is not displayed on the client-side, but on the server this is the `value` given to the data submitted with the checkbox's `name`. Take the following example:
+A string representing the value of the checkbox. This is not displayed on the client-side, but on the server this is the `value` given to the data submitted with the checkbox's `name`. Take the following example:
 
 ```html
 <form>
@@ -177,22 +177,22 @@ overall.addEventListener('click', (e) => {
   e.preventDefault();
 });
 
-for(const ingredient of ingredients) {
+for (const ingredient of ingredients) {
   ingredient.addEventListener('click', updateDisplay);
 }
 
 function updateDisplay() {
   let checkedCount = 0;
-  for(const ingredient of ingredients) {
-    if(ingredient.checked) {
+  for (const ingredient of ingredients) {
+    if (ingredient.checked) {
       checkedCount++;
     }
   }
 
-  if(checkedCount === 0) {
+  if (checkedCount === 0) {
     overall.checked = false;
     overall.indeterminate = false;
-  } else if(checkedCount === ingredients.length) {
+  } else if (checkedCount === ingredients.length) {
     overall.checked = true;
     overall.indeterminate = false;
   } else {
@@ -288,7 +288,7 @@ const otherText = document.querySelector('#otherValue');
 otherText.style.visibility = 'hidden';
 
 otherCheckbox.addEventListener('change', () => {
-  if(otherCheckbox.checked) {
+  if (otherCheckbox.checked) {
     otherText.style.visibility = 'visible';
     otherText.value = '';
   } else {

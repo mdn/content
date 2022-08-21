@@ -10,8 +10,8 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Safari (web browser)", "Safari")}} on Wikipedia
+- [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) on Wikipedia
 - [Safari on apple.com](https://www.apple.com/safari/)
 - [The WebKit project](https://webkit.org/)
-- [WebKit nightly build](https://nightly.webkit.org/)
+- [WebKit nightly build](https://webkit.org/build-archives/)
 - [Reporting a bug for Safari](https://bugs.webkit.org/)

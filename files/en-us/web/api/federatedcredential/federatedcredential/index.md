@@ -1,6 +1,7 @@
 ---
 title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,9 +10,10 @@ tags:
   - NeedsExample
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
-{{APIRef("Credential Management API")}}{{Non-standard_header}}
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`FederatedCredential()`**
 constructor creates a new {{domxref("FederatedCredential")}} object. In
@@ -26,12 +28,13 @@ new FederatedCredential(init)
 
 ### Parameters
 
-- _init_
+- `init`
 
   - : Options are:
 
-    - `provider`: A {{domxref("USVString")}}; identifying the credential
-      provider.
+    - `provider`
+      - : A string; identifying the credential
+        provider.
 
 ## Specifications
 

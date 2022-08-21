@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNode()
 slug: Web/API/Element/getAttributeNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,8 +20,13 @@ Returns the specified attribute of the specified element, as an `Attr` node.
 getAttributeNode(attrName)
 ```
 
-- `attrNode` is an `Attr` node for the attribute.
+### Parameters
+
 - `attrName` is a string containing the name of the attribute.
+
+### Return value
+
+An `Attr` node for the attribute.
 
 ## Examples
 
@@ -28,7 +34,7 @@ getAttributeNode(attrName)
 // html: <div id="top" />
 let t = document.getElementById("top");
 let idAttr = t.getAttributeNode("id");
-alert(idAttr.value == "top")
+alert(idAttr.value === "top")
 ```
 
 ## Notes

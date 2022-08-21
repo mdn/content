@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLSlotElement
@@ -8,7 +9,7 @@ tags:
   - Reference
   - Web Components
   - assign
-  - shadow dom
+  - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
 {{APIRef("Shadow DOM API")}}
@@ -16,15 +17,19 @@ browser-compat: api.HTMLSlotElement.assign
 The **`assign()`** method of the
 {{domxref("HTMLSlotElement")}} interface sets the slot's **manually assigned nodes** to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using `assign()`.
 
+Please note that you cannot mix declarative and imperative slot assignment. Therefore, for this to work, the shadow tree needs to have been created with the `slotAssignment: "manual"` option.
+
 ## Syntax
 
 ```js
-HTMLSlotElement.assign(...nodes)
+assign(node1)
+assign(node1, node2)
+assign(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### Parameters
 
-- ...`nodes`
+- `node1`, …, `nodeN`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
 ### Return value

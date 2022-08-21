@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -33,6 +34,10 @@ stroke(path)
 
 - `path`
   - : A {{domxref("Path2D")}} path to stroke.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

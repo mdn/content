@@ -1,6 +1,7 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -17,12 +18,12 @@ The **`CharacterData`** abstract interface represents a {{domxref("Node")}} obje
 _This interface also inherits properties from its parents, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
 - {{domxref("CharacterData.data")}}
-  - : Is a string representing the textual data contained in this object.
-- {{domxref("CharacterData.length")}} {{readonlyInline}}
+  - : A string representing the textual data contained in this object.
+- {{domxref("CharacterData.length")}} {{ReadOnlyInline}}
   - : Returns a number representing the size of the string contained in the object.
-- {{domxref("CharacterData.nextElementSibling")}} {{readonlyInline}}
+- {{domxref("CharacterData.nextElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _follows_ this node, and is a sibling.
-- {{domxref("CharacterData.previousElementSibling")}} {{readonlyInline}}
+- {{domxref("CharacterData.previousElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _precedes_ this node, and is a sibling.
 
 ## Methods
@@ -44,7 +45,7 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
 - {{domxref("CharacterData.remove()")}}
   - : Removes the object from its parent children list.
 - {{domxref("CharacterData.replaceData()")}}
-  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, `data` contains the modified string.
+  - : Replaces the specified amount of characters, starting at the specified offset, with the specified string; when this method returns, `data` contains the modified string.
 - {{DOMxRef("CharacterData.replaceWith()")}}
   - : Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
 - {{domxref("CharacterData.substringData()")}}

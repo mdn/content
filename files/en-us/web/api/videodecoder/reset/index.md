@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.reset()
 slug: Web/API/VideoDecoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,16 +17,16 @@ The **`reset()`** method of the {{domxref("VideoDecoder")}} interface resets all
 ## Syntax
 
 ```js
-VideoDecoder.reset()
+reset()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

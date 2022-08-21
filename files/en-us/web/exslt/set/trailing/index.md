@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 set:trailing(nodeSet1, nodeSet2)
 ```
 
@@ -31,4 +31,4 @@ A node-set containing the nodes from `nodeSet1` whose values follow the first no
 
 ## Specifications
 
-[EXSLT - SET:TRAILING](http://www.exslt.org/set/functions/trailing/index.html)
+[EXSLT - SET:TRAILING](http://exslt.org/set/functions/trailing/index.html)

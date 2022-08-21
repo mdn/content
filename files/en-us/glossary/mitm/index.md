@@ -20,4 +20,3 @@ In physical mail and in online communication, MITM attacks are tough to defend. 
 - OWASP: [Manipulator-in-the-middle attack](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
 - PortSwigger: [Latest manipulator-in-the-middle attacks news](https://portswigger.net/daily-swig/mitm)
 - Wikipedia: [Man-in-the-middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
-- The {{HTTPHeader("Public-Key-Pins")}} header ({{Glossary("HPKP")}}) can significantly decrease the risk of MITM by instructing browsers to require an allowlisted certificate for all subsequent connections to that website.

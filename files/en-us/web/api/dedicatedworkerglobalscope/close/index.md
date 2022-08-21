@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,6 +21,14 @@ The **`close()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interf
 ```js
 close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -19,8 +19,6 @@ WebAssembly instructions.
 
 - [`Reference Instructions`](/en-US/docs/WebAssembly/Reference/Reference)
 
-- [`Parametric Instructions`](/en-US/docs/WebAssembly/Reference/Parametric)
-
 - [`Variable Instructions`](/en-US/docs/WebAssembly/Reference/Variables)
   - : Setting and getting local and global variables.
 

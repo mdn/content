@@ -1,6 +1,7 @@
 ---
 title: Element.ariaColSpan
 slug: Web/API/Element/ariaColSpan
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaColSpan`** property of the {{domxref("Element")}} interface reflects 
 
 ## Value
 
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -54,4 +55,4 @@ console.log(el.ariaColSpan);
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

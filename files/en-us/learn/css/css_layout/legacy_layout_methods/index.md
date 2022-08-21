@@ -119,7 +119,7 @@ You'll notice here that we are using percentages for all the widths — this is 
 
 The majority of legacy frameworks use the behavior of the {{cssxref("float")}} property to float one column up next to another in order to create something that looks like a grid. Working through the process of creating a grid with floats shows you how this works and also introduces some more advanced concepts to build on the things you learned in the lesson on [floats and clearing](/en-US/docs/Learn/CSS/CSS_layout/Floats).
 
-The easiest type of grid framework to create is a fixed width one — we just need to work out how much total width we want our design to be, how many columns we want, and how wide the gutters and columns should be. If we instead decided to lay out our design on a grid with columns that grow and shrink according to browser width, we would need to calculate percentage widths for the columns and  gutters between them.
+The easiest type of grid framework to create is a fixed width one — we just need to work out how much total width we want our design to be, how many columns we want, and how wide the gutters and columns should be. If we instead decided to lay out our design on a grid with columns that grow and shrink according to browser width, we would need to calculate percentage widths for the columns and gutters between them.
 
 In the next sections we will look at how to create both. We will create a 12 column grid — a very common choice that is seen to be very adaptable to different situations given that 12 is nicely divisible by 6, 4, 3, and 2.
 
@@ -156,9 +156,9 @@ Start out by making a local copy of our sample [simple-grid.html](https://github
 
 The aim is to turn this into a demonstration grid of two rows on a twelve column grid — the top row demonstrating the size of the individual columns, the second row some different sized areas on the grid.
 
-![](simple-grid-finished.png)
+![CSS grid with 16 grid items spread across twelve columns and two rows. The top row has 12 equal-width grid items in 12 columns. The second row has different-sized grid items. Item 13 spans 1 column, item 14 spans six columns, 15 spans three, and 16 spans two.](simple-grid-finished.png)
 
-In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
+In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
 
 ```css
 * {
@@ -185,7 +185,7 @@ Now use the row container that is wrapped around each row of the grid to clear o
 
 Applying this clearing means that we don't need to completely fill each row with elements making the full twelve columns. The rows will remain separated, and not interfere with each other.
 
-The gutters between the columns are 20 pixels wide. We create these gutters as a margin on the left side of each column — including the first column, to balance out the 20 pixels of padding on the right hand side of the container. So we have 12 gutters in total — 12 x 20 = 240.
+The gutters between the columns are 20 pixels wide. We create these gutters as a margin on the left side of each column — including the first column, to balance out the 20 pixels of padding on the right-hand side of the container. So we have 12 gutters in total — 12 x 20 = 240.
 
 We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.
 
@@ -213,7 +213,7 @@ Add the following at the bottom of your CSS:
 .col.span2 { width: 140px; }
 /* Three column widths (180px) plus two gutter widths (40px) */
 .col.span3 { width: 220px; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 300px; }
 .col.span5 { width: 380px; }
 .col.span6 { width: 460px; }
@@ -306,7 +306,7 @@ Update the bottom block of CSS rules with the following:
 .col.span2 { width: 14.58333333%; }
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
 .col.span3 { width: 22.91666666%; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 31.24999999%; }
 .col.span5 { width: 39.58333332%; }
 .col.span6 { width: 47.91666665%; }
@@ -324,7 +324,7 @@ Now save your code, load it in a browser, and try changing the viewport width �
 
 ### Easier calculations using the calc() function
 
-You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](</en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc).
 
 Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The `calc()` function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:
 
@@ -370,7 +370,7 @@ These are not the only approach. You could instead decide on your grid and then 
 
 ### Enabling offset containers in our grid
 
-The grid we have created works well as long as we want to start all of the containers flush with the left hand side of the grid. If we wanted to leave an empty column space  before the first container — or between containers — we would need to create an offset class to add a left margin to our site to push it across the grid visually. More math!
+The grid we have created works well as long as we want to start all of the containers flush with the left-hand side of the grid. If we wanted to leave an empty column space before the first container — or between containers — we would need to create an offset class to add a left margin to our site to push it across the grid visually. More math!
 
 Let's try this out.
 
@@ -392,7 +392,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 }
 ```
 
-You can now add this class to any container you want to leave a one column wide empty space on the left hand side of it. For example, if you have this in your HTML:
+You can now add this class to any container you want to leave a one column wide empty space on the left-hand side of it. For example, if you have this in your HTML:
 
 ```html
 <div class="col span6">14</div>
@@ -408,7 +408,7 @@ Try replacing it with
 
 Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
 
-![](offset-grid-finished.png)
+![The grid has 2 rows. The first row has 12 equal-width grid items and the second row has 4 items of different widths. Item 13 spans 1 column, item 14 spans five columns, 15 spans three, and 16 spans two. Item 14 has the 'offset-by-one' class applied, which means it starts in the 3rd column, rather than the second, leaving a one-column wide empty space in the second-row second-column. ](offset-grid-finished.png)
 
 > **Note:** As an extra exercise, can you implement an `offset-by-two` class?
 
@@ -458,7 +458,7 @@ On `.col` we set the {{cssxref("flex")}} property's first value ({{cssxref("flex
 
 On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.
 
-![](flexbox-grid-incomplete.png)
+![The grid has two rows. Each row is a flex container. The first row has twelve equal-width flex items. The second row has four equal-width flex items.](flexbox-grid-incomplete.png)
 
 To fix this we still need to include our `span` classes to provide a width that will replace the value used by `flex-basis` for that element.
 
@@ -470,7 +470,7 @@ In your project you might still choose to use a flexbox 'grid' due to the additi
 
 ## Third party grid systems
 
-Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://foundation.zurb.com/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
+Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
 
 Let's take a look at one of these standalone systems as it demonstrates common techniques for working with a grid framework. The grid we will be using is part of Skeleton, a simple CSS framework.
 
@@ -590,6 +590,6 @@ You now understand how various grid systems are created, which will be useful in
 - [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- Legacy layout methods
+- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -1,6 +1,7 @@
 ---
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -22,17 +23,17 @@ The **`HTMLEmbedElement`** interface provides special properties (beyond the reg
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"center"`, and `"justify"`.
+  - : A string representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"center"`, and `"justify"`.
 - {{domxref("HTMLEmbedElement.height")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("height", "embed")}} HTML attribute, containing the displayed height of the resource.
+  - : A string reflecting the {{htmlattrxref("height", "embed")}} HTML attribute, containing the displayed height of the resource.
 - {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the name of the embedded object.
+  - : A string representing the name of the embedded object.
 - {{domxref("HTMLEmbedElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "embed")}} HTML attribute, containing the address of the resource.
+  - : A string that reflects the {{htmlattrxref("src", "embed")}} HTML attribute, containing the address of the resource.
 - {{domxref("HTMLEmbedElement.type")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("type", "embed")}} HTML attribute, containing the type of the resource.
+  - : A string that reflects the {{htmlattrxref("type", "embed")}} HTML attribute, containing the type of the resource.
 - {{domxref("HTMLEmbedElement.width")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "embed")}} HTML attribute, containing the displayed width of the resource.
+  - : A string that reflects the {{htmlattrxref("width", "embed")}} HTML attribute, containing the displayed width of the resource.
 
 ## Methods
 

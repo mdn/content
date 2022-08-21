@@ -1,6 +1,7 @@
 ---
 title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
+page-type: guide
 tags:
   - HTML5
   - Handshaking
@@ -8,6 +9,8 @@ tags:
   - Tutorial
   - WebSockets
 ---
+{{DefaultAPISidebar("Websockets API")}}
+
 ## Introduction
 
 This example shows you how to create a WebSocket API server using Oracle Java.
@@ -18,7 +21,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
 
 ### ServerSocket
 
@@ -47,7 +50,7 @@ public class WebSocket {
   public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
     ServerSocket server = new ServerSocket(80);
     try {
-      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
+      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection…");
       Socket client = server.accept();
       System.out.println("A client connected.");
 ```
@@ -56,9 +59,9 @@ public class WebSocket {
 
 Methods:
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
+- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
   Returns an input stream for this socket.
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
+- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
   Returns an output stream for this socket.
 
 ### OutputStream
@@ -106,7 +109,7 @@ You must,
 1. Obtain the value of _Sec-WebSocket-Key_ request header without any leading and trailing whitespace
 2. Link it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
 3. Compute SHA-1 and Base64 code of it
-4. Write it back as value of _Sec-WebSocket-Accept_ response header as part of a HTTP response.
+4. Write it back as value of _Sec-WebSocket-Accept_ response header as part of an HTTP response.
 
 ```java
 if (get.find()) {

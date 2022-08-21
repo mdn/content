@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.reduction
 slug: Web/API/DynamicsCompressorNode/reduction
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode
@@ -23,9 +24,9 @@ A float.
 ## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
-var myReduction = compressor.reduction;
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
+const myReduction = compressor.reduction;
 ```
 
 See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.

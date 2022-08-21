@@ -1,9 +1,9 @@
 ---
 title: HTMLVideoElement.requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLVideoElement
   - Media
@@ -32,6 +32,10 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 requestPictureInPicture()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
@@ -45,7 +49,7 @@ listener to handle the floating window resizing.
 ```js
 function enterPictureInPicture() {
   videoElement.requestPictureInPicture()
-    .then(pictureInPictureWindow => {
+    .then((pictureInPictureWindow) => {
       pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
     })
 }

@@ -1,6 +1,7 @@
 ---
 title: XRTransientInputHitTestResult.results
 slug: Web/API/XRTransientInputHitTestResult/results
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -32,8 +33,8 @@ Two arrays are used to access transient input hit test results. First, you get a
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
 
-  hitTestResults.forEach(resultsPerInputSource => {
-    resultsPerInputSource.results.forEach(hitTest => {
+  hitTestResults.forEach((resultsPerInputSource) => {
+    resultsPerInputSource.results.forEach((hitTest) => {
       // do something with the hit test
       hitTest.getPose(referenceSpace);
     });

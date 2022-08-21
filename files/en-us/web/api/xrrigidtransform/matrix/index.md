@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.matrix
 slug: Web/API/XRRigidTransform/matrix
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -47,7 +48,7 @@ All 4x4 transform matrices used in WebGL are stored in 16-element
 into the array in column-major order; that is, each column is written into the array
 top-down before moving to the
 right one column and writing the next column into the array. Thus, for an array \[a0, a1,
-a2, ..., a13, a14, a15], the
+a2, …, a13, a14, a15], the
 matrix looks like this:
 
 <math display="block"><semantics><mrow><mo>[</mo>

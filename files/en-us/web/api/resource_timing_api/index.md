@@ -1,6 +1,7 @@
 ---
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
+page-type: web-api-overview
 tags:
   - API
   - Guide
@@ -10,6 +11,7 @@ tags:
   - Resource Timing API
   - Timing
   - Web Performance
+spec-urls: https://w3c.github.io/resource-timing/
 ---
 {{DefaultAPISidebar("Resource Timing API")}}
 
@@ -25,7 +27,7 @@ The `PerformanceResourceTiming` interface extends the {{domxref("PerformanceEntr
 
 ## High-resolution timestamps
 
-Several of the `Resource Timing` properties return _high-resolution timestamps_. These timestamps have a `{{domxref("DOMHighResTimeStamp")}}` type and as its name implies, they represent a high-resolution point in time. This type is a `double` and its value is a discrete point in time or the difference in time between two discrete points in time.
+Several of the `Resource Timing` properties return _high-resolution timestamps_. These timestamps have a {{domxref("DOMHighResTimeStamp")}} type and as its name implies, they represent a high-resolution point in time. This type is a `double` and its value is a discrete point in time or the difference in time between two discrete points in time.
 
 The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 µs (because, for example, due to hardware or software constraints), the browser can represent a the value as a time in milliseconds accurate to a millisecond.
 
@@ -37,7 +39,7 @@ An application can get timestamps for the various stages used to load a resource
 >
 > The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
 
-The `{{domxref("PerformanceResourceTiming")}}` interface also includes several network timing properties. The {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for redirect start and end times, respectively. Likewise, the {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for DNS lookup start and end times, respectively.
+The {{domxref("PerformanceResourceTiming")}} interface also includes several network timing properties. The {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for redirect start and end times, respectively. Likewise, the {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for DNS lookup start and end times, respectively.
 
 _This would be a nice place to have a diagram showing the relationships between these segments of the resource loading time._
 
@@ -63,9 +65,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## Specifications
 
-| Specification                                             |
-| --------------------------------------------------------- |
-| [Resource Timing](https://w3c.github.io/resource-timing/) |
+{{Specifications}}
 
 ## Implementation status
 

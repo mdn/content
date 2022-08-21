@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,7 +17,7 @@ The **`enterKeyHint`** property is an enumerated property defining
 what action label (or icon) to present for the enter key on virtual keyboards.
 It reflects the [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
 HTML global attribute and is an enumerated property, only accepting the following values
-as a [`DOMString`](/en-US/docs/Web/API/DOMString):
+as a string:
 
 - `'enter'` typically indicating inserting a new line.
 - `'done'` typically meaning there is nothing more to input and the input method editor (IME) will be closed.

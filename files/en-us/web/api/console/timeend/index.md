@@ -1,6 +1,7 @@
 ---
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -33,13 +34,17 @@ timeEnd(label)
     displayed in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) along
     with an indicator that the time has ended.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 

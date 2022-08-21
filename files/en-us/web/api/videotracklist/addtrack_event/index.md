@@ -1,6 +1,7 @@
 ---
 title: 'VideoTrackList: addtrack event'
 slug: Web/API/VideoTrackList/addtrack_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -17,9 +18,9 @@ The `addtrack` event is fired when a video track is added to a [`VideoTrackList`
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('addtrack', event => { })
+addEventListener('addtrack', (event) => { })
 
-onaddtrack = event => { }
+onaddtrack = (event) => { }
 ```
 
 ## Event type

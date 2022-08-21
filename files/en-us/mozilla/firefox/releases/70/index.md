@@ -84,9 +84,9 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### DOM
 
-- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the `{{domxref("Window/popstate_event", "popstate")}}` event to get notification that navigation has completed {{Bug(1563587)}}.
+- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed {{Bug(1563587)}}.
 - We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ({{bug(1420580)}}).
-- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including  {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).
+- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).
 - [Notification](/en-US/docs/Web/API/Notifications_API) permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ({{bug(1560741)}}).
 
 #### Media, Web Audio, and WebRTC
@@ -107,7 +107,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 ### HTTP
 
-- The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection) is turned on ({{bug(1569996)}}).
+- The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) is turned on ({{bug(1569996)}}).
 - The size of the {{httpheader("Referer")}} request header is now limited to 4 KB (4,096 bytes). If an overly long referer exceeds the defined limit, only the origin part will be sent ({{bug(1557346)}}).
 - The [HTTP cache](/en-US/docs/Web/HTTP/Caching) is now partitioned per the top-level document's origin ({{bug(1536058)}}).
 

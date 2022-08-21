@@ -1,6 +1,7 @@
 ---
 title: Navigator.plugins
 slug: Web/API/Navigator/plugins
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -48,7 +49,7 @@ If inline viewing of PDFs is not supported then an empty object is returned.
 This code shows how to check if PDF files can be displayed inline:
 
 ```js
-if ('PDF Viewer' in navigator.plugins) { 
+if ('PDF Viewer' in navigator.plugins) {
   // browser supports inline viewing of PDF files.
 }
 ```

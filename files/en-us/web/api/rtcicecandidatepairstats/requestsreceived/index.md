@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.requestsReceived
 slug: Web/API/RTCIceCandidatePairStats/requestsReceived
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

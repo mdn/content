@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,6 +21,14 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 ```js
 deleteTHead()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -44,7 +53,7 @@ table.deleteTHead();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

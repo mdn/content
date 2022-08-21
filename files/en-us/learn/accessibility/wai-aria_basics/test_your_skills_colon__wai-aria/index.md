@@ -19,7 +19,7 @@ This aim of this skill test is to assess whether you've understood our [WAI-ARIA
 
 ## WAI-ARIA 1
 
-In our first ARIA task, we present you with a section of non-semantic markup, which is obviously meant to be a list. Assuming you are not able to change the elements used, how can you allow screenreader users to recognize this as a list?
+In our first ARIA task, we present you with a section of non-semantic markup, which is obviously meant to be a list. Assuming you are not able to change the elements used, how can you allow screen reader users to recognize this as a list?
 
 Try updating the live code below to recreate the finished example:
 
@@ -33,7 +33,7 @@ Try updating the live code below to recreate the finished example:
 
 In our second WAI-ARIA task, we present a simple search form, and we want you to add in a couple of WAI-ARIA features to improve its accessibility:
 
-1. How can you allow the search form to be called out as a separate landmark on the page by screenreaders, to make it easily findable?
+1. How can you allow the search form to be called out as a separate landmark on the page by screen readers, to make it easily findable?
 2. How can you give the search input a suitable label, without explicitly adding a visible text label to the DOM?
 
 Try updating the live code below to recreate the finished example:
@@ -48,7 +48,7 @@ Try updating the live code below to recreate the finished example:
 
 For this final WAI-ARIA task, we return to an example we previously saw in the [CSS and JavaScript skill test](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility). As before, we have a simple app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list. Here, we are starting with a mouse- and keyboard-accessible version.
 
-The problem we have now is that when the DOM changes to show a new description, screenreaders cannot see what has changed. Can you update it so that description changes are announced by the screenreader?
+The problem we have now is that when the DOM changes to show a new description, screen readers cannot see what has changed. Can you update it so that description changes are announced by the screen reader?
 
 > **Callout:**
 >
@@ -61,7 +61,7 @@ You can practice these examples in the Interactive Editors above.
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for WAI-ARIA 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

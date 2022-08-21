@@ -1,6 +1,7 @@
 ---
 title: HTMLTimeElement.dateTime
 slug: Web/API/HTMLTimeElement/dateTime
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,7 +14,7 @@ browser-compat: api.HTMLTimeElement.dateTime
 
 The
 **`HTMLTimeElement.dateTime`**
-property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("datetime",
+property is a string that reflects the {{ htmlattrxref("datetime",
   "time") }} HTML attribute, containing a machine-readable form of the element's date and
 time value.
 
@@ -161,7 +162,7 @@ A string.
 ```js
 // Assumes there is <time id="t"> element in the HTML
 
-var t = document.getElementById("t");
+const t = document.getElementById("t");
 t.dateTime = "6w 5h 34m 5s";
 ```
 

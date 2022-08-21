@@ -1,6 +1,7 @@
 ---
 title: MIDIOutput.clear()
 slug: Web/API/MIDIOutput/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,6 +23,10 @@ clear()
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

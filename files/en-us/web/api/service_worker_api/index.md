@@ -1,6 +1,7 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -9,6 +10,7 @@ tags:
   - Reference
   - Service Workers
   - Workers
+spec-urls: https://w3c.github.io/ServiceWorker/
 ---
 {{ServiceWorkerSidebar}}
 
@@ -24,7 +26,7 @@ Service workers only run over HTTPS, for security reasons. Having modified netwo
 
 > **Note:** On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu.
 
-> **Note:** Unlike previous attempts in this area such as [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag), service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.
+> **Note:** Unlike previous attempts in this area such as [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/), service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.
 
 > **Note:** Service workers make heavy use of [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.
 
@@ -125,9 +127,7 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## Specifications
 
-| Specification                                           |
-| ------------------------------------------------------- |
-| [Service Workers](https://w3c.github.io/ServiceWorker/) |
+{{Specifications}}
 
 ## See also
 

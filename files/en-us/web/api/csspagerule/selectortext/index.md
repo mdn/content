@@ -1,6 +1,7 @@
 ---
 title: CSSPageRule.selectorText
 slug: Web/API/CSSPageRule/selectorText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,7 +16,7 @@ The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 

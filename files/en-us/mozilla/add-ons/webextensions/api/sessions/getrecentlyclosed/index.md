@@ -29,7 +29,7 @@ let gettingSessions = browser.sessions.getRecentlyClosed(
 
 ### Parameters
 
-- `filter`{{optional_inline}}
+- `filter` {{optional_inline}}
   - : `object`. A {{WebExtAPIRef("sessions.Filter")}} object that limits the set of sessions returned.
 
 ### Return value
@@ -64,7 +64,7 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });
@@ -74,7 +74,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

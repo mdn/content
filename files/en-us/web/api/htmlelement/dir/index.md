@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -37,16 +38,16 @@ directionality of its parent element.
 
 ## Value
 
-One of the followings:
+One of the following:
 
-- `ltr`, for left-to-right
-- `rtl`, for right-to-left
+- `ltr`, for left-to-right;
+- `rtl`, for right-to-left;
 - `auto` for specifying that the direction of the element must be determined based on the contents of the element.
 
 ## Examples
 
 ```js
-var parg = document.getElementById("para1");
+const parg = document.getElementById("para1");
 parg.dir = "rtl";
 // change the text direction on a paragraph identified as "para1"
 ```

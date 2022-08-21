@@ -1,6 +1,7 @@
 ---
 title: XRViewport
 slug: Web/API/XRViewport
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -43,7 +44,7 @@ Currently, the only type of surface available is the {{domxref("XRWebGLLayer")}}
 These values may be passed directly into the {{domxref("WebGLRenderingContext.viewport()")}} method:
 
 ```js
-let xrViewport = xrWebGLLayer.getViewport(xrView);
+const xrViewport = xrWebGLLayer.getViewport(xrView);
 gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
 ```
 
@@ -53,12 +54,12 @@ This example sets up an animation frame callback using {{domxref("XRSession.requ
 
 ```js
 xrSession.requestAnimationFrame((time, xrFrame) => {
-  let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
+  const viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
 
   gl.bindFramebuffer(xrWebGLLayer.framebuffer);
 
-  for (xrView of viewerPose.views) {
-    let xrViewport = xrWebGLLayer.getViewport(xrView);
+  for (const xrView of viewerPose.views) {
+    const xrViewport = xrWebGLLayer.getViewport(xrView);
     gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
 
    // Now we can use WebGL to draw into a viewport matching

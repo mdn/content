@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaLevel
 slug: Web/API/ElementInternals/ariaLevel
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaLevel`** property of the {{domxref("ElementInternals")}} interface re
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 

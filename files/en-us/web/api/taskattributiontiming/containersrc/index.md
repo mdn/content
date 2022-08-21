@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerSrc
 slug: Web/API/TaskAttributionTiming/containerSrc
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -19,7 +20,7 @@ the whole, for a long task.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the container's `src` attribute.
+A string containing the container's `src` attribute.
 
 ## Specifications
 

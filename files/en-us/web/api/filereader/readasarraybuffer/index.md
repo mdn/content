@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -35,6 +36,10 @@ readAsArrayBuffer(blob)
 
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

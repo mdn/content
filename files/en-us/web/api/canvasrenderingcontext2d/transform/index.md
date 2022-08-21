@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -56,6 +57,10 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
   - : Horizontal translation (moving).
 - `f` (dy)
   - : Vertical translation (moving).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

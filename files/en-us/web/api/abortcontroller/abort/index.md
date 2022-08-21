@@ -1,10 +1,10 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
+page-type: web-api-instance-method
 tags:
   - API
   - AbortController
-  - Experimental
   - Fetch
   - Method
   - Reference
@@ -25,13 +25,13 @@ abort(reason)
 
 ### Parameters
 
-- `reason`
+- `reason` {{optional_inline}}
   - : The reason why the operation was aborted, which can be any JavaScript value.
     If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -42,26 +42,28 @@ We first create a controller using the {{domxref("AbortController.AbortControlle
 When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+const url = 'video.mp4';
+const downloadBtn = document.querySelector('.download');
+const abortBtn = document.querySelector('.abort');
 
 downloadBtn.addEventListener('click', fetchVideo);
 
-abortBtn.addEventListener('click', function() {
+abortBtn.addEventListener('click', () => {
   controller.abort();
   console.log('Download aborted');
 });
 
 function fetchVideo() {
-  ...
-  fetch(url, {signal}).then(function(response) {
-    ...
-  }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
-  })
+  fetch(url, { signal })
+    .then((response) => {
+      console.log('Download complete', response);
+    })
+    .catch((err) => {
+      console.error(`Download error: ${err.message}`);
+    });
 }
 ```
 

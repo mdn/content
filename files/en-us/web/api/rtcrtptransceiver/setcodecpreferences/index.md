@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.setCodecPreferences()
 slug: Web/API/RTCRtpTransceiver/setCodecPreferences
+page-type: web-api-instance-method
 tags:
   - API
   - Codec
@@ -57,7 +58,7 @@ setCodecPreferences(codecs)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -88,8 +89,8 @@ The following code snippet demonstrates how to get both the list of codecs suppo
 the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.
 
 ```js
-var availSendCodecs = transceiver.sender.getCapabilities("video").codecs;
-var availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
+const availSendCodecs = transceiver.sender.getCapabilities("video").codecs;
+const availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 ```
 
 ## Specifications
@@ -104,6 +105,5 @@ var availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - [Web media technologies](/en-US/docs/Web/Media)

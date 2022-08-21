@@ -14,6 +14,10 @@ browser-compat: css.properties.aspect-ratio
 
 The **`aspect-ratio`**  [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
 
+{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+
+## Syntax
+
 ```css
 aspect-ratio: 1 / 1;
 aspect-ratio: 1;
@@ -50,20 +54,6 @@ aspect-ratio: 1 / 1;
 aspect-ratio: 16 / 9;
 aspect-ratio: 0.5;
 ```
-
-## Mapping width and height to aspect-ratio
-
-Browsers have added an internal `aspect-ratio` property that applies to [replaced elements](/en-US/docs/Web/CSS/Replaced_element) and other related elements that accept `width` and `height` attributes. This appears in the browser's internal UA stylesheet.
-
-In Firefox, the internal stylesheet rule looks like this:
-
-```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
-  aspect-ratio: attr(width) / attr(height);
-}
-```
-
-You can read more about this feature in [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
 ## Specifications
 

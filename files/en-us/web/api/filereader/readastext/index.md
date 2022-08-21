@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
+page-type: web-api-instance-method
 tags:
   - API
   - File API
@@ -30,6 +31,10 @@ readAsText(blob, encoding)
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 - `encoding` {{optional_inline}}
   - : A string specifying the encoding to use for the returned data. By default, UTF-8 is assumed if this parameter is not specified.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -61,7 +66,7 @@ function previewFile() {
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{EmbedLiveSample("Examples", "100%", 240)}}
 
 ## Specifications
 

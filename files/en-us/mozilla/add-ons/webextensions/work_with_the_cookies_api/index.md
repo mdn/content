@@ -135,12 +135,12 @@ let bgBtns = document.querySelectorAll('.bg-container button');
 It then loops through all the buttons assigning them their image and creating an onclick listener for each button:
 
 ```js
-for(let i = 0; i < bgBtns.length; i++) {
+for (let i = 0; i < bgBtns.length; i++) {
   let imgName = bgBtns[i].getAttribute('class');
   let bgImg = 'url(\'images/' + imgName + '.png\')';
   bgBtns[i].style.backgroundImage = bgImg;
 
-  bgBtns[i].onclick = function(e) {
+  bgBtns[i].onclick = (e) => {
 ```
 
 When a button is clicked, its corresponding listener function gets the button class name and then the icon path which it passes to the page's content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) using a message. The content script then applies the icon to the web page's background. Meanwhile, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js) stores the details of the icon applied to the background in a cookie:
@@ -202,7 +202,7 @@ A background script ([background.js](https://github.com/mdn/webextensions-exampl
     });
 ```
 
-If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the  content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) using messages:
+If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) using messages:
 
 ```js
     gettingCookies.then((cookie) => {

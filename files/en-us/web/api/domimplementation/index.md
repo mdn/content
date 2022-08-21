@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -26,7 +27,7 @@ _No inherited method._
   - : Creates and returns a {{domxref("DocumentType")}}.
 - {{domxref("DOMImplementation.createHTMLDocument()")}}
   - : Creates and returns an HTML {{domxref("Document")}}.
-- {{domxref("DOMImplementation.hasFeature()")}}
+- {{domxref("DOMImplementation.hasFeature()")}} {{Deprecated_Inline}}
   - : Returns a boolean value indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns `true`. Old browsers are very inconsistent in their behavior.
 
 ## Specifications

@@ -1,6 +1,6 @@
 ---
 title: Cognitive accessibility
-slug: Web/Accessibility/Cognitive_accessibility 
+slug: Web/Accessibility/Cognitive_accessibility
 tags:
   - Accessibility
   - Best practices
@@ -44,7 +44,7 @@ A solid approach to providing accessible solutions for people with cognitive imp
 
 ## WCAG Guidelines
 
-WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the [Accessible Rich Internet Application (ARIA)](/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides guidelines).
+WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the [Accessible Rich Internet Application (ARIA)](/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides) guidelines.
 
 WCAG are guided by four principles: websites must be Perceivable, Operable, Understandable, and Robust. To this end, they define 17 specific guidelines, of which six are especially relevant for cognitive accessibility.
 
@@ -116,7 +116,7 @@ Providing more than one way to navigate your site can help people find informati
 
 ### Ability to bypass blocks of content
 
-Providing a mechanism, such as a [skiplink](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
+Providing a mechanism, such as a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
 
 ### Focus order makes sense
 
@@ -146,7 +146,7 @@ All users benefit from information about where they are in a site's hierarchy, e
 
 For these users, the ability to read and understand may depend on the availability of specific definitions or the expanded forms of acronyms or abbreviations. Some users may experience great difficulty in recognizing written words yet they understand extremely complex and sophisticated documents when the text is read aloud, or when key processes and ideas are illustrated visually.
 
-### Declare the language of the page and any content not in that main language.
+### Declare the language of the page and any content not in that main language
 
 The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
 
@@ -243,7 +243,7 @@ Start the form with text instructions on how to operate it. Include labels or in
 
 Labels should be descriptive and positioned close to the input they relate to. When requiring a specific format for input, provide an example formatted in the proper way. Additionally, consider performing server-side validation to help format input data, to aid in the ease of user input.
 
-If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
+If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
 
 ### Error Suggestion
 
@@ -278,7 +278,7 @@ The above are good design practices. They will benefit everyone.
 - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 - [Accessibility overview](/en-US/docs/Learn/Accessibility)
-- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#WCAG_Guidelines).
+- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines).
 - [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
 - [CDC information on disabilities.](https://www.cdc.gov/media/releases/2018/p0816-disability.html)

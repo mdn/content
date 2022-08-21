@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.root
 slug: Web/API/NodeIterator/root
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -21,10 +22,10 @@ A {{DOMxref("Node")}}.
 ## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
+const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 root = nodeIterator.root; // document.body in this case
 ```

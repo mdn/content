@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -36,6 +37,10 @@ scale(x, y)
 - `y`
   - : Scaling factor in the vertical direction. A negative value flips pixels across the
     horizontal axis. A value of `1` results in no vertical scaling.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

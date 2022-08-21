@@ -1,6 +1,7 @@
 ---
 title: 'XREquirectLayer: redraw event'
 slug: Web/API/XREquirectLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -23,9 +24,9 @@ See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is als
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('redraw', event => { })
+addEventListener('redraw', (event) => { })
 
-onredraw = event => { }
+onredraw = (event) => { }
 ```
 
 ## Event type
@@ -46,7 +47,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can pass `redraw` to {{domxref("EventTarget.addEventListener()", "addEventListener()")}}:
 
 ```js
-equirectLayer.addEventListener("redraw", function(event) {
+equirectLayer.addEventListener("redraw", (event) => {
   // redraw the layer
 });
 ```
@@ -54,7 +55,7 @@ equirectLayer.addEventListener("redraw", function(event) {
 Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
-equirectLayer.onredraw = function(event) {
+equirectLayer.onredraw = (event) => {
  // redraw the layer
 }
 ```

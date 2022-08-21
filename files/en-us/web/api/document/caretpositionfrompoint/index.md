@@ -1,6 +1,7 @@
 ---
 title: Document.caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -8,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
-{{APIRef("CSSOM View")}} {{SeeCompatTable}}
+{{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
 property of the {{domxref("Document")}} interface returns a
@@ -38,7 +39,7 @@ Click anywhere in the **Demo** paragraph below to insert a line break at the poi
 
 ### Demo
 
-{{EmbedLiveSample('Example', '100%', '100px')}}
+{{EmbedLiveSample('Examples')}}
 
 The code below first checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} support, but if the browser doesn't support that, the code then checks for `document.caretPositionFromPoint`, and uses that instead.
 
@@ -65,7 +66,7 @@ function insertBreakAtPoint(e) {
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode && textNode.nodeType == 3) {
+  if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);

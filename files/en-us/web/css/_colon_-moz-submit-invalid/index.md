@@ -19,7 +19,9 @@ By default, no style is applied. You can use this pseudo-class to customize the 
 
 ## Syntax
 
-{{csssyntax}}
+```
+:-moz-submit-invalid
+```
 
 ## Specifications
 

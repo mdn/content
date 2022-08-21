@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.blur()
 slug: Web/API/HTMLElement/blur
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -19,6 +20,14 @@ removes keyboard focus from the current element.
 ```js
 blur()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -28,13 +28,15 @@ simple-custom:defined {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:defined
+```
 
 ## Examples
 
 ### Hiding elements until they are defined
 
-The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/main/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
 In this demo we define a very simple trivial custom element:
 

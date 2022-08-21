@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -30,7 +31,7 @@ A boolean.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);

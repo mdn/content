@@ -1,6 +1,7 @@
 ---
 title: Element.ariaBusy
 slug: Web/API/Element/ariaBusy
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is being updated.

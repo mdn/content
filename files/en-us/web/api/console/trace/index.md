@@ -1,6 +1,7 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
+page-type: web-api-instance-method
 tags:
   - API
   - Chrome
@@ -29,7 +30,7 @@ See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 
 ```js
 trace()
-trace(object1, /* ..., */ objectN)
+trace(object1, /* …, */ objectN)
 ```
 
 ### Parameters
@@ -38,6 +39,10 @@ trace(object1, /* ..., */ objectN)
   - : Zero or more objects to be output to console along with the trace. These are
     assembled and formatted the same way they would be if passed to the
     {{domxref("console.log()")}} method.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

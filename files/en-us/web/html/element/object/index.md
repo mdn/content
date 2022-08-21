@@ -85,11 +85,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{HTMLAttrDef("data")}}
   - : The address of the resource as a valid URL. At least one of **data** and **type** must be defined.
 - {{HTMLAttrDef("declare")}} {{deprecated_inline}}
-  - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. In HTML5, repeat the \<object> element completely each time that the resource is reused.
+  - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. Repeat the `<object>` element completely each time the resource is reused.
 - {{HTMLAttrDef("form")}}
   - : The form element, if any, that the object element is associated with (its _form owner_). The value of the attribute must be an ID of a {{HTMLElement("form")}} element in the same document.
 - {{HTMLAttrDef("height")}}
-  - : The height of the displayed resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : The height of the displayed resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - {{HTMLAttrDef("name")}}
   - : The name of valid browsing context (HTML5), or the name of the control (HTML 4).
 - {{HTMLAttrDef("standby")}} {{deprecated_inline}}
@@ -99,7 +99,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{HTMLAttrDef("usemap")}}
   - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a {{htmlattrxref("name", "map")}} of a map element.
 - {{HTMLAttrDef("width")}}
-  - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## Examples
 
@@ -112,7 +112,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     height="720">
 </object>
 ```
-  
+
 Note that a `type` field is normally specified, but is not needed for youtube videos.
 
 ## Specifications

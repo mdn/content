@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.sliCount
 slug: Web/API/RTCOutboundRtpStreamStats/sliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption
@@ -30,7 +31,7 @@ the RTP stream described by this object.
 
 An SLI packet is used by a decoder to let the encoder (the sender) know that it's
 detected corruption of one or more consecutive macroblocks, in scan order, in the
-received media.In general, what's usually of interest is that the higher this number is,
+received media. In general, what's usually of interest is that the higher this number is,
 the more the stream data is becoming corrupted between the sender and the receiver,
 causing the receiver to request retransmits or to drop frames entirely.
 
@@ -55,6 +56,6 @@ This is a very technical part of how video codecs work. For details, see {{RFC(4
 
 ## See also
 
-- {{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
+- {{RFC(4585, "", "6.3.2")}}: Definition of "Slice Loss Indication" in the document
   _Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
   Feedback (RTP/AVPF)_.

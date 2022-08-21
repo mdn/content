@@ -301,7 +301,7 @@ You may notice some unusual attributes here. For example:
 
 Here, `aria-pressed` tells assistive technology (like screen readers) that the button can be in one of two states: `pressed` or `unpressed`. Think of these as analogs for on and off. Setting a value of `true` means that the button is pressed by default.
 
-The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.
+The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screen reader users that do not have the extra visual context to help them.
 
 Further down, you can find the following `<ul>` element:
 
@@ -354,7 +354,7 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
 ```
 
-> **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix..._ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
+> **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix…_ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
 
 If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
@@ -362,7 +362,7 @@ If you want to globally disable this warning, you can add this `onwarn` handler 
 plugins: [
   svelte({
     dev: !production,
-    css: css => {
+    css: (css) => {
       css.write('public/build/bundle.css');
     },
     // Warnings are normally passed straight to Rollup. You can
@@ -377,7 +377,7 @@ plugins: [
     }
   }),
 
-  ...
+  // …
 ]
 ```
 
@@ -385,7 +385,7 @@ By design, these warnings are implemented in the compiler itself, and not as a p
 
 > **Note:** You should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.
 
-The accessibility rules checked by Svelte are taken from [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules), a plugin for eslint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see [which accessibility checks are still missing](https://github.com/sveltejs/svelte/issues/820). You can check the meaning of each rule by clicking on its link.
+The accessibility rules checked by Svelte are taken from [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules), a plugin for ESLint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see [which accessibility checks are still missing](https://github.com/sveltejs/svelte/issues/820). You can check the meaning of each rule by clicking on its link.
 
 ## Styling our markup
 
@@ -425,7 +425,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
 }
 button::-moz-focus-inner {
   border: 0;
@@ -665,7 +665,7 @@ body {
 .c-cb > label::before {
   content: "";
   position: absolute;
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   background: transparent;
 }
 .c-cb > input[type="checkbox"]:focus + label::before {

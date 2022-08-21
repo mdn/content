@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -33,7 +34,7 @@ setStringValue(stringType, stringValue)
 
 ### Parameters
 
-- stringType
+- `stringType`
 
   - : An `unsigned short` representing the type of the value. Possible values
     are:
@@ -45,12 +46,12 @@ setStringValue(stringType, stringValue)
     | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.            |
     | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.                     |
 
-- stringValue
+- `stringValue`
   - : A string representing the new string value.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -62,7 +63,7 @@ None.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

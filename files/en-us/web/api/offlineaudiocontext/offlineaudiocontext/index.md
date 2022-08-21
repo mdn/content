@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext()
 slug: Web/API/OfflineAudioContext/OfflineAudioContext
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -21,8 +22,9 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 ## Syntax
 
 ```js
-new OfflineAudioContext(options);
-new OfflineAudioContext(numberOfChannels, length, sampleRate);
+new OfflineAudioContext(options)
+
+new OfflineAudioContext(numberOfChannels, length, sampleRate)
 ```
 
 ### Parameters
@@ -52,9 +54,7 @@ using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} const
 with no arguments, the `OfflineAudioContext()` constructor requires three
 arguments, since it needs to create an `AudioBuffer`. This works in exactly
 the same way as when you create a new {{domxref("AudioBuffer")}} with the
-{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio
-buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our [Basic
-concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
+{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
 
 ### Return value
 
@@ -74,12 +74,11 @@ const offlineCtx = new OfflineAudioContext({
   sampleRate: 44100,
 });
 const source = offlineCtx.createBufferSource();
-// etc...
+// …
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-GitHub repo (see the [source
-code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
+GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
 
 ## Specifications
 

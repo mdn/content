@@ -67,8 +67,8 @@ Given a manifest.json entry like this:
 You could listen for this particular command like this:
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
-  if (command == "toggle-feature") {
+browser.commands.onCommand.addListener((command) => {
+  if (command === "toggle-feature") {
     console.log("toggling the feature!");
   }
 });
@@ -76,4 +76,4 @@ browser.commands.onCommand.addListener(function(command) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/extensions/commands) API.
+> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.

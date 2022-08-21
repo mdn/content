@@ -36,8 +36,8 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners)
-  - : An HTML guide for beginners that includes explanations of common tags, including HTML5 tags. Also includes a step-by-step guide to creating a basic web page with code examples.
+- [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
+  - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
 
@@ -77,6 +77,15 @@ These resources are created by forward-thinking companies and web developers who
   - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
+  
+- [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+  - : Target HTML elements, including based on element state, with CSS.
+
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - : Understanding the browser algorithm to determine which CSS declarations get applied to element when there are compting declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
+
+- [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+  - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
 - [Styling text](/en-US/docs/Learn/CSS/Styling_text)
   - : Here we look at text styling fundamentals, including setting font, boldness, and italics, line and letter spacing, and drop shadows and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
@@ -92,7 +101,7 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [Fluid Grids](https://www.alistapart.com/articles/fluidgrids/)
+- [Fluid Grids](https://alistapart.com/article/fluidgrids/)
   - : Design layouts that fluidly resize with the browser window, while still using a typographic grid.
 - [CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges)
   - : Flex your CSS skills, and see where you need more practice.
@@ -102,21 +111,9 @@ These resources are created by forward-thinking companies and web developers who
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-  - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
-
-<!---->
-
-- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/)
-  - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
-- [Starting to Write CSS](https://davidwalsh.name/starting-css)
-  - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.
-
-<!---->
-
+  - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
-- [HTML5 Doctor](https://html5doctor.com/)
-  - : Articles about using HTML5 right now.
 
 ## JavaScript Tutorials
 
@@ -133,8 +130,8 @@ These resources are created by forward-thinking companies and web developers who
   - : What is JavaScript and how can it help you?
 - [Codecademy](https://www.codecademy.com/)
   - : Codecademy is an easy way to learn how to code JavaScript. It's interactive and you can do it with your friends.
-- [freeCodeCamp](https://freecodecamp.org/learn/)
-  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://freecodecamp.org/forum), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://freecodecamp.org/news).
+- [freeCodeCamp](https://www.freecodecamp.org/learn)
+  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://forum.freecodecamp.org/), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://www.freecodecamp.org/news).
 
 ### Intermediate level
 
@@ -151,7 +148,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
 - [Speaking JavaScript](http://speakingjs.com/es5/)
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
-- [Essential JavaScript Design Patterns](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.
 - [JavaScript.info - The Modern JavaScript Tutorial](https://javascript.info/)
   - : Part 1: The Language. Part 2: Working with Browsers.
@@ -179,4 +176,4 @@ These resources are created by forward-thinking companies and web developers who
 ### Extension Development
 
 - [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/extensions) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
+  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).

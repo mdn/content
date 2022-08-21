@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,17 +20,17 @@ interface returns the first value associated to the given search parameter.
 ## Syntax
 
 ```js
-URLSearchParams.get(name)
+get(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to return.
 
 ### Return value
 
-A {{domxref("USVString")}} if the given search parameter is found; otherwise,
+A string if the given search parameter is found; otherwise,
 **`null`**.
 
 ## Examples

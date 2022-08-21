@@ -1,6 +1,7 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -37,7 +38,7 @@ This example tries to illustrate how the stack of drawing states functions by dr
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
   ctx.save();                  // Save the default state
@@ -72,7 +73,7 @@ So far this is pretty similar to what we've done in previous sections. However o
 
 When the second `restore()` statement is called, the original state (the one we set up before the first call to `save`) is restored and the last rectangle is once again drawn in black.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "190", "canvas_savestate.png")}}
 
 ## Translating
 
@@ -93,11 +94,11 @@ In the `draw()` function, we call the `fillRect()` function nine times using two
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById('canvas').getContext('2d');
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = `rgb(${51 * i}, ${255 - 51 * i}, 255)`;
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -114,7 +115,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "190", "translate.png")}}
 
 ## Rotating
 
@@ -135,7 +136,7 @@ In this example, we'll use the `rotate()` method to first rotate a rectangle fro
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
   ctx.save();
@@ -175,7 +176,7 @@ To rotate the rectangle around its own center, we translate the canvas to the ce
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "260", "rotate.png")}}
 
 ## Scaling
 
@@ -194,7 +195,7 @@ In this last example, we'll draw shapes with different scaling factors.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -217,7 +218,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "190", "scale.png")}}
 
 ## Transforms
 
@@ -235,7 +236,7 @@ The parameters of this function are:
 
 - `a (m11)`
   - : Horizontal scaling.
-- _`b (m12)`_
+- `b (m12)`
   - : Horizontal skewing.
 - `c (m21)`
   - : Vertical skewing.
@@ -254,15 +255,15 @@ The parameters of this function are:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
-  var sin = Math.sin(Math.PI / 6);
-  var cos = Math.cos(Math.PI / 6);
+  const sin = Math.sin(Math.PI / 6);
+  const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
-  var c = 0;
-  for (var i = 0; i <= 12; i++) {
+  let c = 0;
+  for (let i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    ctx.fillStyle = `rgb(${c}, ${c}, ${c})`;
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
@@ -281,6 +282,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "290", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

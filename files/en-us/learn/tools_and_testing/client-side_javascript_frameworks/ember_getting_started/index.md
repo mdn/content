@@ -32,7 +32,7 @@ In our first Ember article we will look at how Ember works and what it's useful 
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -71,7 +71,7 @@ Examples include:
 
 - [PREmber](https://github.com/ef4/prember): Static website rendering for blogs or marketing content.
 - [FastBoot](https://ember-fastboot.com/): Server-side rendering, including improving search-engine optimization (SEO), or improving initial render performance of complex, highly interactive web pages.
-- [empress-blog](https://empress-blog.netlify.com/welcome): Authoring blog posts in markdown while optimizing for SEO with PREmber.
+- [empress-blog](https://empress-blog.netlify.app/welcome/): Authoring blog posts in markdown while optimizing for SEO with PREmber.
 - [ember-service-worker](https://ember-service-worker.com/): Configuring a PWA so that the app can be installed on mobile devices, just like apps from the device's respective app-store.
 
 ### Native mobile apps
@@ -233,7 +233,7 @@ If everything is working correctly, you should see a page like this:
 
 ![The default start page when you create a new Ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
-> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install-win10), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
+> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 
 ## Summary
 

@@ -6,15 +6,17 @@ tags:
   - Guide
   - Overview
   - css scrollbars
-spec-urls: https://drafts.csswg.org/css-scrollbars/
+browser-compat:
+  - css.properties.scrollbar-width
+  - css.properties.scrollbar-color
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Scrollbars** standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
 
-## Basic Example
+## Basic example
 
-In this example we have chosen to use a thin scrollbar, with a green track and purple thumb.
+In this example, we have chosen to use a thin scrollbar with a green track and purple thumb.
 
 ```css
 .scroller {
@@ -44,30 +46,24 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## Reference
 
-### CSS Properties
+### Properties
 
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
-
-## Specifications
-
-{{Specifications}}
 
 ## Accessibility concerns
 
 When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.
 
-- [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+- [Baseline Rules for Scrollbar Usability | Adrian Roselli](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
-### scrollbar-width
-
-{{Compat("css.properties.scrollbar-width")}}
-
-### scrollbar-color
-
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}
 
 ## See also
 

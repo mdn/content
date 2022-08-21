@@ -1,5 +1,5 @@
 ---
-title: Line-based placement with CSS Grid
+title: Grid layout using line-based placement
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 tags:
   - CSS
@@ -135,7 +135,7 @@ Addressing each item individually we can place all four items spanning row and c
 
 ## The `grid-column` and `grid-row` shorthands
 
-We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
+We have quite a lot of code here to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -374,7 +374,7 @@ When we specify our grid area using the `grid-area` property we first define bot
 
 ## Counting backwards
 
-We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
+We can also count backwards from the block and inline end of the grid, for English that would be the right-hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
 
 In this next example, we have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 

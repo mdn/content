@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.send()
 slug: Web/API/PresentationConnection/send
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -37,7 +38,7 @@ send(data)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

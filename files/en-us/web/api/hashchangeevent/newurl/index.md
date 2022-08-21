@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent
@@ -17,13 +18,13 @@ navigating.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
 ```js
-window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed to ' + event.newURL);
+window.addEventListener('hashchange', (event) => {
+  console.log(`Hash changed to ${event.newURL}`);
 });
 ```
 

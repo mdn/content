@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.protocol
 slug: Web/API/RTCIceCandidateStats/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

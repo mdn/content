@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Constrain Validation API
@@ -27,6 +28,10 @@ setCustomValidity(string)
 
 - `string` is the string containing the error message.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}
@@ -37,5 +42,4 @@ setCustomValidity(string)
 
 ## See also
 
-- [Form
-  validation.](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).

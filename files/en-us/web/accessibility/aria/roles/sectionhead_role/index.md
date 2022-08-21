@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: sectionhead role'
 slug: Web/Accessibility/ARIA/Roles/sectionhead_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -9,15 +9,15 @@ tags:
   - ARIA roles
   - sectionhead
   - sectionhead role
+spec-urls: https://w3c.github.io/aria/#sectionhead
 ---
-
 The **`sectionhead` role**, an abstract role, is superclass role for labels or summaries of the topic of its related section.
 
-> **Note:**  The `sectionhead` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:**  The `sectionhead` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
-The structural `sectionhead` role is an abstract role for the subclass roles that identify the labels or summaries of the sections they label. The role must not be used. The four subclasses -- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role). There are HTML element equivalents, like, {{HTMLElement('th', '<code>&lt;th scope="col"></code>')}} for `columnheader`, {{HTMLElement('th', '<code>&lt;th scope="row"></code>')}} for rowheader, and any of the HTML headings, {{HTMLElement('h1')}} thru  {{HTMLElement('h6')}} for `heading`. The `tab` role does not currently have an HTML equivalent.
+The structural `sectionhead` role is an abstract role for the subclass roles that identify the labels or summaries of the sections they label. The role must not be used. The four subclasses — [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role). There are HTML element equivalents, like, {{HTMLElement('th', '<code>&lt;th scope="col"&gt;</code>')}} for `columnheader`, {{HTMLElement('th', '<code>&lt;th scope="row"&gt;</code>')}} for rowheader, and any of the HTML headings, {{HTMLElement('h1')}} thru {{HTMLElement('h6')}} for `heading`. The `tab` role does not currently have an HTML equivalent.
 
 ## Best Practices
 
@@ -25,9 +25,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#sectionhead","ARIA: sectionhead role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

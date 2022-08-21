@@ -17,7 +17,7 @@ To update or check the content of the CSS JSON DB, you will need to gather infor
 1. **Latest spec**
     Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specifies that cover) that feature. To find it, you can usually do a web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
 2. **Latest web browsers**
-    These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
+    These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
 3. **Additional info**
     Find as much info as you can to better understand how the specific feature works. E.g. blog posts or demos are good resources.
 4. **Engineering contacts**
@@ -273,12 +273,12 @@ You can use the macros [\\{{cssxref}}](https://github.com/mdn/yari/blob/main/kum
 
 It may happen that the syntax contains references to specific values. Such values normally define their own syntaxes. Those syntaxes should be stored [syntaxes.json](https://github.com/mdn/data/blob/main/css/syntaxes.json) with their name as key. E.g. the {{cssxref("font-family")}} property has a syntax of `[ <family-name> | <generic-family> ]#`. The syntaxes for the values `<family-name>` and `<generic-family>` are stored like this:
 
-```js
+```json
 {
-    "syntaxes": {
-        "family-name": "<string> | <custom-ident>+",
-        "generic-family": "serif | sans-serif | cursive | fantasy | monospace"
-    }
+  "syntaxes": {
+    "family-name": "<string> | <custom-ident>+",
+    "generic-family": "serif | sans-serif | cursive | fantasy | monospace"
+  }
 }
 ```
 

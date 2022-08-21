@@ -37,10 +37,8 @@ Not part of any standard.
 
 ```css
 meter {
-  /* Reset the default appearance */
+  /* Reset the default appearance for -webkit- only */
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 meter::-webkit-meter-bar {

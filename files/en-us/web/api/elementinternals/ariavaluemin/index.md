@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaValueMin
 slug: Web/API/ElementInternals/ariaValueMin
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaValueMin`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} which contains a number.
+A string which contains a number.
 
 ## Examples
 

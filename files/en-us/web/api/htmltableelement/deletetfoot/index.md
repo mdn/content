@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,6 +21,14 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 ```js
 deleteTFoot()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -45,7 +54,7 @@ table.deleteTFoot();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

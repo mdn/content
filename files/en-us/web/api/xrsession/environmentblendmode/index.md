@@ -1,6 +1,7 @@
 ---
 title: XRSession.environmentBlendMode
 slug: Web/API/XRSession/environmentBlendMode
+page-type: web-api-instance-property
 tags:
   - API
   - AR

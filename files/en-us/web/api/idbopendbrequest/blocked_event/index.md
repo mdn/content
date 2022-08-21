@@ -1,6 +1,7 @@
 ---
 title: 'IDBOpenDBRequest: blocked event'
 slug: Web/API/IDBOpenDBRequest/blocked_event
+page-type: web-api-event
 tags:
   - Event
   - IDBOpenDBRequest
@@ -19,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blocked', event => { });
+addEventListener('blocked', (event) => { });
 
-onblocked = event => { };
+onblocked = (event) => { };
 ```
 
 ## Event type
@@ -34,9 +35,9 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
   - : Returns the old version of the database.
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
 ## Examples
@@ -55,7 +56,7 @@ DBOpenRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -77,7 +78,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-Using the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property:
+Using the `onblocked` property:
 
 ```js
 // Open the database
@@ -91,7 +92,7 @@ DBOpenRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });

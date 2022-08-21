@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,13 +22,13 @@ values passed. The passed values must be of the same type.
 ## Syntax
 
 ```js
-min(number1 numberN)
+min(number1, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number1`, …, `numberN`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
@@ -35,8 +36,8 @@ A {{domxref('CSSUnitValue')}}.
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

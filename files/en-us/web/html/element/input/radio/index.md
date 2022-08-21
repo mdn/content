@@ -18,7 +18,7 @@ tags:
   - form
   - radio
   - radio button
-browser-compat: html.elements.input.input-radio
+browser-compat: html.elements.input.type_radio
 ---
 
 {{HTMLRef("Input_types")}}
@@ -40,13 +40,13 @@ They are called radio buttons because they look and operate in a similar manner 
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value of the radio
+        A string representing the value of the radio
         button.
       </td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
@@ -77,7 +77,7 @@ They are called radio buttons because they look and operate in a similar manner 
 
 ## Value
 
-The `value` attribute is a {{domxref("DOMString")}} containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
+The `value` attribute is a string containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
 
 ### Defining a radio group
 
@@ -154,14 +154,14 @@ Let's add a little bit of code to our example so we can examine the data generat
 Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
 
 ```js
-var form = document.querySelector("form");
-var log = document.querySelector("#log");
+const form = document.querySelector("form");
+const log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
+form.addEventListener("submit", (event) => {
+  const data = new FormData(form);
+  let output = "";
   for (const entry of data) {
-    output = output + entry[0] + "=" + entry[1] + "\r";
+    output = `${output}${entry[0]}=${entry[1]}\r`;
   };
   log.innerText = output;
   event.preventDefault();
@@ -280,8 +280,6 @@ label {
 }
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   border-radius: 50%;

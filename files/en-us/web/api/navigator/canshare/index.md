@@ -1,6 +1,7 @@
 ---
 title: Navigator.canShare()
 slug: Web/API/Navigator/canShare
+page-type: web-api-instance-method
 tags:
   - API
   - Method

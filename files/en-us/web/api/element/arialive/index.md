@@ -1,6 +1,7 @@
 ---
 title: Element.ariaLive
 slug: Web/API/Element/ariaLive
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,7 +17,7 @@ The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"assertive"`
   - : Indicates that updates to the region have the highest priority and should be presented the user immediately.

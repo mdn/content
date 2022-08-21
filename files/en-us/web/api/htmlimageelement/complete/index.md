@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
+page-type: web-api-instance-property
 tags:
   - API
   - Fetching
@@ -76,7 +77,7 @@ async function lightBox(url) {
   lightboxControlsElem.disabled = false;
 }
 
-/* ... */
+// …
 
 function fixRedEyeCommand() {
   if (lightboxElem.style.display === "block" && lightboxImgElem.complete) {

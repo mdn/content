@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedString
 slug: Web/API/SVGAnimatedString
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -15,10 +16,10 @@ The **`SVGAnimatedString`** interface represents string attributes which can be 
 
 ## Properties
 
-- {{domxref("SVGAnimatedString.animVal")}} {{readonlyInline}}
-  - : This is a {{domxref("DOMString")}} representing the animation value. If the given attribute or property is being animated it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as baseVal.
+- {{domxref("SVGAnimatedString.animVal")}} {{ReadOnlyInline}}
+  - : This is a string representing the animation value. If the given attribute or property is being animated it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as baseVal.
 - {{domxref("SVGAnimatedString.baseVal")}}
-  - : This is a {{domxref("DOMString")}} representing the base value. The base value of the given attribute before applying any animations. Setter throws DOMException.
+  - : This is a string representing the base value. The base value of the given attribute before applying any animations. Setter throws DOMException.
 
 ## Methods
 

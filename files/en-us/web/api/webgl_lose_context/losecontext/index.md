@@ -1,6 +1,7 @@
 ---
 title: WEBGL_lose_context.loseContext()
 slug: Web/API/WEBGL_lose_context/loseContext
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -21,8 +22,16 @@ called.
 ## Syntax
 
 ```js
-gl.getExtension('WEBGL_lose_context').loseContext();
+loseContext()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -31,10 +40,10 @@ With this method, you can simulate the
 event:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', function(e) {
+canvas.addEventListener('webglcontextlost', (e) => {
   console.log(e);
 }, false);
 

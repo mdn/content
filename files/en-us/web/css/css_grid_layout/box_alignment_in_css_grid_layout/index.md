@@ -1,5 +1,5 @@
 ---
-title: Box alignment in CSS Grid Layout
+title: Box alignment in grid layout
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 tags:
   - Alignment in Grids
@@ -21,11 +21,11 @@ This guide presents demonstrations of how box alignment in grid layout works. Yo
 
 When working with grid layout you have two axes available to align things against – the _block axis_ and the _inline axis_. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis.
 
-![](block_axis.png)
+![Block axes are vertical.](block_axis.png)
 
 The _inline axis_ runs across the block axis, it is the direction in which text in regular inline flow runs.
 
-![](7_inline_axis.png)
+![Inline / row axis are horizontal.](7_inline_axis.png)
 
 We are able to align the content inside grid areas, and the grid tracks themselves on these two axes.
 
@@ -582,7 +582,7 @@ Using the same example, I am setting {{cssxref("justify-content")}} to `space-ar
 
 ## Alignment and auto margins
 
-Another way to align items inside their area, is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to `auto`, you know that an auto margin absorbs all of the available space. By setting the margin to `auto` on both sides, it pushes the block into the middle as both margins attempt to take all of the space.
+Another way to align items inside their area is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to `auto`, you know that an auto margin absorbs all of the available space. By setting the margin to `auto` on both sides, it pushes the block into the middle as both margins attempt to take all of the space.
 
 In this next example, I have given item 1 a left margin of `auto`. You can see how the content is now pushed over to the right side of the area, as the auto margin takes up remaining space, after room for the content of that item has been assigned:
 
@@ -651,6 +651,6 @@ You can see how the item is aligned by using the [Firefox Grid Highlighter](http
 
 In all of these examples I have been working in English, which is a left-to-right language. This means that our start lines are top and left of our grid when thinking in physical directions.
 
-CSS Grid Layout, and the Box Alignment specification are designed to work with writing modes in CSS. This means that if you are working in a right to left language, such as Arabic, the start of the grid would be the top and right, so the default of `justify-content: start` would be for grid tracks to start on the right hand side of the grid.
+CSS Grid Layout, and the Box Alignment specification are designed to work with writing modes in CSS. This means that if you are working in a right to left language, such as Arabic, the start of the grid would be the top and right, so the default of `justify-content: start` would be for grid tracks to start on the right-hand side of the grid.
 
 Setting auto margins, using `margin-right` or `margin-left` however, or absolutely positioning items using the `top`, `right`, `bottom` and `left` offsets would not honor writing modes. In the next guide, we will look further into this interaction between CSS grid layout, box alignment and writing modes. This will be important to understand, if you develop sites that are then displayed in multiple languages, or if you want to mix languages or writing modes in a design.

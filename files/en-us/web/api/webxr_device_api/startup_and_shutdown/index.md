@@ -1,6 +1,7 @@
 ---
 title: Starting up and shutting down a WebXR session
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
+page-type: guide
 tags:
   - 3D
   - API
@@ -79,7 +80,7 @@ Other improvements include updating the emulator to rename the `XR` interface to
 
 ### Context requirements
 
-A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using a URL such as `http://localhost/...`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
+A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using a URL such as `http://localhost/…`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
 
 If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there is no compatible XR hardware available. Either way, you need to be prepared for the lack of an `xr` property and either gracefully handle the error or provide some form of fallback.
 
@@ -116,8 +117,8 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const xr = getXR("no");  // Get the native XRSystem object
-const xr = getXR("yes"); // Always returns an XRSystem from the polyfill
+const nativeXr = getXR("no");  // Get the native XRSystem object
+const polyfilledXr = getXR("yes"); // Always returns an XRSystem from the polyfill
 const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 ```
 
@@ -171,12 +172,8 @@ If the session couldn't be created for some reason—such as feature policy disa
 
 ```js
 async function createImmersiveSession(xr) {
-  try {
-    session = await xr.requestSession("immersive-vr");
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  session = await xr.requestSession("immersive-vr");
+  return session;
 }
 ```
 
@@ -190,14 +187,10 @@ For example, if you need an `unbounded` reference space, you can specify that as
 
 ```js
 async function createImmersiveSession(xr) {
-  try {
-    session = await xr.requestSession("immersive-vr", {
-      requiredFeatures: [ "unbounded" ]
-    });
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  session = await xr.requestSession("immersive-vr", {
+    requiredFeatures: [ "unbounded" ]
+  });
+  return session;
 }
 ```
 
@@ -205,14 +198,10 @@ On the other hand, if you need an *inline* session and would prefer a `local` re
 
 ```js
 async function createInlineSession(xr) {
-  try {
-    session = await xr.requestSession("inline", {
-      optionalFeatures: [ "local" ]
-    });
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  session = await xr.requestSession("inline", {
+    optionalFeatures: [ "local" ]
+  });
+  return session;
 }
 ```
 
@@ -237,18 +226,16 @@ In basic form, code to do this final setup might look something like this:
 
 ```js
 async function runSession(session) {
-  let worldData;
-
   session.addEventListener("end", onSessionEnd);
 
-  let canvas = document.querySelector("canvas");
-  gl = canvas.getContext("webgl", { xrCompatible: true });
+  const canvas = document.querySelector("canvas");
+  const gl = canvas.getContext("webgl", { xrCompatible: true });
 
   // Set up WebGL data and such
 
-  worldData = loadGLPrograms(session, "worlddata.xml");
+  const worldData = loadGLPrograms(session, "worlddata.xml");
   if (!worldData) {
-    return NULL;
+    return null;
   }
 
   // Finish configuring WebGL

@@ -1,11 +1,13 @@
 ---
 title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
+page-type: web-api-instance-method
 tags:
   - API
   - Feature Policy
   - Feature-Policy
   - Reference
+  - Experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
@@ -17,7 +19,7 @@ specific feature for the current Feature Policy.
 ## Syntax
 
 ```js
-const allowlist = FeaturePolicy.getAllowlistForFeature(<feature>)
+const allowlist = FeaturePolicy.getAllowlistForFeature(feature);
 ```
 
 ### Parameter

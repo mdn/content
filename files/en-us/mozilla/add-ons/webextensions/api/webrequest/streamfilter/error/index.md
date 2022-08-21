@@ -1,5 +1,5 @@
 ---
-title: webRequest.Streamfilter.error
+title: webRequest.StreamFilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 tags:
   - API
@@ -27,7 +27,7 @@ This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror"
 function listener(details) {
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event => {
+  filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
   }
 

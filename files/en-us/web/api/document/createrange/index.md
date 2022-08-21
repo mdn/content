@@ -1,6 +1,7 @@
 ---
 title: Document.createRange()
 slug: Web/API/Document/createRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -22,7 +23,13 @@ The **`Document.createRange()`** method returns a new
 createRange()
 ```
 
-_range_ is the created {{domxref("Range")}} object.
+### Parameters
+
+None.
+
+### Return value
+
+The created {{domxref("Range")}} object.
 
 ## Examples
 

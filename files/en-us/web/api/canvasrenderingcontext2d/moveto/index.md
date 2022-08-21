@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -28,6 +29,10 @@ moveTo(x, y)
   - : The x-axis (horizontal) coordinate of the point.
 - `y`
   - : The y-axis (vertical) coordinate of the point.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

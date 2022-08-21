@@ -1,6 +1,7 @@
 ---
 title: XRCylinderLayer.radius
 slug: Web/API/XRCylinderLayer/radius
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -34,7 +35,7 @@ const cylinderLayer = xrGlBinding.createCylinderLayer({
   centralAngle : 60 * Math.PI / 180,
   aspectRatio : 2,
   radius : 2,
-  transform : new XRRigidTransform(/* ... */),
+  transform : new XRRigidTransform(/* … */),
 });
 
 cylinderLayer.radius; // 2

@@ -34,7 +34,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template) in HTML5.
+The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template).
 
 Most attributes on `use` do **not** override those already on the element *referenced* by `use`. (This differs from how CSS style attributes override those set 'earlier' in the cascade). **Only** the attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} and {{SVGAttr("href")}} on the `use` element will override those set on the referenced element. However, *any other attributes* not set on the referenced element **will** be applied to the `use` element.
 
@@ -42,7 +42,7 @@ Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-
 
 For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `use` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `use` elements.
 
-> **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information. However, {{SVGAttr("xlink:href")}} can still be required in practice for cross-browser compatibility (see the [compatibility table](#browser_compatibility) below).
+> **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
 
 ## Attributes
 

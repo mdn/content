@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -35,6 +36,10 @@ matrix by moving the canvas and its origin `x` units horizontally and
 - `y`
   - : Distance to move in the vertical direction. Positive values are down, and negative
     are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

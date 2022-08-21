@@ -29,19 +29,19 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 ```js
 // Arrow function
-find((element) => { /* ... */ } )
-find((element, index) => { /* ... */ } )
-find((element, index, array) => { /* ... */ } )
+find((element) => { /* … */ } )
+find((element, index) => { /* … */ } )
+find((element, index, array) => { /* … */ } )
 
 // Callback function
 find(callbackFn)
 find(callbackFn, thisArg)
 
 // Inline callback function
-find(function(element) { /* ... */ })
-find(function(element, index) { /* ... */ })
-find(function(element, index, array){ /* ... */ })
-find(function(element, index, array) { /* ... */ }, thisArg)
+find(function(element) { /* … */ })
+find(function(element, index) { /* … */ })
+find(function(element, index, array){ /* … */ })
+find(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 - `callbackFn`
 
   - : Function to execute on each value in the array.
-  
+
     The function is called with the following arguments:
 
     - `element`
@@ -119,7 +119,7 @@ const inventory = [
   {name: 'cherries', quantity: 5}
 ];
 
-const result = inventory.find( ({ name }) => name === 'cherries' );
+const result = inventory.find(({ name }) => name === 'cherries');
 
 console.log(result) // { name: 'cherries', quantity: 5 }
 ```
@@ -151,12 +151,12 @@ and that the value passed to the callback is their value when visited:
 const array = [0,1,,,,5,6];
 
 // Shows all indexes, not just those with assigned values
-array.find(function(value, index) {
+array.find((value, index) => {
   console.log('Visited index ', index, ' with value ', value);
 });
 
 // Shows all indexes, including deleted
-array.find(function(value, index) {
+array.find((value, index) => {
   // Delete element 5 on first iteration
   if (index === 0) {
     console.log('Deleting array[5] with value ', array[5]);

@@ -36,6 +36,8 @@ Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
 ```
 
+## Directives
+
 - \<cookie-list>
   - : A list of name-value pairs in the form of `<cookie-name>=<cookie-value>`. Pairs in the list are separated by a semicolon and a space (`'; '`).
 

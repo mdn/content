@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
+page-type: web-api-instance-method
 tags:
   - Media
   - MediaStream
@@ -21,13 +22,13 @@ string. If there is no track with the specified ID, this method returns
 ## Syntax
 
 ```js
-var track = MediaStream.getTrackById(id);
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} which identifies the track to be returned.
+  - : A string which identifies the track to be returned.
 
 ### Return value
 
@@ -35,7 +36,7 @@ If a track is found for which {{domxref("MediaStreamTrack.id")}} matches the spe
 `id` string, that {{domxref("MediaStreamTrack")}} object is returned.
 Otherwise, the returned value is `null`.
 
-## Example
+## Examples
 
 This example activates a commentary track on a video by ducking the audio level of the
 main audio track to 50%, then enabling the commentary track.

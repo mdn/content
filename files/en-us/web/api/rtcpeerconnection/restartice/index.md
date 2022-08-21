@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
+page-type: web-api-instance-method
 tags:
   - API
   - ICE
@@ -57,7 +58,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -79,7 +80,7 @@ This example creates a handler for the
 state by restarting ICE in order to try again.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */
@@ -107,7 +108,5 @@ just a regular renegotiation.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

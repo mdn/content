@@ -18,7 +18,7 @@ tags:
 
 Highlights:
 
-- [Debugging Firefox for Android over Wifi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-over-the-network)
+- [Debugging Firefox for Android over Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-over-the-network)
 - _Firefox OS Simulator configuration in WebIDE_
 - [CSS filter presets](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html#saving-filter-presets)
 
@@ -72,7 +72,7 @@ Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_
 - The {{domxref('Animation/playbackRate', 'AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).
 - The {{domxref('CSSAnimation')}} and {{domxref('CSSTransition')}} interfaces ({{bug(1178186)}}).
 - The {{domxref('Animation.reverse()')}} method ({{bug(1150808)}}).
-- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{event('cancel')}} and {{event('finish')}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
+- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{domxref("Animation/cancel_event", "cancel")}} and {{domxref("Animation/finish_event" , "finish")}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
 
 #### Web Components
 

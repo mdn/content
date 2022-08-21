@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -35,6 +36,10 @@ deleteObjectStore(name)
   - : The name of the object store you want to delete. Names are
         case sensitive.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -47,12 +52,12 @@ deleteObjectStore(name)
 ## Examples
 
 ```js
-var dbName = "sampleDB";
-var dbVersion = 2;
-var request = indexedDB.open(dbName, dbVersion);
+const dbName = "sampleDB";
+const dbVersion = 2;
+const request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = event => {
-  var db = request.result;
+request.onupgradeneeded = (event) => {
+  const db = request.result;
   if (event.oldVersion < 1) {
     db.createObjectStore("store1");
   }
@@ -62,7 +67,7 @@ request.onupgradeneeded = event => {
     db.createObjectStore("store2");
   }
 
-  // etc. for version < 3, 4...
+  // etc. for version < 3, 4…
 };
 ```
 

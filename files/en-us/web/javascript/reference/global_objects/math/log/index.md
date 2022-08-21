@@ -77,6 +77,8 @@ If you need the natural log of 2 or 10, use the constants {{jsxref("Math.LN2")}}
 other bases, use Math.log(x) / Math.log(otherBase) as in the example below; you might
 want to precalculate 1 / Math.log(otherBase).
 
+Beware that positive numbers very close to 1 can suffer from loss of precision and make its natural logarithm less accurate. In this case, you may want to use {{jsxref("Math.log1p")}} instead.
+
 ## Examples
 
 ### Using Math.log()
@@ -91,7 +93,7 @@ Math.log(10); // 2.302585092994046
 ### Using Math.log() with a different base
 
 The following function returns the logarithm of `y` with base
-`x` (ie. <math><semantics><mrow><msub><mo>log</mo>
+`x` (i.e. <math><semantics><mrow><msub><mo>log</mo>
 <mi>x</mi>
 </msub><mi>y</mi>
 </mrow><annotation encoding="TeX">\log_x y</annotation>

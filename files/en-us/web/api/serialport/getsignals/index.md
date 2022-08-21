@@ -1,6 +1,7 @@
 ---
 title: SerialPort.getSignals()
 slug: Web/API/SerialPort/getSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interf
 ## Syntax
 
 ```js
-var promise = SerialPort.getSignals();
+getSignals()
 ```
 
 ### Parameters

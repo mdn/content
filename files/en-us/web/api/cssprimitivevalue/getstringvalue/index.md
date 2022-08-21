@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getStringValue()
 slug: Web/API/CSSPrimitiveValue/getStringValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -29,6 +30,10 @@ value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 getStringValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A `string` value.
@@ -42,14 +47,14 @@ A `string` value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("display");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("display");
 console.log(cssValue.getStringValue());
 ```
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

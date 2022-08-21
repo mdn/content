@@ -25,7 +25,7 @@ spec-urls: https://drafts.csswg.org/css-transitions/
 
 ## Guides
 
-- [Using CSS transitions](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
   - : Step-by-step tutorial about how to create transitions using CSS. This article describes each relevant CSS property and explains how they interact with each other.
 
 ## Specifications

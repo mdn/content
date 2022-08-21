@@ -24,8 +24,8 @@ Instead of starting the game right away we can leave that decision to the player
 We will need a variable to store a boolean value representing whether the game is currently being played or not, and another one to represent our button. Add these lines below your other variable definitions:
 
 ```js
-var playing = false;
-var startButton;
+let playing = false;
+let startButton;
 ```
 
 ## Loading the button spritesheet
@@ -45,7 +45,16 @@ You also need to [grab the button spritesheet from GitHub](https://github.com/en
 Adding the new button to the game is done by using the `add.button` method. Add the following lines to the bottom of your `create()` function:
 
 ```js
-startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+startButton = game.add.button(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  'button',
+  startGame,
+  this,
+  1,
+  0,
+  2
+);
 startButton.anchor.set(0.5);
 ```
 
@@ -63,9 +72,9 @@ Now we need to define the `startGame()` function referenced in the code above:
 
 ```js
 function startGame() {
-    startButton.destroy();
-    ball.body.velocity.set(150, -150);
-    playing = true;
+  startButton.destroy();
+  ball.body.velocity.set(150, -150);
+  playing = true;
 }
 ```
 
@@ -79,11 +88,11 @@ It works as expected, but we can still move the paddle when the game hasn't star
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    if(playing) {
-        paddle.x = game.input.x || game.world.width*0.5;
-    }
+  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  if (playing) {
+    paddle.x = game.input.x || game.world.width * 0.5;
+  }
 }
 ```
 
