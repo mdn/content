@@ -18,7 +18,6 @@ When a non-empty string is assigned to the `returnValue` Event property, a dialo
 > **Note:** In older browsers, the `returnValue` of the event was displayed in the dialog box. 
 > Starting with Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic string not under the control of the webpage is shown instead of the returned string.
 
-
 {{InheritanceDiagram}}
 
 <table class="properties">
