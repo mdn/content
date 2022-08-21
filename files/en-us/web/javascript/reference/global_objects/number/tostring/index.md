@@ -42,7 +42,7 @@ A string representing the specified {{jsxref("Number")}} object.
 
 The {{jsxref("Number")}} object overrides the `toString()` method of the
 {{jsxref("Object")}} object. (It does _not_ inherit
-{{jsxref("Object.prototype.toString()")}}). For {{jsxref("Number")}} objects, the
+{{jsxref("Object.prototype.toString()")}}.) For {{jsxref("Number")}} objects, the
 `toString()` method returns a string representation of the object in the
 specified radix.
 
