@@ -36,7 +36,7 @@ myMap.set('bar', 'baz');
 myMap.set(1, 'foo');
 
 console.log(myMap.size);  // 2
-myMap.has('bar');         // true
+console.log(myMap.has('bar')); // true
 
 myMap.clear();
 
