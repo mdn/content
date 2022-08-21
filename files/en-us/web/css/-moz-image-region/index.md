@@ -47,7 +47,8 @@ The syntax is similar to the {{CSSxRef("clip")}} property. All four values are r
 ## Formal syntax
 
 ```plain
- "-moz-image-region": "<shape> | auto";
+ -moz-image-region =
+   <shape> | auto
 ```
 
 ## Examples
