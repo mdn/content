@@ -41,8 +41,8 @@ otherwise `false`.
 const myMap = new Map();
 myMap.set('bar', "foo");
 
-myMap.has('bar'); // returns true
-myMap.has('baz'); // returns false
+console.log(myMap.has('bar')); // returns true
+console.log(myMap.has('baz')); // returns false
 ```
 
 ## Specifications
