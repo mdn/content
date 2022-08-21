@@ -68,17 +68,6 @@ For more examples and explanation about this property, see [Applying styles and 
 
 {{Compat}}
 
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-  `ctx.setLineWidth()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `lineWidth` to a
-  negative value no longer throws an exception; instead, it properly ignores
-  non-positive values.
-
 ## See also
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
