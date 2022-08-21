@@ -73,7 +73,7 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
 
 ## Specifications
 
-Not part of any standard. 
+Not part of any standard.
 
 ## Browser compatibility
 
