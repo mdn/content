@@ -56,7 +56,7 @@ myMap.set('bar', arr);
 
 myMap.get('bar').push('foo');
 
-console.log(arr);              // ["foo"]
+console.log(arr); // ["foo"]
 console.log(myMap.get('bar')); // ["foo"]
 ```
 
