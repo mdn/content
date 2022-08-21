@@ -13,6 +13,8 @@ tags:
   - Reference
 browser-compat: api.Document.forms
 ---
+{{APIRef("DOM")}}
+
 The **`forms`** read-only property of
 the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
 all the {{HTMLElement("form")}} elements contained in the document.
@@ -103,5 +105,3 @@ const selectFormElement = document.forms[index].elements[index];
 
 - [HTML forms](/en-US/docs/Learn/Forms)
 - {{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface
-
-{{APIRef("DOM")}}
