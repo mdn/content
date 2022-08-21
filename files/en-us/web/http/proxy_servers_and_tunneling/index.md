@@ -62,7 +62,7 @@ See also the [HTTP tunnel article on Wikipedia](https://en.wikipedia.org/wiki/HT
 
 A [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) file is a [JavaScript](/en-US/docs/Web/JavaScript) function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
-The auto-config file should be saved to a file with a `.pac` filename extension, `proxy.pac`.
+The auto-config file should be saved to a file with a `.pac` filename extension,: `proxy.pac`.
 
 And the MIME type set to `application/x-ns-proxy-autoconfig`.
 

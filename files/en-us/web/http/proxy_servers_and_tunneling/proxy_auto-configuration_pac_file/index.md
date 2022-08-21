@@ -69,7 +69,7 @@ If all proxies are down, and there was no DIRECT option specified, the browser w
 - `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
   - : Use SOCKS if the primary proxy goes down.
 
-The auto-config file should be saved to a file with a .pac filename extension, `proxy.pac`.
+The auto-config file should be saved to a file with a .pac filename extension: `proxy.pac`.
 
 And the MIME type should be set to `application/x-ns-proxy-autoconfig`.
 
