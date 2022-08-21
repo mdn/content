@@ -56,7 +56,7 @@ This can be optimized. First of all, you should use tools or services similar to
 Instead of having all the screenshots of games referenced in `<img>` element `src` attributes, which will force the browser to download them automatically, we can do it selectively via JavaScript. The js13kPWA app uses a placeholder image instead, which is small and lightweight, while the final paths to target images are stored in `data-src` attributes:
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME">
 ```
 
 Those images will be loaded via JavaScript _after_ the site finishes building the HTML structure. The placeholder image is scaled the same way the original images are, so it will take up the same space and not cause the layout to repaint as the images load.
@@ -115,7 +115,7 @@ This problem can be solved by loading the images only when needed: this is calle
 The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME' loading='lazy'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" loading="lazy">
 ```
 
 ### Intersection Observer
