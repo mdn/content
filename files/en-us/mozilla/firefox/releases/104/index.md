@@ -13,15 +13,11 @@ This article provides information about the changes in Firefox 104 that will aff
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
-
-#### Removals
 
 ### JavaScript
 
@@ -33,15 +29,13 @@ This article provides information about the changes in Firefox 104 that will aff
   The `stack` is not yet serialized when errors are sent using other APIs, such as [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
   (See {{bug(1774866)}} for more details.)
 
-#### Removals
-
 ### HTTP
 
-#### Removals
+No notable changes.
 
 ### Security
 
-#### Removals
+No notable changes.
 
 ### APIs
 
