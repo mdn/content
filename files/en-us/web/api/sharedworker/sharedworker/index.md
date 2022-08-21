@@ -17,8 +17,8 @@ The **`SharedWorker()`** constructor creates a
 script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 > **Note:** there is disagreement among browser manufacturers about
-> whether a data URL is of the same origin or not. Although Gecko 10.0
-> {{geckoRelease("10.0")}} and later accept data URLs, that's not the case in all other
+> whether a data URL is of the same origin or not. Although Firefox 10.0
+> and later accept data URLs, that's not the case in all other
 > browsers.
 
 ## Syntax

@@ -332,13 +332,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
             >.
           </li>
           <li>
-            Deprecated/non-standard Mozilla touch events
-            <a
-              href="/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events"
-              >Touch events (Mozilla experimental)</a
-            >
-          </li>
-          <li>
             <a href="/en-US/docs/Web/Events/Mouse_gesture_events"
               >Mouse gesture events for Firefox Addons</a
             >

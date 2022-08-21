@@ -259,21 +259,6 @@ In some GTK-based environments, auto-repeat dispatches a native key-up event aut
 
 In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.
 
-#### Auto-repeat handling prior to Gecko 5.0
-
-Before Gecko 5.0 {{geckoRelease('5.0')}}, keyboard handling was less consistent across platforms.
-
-- Windows
-  - : Auto-repeat behavior is the same as in Gecko 4.0 and later.
-- Mac
-  - : After the initial keydown event, only keypress events are sent until the keyup event occurs; the inter-spaced keydown events are not sent.
-- Linux
-  - : The event behavior depends on the specific platform. It will either behave like Windows or Mac depending on what the native event model does.
-
-> **Note:** Manually firing an event does _not_ generate the default action associated with that event.
-> For example, manually firing a key event does not cause that letter to appear in a focused text input.
-> In the case of UI events, this is important for security reasons, as it prevents scripts from simulating user actions that interact with the browser itself.
-
 ## Example
 
 ```js
