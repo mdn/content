@@ -41,7 +41,7 @@ console.log(myMap.has('bar')); // true
 myMap.clear();
 
 console.log(myMap.size);  // 0
-myMap.has('bar');         // false
+console.log(myMap.has('bar')); // false
 ```
 
 ## Specifications
