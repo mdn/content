@@ -8,9 +8,10 @@ tags:
   - Reference
   - getHighEntropyValues
   - NavigatorUAData
+  - Experimental
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
-{{DefaultAPISidebar("")}}
+{{APIRef("")}}{{SeeCompatTable}}
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
 
@@ -35,7 +36,7 @@ getHighEntropyValues(hints)
     - `"bitness"`
     - `"model"`
     - `"platformVersion"`
-    - `"uaFullVersion"` {{deprecated_inline}}
+    - `"uaFullVersion"` {{Deprecated_Inline}}
     - `"fullVersionList"`
 
 ### Return value
@@ -63,7 +64,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
 - `platformVersion`
   - : A string containing the platform version. Platform name itself is always available as low-entropy hint `platform`. For example, `"10.0"`.
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
-- `uaFullVersion` {{deprecated_inline}}
+- `uaFullVersion` {{Deprecated_Inline}}
   - : A string containing the full browser version. For example, `"103.0.5060.134"`. Deprecated in favor of `fullVersionList`.
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `fullVersionList`

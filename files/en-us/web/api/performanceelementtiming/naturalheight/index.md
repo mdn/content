@@ -8,9 +8,10 @@ tags:
   - Reference
   - naturalHeight
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.naturalHeight
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`naturalHeight`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic height of the image element.
 
