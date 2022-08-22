@@ -191,6 +191,42 @@ This also means that the first image no longer floats down to the second article
 
 {{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}
 
+### Style containment
+
+Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
+For CSS counters, the `counter-increment` and `counter-set` properties are scoped to the element as if it's at the root of the document.
+The example below takes a look at how counters work when style containment is applied.
+
+```html hidden
+<h1>Introduction</h1>
+<h1>Background</h1>
+<div class="contain">
+  <h1>Contained counter</h1>
+</div>
+<h1>Conclusion</h1>
+```
+
+```css
+body {
+  counter-reset: headings;
+}
+
+h1::before {
+  counter-increment: headings;
+  content: counter(headings) ": ";
+}
+
+.contain {
+  contain: style;
+}
+```
+
+{{EmbedGHLiveSample("css-examples/contain/contain-style.html", '100%', 500)}}
+
+Without containment, the counter would increment from 1 to 4 for each heading.
+Applying style containment causes the `counter-increment` to be scoped to the element and the counter begins again at 1.
+CSS quotes are affected in much the same way as counters, except that the [`content`](/en-US/docs/Web/CSS/content) values are scoped to the element.
+
 ## Specifications
 
 {{Specifications}}
