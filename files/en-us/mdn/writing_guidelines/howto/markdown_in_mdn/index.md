@@ -62,6 +62,7 @@ In MDN, writers will use code fences for example code blocks. They must specify 
 - `js` (for JavaScript)
 - `json`
 - `php`
+- `pug` (for [pug templates](https://pugjs.org/api/getting-started.html), which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - `python`
 - `sql`
 - `svg`
