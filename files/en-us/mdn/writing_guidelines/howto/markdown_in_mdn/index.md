@@ -68,6 +68,7 @@ In MDN, writers will use code fences for example code blocks. They must specify 
 - `svg`
 - `xml`
 - `wasm` (for WebAssembly text format)
+- `yaml`
 
 For example:
 
