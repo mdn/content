@@ -99,7 +99,7 @@ Almost everything in this template has been demonstrated in previous sections.
 
 > **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
 >
-> ```plain
+> ```pug
 >   p #[strong Genre:]
 >     each val, index in book.genre
 >       a(href=val.url) #{val.name}

@@ -17,11 +17,11 @@ A `GamepadButton` object is returned by querying any value of the array returned
 
 ## Properties
 
-- {{domxref("GamepadButton.pressed")}} {{readonlyInline}}
+- {{domxref("GamepadButton.pressed")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the button is currently pressed (`true`) or unpressed (`false`).
-- {{domxref("GamepadButton.touched")}} {{readonlyInline}}
+- {{domxref("GamepadButton.touched")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the button is currently touched (`true`) or not touched (`false`).
-- {{domxref("GamepadButton.value")}} {{readonlyInline}}
+- {{domxref("GamepadButton.value")}} {{ReadOnlyInline}}
   - : A double value used to represent the current state of analog buttons, such as the triggers on many modern gamepads. The values are normalized to the range 0.0 —1.0, with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.
 
 ## Example

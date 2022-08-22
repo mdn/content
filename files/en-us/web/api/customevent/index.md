@@ -24,7 +24,7 @@ The **`CustomEvent`** interface represents events initialized by an application 
 
 _This interface inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("CustomEvent.detail")}} {{readonlyinline}}
+- {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
   - : Returns any data passed when initializing the event.
 
 ## Methods

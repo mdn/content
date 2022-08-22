@@ -130,7 +130,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="none">
               <rect x="24" y="24" width="144" height="144" />
@@ -164,7 +164,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg">
               <rect x="24" y="24" width="144" height="144" />
@@ -187,7 +187,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg2">
               <rect x="24" y="24" width="144" height="144" />
@@ -209,7 +209,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape1">
               <rect x="24" y="24" width="144" height="144" />
@@ -231,7 +231,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape2">
               <rect x="24" y="24" width="144" height="144" />
@@ -253,7 +253,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape3">
               <rect x="24" y="24" width="144" height="144" />
@@ -275,7 +275,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape4">
               <rect x="24" y="24" width="144" height="144" />
@@ -297,7 +297,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape5">
               <rect x="24" y="24" width="144" height="144" />
@@ -319,7 +319,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape6">
               <rect x="24" y="24" width="144" height="144" />
@@ -341,7 +341,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape7">
               <rect x="24" y="24" width="144" height="144" />
@@ -363,7 +363,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape8">
               <rect x="24" y="24" width="144" height="144" />
@@ -385,7 +385,7 @@ The `clip-path` property is specified as one or a combination of the values list
         </div>
       </div>
       <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape9">
               <rect x="24" y="24" width="144" height="144" />
@@ -461,12 +461,12 @@ html,body {
   font: italic .6em sans-serif;
 }
 
-.viewbox {
+.view-box {
   box-shadow: 1rem 1rem 0 #EFEFEF inset, -1rem -1rem 0 #EFEFEF inset;
 }
 
-.container.viewbox::after {
-  content: 'viewbox';
+.container.view-box::after {
+  content: 'view-box';
   position: absolute;
   left: 1.1rem;
   top: 1.1rem;

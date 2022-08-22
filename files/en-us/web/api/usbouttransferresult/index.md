@@ -25,9 +25,9 @@ The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/Web
 
 ## Properties
 
-- {{domxref("USBOutTransferResult.bytesWritten")}} {{readonlyInline}}
+- {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}}
   - : Returns the number of bytes from the transfer request that were sent to the device.
-- {{domxref("USBOutTransferResult.status")}} {{readonlyInline}}
+- {{domxref("USBOutTransferResult.status")}} {{ReadOnlyInline}}
 
   - : Returns the status of the transfer request, one of:
 

@@ -32,7 +32,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
   - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given element.
 
-- {{domxref("SVGStyleElement.sheet")}} {{readonlyInline}}
+- {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
   
 - {{domxref("SVGStyleElement.disabled")}}

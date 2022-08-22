@@ -624,10 +624,6 @@ XHRSubmit(myForm);
 > script makes sense only when you are dealing with small files. If you do not intend to
 > upload binary content, consider instead using the `FormData` API.
 
-> **Note:** The non-standard `sendAsBinary` method
-> is considered deprecated as of Gecko 31 {{geckoRelease(31)}} and will be removed soon.
-> The standard `send(Blob data)` method can be used instead.
-
 ### Using FormData objects
 
 The {{domxref("FormData")}} constructor lets you compile a

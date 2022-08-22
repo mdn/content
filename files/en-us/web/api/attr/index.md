@@ -29,17 +29,17 @@ The name is deemed _local_ when it ignores the eventual namespace prefix and dee
 
 _This interface also inherits the properties of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
-- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
+- {{domxref("Attr.localName", "localName")}} {{ReadOnlyInline}}
   - : A string representing the local part of the qualified name of the attribute.
-- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
+- {{domxref("Attr.name", "name")}} {{ReadOnlyInline}}
   - : The attribute's _qualified name_. If the attribute is not in a namespace, it will be the same as {{domxref("attr.localName", "localName")}} property.
-- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
+- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{ReadOnlyInline}}
   - : A string representing the URI of the namespace of the attribute, or `null` if there is no namespace.
-- {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
+- {{domxref("Attr.ownerElement", "ownerElement")}} {{ReadOnlyInline}}
   - : The {{domxref("Element")}} the attribute belongs to.
-- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
+- {{domxref("Attr.prefix", "prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the attribute, or `null` if a namespace without prefix or no namespace are specified.
-- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}} {{deprecated_inline}}
+- {{domxref("Attr.specified", "specified")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : This property always returns `true`.
 - {{domxref("Attr.value", "value")}}
   - : The attribute's value, a string that can be set and get using this property.

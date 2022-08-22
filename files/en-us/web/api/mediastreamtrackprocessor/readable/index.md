@@ -8,9 +8,10 @@ tags:
   - Reference
   - readable
   - MediaStreamTrackProcessor
+  - Experimental
 browser-compat: api.MediaStreamTrackProcessor.readable
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
 The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 

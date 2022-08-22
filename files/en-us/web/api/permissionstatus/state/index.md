@@ -22,7 +22,7 @@ This property returns one of `'granted'`, `'denied'`, or
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `'granted'`
 - `'denied'`

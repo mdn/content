@@ -8,9 +8,10 @@ tags:
   - Periodic Background Synchronization
   - ServiceWorkerGlobalScope
   - events
+  - Experimental
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 
@@ -36,7 +37,7 @@ A {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}
+- {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
 ## Examples

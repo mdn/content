@@ -17,7 +17,7 @@ The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an ob
 
 ## Properties
 
-- {{domxref("RTCCertificate.expires")}} {{readonlyinline}}
+- {{domxref("RTCCertificate.expires")}} {{ReadOnlyInline}}
   - : Returns the expiration date of the certificate.
 
 ## Specifications

@@ -33,7 +33,7 @@ Inherits methods from its parent interface, {{domxref("IDBCursor")}}.
 
 Inherits properties from its parent interface, {{domxref("IDBCursor")}}.
 
-- {{domxref("IDBCursorWithValue.value")}} {{readonlyInline}}
+- {{domxref("IDBCursorWithValue.value")}} {{ReadOnlyInline}}
   - : Returns the value of the current cursor.
 
 ## Example

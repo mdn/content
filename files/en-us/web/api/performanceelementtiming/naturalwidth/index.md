@@ -8,9 +8,10 @@ tags:
   - Reference
   - naturalWidth
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.naturalWidth
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`naturalWidth`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.
 

@@ -33,7 +33,7 @@ onfocus = (event) => { };
 
 ## Event type
 
-An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 
