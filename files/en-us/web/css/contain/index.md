@@ -225,7 +225,7 @@ h1::before {
 
 Without containment, the counter would increment from 1 to 4 for each heading.
 Applying style containment causes the `counter-increment` to be scoped to the element and the counter begins again at 1.
-CSS quotes are affected in much the same way as counters, except that the [`content`](/en-US/docs/Web/CSS/content) values are scoped to the element.
+CSS quotes are affected in much the same way as counters, except that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element.
 
 ## Specifications
 
