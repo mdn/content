@@ -18,9 +18,10 @@ A function name is an {{Glossary("identifier")}} included as part of a function 
 An **anonymous function** is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:
 
 ```js
-// When created as a function expression
+// Anonymous function created as a function expression
 (function () {});
-// or created as an arrow function
+
+// Anonymous function created as an arrow function
 () => {};
 ```
 
@@ -31,8 +32,10 @@ A **named function** is a function with a function name:
 ```js
 // Function declaration
 function foo() {};
+
 // Named function expression
 (function bar() {});
+
 // Arrow function
 const baz = () => {};
 ```
@@ -73,16 +76,9 @@ const loop2 = (x) => {
 
 An **Immediately Invoked Function Expressions** ({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser's compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function's definition.
 
-```js
-// Declared functions can't be called immediately this way
-// Error (https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
-/*
-function foo() {
-    console.log('Hello Foo');
-}();
-*/
+Function expressions, named or anonymous, can be called immediately.
 
-// Function expressions, named or anonymous, can be called immediately
+```js
 (function foo() {
   console.log("Hello Foo");
 }());
@@ -94,7 +90,15 @@ function foo() {
 (() => console.log('hello world'))();
 ```
 
-If you'd like to know more about IIFEs, check out the following page on Wikipedia : [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
+Declared functions can't be called immediately this way, because IIFEs must be function _expressions_.
+
+```js example-bad
+function foo() {
+  console.log('Hello Foo');
+}();
+```
+
+If you'd like to know more about IIFEs, check out the following page on Wikipedia: [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
 
 ## See also
 
