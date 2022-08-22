@@ -78,7 +78,7 @@ The `border-radius` property is specified as:
   <tbody>
     <tr>
       <td><em>radius</em></td>
-      <td><img alt="all-corner.png" src="all-corner.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. All 4 corners have been traced with a thick black line." src="all-corner.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -89,7 +89,7 @@ The `border-radius` property is specified as:
     <tr>
       <td><em>top-left-and-bottom-right</em></td>
       <td>
-        <img alt="top-left-bottom-right.png" src="top-left-bottom-right.png" />
+        <img alt="A light blue rectangle with a light gray border. The 2 corners on the top left and the bottom right have been traced with a thick black line." src="top-left-bottom-right.png" />
       </td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
@@ -101,7 +101,7 @@ The `border-radius` property is specified as:
     <tr>
       <td><em>top-right-and-bottom-left</em></td>
       <td>
-        <img alt="top-right-bottom-left.png" src="top-right-bottom-left.png" />
+        <img alt="A light blue rectangle with a light gray border. The 2 corners on the top right and the bottom left have been traced with a thick black line." src="top-right-bottom-left.png" />
       </td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
@@ -112,7 +112,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>top-left</em></td>
-      <td><img alt="top-left.png" src="top-left.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The corner on the top left has been traced with a thick black line." src="top-left.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -122,7 +122,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>top-right</em></td>
-      <td><img alt="top-right.png" src="top-right.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The corner on the top right has been traced with a thick black line." src="top-right.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -132,7 +132,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>bottom-right</em></td>
-      <td><img alt="bottom-right.png" src="bottom-right.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The corner on the bottom right has been traced with a thick black line." src="bottom-right.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -142,7 +142,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>bottom-left</em></td>
-      <td><img alt="bottom-left.png" src="bottom-left.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The corner on the bottom left has been traced with a thick black line." src="bottom-left.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
