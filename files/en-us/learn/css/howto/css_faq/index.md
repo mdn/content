@@ -218,7 +218,7 @@ The rules are more complicated when the selector has multiple parts. A more deta
 
 ## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
-These properties, called _prefixed properties_, are extensions to the CSS standard. They were used to allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
+These properties, called _prefixed properties_, are extensions to the CSS standard. They were once used to allow the use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
 
 The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only use the `-webkit-` prefixed version of a property when the non-prefixed version is fully supported across all browsers. This means a feature relying on that property not work in non-webkit-based browsers, when it could. This became a great enough problem that other browsers implement `-webkit-` prefixed aliases to improve web compatibility, as specified in the [Compatibility Living Standard](https://compat.spec.whatwg.org/).
 
