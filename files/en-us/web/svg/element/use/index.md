@@ -65,7 +65,7 @@ For security reasons, browsers may apply the [same-origin policy](/en-US/docs/We
   - : The height of the use element.
     *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0`; *Animatable*: **yes**
 
-> **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
+> **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are *Geometry Properties*, meaning those attributes can also be used as CSS properties for that element.
 
