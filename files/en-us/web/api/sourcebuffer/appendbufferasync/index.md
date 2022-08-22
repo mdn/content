@@ -14,9 +14,10 @@ tags:
   - SourceBuffer
   - Video
   - appendBufferAsync
+  - Experimental
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}
+{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`appendBufferAsync()`** method
 of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously

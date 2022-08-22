@@ -8,9 +8,10 @@ tags:
   - Reference
   - identifier
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.identifier
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`identifier`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 

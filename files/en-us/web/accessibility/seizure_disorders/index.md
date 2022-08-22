@@ -234,7 +234,7 @@ div {
 
 [`CSS Transitions`](https://www.w3.org/TR/css-transitions-1/) can be used to set the duration to zero for the initial stage of animation.
 
-```html
+```css
 div {
   transition-duration: 0s;
 }

@@ -46,7 +46,7 @@ After receiving an HTTP request, a server can send one or more {{HTTPHeader("Set
 
 The {{HTTPHeader("Set-Cookie")}} HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:
 
-```html
+```http
 Set-Cookie: <cookie-name>=<cookie-value>
 ```
 

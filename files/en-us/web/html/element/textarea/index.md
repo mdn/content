@@ -107,7 +107,7 @@ The HTML specification doesn't define where the baseline of a `<textarea>` is, s
 
 In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right-hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
 
-```html
+```css
 textarea {
   resize: none;
 }

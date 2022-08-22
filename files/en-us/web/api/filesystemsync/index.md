@@ -10,9 +10,10 @@ tags:
   - Offline
   - filesystem
   - Non-standard
+  - Deprecated
 browser-compat: api.FileSystemSync
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 In the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileSystemSync` object represents a file system. It has two properties.
 
@@ -25,9 +26,9 @@ The `FileSystemSync` object is your gateway to the entire API and you will use i
 
 ## Properties
 
-- `name` {{ReadOnlyInline}} {{Non-standard_Inline}}
+- `name` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A string that represents the name of the file system. The name must be unique across the list of exposed file systems.
-- `root` {{ReadOnlyInline}} {{Non-standard_Inline}}
+- `root` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A `DirectoryEntry` that is the root directory of the file system.
 
 ## Specifications

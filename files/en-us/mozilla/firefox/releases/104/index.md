@@ -9,19 +9,15 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [August 23, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 was released on August 23, 2020.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
-
-#### Removals
 
 ### JavaScript
 
@@ -33,15 +29,13 @@ This article provides information about the changes in Firefox 104 that will aff
   The `stack` is not yet serialized when errors are sent using other APIs, such as [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
   (See {{bug(1774866)}} for more details.)
 
-#### Removals
-
 ### HTTP
 
-#### Removals
+No notable changes.
 
 ### Security
 
-#### Removals
+No notable changes.
 
 ### APIs
 

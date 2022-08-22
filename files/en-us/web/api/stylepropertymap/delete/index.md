@@ -10,6 +10,7 @@ tags:
   - Reference
   - StylePropertyMap
   - delete()
+  - Experimental
 browser-compat: api.StylePropertyMap.delete
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}

@@ -77,7 +77,7 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ## Specifications
 
-Not part of any standard. 
+Not part of any standard.
 
 ## Browser compatibility
 

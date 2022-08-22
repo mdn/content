@@ -6,9 +6,10 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.data
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`data`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns a

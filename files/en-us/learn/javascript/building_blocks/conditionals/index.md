@@ -37,7 +37,7 @@ In any programming language, the code needs to make decisions and carry out acti
   </tbody>
 </table>
 
-## You can have it on one condition..!
+## You can have it on one condition!
 
 Human beings (and other animals) make decisions all the time that affect their lives, from small ("should I eat one cookie or two?") to large ("should I stay in my home country and work on my father's farm, or should I move to America and study astrophysics?")
 
@@ -190,7 +190,8 @@ And, returning to our previous example about the child doing a chore for their p
 let shoppingDone = false;
 let childsAllowance;
 
-if (shoppingDone) { // don't need to explicitly specify '=== true'
+// We don't need to explicitly specify 'shoppingDone === true'
+if (shoppingDone) {
   childsAllowance = 10;
 } else {
   childsAllowance = 5;

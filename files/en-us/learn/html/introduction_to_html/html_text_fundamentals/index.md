@@ -164,7 +164,14 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<h1>My short story</h1>\n<p>I am a statistician and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
+const htmlSolution = `<h1>My short story</h1>
+<p>
+  I am a statistician and my name is Trish.
+</p>
+<p>
+  My legs are made of cardboard and I am married to a fish.
+</p>`;
+
 let solutionEntry = htmlSolution;
 
 reset.addEventListener('click', () => {

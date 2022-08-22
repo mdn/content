@@ -18,7 +18,7 @@ Starting with Internet Explorer 10, input type=password fields will automaticall
 
 ## Syntax
 
-```html
+```js
 document.msCapsLockWarningOff = true;
 ```
 

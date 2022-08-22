@@ -27,7 +27,7 @@ ontouchstart = (event) => { };
 
 ## Event type
 
-An {{domxref("TouchEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TouchEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TouchEvent")}}
 
