@@ -39,18 +39,18 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.9.tgz#ab07c9942bd3f49460fa07c13b507569a2401a11"
   integrity sha512-+Pa+ecijbf8HDuB2A3HoKC/bd+xugdX+3A6JQei5R4CJ2GO1m+p40S/rA+MMaLee1A52rX1bZ/8yRr9wFfBq6g==
 
-"@mdn/yari@1.14.39":
-  version "1.14.39"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.14.39.tgz#aa39a9aaf9e1633b2903b7c21f183afe4da43b0b"
-  integrity sha512-J2e5kIgTMmbnDtq9mTU8TIu/GVV8CkWA/eEk1qZ/XGLDSde029p0dWmJLnwoR+0CZLFNrlsdMs2AC38KFKdk8Q==
+"@mdn/yari@1.15.7":
+  version "1.15.7"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.15.7.tgz#ce5b26c546bcc8210d4c74c8d663dd1f4bbcc289"
+  integrity sha512-9exzHdOMQ5ZB68OhE+Bq5Ad9ZXYha64m+3BOu6syjmgGoiK6TqhbGc11R8M9u2bz8AKoJpzCsIxrMEJakcRurQ==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/browser-compat-data" "^5.1.9"
     "@use-it/interval" "^1.0.0"
-    "@webref/css" "^4.3.4"
+    "@webref/css" "^5.0.1"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.17.0"
+    browser-specs "^3.18.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -68,7 +68,7 @@
     front-matter "^4.0.2"
     fs-extra "^10.1.0"
     got "^11.8.3"
-    html-react-parser "^3.0.1"
+    html-react-parser "^3.0.3"
     http-proxy-middleware "^2.0.6"
     image-size "^1.0.2"
     image-type "^4.1.0"
@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-1.0.0.tgz#c42c68f22ca29a0dc929041746373d94496d2b3a"
   integrity sha512-WQFcnSt/xM/mS8ZtJ0ut5lhPrl+V0HDPPcI/J0eUClsfiD+/r8A7IeW/pVcfpSVGWRmN3+WnjNteWuKyWs2WZg==
 
-"@webref/css@^4.3.4":
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-4.3.4.tgz#6fff159c97e9bf3888351df8a092d6f85bdd85f0"
-  integrity sha512-utt6xOjOfpOzFqlligVwgFYflos1rfNv7uzgANJtqbqsh/VHVHtN3AFLS1IuSxnm7FMDKgRQnT/wM2qkQ8c8tA==
+"@webref/css@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.0.1.tgz#867df2c74e0d4ab43b856c62dd21bbb758014bcd"
+  integrity sha512-x6begnIDBt051elWBEOwVuMvDwIb9gzcBZsEAurIcMCzd5CzRTJXEdi507V5QuHt2AgKwdFXMMCFE9gXNwtuHA==
 
 accept-language-parser@^1.5.0:
   version "1.5.0"
@@ -571,10 +571,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.17.0:
-  version "3.17.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.17.0.tgz#38bb2e8382a7fdfd56ef5ce3598a3ed0f96ff08d"
-  integrity sha512-McxOC1u68oQKG7osIYm8dvWZuvXuOrZGtjy3dVez2+JHEuS7qn4xRCYhoVR+7UCAZLWx3/gQwyAB0dU0/35H1Q==
+browser-specs@^3.18.0:
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.18.0.tgz#473f8db9dc0292baf39ec3804eac0dc13905549a"
+  integrity sha512-XIwvzRZMUb7JBVVB/JyKmalGSoHQcxrDFmIc9W87uhRqbAtXgNv/L2UmEg5Z8ifkuANCkVXJjkrtQOMfhn2qPg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -2237,21 +2237,21 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
   integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
 
-html-dom-parser@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-3.0.1.tgz#09907c612c846865301cb3b1216462371021e256"
-  integrity sha512-BtPGWyE2XGbqQFdZE+0/YMVppz319jvvkNGcMwLRmt1Mw0tLHzZOMs1TqbxtcCdVSZwS5pEOXasaD7HHD5iwkQ==
+html-dom-parser@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-3.1.1.tgz#1d39b708c93a2bff2fa9c61a3848aeb864560416"
+  integrity sha512-yYRQBPQ/Z2Lo0cW8YE0DtKhA6BtLoCRz2subcEVkVMymBRVH6kkCTrau/DimD9BvME6+tXpUSqNGvR08y3NMlQ==
   dependencies:
     domhandler "5.0.3"
     htmlparser2 "8.0.1"
 
-html-react-parser@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.1.tgz#b5715b6c12fe4d46ad770f0cdae313784d7d120c"
-  integrity sha512-TsCwwmpqN8F2JA0EqWK/8U/cN07BfZU7agH3FY5G+RQqLs6HT2z2RNlFZI+Jp8e/nIXIsgYDvt8vqu8Dv9lr6w==
+html-react-parser@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.3.tgz#7eb1a128e99622cfe05aadb45c052c3de73e2a1b"
+  integrity sha512-LIrqhoW6bi2LMc0/+9tIjHaJYb0NaTgIggZPPF+fpkqVj/Yl7+pzsNw4ubD5BVjqt+Ym3P29bzDNSzccXgnJmA==
   dependencies:
     domhandler "5.0.3"
-    html-dom-parser "3.0.1"
+    html-dom-parser "3.1.1"
     react-property "2.0.0"
     style-to-js "1.1.1"
 
