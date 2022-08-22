@@ -166,10 +166,7 @@ label.switch {
   line-height: 20px;
   user-select: none;
   vertical-align: middle;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
+  user-select: none;
 }
 ```
 
