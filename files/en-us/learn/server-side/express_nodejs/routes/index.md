@@ -51,7 +51,7 @@ As we've already created the models, the main things we'll need to create are:
 - Controller functions to get the requested data from the models, create an HTML page displaying the data, and return it to the user to view in the browser.
 - Views (templates) used by the controllers to render the data.
 
-![](mvc_express.png)
+![Main data flow diagram of an MVC express server: 'Routes' receive the HTTP requests sent to the Express server and forward them to the appropriate 'controller' function. Controller is used to read and write data from the models. Models are connected to the database to provide data access to the server. Controllers use 'views' to render the data and sends it back to the client as HTTP response.](mvc_express.png)
 
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
 
