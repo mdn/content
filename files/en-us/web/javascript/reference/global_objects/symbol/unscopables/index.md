@@ -31,7 +31,7 @@ This protocol is also utilized by DOM APIs, such as [`Element.append()`](/en-US/
 
 ### Scoping in with statements
 
-The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside `with` environment "keys" would now be the method and not the variable. That's when the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent that some of the Array methods are being scoped into the `with` statement.
+The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside a `with` environment, "keys" would now be the method and not the variable. That's why the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
 
 ```js
 const keys = [];
