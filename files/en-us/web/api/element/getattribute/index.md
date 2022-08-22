@@ -35,10 +35,12 @@ A string containing the value of `attributeName`.
 
 ## Examples
 
-```js
+```html
 <!-- example div in an HTML DOC -->
 <div id="div1">Hi Champ!</div>
+```
 
+```js
 // in a console
 const div1 = document.getElementById('div1');
 //=> <div id="div1">Hi Champ!</div>

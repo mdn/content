@@ -106,9 +106,9 @@ const testNode = new AudioWorkletNode(audioContext, 'test-processor', {
 
 The console output will be as follows:
 
-```js
+```
 > 1 // AudioWorkletNode options.numberOfInputs set to default
-> Map(2) {1 => "one", 2 => "two"} // A cloned map under someUsefulVariable
+> Map(2) { 1 => "one", 2 => "two" } // A cloned map under someUsefulVariable
 ```
 
 ## Specifications

@@ -36,12 +36,11 @@ let node = document.getElementById('div-02').nextSibling;
 let result = 'Previous element siblings of SOME TEXT:\n';
 
 while (node) {
-  result += node.nodeName + '\n';
+  result += `${node.nodeName}\n`;
   node = node.previousElementSibling;
 }
 
 document.getElementsByTagName('pre')[0].textContent = result;
-
 ```
 
 {{EmbedLiveSample("Example", "100%", "200")}}

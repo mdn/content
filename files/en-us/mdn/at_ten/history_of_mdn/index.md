@@ -168,7 +168,7 @@ Florian is a Technical Writer at Mozilla focused on open web technologies. He is
 
 ![David Walsh](darkwing.png)
 
-Mozilla Sr. Web Developer, Front-End Engineer, MooTools Core Developer, Javascript Fanatic, CSS Tinkerer, PHP Hacker, web and open source lover. David is [@davidwalshblog](https://twitter.com/davidwalshblog) on Twitter.
+Mozilla Sr. Web Developer, Front-End Engineer, MooTools Core Developer, JavaScript Fanatic, CSS Tinkerer, PHP Hacker, web and open source lover. David is [@davidwalshblog](https://twitter.com/davidwalshblog) on Twitter.
 
 ### Luke Crouch<br>Web developer, MDN
 
@@ -203,7 +203,7 @@ Many more people have done amazing work on MDN:
 - Craig Cook
 - Rob Hudson
 - John Whitlock
-- ...
+- …
   And many more [Kuma contributors.](https://github.com/mdn/kuma/graphs/contributors)
 
 <!---->
@@ -219,5 +219,5 @@ Many more people have done amazing work on MDN:
 - Tooru Fujisawa
 - Karen Scarfone
 - Niklas Barning
-- ...
+- …
   And hundreds more wiki collaborators.

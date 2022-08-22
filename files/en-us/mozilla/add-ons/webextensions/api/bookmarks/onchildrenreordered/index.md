@@ -65,8 +65,8 @@ Events have three functions:
 
 ```js
 function handleChildrenReordered(id, reorderInfo) {
-  console.log("Item: " + id + " children reordered");
-  console.log("Children: " + reorderInfo.childIds);
+  console.log(`Item: ${id} children reordered`);
+  console.log(`Children: ${reorderInfo.childIds}`);
 }
 
 function handleClick() {

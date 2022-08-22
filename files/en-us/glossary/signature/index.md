@@ -11,4 +11,4 @@ The term **signature** can have several meanings depending on the context. It ma
 
 ## See also
 
-- {{Interwiki("wikipedia", "Signature_(disambiguation)", "Signature")}} on Wikipedia
+- [Signature](https://en.wikipedia.org/wiki/Signature_(disambiguation)) on Wikipedia

@@ -16,12 +16,14 @@ object referring to a given target object.
 ## Syntax
 
 ```js
-new WeakRef(targetObject);
+new WeakRef(targetObject)
 ```
+
+> **Note:** `WeakRef()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
-- targetObject
+- `targetObject`
   - : The target object the WeakRef should refer to (also called the _referent_).
 
 ## Examples

@@ -53,11 +53,11 @@ function logItems(bookmarkItem, indent) {
   if (bookmarkItem.url) {
     console.log(makeIndent(indent) + bookmarkItem.url);
   } else {
-    console.log(makeIndent(indent) + "Folder: " + bookmarkItem.id);
+    console.log(`${makeIndent(indent)}Folder: ${bookmarkItem.id}`);
     indent++;
   }
   if (bookmarkItem.children) {
-    for (let child of bookmarkItem.children) {
+    for (const child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }
@@ -73,8 +73,7 @@ function onRejected(error) {
 
 let subTreeID = "root_____";
 
-let gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
-gettingSubTree.then(logSubTree, onRejected);
+browser.bookmarks.getSubTree(subTreeID).then(logSubTree, onRejected);
 ```
 
 {{WebExtExamples}}

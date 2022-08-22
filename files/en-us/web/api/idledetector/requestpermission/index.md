@@ -8,9 +8,10 @@ tags:
   - Reference
   - requestPermission
   - IdleDetector
+  - Experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the {{domxref("IdleDetector")}}
 interface returns a {{jsxref('Promise')}} that resolves with a string when the user has chosen
@@ -37,7 +38,7 @@ The following example uses a `click` event on a button to trigger requesting the
 
 ```js
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

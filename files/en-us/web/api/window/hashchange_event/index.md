@@ -19,8 +19,8 @@ The **`hashchange`** event is fired when the fragment identifier of the URL has 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('hashchange', event => { });
-onhashchange = event => { };
+addEventListener('hashchange', (event) => { });
+onhashchange = (event) => { };
 ```
 
 ## Event type
@@ -31,9 +31,9 @@ A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
   - : The new URL to which the window is navigating.
-- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated.
 
 ## Event handler aliases
@@ -49,7 +49,7 @@ In addition to the `Window` interface, the event handler property `onhashchange`
 You can use the `hashchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-window.addEventListener('hashchange', function() {
+window.addEventListener('hashchange', () => {
   console.log('The hash has changed!')
 }, false);
 ```

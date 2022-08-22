@@ -3,6 +3,7 @@ title: align-tracks
 slug: Web/CSS/align-tracks
 tags:
   - CSS
+  - CSS Property
   - Experimental
   - Property
   - Reference

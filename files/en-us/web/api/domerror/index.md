@@ -11,15 +11,15 @@ tags:
   - Reference
 browser-compat: api.DOMError
 ---
-{{ APIRef("DOM") }}{{deprecated_header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`DOMError`** interface describes an error object that contains an error name.
 
 ## Properties
 
-- {{domxref("DOMError.name")}} {{readOnlyInline}}
+- {{domxref("DOMError.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns a string representing one of the error type names (see below).
-- {{domxref("DOMError.message")}} {{readOnlyInline}}
+- {{domxref("DOMError.message")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns a string representing a message or description associated with the given error type name.
 
 ## Error types

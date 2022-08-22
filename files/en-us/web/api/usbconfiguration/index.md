@@ -24,11 +24,11 @@ The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_
 
 ## Properties
 
-- {{domxref("USBConfiguration.configurationValue")}}{{readonlyInline}}
+- {{domxref("USBConfiguration.configurationValue")}} {{ReadOnlyInline}}
   - : Returns the configuration value of this configuration. This is equal to the [`bConfigurationValue`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) field of the configuration descriptor provided by the device defining this configuration.
-- {{domxref("USBConfiguration.configurationName")}}{{readonlyInline}}
+- {{domxref("USBConfiguration.configurationName")}} {{ReadOnlyInline}}
   - : Returns the name provided by the device to describe this configuration. This is equal to the value of the string descriptor with the index provided in the [`iConfiguration`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) field of the configuration descriptor defining this configuration.
-- {{domxref("USBConfiguration.interfaces")}}{{readonlyInline}}
+- {{domxref("USBConfiguration.interfaces")}} {{ReadOnlyInline}}
   - : Returns an array containing instances of the {{domxref('USBInterface')}} describing each interface supported by this configuration.
 
 ## Specifications

@@ -11,9 +11,10 @@ tags:
   - VRDisplayEvent
   - Virtual Reality
   - WebVR
+  - Non-standard
 browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} object.
 
@@ -45,7 +46,7 @@ A new {{domxref("VRDisplayEvent")}} object.
 ## Examples
 
 ```js
-var myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent('custom', {
   display: vrDisplay,
   reason: 'Custom reason'
 });

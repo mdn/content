@@ -40,11 +40,11 @@ In this simple example, we demonstrate that using the `:scope` pseudo-class from
 #### JavaScript
 
 ```js
-let paragraph = document.getElementById("para");
-let output = document.getElementById("output");
+const paragraph = document.getElementById("para");
+const output = document.getElementById("output");
 
 if (paragraph.matches(":scope")) {
-  output.innerText = "Yep, the element is its own scope as expected!";
+  output.textContent = "Yep, the element is its own scope as expected!";
 }
 ```
 
@@ -68,12 +68,13 @@ A situation where the `:scope` pseudo-class prove to be useful is when you need 
 #### JavaScript
 
 ```js
-var context = document.getElementById('context');
-var selected = context.querySelectorAll(':scope > div');
+const context = document.getElementById('context');
+const selected = context.querySelectorAll(':scope > div');
 
-document.getElementById('results').innerHTML = Array.prototype.map.call(selected, function (element) {
-    return '#' + element.getAttribute('id');
-}).join(', ');
+document.getElementById('results').innerHTML = Array.prototype.map.call(
+  selected,
+  (element) => `#${element.getAttribute('id')}`,
+).join(', ');
 ```
 
 #### HTML

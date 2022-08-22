@@ -14,19 +14,19 @@ The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/d
 
 _`SpeechRecognitionErrorEvent` also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns the type of error raised.
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
   - : Returns a message describing the error in more detail.
 
 ## Examples
 
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
+recognition.onerror = (event) => {
+  console.log(`Speech recognition error detected: ${event.error}`);
+  console.log(`Additional information: ${event.message}`);
 }
 ```
 

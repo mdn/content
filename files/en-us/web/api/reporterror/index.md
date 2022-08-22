@@ -45,25 +45,25 @@ None ({{jsxref("undefined")}}).
 Feature test for the method using:
 
 ```js
-if (typeof self.reportError == 'function') {
+if (typeof self.reportError === 'function') {
   // function is defined
 }
 ```
 
-The following code shows how you might create and report an error, and how it may be caught using either the global `onerror` handler ({{domxref("GlobalEventHandlers.onerror")}}) or by adding a listener for the `error` event.
+The following code shows how you might create and report an error, and how it may be caught using either the global `onerror` handler or by adding a listener for the `error` event.
 Note that the handler assigned to `onerror` must return `true` to stop the event propagating further.
 
 ```js
-var newError = new Error('Some error message', "someFile.js", 11);
+const newError = new Error('Some error message', "someFile.js", 11);
 self.reportError(newError);
 
-window.onerror = function(message, source, lineno, colno, error) {
-  console.log('message:' + error.message + ', lineno: ' + lineno );
+window.onerror = (message, source, lineno, colno, error) => {
+  console.error(`message: ${error.message}, lineno: ${lineno}` );
   return true;
 };
 
 self.addEventListener('error', (error) => {
-    console.log(error.filename);
+  console.error(error.filename);
 });
 
 // Output
@@ -83,5 +83,4 @@ self.addEventListener('error', (error) => {
 
 - [`Window`](/en-US/docs/Web/API/Window#methods_implemented_from_elsewhere)
 - [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#methods_implemented_from_elsewhere)
-- {{domxref("GlobalEventHandlers/onerror","GlobalEventHandlers.onerror")}}
 - [error](/en-US/docs/Web/API/Element/error_event) event

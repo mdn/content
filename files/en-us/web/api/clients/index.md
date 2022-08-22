@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Clients
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -34,8 +33,8 @@ The `Clients` interface provides access to {{domxref("Client")}} objects. Access
 The following example shows an existing chat window or creates a new one when the user clicks a notification.
 
 ```js
-addEventListener('notificationclick', event => {
-  event.waitUntil(async function() {
+addEventListener('notificationclick', (event) => {
+  event.waitUntil((async () => {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
     });
@@ -46,7 +45,7 @@ addEventListener('notificationclick', event => {
     for (const client of allClients) {
       const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
+      if (url.pathname === '/chat/') {
         // Excellent, let's use it!
         client.focus();
         chatClient = client;
@@ -62,7 +61,7 @@ addEventListener('notificationclick', event => {
 
     // Message the client:
     chatClient.postMessage("New chat messages!");
-  }());
+  })());
 });
 ```
 

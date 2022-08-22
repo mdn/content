@@ -47,18 +47,18 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{event("change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
+The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{domxref("HTMLElement/change_event", "change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+second.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
@@ -75,13 +75,13 @@ This minimum example has `main` create an `ArrayBuffer` and transfer it to `myWo
 
 ```js
 // create worker
-var myWorker = new Worker("myWorker.js");
+const myWorker = new Worker("myWorker.js");
 
 // listen for myWorker to transfer the buffer back to main
 myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
   console.log("message from worker received in main:", msg);
 
-  var bufTransferredBackFromWorker = msg.data;
+  const bufTransferredBackFromWorker = msg.data;
 
   console.log(
     "buf.byteLength in main AFTER transfer back from worker:",
@@ -90,7 +90,7 @@ myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
 });
 
 // create the buffer
-var myBuf = new ArrayBuffer(8);
+const myBuf = new ArrayBuffer(8);
 
 console.log(
   "buf.byteLength in main BEFORE transfer to worker:",
@@ -113,7 +113,7 @@ console.log(
 self.onmessage = function handleMessageFromMain(msg) {
   console.log("message from main received in worker:", msg);
 
-  var bufTransferredFromMain = msg.data;
+  const bufTransferredFromMain = msg.data;
 
   console.log(
     "buf.byteLength in worker BEFORE transfer back to main:",

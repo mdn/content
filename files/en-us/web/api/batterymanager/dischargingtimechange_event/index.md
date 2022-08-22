@@ -17,9 +17,9 @@ The **`dischargingtimechange`** event of the [Battery Status API](/en-US/docs/We
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dischargingtimechange', event => { });
+addEventListener('dischargingtimechange', (event) => { });
 
-ondischargingtimechange = event => { };
+ondischargingtimechange = (event) => { };
 ```
 
 ## Event type
@@ -38,7 +38,7 @@ _A generic {{domxref("Event")}}._
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
     battery.ondischargingtimechange = () => {
         document.querySelector('#level').textContent = battery.level;
         document.querySelector('#chargingTime').textContent = battery.chargingTime;

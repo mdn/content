@@ -39,7 +39,7 @@ function trace() {
   try {
     throw new Error('myError');
   }
-  catch(e) {
+  catch (e) {
     alert(e.stack);
   }
 }

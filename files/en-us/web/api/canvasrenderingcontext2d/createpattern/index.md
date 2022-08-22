@@ -55,7 +55,7 @@ createPattern(image, repetition)
     - `"no-repeat"` (neither direction)
 
     If `repetition` is specified as an empty string (`""`) or
-    {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of `"repeat"`
+    [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"`
     will be used.
 
 ### Return value
@@ -89,7 +89,7 @@ const ctx = canvas.getContext('2d');
 
 const img = new Image();
 img.src = 'canvas_createpattern.png';
-img.onload = function() {
+img.onload = () => {
   const pattern = ctx.createPattern(img, 'repeat');
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);
@@ -142,15 +142,6 @@ document.body.appendChild(canvas);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a `null` or
-  `undefined` image correctly throws a `TYPE_MISMATCH_ERR`
-  exception.
-- Starting with Gecko 16.0 {{geckoRelease("16.0")}}, specifying `null` for
-  the `repetition` parameter is now allowed and results in the repetition
-  being set to `"repeat"` ({{bug(762657)}}).
 
 ## See also
 

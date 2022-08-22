@@ -58,8 +58,8 @@ Copy a remote image:
 // * the API permission "clipboardWrite"
 
 fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+.then((response) => response.arrayBuffer())
+.then((buffer) => browser.clipboard.setImageData(buffer, 'png'));
 ```
 
 Copy an image that was bundled with the extension:
@@ -68,8 +68,8 @@ Copy an image that was bundled with the extension:
 // requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+.then((response) => response.arrayBuffer())
+.then((buffer) => browser.clipboard.setImageData(buffer, 'png'));
 ```
 
 {{WebExtExamples}}

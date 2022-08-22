@@ -42,7 +42,7 @@ If so ensure they are safe and that no better alternatives are available.
 | Name                     | Risk Level | Problem                                                            | Solution                                            |
 | ------------------------ | ---------- | ------------------------------------------------------------------ | --------------------------------------------------- |
 | eval                     | Very High  | Invokes JavaScript parser - dangerous if used with untrusted input | Avoid eval if at all possible.                      |
-| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, ...) |
+| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, …) |
 
 ## C++ - Dangerous Functions
 
@@ -105,7 +105,7 @@ If so ensure they are safe and that no better alternatives are available.
 3. Sensitive information
 
     1. Ensure any security sensitive or personal information is adequately protected (see Encryption section)
-    2. Particular care must be taken around credentials (passwords, etc) - If you're working with information of this type and you're unsure of what to do, it's always worth asking
+    2. Particular care must be taken around credentials (passwords, etc.) - If you're working with information of this type and you're unsure of what to do, it's always worth asking
 
 4. Logging
 

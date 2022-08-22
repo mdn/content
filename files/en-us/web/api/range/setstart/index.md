@@ -73,7 +73,7 @@ const address = document.getElementById('address');
 const log = document.getElementById('log');
 
 // Log info
-address.childNodes.forEach(node => {
+address.childNodes.forEach((node) => {
   const li = document.createElement('li');
   li.textContent = `${node.nodeName}, ${node.nodeValue}`;
   log.appendChild(li);

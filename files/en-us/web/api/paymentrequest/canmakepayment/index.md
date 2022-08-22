@@ -4,7 +4,6 @@ slug: Web/API/PaymentRequest/canMakePayment
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Payment Request
   - Payment Request API
@@ -81,7 +80,7 @@ async function initPaymentRequest() {
     return;
   }
 
-  // Otherwise... let's see if we can use Example Pay
+  // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
     details

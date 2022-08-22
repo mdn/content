@@ -22,4 +22,4 @@ global.get $val
 
 | Instruction  | Binary opcode |
 | ------------ | ------------- |
-| `global.get` | `0x20`        |
+| `global.get` | `0x23`        |

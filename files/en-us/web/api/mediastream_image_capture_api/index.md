@@ -24,7 +24,7 @@ First, get a reference to a device by calling {{domxref("MediaDevices.getUserMed
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
+  .then((mediaStream) => {
     // Do something with the stream.
   })
 ```
@@ -41,7 +41,7 @@ At this point, you might want to configure the device capabilities before captur
 let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
-if(!capabilities.zoom) {
+if (!capabilities.zoom) {
   return;
 }
 track.applyConstraints({ advanced : [{ zoom: zoom.value }] });

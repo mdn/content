@@ -24,12 +24,12 @@ Three.js has objects that represent **mathematical volumes** and shapes — for 
 To create a **`Box3` instance**, we need to provide the **lower and upper boundaries** of the box. Usually we will want this AABB to be "linked" to an object in our 3D world (like a character.) In Three.js, `Geometry` instances have a `boundingBox` property with `min` and `max` boundaries for the object. Keep in mind that in order for this property to be defined, you need to manually call `Geometry.computeBoundingBox` beforehand.
 
 ```js
-var knot = new THREE.Mesh(
+const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new MeshNormalMaterial({}));
 
 knot.geometry.computeBoundingBox();
-var knotBBox = new Box3(
+const knotBBox = new Box3(
   knot.geometry.boundingBox.min,
   knot.geometry.boundingBox.max);
 ```
@@ -39,11 +39,11 @@ var knotBBox = new Box3(
 A more simple alternative that fixes the previous issue is to set those boundaries later on with `Box3.setFromObject`, which will compute the dimensions taking into account a 3D entity's **transformations _and_ any child meshes** as well.
 
 ```js
-var knot = new THREE.Mesh(
+const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new MeshNormalMaterial({}));
 
-var knotBBox = new Box3(new THREE.Vector3(), new THREE.Vector3());
+const knotBBox = new Box3(new THREE.Vector3(), new THREE.Vector3());
 knotBBox.setFromObject(knot);
 ```
 
@@ -52,11 +52,11 @@ knotBBox.setFromObject(knot);
 Instantiating **`Sphere` objects** is similar. We need to provide the sphere's center and radius, which can be added to the `boundingSphere` property available in `Geometry`.
 
 ```js
-var knot = new THREE.Mesh(
+const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new MeshNormalMaterial({}));
 
-var knotBSphere = new Sphere(
+const knotBSphere = new Sphere(
   knot.position,
   knot.geometry.boundingSphere.radius);
 ```
@@ -75,7 +75,7 @@ knotBSphere.radius = knot.geometry.radius * 2;
 Both `Box3` and `Sphere` have a **`containsPoint`** method to do this test.
 
 ```js
-var point = new THREE.Vector3(2, 4, 7);
+const point = new THREE.Vector3(2, 4, 7);
 knotBBox.containsPoint(point);
 ```
 
@@ -112,7 +112,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
     THREE.Sphere.__closest.set(this.center.x, this.center.y, this.center.z);
     THREE.Sphere.__closest.clamp(box.min, box.max);
 
-    var distance =  this.center.distanceToSquared(THREE.Sphere.__closest);
+    const distance =  this.center.distanceToSquared(THREE.Sphere.__closest);
     return distance < (this.radius * this.radius);
 };
 ```
@@ -125,7 +125,7 @@ We have prepared some [live demos](https://mozdevs.github.io/gamedev-js-3d-aabb/
 - [Box vs. Box and Sphere](https://mozdevs.github.io/gamedev-js-3d-aabb/raw_box.html)
 - [Sphere vs. Box and Sphere](https://mozdevs.github.io/gamedev-js-3d-aabb/raw_sphere.html)
 
-![](screen_shot_2015-10-20_at_15.19.16.png)
+![A knot object, a large sphere object and a small sphere object in 3-D space. Three vectors are drawn on the small sphere. The vectors point in the directions of the three axes that define the space. Text at the bottom reads: Drag the ball around.](screen_shot_2015-10-20_at_15.19.16.png)
 
 ## Using `BoxHelper`
 
@@ -144,18 +144,18 @@ The main disadvantage is that it **only creates box bounding volumes**, so if yo
 To use it, we need to create a new `BoxHelper` instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the `three.js` scene in order to render it. We assume our scene variable to be called `scene`.
 
 ```js
-var knot = new THREE.Mesh(
+const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new THREE.MeshNormalMaterial({})
 );
-var knotBoxHelper = new THREE.BoxHelper(knot, 0x00ff00);
+const knotBoxHelper = new THREE.BoxHelper(knot, 0x00ff00);
 scene.add(knotBoxHelper);
 ```
 
 In order to also have our actual `Box3` bounding box, we create a new `Box3` object and make it assume the `BoxHelper`'s shape and position.
 
 ```js
-var box3 = new THREE.Box3();
+const box3 = new THREE.Box3();
 box3.setFromObject(knotBoxHelper);
 ```
 
@@ -182,4 +182,4 @@ box3.containsPoint(point.position);
 
 There are **two demos** you can take a look at on our [live demos page](https://mozdevs.github.io/gamedev-js-3d-aabb/). The [first one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html) showcases point vs. box collisions using `BoxHelper`. The [second one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html) performs box vs. box tests.
 
-![](screen_shot_2015-10-19_at_12.10.06.png)
+![A knot object, a sphere object and a cube object in 3-D space. The knot and the sphere are encompassed by a virtual bounding box. The cube is intersecting the bounding box of the sphere. Text at the bottom reads: Drag the cube around. Press Esc to toggle B-Boxes.](screen_shot_2015-10-19_at_12.10.06.png)

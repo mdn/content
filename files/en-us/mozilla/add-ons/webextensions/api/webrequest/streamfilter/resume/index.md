@@ -43,7 +43,7 @@ This example uses suspend/resume to delay a web request.
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     filter.suspend();
 
     setTimeout(() => {

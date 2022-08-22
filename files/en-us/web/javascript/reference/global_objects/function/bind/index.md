@@ -23,28 +23,15 @@ is called.
 
 ```js
 bind(thisArg)
-bind(thisArg, arg1)
-bind(thisArg, arg1, arg2)
-bind(thisArg, arg1, ... , argN)
+bind(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters
 
 - `thisArg`
-  - : The value to be passed as the `this` parameter to the target function
-    `func` when the bound function is called. The value is ignored
-    if the bound function is constructed using the {{jsxref("Operators/new", "new")}}
-    operator. When using `bind` to create a function (supplied as a callback)
-    inside a `setTimeout`, any primitive value passed as
-    `thisArg` is converted to object. If no arguments are provided
-    to `bind`, or if the `thisArg` is
-    `null` or `undefined`, the
-    `this` of the executing scope is treated as the
-    `thisArg` for the new function.
-- `arg1, arg2, ...argN`
-  {{optional_inline}}
-  - : Arguments to prepend to arguments provided to the bound function when invoking
-    `func`.
+  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator.
+- `arg1, …, argN` {{optional_inline}}
+  - : Arguments to prepend to arguments provided to the bound function when invoking `func`.
 
 ### Return value
 
@@ -53,32 +40,7 @@ arguments (if provided).
 
 ## Description
 
-The `bind()` function creates a new **bound function**, which
-is an _exotic function object_ (a term from ECMAScript 2015) that wraps the
-original function object. Calling the bound function generally results in the execution
-of its wrapped function.
-
-A bound function has the following internal properties:
-
-- **`[[BoundTargetFunction]]`**
-  - : The wrapped function object.
-- **`[[BoundThis]]`**
-  - : The value that is always passed as `this` value when calling the wrapped
-    function.
-- **`[[BoundArguments]]`**
-  - : A list of values whose elements are used as the first arguments to any call to the
-    wrapped function.
-- **`[[Call]]`**
-  - : Executes code associated with this object. Invoked via a function call expression.
-    The arguments to the internal method are a `this` value and a list
-    containing the arguments passed to the function by a call expression.
-
-When a bound function is called, it calls internal method `[[Call]]` on
-`[[BoundTargetFunction]]`, with following arguments
-`Call(boundThis, ...args)`. Where
-`boundThis` is `[[BoundThis]]`,
-`args` is `[[BoundArguments]]`, followed by the
-arguments passed by the function call.
+The `bind()` function creates a new **bound function**. Calling the bound function generally results in the execution of its wrapped function. The bound function will store the parameters passed — which include the value of `this` and the first few arguments — as its internal state. These values are stored in advance, instead of being passed at call time. You can generally see `const boundFn = fn.bind(thisArg, arg1, arg2)` as being equivalent to `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)`.
 
 A bound function may also be constructed using the {{jsxref("Operators/new", "new")}}
 operator. Doing so acts as though the target function had instead been constructed. The
@@ -103,7 +65,7 @@ function from the function, using the original object, neatly solves this proble
 this.x = 9;    // 'this' refers to the global object (e.g. 'window') in non-strict mode
 const module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX() { return this.x; }
 };
 
 module.getX();
@@ -135,8 +97,8 @@ inserted at the start of the arguments passed to the target function, followed b
 whatever arguments are passed to the bound function at the time it is called.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+function list(...args) {
+  return args;
 }
 
 function addArguments(arg1, arg2) {
@@ -169,7 +131,7 @@ const result3 = addThirtySeven(5, 10);
 //  (the second argument is ignored)
 ```
 
-### With `setTimeout()`
+### With setTimeout()
 
 By default within {{domxref("setTimeout()")}}, the `this` keyword will be set to the
 {{domxref("window")}} (or `global`) object. When working with class methods
@@ -177,18 +139,18 @@ that require `this` to refer to class instances, you may explicitly bind
 `this` to the callback function, in order to maintain the instance.
 
 ```js
-function LateBloomer() {
-  this.petalCount = Math.floor(Math.random() * 12) + 1;
+class LateBloomer {
+  constructor() {
+    this.petalCount = Math.floor(Math.random() * 12) + 1;
+  }
+  bloom() {
+    // Declare bloom after a delay of 1 second
+    setTimeout(this.declare.bind(this), 1000);
+  }
+  declare() {
+    console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
+  }
 }
-
-// Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function() {
-  window.setTimeout(this.declare.bind(this), 1000);
-};
-
-LateBloomer.prototype.declare = function() {
-  console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
-};
 
 const flower = new LateBloomer();
 flower.bloom();
@@ -215,7 +177,7 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return `${this.x},${this.y}`;
 };
 
@@ -223,14 +185,10 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-//  not supported in the polyfill below,
-
-//  works fine with native bind:
-
-const YAxisPoint = Point.bind(null, 0/*x*/);
+let YAxisPoint = Point.bind(null, 0/*x*/);
 
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+YAxisPoint = Point.bind(emptyObj, 0/*x*/);
 
 const axisPoint = new YAxisPoint(5);
 axisPoint.toString();                    // '0,5'
@@ -284,7 +242,7 @@ In the following piece of code, `slice()` is a bound function to the
 {{jsxref("Function.prototype.apply()", "apply()")}} function of
 {{jsxref("Function")}}, with the `this` value set to the
 {{jsxref("Array.prototype.slice()", "slice()")}} function of
-{{jsxref("Array.prototype")}}. This means that additional `apply()` calls can
+`Array.prototype`. This means that additional `apply()` calls can
 be eliminated:
 
 ```js

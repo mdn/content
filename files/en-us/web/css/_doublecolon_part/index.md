@@ -33,7 +33,7 @@ custom-element::part(foo) {
 
 ```html
 <template id="tabbed-custom-element">
-<style type="text/css">
+<style>
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 1rem;

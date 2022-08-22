@@ -37,7 +37,7 @@ An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} containing th
 ## Examples
 
 ```js
-var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
+const uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
 ```
 
 ## Specifications

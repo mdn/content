@@ -30,11 +30,11 @@ If a feature policy blocks use of a feature, it's because your code is inconsist
 
 ## Properties
 
-- {{domxref('Magnetometer.x')}} {{readonlyinline}}
+- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}}
   - : Returns a double containing the magnetic field around the device's x axis.
-- {{domxref('Magnetometer.y')}} {{readonlyinline}}
+- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}}
   - : Returns a double containing the magnetic field around the device's y axis.
-- {{domxref('Magnetometer.z')}} {{readonlyinline}}
+- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}}
   - : Returns a double containing the magnetic field around the device's z axis.
 
 ## Methods
@@ -52,10 +52,10 @@ The magnetometer is typically read in the {{domxref('Sensor.reading_event', 'rea
 ```js
 let magSensor = new Magnetometer({frequency: 60});
 
-magSensor.addEventListener('reading', e => {
-  console.log("Magnetic field along the X-axis " + magSensor.x);
-  console.log("Magnetic field along the Y-axis " + magSensor.y);
-  console.log("Magnetic field along the Z-axis " + magSensor.z);
+magSensor.addEventListener('reading', (e) => {
+  console.log(`Magnetic field along the X-axis ${magSensor.x}`);
+  console.log(`Magnetic field along the Y-axis ${magSensor.y}`);
+  console.log(`Magnetic field along the Z-axis ${magSensor.z}`);
 });
 magSensor.start();
 ```

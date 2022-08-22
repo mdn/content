@@ -26,12 +26,12 @@ const file = document.getElementById('fileItem').files[0];
 
 ## Properties
 
-- {{DOMxRef("FileList/length", "length")}}{{ReadOnlyInline}}
+- {{DOMxRef("FileList/length", "length")}} {{ReadOnlyInline}}
   - : A read-only value indicating the number of files in the list.
 
 ## Methods
 
-- {{DOMxRef("FileList/item", "item()")}}{{ReadOnlyInline}}
+- {{DOMxRef("FileList/item", "item()")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Example
@@ -43,10 +43,8 @@ In this example, we log the names of all the files selected by the user.
 #### HTML
 
 ```html
-
-<!--'multiple' is set to allow multiple files to be selected-->
 <input id="myfiles" multiple type="file">
-<div class="output"></div>
+<pre class="output">Selected files:</pre>
 ```
 
 #### CSS
@@ -63,18 +61,13 @@ In this example, we log the names of all the files selected by the user.
 
 ```js
 const output = document.querySelector('.output');
-const myFiles = document.querySelector("#myfiles");
+const fileInput = document.querySelector("#myfiles");
 
-function logFilenames(){
-  const fileInput = document.querySelector("#myfiles");
-  const files = fileInput.files;
-  const fileListLength = files.length;
-  for (let i = 0; i < fileListLength; i++) {
-    output.innerText = `${output.innerText}\n${files.item(i).name}`;
+fileInput.addEventListener("change", () => {
+  for (const file of fileInput.files) {
+    output.innerText += `\n${file.name}`;
   }
-}
-
-myFiles.addEventListener("change", logFilenames);
+});
 ```
 
 #### Result

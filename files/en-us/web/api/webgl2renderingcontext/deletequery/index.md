@@ -36,9 +36,9 @@ None ({{jsxref("undefined")}}).
 `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 
-// ...
+// …
 
 gl.deleteQuery(query);
 ```

@@ -47,7 +47,6 @@ getLevel.addEventListener('click', async () => {
     output.textContent = `Battery level: ${level}`;
   }
 });
-
 ```
 
 #### Result

@@ -22,6 +22,8 @@ This can be encountered when:
 - when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or
 - when passing bad values to the numeric methods {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} or {{jsxref("Number.prototype.toPrecision()")}}.
 
+`RangeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{jsxref("RangeError/RangeError", "RangeError()")}}
@@ -30,9 +32,11 @@ This can be encountered when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "RangeError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}} {{non-standard_inline}}
@@ -47,48 +51,36 @@ This can be encountered when:
 ### Using RangeError (for numeric values)
 
 ```js
-function check(n)
-{
-    if( !(n >= -500 && n <= 500) )
-    {
-        throw new RangeError("The argument must be between -500 and 500.")
-    }
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.")
+  }
 }
 
-try
-{
-    check(2000)
-}
-catch(error)
-{
-    if (error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
 ### Using RangeError (for non-numeric values)
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
-    }
+function check(value) {
+  if (!["apple", "banana", "carrot"].includes(value)) {
+    throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
+  }
 }
 
-try
-{
-    check("cabbage")
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check("cabbage");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 

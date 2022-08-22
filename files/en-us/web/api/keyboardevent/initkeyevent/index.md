@@ -73,7 +73,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var event = document.createEvent('KeyboardEvent'); // create a key event
+const event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,

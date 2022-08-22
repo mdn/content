@@ -95,8 +95,8 @@ The following example shows the use of the `evaluate()` method.
 ### JavaScript
 
 ```js
-var evaluator = new XPathEvaluator();
-var result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const evaluator = new XPathEvaluator();
+const result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

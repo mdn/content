@@ -48,7 +48,7 @@ function generate_table() {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       const cell = document.createElement("td");
-      const cellText = document.createTextNode("cell in row "+i+", column "+j);
+      const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -166,7 +166,7 @@ function set_background() {
 
   // get the second paragraph from the list
   const secondParagraph = paragraphs[1];
-  
+
   // set the inline style
   secondParagraph.style.background = "red";
 }
@@ -286,11 +286,11 @@ The basic steps to create the table in sample1.html are:
         const mytablebody = document.createElement("tbody");
 
         // creating all cells
-        for(let j = 0; j < 3; j++) {
+        for (let j = 0; j < 3; j++) {
             // creates a <tr> element
             const mycurrent_row = document.createElement("tr");
 
-            for(let i = 0; i < 4; i++) {
+            for (let i = 0; i < 4; i++) {
                 // creates a <td> element
                const mycurrent_cell = document.createElement("td");
                 // creates a Text Node
@@ -369,9 +369,9 @@ Once you have the object in your JavaScript variable, you can set `style` proper
        const mytable = document.createElement("table");
        const mytablebody = document.createElement("tbody");
 
-       for(let row = 0; row < 2; row++) {
+       for (let row = 0; row < 2; row++) {
            mycurrent_row=document.createElement("tr");
-           for(let col = 0; col < 2; col++) {
+           for (let col = 0; col < 2; col++) {
                const mycurrent_cell = document.createElement("td");
                const currenttext = document.createTextNode("cell is: " + row + col);
                mycurrent_cell.appendChild(currenttext);

@@ -122,9 +122,9 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ```css
 @supports (animation-name: test) {
-  … /* CSS applied when animations are supported without a prefix */
-  @keyframes { /* Other at-rules can be nested inside */
-    …
+  /* CSS applied when animations are supported without a prefix */
+  @keyframes {
+    /* Other at-rules can be nested inside */
   }
 }
 ```
@@ -134,7 +134,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 ```css
 @supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
          (-ms-perspective: 10px) or (-o-perspective: 10px)) {
-  … /* CSS applied when 3D transforms, prefixed or not, are supported */
+  /* CSS applied when 3D transforms, prefixed or not, are supported */
 }
 ```
 
@@ -142,7 +142,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ```css
 @supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
-  … /* CSS to provide fallback alternative for text-align-last: justify */
+  /* CSS to provide fallback alternative for text-align-last: justify */
 }
 ```
 
@@ -163,14 +163,14 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
 ```css
 /* This rule won't be applied in browsers which don't support :is() */
 :is(ul, ol) > li {
-  … /* CSS applied when the :is(…) selector is supported */
+  /* CSS applied when the :is(…) selector is supported */
 }
 
 @supports not selector(:is(a, b)) {
   /* Fallback for when :is() is unsupported */
   ul > li,
   ol > li {
-    … /* The above expanded for browsers which don't support :is(…) */
+    /* The above expanded for browsers which don't support :is(…) */
   }
 }
 
@@ -179,12 +179,9 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
   /* This rule needs to be inside the @supports block, otherwise
      it will be partially applied in browsers which don't support
      the `of` argument of :nth-child(…) */
-  :is(
-      :nth-child(1n of ul, ol) a,
-      details > summary
-  ) {
-    … /* CSS applied when the :is(…) selector and
-         the `of` argument of :nth-child(…) are both supported */
+  :is(:nth-child(1n of ul, ol) a, details > summary) {
+    /* CSS applied when the :is(…) selector and
+       the `of` argument of :nth-child(…) are both supported */
   }
 }
 ```

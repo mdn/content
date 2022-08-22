@@ -13,9 +13,7 @@ browser-compat: javascript.builtins.Array.sort
 ---
 {{JSRef}}
 
-The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and
-returns the sorted array. The default sort order is ascending, built upon converting the
-elements into strings, then comparing their sequences of UTF-16 code units values.
+The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
 
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
@@ -29,13 +27,13 @@ implementation.
 sort()
 
 // Arrow function
-sort((a, b) => { /* ... */ } )
+sort((a, b) => { /* … */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(a, b) { /* ... */ })
+sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
@@ -51,12 +49,11 @@ sort(function compareFn(a, b) { /* ... */ })
 
 ### Return value
 
-The sorted array. Note that the array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no
-copy is made.
+The reference to the original array, now sorted. Note that the array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
 
 ## Description
 
-If `compareFunction` is not supplied, all non-`undefined` array
+If `compareFn` is not supplied, all non-`undefined` array
 elements are sorted by converting them to strings and comparing strings in UTF-16 code
 units order. For example, "banana" comes before "cherry". In a numeric sort, 9 comes
 before 80, but because numbers are converted to strings, "80" comes before "9" in the
@@ -69,24 +66,21 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 > pair `\uD855\uDE51` will be sorted before the character
 > `\uFF3A`.
 
-If `compareFunction` is supplied, all non-`undefined` array
+If `compareFn` is supplied, all non-`undefined` array
 elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
-`compareFunction`).
+`compareFn`).
 
-| `compareFunction(a, b)` return value | sort order                         |
+| `compareFn(a, b)` return value       | sort order                         |
 |--------------------------------------|------------------------------------|
 | > 0                                  | sort `a` after `b`                 |
 | < 0                                  | sort `a` before `b`                |
 | === 0                                | keep original order of `a` and `b` |
 
-> **Note:** `compareFunction(a, b)` must always return the same value when given a specific pair of
-> elements `a` and `b` as its two arguments.
-
 So, the compare function has the following form:
 
 ```js
-function compare(a, b) {
+function compareFn(a, b) {
   if (a is less than b by some ordering criterion) {
     return -1;
   }
@@ -98,7 +92,17 @@ function compare(a, b) {
 }
 ```
 
-> **Note:** Applications should not rely on order of arguments or calls, as those are implementation dependent.
+More formally, the comparator is expected to have the following properties, in order to ensure proper sort behavior:
+
+- _Pure_: The comparator does not mutate the objects being compared or any external state. (This is important because there's no guarantee _when_ and _how_ the comparator will be called, so any particular call should not produce visible effects to the outside.)
+- _Stable_: The comparator returns the same result with the same pair of input.
+- _Reflexive_: `compareFn(a, a) === 0`.
+- _Symmetric_: `compareFn(a, b)` and `compareFn(b, a)` must both be `0` or have opposite signs.
+- _Transitive_: If `compareFn(a, b)` and `compareFn(b, c)` are both positive, zero, or negative, then `compareFn(a, c)` has the same positivity as the previous two.
+
+A comparator conforming to the constraints above will always be able to return all of `1`, `0`, and `-1`, or consistently return `0`. For example, if a comparator only returns `1` and `0`, or only returns `0` and `-1`, it will not be able to sort reliably because _symmetry_ is broken. A comparator that always returns `0` will cause the array to not be changed at all, but is reliable nonetheless.
+
+The default lexicographic comparator satisfies all constraints above.
 
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
@@ -110,27 +114,21 @@ function compareNumbers(a, b) {
 }
 ```
 
-The `sort` method can be conveniently used with
-{{jsxref("Operators/function", "function expressions", "", 1)}}:
+The `sort` method can be conveniently used with [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ```js
 const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
+numbers.sort(function (a, b) {
   return a - b;
 });
 console.log(numbers);
-
 // [1, 2, 3, 4, 5]
-```
 
-ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expressions", "",
-  1)}} with even shorter syntax.
+// OR
 
-```js
-const numbers = [4, 2, 5, 1, 3];
-numbers.sort((a, b) => a - b);
-console.log(numbers);
-
+const numbers2 = [4, 2, 5, 1, 3];
+numbers2.sort((a, b) => a - b);
+console.log(numbers2);
 // [1, 2, 3, 4, 5]
 ```
 
@@ -147,12 +145,10 @@ const items = [
 ];
 
 // sort by value
-items.sort(function (a, b) {
-  return a.value - b.value;
-});
+items.sort((a, b) => a.value - b.value);
 
 // sort by name
-items.sort(function(a, b) {
+items.sort((a, b) => {
   const nameA = a.name.toUpperCase(); // ignore upper and lowercase
   const nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
@@ -210,18 +206,16 @@ appear in the right order.
 
 ```js
 const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
-items.sort(function (a, b) {
-  return a.localeCompare(b);
-});
+items.sort((a, b) => a.localeCompare(b));
 
 // items is ['adieu', 'café', 'communiqué', 'éclair', 'premier', 'réservé']
 ```
 
 ### Sorting with map
 
-The `compareFunction` can be invoked multiple times per element within the
-array. Depending on the `compareFunction`'s nature, this may yield a high
-overhead. The more work a `compareFunction` does and the more elements there
+The `compareFn` can be invoked multiple times per element within the
+array. Depending on the `compareFn`'s nature, this may yield a high
+overhead. The more work a `compareFn` does and the more elements there
 are to sort, it may be more efficient to use [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
 sorting. The idea is to traverse the array once to extract the actual values used for
 sorting into a temporary array, sort the temporary array, and then traverse the
@@ -247,10 +241,32 @@ mapped.sort((a, b) => {
   return 0;
 });
 
-const result = mapped.map(v => data[v.i]);
+const result = mapped.map((v) => data[v.i]);
 ```
 
 There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.
+
+### sort() returns the reference to the same array
+
+The `sort()` method returns a reference to the original array, so mutating the returned array will mutate the original array as well.
+
+```js
+const numbers = [3, 1, 4, 1, 5];
+const sorted = numbers.sort((a, b) => a - b);
+// numbers and sorted are both [1, 1, 3, 4, 5]
+sorted[0] = 10;
+console.log(numbers[0]); // 10
+```
+
+In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+```js
+const numbers = [3, 1, 4, 1, 5];
+// [...numbers] creates a shallow copy, so sort() does not mutate the original
+const sorted = [...numbers].sort((a, b) => a - b);
+sorted[0] = 10;
+console.log(numbers[0]); // 3
+```
 
 ### Sort stability
 
@@ -296,6 +312,32 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
   { name: "Alex",   grade: 15 }  // original order not maintained
 ];
 ```
+
+### Sorting with non-well-formed comparator
+
+If a comparing function does not satisfy all of purity, stability, reflexivity, symmetry, and transitivity rules, as explained in the [description](#description), the program's behavior is not well-defined.
+
+For example, consider this code:
+
+```js
+const arr = [3, 1, 4, 1, 5, 9];
+const compareFn = (a, b) => a > b ? 1 : 0;
+arr.sort(compareFn);
+```
+
+The `compareFn` function here is not well-formed, because it does not satisfy symmetry: if `a > b`, it returns `1`; but by swapping `a` and `b`, it returns `0` instead of a negative value. Therefore, the resulting array will be different across engines. For example, V8 (used by Chrome, Node.js, etc.) and JavaScriptCore (used by Safari) would not sort the array at all and return `[3, 1, 4, 1, 5, 9]`, while SpiderMonkey (used by Firefox) will return the array sorted ascendingly, as `[1, 1, 3, 4, 5, 9]`.
+
+However, if the `compareFn` function is changed slightly so that it returns `-1` or `0`:
+
+```js
+const arr = [3, 1, 4, 1, 5, 9];
+const compareFn = (a, b) => a > b ? -1 : 0;
+arr.sort(compareFn);
+```
+
+Then V8 and JavaScriptCore sorts it descendingly, as `[9, 5, 4, 3, 1, 1]`, while SpiderMonkey returns it as-is: `[3, 1, 4, 1, 5, 9]`.
+
+Due to this implementation inconsistency, you are always advised to make your comparator well-formed by following the five constraints.
 
 ## Specifications
 

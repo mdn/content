@@ -54,7 +54,7 @@ const session = navigator.xr.requestSession("immersive-ar", {
   }
 });
 
-// ...
+// …
 
 // Obtain depth information in an active and animated frame
 function rafCallback(time, frame) {

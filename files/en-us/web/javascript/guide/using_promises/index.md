@@ -10,7 +10,7 @@ tags:
   - asynchronous
   - l10n:priority
 ---
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.
 
@@ -22,11 +22,11 @@ Here's some code that uses `createAudioFileAsync()`:
 
 ```js
 function successCallback(result) {
-  console.log("Audio file ready at URL: " + result);
+  console.log(`Audio file ready at URL: ${result}`);
 }
 
 function failureCallback(error) {
-  console.error("Error generating audio file: " + error);
+  console.error(`Error generating audio file: ${error}`);
 }
 
 createAudioFileAsync(audioSettings, successCallback, failureCallback);
@@ -77,7 +77,7 @@ In the old days, doing several asynchronous operations in a row would lead to th
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
-      console.log("Got the final result: " + finalResult);
+      console.log(`Got the final result: ${finalResult}`);
     }, failureCallback);
   }, failureCallback);
 }, failureCallback);
@@ -94,7 +94,7 @@ doSomething()
     return doThirdThing(newResult);
   })
   .then(function (finalResult) {
-    console.log("Got the final result: " + finalResult);
+    console.log(`Got the final result: ${finalResult}`);
   })
   .catch(failureCallback);
 ```
@@ -111,7 +111,71 @@ doSomething()
   .catch(failureCallback);
 ```
 
-**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions `() => x` is short for `() => { return x; }`).
+**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions, `() => x` is short for `() => { return x; }`). If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
+
+```js example-bad
+doSomething()
+  .then((url) => {
+    // I forgot to return this
+    fetch(url);
+  })
+  .then((result) => {
+    // result is undefined, because nothing is returned from
+    // the previous handler.
+    // There's no way to know the return value of the fetch()
+    // call anymore, or whether it succeeded at all.
+  });
+```
+
+This may be worse if you have race conditions — if the promise from the last handler is not returned, the next `then` handler will be called early, and any value it reads may be incomplete.
+
+```js example-bad
+const listOfIngredients = [];
+
+doSomething()
+  .then((url) => {
+    // I forgot to return this
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        listOfIngredients.push(data);
+      });
+  })
+  .then(() => {
+    console.log(listOfIngredients);
+    // Always [], because the fetch request hasn't completed yet.
+  });
+```
+
+Therefore, as a rule of thumb, whenever your operation encounters a promise, return it and defer its handling to the next `then` handler.
+
+```js example-good
+const listOfIngredients = [];
+
+doSomething()
+  .then((url) =>
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        listOfIngredients.push(data);
+      })
+  )
+  .then(() => {
+    console.log(listOfIngredients);
+  });
+
+// OR
+
+doSomething()
+  .then((url) => fetch(url))
+  .then((res) => res.json())
+  .then((data) => {
+    listOfIngredients.push(data);
+  })
+  .then(() => {
+    console.log(listOfIngredients);
+  });
+```
 
 ### Chaining after a catch
 
@@ -171,7 +235,7 @@ try {
 }
 ```
 
-This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntactic sugar in ECMAScript 2017:
+This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntax:
 
 ```js
 async function foo() {
@@ -266,7 +330,15 @@ Sequential composition is possible using some clever JavaScript:
   });
 ```
 
-Basically, we reduce an array of asynchronous functions down to a promise chain equivalent to: `Promise.resolve().then(func1).then(func2).then(func3);`
+Basically, we reduce an array of asynchronous functions down to a promise chain. The code above is equivalent to:
+
+```js
+Promise.resolve()
+  .then(func1)
+  .then(func2)
+  .then(func3)
+  .then((result3) => { /* use result3 */ });
+```
 
 This can be made into a reusable compose function, which is common in functional programming:
 
@@ -282,7 +354,7 @@ const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 ```
 
-In ECMAScript 2017, sequential composition can be done more with async/await:
+Sequential composition can also be done more succinctly with async/await:
 
 ```js
 let result;
@@ -357,7 +429,7 @@ doSomethingCritical()
       .catch((e) => {})
   ) // Ignore if optional stuff fails; proceed.
   .then(() => moreCriticalStuff())
-  .catch((e) => console.error("Critical failure: " + e.message));
+  .catch((e) => console.error(`Critical failure: ${e.message}`));
 ```
 
 Note that the optional steps here are nested, not from the indentation, but from the precarious placement of the outer `(` and `)` around them.
@@ -428,4 +500,4 @@ If you think microtasks may help solve this problem, see the [microtask guide](/
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}

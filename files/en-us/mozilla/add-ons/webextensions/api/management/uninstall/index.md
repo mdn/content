@@ -32,7 +32,7 @@ let uninstalling = browser.management.uninstall(
 
 - `id`
   - : `string`. ID of the add-on to uninstall.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : `object`. Object which may contain a single property, `showConfirmDialog`. If `showConfirmDialog` is `true`, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled.
 
 <!---->

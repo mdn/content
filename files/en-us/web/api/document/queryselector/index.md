@@ -97,7 +97,7 @@ In this example, the first element in the document with the class
 "`myclass`" is returned:
 
 ```js
-var el = document.querySelector(".myclass");
+const el = document.querySelector(".myclass");
 ```
 
 ### Complex selectors
@@ -109,7 +109,7 @@ class is "user-panel main" (`<div class="user-panel main">`) in the
 document is returned:
 
 ```js
-var el = document.querySelector("div.user-panel.main input[name='login']");
+const el = document.querySelector("div.user-panel.main input[name='login']");
 ```
 
 ### Negation
@@ -117,7 +117,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 As all CSS selector strings are valid, you can also negate selectors:
 
 ```js
-var el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+const el = document.querySelector("div.user-panel:not(.main) input[name='login']");
 ```
 
 This will select an input with a parent div with the `user-panel` class but

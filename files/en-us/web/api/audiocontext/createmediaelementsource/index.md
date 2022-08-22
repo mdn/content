@@ -39,24 +39,20 @@ This simple example creates a source from an {{htmlelement("audio") }} element u
 > **Note:** You can also [view this example running live](https://mdn.github.io/webaudio-examples/media-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-
-pre.innerHTML = myScript.innerHTML;
+const audioCtx = new AudioContext();
+const myAudio = document.querySelector('audio');
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a gain node
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 
 // Create variables to store mouse pointer Y coordinate
 // and HEIGHT of screen
-var CurY;
-var HEIGHT = window.innerHeight;
+let CurY;
+const HEIGHT = window.innerHeight;
 
 // Get new mouse pointer coordinates when mouse is moved
 // then set new gain value
@@ -64,7 +60,7 @@ var HEIGHT = window.innerHeight;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ?? document.body.scrollTop);
 
     gainNode.gain.value = CurY/HEIGHT;
 }

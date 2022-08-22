@@ -11,6 +11,7 @@ tags:
   - Property
   - Reference
   - fetchPriority
+  - Experimental
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
@@ -46,7 +47,7 @@ degrading performance.
 ## Examples
 
 ```js
-var preloadLink = document.createElement("link");
+const preloadLink = document.createElement("link");
 preloadLink.href = "myimage.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";

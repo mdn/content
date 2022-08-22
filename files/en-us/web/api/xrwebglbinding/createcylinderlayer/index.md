@@ -49,7 +49,7 @@ createCylinderLayer(init)
         - `ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
         - `ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
         Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
-        - `All`of the formats the extension supports.
+        - `All` of the formats the extension supports.
         The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
       - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
@@ -115,7 +115,7 @@ function onXRSessionStarted(xrSession) {
     centralAngle : 60 * Math.PI / 180,
     aspectRatio : 2,
     radius : 2,
-    transform : new XRRigidTransform(/* ... */),
+    transform : new XRRigidTransform(/* … */),
   });
 
   xrSession.updateRenderState({

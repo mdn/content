@@ -119,7 +119,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">35</span>
         <span role="cell">7</span>
         <span role="cell">/</span>
-        ...
+        …
       </div>
       <div role="row" aria-rowindex="11">
         <span role="cell">McPherson</span>
@@ -130,7 +130,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">8</span>
         <span role="cell">1</span>
         <span role="cell">18</span>
-      ...
+      …
 ```
 
 If we had used a {{HTMLElement('table')}} and semantic table elements our markup would have been less verbose and accessible by default.
@@ -167,4 +167,4 @@ Inherits into roles:
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) property
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)role
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role

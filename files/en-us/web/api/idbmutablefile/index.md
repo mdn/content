@@ -23,9 +23,9 @@ As `IDBMutableFile` objects are bound to a fake file system built using `Indexed
 
 ## Properties
 
-- {{domxref("IDBMutableFile.name")}} {{readonlyinline}}
+- {{domxref("IDBMutableFile.name")}} {{ReadOnlyInline}}
   - : The name of the handled file.
-- {{domxref("IDBMutableFile.type")}} {{readonlyinline}}
+- {{domxref("IDBMutableFile.type")}} {{ReadOnlyInline}}
   - : The MIME type of the handled file.
 
 ## Methods

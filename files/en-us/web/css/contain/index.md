@@ -16,7 +16,9 @@ browser-compat: css.properties.contain
 ---
 {{CSSRef}}
 
-The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page, leading to obvious performance benefits.
+The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree.
+Containment allows the browser to calculate layout, style, paint, size, or any combination of them for a specific area of the DOM.
+Changes within an element with containment applied are not propagated outside of the contained element to the rest of the page, leading to performance benefits through fewer DOM re-renders.
 
 {{EmbedInteractiveExample("pages/css/contain.html")}}
 
@@ -36,6 +38,7 @@ contain: none;
 contain: strict;
 contain: content;
 contain: size;
+contain: inline-size;
 contain: layout;
 contain: style;
 contain: paint;
@@ -43,6 +46,7 @@ contain: paint;
 /* Multiple keywords */
 contain: size paint;
 contain: size layout paint;
+contain: inline-size layout;
 
 /* Global values */
 contain: inherit;
@@ -55,22 +59,24 @@ contain: unset;
 The `contain` property is specified as either one of the following:
 
 - Using a single `none`, `strict`, or `content` keyword.
-- Using one or more of the `size`, `layout`, `style`, and `paint` keywords in any order.
+- Using one or more of `size` (or `inline-size`), `layout`, `style`, `paint` keywords in any order.
 
 ### Values
 
 - `none`
   - : Indicates the element renders as normal, with no containment applied.
 - `strict`
-  - : Indicates that all containment rules except `style` are applied to the element. This is equivalent to `contain: size layout paint`.
+  - : Indicates that all containment rules are applied to the element. This is equivalent to `contain: size layout paint style`.
 - `content`
-  - : Indicates that all containment rules except `size` and `style` are applied to the element. This is equivalent to `contain: layout paint`.
+  - : Indicates that all containment rules except `size` are applied to the element. This is equivalent to `contain: layout paint style`.
 - `size`
-  - : Indicates that the element can be sized without the need to examine its descendants' sizes.
+  - : Indicates that size containment is applied to the element. The size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `inline-size`.
+- `inline-size`
+  - : Indicates that inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `size`.
 - `layout`
-  - : Indicates that nothing outside the element may affect its internal layout and vice versa.
+  - : Indicates that the internal layout of the element is isolated from the rest of the page, that is, nothing outside the element affects its internal layout, and vice versa.
 - `style`
-  - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element.
+  - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
 - `paint`
   - : Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 

@@ -30,7 +30,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("Range")}} object.
 
 ## Examples
 

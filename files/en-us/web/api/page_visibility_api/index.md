@@ -36,7 +36,7 @@ Let's consider a few use cases for the Page Visibility API.
 - A page wants to detect when it is being prerendered so it can keep accurate count of page views
 - A site wants to switch off sounds when a device is in standby mode (user pushes power button to turn screen off)
 
-Developers have historically used imperfect proxies to detect this. For example, watching for {{event("blur")}} and {{event("focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
+Developers have historically used imperfect proxies to detect this. For example, watching for {{domxref("Window/blur_event", "blur")}} and {{domxref("Window/focus_event", "focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
 
 > **Note:** While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
 
@@ -102,12 +102,12 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
+  videoElement.addEventListener("pause", () => {
     document.title = 'Paused';
   }, false);
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
+  videoElement.addEventListener("play", () => {
     document.title = 'Playing';
   }, false);
 

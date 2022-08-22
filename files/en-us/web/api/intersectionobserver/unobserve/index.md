@@ -44,7 +44,7 @@ unobserved.
 const observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById("elementToObserve"));
 
-/* ... */
+// …
 
 observer.unobserve(document.getElementById("elementToObserve"));
 ```

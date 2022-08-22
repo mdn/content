@@ -28,20 +28,20 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 
 ## Properties
 
-- {{DOMxRef("DeviceMotionEvent.acceleration")}}{{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.acceleration")}} {{ReadOnlyInline}}
   - : An object giving the acceleration of the device on the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}{{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} {{ReadOnlyInline}}
   - : An object giving the acceleration of the device on the three axis X, Y and Z with the effect of gravity. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{DOMxRef("DeviceMotionEvent.rotationRate")}}{{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.rotationRate")}} {{ReadOnlyInline}}
   - : An object giving the rate of change of the device's orientation on the three orientation axis alpha, beta and gamma. Rotation rate is expressed in degrees per seconds.
-- {{DOMxRef("DeviceMotionEvent.interval")}}{{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.interval")}} {{ReadOnlyInline}}
   - : A number representing the interval of time, in milliseconds, at which data is obtained from the device.
 
 ## Example
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener('devicemotion', (event) => {
+  console.log(`${event.acceleration.x} m/s2`);
 });
 ```
 
@@ -55,9 +55,9 @@ window.addEventListener('devicemotion', function(event) {
 
 ## See also
 
-- {{Event("deviceorientation")}}
+- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
 - {{DOMxRef("DeviceOrientationEvent")}}
-- {{Event("devicemotion")}}
+- {{domxref("Window/devicemotion_event", "devicemotion")}}
 - {{DOMxRef("Accelerometer")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
 - [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)

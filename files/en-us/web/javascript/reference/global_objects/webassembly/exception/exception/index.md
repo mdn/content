@@ -18,11 +18,12 @@ The constructor accepts a [`Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 The data types of each of the payload elements must match the corresponding data type specified in the `Tag`.
 
 The constructor may also take an `options` object.
-The `options.traceStack` property can be set true (by default it is `false`) to indicate that WebAssembly code that throws the exception may populate the exception's [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property with a stack track.
+The `options.traceStack` property can be set `true` (by default it is `false`) to indicate that a WASM stack trace may be attached to the exception's [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property.
 
 ## Syntax
 
 ```js
+new Exception(tag, payload)
 new Exception(tag, payload, options)
 ```
 
@@ -34,10 +35,9 @@ new Exception(tag, payload, options)
   - : An array of one or more data fields comprising the payload of the exception.
     The elements must match the data types of the corresponding elements in the `tag`.
     If the number of data fields in the payload and their types don't match, a {{jsxref("TypeError")}} exception is thrown.
-- `options` {{optional_inline}}
+- `options` {{optional_inline}} {{non-standard_inline}}
   - : An object with the following optional fields:
-
-    - `traceStack` {{optional_inline}}
+    - `traceStack` {{optional_inline}} {{non-standard_inline}}
       - : `true` if the `Exception` may have a stack trace attached to its [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property, otherwise `false`.
          This is `false` by default (if `options` or `options.traceStack` are not provided).
 

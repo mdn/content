@@ -11,9 +11,11 @@ tags:
   - Reference
   - Secure context
   - shippingOption
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingOption
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`shippingOption`** read-only attribute of
 the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
@@ -40,13 +42,13 @@ payment sheet.
 ```js
 const request = new PaymentRequest(methodData, details, options);
 // Async update to details
-request.onshippingaddresschange = ev => {
+request.onshippingaddresschange = (ev) => {
   ev.updateWith(checkShipping(request));
 };
 // Sync update to the total
-request.onshippingoptionchange = ev => {
+request.onshippingoptionchange = (ev) => {
   const shippingOption = shippingOptions.find(
-    option => option.id === request.id
+    (option) => option.id === request.id
   );
   const newTotal = {
     currency: "USD",

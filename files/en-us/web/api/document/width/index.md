@@ -11,9 +11,10 @@ tags:
   - Property
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.width
 ---
-{{APIRef("DOM")}} {{deprecated_header}}
+{{APIRef("DOM")}} {{deprecated_header}}{{Non-standard_header}}
 
 > **Note:** Starting in {{Gecko("6.0")}}, `document.width` is
 > no longer supported. Instead, use `document.body.clientWidth`. See
@@ -32,7 +33,7 @@ A number that represents the width of the document in pixels.
 
 ```js
 function init() {
-  alert("The width of the document is " + document.width + " pixels.");
+  alert(`The width of the document is ${document.width} pixels.`);
 }
 ```
 

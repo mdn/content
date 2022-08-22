@@ -60,7 +60,7 @@ ICE candidate received from the remote peer during the signaling process.
 
 ```js
 function handleNewIceCandidate(candidateSDP) {
-  var candidateObj = new RTCIceCandidate(candidateSDP);
+  const candidateObj = new RTCIceCandidate(candidateSDP);
 
   myPeerConnection.addIceCandidate(candidateObj).catch({
     /* handle the error thrown by addIceCandidate() */
@@ -75,14 +75,6 @@ which represents the candidate.
 
 The new candidate is then passed into {{domxref("RTCPeerConnection.addIceCandidate()")}} to add the candidate to the list of
 candidates for WebRTC to consider using for the connection being established.
-
-This example could be simplified somewhat; you may more often see the code look
-something like this, taking advantage of more advanced ECMAScript 2016 features:
-
-```js
-let handleNewIceCandidate = candidateSDP =>
-  myPeerConnection.addIceCandidate(new RTCIceCandidate(candidateSDP));
-```
 
 ## Specifications
 

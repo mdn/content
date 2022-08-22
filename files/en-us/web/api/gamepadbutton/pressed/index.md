@@ -21,7 +21,7 @@ the button is currently pressed (`true`) or unpressed (`false`).
 ```js
 let gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
-if(gp.buttons[0].pressed == true) {
+if (gp.buttons[0].pressed) {
   // respond to button being pressed
 }
 ```

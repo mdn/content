@@ -26,9 +26,9 @@ A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object wheneve
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', event => { })
+addEventListener('devicechange', (event) => { })
 
-ondevicechange = event => { }
+ondevicechange = (event) => { }
 ```
 
 ## Event type
@@ -51,14 +51,10 @@ The example shown here handles the `devicechange` event by toggling the availabi
 
 ```js
 if (navigator.xr) {
-  navigator.xr.addEventListener("devicechange", event => {
+  navigator.xr.addEventListener("devicechange", (event) => {
     navigator.xr.isSessionSupported("immersive-vr")
-    .then(immersiveOK) => {
-      if (immersiveOK) {
-        enableXRButton.disabled = false;
-      } else {
-        enableXRButton.disabled = true;
-      }
+    .then((immersiveOK) => {
+      enableXRButton.disabled = !immersiveOK;
     });
   });
 }
@@ -70,8 +66,8 @@ You can also use the `ondevicechange` event handler property to set a single han
 
 ```js
 if (navigator.xr) {
-  navigator.xr.ondevicechange = event => {
-    /* ... etc ... */
+  navigator.xr.ondevicechange = (event) => {
+    // …
   };
 }
 ```

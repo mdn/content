@@ -66,7 +66,7 @@ Finally, let's define how the control's options will behave:
 - When the control is opened, the selected option is highlighted
 - When the mouse is over an option, the option is highlighted and the previously highlighted option is returned to its normal state
 
-For the purposes of our example, we'll stop with that; however, if you're a careful reader, you'll notice that some behaviors are missing. For example, what do you think will happen if the user hits the tab key while the control is in its open state? The answer is... nothing. OK, the right behavior seems obvious but the fact is, because it's not defined in our specs, it is very easy to overlook this behavior. This is especially true in a team environment when the people who design the control's behavior are different from the ones who implement it.
+For the purposes of our example, we'll stop with that; however, if you're a careful reader, you'll notice that some behaviors are missing. For example, what do you think will happen if the user hits the tab key while the control is in its open state? The answer is _nothing_. OK, the right behavior seems obvious but the fact is, because it's not defined in our specs, it is very easy to overlook this behavior. This is especially true in a team environment when the people who design the control's behavior are different from the ones who implement it.
 
 Another fun example: what will happen if the user hits the up or down arrow keys while the control is in the open state? This one is a little bit trickier. If you consider that the active state and the open state are completely different, the answer is again "nothing will happen" because we did not define any keyboard interactions for the opened state. On the other hand, if you consider that the active state and the open state overlap a bit, the value may change but the option will definitely not be highlighted accordingly, once again because we did not define any keyboard interactions over options when the control is in its opened state (we have only defined what should happen when the control is opened, but nothing after that).
 
@@ -182,7 +182,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
 ```css
 .select {
-  /* The computations are made assuming 1em == 16px which is the default value in most browsers.
+  /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
   font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family : Verdana, Arial, sans-serif;
@@ -323,7 +323,7 @@ So here's the result with our three states:
 
 Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.
 
-> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
 ### Why isn't it working?
 
@@ -333,11 +333,11 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
 - The script is in conflict with a third party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [NotScripts](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) extension).
+- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
-Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital make your script generic and reusable.
+Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital to make your script generic and reusable.
 
 In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully
 
@@ -371,7 +371,7 @@ First, we need to add a regular {{HTMLElement("select")}} element before each in
 </body>
 ```
 
-Second, we need two new classes to let us hide the unneeded element: we visually hide the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom control if it is running. Note that, by default, our HTML code hides our custom control.
+Second, we need two new classes to let us hide the unneeded element: we visually hide the custom control if our script isn't running, or the "real" {{HTMLElement("select")}} element if it is running. Note that, by default, our HTML code hides our custom control.
 
 ```css
 .widget select,
@@ -392,7 +392,7 @@ This CSS visually hides one of the elements, but it is still available to screen
 Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.
 
 ```js
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   document.body.classList.remove("no-widget");
   document.body.classList.add("widget");
 });
@@ -460,7 +460,7 @@ function deactivateSelect(select) {
   if (!select.classList.contains('active')) return;
 
   // We need to get the list of options for the custom control
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   // We close the list of option
   optList.classList.add('hidden');
@@ -469,7 +469,8 @@ function deactivateSelect(select) {
   select.classList.remove('active');
 }
 
-// This function will be used each time the user wants to (de)activate the control
+// This function will be used each time the user wants to activate the control
+// (which, in turn, will deactivate other select controls)
 // It takes two parameters:
 // select : the DOM node with the `select` class to activate
 // selectList : the list of all the DOM nodes with the `select` class
@@ -492,9 +493,8 @@ function activeSelect(select, selectList) {
 // It takes one parameter:
 // select : the DOM node with the list to toggle
 function toggleOptList(select) {
-
   // The list is kept from the control
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   // We change the class of the list to show/hide it
   optList.classList.toggle('hidden');
@@ -505,12 +505,11 @@ function toggleOptList(select) {
 // select : the DOM node with the `select` class containing the option to highlight
 // option : the DOM node with the `option` class to highlight
 function highlightOption(select, option) {
-
   // We get the list of all option available for our custom select element
-  var optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll('.option');
 
   // We remove the highlight from all options
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove('highlight');
   });
 
@@ -525,18 +524,18 @@ Next, we bind these functions to the appropriate events:
 
 ```js
 // We handle the event binding when the document is loaded.
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+  const selectList = document.querySelectorAll('.select');
 
   // Each custom control needs to be initialized
-  selectList.forEach(function (select) {
+  selectList.forEach((select) => {
 
     // as well as all its `option` elements
-    var optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll('.option');
 
     // Each time a user hovers their mouse over an option, we highlight the given option
-    optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+    optionList.forEach((option) => {
+      option.addEventListener('mouseover', () => {
         // Note: the `select` and `option` variable are closures
         // available in the scope of our function call.
         highlightOption(select, option);
@@ -544,7 +543,7 @@ window.addEventListener('load', function () {
     });
 
     // Each times the user clicks on or taps a custom select element
-    select.addEventListener('click', function (event) {
+    select.addEventListener('click', (event) => {
       // Note: the `select` variable is a closure
       // available in the scope of our function call.
 
@@ -555,7 +554,7 @@ window.addEventListener('load', function () {
     // In case the control gains focus
     // The control gains the focus each time the user clicks on it or each time
     // they use the tabulation key to access the control
-    select.addEventListener('focus', function (event) {
+    select.addEventListener('focus', (event) => {
       // Note: the `select` and `selectList` variable are closures
       // available in the scope of our function call.
 
@@ -564,7 +563,7 @@ window.addEventListener('load', function () {
     });
 
     // In case the control loses focus
-    select.addEventListener('blur', function (event) {
+    select.addEventListener('blur', (event) => {
       // Note: the `select` variable is a closure
       // available in the scope of our function call.
 
@@ -573,11 +572,11 @@ window.addEventListener('load', function () {
     });
 
     // Loose focus if the user hits `esc`
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener('keyup', (event) => {
 
       // deactivate on keyup of `esc`
-      if (event.keyCode === 27) {
-         deactivateSelect(select);
+      if (event.key === "Escape") {
+        deactivateSelect(select);
       }
     });
 });
@@ -607,13 +606,13 @@ As seen previously, we already use a native select control as a fallback for acc
 function updateValue(select, index) {
   // We need to get the native control for the given custom control
   // In our example, that native control is a sibling of the custom control
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   // We also need to get the value placeholder of our custom control
-  var value = select.querySelector('.value');
+  const value = select.querySelector('.value');
 
   // And we need the whole list of options
-  var optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll('.option');
 
   // We set the selected index to the index of our choice
   nativeWidget.selectedIndex = index;
@@ -631,7 +630,7 @@ function updateValue(select, index) {
 function getIndex(select) {
   // We need to access the native control for the given custom control
   // In our example, that native control is a sibling of the custom control
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 };
@@ -641,13 +640,13 @@ With these two functions, we can bind the native controls to the custom ones:
 
 ```js
 // We handle event binding when the document is loaded.
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+  const selectList = document.querySelectorAll('.select');
 
   // Each custom control needs to be initialized
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option'),
-        selectedIndex = getIndex(select);
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll('.option');
+    const selectedIndex = getIndex(select);
 
     // We make our custom control focusable
     select.tabIndex = 0;
@@ -659,22 +658,25 @@ window.addEventListener('load', function () {
     updateValue(select, selectedIndex);
 
     // Each time a user clicks on an option, we update the value accordingly
-    optionList.forEach(function (option, index) {
-      option.addEventListener('click', function (event) {
+    optionList.forEach((option, index) => {
+      option.addEventListener('click', (event) => {
         updateValue(select, index);
       });
     });
 
     // Each time a user uses their keyboard on a focused control, we update the value accordingly
-    select.addEventListener('keyup', function (event) {
-      var length = optionList.length,
-          index  = getIndex(select);
+    select.addEventListener('keyup', (event) => {
+      let index = getIndex(select);
 
       // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
 
       // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
 
       updateValue(select, index);
     });
@@ -733,12 +735,12 @@ The `aria-selected` attribute is used to mark which option is currently selected
 
 ```js
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector('.value');
-  var optionList = select.querySelectorAll('[role="option"]');
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector('.value');
+  const optionList = select.querySelectorAll('[role="option"]');
 
   // We make sure that all the options are not selected
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.setAttribute('aria-selected', 'false');
   });
 

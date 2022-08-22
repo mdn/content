@@ -69,14 +69,14 @@ spec-urls: https://drafts.csswg.org/selectors/
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
   - : The `+` combinator matches the second element only if it _immediately_ follows the first element.
     **Syntax:** `A + B`
-    **Example:** `h2 + p` will match all {{HTMLElement("p")}} elements that _immediately_ follow an {{HTMLElement("h2")}} element.
+    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follow an {{HTMLElement("h2")}} element.
 
 - [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : The `||` combinator selects nodes which belong to a column.
     **Syntax:** `A || B`
     **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
-## Pseudo
+## Pseudo-classes and pseudo-elements
 
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
   - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.

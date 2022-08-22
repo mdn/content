@@ -29,8 +29,7 @@ A string containing a {{HTMLElement("small")}} HTML element.
 
 ## Description
 
-The `small()` method embeds a string in a `<small>`
-element: "`<small>str</small>`".
+The `small()` method embeds a string in a `<small>` element: `"<small>str</small>"`.
 
 ## Examples
 

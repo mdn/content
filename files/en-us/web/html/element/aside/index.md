@@ -113,7 +113,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     </p>
   </aside>
   <p>
-    More info about the movie...
+    More info about the movie…
   </p>
 </article>
 ```

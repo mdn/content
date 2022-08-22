@@ -35,9 +35,9 @@ let gettingTitle = browser.browserAction.getTitle(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Specify the tab to get the title from.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Specify the window to get the title from.
 
 <!---->
@@ -59,7 +59,7 @@ This code switches the title between "this" and "that" each time the user clicks
 
 ```js
 function toggleTitle(title) {
-  if (title == "this") {
+  if (title === "this") {
     browser.browserAction.setTitle({title: "that"});
   } else {
     browser.browserAction.setTitle({title: "this"});

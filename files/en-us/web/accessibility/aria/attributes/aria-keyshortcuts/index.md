@@ -16,7 +16,7 @@ The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an au
 
 ## Description
 
-A keyboard shortcut is a series of one or several keys that tells software to perform a pre-programmed action. Keyboard shortcuts enable keyboard users to invoke commands using the keyboard that would otherwise require accessing a menu or using touch or a mouse.The `aria-keyshortcuts` property defines the keyboard keys that have been implemented to activate or give focus to the element on which the attribute is set.
+A keyboard shortcut is a series of one or several keys that tells software to perform a pre-programmed action. Keyboard shortcuts enable keyboard users to invoke commands using the keyboard that would otherwise require accessing a menu or using touch or a mouse. The `aria-keyshortcuts` property defines the keyboard keys that have been implemented to activate or give focus to the element on which the attribute is set.
 
 The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assistive technologies so the presence of the shortcut can be communicated to its users. Like all ARIA attributes, it has no effect on the functionality of the page; the keyboard behavior must be added via JavaScript event handlers.
 
@@ -30,7 +30,7 @@ The value of the `aria-keyshortcuts` attribute is a space-separated list of key 
 
 Examples of valid keyboard shortcuts include:
 
-```html
+```plain
 aria-keyshortcuts="A"
 aria-keyshortcuts="Shift+Space"
 aria-keyshortcuts="Control+Alt+."
@@ -51,7 +51,7 @@ Modifier keys must be listed first in each key combination. Possible key combina
 
 These two attribute declarations are equivalent.
 
-```html example-good
+```plain example-good
 aria-keyshortcuts="Shift+Control+V"
 aria-keyshortcuts="control+shift+v"
 ```
@@ -60,7 +60,7 @@ Note that text case doesn't matter. But order of non-modifier does.
 
 These two attribute declarations are invalid because the non-modifier must be last.
 
-```html example-bad
+```plain example-bad
 aria-keyshortcuts="V+Shift+Control"
 aria-keyshortcuts="V+Control+Shift"
 ```
@@ -79,7 +79,7 @@ Unless you're creating an HTML version of a productivity application, you should
 
 #### Consider language and keyboard differences
 
-Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French, use the Control key.
+Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French (France), use the Shift key.
 
 #### **Don't** use HTML instead
 

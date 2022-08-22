@@ -8,11 +8,10 @@ tags:
   - Method
   - Reference
   - supports
-  - Experimental
   - Feature detection
 browser-compat: api.HTMLScriptElement.supports
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`supports()`** static method of the {{domxref("HTMLScriptElement")}} interface provides a simple and consistent method to feature-detect what types of scripts are supported by the user agent.
 
@@ -55,20 +54,20 @@ The code below shows how to check if `HTMLScriptElement.supports()` is defined, 
 ```
 
 ```js
-if (typeof HTMLScriptElement.supports == 'undefined') {
+if (typeof HTMLScriptElement.supports === 'undefined') {
   //Check if method is defined
-  log.textContent+="HTMLScriptElement.supports() method is not supported\n";
+  console.log("HTMLScriptElement.supports() method is not supported");
 }
 else
 {
   //Returns true for the supported values
-  log.textContent+="HTMLScriptElement.supports('module'): " + HTMLScriptElement.supports('module') +"\n";
-  log.textContent+="HTMLScriptElement.supports('classic'): " + HTMLScriptElement.supports('classic') +"\n";
-  log.textContent+="HTMLScriptElement.supports('importmap'): " + HTMLScriptElement.supports('importmap') +"\n";
-  log.textContent+="HTMLScriptElement.supports('speculationrules'): " + HTMLScriptElement.supports('speculationrules') +"\n";
+  console.log(`HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports('module')}`);
+  console.log(`HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports('classic')}`);
+  console.log(`HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports('importmap')}`);
+  console.log(`HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports('speculationrules')}`);
 
   //Returns false for any other values
-  log.textContent+="HTMLScriptElement.supports('anything else'): " + HTMLScriptElement.supports('anything else') +"\n";
+  console.log(`HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports('anything else')}`);
 }
 ```
 

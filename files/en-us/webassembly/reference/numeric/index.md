@@ -54,6 +54,29 @@ WebAssembly numeric instructions.
 - [`Remainder`](/en-US/docs/WebAssembly/Reference/Numeric/Remainder)
   - : Calculate the remainder left over when one integer is divided by another integer.
 
+## Conversion
+
+- [`Extend`](/en-US/docs/WebAssembly/Reference/Numeric/Extend)
+  - : Convert (extend) `i32` to `i64`.
+
+- [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap)
+  - : Convert (wrap) `i64` to `i32`.
+
+- [`Promote`](/en-US/docs/WebAssembly/Reference/Numeric/Promote)
+  - : Convert (promote) `f32` to `f64`.
+
+- [`Demote`](/en-US/docs/WebAssembly/Reference/Numeric/Demote)
+  - : Convert (demote) `f64` to `f32`.
+
+- [`Convert`](/en-US/docs/WebAssembly/Reference/Numeric/Convert)
+  - : Convert integers to floating points.
+
+- [`Truncate (float to int)`](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int)
+  - : Convert (truncate fractional part) floating points to integers.
+
+- [`Reinterpret`](/en-US/docs/WebAssembly/Reference/Numeric/Reinterpret)
+  - : Reinterpret the bytes of integers as floating points and vice versa.
+
 ## Floating point specific instructions
 
 - [`Min`](/en-US/docs/WebAssembly/Reference/Numeric/Min)
@@ -71,7 +94,7 @@ WebAssembly numeric instructions.
 - [`Floor`](/en-US/docs/WebAssembly/Reference/Numeric/Floor)
   - : Round down a number.
 
-- [`Truncate`](/en-US/docs/WebAssembly/Reference/Numeric/Truncate)
+- [`Truncate (float to float)`](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float)
   - : Discard the fractional part of a number.
 
 - [`Absolute`](/en-US/docs/WebAssembly/Reference/Numeric/Absolute)

@@ -82,7 +82,7 @@ If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')
 ```html
 <body>
 
-  ...
+  …
 
   <article>
     <h2>Everyday Pad Thai</h2>
@@ -92,7 +92,7 @@ If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')
     </footer>
   </article>
 
-  ...
+  …
 
   <footer aria-label="Footer">
     <!-- footer content -->

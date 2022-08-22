@@ -15,7 +15,7 @@ A `scrollbar` is a graphical object that controls the scrolling of content withi
 
 ## Description
 
-A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport‘s frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
 ### What is scroll bar
 
@@ -73,7 +73,7 @@ Because descendants of `scrollbar` are presentational, the following code is equ
 
 ```html
 <div role="scrollbar"><h3 role="presentation">Title of my scrollbar</h3></div>
-````
+```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 

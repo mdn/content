@@ -47,13 +47,13 @@ inherits from {{domxref("Node")}}.
 ### HTML
 
 ```html
-<span id="born">When I was born...</span>
+<span id="born">When I was born…</span>
 ```
 
 ### JavaScript
 
 ```js
-var span = document.getElementById("born");
+const span = document.getElementById("born");
 console.log(span.tagName);
 ```
 

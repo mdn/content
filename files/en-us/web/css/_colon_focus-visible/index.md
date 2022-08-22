@@ -16,6 +16,8 @@ browser-compat: css.selectors.focus-visible
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-visible.html", "tabbed-shorter")}}
+
 This selector is useful to provide a different focus indicator based on the user's input modality (mouse vs. keyboard).
 
 ## Syntax
@@ -60,16 +62,16 @@ input, button {
 A custom control, such as a custom element button, can use `:focus-visible` to selectively apply a focus indicator only on keyboard-focus. This matches the native focus behavior for controls like {{htmlelement("button")}}.
 
 ```html
-<custom-button tabindex="0" role="button">Click Me</custom-button>
+<button class="custom-button">Click Me</button>
 ```
 
 ```css
-custom-button {
+.custom-button {
   display: inline-block;
   margin: 10px;
 }
 
-custom-button:focus {
+.custom-button:focus {
   /* Provide a fallback style for browsers
      that don't support :focus-visible */
   outline: 2px solid red;
@@ -77,7 +79,7 @@ custom-button:focus {
 }
 
 @supports selector(:focus-visible) {
-  custom-button:focus {
+  .custom-button:focus {
     /* Remove the focus indicator on mouse-focus for browsers
        that do support :focus-visible */
     outline: none;
@@ -85,7 +87,7 @@ custom-button:focus {
   }
 }
 
-custom-button:focus-visible {
+.custom-button:focus-visible {
   /* Draw a very noticeable focus style for
      keyboard-focus on browsers that do support
      :focus-visible */

@@ -1,5 +1,5 @@
 ---
-title: Controlling Ratios of Flex Items Along the Main Axis
+title: Controlling ratios of flex items along the main axis
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 tags:
@@ -131,7 +131,7 @@ Working from a `flex-basis` of `0` this means that the available space is distri
 
 Remember that you can use any positive value here. It is the ratio between one item and the others that matters. You can use large numbers, or decimals — it is up to you. To test that out change the values assigned in the above example to `.25`, `.25`, and `.50` — you should see the same result.
 
-## The `flex-shrink` property
+## The flex-shrink property
 
 The {{CSSxRef("flex-shrink")}} property specifies the **flex shrink factor**, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
 

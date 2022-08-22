@@ -218,24 +218,23 @@ function addClientRectsOverlay(elt) {
      is the same as the rectangle's width.
      Note: the overlays will be out of place if the user resizes or zooms. */
   const rects = elt.getClientRects();
-  for (let i = 0; i != rects.length; i++) {
-    const rect = rects[i];
+  for (const rect of rects) {
     const tableRectDiv = document.createElement('div');
     tableRectDiv.style.position = 'absolute';
     tableRectDiv.style.border = '1px solid red';
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
     tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+    tableRectDiv.style.top = `${rect.top + scrollTop}px`;
+    tableRectDiv.style.left = `${rect.left + scrollLeft}px`;
     // We want rect.width to be the border width, so content width is 2px less.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    tableRectDiv.style.width = `${rect.width - 2}px`;
+    tableRectDiv.style.height = `${rect.height - 2}px`;
     document.body.appendChild(tableRectDiv);
   }
 }
 
-(function() {
+(() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
   const elt = document.getElementsByClassName('withClientRectsOverlay');

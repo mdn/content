@@ -30,7 +30,7 @@ An `unsigned long`.
 ## Examples
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaX": 4, "deltaMode": 0 });
 
 console.log(syntheticEvent.deltaMode);
 ```
@@ -45,5 +45,5 @@ console.log(syntheticEvent.deltaMode);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

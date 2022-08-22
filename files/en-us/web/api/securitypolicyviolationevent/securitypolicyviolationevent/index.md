@@ -37,7 +37,7 @@ new SecurityPolicyViolationEvent(type, options)
       - : The {{domxref("SecurityPolicyViolationEvent.columnNumber","columnNumber")}} of the `SecurityPolicyViolationEvent`.
         If not included, the default value is `0`.
     - `disposition`
-      - : The{{domxref("SecurityPolicyViolationEvent.disposition","disposition")}} of the `SecurityPolicyViolationEvent`.
+      - : The {{domxref("SecurityPolicyViolationEvent.disposition","disposition")}} of the `SecurityPolicyViolationEvent`.
     - `documentURI`
       - : The {{domxref("SecurityPolicyViolationEvent.documentURI","documentURI")}} of the `SecurityPolicyViolationEvent`.
     - `effectiveDirective`
@@ -68,7 +68,7 @@ A new `SecurityPolicyViolationEvent` object.
 ## Examples
 
 ```js
-let SPVEvt = new SecurityPolicyViolationEvent('foo', {...});
+let SPVEvt = new SecurityPolicyViolationEvent('foo', { /* ... */ });
 ```
 
 ## Specifications

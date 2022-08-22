@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -37,7 +36,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Client")}} object or
 ## Examples
 
 ```js
-self.clients.get(id).then(function(client) {
+self.clients.get(id).then((client) => {
   self.clients.openWindow(client.url);
 });
 ```

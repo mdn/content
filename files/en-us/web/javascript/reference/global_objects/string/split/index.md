@@ -8,6 +8,7 @@ tags:
   - Reference
   - Regular Expressions
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.split
 ---
 {{JSRef}}
@@ -27,7 +28,7 @@ split(separator, limit)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. If undefined, the original target string is returned wrapped in an array.
+  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. If undefined, the original target string is returned wrapped in an array.
 - `limit` {{optional_inline}}
   - : A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified `separator`, but stops when `limit` entries have been placed in the array. Any leftover text is not included in the array at all.
     - The array may contain fewer entries than `limit` if the end of the string is reached before the limit is reached.
@@ -47,6 +48,13 @@ If `separator` is an empty string (`""`), `str` is converted to an array of each
 
 > **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
 
+If `separator` is a regexp that matches empty strings, whether the match is split by UTF-16 code units or Unicode codepoints depends on if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set.
+
+```js
+"😄😄".split(/(?:)/); // [ "\ud83d", "\ude04", "\ud83d", "\ude04" ]
+"😄😄".split(/(?:)/u); // [ "😄", "😄" ]
+```
+
 If `separator` is a regular expression with capturing groups, then each time `separator` matches, the captured groups (including any `undefined` results) are spliced into the output array. This behavior is specified by the regexp's [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method.
 
 If `separator` is an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method, that method is called with the target string and `limit` as arguments, and `this` set to the object. Its return value becomes the return value of `split`.
@@ -55,7 +63,7 @@ Any other value will be coerced to a string before being used as separator.
 
 ## Examples
 
-### Using `split()`
+### Using split()
 
 When the string is empty and no separator is specified, `split()` returns an array containing one empty
 string, rather than an empty array. If the string and separator are both empty
@@ -182,6 +190,8 @@ This script displays the following:
 
 An object with a `Symbol.split` method can be used as a splitter with custom behavior.
 
+The following example splits a string using an internal state consisting of an incrementing number:
+
 ```js
 const splitByNumber = {
   [Symbol.split](str) {
@@ -196,13 +206,92 @@ const splitByNumber = {
       }
       result.push(str.substring(pos, matchPos));
       pos = matchPos + String(num).length;
+      num++;
     }
     return result;
   }
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+```
+
+The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
+
+```js
+const DELIMITER = ";";
+
+// Split the commands, but remove any invalid or unnecessary values.
+const splitCommands = {
+  [Symbol.split](str, lim) {
+    const results = [];
+    const state = {
+      on: false,
+      brightness: {
+        current: 2,
+        min: 1,
+        max: 3
+      }
+    };
+    let pos = 0;
+    let matchPos = str.indexOf(DELIMITER, pos);
+
+    while (matchPos !== -1) {
+      const subString = str.slice(pos, matchPos).trim();
+
+      switch (subString) {
+        case "light on":
+          // If the `on` state is already true, do nothing.
+          if (!state.on) {
+            state.on = true;
+            results.push(subString);
+          }
+          break;
+
+        case "light off":
+          // If the `on` state is already false, do nothing.
+          if (state.on) {
+            state.on = false;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness up":
+          // Enforce a brightness maximum.
+          if (state.brightness.current < state.brightness.max) {
+            state.brightness.current += 1;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness down":
+          // Enforce a brightness minimum.
+          if (state.brightness.current > state.brightness.min) {
+            state.brightness.current -= 1;
+            results.push(subString);
+          }
+          break;
+      }
+
+      if (results.length === lim) {
+        break;
+      }
+
+      pos = matchPos + DELIMITER.length;
+      matchPos = str.indexOf(DELIMITER, pos);
+    }
+
+    // If we broke early due to reaching the split `lim`, don't add the remaining commands.
+    if (results.length < lim) {
+      results.push(str.slice(pos).trim());
+    }
+
+    return results;
+  }
+};
+
+const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
+console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
 ```
 
 ## Specifications
@@ -215,6 +304,7 @@ console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 
 ## See also
 
+- [Polyfill of `String.prototype.split` in `core-js` with fixes and implementation of modern behavior like `Symbol.split` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}

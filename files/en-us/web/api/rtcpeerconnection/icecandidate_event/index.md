@@ -27,9 +27,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('icecandidate', event => { });
+addEventListener('icecandidate', (event) => { });
 
-onicecandidate = event => { };
+onicecandidate = (event) => { };
 ```
 
 ## Event type
@@ -42,7 +42,7 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 
 _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
 
 ## Description
@@ -82,7 +82,7 @@ This signal exists for backward compatibility purposes and does _not_ need to be
 If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:
 
 ```js
-pc.addEventListener("icegatheringstatechange", ev => {
+pc.addEventListener("icegatheringstatechange", (ev) => {
   switch(pc.iceGatheringState) {
     case "new":
       /* gathering is either just starting or has been reset */
@@ -108,7 +108,7 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener("icecandidate", ev => {
+pc.addEventListener("icecandidate", (ev) => {
   if (ev.candidate) {
     sendMessage({
       type: "new-ice-candidate",
@@ -121,7 +121,7 @@ pc.addEventListener("icecandidate", ev => {
 You can also set the `onicecandidate` event handler property directly:
 
 ```js
-pc.onicecandidate = ev => {
+pc.onicecandidate = (ev) => {
   if (ev.candidate) {
     sendMessage({
       type: "new-ice-candidate",

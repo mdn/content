@@ -24,7 +24,7 @@ A {{domxref("WindowProxy")}} object.
 Uses of `window.self` like the following could just as well be replaced by `window`.
 
 ```js
-if (window.parent.frames[0] != window.self) {
+if (window.parent.frames[0] !== window.self) {
     // this window is not the first frame in the list
 }
 ```
@@ -32,10 +32,10 @@ if (window.parent.frames[0] != window.self) {
 Furthermore, when executing in the active document of a browsing context, `window` is a reference to the current global object and thus all of the following are equivalent:
 
 ```js
-var w1 = window;
-var w2 = self;
-var w3 = window.window;
-var w4 = window.self;
+const w1 = window;
+const w2 = self;
+const w3 = window.window;
+const w4 = window.self;
 // w1, w2, w3, w4 all strictly equal, but only w2 will function in workers
 ```
 

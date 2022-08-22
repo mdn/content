@@ -73,11 +73,11 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the completeness status of
 ## Examples
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const framebuffer = gl.createFramebuffer();
 
-// ...
+// …
 
 gl.checkFramebufferStatus(gl.FRAMEBUFFER);
 ```

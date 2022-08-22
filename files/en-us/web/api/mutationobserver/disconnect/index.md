@@ -71,7 +71,7 @@ const observerOptions = {
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 
-/* some time later... */
+/* some time later… */
 
 observer.disconnect();
 ```

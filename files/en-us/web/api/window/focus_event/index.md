@@ -26,14 +26,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('focus', event => { });
+addEventListener('focus', (event) => { });
 
-onfocus = event => { };
+onfocus = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

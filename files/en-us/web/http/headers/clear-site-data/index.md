@@ -78,7 +78,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 
 ### Clearing cookies
 
-If this header is delivered with the response at https\://example.com/clear-cookies, all cookies on the same domain https\://example.com and any subdomains (like https\://stage.example.com, etc), will be cleared out.
+If this header is delivered with the response at https\://example.com/clear-cookies, all cookies on the same domain https\://example.com and any subdomains (like https\://stage.example.com, etc.), will be cleared out.
 
 ```
 Clear-Site-Data: "cookies"

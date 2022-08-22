@@ -43,7 +43,7 @@ that the video is in fullscreen mode.
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement && document.fullscreenElement.nodeName == 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === 'VIDEO') {
     return true;
   }
   return false;

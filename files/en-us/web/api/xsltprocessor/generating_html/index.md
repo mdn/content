@@ -7,7 +7,7 @@ page-type: guide
 
 One common application of XSLT in the browser is to transform XML into HTML on the client. The second example will transform the input document (example2.xml), which again contains information about an article, into an HTML document.
 
-The `<body>` element of the article now contains HTML elements (a `<b>` and `<u>` tag, see figure 2). The XML document contains both HTML elements and XML elements, but only one namespace is needed, namely for the XML elements. Since there is no HTML namespace, and using the XHTML namespace would force the XSL to create an XML document that would not behave like a HTML document, the `xsl:output` in the XSL Stylesheet will make sure the resulting document will be handled as HTML. For the XML elements, our own namespace is needed, [`http://devedge.netscape.com/2002/de`](http://devedge.netscape.com/2002/de), and it is given the prefix myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.
+The `<body>` element of the article now contains HTML elements (a `<b>` and `<u>` tag, see figure 2). The XML document contains both HTML elements and XML elements, but only one namespace is needed, namely for the XML elements. Since there is no HTML namespace, and using the XHTML namespace would force the XSL to create an XML document that would not behave like a HTML document, the `xsl:output` in the XSL Stylesheet will make sure the resulting document will be handled as HTML. For the XML elements, our own namespace is needed, `http://devedge.netscape.com/2002/de`, and it is given the prefix myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.
 
 **Figure 2 XML file:(example2.xml)**
 
@@ -37,7 +37,7 @@ The XSL Stylesheet used will need to have two namespaces - one for the XSLT elem
                           xmlns:myNS="http://devedge.netscape.com/2002/de">
 
   <xsl:output method="html"/>
-  ...
+  …
 </xsl:stylesheet version="1.0">
 ```
 
@@ -46,7 +46,7 @@ A template matching the root node of the XML document is created and used to cre
 **Figure 4: Creating the basic HTML document**
 
 ```xml
-...
+…
 <xsl:template match="/">
 <html>
 
@@ -80,7 +80,7 @@ A template matching the root node of the XML document is created and used to cre
 
 </html>
 </xsl:template>
-...
+…
 ```
 
 Three more `xsl:template`'s are needed to complete the example. The first `xsl:template` is used for the author nodes, while the second one processes the body node. The third template has a general matching rule which will match any node and any attribute. It is needed in order to preserve the HTML elements in the XML document, since it matches all of them and copies them out into the HTML document the transformation creates.
@@ -88,7 +88,7 @@ Three more `xsl:template`'s are needed to complete the example. The first `xsl:t
 **Figure 5: Final 3 Templates**
 
 ```xml
-...
+…
 <xsl:template match="myNS:Author">
     --   <xsl:value-of select="." />
 
@@ -112,7 +112,7 @@ Three more `xsl:template`'s are needed to complete the example. The first `xsl:t
     <xsl:apply-templates select="@*|node()"/>
   </xsl:copy>
 </xsl:template>
-...
+…
 ```
 
 The final XSLT stylesheet looks as follows:

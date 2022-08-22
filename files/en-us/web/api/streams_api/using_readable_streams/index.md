@@ -24,7 +24,8 @@ As a JavaScript developer, programmatically reading and manipulating streams of 
 
 ## Browser support
 
-You can consume Fetch body objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). [Pipe chains](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) are only supported in Chrome at the moment, and that functionality is subject to change.
+You can consume Fetch body objects as streams and create your own custom readable streams most current browsers.
+[Pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) support is still not universal, and it may be worth checking compatibility tables (for example, see {{domxref("ReadableStream.pipeThrough()")}}).
 
 ## Finding some examples
 
@@ -41,8 +42,8 @@ As our [Simple stream pump](https://github.com/mdn/dom-examples/tree/master/stre
 ```js
 // Fetch the original image
 fetch('./tortoise.png')
-// Retrieve its body as ReadableStream
-.then(response => response.body)
+  // Retrieve its body as ReadableStream
+  .then((response) => response.body)
 ```
 
 This provides us with a {{domxref("ReadableStream")}} object.
@@ -54,11 +55,11 @@ Now we've got our streaming body, reading the stream requires attaching a reader
 ```js
 // Fetch the original image
 fetch('./tortoise.png')
-// Retrieve its body as ReadableStream
-.then(response => response.body)
-.then(body => {
-  const reader = body.getReader();
-  // ...
+  // Retrieve its body as ReadableStream
+  .then((response) => response.body)
+  .then((body) => {
+    const reader = body.getReader();
+    // …
   });
 ```
 
@@ -68,11 +69,11 @@ Also note that the previous example can be reduced by one step, as `response.bod
 
 ```js
 // Fetch the original image
-  fetch('./tortoise.png')
+fetch('./tortoise.png')
   // Retrieve its body as ReadableStream
-  .then(response => {
+  .then((response) => {
     const reader = response.body.getReader();
-    // ...
+    // …
   });
 ```
 
@@ -84,7 +85,7 @@ Now you've got your reader attached, you can read data chunks out of the stream 
 // Fetch the original image
 fetch('./tortoise.png')
   // Retrieve its body as ReadableStream
-  .then(response => {
+  .then((response) => {
     const reader = response.body.getReader();
     return new ReadableStream({
       start(controller) {
@@ -105,19 +106,19 @@ fetch('./tortoise.png')
     })
   })
   // Create a new response out of the stream
-  .then(stream => new Response(stream))
+  .then((stream) => new Response(stream))
   // Create an object URL for the response
-  .then(response => response.blob())
-  .then(blob => URL.createObjectURL(blob))
+  .then((response) => response.blob())
+  .then((blob) => URL.createObjectURL(blob))
   // Update image
-  .then(url => console.log(image.src = url))
-  .catch(err => console.error(err));
+  .then((url) => console.log(image.src = url))
+  .catch((err) => console.error(err));
 ```
 
 Let's look in detail at how `read()` is used. In the `pump()` function seen above we first invoke `read()`, which returns a promise containing a results object — this has the results of our read in it, in the form `{ done, value }`:
 
 ```js
-return reader.read().then(({ done, value }) => {
+reader.read().then(({ done, value }) => { /* … */ });
 ```
 
 The results can be one of three different types:
@@ -150,7 +151,9 @@ This is the standard pattern you'll see when using stream readers:
 1. You write a function that starts off by reading the stream.
 2. If there is no more stream to read, you return out of the function.
 3. If there is more stream to read, you process the current chunk then run the function again.
-4. You keep running the function recursively until there is no more stream to read, in which case step 2 is followed.
+4. You keep chaining the `pipe` function until there is no more stream to read, in which case step 2 is followed.
+
+> **Note:** The function looks as if `pump()` calls itself and leads to a potentially deep recursion. However, because `pump` is asynchronous and each `pump()` call is at the end of the promise handler, it's actually analogous to a chain of promise handlers.
 
 ## Creating your own custom readable stream
 
@@ -174,10 +177,10 @@ const stream = new ReadableStream({
 
   },
   type,
-  autoAllocateChunkSize
+  autoAllocateChunkSize,
 }, {
-  highWaterMark,
-  size()
+  highWaterMark: 3,
+  size: () => 1,
 });
 ```
 
@@ -196,7 +199,7 @@ Looking at our simple example code again, you can see that our `ReadableStream()
 // Fetch the original image
 fetch('./tortoise.png')
   // Retrieve its body as ReadableStream
-  .then(response => {
+  .then((response) => {
     const reader = response.body.getReader();
     return new ReadableStream({
       start(controller) {
@@ -231,11 +234,12 @@ In addition, when we are done reading the fetch body we use the controller's {{d
 In our Simple stream pump example, we consume the custom readable stream by passing it into a {{domxref("Response.Response", "Response")}} constructor call, after which we consume it as a `blob()`.
 
 ```js
-.then(stream => new Response(stream))
-.then(response => response.blob())
-.then(blob => URL.createObjectURL(blob))
-.then(url => console.log(image.src = url))
-.catch(err => console.error(err));
+readableStream
+  .then((stream) => new Response(stream))
+  .then((response) => response.blob())
+  .then((blob) => URL.createObjectURL(blob))
+  .then((url) => console.log(image.src = url))
+  .catch((err) => console.error(err));
 ```
 
 But a custom stream is still a `ReadableStream` instance, meaning you can attach a reader to it. As an example, have a look at our [Simple random stream demo](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-random-stream/)), which creates a custom stream, enqueues some random strings into it, and then reads the data out of the stream again once the _Stop string generation_ button is pressed.
@@ -248,15 +252,15 @@ The custom stream constructor has a `start()` method that uses a {{domxref("setI
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
-      let string = randomChars();
+      const string = randomChars();
       // Add the string to the stream
       controller.enqueue(string);
       // show it on the screen
-      let listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       readStream();
       controller.close();
@@ -295,8 +299,8 @@ function readStream() {
 
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    const listItem = document.createElement('li');
+    listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
     result += chunk;
@@ -323,31 +327,33 @@ We provide an example of this in our [Simple tee example](https://github.com/mdn
 
 ```js
 function teeStream() {
-    const teedOff = stream.tee();
-    readStream(teedOff[0], list2);
-    readStream(teedOff[1], list3);
-  }
+  const teedOff = stream.tee();
+  readStream(teedOff[0], list2);
+  readStream(teedOff[1], list3);
+}
 ```
 
 ## Pipe chains
 
-One very experimental feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
+Another feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
 
-This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.
-
-We have created an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
+We do have have a simple example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
 ```js
 // Fetch the original image
 fetch('png-logo.png')
-// Retrieve its body as ReadableStream
-.then(response => response.body)
-// Create a gray-scaled PNG stream out of the original
-.then(rs => logReadableStream('Fetch Response Stream', rs))
-.then(body => body.pipeThrough(new PNGTransformStream()))
-.then(rs => logReadableStream('PNG Chunk Stream', rs))
+  // Retrieve its body as ReadableStream
+  .then((response) => response.body)
+  // Create a gray-scaled PNG stream out of the original
+  .then((rs) => logReadableStream('Fetch Response Stream', rs))
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream('PNG Chunk Stream', rs))
 ```
+
+We don't yet have an example that uses {{domxref("TransformStream")}}.
 
 ## Summary
 
-That explains the basics of "default" readable streams. We'll explain bytestreams in a separate future article, once they are available in browsers.
+That explains the basics of "default" readable streams.
+
+See [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) for information about how to use readable _byte_ streams: streams with an underlying byte source that can perform efficient zero-copy transfers to a consumer, bypassing the stream's internal queues.

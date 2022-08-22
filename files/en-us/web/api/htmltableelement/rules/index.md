@@ -20,7 +20,7 @@ borders to render in the table.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `none`
   - : No rules
@@ -37,7 +37,7 @@ One of the followings:
 
 ```js
 // Turn on all the internal borders of a table
-var t = document.getElementById("TableID");
+const t = document.getElementById("TableID");
 t.rules = "all";
 ```
 

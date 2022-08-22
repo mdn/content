@@ -37,7 +37,7 @@ let settingIcon = browser.pageAction.setIcon(
 
   - : `object`. An object containing either `imageData` or `path` properties, and a `tabId` property.
 
-    - `imageData`{{optional_inline}}
+    - `imageData` {{optional_inline}}
 
       - : `{{WebExtAPIRef('pageAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -52,7 +52,7 @@ let settingIcon = browser.pageAction.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
 
       - : `string` or `object`. This is either a relative path to an icon file or a dictionary object.
 

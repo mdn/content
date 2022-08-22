@@ -47,16 +47,16 @@ out of the response using `blob()`, put it into an object URL using
 {{htmlelement("img")}} element to display the image.
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector('img');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest)
-.then(response => response.blob())
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+  .then((response) => response.blob())
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 ## Specifications

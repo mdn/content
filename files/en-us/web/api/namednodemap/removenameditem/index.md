@@ -42,16 +42,16 @@ The removed {{domxref("Attr")}}.
 const pre = document.getElementsByTagName("pre")[0];
 const attrMap = pre.attributes;
 
-let result = "The `test` attribute initially contains `" + attrMap["test"].value + "`.\n";
+let result = `The 'test' attribute initially contains '${attrMap["test"].value}'.\n`;
 
 result += "We remove it.\n\n";
 attrMap.removeNamedItem("test");
 
 if (attrMap.getNamedItem("test")) {
-  result += "And `test` still exists.";
+  result += "And 'test' still exists.";
 }
 else {
-  result += "And `test` is no more to be found.";
+  result += "And 'test' is no more to be found.";
 }
 
 pre.textContent = result;

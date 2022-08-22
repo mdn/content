@@ -88,7 +88,7 @@ tags:
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the {{event("close")}} event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 
@@ -127,12 +127,12 @@ tags:
 
 ### Events
 
-- Firefox now supports the {{domxref("GlobalEventHandlers.onanimationstart", "onanimationstart")}}, {{domxref("GlobalEventHandlers.onanimationiteration", "onanimationiteration")}}, and {{domxref("GlobalEventHandlers.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
-- Firefox now supports the {{domxref("GlobalEventHandlers.ontransitionend", "ontransitionend")}} event handler ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.onanimationstart", "onanimationstart")}}, {{domxref("Element.onanimationiteration", "onanimationiteration")}}, and {{domxref("Element.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.transitionend_event", "ontransitionend")}} event handler ({{bug(911987)}}).
 
 ### Security
 
-- When login pages (i.e those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed out lock icon in the address bar to warn users ({{bug(1319119)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e,. those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ({{bug(1319119)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 
 ### Removals
 

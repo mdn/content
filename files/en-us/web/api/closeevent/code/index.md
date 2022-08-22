@@ -190,7 +190,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
 The following example prints the value of `code` to the console.
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.code);
 };
 ```

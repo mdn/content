@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - Constructor
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -14,7 +13,7 @@ tags:
   - Video
 browser-compat: api.MediaSource.MediaSource
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`MediaSource()`** constructor of the
 {{domxref("MediaSource")}} interface constructs and returns a new
@@ -51,7 +50,7 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   console.error('Unsupported MIME type or codec: ', mimeCodec);
 }
 
-...
+// …
 ```
 
 ## Browser compatibility

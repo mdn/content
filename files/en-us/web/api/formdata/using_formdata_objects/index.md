@@ -29,7 +29,7 @@ formData.append("accountnum", 123456); // number 123456 is immediately converted
 formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object
-const content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
+const content = '<q id="a"><span id="b">hey!</span></q>'; // the body of the new file…
 const blob = new Blob([content], { type: "text/xml"});
 
 formData.append("webmasterfile", blob);
@@ -81,13 +81,24 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
-  <label>Your email address:</label>
-  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
-  <label>Custom file label:</label>
-  <input type="text" name="filelabel" size="12" maxlength="32" /><br />
-  <label>File to stash:</label>
-  <input type="file" name="file" required />
-  <input type="submit" value="Stash the file!" />
+  <p>
+    <label>Your email address:
+      <input type="email" autocomplete="on" name="userid" placeholder="email" required size="32" maxlength="64" />
+    </label>
+  </p>
+  <p>
+    <label>Custom file label:
+      <input type="text" name="filelabel" size="12" maxlength="32" />
+    </label>
+  </p>
+  <p>
+    <label>File to stash:
+      <input type="file" name="file" required />
+    </label>
+  </p>
+  <p>
+    <input type="submit" value="Stash the file!" />
+  </p>
 </form>
 <div></div>
 ```
@@ -96,7 +107,7 @@ Then you can send it using code like the following:
 
 ```js
 const form = document.forms.namedItem("fileinfo");
-form.addEventListener('submit', function(ev) {
+form.addEventListener('submit', (ev) => {
 
   const oOutput = document.querySelector("div"),
       oData = new FormData(form);
@@ -105,11 +116,11 @@ form.addEventListener('submit', function(ev) {
 
   const oReq = new XMLHttpRequest();
   oReq.open("POST", "stash.php", true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
+  oReq.onload = (oEvent) => {
+    if (oReq.status === 200) {
       oOutput.innerHTML = "Uploaded!";
     } else {
-      oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.<br \/>";
+      oOutput.innerHTML = `Error ${oReq.status} occurred when trying to upload your file.<br />`;
     }
   };
 
@@ -161,13 +172,13 @@ formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
-  let data = e.formData;
-  for (let value of data.values()) {
+  const data = e.formData;
+  for (const value of data.values()) {
     console.log(value);
   }
 
   // submit the data via XHR
-  let request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
 });

@@ -25,21 +25,21 @@ In this example the background of the page is set to red using CSS. The JavaScri
 
 ```html
 <html>
-<head>
-<title>Modifying a stylesheet rule with CSSOM</title>
-<style type="text/css">
-body {
- background-color: red;
-}
-</style>
-<script type="text/javascript">
-var stylesheet = document.styleSheets[0];
-stylesheet.cssRules[0].style.backgroundColor="aqua";
-</script>
-</head>
-<body>
-The stylesheet declaration for the body's background color is modified via JavaScript.
-</body>
+  <head>
+    <title>Modifying a stylesheet rule with CSSOM</title>
+    <style>
+      body {
+        background-color: red;
+      }
+    </style>
+    <script>
+      const stylesheet = document.styleSheets[0];
+      stylesheet.cssRules[0].style.backgroundColor="aqua";
+    </script>
+  </head>
+  <body>
+    The stylesheet declaration for the body's background color is modified via JavaScript.
+  </body>
 </html>
 ```
 
@@ -60,40 +60,39 @@ Also, when you set this property on an element, you override any styles that hav
 To change a particular element's style, you can adapt the following example for the element(s) you want to style.
 
 ```html
-<html>
-<head>
-<title>simple style example</title>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>simple style example</title>
 
-<script type="text/javascript">
+    <script>
+      function alterStyle(elem) {
+        elem.style.background = 'green';
+      }
 
-function alterStyle(elem) {
-  elem.style.background = 'green';
-}
+      function resetStyle(elemId) {
+        elem = document.getElementById(elemId);
+        elem.style.background = 'white';
+      }
+    </script>
+    <style>
+      #p1 {
+        border: solid blue 2px;
+      }
+    </style>
+  </head>
 
-function resetStyle(elemId) {
-  elem = document.getElementById(elemId);
-  elem.style.background = 'white';
-}
-</script>
+  <body>
+    <!-- passes a reference to the element's object as parameter 'this'. -->
+    <p id="p1" onclick="alterStyle(this);">
+     Click here to change background color.
+    </p>
 
-<style type="text/css">
-#p1 {
-  border: solid blue 2px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- passes a reference to the element's object as parameter 'this'. -->
-<p id="p1" onclick="alterStyle(this);">
- Click here to change background color.
-</p>
-
-<!-- passes the 'p1' id of another element's style to modify. -->
-<button onclick="resetStyle('p1');">Reset background color</button>
-
-</body>
+    <!-- passes the 'p1' id of another element's style to modify. -->
+    <button onclick="resetStyle('p1');">Reset background color</button>
+  </body>
 </html>
 ```
 
@@ -111,18 +110,20 @@ More important than the two properties noted here is the use of the `style` obje
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <title>style Property Example</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
-    function setStyle() {
-      document.getElementById('d').style.color = 'orange';
-    }
-    function resetStyle() {
-      document.getElementById('d').style.color = 'black';
-    }
-  </script>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Style Property Example</title>
+    <link rel="StyleSheet" href="example.css">
+    <script>
+      function setStyle() {
+        document.getElementById('d').style.color = 'orange';
+      }
+      function resetStyle() {
+        document.getElementById('d').style.color = 'black';
+      }
+    </script>
  </head>
 
  <body>
@@ -142,7 +143,7 @@ The **media** and **type** of the style may or may not be given.
 Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method to specify the CSS property and its value.
 
 ```js
-var el = document.getElementById('some-element');
+const el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');
 ```
 

@@ -32,7 +32,7 @@ createPolicy(policyName, policyOptions)
 
 - `policyName`
   - : A string with the name of the policy.
-- `policyOptions`{{optional_inline}}
+- `policyOptions` {{optional_inline}}
 
   - : User-defined functions for converting strings into trusted values.
 
@@ -60,7 +60,7 @@ The below code creates a policy with the name `"myEscapePolicy"` with a function
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 ```
 
@@ -74,8 +74,7 @@ The policy logs a message to the console to remind the developer to refactor thi
 trustedTypes.createPolicy('default', {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
-    return s + '?default-policy-used&type=' + encodeURIComponent(type) +
-          '&sink=' + encodeURIComponent(sink);
+    return `${s}?default-policy-used&type=${encodeURIComponent(type)}&sink=${encodeURIComponent(sink)}`;
   }
 });
 ```

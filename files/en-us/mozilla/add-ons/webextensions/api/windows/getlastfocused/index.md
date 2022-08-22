@@ -29,13 +29,13 @@ let gettingWindow = browser.windows.getLastFocused(
 
 ### Parameters
 
-- `getInfo`{{optional_inline}}
+- `getInfo` {{optional_inline}}
 
   - : `object`.
 
-    - `populate`{{optional_inline}}
+    - `populate` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) matching the tab's URL.
-    - `windowTypes`{{optional_inline}}
+    - `windowTypes` {{optional_inline}}
       - : An `array` of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to `['normal', 'panel', 'popup']`, with `'panel'` window types limited to the extension's own windows.
 
 > **Note:** If supplied, the `windowTypes` component of `getInfo` is ignored. The use of `windowTypes` has been deprecated as of Firefox 62.
@@ -54,18 +54,17 @@ Get the last focused window, and log the tabs it contains. Note that you'll need
 
 ```js
 function logTabs(windowInfo) {
-  for (tabInfo of windowInfo.tabs) {
+  for (const tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.getLastFocused({populate: true});
-  getting.then(logTabs, onError);
+  browser.windows.getLastFocused({ populate: true }).then(logTabs, onError);
 });
 ```
 

@@ -4,7 +4,6 @@ slug: Web/API/NotificationEvent/action
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - NotificationEvent
   - Notifications
   - Property
@@ -29,7 +28,7 @@ self.registration.showNotification("New articles available", {
   actions: [{action: "get", title: "Get now."}]
 });
 
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   if (event.action === 'get') {
     synchronizeReader();

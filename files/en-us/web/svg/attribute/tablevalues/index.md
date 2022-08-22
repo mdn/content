@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/tableValues
 tags:
   - SVG
   - SVG Attribute
-spec-urls: https://drafts.fxtf.org/filter-effects//#element-attrdef-fecomponenttransfer-tablevalues
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-tablevalues
 ---
 {{SVGRef}}
 

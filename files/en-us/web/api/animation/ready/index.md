@@ -24,7 +24,7 @@ The read-only **`Animation.ready`** property of the [Web Animations API](/en-US/
 A {{jsxref("Promise")}} which resolves when the animation is ready to be played. You'll typically use a construct similar to this when using the ready promise:
 
 ```js
-animation.ready.then(function() {
+animation.ready.then(() => {
   // Do whatever needs to be done when
   // the animation is ready to run
 });
@@ -36,7 +36,7 @@ In the following example, the state of the animation will be `running` when the 
 
 ```js
 animation.pause();
-animation.ready.then(function() {
+animation.ready.then(() => {
   // Displays 'running'
   alert(animation.playState);
 });

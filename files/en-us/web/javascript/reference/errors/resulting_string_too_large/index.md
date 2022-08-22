@@ -15,10 +15,12 @@ argument that is infinity.
 
 ## Message
 
-```js
-RangeError: argument out of range (Edge)
+```
+RangeError: Invalid string length (V8-based)
+RangeError: Invalid count value: Infinity (V8-based)
 RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
-RangeError: Invalid count value (Chrome)
+RangeError: Out of memory (Safari)
+RangeError: String.prototype.repeat argument must be greater than or equal to 0 and not be Infinity (Safari)
 ```
 
 ## Error type
@@ -34,7 +36,7 @@ number. The range of allowed values can be described like this: \[0, +∞).
 
 The resulting string can also not be larger than the maximum string size, which can
 differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size is
-2^28 - 1 (`0xFFFFFFF`).
+2<sup>30</sup> - 2 (\~1GB).
 
 ## Examples
 
@@ -42,7 +44,7 @@ differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size 
 
 ```js example-bad
 'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+'a'.repeat(2**30);      // RangeError
 ```
 
 ### Valid cases

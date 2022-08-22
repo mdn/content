@@ -53,7 +53,7 @@ Events have three functions:
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can only pass one value here:
 
@@ -109,7 +109,7 @@ Events have three functions:
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
-- `requestHeaders`{{optional_inline}}
+- `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that have been sent out with this request.
 - `tabId`
   - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
@@ -153,8 +153,8 @@ let targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request
 function logCookies(e) {
-  for (let header of e.requestHeaders) {
-    if (header.name == "Cookie") {
+  for (const header of e.requestHeaders) {
+    if (header.name === "Cookie") {
       console.log(header.value);
     }
   }

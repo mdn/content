@@ -13,7 +13,7 @@ In the last article we set up our server, but it doesn't do anything yet because
 2. We need to create a peer object with an ID. The ID will be used to connect two peers together and if you don't create one, one will be assigned to the peer. Add the following to `script.js`:
 
     ```js
-    const peer = new Peer(''+Math.floor(Math.random()*2**18).toString(36).padStart(4,0), {
+    const peer = new Peer(`${Math.floor(Math.random() * 2 ** 18).toString(36).padStart(4, 0)}`, {
         host: location.hostname,
         debug: 1,
         path: '/myapp'

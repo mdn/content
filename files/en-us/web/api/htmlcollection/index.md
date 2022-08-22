@@ -21,7 +21,7 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 
 ## Properties
 
-- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
+- {{domxref("HTMLCollection.length")}} {{ReadOnlyInline}}
   - : Returns the number of items in the collection.
 
 ## Methods
@@ -45,7 +45,7 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 For example, assuming there is one `<form>` element in the document and its `id` is `myForm`:
 
 ```js
-var elem1, elem2;
+let elem1, elem2;
 
 // document.forms is an HTMLCollection
 

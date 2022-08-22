@@ -4,7 +4,6 @@ slug: Web/API/VideoPlaybackQuality/creationTime
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Media
   - Media Playback Quality
   - Media Playback Quality API
@@ -39,8 +38,8 @@ function called `lostFramesThresholdExceeded()` is called to, perhaps,
 update a quality indicator to show an increase in frame loss.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const quality = videoElem.getVideoPlaybackQuality();
 
 if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
   lostFramesThresholdExceeded();

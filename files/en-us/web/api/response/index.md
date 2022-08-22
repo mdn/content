@@ -24,25 +24,25 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 
 ## Properties
 
-- {{domxref("Response.body")}} {{readonlyInline}}
+- {{domxref("Response.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
-- {{domxref("Response.bodyUsed")}} {{readonlyInline}}
+- {{domxref("Response.bodyUsed")}} {{ReadOnlyInline}}
   - : Stores a boolean value that declares whether the body has been used in a response yet.
-- {{domxref("Response.headers")}} {{readonlyinline}}
+- {{domxref("Response.headers")}} {{ReadOnlyInline}}
   - : The {{domxref("Headers")}} object associated with the response.
-- {{domxref("Response.ok")}} {{readonlyinline}}
+- {{domxref("Response.ok")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the response was successful (status in the range `200`–`299`) or not.
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
   - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
-- {{domxref("Response.status")}} {{readonlyinline}}
+- {{domxref("Response.status")}} {{ReadOnlyInline}}
   - : The status code of the response. (This will be `200` for a success).
-- {{domxref("Response.statusText")}} {{readonlyinline}}
+- {{domxref("Response.statusText")}} {{ReadOnlyInline}}
   - : The status message corresponding to the status code. (e.g., `OK` for `200`).
 - {{domxref("Response.trailers")}}
   - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
-- {{domxref("Response.type")}} {{readonlyinline}}
+- {{domxref("Response.type")}} {{ReadOnlyInline}}
   - : The type of the response (e.g., `basic`, `cors`).
-- {{domxref("Response.url")}} {{readonlyinline}}
+- {{domxref("Response.url")}} {{ReadOnlyInline}}
   - : The URL of the response.
 
 ## Methods
@@ -76,8 +76,8 @@ You'll notice that since we are requesting an image, we need to run {{domxref("R
 ```js
 const image = document.querySelector('.my-image');
 fetch('flowers.jpg')
-.then(response => response.blob())
-.then(blob => {
+.then((response) => response.blob())
+.then((blob) => {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
 });

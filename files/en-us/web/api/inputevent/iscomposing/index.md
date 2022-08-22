@@ -14,7 +14,7 @@ browser-compat: api.InputEvent.isComposing
 
 The **`InputEvent.isComposing`** read-only property returns a
 boolean value indicating if the event is fired after
-{{event("compositionstart")}} and before {{event("compositionend")}}.
+{{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Value
 
@@ -37,5 +37,5 @@ console.log(inputEvent.isComposing); // return false
 
 ## See also
 
-- {{ event("compositionstart") }} and {{ event("compositionend")}}
+- {{domxref("Element/compositionstart_event", "compositionstart")}} and {{domxref("Element/compositionend_event", "compositionend")}}
 - {{domxref("InputEvent")}}

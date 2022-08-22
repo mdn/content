@@ -139,7 +139,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
   - : The Mozilla networking library now supports the prioritization of connections to a specific server using `nsISupportsPriority`. {{bug(278531) }}
 
 - API for managing user and UA stylesheets
-  - : Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit `userContent.css` to add styling (say for XBL binding attachment) to web pages. See [Using the Stylesheet Service](https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Using_the_Stylesheet_Service).
+  - : Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit `userContent.css` to add styling (say for XBL binding attachment) to web pages. See [Using the Stylesheet Service](/en-US/docs/Archive/Add-ons/Using_the_Stylesheet_Service).
 
 - API for configuring proxies
   - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See `nsIProtocolProxyService`, `nsIProtocolProxyFilter`, and `nsIProtocolProxyCallback`. {{bug(282442) }}
@@ -155,11 +155,11 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - Adding tokens to the User-Agent string
   - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
-    See [documentation](https://www.mozilla.org/build/revised-user-agent-strings.html). {{bug(274928)}}
+    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). {{bug(274928)}}
 
 - Toolkit chrome registry
   - : Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache.
-    See [Chrome Registration](https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration).
+    See [Chrome Registration](/en-US/docs/Mozilla/Chrome_Registration).
 
 - Extension Manager
   - : Following are the new features:
@@ -174,8 +174,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
   - : An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces `nsICommandLine` and `nsICommandLineHandler`.
 
 - XTF Support
-  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example,
-    the [Mozilla XForms Project](https://www.mozilla.org/projects/xforms) uses XTF to add support for the XForms namespace. See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
+  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
 
 ### New Browser Features
 

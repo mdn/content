@@ -19,7 +19,7 @@ value.
 
 ```js
 new Proxy(target, {
-  get: function(target, property, receiver) {
+  get(target, property, receiver) {
   }
 });
 ```
@@ -75,10 +75,10 @@ The following code traps getting a property value.
 
 ```js
 const p = new Proxy({}, {
-  get: function(target, property, receiver) {
-    console.log('called: ' + property);
+  get(target, property, receiver) {
+    console.log(`called: ${property}`);
     return 10;
-  }
+  },
 });
 
 console.log(p.a); // "called: a"
@@ -93,13 +93,13 @@ Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 const p = new Proxy(obj, {
-  get: function(target, property) {
+  get(target, property) {
     return 20;
-  }
+  },
 });
 
 p.a; // TypeError is thrown
@@ -116,5 +116,5 @@ p.a; // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Reflect.get()")}}

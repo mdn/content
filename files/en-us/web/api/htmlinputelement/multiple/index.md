@@ -26,15 +26,14 @@ A boolean value.
 // fileInput is a <input type=file multiple>
 let fileInput = document.getElementById('myfileinput');
 
-if (fileInput.multiple == true) {
-
-  for (let i = 0; i < fileInput.files.length; i++) {
-    // Loop fileInput.files
+if (fileInput.multiple) {
+  // Loop fileInput.files
+  for (const file of fileInput.files) {
+    // Perform action on one file
   }
-
 // Only one file available
 } else {
-  let file = fileInput.files.item(0);
+  let [file] = fileInput.files;
 }
 ```
 

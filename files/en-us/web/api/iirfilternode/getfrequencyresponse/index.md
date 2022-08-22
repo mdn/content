@@ -54,8 +54,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 In the following example we are using an IIR filter on a media stream (for a complete
-full demo, see our [stream-source-buffer demo](https://mdn.github.io/stream-source-buffer/) live,
-or [read its source](https://github.com/mdn/stream-source-buffer/blob/gh-pages/index.html).) As part of this demo, we get the frequency responses for this IIR
+full demo, see our [stream-source-buffer demo](https://mdn.github.io/webaudio-examples/stream-source-buffer/) live,
+or [read its source](https://github.com/mdn/webaudio-examples/blob/master/stream-source-buffer/index.html)). As part of this demo, we get the frequency responses for this IIR
 filter, for five sample frequencies. We first create the {{jsxref("Float32Array")}}
 objects we need, one containing the input frequencies, and two to receive the output
 magnitude and phase values:
@@ -95,14 +95,14 @@ const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
 const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
 
-  ...
+// …
 
 function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
 
-  for(i = 0; i <= myFrequencyArray.length-1;i++){
+  for (i = 0; i <= myFrequencyArray.length-1;i++){
     const listItem = document.createElement('li');
-    listItem.innerHTML = '<strong>' + myFrequencyArray[i] + 'Hz</strong>: Magnitude ' + magResponseOutput[i] + ', Phase ' + phaseResponseOutput[i] + ' radians.';
+    listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }
 }

@@ -37,10 +37,10 @@ elements contained by the `<select>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
-  for(var i = 0; i < select.options.length; i++) {
-    console.log(select.options[i].label); // "Option 1" and "Option 2"
+  for (const option of select.options) {
+    console.log(option.label); // "Option 1" and "Option 2"
   }
 });
 ```

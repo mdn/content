@@ -21,11 +21,11 @@ This object contains a boolean indicating whether the tab is muted, and the reas
 
 Values of this type are objects. They contain the following properties:
 
-- `extensionId`{{optional_inline}}
+- `extensionId` {{optional_inline}}
   - : `string`. The ID of the extension that last changed the muted state. Not set if an extension was not the reason the muted state last changed.
 - `muted`
   - : `boolean`. Whether the tab is currently muted. Equivalent to whether the muted audio indicator is showing.
-- `reason`{{optional_inline}}
+- `reason` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. The reason the tab was muted or unmuted. Not set if the tab's muted state has never been changed.
 
 ## Browser compatibility

@@ -34,12 +34,12 @@ A {{domxref("Node")}} object or `null`.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
-var node = treeWalker.lastChild(); // returns the last visible child of the root element
+const node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```
 
 ## Specifications

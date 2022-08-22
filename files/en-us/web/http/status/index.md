@@ -23,7 +23,7 @@ Responses are grouped in five classes:
 
 The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6).
 
-> **Note:** If you receive a response that is not in [this list](#information-responses), it is a non-standard response, possibly custom to the server's software.
+> **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
 ## Information responses
 

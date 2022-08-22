@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Client
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -32,15 +31,15 @@ _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 
-- {{domxref("WindowClient.focused")}} {{readonlyInline}}
+- {{domxref("WindowClient.focused")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the current client has focus.
-- {{domxref("WindowClient.visibilityState")}} {{readonlyInline}}
+- {{domxref("WindowClient.visibilityState")}} {{ReadOnlyInline}}
   - : Indicates the visibility of the current client. This value can be one of `"hidden"`, `"visible"`, or `"prerender"`.
 
 ## Example
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -48,10 +47,9 @@ self.addEventListener('notificationclick', function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
+  }).then((clientList) => {
+    for (const client of clientList) {
+      if (client.url === '/' && 'focus' in client) {
         client.focus();
         break;
       }

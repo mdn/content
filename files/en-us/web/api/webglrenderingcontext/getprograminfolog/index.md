@@ -39,7 +39,7 @@ string of length 0.
 ### Checking program errors
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);

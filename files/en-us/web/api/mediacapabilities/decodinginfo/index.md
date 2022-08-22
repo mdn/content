@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - Media Capabilities API
   - MediaCapabilities
   - Method
@@ -29,7 +28,7 @@ decodingInfo(configuration)
 
 - `configuration`
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaDecodingConfiguration in the spec -->
-  
+
     - `type`
       - : The type of media being tested. This takes one of three values:
 
@@ -105,11 +104,10 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
-    console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then((result) => {
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
 });
 ```
 

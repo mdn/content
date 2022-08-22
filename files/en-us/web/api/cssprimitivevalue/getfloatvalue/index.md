@@ -87,8 +87,8 @@ A `float` value in the specified unit.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("margin-top");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("margin-top");
 console.log(cssValue.getFloatValue(CSSPrimitiveValue.CSS_CM));
 ```
 

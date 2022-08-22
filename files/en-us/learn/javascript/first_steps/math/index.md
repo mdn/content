@@ -184,7 +184,7 @@ Arithmetic operators are the basic operators that we use to do sums in JavaScrip
       <td>
         Raises a <code>base</code> number to the <code>exponent</code> power,
         that is, the <code>base</code> number multiplied by itself,
-        <code>exponent</code> times. It was first Introduced in EcmaScript 2016.
+        <code>exponent</code> times.
       </td>
       <td>
         <code>5 ** 2</code> (returns <code>25</code>, which is the same as
@@ -262,7 +262,7 @@ guessCount++;
 
 Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:
 
-```js
+```js example-bad
 3++;
 ```
 

@@ -95,7 +95,7 @@ body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 ```
 
-{{EmbedLiveSample("No_all_property", "200", "125")}}
+{{EmbedLiveSample("a._no_all_property", "200", "125")}}
 
 This is the scenario in which no `all` property is set inside the `blockquote` rule. The {{HTMLElement("blockquote")}} element uses the browser's default styling which gives it a margin, together with a specific background and text color as specified in the stylesheet. It also behaves as a _block_ element: the text that follows it is beneath it.
 
@@ -111,7 +111,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: initial; }
 ```
 
-{{EmbedLiveSample("allinitial", "200", "125")}}
+{{EmbedLiveSample("b._all_initial", "200", "125")}}
 
 With the `all` property set to `initial` in the `blockquote` rule, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling anymore: it is an _inline_ element now (initial value), its [`background-color`](/en-US/docs/Web/CSS/background-color#formal_definition) is `transparent` (initial value), its [`font-size`](/en-US/docs/Web/CSS/font-size#formal_definition) is `medium`, and its [`color`](/en-US/docs/Web/CSS/color#formal_definition) is `black` (initial value).
 
@@ -127,7 +127,7 @@ blockquote { background-color: skyblue; color: red; }
 blockquote { all: inherit; }
 ```
 
-{{EmbedLiveSample("allinherit", "200", "125")}}
+{{EmbedLiveSample("c._all_inherit", "200", "125")}}
 
 In this case, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling. Instead, it inherits style values from its parent {{HTMLElement("body")}} element: it is a _block_ element now (inherited value), its {{cssxref("background-color")}} is `#F0F0F0` (inherited value), its {{cssxref("font-size")}} is `small` (inherited value), and its {{cssxref("color")}} is `blue` (inherited value).
 
@@ -143,7 +143,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: unset; }
 ```
 
-{{EmbedLiveSample("allunset", "200", "125")}}
+{{EmbedLiveSample("d._all_unset", "200", "125")}}
 
 When the `unset` value is applied to the `all` property in the `blockquote` rule, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling. Because [`background-color`](/en-US/docs/Web/CSS/background-color#formal_definition) is a non-inherited property and [`font-size`](/en-US/docs/Web/CSS/font-size#formal_definition) and [`color`](/en-US/docs/Web/CSS/color#formal_definition) are inherited properties, the `<blockquote>` element is an _inline_ element now (initial value), its {{cssxref("background-color")}} is `transparent` (initial value), but its {{cssxref("font-size")}} is still `small` (inherited value), and its {{cssxref("color")}} is `blue` (inherited value).
 
@@ -159,7 +159,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: revert; }
 ```
 
-{{EmbedLiveSample("allrevert", "200", "125")}}
+{{EmbedLiveSample("e._all_revert", "200", "125")}}
 
 When the `all` property is set to `revert` in the `blockquote` rule, the `blockquote` rule is considered to be non-existent and the styling property values are inherited from the ones applied to the parent element `<body>`. So the `<blockquote>` element gets styled as a _block_ element, with {{cssxref("background-color")}} `#F0F0F0`, {{cssxref("font-size")}} `small`, and {{cssxref("color")}} `blue` - all values inherited from the `body` rule.
 
@@ -175,7 +175,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: revert-layer; }
 ```
 
-{{EmbedLiveSample("allrevert-layer", "200", "125")}}
+{{EmbedLiveSample("f._all_revert-layer", "200", "125")}}
 
 There are no cascade layers defined in the CSS file, so the `<blockquote>` element inherits its style from the matching `body` rule. The `<blockquote>` element here is styled as a _block_ element, with {{cssxref("background-color")}} `#F0F0F0`, {{cssxref("font-size")}} `small`, and {{cssxref("color")}} `blue` - all values inherited from the `body` rule. This scenario is an example of the case when `all` set to `revert-layer` behaves the same as when `all` is set to `revert`.
 

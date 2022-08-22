@@ -26,7 +26,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 ```js
 before(param1)
 before(param1, param2)
-before(param1, param2, /* ... ,*/ paramN)
+before(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

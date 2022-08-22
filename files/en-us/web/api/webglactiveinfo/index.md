@@ -29,12 +29,6 @@ A `WebGLActiveInfo` object is returned by:
 - {{domxref("WebGLRenderingContext.getActiveUniform()")}} or
 - {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
 
-```js
-WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index)
-```
-
 ## Specifications
 
 {{Specifications}}

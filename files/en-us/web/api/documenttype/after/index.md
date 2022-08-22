@@ -22,7 +22,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 ```js
 after(param1)
 after(param1, param2)
-after(param1, param2, /* ... ,*/ paramN)
+after(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

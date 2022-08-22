@@ -63,9 +63,9 @@ not between `0` and `2^32> - 1` included.
 ## Examples
 
 ```js
-var myIndex = objectStore.index('index');
-var getAllRequest = myIndex.getAll();
-getAllRequest.onsuccess = function() {
+const myIndex = objectStore.index('index');
+const getAllRequest = myIndex.getAll();
+getAllRequest.onsuccess = () => {
   console.log(getAllRequest.result);
 }
 ```

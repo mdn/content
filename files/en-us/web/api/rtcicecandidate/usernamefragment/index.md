@@ -80,11 +80,11 @@ from the signaling server that contains an ICE candidate to be added to the
 restart, we can use code like this:
 
 ```js
-const ssNewCandidate = signalMsg => {
+const ssNewCandidate = (signalMsg) => {
   let candidate = new RTCIceCandidate(signalMsg.candidate);
   let receivers = pc.getReceivers();
 
-  receivers.forEach(receiver => {
+  receivers.forEach((receiver) => {
     let parameters = receiver.transport.getParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {

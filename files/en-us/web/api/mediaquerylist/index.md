@@ -28,18 +28,18 @@ This is very useful for adaptive design, since this makes it possible to observe
 
 _The `MediaQueryList` interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("MediaQueryList.matches", "matches")}}{{ReadOnlyInline}}
+- {{DOMxRef("MediaQueryList.matches", "matches")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
-- {{DOMxRef("MediaQueryList.media", "media")}}{{ReadOnlyInline}}
+- {{DOMxRef("MediaQueryList.media", "media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
 ## Methods
 
 _The `MediaQueryList` interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("MediaQueryList.addListener", "addListener()")}}{{deprecated_inline}}
+- {{DOMxRef("MediaQueryList.addListener", "addListener()")}} {{deprecated_inline}}
   - : Adds to the `MediaQueryList` a callback which is invoked whenever the media query status—whether or not the document matches the media queries in the list—changes. This method exists primarily for backward compatibility; if possible, you should instead use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to watch for the {{domxref("MediaQueryList.change_event", "change")}} event.
-- {{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}{{deprecated_inline}}
+- {{DOMxRef("MediaQueryList.removeListener", "removeListener()")}} {{deprecated_inline}}
   - : Removes the specified listener callback from the callbacks to be invoked when the `MediaQueryList` changes media query status, which happens any time the document switches between matching and not matching the media queries listed in the `MediaQueryList`. This method has been kept for backward compatibility; if possible, you should generally use {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} to remove change notification callbacks (which should have previously been added using `addEventListener()`).
 
 ## Events
@@ -54,8 +54,8 @@ _The following events are delivered to `MediaQueryList` objects:_
 This simple example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
 
 ```js
-var para = document.querySelector('p');
-var mql = window.matchMedia('(max-width: 600px)');
+const para = document.querySelector('p');
+const mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {

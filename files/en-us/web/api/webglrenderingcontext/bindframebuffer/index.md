@@ -13,8 +13,7 @@ browser-compat: api.WebGLRenderingContext.bindFramebuffer
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindFramebuffer()`** method of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
-{{domxref("WebGLFramebuffer")}} to a target.
+[WebGL API](/en-US/docs/Web/API/WebGL_API) binds to the specified target the default {{domxref("WebGLFramebuffer")}}, or, if the second argument is non-null, the provided {{domxref("WebGLFramebuffer")}}.
 
 ## Syntax
 
@@ -41,8 +40,7 @@ bindFramebuffer(target, framebuffer)
       - : Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`.
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} object to bind.
-    If `framebuffer` is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
+  - : A {{domxref("WebGLFramebuffer")}} object to bind, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for binding the {{domxref("Canvas")}} or {{domxref("OffscreenCanvas")}} object associated with the rendering context.
 
 ### Return value
 
@@ -59,9 +57,9 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const framebuffer = gl.createFramebuffer();
 
 gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
 ```

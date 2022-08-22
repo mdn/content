@@ -7,7 +7,7 @@ tags:
   - Constraint Validation API
   - HTML
   - Reference
-browser-compat: html.elements.input.attributes.pattern
+browser-compat: html.elements.input.pattern
 ---
 
 {{HTMLSidebar}}
@@ -99,13 +99,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;

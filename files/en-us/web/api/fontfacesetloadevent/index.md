@@ -26,7 +26,7 @@ The **`FontFaceSetLoadEvent`** interface of the [CSS Font Loading API](/en-US/do
 
 ## Properties
 
-- {{domxref("FontFaceSetLoadEvent.fontfaces")}}{{readonlyInline}}
+- {{domxref("FontFaceSetLoadEvent.fontfaces")}} {{ReadOnlyInline}}
   - : Returns an array of {{domxref("FontFace")}} instances each of which represents a single usable font.
 
 ## Specifications

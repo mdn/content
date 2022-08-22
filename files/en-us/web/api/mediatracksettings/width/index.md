@@ -33,13 +33,11 @@ unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
 ## Value
 
-An integer value indicating the width, in pixels, of the video track as currently
-configured.
+An integer value indicating the width, in pixels, of the video track as currently configured.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 

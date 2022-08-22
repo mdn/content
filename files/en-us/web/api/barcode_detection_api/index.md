@@ -234,7 +234,7 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 
 ## Interfaces
 
-- {{domxref("BarcodeDetector")}}
+- {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
   - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
 
 ## Examples
@@ -262,8 +262,8 @@ The following example calls the `getSupportFormat()` method and logs the results
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
+  .then((supportedFormats) => {
+    supportedFormats.forEach((format) => console.log(format));
   });
 ```
 
@@ -273,10 +273,10 @@ This example uses the `detect()` method to detect the barcodes within the given 
 
 ```js
   barcodeDetector.detect(imageEl)
-    .then(barcodes => {
-      barcodes.forEach(barcode => console.log(barcode.rawData));
+    .then((barcodes) => {
+      barcodes.forEach((barcode) => console.log(barcode.rawData));
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     })
 ```

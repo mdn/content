@@ -30,9 +30,9 @@ For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/Ja
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
   - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Methods
@@ -41,9 +41,9 @@ _This interface has no unique methods; inherits methods from its parent {{domxre
 
 ## Events
 
-- {{Event("rejectionhandled")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
   - : Fired when a JavaScript {{jsxref("Promise")}} is rejected, and after the rejection is handled by the promise's rejection handling code.
-- {{Event("unhandledrejection")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Fired when a JavaScript {{jsxref("Promise")}} is rejected but there is no rejection handler to deal with the rejection.
 
 ## Examples
@@ -51,7 +51,7 @@ _This interface has no unique methods; inherits methods from its parent {{domxre
 This simple example catches unhandled promise rejections and logs them for debugging purposes.
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = (e) => {
   console.log(e.reason);
 }
 ```

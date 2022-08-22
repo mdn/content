@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 set:trailing(nodeSet1, nodeSet2)
 ```
 

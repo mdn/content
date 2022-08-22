@@ -10,7 +10,7 @@ tags:
   - add to home screen
   - icon
 ---
-Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
+Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, i.e. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?
 
@@ -83,7 +83,7 @@ The fields needed for A2HS are as follows:
 
 The manifest for our sample app looks like this:
 
-```js
+```json
 {
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",
@@ -107,7 +107,7 @@ As shown in the above manifest listing, we are including a 192 x 192 px icon for
 
 Note that the `type` member in each icon's object specifies the icon's mimetype, so the browser can quickly read what type the icon is, and then ignore it and move to a different icon if it doesn't support it.
 
-In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Android icon design guidelines](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)).
+In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications)).
 
 ### Link the HTML to the manifest
 

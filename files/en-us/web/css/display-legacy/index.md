@@ -47,6 +47,10 @@ Valid `<display-legacy>` values:
 
     It is equivalent to `inline grid`.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 In the below example, we are creating an inline flex container with the legacy keyword inline-flex.

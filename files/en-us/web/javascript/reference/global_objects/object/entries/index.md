@@ -22,7 +22,7 @@ The order of the array returned by `Object.entries()` is
 the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. If
 there is a need for different ordering, then
 the array should be sorted first, like
-`Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));`.
+`Object.entries(obj).sort((a, b) => a[0].localeCompare(b[0]));`.
 
 {{EmbedInteractiveExample("pages/js/object-entries.html")}}
 
@@ -49,35 +49,6 @@ An array of the given object's own enumerable string-keyed property
 to the enumerable string-keyed property `[key, value]`
 pairs found directly upon `object`. The ordering of the properties is the
 same as that given by looping over the property values of the object manually.
-
-## Polyfill
-
-To add compatible `Object.entries()` support in older environments that do
-not natively support it, you can use any of the following:
-
-- a demonstration implementation of `Object.entries` in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) (if
-  you don't need any support for IE);
-- a polyfill in the [es-shims/Object.entries](https://github.com/es-shims/Object.entries)
-  repositories;
-- or, you can use the simple, ready-to-deploy polyfill listed below:
-
-```js
-if (!Object.entries) {
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
-
-    return resArray;
-  };
-}
-```
-
-For the above polyfill code snippet, if you need support for IE<9, then you will
-also need an `Object.keys()` polyfill (such as the one found on the
-{{jsxref("Object.keys")}} page).
 
 ## Examples
 

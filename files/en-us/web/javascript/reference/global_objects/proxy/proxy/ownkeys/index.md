@@ -19,7 +19,7 @@ The **`handler.ownKeys()`** method is a trap for
 
 ```js
 new Proxy(target, {
-  ownKeys: function(target) {
+  ownKeys(target) {
   }
 });
 ```
@@ -71,7 +71,7 @@ The following code traps {{jsxref("Object.getOwnPropertyNames()")}}.
 
 ```js
 const p = new Proxy({}, {
-  ownKeys: function(target) {
+  ownKeys(target) {
     console.log('called');
     return ['a', 'b', 'c'];
   }
@@ -92,7 +92,7 @@ Object.defineProperty(obj, 'a', {
 );
 
 const p = new Proxy(obj, {
-  ownKeys: function(target) {
+  ownKeys(target) {
     return [123, 12.5, true, false, undefined, null, {}, []];
   }
 });
@@ -114,6 +114,6 @@ console.log(Object.getOwnPropertyNames(p));
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Reflect.ownKeys()")}}

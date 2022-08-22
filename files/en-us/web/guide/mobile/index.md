@@ -45,14 +45,10 @@ Finally, you can take advantage of the new possibilities offered by mobile devic
 To create web sites that will work acceptably across different mobile browsers:
 
 - Try to avoid using browser-specific features, such as vendor-prefixed CSS properties.
-- If you do need to use these features, check whether other browsers implement their own versions of these features, and target them too.
-- For browsers that don't support these features, provide an acceptable fallback.
-
-For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient", "linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
+- For browsers that don't support these features, as long as the content is still usable, do not provide a vendor prefixed fallback. Vendor-prefixed property like `-webkit-border-radius`, harm performance in browsers that are so old they don't support modern standards.
+- To use new features with fallbacks that don't harm performance, style to target current browsers, then use the [`@supports`](/en-US/docs/Web/CSS/@supports) feature query to serve modern CSS to supporting browsers.
 
 See this [list of Gecko-specific properties](/en-US/docs/Web/CSS/Mozilla_Extensions), and this [list of WebKit-specific properties](/en-US/docs/Web/CSS/WebKit_Extensions), and Peter Beverloo's [table of vendor-specific properties](https://peter.sh/experiments/vendor-prefixed-css-property-overview/).
-
-Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](https://sass-lang.com/) and [LESS](https://lesscss.org/) can help you to produce cross-browser code.
 
 ### Take care with user agent sniffing
 
@@ -65,4 +61,4 @@ If you do this, make sure your algorithm is correct, and you aren't serving the 
 Test your web site on multiple browsers. This means testing on multiple platforms — at least iOS and Android.
 
 - test mobile Safari on the iPhone using the [iOS simulator](https://developer.apple.com/devcenter/ios/index.action)
-- test Opera and Firefox using the [Android SDK](https://developer.android.com/sdk/index.html). See these additional instructions for [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
+- test Opera and Firefox using the [Android SDK](https://developer.android.com/studio#command-tools). See these additional instructions for [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).

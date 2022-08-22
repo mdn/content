@@ -74,8 +74,8 @@ Possible values are:
 ## Examples
 
 ```js
-var styleDeclaration = document.styleSheets[0].cssRules[0].style;
-var cssValue = styleDeclaration.getPropertyCSSValue("color");
+const styleDeclaration = document.styleSheets[0].cssRules[0].style;
+const cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssValueType);
 ```
 

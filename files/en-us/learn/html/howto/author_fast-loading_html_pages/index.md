@@ -77,7 +77,7 @@ Inline scripts can be expensive for page loading since the parser must assume th
 
 ### Use modern CSS and valid markup
 
-Use of modern CSS reduces the amount of markup, can reduce the need for (spacer) images, in terms of layout, and can very often replace images of stylized text -- that "cost" much more than the equivalent text-and-CSS.
+Use of modern CSS reduces the amount of markup, can reduce the need for (spacer) images, in terms of layout, and can very often replace images of stylized text — that "cost" much more than the equivalent text-and-CSS.
 
 Using valid markup has other advantages. First, browsers will have no need to perform error-correction when parsing the HTML (this is aside from the philosophical issue of whether to allow format variation in user input and then programmatically "correct" or normalize it; or whether, instead, to enforce a strict, no-tolerance input format).
 
@@ -95,7 +95,7 @@ Rather than deeply nesting tables as in:
 <table>
   <table>
     <table>
-          ...
+          …
     </table>
   </table>
 </table>
@@ -104,9 +104,9 @@ Rather than deeply nesting tables as in:
 use non-nested tables or divs as in
 
 ```html
-<table>...</table>
-<table>...</table>
-<table>...</table>
+<table>…</table>
+<table>…</table>
+<table>…</table>
 ```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
@@ -138,7 +138,7 @@ By default, images are loaded **eagerly**; that is, the image is fetched and ren
 To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
-<img src="./images/footerlogo.jpg" loading="lazy">
+<img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo">
 ```
 
 Note that lazily-loaded images may not be available when the `load` event is fired. You can determine if a given image is loaded by checking to see if the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property is `true`.
@@ -165,11 +165,11 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('head')}}`
 
-    - `{{htmlelement('link')}}` ...
+    - `{{htmlelement('link')}}`
 
       CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.
 
-    - `{{htmlelement('script')}}` ...
+    - `{{htmlelement('script')}}`
 
       JavaScript files for functions **required** during the loading of the page, but not any interaction related JavaScript that can only run after page loads.
 
@@ -177,7 +177,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('body')}}`
 
-    User visible page content in small chunks ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
+    User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
 
     - `{{htmlelement('script')}}`
 

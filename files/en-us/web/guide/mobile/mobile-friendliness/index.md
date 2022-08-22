@@ -13,7 +13,7 @@ Mobile friendliness can mean a multitude of things, depending on who you're talk
 
 _"Make websites that work well on a variety of screen sizes."_
 
-These days, users can access the web on devices in a wide range of form factors, including phones, tablets, and eReaders. Needless to say, a fixed-width, three-column layout filled with complex JavaScript animations and mouse-over effects is not going to look or feel quite right on a phone with a 2-inch-wide screen and a diminutive processor. A slimmed-down, linearized page layout with elements [sized for a touchscreen](https://www.lukew.com/ff/entry.asp?1085 "Touch Target Sizes") would be much more appropriate. That's why this first goal is all about presenting your content in a way that makes life easy for users on mobile device.
+These days, users can access the web on devices in a wide range of form factors, including phones, tablets, and eReaders. Needless to say, a fixed-width, three-column layout filled with complex JavaScript animations and mouse-over effects is not going to look or feel quite right on a phone with a 2-inch-wide screen and a diminutive processor. A slimmed-down, linearized page layout with elements [sized for a touchscreen](https://www.lukew.com/ff/entry.asp?1085) would be much more appropriate. That's why this first goal is all about presenting your content in a way that makes life easy for users on mobile device.
 
 ### Goal #2 (Content)
 
@@ -36,7 +36,7 @@ While not strictly a part of the definition of being mobile friendly, defining w
 The following approaches aim to achieve each of these goals by different means.
 
 - [Separate sites](/en-US/docs/Web/Guide/Mobile/Separate_sites)
-- [Responsive design](/en-US/docs/Web/Progressive_web_apps)
+- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [A hybrid approach](/en-US/docs/Web/Guide/Mobile/A_hybrid_approach)
 
 ## Original document information

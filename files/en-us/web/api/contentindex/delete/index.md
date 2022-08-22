@@ -27,7 +27,7 @@ content.
 ## Syntax
 
 ```js
-ContentIndex.delete(id).then(...);
+ContentIndex.delete(id).then(/* … */);
 ```
 
 ### Parameters

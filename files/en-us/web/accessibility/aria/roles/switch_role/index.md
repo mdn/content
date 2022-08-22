@@ -29,7 +29,7 @@ This example creates a widget and assigns the ARIA `switch` role to it.
 
 ## Description
 
-The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off". Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike a `<checkbox>` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
+The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off". Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike an `<input type="checkbox">` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
 
 Assistive technologies may choose to represent `switch` widgets with a specialized presentation to reflect the notion of an on/off switch.
 
@@ -118,7 +118,7 @@ document.querySelectorAll(".switch").forEach(function(theSwitch) {
 function handleClickEvent(evt) {
   let el = evt.target;
 
-  if (el.getAttribute("aria-checked") == "true") {
+  if (el.getAttribute("aria-checked") === "true") {
       el.setAttribute("aria-checked", "false");
   } else {
       el.setAttribute("aria-checked", "true");
@@ -166,10 +166,7 @@ label.switch {
   line-height: 20px;
   user-select: none;
   vertical-align: middle;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
+  user-select: none;
 }
 ```
 

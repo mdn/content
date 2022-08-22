@@ -51,7 +51,9 @@ This table loads with the last name column sorted in ascending order.
       </th>
     </tr>
   </thead>
-  ... <!-- the <tbody> -->
+  <tbody>
+    …
+  </tbody>
 </table>
 ```
 

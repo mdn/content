@@ -19,32 +19,28 @@ The `dragover` event is fired when an element or text selection is being dragged
 
 The event is fired on the drop target(s).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Reset the current drag operation to "none".</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragover", "ondragover")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('dragover', (event) => {});
+
+ondragover = (event) => { };
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
 
@@ -98,21 +94,21 @@ body {
 ```js
 let dragged = null;
 
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // store a ref. on the dragged elem
   dragged = event.target;
 });
 
-document.addEventListener("dragover", event => {
+document.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();
 });
 
-document.addEventListener("drop", event => {
+document.addEventListener("drop", (event) => {
   // prevent default action (open as link for some elements)
   event.preventDefault();
   // move dragged element to the selected drop target
-  if (event.target.className == "dropzone") {
+  if (event.target.className === "dropzone") {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }

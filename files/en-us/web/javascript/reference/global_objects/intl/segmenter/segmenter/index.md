@@ -24,6 +24,8 @@ new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
 ```
 
+> **Note:** `Intl.Segmenter()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `locales` {{ optional_inline }}
@@ -58,7 +60,7 @@ The following example shows how to count words in a string using the Japanese la
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
 const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
+console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
 // logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

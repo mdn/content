@@ -20,9 +20,9 @@ The `afterscriptexecute` event fires when a static {{HTMLElement("script")}} ele
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('afterscriptexecute', event => { });
+addEventListener('afterscriptexecute', (event) => { });
 
-onafterscriptexecute = event => { };
+onafterscriptexecute = (event) => { };
 ```
 
 ## Event type

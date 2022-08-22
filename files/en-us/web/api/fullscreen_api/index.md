@@ -71,9 +71,9 @@ _The {{DOMxRef("Document")}} interface provides properties that can be used to d
 
 _The Fullscreen API defines two events which can be used to detect when fullscreen mode is turned on and off, as well as when errors occur during the process of changing between fullscreen and windowed modes._
 
-- {{Event("fullscreenchange")}}
+- {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of fullscreen mode.
-- {{Event("fullscreenerror")}}
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of fullscreen mode.
 
 ## Controlling access
@@ -101,7 +101,7 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     toggleFullScreen();
   }
@@ -115,11 +115,9 @@ This code is called by the event handler above when the user hits the <kbd>Enter
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
   }
 }
 ```

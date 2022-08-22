@@ -18,17 +18,31 @@ URI handling function was used in a wrong way.
 ```js
 new URIError()
 new URIError(message)
+new URIError(message, options)
 new URIError(message, fileName)
 new URIError(message, fileName, lineNumber)
+
+URIError()
+URIError(message)
+URIError(message, options)
+URIError(message, fileName)
+URIError(message, fileName, lineNumber)
 ```
+
+> **Note:** `URIError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `URIError` instance.
 
 ### Parameters
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
-- `fileName` {{optional_inline}}
+- `options` {{optional_inline}}
+  - : An object that has the following properties:
+    - `cause` {{optional_inline}}
+      - : A property indicating the specific cause of the error.
+          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception.
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : The line number of the code that caused the exception.
 
 ## Examples

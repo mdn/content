@@ -25,7 +25,7 @@ The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model
 
 - {{domxref('CSSVariableReferenceValue.variable')}}
   - : Returns the custom name passed to the constructor.
-- {{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}
+- {{domxref('CSSVariableReferenceValue.fallback')}} {{ReadOnlyInline}}
   - : Returns the built-in CSS value for the custom name.
 
 ## Methods

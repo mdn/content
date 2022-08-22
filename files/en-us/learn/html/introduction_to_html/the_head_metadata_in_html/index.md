@@ -43,7 +43,7 @@ Let's revisit the simple [HTML document we covered in the previous article](/en-
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
@@ -77,7 +77,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
     1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
-    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *Save Page As...* menu and choose a sensible place to save the file.
+    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *Save Page As…* menu and choose a sensible place to save the file.
 
 2. Now open the file in your browser. You should see something like this:
 
@@ -172,7 +172,7 @@ For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Face
 <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
 <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+and HTML Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
 ```
 

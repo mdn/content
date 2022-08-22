@@ -28,7 +28,7 @@ A boolean.
 ## Examples
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
 

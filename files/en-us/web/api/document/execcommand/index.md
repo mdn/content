@@ -55,7 +55,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point. (Not supported by Internet Explorer.)
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions.See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
@@ -138,7 +138,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `styleWithCSS`
       - : Replaces the `useCSS` command. `true` modifies/generates `style` attributes in markup, false generates presentational elements.
     - `AutoUrlDetect`
-      - : Changes the browser auto-link behavior (Internet Explorer only)
+      - : Changes the browser auto-link behavior (Internet Explorer only).
 
 - `aShowDefaultUI`
   - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.

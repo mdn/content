@@ -8,9 +8,10 @@ tags:
   - Reference
   - identifier
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.identifier
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`identifier`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 
@@ -28,7 +29,7 @@ In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/e
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalWidth);
     }

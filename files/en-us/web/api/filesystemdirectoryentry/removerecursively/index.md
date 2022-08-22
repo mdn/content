@@ -14,7 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}{{SeeCompatTable}}
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
 **`removeRecursively()`** removes
@@ -78,9 +78,9 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
 ## Examples
 
 ```js
-directory.removeRecursively(function() {
+directory.removeRecursively(() => {
   /* The directory was removed successfully */
-}, function() {
+}, () => {
   /* an error occurred while removing the directory */
 });
 ```

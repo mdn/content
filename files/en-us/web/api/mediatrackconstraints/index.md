@@ -100,7 +100,7 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A [`ConstrainULong`](#constrainulong) specifying the sample rate or range of sample rates which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the sample size or range of sample sizes which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.volume", "volume")}}
+- {{domxref("MediaTrackConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A [`ConstrainDouble`](#constraindouble) specifying the volume or range of volumes which are acceptable and/or required.
 
 ### Properties of image tracks

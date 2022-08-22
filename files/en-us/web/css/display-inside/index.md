@@ -46,6 +46,10 @@ Valid `<display-inside>` values:
 
 > **Note:** Browsers that support the two value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`. This will result in expected behavior; for example if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block level box.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 In this example the parent box has been given `display: flow-root` and so establishes a new BFC and contains the floated item.

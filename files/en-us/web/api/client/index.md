@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Client
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -25,11 +24,11 @@ The `Client` interface represents an executable context such as a {{domxref("Wor
 
 ## Properties
 
-- {{domxref("Client.id")}} {{readonlyInline}}
+- {{domxref("Client.id")}} {{ReadOnlyInline}}
   - : The universally unique identifier of the client as a string.
-- {{domxref("Client.type")}} {{readonlyInline}}
+- {{domxref("Client.type")}} {{ReadOnlyInline}}
   - : The client's type as a string. It can be "`window"`, "`worker"`, or "`sharedworker"`.
-- {{domxref("Client.url")}} {{readonlyInline}}
+- {{domxref("Client.url")}} {{ReadOnlyInline}}
   - : The URL of the client as a string.
 
 ## Specifications
