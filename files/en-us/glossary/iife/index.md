@@ -54,7 +54,9 @@ using a function declaration or a function expression.
 An [`async`](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) IIFE allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for-await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) even in older browsers and JavaScript runtimes that have no [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await):
 
 ```js
-const getFileStream = async (url) => { /* implementation */ };
+const getFileStream = async (url) => { 
+  // implementation
+};
 
 (async () => {
   const stream = await getFileStream('https://domain.name/path/file.ext');
