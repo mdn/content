@@ -18,9 +18,10 @@ A function name is an {{Glossary("identifier")}} included as part of a function 
 An **anonymous function** is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:
 
 ```js
-// When created as a function expression
+// Anonymous function created as a function expression
 (function () {});
-// or created as an arrow function
+
+// Anonymous function created as an arrow function
 () => {};
 ```
 
@@ -31,8 +32,10 @@ A **named function** is a function with a function name:
 ```js
 // Function declaration
 function foo() {};
+
 // Named function expression
 (function bar() {});
+
 // Arrow function
 const baz = () => {};
 ```
@@ -73,15 +76,15 @@ const loop2 = (x) => {
 
 An **Immediately Invoked Function Expressions** ({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser's compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function's definition.
 
-```js
+```js example-bad
 // Declared functions can't be called immediately this way
 // Error (https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
-/*
 function foo() {
     console.log('Hello Foo');
 }();
-*/
+```
 
+```js example-good
 // Function expressions, named or anonymous, can be called immediately
 (function foo() {
   console.log("Hello Foo");
