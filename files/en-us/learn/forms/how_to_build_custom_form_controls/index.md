@@ -433,18 +433,8 @@ In the code we are about to build, we will use the standard JavaScript and DOM A
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
-3. [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+3. {{domxref("NodeList.forEach")}}
 4. {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
-
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
-
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-```
-
-If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.
 
 ### Building event callbacks
 
