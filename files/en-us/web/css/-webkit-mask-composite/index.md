@@ -73,7 +73,8 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 ## Formal syntax
 
 ```plain
-"-webkit-mask-composite":"<composite-style>#";
+-webkit-mask-composite =
+ <composite-style>#
 ```
 
 ## Examples

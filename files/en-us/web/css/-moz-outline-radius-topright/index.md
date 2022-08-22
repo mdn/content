@@ -33,7 +33,8 @@ The value of `-moz-outline-radius-topright` is either a CSS [`<length>`](/en-US/
 ## Formal syntax
 
 ```plain
-"-moz-outline-radius-topright":"<outline-radius>";
+-moz-outline-radius-topright =
+ <outline-radius>
 ```
 
 ## Examples

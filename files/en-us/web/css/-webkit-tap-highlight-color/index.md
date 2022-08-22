@@ -36,7 +36,8 @@ A {{Cssxref("&lt;color&gt;")}}.
 ## Formal syntax
 
 ```plain
-"-webkit-tap-highlight-color":"<color>";
+-webkit-tap-highlight-color =
+ <color>
 ```
 
 ## Specifications

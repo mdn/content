@@ -49,7 +49,8 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 ## Formal syntax
 
 ```plain
-"-moz-user-input":"auto | none | enabled | disabled";
+-moz-user-input =
+auto | none | enabled | disabled
 ```
 
 ## Examples

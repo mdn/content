@@ -29,7 +29,8 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 ## Formal syntax
 
 ```plain
-"-webkit-overflow-scrolling":"auto | touch";
+-webkit-overflow-scrolling =
+ auto | touch
 ```
 
 ## Examples

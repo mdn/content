@@ -53,7 +53,8 @@ One or more of the following, in any order:
 ## Formal syntax
 
 ```plain
-"-webkit-border-before":"<'border-width'> || <'border-style'> || <color>";
+-webkit-border-before =
+ <'border-width'> || <'border-style'> || <color>
 ```
 
 ## Examples
