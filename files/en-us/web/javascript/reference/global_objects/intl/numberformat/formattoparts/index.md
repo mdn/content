@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatToParts()`** method
+The **`Intl.NumberFormat.prototype.formatToParts()`** method
 allows locale-aware formatting of strings produced by `NumberFormat`
 formatters.
 

@@ -180,7 +180,6 @@ values.addEventListener('change', (evt) => {
   background-color: #8c8c8c;
   display: flex;
 }
-
 ```
 
 #### Result
@@ -298,7 +297,6 @@ values.addEventListener('change', (evt) => {
 #gridcontainer > div {
   width: 50px;
 }
-
 ```
 
 #### Result

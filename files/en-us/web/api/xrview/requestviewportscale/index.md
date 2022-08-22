@@ -46,12 +46,12 @@ Alternatively, you can use the {{domxref("XRView.recommendedViewportScale")}} pr
 The following example shows how to request and apply a new viewport scale. The call to {{domxref("XRWebGLLayer.getViewport()")}} applies the change and returns the updated viewport.
 
 ```js
-for (let view of pose.views) {
+for (const view of pose.views) {
   if (view.requestViewportScale) {
     view.requestViewportScale(0.8);
     // or use view.requestViewportScale(view.recommendedViewportScale);
   }
-  let viewport = glLayer.getViewport(view);
+  const viewport = glLayer.getViewport(view);
 }
 ```
 

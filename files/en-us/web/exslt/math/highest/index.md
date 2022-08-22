@@ -14,7 +14,7 @@ A node has this maximum value if converting its string value to a number equals 
 
 ## Syntax
 
-```js
+```plain
 math:highest(nodeSet)
 ```
 

@@ -367,7 +367,7 @@ console.log(getX()); // 2
 
 ## Creating closures in loops: A common mistake
 
-Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
+Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
 
 ```html
 <p id="help">Helpful notes will appear here</p>

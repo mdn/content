@@ -14,7 +14,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 exsl:object-type(object)
 ```
 

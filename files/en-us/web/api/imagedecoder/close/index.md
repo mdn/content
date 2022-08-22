@@ -8,9 +8,10 @@ tags:
   - Reference
   - close
   - ImageDecoder
+  - Experimental
 browser-compat: api.ImageDecoder.close
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("ImageDecoder")}} interface ends all pending work and releases system resources.
 

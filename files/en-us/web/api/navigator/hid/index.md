@@ -9,6 +9,7 @@ tags:
   - WebHID API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.Navigator.hid
 ---
 {{APIRef("WebHID API")}}{{SeeCompatTable}}

@@ -59,7 +59,7 @@ multiply(5, 2)  // 10
 multiply(5)     // 5
 ```
 
-With default parameters in ES2015, checks in the function body are no longer necessary.
+With default parameters, checks in the function body are no longer necessary.
 Now, you can assign `1` as the default value for `b` in
 the function head:
 

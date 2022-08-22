@@ -6,13 +6,12 @@ tags:
   - Authentication
   - Configuration
   - Dictionary
-  - Experimental
   - ICE
   - RTCIceServer
   - WebRTC
 browser-compat: api.RTCIceServer
 ---
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) of an {{domxref("RTCPeerConnection")}}, in the `iceServers` array.
 

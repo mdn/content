@@ -24,16 +24,16 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 ## Properties
 
-- {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
-- {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerContainer.ready")}} {{ReadOnlyInline}}
   - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 
 ## Events
 
 - [`controllerchange`](/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
   - : Occurs when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-- [`error`](/en-US/docs/Web/API/ServiceWorkerContainer/error_event)
+- [`error`](/en-US/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired whenever an error occurs in the associated service workers.
 - [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
   - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).

@@ -14,7 +14,7 @@ A node has this minimum value if converting its string value to a number equals 
 
 ## Syntax
 
-```js
+```plain
 math:lowest(nodeSet)
 ```
 

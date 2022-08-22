@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Data Loss
-  - Experimental
   - Frames
   - Media
   - Media Playback Quality

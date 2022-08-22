@@ -7,6 +7,7 @@ tags:
   - InputDeviceCapabilities
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.InputDeviceCapabilities
 ---
 {{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
@@ -29,7 +30,7 @@ myButton.addEventListener('mousedown', (e) => {
 
 ## Interfaces
 
-- {{DOMxRef("InputDeviceCapabilities")}}
+- {{DOMxRef("InputDeviceCapabilities")}} {{Experimental_Inline}}
   - : Provides logical information about an input device.
 
 ## Specifications

@@ -37,13 +37,13 @@ In any programming language, the code needs to make decisions and carry out acti
   </tbody>
 </table>
 
-## You can have it on one condition..!
+## You can have it on one condition!
 
 Human beings (and other animals) make decisions all the time that affect their lives, from small ("should I eat one cookie or two?") to large ("should I stay in my home country and work on my father's farm, or should I move to America and study astrophysics?")
 
 Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)
 
-![](cookie-choice-small.png)
+![A cartoon character resembling a person holding a cookie jar labeled 'Cookies'. There is a question mark above the head of the character. There are two speech bubbles. The left speech bubble has one cookie. The right speech bubble has two cookies. Together it implies the character is trying to decide if it wants to one cookie or two cookies.](cookie-choice-small.png)
 
 ## if...else statements
 
@@ -190,7 +190,8 @@ And, returning to our previous example about the child doing a chore for their p
 let shoppingDone = false;
 let childsAllowance;
 
-if (shoppingDone) { // don't need to explicitly specify '=== true'
+// We don't need to explicitly specify 'shoppingDone === true'
+if (shoppingDone) {
   childsAllowance = 10;
 } else {
   childsAllowance = 5;

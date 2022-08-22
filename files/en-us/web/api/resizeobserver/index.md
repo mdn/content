@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Bounding Box
-  - Experimental
   - Interface
   - Reference
   - Resize Observer API
@@ -62,7 +61,7 @@ slider.addEventListener('input', () => {
 })
 
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       // Firefox implements `contentBoxSize` as a single content rect, rather than an array
       const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;

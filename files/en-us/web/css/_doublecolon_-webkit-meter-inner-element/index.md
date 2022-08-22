@@ -38,10 +38,8 @@ This will only work in WebKit and Blink-based browsers, such as Safari, Chrome, 
 
 ```css
 meter {
-  /* Reset the default appearance */
+  /* Reset the default appearance for -webkit- only */
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 meter::-webkit-meter-inner-element {

@@ -7,7 +7,7 @@ tags:
   - Property
   - RTCDTMFToneChangeEvent
   - Reference
-  - Touch-
+  - Touch
   - WebRTC
   - WebRTC API
   - tone

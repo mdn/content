@@ -73,7 +73,7 @@ const selected = context.querySelectorAll(':scope > div');
 
 document.getElementById('results').innerHTML = Array.prototype.map.call(
   selected,
-  (element) => '#' + element.getAttribute('id'),
+  (element) => `#${element.getAttribute('id')}`,
 ).join(', ');
 ```
 

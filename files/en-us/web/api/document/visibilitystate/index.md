@@ -12,7 +12,7 @@ tags:
   - Web
 browser-compat: api.Document.visibilityState
 ---
-{{ ApiRef("DOM") }}
+{{ApiRef("DOM")}}
 
 The **`Document.visibilityState`**
 read-only property returns the visibility of the {{domxref('document')}}, that is in
@@ -29,7 +29,7 @@ values are:
   - : The page content is not visible to the user. In practice this means that the
     document is either a background tab or part of a minimized window, or the OS screen
     lock is active.
-- `prerender` {{deprecated_inline}}
+- `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The page content is being prerendered and is not visible to the user (considered
     hidden for purposes of
     [`document.hidden`](/en-US/docs/Web/API/Document/hidden)). The

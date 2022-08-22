@@ -40,31 +40,6 @@ const xCoord = 50;
 const yCoord = 100;
 const canvasWidth = 1024;
 
-function getColorIndicesForCoord(x, y, width) {
-  const red = y * (width * 4) + x * 4;
-  return [red, red + 1, red + 2, red + 3];
-}
-
-const colorIndices = getColorIndicesForCoord(xCoord, yCoord, canvasWidth);
-
-const redIndex = colorIndices[0];
-const greenIndex = colorIndices[1];
-const blueIndex = colorIndices[2];
-const alphaIndex = colorIndices[3];
-
-const redForCoord = imageData.data[redIndex];
-const greenForCoord = imageData.data[greenIndex];
-const blueForCoord = imageData.data[blueIndex];
-const alphaForCoord = imageData.data[alphaIndex];
-```
-
-Or, if ES2015 is appropriate:
-
-```js
-const xCoord = 50;
-const yCoord = 100;
-const canvasWidth = 1024;
-
 const getColorIndicesForCoord = (x, y, width) => {
   const red = y * (width * 4) + x * 4;
   return [red, red + 1, red + 2, red + 3];
@@ -89,7 +64,7 @@ To create a new, blank `ImageData` object, you should use the {{domxref("CanvasR
 const myImageData = ctx.createImageData(width, height);
 ```
 
-This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes i.e rgba(0,0,0,0)).
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgba(0,0,0,0)).
 
 You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 

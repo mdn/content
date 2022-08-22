@@ -110,7 +110,7 @@ To get started with writing JavaScript, open the Web Console in multi-line mode,
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
-    alert('Hello ' + yourName);
+    alert(`Hello ${yourName}`);
   }
 
   greetMe('World');

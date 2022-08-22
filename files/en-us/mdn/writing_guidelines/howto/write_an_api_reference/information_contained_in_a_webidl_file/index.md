@@ -297,14 +297,14 @@ _The **`HTMLMediaElement.buffered`** read-only property returns a new \\{{domxre
 
 and
 
-- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
+- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
   - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
 
 In the case of a reference to a collection object (like `HTMLCollection`, `HTMLFormElementsCollection`, or `HTMLOptionsCollection`, always without `[NewObject]`), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a **live** `HTMLCollection` (or `HTMLFormElementsCollections`, or `HTMLOptionsCollection`), both in the interface description and in the subpage.
 
 E.g.
 
-- \\{{domxref("HTMLFormElement.elements")}}\\{{readonlyinline}}
+- \\{{domxref("HTMLFormElement.elements")}}\\{{ReadOnlyInline}}
   - : Returns a live \\{{domxref("HTMLFormControlsCollection")}} containing…
 
 ### Availability in workers
@@ -464,7 +464,7 @@ Such an iterator allows to use the syntax `for (const p in object)` as a shortha
 
 > **Note:** the value pairs to iterate over are _not_ defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)…"_
 >
-> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry "concept-FormData-entry") with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name "concept-FormData-entry-name") and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value "concept-FormData-entry-value"). "_
+> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
 
 ### Set-like methods
 

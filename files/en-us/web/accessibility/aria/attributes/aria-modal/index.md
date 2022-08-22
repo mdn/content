@@ -40,7 +40,6 @@ If a dialog is not modal — there is no inert background and focus isn't confin
 ## Example
 
 ```html
-
 <div id="backdrop" class="no-scroll">
   <div role="alertdialog"
        aria-modal="true"

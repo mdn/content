@@ -28,9 +28,9 @@ If not supplied, data is not modified when piped through the stream.
 
 ## Properties
 
-- {{domxref("TransformStream.readable")}} {{readonlyInline}}
+- {{domxref("TransformStream.readable")}} {{ReadOnlyInline}}
   - : The `readable` end of a `TransformStream`.
-- {{domxref("TransformStream.writable")}} {{readonlyInline}}
+- {{domxref("TransformStream.writable")}} {{ReadOnlyInline}}
   - : The `writable` end of a `TransformStream`.
 
 ## Methods

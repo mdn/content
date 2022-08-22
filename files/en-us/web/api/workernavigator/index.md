@@ -30,9 +30,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
-- {{DOMxRef("WorkerNavigator.language")}} {{readonlyInline}}
+- {{DOMxRef("WorkerNavigator.language")}} {{ReadOnlyInline}}
   - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
-- {{DOMxRef("WorkerNavigator.languages")}} {{readonlyInline}} {{experimental_inline}}
+- {{DOMxRef("WorkerNavigator.languages")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
@@ -44,13 +44,13 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.product")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
-- {{domxref("WorkerNavigator.serial")}} {{readonlyInline}}
+- {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
-- {{domxref("WorkerNavigator.userAgentData")}} {{readonlyInline}}
+- {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 
 ## Methods

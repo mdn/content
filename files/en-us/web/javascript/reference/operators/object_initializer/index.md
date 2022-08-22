@@ -118,14 +118,14 @@ const o = {
 };
 ```
 
-With ECMAScript 2015, there is a shorter notation available to achieve the same:
+There is a shorter notation available to achieve the same:
 
 ```js
 const a = 'foo';
 const b = 42;
 const c = {};
 
-// Shorthand property names (ES2015)
+// Shorthand property names
 const o = { a, b, c };
 
 // In other words,
@@ -253,7 +253,7 @@ const mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-> **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread operator doesn't!
+> **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!
 
 ### Prototype setter
 

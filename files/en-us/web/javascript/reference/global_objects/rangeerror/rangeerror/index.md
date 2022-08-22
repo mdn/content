@@ -20,7 +20,15 @@ new RangeError(message)
 new RangeError(message, options)
 new RangeError(message, fileName)
 new RangeError(message, fileName, lineNumber)
+
+RangeError()
+RangeError(message)
+RangeError(message, options)
+RangeError(message, fileName)
+RangeError(message, fileName, lineNumber)
 ```
+
+> **Note:** `RangeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RangeError` instance.
 
 ### Parameters
 

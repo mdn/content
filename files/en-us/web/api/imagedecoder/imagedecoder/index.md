@@ -7,9 +7,10 @@ tags:
   - Constructor
   - Reference
   - ImageDecoder
+  - Experimental
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} object which unpacks and decodes image data.
 

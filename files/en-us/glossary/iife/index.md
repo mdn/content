@@ -54,7 +54,9 @@ using a function declaration or a function expression.
 An [`async`](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) IIFE allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for-await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) even in older browsers and JavaScript runtimes that have no [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await):
 
 ```js
-const getFileStream = async (url) => { /* implementation */ };
+const getFileStream = async (url) => { 
+  // implementation
+};
 
 (async () => {
   const stream = await getFileStream('https://domain.name/path/file.ext');
@@ -107,7 +109,7 @@ them, we would like them to alert 0 and 1. The following code doesn't work:
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement('button');
-  button.innerText = 'Button ' + i;
+  button.innerText = `Button ${i}`;
   button.onclick = function() {
     console.log(i);
   };
@@ -122,7 +124,7 @@ with the last value 2. To fix this problem before ES6, we could use the IIFE pat
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement('button');
-  button.innerText = 'Button ' + i;
+  button.innerText = `Button ${i}`;
   button.onclick = (function(copyOfI) {
     return () => {
       console.log(copyOfI);
@@ -140,7 +142,7 @@ Using the statement **let**, we could simply do:
 ```js
 for (let i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerText = 'Button ' + i;
+  button.innerText = `Button ${i}`;
   button.onclick = function() {
     console.log(i);
   };

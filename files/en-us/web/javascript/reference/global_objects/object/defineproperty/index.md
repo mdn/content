@@ -71,7 +71,7 @@ A **data descriptor** also has the following optional keys:
 
 - `value`
   - : The value associated with the property. Can be any valid JavaScript value (number,
-    object, function, etc).
+    object, function, etc.).
     **Defaults to {{jsxref("undefined")}}.**
 - `writable`
   - : `true` if the value associated with the property may be changed with an

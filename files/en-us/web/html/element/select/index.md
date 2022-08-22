@@ -53,7 +53,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
-    > **Note:** According to the HTML5 specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
+    > **Note:** According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
 
 ## Usage notes
 
@@ -250,11 +250,7 @@ html body form fieldset#custom div.select[data-multiple] div.header {
 
 html body form fieldset#custom div.select div.header {
   content: '↓';
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0;
   position: relative;
@@ -271,13 +267,11 @@ html body form fieldset#custom div.select div.header::after {
   padding: .5em;
 }
 
-html body form fieldset#custom div.select div.header:hover:after {
+html body form fieldset#custom div.select div.header:hover::after {
   background-color: blue;
 }
 
 .select .header select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font-family: inherit;
   font-size: inherit;
@@ -326,8 +320,6 @@ html body form fieldset#custom div.select[data-open] datalist {
 }
 
 html body form fieldset#custom div.select datalist {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
   border-style: solid;

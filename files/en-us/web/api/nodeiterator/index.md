@@ -26,10 +26,10 @@ const nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 
 _This interface doesn't inherit any property._
 
-- {{domxref("NodeIterator.root")}} {{readonlyInline}}
+- {{domxref("NodeIterator.root")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Node")}} representing the root node as specified when the
     `NodeIterator` was created.
-- {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
+- {{domxref("NodeIterator.whatToShow")}} {{ReadOnlyInline}}
 
   - : Returns an `unsigned long` being a bitmask made of constants
     describing the types of {{domxref("Node")}} that must to be presented.
@@ -54,12 +54,12 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | Shows {{domxref("ProcessingInstruction")}} nodes.                                                                                                                                                                                                                                                                                                                                                                      |
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                                          |
 
-- {{domxref("NodeIterator.filter")}} {{readonlyInline}}
+- {{domxref("NodeIterator.filter")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
-- {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
+- {{domxref("NodeIterator.referenceNode")}} {{ReadOnlyInline}}
   {{experimental_inline() }}
   - : Returns the {{domxref("Node")}} to which the iterator is anchored.
-- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
+- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{ReadOnlyInline}} {{
   experimental_inline() }}
   - : Returns a boolean flag that indicates whether the
     {{domxref("NodeIterator")}} is anchored before, the flag being `true`,

@@ -61,7 +61,7 @@ This page lists a number of impressive web technology demos for you to get inspi
 - [RPG MO](https://data.mo.ee/index2.html)
   - : Isometric MMORPG with similarities to RuneScape Classic and Ultima.
 - [colonist.io](https://colonist.io/)
-  - : HTML5 and canvas implementation of Settlers of Catan.
+  - : HTML and canvas implementation of Settlers of Catan.
 - [Pyramid Solitaire Ancient Egypt](https://www.solitaireparadise.com/games_list/pyramid_solitaire_ancient_egypt.html)
   - : Pyramid solitaire app ported to WebAssembly with Emscripten
 

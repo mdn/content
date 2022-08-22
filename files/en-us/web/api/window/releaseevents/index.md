@@ -7,13 +7,13 @@ tags:
   - DOM
   - DOM_0
   - Method
-  - Non-standard
   - Reference
   - Window
   - releaseEvents
+  - Deprecated
 browser-compat: api.Window.releaseEvents
 ---
-{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
+{{APIRef}}{{Deprecated_Header}}
 
 Releases the window from trapping events of a specific type.
 
@@ -53,7 +53,7 @@ Note that you can pass a list of events to this method using the following synta
 `window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
 See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
-({{deprecated_inline}}).
+({{Deprecated_Inline}}).
 
 ## Specifications
 

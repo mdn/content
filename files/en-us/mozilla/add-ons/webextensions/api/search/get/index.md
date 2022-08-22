@@ -54,7 +54,7 @@ Get all installed search engines:
 ```js
 function retrieved(results) {
   console.log(`There were: ${results.length} search engines retrieved.`);
-  for (let searchEngine of results) {
+  for (const searchEngine of results) {
     console.log(JSON.stringify(searchEngine.name));
   }
 }

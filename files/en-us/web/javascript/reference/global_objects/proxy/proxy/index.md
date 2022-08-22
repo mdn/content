@@ -19,6 +19,8 @@ The **`Proxy()`** constructor is used to create
 new Proxy(target, handler)
 ```
 
+> **Note:** `Proxy()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `target`

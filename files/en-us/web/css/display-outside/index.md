@@ -25,6 +25,10 @@ Valid `<display-outside>` values:
 
 > **Note:** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 In the following example, span elements (normally displayed as inline elements) are set to `display: block` and so break onto new lines and expand to fill their container in the inline dimension.

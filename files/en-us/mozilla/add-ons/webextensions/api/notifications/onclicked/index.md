@@ -55,7 +55,7 @@ In this simple example we add a listener to the {{WebExtAPIRef("notifications.on
 
 ```js
 browser.notifications.onClicked.addListener((notificationId) => {
-  console.log('Notification ' + notificationId + ' was clicked by the user');
+  console.log(`Notification ${notificationId} was clicked by the user`);
 });
 ```
 

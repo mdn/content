@@ -12,7 +12,7 @@ tags:
 ---
 {{ APIRef() }}{{deprecated_header}}{{non-standard_header}}
 
-> **Warning:** Removed in Firefox 50, and never implemented in any other browser. Use the modern standard [HTML5 drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) feature instead.
+> **Warning:** Removed in Firefox 50, and never implemented in any other browser. Use the modern standard [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) feature instead.
 
 ## Summary
 

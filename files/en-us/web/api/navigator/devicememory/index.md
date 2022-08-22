@@ -10,6 +10,7 @@ tags:
   - Reference
   - deviceMemory
   - memory
+  - Experimental
 browser-compat: api.Navigator.deviceMemory
 ---
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}

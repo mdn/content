@@ -6,7 +6,6 @@ tags:
   - API
   - Animation
   - DOM
-  - Experimental
   - Method
   - Reference
   - Window

@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionAlternative/confidence
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionAlternative
@@ -14,7 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionAlternative.confidence
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
 The **`confidence`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns a numeric estimate of how

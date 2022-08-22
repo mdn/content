@@ -24,7 +24,7 @@ valueOf()
 
 ### Return value
 
-The primitive value of the given {{jsxref("Boolean")}} object
+The primitive value of the given {{jsxref("Boolean")}} object.
 
 ## Description
 

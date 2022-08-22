@@ -15,7 +15,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ## Active locales
 
-> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ### Brazilian Portuguese (pt-BR)
 
@@ -30,7 +30,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### French (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Current contributors: [cw118](https://github.com/cw118), [Jb Audras](https://github.com/audrasjb), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Current contributors: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (ja)
 

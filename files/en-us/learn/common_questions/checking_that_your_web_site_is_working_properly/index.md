@@ -43,7 +43,7 @@ Let's see how to diagnose and solve those problems.
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 
@@ -127,7 +127,7 @@ Someone (possibly you) added a script to the page and made a mistake. This will 
 
 Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the page:
 
-![A Javascript error is shown in the Console](js-error.png)
+![A JavaScript error is shown in the Console](js-error.png)
 
 In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series](/en-US/docs/Learn/JavaScript) of articles).
 

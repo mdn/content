@@ -31,9 +31,9 @@ A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
   - : The new URL to which the window is navigating.
-- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated.
 
 ## Event handler aliases

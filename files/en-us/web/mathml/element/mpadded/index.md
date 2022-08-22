@@ -30,7 +30,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ### Pseudo-units
 
 It is possible to use the keywords `"depth`", `"height"`, and `"width"` as a pseudo-unit for the attributes `depth`, `height`, `lspace`, `voffset`, and `width`. They represent each length of the same-named dimension.
-Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` was allowed, which is no longer present in the MathML3 Recommendation and has been removed now.
 
 ## Examples
 

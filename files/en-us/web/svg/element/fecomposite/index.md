@@ -156,7 +156,6 @@ This example defines filters for each of the supported operations (`over`, `atop
 ### SVG
 
 ```html
-
 <svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="imageOver">

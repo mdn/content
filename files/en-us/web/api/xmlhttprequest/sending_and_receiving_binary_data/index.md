@@ -21,7 +21,7 @@ req.onload = (event) => {
   const arrayBuffer = req.response; // Note: not req.responseText
   if (arrayBuffer) {
     const byteArray = new Uint8Array(arrayBuffer);
-    for (let i = 0; i < byteArray.byteLength; i++) {
+    byteArray.forEach((element, index)) => {
       // do something with each byte in the array
     }
   }
@@ -83,7 +83,7 @@ The following example creates a text file on-the-fly and uses the `POST` method 
 const req = new XMLHttpRequest();
 req.open("POST", url, true);
 req.onload = (event) => {
-  // Uploaded.
+  // Uploaded
 };
 
 const blob = new Blob(['abc123'], { type: 'text/plain' });
@@ -96,17 +96,12 @@ req.send(blob);
 You can send JavaScript typed arrays as binary data as well.
 
 ```js
-const array = new ArrayBuffer(512);
-const longInt8View = new Uint8Array(array);
-
-// generate some data
-for (let i=0; i< longInt8View.length; i++) {
-  longInt8View[i] = i % 256;
-}
+// Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
+const array = new Uint8Array(512).map((v, i) => i);
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);
-xhr.send(myArray);
+xhr.send(array);
 ```
 
 This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.

@@ -39,6 +39,10 @@ The `<filter-function>` data type is specified using one of the filter functions
 - {{cssxref("filter-function/sepia", "sepia()")}}
   - : Converts the image to sepia.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Filter function comparison

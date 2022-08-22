@@ -28,7 +28,7 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("SharedWorker.port")}} {{readonlyInline}}
+- {{domxref("SharedWorker.port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.
 
 ## Events

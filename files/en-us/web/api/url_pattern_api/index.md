@@ -9,10 +9,10 @@ tags:
   - URLPattern
   - URL Pattern API
   - Web
+  - Experimental
 browser-compat: api.URLPattern
 ---
-
-{{DefaultAPISidebar("URL Pattern API")}}
+{{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}}
 
 The URL Pattern API defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL
@@ -40,7 +40,7 @@ section below.
 
 The URL Pattern API only has a single related interface:
 
-- {{domxref("URLPattern")}}
+- {{domxref("URLPattern")}} {{Experimental_Inline}}
 
 ## Pattern syntax
 

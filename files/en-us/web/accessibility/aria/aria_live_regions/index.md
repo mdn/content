@@ -178,7 +178,7 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 function updateClock() {
   const now = new Date();
   document.getElementById('clock-hours').innerHTML = now.getHours();
-  document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
+  document.getElementById('clock-mins').innerHTML = (`0${now.getMinutes()}`).substr(-2);
 }
 
 /* first run */
@@ -229,7 +229,7 @@ function change(event) {
 };
 ```
 
-Without `aria-atomic="true"` the screenreader announces only the changed value of year. With `aria-atomic="true"`, the screenreader announces "The set year is: _changed value_"
+Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"
 
 ### Basic example: `aria-relevant`
 

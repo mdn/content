@@ -54,18 +54,17 @@ Get the last focused window, and log the tabs it contains. Note that you'll need
 
 ```js
 function logTabs(windowInfo) {
-  for (tabInfo of windowInfo.tabs) {
+  for (const tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.getLastFocused({populate: true});
-  getting.then(logTabs, onError);
+  browser.windows.getLastFocused({ populate: true }).then(logTabs, onError);
 });
 ```
 

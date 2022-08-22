@@ -62,7 +62,7 @@ all the objects in an array called `objects` within it.
 
 ```js
 xrReferenceSpace.addEventListener("reset", (event) => {
-  for (let obj of scene.objects) {
+  for (const obj of scene.objects) {
     mat4.multiply(obj.transform, obj.transform, event.transform);
   }
 });

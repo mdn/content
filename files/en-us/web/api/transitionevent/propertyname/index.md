@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - Property
   - Reference
   - TransitionEvent

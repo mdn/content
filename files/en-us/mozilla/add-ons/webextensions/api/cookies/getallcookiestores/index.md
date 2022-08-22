@@ -43,13 +43,12 @@ In the following snippet, the `getAllCookieStores()` method is used to retrieve 
 
 ```js
 function logStores(cookieStores) {
-  for (let store of cookieStores) {
+  for (const store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
-let getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
+browser.cookies.getAllCookieStores().then(logStores);
 ```
 
 Each member of the `cookieStores` array is a {{WebExtAPIRef("cookies.CookieStore")}} object.

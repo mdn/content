@@ -11,8 +11,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.password
 ---
-
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`password`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the password part

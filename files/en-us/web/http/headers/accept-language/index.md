@@ -44,7 +44,7 @@ The server possibly can send back a {{HTTPStatus("406")}} (Not Acceptable) error
 
 ## Syntax
 
-```html
+```http
 Accept-Language: <language>
 Accept-Language: *
 

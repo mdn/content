@@ -53,9 +53,9 @@ let urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
-    console.log(urlToRemove  + " was removed");
+    console.log(`${urlToRemove} was removed`);
   } else {
-    console.log(urlToRemove  + " was not removed");
+    console.log(`${urlToRemove} was not removed`);
   }
 }
 
@@ -78,7 +78,7 @@ Remove the last-visited page from history, with a listener to {{WebExtAPIRef("hi
 ```js
 function onRemoved(removeInfo) {
   if (removeInfo.urls.length) {
-    console.log("Removed: " + removeInfo.urls[0]);
+    console.log(`Removed: ${removeInfo.urls[0]}`);
   }
 }
 
@@ -86,7 +86,7 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 
 function onGot(results) {
   if (results.length) {
-    console.log("Removing: " + results[0].url);
+    console.log(`Removing: ${results[0].url}`);
     browser.history.deleteUrl({url: results[0].url});
   }
 }

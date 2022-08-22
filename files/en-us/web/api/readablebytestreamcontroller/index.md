@@ -40,9 +40,9 @@ None. `ReadableByteStreamController` instances are automatically created if an `
 
 ## Properties
 
-- {{domxref("ReadableByteStreamController.byobRequest")}} {{readonlyInline}}
+- {{domxref("ReadableByteStreamController.byobRequest")}} {{ReadOnlyInline}}
   - : Returns the current BYOB pull request, or `null` if there no outstanding request.
-- {{domxref("ReadableByteStreamController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableByteStreamController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
 ## Methods

@@ -264,8 +264,6 @@ function log(msg) {
   const container = document.getElementById('log');
   container.textContent = `${msg} \n${container.textContent}`;
 }
-
-
 ```
 
 ### Result

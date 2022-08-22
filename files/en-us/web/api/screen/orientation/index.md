@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
-  - Experimental
   - Property
   - Read-only
   - Screen Orientation

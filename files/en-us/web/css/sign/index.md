@@ -1,6 +1,6 @@
 ---
 title: sign()
-slug: Web/CSS/sign_function
+slug: Web/CSS/sign
 tags:
   - CSS
   - CSS Function
