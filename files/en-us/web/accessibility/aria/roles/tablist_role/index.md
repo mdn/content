@@ -87,7 +87,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 <!--
 ### Required JavaScript features
 
-## Examples
+
 
 ## Accessibility Concerns
 
@@ -95,6 +95,9 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 
 ### Prefer HTML
 -->
+## Examples
+
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
 
 ## Specifications
 
