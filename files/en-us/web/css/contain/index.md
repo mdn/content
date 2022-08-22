@@ -90,9 +90,9 @@ The `contain` property is specified as either one of the following:
 
 ## Examples
 
-### Simple layout
+### Setting up a simple layout without containment
 
-The markup below consists of a number of articles, each with content:
+The markup below consists of two articles, each with content:
 
 ```html
 <h1>My blog</h1>
@@ -122,11 +122,11 @@ article {
 
 {{EmbedGHLiveSample("css-examples/contain/simple-layout.html", '100%', 400)}}
 
-You can immediately see an issue — no effort is made to clear the floating beyond the bottom of the article.
+There is an issue because the floating element is laid out beyond the bottom of the article.
 
-### Float interference
+### Adding an additional floating element
 
-If we were to insert another image at the bottom of the first article, a large portion of the DOM tree may be re-laid out or repainted, and this would interfere further with the layout of the second article:
+To the previous example, if we insert another image at the bottom of the first article, a large portion of the DOM tree is re-laid out or repainted, and this interferes with the layout of the second article:
 
 ```html
 <h1>My blog</h1>
@@ -153,13 +153,13 @@ article {
 }
 ```
 
-As you can see, because of the way floats work, the first image ends up inside the area of the second article:
+Because of the way floats work, the first image ends up inside the area of the second article:
 
 {{EmbedGHLiveSample("css-examples/contain/float-interference.html", '100%', 400)}}
 
-### Fixing with contain
+### Fixing the layout with contain
 
-If we give each `article` the `contain` property with a value of `content`, when new elements are inserted the browser understands it only needs to recalculate the containing element's subtree, and not anything outside it:
+If we give each `article` the `contain` property with a value of `content`, when new elements are inserted, the browser only needs to recalculate the containing element's subtree, and not anything outside it:
 
 ```html hidden
 <h1>My blog</h1>
@@ -191,13 +191,13 @@ This also means that the first image no longer floats down to the second article
 
 {{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}
 
-### Style containment
+### Using the style value for containment
 
 Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
 For CSS counters, the `counter-increment` and `counter-set` properties are scoped to the element as if it's at the root of the document.
-The example below takes a look at how counters work when style containment is applied.
+The example below takes a look at how counters work when style containment is applied:
 
-```html hidden
+```html
 <h1>Introduction</h1>
 <h1>Background</h1>
 <div class="contain">
@@ -221,11 +221,41 @@ h1::before {
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/contain/contain-style.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/contain/contain-style-counter.html", '100%', 500)}}
 
 Without containment, the counter would increment from 1 to 4 for each heading.
-Applying style containment causes the `counter-increment` to be scoped to the element and the counter begins again at 1.
-CSS quotes are affected in much the same way as counters, except that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element.
+Style containment causes the `counter-increment` to be scoped to the element's subtree and the counter begins again at 1.
+CSS quotes are affected similarly in that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element:
+
+```html
+<span class="open-quote">
+   outer
+  <span style="contain: style;">
+    <span class="open-quote">
+    inner
+    </span>
+  </span>
+</span>
+<span class="close-quote">close</span>
+
+```
+
+```css
+body {
+  quotes: "«" "»" "‹" "›"
+}
+.open-quote:before {
+  content: open-quote;
+}
+
+.close-quote:after {
+  content: close-quote;
+}
+```
+
+In this example, the close quote ignores the inner span because it has style containment applied:
+
+{{EmbedGHLiveSample("css-examples/contain/contain-style-quotes.html", '100%', 500)}}
 
 ## Specifications
 
