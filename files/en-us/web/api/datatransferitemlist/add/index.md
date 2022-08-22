@@ -81,7 +81,7 @@ div {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 function dragstart_handler(ev) {
