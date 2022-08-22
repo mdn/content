@@ -48,7 +48,7 @@ Invoking a template is done with a _macro_, which can be used anywhere in any pa
 
 The output of the macro would look like this:
 
-```html
+```
 Hello #0
 Hello #1
 Hello #2
@@ -269,7 +269,7 @@ The result of 2 + 2 = <%= math_lib.add(2, 2) %>
 
 And, the output of this template would be:
 
-```html
+```
 The result of 2 + 2 = 4
 ```
 
