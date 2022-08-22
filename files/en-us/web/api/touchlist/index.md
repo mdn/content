@@ -1,6 +1,7 @@
 ---
 title: TouchList
 slug: Web/API/TouchList
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -18,7 +19,7 @@ The **`TouchList`** interface represents a list of contact points on a touch sur
 
 ## Properties
 
-- {{domxref("TouchList.length")}} {{readonlyInline}}
+- {{domxref("TouchList.length")}} {{ReadOnlyInline}}
   - : The number of {{domxref("Touch")}} objects in the `TouchList`.
 
 ## Methods

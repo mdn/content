@@ -114,7 +114,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 ## Using d as a CSS property
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
-The property takes either [path()](/en-US/docs/Web/CSS/path()) or `none`.
+The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -431,7 +431,7 @@ html,body,svg { height:100% }
 
 ### Cubic Bézier Curve
 
-*Cubic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using four points:
+*Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using four points:
 
 - starting point (current point)
   - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
@@ -555,8 +555,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         >. The <em>end control point</em> is specified by
         <code><var>x2</var></code
         >,<code><var>y2</var></code
-        >. The <em>start control point</em> is a reflection of the
-        <em>end control point</em> of the previous curve command. If the
+        >. The <em>start control point</em> is the reflection of the
+        <em>end control point</em> of the previous curve command about the <em>current point</em>. If the
         previous command wasn't a cubic Bézier curve, the
         <em>start control point</em> is the same as the curve starting point
         (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
@@ -581,8 +581,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         <em>end control point</em> is the <em>current point</em> (starting point
         of the curve) shifted by <code><var>dx2</var></code> along the x-axis
         and <code><var>dy2</var></code> along the y-axis. The
-        <em>start control point</em> is a reflection of the
-        <em>end control point</em> of the previous curve command. If the
+        <em>start control point</em> is the reflection of the
+        <em>end control point</em> of the previous curve command about the <em>current point</em>. If the
         previous command wasn't a cubic Bézier curve, the
         <em>start control point</em> is the same as the curve starting point
         (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
@@ -644,7 +644,7 @@ html,body,svg { height:100% }
 
 ### Quadratic Bézier Curve
 
-*Quadratic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using three points:
+*Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using three points:
 
 - starting point (current point)
   - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
@@ -747,8 +747,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           <em>current point</em> to the <em>end point</em> specified by
           <code><var>x</var></code
           >,<code><var>y</var></code
-          >. The <em>control point</em> is a reflection of the
-          <em>control point</em> of the previous curve command. If the previous
+          >. The <em>control point</em> is the reflection of the
+          <em>control point</em> of the previous curve command about the <em>current point</em>. If the previous
           command wasn't a quadratic Bézier curve, the <em>control point</em> is
           the same as the curve starting point (<em>current point</em>). Any
           subsequent coordinate pair(s) are interpreted as parameter(s) for
@@ -779,8 +779,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           <em>current point</em> to the <em>end point</em>, which is the
           <em>current point</em> shifted by <code><var>dx</var></code> along the
           x-axis and <code><var>dy</var></code> along the y-axis. The
-          <em>control point</em> is a reflection of the
-          <em>control point</em> of the previous curve command. If the previous
+          <em>control point</em> is the reflection of the
+          <em>control point</em> of the previous curve command about the <em>current point</em>. If the previous
           command wasn't a quadratic Bézier curve, the <em>control point</em> is
           the same as the curve starting point (<em>current point</em>). Any
           subsequent coordinate pair(s) are interpreted as parameter(s) for
@@ -1056,38 +1056,7 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "paths.html#DProperty", "d")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;path></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;glyph></code> and <code>&#x3C;missing-glyph></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;path></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

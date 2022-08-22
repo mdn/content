@@ -1,6 +1,7 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Adaptive Design
@@ -60,20 +61,20 @@ should be added to allow for a sharper image.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 // Set display size (css pixels).
-var size = 200;
-canvas.style.width = size + "px";
-canvas.style.height = size + "px";
+const size = 200;
+canvas.style.width = `${size}px`;
+canvas.style.height = `${size}px`;
 
 // Set actual size in memory (scaled to account for extra pixel density).
-var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
+const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
-// Normalize coordinate system to use css pixels.
+// Normalize coordinate system to use CSS pixels.
 ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
@@ -83,10 +84,10 @@ ctx.font = '18px Arial';
 ctx.textAlign = 'center';
 ctx.textBaseline = 'middle';
 
-var x = size / 2;
-var y = size / 2;
+const x = size / 2;
+const y = size / 2;
 
-var textString = "I love MDN";
+const textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
@@ -117,9 +118,9 @@ updatePixelRatio();
 ```
 
 The string `mqString` is set up to be the media query itself. The media
-query, which begins as `(resolution: 1dppx)` (for standard  displays) or
+query, which begins as `(resolution: 1dppx)` (for standard displays) or
 `(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
-current display resolution matches a specific  number of device dots per
+current display resolution matches a specific number of device dots per
 `px`.
 
 The `updatePixelRatio()` function fetches the current value of

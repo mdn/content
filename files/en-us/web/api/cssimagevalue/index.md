@@ -1,6 +1,7 @@
 ---
 title: CSSImageValue
 slug: Web/API/CSSImageValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -15,7 +16,7 @@ browser-compat: api.CSSImageValue
 
 The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take an image, for example {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, or {{cssxref('border-image-source')}}.
 
-The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves a URL, such as [`url()`](</en-US/docs/Web/CSS/url()>) or [`image()`](</en-US/docs/Web/CSS/image()>), but not [`linear-gradient()`](</en-US/docs/Web/CSS/linear-gradient()>) or [`element()`](</en-US/docs/Web/CSS/element()>).
+The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves a URL, such as [`url()`](</en-US/docs/Web/CSS/url>) or [`image()`](</en-US/docs/Web/CSS/image>), but not [`linear-gradient()`](</en-US/docs/Web/CSS/gradient/linear-gradient>) or [`element()`](</en-US/docs/Web/CSS/element>).
 
 {{InheritanceDiagram}}
 
@@ -49,14 +50,14 @@ We get the element's style map. We then get() the background-image from the styl
 
 ```js
 // get the element
-const button = document.querySelector( 'button' );
+const button = document.querySelector('button');
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = button.computedStyleMap();
 
 // Return the CSSImageValue Example
-console.log( allComputedStyles.get('background-image') );
-console.log( allComputedStyles.get('background-image').toString() );
+console.log(allComputedStyles.get('background-image'));
+console.log(allComputedStyles.get('background-image').toString());
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

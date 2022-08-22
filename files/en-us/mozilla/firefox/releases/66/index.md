@@ -15,8 +15,8 @@ This article provides information about the changes in Firefox 66 that will affe
 
 ### Developer tools
 
-- JavaScript getters can now be executed from the auto-completion popup in the [Web Console](/en-US/docs/Tools/Web_Console) ({{bug(1499289)}}).
-- The Window methods {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} now work again in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), after a period of being broken ({{bug(1273997)}}).
+- JavaScript getters can now be executed from the auto-completion popup in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) ({{bug(1499289)}}).
+- The Window methods {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} now work again in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), after a period of being broken ({{bug(1273997)}}).
 - You can copy the output of the console to the clipboard by right-clicking and selecting "**Export visible messages to clipboard**" from the context menu.
 
 ### HTML
@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 66 that will affe
 
 #### Removals
 
-- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use  {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
 
 ### CSS
 
@@ -65,7 +65,7 @@ _No additions._
 
 #### Removals
 
-- We removed support for the [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute ({{Bug(903372)}}).
+- We removed support for the `xml:base` attribute ({{Bug(903372)}}).
 
 ### JavaScript
 
@@ -86,7 +86,7 @@ No changes.
 
 - The {{domxref("InputEvent.inputType")}} property has been implemented ({{bug(1447239)}}).
 - The {{domxref("Window.event")}} and {{domxref("Event.returnValue")}} properties — originally proprietary IE features, then also supported across other browsers for compatibility purposes — have been re-introduced in Firefox 66, after first being added in versions 63 and 64 respectively but then removed again due to compatibility issues.
-- From 66 onwards, when the {{domxref("KeyboardEvent.keyCode")}} property of the {{event("keypress")}} event object is 0, the value will be the same as {{domxref("KeyboardEvent.charCode")}}. Conversely, when `charCode` is 0, it will be the same as `keyCode`. This mirroring behavior matches other browsers and is expected to solve most associated compatibility issues, however user agent sniffing might cause further issues in some JavaScript libraries. Note that in spec terms, we've switched from the _split model_ to the _conflated model_ (see [How to determine keyCode for keypress events](https://w3c.github.io/uievents/#determine-keypress-keyCode) in the UI Event spec).
+- From 66 onwards, when the {{domxref("KeyboardEvent.keyCode")}} property of the {{domxref("Element/keypress_event", "keypress")}} event object is 0, the value will be the same as {{domxref("KeyboardEvent.charCode")}}. Conversely, when `charCode` is 0, it will be the same as `keyCode`. This mirroring behavior matches other browsers and is expected to solve most associated compatibility issues, however user agent sniffing might cause further issues in some JavaScript libraries. Note that in spec terms, we've switched from the _split model_ to the _conflated model_ (see [How to determine keyCode for keypress events](https://w3c.github.io/uievents/#determine-keypress-keyCode) in the UI Event spec).
 
 #### Media, Web Audio, and WebRTC
 

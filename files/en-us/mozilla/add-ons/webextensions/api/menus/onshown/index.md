@@ -32,12 +32,12 @@ If the `onShown` handler calls any asynchronous APIs, then it's possible that th
 let lastMenuInstanceId = 0;
 let nextMenuInstanceId = 1;
 
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
   // Call an async function
-  await .... ;
+  await /* the function to call */ ;
 
   // After completing the async operation, check whether the menu is still shown.
   if (menuInstanceId !== lastMenuInstanceId) {
@@ -46,7 +46,7 @@ browser.menus.onShown.addListener(async function(info, tab) {
   // Now use menus.create/update + menus.refresh.
 });
 
-browser.menus.onHidden.addListener(function() {
+browser.menus.onHidden.addListener(() => {
   lastMenuInstanceId = 0;
 });
 ```
@@ -54,8 +54,8 @@ browser.menus.onHidden.addListener(function() {
 Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
-  browser.menus.update(menuId, ...);
+browser.menus.onShown.addListener(async (info, tab) => {
+  browser.menus.update(menuId /*, …*/);
    // Note: Not waiting for returned promise.
   browser.menus.refresh();
 });
@@ -64,11 +64,11 @@ browser.menus.onShown.addListener(async function(info, tab) {
 However, if you call these APIs asynchronously, then you do have to perform the check:
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
-  await browser.menus.update(menuId, ...);
+  await browser.menus.update(menuId /*, …*/);
   // must now perform the check
   if (menuInstanceId !== lastMenuInstanceId) {
     return;
@@ -120,10 +120,6 @@ Events have three functions:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
@@ -136,7 +132,7 @@ function updateMenuItem(linkHostname) {
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }
@@ -147,3 +143,7 @@ browser.menus.onShown.addListener(info => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

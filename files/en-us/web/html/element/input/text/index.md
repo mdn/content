@@ -12,7 +12,7 @@ tags:
   - Text
   - text entry
   - text input
-browser-compat: html.elements.input.input-text
+browser-compat: html.elements.input.type_text
 ---
 {{HTMLRef("Input_types")}}
 
@@ -25,7 +25,7 @@ browser-compat: html.elements.input.input-text
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the text contained in
+        A string representing the text contained in
         the text field.
       </td>
     </tr>
@@ -72,7 +72,7 @@ browser-compat: html.elements.input.input-text
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
+The {{htmlattrxref("value", "input")}} attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
 
 ```js
 let theText = myTextInput.value;
@@ -160,11 +160,9 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 
 ### `mozactionhint`
 
-A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
+A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-> **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
-
-Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
+This attribute has been deprecated: use the {{htmlattrxref("enterkeyhint")}} global attribute instead.
 
 ## Using text inputs
 
@@ -253,14 +251,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -292,14 +291,14 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -339,14 +338,14 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -395,15 +394,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

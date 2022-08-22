@@ -53,11 +53,11 @@ A tilemap can either fit into the visible screen area screen or be larger. In th
 Rendering static tilemaps is easy, and can be done with a nested loop iterating over columns and rows. A high-level algorithm could be:
 
 ```js
-for (var column = 0; column < map.columns; column++) {
-  for (var row = 0; row < map.rows; row++) {
-    var tile = map.getTile(column, row);
-    var x = column * map.tileSize;
-    var y = row * map.tileSize;
+for (let column = 0; column < map.columns; column++) {
+  for (let row = 0; row < map.rows; row++) {
+    const tile = map.getTile(column, row);
+    const x = column * map.tileSize;
+    const y = row * map.tileSize;
     drawTile(tile, x, y);
   }
 }
@@ -101,7 +101,7 @@ If characters or other game sprites are drawn in the middle of the layer stack, 
 
 The following screenshot shows an example of both points: a character appearing _behind_ a tile (the knight appearing behind the top of a tree) and a tile (the bush) being rendered over different terrain types.
 
-![](screen_shot_2015-10-06_at_15.56.05.png)
+![A grid of layered background terrains. A bush tile is rendered at the top, over a large grass terrain, and again over a layered rectangular terrain with brown sand at the bottom. A tree tile is rendered over the grass terrain at the bottom left and again at the bottom right. A knight tile appears behind the tree tile that is rendered at the bottom left.](screen_shot_2015-10-06_at_15.56.05.png)
 
 ### The logic grid
 
@@ -113,7 +113,7 @@ Since tilemaps are an actual grid of visual tiles, it is common to create a mapp
 
 Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy, or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_, or _Final Fantasy Tactics_. The below image shows an example of an atlas for an isometric tileset.
 
-![](iso_tiles.png)
+![A 3x4 map of variously colored tiles in isometric projection](iso_tiles.png)
 
 ## Performance
 

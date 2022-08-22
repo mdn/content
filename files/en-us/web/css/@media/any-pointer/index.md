@@ -48,8 +48,6 @@ input[type="checkbox"]:checked {
 
 @media (any-pointer: fine) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
@@ -59,8 +57,6 @@ input[type="checkbox"]:checked {
 
 @media (any-pointer: coarse) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     width: 30px;
     height: 30px;

@@ -19,7 +19,7 @@ The following example shows an HTML document and corresponding "XHTML" document,
 Content-Type: text/html
 
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en-US">
   <head>
     <meta charset=utf-8>
     <title>HTML</title>
@@ -36,7 +36,7 @@ Content-Type: text/html
 Content-Type: application/xhtml+xml
 
 <?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
   <head>
     <title>XHTML</title>
   </head>
@@ -49,7 +49,7 @@ Content-Type: application/xhtml+xml
 In practice, very few "XHTML" documents are served over the web with a `Content-Type: application/xhtml+xml` header. Instead, even though the documents are written to conform to XML syntax rules, they are served with a `Content-Type: text/html` header — so browsers parse those documents using HTML parsers rather than XML parsers, which can cause a variety of sometimes-very-surprising problems. The problems are described in more details in the following articles:
 
 - [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) by David Hammond
-- [Sending XHTML as text/html Considered Harmful](http://www.hixie.ch/advocacy/xhtml) by Ian Hickson
-- [XHTML's Dirty Little Secret](http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) by Mark Pilgrim
-- [XHTML - What's the Point?](http://hsivonen.iki.fi/xhtml-the-point/) by Henri Sivonen
-- [XHTML is not for Beginners](http://lachy.id.au/log/2005/12/xhtml-beginners) by Lachlan Hunt
+- [Sending XHTML as text/html Considered Harmful](https://www.hixie.ch/advocacy/xhtml) by Ian Hickson
+- [XHTML's Dirty Little Secret](https://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) by Mark Pilgrim
+- [XHTML - What's the Point?](https://hsivonen.fi/xhtml-the-point/) by Henri Sivonen
+- [XHTML is not for Beginners](https://lachy.id.au/log/2005/12/xhtml-beginners) by Lachlan Hunt

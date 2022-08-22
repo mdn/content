@@ -42,10 +42,10 @@ expression.
 The following example displays the string value of a {{jsxref("RegExp")}} object:
 
 ```js
-var myExp = new RegExp('a+b+c');
+const myExp = new RegExp('a+b+c');
 console.log(myExp.toString());  // logs '/a+b+c/'
 
-var foo = new RegExp('bar', 'g');
+const foo = new RegExp('bar', 'g');
 console.log(foo.toString());    // logs '/bar/g'
 ```
 

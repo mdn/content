@@ -1,6 +1,7 @@
 ---
 title: XPathException
 slug: Web/API/XPathException
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -16,7 +17,7 @@ In the [DOM XPath API](/en-US/docs/Web/XPath) the **`XPathException`** interface
 
 ## Properties
 
-- {{domxref("XPathException.code")}} {{readOnlyInline}}
+- {{domxref("XPathException.code")}} {{ReadOnlyInline}}
   - : Returns a `short` that contains one of the [error code constants](#error_codes).
 
 ## Constants

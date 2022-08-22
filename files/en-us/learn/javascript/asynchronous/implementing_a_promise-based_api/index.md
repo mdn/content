@@ -20,7 +20,7 @@ In the last article we discussed how to use APIs that return promises. In this a
     </tr>
     <tr>
       <th scope="row">Objective:</th>
-      <td>To understand how implement promise-based APIs.</td>
+      <td>To understand how to implement promise-based APIs.</td>
     </tr>
   </tbody>
 </table>
@@ -53,7 +53,7 @@ const output = document.querySelector('#output');
 const button = document.querySelector('#set-alarm');
 
 function setAlarm() {
-  window.setTimeout(() => {
+  setTimeout(() => {
     output.textContent = 'Wake up!';
   }, 1000);
 }
@@ -79,7 +79,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -90,7 +90,7 @@ This function creates and returns a new `Promise`. Inside the executor for the p
 
 - check that `delay` is not negative, and throw an error if it is.
 
-- call `window.setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
+- call `setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
 
 ## Using the alarm() API
 
@@ -132,7 +132,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -140,8 +140,8 @@ function alarm(person, delay) {
 
 button.addEventListener('click', () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => output.textContent = message)
+    .catch((error) => output.textContent = `Couldn't set alarm: ${error}`);
 });
 ```
 
@@ -189,7 +189,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -201,7 +201,7 @@ button.addEventListener('click', async () => {
     output.textContent = message;
   }
   catch (error) {
-    output.textContent = `Couldn't set alarm: ${error}`;  
+    output.textContent = `Couldn't set alarm: ${error}`;
   }
 });
 ```

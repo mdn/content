@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getTransceivers()
 slug: Web/API/RTCPeerConnection/getTransceivers
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -24,7 +25,7 @@ connection.
 ## Syntax
 
 ```js
-transceiverList = rtcPeerConnection.getTransceivers();
+getTransceivers()
 ```
 
 ### Parameters
@@ -37,13 +38,13 @@ An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transc
 handling sending and receiving all media on the `RTCPeerConnection`. The list
 is in the order in which the transceivers were added to the connection.
 
-## Example
+## Examples
 
 The following snippet of code stops all transceivers associated with an
 `RTCPeerConnection`.
 
 ```js
-pc.getTransceivers().forEach(transceiver => {
+pc.getTransceivers().forEach((transceiver) => {
   transceiver.stop();
 });
 ```
@@ -59,7 +60,6 @@ pc.getTransceivers().forEach(transceiver => {
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
 - {{domxref("RTCPeerConnection.addTransceiver()")}}
 - {{jsxref("Array.forEach()")}}

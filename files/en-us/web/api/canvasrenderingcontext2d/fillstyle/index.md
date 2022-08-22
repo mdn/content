@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -17,15 +18,13 @@ property of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) specifies the
 color, gradient, or pattern to use inside shapes. The default style is `#000`
 (black).
 
-> **Note:** For more examples of fill and stroke styles, see [Applying
-> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> **Note:** For more examples of fill and stroke styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 
 One of the followings:
 
-- A {{domxref("DOMString")}} parsed as CSS {{cssxref("&lt;color&gt;")}} value.
+- A string parsed as CSS {{cssxref("&lt;color&gt;")}} value.
 - A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
 - A {{domxref("CanvasPattern")}} object (a repeating image).
 
@@ -101,8 +100,8 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 `ctx.setFillColor()` is implemented in addition to this property.
 
 ```js
-setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
+setFillColor(color, /* (optional) */ alpha);
+setFillColor(grayLevel, /* (optional) */ alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
 ```

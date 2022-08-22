@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: squeeze event'
 slug: Web/API/XRSession/squeeze_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -35,9 +36,9 @@ For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeeze', event => { })
+addEventListener('squeeze', (event) => { })
 
-onsqueeze = event => { }
+onsqueeze = (event) => { }
 ```
 
 ## Event type
@@ -76,8 +77,8 @@ The following example uses {{domxref("EventTarget.addEventListener", "addEventLi
 This code treats the squeeze as an instantaneous action that doesn't involve tracking an ongoing activity. If you need to track a squeeze action that isn't instantaneous, listen for the {{domxref("XRSession.squeezestart_event", "squeezestart")}} and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events to sense when the squeeze action begins and ends.
 
 ```js
-xrSession.addEventListener("squeeze", event => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+xrSession.addEventListener("squeeze", (event) => {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {
@@ -90,8 +91,8 @@ xrSession.addEventListener("squeeze", event => {
 You can also set up a handler for `squeeze` events by setting the {{domxref("XRSession")}} object's `onsqueeze` event handler property to a function that handles the event:
 
 ```js
-xrSession.onsqueeze = event => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+xrSession.onsqueeze = (event) => {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {

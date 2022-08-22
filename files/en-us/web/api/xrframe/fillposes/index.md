@@ -1,6 +1,7 @@
 ---
 title: XRFrame.fillPoses()
 slug: Web/API/XRFrame/fillPoses
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -35,7 +36,8 @@ A boolean indicating if all of the spaces have a valid pose.
 
 ### Exceptions
 
-- Throws a `TypeError` if the length of `spaces` multiplied by 16 is larger than the number of elements in `transforms`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the length of `spaces` multiplied by 16 is larger than the number of elements in `transforms`.
 
 ## Examples
 

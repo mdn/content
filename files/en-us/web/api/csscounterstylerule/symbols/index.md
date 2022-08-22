@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.symbols
 slug: Web/API/CSSCounterStyleRule/symbols
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`symbols`** property of the {{domxref("CSSCounterStyleRule")}} interface g
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

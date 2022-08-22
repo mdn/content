@@ -1,6 +1,7 @@
 ---
 title: XRPermissionStatus
 slug: Web/API/XRPermissionStatus
+page-type: web-api-interface
 tags:
   - API
   - AR

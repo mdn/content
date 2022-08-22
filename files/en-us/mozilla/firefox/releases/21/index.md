@@ -30,7 +30,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### DOM
 
-- Support for {{domxref("RTCPeerConnection")}} (as `MozRTCPeerConnection`) is now enabled by default ({{bug(796463)}}). It can be disabled again if necessary by setting {{pref("media.peerconnection.enabled")}} to false.
+- Support for {{domxref("RTCPeerConnection")}} (as `MozRTCPeerConnection`) is now enabled by default ({{bug(796463)}}). It can be disabled again if necessary by setting `media.peerconnection.enabled` to false.
 - The `origin` property has been added to the {{domxref("window.location")}} ({{bug("828261")}}).
 - The `valueAsDate` and `valueAsNumber` methods have been added for `<input type="time">` ({{bug("781570")}}).
 - The `min` and `max` attributes now apply to `<input type="time">` too ({{bug("781572")}}).
@@ -110,7 +110,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ## See also
 
-- [Firefox 21 Release Notes](https://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
+- [Firefox 21 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/21.0/releasenotes/)
 - [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
 
 ### Older versions

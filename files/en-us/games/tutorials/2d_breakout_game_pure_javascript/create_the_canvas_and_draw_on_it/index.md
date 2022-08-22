@@ -25,14 +25,14 @@ The HTML document structure is quite simple, as the game will be rendered entire
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop</title>
-    <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
+  <meta charset="utf-8" />
+  <title>Gamedev Canvas Workshop</title>
+  <style>
+    * { padding: 0; margin: 0; }
+    canvas { background: #eee; display: block; margin: 0 auto; }
+  </style>
 </head>
 <body>
 
@@ -53,8 +53,8 @@ We have a `charset` defined, {{htmlelement("title")}} and some basic CSS in the 
 To actually be able to render graphics on the {{htmlelement("canvas")}} element, first we have to grab a reference to it in JavaScript. Add the following below your opening `<script>` tag.
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 ```
 
 Here we're storing a reference to the {{htmlelement("canvas")}} element to the `canvas` variable. Then we're creating the `ctx` variable to store the 2D rendering context — the actual tool we can use to paint on the Canvas.

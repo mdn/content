@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
+page-type: web-api-instance-method
 tags:
   - API
   - Constraints
@@ -17,16 +18,19 @@ The **`getSettings()`** method of the
 object containing the current values of each of the constrainable properties for the
 current `MediaStreamTrack`.
 
-See [Capabilities, constraints,
-and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
+See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
 
 ## Syntax
 
 ```js
-const settings = track.getSettings()
+getSettings()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
 track's constrainable properties.

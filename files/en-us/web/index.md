@@ -29,7 +29,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [CSS](/en-US/docs/Web/CSS)
   - : Cascading Style Sheets are used to describe the appearance of Web documents and apps.
 - [JavaScript](/en-US/docs/Web/JavaScript)
-  - : JavaScript is the Web’s native programming language.
+  - : JavaScript is the Web's native programming language.
 - [WebAssembly](/en-US/docs/WebAssembly)
   - : WebAssembly allows programs written in C, C++, Rust, Swift, C#, Go, and more to run on the Web.
 - [Events](/en-US/docs/Web/Events)
@@ -39,13 +39,13 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Media](/en-US/docs/Web/Media)
   - : Formats, codecs, protocols, APIs, and techniques for embedding and streaming video, audio, and image content in Web documents and apps.
 - [SVG](/en-US/docs/Web/SVG)
-  - : Scalable Vector Graphics let you to create images that scale smoothly to any size.
+  - : Scalable Vector Graphics let you create images that scale smoothly to any size.
 - [MathML](/en-US/docs/Web/MathML)
   - : MathML lets you display complex mathematical notation on the Web.
 - [Web Components](/en-US/docs/Web/Web_Components)
   - : Web Components are custom elements that you can define and reuse in your Web apps.
 - [WebDriver](/en-US/docs/Web/WebDriver)
-  - : WebDriver is a browser-automation mechanism for remotely controlling a browser by emulating the actions of a real person using the browser. It’s widely used for cross-browser testing of Web apps.
+  - : WebDriver is a browser-automation mechanism for remotely controlling a browser by emulating the actions of a real person using the browser. It's widely used for cross-browser testing of Web apps.
 - [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
   - : Web Extensions are a way for you to give users enhanced capabilities in their browsers — for doing things such as blocking ads and other content, customizing the appearance of pages, and more.
 - [Web App Manifests](/en-US/docs/Web/Manifest)
@@ -61,5 +61,5 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Documentation for the set of web-developer tools built into Chrome.
 - [Safari Web Inspector](https://webkit.org/web-inspector/)
   - : Documentation for the set of web-developer tools built into Safari.
-- [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/)
+- [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/)
   - : Documentation for the set of web-developer tools built into Edge.

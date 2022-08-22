@@ -30,7 +30,7 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -99,10 +99,6 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

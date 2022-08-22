@@ -1,6 +1,7 @@
 ---
 title: AudioNode.disconnect()
 slug: Web/API/AudioNode/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -18,12 +19,8 @@ The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets y
 ## Syntax
 
 ```js
-disconnect();
+disconnect()
 ```
-
-### Return value
-
-{{jsxref("undefined")}}
 
 ### Parameters
 
@@ -36,6 +33,10 @@ There are several versions of the `disconnect()` method, which accept different 
 - `input` {{optional_inline}}
   - : An index describing which input into the specified destination `AudioNode` is to be disconnected. The index numbers are defined according to the number of input channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
@@ -46,12 +47,12 @@ There are several versions of the `disconnect()` method, which accept different 
 ## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

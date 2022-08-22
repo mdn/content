@@ -1,6 +1,7 @@
 ---
 title: NamedNodeMap.length
 slug: Web/API/NamedNodeMap/length
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -26,7 +27,7 @@ A number containing the number of objects in the map
 const pre = document.getElementsByTagName("pre")[0];
 const attrMap = pre.attributes;
 
-let result = "The `test` attribute contains " + attrMap.length + " attributes.\n";
+let result = `The 'test' attribute contains ${attrMap.length} attributes.\n`;
 
 pre.textContent = result;
 ```

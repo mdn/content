@@ -1,6 +1,7 @@
 ---
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -17,7 +18,7 @@ The **`PerformanceLongTaskTiming`** interface of the [Long Tasks API](/en-US/doc
 
 ## Properties
 
-- {{domxref("PerformanceLongTaskTiming.attribution")}} {{readonlyinline}}
+- {{domxref("PerformanceLongTaskTiming.attribution")}} {{ReadOnlyInline}}
   - : Returns a sequence of {{domxref('TaskAttributionTiming')}} instances.
 
 ## Specifications

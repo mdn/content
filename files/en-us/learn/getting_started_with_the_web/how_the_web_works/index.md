@@ -1,5 +1,5 @@
 ---
-title: How the Web works
+title: How the web works
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 tags:
   - Beginner
@@ -34,7 +34,7 @@ The client and server we've described above don't tell the whole story. There ar
 
 For now, let's imagine that the web is a road. On one end of the road is the client, which is like your house. On the other end of the road is the server, which is a shop you want to buy something from.
 
-![](road.jpg)
+![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
 In addition to the client and the server, we also need to say hello to:
 
@@ -71,7 +71,7 @@ Real web addresses aren't the nice, memorable strings you type into your address
 
 This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why Domain Name Servers were invented. These are special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
 
-Websites can be reached directly via their IP addresses. You can find the IP address of a website by typing its domain into a tool like [IP Checker](https://ipinfo.info/html/ip_checker.php).
+Websites can be reached directly via their IP addresses. You can use a [DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/) to find the IP address of a website.
 
 ## Packets explained
 
@@ -99,4 +99,4 @@ Street photo: [Street composing](https://www.pinterest.com/pin/40053896058067685
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- How the web works
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

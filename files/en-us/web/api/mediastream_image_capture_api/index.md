@@ -1,6 +1,7 @@
 ---
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
+page-type: web-api-overview
 tags:
   - API
   - Image
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Reference
   - Video
+browser-compat: api.ImageCapture
 ---
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 
@@ -22,7 +24,7 @@ First, get a reference to a device by calling {{domxref("MediaDevices.getUserMed
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
+  .then((mediaStream) => {
     // Do something with the stream.
   })
 ```
@@ -39,7 +41,7 @@ At this point, you might want to configure the device capabilities before captur
 let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
-if(!capabilities.zoom) {
+if (!capabilities.zoom) {
   return;
 }
 track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
@@ -55,24 +57,14 @@ let imageCapture = new ImageCapture(track);
 
 - {{domxref("ImageCapture")}}
   - : An interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
-- {{domxref("PhotoCapabilities")}}
-  - : Provides available configuration options for an attached photographic device. Retrieve a `PhotoCapabilities` object by calling {{domxref("ImageCapture.getPhotoCapabilities()")}}.
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('MediaStream Image')}} | {{Spec2('MediaStream Image')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `ImageCapture`
-
-{{Compat("api.ImageCapture")}}
-
-### `PhotoCapabilities`
-
-{{Compat("api.PhotoCapabilities")}}
+{{Compat}}
 
 ## See also
 

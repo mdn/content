@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.paymentRequestOrigin
 slug: Web/API/PaymentRequestEvent/paymentRequestOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API
@@ -9,6 +10,7 @@ tags:
   - Reference
   - payment
   - paymentRequestOrigin
+  - Experimental
 browser-compat: api.PaymentRequestEvent.paymentRequestOrigin
 ---
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
@@ -19,7 +21,7 @@ The **`paymentRequestOrigin`** read-only property of the
 
 ## Value
 
-A USVString.
+A string.
 
 ## Specifications
 

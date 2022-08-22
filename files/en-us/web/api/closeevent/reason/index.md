@@ -1,6 +1,7 @@
 ---
 title: CloseEvent.reason
 slug: Web/API/CloseEvent/reason
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,14 +15,14 @@ The **`reason`** read-only property of the {{domxref("CloseEvent")}} interface r
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
 The following example prints the value of `reason` to the console.
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.reason);
 };
 ```

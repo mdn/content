@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.validationMessage
 slug: Web/API/ElementInternals/validationMessage
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`validationMessage`** read-only property of the {{domxref("ElementInternal
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the validation message of this element.
+A string containing the validation message of this element.
 
 ## Examples
 

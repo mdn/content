@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.groupId
 slug: Web/API/MediaTrackSupportedConstraints/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -48,18 +49,14 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().groupId) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().groupId;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

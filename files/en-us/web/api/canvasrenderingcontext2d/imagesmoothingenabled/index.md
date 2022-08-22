@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -53,7 +54,7 @@ ctx.textAlign = 'center';
 
 const img = new Image();
 img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
+img.onload = () => {
   const w = img.width,
         h = img.height;
 

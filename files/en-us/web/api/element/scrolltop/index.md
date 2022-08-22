@@ -1,6 +1,7 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -39,7 +40,6 @@ In this example, try scrolling the inner container with the dashed border, and s
 #### HTML
 
 ```html
-
 <div id="container">
   <div id="scroller">
       <p>Far out in the uncharted backwaters of the unfashionable end
@@ -75,7 +75,7 @@ In this example, try scrolling the inner container with the dashed border, and s
 const scroller = document.querySelector("#scroller");
 const output = document.querySelector("#output");
 
-scroller.addEventListener("scroll", event => {
+scroller.addEventListener("scroll", (event) => {
   output.textContent = `scrollTop: ${scroller.scrollTop}`;
 });
 ```
@@ -94,6 +94,6 @@ scroller.addEventListener("scroll", event => {
 
 ## See also
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollLeft")}}
 - {{domxref("Element.scrollTo()")}}

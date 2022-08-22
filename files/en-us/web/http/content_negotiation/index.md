@@ -11,7 +11,7 @@ tags:
 
 In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism that is used for serving different {{Glossary("Representation header","representations")}} of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding).
 
-> **Note:** You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML5 provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
+> **Note:** You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
 
 ## Principles of content negotiation
 
@@ -32,7 +32,7 @@ In _server-driven content negotiation_, or proactive content negotiation, the br
 
 ![](httpnegoserver.png)
 
-The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation (such as {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, and {{HTTPHeader("Accept-Language")}}). Though {{HTTPHeader("User-Agent")}} isn't in this list, it's sometimes also used to send a specific representation of the requested resource. However, this isn't always considered a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely, the associated response headers), so that [caches](/en-US/docs/Web/HTTP/Caching) can work optimally.
+The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation (such as {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, and {{HTTPHeader("Accept-Language")}}). Though {{HTTPHeader("User-Agent")}} isn't in this list, it's sometimes also used to send a specific representation of the requested resource. However, this isn't always considered a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely, the associated request headers), so that [caches](/en-US/docs/Web/HTTP/Caching) can work optimally.
 
 In addition to these, there's an experimental proposal to add more headers to the list of available headers, called _client hints_. Client hints advertise what kind of device the user agent runs on (for example, a desktop computer or a mobile device).
 

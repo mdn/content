@@ -122,7 +122,7 @@ class Team(models.Model):
         ('U09', 'Under 09s'),
         ('U10', 'Under 10s'),
         ('U11', 'Under 11s'),
-        ...  #list our other teams
+        # List our other teams
     )
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
@@ -231,11 +231,11 @@ Popular sites using Django (from Django home page) include: Disqus, Instagram, K
 
 ### Flask (Python)
 
-[Flask](http://flask.pocoo.org/) is a microframework for Python.
+[Flask](https://flask.palletsprojects.com) is a microframework for Python.
 
 While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://www.restapitutorial.com/lessons/restfulresourcenaming.html) request dispatching. It has good documentation and an active community.
 
-Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://blogtarkin.com/drone-definitions-learning-the-drone-lingo/), etc.)
+Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/), etc.)
 
 ### Express (Node.js/JavaScript)
 
@@ -245,7 +245,7 @@ Express is extremely popular, partially because it eases the migration of client
 
 Because Express is a minimalist web framework it does not incorporate every component that you might want to use (for example, database access and support for users and sessions are provided through independent libraries). There are many excellent independent components, but sometimes it can be hard to work out which is the best for a particular purpose!
 
-Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://www.itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://mean.io/), and [Sails](https://sailsjs.org/).
+Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://github.com/linnovate/mean), and [Sails](https://sailsjs.com/).
 
 A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided [here](https://expressjs.com/en/resources/companies-using-express.html)).
 
@@ -274,7 +274,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 
@@ -292,7 +292,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ### ASP.NET
 
-[ASP.NET](https://www.asp.net/) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
+[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
 
 One of the differentiators for ASP.NET is that it is built on the [Common Language Runtime](https://en.wikipedia.org/wiki/Common_Language_Runtime) (CLR), allowing programmers to write ASP.NET code using any supported .NET language (C#, Visual Basic, etc.). Like many Microsoft products it benefits from excellent tools (often free), an active developer community, and well-written documentation.
 
@@ -302,7 +302,7 @@ ASP.NET is used by Microsoft, Xbox.com, Stack Overflow, and many others.
 
 [Mojolicious](https://mojolicious.org/) is a next-generation web framework for the Perl programming language.
 
-Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/module/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
+Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/pod/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
 
 Some of the features provided by Mojolicious are:
 

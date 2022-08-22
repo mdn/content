@@ -1,6 +1,7 @@
 ---
 title: SharedWorkerGlobalScope.name
 slug: Web/API/SharedWorkerGlobalScope/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,14 +21,14 @@ to get a reference to the {{domxref("SharedWorkerGlobalScope")}}.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
 If a shared worker is created using a constructor with a `name` option:
 
 ```js
-var myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });
+const myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });
 ```
 
 the {{domxref("SharedWorkerGlobalScope")}} will now have a name of "mySharedWorker",

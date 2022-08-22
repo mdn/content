@@ -36,7 +36,7 @@ When two version strings are compared, their version parts are compared left to 
 
 If at some point a version part of one version string is greater than the corresponding version part of another version string, then the first version string is greater than the other one.
 
-Otherwise, the version strings are equal. Note, that since missing version parts are treated as if they were `0`, the following version strings are equal: `1`, `1.0`, `1.0.`, `1.0.0`, and even `1.0...`
+Otherwise, the version strings are equal. Note that since missing version parts are treated as if they were `0`, the following version strings are equal: `1`, `1.0`, `1.0.`, `1.0.0`, and even `1.0..`.
 
 ### Comparing version parts
 

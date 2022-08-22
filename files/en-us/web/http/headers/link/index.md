@@ -23,7 +23,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>`.
+  - : The URI reference, must be enclosed between `<` and `>` and [percent encoded](/en-US/docs/Glossary/percent-encoding).
 
 ### Parameters
 
@@ -33,12 +33,24 @@ The link header contains parameters, which are separated with `;` and are equiva
 
 The URI (absolute or relative) must be enclosed between `<` and `>`:
 
-```example-good
+```http example-good
 Link: <https://example.com>; rel="preconnect"
 ```
 
-```example-bad
+```http example-bad
 Link: https://bad.example; rel="preconnect"
+```
+
+### Encoding URLs
+
+The URI (absolute or relative) must encode char codes greater than 255:
+
+```http example-good
+Link: <https://example.com/%E8%8B%97%E6%9D%A1>; rel="preconnect"
+```
+
+```http example-bad
+Link: <https://example.com/苗条>; rel="preconnect"
 ```
 
 ### Specifying multiple links
@@ -51,9 +63,7 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 
 ## Specifications
 
-| Specification                                            | Title       |
-| -------------------------------------------------------- | ----------- |
-| {{RFC(8288, "Link Serialization in HTTP Headers", "3")}} | Web Linking |
+{{Specifications}}
 
 ## Browser compatibility
 

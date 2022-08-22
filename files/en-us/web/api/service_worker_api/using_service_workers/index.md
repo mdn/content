@@ -1,6 +1,7 @@
 ---
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
+page-type: guide
 tags:
   - Guide
   - Service
@@ -16,11 +17,11 @@ This article provides information on getting started with service workers, inclu
 
 One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can't download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn't a good overall control mechanism for asset caching and custom network requests.
 
-The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
+The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) for more details.
 
-> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chromium 90, and is deprecated in Safari.
+> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also has been [removed](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) from Chromium 95, and is deprecated in Safari.
 
-Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](http://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
+Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade-off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](https://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
 ## Setting up to play with service workers
 
@@ -79,7 +80,7 @@ const registerServiceWorker = async () => {
   }
 };
 
-// ...
+// …
 
 registerServiceWorker();
 ```
@@ -171,7 +172,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-We could start by responding with the resource whose url matches that of the network request, in each case:
+We could start by responding with the resource whose URL matches that of the network request, in each case:
 
 ```js
 self.addEventListener('fetch', (event) => {
@@ -185,7 +186,7 @@ self.addEventListener('fetch', (event) => {
 
 Let's look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
-1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
     ```js
     new Response('Hello from your friendly neighborhood service worker!');
@@ -265,7 +266,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-If the request url is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
+If the request URL is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
 
 Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
@@ -466,9 +467,9 @@ self.addEventListener('install', (event) => {
       './sw-test/app.js',
       './sw-test/image-list.js',
 
-      …
+      // ...
 
-      // include other new resources for the new version...
+      // include other new resources for the new version…
     ]
   ));
 });
@@ -485,14 +486,14 @@ You also get an `activate` event. This is generally used to do stuff that would 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
 ```js
-const deleteCache = async key => {
+const deleteCache = async (key) => {
   await caches.delete(key)
 }
 
 const deleteOldCaches = async () => {
    const cacheKeepList = ['v2'];
    const keyList = await caches.keys()
-   const cachesToDelete = keyList.filter(key => !cacheKeepList.includes(key))
+   const cachesToDelete = keyList.filter((key) => !cacheKeepList.includes(key))
    await Promise.all(cachesToDelete.map(deleteCache));
 }
 
@@ -507,16 +508,15 @@ Chrome has `chrome://inspect/#service-workers`, which shows current service work
 
 Firefox has also started to implement some useful tools related to service workers:
 
-- You can navigate to [`about:debugging`](/en-US/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
-- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/en-US/docs/Tools/Settings).
+- You can navigate to [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) to see what SWs are registered and update/remove them.
+- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
 - The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
 
 > **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
 
 ## See also
 
-- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
-- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

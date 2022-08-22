@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.readValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,7 +13,7 @@ tags:
   - readValue
 browser-compat: api.BluetoothRemoteGATTCharacteristic.readValue
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.readValue()`** method
 returns a {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}} holding a
@@ -22,8 +23,12 @@ it throws an error.
 ## Syntax
 
 ```js
-readValue();
+readValue()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: Accelerometer
 slug: Web/API/Accelerometer
+page-type: web-api-interface
 tags:
   - API
   - Accelerometer
@@ -11,6 +12,7 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
 browser-compat: api.Accelerometer
 ---
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
@@ -25,18 +27,18 @@ If a feature policy blocks the use of a feature, it is because your code is inco
 
 ## Constructor
 
-- {{domxref("Accelerometer.Accelerometer()", "Accelerometer()")}}
+- {{domxref("Accelerometer.Accelerometer()", "Accelerometer()")}} {{Experimental_Inline}}
   - : Creates a new `Accelerometer` object.
 
 ## Properties
 
 _In addition to the properties listed below, `Accelerometer` inherits properties from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
-- {{domxref('Accelerometer.x')}} {{readonlyinline}}
+- {{domxref('Accelerometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's x axis.
-- {{domxref('Accelerometer.y')}} {{readonlyinline}}
+- {{domxref('Accelerometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's y axis.
-- {{domxref('Accelerometer.z')}} {{readonlyinline}}
+- {{domxref('Accelerometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's z axis.
 
 ## Methods
@@ -54,9 +56,9 @@ Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading
 ```js
 let acl = new Accelerometer({frequency: 60});
 acl.addEventListener('reading', () => {
-  console.log("Acceleration along the X-axis " + acl.x);
-  console.log("Acceleration along the Y-axis " + acl.y);
-  console.log("Acceleration along the Z-axis " + acl.z);
+  console.log(`Acceleration along the X-axis ${acl.x}`);
+  console.log(`Acceleration along the Y-axis ${acl.y}`);
+  console.log(`Acceleration along the Z-axis ${acl.z}`);
 });
 
 acl.start();

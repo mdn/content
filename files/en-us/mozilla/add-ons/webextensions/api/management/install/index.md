@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [Promise](/en-US/docs/Web/JavaSc
 ## Syntax
 
 ```js
-let {id} = await browser.management.install({url});
+browser.management.install(options)
 ```
 
 ### Parameters
@@ -44,36 +44,36 @@ Cycle through a list of themes:
 ```js
 "use strict";
 
-let themes = [
-    "https://addons.mozilla.org/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
-    "https://addons.mozilla.org/firefox/downloads/file/1063419/orange_roses-1.0-fx.xpi",
-    "https://addons.mozilla.org/firefox/downloads/file/1062647/sticktoyourguns-2.0-fx.xpi",
-    "https://addons.mozilla.org/firefox/downloads/file/0/bad_url.xpi",
+const themes = [
+  "https://addons.mozilla.org/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
+  "https://addons.mozilla.org/firefox/downloads/file/1063419/orange_roses-1.0-fx.xpi",
+  "https://addons.mozilla.org/firefox/downloads/file/1062647/sticktoyourguns-2.0-fx.xpi",
+  "https://addons.mozilla.org/firefox/downloads/file/0/bad_url.xpi",
 ];
 
 let current;
 
 async function install(url) {
-    try {
-        current = url;
-        let {id} = await browser.management.install({url});
-        console.log("Theme installed: " + id);
-    } catch (e) {
-        console.error("Installation failed: " + e);
-    }
+  try {
+    current = url;
+    const { id } = await browser.management.install({ url });
+    console.log(`Theme installed: ${id}`);
+  } catch (e) {
+    console.error(`Installation failed: ${e}`);
+  }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-    let id = themes.indexOf(current);
-    install(themes[(id + 1) % themes.length]);
+  const id = themes.indexOf(current);
+  install(themes[(id + 1) % themes.length]);
 });
 
-for (let url of themes) {
-    browser.menus.create({
-        title: url,
-        onclick: () => install(url),
-        contexts: ["browser_action"],
-    });
+for (const url of themes) {
+  browser.menus.create({
+    title: url,
+    onclick: () => install(url),
+    contexts: ["browser_action"],
+  });
 }
 ```
 

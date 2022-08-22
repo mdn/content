@@ -1,6 +1,7 @@
 ---
 title: DOMParser.parseFromString()
 slug: Web/API/DOMParser/parseFromString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -14,18 +15,18 @@ The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface par
 ## Syntax
 
 ```js
-const doc = domparser.parseFromString(string, mimeType)
+parseFromString(string, mimeType)
 ```
 
 ### Parameters
 
 - `string`
-  - : The {{domxref("DOMString")}} to be parsed. It must contain either an
+  - : The string to be parsed. It must contain either an
     {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or
     {{Glossary("svg")}} document.
 - `mimeType`
 
-  - : A {{domxref("DOMString")}}. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:
+  - : A string. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:
 
     - `text/html`
     - `text/xml`

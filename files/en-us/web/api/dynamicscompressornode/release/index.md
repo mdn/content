@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.release
 slug: Web/API/DynamicsCompressorNode/release
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode
@@ -25,8 +26,8 @@ An {{domxref("AudioParam")}}.
 ## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.release.value = 0.25;
 ```
 

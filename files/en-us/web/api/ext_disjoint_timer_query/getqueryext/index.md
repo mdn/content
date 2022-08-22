@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query.getQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/getQueryEXT
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -18,12 +19,12 @@ target.
 ## Syntax
 
 ```js
-any ext.getQueryEXT(target, pname);
+getQueryEXT(target, pname)
 ```
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIMESTAMP_EXT` or `ext.TIME_ELAPSED_EXT`.
 - `pname`
@@ -44,11 +45,11 @@ Depends on `pname`:
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_disjoint_timer_query');
-var startQuery = ext.createQueryEXT();
+const ext = gl.getExtension('EXT_disjoint_timer_query');
+const startQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 
-var currentQuery = ext.getQueryEXT(ext.TIMESTAMP_EXT,
+const currentQuery = ext.getQueryEXT(ext.TIMESTAMP_EXT,
                                    ext.CURRENT_QUERY_EXT);
 ```
 

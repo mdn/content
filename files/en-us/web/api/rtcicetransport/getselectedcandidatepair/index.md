@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
+page-type: web-api-instance-method
 tags:
   - API
   - Candidates
@@ -27,7 +28,7 @@ of {{Glossary("ICE")}} candidates describing the configuration of the endpoints 
 ## Syntax
 
 ```js
-candidatePair = RTCIceTransport.getSelectedCandidatePair();
+getSelectedCandidatePair()
 ```
 
 ### Parameters

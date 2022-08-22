@@ -10,7 +10,7 @@ tags:
 ---
 A **forbidden header name** is the name of any [HTTP header](/en-US/docs/Web/HTTP/Headers) that cannot be modified programmatically; specifically, an HTTP **request** header name (in contrast with a {{Glossary("Forbidden response header name")}}).
 
-Modifying such headers is forbidden because the user agent retains full control over them. Names starting with `Sec-` are reserved for creating new headers safe from {{glossary("API","APIs")}} using [Fetch](/en-US/docs/Web/API/Fetch_API) that grant developers control over headers, such as {{domxref("XMLHttpRequest")}}.
+Modifying such headers is forbidden because the user agent retains full control over them. Names starting with `Sec-` are reserved for creating new headers safe from {{glossary("API","APIs")}} using the [fetch algorithm](https://fetch.spec.whatwg.org/#concept-fetch) that grant developers control over headers, such as {{domxref("XMLHttpRequest")}}.
 
 Forbidden header names start with `Proxy-` or `Sec-`, or are one of the following names:
 

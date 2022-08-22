@@ -71,7 +71,7 @@ text-transform: unset;
 
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition
@@ -88,10 +88,10 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: none
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -110,10 +110,10 @@ This demonstrates no text transformation.
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: capitalize
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -198,10 +198,10 @@ This demonstrates how the Dutch _ij_ digraph must be handled like one single let
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: uppercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -242,10 +242,10 @@ This demonstrates how Greek vowels except disjunctive _eta_ should have no accen
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: lowercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 

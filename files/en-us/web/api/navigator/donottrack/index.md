@@ -1,13 +1,14 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - Navigator
   - Property
   - Reference
+  - Deprecated
 browser-compat: api.Navigator.doNotTrack
 ---
 {{ApiRef("HTML DOM")}}{{Deprecated_header}}
@@ -37,4 +38,4 @@ console.log(navigator.doNotTrack);
 
 ## See also
 
-- [The Do Not Track field guide](/en-US/docs/Web/Security/Do_not_track_field_guide)
+- {{httpheader("DNT")}} HTTP header

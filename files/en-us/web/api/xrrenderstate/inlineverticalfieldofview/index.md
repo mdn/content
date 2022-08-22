@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.inlineVerticalFieldOfView
 slug: Web/API/XRRenderState/inlineVerticalFieldOfView
+page-type: web-api-instance-property
 tags:
   - API
   - Field of View

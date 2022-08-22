@@ -1,6 +1,7 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -21,9 +22,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 ## Syntax
 
 ```js
-response.json().then(data => {
-  // do something with your data
-});
+json()
 ```
 
 ### Parameters
@@ -33,13 +32,11 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
-anything that can be represented by JSON — an object, an array, a string, a number...
+anything that can be represented by JSON — an object, an array, a string, a number…
 
-## Example
+## Examples
 
-In our [fetch
-json example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch
-json live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
+In our [fetch JSON example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch JSON live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
   "Request()")}} constructor, then use it to fetch a `.json` file. When the
 fetch is successful, we read and parse the data using `json()`, then read
 values out of the resulting objects as you'd expect and insert them into list items to
@@ -50,10 +47,10 @@ const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');
 
 fetch(myRequest)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     for (const product of data.products) {
-      let listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.appendChild(
         document.createElement('strong')
       ).textContent = product.Name;

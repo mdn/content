@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.suffix
 slug: Web/API/CSSCounterStyleRule/suffix
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`suffix`** property of the {{domxref("CSSCounterStyleRule")}} interface ge
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

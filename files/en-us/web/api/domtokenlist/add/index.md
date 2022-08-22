@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -15,7 +16,7 @@ The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the giv
 ```js
 add(token0);
 add(token0, token1);
-add(token0, token1, /* ... ,*/ tokenN)
+add(token0, token1, /* … ,*/ tokenN)
 ```
 
 ### Parameters
@@ -30,9 +31,9 @@ None.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : One of the arguments is the empty string
+  - : Thrown if one of the arguments is an empty string
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : A token contains ASCII whitespace.
+  - : Thrown if a token contains ASCII whitespace.
 
 ## Examples
 

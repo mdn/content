@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -53,7 +54,7 @@ This example creates a handler for the {{domxref("HTMLVideoElement.resize", "res
 ```js
 let v = document.getElementById("myVideo");
 
-v.addEventListener("resize", ev => {
+v.addEventListener("resize", (ev) => {
   let w = v.videoWidth;
   let h = v.videoHeight;
 

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -57,9 +58,7 @@ ctx.stroke();
 
 ### More examples
 
-For more examples and explanation about this property, see [Applying
-styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+For more examples and explanation about this property, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Specifications
 
@@ -69,21 +68,9 @@ Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 {{Compat}}
 
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-  `ctx.setLineWidth()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `lineWidth` to a
-  negative value no longer throws an exception; instead, it properly ignores
-  non-positive values.
-
 ## See also
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
-- [Applying
-  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

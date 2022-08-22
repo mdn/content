@@ -1,6 +1,7 @@
 ---
 title: Document.getSelection()
 slug: Web/API/Document/getSelection
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -26,11 +27,11 @@ getSelection()
 
 None.
 
-### Returns
+### Return value
 
 A {{DOMxRef("Selection")}} object.
 
-## Example
+## Examples
 
 ### Getting a Selection object
 

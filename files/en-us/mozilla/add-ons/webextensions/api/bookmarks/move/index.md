@@ -49,6 +49,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 If the node corresponding to the `id` parameter can't be found, the promise is rejected with an error message.
 
+> **Note:** If you move multiple bookmarks, because this API is asynchronous, the move calls may get processed in any order. Consequently, the value of each bookmark's index returned in {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} may change or be unknown until all the move calls are completed. If the index associated with a bookmark matters to your extension, then – when moving multiple bookmarks – the extension should wait for each `bookmarks.move` call to complete before moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a move call executing concurrently while the original call is in progress.
+
 ## Examples
 
 This example moves a bookmark so that it's the first bookmark in its current folder.
@@ -62,7 +64,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let bookmarkId = "abcdefghilkl";
+let bookmarkId = "abcdefghijkl";
 
 let movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
 movingBookmark.then(onMoved, onRejected);
@@ -74,7 +76,7 @@ movingBookmark.then(onMoved, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-move) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

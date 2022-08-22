@@ -1,6 +1,7 @@
 ---
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -18,7 +19,7 @@ The **`PageTransitionEvent`** event object is available inside handler functions
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
 ## Example
@@ -27,7 +28,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <body>
 </body>
 </html>
@@ -36,15 +37,13 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### JavaScript
 
 ```js
-window.addEventListener('pageshow', myFunction);
-
-function myFunction(event) {
+window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
     alert("The page was cached by the browser");
   } else {
     alert("The page was NOT cached by the browser");
   }
-}
+});
 ```
 
 ## Specifications

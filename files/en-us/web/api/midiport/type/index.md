@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.type
 slug: Web/API/MIDIPort/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`type`** read-only property of the {{domxref("MIDIPort")}} interface retur
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the type of the port, one of:
+A string containing the type of the port, one of:
 
 - `"input"`
   - : The `MIDIPort` is an input port.
@@ -27,8 +28,8 @@ A {{domxref("DOMString","string")}} containing the type of the port, one of:
 The following example loops through all input ports and prints the `type` of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.type); // should always be input
 }
 ```

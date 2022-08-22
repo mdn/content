@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor.readValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -13,7 +14,7 @@ tags:
   - readValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.readValue
 ---
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The
 **`BluetoothRemoteGATTDescriptor.readValue()`**
@@ -24,8 +25,12 @@ it is available and supported. Otherwise it throws an error.
 ## Syntax
 
 ```js
-readValue();
+readValue()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

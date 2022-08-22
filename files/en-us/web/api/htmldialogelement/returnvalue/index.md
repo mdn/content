@@ -1,9 +1,9 @@
 ---
 title: HTMLDialogElement.returnValue
 slug: Web/API/HTMLDialogElement/returnValue
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Property
@@ -13,8 +13,6 @@ browser-compat: api.HTMLDialogElement.returnValue
 ---
 {{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
-
 The **`returnValue`** property of the
 {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the
 `<dialog>`, usually to indicate which button the user pressed to
@@ -22,7 +20,7 @@ close it.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
+A string representing the `returnValue` of the dialog.
 
 ## Examples
 
@@ -54,9 +52,9 @@ dialog.
   </menu>
 
   <script>
-    (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var dialog = document.getElementById('favDialog');
+    (() => {
+      const updateButton = document.getElementById('updateDetails');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -68,7 +66,7 @@ dialog.
       }
 
       function handleUserInput(returnValue) {
-        if (returnValue === 'Cancel' || returnValue == null) {
+        if (!returnValue || returnValue === 'Cancel') {
           // User canceled the dialog, do nothing
         } else if (returnValue === 'Confirm') {
           // User chose a favorite animal, do something with it
@@ -76,7 +74,7 @@ dialog.
       }
 
       // "Update details" button opens the <dialog> modally
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
         handleUserInput(dialog.returnValue);
@@ -86,8 +84,7 @@ dialog.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

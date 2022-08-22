@@ -37,7 +37,7 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
 ### Parameters
 
 - `keys`
-  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
+  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an empty array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
 
 ### Return value
 
@@ -49,6 +49,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

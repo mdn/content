@@ -33,6 +33,7 @@ You can also mitigate such risks using:
 - The {{httpheader("Referrer-Policy")}} header on your server to control what information is sent through the {{httpheader("Referer")}} header. For example, a directive of `no-referrer` would omit the Referer header entirely.
 - The `referrerpolicy` attribute on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). This can for example be set to `no-referrer` to stop the `Referer` header being sent altogether.
 - The `rel` attribute set to `noreferrer` on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). See [Link types](/en-US/docs/Web/HTML/Link_types) and search for `noreferrer` for more information.
+- A {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Element/meta#attr-name) of `referrer` and the content set to `no-referrer` to disable the Referer header for the whole document. See [Referrer-Policy Integration with HTML](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_html).
 - The [Exit page](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect) technique.
 
 Security-conscious server-side frameworks tend to have built in mitigations for such problems, for example:
@@ -42,7 +43,7 @@ Security-conscious server-side frameworks tend to have built in mitigations for 
 
 ## Policy and requirements
 
-It would make sense to write a set of security and privacy requirements for your project team(s) that specify usage of such features to mitigate the associated risks. You should enlist the help of a web security expert to write these requirements, and consider both user needs and welfare, as well as other issues like policy and regulation enforced by legislation such as the [EU General Data Protection Regulation (GDPR)](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en).
+It would make sense to write a set of security and privacy requirements for your project team(s) that specify usage of such features to mitigate the associated risks. You should enlist the help of a web security expert to write these requirements, and consider both user needs and welfare, as well as other issues like policy and regulation enforced by legislation such as the [EU General Data Protection Regulation (GDPR)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN).
 
 ## See also
 

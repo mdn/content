@@ -4,7 +4,6 @@ slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
-  - Experimental
   - NeedsBrowserCompatibility
   - NeedsContent
   - NeedsExample
@@ -46,7 +45,7 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 
 ```css
 :where(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
@@ -54,7 +53,7 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 
 ```css
 :valid, :unsupported {
-  ...
+  /* … */
 }
 ```
 
@@ -137,7 +136,9 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:where( <complex-selector-list> )
+```
 
 ## Specifications
 

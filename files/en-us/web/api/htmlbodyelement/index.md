@@ -1,6 +1,7 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -17,24 +18,24 @@ The **`HTMLBodyElement`** interface provides special properties (beyond those in
 
 ## Properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
-  - : Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.
+  - : A string that represents the color of active hyperlinks.
 - {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
-  - : Is a {{ domxref("DOMString") }} that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
+  - : A string that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
 - {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
-  - : Is a {{ domxref("DOMString") }} that represents the background color for the document.
+  - : A string that represents the background color for the document.
 - {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
-  - : Is a {{ domxref("DOMString") }} that represents the color of unvisited links.
+  - : A string that represents the color of unvisited links.
 - {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
-  - : Is a {{ domxref("DOMString") }} that represents the foreground color of text.
+  - : A string that represents the foreground color of text.
 - {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
-  - : Is a {{ domxref("DOMString") }} that represents the color of visited links.
+  - : A string that represents the color of visited links.
 
 ## Methods
 
-_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}, and from {{domxref("WindowEventHandlers")}}._
+_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Event handlers
 
@@ -92,4 +93,3 @@ The following {{domxref("Window")}} `onXYZ` event handler properties are also av
 ## See also
 
 - HTML element implementing this interface: {{ HTMLElement("body") }}
-- {{domxref("WindowEventHandlers")}}

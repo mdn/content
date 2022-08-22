@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 str:tokenize(string, delimiters)
 ```
 
@@ -29,7 +29,7 @@ A node-set of `token` elements, each containing one token from the `string`.
 
 ## Example:
 
-```js
+```plain
 str:tokenize('2007-09-14-03T11:40:23', '-T:')
 ```
 
@@ -46,7 +46,7 @@ Returns a node set like this:
 
 ## Specifications
 
-[EXSLT - STR:TOKENIZE](http://www.exslt.org/str/functions/tokenize/index.html)
+[EXSLT - STR:TOKENIZE](http://exslt.org/str/functions/tokenize/index.html)
 
 ## See also
 

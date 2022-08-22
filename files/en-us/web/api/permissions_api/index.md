@@ -1,6 +1,7 @@
 ---
 title: Permissions API
 slug: Web/API/Permissions_API
+page-type: web-api-overview
 tags:
   - API
   - Introduction
@@ -9,6 +10,7 @@ tags:
   - Permissions API
   - Web
   - access
+browser-compat: api.Permissions
 ---
 {{DefaultAPISidebar("Permissions API")}}
 
@@ -41,7 +43,7 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Interfaces
 
-- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{readonlyinline}}
+- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
 - {{domxref("Permissions")}}
   - : Provides the core Permission API functionality, such as methods for querying and revoking permissions.
@@ -50,15 +52,11 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Specifications
 
-| Specification                                     |
-| ------------------------------------------------- |
-| [Permissions](https://w3c.github.io/permissions/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Permissions interface
-
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## See also
 

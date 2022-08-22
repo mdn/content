@@ -17,11 +17,11 @@ Major changes include:
 
 - Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their URL, etc.
 - Added the [console API](/en-US/docs/Web/API/Console_API) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) tool now shows performance statistics using pie charts ({{bug(846601)}}).
-- On the [Inspector](/en-US/docs/Tools/Page_Inspector), preview tooltips of CSS transforms are now available ({{bug(726427)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool now shows performance statistics using pie charts ({{bug(846601)}}).
+- On the [Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), preview tooltips of CSS transforms are now available ({{bug(726427)}}).
 - DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.
-- A CSS source map is now supported by the [Style Editor](/en-US/docs/Tools/Style_Editor) ({{bug(926014)}}).
-- Autocompletion of CSS properties and values has been added to the [Style Editor](/en-US/docs/Tools/Style_Editor) ({{bug(717369)}}).
+- A CSS source map is now supported by the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ({{bug(926014)}}).
+- Autocompletion of CSS properties and values has been added to the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ({{bug(717369)}}).
 
 _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/) for details and other smaller changes._
 
@@ -46,7 +46,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 ### JavaScript
 
 - New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ({{bug("918879")}}).
-- The [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
+- The [ECMAScript Internationalization API (ECMA-402)](https://402.ecma-international.org/1.0/) has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
 
   - New objects in the new {{jsxref("Intl")}} object namespace:
 
@@ -74,7 +74,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 - The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of a URL ({{bug(887836)}}). The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor allows easier parsing of query strings.
 - The {{domxref("WorkerNavigator.onLine", "navigator.onLine")}} property is now supported on {{domxref("WorkerNavigator")}}, allowing to know the online/offline status in workers ({{bug(925437)}}).
 - As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ({{bug(887538)}})
-- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("DOMString")}} but a {{domxref("DOMTokenList")}} ({{bug(845057)}}).
+- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a string but a {{domxref("DOMTokenList")}} ({{bug(845057)}}).
 - On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ({{bug(913597)}}).
 - The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ({{bug(959958)}})
 - The property {{domxref("WorkerLocation.origin", "location.origin")}} is now available in workers (via {{domxref("WorkerLocation")}}) ({{bug(964148)}}).

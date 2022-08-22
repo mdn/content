@@ -1,5 +1,5 @@
 ---
-title: Backwards Compatibility of Flexbox
+title: Backwards compatibility of flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 tags:
   - '@supports'
@@ -103,7 +103,7 @@ You can use [feature queries](/en-US/docs/Web/CSS/@supports) to detect flexbox s
 
 ```css
 @supports (display: flex) {
-  // code for supporting browsers
+  /* code for supporting browsers */
 }
 ```
 
@@ -111,7 +111,7 @@ Note that Internet Explorer 11 does not support feature queries yet _does_ suppo
 
 ```css
 @supports (display: flex) or (display: -webkit-box) {
-  // code for supporting browsers
+  /* code for supporting browsers */
 }
 ```
 

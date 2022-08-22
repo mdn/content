@@ -4,7 +4,7 @@ slug: Web/CSS/justify-tracks
 tags:
   - CSS
   - Experimental
-  - Property
+  - CSS Property
   - Reference
   - grid
   - justify-tracks

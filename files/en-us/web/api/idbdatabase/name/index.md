@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -15,14 +16,14 @@ browser-compat: api.IDBDatabase.name
 {{ APIRef("IndexedDB") }}
 
 The **`name`** read-only property of the
-`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
+`IDBDatabase` interface is a string that contains the
 name of the connected database.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{ domxref("DOMString")}} containing the name of the connected database.
+A string containing the name of the connected database.
 
 ## Examples
 
@@ -34,15 +35,15 @@ then being logged. For a full example, see our
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being
 // opened successfully, or not
-DBOpenRequest.onerror = event => {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below

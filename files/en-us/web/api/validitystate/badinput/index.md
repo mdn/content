@@ -1,6 +1,7 @@
 ---
 title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints API
@@ -25,7 +26,7 @@ A boolean.
 ```
 
 ```js
-var input = document.getElementById("age");
+const input = document.getElementById("age");
 if (input.validity.badInput) {
   console.log("Bad input detected…");
 } else {

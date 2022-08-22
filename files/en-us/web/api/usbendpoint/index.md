@@ -1,6 +1,7 @@
 ---
 title: USBEndpoint
 slug: Web/API/USBEndpoint
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,22 +9,23 @@ tags:
   - USB
   - USBEndpoint
   - Web USB API
+  - Experimental
 browser-compat: api.USBEndpoint
 ---
-{{securecontext_header}}
+{{APIRef("WebUSB API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about an endpoint provided by the USB device. An endpoint represents a unidirectional data stream into or out of a device.
 
 ## Constructor
 
-- **`{{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}}`**
+- {{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}}
   - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAlternateInterface')}} with the given endpoint number and transfer direction.
 
 ## Properties
 
-- **`{{domxref("USBEndpoint.endpointNumber")}}`**
+- {{domxref("USBEndpoint.endpointNumber")}}
   - : Returns this endpoint's "endpoint number" which is a value from 1 to 15 extracted from the `bEndpointAddress` field of the endpoint descriptor defining this endpoint. This value is used to identify the endpoint when calling methods on `USBDevice`.
-- **`{{domxref("USBEndpoint.direction")}}`**
+- {{domxref("USBEndpoint.direction")}}
 
   - : Returns the direction in which this endpoint transfers data, one of:
 
@@ -33,7 +35,7 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
     - `"out"` - Data is transferred from host to device.
 
-- **`{{domxref("USBEndpoint.type")}}`**
+- {{domxref("USBEndpoint.type")}}
 
   - : Returns the type of this endpoint, one of:
 
@@ -49,7 +51,7 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
 <!---->
 
-- **`{{domxref("USBEndpoint.packetSize")}}`**
+- {{domxref("USBEndpoint.packetSize")}}
   - : Returns the size of the packets that data sent through this endpoint will be divided into.
 
 ## Examples
@@ -62,25 +64,25 @@ This code identifies the correct endpoints by searching for the interface implem
 let inEndpoint = undefined;
 let outEndpoint = undefined;
 
-for (const interface of device.configuration.interfaces) {
+for (const { alternates } of device.configuration.interfaces) {
   // Only support devices with out multiple alternate interfaces.
-  const alternate = interface.alternates[0];
+  const alternate = alternates[0];
 
   // Identify the interface implementing the USB CDC class.
   const USB_CDC_CLASS = 10;
-  if (alternate.interfaceClass != USB_CDC_CLASS) {
+  if (alternate.interfaceClass !== USB_CDC_CLASS) {
     continue;
   }
 
   for (const endpoint of alternate.endpoints) {
     // Identify the bulk transfer endpoints.
-    if (endpoint.type != "bulk") {
+    if (endpoint.type !== "bulk") {
       continue;
     }
 
-    if (endpoint.direction == "in") {
+    if (endpoint.direction === "in") {
       inEndpoint = endpoint.endpointNumber;
-    } else if (endpoint.direction == "out") {
+    } else if (endpoint.direction === "out") {
       outEndpoint = endpoint.endpointNumber;
     }
   }

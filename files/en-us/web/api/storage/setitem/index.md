@@ -1,6 +1,7 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,27 +19,27 @@ interface, when passed a key name and value, will add that key to the given
 ## Syntax
 
 ```js
-storage.setItem(keyName, keyValue);
+setItem(keyName, keyValue)
 ```
 
 ### Parameters
 
 - `keyName`
-  - : A {{domxref("DOMString")}} containing the name of the key you want to create/update.
+  - : A string containing the name of the key you want to create/update.
 - `keyValue`
-  - : A {{domxref("DOMString")}} containing the value you want to give the key you are
+  - : A string containing the value you want to give the key you are
     creating/updating.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 `setItem()` may throw an exception if the storage is full. Developers should make sure to
 **always catch possible exceptions from `setItem()`**.
 
-## Example
+## Examples
 
 The following function creates three data items inside local storage.
 
@@ -64,5 +65,4 @@ function populateStorage() {
 
 - [Storage.getItem()](/en-US/docs/Web/API/Storage/getItem)
 - [Storage.removeItem()](/en-US/docs/Web/API/Storage/removeItem)
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

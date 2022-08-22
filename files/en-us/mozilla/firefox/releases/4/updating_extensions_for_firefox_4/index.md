@@ -25,7 +25,7 @@ The status bar has been removed from Firefox 4, with a new add-on bar added in i
 
 #### Creating toolbars
 
-If your add-on creates a new toolbar using an overlay, your toolbar may not show up. This happens when your {{XULElem("toolbox")}} element overlay is a child of the {{XULElem("window")}} element instead of a direct child of the overlay element. Move the toolbox out of the window element to fix this problem.
+If your add-on creates a new toolbar using an overlay, your toolbar may not show up. This happens when your `<toolbox>` element overlay is a child of the `<window>` element instead of a direct child of the overlay element. Move the toolbox out of the window element to fix this problem.
 
 ### The Firefox application menu
 
@@ -35,10 +35,10 @@ If your add-on is discoverable only through the menu bar, you'll want to overlay
 
 ### Tabs
 
-A number of changes were made to the {{XULElem("tabbrowser")}} element to help support app tabs and Panoramas, as well as to make the tab bar into a standard toolbar. Other changes that may break existing extensions include:
+A number of changes were made to the `<tabbrowser>` element to help support app tabs and Panoramas, as well as to make the tab bar into a standard toolbar. Other changes that may break existing extensions include:
 
-- The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the {{XULElem("tabbrowser")}} element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
-- The tab context menu is no longer an anonymous child of the {{XULElem("tabbrowser")}}. It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
+- The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the `<tabbrowser>` element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
+- The tab context menu is no longer an anonymous child of the `<tabbrowser>`. It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
 
 ## XPCOM changes
 
@@ -58,7 +58,7 @@ You can no longer pass JavaScript objects between threads. This renders the Thre
 
 ## Network redirects
 
-The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use [the new API](</en-US/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()>).
+The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use the new API `asyncOnChannelRedirect`.
 
 ## XPI unpacking
 
@@ -112,4 +112,4 @@ The `-install-global-extension` and `-install-global-theme` command line options
 
 ## See also
 
-- [Making Your Add-on Compatible with Firefox 4](https://blog.mozilla.com/addons/2010/11/11/making-add-on-compatible-firefox-4/) (blog post)
+- [Making Your Add-on Compatible with Firefox 4](https://blog.mozilla.org/addons/2010/11/11/making-add-on-compatible-firefox-4/) (blog post)

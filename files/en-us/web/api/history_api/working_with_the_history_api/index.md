@@ -1,13 +1,15 @@
 ---
 title: Working with the History API
 slug: Web/API/History_API/Working_with_the_History_API
+page-type: guide
 tags:
   - Advanced
   - DOM
   - History API
   - History API Tutorial
 ---
-HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("WindowEventHandlers/onpopstate","onpopstate")}} event.
+{{DefaultAPISidebar("History API")}}
+The {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods add and modify history entries, respectively. These methods work in conjunction with the {{domxref("Window/popstate_event", "popstate")}} event.
 
 ## Adding and modifying history entries
 
@@ -45,8 +47,6 @@ Let's examine each of these three parameters in more detail.
 - **URL**
   - : The new history entry's URL is given by this parameter. Note that the browser won't attempt to load this URL after a call to `pushState()`, but it might attempt to load the URL later, for instance after the user restarts the browser. The new URL does not need to be absolute; if it's relative, it's resolved relative to the current URL. The new URL must be of the same origin as the current URL; otherwise, `pushState()` will throw an exception. This parameter is optional; if it isn't specified, it's set to the document's current URL.
 
-> **Note:** In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
-
 In a sense, calling `pushState()` is similar to setting `window.location = "#foo"`, in that both will also create and activate another history entry associated with the current document.
 
 But `pushState()` has a few advantages:
@@ -65,8 +65,6 @@ In other documents, it creates an element with a `null` namespace URI.
 `history.replaceState()` operates exactly like `history.pushState()`, except that `replaceState()` modifies the current history entry instead of creating a new one. Note that this doesn't prevent the creation of a new entry in the global browser history.
 
 `replaceState()` is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
-
-> **Note:** In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
 
 ### Example of replaceState() method
 
@@ -93,7 +91,7 @@ Suppose now that the user navigates to `https://www.microsoft.com`, then clicks 
 
 A `popstate` event is dispatched to the window every time the active history entry changes. If the history entry being activated was created by a call to {{DOMxRef("History.pushState","pushState")}} or affected by a call to {{DOMxRef("History.replaceState","replaceState")}}, the `popstate` event's `state` property contains a copy of the history entry's state object.
 
-See {{ domxref("WindowEventHandlers.onpopstate") }} for sample usage.
+See {{domxref("Window/popstate_event", "popstate")}} for sample usage.
 
 ### Reading the current state
 

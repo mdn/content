@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -70,9 +71,9 @@ Call its {{domxref("IntersectionObserver.observe", "observe()")}} method to begi
 
 ### Exceptions
 
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The specified `rootMargin` is invalid.
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : One or more of the values in `threshold` is outside the range 0.0 to 1.0.
 
 ## Examples

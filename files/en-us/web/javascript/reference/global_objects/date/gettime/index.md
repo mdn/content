@@ -44,14 +44,14 @@ new Date().getTime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 new Date().getTime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the
@@ -67,8 +67,8 @@ Constructing a date object with the identical time value.
 
 ```js
 // Since month is zero based, birthday will be January 10, 1995
-var birthday = new Date(1994, 12, 10);
-var copy = new Date();
+const birthday = new Date(1994, 12, 10);
+const copy = new Date();
 copy.setTime(birthday.getTime());
 ```
 
@@ -80,15 +80,15 @@ to calculate the executing time of some operations. See also {{jsxref("Date.now(
 prevent instantiating unnecessary {{jsxref("Date")}} objects.
 
 ```js
-var end, start;
+let end, start;
 
 start = new Date();
-for (var i = 0; i < 1000; i++) {
+for (let i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
-console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
+console.log(`Operation took ${end.getTime() - start.getTime()} msec`);
 ```
 
 ## Specifications

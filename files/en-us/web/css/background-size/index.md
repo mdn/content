@@ -91,7 +91,7 @@ These attributes are as follows:
 - CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
 - Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
-> **Note:** In Gecko, background images created using the [`element()`](</en-US/docs/Web/CSS/element()>) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
+> **Note:** In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 
 Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:
 
@@ -119,31 +119,6 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
 
 > **Note:** Background sizing for vector images that lack intrinsic dimensions or proportions is not yet fully implemented in all browsers.
 > Be careful about relying on the behavior described above, and test in multiple browsers to be sure the results are acceptable.
-
-### Working with gradients
-
-If you use a `<gradient>` as the background and specify a `background-size` to go with it, it's best not to specify a size that uses a single `auto` component, or is specified using only a width value (for example, `background-size: 50%`).
-Rendering of `<gradient>`s in such cases changed in Firefox 8, and at present is generally inconsistent across browsers, which do not all implement rendering in full accordance with [the CSS3 `background-size` specification](https://www.w3.org/TR/css3-background/#the-background-size) and with [the CSS3 Image Values gradient specification](https://dev.w3.org/csswg/css3-images/#gradients).
-
-```css
-.gradient-example {
-  width: 50px;
-  height: 100px;
-  background-image: linear-gradient(blue, red);
-
-  /* Not safe to use */
-  background-size: 25px;
-  background-size: 50%;
-  background-size: auto 50px;
-  background-size: auto 50%;
-
-  /* Safe to use */
-  background-size: 25px 50px;
-  background-size: 50% 50%;
-}
-```
-
-Note that it's particularly not recommended to use a pixel dimension and an `auto` dimension with a `<gradient>`, because it's impossible to replicate rendering in versions of Firefox prior to 8, and in browsers not implementing Firefox 8's rendering, without knowing the exact size of the element whose background is being specified.
 
 ## Formal definition
 

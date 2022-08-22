@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -30,7 +31,7 @@ may even be negative, though each browser trims very large values.
 
 ## Value
 
-`index` is an integer
+An integer.
 
 ## Examples
 
@@ -50,8 +51,7 @@ b1.tabIndex = 1;
 
 ## See also
 
-- [Accessibility
-  of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - The HTML
   [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
   global attribute.

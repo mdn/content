@@ -102,7 +102,7 @@ By default, when you create a new app with `npx degit sveltejs/template my-svelt
 
 > **Note:** There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
 
-In the file `package.json` you can see that the `dev` and `start` scripts are just calling rollup:
+In the file `package.json` you can see that the `build` and `dev` scripts are just calling rollup:
 
 ```json
 "scripts": {
@@ -118,7 +118,7 @@ If we have a look at the `rollup.config.js` file, we can see that the Svelte com
 
 ```js
 import svelte from 'rollup-plugin-svelte';
-[...]
+// …
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -137,7 +137,7 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: css => {
+      css: (css) => {
         css.write('public/build/bundle.css');
       }
     }),
@@ -226,10 +226,10 @@ To demonstrate this, we will deploy our todos app to [GitLab Pages](https://abou
     git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
     git add .
     git commit -m "Initial commit"
-    git push -u origin master
+    git push -u origin main
     ```
 
-    > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
+    > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/index.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
 
 With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.
 
@@ -250,10 +250,10 @@ Let's have a go at doing this now.
         paths:
           - public
       only:
-        - master
+        - main
     ```
 
-    Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.
+    Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our main branch.
 
 2. Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
 
@@ -282,7 +282,7 @@ Let's have a go at doing this now.
     Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
     Total 5 (delta 3), reused 0 (delta 0)
     To gitlab.com:opensas/mdn-svelte-todo.git
-       7dac9f3..5725f46  master -> master
+       7dac9f3..5725f46  main -> main
     ```
 
 Whenever there's a job running GitLab will display an icon showing the process of the job. Clicking on it will let you inspect the output of the job.
@@ -305,7 +305,7 @@ In this section we'll give you some resources and projects to go and check out, 
 
 To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://svelte.dev/tutorial/basics). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
 
-You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples#hello-world).
+You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples/hello-world).
 
 To understand the motivations behind Svelte, you should read [Rich Harris](https://twitter.com/Rich_Harris)'s [Rethinking reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao&t=47s) presentation on YouTube. He is the creator of Svelte, so he has a couple of things to say about it. You also have the interactive slides available here which are, unsurprisingly, built with Svelte. If you liked it, you will also enjoy [The Return of 'Write Less, Do More'](https://www.youtube.com/watch?v=BzX4aTRPzno) presentation, which Rich Harris gave at [JSCAMP 2019](https://jscamp.tech/2019/).
 
@@ -330,7 +330,7 @@ There are other projects related to Svelte that are worth checking out:
 
 There are a number of different ways to get support and interact with the Svelte community:
 
-- [svelte.dev/chat](https://svelte.dev/chat): Svelte's Discord server.
+- [svelte.dev/chat](https://discord.com/invite/yy75DKs): Svelte's Discord server.
 - [@sveltejs](https://twitter.com/sveltejs): The official Twitter account.
 - [@sveltesociety](https://twitter.com/sveltesociety): Svelte community Twitter account.
 - [Svelte Recipes](https://github.com/svelte-society/recipes-mvp#recipes-mvp): Community-driven repository of recipes, tips, and best practices to solve common problems.

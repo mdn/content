@@ -20,6 +20,10 @@ browser-compat: webextensions.manifest.content_scripts
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -159,12 +163,12 @@ Details of all the keys you can include are given in the table below.
         <p>
           Files are injected in the order given. This means that, for example,
           if you include jQuery here followed by another content script, like
-          this...
+          this:
         </p>
         <pre class="brush: json">
 "js": ["jquery.js", "my-content-script.js"]</pre
         >
-        <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
+        <p>Then, <code>"my-content-script.js"</code> can use jQuery.</p>
         <p>
           The files are injected after any files in
           <code><a href="#css">css</a></code

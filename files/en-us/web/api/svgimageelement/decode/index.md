@@ -1,6 +1,7 @@
 ---
-title: SVGImageElement.decode
+title: SVGImageElement.decode()
 slug: Web/API/SVGImageElement/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Decode
@@ -25,7 +26,7 @@ for use.
 ## Syntax
 
 ```js
-var promise = svgImageElement.decode();
+decode()
 ```
 
 ### Parameters

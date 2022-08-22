@@ -58,13 +58,13 @@ The [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) object is part of t
 
 The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and it can notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
 
-While this article does not dive into using these APIs, it is useful to know they exist. You can also refer to  the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings)  article for further examples on using performance Web APIs.
+While this article does not dive into using these APIs, it is useful to know they exist. You can also refer to the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings) article for further examples on using performance Web APIs.
 
 ## Tools and metrics
 
 There are a number of different tools available to help you improve performance. These can generally be classified into two categories:
 
-- Tools that indicate or measure performance, such as [PageSpeed Insights](https://pagespeed.web.dev/) or the Firefox [Network Monitor](/en-US/docs/Tools/Network_Monitor) and [Performance Monitor](/en-US/docs/Tools/Performance). These tools show you how fast or slow your web app or site load. They also indicate areas that can be improved to optimize your web app.
+- Tools that indicate or measure performance, such as [PageSpeed Insights](https://pagespeed.web.dev/) or the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) and [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html). These tools show you how fast or slow your web app or site load. They also indicate areas that can be improved to optimize your web app.
 - Tools that update code so that your web app or site will perform better. For example, bundling tools pack your code into single files to reduce the number of HTTP requests or minifiers that remove all whitespace from your code to make the files smaller.
 
 We'll talk about both categories in this course. And as well as talking about performance metrics we will of course talk about the metrics that you'll use to measure whether your site's performance is improving.
@@ -85,11 +85,11 @@ Try running your favorite website now, on both webpagetest.org and PageSpeed Ins
 
 ### Network tools
 
-Most browsers have tools available that you can use to run against loaded pages and determine how they are performing. For example, the Firefox [Network Monitor](/en-US/docs/Tools/Network_Monitor) returns detailed information on all the assets downloaded form the network, along with a time graph that shows how long each one took to download.
+Most browsers have tools available that you can use to run against loaded pages and determine how they are performing. For example, the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) returns detailed information on all the assets downloaded form the network, along with a time graph that shows how long each one took to download.
 
 ![](network-monitor.png)
 
-You can also use the [Performance Monitor](/en-US/docs/Tools/Performance) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
+You can also use the [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
 
 ![](perf-monitor.png)
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createTBody()
 slug: Web/API/HTMLTableElement/createTBody
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -25,18 +26,22 @@ The **`createTBody()`** method of
 ## Syntax
 
 ```js
-table.createTBody();
+createTBody()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let mybody = mytable.createTBody();
-// Now this should be true: mybody == mytable.tBodies.item(mytable.tBodies.length - 1)
+// Now this should be true: mybody === mytable.tBodies.item(mytable.tBodies.length - 1)
 ```
 
 ## Specifications

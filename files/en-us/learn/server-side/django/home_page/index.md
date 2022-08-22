@@ -43,7 +43,7 @@ The following diagram describes the main data flow, and the components required 
 - View functions to get the requested data from the models, create HTML pages that display the data, and return the pages to the user to view in the browser.
 - Templates to use when rendering data in the views.
 
-![](basic-django.png)
+![Main data flow diagram: URL, Model, View & Template component required when handling HTTP requests and responses in a Django application. A HTTP request hits a Django server gets forwarded to the 'urls.py' file of the URLS component. The request is forwarded to the appropriate view. The view can read and write data from the Models 'models.py' file containing the code related to models. The view also accesses the HTML file template component. The view returns the response back to the user.](basic-django.png)
 
 As you'll see in the next section, we have 5 pages to display, which is too much information to document in a single article. Therefore, this article will focus on how to implement the home page, and we'll cover the other pages in a subsequent article. This should give you a good end-to-end understanding of how URL mappers, views, and models work in practice.
 
@@ -86,7 +86,7 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include "django.conf.urls.include"), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
+> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
 
 We also created a placeholder file for the *URLConf* module, named **/catalog/urls.py**.
 Add the following lines to that file:
@@ -102,7 +102,7 @@ The `path()` function defines the following:
 - A URL pattern, which is an empty string: `''`. We'll discuss URL patterns in detail when working on the other views.
 - A view function that will be called if the URL pattern is detected: `views.index`, which is the function named `index()` in the **views.py** file.
 
-The `path()` function also specifies a `name` parameter, which is a unique identifier for *this* particular URL mapping. You can use the name to "reverse" the mapper, i.e. to dynamically create a URL that  points to the resource that the mapper is designed to handle.
+The `path()` function also specifies a `name` parameter, which is a unique identifier for *this* particular URL mapping. You can use the name to "reverse" the mapper, i.e. to dynamically create a URL that points to the resource that the mapper is designed to handle.
 For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:
 
 ```html
@@ -254,7 +254,7 @@ Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** 
 
 The template includes CSS from [Bootstrap](https://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap (or another client-side web framework) is a quick way to create an attractive page that displays well on different screen sizes.
 
-The base template also references a local css file (**styles.css**) that provides additional styling. Create a **styles.css** file in **/locallibrary/catalog/static/css/** and paste the following code in the file:
+The base template also references a local CSS file (**styles.css**) that provides additional styling. Create a **styles.css** file in **/locallibrary/catalog/static/css/** and paste the following code in the file:
 
 ```css
 .sidebar-nav {

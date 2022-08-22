@@ -1,6 +1,7 @@
 ---
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,8 +21,12 @@ the current position of the caret.
 ## Syntax
 
 ```js
-selection = window.getSelection();
+getSelection()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -39,9 +44,9 @@ browsers will return a {{domxref("Selection")}} object with
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
+    const selObj = window.getSelection();
     alert(selObj);
-    var selRange = selObj.getRangeAt(0);
+    const selRange = selObj.getRangeAt(0);
     // do stuff with the range
 }
 ```
@@ -68,7 +73,7 @@ have that property or method and may return unexpected results if it does. To us
 directly:
 
 ```js
-var selectedText = selObj.toString();
+const selectedText = selObj.toString();
 ```
 
 - `selObj` is a `Selection` object.

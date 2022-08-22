@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -20,7 +21,7 @@ If you need higher performance and don't care about precision, you can use {{dom
 ## Syntax
 
 ```js
-getFloatFrequencyData(array);
+getFloatFrequencyData(array)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ getFloatFrequencyData(array);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

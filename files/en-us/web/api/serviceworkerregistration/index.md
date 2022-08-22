@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -26,23 +27,23 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
-- {{domxref("ServiceWorkerRegistration.active")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
-- {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
-- {{domxref("ServiceWorkerRegistration.installing")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.installing")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installing`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
-- {{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
   - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorkerRegistration.sync")}} {{non-standard_inline}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
-- {{domxref("ServiceWorkerRegistration.waiting")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installed`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
 ## Methods
@@ -70,23 +71,22 @@ In this example, the code first checks whether the browser supports service work
 ```js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
-  .then(function(registration) {
-    registration.addEventListener('updatefound', function() {
+  .then((registration) => {
+    registration.addEventListener('updatefound', () => {
       // If updatefound is fired, it means that there's
       // a new service worker being installed.
-      var installingWorker = registration.installing;
-      console.log('A new service worker is being installed:',
-        installingWorker);
+      const installingWorker = registration.installing;
+      console.log('A new service worker is being installed:', installingWorker);
 
       // You can listen for changes to the installing service worker's
       // state via installingWorker.onstatechange
     });
   })
-  .catch(function(error) {
-    console.log('Service worker registration failed:', error);
+  .catch((error) => {
+    console.error(`Service worker registration failed: ${error}`);
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 

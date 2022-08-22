@@ -1,6 +1,7 @@
 ---
 title: Document.height
 slug: Web/API/Document/height
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -10,9 +11,10 @@ tags:
   - Property
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.height
 ---
-{{APIRef("DOM")}} {{deprecated_header}}
+{{APIRef("DOM")}} {{deprecated_header}}{{Non-standard_header}}
 
 > **Note:** Starting in {{Gecko("6.0")}}, `document.height` is
 > no longer supported. Instead, use `document.body.clientHeight`. See

@@ -1,6 +1,7 @@
 ---
 title: Sensor
 slug: Web/API/Sensor
+page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API
@@ -37,11 +38,11 @@ Below is a list of interfaces based on the `Sensor` interface.
 
 ## Properties
 
-- {{domxref('Sensor.activated')}} {{readonlyinline}}
+- {{domxref('Sensor.activated')}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the sensor is active.
-- {{domxref('Sensor.hasReading')}} {{readonlyinline}}
+- {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the sensor has a reading.
-- {{domxref('Sensor.timestamp')}} {{readonlyinline}}
+- {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
   - : Returns the time stamp of the latest sensor reading.
 
 ## Methods

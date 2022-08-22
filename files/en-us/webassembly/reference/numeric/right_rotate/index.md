@@ -12,7 +12,7 @@ tags:
 
 The **`rotr`** instructions, short for *rotate-right*, are used for performing a bitwise right-rotate.
 
-{{EmbedInteractiveExample("pages/wat/rotr.html")}}
+{{EmbedInteractiveExample("pages/wat/rotr.html", "tabbed-taller")}}
 
 ## Syntax
 

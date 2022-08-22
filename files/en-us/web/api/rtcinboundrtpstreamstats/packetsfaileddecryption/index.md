@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.packetsFailedDecryption
 slug: Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption
+page-type: web-api-instance-property
 tags:
   - API
   - Decryption
@@ -39,4 +40,4 @@ could not be successfully decrypted.
 
 ## See also
 
-- {{RFC(3711, "3.3")}}: Description of the decryption process for secure RTP packets
+- {{RFC(3711, "", "3.3")}}: Description of the decryption process for secure RTP packets

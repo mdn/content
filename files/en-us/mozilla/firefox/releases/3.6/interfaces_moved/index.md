@@ -33,7 +33,6 @@ The following interfaces were moved from `dom/public/idl/base/` to `dom/interfac
 | `nsIDOMWindow2`            | `nsIDOMWindowCollection` |
 | `nsIDOMWindowInternal`     | `nsIDOMWindowUtils`      |
 
-
 The following interfaces moved from `dom/public/idl/core/` to `dom/interfaces/core/`:
 
 | From                 | To                            |
@@ -74,8 +73,6 @@ These interfaces moved from `dom/public/idl/css/` to `dom/interfaces/css/`:
 | `nsIDOMNSRGBAColor`           | `nsIDOMRGBColor`           |
 | `nsIDOMRect`                  | `nsIDOMViewCSS`            |
 
-
-
 The following interfaces moved from `dom/public/idl/events/` to `dom/interfaces/events/`:
 
 | From                        | To                         |
@@ -95,7 +92,6 @@ The following interfaces moved from `dom/public/idl/events/` to `dom/interfaces/
 | `nsIDOMProgressEvent`       | `nsIDOMSimpleGestureEvent` |
 | `nsIDOMSmartCardEvent`      | `nsIDOMUIEvent`            |
 
-
 These interfaces moved from `dom/public/idl/geolocation/` to `/dom/interfaces/geolocation/`:
 
 | From                        | To                               |
@@ -106,10 +102,7 @@ These interfaces moved from `dom/public/idl/geolocation/` to `/dom/interfaces/ge
 | `nsIDOMGeoPositionOptions`  | `nsIDOMNavigatorGeolocation`     |
 | `nsIGeolocationProvider`    | `nsIGeolocationProvider`         |
 
-
-
 These interfaces moved from `dom/public/idl/html/` to `/dom/interfaces/html/`:
-
 
 | From                          | To                            |
 |-------------------------------|-------------------------------|
@@ -156,13 +149,11 @@ These interfaces moved from `dom/public/idl/html/` to `/dom/interfaces/html/`:
 | `nsIDOMNSHTMLOptionElement`   | `nsIDOMNSHTMLSelectElement`   |
 | `nsIDOMNSHTMLTextAreaElement` | `nsIDOMNSXBLFormControl`      |
 
-
 The following interfaces were moved from `dom/public/idl/json/` to `dom/interfaces/json/`:
 
 | From      | To        |
 |-----------|-----------|
 | `nsIJSON` | `nsIJSON` |
-
 
 The following interfaces were moved from `dom/public/idl/ls/` to `dom/interfaces/load-save/`:
 
@@ -174,7 +165,6 @@ The following interfaces were moved from `dom/public/idl/ls/` to `dom/interfaces
 | `nsIDOMLSParserFilter`      | `nsIDOMLSProgressEvent`    |
 | `nsIDOMLSResourceResolver`  | `nsIDOMLSSerializer`       |
 | `nsIDOMLSSerializerFilter`  | `nsIDOMLSSerializerFilter` |
-
 
 The following interfaces moved from `dom/public/idl/offline/` to `dom/interfaces/offline/`:
 
@@ -190,13 +180,11 @@ These interfaces moved from `dom/public/idl/range/` to `dom/interfaces/range/`:
 | `nsIDOMDocumentRange` | `nsIDOMNSRange`        |
 | `nsIDOMRange`         | `nsIDOMRangeException` |
 
-
 This interface moved from `dom/public/idl/smil` to `dom/interfaces/smil/`:
 
 | From                       | To                         |
 |----------------------------|----------------------------|
 | `nsIDOMElementTimeControl` | `nsIDOMElementTimeControl` |
-
 
 The following interfaces moved from `dom/public/idl/storage/` to `dom/interfaces/storage/`:
 
@@ -207,7 +195,6 @@ The following interfaces moved from `dom/public/idl/storage/` to `dom/interfaces
 | `nsIDOMStorageManager` | `nsIDOMStorageWindow` |
 | `nsIDOMToString`       | `nsIDOMToString`      |
 
-
 The following interfaces moved from `dom/public/idl/stylesheets/` to `dom/interfaces/stylesheets/`:
 
 | From                  | To                      |
@@ -215,7 +202,6 @@ The following interfaces moved from `dom/public/idl/stylesheets/` to `dom/interf
 | `nsIDOMDocumentStyle` | `nsIDOMLinkStyle`       |
 | `nsIDOMMediaList`     | `nsIDOMNSDocumentStyle` |
 | `nsIDOMStyleSheet`    | `nsIDOMStyleSheetList`  |
-
 
 The following interfaces moved from `dom/public/idl/svg/` to `dom/interfaces/svg/`:
 
@@ -281,13 +267,11 @@ The following IDL files have moved from `dom/public/idl/views/` to `dom/interfac
 |----------------------|----------------------|
 | `nsIDOMAbstractView` | `nsIDOMDocumentView` |
 
-
 The following IDL files have moved from `dom/public/idl/xbl/` to `dom/interfaces/xbl/`:
 
 | From                | To                  |
 |---------------------|---------------------|
 | `nsIDOMDocumentXBL` | `nsIDOMDocumentXBL` |
-
 
 The following IDL files have moved from `dom/public/idl/xpath/` to `dom/interfaces/xpath/`:
 
@@ -297,7 +281,6 @@ The following IDL files have moved from `dom/public/idl/xpath/` to `dom/interfac
 | `nsIDOMXPathException`    | `nsIDOMXPathExpression` |
 | `nsIDOMXPathNSResolver`   | `nsIDOMXPathNamespace`  |
 | `nsIDOMXPathResult`       | `nsIDOMXPathResult`     |
-
 
 The following IDL files have moved from `dom/public/idl/xul/` to `dom/interfaces/xul/`:
 

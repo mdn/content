@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential
+page-type: web-api-interface
 tags:
   - API
   - Credential Management API
@@ -20,19 +21,19 @@ The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_
 
 ## Constructor
 
-- {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}}{{securecontext_inline}}
+- {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}} {{securecontext_inline}}
   - : Creates a new `PasswordCredential` object.
 
 ## Properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}
-  - : A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
-- {{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}
-  - : A {{domxref("USVString")}} containing a human-readable public name for display in a credential chooser.
-- {{domxref("PasswordCredential.password")}}{{readonlyinline}}{{securecontext_inline}}
-  - : A {{domxref("USVString")}} containing the password of the credential.
+- {{domxref("PasswordCredential.iconURL")}} {{ReadOnlyInline}} {{securecontext_inline}}
+  - : A string containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
+- {{domxref("PasswordCredential.name")}} {{ReadOnlyInline}} {{securecontext_inline}}
+  - : A human-readable string that provides public name for display in a credential chooser.
+- {{domxref("PasswordCredential.password")}} {{ReadOnlyInline}} {{securecontext_inline}}
+  - : A string containing the password of the credential.
 
 ### Event handlers
 
@@ -45,17 +46,17 @@ None.
 ## Examples
 
 ```js
-var cred = new PasswordCredential({
-  id: id,
-  password: password,
-  name: name,
-  iconURL: iconUrl
+const cred = new PasswordCredential({
+  id,
+  password,
+  name,
+  iconURL,
 });
 
 navigator.credentials.store(cred)
- .then(function() {
- // Do something else.
-});
+  .then(() => {
+  // Do something else.
+  });
 ```
 
 ## Specifications

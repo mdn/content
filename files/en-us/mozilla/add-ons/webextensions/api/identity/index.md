@@ -17,7 +17,7 @@ Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code
 OAuth2 flows vary between service provider so, to use this API with a particular service provider, consult their documentation. For example:
 
 - [Google](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
-- [GitHub](https://developer.github.com/v3/oauth/)
+- [GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
 
 The identity API provides the {{WebExtAPIRef("identity.launchWebAuthFlow()")}} function. This authenticates the user with the service, if necessary, and asks the user to authorize the extension to access data, if necessary. The function completes with an access token or authorization code, depending on the provider.
 
@@ -67,7 +67,7 @@ This will tend to be specific to the service provider, but in general it means c
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/extensions/identity) API.
+> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

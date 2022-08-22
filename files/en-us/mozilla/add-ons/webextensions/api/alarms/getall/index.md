@@ -37,13 +37,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function gotAll(alarms) {
-  for (let alarm of alarms) {
+  for (const alarm of alarms) {
     console.log(alarm.name);
   }
 }
 
-let getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);
+browser.alarms.getAll().then(gotAll);
 ```
 
 {{WebExtExamples}}
@@ -52,6 +51,6 @@ getAlarms.then(gotAll);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

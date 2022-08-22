@@ -1,6 +1,7 @@
 ---
 title: Event.srcElement
 slug: Web/API/Event/srcElement
+page-type: web-api-instance-property
 tags:
   - Deprecated
   - Property

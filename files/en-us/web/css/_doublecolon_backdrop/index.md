@@ -34,7 +34,9 @@ All fullscreen elements are placed in a last-in/first out (LIFO) stack in the to
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::backdrop
+```
 
 ## Examples
 
@@ -50,7 +52,7 @@ video::backdrop {
 
 The resulting screen looks like this:
 
-![](bbb-backdrop.png)
+![An almost full-screen video player with purple above and below the player as the video player doesn't completely fill the screen.](bbb-backdrop.png)
 
 [See this example in action](https://mdn.github.io/css-examples/backdrop/index.html), after changing the color of the background cause the video to go fullscreen to see the change to the backdrop color.
 

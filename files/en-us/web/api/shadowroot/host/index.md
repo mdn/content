@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
+page-type: web-api-instance-property
 tags:
   - API
   - Host
@@ -18,7 +19,7 @@ the {{domxref("ShadowRoot")}} returns a reference to the DOM element the
 
 ## Value
 
-A  DOM {{domxref('Element')}}.
+A DOM {{domxref('Element')}}.
 
 ## Examples
 
@@ -26,7 +27,7 @@ A  DOM {{domxref('Element')}}.
 let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
-  ...
+// ...
 
 // return the original host element some time later
 let hostElem = shadow.host;

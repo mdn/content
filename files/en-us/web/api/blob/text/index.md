@@ -1,6 +1,7 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -18,8 +19,12 @@ string containing the contents of the blob, interpreted as UTF-8.
 ## Syntax
 
 ```js
-text();
+text()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

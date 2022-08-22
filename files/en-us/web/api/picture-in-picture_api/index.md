@@ -1,6 +1,7 @@
 ---
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - Video
   - View
   - pip
+browser-compat: api.PictureInPictureWindow
 ---
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
@@ -69,6 +71,10 @@ _The Picture-in-Picture API defines three events, which can be used to detect wh
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
 
+## Adding Controls
+
+If media action handlers have been set via the [Media Session API](/en-US/docs/Web/API/Media_Session_API), then appropriate controls for those actions will be added by the browser to the picture-in-picture overlay. For example, if a `"nexttrack"` action has been set, then a skip button might be displayed in the picture-in-picture view. There is no support for adding custom HTML buttons or controls.
+
 ## Controlling styling
 
 The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
@@ -92,11 +98,9 @@ This code is called by a click handler when the user clicks the "Toggle Picture-
 ```js
 function togglePictureInPicture() {
   if (document.pictureInPictureElement) {
-      document.exitPictureInPicture();
-  } else {
-    if (document.pictureInPictureEnabled) {
-      video.requestPictureInPicture();
-    }
+    document.exitPictureInPicture();
+  } else if (document.pictureInPictureEnabled) {
+    video.requestPictureInPicture();
   }
 }
 ```
@@ -109,39 +113,11 @@ If the value is `null`, no video is in the floating window. So we can request a 
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Picture-in-Picture](https://w3c.github.io/picture-in-picture/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `HTMLVideoElement.requestPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}
-
-### `HTMLVideoElement.autoPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}
-
-### `HTMLVideoElement.disablePictureInPicture`
-
-{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}
-
-### `Document.pictureInPictureEnabled`
-
-{{Compat("api.Document.pictureInPictureEnabled")}}
-
-### `Document.exitPictureInPicture`
-
-{{Compat("api.Document.exitPictureInPicture")}}
-
-### `Document.pictureInPictureElement`
-
-{{Compat("api.Document.pictureInPictureElement")}}
-
-### `PictureInPictureWindow`
-
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

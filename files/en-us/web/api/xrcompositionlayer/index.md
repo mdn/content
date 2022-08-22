@@ -1,6 +1,7 @@
 ---
 title: XRCompositionLayer
 slug: Web/API/XRCompositionLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -36,13 +37,13 @@ Several layer types inherit from `XRCompositionLayer`:
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}
   - : A boolean enabling the layer's texture alpha channel.
 - {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}}
-  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, {{jsxref("null")}} otherwise.
+  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 - {{domxref("XRCompositionLayer.layout")}} {{ReadOnlyInline}}
   - : The layout type of the layer.
 - {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}
   - : The number of mip levels in the color and texture data for the layer.
 - {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}}
-  - : A boolean signaling that the layer should be rerendered in the next frame.
+  - : A boolean signaling that the layer should be re-rendered in the next frame.
 
 ## Methods
 

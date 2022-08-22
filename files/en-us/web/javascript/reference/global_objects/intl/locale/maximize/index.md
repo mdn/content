@@ -54,10 +54,13 @@ include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
 ### Using maximize
 
 ```js
-let myLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr"
 console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
-let myLocMaximized = myLocale.maximize();
+const myLocMaximized = myLocale.maximize();
 
 // Prints "fr-Latn-FR". The "Latn" and "FR" tags are added,
 // since French is only written in the Latin script and is most likely to be spoken in France.
@@ -65,7 +68,7 @@ console.log(myLocMaximized.baseName);
 
 // Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
 // Note that the extension tags (after "-u") remain unchanged.
-console.log(myLocMaximized.toString()); 
+console.log(myLocMaximized.toString());
 ```
 
 ## Specifications

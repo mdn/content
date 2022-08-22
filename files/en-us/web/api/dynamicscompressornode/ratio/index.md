@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.ratio
 slug: Web/API/DynamicsCompressorNode/ratio
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode
@@ -27,8 +28,8 @@ An {{domxref("AudioParam")}}.
 ## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.ratio.value = 12;
 ```
 

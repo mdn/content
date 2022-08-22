@@ -12,7 +12,7 @@ tags:
   - Search
 ---
 
-[_Microformats_](https://microformats.org/)are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
+[_Microformats_](https://microformats.org/) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
 - To create a microformats object, h-\* class names are used in the class attribute.
 - To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
@@ -70,7 +70,7 @@ All microformats class names use prefixes. Prefixes are **syntax independent fro
 
 - **"dt-\*" for datetime properties**, e.g. "dt-start", "dt-end", "dt-bday"
 
-  - Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
+  - Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" for element tree properties** where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".
 
@@ -228,7 +228,7 @@ Example h-entry as a blog post:
 
 ### h-feed
 
-The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](https://microformats.org/wiki/h-entry "h-entry") posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts.
+The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](https://microformats.org/wiki/h-entry) posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts.
 
 #### Example h-feed
 
@@ -379,19 +379,25 @@ There are some microformats that are applied to a page by using a special `rel=`
 
 This attribute states that the linked document represents the author of the current page.
 
-```<a rel="author" href="https://jamesg.blog">James Gallagher</a>```
-  
+```html
+<a rel="author" href="https://jamesg.blog">James Gallagher</a>
+```
+
 ### rel=license
 
 This attribute states that the linked document contains the license under which the current page is published.
 
-```<a rel="license" href="https://mit-license.org/">MIT License</a>```
-  
+```html
+<a rel="license" href="https://mit-license.org/">MIT License</a>
+```
+
 ### rel=nofollow
 
 This attribute states that the linked document should not be given any weight by search engine ranking algorithms that may derive from the current page. This is useful to prevent link graph algorithms from weighing a page higher than it otherwise would after seeing a link to a document.
 
-```<a rel="nofollow" href="https://jamesg.blog">James Gallagher</a>```
+```html
+<a rel="nofollow" href="https://jamesg.blog">James Gallagher</a>
+```
 
 ## Browser compatibility
 
@@ -400,7 +406,7 @@ Supported in all browsers's support for the class attribute and its DOM API.
 ## See also
 
 - [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
-- {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
+- [Microformat](https://en.wikipedia.org/wiki/Microformat) on Wikipedia
 - [Microformats official website](https://microformats.org/)
 - [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
 - [Microformats on IndieWebCamp](https://indieweb.org/microformats)

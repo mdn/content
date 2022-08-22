@@ -1,6 +1,7 @@
 ---
 title: SVGFEDisplacementMapElement
 slug: Web/API/SVGFEDisplacementMapElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

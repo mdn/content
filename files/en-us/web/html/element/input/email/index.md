@@ -8,7 +8,7 @@ tags:
   - HTML forms
   - Input Type
   - Reference
-browser-compat: html.elements.input.input-email
+browser-compat: html.elements.input.type_email
 ---
 
 {{HTMLRef}}
@@ -26,7 +26,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing an e-mail address, or
+        A string representing an e-mail address, or
         empty
       </td>
     </tr>
@@ -45,7 +45,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
         {{htmlattrxref("maxlength", "input")}},
         {{htmlattrxref("minlength", "input")}},
         {{htmlattrxref("multiple", "input")}},
-        {{htmlattrxref("name", "input")}},{{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("name", "input")}}, {{htmlattrxref("pattern", "input")}},
         {{htmlattrxref("placeholder", "input")}},
         {{htmlattrxref("readonly", "input")}},
         {{htmlattrxref("required", "input")}},
@@ -72,7 +72,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to e-mail syntax. More specifically, there are three possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to e-mail syntax. More specifically, there are three possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
 2. A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see [Validation](#validation) for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.
@@ -266,8 +266,7 @@ There are two levels of content validation available for `email` inputs. First, 
 Browsers that support the `email` input type automatically provide validation to ensure that only text that matches the standard format for Internet e-mail addresses is entered into the input box. Browsers that implement the specification should be using an algorithm equivalent to the following regular expression:
 
 ```js
-/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
-[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
 To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see [Form data validation](/en-US/docs/Learn/Forms/Form_validation).
@@ -330,7 +329,7 @@ Let's take a closer look at the e-mail address entry box. Its {{htmlattrxref("si
 
 An appropriate {{htmlattrxref("placeholder", "input")}} is provided—`username@beststartupever.com`—to demonstrate what constitutes a valid entry. This string demonstrates both that an e-mail address should be entered, and suggests that it should be a corporate beststartupever.com account. This is in addition to the fact that using type `email` will validate the text to ensure that it's formatted like an e-mail address. If the text in the input box isn't an e-mail address, you'll get an error message that looks something like this:
 
-![](enter-valid-email-address.png)
+![Invalid email address in error state with a popout from the input reading 'please enter an email address'.](enter-valid-email-address.png)
 
 If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "_username_@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set `pattern` to `.+@beststartupever.com`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
 
@@ -340,7 +339,7 @@ It's advisable to use the {{htmlattrxref("title")}} attribute along with `patter
 
 That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate e-mail address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address."
 
-![](email-pattern-match-bad.png)
+![A valid email address, but the input is in error state with a popout from the input reading 'The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address.'](email-pattern-match-bad.png)
 
 > **Note:** If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
 

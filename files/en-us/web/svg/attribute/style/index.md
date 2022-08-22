@@ -19,7 +19,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewbox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
   <rect width="80"  height="40" x="10" y="10"
       style="fill: skyblue; stroke: cadetblue; stroke-width: 2;"/>
 </svg>
@@ -53,31 +53,7 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "styling.html#StyleAttribute", "style")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "styling.html#StyleAttribute", "style")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

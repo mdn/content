@@ -1,6 +1,7 @@
 ---
 title: Element.ariaAtomic
 slug: Web/API/Element/ariaAtomic
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects t
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"false"`
   - : Assistive technologies will present only the changed node or nodes.

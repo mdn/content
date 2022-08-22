@@ -8,18 +8,21 @@ tags:
   - Reference
   - Role application
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#application
+  - https://w3c.github.io/aria-practices/#application
 ---
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
-<div role="application" aria-label="...">...</div>
+<div role="application" aria-label="…">…</div>
 ```
 
 By specifying the `application` role, it indicates this `div` element and all of its descendants are to be treated like they are part of a desktop application.
 
 ## Description
 
-The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#Document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
+The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
@@ -27,9 +30,9 @@ If the web application encompassed by the application role contains parts that _
 
 ### Background
 
-For historic reasons, especially on Windows, screen readers and some other assistive technologies (AT) have traditionally grabbed the whole web content from the browser at once after it had finished loading. The ATs build their own representation of it that makes the most sense for a blind user to consume the content. This is often referred to as _virtual document_, _browse mode_, or similar terms. The document is streamlined to a single-column view. A keyboard interaction model is generated that is very similar to a word processor where users can read line by line, sentence by sentence, or paragraph by paragraph. The AT will read any semantics like links, headings, form controls, tables, lists, or images.
+For historic reasons, especially on Windows, screen readers and some other assistive technologies (AT) have traditionally grabbed the whole web content from the browser at once after it had finished loading. The ATs build their own representation of it that makes the most sense for a visually impaired user to consume the content. This is often referred to as _virtual document_, _browse mode_, or similar terms. The document is streamlined to a single-column view. A keyboard interaction model is generated that is very similar to a word processor where users can read line by line, sentence by sentence, or paragraph by paragraph. The AT will read any semantics like links, headings, form controls, tables, lists, or images.
 
-In addition, a set of so-called _quick navigation keys_ has been established over the years that allows blind users to skim through a page via a certain element type. Such elements usually include headings, form fields, lists, tables, links, graphics, or landmark regions.
+In addition, a set of so-called _quick navigation keys_ has been established over the years that allows visually impaired users to skim through a page via a certain element type. Such elements usually include headings, form fields, lists, tables, links, graphics, or landmark regions.
 
 For all of this to work, ATs intercept almost all keyboard input and consume it themselves, letting nothing through to the browser or other user agent. To be able to interact with a web page, a standard set of widgets is recognized that, when pressing a certain key (usually the <kbd>Enter</kbd> key) this mode is switched off. The screen reader mode, often called _forms mode_ or _focus mode_, lets all keyboard input go through to the browser again. <kbd>Escape</kbd> is the most common way of switching back to _browse_ mode, but when within a specific `application` section, some screen readers may require other keys to purposefully exit this mode. For instance <kbd>NUMPAD PLUS</kbd> with JAWS.
 
@@ -89,10 +92,7 @@ If used, the application role should be added to the lowest common container pos
 
 ## Specifications
 
-| Specification                                                    | Status                   |
-| ---------------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#application","application")}} | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#application","application")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## Precedence order
 
@@ -100,7 +100,7 @@ Applying the `application` role will cause this and all of the descendant elemen
 
 ## See also
 
-- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
+- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
 - [Using the ARIA `application` role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
 
 <section id="Quick_links">

@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 74 that will affe
 
 #### Web console
 
-- The `$x()` [web console helper](/en-US/docs/Tools/Web_Console/Helpers)'s third argument (result type) now accepts simple string values as well as [`XPathResult` constants](/en-US/docs/Web/API/XPathResult#constants) ([bug 1602591](https://bugzilla.mozilla.org/show_bug.cgi?id=1602591)).
+- The `$x()` [web console helper](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html)'s third argument (result type) now accepts simple string values as well as [`XPathResult` constants](/en-US/docs/Web/API/XPathResult#constants) ([bug 1602591](https://bugzilla.mozilla.org/show_bug.cgi?id=1602591)).
 - Freshly landed support for the optional chaining operator "?." which can also be used with Console's autocomplete ([bug 1594009](https://bugzilla.mozilla.org/show_bug.cgi?id=1594009)).
 - The Debugger can now inspect and debug [nested workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ([bug 1590766](https://bugzilla.mozilla.org/show_bug.cgi?id=1590766))
 
@@ -46,7 +46,7 @@ _No changes._
 
 #### Removals
 
-- The {{jsxref("Object.toSource()")}} method and the global function {{jsxref("uneval()")}} are no longer available for use by web content or extensions ([bug 1565170](https://bugzilla.mozilla.org/show_bug.cgi?id=1565170)).
+- The `Object.toSource()` method and the global function `uneval()` are no longer available for use by web content or extensions ([bug 1565170](https://bugzilla.mozilla.org/show_bug.cgi?id=1565170)).
 
 ### APIs
 
@@ -66,7 +66,7 @@ _No changes._
 
 - The non-standard `IDBDatabase.mozCreateFileHandle()` method has been removed, in favor of the (also non-standard) `IDBDatabase.createMutableFile()` method ({{bug(1024312)}}).
 - The non-standard `IDBMutableFile.getFile()` method has been removed ({{bug(1607791)}}).
-- The non-standard {{domxref("HTMLCanvasElement")}} method {{domxref("HTMLCanvasElement.mozGetAsFile", "mozGetAsFile()")}} has been removed, after being deprecated several years ago ({{bug(1588980)}}).
+- The non-standard {{domxref("HTMLCanvasElement")}} method `mozGetAsFile()` has been removed, after being deprecated several years ago ({{bug(1588980)}}).
 - The {{domxref("FetchEvent")}} property {{domxref("FetchEvent.isReload", "isReload")}} has been removed, from both Firefox and the specification ({{bug(1264175)}}).
 
 ### HTTP

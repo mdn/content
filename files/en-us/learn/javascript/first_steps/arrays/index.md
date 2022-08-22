@@ -183,7 +183,7 @@ if (index !== -1) {
 console.log(cities);     // [ "Manchester", "Edinburgh", "Carlisle" ]
 ```
 
-In this call to `splice()`, the first argument says where to start removing items, and the second argument says  how many items should be removed. So you can remove more than one item:
+In this call to `splice()`, the first argument says where to start removing items, and the second argument says how many items should be removed. So you can remove more than one item:
 
 ```js
 const cities = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
@@ -389,7 +389,7 @@ for (const product of products) {
   const name = subArray[0];
   const price = Number(subArray[1]);
   total += price;
-  const itemText = \`\$\{name} — $\$\{price}\`;
+  const itemText = \`\${name} — $\${price}\`;
 
   const listItem = document.createElement('li');
   listItem.textContent = itemText;
@@ -421,11 +421,11 @@ textarea.onkeydown = (event) => {
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -654,11 +654,11 @@ textarea.onkeydown = (event) => {
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();

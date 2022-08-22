@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaPlaceholder
 slug: Web/API/ElementInternals/ariaPlaceholder
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaPlaceholder`** property of the {{domxref("ElementInternals")}} interf
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
+page-type: web-api-instance-property
 tags:
   - API
   - Content
@@ -34,7 +35,7 @@ it's expected to be needed, rather than immediately during the initial page load
 
 ## Value
 
-A {{domxref("DOMString")}} providing a hint to the user agent as to how to best
+A string providing a hint to the user agent as to how to best
 schedule the loading of the image to optimize page performance. The possible values are:
 
 - `eager`
@@ -80,7 +81,7 @@ To prevent this reflow from occurring, you should explicitly specify the size of
 image's presentation using the image element's {{htmlattrxref("width", "img")}} and
 {{htmlattrxref("height", "img")}} attributes. By establishing the intrinsic aspect ratio
 in this manner, you prevent elements from shifting around while the document loads,
-which can be disconcerting or offputting at best and can cause users to click the wrong
+which can be disconcerting or off-putting at best and can cause users to click the wrong
 thing at worst, depending on the exact timing of the deferred loads and reflows.
 
 ## Examples

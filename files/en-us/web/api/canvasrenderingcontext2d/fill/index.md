@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,10 +20,10 @@ method of the Canvas 2D API fills the current or given path with the current
 ## Syntax
 
 ```js
-fill();
-fill(path);
-fill(fillRule);
-fill(path, fillRule);
+fill()
+fill(path)
+fill(fillRule)
+fill(path, fillRule)
 ```
 
 ### Parameters
@@ -35,11 +36,14 @@ fill(path, fillRule);
 
     - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
       Default rule.
-    - **`"evenodd"`**: The [even-odd winding
-      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to fill.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

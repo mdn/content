@@ -12,7 +12,7 @@ tags:
 
 The **`neg`** instructions, short for *negate*, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
 
-{{EmbedInteractiveExample("pages/wat/neg.html")}}
+{{EmbedInteractiveExample("pages/wat/neg.html", "tabbed-standard")}}
 
 ## Syntax
 

@@ -1,5 +1,5 @@
 ---
-title: Logical properties for margins, borders and padding
+title: Logical properties for margins, borders, and padding
 slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 tags:
   - CSS
@@ -39,8 +39,8 @@ If you were using a `horizontal-tb` writing mode with a right-to-left text direc
 | {{cssxref("border-inline-start-style")}} | {{cssxref("border-left-style")}}             |
 | {{cssxref("border-inline-start-width")}} | {{cssxref("border-left-width")}}             |
 | {{cssxref("border-start-start-radius")}} | {{cssxref("border-top-left-radius")}}         |
-| {{cssxref("border-start-end-radius")}} | {{cssxref("border-bottom-left-radius")}}     |
-| {{cssxref("border-end-start-radius")}} | {{cssxref("border-top-right-radius")}}     |
+| {{cssxref("border-end-start-radius")}} | {{cssxref("border-bottom-left-radius")}}     |
+| {{cssxref("border-start-end-radius")}} | {{cssxref("border-top-right-radius")}}     |
 | {{cssxref("border-end-end-radius")}}     | {{cssxref("border-bottom-right-radius")}} |
 | {{cssxref("margin-block-end")}}             | {{cssxref("margin-bottom")}}                     |
 | {{cssxref("margin-block-start")}}         | {{cssxref("margin-top")}}                         |

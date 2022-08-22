@@ -1,6 +1,7 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,31 +22,30 @@ method) at explicit points in time.
 ## Syntax
 
 ```js
-entries = window.performance.getEntriesByType(type);
+getEntriesByType(type)
 ```
 
-### Arguments
+### Parameters
 
-- type
+- `type`
   - : The type of entry to retrieve such as "`mark`". The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value
 
-- entries
-  - : A list of {{domxref("PerformanceEntry")}} objects that have the specified
+A list of {{domxref("PerformanceEntry")}} objects that have the specified
     `type`. The items will be in chronological order based on the entries'
     {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the
     specified `type`, or no argument is provided, an empty list is returned.
 
-## Example
+## Examples
 
 ```js
 function usePerformanceEntryMethods() {
-  log("PerformanceEntry tests ...");
+  console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported.");
     return;
   }
 
@@ -60,33 +60,35 @@ function usePerformanceEntryMethods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
+  let p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
+    log(`Entry[${i}]`);
     checkPerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
-    log("Begin[" + i + "]");
+  for (let i=0; i < p.length; i++) {
+    log(`Begin[${i}]`);
     checkPerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (let i=0; i < p.length; i++) {
+    log(`Mark only entry[${i}]:`);
+    log(`  name      = ${p[i].name}`);
+    log(`  startTime = ${p[i].startTime}`);
+    log(`  duration  = ${p[i].duration}`);
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (let i=0; i < p.length; i++) {
+    log(`Mark and Begin entry[${i}]:`);
+    log(`  name      = ${p[i].name}`);
+    log(`  startTime = ${p[i].startTime}`);
+    log(`  duration  = ${p[i].duration}`);
   }
 }
 ```

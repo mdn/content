@@ -29,7 +29,7 @@ lastIndexOf(searchString, position)
 
   - : Substring to search for.
 
-    If the method is called with no arguments, `searchString` [is coerced](https://tc39.github.io/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.lastIndexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.lastIndexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+    If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to `"undefined"`. Therefore,`'undefined'.lastIndexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `'undefine'.lastIndexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 
@@ -78,11 +78,11 @@ The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}}
 "`Brave, Brave New World`".
 
 ```js
-let anyString = 'Brave, Brave New World';
+const anyString = 'Brave, Brave New World';
 
-console.log('The index of the first "Brave" is ' + anyString.indexOf('Brave'));
+console.log(`The index of the first "Brave" is ${anyString.indexOf('Brave')}`);
 // logs 0
-console.log('The index of the last "Brave" is ' + anyString.lastIndexOf('Brave'));
+console.log(`The index of the last "Brave" is ${anyString.lastIndexOf('Brave')}`);
 // logs 7
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue
 slug: Web/API/CSSKeywordValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,12 +22,12 @@ The interface instance name is a {{Glossary("stringifier")}} meaning that when u
 
 ## Constructor
 
-- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}}
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSKeywordValue` object.
 
 ## Properties
 
-- {{domxref('CSSKeywordValue.value')}}
+- {{domxref('CSSKeywordValue.value')}} {{Experimental_Inline}}
   - : Returns or sets the value of the `CSSKeywordValue`.
 
 ## Methods
@@ -35,7 +36,7 @@ _Inherits methods from {{domxref('CSSStyleValue')}}._
 
 ## Examples
 
-The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element).
+The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden
 #myElement {
@@ -51,7 +52,7 @@ The following example resets the CSS {{cssxref('display')}} property to its defa
 let myElement = document.getElementById('myElement').attributeStyleMap;
     myElement.set('display', new CSSKeywordValue('initial'));
 
-console.log( myElement.get('display').value);  // 'initial'
+console.log(myElement.get('display').value);  // 'initial'
 ```
 
 {{EmbedLiveSample("Examples", 120, 120)}}

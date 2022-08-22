@@ -21,6 +21,10 @@ browser-compat: webextensions.manifest.commands
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -128,7 +132,7 @@ This JSON defines 2 shortcuts:
 You could then listen for the `"toggle-feature"` command with code like this:
 
 ```js
-browser.commands.onCommand.addListener(function (command) {
+browser.commands.onCommand.addListener((command) => {
   if (command === "toggle-feature") {
     console.log("Toggling the feature!");
   }
@@ -145,7 +149,7 @@ There are 3 **special shortcuts with default actions**, for which the {{WebExtAP
 
 For example, this JSON defines a key combination that clicks the extension's browser action:
 
-```js
+```json
 "commands": {
   "_execute_browser_action": {
     "suggested_key": {

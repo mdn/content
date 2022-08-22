@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.url
 slug: Web/API/PerformanceElementTiming/url
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`url`** read-only property of the {{domxref("PerformanceElementTiming")}} 
 
 ## Value
 
-A {{domxref("DOMString")}} which is the initial URL of the resources request for images or 0 for text.
+A string which is the initial URL of the resources request for images or 0 for text.
 
 ## Examples
 
@@ -27,7 +28,7 @@ In this example calling `entry.url` returns `https://example.com/image.jpg`.
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.url);
     }

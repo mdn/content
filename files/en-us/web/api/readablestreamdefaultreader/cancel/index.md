@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,12 +29,13 @@ still and not completely get rid of the stream, you'd use
 ## Syntax
 
 ```js
-var promise = readableStreamDefaultReader.cancel(reason);
+cancel()
+cancel(reason)
 ```
 
 ### Parameters
 
-- reason {{optional_inline}}
+- `reason` {{optional_inline}}
   - : A human-readable reason for the cancellation. This value may or may not be used.
 
 ### Return value
@@ -43,7 +45,7 @@ parameter.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamDefaultReader`, or the stream
     has no owner.
 
@@ -51,8 +53,7 @@ parameter.
 
 In the following simple example, a previously-created custom
 `ReadableStream` is read using a {{domxref("ReadableStreamDefaultReader")}}
-created using `getReader()`. (this code is based on our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)). Each chunk is read sequentially and output to the UI, until the
+created using `getReader()`. (this code is based on our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)). Each chunk is read sequentially and output to the UI, until the
 stream has finished being read, at which point we return out of the recursive function
 and print the entire stream to another part of the UI.
 
@@ -81,7 +82,7 @@ function fetchStream() {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
     result += chunk;

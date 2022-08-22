@@ -10,5 +10,5 @@ An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Gloss
 
 ## See also
 
-- {{Interwiki("wikipedia", "Parameter_(computer_programming)", "Difference between Parameter and Argument")}} on Wikipedia
+- [Difference between Parameter and Argument](https://en.wikipedia.org/wiki/Parameter_(computer_programming)) on Wikipedia
 - The {{jsxref("Functions/arguments","arguments")}} object in {{glossary("JavaScript")}}

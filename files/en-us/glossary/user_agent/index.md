@@ -24,10 +24,10 @@ A typical user agent string looks like this: `"Mozilla/5.0 (X11; Ubuntu; Linux x
 
 ## See also
 
-- {{interwiki("wikipedia", "User agent")}} on Wikipedia
+- [User agent](https://en.wikipedia.org/wiki/User_agent) on Wikipedia
 - {{domxref("Navigator/userAgent", "NavigatorID.userAgent")}}
 - [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
-- {{RFC(2616, "14.43")}}: The `User-Agent` header
+- {{RFC(2616, "", "14.43")}}: The `User-Agent` header
 - [Glossary:](/en-US/docs/Glossary)
 
   - {{Glossary("Browser")}}

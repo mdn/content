@@ -52,8 +52,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getUint32 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getUint32(1); // 0
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SerialPort.getInfo()
 slug: Web/API/SerialPort/getInfo
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an
 ## Syntax
 
 ```js
-SerialPort.getInfo();
+getInfo()
 ```
 
 ### Parameters

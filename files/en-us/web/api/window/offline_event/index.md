@@ -1,6 +1,7 @@
 ---
 title: 'Window: offline event'
 slug: Web/API/Window/offline_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -13,28 +14,26 @@ browser-compat: api.Window.offline_event
 
 The **`offline`** event of the {{domxref("Window")}} interface is fired when the browser has lost access to the network and the value of {{domxref("Navigator.onLine")}} switches to `false`.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onoffline", "onoffline")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('offline', (event) => { });
+onoffline = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onoffline` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Examples
 

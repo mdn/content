@@ -1,6 +1,7 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -40,7 +41,7 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 
 Before using Background Fetch, check for browser support.
 
-```css
+```js
 if (!('BackgroundFetchManager' in self)) {
   // Provide fallback downloading.
 }
@@ -69,9 +70,7 @@ You can find a demo application which implements Background Fetch [here](https:/
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Background Fetch](https://wicg.github.io/background-fetch/) |
+{{Specifications}}
 
 ## Browser compatibility
 

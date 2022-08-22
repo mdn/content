@@ -1,6 +1,7 @@
 ---
 title: XRRay()
 slug: Web/API/XRRay/XRRay
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -37,11 +38,11 @@ A newly-created {{domxref("XRRay")}} object.
 
 ### Exceptions
 
-A `TypeError` is thrown,
-
-- if all of `direction`'s `x`, `y`, and `z` coordinates are zero.
-- if `direction`'s `w` coordinate is not 0.0.
-- if `origin`'s `w` coordinate is not 1.0.
+- {{jsxref("TypeError")}}
+  - : Thrown if one of the following conditions is met:
+    - all of `direction`'s `x`, `y`, and `z` coordinates are zero.
+    - `direction`'s `w` coordinate is not 0.0.
+    - `origin`'s `w` coordinate is not 1.0.
 
 ## Examples
 

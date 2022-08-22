@@ -40,7 +40,7 @@ This document provides a concise checklist of accessibility requirements for mob
 
 - Text equivalent must be provided for every non-strictly presentational non-text element within the app.
 
-  - Use _alt_ and _title_ where appropriate (*s*ee Steve Faulkner's post about [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) for a good guide.)
+  - Use _alt_ and _title_ where appropriate (*s*ee Steve Faulkner's post about [Using the HTML title attribute](https://www.tpgi.com/using-the-html-title-attribute-updated/) for a good guide.)
   - If the above attributes are not applicable, use appropriate [ARIA States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as `aria-label`, `aria-labelledby`, or `aria-describedby`.
 
 - Images of text must be avoided.
@@ -69,7 +69,7 @@ This document provides a concise checklist of accessibility requirements for mob
       <h3>Low level heading</h3>
   ```
 
-- [ARIA Landmark Roles](https://www.washington.edu/accessibility/web/landmarks/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- [ARIA Landmark Roles](https://www.washington.edu/accessibility/websites/regions/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
 - For touch events, at least one of the following must be true ([WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)):
 
   - The down-event should not be used to trigger any action
@@ -77,6 +77,6 @@ This document provides a concise checklist of accessibility requirements for mob
   - The up-event will undo any action that was triggered on a down event
   - It is essential to trigger the action on the down event. For example, playing a game or a piano application.
 
-- Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) for useful touch target size guidelines).
+- Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size) for useful touch target size guidelines).
 
 > **Note:** The [original version of this document](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) was written by [Yura Zenevich](https://yzen.github.io/).

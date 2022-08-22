@@ -14,7 +14,7 @@ DOM was not originally specified—it came about when browsers began implementin
 
 ## See also
 
-- {{interwiki("wikipedia", "Document_Object_Model", "The Document Object Model")}} on Wikipedia
+- [The Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model) on Wikipedia
 - [The DOM documentation on MDN](/en-US/docs/Web/API/Document_Object_Model)
 - [The DOM Standard](https://dom.spec.whatwg.org/)
 - [Glossary](/en-US/docs/Glossary)

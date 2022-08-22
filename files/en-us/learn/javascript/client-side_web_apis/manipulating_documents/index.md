@@ -32,7 +32,7 @@ When writing web pages and apps, one of the most common things you'll want to do
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with the core DOM APIs, and the other APIs commonly
-        associated with DOM and document manipulation
+        associated with DOM and document manipulation.
       </td>
     </tr>
   </tbody>
@@ -60,7 +60,7 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Simple DOM example</title>
@@ -213,7 +213,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
     para.style.textAlign = 'center';
     ```
 
-2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](/en-US/docs/Tools/Page_Inspector), you'll see that these lines are indeed adding inline styles to the document:
+2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you'll see that these lines are indeed adding inline styles to the document:
 
     ```html
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>

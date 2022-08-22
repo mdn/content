@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaLabel
 slug: Web/API/ElementInternals/ariaLabel
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaLabel`** property of the {{domxref("ElementInternals")}} interface re
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

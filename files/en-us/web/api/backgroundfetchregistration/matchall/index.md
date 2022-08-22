@@ -1,23 +1,25 @@
 ---
 title: BackgroundFetchRegistration.matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - matchAll
   - BackgroundFetchRegistration
+  - Experimental
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
-{{APIRef("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.
 
 ## Syntax
 
 ```js
-matchAll(request);
-matchAll(request,options);
+matchAll(request)
+matchAll(request,options)
 ```
 
 ### Parameters

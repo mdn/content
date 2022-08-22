@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 84 that will affe
 
 ### Developer Tools
 
-- The Firefox [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) now supports displaying the [keyboard tab order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order) on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).
+- The Firefox [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now supports displaying the [keyboard tab order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order) on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).
 
 ### HTML
 

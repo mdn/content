@@ -12,4 +12,4 @@ In computing, a reference is a value that indirectly accesses data to retrieve a
 
 ## See also
 
-- {{Interwiki("wikipedia", "Reference (computer science)")}} on Wikipedia
+- [Reference (computer science)](https://en.wikipedia.org/wiki/Reference_(computer_science)) on Wikipedia

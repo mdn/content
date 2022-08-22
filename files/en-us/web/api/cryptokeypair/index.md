@@ -1,12 +1,14 @@
 ---
 title: CryptoKeyPair
 slug: Web/API/CryptoKeyPair
+page-type: web-api-interface
 tags:
   - API
   - CryptoKeyPair
   - Dictionary
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#keypair
 ---
 {{APIRef("Web Crypto API")}}
 
@@ -40,9 +42,7 @@ The examples for `SubtleCrypto` methods often use `CryptoKeyPair` objects. For e
 
 ## Specifications
 
-| Specification                        | Status                           | Comment         |
-| ------------------------------------ | -------------------------------- | --------------- |
-| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} | |
+{{Specifications}}
 
 ## See also
 

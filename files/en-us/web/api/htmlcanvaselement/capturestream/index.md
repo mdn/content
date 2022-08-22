@@ -1,9 +1,9 @@
 ---
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
+page-type: web-api-instance-method
 tags:
   - Canvas
-  - Experimental
   - Frame Capture
   - HTMLCanvasElement
   - Interface
@@ -23,7 +23,7 @@ which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-
 ## Syntax
 
 ```js
-MediaStream = canvas.captureStream(frameRate);
+captureStream(frameRate)
 ```
 
 ### Parameters
@@ -46,19 +46,23 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the value of `frameRate` is negative.
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : The canvas's bitmap is not origin clean;
+    at least some of its contents have or may have been loaded from a site other than the one from which the document itself was loaded.
+
 ## Example
 
 ```js
 // Find the canvas element to capture
-var canvasElt = document.querySelector('canvas');
+const canvasElt = document.querySelector('canvas');
 
 // Get the stream
-var stream = canvasElt.captureStream(25); // 25 FPS
+const stream = canvasElt.captureStream(25); // 25 FPS
 
 // Do things to the stream
 // E.g. Send it to another computer using an RTCPeerConnection
 //      pc is an RTCPeerConnection created elsewhere
-pc.addStream(stream);
+stream.getTracks().forEach((track) => pc.addTrack(track, stream));
 ```
 
 ## Specifications

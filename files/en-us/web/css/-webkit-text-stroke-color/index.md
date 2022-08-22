@@ -64,8 +64,8 @@ p {
 ```
 
 ```js hidden
-var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function(evt) {
+const colorPicker = document.querySelector("input");
+colorPicker.addEventListener("change", (evt) => {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```
@@ -84,7 +84,7 @@ colorPicker.addEventListener("change", function(evt) {
 
 ## See also
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Surfin' Safari blog post announcing this feature](https://webkit.org/blog/85/introducing-text-stroke/)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-fill-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}

@@ -25,7 +25,7 @@ The value of the **`input`** property is modified whenever the searched string o
 ### Using `input` and `$_`
 
 ```js
-var re = /hi/g;
+const re = /hi/g;
 re.test('hi there!');
 RegExp.input;         // "hi there!"
 re.test('foo');       // new test, non-matching

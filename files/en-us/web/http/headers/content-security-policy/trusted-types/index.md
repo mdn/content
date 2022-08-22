@@ -6,7 +6,7 @@ tags:
   - Directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.trusted-types
+browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 {{HTTPSidebar}}
 
@@ -54,6 +54,6 @@ if (typeof trustedTypes !== 'undefined') {
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
 - [Trusted Types polyfill](https://github.com/w3c/webappsec-trusted-types#polyfill)

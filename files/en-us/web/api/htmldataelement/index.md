@@ -1,6 +1,7 @@
 ---
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -21,7 +22,7 @@ The **`HTMLDataElement`** interface provides special properties (beyond the regu
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDataElement.value")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value", "data")}} HTML attribute, containing a machine-readable form of the element's value.
+  - : A string reflecting the {{htmlattrxref("value", "data")}} HTML attribute, containing a machine-readable form of the element's value.
 
 ## Methods
 

@@ -1,6 +1,7 @@
 ---
 title: 'Element: error event'
 slug: Web/API/Element/error_event
+page-type: web-api-event
 tags:
   - Audio
   - DOM
@@ -21,30 +22,23 @@ browser-compat: api.Element.error_event
 
 The `error` event is fired on an {{domxref("Element")}} object when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}} or {{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('error', (event) => {});
+
+onerror = (event) => { };
+```
+
+## Event type
 
 The event object is a {{domxref("UIEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
+
+{{InheritanceDiagram("UIEvent")}}
 
 ## Examples
 
@@ -59,15 +53,15 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
 </div>
 ```
 
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {
@@ -107,7 +101,7 @@ const log = document.querySelector('.event-log-contents');
 
 const badImg = document.querySelector('.bad-img');
 badImg.addEventListener('error', (event) => {
-    log.textContent = log.textContent + `${event.type}: Loading image\n`;
+    log.textContent += `${event.type}: Loading image\n`;
     console.log(event)
 });
 

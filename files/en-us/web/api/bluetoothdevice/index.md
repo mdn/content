@@ -1,6 +1,7 @@
 ---
 title: BluetoothDevice
 slug: Web/API/BluetoothDevice
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth
@@ -13,19 +14,18 @@ browser-compat: api.BluetoothDevice
 ---
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The BluetoothDevice interface of the [Web Bluetooth
-API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a Bluetooth device inside a particular script execution
+The BluetoothDevice interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a Bluetooth device inside a particular script execution
 environment.
 
 {{InheritanceDiagram}}
 
 ## Properties
 
-- {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} that uniquely identifies a device.
-- {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} that provides a human-readable name for the device.
-- {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : A string that uniquely identifies a device.
+- {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : A string that provides a human-readable name for the device.
+- {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
 ## Methods

@@ -53,11 +53,11 @@ function logItems(bookmarkItem, indent) {
   if (bookmarkItem.url) {
     console.log(makeIndent(indent) + bookmarkItem.url);
   } else {
-    console.log(makeIndent(indent) + "Folder: " + bookmarkItem.id);
+    console.log(`${makeIndent(indent)}Folder: ${bookmarkItem.id}`);
     indent++;
   }
   if (bookmarkItem.children) {
-    for (let child of bookmarkItem.children) {
+    for (const child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }
@@ -73,8 +73,7 @@ function onRejected(error) {
 
 let subTreeID = "root_____";
 
-let gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
-gettingSubTree.then(logSubTree, onRejected);
+browser.bookmarks.getSubTree(subTreeID).then(logSubTree, onRejected);
 ```
 
 {{WebExtExamples}}
@@ -83,7 +82,7 @@ gettingSubTree.then(logSubTree, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getSubTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getSubTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

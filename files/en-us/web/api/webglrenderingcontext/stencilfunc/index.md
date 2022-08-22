@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilFunc()
 slug: Web/API/WebGLRenderingContext/stencilFunc
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ multipass rendering to achieve special effects.
 ## Syntax
 
 ```js
-void gl.stencilFunc(func, ref, mask);
+stencilFunc(func, ref, mask)
 ```
 
 ### Parameters
@@ -40,7 +41,7 @@ void gl.stencilFunc(func, ref, mask);
     - `gl.GREATER`: Pass if
       `(ref & mask) > (stencil & mask)`.
     - `gl.NOTEQUAL`: Pass if
-      `(ref & mask) != (stencil & mask)`.
+      `(ref & mask) !== (stencil & mask)`.
     - `gl.GEQUAL`: Pass if
       `(ref & mask) >= (stencil & mask)`.
     - `gl.ALWAYS`: Always pass.
@@ -55,7 +56,7 @@ void gl.stencilFunc(func, ref, mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

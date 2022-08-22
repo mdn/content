@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.upperBound()
 slug: Web/API/IDBKeyRange/upperBound
+page-type: web-api-static-method
 tags:
   - API
   - Database
@@ -23,14 +24,16 @@ it includes the upper endpoint value and is closed.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])
+upperBound(upper)
+upperBound(upper, open)
 ```
 
 ### Parameters
 
-- *bound* specifies the upper bound of the new key range.
-- _open_ indicates whether the upper bound excludes the endpoint value. The
-  default is false. {{optional_inline}}
+- `upper`
+  - : Specifies the upper bound of the new key range.
+- `open` {{optional_inline}}
+  - : Indicates whether the upper bound excludes the endpoint value. The default is false.
 
 ### Return value
 
@@ -38,13 +41,10 @@ var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following type:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the key associated with the `upper` parameter is not a valid key.
 
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
-
-## Example
+## Examples
 
 The following example illustrates how you'd use an upper bound key range. Here we
 declare `keyRangeValue = IDBKeyRange.upperBound("F");` — a range that
@@ -57,22 +57,21 @@ If we used `IDBKeyRange.upperBound("F", true);`, then the range excludes
 "F"; and instead only includes the values before it.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
-> ([view the example live
-> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo
+> ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.upperBound("F");
+  const keyRangeValue = IDBKeyRange.upperBound("F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+      if (cursor) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -99,5 +98,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -1,6 +1,7 @@
 ---
 title: 'WindowControlsOverlay: geometrychange event'
 slug: Web/API/WindowControlsOverlay/geometrychange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -20,9 +21,9 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('geometrychange', event => { })
+addEventListener('geometrychange', (event) => { })
 
-ongeometrychange = event => { }
+ongeometrychange = (event) => { }
 ```
 
 ## Event type

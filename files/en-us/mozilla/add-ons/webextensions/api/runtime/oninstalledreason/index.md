@@ -25,7 +25,7 @@ Values of this type are strings. Possible values are:
   - : The extension was installed.
 - `"update"`
   - : The extension was updated to a new version.
-- `"browser_update"`
+- `"browser_update"` or, for Chrome, `"chrome_update"`
   - : The browser was updated to a new version.
 - `"shared_module_update"`
   - : Another extension, which contains a module used by this extension, was updated.
@@ -36,7 +36,7 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-OnInstalledReason) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-OnInstalledReason) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

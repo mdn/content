@@ -51,4 +51,4 @@ The following interactive example shows how changing the value of the `overflow`
 ## See also
 
 - Properties for controlling the look of scrollbars {{CSSxRef("scrollbar-width")}} and {{CSSxRef("scrollbar-color")}}
-- How to [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow).
+- How to [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html).

@@ -1,6 +1,7 @@
 ---
 title: Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
+page-type: guide
 tags:
   - Advanced
   - Canvas
@@ -31,8 +32,12 @@ The canvas API is able to use any of the following data types as an image source
   - : Using an HTML {{HTMLElement("video")}} element as your image source grabs the current frame from the video and uses it as an image.
 - {{domxref("HTMLCanvasElement")}}
   - : You can use another {{HTMLElement("canvas")}} element as your image source.
-
-These sources are collectively referred to by the type {{domxref("CanvasImageSource")}}.
+- {{domxref("ImageBitmap")}}
+  - : A bitmap image, eventually cropped. Such type are used to extract part of an image, a _sprite_, from a larger image
+- {{domxref("OffscreenCanvas")}}
+  - : A special kind of `<canvas>` that is not displayed and is prepared without being display. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
+- {{domxref("VideoFrame")}}
+  - : An image representing one single frame of a video.
 
 There are several ways to get images for use on a canvas.
 
@@ -59,7 +64,7 @@ One of the more practical uses of this would be to use a second canvas element a
 Another option is to create new {{domxref("HTMLImageElement")}} objects in our script. To do this, you can use the convenient `Image()` constructor:
 
 ```js
-var img = new Image();   // Create new img element
+const img = new Image();   // Create new img element
 img.src = 'myImage.png'; // Set source path
 ```
 
@@ -68,8 +73,8 @@ When this script gets executed, the image starts loading.
 If you try to call `drawImage()` before the image has finished loading, it won't do anything (or, in older browsers, may even throw an exception). So you need to be sure to use the load event so you don't try this before the image has loaded:
 
 ```js
-var img = new Image();   // Create new img element
-img.addEventListener('load', function() {
+const img = new Image();   // Create new img element
+img.addEventListener('load', () => {
   // execute drawImage statements here
 }, false);
 img.src = 'myImage.png'; // Set source path
@@ -79,10 +84,10 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
-var img = new Image();   // Create new img element
+const img = new Image();   // Create new img element
 img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
 ```
 
@@ -96,23 +101,23 @@ You can also use frames from a video being presented by a {{HTMLElement("video")
 
 ```js
 function getMyVideo() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     return document.getElementById('myvideo');
   }
 }
 ```
 
-This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, is one of the objects that can be used as a `CanvasImageSource`.
+This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvas.
 
 ## Drawing images
 
 Once we have a reference to our source image object we can use the `drawImage()` method to render it to the canvas. As we will see later the `drawImage()` method is overloaded and has several variants. In its most basic form it looks like this:
 
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
-  - : Draws the `CanvasImageSource` specified by the `image` parameter at the coordinates (`x`, `y`).
+  - : Draws the image specified by the `image` parameter at the coordinates (`x`, `y`).
 
 > **Note:** SVG images must specify a width and height in the root \<svg> element.
 
@@ -130,9 +135,9 @@ In the following example, we will use an external image as the backdrop for a sm
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function() {
+  const ctx = document.getElementById('canvas').getContext('2d');
+  const img = new Image();
+  img.onload = () => {
     ctx.drawImage(img, 0, 0);
     ctx.beginPath();
     ctx.moveTo(30, 96);
@@ -172,11 +177,11 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function() {
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById('canvas').getContext('2d');
+  const img = new Image();
+  img.onload = () => {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
@@ -222,8 +227,8 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
 
   // Draw slice
   ctx.drawImage(document.getElementById('source'),
@@ -297,10 +302,10 @@ Tying it all together is the JavaScript to draw our framed images:
 function draw() {
 
   // Loop through all images
-  for (var i = 0; i < document.images.length; i++) {
+  for (let i = 0; i < document.images.length; i++) {
 
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') != 'frame') {
+    if (document.images[i].getAttribute('id') !== 'frame') {
 
       // Create canvas element
       canvas = document.createElement('canvas');

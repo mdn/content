@@ -26,7 +26,7 @@ The `box-shadow` property takes a number of values:
 - A color
 - The `inset` keyword
 
-In the example below we have set the X and Y axises to 5px, the blur to 10px and the spread to 2px. I am using a semi-transparent black as my color. Play with the different values to see how they change the shadow.
+In the example below we have set the X and Y axes to 5px, the blur to 10px and the spread to 2px. I am using a semi-transparent black as my color. Play with the different values to see how they change the shadow.
 
 {{EmbedGHLiveSample("css-examples/howto/box-shadow-button.html", '100%', 500)}}
 
@@ -34,5 +34,5 @@ In the example below we have set the X and Y axises to 5px, the blur to 10px and
 
 ## See also
 
-- The [Box shadow generator](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator)
+- The [Box shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
 - [Learn CSS: Advanced styling effects.](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)

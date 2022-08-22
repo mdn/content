@@ -14,10 +14,10 @@ For example:
 
 - The [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia) API can be used to grab audio and video from a user's webcam, which can then be used in any way the developer likes, for example, recording video and audio, broadcasting it to another user in a conference call, or capturing image stills from the video.
 - The [Geolocation API](/en-US/docs/Web/API/Geolocation) can be used to retrieve location information from whatever service the user has available on their device (e.g. GPS), which can then be used in conjunction with the [Google Maps APIs](https://developers.google.com/maps/) to for example plot the user's location on a custom map and show them what tourist attractions are in their area.
-- The [Twitter APIs](https://dev.twitter.com/overview/api) can be used to retrieve data from a user's twitter accounts, for example, to display their latest tweets on a web page.
+- The [Twitter APIs](https://developer.twitter.com/en/docs) can be used to retrieve data from a user's twitter accounts, for example, to display their latest tweets on a web page.
 - The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) can be used to animate parts of a web page — for example, to make images move around or rotate.
 
 ## See also
 
-- {{Interwiki("wikipedia", "API", "API")}} on Wikipedia
+- [API](https://en.wikipedia.org/wiki/API) on Wikipedia
 - [Web API reference](/en-US/docs/Web/API)

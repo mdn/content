@@ -16,7 +16,7 @@ The static
 **`Reflect.preventExtensions()`** method prevents new
 properties from ever being added to an object (i.e., prevents future extensions to the
 object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
-some [differences](#difference_from_object.preventExtensions).
+some [differences](#difference_from_object.preventextensions).
 
 {{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
@@ -55,11 +55,11 @@ See also {{jsxref("Object.preventExtensions()")}}.
 
 ```js
 // Objects are extensible by default.
-let empty = {}
+const empty = {};
 Reflect.isExtensible(empty)  // === true
 
 // ...but that can be changed.
-Reflect.preventExtensions(empty)
+Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty)  // === false
 ```
 
@@ -71,10 +71,10 @@ primitive), then it will cause a {{jsxref("TypeError")}}. With
 will be coerced to an object.
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 

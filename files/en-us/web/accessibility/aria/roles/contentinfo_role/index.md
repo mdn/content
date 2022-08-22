@@ -7,6 +7,9 @@ tags:
   - Reference
   - contentinfo role
   - Accessibility
+spec-urls:
+  - https://w3c.github.io/aria/#contentinfo
+  - https://w3c.github.io/aria-practices/#aria_lh_contentinfo
 ---
 The `contentinfo` role defines a footer, containing identifying information such as copyright information, navigation links, and privacy statements, found on every document within a site. This section is commonly called a footer.
 
@@ -28,7 +31,7 @@ This is a website footer. Using the {{HTMLElement('footer')}} element instead is
 
 ## Description
 
-The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) used to identify a page footer. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Pages should only include one top-level `contentinfo` landmark role per page.
+The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) used to identify a page footer. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Pages should only include one top-level `contentinfo` landmark role per page.
 
 Each page should only include one `contentinfo` landmark, created by either using the {{HTMLElement('footer')}} element or by declaring `role="contentinfo"`. `contentinfo` landmarks present in content embedded via {{HTMLElement('iframe')}} do not count towards this limit.
 
@@ -58,7 +61,7 @@ Each page should only include one `contentinfo` landmark, created by either usin
 
 ### Use sparingly
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ### One `contentinfo` landmark per page
 
@@ -79,7 +82,7 @@ If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')
 ```html
 <body>
 
-  ...
+  …
 
   <article>
     <h2>Everyday Pad Thai</h2>
@@ -89,7 +92,7 @@ If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')
     </footer>
   </article>
 
-  ...
+  …
 
   <footer aria-label="Footer">
     <!-- footer content -->
@@ -115,17 +118,14 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 ## Specifications
 
-| Specification                                                                                                            | Status                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#contentinfo","contentinfo landmark role")}}                                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_contentinfo","contentinfo landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
 - The {{HTMLElement('footer')}} element
 - [contentinfo (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#contentinfo)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The Footer Element Update | HTML5 Doctor](https://html5doctor.com/the-footer-element-update/)
 

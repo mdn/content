@@ -43,7 +43,7 @@ You've already met some form elements, including {{HTMLelement('form')}}, {{HTML
 - The common input types {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, and {{HTMLelement('input/text', 'text')}}.
 - Some of the attributes that are common to all form controls.
 
-> **Note:** The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [\<input> types](/en-US/docs/Web/HTML/Element/input) reference.
+> **Note:** We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Element/input) reference.
 
 ## Text input fields
 
@@ -58,11 +58,11 @@ All basic text controls share some common behaviors:
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
 - They can benefit from spell checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
 
-> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#attr-type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
-A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
+A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
 > **Note:** You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
@@ -78,7 +78,7 @@ _The following screenshot shows default, focused and disabled text input types i
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
-> **Note:** HTML5 enhanced the basic original single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints and other features, for example specific to entering URLs or numbers. We'll cover those in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+> **Note:** We discuss values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 #### Password field
 
@@ -90,7 +90,7 @@ One of the original input types was the `password` text field type:
 
 The `password` value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g. with dots or asterisks) so it can't be easily read by others.
 
-Keep in mind this is just a user interface feature; unless you submit your form securely, it will get sent in plain text, which is bad for security — a malicious party could intercept your data and steal passwords, credit card details, or whatever else you've submitted. The best way to protect users from this is to host any pages involving forms over a secure connection (i.e. at an `https://` ... address), so the data is encrypted before it is sent.
+Keep in mind this is just a user interface feature; unless you submit your form securely, it will get sent in plain text, which is bad for security — a malicious party could intercept your data and steal passwords, credit card details, or whatever else you've submitted. The best way to protect users from this is to host any pages involving forms over a secure connection (i.e. located at an `https://` address), so the data is encrypted before it is sent.
 
 Browsers recognize the security implications of sending form data over an insecure connection, and have warnings to deter users from using insecure forms. For more information on what Firefox implements, see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
 
@@ -104,13 +104,13 @@ Another original text control is the `hidden` input type. This is used to create
 
 If you create such an element, it's required to set its `name` and `value` attributes. The value can be dynamically set via JavaScript. The `hidden` input type should not have an associated label.
 
-Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, and {{HTMLElement("input/tel", "tel")}}, were added with HTML5. Those will be covered in the next tutorial, [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, and {{HTMLElement("input/tel", "tel")}}, will be covered in the next tutorial, [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 ## Checkable items: checkboxes and radio buttons
 
 Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable item: the check box and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
 
-It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#attr-name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
+It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
 > **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
@@ -118,13 +118,13 @@ For maximum usability/accessibility, you are advised to surround each list of re
 
 ### Check box
 
-A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#attr-type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
+A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked>
 ```
 
-Related checkbox items should use the same {{htmlattrxref("name","input")}} attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
+Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
 
 ```html
 <fieldset>
@@ -184,7 +184,7 @@ Several radio buttons can be tied together. If they share the same value for the
 </fieldset>
 ```
 
-The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macos and Chrome 79 and Edge 18 on Windows 10.
+The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10.
 
 ![Radio buttons on Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](radios.png)
 
@@ -348,14 +348,14 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-name">name</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#name">name</a></code>
       </td>
       <td></td>
       <td>The name of the element; this is submitted with the form data.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#value">value</a></code>
       </td>
       <td></td>
       <td>The element's initial value.</td>
@@ -369,7 +369,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-This article has covered the older input types — the original set introduced in the early days of HTML that is well supported in all browsers. In the next section, we'll take a look at the newer values of the `type` attribute that were added in HTML5.
+This article has covered the older input types — the original set introduced in the early days of HTML that is well supported in all browsers. In the next section, we'll take a look at the more modern values of the `type` attribute.
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 

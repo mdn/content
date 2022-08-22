@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList
 slug: Web/API/VideoTrackList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -40,19 +41,19 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 
 ## Events
 
-- {{domxref("VideoTrackList.addtrack_event", "addtrack")}}
+- {{domxref("VideoTrackList/addtrack_event", "addtrack")}}
   - : Fired when a new video track has been added to the media element.
     Also available via the `onaddtrack` property.
 - {{domxref("VideoTrackList.change_event", "change")}}
   - : Fired when a video track has been made active or inactive.
     Also available via the `onchange` property.
-- {{domxref("VideoTrackList.removetrack_event", "removetrack")}}
+- {{domxref("VideoTrackList/removetrack_event", "removetrack")}}
   - : Fired when a new video track has been removed from the media element.
     Also available via the `onremovetrack` property.
 
 ## Usage notes
 
-In addition to being able to obtain direct access to the video tracks present on a media element, `VideoTrackList` lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
+In addition to being able to obtain direct access to the video tracks present on a media element, `VideoTrackList` lets you set event handlers on the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
 
 ## Examples
 
@@ -61,12 +62,12 @@ In addition to being able to obtain direct access to the video tracks present on
 To get a media element's {{domxref("VideoTrackList")}}, use its {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
 
 ```js
-var videoTracks = document.querySelector("video").videoTracks;
+const videoTracks = document.querySelector("video").videoTracks;
 ```
 
 ### Monitoring track count changes
 
-In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.
+In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events are set up.
 
 ```js
 videoTracks.onaddtrack = updateTrackCount;

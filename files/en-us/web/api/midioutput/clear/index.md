@@ -1,6 +1,7 @@
 ---
 title: MIDIOutput.clear()
 slug: Web/API/MIDIOutput/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,12 +17,16 @@ The **`clear()`** method of the {{domxref("MIDIOutput")}} interface clears the q
 ## Syntax
 
 ```js
-MIDIOutput.clear();
+clear()
 ```
 
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

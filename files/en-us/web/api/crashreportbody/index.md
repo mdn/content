@@ -1,6 +1,7 @@
 ---
 title: CrashReportBody
 slug: Web/API/CrashReportBody
+page-type: web-api-interface
 tags:
   - API
   - CrashReportBody
@@ -20,7 +21,7 @@ A crash report is generated when a document becomes unusable due to the browser 
 
 ## Properties
 
-- `reason`
+- `reason` {{experimental_inline}}
 
   - : A string representing the reason for the crash. Current possible reasons are:
 

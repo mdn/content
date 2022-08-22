@@ -1,6 +1,7 @@
 ---
 title: AudioParam.cancelScheduledValues()
 slug: Web/API/AudioParam/cancelScheduledValues
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam
@@ -18,12 +19,12 @@ Interface cancels all scheduled future changes to the `AudioParam`.
 ## Syntax
 
 ```js
-cancelScheduledValues(startTime);
+cancelScheduledValues(startTime)
 ```
 
 ### Parameters
 
-- startTime
+- `startTime`
   - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
     was first created after which all scheduled changes will be cancelled.
 
@@ -35,7 +36,7 @@ method returns {{jsxref('undefined')}}.
 ## Examples
 
 ```js
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); //'gain' is the AudioParam
 gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
 ```

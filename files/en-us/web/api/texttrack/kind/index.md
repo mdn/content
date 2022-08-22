@@ -1,6 +1,7 @@
 ---
 title: TextTrack.kind
 slug: Web/API/TextTrack/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`kind`** read-only property of the {{domxref("TextTrack")}} interface retu
 
 ## Value
 
-A {{domxref("DOMString","string")}}. One of:
+A string. One of:
 
 - `"subtitles"`
   - : The cues are overlaid on the video. Positioning of the cues is controlled using the properties of an object that inherits from {{domxref("TextTrackCue")}}, for example {{domxref("VTTCue")}}.

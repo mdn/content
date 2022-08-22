@@ -17,14 +17,14 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 
 ### CSS
 
-- Support for {{cssxref("@supports")}} at-rule defined in [CSS3 Conditional Rules specification](https://dev.w3.org/csswg/css3-conditional/) has been landed. It is disabled by default. Developers can try it by setting `layout.css.supports-rule.enabled` to true ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740)).
+- Support for {{cssxref("@supports")}} at-rule defined in [CSS Conditional Rules Module Level 3](https://drafts.csswg.org/css-conditional-3/) has been landed. It is disabled by default. Developers can try it by setting `layout.css.supports-rule.enabled` to true ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740)).
 - Support for the CSS Selectors Level 4 pseudo-class {{cssxref(":dir", ":dir()")}} allowing selection of elements based on their directionality has landed. ([bug 562169](https://bugzilla.mozilla.org/show_bug.cgi?id=562169))
 - Support for the newly specified `isolate-override` value of the CSS {{cssxref("unicode-bidi")}} value has landed ({{bug("774335")}})
 - Our prefixed implementation of {{cssxref("box-sizing")}} now takes into account {{cssxref("min-height")}} and {{cssxref("max-height")}}. One step closer to its unprefixing ({{bug("308801")}})
 
 ### DOM/APIs
 
-- Support for {{domxref("CSSSupportsRule")}} interface defined in [CSS3 Conditional Rules specification](https://dev.w3.org/csswg/css3-conditional/) has been landed ({{bug("649740")}})
+- Support for {{domxref("CSSSupportsRule")}} interface defined in [CSS3 Conditional Rules specification](https://drafts.csswg.org/css-conditional-3/) has been landed ({{bug("649740")}})
 - Support for {{domxref("WheelEvent")}} object and `wheel` event have been landed ({{bug("719320")}}).
 - Support DOM Meta key on Linux again ({{bug("751749")}}).
 - On {{domxref("HTMLMediaElement")}}, a new method, `mozGetMetadata`, that returns a JavaScript object whose properties represent metadata from the playing media resource as {key: value} pairs ({{bug("763010")}}).
@@ -99,7 +99,7 @@ _None removed._
 
 ## See also
 
-- [Firefox 17 Release Notes](https://www.mozilla.org/en-US/firefox/17.0/releasenotes/)
+- [Firefox 17 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/17.0/releasenotes/)
 - [Aurora 17 is out, bringing better security and support for new standards](https://hacks.mozilla.org/2012/08/aurora-17-is-out/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 17](https://blog.mozilla.org/addons/2012/11/08/compatibility-for-firefox-17/) (Add-ons Blog)
 

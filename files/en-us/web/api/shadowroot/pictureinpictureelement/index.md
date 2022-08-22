@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
+page-type: web-api-instance-property
 tags:
   - API
   - Property

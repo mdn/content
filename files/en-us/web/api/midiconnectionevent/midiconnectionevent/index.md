@@ -1,6 +1,7 @@
 ---
-title: MIDIConnectionEvent.MIDIConnectionEvent()
+title: MIDIConnectionEvent()
 slug: Web/API/MIDIConnectionEvent/MIDIConnectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,15 +16,15 @@ The **`MIDIConnectionEvent()`** constructor creates a new {{domxref("MIDIConnect
 ## Syntax
 
 ```js
-new MIDIConnectionEvent(type);
-new MIDIConnectionEvent(type, MIDIConnectionEventInit);
+new MIDIConnectionEvent(type)
+new MIDIConnectionEvent(type, midiConnectionEventInit)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with one of `"connect"` or `"disconnect"`.
-- `MIDIConnectionEventInit`{{Optional_Inline}}
+  - : A string with one of `"connect"` or `"disconnect"`.
+- `midiConnectionEventInit` {{optional_inline}}
 
   - : A dictionary including the following fields:
 

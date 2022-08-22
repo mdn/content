@@ -1,6 +1,7 @@
 ---
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
+page-type: guide
 tags:
   - 3D
   - API
@@ -33,7 +34,7 @@ The majority of these values define the XR device's [viewing frustum](/en-US/doc
 
 Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the **[perspective projection matrix](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#perspective_projection_matrix)**. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.
 
-Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the `XRView` are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause {{interwiki("wikipedia", "virtual reality sickness")}} in at least some of your users.
+Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the `XRView` are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause [virtual reality sickness](https://en.wikipedia.org/wiki/Virtual_reality_sickness) in at least some of your users.
 
 For example, if your app uses a WebGL uniform named `uProjectionMatrix` to pass the projection matrix to your shaders, you might use code like this to pass the projection matrix for the `view` currently being rendered:
 
@@ -55,8 +56,8 @@ Once you have the viewing frustum, you can compute the perspective projection ma
 
 ```js
 function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
-  var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
-  var rangeInv = 1 / (near - far);
+  const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
+  const rangeInv = 1 / (near - far);
 
   return [
     f / aspectRatio, 0,                          0,   0,
@@ -69,7 +70,7 @@ function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
 
 The values of `near` and `far` are obtained directly from the frustum; they're the distance from the origin to the closest point on the near clipping plane and the far clipping plane, respectively. The aspect ratio is the value obtained by dividing the width of the field of view by its height. If the target display uses a 16:9 aspect ratio, the value used for `aspectRatio` should be `16/9`, or 1.7777777778.
 
-If you're using a library or framework that provides matrix math functions, it will almost certainly have a similar function include. For example, in the popular [glMatrix](http://glmatrix.net/) library, you'll find this in the function [`mat4.perspective()`](http://glmatrix.net/docs/module-mat4.html#.perspective).
+If you're using a library or framework that provides matrix math functions, it will almost certainly have a similar function include. For example, in the popular [glMatrix](https://glmatrix.net/) library, you'll find this in the function [`mat4.perspective()`](https://glmatrix.net/docs/module-mat4.html#.perspective).
 
 Regardless of where it comes from, once you have the projection matrix, you can use it when calling WebGL to render your scene.
 

@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -58,10 +59,10 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         myBuffer = buffer;
         songLength = buffer.duration;
         source.buffer = myBuffer;
@@ -73,21 +74,21 @@ function getData() {
         loopendControl.setAttribute('max', Math.floor(songLength));
       },
 
-      function(e){"Error with decoding audio data" + e.err});
+      (e) => console.error(`Error with decoding audio data: ${e.err}`));
 
   }
 
   request.send();
 }
 
-  ...
+// …
 
-loopstartControl.oninput = function() {
+loopstartControl.oninput = () => {
   source.loopStart = loopstartControl.value;
   loopstartValue.innerHTML = loopstartControl.value;
 }
 
-loopendControl.oninput = function() {
+loopendControl.oninput = () => {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
 }

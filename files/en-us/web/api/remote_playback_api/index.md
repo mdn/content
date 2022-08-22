@@ -1,11 +1,13 @@
 ---
 title: Remote Playback API
 slug: Web/API/Remote_Playback_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Remote Playback API
+browser-compat: api.RemotePlayback
 ---
 {{DefaultAPISidebar("Remote Playback API")}}
 
@@ -55,8 +57,8 @@ videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
 
 ## Specifications
 
-{{Specifications("api.RemotePlayback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.RemotePlayback")}}
+{{Compat}}

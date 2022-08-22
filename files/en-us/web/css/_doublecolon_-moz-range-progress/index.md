@@ -18,7 +18,9 @@ The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-range-progress
+```
 
 ## Examples
 
@@ -43,7 +45,7 @@ input[type=range]::-moz-range-progress {
 
 A progress bar using this style might look something like this:
 
-![](screen_shot_2015-12-04_at_20.14.48.png)
+![The progress bar is a thick green square to the left of the thumb and a thin grey line to the right. The thumb is a circle with a diameter the height of the green area.](screen_shot_2015-12-04_at_20.14.48.png)
 
 ## Specifications
 
@@ -65,4 +67,4 @@ Not part of any standard.
   - {{cssxref("::-ms-fill-upper")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

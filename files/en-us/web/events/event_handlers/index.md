@@ -33,9 +33,8 @@ Below we show how to set a simple `greet()` function for the `click` event using
 ```js
 const btn = document.querySelector('button');
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log('greet:', event)
 }
 
 btn.onclick = greet;
@@ -54,9 +53,8 @@ Below we show how a simple `greet()` function can be set as a listener/event han
 ```js
 const btn = document.querySelector('button');
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log('greet:', event)
 }
 
 btn.addEventListener('click', greet);
@@ -73,10 +71,9 @@ This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("Ev
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', function(event) {
-  // print the event object to console
-  console.log('greet:', arguments)
-  }, { signal: controller.signal }); // pass an AbortSignal to this handler
+btn.addEventListener('click', (event) => {
+  console.log('greet:', event);
+}, { signal: controller.signal }); // pass an AbortSignal to this handler
 ```
 
 Then the event handler created by the code above can be removed like this:
@@ -85,4 +82,9 @@ Then the event handler created by the code above can be removed like this:
 controller.abort(); // removes any/all event handlers associated with this controller
 ```
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li><li><a href="/en-US/docs/Web/Events">Event reference</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+  </ol>
+</section>

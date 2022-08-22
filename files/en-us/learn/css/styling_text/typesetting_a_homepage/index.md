@@ -89,17 +89,17 @@ Navigation menu:
 
 The following screenshot shows an example of what the finished design could look like:
 
-![](example2.png)
+![A screenshot of the finished design of the 'Community school website homepage' text styling assessment. The heading reads 'St Huxley's Community College'. There is a red line separating the banner header from the content. The main content has three columns. The first, widest column has a few paragraphs which imply the importance of college to Students. The second column has a list of links to the top course choices offered by the college. The third column contains a vertical navigation bar with rectangular outlined button links to different sections of the website.](example2.png)
 
 ## Assessment or further help
 
-If you would like your work assessed, or are stuck and want to ask for help:
+If you would like your work assessed or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Typesetting a community school homepage".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
     - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
 
@@ -111,4 +111,4 @@ If you would like your work assessed, or are stuck and want to ask for help:
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- **Typesetting a community school homepage**
+- [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

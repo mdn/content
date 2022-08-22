@@ -40,7 +40,7 @@ Cross browser testing is the practice of making sure that the web sites and web 
 
 - Different browsers other than the one or two that you use regularly on your devices, including slightly older browsers that some people might still be using, which don't support all the latest, shiniest CSS and JavaScript features.
 - Different devices with different capabilities, from the latest greatest tablets and smartphones, through smart TVs, right down to cheap tablets and even older feature phones that may run browsers with limited capabilities.
-- People with disabilities, who use the Web with the aid of assistive technologies like screenreaders, or don't use a mouse (some people use only the keyboard).
+- People with disabilities, who use the Web with the aid of assistive technologies like screen readers, or don't use a mouse (some people use only the keyboard).
 
 Remember that you are not your users — just because your site works on your MacBook Pro or high-end Galaxy Nexus, doesn't mean it will work for all your users — there's a whole lot of testing to be done!
 
@@ -130,12 +130,12 @@ If you haven't got the means to test all those different browser, operating syst
 
 Another option is user groups — using a group of people outside your development team to test your site. This could be a group of friends or family, a group of other employees, a class at a local university, or a professional user testing setup, where people are paid to test out your site and provide results.
 
-Finally, you can get smarter with your testing using auditing or automation tools; this is a sensible choice as your projects get bigger, as doing all this testing by hand can start to take a really long time. You can set up your own testing automation system ([Selenium](https://www.seleniumhq.org/) being the popular app of choice) that could for example load your site in a number of different browsers, and:
+Finally, you can get smarter with your testing using auditing or automation tools; this is a sensible choice as your projects get bigger, as doing all this testing by hand can start to take a really long time. You can set up your own testing automation system ([Selenium](https://www.selenium.dev/) being the popular app of choice) that could for example load your site in a number of different browsers, and:
 
 - see if a button click causes something to happen successfully (like for example, a map displaying), displaying the results once the tests are completed
 - take a screenshot of each, allowing you to see if a layout is consistent across the different browsers.
 
-You can also go further than this, if wished. There are commercial tools available such as [Browserling](https://www.browserling.com), [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/), [Endtest](https://endtest.io), [LambdaTest](https://www.lambdatest.com/), [TestingBot](https://testingbot.com), and [CrossBrowserTesting](https://crossbrowsertesting.com) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing. It is also possible to set up an environment that automatically runs tests for you, and then only lets you check in your changes to the central code repository if the tests still pass.
+If you wish to invest money in testing, there are also commercial tools that can automate much of the setup and testing for you (such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/)). These kinds of tools usually enable a continuous integration workflow, where code changes are automatically tested before they are allowed to be submitted into your code repository.
 
 #### Testing on prerelease browsers
 
@@ -144,7 +144,7 @@ It is often a good idea to test on prerelease versions of browsers; see the foll
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-- [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+- [Chrome Canary](https://www.google.com/chrome/canary/)
 - [Opera Developer](https://www.opera.com/computer/beta)
 
 This is especially prevalent if you are using very new technologies in your site, and you want to test against the latest implementations, or if you are coming across a bug in the latest release version of a browser, and you want to see if the browser's developers have fixed the bug in a newer version.
@@ -166,10 +166,10 @@ Once a fix has been made, you'll want to repeat your testing process to make sur
 Just to reiterate on what was said above, if you discover bugs in browsers, you should report them:
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
-- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
+- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/)
 - [Safari](https://bugs.webkit.org/)
 - [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
-- [Opera](https://bugs.opera.com/wizard/desktop)
+- [Opera](https://help.opera.com/en/computer-bug-wizard/)
 
 ## Summary
 

@@ -36,9 +36,9 @@ html, body, svg {
     <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge"/>
   </filter>
 
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
       style="filter:url(#blending1);"/>
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
       style="filter:url(#blending2); transform:translateX(220px);"/>
 </svg>
 ```
@@ -68,31 +68,7 @@ For a description of the values, see {{cssxref("blend-mode")}}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feblend-mode", "mode")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feBlendModeAttribute", "mode")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

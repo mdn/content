@@ -1,10 +1,10 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
+page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Interface
   - Media
   - Reference
@@ -13,8 +13,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription
 ---
-
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 
@@ -27,7 +26,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 - {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
   - : An enum describing the session description's type.
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} containing the {{Glossary("SDP")}} describing the session.
+  - : A string containing the {{Glossary("SDP")}} describing the session.
 
 ## Methods
 
@@ -41,26 +40,28 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 ## Example
 
 ```js
-signalingChannel.onmessage = function (evt) {
+signalingChannel.onmessage = (evt) => {
   if (!pc) start(false);
 
-  var message = JSON.parse(evt.data);
-  if (message.sdp)
+  const message = JSON.parse(evt.data);
+  if (message.sdp) {
     pc.setRemoteDescription(
       new RTCSessionDescription(message),
-      function () {
+      () => {
         // if we received an offer, we need to answer
-        if (pc.remoteDescription.type == "offer")
+        if (pc.remoteDescription.type === "offer") {
           pc.createAnswer(localDescCreated, logError);
+        }
       },
       logError
     );
-  else
+  } else {
     pc.addIceCandidate(
       new RTCIceCandidate(message.candidate),
-      function () {},
+      () => {},
       logError
     );
+  }
 };
 ```
 

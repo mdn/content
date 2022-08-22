@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.width
 slug: Web/API/SVGImageElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - Image

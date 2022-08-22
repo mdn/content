@@ -19,6 +19,6 @@ WCAG uses three levels of conformance:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Web Content Accessibility Guidelines", "WCAG")}} on Wikipedia
+- [WCAG](https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines) on Wikipedia
 - [Accessibility information on MDN](/en-US/docs/Web/Accessibility/Information_for_Web_authors)
 - [The WCAG 2.0 recommendation at the W3C](https://www.w3.org/TR/WCAG20/)

@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,30 +19,27 @@ a JSON representation of the {{domxref("PerformanceEntry","performance entry")}}
 ## Syntax
 
 ```js
-json = perfEntry.toJSON();
+toJSON()
 ```
 
-### Arguments
+### Parameters
 
-- None
-  - :
+None.
 
 ### Return value
 
-- json
-  - : A JSON object that is the serialization of the {{domxref("PerformanceEntry")}}
-    object.
+A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.
 
-## Example
+## Examples
 
 The following example shows the use of the `toJSON()` method.
 
 ```js
 function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
+  console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.log("The property performance.mark is not supported");
     return;
   }
 
@@ -51,32 +49,33 @@ function run_PerformanceEntry() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
+  const p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
+    log(`Entry[${i}]`);
     check_PerformanceEntry(p[i]);
   }
 }
 function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
+  const properties = ["name", "entryType", "startTime", "duration"];
+  const methods = ["toJSON"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (let i=0; i < properties.length; i++) {
     // check each property
-    var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
-  }
-  for (var i=0; i < methods.length; i++) {
-    // check each method
-    var supported = typeof obj[methods[i]] == "function";
+    const supported = properties[i] in obj;
     if (supported) {
-      var js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
+      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
     } else {
-      log("..." + methods[i] + " = Not supported");
+      console.log(`…${properties[i]} = Not supported`);
+    }
+  }
+  for (let i=0; i < methods.length; i++) {
+    // check each method
+    const supported = typeof obj[methods[i]] === "function";
+    if (supported) {
+      const js = obj[methods[i]]();
+      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
+    } else {
+      console.log(`…${methods[i]} = Not supported`);
     }
   }
 }

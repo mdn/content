@@ -1,6 +1,7 @@
 ---
 title: Web Animations API Concepts
 slug: Web/API/Web_Animations_API/Web_Animations_API_Concepts
+page-type: guide
 tags:
   - Animations
   - Beginner
@@ -19,7 +20,7 @@ The Web Animations API fills the gap between declarative CSS animations and tran
 
 ## History
 
-Over a decade ago, [Synchronized Multimedia Integration Language, or SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (pronounced "smile"), brought animation to SVG. Back then it was the only animation engine browsers had to worry about. While four out of five browsers supported SMIL, it only animated SVG elements, could not be used from CSS, and was very complex — often leading to inconsistent implementations. Ten years later, the Safari team introduced the {{SpecName("CSS3 Animations")}} and {{SpecName("CSS3 Transitions")}} specs.
+Over a decade ago, [Synchronized Multimedia Integration Language, or SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (pronounced "smile"), brought animation to SVG. Back then it was the only animation engine browsers had to worry about. While four out of five browsers supported SMIL, it only animated SVG elements, could not be used from CSS, and was very complex — often leading to inconsistent implementations. Ten years later, the Safari team introduced the [CSS Animations](https://drafts.csswg.org/css-animations/) and [CSS Transitions](https://drafts.csswg.org/css-transitions/) specs.
 
 The Internet Explorer team requested an animations API to consolidate and normalize animation functionality across all browsers, and thus efforts began in earnest among Mozilla Firefox and Google Chrome developers to create the one animation spec to rule them all: the Web Animations API. Now we've got the WAAPI for future animation specifications to piggyback on, allowing them to remain consistent and play well together. It also provides a point of reference all browsers can adhere to with the currently available specs.
 
@@ -73,5 +74,5 @@ The API allows for the creation of dynamic animations that can be updated on the
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) — main page
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) — guide
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

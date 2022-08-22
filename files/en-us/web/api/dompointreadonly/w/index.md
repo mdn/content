@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.w
 slug: Web/API/DOMPointReadOnly/w
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates

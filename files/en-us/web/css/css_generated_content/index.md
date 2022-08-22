@@ -29,8 +29,4 @@ See the [how to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generat
 ## See also
 
 - [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
-- {{cssxref("content")}}
-- {{cssxref("quotes")}}
-- {{cssxref("::before")}}
-- {{cssxref("::after")}}
-- {{cssxref("::marker")}}
+- Pseudo-elements: {{cssxref("::before")}}, {{cssxref("::after")}}, {{cssxref("::marker")}}

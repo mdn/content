@@ -1,6 +1,7 @@
 ---
 title: Matrix math for the web
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
+page-type: guide
 tags:
   - 3D
   - 3D2D
@@ -20,7 +21,7 @@ tags:
 
 Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) and the `matrix3d` transform type.
 
-While this article uses [CSS](/en-US/docs/Web/CSS) to simplify explanations, matrices are a core concept used by many different technologies including [WebGL](/en-US/docs/Web/API/WebGL_API), the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) (VR and AR) API, and [GLSL shaders](/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders). This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-matrix-math). The live examples use a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under a global object named `MDN`.
+While this article uses [CSS](/en-US/docs/Web/CSS) to simplify explanations, matrices are a core concept used by many different technologies including [WebGL](/en-US/docs/Web/API/WebGL_API), the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) (VR and AR) API, and [GLSL shaders](/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders). This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-matrix-math). The live examples use a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under a global object named `MDN`.
 
 ## Transformation matrices
 
@@ -148,7 +149,7 @@ let identityMatrix = [
 let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
-> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](http://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
+> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](https://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
 
 ## Translation matrix
 
@@ -178,7 +179,7 @@ A really easy way to start using a matrix is to use the CSS {{cssxref("transform
 ```html
 <div id='move-me' class='transformable'>
   <h2>Move me with a matrix</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</p>
 </div>
 ```
 
@@ -187,7 +188,7 @@ Finally, for each of the examples we will generate a 4x4 matrix, then update the
 ```js
 // Create the matrix3d style property from a matrix array
 function matrixArrayToCssMatrix(array) {
-  return 'matrix3d(' + array.join(',') + ')';
+  return `matrix3d(${array.join(',')})`;
 }
 
 // Grab the DOM element
@@ -200,7 +201,7 @@ let matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
 moveMe.style.transform = matrix3dRule;
 ```
 
-[View on JSFiddle](https://jsfiddle.net/g24mgw6y)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/g24mgw6y/)
 
 ![An example of matrix translation](matrix-translation.jpg)
 
@@ -223,13 +224,13 @@ let scaleMatrix = [
 ];
 ```
 
-[View on JSFiddle](https://jsfiddle.net/fndd6e1b)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/fndd6e1b/)
 
 ![An example of matrix scaling](matrix-scale.jpg)
 
 ## Rotation matrix
 
-A **rotation matrix** is used to rotate a point or object. Rotation matrices look a little bit more complicated than scaling and transform matrices. They use trigonometric functions to perform the rotation. While this section won't break the steps down into exhaustive detail (check out [this article on Wolfram MathWorld](http://mathworld.wolfram.com/RotationMatrix.html) for that), take this example for illustration.
+A **rotation matrix** is used to rotate a point or object. Rotation matrices look a little bit more complicated than scaling and transform matrices. They use trigonometric functions to perform the rotation. While this section won't break the steps down into exhaustive detail (check out [this article on Wolfram MathWorld](https://mathworld.wolfram.com/RotationMatrix.html) for that), take this example for illustration.
 
 First, here's code that rotates a point around the origin without using matrices.
 
@@ -269,7 +270,7 @@ let rotateZMatrix = [
 ];
 ```
 
-[View on JSFiddle](https://jsfiddle.net/9vr2dorz)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/9vr2dorz/)
 
 ![](matrix-rotation.jpg)
 
@@ -304,7 +305,7 @@ function rotateAroundZAxis(a) {
 }
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tk072doc)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/tk072doc/)
 
 ## Matrix composition
 
@@ -320,7 +321,7 @@ Another mind-bender is that matrix multiplication in WebGL and CSS needs to happ
 
 ### Composing multiple transformations
 
-The function that we will be using to compose our matrices is `multiplyArrayOfMatrices()`, which is part of the set of [utility functions](https://github.com/TatumCreative/mdn-webgl) introduced near the top of this article. It takes an array of matrices and multiplies them together, returning the result. In WebGL shader code, this is built into the language and the `*` operator can be used. Additionally this example uses `scale()` and `translate()` functions, which return matrices as defined above.
+The function that we will be using to compose our matrices is `multiplyArrayOfMatrices()`, which is part of the set of [utility functions](https://github.com/gregtatum/mdn-webgl) introduced near the top of this article. It takes an array of matrices and multiplies them together, returning the result. In WebGL shader code, this is built into the language and the `*` operator can be used. Additionally this example uses `scale()` and `translate()` functions, which return matrices as defined above.
 
 ```js
 let transformMatrix = MDN.multiplyArrayOfMatrices([
@@ -330,7 +331,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
 ]);
 ```
 
-[View on JSFiddle](https://jsfiddle.net/qxxg3yvc)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/qxxg3yvc/)
 
 ![An example of matrix composition](matrix-composition.jpg)
 

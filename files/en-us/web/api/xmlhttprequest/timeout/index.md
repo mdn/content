@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
+page-type: web-api-instance-property
 tags:
   - AJAX
   - Asynchronous XHR
@@ -25,16 +26,16 @@ In Internet Explorer, the timeout property may be set only after calling the [op
 ## Example
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // time in milliseconds
 
-xhr.onload = function () {
+xhr.onload = () => {
   // Request finished. Do processing here.
 };
 
-xhr.ontimeout = function (e) {
+xhr.ontimeout = (e) => {
   // XMLHttpRequest timed out. Do something here.
 };
 

@@ -25,7 +25,7 @@ toString(radix)
 
 ### Parameters
 
-- `radix`{{optional_inline}}
+- `radix` {{optional_inline}}
   - : Optional. An integer in the range 2 through 36 specifying the base to use for
     representing numeric values.
 
@@ -75,7 +75,7 @@ complement of the `bigIntObj`.
 
 There is no negative-zero `BigInt` as there are no negative zeros in
 integers. `-0.0` is an IEEE floating-point concept that only appears in the
-JavaScript {{jsxref("Number")}} type.
+JavaScript [`Number`](/en-US/docs/Web/JavaScript/Data_structures#number_type) type.
 
 ```js
 (-0n).toString();      // '0'

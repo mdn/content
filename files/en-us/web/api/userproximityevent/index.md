@@ -1,16 +1,17 @@
 ---
 title: UserProximityEvent
 slug: Web/API/UserProximityEvent
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Proximity Events
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.UserProximityEvent
 ---
-{{APIRef("Proximity Events")}}{{deprecated_header}}
+{{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** `UserProximityEvent` is not supported by any current major browser, and should not be used.
 
@@ -18,13 +19,13 @@ The **`UserProximityEvent`** indicates whether a nearby physical object is prese
 
 ## Properties
 
-- `UserProximityEvent.near`
+- `UserProximityEvent.near` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates if the device has sensed a nearby physical object.
 
 ## Examples
 
 ```js
-window.addEventListener('userproximity', function(event) {
+window.addEventListener('userproximity', (event) => {
   if (event.near) {
     // let's power off the screen
     navigator.mozPower.screenEnabled = false;

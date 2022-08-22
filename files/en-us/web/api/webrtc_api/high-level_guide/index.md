@@ -1,6 +1,7 @@
 ---
 title: High-level guides
 slug: Web/API/WebRTC_API/High-level_guide
+page-type: guide
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
+page-type: web-api-instance-method
 tags:
   - API
   - Directive
@@ -8,6 +9,7 @@ tags:
   - Feature-Policy
   - FeaturePolicy
   - Reference
+  - Experimental
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

@@ -42,7 +42,7 @@ This topic contains the following modules. You should start with the first modul
 - [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django)
   - : Django is an extremely popular and fully featured server-side web framework, written in Python. The module explains why Django is such a good web server framework, how to set up a development environment and how to perform common tasks with it.
 - [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs)
-  - : Express is a popular web framework, written in JavaScript and hosted within the node.js runtime environment. The module explains some of the key benefits of this framework, how to set up your development environment and how to perform common web development and deployment tasks.
+  - : Express is a popular web framework, written in JavaScript and hosted within the Node.js runtime environment. The module explains some of the key benefits of this framework, how to set up your development environment and how to perform common web development and deployment tasks.
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getLocalParameters()
 slug: Web/API/RTCIceTransport/getLocalParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Connectivity
@@ -33,7 +34,7 @@ transport when the client calls {{domxref("RTCPeerConnection.setLocalDescription
 ## Syntax
 
 ```js
-parameters = RTCIceTransport.getLocalParameters();
+getLocalParameters()
 ```
 
 ### Parameters

@@ -1,10 +1,10 @@
 ---
 title: PaymentRequestUpdateEvent()
 slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentRequestUpdateEvent

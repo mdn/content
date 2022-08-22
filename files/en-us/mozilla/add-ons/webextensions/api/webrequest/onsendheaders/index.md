@@ -53,7 +53,7 @@ Events have three functions:
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can only pass one value here:
 
@@ -109,7 +109,7 @@ Events have three functions:
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
-- `requestHeaders`{{optional_inline}}
+- `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that have been sent out with this request.
 - `tabId`
   - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
@@ -153,8 +153,8 @@ let targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request
 function logCookies(e) {
-  for (let header of e.requestHeaders) {
-    if (header.name == "Cookie") {
+  for (const header of e.requestHeaders) {
+    if (header.name === "Cookie") {
       console.log(header.value);
     }
   }
@@ -171,7 +171,7 @@ browser.webRequest.onSendHeaders.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

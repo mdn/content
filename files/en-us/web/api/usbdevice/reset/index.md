@@ -1,6 +1,7 @@
 ---
 title: USBDevice.reset()
 slug: Web/API/USBDevice/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - reset
+  - Experimental
 browser-compat: api.USBDevice.reset
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -21,7 +23,7 @@ app operations canceled and their promises rejected.
 ## Syntax
 
 ```js
-var promise = USBDevice.reset()
+reset()
 ```
 
 ### Parameters

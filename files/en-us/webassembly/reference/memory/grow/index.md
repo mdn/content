@@ -13,7 +13,7 @@ The **`grow`** instruction, increases the size of the memory instance by a speci
 
 The **`grow`** instruction returns **`1`** if the operation was successful, and returns **`-1`** if the operation failed.
 
-{{EmbedInteractiveExample("pages/wat/grow.html")}}
+{{EmbedInteractiveExample("pages/wat/grow.html", "tabbed-taller")}}
 
 ## Syntax
 

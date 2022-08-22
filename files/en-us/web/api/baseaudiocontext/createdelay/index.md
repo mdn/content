@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -24,7 +25,7 @@ which is used to delay the incoming audio signal by a certain amount of time.
 ## Syntax
 
 ```js
-createDelay(maxDelayTime);
+createDelay(maxDelayTime)
 ```
 
 ### Parameters
@@ -48,16 +49,15 @@ sliders up to the right, then press the play buttons, a delay will be introduced
 looping sounds don't start playing for a short amount of time.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var synthDelay = audioCtx.createDelay(5.0);
+const synthDelay = audioCtx.createDelay(5.0);
 
-  ...
+// …
 
-var synthSource;
+let synthSource;
 
-playSynth.onclick = function() {
+playSynth.onclick = () => {
   synthSource = audioCtx.createBufferSource();
   synthSource.buffer = buffers[2];
   synthSource.loop = true;
@@ -67,17 +67,17 @@ playSynth.onclick = function() {
   this.setAttribute('disabled', 'disabled');
 }
 
-stopSynth.onclick = function() {
+stopSynth.onclick = () => {
   synthSource.disconnect(synthDelay);
   synthDelay.disconnect(destination);
   synthSource.stop();
   playSynth.removeAttribute('disabled');
 }
 
-...
+// …
 
-var delay1;
-rangeSynth.oninput = function() {
+let delay1;
+rangeSynth.oninput = () => {
   delay1 = rangeSynth.value;
   synthDelay.delayTime.setValueAtTime(delay1, audioCtx.currentTime);
 }

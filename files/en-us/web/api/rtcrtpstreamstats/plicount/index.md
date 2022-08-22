@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.pliCount
 slug: Web/API/RTCRtpStreamStats/pliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Data Loss
@@ -60,6 +61,6 @@ the bit rate of the stream.
 
 ## See also
 
-- {{RFC(4585, "6.3.1")}}: Definition of "PLI messages" in the document _Extended
+- {{RFC(4585, "", "6.3.1")}}: Definition of "PLI messages" in the document _Extended
   RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback
   (RTP/AVPF)_.

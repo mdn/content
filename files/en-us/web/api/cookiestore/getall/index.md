@@ -1,37 +1,39 @@
 ---
 title: CookieStore.getAll()
 slug: Web/API/CookieStore/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - getAll()
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.getAll
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
 
 ## Syntax
 
 ```js
-var list = cookieStore.getAll(name);
-var list = cookieStore.getAll(options);
+getAll(name)
+getAll(options)
 ```
 
 ### Parameters
 
-- `name`{{Optional_Inline}}
-  - : A {{domxref("USVString")}} with the name of a cookie.
-- `options`{{Optional_Inline}}
+- `name` {{optional_inline}}
+  - : A string with the name of a cookie.
+- `options` {{optional_inline}}
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the url of a cookie.
+      - : A string with the URL of a cookie.
 
 > **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 

@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -18,7 +19,7 @@ If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, ex
 ## Syntax
 
 ```js
-getByteTimeDomainData(array);
+getByteTimeDomainData(array)
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ getByteTimeDomainData(array);
 
 ### Return value
 
-**`void`** | None
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -39,7 +40,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
 const bufferLength = analyser.fftSize;
@@ -61,14 +62,15 @@ function draw() {
   let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 
-    if(i === 0)
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
-    else
+    } else {
       canvasCtx.lineTo(x, y);
+    }
 
     x += sliceWidth;
   }

@@ -242,11 +242,11 @@ In addition to the mandatory audio codecs, some browsers support additional code
   </tbody>
 </table>
 
-**{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}** (**iLBC**) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.
+**[Internet Low Bitrate Codec](https://en.wikipedia.org/wiki/Internet_Low_Bitrate_Codec)** (**iLBC**) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.
 
-The **{{interwiki("wikipedia", "Internet Speech Audio Codec")}}** (**iSAC**) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.
+The **[Internet Speech Audio Codec](https://en.wikipedia.org/wiki/Internet_Speech_Audio_Codec)** (**iSAC**) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.
 
-**{{interwiki("wikipedia", "Comfort noise")}}** (**CN**) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.
+**[Comfort noise](https://en.wikipedia.org/wiki/Comfort_noise)** (**CN**) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.
 
 Comfort Noise is used with G.711, and may potentially be used with other codecs that don't have a built-in CN feature. Opus, for example, has its own CN capability; as such, using RFC 3389 CN with the Opus codec is not recommended.
 
@@ -276,9 +276,9 @@ The bit rate may be adjusted at any time. In order to avoid network congestion, 
 
 ### G.711
 
-G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both {{interwiki("wikipedia", "M-law", "µ-law")}} and {{interwiki("wikipedia", "A-law")}} encodings are allowed.
+G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both [µ-law](https://en.wikipedia.org/wiki/M-law) and [A-law](https://en.wikipedia.org/wiki/A-law) encodings are allowed.
 
-G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "4.5.14")}}.
+G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "", "4.5.14")}}.
 
 WebRTC requires that G.711 use 8-bit samples at the standard 64 kbps rate, even though G.711 supports some other variations. Neither G.711.0 (lossless compression), G.711.1 (wideband capability), nor any other extensions to the G.711 standard are mandated by WebRTC.
 
@@ -337,7 +337,7 @@ Once you have a list of the available codecs, you can alter it and then send the
 function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
-  transceivers.forEach(transceiver => {
+  transceivers.forEach((transceiver) => {
     const kind = transceiver.sender.track.kind;
     let sendCodecs = RTCRtpSender.getCapabilities(kind).codecs;
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
@@ -371,7 +371,7 @@ function preferCodec(codecs, mimeType) {
   let sortedCodecs = [];
   let count = codecs.length;
 
-  codecs.forEach(codec => {
+  codecs.forEach((codec) => {
     if (codec.mimeType === mimeType) {
       sortedCodecs.push(codec);
     } else {

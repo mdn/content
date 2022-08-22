@@ -1,6 +1,7 @@
 ---
 title: ImageData
 slug: Web/API/ImageData
+page-type: web-api-interface
 tags:
   - API
   - Canvas
@@ -23,12 +24,12 @@ It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constr
 
 ## Properties
 
-- {{domxref("ImageData.data")}} {{readonlyInline}}
-  - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (inclusive).
-- {{domxref("ImageData.height")}} {{readonlyInline}}
-  - : Is an `unsigned long` representing the actual height, in pixels, of the `ImageData`.
-- {{domxref("ImageData.width")}} {{readonlyInline}}
-  - : Is an `unsigned long` representing the actual width, in pixels, of the `ImageData`.
+- {{domxref("ImageData.data")}} {{ReadOnlyInline}}
+  - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (inclusive).
+- {{domxref("ImageData.height")}} {{ReadOnlyInline}}
+  - : An `unsigned long` representing the actual height, in pixels, of the `ImageData`.
+- {{domxref("ImageData.width")}} {{ReadOnlyInline}}
+  - : An `unsigned long` representing the actual width, in pixels, of the `ImageData`.
 
 ## Specifications
 

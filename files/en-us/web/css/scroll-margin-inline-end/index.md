@@ -2,10 +2,13 @@
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
 tags:
-  - Advanced
   - CSS
+  - CSS Property
   - Reference
+  - Web
   - recipe:css-property
+  - scroll-margin-inline
+  - scroll-margin-inline-end
 browser-compat: css.properties.scroll-margin-inline-end
 ---
 {{CSSRef}}

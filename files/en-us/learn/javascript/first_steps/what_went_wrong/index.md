@@ -84,12 +84,12 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 ### Syntax errors round two
 
 1. Save your page and refresh, and you should see the error has gone.
-2. Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! ![](variable-is-null.png)
+2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![](variable-is-null.png)
 3. This time the error being reported is "TypeError: lowOrHi is null", on line 78.
 
     > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
 
-    > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { ... }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
+    > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 
 4. Have a look at line 78, and you'll see the following code:
 
@@ -114,7 +114,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 7. Save and refresh, and you should now see the `console.log()` result in your console. ![](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 48.
 8. Let's think about what the problem could be. Line 48 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
-    ```js
+    ```html
     <p class="lowOrHi"></p>
     ```
 
@@ -127,7 +127,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 1. Now if you try playing the game through again, you should get more success — the game should play through absolutely fine, until you end the game, either by guessing the right number, or by running out of guesses.
 2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 94.
-3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `.addEventListener`. Do this now.
+3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `addEventListener`. Do this now.
 
 ## A logic error
 
@@ -197,7 +197,7 @@ const userGuess = Number(guessField.value);
 
 to
 
-```js
+```js example-bad
 const userGuess === Number(guessField.value);
 ```
 
@@ -262,7 +262,7 @@ So there we have it, the basics of figuring out errors in simple JavaScript prog
 ## See also
 
 - There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
-- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn), or in the [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
+- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250), or in the [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

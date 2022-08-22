@@ -1,6 +1,7 @@
 ---
 title: HTMLProgressElement.labels
 slug: Web/API/HTMLProgressElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -33,15 +34,15 @@ with the `<progress>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const progress = document.getElementById("test");
-  for(var i = 0; i < progress.labels.length; i++) {
-    console.log(progress.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of progress.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

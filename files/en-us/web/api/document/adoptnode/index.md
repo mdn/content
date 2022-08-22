@@ -1,6 +1,7 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ current document. The node can then be inserted into the current document.
 ## Syntax
 
 ```js
-const importedNode = document.adoptNode(externalNode);
+adoptNode(externalNode)
 ```
 
 ### Parameters
@@ -42,14 +43,14 @@ After calling this method, `importedNode` and
 > {{domxref("Node.parentNode")}} is `null`, since it has not yet been
 > inserted into the document tree!
 
-## Example
+## Examples
 
 ```js
 const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Method
   - Reference
   - removeListener
+  - Deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
@@ -25,24 +27,24 @@ available in the browsers you need to support.
 ## Syntax
 
 ```js
-MediaQueryList.removeListener(func)
+removeListener(func)
 ```
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to
     remove.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
-var paragraph = document.querySelector('p');
-var mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector('p');
+const mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -73,8 +75,7 @@ mediaQueryList.removeListener(screenTest);
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

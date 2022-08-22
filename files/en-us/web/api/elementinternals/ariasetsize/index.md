@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaSetSize
 slug: Web/API/ElementInternals/ariaSetSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaSetSize`** property of the {{domxref("ElementInternals")}} interface 
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 
@@ -39,4 +40,4 @@ this.internals_.ariaSetSize = "4";
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

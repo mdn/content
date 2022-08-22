@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.desiredSize
 slug: Web/API/TransformStreamDefaultController/desiredSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property

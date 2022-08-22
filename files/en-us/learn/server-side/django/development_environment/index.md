@@ -102,7 +102,7 @@ This module assumes that you've installed Django into a virtual environment, and
 
 ## Installing Python 3
 
-In order to use Django you will have to install Python on your operating system. If you're using *Python 3* then you will also need the [Python Package Index](https://pypi.python.org/pypi) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
+In order to use Django you will have to install Python on your operating system. If you're using *Python 3* then you will also need the [Python Package Index](https://pypi.org/) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
 
 This section briefly explains how you can check what versions of Python are present, and install new versions as needed, for Ubuntu Linux 20.04, macOS, and Windows 10.
 
@@ -127,7 +127,7 @@ sudo apt install python3-pip
 
 > **Note:** Python 3.8 is the oldest version [supported by Django 4.0](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django).
 > While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
-> If you want to update Python, then there are instructions on the Internet.
+> If you want to update Python, then there are instructions on the internet.
 
 ### macOS
 
@@ -193,7 +193,7 @@ pip3 list
 
 ## Using Django inside a Python virtual environment
 
-The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
+The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
 
 ### Installing the virtual environment software
 
@@ -232,7 +232,7 @@ At this point you should see a bunch of scripts being run as shown below:
 ```bash
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
@@ -295,7 +295,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 
 #### Windows 10 virtual environment setup
 
-Installing [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
+Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 
 ```bash
 pip3 install virtualenvwrapper-win
@@ -313,7 +313,7 @@ Now you can create a new virtual environment with the `mkvirtualenv` command. As
 $ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
 (my_django_environment) ubuntu@ubuntu:~$
 ```
@@ -361,6 +361,13 @@ py -3 -m django --version
 
 > **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`) . If you're working on _Windows_ replace this prefix with: `py -3`
 
+## Other Python tools
+
+Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
+
+Note that you should use a [Django aware linter](https://djangopackages.org/grids/g/linters/) like [pylint-django](https://pypi.org/project/pylint-django/).
+Commonly used Python linters, such as `pylint`, may incorrectly report errors in the standard files generated for Django.
+
 ## Testing your installation
 
 The above test works, but it isn't very much fun. A more interesting test is to create a skeleton project and see it working. To do this, first navigate in your command prompt/terminal to where you want to store your Django apps. Create a folder for your test site and navigate into it.
@@ -382,7 +389,7 @@ We can run the _development web server_ from within this folder using **manage.p
 ```bash
 $ python3 manage.py runserver
 Watching for file changes with StatReloader
-Performing system checks...
+Performing system checks…
 
 System check identified no issues (0 silenced).
 

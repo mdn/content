@@ -25,9 +25,9 @@ The physics engine makes everything a lot easier — we just need to add two sim
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    paddle.x = game.input.x || game.world.width*0.5;
+  game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
 }
 ```
 
@@ -35,7 +35,7 @@ The ball's position is calculated against the positions of all the bricks in the
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
+  brick.kill();
 }
 ```
 

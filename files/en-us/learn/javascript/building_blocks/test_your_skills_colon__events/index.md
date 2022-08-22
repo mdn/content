@@ -56,7 +56,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Events 3
 
-In the next events-related task, you need to set an event listener on the `<button>`s' parent element (`<div class="button-bar"> ... </div>`), which when invoked by clicking any of the buttons will set the background of the `button-bar` to the color contained in the button's `data-color` attribute.
+In the next events-related task, you need to set an event listener on the `<button>`s' parent element (`<div class="button-bar"> … </div>`), which when invoked by clicking any of the buttons will set the background of the `button-bar` to the color contained in the button's `data-color` attribute.
 
 We want you to solve this without looping through all the buttons and giving each one their own event listener.
 
@@ -75,7 +75,7 @@ You can practice these examples in the Interactive Editors above.
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Events 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

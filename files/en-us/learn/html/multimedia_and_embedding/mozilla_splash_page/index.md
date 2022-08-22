@@ -30,11 +30,7 @@ In this assessment, we'll test your knowledge of some of the techniques discusse
       <th scope="row">Prerequisites:</th>
       <td>
         Before attempting this assessment you should have already worked through
-        the rest of the
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding"
-          >Multimedia and embedding</a
-        >
-        module.
+        all the articles in this module.
       </td>
     </tr>
     <tr>
@@ -93,7 +89,7 @@ In each case (except one — which one is inherently responsive?) we want the br
 
 Make sure you match the correct images with the correct links!
 
-> **Note:** To properly test the `srcset`/`sizes` examples, you'll need to upload your site to a server (using [GitHub pages](/en-US/docs/Learn/Common_questions/Using_Github_pages) is an easy and free solution), then from there you can test whether they are working properly using browser developer tools such as the Firefox [Network Monitor](/en-US/docs/Tools/Network_Monitor).
+> **Note:** To properly test the `srcset`/`sizes` examples, you'll need to upload your site to a server (using [GitHub pages](/en-US/docs/Learn/Common_questions/Using_Github_pages) is an easy and free solution), then from there you can test whether they are working properly using browser developer tools such as the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
 
 ### An art directed red panda
 
@@ -115,14 +111,13 @@ The following screenshots show what the splash page should look like after being
 
 ## Assessment or further help
 
-If you would like your work assessed, or are stuck and want to ask for help:
+If you would like your work assessed or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Glitch is probably better for this example, as it allows you upload assets like images, whereas some of the other tools don't.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum "Learning" category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Mozilla splash page".
-    - Details of what you have already tried, and what you would like us to do.
-      For example, if you are stuck and need help, or want an assessment.
+    - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
     - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
 

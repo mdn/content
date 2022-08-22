@@ -16,7 +16,7 @@ Specifying multiple backgrounds is easy:
 
 ```css
 .myclass {
-  background: background1, background2, ..., backgroundN;
+  background: background1, background2, /* … ,*/ backgroundN;
 }
 ```
 
@@ -24,7 +24,7 @@ You can do this with both the shorthand {{ cssxref("background") }} property and
 
 ## Example
 
-In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient()):
+In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient):
 
 ### HTML
 

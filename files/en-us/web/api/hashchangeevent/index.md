@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent
 slug: Web/API/HashChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Event
@@ -23,9 +24,9 @@ The fragment identifier is the part of the URL that follows (and includes) the `
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
-- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
   - : The new URL to which the window is navigating.
-- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated.
 
 ## Methods

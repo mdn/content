@@ -1,6 +1,7 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,23 +25,32 @@ to this element until the mouse button is released or {{
 ## Syntax
 
 ```js
-element.setCapture(retargetToElement);
+setCapture(retargetToElement)
 ```
+
+### Parameters
 
 - `retargetToElement`
   - : If `true`, all events are targeted directly to this element; if
     `false`, events can also fire at descendants of this element.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In this example, the current mouse coordinates are drawn while you mouse around after
 clicking and holding down on an element.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Mouse Capture Example</title>
-  <style type="text/css">
+  <style>
     #myButton {
       border: solid black 1px;
       color: black;
@@ -49,9 +59,9 @@ clicking and holding down on an element.
     }
   </style>
 
-  <script type="text/javascript">
+  <script>
     function init() {
-      var btn = document.getElementById("myButton");
+      const btn = document.getElementById("myButton");
       if (btn.setCapture) {
         btn.addEventListener("mousedown", mouseDown, false);
         btn.addEventListener("mouseup", mouseUp, false);
@@ -71,7 +81,7 @@ clicking and holding down on an element.
     }
 
     function mouseMoved(e) {
-      var output = document.getElementById("output");
+      const output = document.getElementById("output");
       output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
     }
   </script>

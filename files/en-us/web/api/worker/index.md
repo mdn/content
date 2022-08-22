@@ -1,6 +1,7 @@
 ---
 title: Worker
 slug: Web/API/Worker
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -60,17 +61,17 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:
 
 ```js
-var myWorker = new Worker('/worker.js');
-var first = document.querySelector('input#number1');
-var second = document.querySelector('input#number2');
+const myWorker = new Worker('/worker.js');
+const first = document.querySelector('input#number1');
+const second = document.querySelector('input#number2');
 
-first.onchange = function() {
+first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Specifications
 
@@ -84,7 +85,7 @@ Support varies for different types of workers. See each worker type's page for s
 
 ### Cross-origin worker error behavior
 
-In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{event("error")}} event is thrown instead.
+In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{domxref("Worker/error_event", "error")}} event is thrown instead.
 
 ## See also
 

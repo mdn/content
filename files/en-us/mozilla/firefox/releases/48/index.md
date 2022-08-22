@@ -17,11 +17,11 @@ tags:
 
 - The position of elements can now be changed within the content ({{bug(1139187)}}).
 - Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
-- Added [HTTP log inspection to the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details) ({{bug(1211525)}}).
-- Added a [Firebug theme](/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme) ({{bug(1244054)}}).
-- Added the [DOM Inspector](/en-US/docs/Tools/DOM_Property_Viewer) ({{bug(1201475)}}).
-- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been enabled by default again ({{bug(1280121)}}).
-- [Improved suggestions](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#edit_rules) for CSS properties ({{bug(1168246)}}).
+- Added [HTTP log inspection to the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing-network-request-details) ({{bug(1211525)}}).
+- Added a [Firebug theme](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#choose-devtools-theme) ({{bug(1244054)}}).
+- Added the [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html) ({{bug(1201475)}}).
+- [Font inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts-view) has been enabled by default again ({{bug(1280121)}}).
+- [Improved suggestions](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#edit-rules) for CSS properties ({{bug(1168246)}}).
 - Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).
 
 ### HTML
@@ -29,7 +29,7 @@ tags:
 - The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
 
   - The default style for these elements has been adapted to match the spec ({{bug(1258657)}}).
-  - The {{event("toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
+  - The {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
 
 - The {{htmlattrxref("meta", "referrer")}} attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ({{bug(1178337)}}).
 
@@ -109,7 +109,7 @@ tags:
 #### WebRTC
 
 - The two methods {{domxref("MediaStream.clone()")}} and {{domxref("MediaStreamTrack.clone()")}} have been implemented ({{bug(1208371)}}).
-- The `iceRestart` entry is now supported in the `RTCOfferOptions`code> dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
+- The `iceRestart` entry is now supported in the `RTCOfferOptions` code dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
 - The {{domxref("RTCPeerConnection.createOffer()")}} method now prefers the VP9 video codec by default; previously VP8 was preferred ({{bug(1242324)}}.
 - WebM/VP8 video that includes video resolution changes that has been recorded using {{domxref("MediaRecorder")}} can now be played back successfully.
 
@@ -122,7 +122,7 @@ tags:
 - Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ({{bug(1257877)}}).
 - {{domxref("RTCStatsReport")}} is now a true `maplike` interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ({{bug(906986)}}).
 - The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ({{bug(1120715)}}).
-- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{event("keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
+- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{domxref("Element/keypress_event", "keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
 
 ## HTTP
 

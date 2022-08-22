@@ -9,4 +9,4 @@ Usenet is an internet discussion system where each post is duplicated on many se
 
 ## See also
 
-- {{Interwiki("wikipedia", "Usenet")}} on Wikipedia
+- [Usenet](https://en.wikipedia.org/wiki/Usenet) on Wikipedia

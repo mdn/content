@@ -1,6 +1,7 @@
 ---
 title: Range
 slug: Web/API/Range
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -20,17 +21,17 @@ There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
 _There are no inherited properties._
 
-- {{domxref("Range.collapsed")}} {{readonlyInline}}
+- {{domxref("Range.collapsed")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the range's start and end points are at the same position.
-- {{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}
+- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
   - : Returns the deepest {{ domxref("Node") }} that contains the `startContainer` and `endContainer` nodes.
-- {{domxref("Range.endContainer")}} {{readonlyInline}}
+- {{domxref("Range.endContainer")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Node") }} within which the `Range` ends.
-- {{domxref("Range.endOffset")}} {{readonlyInline}}
+- {{domxref("Range.endOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing where in the `endContainer` the `Range` ends.
-- {{domxref("Range.startContainer")}} {{readonlyInline}}
+- {{domxref("Range.startContainer")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Node") }} within which the `Range` starts.
-- {{domxref("Range.startOffset")}} {{readonlyInline}}
+- {{domxref("Range.startOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing where in the `startContainer` the `Range` starts.
 
 ## Constructor
@@ -46,7 +47,7 @@ _There are no inherited methods._
   - : Collapses the `Range` to one of its boundary points.
 - {{ domxref("Range.compareBoundaryPoints()")}}
   - : Compares the boundary points of the `Range` with another `Range`.
-- {{ domxref("Range.compareNode()")}} {{deprecated_inline}}{{non-standard_inline}}
+- {{ domxref("Range.compareNode()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns a constant representing whether the {{domxref("Node")}} is before, after, inside, or surrounding the range.
 - {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
   - : Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the `Range`.
@@ -54,7 +55,7 @@ _There are no inherited methods._
   - : Returns a {{ domxref("DocumentFragment") }} copying the nodes of a `Range`.
 - {{ domxref("Range.cloneRange()")}}
   - : Returns a `Range` object with boundary points identical to the cloned `Range`.
-- {{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}
+- {{ domxref("Range.createContextualFragment()")}} {{experimental_inline}}
   - : Returns a {{ domxref("DocumentFragment") }} created from a given string of code.
 - {{ domxref("Range.deleteContents()")}}
   - : Removes the contents of a `Range` from the {{ domxref("Document") }}.

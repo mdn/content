@@ -1,6 +1,7 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -21,7 +22,7 @@ The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} i
 ## Syntax
 
 ```js
-cancel();
+cancel()
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

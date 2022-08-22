@@ -1,6 +1,7 @@
 ---
 title: 'DedicatedWorkerGlobalScope: message event'
 slug: Web/API/DedicatedWorkerGlobalScope/message_event
+page-type: web-api-event
 tags:
   - Event
   - message
@@ -19,9 +20,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -34,15 +35,15 @@ An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("MessageEvent.data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : A {{domxref("USVString")}} representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{readonlyInline}}
-  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
-- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : A string representing the origin of the message emitter.
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : A string representing a unique ID for the event.
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Example
@@ -52,18 +53,18 @@ The following code snippet shows creation of a {{domxref("Worker")}} object usin
 ```js
 // main.js
 
-var myWorker = new Worker("worker.js");
+const myWorker = new Worker("worker.js");
 
-first.onchange = function() {
+first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
 // worker.js
 
-self.onmessage = function(e) {
+self.onmessage = (e) => {
   console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -74,7 +75,7 @@ In the `main.js` script, an `onmessage` handler is used to handle messages from 
 ```js
 // main.js
 
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
 }
@@ -85,15 +86,15 @@ Alternatively, the script can listen for the message using [`addEventListener()`
 ```js
 // worker.js
 
-self.addEventListener('message', function(e) {
+self.addEventListener('message', (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
-}
+});
 ```
 
 Notice how in the main script, `onmessage` has to be called on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Specifications
 
@@ -109,5 +110,4 @@ For a full example, see our [Basic dedicated worker example](https://github.com/
 - {{domxref("WorkerGlobalScope")}}
 - Related events: [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

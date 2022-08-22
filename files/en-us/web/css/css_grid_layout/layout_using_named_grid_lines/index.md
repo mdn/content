@@ -1,5 +1,5 @@
 ---
-title: Layout using named grid lines
+title: Grid layout using named grid lines
 slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 tags:
   - CSS
@@ -32,7 +32,7 @@ You can assign some or all of the lines in your grid a name when you define your
 }
 ```
 
-When defining the grid, I name my lines inside square brackets. Those names can be anything you like. I have defined a name for the start and end of the container, both for rows and columns. Then defined the centre block of the grid as `content-start` and `content-end` again, both for columns and rows although you do not need to name all of the lines on your grid. You might choose to name just some key lines for your layout.
+When defining the grid, I name my lines inside square brackets. Those names can be anything you like. I have defined a name for the start and end of the container, both for rows and columns. Then defined the center block of the grid as `content-start` and `content-end` again, both for columns and rows although you do not need to name all of the lines on your grid. You might choose to name just some key lines for your layout.
 
 ```css
 .wrapper {
@@ -315,7 +315,7 @@ If we write this definition out without using repeat notation it would look like
 
 ```css
 .wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
@@ -412,7 +412,7 @@ I could then place this on my grid layout framework like this.
 
 ```css
 .main-header,
-.main-footer  {
+.main-footer {
   grid-column: col-start / span 12;
 }
 

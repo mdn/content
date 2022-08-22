@@ -21,7 +21,7 @@ the string arguments to the calling string and returns a new string.
 ```js
 concat(str1)
 concat(str1, str2)
-concat(str1, str2, ... , strN)
+concat(str1, str2, /* …, */ strN)
 ```
 
 ### Parameters
@@ -42,11 +42,13 @@ don't affect the other.
 If the arguments are not of the type string, they are converted to string values before
 concatenating.
 
-## Performance
+The `concat()` method is very similar to the [addition/string concatenation operators](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (`+`, `+=`), but they have slightly different semantics. Addition would coerce the expression to a _primitive_, which calls [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) in priority; on the other hand, `concat()` would coerce the parameter to a _string_, which calls [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) in priority. If the parameter has a [`@@toPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, addition calls it with `"default"` as hint, while `concat()` use `"string"`. This is important for objects that have different string and primitive representations — such as [Temporal](https://github.com/tc39/proposal-temporal), whose `valueOf()` method throws.
 
-It is strongly recommended to use the {{jsxref("Operators/Assignment_Operators",
-  "assignment operators", "", 1)}} (`+`, `+=`) instead of
-the `concat()` method.
+```js
+const t = Temporal.Now.instant();
+"" + t; // Throws TypeError
+"".concat(t); // '2022-07-31T04:48:56.113918308Z'
+```
 
 ## Examples
 
@@ -55,11 +57,11 @@ the `concat()` method.
 The following example combines strings into a new string.
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+const hello = 'Hello, ';
+console.log(hello.concat('Kevin', '. Have a nice day.'));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
+const greetList = ['Hello', ' ', 'Venkat', '!'];
 "".concat(...greetList)  // "Hello Venkat!"
 
 "".concat({})    // [object Object]
@@ -80,4 +82,4 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

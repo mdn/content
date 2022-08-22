@@ -16,13 +16,28 @@ browser-compat: javascript.operators.generator_function
 The **`function*`** keyword can be used to define a generator
 function inside an expression.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html",
-   "taller")}}
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
 
 ## Syntax
 
 ```js
-function* [name]([param1[, param2[, ..., paramN]]]) {
+function* (param0) {
+  statements
+}
+function* (param0, param1) {
+  statements
+}
+function* (param0, param1, /* … ,*/ paramN) {
+  statements
+}
+
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```
@@ -35,7 +50,7 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 - `paramN` {{optional_inline}}
   - : The name of an argument to be passed to the function. A function can have up to 255
     arguments.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
 ## Description
@@ -55,8 +70,8 @@ The following example defines an unnamed generator function and assigns it to
 `x`. The function yields the square of its argument:
 
 ```js
-let x = function*(y) {
-   yield y * y;
+const x = function* (y) {
+  yield y * y;
 };
 ```
 
@@ -78,4 +93,3 @@ let x = function*(y) {
 - {{jsxref("Function")}} object
 - {{jsxref("Statements/function", "function")}} statement
 - {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}

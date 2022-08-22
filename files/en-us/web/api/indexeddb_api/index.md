@@ -1,6 +1,7 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
@@ -9,6 +10,7 @@ tags:
   - Landing
   - Reference
   - Storage
+spec-urls: https://w3c.github.io/IndexedDB/
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
@@ -81,9 +83,7 @@ This specification fires events with the following custom interface:
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Indexed Database API](https://w3c.github.io/IndexedDB/) |
+{{Specifications}}
 
 ## See also
 
@@ -97,4 +97,4 @@ This specification fires events with the following custom interface:
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval):  A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
 - [sifrr-storage:](https://www.npmjs.com/package/@sifrr/storage) A small (\~2kB) promise based library for client side key-value storage. Works with IndexedDB, localStorage, WebSQL, Cookies. Can automatically use supported storage available based on priority.
 - [lovefield](https://github.com/google/lovefield): Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.
-- [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based api and automatic migrations.
+- [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.

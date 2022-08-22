@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.heading
 slug: Web/API/GeolocationCoordinates/heading
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API

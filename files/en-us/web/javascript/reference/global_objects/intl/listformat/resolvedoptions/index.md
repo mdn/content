@@ -22,7 +22,6 @@ object.
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-
 ## Syntax
 
 ```js
@@ -45,12 +44,12 @@ The object returned by `resolvedOptions()` has the following properties:
     included in `locale`.
 - `style`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`long`"). Its value is either
-    "`long`", "`short`", or "`narrow`".
+    constructor or the default value (`"long"`). Its value is either
+    `"long"`, `"short"`, or `"narrow"`.
 - `type`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`conjunction`"). Its value is either
-    "`conjunction`", "`disjunction`", or "`unit`".
+    constructor or the default value (`"conjunction"`). Its value is either
+    `"conjunction"`, `"disjunction"`, or `"unit"`.
 
 ## Examples
 

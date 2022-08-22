@@ -33,7 +33,6 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### C–I
 
-- {{CSSxRef("-moz-context-properties")}}
 - {{CSSxRef("-moz-float-edge")}}
 - {{CSSxRef("-moz-force-broken-image-icon")}}
 - {{CSSxRef("-moz-image-region")}}
@@ -89,10 +88,10 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### B
 
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
-- {{CSSxRef("background-origin", "-moz-background-origin")}}{{deprecated_inline}}
-- {{CSSxRef("-moz-background-inline-policy")}}{{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
-- {{CSSxRef("background-size", "-moz-background-size")}}{{deprecated_inline}}
+- {{CSSxRef("background-clip", "-moz-background-clip")}} {{deprecated_inline}}
+- {{CSSxRef("background-origin", "-moz-background-origin")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-background-inline-policy")}} {{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
+- {{CSSxRef("background-size", "-moz-background-size")}} {{deprecated_inline}}
 - {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
 - {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
 - {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-style")}}]
@@ -147,10 +146,10 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### T–U
 
 - {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
-- {{CSSxRef("text-align-last","-moz-text-align-last")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}}{{deprecated_inline}}
+- {{CSSxRef("text-align-last","-moz-text-align-last")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}} {{deprecated_inline}}
 - {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
 - {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -168,7 +167,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 - {{CSSxRef("initial","-moz-initial")}}
 
-### {{CSSxRef("-moz-appearance")}}
+### -moz-appearance
+
+Property: {{CSSxRef("-moz-appearance")}}
 
 - `button`
 - `button-arrow-down`
@@ -255,7 +256,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `treeview`
 - `window`
 
-### {{CSSxRef("background-image")}}
+### background-image
+
+Property: {{CSSxRef("background-image")}}
 
 #### Gradients
 
@@ -270,17 +273,23 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 - {{CSSxRef("-moz-image-rect")}}
 
-### {{CSSxRef("border-color")}}
+### border-color
 
-- `-moz-use-text-color`{{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentColor_keyword","currentcolor")}} instead.
+Property: {{CSSxRef("border-color")}}
 
-### {{CSSxRef("border-style")}} and {{CSSxRef("outline-style")}}
+- `-moz-use-text-color` {{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
+
+### order-style and outline-style
+
+Properties: {{CSSxRef("border-style")}} and {{CSSxRef("outline-style")}}
 
 - `-moz-bg-inset` {{deprecated_inline}}
 - `-moz-bg-outset` {{deprecated_inline}}
 - `-moz-bg-solid` {{deprecated_inline}}
 
-### {{CSSxRef("&lt;color&gt;")}} keywords
+### &lt;color&gt; keywords
+
+Type: {{CSSxRef("&lt;color&gt;")}}
 
 - `-moz-activehyperlinktext`
 - `-moz-hyperlinktext`
@@ -316,7 +325,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-win-mediatext`
 - `-moz-nativehyperlinktext`
 
-### {{CSSxRef("display")}}
+### display
+
+Property: {{CSSxRef("display")}}
 
 - `-moz-box` {{deprecated_inline}}
 - `-moz-inline-block` {{deprecated_inline}}
@@ -333,11 +344,15 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-stack` {{deprecated_inline}}
 - `-moz-marker` {{deprecated_inline}}
 
-### {{CSSxRef("empty-cells")}}
+### empty-cells
+
+Property: {{CSSxRef("empty-cells")}}
 
 - `-moz-show-background` (default value in quirks mode)
 
-### {{CSSxRef("font")}}
+### font
+
+Property: {{CSSxRef("font")}}
 
 - `-moz-button`
 - `-moz-info`
@@ -350,19 +365,27 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-pull-down-menu`
 - `-moz-field` (also a color)
 
-### {{CSSxRef("font-family")}}
+### font-family
+
+Property: {{CSSxRef("font-family")}}
 
 - `-moz-fixed`
 
-### {{CSSxRef("image-rendering")}}
+### image-rendering
+
+Property: {{CSSxRef("image-rendering")}}
 
 - {{CSSxRef("image-rendering","-moz-crisp-edges")}}
 
-### {{CSSxRef("&lt;length&gt;")}}
+### &lt;length&gt;
+
+Type: {{CSSxRef("&lt;length&gt;")}}
 
 - {{CSSxRef("-moz-calc")}}
 
-### {{CSSxRef("list-style-type")}}
+### list-style-type
+
+Property: {{CSSxRef("list-style-type")}}
 
 - `-moz-arabic-indic`
 - `-moz-bengali`
@@ -396,29 +419,39 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-trad-chinese-informal`
 - `-moz-urdu`
 
-### {{CSSxRef("overflow")}}
+### overflow
+
+Property: {{CSSxRef("overflow")}}
 
 - {{CSSxRef("-moz-scrollbars-none")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}
 - {{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}
 - {{CSSxRef("-moz-hidden-unscrollable")}}
 
-### {{CSSxRef("text-align")}}
+### text-align
+
+Property: {{CSSxRef("text-align")}}
 
 - `-moz-center`
 - `-moz-left`
 - `-moz-right`
 
-### {{CSSxRef("text-decoration")}}
+### text-decoration
+
+Property: {{CSSxRef("text-decoration")}}
 
 - `-moz-anchor-decoration`
 
-### {{CSSxRef("-moz-user-select")}}
+### -moz-user-select
+
+Property: {{CSSxRef("-moz-user-select")}}
 
 - `-moz-all`
 - `-moz-none`
 
-### {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-width")}}
+### width, min-width, and max-width
+
+Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-width")}}
 
 - `-moz-min-content`
 - `-moz-fit-content`

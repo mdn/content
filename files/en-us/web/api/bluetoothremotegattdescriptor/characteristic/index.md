@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor.characteristic
 slug: Web/API/BluetoothRemoteGATTDescriptor/characteristic
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,21 +14,15 @@ tags:
   - characteristic
 browser-compat: api.BluetoothRemoteGATTDescriptor.characteristic
 ---
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.characteristic`**
 read-only property returns the {{domxref("BluetoothRemoteGATTCharacteristic")}} this
 descriptor belongs to.
 
-## Syntax
+## Value
 
-```js
-var characteristic = BluetoothRemoteGATTCharacteristic.characteristic
-```
-
-### Returns
-
-An instance of  {{domxref("BluetoothRemoteGATTCharacteristic")}}.
+An instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}.
 
 ## Specifications
 

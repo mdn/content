@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,41 +24,37 @@ known as "ciphertext").
 ## Syntax
 
 ```js
-const result = crypto.subtle.encrypt(algorithm, key, data);
+encrypt(algorithm, key, data)
 ```
 
 ### Parameters
 
-- _`algorithm`_ is an object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if
-  required:
+- `algorithm`
+  - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
+    - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
+    - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
+    - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}} object.
+    - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}} object.
 
-  - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}}
-    object.
-  - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}}
-    object.
-  - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}}
-    object.
-  - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}}
-    object.
-
-- `key` is a {{domxref("CryptoKey")}} containing the key to be
-  used for encryption.
-- _`data`_ is a {{domxref("BufferSource")}} containing the data to
-  be encrypted (also known as the {{glossary("plaintext")}}).
+- `key`
+  - : A {{domxref("CryptoKey")}} containing the key to be used for encryption.
+- `data`
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+    containing the data to be encrypted (also known as the {{glossary("plaintext")}}).
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with an
+A {{jsxref("Promise")}} that fulfills with an
   {{jsxref("ArrayBuffer")}} containing the "ciphertext".
 
 ### Exceptions
 
 The promise is rejected when the following exceptions are encountered:
 
-- InvalidAccessError
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the requested operation is not valid for the provided key (e.g. invalid
     encryption algorithm, or invalid key for the specified encryption algorithm*)*.
-- OperationError
+- `OperationError` {{domxref("DOMException")}}
   - : Raised when the operation failed for an operation-specific reason (e.g. algorithm
     parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
 
@@ -110,8 +107,7 @@ an attacker.
 
 ## Examples
 
-> **Note:** You can [try
-> the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) out on GitHub.
+> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) out on GitHub.
 
 ### RSA-OAEP
 
@@ -174,18 +170,24 @@ let data = new Uint8Array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
 //contains this code is an async function
 //encrypt function wants a cryptokey object
-const key_encoded = await crypto.subtle.importKey(  "raw",    key.buffer,   'AES-CTR' ,  false,   ["encrypt", "decrypt"]);
+const key_encoded = await crypto.subtle.importKey(
+  "raw",
+  key.buffer,
+  "AES-CTR",
+  false,
+  ["encrypt", "decrypt"],
+);
 const encrypted_content = await window.crypto.subtle.encrypt(
-    {
-      name: "AES-CTR",
-      counter: iv,
-      length: 128
-    },
-    key_encoded,
-    data
-  );
+  {
+    name: "AES-CTR",
+    counter: iv,
+    length: 128,
+  },
+  key_encoded,
+  data,
+);
 
-//Uint8Array
+// Uint8Array
 console.log(encrypted_content);
 ```
 
@@ -209,10 +211,10 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     {
       name: "AES-CBC",
-      iv
+      iv,
     },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -225,22 +227,19 @@ it using AES in GCM mode. [See the complete code on GitHub.](https://github.com/
 ```js
 function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-gcm #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
+  const message = messageBox.value;
+  const enc = new TextEncoder();
   return enc.encode(message);
 }
 
 function encryptMessage(key) {
-  let encoded = getMessageEncoding();
+  const encoded = getMessageEncoding();
   // iv will be needed for decryption
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+  const iv = window.crypto.getRandomValues(new Uint8Array(12));
   return window.crypto.subtle.encrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
+    { name: "AES-GCM", iv },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -257,9 +256,6 @@ function encryptMessage(key) {
 
 - {{domxref("SubtleCrypto.decrypt()")}}.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSAOAEP.
-- [NIST
-  SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
-- [NIST
-  SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
-- [NIST
-  SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
+- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
+- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
+- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.

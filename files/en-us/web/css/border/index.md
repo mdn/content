@@ -124,5 +124,6 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
+- {{Cssxref("outline")}}
 - [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

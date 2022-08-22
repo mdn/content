@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue.values()
 slug: Web/API/CSSUnparsedValue/values
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -23,7 +24,7 @@ values for each index in the CSSUnparsedValue object.
 ## Syntax
 
 ```js
-CSSUnparsedValue.values()
+values()
 ```
 
 ### Parameters

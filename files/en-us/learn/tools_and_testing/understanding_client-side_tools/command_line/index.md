@@ -67,7 +67,7 @@ The next images show the command prompts available in Windows — there's a good
 
 And below, you can see the macOS terminal application.
 
-![A basic vanilla mac terminal](mac-terminal.png)
+![A basic vanilla macOS terminal](mac-terminal.png)
 
 ### How do you access the terminal?
 
@@ -93,9 +93,9 @@ Better programs exist for providing a terminal experience on Windows, such as Po
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
-This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl).
+This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/en-us/windows/wsl/).
 
-![a screenshot of the windows subsystem for linux documentation](wsl.png)
+![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
 In terms of what option to choose on Windows, we'd strongly recommend trying to install the WSL. You could stick with the default command prompt (`cmd`), and many tools will work OK, but you'll find everything easier if you have better parity with Unix tools.
 
@@ -199,7 +199,7 @@ In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one f
 
 Below is a screenshot with a "vanilla" macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
 
-![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
+![A vanilla macOS terminal and a more colorful custom macOS terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
 > **Note:** To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal's default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it's there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer's quit command ("q" in `less`; you may have to search on the web to find it if it isn't obvious).
 
@@ -324,7 +324,7 @@ This is slowly expanding — you can expect to see more package providers as tim
 
 Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.
 
-![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
+![the Node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
 Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
 Prettier is an opinionated code formatter that only has a "few options".
@@ -356,7 +356,6 @@ There are pros and cons each way — and the following lists of pros and cons fo
 Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits.
 Here we'll install locally, but feel free to install globally once you understand the relative risks.
 
-
 ### Installing Prettier
 
 Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.
@@ -376,7 +375,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install prettier
 ```
 
-You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner) tool.
+You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 
@@ -398,10 +397,9 @@ Stdin is read if it is piped to Prettier and no files are given.
 It's always worth at the very least skimming over the usage information, even if it is long.
 It'll help you to understand better how the tool is intended to be used.
 
-> **Note:** If you have not first installed prettier locally, then running `npx prettier` will download and run the latest version of prettier all in one go _just for that command_.
-> While that might sound great, new versions of prettier may slightly modify the output.
-> You want to install locally so that you are fixing the version of prettier that you are using for formatting until you are ready to change it.
-
+> **Note:** If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
+> While that might sound great, new versions of Prettier may slightly modify the output.
+> You want to install locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
 
 ### Playing with Prettier
 
@@ -418,13 +416,13 @@ function printMe(obj){console.log(obj.b.c)}
 printMe(myObj)
 ```
 
-We can run prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
+We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
 ```bash
 npx prettier --check index.js
 ```
 
-You should get on output along the lines of:
+You should get an output along the lines of:
 
 ```bash
 Checking formatting...
@@ -432,7 +430,7 @@ index.js
 Code style issues found in the above file(s). Forgot to run Prettier?
 ```
 
-So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
+So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code.
 
 Now try running this version of the command:
 
@@ -463,7 +461,7 @@ printMe(myObj);
 
 Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
 
-With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke prettier:
+With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke Prettier:
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
@@ -477,7 +475,7 @@ If you want to play with a few more tools, here's a brief list that are fun to t
 
 - [`bat`](https://github.com/sharkdp/bat) — A "nicer" `cat` (`cat` is used to print the contents of files).
 - [`prettyping`](https://denilson.sa.nom.br/prettyping/) — `ping` on the command line, but visualized (`ping` is a useful tool to check if a server is responding).
-- [`htop`](https://hisham.hm/htop/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
+- [`htop`](https://htop.dev/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
 - [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command line tool.
 
 Note that some of the above suggestions may need installing using npm, like we did with Prettier.

@@ -251,7 +251,7 @@ We have removed the underline on our link on hover. You could remove the underli
 
 > **Note:** you will often see mention of [accessibility](/en-US/docs/Learn/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.
 >
-> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
+> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screen reader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
 >
 > A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.
 
@@ -261,10 +261,10 @@ It is worth noting that you can combine multiple selectors and combinators toget
 
 ```css
 /* selects any <span> that is inside a <p>, which is inside an <article>  */
-article p span { ... }
+article p span { }
 
 /* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
-h1 + ul + p { ... }
+h1 + ul + p { }
 ```
 
 You can combine multiple types together, too. Try adding the following into your code:
@@ -283,18 +283,18 @@ In the original HTML we provided, the only element styled is `<span class="speci
 
 Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.
 
-## Wrapping up
+## Summary
 
-In this tutorial, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However, you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.
+In this article, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However, you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.
 
-In the next lesson, we will be taking a look at how CSS is structured.
+In the next lesson, we'll be taking a look at [how CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured).
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 ## In this module
 
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

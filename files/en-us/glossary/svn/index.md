@@ -9,5 +9,5 @@ Apache Subversion (**SVN**) is a free source control management ({{Glossary("SCM
 
 ## See also
 
-- {{Interwiki("wikipedia", "Apache Subversion")}} on Wikipedia
+- [Apache Subversion](https://en.wikipedia.org/wiki/Apache_Subversion) on Wikipedia
 - [Official website](https://subversion.apache.org/)

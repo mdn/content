@@ -1,9 +1,9 @@
 ---
 title: Headers
 slug: Web/API/Headers
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - Headers
@@ -23,7 +23,7 @@ A Headers object also has an associated guard, which takes a value of `immutable
 
 You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {{domxref("Response.headers")}} properties, and create a new `Headers` object using the {{domxref("Headers.Headers", "Headers()")}} constructor.
 
-An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` is equivalent to `for (var p of myHeaders.entries())`.
+An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
 > **Note:** you can find more out about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
 
@@ -41,7 +41,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 - {{domxref("Headers.entries()")}}
   - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing to go through all key/value pairs contained in this object.
 - {{domxref("Headers.forEach()")}}
-  - : Executes a provided function once for each array element.
+  - : Executes a provided function once for each key/value pair in this `Headers` object.
 - {{domxref("Headers.get()")}}
   - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
 - {{domxref("Headers.has()")}}
@@ -55,7 +55,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 
 > **Note:** To be clear, the difference between {{domxref("Headers.set()")}} and {{domxref("Headers.append()")}} is that if the specified header does already exist and does accept multiple values, {{domxref("Headers.set()")}} will overwrite the existing value with the new one, whereas {{domxref("Headers.append()")}} will append the new value onto the end of the set of values. See their dedicated pages for example code.
 
-> **Note:** All of the Headers methods will throw a `TypeError` if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header has an immutable {{Glossary("Guard")}}. In any other failure case they fail silently.
+> **Note:** All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header has an immutable {{Glossary("Guard")}}. In any other failure case they fail silently.
 
 > **Note:** When Header values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined.
 
@@ -64,7 +64,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 In the following snippet, we create a new header using the `Headers()` constructor, add a new header to it using `append()`, then return that header value using `get()`:
 
 ```js
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.get('Content-Type') // should return 'text/xml'
@@ -73,7 +73,7 @@ myHeaders.get('Content-Type') // should return 'text/xml'
 The same can be achieved by passing an array of arrays or an object literal to the constructor:
 
 ```js
-var myHeaders = new Headers({
+let myHeaders = new Headers({
     'Content-Type': 'text/xml'
 });
 

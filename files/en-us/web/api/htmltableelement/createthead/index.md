@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -25,18 +26,22 @@ method creates it, and then returns it.
 ## Syntax
 
 ```js
-table.createTHead();
+createTHead()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let myhead = mytable.createTHead();
-// Now this should be true: myhead == mytable.tHead
+// Now this should be true: myhead === mytable.tHead
 ```
 
 ## Specifications

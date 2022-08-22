@@ -74,7 +74,7 @@ html, body, svg {
 - `auto`
   - : This value indicates that the marker is oriented such that its positive x-axis is pointing in a direction relative to the path at the position the marker is placed.
 - `auto-start-reverse`
-  - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` where specified. For all other markers, `auto-start-reverse` means the same as `auto`.
+  - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` were specified. For all other markers, `auto-start-reverse` means the same as `auto`.
 
     > **Note:** This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.
 - `<angle>`
@@ -86,34 +86,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#OrientAttribute", "orient")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Added the <code>auto-start-reverse</code> value and simplified the
-        descriptions of the values.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#OrientAttribute", "orient")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

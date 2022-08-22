@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -22,9 +23,9 @@ to begin playback immediately.
 ## Syntax
 
 ```js
-start(when);
-start(when, offset);
-start(when, offset, duration);
+start(when)
+start(when, offset)
+start(when, offset, duration)
 ```
 
 ### Parameters
@@ -55,11 +56,11 @@ start(when, offset, duration);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if a negative value was specified for one or more of the three time parameters. Please
     don't attempt to tamper with the laws of temporal physics.
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -94,5 +95,4 @@ source.start(audioCtx.currentTime + 1,3,10);
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

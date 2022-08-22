@@ -32,7 +32,7 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("autocomplete")}}
-  - : A {{domxref("DOMString")}} providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
+  - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
 - {{htmlattrdef("autofocus")}}
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
 - {{htmlattrdef("disabled")}}
@@ -53,7 +53,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
-    > **Note:** According to the HTML5 specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
+    > **Note:** According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
 
 ## Usage notes
 
@@ -250,11 +250,7 @@ html body form fieldset#custom div.select[data-multiple] div.header {
 
 html body form fieldset#custom div.select div.header {
   content: '↓';
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0;
   position: relative;
@@ -271,13 +267,11 @@ html body form fieldset#custom div.select div.header::after {
   padding: .5em;
 }
 
-html body form fieldset#custom div.select div.header:hover:after {
+html body form fieldset#custom div.select div.header:hover::after {
   background-color: blue;
 }
 
 .select .header select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font-family: inherit;
   font-size: inherit;
@@ -326,8 +320,6 @@ html body form fieldset#custom div.select[data-open] datalist {
 }
 
 html body form fieldset#custom div.select datalist {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
   border-style: solid;
@@ -405,135 +397,153 @@ html body form fieldset#custom div.select div.header span {
 ```js
 const selects = custom.querySelectorAll('select');
 for (const select of selects) {
-    const div = document.createElement('div');
-    const header = document.createElement('div');
-    const datalist = document.createElement('datalist');
-    const optgroups = select.querySelectorAll('optgroup');
-    const span = document.createElement('span');
-    const options = select.options;
-    const parent = select.parentElement;
-    const multiple = select.hasAttribute('multiple');
-    const onclick = function(e) {
-        const disabled = this.hasAttribute('data-disabled');
-        select.value = this.dataset.value;
-        span.innerText = this.dataset.label;
-        if (disabled) return;
-        if (multiple) {
-            if (e.shiftKey) {
-                const checked = this.hasAttribute("data-checked");
-                if (checked) {
-                    this.removeAttribute("data-checked");
-                } else {
-                    this.setAttribute("data-checked", "");
-                };
-            } else {
-                const options = div.querySelectorAll('.option');
-                for (i = 0; i < options.length; i++) {
-                    const option = options[i];
-                    option.removeAttribute("data-checked");
-                };
-                this.setAttribute("data-checked", "");
-            };
-        };
-    };
-    const onkeyup = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if (e.keyCode === 13) {
-            this.click();
-        }
-    };
-    div.classList.add('select');
-    header.classList.add('header');
-    div.tabIndex = 1;
-    select.tabIndex = -1;
-    span.innerText = select.label;
-    header.appendChild(span);
-    for (attribute of select.attributes) div.dataset[attribute.name] = attribute.value;
-    for (i = 0; i < options.length; i++) {
-        const option = document.createElement('div');
-        const label = document.createElement('div');
-        const o = options[i];
-        for (attribute of o.attributes) option.dataset[attribute.name] = attribute.value;
-        option.classList.add('option');
-        label.classList.add('label');
-        label.innerText = o.label;
-        option.dataset.value = o.value;
-        option.dataset.label = o.label;
-        option.onclick = onclick;
-        option.onkeyup = onkeyup;
-        option.tabIndex = i + 1;
-        option.appendChild(label);
-        datalist.appendChild(option);
-    }
-    div.appendChild(header);
-    for (o of optgroups) {
-        const optgroup = document.createElement('div');
-        const label = document.createElement('div');
-        const options = o.querySelectorAll('option');
-        Object.assign(optgroup, o);
-        optgroup.classList.add('optgroup');
-        label.classList.add('label');
-        label.innerText = o.label;
-        optgroup.appendChild(label);
-        div.appendChild(optgroup);
-        for (o of options) {
-            const option = document.createElement('div');
-            const label = document.createElement('div');
-            for (attribute of o.attributes) option.dataset[attribute.name] = attribute.value;
-            option.classList.add('option');
-            label.classList.add('label');
-            label.innerText = o.label;
-            option.tabIndex = i + 1;
-            option.dataset.value = o.value;
-            option.dataset.label = o.label;
-            option.onclick = onclick;
-            option.onkeyup = onkeyup;
-            option.tabIndex = i + 1;
-            option.appendChild(label);
-            optgroup.appendChild(option);
-        };
-    };
-    div.onclick = function(e) {
-        e.preventDefault();
-    }
-    parent.insertBefore(div, select);
-    header.appendChild(select);
-    div.appendChild(datalist);
-    datalist.style.top = header.offsetTop + header.offsetHeight + 'px';
-    div.onclick = function(e) {
-        if (multiple) {
-
+  const div = document.createElement('div');
+  const header = document.createElement('div');
+  const datalist = document.createElement('datalist');
+  const optgroups = select.querySelectorAll('optgroup');
+  const span = document.createElement('span');
+  const options = select.options;
+  const parent = select.parentElement;
+  const multiple = select.hasAttribute('multiple');
+  function onclick(e) {
+    const disabled = this.hasAttribute('data-disabled');
+    select.value = this.dataset.value;
+    span.innerText = this.dataset.label;
+    if (disabled) return;
+    if (multiple) {
+      if (e.shiftKey) {
+        const checked = this.hasAttribute("data-checked");
+        if (checked) {
+          this.removeAttribute("data-checked");
         } else {
-            const open = this.hasAttribute("data-open");
-            e.stopPropagation();
-            if (open) {
-                this.removeAttribute("data-open");
-            } else {
-                this.setAttribute("data-open", "");
-            }
-        }
+          this.setAttribute("data-checked", "");
+        };
+      } else {
+        const options = div.querySelectorAll('.option');
+        for (let i = 0; i < options.length; i++) {
+          const option = options[i];
+          option.removeAttribute("data-checked");
+        };
+        this.setAttribute("data-checked", "");
+      };
     };
-    div.onkeyup = function(event) {
-        event.preventDefault();
-        if (event.keyCode === 13) {
-            this.click();
-        }
-    };
-    document.addEventListener('click', function(e) {
-        if (div.hasAttribute("data-open")) div.removeAttribute("data-open");
-    });
-    const width = Math.max(...Array.from(options).map(function(e) {
-        span.innerText = e.label;
-        return div.offsetWidth;
-    }));
-    console.log(width)
-    div.style.width = width + 'px';
-}
-document.forms[0].onsubmit = function(e) {
-    const data = new FormData(this);
+  };
+  
+  function onkeyup(e) {
     e.preventDefault();
-    submit.innerText = JSON.stringify([...data.entries()]);
+    e.stopPropagation();
+    if (e.keyCode === 13) {
+      this.click();
+    }
+  };
+  
+  div.classList.add('select');
+  header.classList.add('header');
+  div.tabIndex = 1;
+  select.tabIndex = -1;
+  span.innerText = select.label;
+  header.appendChild(span);
+  
+  for (const attribute of select.attributes) {
+    div.dataset[attribute.name] = attribute.value;
+  }
+  for (let i = 0; i < options.length; i++) {
+    const option = document.createElement('div');
+    const label = document.createElement('div');
+    const o = options[i];
+    for (const attribute of o.attributes) {
+      option.dataset[attribute.name] = attribute.value;
+    }
+    option.classList.add('option');
+    label.classList.add('label');
+    label.innerText = o.label;
+    option.dataset.value = o.value;
+    option.dataset.label = o.label;
+    option.onclick = onclick;
+    option.onkeyup = onkeyup;
+    option.tabIndex = i + 1;
+    option.appendChild(label);
+    datalist.appendChild(option);
+  }
+  div.appendChild(header);
+  for (const o of optgroups) {
+    const optgroup = document.createElement('div');
+    const label = document.createElement('div');
+    const options = o.querySelectorAll('option');
+    
+    Object.assign(optgroup, o);
+    optgroup.classList.add('optgroup');
+    label.classList.add('label');
+    label.innerText = o.label;
+    optgroup.appendChild(label);
+    div.appendChild(optgroup);
+    for (const o of options) {
+      const option = document.createElement('div');
+      const label = document.createElement('div');
+      
+      for (const attribute of o.attributes) {
+        option.dataset[attribute.name] = attribute.value;
+      }
+      option.classList.add('option');
+      label.classList.add('label');
+      label.innerText = o.label;
+      option.tabIndex = i + 1;
+      option.dataset.value = o.value;
+      option.dataset.label = o.label;
+      option.onclick = onclick;
+      option.onkeyup = onkeyup;
+      option.tabIndex = i + 1;
+      option.appendChild(label);
+      optgroup.appendChild(option);
+    };
+  };
+  
+  div.onclick = (e) => {
+    e.preventDefault();
+  }
+  
+  parent.insertBefore(div, select);
+  header.appendChild(select);
+  div.appendChild(datalist);
+  datalist.style.top = `${header.offsetTop + header.offsetHeight}px`;
+  
+  div.onclick = (e) => {
+    if (!multiple) {
+      const open = this.hasAttribute("data-open");
+      e.stopPropagation();
+      if (open) {
+        div.removeAttribute("data-open");
+      } else {
+        div.setAttribute("data-open", "");
+      }
+    }
+  };
+  
+  div.onkeyup = (event) => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      div.click();
+    }
+  };
+  
+  document.addEventListener('click', (e) => {
+    if (div.hasAttribute("data-open")) {
+      div.removeAttribute("data-open");
+    }
+  });
+  
+  const width = Math.max(...Array.from(options).map((e) => {
+    span.innerText = e.label;
+    return div.offsetWidth;
+  }));
+  
+  console.log(width)
+  div.style.width = `${width}px`;
+}
+document.forms[0].onsubmit = (e) => {
+  const data = new FormData(this);
+  e.preventDefault();
+  submit.innerText = JSON.stringify([...data.entries()]);
 }
 ```
 

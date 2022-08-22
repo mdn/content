@@ -37,7 +37,7 @@ html,body,svg { height:100% }
     *Value type*: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)**|**[\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage)** ; *Default value*: `0`; *Animatable*: **yes**
 - {{SVGAttr("r")}}
   - : The radius of the circle. A value lower or equal to zero disables rendering of the circle.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0`; *Animatable*: **yes**
+    *Value type*: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)**|**[\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage)** ; *Default value*: `0`; *Animatable*: **yes**
 - {{SVGAttr("pathLength")}}
   - : The total length for the circle's circumference, in user units.
     *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: *none*; *Animatable*: **yes**

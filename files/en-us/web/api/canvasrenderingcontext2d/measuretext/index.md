@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,7 +20,7 @@ measured text (such as its width, for example).
 ## Syntax
 
 ```js
-measureText(text);
+measureText(text)
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ Given this {{HTMLElement("canvas")}} element:
 <canvas id="canvas"></canvas>
 ```
 
-... you can get a {{domxref("TextMetrics")}} object using the following code:
+… you can get a {{domxref("TextMetrics")}} object using the following code:
 
 ```js
 const canvas = document.getElementById('canvas');

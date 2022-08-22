@@ -1,15 +1,17 @@
 ---
 title: IdleDetector.requestPermission()
 slug: Web/API/IdleDetector/requestPermission
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - requestPermission
   - IdleDetector
+  - Experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the {{domxref("IdleDetector")}}
 interface returns a {{jsxref('Promise')}} that resolves with a string when the user has chosen
@@ -19,14 +21,14 @@ whether to grant the origin access to their idle state. Resolves with
 ## Syntax
 
 ```js
-IdleDetector.requestPermission()
+requestPermission()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A `Promise` that resolves with `"granted"` or `"denied"`.
 
@@ -36,7 +38,7 @@ The following example uses a `click` event on a button to trigger requesting the
 
 ```js
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

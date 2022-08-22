@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

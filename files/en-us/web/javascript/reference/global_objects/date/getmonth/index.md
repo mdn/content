@@ -36,20 +36,20 @@ The second statement below assigns the value 11 to the variable `month`,
 based on the value of the {{jsxref("Date")}} object `Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
-var month = Xmas95.getMonth();
+const Xmas95 = new Date('December 25, 1995 23:15:30');
+const month = Xmas95.getMonth();
 
 console.log(month); // 11
 ```
 
 > **Note:** If needed, the full name of a month (`January` for
 > example) can be obtained by using
-> [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options)
+> [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options)
 > with an `options` parameter. Using this method, internationalization is
 > made easier:
 >
 > ```js
-> var options = { month: 'long'};
+> const options = { month: 'long'};
 > console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 > // December
 > console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));

@@ -1,6 +1,7 @@
 ---
 title: 'SpeechRecognition: result event'
 slug: Web/API/SpeechRecognition/result_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -16,9 +17,9 @@ The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_AP
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('result', event => { })
+addEventListener('result', (event) => { })
 
-onresult = event => { }
+onresult = (event) => { }
 ```
 
 ## Event type
@@ -31,27 +32,27 @@ An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("SpeechRecognitionEvent.emma")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
   - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
   - : Returns the semantic meaning of what the user said.
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
   - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
-- {{domxref("SpeechRecognitionEvent.results")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
-recognition.addEventListener('result', function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+recognition.addEventListener('result', (event) => {
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
 });
 ```
@@ -59,9 +60,9 @@ recognition.addEventListener('result', function(event) {
 Or use the `onresult` event handler property:
 
 ```js
-recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+recognition.onresult = (event) => {
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
 }
 ```

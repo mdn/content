@@ -1,6 +1,7 @@
 ---
 title: XRSystem
 slug: Web/API/XRSystem
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -55,11 +56,7 @@ if (navigator.xr) {
   immersiveButton.addEventListener("click", onButtonClicked);
   navigator.xr.isSessionSupported('immersive-vr')
   .then((isSupported) => {
-    if (isSupported) {
-      immersiveButton.disabled = false;
-    } else {
-      immersiveButton.disabled = true;
-    }
+    immersiveButton.disabled = !isSupported;
   });
 }
 

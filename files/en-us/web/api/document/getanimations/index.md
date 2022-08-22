@@ -1,6 +1,7 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -26,7 +27,7 @@ target elements are descendants of the document. This array includes [CSS Animat
 ## Syntax
 
 ```js
-getAnimations();
+getAnimations()
 ```
 
 ### Parameters
@@ -45,11 +46,9 @@ The following code snippet will slow down all animations on a page by halving th
 {{domxref("Animation.playbackRate")}}.
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 ## Specifications

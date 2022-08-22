@@ -50,7 +50,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
   - : Defines the line gap metric for the font.
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}{{experimental_inline}}
+- {{cssxref("@font-face/size-adjust", "size-adjust")}} {{experimental_inline}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
 
@@ -70,7 +70,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
 ## Description
 
-If the `local()` function is provided, specifying a font name to look for on the user's computer, and the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
+If the `local()` function is provided, specifying a font name to look for on the user's computer, and if the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
 
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
 
@@ -106,7 +106,11 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@font-face {
+  <declaration-list>
+}
+```
 
 ## Examples
 
@@ -115,13 +119,16 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 This example specifies a downloadable font to use, applying it to the entire body of the document:
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
+  <style media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }
@@ -135,7 +142,7 @@ This example specifies a downloadable font to use, applying it to the entire bod
 
 The output of this example code looks like so:
 
-{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', 50)}}
+{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
 
 ### Specifying local font alternatives
 

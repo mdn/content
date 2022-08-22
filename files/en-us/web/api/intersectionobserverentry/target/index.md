@@ -1,10 +1,10 @@
 ---
 title: IntersectionObserverEntry.target
 slug: Web/API/IntersectionObserverEntry/target
+page-type: web-api-instance-property
 tags:
   - API
   - Element
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserver
@@ -13,7 +13,7 @@ tags:
   - target
 browser-compat: api.IntersectionObserverEntry.target
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`target`** property indicates which targeted
@@ -34,7 +34,7 @@ In this simple example, each targeted element's {{cssxref("opacity")}} is set to
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     entry.target.opacity = entry.intersectionRatio;
   });
 }

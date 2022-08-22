@@ -59,7 +59,7 @@ This system works well, but traditionally web developers' font choices were limi
 
 ## Web fonts
 
-But there is an alternative that works very well. (It's even supported by such older browsers as IE version 6). CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
+But there is an alternative that works very well. (It's even supported by such older browsers as IE version 6.) CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
 
 First of all, you have a {{cssxref("@font-face")}} ruleset at the start of the CSS, which specifies the font file(s) to download:
 
@@ -90,7 +90,7 @@ Here are some important things to bear in mind about web fonts:
 
 > **Note:** Web fonts as a technology have been supported in Internet Explorer since version 4!
 
-You can use the [Firefox Font Editor](/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not. This video provides a nice walkthrough:
+You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not. This video provides a nice walkthrough:
 
 {{EmbedYouTube("UazfLa1O94M")}}
 
@@ -132,8 +132,8 @@ Web services for font generation typically limit file sizes. In such a case, con
 
 1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) for converting ttf to woff
 2. [fontforge](https://fontforge.org/) for converting from ttf to svg
-3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html)for converting from ttf to svg
-4. [woff2](https://github.com/google/woff2)for converting from ttf to woff2
+3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html) for converting from ttf to svg
+4. [woff2](https://github.com/google/woff2) for converting from ttf to woff2
 
 ### Implementing the code in your demo
 
@@ -166,17 +166,17 @@ To implement these fonts in your demo, follow these steps:
 
 You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.
 
-![](web-font-example.png)
+![The finished design of a Web font active learning exercise. The page has two headings and three paragraphs. The page contains different fonts and text at different sizes.](web-font-example.png)
 
 > **Note:** If you have any problems getting this to work, feel free to compare your version to our finished files — see [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) and [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css). You can also download the [code from GitHub](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) or [run the finished example live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
 
 ## Using an online font service
 
-Online font services generally store and serve fonts for you so you don't have to worry about writing the `@font-face` code. Instead, you generally just need to insert a simple line or two of code into your site to make everything work. Examples include [Adobe Fonts](https://fonts.adobe.com/) and [Cloud.typography](https://www.typography.com/cloud/welcome/). Most of these services are subscription-based, with the notable exception of [Google Fonts](https://www.google.com/fonts), a useful free service, especially for rapid testing work and writing demos.
+Online font services generally store and serve fonts for you so you don't have to worry about writing the `@font-face` code. Instead, you generally just need to insert a simple line or two of code into your site to make everything work. Examples include [Adobe Fonts](https://fonts.adobe.com/) and [Cloud.typography](https://www.typography.com/webfonts). Most of these services are subscription-based, with the notable exception of [Google Fonts](https://fonts.google.com/), a useful free service, especially for rapid testing work and writing demos.
 
 Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
 
-1. Go to [Google Fonts](https://www.google.com/fonts).
+1. Go to [Google Fonts](https://fonts.google.com/).
 2. Search for your favorite fonts or use the filters at the top of the page to display the kinds of fonts you want to choose and select a couple of fonts that you like.
 3. To select a font family, click on the font preview and press the ⊕ button alongside the font.
 4. When you've chosen the font families, press the *View your selected families* button in the top right corner of the page.
@@ -187,7 +187,7 @@ Most of these services are easy to use, so we won't cover them in great detail. 
 
 ## @font-face in more detail
 
-Let's explore that `@font-face` syntax generated for you by fontsquirrel. This is what one of the rulesets looks like:
+Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This is what one of the rulesets looks like:
 
 ```css
 @font-face {
@@ -211,13 +211,9 @@ Let's go through it to see what it does:
 
 There is a newer font technology available in browsers called variable fonts. These are fonts that allow many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They are somewhat advanced for our beginner's course, but if you fancy stretching yourself and looking into them, read our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide).
 
-## Test your skills!
-
-You've reached the end of this module, and already did some skill testing in our Active Learning sections, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
-
 ## Summary
 
-Now that you have worked through our articles on text styling fundamentals, it's time to test your comprehension with our assessment for the module: Typesetting a community school homepage.
+Now that you have worked through our articles on text styling fundamentals, it's time to test your comprehension with our assessment for the module: [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
@@ -226,5 +222,5 @@ Now that you have worked through our articles on text styling fundamentals, it's
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- **Web fonts**
+- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

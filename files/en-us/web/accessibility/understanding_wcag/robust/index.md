@@ -1,6 +1,6 @@
 ---
 title: Robust
-slug: Web/Accessibility/Understanding_WCAG/Robust 
+slug: Web/Accessibility/Understanding_WCAG/Robust
 tags:
   - Accessibility
   - HTML
@@ -36,7 +36,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       <td>
         <p>
           Content should be well-formed so it can be parsed successfully by
-          browsers and other user agents such as screenreaders.
+          browsers and other user agents such as screen readers.
         </p>
         <p>
           To pass this criterion, make sure that your HTML is as valid as
@@ -66,7 +66,7 @@ This guideline focuses on making content as compatible as possible, not only wit
           components, you will need to use WAI-ARIA roles and other features to
           make sure your controls will be interpreted and are able to be used as
           intended, e.g. not only by sighted mouse users, but also by
-          screenreader users, keyboard-only users, etc.
+          screen reader users, keyboard-only users, etc.
         </p>
       </td>
       <td>
@@ -110,7 +110,7 @@ This guideline focuses on making content as compatible as possible, not only wit
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
   2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)

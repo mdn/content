@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isEnabled()
 slug: Web/API/WebGLRenderingContext/isEnabled
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ By default, all capabilities except `gl.DITHER` are
 ## Syntax
 
 ```js
-GLboolean gl.isEnabled(cap);
+isEnabled(cap)
 ```
 
 ### Parameters

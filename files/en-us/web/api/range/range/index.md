@@ -1,17 +1,17 @@
 ---
 title: Range()
 slug: Web/API/Range/Range
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - DOM
   - DOM Reference
-  - Experimental
   - Range
   - Reference
 browser-compat: api.Range.Range
 ---
-{{ APIRef("DOM") }} {{SeeCompatTable}}
+{{ APIRef("DOM") }}
 
 The **`Range()`** constructor returns a newly created
 {{domxref("Range")}} object whose start and end is the global {{domxref("Document")}}
@@ -20,8 +20,12 @@ object.
 ## Syntax
 
 ```js
-new Range();
+new Range()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 
@@ -62,7 +66,7 @@ selection.addRange(range);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples", 400, 210)}}
 
 ## Specifications
 

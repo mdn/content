@@ -1,6 +1,7 @@
 ---
 title: TouchEvent.shiftKey
 slug: Web/API/TouchEvent/shiftKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

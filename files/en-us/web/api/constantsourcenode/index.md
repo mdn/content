@@ -1,6 +1,7 @@
 ---
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -48,7 +49,7 @@ _Inherits properties from its parent interface, {{domxref("AudioScheduledSourceN
 
 _Inherits events from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
 
-> **Note:** Some browsers' implementations of these events are part of the  {{domxref("AudioScheduledSourceNode")}} interface.
+> **Note:** Some browsers' implementations of these events are part of the {{domxref("AudioScheduledSourceNode")}} interface.
 
 - {{domxref("AudioScheduledSourceNode.ended_event","ended")}}
   - : Fired whenever the {{domxref('ConstantSourceNode')}} data has stopped playing.

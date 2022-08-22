@@ -1,6 +1,7 @@
 ---
 title: Element.nextElementSibling
 slug: Web/API/Element/nextElementSibling
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ A {{domxref("Element")}} object, or `null`.
 <div id="div-01">Here is div-01</div>
 <div id="div-02">Here is div-02</div>
 
-<script type="text/javascript">
+<script>
   let el = document.getElementById('div-01').nextElementSibling;
   console.log('Siblings of div-01:');
   while (el) {

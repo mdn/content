@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver
 slug: Web/API/RTCRtpTransceiver
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -34,7 +35,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
   - : The {{domxref("RTCRtpReceiver")}} object that handles receiving and decoding incoming media.
 - {{domxref("RTCRtpTransceiver.sender", "sender")}} {{ReadOnlyInline}}
   - : The {{domxref("RTCRtpSender")}} object responsible for encoding and sending data to the remote peer.
-- {{domxref("RTCRtpTransceiver.stopped", "stopped")}}
+- {{domxref("RTCRtpTransceiver.stopped", "stopped")}} {{Deprecated_Inline}}
   - : Indicates whether or not sending and receiving using the paired `RTCRtpSender` and `RTCRtpReceiver` has been permanently disabled, either due to SDP offer/answer, or due to a call to {{domxref("RTCRtpTransceiver.stop", "stop()")}}.
 
 ## Methods

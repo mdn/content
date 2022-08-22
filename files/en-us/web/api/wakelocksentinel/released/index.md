@@ -1,6 +1,7 @@
 ---
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -17,7 +18,7 @@ a {{domxref("WakeLockSentinel")}} has been released yet.
 ## Syntax
 
 ```js
-var released = sentinel.released;
+const released = sentinel.released;
 ```
 
 ### Value

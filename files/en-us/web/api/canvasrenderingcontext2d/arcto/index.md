@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -26,7 +27,7 @@ This method is commonly used for making rounded corners.
 ## Syntax
 
 ```js
-arcTo(x1, y1, x2, y2, radius);
+arcTo(x1, y1, x2, y2, radius)
 ```
 
 ### Parameters
@@ -41,6 +42,10 @@ arcTo(x1, y1, x2, y2, radius);
   - : The y-axis coordinate of the second control point.
 - `radius`
   - : The arc's radius. Must be non-negative.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -127,9 +132,9 @@ const p0 = { x: 230, y: 20  }
 const p1 = { x: 90,  y: 130 }
 const p2 = { x: 20,  y: 20  }
 
-const labelPoint = function (p) {
+const labelPoint = (p) => {
   const offset = 15;
-  ctx.fillText('(' + p.x + ',' + p.y + ')', p.x + offset, p.y + offset);
+  ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
 }
 
 ctx.beginPath();
@@ -199,23 +204,22 @@ arc changes.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
+let radius   = 100;
 
 const controlOut = document.getElementById('radius-output');
 const control    = document.getElementById('radius');
-      control.oninput = () => {
-          controlOut.textContent = r = control.value;
-      };
+control.oninput = () => {
+  controlOut.textContent = radius = control.value;
+};
 
 const mouse = { x: 0, y: 0 };
 
-let r  = 100; // Radius
 const p0 = { x: 0, y: 50 };
-
 const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
 
-const labelPoint = function (p, offset, i = 0){
+const labelPoint = (p, offset, i = 0) => {
     const {x, y} = offset;
     ctx.beginPath();
     ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
@@ -223,15 +227,15 @@ const labelPoint = function (p, offset, i = 0){
     ctx.fillText(`${i}:(${p.x}, ${p.y})`, p.x + x, p.y + y);
 }
 
-const drawPoints = function (points){
+const drawPoints = (points) => {
   for (let i = 0; i < points.length; i++) {
-    var p = points[i];
+    const p = points[i];
     labelPoint(p, { x: 0, y: -20 } , i)
   }
 }
 
 // Draw arc
-const drawArc = function ([p0, p1, p2], r) {
+const drawArc = ([p0, p1, p2], r) => {
   ctx.beginPath();
   ctx.moveTo(p0.x, p0.y);
   ctx.arcTo(p1.x, p1.y, p2.x, p2.y, r);
@@ -242,11 +246,11 @@ const drawArc = function ([p0, p1, p2], r) {
 let t0 = 0;
 let rr = 0; // the radius that changes over time
 let a  = 0; // angle
-let PI2 = Math.PI * 2;
-const loop = function (t) {
+const PI2 = Math.PI * 2;
+const loop = (t) => {
   t0 = t / 1000;
   a  = t0 % PI2;
-  rr = Math.abs(Math.cos(a) * r);
+  rr = Math.abs(Math.cos(a) * radius);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

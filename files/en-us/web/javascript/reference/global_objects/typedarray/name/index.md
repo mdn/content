@@ -16,7 +16,11 @@ The **`TypedArray.name`** property represents a string value of the typed array 
 
 ## Description
 
-`TypedArray` objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The `name` property describes of what data type the array consists. The first part can be `Int` for "integer" or `Uint` for an "unsigned integer", also `Float` for "floating point" is used. The second part is a number describing the bit-size of the array. Finally, the object type is `Array`, with `ClampedArray` as a special case. Please see {{jsxref("Uint8ClampedArray")}} for more details.
+`TypedArray` objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The `name` property describes what data type the array consists of. It has three parts:
+
+- The first part can be `Int` for _integer_, `Uint` for _unsigned integer_, or `Float` for _floating point_.
+- The second part is a number describing the bit size of each element. Since 64-bit integers are too large to be represented without loss of precision with JavaScript numbers, the elements are stored as [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) values instead, and the first part is prefixed with "Big", becoming either `BigInt` or `BigUint`.
+- Finally, the name terminates with `Array` or `ClampedArray`. {{jsxref("Uint8ClampedArray")}} has details about _clamped arrays_.
 
 ## Examples
 
@@ -32,6 +36,8 @@ Int32Array.name;        // "Int32Array"
 Uint32Array.name;       // "Uint32Array"
 Float32Array.name;      // "Float32Array"
 Float64Array.name;      // "Float64Array"
+BigInt64Array.name;     // "BigInt64Array"
+BigUint64Array.name;    // "BigUint64Array"
 ```
 
 ## Specifications

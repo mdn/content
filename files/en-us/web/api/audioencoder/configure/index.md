@@ -1,22 +1,24 @@
 ---
 title: AudioEncoder.configure()
 slug: Web/API/AudioEncoder/configure
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - configure
   - AudioEncoder
+  - Experimental
 browser-compat: api.AudioEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
 ## Syntax
 
 ```js
-configure(config);
+configure(config)
 ```
 
 ### Parameters
@@ -24,21 +26,21 @@ configure(config);
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
-    - `sampleRate`{{Optional_Inline}}
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+    - `sampleRate` {{optional_inline}}
       - : An integer representing the number of frame samples per second.
-    - `numberOfChannels`{{Optional_Inline}}
+    - `numberOfChannels` {{optional_inline}}
       - : An integer representing the number of audio channels.
-    - `bitrate`{{Optional_Inline}}
+    - `bitrate` {{optional_inline}}
       - : An integer representing the bitrate.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioEncoder.state","state")}} is `"closed"`.

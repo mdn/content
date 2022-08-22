@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domainLookupStart
 slug: Web/API/PerformanceTiming/domainLookupStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

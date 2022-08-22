@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent.promise
 slug: Web/API/PromiseRejectionEvent/promise
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -38,9 +39,9 @@ callback that will retry the task that failed to execute correctly.
 been handled.
 
 ```js
-window.onunhandledrejection = function(event) {
-  if (event.reason.code && event.reason.code == "Module not ready") {
-    window.requestIdleCallback(function(deadline) {
+window.onunhandledrejection = (event) => {
+  if (event.reason?.code === "Module not ready") {
+    requestIdleCallback((deadline) => {
       loadModule(event.reason.moduleName)
         .then(performStartup);
     });
@@ -63,5 +64,5 @@ window.onunhandledrejection = function(event) {
     rejection events")}}
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
 - {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}

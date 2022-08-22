@@ -24,11 +24,11 @@ The `byteOffset` property is an accessor property whose set accessor function is
 ### Using the byteOffset property
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.byteOffset; // 0 (no offset specified)
 
-var dataview2 = new DataView(buffer, 3);
+const dataview2 = new DataView(buffer, 3);
 dataview2.byteOffset; // 3 (as specified when constructing the DataView)
 ```
 

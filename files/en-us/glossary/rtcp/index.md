@@ -18,5 +18,5 @@ RTCP periodically transmits control packets to all of an RTP session's participa
 ## See also
 
 - [Introduction to the Real-time Transport Protocol](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{interwiki("wikipedia", "RTP Control Protocol")}}
-- {{RFC(3550, 6, "RFC 3550 Section 6")}}
+- [RTP Control Protocol](https://en.wikipedia.org/wiki/RTP_Control_Protocol)
+- {{RFC(3550, "RFC 3550 Section 6", 6)}}

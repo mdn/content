@@ -1,6 +1,7 @@
 ---
 title: Attr.specified
 slug: Web/API/Attr/specified
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -12,7 +13,7 @@ browser-compat: api.Attr.specified
 
 The read-only **`specified`** property of the {{domxref("Attr")}} interface always returns `true`.
 
-### Value
+## Value
 
 Always returns `true`.
 

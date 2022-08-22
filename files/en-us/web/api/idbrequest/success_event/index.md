@@ -1,6 +1,7 @@
 ---
 title: 'IDBRequest: success event'
 slug: Web/API/IDBRequest/success_event
+page-type: web-api-event
 browser-compat: api.IDBRequest.success_event
 ---
 {{ APIRef("IndexedDB") }}
@@ -14,9 +15,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('success', event => { });
+addEventListener('success', (event) => { });
 
-onsuccess = event => { };
+onsuccess = (event) => { };
 ```
 
 ## Event type
@@ -39,7 +40,7 @@ openRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -68,7 +69,7 @@ openRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -90,4 +91,3 @@ openRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) event handler property

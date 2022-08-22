@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.appendItem()
 slug: Web/API/SVGPointList/appendItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,8 +17,10 @@ The **`appendItem()`** method of the {{domxref("SVGPointList")}} interface adds 
 ## Syntax
 
 ```js
-SVGPointList.appendItem(obj);
+appendItem(obj)
 ```
+
+### Parameters
 
 - `obj`
   - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be appended.
@@ -28,7 +31,7 @@ The {{domxref("SVGPoint")}} object that was appended.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.additiveSymbols
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`additiveSymbols`** property of the {{domxref("CSSCounterStyleRule")}} int
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

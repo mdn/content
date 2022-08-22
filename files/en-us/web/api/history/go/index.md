@@ -1,6 +1,7 @@
 ---
 title: History.go()
 slug: Web/API/History/go
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -22,7 +23,8 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.go([delta])
+go()
+go(delta)
 ```
 
 ### Parameters
@@ -33,6 +35,10 @@ history.go([delta])
     `history.go(2)` moves forward two pages and `history.go(-2)`
     moves back two pages. If no value is passed or if `delta` equals 0, it has
     the same result as calling `location.reload()`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -82,5 +88,4 @@ history.go(0);
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
 - {{domxref("Window/popstate_event", "popstate")}} event
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

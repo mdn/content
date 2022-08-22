@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/rx
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/svg2-draft/geometry.html#RX
 ---
 {{SVGRef}}
 
@@ -114,33 +115,4 @@ The way the value of the `rx` attribute is interpreted depend on both the {{SVGA
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "geometry.html#RX", "rx")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition as a geometry property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#EllipseElementRXAttribute", "rx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;ellipse></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#RectElementRXAttribute", "rx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;rect></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

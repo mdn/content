@@ -1,6 +1,7 @@
 ---
-title: 'MediaDevices: devicechange event'
+title: "MediaDevices: devicechange event"
 slug: Web/API/MediaDevices/devicechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -17,16 +18,16 @@ browser-compat: api.MediaDevices.devicechange_event
 
 A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
-This device is not cancelable and does not bubble.
+This event is not cancelable and does not bubble.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', event => { });
+addEventListener('devicechange', (event) => {});
 
-ondevicechange = event => { };
+ondevicechange = (event) => {};
 ```
 
 ## Event type
@@ -59,7 +60,7 @@ media device is attached to or removed from the device running the sample.
   <ul class="deviceList" id="videoList"></ul>
 </div>
 
-<div id="log"></div>
+<output></output>
 ```
 
 ```css hidden
@@ -89,15 +90,15 @@ h2 {
 }
 
 .left {
-  float:left;
+  float: left;
   width: 48%;
-  margin-right: 2%
+  margin-right: 2%;
 }
 
 .right {
-  float:right;
+  float: right;
   width: 48%;
-  margin-left: 2%
+  margin-left: 2%;
 }
 
 .deviceList {
@@ -109,39 +110,50 @@ h2 {
 ```
 
 ```js hidden
-let videoElement = document.getElementById("video");
-let logElement = document.getElementById("log");
+// UI elements
+const videoElement = document.queryElement("#video");
+const logElement = document.queryElement("output");
+const startButton = document.queryElement("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += msg + "<br>";
+  logElement.innerHTML += `${msg}<br>`;
 }
 
-document.getElementById("startButton").addEventListener("click", function() {
-  navigator.mediaDevices.getUserMedia({
-    video: {
-      width: 160,
-      height: 120,
-      frameRate: 30
-    },
-    audio: {
-      sampleRate: 44100,
-      sampleSize: 16,
-      volume: 0.25
-    }
-  }).then(stream => {
-      videoElement.srcObject = stream;
-      updateDeviceList();
-    })
-    .catch(err => log(err.name + ": " + err.message));
-}, false);
+startButton.addEventListener(
+  "click",
+  () => {
+    const constraints = {
+      video: {
+        width: 160,
+        height: 120,
+        frameRate: 30
+      },
+      audio: {
+        sampleRate: 44100,
+        sampleSize: 16,
+        volume: 0.25
+      }
+    };
+
+    navigator.mediaDevices.getUserMedia(constraints)
+      .then((stream) => {
+        videoElement.srcObject = stream;
+        updateDeviceList();
+      })
+      .catch((err) => {
+        log(`${err.name}: ${err.message}`);
+      });
+  },
+  false
+);
 ```
 
 We set up global variables that contain references to the {{HTMLElement("ul")}}
 elements that are used to list the audio and video devices:
 
 ```js
-let audioList = document.getElementById("audioList");
-let videoList = document.getElementById("videoList");
+const audioList = document.getElementById("audioList");
+const videoList = document.getElementById("videoList");
 ```
 
 #### Getting and drawing the device list
@@ -153,22 +165,22 @@ displayed lists of audio and video devices using that information.
 ```js
 function updateDeviceList() {
   navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    audioList.innerHTML = "";
-    videoList.innerHTML = "";
+    .then((devices) => {
+      audioList.innerHTML = "";
+      videoList.innerHTML = "";
 
-    devices.forEach(device => {
-      let elem = document.createElement("li");
-      let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+      devices.forEach((device) => {
+        const elem = document.createElement("li");
+        const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-      elem.innerHTML = "<strong>" + device.label + "</strong> (" + direction + ")";
-      if (type === "audio") {
-        audioList.appendChild(elem);
-      } else if (type === "video") {
-        videoList.appendChild(elem);
-      }
+        elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
+        if (type === "audio") {
+          audioList.appendChild(elem);
+        } else if (type === "video") {
+          videoList.appendChild(elem);
+        }
+      });
     });
-  });
 }
 ```
 
@@ -187,9 +199,7 @@ display it to the user.
 
 The line
 `let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);`
-deserves special notice. This uses [destructuring
-assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (a new feature of [ECMAScript
-6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)) to assign the values of the first three items in the array returned by
+deserves special notice. This uses [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign the values of the first three items in the array returned by
 {{jsxref("String.match()")}} to the variables `kind`, `type`, and
 `direction`. We do this because the value of
 {{domxref("MediaDeviceInfo.kind")}} is a single string that includes both the media type
@@ -207,12 +217,12 @@ parentheses, it's appended to the appropriate list by calling
 We call `updateDeviceList()` in two places. The first is in the
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} promise's fulfillment
 handler, to initially fill out the list when the stream is opened. The second is in the
-event handler for {{event("devicechange")}}:
+event handler for this `devicechange` event:
 
 ```js
-navigator.mediaDevices.ondevicechange = event => {
+navigator.mediaDevices.ondevicechange = (event) => {
   updateDeviceList();
-}
+};
 ```
 
 With this code in place, each time the user plugs in a camera, microphone, or other

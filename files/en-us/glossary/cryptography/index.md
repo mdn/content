@@ -13,7 +13,7 @@ More than just **data confidentiality**, cryptography also tackles **identificat
 
 ## See also
 
-- {{Interwiki("wikipedia", "Cryptography")}} on Wikipedia
+- [Cryptography](https://en.wikipedia.org/wiki/Cryptography) on Wikipedia
 - [Information security tutorial](/en-US/docs/Web/Security/Information_Security_Basics)
 - [Encrypting and Decrypting](/en-US/docs/Archive/Security/Encryption_and_Decryption)
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)

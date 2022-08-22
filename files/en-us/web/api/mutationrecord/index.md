@@ -1,6 +1,7 @@
 ---
 title: MutationRecord
 slug: Web/API/MutationRecord
+page-type: web-api-interface
 tags:
   - API
   - Advanced

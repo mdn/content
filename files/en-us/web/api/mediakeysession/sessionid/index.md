@@ -1,10 +1,10 @@
 ---
 title: MediaKeySession.sessionId
 slug: Web/API/MediaKeySession/sessionId
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - NeedsExample
   - Property

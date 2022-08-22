@@ -1,6 +1,6 @@
 ---
 title: An overview of accessible web applications and widgets
-slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets 
+slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 tags:
   - ARIA
   - Accessibility
@@ -43,7 +43,7 @@ _Example 2: How the tabs widget might be styled visually. Users might recognize 
 
 **ARIA** enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behavior of most familiar UI widgets.
 
-> **Warning:** Many of these were later added in HTML5, and **developers should always prefer using the correct semantic HTML element over using ARIA**.
+> **Warning:** Many of these were later added when browsers didn't fully support modern HTML features. **Developers should always prefer using the correct semantic HTML element over using ARIA**.
 
 The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
 
@@ -132,7 +132,7 @@ The JavaScript to update the **`aria-hidden`** property has the form shown in Ex
 _Example 2c. JavaScript to update the aria-hidden attribute_
 
 ```js
-var showTip = function(el) {
+function showTip(el) {
   el.setAttribute('aria-hidden', 'false');
 }
 ```
@@ -163,7 +163,7 @@ Here's a summary of how keyboard navigation should work in an ARIA-enabled web a
 - Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.
 - If in doubt, mimic the standard desktop behavior of the control you are creating.
 
-So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the {{HTMLElement('ol')}} in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the {{HTMLElement('li')}} elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
+So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the {{HTMLElement('ol')}} in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the {{HTMLElement('li')}} elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On macOS, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
 
 ## See also
 

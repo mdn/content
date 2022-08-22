@@ -109,8 +109,6 @@ max-content: unset;
 
 ## Browser compatibility
 
-### Supported for width (and other sizing properties)
-
 {{Compat}}
 
 ## See also

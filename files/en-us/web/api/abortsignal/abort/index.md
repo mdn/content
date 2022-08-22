@@ -1,6 +1,7 @@
 ---
 title: AbortSignal.abort()
 slug: Web/API/AbortSignal/abort
+page-type: web-api-static-method
 tags:
   - API
   - AbortSignal
@@ -28,8 +29,8 @@ This could, for example, be passed to a fetch method in order to run its abort l
 ## Syntax
 
 ```js
-abort();
-abort(reason);
+abort()
+abort(reason)
 ```
 
 ### Parameters

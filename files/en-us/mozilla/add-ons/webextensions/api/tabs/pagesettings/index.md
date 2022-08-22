@@ -30,13 +30,13 @@ For setting headers and footers, you can include certain special characters in t
 
 Values of this type are objects. They contain the following properties:
 
-- `edgeBottom`{{optional_inline}}
+- `edgeBottom` {{optional_inline}}
   - : `number`. The spacing between the bottom of the footers and the bottom edge of the paper (inches). Default: 0.
-- `edgeLeft`{{optional_inline}}
+- `edgeLeft` {{optional_inline}}
   - : `number`. The spacing between the left header/footer and the left edge of the paper (inches). Default: 0.
-- `edgeRight`{{optional_inline}}
+- `edgeRight` {{optional_inline}}
   - : `number`. The spacing between the right header/footer and the left edge of the paper (inches). Default: 0.
-- `edgeTop`{{optional_inline}}
+- `edgeTop` {{optional_inline}}
   - : `number`. The spacing between the top of the headers and the top edge of the paper (inches). Default: 0
 - `footerCenter` {{optional_inline}}
   - : `string`. The text for the page's center footer. Default: ''.
@@ -50,17 +50,17 @@ Values of this type are objects. They contain the following properties:
   - : `string`. The text for the page's left header. Default: '\&T'.
 - `headerRight` {{optional_inline}}
   - : `string`. The text for the page's right header. Default: '\&U'.
-- `marginBottom`{{optional_inline}}
+- `marginBottom` {{optional_inline}}
   - : `number`. The margin between the page content and the bottom edge of the paper (inches). Default: 0.5.
-- `marginLeft`{{optional_inline}}
+- `marginLeft` {{optional_inline}}
   - : `number`. The margin between the page content and the left edge of the paper (inches). Default: 0.5.
-- `marginRight`{{optional_inline}}
+- `marginRight` {{optional_inline}}
   - : `number`. The margin between the page content and the right edge of the paper (inches). Default: 0.5.
-- `marginTop`{{optional_inline}}
+- `marginTop` {{optional_inline}}
   - : `number`. The margin between the page content and the top edge of the paper (inches). Default: 0.5.
 - `orientation` {{optional_inline}}
   - : `integer`. Page orientation: 0 means "portrait", 1 means "landscape". Default: 0.
-- `paperHeight`{{optional_inline}}
+- `paperHeight` {{optional_inline}}
   - : `number`. The paper height in paper size units. Default: 11.0.
 - `paperSizeUnit` {{optional_inline}}
   - : `integer`. The paper size unit: 0 = inches, 1 = millimeters. Default: 0.

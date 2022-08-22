@@ -34,7 +34,7 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/devtools_network/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

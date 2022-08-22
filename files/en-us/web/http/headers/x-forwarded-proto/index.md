@@ -8,7 +8,6 @@ tags:
   - Reference
   - Request header
   - header
-browser-compat: http.headers.X-Forwarded-Proto
 ---
 {{HTTPSidebar}}
 
@@ -66,10 +65,6 @@ X-Url-Scheme: https
 
 Not part of any current specification. The standardized version of this header is
 {{HTTPHeader("Forwarded")}}.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

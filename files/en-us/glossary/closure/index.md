@@ -9,5 +9,5 @@ The binding which defines the **{{glossary("scope")}}** of execution. In {{gloss
 
 ## See also
 
-- {{Interwiki("wikipedia", "Closure_%28computer_programming%29", "Closure")}} on Wikipedia
+- [Closure](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) on Wikipedia
 - [Closure](/en-US/docs/Web/JavaScript/Closures) on MDN

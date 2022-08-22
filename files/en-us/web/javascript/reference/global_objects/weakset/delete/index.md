@@ -38,8 +38,8 @@ the `WeakSet` or if the `value` is not an object.
 ### Using the delete() method
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 
 ws.add(window);
 
@@ -60,4 +60,5 @@ ws.has(window);    // Returns false. The window is no longer present in the Weak
 ## See also
 
 - {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

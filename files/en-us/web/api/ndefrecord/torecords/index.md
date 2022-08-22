@@ -1,13 +1,15 @@
 ---
 title: NDEFRecord.toRecords()
 slug: Web/API/NDEFRecord/toRecords
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.toRecords
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`toRecords()`**
 method of the {{DOMxRef("NDEFRecord")}} interface converts
@@ -32,7 +34,7 @@ A list of {{DOMxRef("NDEFRecord")}}s.
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `"NotSupported"`
+- `NotSupported` {{domxref("DOMException")}}
   - : Indicates that the {{Glossary("User Agent")}} does not know how to parse this combination of
     {{DOMxRef("NDEFRecord.data")}} and {{DOMxRef("NDEFRecord.recordType")}}.
 
@@ -60,16 +62,16 @@ const ndefReader = new NDEFReader();
 await ndefReader.scan();
 ndefReader.onreading = (event) => {
   const externalRecord = event.message.records.find(
-    record => record.type == "example.com:smart-poster"
+    (record) => record.type === "example.com:smart-poster"
   );
 
   let action, text;
 
   for (const record of externalRecord.toRecords()) {
-    if (record.recordType == "text") {
+    if (record.recordType === "text") {
       const decoder = new TextDecoder(record.encoding);
       text = decoder.decode(record.data);
-    } else if (record.recordType == ":act") {
+    } else if (record.recordType === ":act") {
       action = record.data.getUint8(0);
     }
   }

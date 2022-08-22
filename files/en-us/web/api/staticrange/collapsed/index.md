@@ -1,6 +1,7 @@
 ---
 title: StaticRange.collapsed
 slug: Web/API/StaticRange/collapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ start position and end position are the same.
 
 A boolean value which is `true` if the range
 is **collapsed**. A collapsed range is one in which the start and end
-positions are the same, resulting in a zero-character-long range..
+positions are the same, resulting in a zero-character-long range.
 
 ## Specifications
 

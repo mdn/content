@@ -54,22 +54,22 @@ WebAssembly is a different language from JavaScript, but it is not intended as a
 
 With the advent of WebAssembly appearing in browsers, the virtual machine that we talked about earlier will now load and run two types of code — JavaScript AND WebAssembly.
 
-The different code types can call each other as required — the [WebAssembly JavaScript API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) wraps exported WebAssembly code with JavaScript functions that can be called normally, and WebAssembly code can import and synchronously call normal JavaScript functions. In fact, the basic unit of WebAssembly code is called a module and WebAssembly modules are symmetric in many ways to ES2015 modules.
+The different code types can call each other as required — the [WebAssembly JavaScript API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) wraps exported WebAssembly code with JavaScript functions that can be called normally, and WebAssembly code can import and synchronously call normal JavaScript functions. In fact, the basic unit of WebAssembly code is called a module and WebAssembly modules are symmetric in many ways to ES modules.
 
 ### WebAssembly key concepts
 
 There are several key concepts needed to understand how WebAssembly runs in the browser. All of these concepts are reflected 1:1 in the [WebAssembly JavaScript API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
 
-- **Module**: Represents a WebAssembly binary that has been compiled by the browser into executable machine code. A Module is stateless and thus, like a [Blob](/en-US/docs/Web/API/Blob), can be explicitly shared between windows and workers (via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)). A Module declares imports and exports just like an ES2015 module.
+- **Module**: Represents a WebAssembly binary that has been compiled by the browser into executable machine code. A Module is stateless and thus, like a [`Blob`](/en-US/docs/Web/API/Blob), can be explicitly shared between windows and workers (via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)). A Module declares imports and exports just like an ES module.
 - **Memory**: A resizable ArrayBuffer that contains the linear array of bytes read and written by WebAssembly's low-level memory access instructions.
 - **Table**: A resizable typed array of references (e.g. to functions) that could not otherwise be stored as raw bytes in Memory (for safety and portability reasons).
-- **Instance**: A Module paired with all the state it uses at runtime including a Memory, Table, and set of imported values. An Instance is like an ES2015 module that has been loaded into a particular global with a particular set of imports.
+- **Instance**: A Module paired with all the state it uses at runtime including a Memory, Table, and set of imported values. An Instance is like an ES module that has been loaded into a particular global with a particular set of imports.
 
 The JavaScript API provides developers with the ability to create modules, memories, tables, and instances. Given a WebAssembly instance, JavaScript code can synchronously call its exports, which are exposed as normal JavaScript functions. Arbitrary JavaScript functions can also be synchronously called by WebAssembly code by passing in those JavaScript functions as the imports to a WebAssembly instance.
 
 Since JavaScript has complete control over how WebAssembly code is downloaded, compiled and run, JavaScript developers could even think of WebAssembly as just a JavaScript feature for efficiently generating high-performance functions.
 
-In the future, WebAssembly modules will be [loadable just like ES2015 modules](https://github.com/WebAssembly/proposals/issues/12) (using `<script type='module'>`), meaning that JavaScript will be able to fetch, compile, and import a WebAssembly module as easily as an ES2015 module.
+In the future, WebAssembly modules will be [loadable just like ES modules](https://github.com/WebAssembly/proposals/issues/12) (using `<script type='module'>`), meaning that JavaScript will be able to fetch, compile, and import a WebAssembly module as easily as an ES module.
 
 ## How do I use WebAssembly in my app?
 
@@ -80,7 +80,7 @@ The WebAssembly ecosystem is at a nascent stage; more tools will undoubtedly eme
 - Porting a C/C++ application with [Emscripten](https://emscripten.org/).
 - Writing or generating WebAssembly directly at the assembly level.
 - Writing a Rust application and targeting WebAssembly as its output.
-- Using [AssemblyScript](https://assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
+- Using [AssemblyScript](https://www.assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
 
 Let's talk about these options:
 
@@ -128,7 +128,7 @@ It is also possible to write Rust code and compile over to WebAssembly, thanks t
 
 ### Using AssemblyScript
 
-For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code intellisense, etc. You can check its documentation on <https://assemblyscript.org/>.
+For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code intellisense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
 
 ## Summary
 
@@ -137,6 +137,6 @@ This article has given you an explanation of what WebAssembly is, why it is so u
 ## See also
 
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
+- [WebAssembly on Mozilla Research](https://research.mozilla.org/)
 - [Loading and running WebAssembly code](/en-US/docs/WebAssembly/Loading_and_running) — find out how to load your own WebAssembly module into a web page.
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API) — find out how to use the other major features of the WebAssembly JavaScript API.

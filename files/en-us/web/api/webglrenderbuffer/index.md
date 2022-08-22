@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -27,9 +28,9 @@ The `WebGLRenderbuffer` object does not define any methods or properties of its 
 ### Creating a render buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createRenderbuffer();
 ```
 
 ## Specifications

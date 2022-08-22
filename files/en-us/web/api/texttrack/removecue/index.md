@@ -1,6 +1,7 @@
 ---
 title: TextTrack.removeCue()
 slug: Web/API/TextTrack/removeCue
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`removeCue()`** method of the {{domxref("TextTrack")}} interface removes a
 ## Syntax
 
 ```js
-TextTrack.removeCue(cue);
+removeCue(cue)
 ```
 
 ### Parameters

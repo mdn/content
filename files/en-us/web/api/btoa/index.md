@@ -1,6 +1,7 @@
 ---
 title: btoa()
 slug: Web/API/btoa
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -8,16 +9,13 @@ tags:
   - Reference
   - Polyfill
   - Web
-  - btoa
-  - data
-  - strings
 browser-compat: api.btoa
 ---
 {{APIRef("HTML DOM")}}
 
 The **`btoa()`** method creates a
-{{glossary("Base64")}}-encoded ASCII string from a [binary string](/en-US/docs/Web/API/DOMString/Binary) (i.e., a
-{{jsxref("String")}} object in which each character in the string is treated as a byte
+{{glossary("Base64")}}-encoded ASCII string from a _binary string_ (i.e., a
+string in which each character in the string is treated as a byte
 of binary data).
 
 You can use this method to encode data which may otherwise cause communication
@@ -28,13 +26,13 @@ characters such as ASCII values 0 through 31.
 ## Syntax
 
 ```js
-btoa(stringToEncode);
+btoa(stringToEncode)
 ```
 
 ### Parameters
 
 - `stringToEncode`
-  - : The [binary string](/en-US/docs/Web/API/DOMString/Binary) to encode.
+  - : The _binary string_ to encode.
 
 ### Return value
 
@@ -139,7 +137,6 @@ See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution 
 ## See also
 
 - [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("atob","atob()")}}
 - {{Glossary("Base64")}}
-- [Polyfill](https://github.com/MaxArt2501/base64-js/blob/master/base64.js)

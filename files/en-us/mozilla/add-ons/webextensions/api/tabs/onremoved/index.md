@@ -65,9 +65,9 @@ Listen for close events, and log the info:
 
 ```js
 function handleRemoved(tabId, removeInfo) {
-  console.log("Tab: " + tabId + " is closing");
-  console.log("Window ID: " + removeInfo.windowId);
-  console.log("Window is closing: " + removeInfo.isWindowClosing);
+  console.log(`Tab: ${tabId} is closing`);
+  console.log(`Window ID: ${removeInfo.windowId}`);
+  console.log(`Window is closing: ${removeInfo.isWindowClosing}`);
 }
 
 browser.tabs.onRemoved.addListener(handleRemoved);
@@ -79,7 +79,7 @@ browser.tabs.onRemoved.addListener(handleRemoved);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onRemoved) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onRemoved) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

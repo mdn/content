@@ -11,4 +11,4 @@ A _`WindowProxy`_ object is a wrapper for a [`Window`](/en-US/docs/Web/API/Windo
 ## See also
 
 - HTML specification: [WindowProxy section](https://html.spec.whatwg.org/multipage/window-object.html#the-windowproxy-exotic-object)
-- Stack Overflow question: [WindowProxy and Window objects?](https://stackoverflow.com/q/16092835/)
+- Stack Overflow question: [WindowProxy and Window objects?](https://stackoverflow.com/questions/16092835/windowproxy-and-window-objects)

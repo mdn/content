@@ -67,7 +67,7 @@ let creating = browser.windows.create(
     - `top` {{optional_inline}}
       - : `integer`. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)
     - `type` {{optional_inline}}
-      - : A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify `panel` or `popup` here to open a window without any of the normal browser UI (address bar, toolbar, etc).
+      - : A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify `panel` or `popup` here to open a window without any of the normal browser UI (address bar, toolbar, etc.).
     - `url` {{optional_inline}}
       - : `string` or `array` of `string`s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. `http://www.google.com`, not `www.google.com`). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.
     - `width` {{optional_inline}}
@@ -150,7 +150,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

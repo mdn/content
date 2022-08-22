@@ -1,6 +1,7 @@
 ---
 title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -19,7 +20,7 @@ with the request.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
+A string representing the request's `referrerPolicy`. For
 more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
 header page.
 
@@ -30,8 +31,8 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer policy in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrerPolicy; // returns "" by default
+const myRequest = new Request('flowers.jpg');
+const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ```
 
 ## Specifications

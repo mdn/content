@@ -1,6 +1,7 @@
 ---
 title: CharacterData.substringData()
 slug: Web/API/CharacterData/substringData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -29,7 +30,7 @@ and extending for a given number of characters afterwards.
 
 ### Return value
 
-A new {{jsxref("String")}} object with the substring.
+A string with the substring.
 
 ## Exceptions
 

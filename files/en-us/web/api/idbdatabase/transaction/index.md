@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -23,9 +24,9 @@ object store.
 ## Syntax
 
 ```js
-IDBDatabase.transaction(storeNames);
-IDBDatabase.transaction(storeNames, mode);
-IDBDatabase.transaction(storeNames, mode, options);
+transaction(storeNames)
+transaction(storeNames, mode)
+transaction(storeNames, mode, options)
 ```
 
 ### Parameters
@@ -38,15 +39,15 @@ IDBDatabase.transaction(storeNames, mode, options);
     Therefore the following lines are equivalent:
 
     ```js
-    var transaction = db.transaction(['my-store-name']);
-    var transaction = db.transaction('my-store-name');
+    db.transaction(['my-store-name']);
+    db.transaction('my-store-name');
     ```
 
     If you need to access all object stores in the database, you can use the property
     {{domxref("IDBDatabase.objectStoreNames")}}:
 
     ```js
-    var transaction = db.transaction(db.objectStoreNames);
+    const transaction = db.transaction(db.objectStoreNames);
     ```
 
     Passing an empty array will throw an exception.
@@ -65,7 +66,7 @@ IDBDatabase.transaction(storeNames, mode, options);
     you would use the following:
 
     ```js
-    var transaction = db.transaction('my-store-name', "readwrite");
+    const transaction = db.transaction('my-store-name', "readwrite");
     ```
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
@@ -93,12 +94,13 @@ IDBDatabase.transaction(storeNames, mode, options);
 
   - : Dictionary of other options. Available options are:
 
-    - `durability`: `"default"`, `"strict"`, or
-      `"relaxed"`. The default is `"default"`. Using
-      `"relaxed"` provides better performance, but with fewer guarantees. Web
-      applications are encouraged to use `"relaxed"` for ephemeral data such
-      as caches or quickly changing records, and `"strict"` in cases where
-      reducing the risk of data loss outweighs the impact to performance and power.
+    - `durability`
+      - : `"default"`, `"strict"`, or
+        `"relaxed"`. The default is `"default"`. Using
+        `"relaxed"` provides better performance, but with fewer guarantees. Web
+        applications are encouraged to use `"relaxed"` for ephemeral data such
+        as caches or quickly changing records, and `"strict"` in cases where
+        reducing the risk of data loss outweighs the impact to performance and power.
 
 ### Return value
 
@@ -110,25 +112,24 @@ An {{domxref("IDBTransaction")}} object.
   - : Thrown if the {{domxref("IDBDatabase.close", "close()")}} method has previously been called on this {{domxref("IDBDatabase")}} instance.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if an object store specified in the 'storeNames' parameter has been deleted or removed.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the value for the `mode` parameter is invalid.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the function was called with an empty list of store names.
 
-## Example
+## Examples
 
 In this example we open a database connection, then use transaction() to open a
 transaction on the database. For a complete example, see our
-[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-var db;
+let db;
 
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -142,20 +143,20 @@ DBOpenRequest.onsuccess = event => {
 };
 
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["toDoList"], "readwrite");
+const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = event => {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = event => {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
 // you would then go on to do something to this database
 // via an object store
-var objectStore = transaction.objectStore("toDoList");
+const objectStore = transaction.objectStore("toDoList");
 // etc.
 ```
 

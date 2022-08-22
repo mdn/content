@@ -1,6 +1,7 @@
 ---
 title: TextTrackList
 slug: Web/API/TextTrackList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -56,7 +57,7 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 
 ## Usage notes
 
-In addition to being able to obtain direct access to the text tracks present on a media element, `TextTrackList` lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
+In addition to being able to obtain direct access to the text tracks present on a media element, `TextTrackList` lets you set event handlers on the {{domxref("TextTrackList/addtrack_event", "addtrack")}} and {{domxref("TextTrackList/removetrack_event", "removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
 
 ## Examples
 
@@ -65,12 +66,12 @@ In addition to being able to obtain direct access to the text tracks present on 
 To get a media element's `TextTrackList`, use its {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property.
 
 ```js
-var textTracks = document.querySelector("video").textTracks;
+const textTracks = document.querySelector("video").textTracks;
 ```
 
 ### Monitoring track count changes
 
-In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.
+In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{domxref("TextTrackList/addtrack_event", "addtrack")}} and {{domxref("TextTrackList/removetrack_event", "removetrack")}} events are set up.
 
 ```js
 textTracks.onaddtrack = updateTrackCount;

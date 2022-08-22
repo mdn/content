@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - Pointer Events
@@ -16,7 +17,7 @@ A _live_ version of this application is available on [GitHub](https://mdn.github
 
 ## Example
 
-This example demonstrates using pointer events' various event types ({{event("pointerdown")}}, {{event("pointermove")}}, {{event("pointerup")}} {{event("pointercancel")}}, etc.) for different multi-touch interactions.
+This example demonstrates using pointer events' various event types ({{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerup_event", "pointerup")}} {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, etc.) for different multi-touch interactions.
 
 ### Define touch targets
 
@@ -49,22 +50,22 @@ To support multi-touch interaction, preserving a pointer's event state during va
 
 ```js
 // Log events flag
-var logEvents = false;
+const logEvents = false;
 
 // Event caches, one per touch target
-var evCache1 = new Array();
-var evCache2 = new Array();
-var evCache3 = new Array();
+const evCache1 = [];
+const evCache2 = [];
+const evCache3 = [];
 ```
 
 ### Register event handlers
 
-Event handlers are registered for the following pointer events: {{event("pointerdown")}}, {{event("pointermove")}} and {{event("pointerup")}}. The handler for {{event("pointerup")}} is used for the {{event("pointercancel")}}, {{event("pointerout")}} and {{event("pointerleave")}} events, since these four events have the same semantics in this application.
+Event handlers are registered for the following pointer events: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}} and {{domxref("HTMLElement/pointerup_event", "pointerup")}}. The handler for {{domxref("HTMLElement/pointerup_event", "pointerup")}} is used for the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events, since these four events have the same semantics in this application.
 
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- var el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.onpointerdown = pointerdown_handler;
  el.onpointermove = pointermove_handler;
 
@@ -85,7 +86,7 @@ function init() {
 
 ### Pointer down
 
-The {{event("pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. The event's state must be cached, in case this down event is part of a multi-touch interaction.
+The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. The event's state must be cached, in case this down event is part of a multi-touch interaction.
 
 In this application, when a pointer is placed down on an element, the background color of the element changes, depending on the number of active touch points the element has. See the [`update_background`](#update_background_color) function for more details about the color changes.
 
@@ -95,14 +96,14 @@ function pointerdown_handler(ev) {
  // Save this event for later processing (this could be part of a
  // multi-touch interaction) and update the background color
  push_event(ev);
- if (logEvents) log("pointerDown: name = " + ev.target.id, ev);
+ if (logEvents) log(`pointerDown: name = ${ev.target.id}`, ev);
  update_background(ev);
 }
 ```
 
 ### Pointer move
 
-The {{event("pointermove")}} handler is called when the pointer moves. It may be called multiple times (for example, if the user moves the pointer) before a different event type is fired.
+The {{domxref("HTMLElement/pointermove_event", "pointermove")}} handler is called when the pointer moves. It may be called multiple times (for example, if the user moves the pointer) before a different event type is fired.
 
 In this application, a pointer move is represented by the target's border being set to `dashed` to provide a clear visual indication that the element has received this event.
 
@@ -121,9 +122,9 @@ function pointermove_handler(ev) {
 
 ### Pointer up
 
-The {{event("pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the associated event cache.
+The {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the associated event cache.
 
-In this application, this handler is also used for {{event("pointercancel")}}, {{event("pointerleave")}} and {{event("pointerout")}} events.
+In this application, this handler is also used for {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} and {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
 
 ```js
 function pointerup_handler(ev) {
@@ -177,15 +178,15 @@ function get_cache(ev) {
 
 function push_event(ev) {
  // Save this event in the target's cache
- var cache = get_cache(ev);
+ const cache = get_cache(ev);
  cache.push(ev);
 }
 
 function remove_event(ev) {
  // Remove this event from the target's cache
- var cache = get_cache(ev);
- for (var i = 0; i < cache.length; i++) {
-   if (cache[i].pointerId == ev.pointerId) {
+ const cache = get_cache(ev);
+ for (let i = 0; i < cache.length; i++) {
+   if (cache[i].pointerId === ev.pointerId) {
      cache.splice(i, 1);
      break;
    }
@@ -205,7 +206,7 @@ function update_background(ev) {
  //   yellow - one pointer down
  //   pink - two pointers down
  //   lightblue - three or more pointers down
- var evCache = get_cache(ev);
+ const evCache = get_cache(ev);
  switch (evCache.length) {
    case 0:
      // Target element has no touch points
@@ -232,23 +233,23 @@ These functions are used send to event activity to the application window (to su
 
 ```js
 // Log events flag
-var logEvents = false;
+let logEvents = false;
 
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev) {
-  var o = document.getElementsByTagName('output')[0];
-  var s = name + ": pointerID = " + ev.pointerId +
-                " ; pointerType = " + ev.pointerType +
-                " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "
-";
+  const o = document.getElementsByTagName('output')[0];
+  const s = `${name}:<br>`
+    + `  pointerID   = ${ev.pointerId}<br>`
+    + `  pointerType = ${ev.pointerType}<br>`
+    + `  isPrimary   = ${ev.isPrimary}`;
+  o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
- var o = document.getElementsByTagName('output')[0];
+ const o = document.getElementsByTagName('output')[0];
  o.innerHTML = "";
 }
 ```

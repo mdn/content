@@ -1,6 +1,7 @@
 ---
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+page-type: guide
 tags:
   - Advanced
   - HTML5
@@ -44,12 +45,14 @@ Registering the same protocol handler more than once will pop up a different not
 
 ### Example
 
-```js
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
+```html
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
   <title>Web Protocol Handler Sample - Register</title>
-  <script type="text/javascript">
+  <script>
     navigator.registerProtocolHandler("web+burger",
                                   "http://www.google.co.uk/?uri=%s",
                                   "Burger handler");
@@ -124,5 +127,5 @@ if ( isset ( $_GET["value"] ) ) {
 ## See also
 
 - `nsIProtocolHandler` (XUL only)
-- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
 - [Register a custom protocolHandler](https://web.dev/registering-a-custom-protocol-handler/) at web.dev.

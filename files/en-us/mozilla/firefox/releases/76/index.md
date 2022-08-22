@@ -19,23 +19,23 @@ This article provides information about the changes in Firefox 76 that will affe
 
 #### Debugger
 
-- You can now enable/disable blackboxing of source groups and folders listed in the [Source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane) via context menu options ({{bug(1118152)}}).
-- The [Call stack pane](/en-US/docs/Tools/Debugger/UI_Tour#call_stack)'s _Copy stack trace_ context menu option now copies full URLs, not just filenames ({{bug(1619039)}}).
+- You can now enable/disable blackboxing of source groups and folders listed in the [Source list pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-list-pane) via context menu options ({{bug(1118152)}}).
+- The [Call stack pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack)'s _Copy stack trace_ context menu option now copies full URLs, not just filenames ({{bug(1619039)}}).
 
 #### Network monitor
 
 - In the network request list, you can now double-click a column divider to resize the column to the left of it to fit its contents ({{bug(1615102)}}).
-- The network request _Copy > [Copy as cURL](/en-US/docs/Tools/Network_Monitor/request_list#copy_as_curl)_ context menu option has a new option available, `--globoff`, which suppresses cURL's globbing (wildcard matching) feature if the copied URL includes square bracket characters ({{bug(1549773)}}).
-- The _Messages_ tab of the details pane for [web socket requests](/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).
+- The network request _Copy > [Copy as cURL](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#copy-as-curl)_ context menu option has a new option available, `--globoff`, which suppresses cURL's globbing (wildcard matching) feature if the copied URL includes square bracket characters ({{bug(1549773)}}).
+- The _Messages_ tab of the details pane for [web socket requests](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).
 
 #### Web console
 
-- In [multi-line mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode), code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twistie"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).
-- DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the [Page inspector](/en-US/docs/Tools/Page_Inspector) ({{bug(1612276)}}).
+- In [multi-line mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode), code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twisty"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).
+- DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the [Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) ({{bug(1612276)}}).
 
 #### Remote debugging
 
-- Because of differences in DevTools versions, it is not possible to debug releases of Firefox for Android that are based on version 68, from desktop Firefox versions 69 or later. When attempting to do this, the Firefox desktop browser will now show a message informing the user of this problem, and offering possible next steps ({{bug(1625906)}}). See [Connection to Firefox for Android 68](/en-US/docs/Tools/about:debugging#connection_to_firefox_for_android_68) for more information.
+- Because of differences in DevTools versions, it is not possible to debug releases of Firefox for Android that are based on version 68, from desktop Firefox versions 69 or later. When attempting to do this, the Firefox desktop browser will now show a message informing the user of this problem, and offering possible next steps ({{bug(1625906)}}). See [Connection to Firefox for Android 68](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connection-to-firefox-for-android-68) for more information.
 
 ### HTML
 
@@ -43,7 +43,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### CSS
 
-- Firefox now supports [CSS4 system colors](/en-US/docs/Web/CSS/color_value#system_colors) ({{bug(1590894)}}).
+- Firefox now supports [CSS colors level 4 system colors](https://www.w3.org/TR/css-color-4/#typedef-system-color) ({{bug(1590894)}}).
 
 ### SVG
 

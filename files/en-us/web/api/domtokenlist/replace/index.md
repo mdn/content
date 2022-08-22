@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,7 +20,7 @@ without adding the new token to the token list.
 ## Syntax
 
 ```js
-replace(oldToken, newToken);
+replace(oldToken, newToken)
 ```
 
 ### Parameters
@@ -55,11 +56,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-if (result) {
-  span.textContent = classes;
-} else {
-  span.textContent = 'token not replaced successfully';
-}
+span.textContent = result ? classes : 'token not replaced successfully';
 ```
 
 The output looks like this:

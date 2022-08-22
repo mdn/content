@@ -62,7 +62,7 @@ This example logs the IDs of all bookmarks:
 
 ```js
 function onFulfilled(bookmarkItems) {
-  for (item of bookmarkItems) {
+  for (const item of bookmarkItems) {
     console.log(item.id);
   }
 }
@@ -71,9 +71,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let searching = browser.bookmarks.search({});
-
-searching.then(onFulfilled, onRejected);
+browser.bookmarks.search({}).then(onFulfilled, onRejected);
 ```
 
 This example looks to see if the currently active tab is bookmarked:
@@ -92,8 +90,7 @@ function onRejected(error) {
 }
 
 function checkActiveTab(tab) {
-  let searching = browser.bookmarks.search({url: tab.url});
-  searching.then(onFulfilled, onRejected);
+  browser.bookmarks.search({ url: tab.url }).then(onFulfilled, onRejected);
 }
 
 browser.browserAction.onClicked.addListener(checkActiveTab);
@@ -105,7 +102,7 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ make active.
 ## Syntax
 
 ```js
-void gl.activeTexture(texture);
+activeTexture(texture)
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ void gl.activeTexture(texture);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

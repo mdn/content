@@ -18,7 +18,7 @@ by a locale-specific string (such as a comma ","). This method has the same algo
 {{jsxref("Array.prototype.toLocaleString()")}} and, as the typed array elements are
 numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} applies
 for each element. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ A string representing the elements of the typed array.
 ### Using toLocaleString
 
 ```js
-var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+const uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
 
 uint.toLocaleString();
 // if run in a de-DE locale

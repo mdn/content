@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.width
 slug: Web/API/VisualViewport/width
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.trackId
 slug: Web/API/RTCInboundRtpStreamStats/trackId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -29,7 +30,7 @@ The **`trackId`** property of the
 
 ## Value
 
-A {{domxref("DOMString")}} containing the ID of the
+A string containing the ID of the
 {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
 {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the track which
 is receiving the media from this RTP session.

@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,7 +34,7 @@ The value returned by this property depends on the performance entry's
   immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
     fetching the resource")}}.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 
@@ -52,10 +53,10 @@ The following example shows the use of the `startTime` property.
 
 ```js
 function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
+  console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.log("The property performance.mark is not supported");
     return;
   }
 
@@ -65,32 +66,33 @@ function run_PerformanceEntry() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
+  const p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
+    log(`Entry[${i}]`);
     check_PerformanceEntry(p[i]);
   }
 }
 function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
+  const properties = ["name", "entryType", "startTime", "duration"];
+  const methods = ["toJSON"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // check each property
-    var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
-  }
-  for (var i=0; i < methods.length; i++) {
-    // check each method
-    var supported = typeof obj[methods[i]] == "function";
+    const supported = properties[i] in obj;
     if (supported) {
-      var js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
+      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
     } else {
-      log("..." + methods[i] + " = Not supported");
+      console.log(`…${properties[i]} = Not supported`);
+    }
+  }
+  for (let i = 0; i < methods.length; i++) {
+    // check each method
+    const supported = typeof obj[methods[i]] === "function";
+    if (supported) {
+      const js = obj[methods[i]]();
+      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
+    } else {
+      console.log(`…${methods[i]} = Not supported`);
     }
   }
 }

@@ -62,7 +62,7 @@ attr(data-something, "default");
         Relative URL are resolved relatively to the original document, not relatively to the style sheet.
         Leading and trailing spaces are stripped.
 
-        Default value: the url `about:invalid` that points to a non-existent document with a generic error condition.
+        Default value: the URL `about:invalid` that points to a non-existent document with a generic error condition.
 
     - `integer` {{Experimental_Inline}}
 
@@ -117,7 +117,7 @@ attr(data-something, "default");
 
     - `s`, `ms` {{Experimental_Inline}}
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an{{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an {{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
         Leading and trailing spaces are stripped.
 
         Default value: `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.

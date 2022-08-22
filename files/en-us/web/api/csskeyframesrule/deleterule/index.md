@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.deleteRule()
 slug: Web/API/CSSKeyframesRule/deleteRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -17,14 +18,14 @@ The **`deleteRule()`** method of the {{domxref("CSSKeyframeRule")}} interface de
 ## Syntax
 
 ```js
-CSSKeyframesRule.deleteRule(select);
+deleteRule(select)
 ```
 
 ### Parameters
 
 - `select`
 
-  - : A {{domxref("CSSOMString")}} which contains the keyframe selector of the rule to be deleted, which must be:
+  - : A string which contains the keyframe selector of the rule to be deleted, which must be:
 
     - a comma-separated list of percentage values between 0% and 100%;
     - or, the keywords `from` or `to`
@@ -33,9 +34,9 @@ CSSKeyframesRule.deleteRule(select);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Returning the `cssRules` property would return a {{domxref("CSSRuleList")}} containing two rules.

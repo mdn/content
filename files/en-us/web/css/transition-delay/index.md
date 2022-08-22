@@ -58,13 +58,13 @@ transition-delay: unset;
 #### HTML
 
 ```html
-  <div class="box delay-1">0.5 seconds</div>
+<div class="box delay-1">0.5 seconds</div>
 
-  <div class="box delay-2">2 seconds</div>
+<div class="box delay-2">2 seconds</div>
 
-  <div class="box delay-3">4 seconds</div>
+<div class="box delay-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS
@@ -111,7 +111,7 @@ transition-delay: unset;
 ```js
 function change() {
   const elements = document.querySelectorAll("div.box");
-  for (let element of elements) {
+  for (const element of elements) {
     element.classList.toggle("transformed-state");
   }
 }

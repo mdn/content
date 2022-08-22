@@ -24,24 +24,24 @@ As there are several ways to define the character encoding of a style sheet, the
 1. The value of the [Unicode byte-order](https://en.wikipedia.org/wiki/Byte_order_mark) character placed at the beginning of the file.
 2. The value given by the `charset` attribute of the `Content-Type:` HTTP header or the equivalent in the protocol used to serve the style sheet.
 3. The `@charset` CSS at-rule.
-4. Use the character encoding defined by the referring document: the `charset` attribute of the {{ HTMLElement("link") }} element. This method is obsoleted in HTML5 and must not be used.
+4. Use the character encoding defined by the referring document: the `charset` attribute of the {{ HTMLElement("link") }} element. This method is obsolete and should not be used.
 5. Assume that the document is UTF-8
 
 ## Syntax
 
-```css
+```
 @charset "UTF-8";
 @charset "iso-8859-15";
 ```
 
-where:
+### Formal syntax
+
+```
+@charset "<charset>";
+```
 
 - _charset_
-  - : Is a {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](http://www.iana.org/assignments/character-sets), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with *preferred* must be used.
-
-## Formal syntax
-
-{{csssyntax}}
+  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with *preferred* must be used.
 
 ## Examples
 

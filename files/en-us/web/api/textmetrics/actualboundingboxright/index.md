@@ -1,9 +1,9 @@
 ---
 title: TextMetrics.actualBoundingBoxRight
 slug: Web/API/TextMetrics/actualBoundingBoxRight
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - TextMetrics

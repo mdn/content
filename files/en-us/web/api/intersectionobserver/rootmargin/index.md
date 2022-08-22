@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -11,7 +12,7 @@ tags:
   - rootMargin
 browser-compat: api.IntersectionObserver.rootMargin
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
 **`rootMargin`** property is a string with syntax similar to

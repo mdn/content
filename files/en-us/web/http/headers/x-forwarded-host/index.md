@@ -8,7 +8,6 @@ tags:
   - Reference
   - Request header
   - header
-browser-compat: http.headers.X-Forwarded-Host
 ---
 {{HTTPSidebar}}
 
@@ -61,10 +60,6 @@ X-Forwarded-Host: id42.example-cdn.com
 
 Not part of any current specification. The standardized version of this header is
 {{HTTPHeader("Forwarded")}}.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

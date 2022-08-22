@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.hostname
 slug: Web/API/WorkerLocation/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,7 +22,7 @@ A string.
 
 ```js
 // In a Web worker, on the page http://localhost:8080/
-var result = location.hostname; // Returns 'localhost'
+const result = location.hostname; // Returns 'localhost'
 ```
 
 ## Specifications

@@ -20,7 +20,7 @@ By modifying the coordinate space, **CSS transforms** change the shape and posit
 
 CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
-> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. As a rule of thumb, an element is positioned by the box model if it has `display: block`.
+> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. An element is positioned by the box model if it has `display: block`.
 
 ## CSS transforms properties
 
@@ -543,5 +543,5 @@ Once you have done this, you can work on the element in the 3D space.
 ## See also
 
 - [Using device orientation with 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
-- [Intro to CSS 3D transforms](https://desandro.github.io/3dtransforms/) (Blog post by David DeSandro)
+- [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)
 - [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

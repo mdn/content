@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue
 slug: Web/API/TextTrackCue
+page-type: web-api-interface
 tags:
   - API
   - Accessibility
@@ -28,10 +29,10 @@ browser-compat: api.TextTrackCue
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 
-- {{domxref("TextTrackCue.track")}}{{readOnlyInline}}
+- {{domxref("TextTrackCue.track")}} {{ReadOnlyInline}}
   - : The {{domxref("TextTrack")}} that this cue belongs to, or `null` if it doesn't belong to any.
 - {{domxref("TextTrackCue.id")}}
-  - : A {{domxref("DOMString")}} that identifies the cue.
+  - : A string that identifies the cue.
 - {{domxref("TextTrackCue.startTime")}}
   - : A `double` that represents the video time that the cue will start being displayed, in seconds.
 - {{domxref("TextTrackCue.endTime")}}

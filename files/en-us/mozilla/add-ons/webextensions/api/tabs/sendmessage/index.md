@@ -67,22 +67,25 @@ function onError(error) {
 }
 
 function sendMessageToTabs(tabs) {
-  for (let tab of tabs) {
-    browser.tabs.sendMessage(
-      tab.id,
-      {greeting: "Hi from background script"}
-    ).then(response => {
-      console.log("Message from the content script:");
-      console.log(response.response);
-    }).catch(onError);
+  for (const tab of tabs) {
+    browser.tabs
+      .sendMessage(tab.id, { greeting: "Hi from background script" })
+      .then((response) => {
+        console.log("Message from the content script:");
+        console.log(response.response);
+      })
+      .catch(onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.query({
-    currentWindow: true,
-    active: true
-  }).then(sendMessageToTabs).catch(onError);
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(sendMessageToTabs)
+    .catch(onError);
 });
 ```
 
@@ -92,10 +95,10 @@ Here's the corresponding content script:
 // content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request => {
+browser.runtime.onMessage.addListener((request) => {
   console.log("Message from the background script:");
   console.log(request.greeting);
-  return Promise.resolve({response: "Hi from content script"});
+  return Promise.resolve({ response: "Hi from content script" });
 });
 ```
 
@@ -105,7 +108,7 @@ browser.runtime.onMessage.addListener(request => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-sendMessage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-sendMessage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

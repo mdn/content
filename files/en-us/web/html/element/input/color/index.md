@@ -12,7 +12,7 @@ tags:
   - Input
   - Reference
   - color
-browser-compat: html.elements.input.input-color
+browser-compat: html.elements.input.type_color
 ---
 
 {{HTMLRef}}
@@ -30,7 +30,7 @@ The element's presentation may vary substantially from one browser and/or platfo
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A 7-character {{domxref("DOMString")}} specifying a
+        A 7-character string specifying a
         {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
       </td>
     </tr>
@@ -67,7 +67,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a {{domxref("DOMString")}} which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
 > **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
@@ -98,7 +98,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }
@@ -146,8 +146,8 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color well to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
 
 ```js
-var colorWell;
-var defaultColor = "#0000ff";
+let colorWell;
+const defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
 ```
@@ -176,8 +176,7 @@ We provide two functions that deal with color changes. The `updateFirst()` funct
 
 ```js
 function updateFirst(event) {
-  var p = document.querySelector("p");
-
+  const p = document.querySelector("p");
   if (p) {
     p.style.color = event.target.value;
   }
@@ -188,7 +187,7 @@ When the color picker is dismissed, indicating that the value will not be changi
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }

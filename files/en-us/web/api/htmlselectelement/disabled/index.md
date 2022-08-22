@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -41,21 +42,17 @@ A boolean value.
 ### JavaScript
 
 ```js
-var allowDrinksCheckbox = document.getElementById("allow-drinks");
-var drinkSelect = document.getElementById("drink-select");
+const allowDrinksCheckbox = document.getElementById("allow-drinks");
+const drinkSelect = document.getElementById("drink-select");
 
-allowDrinksCheckbox.addEventListener("change", function(event) {
-  if (event.target.checked) {
-    drinkSelect.disabled = false;
-  } else {
-    drinkSelect.disabled = true;
-  }
+allowDrinksCheckbox.addEventListener("change", (event) => {
+  drinkSelect.disabled = !event.target.checked;
 }, false);
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

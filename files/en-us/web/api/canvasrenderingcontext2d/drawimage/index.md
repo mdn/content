@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -17,9 +18,9 @@ Canvas 2D API provides different ways to draw an image onto the canvas.
 ## Syntax
 
 ```js
-drawImage(image, dx, dy);
-drawImage(image, dx, dy, dWidth, dHeight);
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+drawImage(image, dx, dy)
+drawImage(image, dx, dy, dWidth, dHeight)
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
 ![drawImage](canvas_drawimage.jpg)
@@ -28,11 +29,14 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 
 - `image`
   - : An element to draw into the context. The specification permits any canvas image
-    source ({{domxref("CanvasImageSource")}}), specifically, a
-    {{domxref("CSSImageValue")}}, an {{domxref("HTMLImageElement")}}, an
-    {{domxref("SVGImageElement")}}, an {{domxref("HTMLVideoElement")}}, an
-    {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, or an
-    {{domxref("OffscreenCanvas")}}.
+    source, specifically,
+    an {{domxref("HTMLImageElement")}},
+    an {{domxref("SVGImageElement")}},
+    an {{domxref("HTMLVideoElement")}},
+    an {{domxref("HTMLCanvasElement")}},
+    an {{domxref("ImageBitmap")}},
+    an {{domxref("OffscreenCanvas")}},
+    or a {{domxref("VideoFrame")}}.
 - `sx` {{optional_inline}}
   - : The x-axis coordinate of the top left corner of the sub-rectangle of the source
     `image` to draw into the destination context. Use the 3- or 5-argument syntax
@@ -46,9 +50,11 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
     destination context. If not specified, the entire rectangle from the coordinates
     specified by `sx` and `sy` to the bottom-right corner of the
     image is used. Use the 3- or 5-argument syntax to omit this argument.
+    A negative value will flip the image.
 - `sHeight` {{optional_inline}}
   - : The height of the sub-rectangle of the source `image` to draw into the
     destination context. Use the 3- or 5-argument syntax to omit this argument.
+    A negative value will flip the image.
 - `dx`
   - : The x-axis coordinate in the destination canvas at which to place the top-left
     corner of the source `image`.
@@ -64,10 +70,16 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
     scaling of the drawn image. If not specified, the image is not scaled in height when
     drawn. Note that this argument is not included in the 3-argument syntax.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
-- `InvalidStateError`
-  - : Thrown if the image has no image data or if the canvas or source rectangle width or height is zero.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown when the image has no image data or if the canvas or source rectangle width or height is zero.
+- `TypeMismatchError` {{domxref("DOMException")}}
+  - : Thrown when a `null` or `undefined` image is passed as parameter.
 
 ## Examples
 
@@ -97,7 +109,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
-image.addEventListener('load', e => {
+image.addEventListener('load', (e) => {
   ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 });
 ```
@@ -164,26 +176,6 @@ function drawImageActualSize() {
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Support for flipping the image by using negative values for `sw` and
-  `sh` was added in Gecko 5.0 {{geckoRelease("5.0")}}.
-- Starting with {{geckoRelease("5.0")}}, `drawImage()` handles negative
-  arguments in accordance with the specification, by flipping the rectangle around the
-  appropriate axis.
-- Specifying a `null` or `undefined` image when calling or
-  `drawImage()` correctly throws a `TYPE_MISMATCH_ERR` exception
-  starting with {{geckoRelease("5.0")}}.
-- Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox threw an exception if any of
-  the coordinate values was non-finite or zero. As per the specification, this no longer
-  happens.
-- Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images
-  across domains without [tainting the
-  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
-- Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a
-  canvas without [tainting the
-  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ## Notes
 

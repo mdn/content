@@ -79,7 +79,7 @@ The Firefox Web Console displays a mixed content warning message in the Net pane
 
 ![Screen shot of the web console displaying a mixed content warning.](mixed_content_-_net_pane.png)
 
-As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](http://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
+As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](https://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
 
 Starting in Firefox 23, mixed active content is blocked by default (and mixed display content can be blocked by setting a preference). To make it easier for web developers to find mixed content errors, all blocked mixed content requests are logged to the Security pane of the Web Console, as seen below:
 

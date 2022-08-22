@@ -8,7 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-outside
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-outside
+browser-compat: css.properties.display.display-outside
 ---
 {{CSSRef}}
 
@@ -24,6 +24,10 @@ Valid `<display-outside>` values:
   - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space
 
 > **Note:** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -55,7 +59,7 @@ span {
 
 ## Browser compatibility
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## See also
 

@@ -39,7 +39,7 @@ linear-gradient(0deg, blue, green 40%, red);
    starting red, getting to the midpoint color
    10% of the way across the length of the gradient,
    taking the rest of the 90% of the length to change to blue */
-linear-gradient(.25turn, red, 10%, blue);
+linear-gradient(.25turn, red 10%, blue);
 
 /* Multi-position color stop: A gradient tilted 45 degrees,
    with a red bottom-left half and a blue top-right half,
@@ -62,7 +62,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : An interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-> **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> **Note:** Rendering of [color stops in CSS gradients](#composition_of_a_linear_gradient) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
 >
 > Note also that the first example above does not exactly render as depicted in Mozilla Firefox (particularly version 80.0b3). You'll have to set the html height property to 100% or 100vh to render as depicted.
 
@@ -117,7 +117,7 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);
 
 By default, if there is no color with a 0% stop, the first color declared will be at that point. Similarly, the last color will continue to the 100% mark, or be at the 100% mark if no length has been declared on that last stop.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 

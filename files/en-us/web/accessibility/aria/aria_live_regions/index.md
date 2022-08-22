@@ -9,7 +9,7 @@ tags:
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
 > **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
-> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/Docs/Web/Accessibility/ARIA/Roles/Alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
+> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
 
 ## Live regions
 
@@ -87,7 +87,7 @@ function renderPlanetInfo(planet) {
 
 const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
 
-renderPlanetInfoButton.addEventListener('click', event => {
+renderPlanetInfoButton.addEventListener('click', (event) => {
   const planetsSelect = document.querySelector('#planetsSelect');
   const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
 
@@ -105,7 +105,7 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 ## Roles with implicit live region attributes
 
-Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
+Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
 
 <table style="width: 100%;">
  <thead>
@@ -128,7 +128,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>alert</td>
-   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html" class="external" rel=" noopener">Alert Example.</a></td>
+   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel=" noopener">Alert Example.</a></td>
    <td>To maximize compatibility, some people recommend adding a redundant <code>aria-live="assertive"</code> when using this role. However, adding both <code>aria-live</code> and <code>role="alert"</code> causes double speaking issues in VoiceOver on iOS.</td>
   </tr>
   <tr>
@@ -155,10 +155,10 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
 
 General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).
 
-The Paciello Group has some [information about the state of the support of Live Regions](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/) (2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
+The Paciello Group has some [information about the state of the support of Live Regions](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
 1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
+2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 
     : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 
@@ -176,9 +176,9 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 ```js
 /* basic JavaScript to update the clock */
 function updateClock() {
-  var now = new Date();
+  const now = new Date();
   document.getElementById('clock-hours').innerHTML = now.getHours();
-  document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
+  document.getElementById('clock-mins').innerHTML = (`0${now.getMinutes()}`).substr(-2);
 }
 
 /* first run */
@@ -196,7 +196,7 @@ One way around this would be to first clear all the contents of the live region 
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true">
-  ...
+  …
 </div>
 ```
 
@@ -217,7 +217,7 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 
 ```js
 function change(event) {
-  var yearOut = document.getElementById("year-output");
+  const yearOut = document.getElementById("year-output");
 
   switch (event.target.id) {
     case "year":
@@ -229,7 +229,7 @@ function change(event) {
 };
 ```
 
-Without `aria-atomic="true"` the screenreader announces only the changed value of year. With `aria-atomic="true"`, the screenreader announces "The set year is: _changed value_"
+Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"
 
 ### Basic example: `aria-relevant`
 

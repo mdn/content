@@ -1,6 +1,7 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -17,9 +18,9 @@ newly created {{domxref("TreeWalker")}} object.
 ## Syntax
 
 ```js
-document.createTreeWalker(root);
-document.createTreeWalker(root, whatToShow);
-document.createTreeWalker(root, whatToShow, filter);
+createTreeWalker(root)
+createTreeWalker(root, whatToShow)
+createTreeWalker(root, whatToShow, filter)
 ```
 
 ### Parameters
@@ -60,7 +61,7 @@ document.createTreeWalker(root, whatToShow, filter);
 
 A new {{domxref("TreeWalker")}} object.
 
-## Example
+## Examples
 
 The following example goes through all nodes in the body,
 filters out any non nodes that aren't elements (with the \`NodeFilter.SHOW_ELEMENT\` value),
@@ -70,14 +71,14 @@ that is created to advance through the nodes (now all elements) and push them in
 array.
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+  { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 
-var nodeList = [];
-var currentNode = treeWalker.currentNode;
+const nodeList = [];
+let currentNode = treeWalker.currentNode;
 
 while(currentNode) {
   nodeList.push(currentNode);

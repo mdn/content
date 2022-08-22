@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.phone
 slug: Web/API/AddressErrors/phone
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -24,7 +25,7 @@ An object based on {{domxref("AddressErrors")}} includes a **`phone`** property 
 
 ## Value
 
-If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.phone", "phone")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.phone", "phone")}} property could not be validated, this property contains a string offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
 If the `phone` value was validated successfully, this property is not included in the `AddressErrors` object.
 

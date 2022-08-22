@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -32,7 +33,8 @@ requestLightProbe(options)
 
 - `options` {{optional_inline}}
   - : An object containing configuration options, specifically:
-    - `reflectionFormat`: The internal reflection format indicating how the texture data is represented, either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
+    - `reflectionFormat`
+      - : The internal reflection format indicating how the texture data is represented, either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
 
 ### Return value
 

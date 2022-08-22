@@ -1,6 +1,7 @@
 ---
 title: Comparison of Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
+page-type: guide
 tags:
   - DOM
   - Gecko
@@ -31,7 +32,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        The DOM element on the left hand side of the call that triggered this
+        The DOM element on the left-hand side of the call that triggered this
         event.
       </td>
     </tr>
@@ -87,8 +88,7 @@ There are five targets to consider:
           ></code
         >
       </td>
-      <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+      <td><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} If the event was retargeted for
@@ -111,7 +111,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original target of the event,
@@ -126,7 +126,7 @@ There are five targets to consider:
     <tr>
       <td>event.composedTarget</td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original non-native target of
@@ -144,7 +144,7 @@ There are five targets to consider:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

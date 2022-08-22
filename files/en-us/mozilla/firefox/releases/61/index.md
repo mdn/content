@@ -14,17 +14,17 @@ This article provides information about the changes in Firefox 61 that will affe
 
 ### Developer tools
 
-- The new-look Console UI has been enabled by default for the [Browser Console](/en-US/docs/Tools/Browser_Console) & [Browser Toolbox](/en-US/docs/Tools/Browser_Toolbox) ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.
-- In the [Network Monitor](/en-US/docs/Tools/Network_Monitor), clicking _Open in New Tab_ in a `POST` request's context menu correctly resends the request with the expected `POST` parameters ({{bug(1407515)}}).
-- [CSS variables now autocomplete](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#css_variable_autocompletion) with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
+- The new-look Console UI has been enabled by default for the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) & [Browser Toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html) ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.
+- In the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html), clicking _Open in New Tab_ in a `POST` request's context menu correctly resends the request with the expected `POST` parameters ({{bug(1407515)}}).
+- [CSS variables now autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#css-variable-autocompletion) with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
 
   - In addition, hovering over a CSS variable name brings up a tooltip showing what color value is stored in that variable ({{bug(1431949)}}).
 
 - The main toolbox's toolbar has been redesigned. Highlights are better responsiveness for narrow and wide viewports with a new overflow dropdown, cleaned up meatball menu, and sortable tabs to let you move up your most used panels ({{bug(1226272)}}).
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor)'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import...' option ({{bug(1403530)}}).
-- The Network Monitor's details pane now includes a [Cache tab](/en-US/docs/Tools/Network_Monitor#cache), which displays information about previously cached resources ({{bug(859051)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import…' option ({{bug(1403530)}}).
+- The Network Monitor's details pane now includes a [Cache tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cache), which displays information about previously cached resources ({{bug(859051)}}).
 - The Network Monitor's main toolbar got redesigned to be more responsive on smaller viewports and visually aligned with the Console.
-- The Network Monitor's main toolbar now includes a [Throttling](/en-US/docs/Tools/Network_Monitor#throttling) dropdown which was only available in the [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#network_throttling) before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).
+- The Network Monitor's main toolbar now includes a [Throttling](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#throttling) dropdown which was only available in the [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#network-throttling) before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).
 - The Browser Console now hides CSS errors by default for readability and performance reasons ({{bug(1452143)}}).
 - The Browser Console now includes a command to restart the browser. Use `Ctrl` + `Alt` + `R` (Windows, Linux) or `Cmd` + `Alt` + `R` (Mac) to restart the browser with the same tabs open as before the restart.
 - DevTools' web extension APIs [`devtools.network.onRequestFinished`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished) ({{bug(1311171)}}) and [`devtools.network.getHAR`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR) ({{bug(1311177)}}) got implemented (enabling extensions like [har-export-trigger](/en-US/docs/Web)).

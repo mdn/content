@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 str:split(string, pattern)
 ```
 
@@ -29,7 +29,7 @@ A node-set of `token` elements, each containing one token from the `string`.
 
 ## Example
 
-```js
+```plain
 str:split('book, phone, computer, chair', ', ')
 ```
 
@@ -44,7 +44,7 @@ Returns a node set like:
 
 ## Specifications
 
-[EXSLT - STR:SPLIT](http://www.exslt.org/str/functions/split/index.html)
+[EXSLT - STR:SPLIT](http://exslt.org/str/functions/split/index.html)
 
 ## See also
 

@@ -1,5 +1,5 @@
 ---
-title: Introduction to HTML5 Game Development
+title: Introduction to HTML Game Development
 slug: Games/Introduction_to_HTML5_Game_Development
 tags:
   - Firefox OS
@@ -11,7 +11,7 @@ tags:
 
 ## Advantages
 
-1. Games built with HTML5 work on smartphones, tablets, PCs and Smart TVs.
+1. Games built with HTML work on smartphones, tablets, PCs and Smart TVs.
 2. Advertise and promote your game all over the Web as well as other media.
 3. Payments. Charge what you want and use whatever payment processing service you like.
 4. Update your game whenever you want.
@@ -58,7 +58,7 @@ tags:
       <td><strong>Language</strong></td>
       <td>
         <a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using
-        <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> to
         compile to JavaScript)
       </td>
     </tr>
@@ -99,7 +99,7 @@ tags:
   - : Store user data on their own computer or device.
 - [JavaScript](/en-US/docs/Web/JavaScript)
   - : Fast web programming language to write the code for your game.
-    To easily port your existing games [Emscripten](https://github.com/kripken/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
+    To easily port your existing games [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
 - [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
   - : Lock the mouse or other pointing device within your game's interface.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)

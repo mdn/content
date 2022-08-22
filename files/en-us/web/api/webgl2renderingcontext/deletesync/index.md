@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteSync()
 slug: Web/API/WebGL2RenderingContext/deleteSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US
 ## Syntax
 
 ```js
-void gl.deleteSync(sync);
+deleteSync(sync)
 ```
 
 ### Parameters
@@ -27,7 +28,7 @@ void gl.deleteSync(sync);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -35,9 +36,9 @@ None.
 objects are not available in WebGL 1.
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
-// ...
+// …
 
 gl.deleteSync(sync);
 ```

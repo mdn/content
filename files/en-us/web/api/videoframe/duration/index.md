@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.duration
 slug: Web/API/VideoFrame/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property

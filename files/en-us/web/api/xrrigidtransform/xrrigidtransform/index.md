@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
+page-type: web-api-constructor
 tags:
   - API
   - AR
@@ -59,8 +60,8 @@ origin to the specified `position` and facing in the direction indicated by
 
 ### Exceptions
 
-- `TypeError`
-  - : The value of the `w` coordinate in the specified `position` is
+- {{jsxref("TypeError")}}
+  - : Thrown if the value of the `w` coordinate in the specified `position` is
     not 1.0.
 
 ## Examples
@@ -93,8 +94,7 @@ Then {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} i
 called to ask for a new animation frame to draw into. The `drawFrame()`
 callback will be executed when the system is ready to draw the next frame.
 
-You can find more examples in [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
+You can find more examples in [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 
 ## Specifications
 

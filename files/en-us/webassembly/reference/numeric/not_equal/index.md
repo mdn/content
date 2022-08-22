@@ -12,7 +12,7 @@ tags:
 
 The **`ne`** instructions, short for *not equal*, check if two numbers are not equal. If the numbers are not equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 
-{{EmbedInteractiveExample("pages/wat/ne.html")}}
+{{EmbedInteractiveExample("pages/wat/ne.html", "tabbed-taller")}}
 
 ## Syntax
 

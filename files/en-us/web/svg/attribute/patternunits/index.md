@@ -70,35 +70,11 @@ For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in u
 - `userSpaceOnUse`
   - : This value indicates that all coordinates for the geometry properties refer to the user coordinate system as defined when the pattern was applied.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
+  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#PatternElementPatternUnitsAttribute", "patternUnits")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#PatternElementPatternUnitsAttribute", "patternUnits")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

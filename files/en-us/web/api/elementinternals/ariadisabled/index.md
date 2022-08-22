@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaDisabled
 slug: Web/API/ElementInternals/ariaDisabled
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaDisabled`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.

@@ -1,6 +1,7 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -41,7 +42,7 @@ A shadow DOM example:
 // Create a shadow root
 const shadow = this.attachShadow({mode: 'open'});
 
-// Create some CSS to apply to the shadow dom
+// Create some CSS to apply to the shadow DOM
 const style = document.createElement('style');
 console.log(style.isConnected); // returns false
 
@@ -67,7 +68,7 @@ style.textContent = `
 }
 `;
 
-// Attach the created style element to the shadow dom
+// Attach the created style element to the shadow DOM
 
 shadow.appendChild(style);
 console.log(style.isConnected); // Returns true

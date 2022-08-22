@@ -1,6 +1,7 @@
 ---
 title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -19,12 +20,16 @@ leaving nothing selected.
 ## Syntax
 
 ```js
-sel.removeAllRanges();
+removeAllRanges()
 ```
 
 ### Parameters
 
-_None._
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

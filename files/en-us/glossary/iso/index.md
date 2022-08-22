@@ -12,4 +12,4 @@ tags:
 
 ## See also
 
-- [Official website](https://www.iso.org/iso/home.html)
+- [Official website](https://www.iso.org/home.html)

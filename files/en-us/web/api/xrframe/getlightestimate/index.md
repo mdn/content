@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getLightEstimate()
 slug: Web/API/XRFrame/getLightEstimate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,7 +28,7 @@ getLightEstimate(lightProbe)
 
 ### Return value
 
-An {{domxref("XRLightEstimate")}} object or {{jsxref("null")}} if the device cannot estimate lighting for this frame.
+An {{domxref("XRLightEstimate")}} object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the device cannot estimate lighting for this frame.
 
 ## Examples
 
