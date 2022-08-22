@@ -152,7 +152,7 @@ Reporting directives control the reporting process of CSP violations. See also t
     > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
     > you can specify both **`report-uri`** and {{CSP("report-to")}}:
     >
-    > ```html
+    > ```http
     > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
     > ```
     >
