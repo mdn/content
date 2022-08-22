@@ -23,7 +23,8 @@ Shader programs have access to three kinds of data storage, each of which has a 
 
 ## GLSL data types
 
-<\<document the basic types, vectors, etc; see [Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) on the Khronos WebGL wiki>>
+Basic types as the integral parts of the [GLSL data types](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)) are scalars, vectors, swizzling, matrices, opaque types, and Implicit conversion. 
+These types can be categorized into other variants, such as arrays. GLSL has other array types known as Opaque arrays, and Arrays of arrays. Other main GLSL data types include Structs, Constructors and initializers, and Interface blocks.
 
 ## GLSL variables
 
