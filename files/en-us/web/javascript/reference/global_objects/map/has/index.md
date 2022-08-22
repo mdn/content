@@ -39,10 +39,10 @@ otherwise `false`.
 
 ```js
 const myMap = new Map();
-myMap.set('bar', "foo");
+myMap.set("bar", "foo");
 
-console.log(myMap.has('bar')); // returns true
-console.log(myMap.has('baz')); // returns false
+console.log(myMap.has("bar")); // true
+console.log(myMap.has("baz")); // false
 ```
 
 ## Specifications
