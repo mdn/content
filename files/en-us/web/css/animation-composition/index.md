@@ -53,7 +53,7 @@ animation-composition: unset;
 
 ## Description
 
-Each property that is targeted by the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule is associated with an effect stack. The value of the effect stack is calculated by combining the (underlying) value of a property in a CSS style rule with the (effect) value of that property in the keyframe. The `animation-composition` property helps to specify how to combine the underlying value with the effect value.
+Each property that is targeted by the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule is associated with an effect stack. The value of the effect stack is calculated by combining the _underlying value_ of a property in a CSS style rule with the _effect value_ of that property in the keyframe. The `animation-composition` property helps to specify how to combine the underlying value with the effect value.
 
 For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10px)` is the effect value. The `filter` property is affected by both animations, `pulse` and `brightness-pulse`. The `animation-composition` property specifies the operation to perform to produce the final effect value after compositing the effect of the underlying value and the effect value.
 
@@ -76,9 +76,9 @@ For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10
 
 Consider different values for the `animation-composition` property in the above example. The final effect value in each of those cases will be calculated as explained below:
 
-- With `replace`, `blur(10px)` will replace `blur(5px)` in the `0%` keyframe.
-- With `add`, the composite effect value in `0%` will be `blur(5px) blur(10px)`.
-- With `accumulate`, the composite effect value in `0%` will be `blur(15px)`.
+- With `replace`, `blur(10px)` will replace `blur(5px)` in the `0%` keyframe. This is the default behavior of the property.
+- With `add`, the composite effect value in `0%` keyframe will be `blur(5px) blur(10px)`.
+- With `accumulate`, the composite effect value in `0%` keyframe will be `blur(15px)`.
 
 > **Note:** A composite operation can also be specified in a keyframe. In that case, the specified composite operation is used for each property first within that keyframe and then on each property in the next keyframe.
 
