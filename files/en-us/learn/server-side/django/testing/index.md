@@ -480,7 +480,7 @@ The rest of the functions test that the form is valid for renewal dates just ins
 >
 > We also need to validate that the correct errors are raised if the form is invalid, however this is usually done as part of view processing, so we'll take care of that in the next section.
 
-> **Warning:** If you use the form class `RenewBookModelForm(forms.ModelForm)` instead of class `RenewBookForm(forms.Form)`, then the form field name is **'due_back'** instead of **'renewal_date'**.
+> **Warning:** If you use the [ModelForm](/en-US/docs/Learn/Server-side/Django/Forms#modelforms) class `RenewBookModelForm(forms.ModelForm)` instead of class `RenewBookForm(forms.Form)`, then the form field name would be **'due_back'** instead of **'renewal_date'**.
 
 That's all for forms; we do have some others, but they are automatically created by our generic class-based editing views, and should be tested there! Run the tests and confirm that our code still passes!
 
