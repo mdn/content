@@ -572,7 +572,7 @@ For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app t
 
 ```js
 // Create a 32MB "file" and fill it with consecutive values from 0 to 255 – 32MB = 1024 * 1024 * 32
-const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 32 }, (v, i) => i);
+const uInt8Array = new Uint8Array(1024 * 1024 * 32).map((v, i) => i);
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 

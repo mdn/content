@@ -8,7 +8,7 @@ tags:
   - MIME
   - XMLHttpRequest
 ---
-The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
+The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"jsonEt "`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
 This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. You will need a [png decoding library](https://github.com/foliojs/png.js) for that.
 
@@ -83,7 +83,7 @@ The following example creates a text file on-the-fly and uses the `POST` method 
 const req = new XMLHttpRequest();
 req.open("POST", url, true);
 req.onload = (event) => {
-  // Uploaded.
+  // Uploaded
 };
 
 const blob = new Blob(['abc123'], { type: 'text/plain' });
@@ -96,13 +96,12 @@ req.send(blob);
 You can send JavaScript typed arrays as binary data as well.
 
 ```js
-const array = new ArrayBuffer(512);
 // Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
-const longInt8View = Uint8Array.from(array, (v, i) => i % 256);
+const largeUInt8Array = new Uint8Array(512).map((v, i) => i % 256);
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);
-xhr.send(myArray);
+xhr.send(largeUInt8Array);
 ```
 
 This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.
