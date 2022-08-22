@@ -87,7 +87,7 @@ The important thing to remember is that the framework is setting up helpful meth
 
 Back to game states: the line below is adding a new state called `Boot` to the game:
 
-```html
+```js
 game.state.add('Boot', Ball.Boot);
 ```
 

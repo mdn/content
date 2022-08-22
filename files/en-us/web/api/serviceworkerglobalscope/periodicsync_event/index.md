@@ -8,9 +8,10 @@ tags:
   - Periodic Background Synchronization
   - ServiceWorkerGlobalScope
   - events
+  - Experimental
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 

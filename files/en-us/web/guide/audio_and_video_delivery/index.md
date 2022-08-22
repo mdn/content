@@ -333,8 +333,6 @@ A few examples:
 - `http://example.com/video.ogv#t=60`
   - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
 
-> **Note:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](https://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
-
 ## Error handling
 
 Errors gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.

@@ -207,6 +207,7 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
@@ -245,7 +246,6 @@ The following are only reserved when they are found in strict mode code:
 - `private`
 - `protected`
 - `public`
-- `static`
 
 #### Future reserved words in older standards
 

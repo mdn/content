@@ -51,7 +51,7 @@ Timing the main loop to when the browser paints to the display allows you to run
 
 But do not immediately assume animations require frame-by-frame control. Simple animations can be easily performed, even GPU-accelerated, with CSS animations and other tools included in the browser. There are a lot of them and they will make your life easier.
 
-## Building a _better_ main loop in Javascript
+## Building a _better_ main loop in JavaScript
 
 There are two obvious issues with our previous main loop: `main()` pollutes the `{{ domxref("window") }}` object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
@@ -107,7 +107,7 @@ We now have a variable declared in our `MyGame` namespace, which we call `stopMa
 window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
-The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In Javascript, you are using the browser's main loop and you are trying to do so effectively.
+The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In JavaScript, you are using the browser's main loop and you are trying to do so effectively.
 
 ## Building a _more_ _optimized_ main loop in JavaScript
 

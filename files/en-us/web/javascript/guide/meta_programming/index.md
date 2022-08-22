@@ -15,7 +15,7 @@ The {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allow you to intercept
 
 ## Proxies
 
-Introduced in ECMAScript 6, {{jsxref("Proxy")}} objects allow you to intercept certain operations and to implement custom behaviors.
+{{jsxref("Proxy")}} objects allow you to intercept certain operations and to implement custom behaviors.
 
 For example, getting a property on an object:
 
@@ -426,9 +426,9 @@ With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/en-US
 Reflect.has(Object, 'assign') // true
 ```
 
-### A better `apply` function
+### A better apply() function
 
-In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
+Before `Reflect`, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75])
