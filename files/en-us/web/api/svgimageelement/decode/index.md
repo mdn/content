@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Decode
-  - Experimental
   - Image
   - Method
   - NeedsExample
