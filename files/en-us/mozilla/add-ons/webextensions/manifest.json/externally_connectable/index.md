@@ -28,18 +28,11 @@ browser-compat: webextensions.manifest.externally_connectable
       <td>
         <pre>
 "externally_connectable": {
-  // List of extension IDs that extension wishes to communicate with
-  // If "browser_action" is specified but "browser_action.ids" is not,
-  // no extensions can communicate with this extension.
-  // To match all extension IDs use "*".
   "ids": [
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
     "cccccccccccccccccccccccccccccccc"
   ],
-  // Regular expression patterns specifying web pages
-  // If "matches" is not specified, no web pages can communicate with
-  // this extension
   "matches": [
     "https://example1.com/*",
     "*://*.example2.com/*"
