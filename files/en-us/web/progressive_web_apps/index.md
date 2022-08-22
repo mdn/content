@@ -39,5 +39,6 @@ These introductory materials and step-by-step guides walk you through key aspect
 - [Workbox](https://developer.chrome.com/docs/workbox/) — set of libraries to power a "production-ready" service worker for your PWA
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) — web-app auditing tool that includes PWA-auditing features
 - [localForage](https://localforage.github.io/localForage/) — `localStorage`-like _async_ storage, to improve your PWA's offline experience
+- [Lath](https://lath.dev/) — A pure front-end container. Bring interactive experiences comparable to Native Apps.
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
