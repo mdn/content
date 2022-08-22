@@ -97,7 +97,7 @@ You can send JavaScript typed arrays as binary data as well.
 
 ```js
 // Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
-const largeUInt8Array = new Uint8Array(512).map((v, i) => i % 256);
+const largeUInt8Array = new Uint8Array(512).map((v, i) => i);
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);
