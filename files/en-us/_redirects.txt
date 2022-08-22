@@ -4165,7 +4165,7 @@
 /en-US/docs/JavaScript/Guide/Working_with_Objects	/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 /en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/JavaScript/JavaScript_technologies_overview	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
-/en-US/docs/JavaScript/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
+/en-US/docs/JavaScript/JavaScript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/JavaScript/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -4825,7 +4825,7 @@
 /en-US/docs/JavaScript_Documention/Guide/Values,_variables,_and_literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
 /en-US/docs/JavaScript_Documention/Guide/Working_with_Objects	/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 /en-US/docs/JavaScript_Documention/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
-/en-US/docs/JavaScript_Documention/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
+/en-US/docs/JavaScript_Documention/JavaScript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/JavaScript_Documention/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_Documention/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript_Documention/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -12040,7 +12040,7 @@
 /en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Web/JavaScript/JavaScript_templates	/en-US/docs/Web/JavaScript/Reference/Template_literals
-/en-US/docs/Web/JavaScript/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
+/en-US/docs/Web/JavaScript/JavaScript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/Web/JavaScript/Microsoft_Extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
