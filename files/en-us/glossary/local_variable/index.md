@@ -13,7 +13,7 @@ A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only
 ```js
 let global = 5; // A global variable
 
-function fun(){
+function fun() {
   let local = 10; // A local variable
 }
 ```
