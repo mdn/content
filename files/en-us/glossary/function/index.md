@@ -76,16 +76,9 @@ const loop2 = (x) => {
 
 An **Immediately Invoked Function Expressions** ({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser's compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function's definition.
 
-```js example-bad
-// Declared functions can't be called immediately this way
-// Error (https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
-function foo() {
-  console.log('Hello Foo');
-}();
-```
+Function expressions, named or anonymous, can be called immediately.
 
-```js example-good
-// Function expressions, named or anonymous, can be called immediately
+```js
 (function foo() {
   console.log("Hello Foo");
 }());
@@ -97,7 +90,15 @@ function foo() {
 (() => console.log('hello world'))();
 ```
 
-If you'd like to know more about IIFEs, check out the following page on Wikipedia : [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
+Declared functions can't be called immediately this way, because IIFEs must be function _expressions_.
+
+```js example-bad
+function foo() {
+  console.log('Hello Foo');
+}();
+```
+
+If you'd like to know more about IIFEs, check out the following page on Wikipedia: [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
 
 ## See also
 
