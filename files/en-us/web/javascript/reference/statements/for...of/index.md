@@ -180,8 +180,7 @@ console.log('done');
 
 ### Iterating over generators
 
-You can also iterate over [generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*), i.e.
-functions generating an iterable object:
+You can also iterate over [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
 
 ```js
 function* fibonacci() { // a generator function
