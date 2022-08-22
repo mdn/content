@@ -224,27 +224,24 @@ form > #date
 
 Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations. So for example:
 
-- Mozilla uses `-moz-`
-- Chrome/Opera/Safari use `-webkit-`
-- Microsoft uses `-ms-`
+- Firefox uses `-moz-`
+- Chrome/Edge/Opera/Safari use `-webkit-`
+
+More prefixes were used in the past: Internet Explorer and early versions of Edge used `-ms-`, and old versions of Opera used `-o`.
 
 Here's some examples:
 
 ```css
 -webkit-transform: rotate(90deg);
-
-background-image: -moz-linear-gradient(left ,green, yellow);
-background-image: -webkit-gradient(linear, left center, right center, from(green), to(yellow));
-background-image: linear-gradient(to right, green, yellow);
+-moz-transform: rotate(90deg);
+transform: rotate(90deg);
 ```
 
-While none of these properties requires a prefix, you may encounter this old CSS in a codebase. The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
+While the `transform` property does not require a prefix, you may encounter this old CSS in a codebase. The first line shows the {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
 
-The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) function, which is originally how linear gradient were written:
+The second line has a `-moz-` prefix, which is also no longer needed. The third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
 
-The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
-
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happened so much that other browsers implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so developers can test them during development.
+Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning and cause cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
 
 If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
 
