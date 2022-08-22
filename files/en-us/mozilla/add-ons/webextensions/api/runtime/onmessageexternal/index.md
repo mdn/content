@@ -15,7 +15,10 @@ browser-compat: webextensions.api.runtime.onMessageExternal
 ---
 {{AddonSidebar()}}
 
-Use this event to listen for messages from another extension.
+Use this event to listen for messages from another extension or a website.
+
+Whether the extension will allow messages from other extensions and websites is controlled by [`externally_connectable`](
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) field in `manifest.json`.
 
 To send a message which will be received by the `onMessageExternal` listener, use {{WebExtAPIRef("runtime.sendMessage()")}}, passing the ID of the recipient in the `extensionId` parameter.
 
