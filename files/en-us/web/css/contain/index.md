@@ -70,11 +70,11 @@ The `contain` property is specified as either one of the following:
 - `content`
   - : Indicates that all containment rules except `size` are applied to the element. This is equivalent to `contain: layout paint style`.
 - `size`
-  - : Indicates that size containment is applied to the element. The size of the element can be computed in isolation, ignoring the child elements. Cannot be combined with `inline-size`.
+  - : Indicates that size containment is applied to the element. The size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `inline-size`.
 - `inline-size`
-  - : Indicates that inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements. Cannot be combined with `size`.
+  - : Indicates that inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `size`.
 - `layout`
-  - : Indicates that the internal layout of the element is isolated from the rest of the page.
+  - : Indicates that the internal layout of the element is isolated from the rest of the page, that is, nothing outside the element affects its internal layout, and vice versa.
 - `style`
   - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
 - `paint`
