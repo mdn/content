@@ -99,7 +99,6 @@ In MDN, writers will use code fences for example code blocks. They must specify 
   - `regex` - Regex
   - `uri` - URIs and URLs
 
-
 For example:
 
 ````plain
