@@ -72,7 +72,7 @@ Methods:
 write(byte[] b, int off, int len)
 ```
 
-Writes _`len`_ bytes from the specified byte array starting at offset _`off`_ to this output stream.
+Writes `len` bytes from the specified byte array starting at offset `off` to this output stream.
 
 ### InputStream
 

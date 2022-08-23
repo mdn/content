@@ -17,7 +17,7 @@ string( [object] )
 
 ### Arguments
 
-- _`object`_(optional)
+- `object` (optional)
   - : The object to convert to a string. If omitted, the context node is used.
 
 ### Returns

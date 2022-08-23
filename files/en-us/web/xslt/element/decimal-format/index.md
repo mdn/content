@@ -9,7 +9,7 @@ tags:
 ---
 {{ XsltRef() }}
 
-The `<xsl:decimal-format>` element defines the characters and symbols that are to be used in converting numbers into strings using the*`format-number( )`* function.
+The `<xsl:decimal-format>` element defines the characters and symbols that are to be used in converting numbers into strings using the `format-number( )` function.
 
 ### Syntax
 

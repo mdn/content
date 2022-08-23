@@ -75,10 +75,10 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 The promise is rejected when one of the following exceptions is encountered:
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Raised when _`keyUsages`_ is empty but the unwrapped key is of
+  - : Raised when `keyUsages` is empty but the unwrapped key is of
     type `secret` or `private`.
 - {{jsxref("TypeError")}}
-  - : Raised when trying to use an invalid format or if the _`keyData`_
+  - : Raised when trying to use an invalid format or if the `keyData`
     is not suited for that format.
 
 ## Supported formats
