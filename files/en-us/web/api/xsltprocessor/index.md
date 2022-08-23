@@ -21,7 +21,7 @@ transformation to documents.
 ## Constructor
 
 - {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}}
-  - : Create a new `XSLTProcessor`.  
+  - : Create a new `XSLTProcessor`.
 
 ## Methods
 

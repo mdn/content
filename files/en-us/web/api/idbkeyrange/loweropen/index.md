@@ -51,7 +51,7 @@ the range.
 function displayData() {
   const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.lowerOpen);
-  
+
   const transaction = db.transaction(["fThings"], "readonly");
   const objectStore = transaction.objectStore("fThings");
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
