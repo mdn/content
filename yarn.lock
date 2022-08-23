@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.9.tgz#ab07c9942bd3f49460fa07c13b507569a2401a11"
   integrity sha512-+Pa+ecijbf8HDuB2A3HoKC/bd+xugdX+3A6JQei5R4CJ2GO1m+p40S/rA+MMaLee1A52rX1bZ/8yRr9wFfBq6g==
 
-"@mdn/yari@1.15.7":
-  version "1.15.7"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.15.7.tgz#ce5b26c546bcc8210d4c74c8d663dd1f4bbcc289"
-  integrity sha512-9exzHdOMQ5ZB68OhE+Bq5Ad9ZXYha64m+3BOu6syjmgGoiK6TqhbGc11R8M9u2bz8AKoJpzCsIxrMEJakcRurQ==
+"@mdn/yari@1.15.13":
+  version "1.15.13"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.15.13.tgz#190c93268753aea8be81dc45bec2b5cc34778523"
+  integrity sha512-GqGkKhsrm/Q/4ITpaO7L0XScI071QuOYnpJPBYdYiwCMbAW54IAaxqvhHEueCU7+qnMXKyr7vS1pULiSPJi51Q==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -68,7 +68,7 @@
     front-matter "^4.0.2"
     fs-extra "^10.1.0"
     got "^11.8.3"
-    html-react-parser "^3.0.3"
+    html-react-parser "^3.0.4"
     http-proxy-middleware "^2.0.6"
     image-size "^1.0.2"
     image-type "^4.1.0"
@@ -90,7 +90,7 @@
     node-gettext "^3.0.0"
     open "^8.4.0"
     open-editor "^3.0.0"
-    prismjs "^1.28.0"
+    prismjs "^1.29.0"
     react-modal "^3.15.1"
     read-chunk "^3.2.0"
     rehype-format "^3.1.0"
@@ -2275,21 +2275,21 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
   integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
 
-html-dom-parser@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-3.1.1.tgz#1d39b708c93a2bff2fa9c61a3848aeb864560416"
-  integrity sha512-yYRQBPQ/Z2Lo0cW8YE0DtKhA6BtLoCRz2subcEVkVMymBRVH6kkCTrau/DimD9BvME6+tXpUSqNGvR08y3NMlQ==
+html-dom-parser@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-3.1.2.tgz#c137c42df80e17d185ff35a806925d96cc73f408"
+  integrity sha512-mLTtl3pVn3HnqZSZzW3xVs/mJAKrG1yIw3wlp+9bdoZHHLaBRvELdpfShiPVLyjPypq1Fugv2KMDoGHW4lVXnw==
   dependencies:
     domhandler "5.0.3"
     htmlparser2 "8.0.1"
 
-html-react-parser@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.3.tgz#7eb1a128e99622cfe05aadb45c052c3de73e2a1b"
-  integrity sha512-LIrqhoW6bi2LMc0/+9tIjHaJYb0NaTgIggZPPF+fpkqVj/Yl7+pzsNw4ubD5BVjqt+Ym3P29bzDNSzccXgnJmA==
+html-react-parser@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.4.tgz#6a6a115a011dfdadd901ca9d2ed80fa5390647e5"
+  integrity sha512-va68PSmC7uA6PbOEc9yuw5Mu3OHPXmFKUpkLGvUPdTuNrZ0CJZk1s/8X/FaHjswK/6uZghu2U02tJjussT8+uw==
   dependencies:
     domhandler "5.0.3"
-    html-dom-parser "3.1.1"
+    html-dom-parser "3.1.2"
     react-property "2.0.0"
     style-to-js "1.1.1"
 
@@ -3855,10 +3855,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prismjs@^1.28.0:
-  version "1.28.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.28.0.tgz#0d8f561fa0f7cf6ebca901747828b149147044b6"
-  integrity sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==
+prismjs@^1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.29.0.tgz#f113555a8fa9b57c35e637bba27509dcf802dd12"
+  integrity sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
