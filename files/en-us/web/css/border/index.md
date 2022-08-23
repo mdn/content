@@ -17,7 +17,7 @@ The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
-## Constituent properties 
+## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
