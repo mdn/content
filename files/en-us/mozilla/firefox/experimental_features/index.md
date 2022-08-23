@@ -14,7 +14,7 @@ This allows you to test the features before they are released.
 
 New features appear first in the [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build, where they are often enabled by default.
 They later propagate though to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and eventually to the release build.
-Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.
+After a feature is enabled by default in a release build, it is no longer considered experimental and should be removed from the topic.
 
 Experimental features can be enabled or disabled using the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) (enter `about:config` in the Firefox address bar) by modifying the associated _preference_ listed below.
 
@@ -24,7 +24,7 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ### inert attribute
 
-The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
+The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}. When present, it may make the browser "ignore" the element from assistive technologies, page search, and text selection. For more details on the status of this feature, see {{bug(1655722)}}.
 
 <table>
   <thead>
@@ -307,46 +307,6 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
-### The fit-content() function for width and other sizing properties
-
-The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.fit-content-function.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Grid: Masonry layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.
@@ -429,11 +389,51 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
+### Function: fit-content()
+
+The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.fit-content-function.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Scroll-linked animations
 
 The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
 Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-For more information see {{bug(1676791)}} and {{bug(1676782)}}.
+For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
 
 <table>
   <thead>
@@ -471,7 +471,7 @@ For more information see {{bug(1676791)}} and {{bug(1676782)}}.
   </tbody>
 </table>
 
-### linear() easing function
+### Function: linear() easing
 
 The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
 (See {{bug(1764126)}} for more details.)
@@ -508,6 +508,47 @@ The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.linear-easing-function.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Property: animation-composition
+
+The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
+(See {{bug(1293490)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>104</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.animation-composition.enabled</code></td>
     </tr>
   </tbody>
 </table>

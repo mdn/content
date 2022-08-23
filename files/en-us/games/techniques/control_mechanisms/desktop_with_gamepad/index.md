@@ -249,7 +249,7 @@ update() {
   // …
   if (GamepadAPI.active) {
     this.textGamepad.visible = true;
-        
+
     GamepadAPI.update();
     if (GamepadAPI.buttons.pressed('Start')) {
       // start the game
@@ -257,7 +257,7 @@ update() {
     if (GamepadAPI.buttons.pressed('X')) {
       // turn on/off the sounds
     }
-    
+
     this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed('Y', 'hold');
   }
 }
@@ -316,7 +316,7 @@ if (GamepadAPI.axes.status) {
   } else if (GamepadAPI.axes.status[0] < -0.5) {
     // move player down
   }
-  
+
   if (GamepadAPI.axes.status[1] > 0.5) {
     // move player left
   } else if (GamepadAPI.axes.status[1] < -0.5) {

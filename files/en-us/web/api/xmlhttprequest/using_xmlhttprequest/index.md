@@ -455,7 +455,7 @@ ways to _submit_, and to **upload files**:
               if (this.technique === 3) {
                 // enctype is multipart/form-data
                 this.segments.push(`Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`);
-              } else {  
+              } else {
                 // enctype is application/x-www-form-urlencoded or text/plain or method is GET
                 this.segments.push(`${filter(field.name)}=${filter(field.value)}`);
               }

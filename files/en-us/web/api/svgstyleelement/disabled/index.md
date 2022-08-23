@@ -56,7 +56,7 @@ The style already exists because it is defined in the SVG, so this should succee
 ```js
 const svg = document.querySelector("svg");
 const style = svg.getElementById("circle_style_id")
-style.disabled = true;  
+style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the disabled state and button text.

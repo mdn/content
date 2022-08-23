@@ -525,7 +525,7 @@ const queryableFunctions = {
   getDifference(minuend, subtrahend) {
     reply('printStuff', minuend - subtrahend);
   },
-  
+
   // example #2: wait three seconds
   waitSomeTime() {
     setTimeout(() => { reply('doAlert', 3, 'seconds'); }, 3000);
