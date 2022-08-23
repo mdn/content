@@ -11,6 +11,7 @@ tags:
   - install
 browser-compat: api.ServiceWorkerGlobalScope.install_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`install`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
@@ -22,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('install', (event) => { });
+addEventListener("install", (event) => {});
 
-oninstall = (event) => { };
+oninstall = (event) => {};
 ```
 
 ## Event type
@@ -42,22 +43,22 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
 ```js
-this.addEventListener('install', (event) => {
+this.addEventListener("install", (event) => {
   event.waitUntil(
     caches
-      .open('v1')
+      .open("v1")
       .then((cache) =>
         cache.addAll([
-          '/sw-test/',
-          '/sw-test/index.html',
-          '/sw-test/style.css',
-          '/sw-test/app.js',
-          '/sw-test/image-list.js',
-          '/sw-test/star-wars-logo.jpg',
-          '/sw-test/gallery/',
-          '/sw-test/gallery/bountyHunters.jpg',
-          '/sw-test/gallery/myLittleVader.jpg',
-          '/sw-test/gallery/snowTroopers.jpg',
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
         ])
       )
   );
