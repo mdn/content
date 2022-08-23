@@ -112,7 +112,7 @@ function runPerformanceEntry() {
   performance.mark("begin");
 
   // Check the entryType of all the "begin" entries
-  entriesNamedBegin = performance.getEntriesByName("begin")
+  performance.getEntriesByName("begin")
     .forEach((entry) => {
       console.log(`Entry is type: ${entry.entryType}`);
     });

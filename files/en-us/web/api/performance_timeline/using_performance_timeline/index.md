@@ -20,8 +20,8 @@ function log(s) {
   o.innerHTML += `${s} <br>`;
 }
 
-function doWork (n) {
-  for (let i=0 ; i < n; i++) {
+function doWork(n) {
+  for (let i = 0; i < n; i++) {
      const m = Math.random(); // This is an example of work taking some time
   }
 }
@@ -159,7 +159,9 @@ function PerformanceObservers() {
   });
   
   // Subscribe to all performance event types
-  observeAll.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
+  observeAll.observe({
+    entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'],
+  });
 
   // Create observer for just the "mark" event type
   const observeMark = new PerformanceObserver((list, obs) => {
@@ -172,7 +174,7 @@ function PerformanceObservers() {
   });
   
   // Subscribe to only the 'mark' event
-  observeMark.observe({entryTypes: ['mark']});
+  observeMark.observe({ entryTypes: ['mark'] });
 }
 
 function printPerfEntry(pe) {

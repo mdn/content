@@ -53,7 +53,7 @@ function printStartAndEndProperties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-for (const property of properties) {
+  for (const property of properties) {
     // Log the property
     console.log(`… ${property} = ${perfEntry[property] ?? "NOT supported"}`);
   }

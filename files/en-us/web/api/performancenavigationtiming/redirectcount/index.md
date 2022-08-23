@@ -30,7 +30,7 @@ The following example illustrates this property's usage.
 function printNavTimingData() {
   // Use getEntriesByType() to just get the "navigation" events
   performance.getEntriesByType("navigation")
-    perfEntries.forEach((p, i) => {
+    .forEach((p, i) => {
       console.log(`= Navigation entry[${i}]`);
 
       // DOM Properties

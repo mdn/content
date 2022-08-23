@@ -67,11 +67,11 @@ function usePerformanceEntryMethods() {
     });
     
   // Use getEntries(name, entryType) to get specific entries
-  performance.getEntries({name : "Begin", entryType: "mark"})
+  performance.getEntries({ name: "Begin", entryType: "mark" })
     .forEach((entry, i) => {
       log(`Begin[${i}]`);
       checkPerformanceEntry(entry);
-  }
+    });
 
   // Use getEntriesByType() to get all "mark" entries
   performance.getEntriesByType("mark")
