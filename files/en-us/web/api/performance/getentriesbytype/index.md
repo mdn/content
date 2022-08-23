@@ -69,7 +69,7 @@ function usePerformanceEntryMethods() {
   // Use getEntries(name, entryType) to get specific entries
   performance.getEntries({ name: "Begin", entryType: "mark" })
     .forEach((entry, i) => {
-      lconsole.og(`Begin[${i}]`);
+      console.log(`Begin[${i}]`);
       checkPerformanceEntry(entry);
     });
 
@@ -101,7 +101,7 @@ function checkPerformanceEntry(obj) {
   // Check each method
   methods.forEach((method) => {
     const supported = typeof obj[method] === "function";
-    console.log(`…${method} = ${supported ? obj[method] : "Not supported"}`);
+    console.log(`…${method} = ${supported ? JSON.stringify(obj[method]()) : "Not supported"}`);
   });
 }
 ```

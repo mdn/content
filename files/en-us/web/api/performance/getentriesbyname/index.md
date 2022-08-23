@@ -88,7 +88,7 @@ function usePerformanceEntryMethods() {
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   performance.getEntriesByName("Begin", "mark")
     .forEach((entry, i) => {
-      lconsole.og(`Mark and Begin entry[${i}]:`);
+      console.log(`Mark and Begin entry[${i}]:`);
       checkPerformanceEntry(entry);
     });
 }
