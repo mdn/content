@@ -76,7 +76,7 @@ A third party is able to determine a user's session identifier (i.e., by reading
 
 Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other sub-domains by setting the `Domain` attribute:
 
-```
+```http
 Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
 ```
 

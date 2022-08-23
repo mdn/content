@@ -15,7 +15,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `gyroscope` directive controls 
 
 ## Syntax
 
-```
+```http
 Feature-Policy: gyroscope <allowlist>;
 ```
 

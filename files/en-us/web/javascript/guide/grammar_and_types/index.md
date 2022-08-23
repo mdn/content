@@ -526,7 +526,7 @@ More succinctly, the syntax is:
 
 For example:
 
-```
+```js
 3.1415926
 .123456789
 3.1E+12

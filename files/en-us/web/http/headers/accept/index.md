@@ -37,7 +37,7 @@ The **`Accept`** request HTTP header indicates which content types, expressed as
 
 ## Syntax
 
-```
+```http
 Accept: <MIME_type>/<MIME_subtype>
 Accept: <MIME_type>/*
 Accept: */*
@@ -59,7 +59,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 
 ## Examples
 
-```
+```http
 Accept: text/html
 
 Accept: image/*

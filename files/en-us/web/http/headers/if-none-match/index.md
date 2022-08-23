@@ -39,7 +39,7 @@ There are two common use cases:
 
 ## Syntax
 
-```
+```http
 If-None-Match: "<etag_value>"
 If-None-Match: "<etag_value>", "<etag_value>", …
 If-None-Match: *
@@ -54,12 +54,12 @@ If-None-Match: *
 
 ## Examples
 
-```
-    If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
+```http
+If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
-    If-None-Match: W/"67ab43", "54ed21", "7892dd"
+If-None-Match: W/"67ab43", "54ed21", "7892dd"
 
-    If-None-Match: *
+If-None-Match: *
 ```
 
 ## Specifications

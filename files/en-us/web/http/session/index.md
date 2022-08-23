@@ -38,7 +38,7 @@ Once the connection is established, the user-agent can send the request (a user-
 
 Fetching the root page of developer.mozilla.org, (`https://developer.mozilla.org/`), and telling the server that the user-agent would prefer the page in French, if possible:
 
-```
+```http
 GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr
@@ -48,7 +48,7 @@ Observe that final empty line, this separates the data block from the header blo
 
 For example, sending the result of a form:
 
-```
+```http
 POST /contact_form.php HTTP/1.1
 Host: developer.mozilla.org
 Content-Length: 64
@@ -76,7 +76,7 @@ After the connected agent has sent its request, the web server processes it, and
 
 Successful web page response:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Length: 55743
@@ -108,7 +108,7 @@ Age: 7
 
 Notification that the requested resource has permanently moved:
 
-```
+```http
 HTTP/1.1 301 Moved Permanently
 Server: Apache/2.4.37 (Red Hat)
 Content-Type: text/html; charset=utf-8
@@ -125,7 +125,7 @@ Content-Length: 325 (the content contains a default page to display if the user-
 
 Notification that the requested resource doesn't exist:
 
-```
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=utf-8
 Content-Length: 38217

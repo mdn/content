@@ -22,7 +22,7 @@ to set {{domxref("document.domain")}} will fail and cause a `SecurityError`
 
 ## Syntax
 
-```
+```http
 Feature-Policy: document-domain <allowlist>;
 ```
 

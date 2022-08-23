@@ -18,7 +18,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header field's `payment` directive con
 
 ## Syntax
 
-```
+```http
 Feature-Policy: payment <allowlist>;
 ```
 

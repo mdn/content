@@ -74,7 +74,7 @@ print(session.get_timeouts)
 
 The output will be in seconds because this is the idiomatic time unit in Python:
 
-```
+```json
 {"implicit": 4.5, "script": 300, "pageLoad": 30000}
 ```
 

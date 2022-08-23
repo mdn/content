@@ -11,7 +11,7 @@ Not all headers appearing in a response are categorized as *response headers* by
 
 The following shows a few response and representation headers after a {{HTTPMethod("GET")}} request.
 
-```plain
+```http
 200 OK
 Access-Control-Allow-Origin: *
 Connection: Keep-Alive
