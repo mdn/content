@@ -51,7 +51,7 @@ addTransceiver(trackOrKind, init)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The {{domxref("RTCRtpTransceiver")}} object which will be used to transmit and/or receive the media data.
 
 ### Exceptions
 
