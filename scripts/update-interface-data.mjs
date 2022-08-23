@@ -7,28 +7,28 @@ if (!process.argv[2]) {
 }
 
 const webrefPath = path.join(process.argv[2], "ed");
-const interfaceData = {};
-const index = await fs
+const idlnames = await fs
   .readFile(path.join(webrefPath, "idlnames.json"), "utf-8")
   .then(JSON.parse);
 
-(
+const idls =
   await Promise.all(
-    Object.entries(index)
+    Object.entries(idlnames)
       .sort(([k1], [k2]) => k1.localeCompare(k2))
       .map(([, { parsed: jsonIdlPath }]) =>
-        fs.readFile(path.join(webrefPath, jsonIdlPath), "utf-8")
+        fs.readFile(path.join(webrefPath, jsonIdlPath), "utf-8").then(JSON.parse)
       )
-  )
-).forEach((jsonData) => {
-  const jsonIdl = JSON.parse(jsonData);
-  if (jsonIdl.type === "interface") {
-    interfaceData[jsonIdl.name] = {
-      inh: jsonIdl.inheritance?.name || "",
+  );
+
+const interfaceData = idls.reduce((interfaceData, idl) => {
+  if (idl.type === "interface") {
+    interfaceData[idl.name] = {
+      inh: idl.inheritance?.name || "",
       impl: [],
     };
   }
-});
+  return interfaceData;
+}, {});
 
 await fs.writeFile(
   "files/jsondata/InterfaceData.json",
