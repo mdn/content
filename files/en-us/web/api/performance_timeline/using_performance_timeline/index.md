@@ -160,11 +160,9 @@ function PerformanceObservers() {
   });
 
   // Create observer for just the "mark" event type
-  const observeMark = new PerformanceObserver((list, obs) => {
-    const perfEntries = list.getEntries();
-    
+  const observeMark = new PerformanceObserver((list, obs) => { 
     // Should only have 'mark' entries
-    perfEntries.forEach((entry) =>  {
+    list.getEntries().forEach((entry) =>  {
       printPerfEntry(entry);
     });
   });
