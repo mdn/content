@@ -38,7 +38,7 @@ capture, `false` if it doesn't.
 ## Examples
 
 ```html
-<html>
+<html lang="en">
   <script>
     function downHandler(ev) {
       const el = document.getElementById("target");

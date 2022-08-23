@@ -28,7 +28,6 @@ Create a new directory called `settings`, then create a file called `manifest.js
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -39,7 +38,6 @@ Create a new directory called `settings`, then create a file called `manifest.js
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -63,7 +61,6 @@ First, update `manifest.json` so it has these contents:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -86,7 +83,6 @@ First, update `manifest.json` so it has these contents:
       "id": "addon@example.com"
     }
   }
-
 }
 ```
 
@@ -103,23 +99,19 @@ Next, because we've promised to provide `options.html`, let's create it. Create 
 
 ```html
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
   </head>
 
   <body>
-
     <form>
-        <label>Border color <input type="text" id="color" name="color"></label>
-        <button type="submit">Save</button>
+      <label>Border color <input type="text" id="color" name="color"></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -136,7 +128,6 @@ function saveOptions(e) {
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
