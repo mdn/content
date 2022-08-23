@@ -1,9 +1,12 @@
+name: Update InterfaceData.json
+
 on:
   schedule:
     # picking Fridays as webref IDL releases tend to be pushed on Thursdays
     - cron: '0 0 * * 6'
   workflow_dispatch:
-name: Update InterfaceData.json
+
+jobs:
   update:
     runs-on: ubuntu-latest
 
@@ -16,19 +19,18 @@ name: Update InterfaceData.json
       uses: actions/checkout@v3
       with:
         path: mdn-content
+        ref: main
 
     - name: Checkout webref
       uses: actions/checkout@v3
       with:
         repository: w3c/webref
         path: webref
-        ref: @webref/idl@latest
+        ref: "@webref/idl@latest"
 
     - name: Extract data from webref
       working-directory: mdn-content
-      run: |
-        cd mdn-content
-        node scripts/update-interface-data.mjs ../webref/
+      run: node scripts/update-interface-data.mjs ../webref/
 
     - name: Create pull request
       uses: peter-evans/create-pull-request@v4
