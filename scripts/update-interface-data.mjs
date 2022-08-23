@@ -32,5 +32,5 @@ const interfaceData = idls.reduce((interfaceData, idl) => {
 
 await fs.writeFile(
   "files/jsondata/InterfaceData.json",
-  JSON.stringify([interfaceData], null, 2)
+  JSON.stringify([interfaceData], null, 2) + "\n"
 );
