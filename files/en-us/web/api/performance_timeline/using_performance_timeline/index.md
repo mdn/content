@@ -96,7 +96,7 @@ function printPerformanceEntry(ev) {
       properties.forEach((prop) => {
         // Check each property in window.performance
         const supported = prop in perfEntry;
-        console.log(`… ${prop} = ${suppported ? perfEntry[prop] : "Not supported"}`);
+        log(`… ${prop} = ${suppported ? perfEntry[prop] : "Not supported"}`);
       });
     });
 }
@@ -106,7 +106,6 @@ This interface also includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}}
 
 ```js
 function perfEntryToJSON() {
-
   // Create a few performance entries
   performance.mark("mark-1");
   performance.mark("mark-2");
@@ -140,20 +139,17 @@ function PerformanceObservers() {
   // Create observer for all performance event types
   const observeAll = new PerformanceObserver((list, obs) => {
     // Print all entries
-    let perfEntries = list.getEntries();
-    perfEntries.forEach((entry) =>  {
+    list.getEntries().forEach((entry) =>  {
       printPerfEntry(entry);
     });
 
     // Print entries named "Begin" with type "mark"
-    perfEntries = list.getEntriesByName("Begin", "mark");
-    perfEntries.forEach((entry) =>  {
+    list.getEntriesByName("Begin", "mark").forEach((entry) =>  {
       printPerfEntry(entry);
     });
 
     // Print entries with type "mark"
-    perfEntries = list.getEntriesByType("mark");
-    perfEntries.forEach((entry) =>  {
+    list.getEntriesByType("mark").forEach((entry) =>  {
       printPerfEntry(entry);
     });
   });
