@@ -6,6 +6,8 @@ tags:
   - MathML
   - MathML Project
 ---
+{{MathMLRef}}
+
 This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Many such tools are available and it is impossible to provide an exhaustive list. Instead, this article focuses on common approaches and examples.
 
 ## Using MathML
@@ -250,7 +252,7 @@ In this section, we review a few editing tools providing graphical interfaces.
 
 A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example,  [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
-![LaTeX input box in Thunderbird ](thunderbird.png)
+![LaTeX input box in Thunderbird](thunderbird.png)
 
 > **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
 
