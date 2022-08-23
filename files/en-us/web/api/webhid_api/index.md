@@ -7,6 +7,7 @@ tags:
   - Advanced
   - WebHID
   - WebHID API
+  - Experimental
 browser-compat: api.HID
 ---
 {{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}

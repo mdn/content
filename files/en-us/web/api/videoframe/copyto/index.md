@@ -8,9 +8,10 @@ tags:
   - Reference
   - copyTo
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.copyTo
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`copyTo()`** method of the {{domxref("VideoFrame")}} interface copies the contents of the `VideoFrame` to an `ArrayBuffer`.
 
@@ -25,15 +26,15 @@ copyTo(destination, options)
 
 - `destination`
   - : An `ArrayBuffer`, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} to copy to.
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
   - : An object containing the following:
-    - `rect` {{optional_inline}}
+    - `rect` {{Optional_Inline}}
       - : The rectangle of pixels to copy from the `VideoFrame`. If unspecified, the {{domxref("VideoFrame.visibleRect","visibleRect")}} will be used. This is in the format of a dictionary object containing:
         - `x`: The x-coordinate.
         - `y`: The y-coordinate.
         - `width`: The width of the frame.
         - `height`: The height of the frame.
-    - `layout` {{optional_inline}}
+    - `layout` {{Optional_Inline}}
       - : A list containing the following values for each plane in the `VideoFrame`:
         - `offset`
           - : An integer representing the offset in bytes where the given plane begins.
