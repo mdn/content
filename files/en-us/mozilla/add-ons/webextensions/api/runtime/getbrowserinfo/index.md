@@ -24,13 +24,9 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 let gettingInfo = browser.runtime.getBrowserInfo()
 ```
 
-### Parameters  
+### Parameters
 
-None. 
-
-##### Dummy Test Section
-
-Testing the Github md lint action.  
+None.
 
 ### Return value
 
