@@ -16,9 +16,10 @@ tags:
   - XR
   - XRBoundedReferenceSpace
   - augmented
+  - Experimental
 browser-compat: api.XRBoundedReferenceSpace
 ---
-{{APIRef("WebXR Device API")}}{{secureContext_header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRBoundedReferenceSpace`** interface describes a virtual world [reference space](/en-US/docs/Web/API/WebXR_Device_API/Geometry) which has preset boundaries. This extends {{domxref("XRReferenceSpace")}}, which describes an essentially unrestricted space around the viewer's position. These bounds are defined using an array of points, each of which defines a vertex in a polygon inside which the user is allowed to move.
 
@@ -30,7 +31,7 @@ This is typically used when the XR system is capable of tracking the user's phys
 
 _In addition to the properties of {{domxref("XRReferenceSpace")}}, `XRBoundedReferenceSpace` includes the following:_
 
-- {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} {{ReadOnlyInline}}
+- {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An array of {{domxref("DOMPointReadOnly")}} objects, each of which defines a vertex in the polygon defining the boundaries within which the user will be required to remain. These vertices *must* be sorted such that they move *clockwise* around the viewer's position.
 
 ## Methods
