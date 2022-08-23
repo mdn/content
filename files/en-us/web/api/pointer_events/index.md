@@ -214,7 +214,7 @@ This example illustrates accessing all of a pointer event's properties.
           process_touch(ev);
           break;
         default:
-          console.log(`pointerType ${ev.pointerType} is Not supported`);
+          console.log(`pointerType ${ev.pointerType} is not supported`);
       }
 
       // Call the tilt handler
