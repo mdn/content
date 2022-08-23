@@ -125,6 +125,7 @@ CSS uses dimensions to specify:
 - {{cssxref("&lt;time&gt;")}}
 - {{cssxref("&lt;frequency&gt;")}}
 - {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("&lt;flex&gt;")}}
 
 These are all covered in subsections below.
 
