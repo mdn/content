@@ -35,7 +35,7 @@ getContext(contextType, contextAttributes)
     context associated to the canvas. Possible values are:
 
     - `2d`
-      - : creates a
+      - : Creates a
       {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
       rendering context.
     - `webgl`
