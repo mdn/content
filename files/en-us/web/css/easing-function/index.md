@@ -17,7 +17,7 @@ browser-compat: css.types.easing-function
 
 The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes the rate at which a numerical value changes.
 
-This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient.
+This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition) and [animation](/en-US/docs/Web/CSS/animation) properties.
 
 The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the {{Glossary("interpolation")}}. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
 
@@ -33,6 +33,7 @@ However, certain properties will restrict the output if it goes outside an allow
 
 ```css
 /* linear function */
+linear()
 linear;
 
 /* cubic-bezier functions */
@@ -48,6 +49,8 @@ step-start;
 step-end;
 ```
 
+## Description
+
 The value of an `<easing-function>` type describes the easing function using one of the following three methods:
 
 - linear functions
@@ -62,7 +65,7 @@ The interpolation is done at a constant rate from beginning to end. Use the `lin
 
 ### Cubic Bézier functions
 
-The `cubic-bezier()` functional notation defines a [cubic Bézier curve](/en-US/docs/Glossary/Bezier_curve). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
+The `cubic-bezier()` functional notation defines a cubic [Bézier curve](/en-US/docs/Glossary/Bezier_curve). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
@@ -309,7 +312,7 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 These easing functions are valid:
 
 ```css
-/* There is 5 treads, the last one happens
+/* There are 5 treads, the last one happens
    right before the end of the animation. */
 steps(5, end)
 
@@ -323,7 +326,7 @@ steps(2)
 
 > **Note:** If the animation contains multiple stops, then the steps specified in the `steps()` function will apply to each section. Therefore an animation with three segments and `steps(2)` will contain 6 steps in total, 2 per segment.
 
-These easing function are invalid:
+These easing functions are invalid:
 
 ```css example-bad
 /* The first parameter must be an <integer> and
