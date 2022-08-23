@@ -64,3 +64,7 @@ ctx.fillText(`Hello world (${ctx.letterSpacing})`, 10, 140);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
