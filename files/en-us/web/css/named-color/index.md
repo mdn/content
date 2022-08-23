@@ -1,52 +1,44 @@
 ---
-title: Color keywords
-slug: Web/CSS/color_value/color_keywords
+title: <named-color>
+slug: Web/CSS/named-color
 tags:
   - Reference
+  - CSS Data Type
   - color
+browser-compat: css.types.color.color_keywords
 ---
 {{CSSRef}}
 
-**Color keywords** are case-insensitive identifiers representing a specific [`<color>`](/en-US/docs/Web/CSS/color_value), such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the terms used.
+The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).
 
-All keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
+A `<named-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) can be used.
 
-There are a few caveats to consider when using color keywords:
+## Syntax
 
-- [HTML](/en-US/docs/Web/HTML) only recognizes the 16 basic color keywords (`black`, `silver`, `gray`, `white`, `maroon`, `red`, `purple`, `fuchsia`, `green`, `lime`, `olive`, `yellow`, `navy`, `blue`, `teal`, and `aqua`).
-- An algorithm converts all other values (a CSS color keyword or a random string) to a color (leading most of the time to completely different colors than the CSS color associated in the table below). Therefore, color keywords beside these 16 values should only be used in CSS and [SVG](/en-US/docs/Web/SVG), but not in HTML.
-- Unlike HTML, CSS completely ignores unknown keywords.
-- The color keywords all represent plain, solid colors without transparency.
-- Several keywords are aliases for each other:
+```css
+color: red;
+color: orange;
+color: tan;
+color: rebeccapurple;
+color: transparent;
+```
 
-  - `aqua` / `cyan`
-  - `fuchsia` / `magenta`
-  - `darkgray` / `darkgrey`
-  - `darkslategray` / `darkslategrey`
-  - `dimgray` / `dimgrey`
-  - `lightgray` / `lightgrey`
-  - `lightslategray` / `lightslategrey`
-  - `gray` / `grey`
-  - `slategray` / `slategrey`
+### Value
 
-- Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
+#### CSS Level 1 values
 
-- In addition to the color keywords, the [`<color>`](/en-US/docs/Web/CSS/color_value) data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors)_ that represents colors that matches those of the OS.
-
-## List of all color keywords
+[CSS Level 1](https://www.w3.org/TR/CSS1/) only included 16 basic colors, called the _VGA colors_ as they were taken from the set of displayable colors on [VGA](https://en.wikipedia.org/wiki/VGA) graphics cards.
 
 <table>
   <thead>
     <tr>
-      <th scope="col">Specification</th>
       <th scope="col">Keyword</th>
       <th scope="col">RGB hex value</th>
-      <th scope="col">Live keyword</th>
+      <th scope="col">Sample</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
       <td style="background: black"></td>
@@ -126,14 +118,44 @@ There are a few caveats to consider when using color keywords:
       <td><code>#00ffff</code></td>
       <td style="background: aqua"></td>
     </tr>
+  </tbody>
+</table>
+
+### CSS Level 2 values
+
+The following value is defined in [CSS Level 2](https://www.w3.org/TR/CSS2/).
+
+<table>
+  <thead>
     <tr>
-      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
+      <th scope="col">Keyword</th>
+      <th scope="col">RGB hex value</th>
+      <th scope="col">Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
+  </tbody>
+</table>
+
+### CSS Level 3 values
+
+Although various colors not in the specification (mostly adapted from the X11 colors list) were supported by early browsers, it wasn't until SVG 1.0 and [CSS Colors Level 3](https://drafts.csswg.org/css-color-3/) that they were formally defined. They are called the _extended color keywords_, the _X11 colors_, or the _SVG colors_.
+
+<table>
+  <thead>
     <tr>
-      <td rowspan="130"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Level 3</a></td>
+      <th scope="col">Keyword</th>
+      <th scope="col">RGB hex value</th>
+      <th scope="col">Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
       <td style="background: aliceblue"></td>
@@ -763,6 +785,11 @@ There are a few caveats to consider when using color keywords:
       <td style="background: tomato"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>transparent</code></td>
+      <td>See <a href="#transparent">transparent</a>.</td>
+      <td style="background: transparent"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>turquoise</code></td>
       <td><code>#40e0d0</code></td>
       <td style="background: turquoise"></td>
@@ -788,7 +815,31 @@ There are a few caveats to consider when using color keywords:
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td><a href="https://drafts.csswg.org/css-color-4/">CSS Color Level 4</a></td>
+  </tbody>
+</table>
+
+##### transparent
+
+The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
+
+To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
+
+The `transparent` keyword wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
+
+#### CSS Level 4 values
+
+[CSS Colors Level 4](https://drafts.csswg.org/css-color-4/) added the `rebeccapurple` keyword [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man).
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Keyword</th>
+      <th scope="col">RGB hex value</th>
+      <th scope="col">Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td style="text-align: center">
         <a href="https://en.wikipedia.org/wiki/Eric_A._Meyer#Personal_life"
           ><code>rebeccapurple</code></a
@@ -800,13 +851,85 @@ There are a few caveats to consider when using color keywords:
   </tbody>
 </table>
 
-> **Note:** The list of accepted keywords has undergone many changes during the evolution of CSS:
->
-> - CSS Level 1 only included 16 basic colors, called the _VGA colors_ as they were taken from the set of displayable colors on [VGA](https://en.wikipedia.org/wiki/VGA) graphics cards.
-> - CSS Level 2 added the `orange` keyword.
-> - Although various colors not in the specification (mostly adapted from the X11 colors list) were supported by early browsers, it wasn't until SVG 1.0 and CSS Colors Level 3 that they were formally defined. They are called the _extended color keywords_, the _X11 colors_, or the _SVG colors_.
-> - CSS Colors Level 4 added the `rebeccapurple` keyword [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man).
+## Description
+
+All names specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the terms used.
+
+There are a few caveats to consider when using color keywords:
+
+- [HTML](/en-US/docs/Web/HTML) only recognizes the 16 basic color keywords (`black`, `silver`, `gray`, `white`, `maroon`, `red`, `purple`, `fuchsia`, `green`, `lime`, `olive`, `yellow`, `navy`, `blue`, `teal`, and `aqua`). An algorithm converts all other values (a CSS color keyword or a random string) to a color (leading most of the time to completely different colors than the CSS color associated in the table below). Therefore, color keywords beside these 16 values should only be used in CSS and [SVG](/en-US/docs/Web/SVG), but not in HTML.
+- Unlike HTML, CSS completely ignores unknown keywords.
+- The color keywords all represent plain, solid colors without transparency.
+- Several keywords are aliases for each other:
+
+  - `aqua` / `cyan`
+  - `fuchsia` / `magenta`
+  - `darkgray` / `darkgrey`
+  - `darkslategray` / `darkslategrey`
+  - `dimgray` / `dimgrey`
+  - `lightgray` / `lightgrey`
+  - `lightslategray` / `lightslategrey`
+  - `gray` / `grey`
+  - `slategray` / `slategrey`
+
+- Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
+
+## Examples
+
+### Using named colors
+
+#### HTML
+
+```html
+<div id="container">
+  <div id="one"></div>
+  <div id="two"></div>
+  <div id="three"></div>
+</div>
+```
+
+#### CSS
+
+```css
+#container {
+  display: flex;
+  justify-content: space-around;
+  background-color: darkslateblue;
+  padding: 20px;
+}
+
+#container>div {
+  height: 100px;
+  width: 100px;
+  margin: 3px;
+  border: 2px solid black;
+}
+
+#one {
+  background-color: red;
+}
+
+#two {
+  background-color: lavender;
+}
+
+#three {
+  background-color: transparent;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using named colors")}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these keywords belong to.
+- [`<color>`](/en-US/docs/Web/CSS/color_value): the data type of whose definition `<named-color>` is a constituent part.
