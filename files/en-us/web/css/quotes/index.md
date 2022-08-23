@@ -129,4 +129,3 @@ For most browsers, the default value of `quotes` is `auto` (Firefox 70+), or the
 
 - {{ Cssxref("contain") }}
 - {{ Cssxref("content") }}
-
