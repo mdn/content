@@ -521,7 +521,7 @@ function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw (new Error('The message'));
   } else {
-    doSomethingToGetAJavascriptError();
+    doSomethingToGetAJavaScriptError();
   }
 }
 

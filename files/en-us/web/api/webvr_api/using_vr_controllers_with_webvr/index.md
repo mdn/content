@@ -229,38 +229,27 @@ In the `displayPoseStats()` function, we grab all of the data we want to display
 ```js
 function displayPoseStats(pose) {
   const pos = pose.position;
-  const orient = pose.orientation;
-  const linVel = pose.linearVelocity;
-  const linAcc = pose.linearAcceleration;
-  const angVel = pose.angularVelocity;
-  const angAcc = pose.angularAcceleration;
 
-  if (pose.hasPosition) {
-    posStats.textContent = `Position: x ${pos[0].toFixed(3)}, y ${pos[1].toFixed(3)}, z ${pos[2].toFixed(3)}`;
-  } else {
-    posStats.textContent = 'Position not reported';
-  }
+  const formatCoords = ([x, y, z]) => `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
 
-  if (pose.hasOrientation) {
-    orientStats.textContent = `Orientation: x ${orient[0].toFixed(3)}, y ${orient[1].toFixed(3)}, z ${orient[2].toFixed(3)}`;
-  } else {
-    orientStats.textContent = 'Orientation not reported';
-  }
+  posStats.textContent = pose.hasPosition
+    ? `Position: ${formatCoords(pose.position)}`
+    : 'Position not reported';
 
-  linVelStats.textContent = `Linear velocity: x ${linVel[0].toFixed(3)}, y ${linVel[1].toFixed(3)}, z ${linVel[2].toFixed(3)}`;
-  angVelStats.textContent = `Angular velocity: x ${angVel[0].toFixed(3)}, y ${angVel[1].toFixed(3)}, z ${angVel[2].toFixed(3)}`;
+  orientStats.textContent = pose.hasOrientation
+    ? `Orientation: ${formatCoords(pose.orientation)}`
+    : 'Orientation not reported';
 
-  if (linAcc) {
-    linAccStats.textContent = `Linear acceleration: x ${linAcc[0].toFixed(3)}, y ${linAcc[1].toFixed(3)}, z ${linAcc[2].toFixed(3)}`;
-  } else {
-    linAccStats.textContent = 'Linear acceleration not reported';
-  }
+  linVelStats.textContent = `Linear velocity: ${formatCoords(pose.linearVelocity)}`;
+  angVelStats.textContent = `Angular velocity: ${formatCoords(pose.angularVelocity)}`;
 
-  if (angAcc) {
-    angAccStats.textContent = `Angular acceleration: x ${angAcc[0].toFixed(3)}, y ${angAcc[1].toFixed(3)}, z ${angAcc[2].toFixed(3)}`;
-  } else {
-    angAccStats.textContent = 'Angular acceleration not reported';
-  }
+  linAccStats.textContent = pose.linearAcceleration
+    ? `Linear acceleration: ${formatCoords(pose.linearAcceleration)}`
+    : 'Linear acceleration not reported';
+
+  angAccStats.textContent = pose.angularAcceleration
+    ? `Angular acceleration: ${formatCoords(pose.angularAcceleration)}`
+    : 'Angular acceleration not reported';
 }
 ```
 

@@ -58,7 +58,7 @@ for (const rule of rules) {
   - : The rule is a {{domxref("CSSViewportRule")}}.
 - `CSSRule.REGION_STYLE_RULE` (`16`)
   - : The rule is a {{domxref("CSSRegionStyleRule")}}.
-  
+
 Both `CSSRule.UNKNOWN_RULE` (`0`) and `CSSRule.CHARSET_RULE` (`2`) are deprecated and cannot be obtained any more
 
 ## Examples

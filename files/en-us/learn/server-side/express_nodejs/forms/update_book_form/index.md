@@ -158,7 +158,7 @@ exports.book_update_post = [
       if (err) {
         return next(err);
       }
-      
+
       // Successful: redirect to book detail page.
       res.redirect(thebook.url);
     });

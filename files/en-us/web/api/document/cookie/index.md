@@ -362,7 +362,7 @@ authenticated user's session. Common ways to steal cookies include using [social
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by
-preventing access to cookie value through Javascript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
+preventing access to cookie value through JavaScript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
 
 ## Notes
 

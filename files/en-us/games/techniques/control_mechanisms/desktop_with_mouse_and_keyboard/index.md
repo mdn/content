@@ -64,13 +64,13 @@ function draw() {
   } else if (leftPressed) {
     playerX -= 5;
   }
-  
+
   if (downPressed) {
     playerY += 5;
   } else if (upPressed) {
     playerY -= 5;
   }
-  
+
   ctx.drawImage(img, playerX, playerY);
   requestAnimationFrame(draw);
 }
