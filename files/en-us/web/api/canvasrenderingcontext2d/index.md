@@ -115,6 +115,19 @@ The following properties control how text is laid out.
 - {{domxref("CanvasRenderingContext2D.letterSpacing")}}
   - : Letter spacing. Default: `0px`.
 
+
+  ----
+- {{domxref("CanvasRenderingContext2D.fontKerning")}}
+  - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
+- {{domxref("CanvasRenderingContext2D.fontStretch")}}
+  - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}}
+  - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
+- {{domxref("CanvasRenderingContext2D.textRendering")}}
+  - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
+  - : Word spacing. Default value: `0px`
+
 ### Fill and stroke styles
 
 Fill styling is used for colors and styles inside shapes and stroke styling is used for the lines around shapes.

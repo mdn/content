@@ -40,7 +40,7 @@ The font alternative capitalization value, which is one of:
     When used in all uppercase titling sequences they can appear too strong.
     Titling capitals are designed specifically for this situation.
 
-The property can be used to get or set the font capitalization value value.
+The property can be used to get or set the font capitalization value.
 
 Note that there are accessibility concerns with some of these, which are outlined in the corresponding [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps#accessibility_concerns) topic.
 
