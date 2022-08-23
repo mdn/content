@@ -6,25 +6,32 @@ on:
 name: Update InterfaceData.json
   update:
     runs-on: ubuntu-latest
+
     steps:
+
     - name: Setup node.js
       uses: actions/setup-node@v3
+
     - name: Checkout content
       uses: actions/checkout@v3
       with:
         path: mdn-content
+
     - name: Checkout webref
       uses: actions/checkout@v3
       with:
         repository: w3c/webref
         path: webref
         ref: @webref/idl@latest
+
     - name: Extract data from webref
       working-directory: mdn-content
       run: |
         cd mdn-content
         node scripts/update-interface-data.mjs ../webref/
-    - uses: peter-evans/create-pull-request@v4
+
+    - name: Create pull request
+      uses: peter-evans/create-pull-request@v4
       with:
         path: mdn-content
         token: ${{ secrets.GITHUB_TOKEN }}
