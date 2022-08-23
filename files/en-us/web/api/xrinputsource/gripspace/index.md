@@ -6,7 +6,6 @@ tags:
   - API
   - AR
   - Augmented Reality
-  - Experimental
   - Property
   - Reference
   - VR

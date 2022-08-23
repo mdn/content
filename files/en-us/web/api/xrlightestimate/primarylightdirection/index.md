@@ -14,7 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRLightEstimate.primaryLightDirection
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`primaryLightDirection`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{domxref("DOMPointReadOnly")}} representing the direction to the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
 
