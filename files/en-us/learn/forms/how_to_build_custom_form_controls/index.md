@@ -433,7 +433,7 @@ In the code we are about to build, we will use the standard JavaScript and DOM A
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
-3. {{domxref("NodeList.forEach")}}
+3. {{domxref("NodeList.forEach()")}}
 4. {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
 ### Building event callbacks
