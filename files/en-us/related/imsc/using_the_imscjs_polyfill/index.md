@@ -190,7 +190,7 @@ for (let i = 0; i < timeEvents.length; i++) {
   } else {
     myCue = new Cue(timeEvents[i], timeEvents[i + 1], ""); 
   }
-  
+
   myCue.onenter = function () {
     clearSubFromScreen();
     const myIsd = imsc.generateISD(imscDoc, this.startTime);

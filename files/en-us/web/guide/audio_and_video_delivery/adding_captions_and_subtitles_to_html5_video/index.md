@@ -182,7 +182,7 @@ function createMenuItem(id, lang, label) {
     subtitleMenuButtons.forEach((button) => {
       button.setAttribute('data-state', 'inactive');
     });
-    
+
     // Find the language to activate
     const lang = button.getAttribute('lang');
     for (let i = 0; i < video.textTracks.length; i++) {
