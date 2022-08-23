@@ -67,28 +67,28 @@ function usePerformanceEntryMethods() {
   // Use getEntries() to iterate through the each entry
   performance.getEntries()
     .forEach((entry, i) => {
-      log(`Entry[${i}]`);
+      console.log(`Entry[${i}]`);
       checkPerformanceEntry(entry);
     });
     
   // Use getEntries(name, entryType) to get specific entries
   performance.getEntries({ name: "Begin", entryType: "mark" })
     .forEach((entry, i) => {
-      log(`Begin[${i}]`);
+      console.log(`Begin[${i}]`);
       checkPerformanceEntry(entry);
     });
 
   // Use getEntriesByType() to get all "mark" entries
   performance.getEntriesByType("mark")
     .forEach((entry, i) => {
-      log(`Mark only entry[${i}]:`);
+      console.log(`Mark only entry[${i}]:`);
       checkPerformanceEntry(entry);
     });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   performance.getEntriesByName("Begin", "mark")
     .forEach((entry, i) => {
-      log(`Mark and Begin entry[${i}]:`);
+      lconsole.og(`Mark and Begin entry[${i}]:`);
       checkPerformanceEntry(entry);
     });
 }
