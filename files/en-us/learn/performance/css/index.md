@@ -22,7 +22,7 @@ CSS can scope styles to particular conditions with media queries. Media queries 
 <!-- Loading and parsing print.css is not render-blocking  -->
 <link rel="stylesheet" href="print.css" media="print"> 
 
-<!-- Loading and parsing mobile.css is render-blocking on large screens -->
+<!-- Loading and parsing mobile.css is not render-blocking on large screens -->
 <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"> 
 ```
 
