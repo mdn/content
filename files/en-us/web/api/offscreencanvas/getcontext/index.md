@@ -39,7 +39,7 @@ getContext(contextType, contextAttributes)
       {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
       rendering context.
     - `webgl`
-      - : creates a
+      - : Creates a
       {{domxref("WebGLRenderingContext")}} object representing a three-dimensional
       rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
     - `webgl2`
