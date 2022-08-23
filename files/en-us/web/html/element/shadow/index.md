@@ -71,16 +71,14 @@ Here is a simple example of using the `<shadow>` element. It is an HTML file wit
 > **Note:** This is an experimental technology. For this code to work, the browser you display it in must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
 
 ```html
-<html>
+<html lang="en">
   <head></head>
   <body>
-
-  <!-- This <div> will hold the shadow roots. -->
-  <div>
-    <!-- This heading will not be displayed -->
-    <h4>My Original Heading</h4>
-  </div>
-
+    <!-- This <div> will hold the shadow roots. -->
+    <div>
+      <!-- This heading will not be displayed -->
+      <h4>My Original Heading</h4>
+    </div>
   <script>
     // Get the <div> above with its content
     const origContent = document.querySelector('div');

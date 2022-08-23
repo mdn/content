@@ -22,7 +22,7 @@ When a browser requests a resource from a (third party) server, that [cross-orig
 ## Examples
 
 ```html
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
