@@ -120,15 +120,15 @@ Boolean(""); // false
 Boolean(234); // true
 ```
 
-However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see below). For this reason, we sometimes speak of "[truthy](/en-US/docs/Glossary/Truthy)" and "[falsy](/en-US/docs/Glossary/Falsy)", meaning values that become `true` and `false`, respectively, when used in boolean contexts.
+However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see [Control structures](#control_structures). For this reason, we sometimes speak of "[truthy](/en-US/docs/Glossary/Truthy)" and "[falsy](/en-US/docs/Glossary/Falsy)", meaning values that become `true` and `false`, respectively, when used in boolean contexts.
 
-Boolean operations such as `&&` (logical _and_), `||` (logical _or_), and `!` (logical _not_) are supported; see below.
+Boolean operations such as `&&` (logical _and_), `||` (logical _or_), and `!` (logical _not_) are supported; see [Operators](#operators).
 
 The Symbol type is often used to create unique identifiers. Every symbol created with the [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) function is guaranteed to be unique. In addition, there are registered symbols, which are shared constants, and well-known symbols, which are utilized by the language as "protocols" for certain operations. You can read more about them in the [symbol reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 
 ## Variables
 
-New variables in JavaScript are declared using one of three keywords: [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
+Variables in JavaScript are declared using one of three keywords: [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
 `let` allows you to declare block-level variables. The declared variable is available from the _block_ it is enclosed in.
 
@@ -225,7 +225,7 @@ Adding an empty string to something is a useful way of converting it to a string
 
 The double-equals and triple-equals also have their inequality counterparts: `!=` and `!==`.
 
-JavaScript also has [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators). Notably, logical operators don't work with boolean values only — they work by the values "truthiness".
+JavaScript also has [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators). Notably, logical operators don't work with boolean values only — they work by the "truthiness" of the value.
 
 ```js
 const a = 0 && "Hello"; // "Hello" because 0 is "falsy"
@@ -354,13 +354,13 @@ try {
 }
 ```
 
-If an error is uncaught by any `try...catch` in the call stack, the program would exit.
+If an error is uncaught by any `try...catch` in the call stack, the program will exit.
 
 For a comprehensive list of control flow statements, see the [reference section](/en-US/docs/Web/JavaScript/Reference/Statements).
 
 ## Objects
 
-JavaScript objects can be thought of as simple collections of key-value pairs. As such, they are similar to:
+JavaScript objects can be thought of as collections of key-value pairs. As such, they are similar to:
 
 - Dictionaries in Python.
 - Hashes in Perl and Ruby.
@@ -368,7 +368,7 @@ JavaScript objects can be thought of as simple collections of key-value pairs. A
 - HashMaps in Java.
 - Associative arrays in PHP.
 
-JavaScript objects are hashes. Unlike statically typed languages, objects do not have fixed shapes — properties can be added, deleted, re-ordered, mutated, or dynamically queried at any time. Object keys are always [strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) — even array indices, which are canonically integers, are actually strings under the hood.
+JavaScript objects are hashes. Unlike objects in statically typed languages, objects in JavaScript do not have fixed shapes — properties can be added, deleted, re-ordered, mutated, or dynamically queried at any time. Object keys are always [strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) — even array indices, which are canonically integers, are actually strings under the hood.
 
 Objects are usually created using the literal syntax:
 
@@ -441,7 +441,7 @@ const a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
-JavaScript arrays are still objects — you can assign any properties to it, including arbitrary number indices. The only "magic" is that `length` will be automatically updated when you set a particular index.
+JavaScript arrays are still objects — you can assign any properties to them, including arbitrary number indices. The only "magic" is that `length` will be automatically updated when you set a particular index.
 
 ```js
 const a = ["dog", "cat", "hen"];
@@ -503,7 +503,7 @@ function add(x, y) {
 
 A JavaScript function can take 0 or more parameters. The function body can contain as many statements as you like and can declare its own variables which are local to that function. The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement can be used to return a value at any time, terminating the function. If no return statement is used (or an empty return with no value), JavaScript returns `undefined`.
 
-Functions can be called with more or fewer parameters than it specifies. If you call a function without passing the parameters it expects, they will be set to `undefined`. If you pass more parameters than it expects, the function will ignore those.
+Functions can be called with more or fewer parameters than it specifies. If you call a function without passing the parameters it expects, they will be set to `undefined`. If you pass more parameters than it expects, the function will ignore the extra parameters.
 
 ```js
 add(); // NaN
@@ -533,7 +533,7 @@ It is important to note that wherever the rest parameter operator is placed in a
 
 If a function accepts a list of arguments and you already hold an array, you can use the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
-We mentioned JavaScript doesn't have named parameters. It's possible, though, to implement that using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Objects can be conveniently packed and unpacked.
+We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Objects can be conveniently packed and unpacked.
 
 ```js
 // Note the { } braces: this is destructuring an object
@@ -704,7 +704,7 @@ For a detailed guide on various class features, you can read the [guide page](/e
 
 ## Asynchronous programming
 
-JavaScript are single-threaded by nature.
+JavaScript is single-threaded by nature.
 
 <!-- TODO -->
 
