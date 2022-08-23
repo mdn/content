@@ -54,7 +54,7 @@ function printPerformanceEntries() {
     });
 
   // Use getEntries(name, entryType) to get specific entries
-  performance.getEntries({name : "Measure1", entryType: "measure"})
+  performance.getEntries({ name: "Measure1", entryType: "measure" })
     .forEach((entry, i) => {
       log(`Begin and Measure [${i}]`);
       printPerfEntry(entry);
