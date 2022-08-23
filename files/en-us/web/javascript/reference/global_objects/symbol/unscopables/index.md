@@ -21,7 +21,7 @@ The `@@unscopables` property (accessed via `Symbol.unscopables`) can be defined 
 
 Setting a property of the `@@unscopables` object to `true` (or any [truthy](/en-US/docs/Glossary/Truthy) value) will make the corresponding property of the `with` scope object _unscopable_ and therefore won't be introduced to the `with` body scope. Setting a property to `false` (or any [falsy](/en-US/docs/Glossary/falsy) value) will make it _scopable_ and thus appear as lexical scope variables.
 
-When deciding whether `x` is unscopable, the entire prototype chain of the `@@unscopables` property is looked up for a property called `x`. This means if you declared `@@unscopables` as a plain object, `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) would become unscopable as well, which may cause backward incompatibility for legacy code assuming those properties are normally scoped (see [an example below](#avoid_using_a_non-null-prototype_object_as_unscopabes)). You are advised to make your custom `@@unscopables` property have `null` as its prototype, like [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) does.
+When deciding whether `x` is unscopable, the entire prototype chain of the `@@unscopables` property is looked up for a property called `x`. This means if you declared `@@unscopables` as a plain object, `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) would become unscopable as well, which may cause backward incompatibility for legacy code assuming those properties are normally scoped (see [an example below](#avoid_using_a_non-null-prototype_object_as_unscopables)). You are advised to make your custom `@@unscopables` property have `null` as its prototype, like [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) does.
 
 This protocol is also utilized by DOM APIs, such as [`Element.append()`](/en-US/docs/Web/API/Element/append).
 
@@ -80,7 +80,7 @@ with (obj) {
 }
 ```
 
-### Avoid using a non-null-prototype object as @@unscopabes
+### Avoid using a non-null-prototype object as @@unscopables
 
 Declaring `@@unscopables` as a plain object without eliminating its prototype may cause subtle bugs. Consider the following code working before `@@unscopables`:
 
