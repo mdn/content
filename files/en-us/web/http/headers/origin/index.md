@@ -29,7 +29,7 @@ For example, if a user agent needs to request resources included in a page, or f
 
 ## Syntax
 
-```
+```http
 Origin: null
 Origin: <scheme>://<hostname>
 Origin: <scheme>://<hostname>:<port>

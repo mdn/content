@@ -38,7 +38,7 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
 
 ## Syntax
 
-```
+```http
 Set-Cookie: <cookie-name>=<cookie-value>
 Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
 Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<number>
@@ -156,7 +156,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 **Session cookies** are removed when the client shuts down. Cookies are session cookies if they do not specify the `Expires` or `Max-Age` attribute.
 
-```
+```http
 Set-Cookie: sessionId=38afes7a8
 ```
 
@@ -164,11 +164,11 @@ Set-Cookie: sessionId=38afes7a8
 
 **Permanent cookies** are removed at a specific date (`Expires`) or after a specific length of time (`Max-Age`) and not when the client is closed.
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
-```
+```http
 Set-Cookie: id=a3fWa; Max-Age=2592000
 ```
 
@@ -178,7 +178,7 @@ A cookie for a domain that does not include the server that set it [should be re
 
 The following cookie will be rejected if set by a server hosted on `originalcompany.com`:
 
-```
+```http
 Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
 ```
 
@@ -186,7 +186,7 @@ A cookie for a subdomain of the serving domain will be rejected.
 
 The following cookie will be rejected if set by a server hosted on `example.com`:
 
-```
+```http
 Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 ```
 
@@ -198,7 +198,7 @@ In addition, cookies with the `__Host-` prefix must have a path of `/` (meaning 
 
 > **Warning:** For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.
 
-```
+```http
 // Both accepted when from a secure origin (HTTPS)
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
 Set-Cookie: __Host-ID=123; Secure; Path=/

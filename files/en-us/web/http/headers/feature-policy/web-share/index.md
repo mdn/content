@@ -14,7 +14,7 @@ The HTTP {{HTTPHeader('Feature-Policy')}} header `web-share` directive controls 
 
 ## Syntax
 
-```
+```http
 Feature-Policy: web-share <allowlist>;
 ```
 

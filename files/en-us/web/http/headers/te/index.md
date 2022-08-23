@@ -38,7 +38,7 @@ trailer fields in a chunked transfer coding using the "trailers" value.
 
 ## Syntax
 
-```
+```http
 TE: compress
 TE: deflate
 TE: gzip

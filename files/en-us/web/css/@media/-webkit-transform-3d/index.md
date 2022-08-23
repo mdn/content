@@ -50,7 +50,6 @@ A better method for checking for browser support is using a feature query:
     transform-style: preserve-3d;
   }
 }
-
 ```
 
 ## Specifications

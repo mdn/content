@@ -28,7 +28,7 @@ The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header prevents a do
 
 ## Syntax
 
-```
+```http
 Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 ```
 
@@ -46,7 +46,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 
 You can only access certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers, if your document has a COEP header with the value `require-corp` value set.
 
-```
+```http
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```

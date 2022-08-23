@@ -18,7 +18,7 @@ The HTTP **`Link`** entity-header field provides a means for serializing one or 
 
 ## Syntax
 
-```
+```http
 Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
@@ -57,7 +57,7 @@ Link: <https://example.com/苗条>; rel="preconnect"
 
 You can specify multiple links separated by commas, for example:
 
-```
+```http
 Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
 ```
 

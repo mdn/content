@@ -34,7 +34,7 @@ The `Proxy-Authenticate` header is sent along with a {{HTTPStatus("407")}}
 
 ## Syntax
 
-```
+```http
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
@@ -49,7 +49,7 @@ Proxy-Authenticate: <type> realm=<realm>
 
 ## Examples
 
-```
+```http
 Proxy-Authenticate: Basic
 
 Proxy-Authenticate: Basic realm="Access to the internal site"

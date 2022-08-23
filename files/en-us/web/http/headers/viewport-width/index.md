@@ -45,7 +45,7 @@ If the `Viewport-Width` header appears more than once in a message the last occu
 
 ## Syntax
 
-```
+```http
 Viewport-Width: <number>
 ```
 
@@ -58,13 +58,13 @@ Viewport-Width: <number>
 
 A server must first opt in to receive the `Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Viewport-Width`.
 
-```
+```http
 Accept-CH: Viewport-Width
 ```
 
 Then on subsequent requests the client might send `Viewport-Width` header back:
 
-```
+```http
 Viewport-Width: 320
 ```
 

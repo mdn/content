@@ -22,7 +22,7 @@ When this policy is enabled and the permission is denied:
 
 ## Syntax
 
-```
+```http
 Feature-Policy: speaker-selection <allowlist>;
 ```
 

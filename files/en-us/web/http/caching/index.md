@@ -287,7 +287,7 @@ Cache-Control: no-cache
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
 
-```
+```http
 Cache-Control: max-age=0, must-revalidate
 ```
 

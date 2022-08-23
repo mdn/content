@@ -32,7 +32,7 @@ Servers are encouraged to compress data as much as possible, and should use cont
 
 ## Syntax
 
-```
+```http
 Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
@@ -71,14 +71,14 @@ On the client side, you can advertise a list of compression schemes that will be
 along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for
 negotiating content encoding.
 
-```
+```http
 Accept-Encoding: gzip, deflate
 ```
 
 The server responds with the scheme used, indicated by the
 `Content-Encoding` response header.
 
-```
+```http
 Content-Encoding: gzip
 ```
 

@@ -45,7 +45,7 @@ There are 3 main things to keep in mind:
 
 **Second**, it's also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
 
-```plain
+```http
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 

@@ -33,7 +33,7 @@ _resume_ an interrupted download instead of trying to restart the download.
 
 ## Syntax
 
-```
+```http
 Accept-Ranges: <range-unit>
 Accept-Ranges: none
 ```
@@ -51,7 +51,7 @@ Accept-Ranges: none
 
 ## Examples
 
-```
+```http
 Accept-Ranges: bytes
 ```
 

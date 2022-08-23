@@ -16,7 +16,7 @@ When used, those functions only accept non-spoofable, typed values created by Tr
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: require-trusted-types-for 'script';
 ```
 

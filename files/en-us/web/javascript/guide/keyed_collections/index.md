@@ -127,7 +127,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ### Array and Set compared
 
-Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new `Set` object, however, has some advantages:
+Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The `Set` object, however, has some advantages:
 
 - Deleting Array elements by value (`arr.splice(arr.indexOf(val), 1)`) is very slow.
 - `Set` objects let you delete elements by their value. With an array, you would have to `splice` based on an element's index.

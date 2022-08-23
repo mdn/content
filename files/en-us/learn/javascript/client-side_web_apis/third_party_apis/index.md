@@ -95,7 +95,7 @@ Third party APIs have a slightly different permissions system — they tend to u
 
 You'll find a line similar to the following in the Mapquest API example:
 
-```
+```js
 L.mapquest.key = 'YOUR-API-KEY-HERE';
 ```
 

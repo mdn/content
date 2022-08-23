@@ -30,7 +30,7 @@ given resource.
 
 ## Syntax
 
-```
+```http
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 
@@ -39,7 +39,7 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 The response header below will cause compatible user agents to disallow cross-origin
 no-cors requests:
 
-```
+```http
 Cross-Origin-Resource-Policy: same-origin
 ```
 
