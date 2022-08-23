@@ -125,7 +125,7 @@ Generally you will need to check the relevant specifications for these (keys for
   - : A case-insensitive flag indicating that the previous request from the client was rejected because the `nonce` used is too old (stale).
     If this is `true` the request can be re-tried using the same username/password encrypted using the new `nonce`.
     If it is any other value then the username/password are invalid and must be re-requested from the user.
-- `algorithm`   {{optional_inline}}
+- `algorithm` {{optional_inline}}
   - : Algorithm used to produce the digest.
     Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
     Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
