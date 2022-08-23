@@ -631,7 +631,7 @@ There are a number of tags, such as `<bold>`, that can be used. However, if the 
 
   - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The *active text* is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the *active text* in the payload is *previous text* . Any text beyond the *active text* is *future text* . This enables karaoke style captions.
 
-  ##### Example 14 - Karaoke style text
+  Example 14 - Karaoke style text
 
   ```plain
   1
@@ -653,7 +653,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Style the contained text using a CSS class.
 
-  ##### Example 15 - Class tag
+  Example 15 - Class tag
 
   ```html
   <c.classname>text</c>
@@ -663,7 +663,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Italicize the contained text.
 
-  ##### Example 16 - Italics tag
+  Example 16 - Italics tag
 
   ```html
   <i>text</i>
@@ -673,7 +673,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Bold the contained text.
 
-  ##### Example 17 - Bold tag
+  Example 17 - Bold tag
 
   ```html
   <b>text</b>
@@ -683,7 +683,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Underline the contained text.
 
-  ##### Example 18 - Underline tag
+  Example 18 - Underline tag
 
   ```html
   <u>text</u>
@@ -693,7 +693,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-  ##### Example 19 - Ruby tag
+  Example 19 - Ruby tag
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -703,7 +703,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-  ##### Example 20 - Ruby text tag
+  Example 20 - Ruby text tag
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -713,7 +713,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Similar to class tag, also used to style the contained text using CSS.
 
-  ##### Example 21 - Voice tag
+  Example 21 - Voice tag
 
   ```html
   <v Bob>text</v>
