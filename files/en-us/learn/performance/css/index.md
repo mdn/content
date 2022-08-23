@@ -16,7 +16,7 @@ Painting an unstyled page, and then repainting it once styles are parsed would b
 CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
 
 ```html
-<!-- Loading and parsing styless.css is render-blocking -->
+<!-- Loading and parsing styles.css is render-blocking -->
 <link rel="stylesheet" href="styles.css">
 
 <!-- Loading and parsing print.css is render-blocking  -->
