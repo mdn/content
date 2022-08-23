@@ -126,7 +126,7 @@ There is an issue because the floating element is laid out beyond the bottom of 
 
 ### Adding an additional floating element
 
-To the previous example, if we insert another image at the bottom of the first article, a large portion of the DOM tree is re-laid out or repainted, and this interferes with the layout of the second article:
+In the previous example, if we insert another image at the bottom of the first article, a large portion of the DOM tree is re-laid out or repainted, and this interferes with the layout of the second article:
 
 ```html
 <h1>My blog</h1>
@@ -194,7 +194,7 @@ This also means that the first image no longer floats down to the second article
 ### Using the style value for containment
 
 Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
-For CSS counters, the `counter-increment` and `counter-set` properties are scoped to the element as if it's at the root of the document.
+For CSS counters, the `counter-increment` and `counter-set` properties are scoped to the element as if the element is at the root of the document.
 The example below takes a look at how counters work when style containment is applied:
 
 ```html
@@ -225,7 +225,7 @@ h1::before {
 
 Without containment, the counter would increment from 1 to 4 for each heading.
 Style containment causes the `counter-increment` to be scoped to the element's subtree and the counter begins again at 1.
-CSS quotes are affected similarly in that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element:
+CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element:
 
 ```html
 <span class="open-quote">
