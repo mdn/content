@@ -5,8 +5,11 @@ on:
     branches:
       - main
     paths:
-      - '*.md'
+      - .markdownlint.json
+      - yarn.lock
+      - '**/*.md'
       - .github/workflows/markdown-lint.yml
+      - .github/workflows/markdownlint-problem-matcher.json
 
 
 jobs:
@@ -22,6 +25,11 @@ jobs:
           node-version: "16"
           cache: yarn
 
+      - name: Install all yarn packages
+        run: |
+          yarn --frozen-lockfile
+
       - name: Lint markdown files
         run: |
-          npx markdownlint-cli '*.md' -i LICENSE.md -i CODE_OF_CONDUCT.md
+          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
+          yarn lint:md
