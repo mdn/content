@@ -144,12 +144,12 @@ function PerformanceObservers() {
     });
 
     // Print entries named "Begin" with type "mark"
-    list.getEntriesByName("Begin", "mark").forEach((entry) =>  {
+    list.getEntriesByName("Begin", "mark").forEach((entry) => {
       printPerfEntry(entry);
     });
 
     // Print entries with type "mark"
-    list.getEntriesByType("mark").forEach((entry) =>  {
+    list.getEntriesByType("mark").forEach((entry) => {
       printPerfEntry(entry);
     });
   });
