@@ -71,19 +71,12 @@ A custom control, such as a custom element button, can use `:focus-visible` to s
   margin: 10px;
 }
 
-.custom-button:focus {
-  /* Provide a fallback style for browsers
-     that don't support :focus-visible */
-  outline: 2px solid red;
-  background: lightgrey;
-}
-
-@supports selector(:focus-visible) {
+@supports not selector(:focus-visible) {
   .custom-button:focus {
-    /* Remove the focus indicator on mouse-focus for browsers
-       that do support :focus-visible */
-    outline: none;
-    background: transparent;
+    /* Provide a fallback style for browsers
+       that don't support :focus-visible */
+    outline: 2px solid red;
+    background: lightgrey;
   }
 }
 
