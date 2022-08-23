@@ -19,17 +19,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v28.0.0
+        with:
+          files: |
+            **/*.md
+          
       - name: Setup Node.js environment
+        if: steps.changed-files.outputs.any_changed == 'true'
         uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: yarn
 
-      - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
-
       - name: Lint markdown files
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
+          npm install --location=global markdownlint-cli
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn lint:md
+          markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
