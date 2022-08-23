@@ -57,7 +57,7 @@ _This interface doesn't inherit any method._
 
     ```html
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       <head><title>Demo</title>
       <body>
         <div id="container"></div>
