@@ -102,7 +102,7 @@ However, styles properties that are set directly on the element's {{domxref("HTM
 document.querySelector('div').style.display = 'none';
 ```
 
-These types of manipulations can be prevented by disallowing Javascript via the {{CSP("script-src")}} CSP directive.
+These types of manipulations can be prevented by disallowing JavaScript via the {{CSP("script-src")}} CSP directive.
 
 ### Unsafe inline styles
 
