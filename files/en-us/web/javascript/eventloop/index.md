@@ -91,15 +91,15 @@ The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arg
 Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
 
 ```js
-const seconds = new Date().getTime()/1000;
+const seconds = new Date().getTime() / 1000;
 
 setTimeout(() => {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
-  console.log(`Ran after ${new Date().getTime()/1000 - seconds} seconds`);
+  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
 }, 500)
 
 while (true) {
-  if (new Date().getTime()/1000 - seconds >= 2) {
+  if (new Date().getTime() / 1000 - seconds >= 2) {
     console.log("Good, looped for 2 seconds");
     break;
   }
