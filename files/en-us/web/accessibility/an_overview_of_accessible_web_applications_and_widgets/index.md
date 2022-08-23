@@ -87,11 +87,11 @@ Dynamic presentational changes include using CSS to change the appearance of con
 ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
 
 - `aria-checked`
-  - : indicates the state of a checkbox or radio button
+  - : Indicates the state of a checkbox or radio button.
 - `aria-disabled`
-  - : indicates that an element is visible, but not editable or otherwise operable
+  - : Indicates that an element is visible but not editable or otherwise operable.
 - `aria-grabbed`
-  - : indicates the 'grabbed' state of an object in a drag-and-drop operation
+  - : Indicates the 'grabbed' state of an object in a drag-and-drop operation.
 
 (For a full list of ARIA states, consult the [ARIA list of states and properties](https://www.w3.org/TR/wai-aria-1.1/#introstates).)
 
