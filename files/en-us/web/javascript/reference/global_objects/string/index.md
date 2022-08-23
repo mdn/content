@@ -113,10 +113,12 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const strPrim = 'foo';
-const strObj = new String(strPrim);
+const strPrim = 'foo'; // A literal is a string primitive
+const strPrim2 = String(strPrim); // String without new returns a string primitive
+const strObj = new String(strPrim); // String with new returns a string wrapper object.
 
 console.log(typeof strPrim); // Logs "string"
+console.log(typeof strPrim2); // Logs "string"
 console.log(typeof strObj);  // Logs "object"
 ```
 
