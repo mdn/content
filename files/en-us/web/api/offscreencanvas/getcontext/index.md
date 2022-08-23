@@ -48,7 +48,7 @@ getContext(contextType, contextAttributes)
       rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0).
       {{experimental_inline}}
     - `bitmaprenderer`
-      - : creates a
+      - : Creates a
       {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
       replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
 
