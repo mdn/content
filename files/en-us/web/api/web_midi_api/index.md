@@ -17,6 +17,8 @@ The Web MIDI API connects to and interacts with Musical Instrument Digital Inter
 
 The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.
 
+> **Note:** In Firefox the Web MIDI API is an _add-on-gated feature_. This means your website or app needs a site permission add-on for users to download, install and be able to access this API's functionality. [Instructions on how to set up a site permission add-on can be found here](https://extensionworkshop.com/documentation/publish/site-permission-add-on/).
+
 ## Interfaces
 
 - {{domxref("MIDIInputMap")}}
@@ -40,7 +42,7 @@ The interfaces deal with the practical aspects of sending and receiving MIDI mes
 
 ### Gaining access to the MIDI port
 
-The {{domxref("navigator.requestMIDIAccess()")}} method returns a promise that resolves to a {{domxref("MIDIAccess")}}, which can then be used to access a MIDI device.
+The {{domxref("navigator.requestMIDIAccess()")}} method returns a promise that resolves to a {{domxref("MIDIAccess")}} object, which can then be used to access a MIDI device.
 The method must be called in a secure context.
 
 ```js
@@ -86,14 +88,14 @@ This example prints incoming MIDI messages on a single port to the console.
 ```js
 function onMIDIMessage(event) {
   let str = `MIDI message received at timestamp ${event.timeStamp}[${event.data.length} bytes]: `;
-  for (let i=0; i<event.data.length; i++) {
-    str += `0x${event.data[i].toString(16)} `;
+  for (const character of event.data) {
+    str += `0x${character.toString(16)} `;
   }
   console.log(str);
 }
 
 function startLoggingMIDIInput(midiAccess, indexOfPort) {
-  midiAccess.inputs.forEach(function(entry) {entry.onmidimessage = onMIDIMessage;});
+  midiAccess.inputs.forEach((entry) => {entry.onmidimessage = onMIDIMessage;});
 }
 ```
 

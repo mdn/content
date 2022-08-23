@@ -6,7 +6,6 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---

@@ -127,7 +127,7 @@ If you want to look at all the special characters that can be used in regular ex
         <p>
           <a
             href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences"
-            >Groups and ranges</a
+            >Groups and backreferences</a
           >
         </p>
       </td>
@@ -461,16 +461,14 @@ const form = document.querySelector('#form');
 const input = document.querySelector('#phone');
 const output = document.querySelector('#output');
 
-const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
+const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
 
 function testInfo(phoneInput) {
   const ok = re.exec(phoneInput.value);
 
-  if (!ok) {
-    output.textContent = `${phoneInput.value} isn't a phone number with area code!`;
-  } else {
-    output.textContent = `Thanks, your phone number is ${ok[0]}`;
-  }
+  output.textContent = ok
+    ? `Thanks, your phone number is ${ok[0]}`
+    : `${phoneInput.value} isn't a phone number with area code!`;
 }
 
 form.addEventListener('submit', (event) => {

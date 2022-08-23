@@ -20,12 +20,12 @@ The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Constructor
 
-- {{domxref("CSSMathMin.CSSMathMin", "CSSMathMin()")}}
+- {{domxref("CSSMathMin.CSSMathMin", "CSSMathMin()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathMin` object.
 
 ## Properties
 
-- {{domxref('CSSMathMin.values')}} {{ReadOnlyInline}}
+- {{domxref('CSSMathMin.values')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Methods

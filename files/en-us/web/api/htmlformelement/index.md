@@ -72,13 +72,10 @@ Listen to these events using `addEventListener()`, or by assigning an event list
 
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
   - : The `formdata` event fires after the entry list representing the form's data is constructed.
-    Also available via the {{domxref("GlobalEventHandlers/onformdata", "onformdata")}} property.
 - {{domxref("HTMLFormElement/reset_event", "reset")}}
   - : The `reset` event fires when a form is reset.
-    Also available via the {{domxref("GlobalEventHandlers/onreset", "onreset")}} property.
 - {{domxref("HTMLFormElement/submit_event", "submit")}}
   - : The `submit` event fires when a form is submitted.
-    Also available via the {{domxref("GlobalEventHandlers/onsubmit", "onsubmit")}} property.
 
 ## Usage notes
 
@@ -164,7 +161,7 @@ Extract information from a `<form>` element and set some of its attributes:
     // The form properties we're interested in
     const properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    const info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
+    const info = properties.map((property) => `${property}: ${f[property]}`).join("\n");
 
     // Set the form's <textarea> to display the form's properties
     document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work
@@ -180,8 +177,8 @@ Extract information from a `<form>` element and set some of its attributes:
 Submit a `<form>` into a new window:
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <meta charset="utf-8">
 <title>Example new-window form submission</title>

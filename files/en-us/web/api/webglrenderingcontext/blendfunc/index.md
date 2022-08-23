@@ -179,7 +179,7 @@ To get the current blend function, query the `BLEND_SRC_RGB`,
 ```js
 gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_COLOR, gl.DST_COLOR);
-gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
+gl.getParameter(gl.BLEND_SRC_RGB) === gl.SRC_COLOR;
 // true
 ```
 

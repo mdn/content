@@ -355,7 +355,7 @@ We still have to implement functionality to allow us to edit existing to-dos. We
     }
 
     function onSave() {
-      update({ name: name })                // updates todo name
+      update({ name })                      // updates todo name
       editing = false                       // and exit editing mode
     }
 
@@ -455,7 +455,7 @@ The `<input>`'s `value` property will be bound to the `name` variable, and the b
 
 We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
 
-```js
+```
 on:keydown={(e) => e.key === 'Escape' && onCancel()}
 ```
 

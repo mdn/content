@@ -27,11 +27,11 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 ## Properties
 
-- {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
 
 ## Events
@@ -76,11 +76,11 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 The code also handles exceptions thrown from the {{domxref("fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then((response) => {
       if (response) {
         console.log('Found response in cache:', response);
 
@@ -88,11 +88,11 @@ self.addEventListener('fetch', function(event) {
       }
       console.log('No response found in cache. About to fetch from network…');
 
-      return fetch(event.request).then(function(response) {
+      return fetch(event.request).then((response) => {
         console.log('Response from network is:', response);
 
         return response;
-      }, function(error) {
+      }, (error) => {
         console.error('Fetching failed:', error);
 
         throw error;

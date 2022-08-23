@@ -60,7 +60,7 @@ async function getIdentityAssertion(pc) {
   try {
     const identity = await pc.peerIdentity;
     return identity;
-  } catch(err) {
+  } catch (err) {
     console.log("Error identifying remote peer: ", err);
     return null;
   }

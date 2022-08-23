@@ -48,8 +48,8 @@ How are you?
 ```
 
 ```js
-let video = document.getElementById("video");
-video.onplay = function () {
+const video = document.getElementById("video");
+video.onplay = () => {
   console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
 }
 ```

@@ -21,10 +21,11 @@ XSLT provides the `xsl:param` element, which is a child of the `xsl:stylesheet` 
 
 // JavaScript:
 
-var sortVal = xsltProcessor.getParameter(null, "myOrder");
+const sortVal = xsltProcessor.getParameter(null, "myOrder");
 
-if (sortVal === "" || sortVal === "descending")
+if (sortVal === "" || sortVal === "descending") {
   xsltProcessor.setParameter(null, "myOrder", "ascending");
-else
+} else {
   xsltProcessor.setParameter(null, "myOrder", "descending");
+}
 ```

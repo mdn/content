@@ -10,6 +10,7 @@ tags:
   - Reference
   - payment
   - topLevelOrigin
+  - Experimental
 browser-compat: api.PaymentRequestEvent.topOrigin
 ---
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}

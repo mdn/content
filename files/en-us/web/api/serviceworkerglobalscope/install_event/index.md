@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: install event'
+title: "ServiceWorkerGlobalScope: install event"
 slug: Web/API/ServiceWorkerGlobalScope/install_event
 page-type: web-api-event
 tags:
@@ -42,30 +42,32 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener('install', (event) => {
   event.waitUntil(
-   caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ])
-   })
-   );
+    caches
+      .open('v1')
+      .then((cache) =>
+        cache.addAll([
+          '/sw-test/',
+          '/sw-test/index.html',
+          '/sw-test/style.css',
+          '/sw-test/app.js',
+          '/sw-test/image-list.js',
+          '/sw-test/star-wars-logo.jpg',
+          '/sw-test/gallery/',
+          '/sw-test/gallery/bountyHunters.jpg',
+          '/sw-test/gallery/myLittleVader.jpg',
+          '/sw-test/gallery/snowTroopers.jpg',
+        ])
+      )
+  );
 });
 ```
 
 You can also set up the event handler using the `oninstall` property:
 
 ```js
-globalScope.oninstall = function(event) {
+globalScope.oninstall = (event) => {
   // ...
 };
 ```

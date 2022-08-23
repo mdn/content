@@ -309,10 +309,10 @@ Now that we have a better understanding of origin type and cascade layer precede
   <tr><td>inline <code>style</code></td></tr>
   <tr><td rowspan="3">6</td><td>user - unlayered styles</td><td rowspan="3"><code>!important</td></tr>
   <tr><td>user - last declared layer</td></tr>
-  <tr><td>user - first declared styles</td></tr>
+  <tr><td>user - first declared layer</td></tr>
   <tr><td rowspan="3">7</td><td>user-agent  - unlayered styles</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>user-agent - last declared layer</td></tr>
-  <tr><td>user-agent - first declared styles</td></tr>
+  <tr><td>user-agent - first declared layer</td></tr>
   <tr><td>8</td><td>transitions</td><td></td></tr>
 </tbody>
 </table>
@@ -377,4 +377,21 @@ After your content has finished altering styles, it may find itself in a situati
 ## See also
 
 - [A very simple introduction to the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- {{CSS_Key_Concepts}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

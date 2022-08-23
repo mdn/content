@@ -151,12 +151,12 @@ and that the value passed to the callback is their value when visited:
 const array = [0,1,,,,5,6];
 
 // Shows all indexes, not just those with assigned values
-array.find(function(value, index) {
+array.find((value, index) => {
   console.log('Visited index ', index, ' with value ', value);
 });
 
 // Shows all indexes, including deleted
-array.find(function(value, index) {
+array.find((value, index) => {
   // Delete element 5 on first iteration
   if (index === 0) {
     console.log('Deleting array[5] with value ', array[5]);

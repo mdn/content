@@ -19,15 +19,15 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 
 ## Properties
 
-- {{domxref("SpeechSynthesisVoice.default")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisVoice.default")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is the default voice for the current app language (`true`), or not (`false`.)
-- {{domxref("SpeechSynthesisVoice.lang")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisVoice.lang")}} {{ReadOnlyInline}}
   - : Returns a BCP 47 language tag indicating the language of the voice.
-- {{domxref("SpeechSynthesisVoice.localService")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisVoice.localService")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is supplied by a local speech synthesizer service (`true`), or a remote speech synthesizer service (`false`.)
-- {{domxref("SpeechSynthesisVoice.name")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisVoice.name")}} {{ReadOnlyInline}}
   - : Returns a human-readable name that represents the voice.
-- {{domxref("SpeechSynthesisVoice.voiceURI")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisVoice.voiceURI")}} {{ReadOnlyInline}}
   - : Returns the type of URI and location of the speech synthesis service for this voice.
 
 ## Examples
@@ -43,7 +43,7 @@ function populateVoiceList() {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-    if(voices[i].default) {
+    if (voices[i].default) {
       option.textContent += ' — DEFAULT';
     }
 
@@ -58,13 +58,13 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for (let i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
@@ -72,7 +72,7 @@ inputForm.onsubmit = function(event) {
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 
-  utterThis.onpause = function(event) {
+  utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
     console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
   }

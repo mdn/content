@@ -137,10 +137,11 @@ function logMessage(message) {
 }
 
 textarea.addEventListener('keydown', (e) => {
-  if (!e.repeat)
+  if (!e.repeat) {
     logMessage(`Key "${e.key}" pressed [event: keydown]`);
-  else
+  } else {
     logMessage(`Key "${e.key}" repeating [event: keydown]`);
+  }
 });
 
 textarea.addEventListener('beforeinput', (e) => {
@@ -196,7 +197,7 @@ As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}}
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 
 ```js
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }

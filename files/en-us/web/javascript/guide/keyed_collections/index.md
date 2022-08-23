@@ -17,7 +17,7 @@ This chapter introduces collections of data which are indexed by a key; `Map` an
 
 ### Map object
 
-ECMAScript 2015 introduces a new data structure to map values to values. A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order.
+A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order.
 
 The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of `[key, value]` for each iteration.
 
@@ -127,7 +127,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ### Array and Set compared
 
-Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new `Set` object, however, has some advantages:
+Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The `Set` object, however, has some advantages:
 
 - Deleting Array elements by value (`arr.splice(arr.indexOf(val), 1)`) is very slow.
 - `Set` objects let you delete elements by their value. With an array, you would have to `splice` based on an element's index.

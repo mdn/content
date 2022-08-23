@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Method
@@ -15,7 +14,7 @@ tags:
   - abort
 browser-compat: api.SourceBuffer.abort
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`abort()`** method of the {{domxref("SourceBuffer")}}
 interface aborts the current segment and resets the segment parser.
@@ -53,7 +52,7 @@ to stop the current append (or whatever) operation occurring on a sourcebuffer, 
 immediately start performing operations on it again. For example, consider this code:
 
 ```js
-sourceBuffer.addEventListener('updateend', function (ev) {
+sourceBuffer.addEventListener('updateend', (ev) => {
   // ...
 });
 

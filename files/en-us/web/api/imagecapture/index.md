@@ -25,7 +25,7 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
 
 ## Properties
 
-- {{domxref("ImageCapture.track")}} {{readonlyinline}}
+- {{domxref("ImageCapture.track")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("MediaStreamTrack")}} passed to the constructor.
 
 ## Methods
@@ -93,7 +93,7 @@ function drawCanvas(canvas, img) {
       x, y, img.width * ratio, img.height * ratio);
 }
 
-document.querySelector('video').addEventListener('play', function() {
+document.querySelector('video').addEventListener('play', () => {
   document.querySelector('#grabFrameButton').disabled = false;
   document.querySelector('#takePhotoButton').disabled = false;
 });

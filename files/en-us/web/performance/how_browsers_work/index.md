@@ -67,8 +67,8 @@ After the 8 round trips, the browser is finally able to make the request.
 Once we have an established connection to a web server, the browser sends an initial [HTTP `GET` request](/en-US/docs/Web/HTTP/Methods) on behalf of the user, which for websites is most often an HTML file. Once the server receives the request, it will reply with relevant response headers and the contents of the HTML.
 
 ```html
-<!doctype HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
  <head>
   <meta charset="UTF-8"/>
   <title>My simple page</title>
@@ -201,7 +201,7 @@ As the page continues to load assets, reflows can happen (recall our example ima
 
 ## Interactivity
 
-Once the main thread is done painting the page, you would think we would be "all set." That isn't necessarily the case. If the load includes JavaScript, that was correctly deferred, and only executed after the [`onload`](/en-US/docs/Web/API/GlobalEventHandlers/onload) event fires, the main thread might be busy, and not available for scrolling, touch, and other interactions.
+Once the main thread is done painting the page, you would think we would be "all set." That isn't necessarily the case. If the load includes JavaScript, that was correctly deferred, and only executed after the [`onload`](/en-US/docs/Web/API/Window/load_event) event fires, the main thread might be busy, and not available for scrolling, touch, and other interactions.
 
 {{glossary('Time to Interactive')}} (TTI) is the measurement of how long it took from that first request which led to the DNS lookup and SSL connection to when the page is interactive — interactive being the point in time after the {{glossary('First Contentful Paint')}} when the page responds to user interactions within 50ms. If the main thread is occupied parsing, compiling, and executing JavaScript, it is not available and therefore not able to respond to user interactions in a timely (less than 50ms) fashion.
 

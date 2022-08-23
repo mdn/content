@@ -54,8 +54,9 @@ This example (see our [instantiate-streaming.html](https://github.com/mdn/webass
 Add the following to your script, below the first block:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then((obj) => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
@@ -71,20 +72,19 @@ These methods don't directly access the byte code, so require an extra step to t
 The equivalent code would look like this:
 
 ```js
-fetch('simple.wasm').then((response) =>
-  response.arrayBuffer()
-).then((bytes) =>
-  WebAssembly.instantiate(bytes, importObject)
-).then((results) => {
-  results.instance.exports.exported_func();
-});
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    results.instance.exports.exported_func();
+  });
 ```
 
 ### Viewing wasm in developer tools
 
 In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the "wasm://" entry.
 
-![](wasm-debug.png)
+![Developer tools debugger panel highlighting a module.](wasm-debug.png)
 
 In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
 
@@ -146,8 +146,9 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
 
     ```js
-    WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-    .then((results) => {
+    WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+      js: { mem: memory },
+    }).then((results) => {
       // add code here
     });
     ```
@@ -198,8 +199,7 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
 
     ```js
-    WebAssembly.instantiateStreaming(fetch('table.wasm'))
-    .then(function(results) {
+    WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
       // add code here
     });
     ```
@@ -208,8 +208,8 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
     ```js
     const tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
+    console.log(tbl.get(0)()); // 13
+    console.log(tbl.get(1)()); // 42
     ```
 
 This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
@@ -223,7 +223,7 @@ WebAssembly has the ability to create global variable instances, accessible from
 To create a WebAssembly global instance from inside your JavaScript, you use the {{jsxref("WebAssembly.Global()")}} constructor, which looks like this:
 
 ```js
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 ```
 
 You can see that this takes two parameters:
@@ -240,28 +240,38 @@ So how do we use this? In the following example we define a global as a mutable 
 The value of the global is then changed, first to `42` using the `Global.value` property, and then to 43 using the `incGlobal()` function exported out of the `global.wasm` module (this adds 1 to whatever value is given to it and then returns the new value).
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-    output.innerHTML += `Testing ${msg}: `;
-    if (got !== expected)
-        output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-    else
-        output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  output.innerHTML += `Testing ${msg}: `;
+  if (got !== expected) {
+    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  } else {
+    output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  }
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "getting initial value from wasm",
+      instance.exports.getGlobal(),
+      0
+    );
     global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "getting JS-updated value from wasm",
+      instance.exports.getGlobal(),
+      42
+    );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});
+  }
+);
 ```
 
 > **Note:** You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); see also the [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).

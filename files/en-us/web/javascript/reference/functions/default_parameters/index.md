@@ -59,7 +59,7 @@ multiply(5, 2)  // 10
 multiply(5)     // 5
 ```
 
-With default parameters in ES2015, checks in the function body are no longer necessary.
+With default parameters, checks in the function body are no longer necessary.
 Now, you can assign `1` as the default value for `b` in
 the function head:
 
@@ -131,7 +131,7 @@ callSomething()  // 2
 Parameters defined earlier (to the left) are available to later default parameters:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
+function greet(name, greeting, message = `${greeting} ${name}`) {
   return [name, greeting, message]
 }
 

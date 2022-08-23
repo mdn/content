@@ -43,7 +43,7 @@ const request = new Request('/myEndpoint', {
   body: JSON.stringify(obj)
  });
 
-request.json().then(function(data) {
+request.json().then((data) => {
   // do something with the data sent in the request
 });
 ```

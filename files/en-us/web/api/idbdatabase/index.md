@@ -27,11 +27,11 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 
 ## Properties
 
-- {{domxref("IDBDatabase.name")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.name")}} {{ReadOnlyInline}}
   - : A string that contains the name of the connected database.
-- {{domxref("IDBDatabase.version")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.version")}} {{ReadOnlyInline}}
   - : A 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
-- {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.objectStoreNames")}} {{ReadOnlyInline}}
   - : A {{ domxref("DOMStringList") }} that contains a list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
 ## Methods
@@ -98,7 +98,7 @@ DBOpenRequest.onsuccess = (event) => {
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

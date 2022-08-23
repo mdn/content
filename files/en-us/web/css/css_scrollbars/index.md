@@ -14,9 +14,9 @@ browser-compat:
 
 **CSS Scrollbars** standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
 
-## Basic Example
+## Basic example
 
-In this example we have chosen to use a thin scrollbar, with a green track and purple thumb.
+In this example, we have chosen to use a thin scrollbar with a green track and purple thumb.
 
 ```css
 .scroller {
@@ -46,7 +46,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## Reference
 
-### CSS Properties
+### Properties
 
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}

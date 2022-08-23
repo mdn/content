@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - AudioParam
-  - Experimental
   - Method
   - Reference
   - Web Audio API

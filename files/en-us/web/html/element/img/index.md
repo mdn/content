@@ -323,6 +323,14 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
+### Identifying SVG as an image
+
+Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+
+```html
+ <img src="mdn.svg" alt="MDN logo" role="img">
+```
+
 ### The title attribute
 
 The {{htmlattrxref("title")}} attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.

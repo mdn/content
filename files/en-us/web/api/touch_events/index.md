@@ -249,7 +249,7 @@ function ongoingTouchIndexById(idToFind) {
   for (let i = 0; i < ongoingTouches.length; i++) {
     const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
@@ -264,8 +264,6 @@ function log(msg) {
   const container = document.getElementById('log');
   container.textContent = `${msg} \n${container.textContent}`;
 }
-
-
 ```
 
 ### Result

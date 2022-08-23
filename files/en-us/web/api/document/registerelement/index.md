@@ -9,9 +9,10 @@ tags:
   - Method
   - Reference
   - Web Components
+  - Non-standard
 browser-compat: api.Document.registerElement
 ---
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}{{Deprecated_header}}{{Non-standard_header}}
 
 > **Warning:** `document.registerElement()` is deprecated in
 > favor of {{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}.

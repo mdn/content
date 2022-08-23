@@ -21,6 +21,8 @@ The **`Promise`** constructor is primarily used to wrap functions that do not al
 new Promise(executor)
 ```
 
+> **Note:** `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `executor`
@@ -52,7 +54,7 @@ To take advantage of the readability improvement and language features offered b
 The `executor` is custom code that ties an outcome in a callback to a promise. You, the programmer, write the `executor`. Its signature is expected to be:
 
 ```js
-function (resolutionFunc, rejectionFunc) {
+function executor(resolutionFunc, rejectionFunc) {
   // Typically, some asynchronous operation that accepts a callback,
   // like the `readFile` function above
 }

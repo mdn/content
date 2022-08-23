@@ -77,14 +77,21 @@ function example() {
         : condition3 ? value3
         : value4;
 }
+```
 
-// Equivalent to:
+This is equivalent to the following [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) chain.
 
+```js
 function example() {
-  if (condition1) { return value1; }
-  else if (condition2) { return value2; }
-  else if (condition3) { return value3; }
-  else { return value4; }
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
 }
 ```
 

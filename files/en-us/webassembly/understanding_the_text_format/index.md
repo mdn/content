@@ -151,7 +151,7 @@ There are a lot more things that can be put inside function bodies, but we will 
 
 ### Calling the function
 
-Our function won't do very much on its own — now we need to call it. How do we do that? Like in an ES2015 module, wasm functions must be explicitly exported by an `export` statement inside the module.
+Our function won't do very much on its own — now we need to call it. How do we do that? Like in an ES module, wasm functions must be explicitly exported by an `export` statement inside the module.
 
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
@@ -252,7 +252,7 @@ For the above, we need an object (let's call it `importObject`) such that `impor
 This would look like the following:
 
 ```js
-var importObject = {
+const importObject = {
   console: {
     log(arg) {
       console.log(arg);
@@ -315,8 +315,8 @@ On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/Tex
 
 ```js
 function consoleLogString(offset, length) {
-  var bytes = new Uint8Array(memory.buffer, offset, length);
-  var string = new TextDecoder('utf8').decode(bytes);
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder('utf8').decode(bytes);
   console.log(string);
 }
 ```
@@ -351,9 +351,9 @@ Our final wasm module looks like this:
 Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+const memory = new WebAssembly.Memory({ initial: 1 });
 
-var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
+const importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
   .then((obj) => {
@@ -405,13 +405,13 @@ So how do we place wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function() {
+function () {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
 
   // function sections:
-  var f1 = ... /* some imported WebAssembly function */
-  var f2 = ... /* some imported WebAssembly function */
+  const f1 = ... /* some imported WebAssembly function */
+  const f2 = ... /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
@@ -540,7 +540,7 @@ These work as follows:
 After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in JavaScript via the following code:
 
 ```js
-var importObj = {
+const importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
     table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
@@ -550,7 +550,7 @@ var importObj = {
 Promise.all([
   WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
   WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
+]).then((results) => {
   console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```
@@ -633,7 +633,7 @@ As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/Web
 Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
 ```
 
 the memory's [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:

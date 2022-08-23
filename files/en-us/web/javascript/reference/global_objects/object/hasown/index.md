@@ -29,8 +29,7 @@ hasOwn(instance, prop)
 - `instance`
   - : The JavaScript object instance to test.
 - `prop`
-  - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
-    the property to test.
+  - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
 
 ### Return value
 
@@ -59,7 +58,7 @@ The following code shows how to determine whether the `example` object contains 
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
+Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
 
 example.prop = 'exists';
 Object.hasOwn(example, 'prop');   // true - 'prop' has been defined

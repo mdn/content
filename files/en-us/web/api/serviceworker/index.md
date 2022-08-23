@@ -26,9 +26,9 @@ The `ServiceWorker` interface is dispatched a set of lifecycle events — `insta
 
 _The `ServiceWorker` interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
+- {{domxref("ServiceWorker.scriptURL")}} {{ReadOnlyInline}}
   - : Returns the `ServiceWorker` serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the `ServiceWorker`.
-- {{domxref("ServiceWorker.state")}} {{readonlyinline}}
+- {{domxref("ServiceWorker.state")}} {{ReadOnlyInline}}
   - : Returns the state of the service worker. It returns one of the following values: `parsed`, `installing`, `installed,` `activating`, `activated`, or `redundant`.
 
 ## Methods
@@ -37,7 +37,7 @@ _The `ServiceWorker` interface inherits methods from its parent, {{domxref("Even
 
 ## Events
 
-- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{readonlyinline}}
+- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{ReadOnlyInline}}
   - : Fires anytime the {{domxref("ServiceWorker.state")}} changes.
 
 ## Examples
@@ -48,7 +48,7 @@ This code snippet is from the [service worker registration-events sample](https:
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
-    }).then(function (registration) {
+    }).then((registration) => {
         let serviceWorker;
         if (registration.installing) {
             serviceWorker = registration.installing;
@@ -62,11 +62,11 @@ if ('serviceWorker' in navigator) {
         }
         if (serviceWorker) {
             // logState(serviceWorker.state);
-            serviceWorker.addEventListener('statechange', function (e) {
+            serviceWorker.addEventListener('statechange', (e) => {
                 // logState(e.target.state);
             });
         }
-    }).catch (function (error) {
+    }).catch((error) => {
         // Something went wrong during registration. The service-worker.js file
         // might be unavailable or contain a syntax error.
     });

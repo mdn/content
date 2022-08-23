@@ -28,7 +28,7 @@ HTML drag-and-drop uses the {{domxref("Event","DOM event model")}} and _{{domxre
 
 During drag operations, several event types are fired, and some events might fire many times, such as the {{domxref('Document/drag_event', 'drag')}} and {{domxref('Document/dragover_event', 'dragover')}} events.
 
-Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associated [global event handler](/en-US/docs/Web/API/DragEvent#globaleventhandlers):
+Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associated event handler:
 
 | Event | Fires when... |
 | ----- | ------------- |
@@ -130,7 +130,7 @@ function dragstart_handler(ev) {
 
 Learn more about drag feedback images in:
 
-- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image "Setting the Drag Feedback Image")
+- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image)
 
 ### Define the drag _effect_
 
@@ -154,7 +154,7 @@ function dragstart_handler(ev) {
 
 For more details, see:
 
-- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects "Drag Effects")
+- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects)
 
 ### Define a _drop zone_
 
@@ -228,7 +228,7 @@ This event fires regardless of whether the drag completed or was canceled. The {
 
 For more information about handling the end of a drag operation, see:
 
-- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_a_drag "Finishing a Drag")
+- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_a_drag)
 
 ## Interoperability
 
@@ -251,5 +251,5 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop "Drag and Drop interoperability data from CanIUse")
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)

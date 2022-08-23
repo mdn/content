@@ -125,7 +125,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -140,6 +140,17 @@ Events have three functions:
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
+
+    **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these codes:
+    - `NS_ERROR_MALWARE_URI` indicating a malware URI.
+    - `NS_ERROR_PHISHING_URI` indicating a phishing URI.
+    - `NS_ERROR_TRACKING_URI` indicating a tracking URI.
+    - `NS_ERROR_UNWANTED_URI` indicating a unwanted URI.
+    - `NS_ERROR_BLOCKED_URI` indicating a blocked URI.
+    - `NS_ERROR_HARMFUL_URI` indicating a harmful URI.
+    - `NS_ERROR_FINGERPRINTING` indicating a fingerprinting URI.
+    - `NS_ERROR_CRYPTOMINING_URI` indicating a cryptomining URI.
+    - `NS_ERROR_SOCIALTRACKING_URI` indicating a social tracking URI.
 
 ## Browser compatibility
 

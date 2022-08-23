@@ -6,7 +6,6 @@ tags:
   - Canvas
   - CanvasCaptureMediaStream
   - DOM
-  - Experimental
   - Frame Capture
   - Media
   - Method
@@ -14,7 +13,7 @@ tags:
   - requestFrame
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} method
 **`requestFrame()`** requests that a frame be captured from

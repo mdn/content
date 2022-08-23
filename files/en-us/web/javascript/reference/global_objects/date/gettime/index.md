@@ -88,7 +88,7 @@ for (let i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
+console.log(`Operation took ${end.getTime() - start.getTime()} msec`);
 ```
 
 ## Specifications

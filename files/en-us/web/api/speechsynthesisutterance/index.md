@@ -100,7 +100,7 @@ if ('onvoiceschanged' in synth) {
   loadVoices();
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);

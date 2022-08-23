@@ -537,11 +537,11 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
@@ -594,7 +594,7 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
+window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
    await new Promise((fn_resolve) => {
       const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
@@ -611,7 +611,7 @@ window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
-};
+});
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

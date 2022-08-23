@@ -7,10 +7,9 @@ tags:
   - Prioritized Task Scheduling API
   - Reference
   - Landing
-  - Experimental
 browser-compat: api.Scheduler
 ---
-{{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{SeeCompatTable}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{AvailableInWorkers}}
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
 
@@ -50,7 +49,7 @@ scheduler
 The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
 
 ```js
-(async function () {
+(async () => {
   try {
     const result = await scheduler.postTask(() => 'Task executing');
     console.log(result);

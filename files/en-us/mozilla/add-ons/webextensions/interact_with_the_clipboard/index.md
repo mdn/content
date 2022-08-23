@@ -46,7 +46,7 @@ For page scripts, the `"clipboard-write"` permission needs to be requested using
 
 ```js
 navigator.permissions.query({name: "clipboard-write"}).then((result) => {
-  if (result.state == "granted" || result.state == "prompt") {
+  if (result.state === "granted" || result.state === "prompt") {
     /* write to the clipboard now */
   }
 });
@@ -58,9 +58,9 @@ This function takes a string and writes it to the clipboard:
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
+  navigator.clipboard.writeText(newClip).then(() => {
     /* clipboard successfully set */
-  }, function() {
+  }, () => {
     /* clipboard write failed */
   });
 }

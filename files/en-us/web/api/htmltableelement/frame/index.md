@@ -22,7 +22,7 @@ drawn.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `void`
   - : No sides. This is the default.

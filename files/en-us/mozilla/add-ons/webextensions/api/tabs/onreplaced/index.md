@@ -58,8 +58,8 @@ Listen for replacement events, and log the associated info:
 
 ```js
 function handleReplaced(addedTabId, removedTabId) {
-  console.log("New tab: " + addedTabId);
-  console.log("Old tab: " + removedTabId);
+  console.log(`New tab: ${addedTabId}`);
+  console.log(`Old tab: ${removedTabId}`);
 }
 
 browser.tabs.onReplaced.addListener(handleReplaced);

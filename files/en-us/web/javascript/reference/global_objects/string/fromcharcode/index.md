@@ -22,7 +22,7 @@ created from the specified sequence of UTF-16 code units.
 ```js
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
-String.fromCharCode(num1, num2, ..., numN)
+String.fromCharCode(num1, num2, /* …, */ numN)
 ```
 
 ### Parameters
@@ -68,7 +68,7 @@ While there is a mathematical relationship between the supplementary code point 
 (e.g., `0xD83C` and `0xDF03`), it does require an extra step to
 either calculate or look up the surrogate pair values every time a supplementary code
 point is to be used. For this reason, it's more convenient to use
-{{jsxref("String.fromCodePoint()")}} (part of the ES2015 standard), which allows for
+{{jsxref("String.fromCodePoint()")}}, which allows for
 returning supplementary characters based on their actual code point value. For example,
 `String.fromCodePoint(0x1F303)` returns code point `U+1F303`
 "Night with Stars".

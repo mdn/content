@@ -143,7 +143,7 @@ Many JavaScript frameworks and libraries add inline styles. Using `!important` w
 ```
 
 ```css
-p[style*="purple"] { color: rebeccapurple; }
+p[style*="purple"] { color: rebeccapurple !important; }
 ```
 
 Make sure to include a comment with every inclusion of the important flag so code maintainers understand why a CSS anti-pattern was used.
@@ -372,8 +372,24 @@ A few things to remember about specificity:
 
 ## See also
 
-- {{CSS_Key_Concepts}}
 - ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)
 - [SpeciFISHity](https://specifishity.com)
 - [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

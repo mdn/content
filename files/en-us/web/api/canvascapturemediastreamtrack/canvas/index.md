@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - Canvas
   - CanvasCaptureMediaStreamTrack
-  - Experimental
   - Frame Capture
   - Media Capture
   - Property

@@ -125,7 +125,7 @@ function onUpdated() {
 }
 
 function onError() {
-  console.log("error updating item:" + browser.runtime.lastError);
+  console.log("error updating item:", browser.runtime.lastError);
 }
 
 browser.menus.create({
@@ -134,8 +134,8 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "do-not-click-me") {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "do-not-click-me") {
     let updating = browser.menus.update(info.menuItemId, {
       title: "Do not click this button again"
     });

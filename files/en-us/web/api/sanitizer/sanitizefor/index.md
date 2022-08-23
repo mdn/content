@@ -6,9 +6,10 @@ tags:
   - HTML Sanitizer API
   - Method
   - sanitizeFor
+  - Experimental
 browser-compat: api.Sanitizer.sanitizeFor
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`sanitizeFor()`** method of the {{domxref("Sanitizer")}} interface is used to parse and sanitize a string of HTML for insertion into the DOM at some later point.
 

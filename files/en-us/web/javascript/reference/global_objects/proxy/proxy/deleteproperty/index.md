@@ -69,29 +69,25 @@ The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 ```js
 const p = new Proxy({}, {
   deleteProperty(target, prop) {
-    if (prop in target){
-      delete target[prop]
-      console.log('property removed: ' + prop)
-      return true
+    if (!(prop in target)) {
+      console.log(`property not found: ${prop}`);
+      return false;
     }
-    else {
-      console.log('property not found: ' + prop)
-      return false
-    }
-  }
-})
+    delete target[prop];
+    console.log(`property removed: ${prop}`);
+    return true;
+  },
+});
 
-let result
+p.a = 10;
+console.log('a' in p); // true
 
-p.a = 10
-console.log('a' in p)  // true
+const result1 = delete p.a; // "property removed: a"
+console.log(result1); // true
+console.log('a' in p); // false
 
-result = delete p.a    // "property removed: a"
-console.log(result)    // true
-console.log('a' in p)  // false
-
-result = delete p.a    // "property not found: a"
-console.log(result)    // false
+const result2 = delete p.a; // "property not found: a"
+console.log(result2); // false
 ```
 
 ## Specifications
@@ -105,6 +101,6 @@ console.log(result)    // false
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/delete", "delete")}} operator
 - {{jsxref("Reflect.deleteProperty()")}}

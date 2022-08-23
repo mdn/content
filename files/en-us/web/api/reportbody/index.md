@@ -8,7 +8,7 @@ tags:
   - Reference
   - Experimental
   - ReportBody
-spec-urls: https://w3c.github.io/reporting/#reportbody
+browser-compat: api.ReportBody
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -32,13 +32,12 @@ An instance of `ReportBody` is returned as the value of {{domxref("Report.body")
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports. The {{domxref("InterventionReportBody")}} interface inherits from `ReportBody`.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   console.log(firstReport.type); // intervention
 }, options);
 ```
@@ -49,4 +48,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

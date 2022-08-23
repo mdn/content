@@ -45,13 +45,13 @@ function readDirectory(directory) {
   let dirReader = directory.createReader();
   let entries = [];
 
-  let getEntries = function() {
-    dirReader.readEntries(function(results) {
+  let getEntries = () => {
+    dirReader.readEntries((results) => {
       if (results.length) {
         entries = entries.concat(toArray(results));
         getEntries();
       }
-    }, function(error) {
+    }, (error) => {
       /* handle error — error is a FileError object */
     });
   };

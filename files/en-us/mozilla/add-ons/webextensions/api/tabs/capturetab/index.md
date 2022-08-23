@@ -51,7 +51,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });

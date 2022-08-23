@@ -100,12 +100,12 @@ if (XR) {
   XR.requestSession("inline").then((xrSession) => {
     xrSession.requestReferenceSpace("local").then((xrReferenceSpace) => {
       xrSession.requestAnimationFrame((time, xrFrame) => {
-        let viewer = xrFrame.getViewerPose(xrReferenceSpace);
+        const viewer = xrFrame.getViewerPose(xrReferenceSpace);
 
         gl.bindFramebuffer(xrWebGLLayer.framebuffer);
 
-        for (xrView of viewer.views) {
-          let xrViewport = xrWebGLLayer.getViewport(xrView);
+        for (const xrView of viewer.views) {
+          const xrViewport = xrWebGLLayer.getViewport(xrView);
           gl.viewport(xrViewport.x, xrViewport.y,
                       xrViewport.width, xrViewport.height);
         }

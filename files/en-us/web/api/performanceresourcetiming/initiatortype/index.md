@@ -39,17 +39,18 @@ initiated the performance event, as specified above.
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     print_initiatorType(p[i]);
   }
 }
 function print_initiatorType(perfEntry) {
   // Print this performance entry object's initiatorType value
   const value = "initiatorType" in perfEntry;
-  if (value)
+  if (value) {
     console.log(`… initiatorType = ${perfEntry.initiatorType}`);
-  else
+  } else {
     console.log("… initiatorType = NOT supported");
+  }
 }
 ```
 

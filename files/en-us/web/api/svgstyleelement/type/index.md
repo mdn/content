@@ -14,7 +14,7 @@ browser-compat: api.SVGStyleElement.type
 {{APIRef("SVG")}} {{Deprecated_Header}}
 
 The **`SVGStyleElement.type`** property returns the type of the current style.
-The value mirrors the [SVG `<style>` element's `type` attribute](/en-US/docs/Web/SVG/Element/style#type).
+The value reflects the associated SVG `<style>` element's [`type`](/en-US/docs/Web/SVG/Element/style#type) attribute.
 
 Authors should not use this property or rely on the value.
 
@@ -26,7 +26,6 @@ The permitted values are an empty string or a case-insensitive match for "text/c
 
 SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read-only attribute.
 This restriction was removed in SVG 2.
-
 
 ## Specifications
 

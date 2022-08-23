@@ -40,11 +40,11 @@ A {{domxref("TransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("TransitionEvent.propertyName")}} {{readonlyInline}}
+- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
   - : A string containing the name CSS property associated with the transition.
-- {{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}
+- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : A `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
-- {{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}
+- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
   - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
@@ -59,7 +59,7 @@ transition.addEventListener('transitionend', () => {
 });
 ```
 
-The same, but using the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}}:
+The same, but using `ontransitionend`:
 
 ```js
 const transition = document.querySelector('.transition');
@@ -100,19 +100,19 @@ To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-
 const message = document.querySelector('.message');
 const el = document.querySelector('.transition');
 
-el.addEventListener('transitionrun', function() {
+el.addEventListener('transitionrun', () => {
   message.textContent = 'transitionrun fired';
 });
 
-el.addEventListener('transitionstart', function() {
+el.addEventListener('transitionstart', () => {
   message.textContent = 'transitionstart fired';
 });
 
-el.addEventListener('transitioncancel', function() {
+el.addEventListener('transitioncancel', () => {
   message.textContent = 'transitioncancel fired';
 });
 
-el.addEventListener('transitionend', function() {
+el.addEventListener('transitionend', () => {
   message.textContent = 'transitionend fired';
 });
 ```

@@ -62,11 +62,11 @@ appends two elements to it. The `total` variable contains the new length of
 the array.
 
 ```js
-let sports = ['soccer', 'baseball']
-let total = sports.push('football', 'swimming')
+const sports = ['soccer', 'baseball'];
+const total = sports.push('football', 'swimming');
 
-console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total)   // 4
+console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+console.log(total); // 4
 ```
 
 ### Merging two arrays
@@ -75,13 +75,13 @@ This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}
 second array into the first one.
 
 ```js
-let vegetables = ['parsnip', 'potato']
-let moreVegs = ['celery', 'beetroot']
+const vegetables = ['parsnip', 'potato'];
+const moreVegs = ['celery', 'beetroot'];
 
 // Merge the second array into the first one
 vegetables.push(...moreVegs);
 
-console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
+console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
 Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.
@@ -99,20 +99,20 @@ an array—and it just works, thanks to the way JavaScript allows us to establis
 execution context in any way we want.
 
 ```js
-let obj = {
-    length: 0,
+const obj = {
+  length: 0,
 
-    addElem(elem) {
-        // obj.length is automatically incremented
-        // every time an element is added.
-        [].push.call(this, elem)
-    }
-}
+  addElem(elem) {
+    // obj.length is automatically incremented
+    // every time an element is added.
+    [].push.call(this, elem);
+  },
+};
 
 // Let's add some empty objects just to illustrate.
-obj.addElem({})
-obj.addElem({})
-console.log(obj.length)
+obj.addElem({});
+obj.addElem({});
+console.log(obj.length);
 // → 2
 ```
 

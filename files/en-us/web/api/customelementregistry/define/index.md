@@ -100,15 +100,8 @@ class PopUpInfo extends HTMLElement {
     info.textContent = text;
 
     // Insert icon
-    let imgUrl;
-    if(this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
-    } else {
-      imgUrl = 'img/default.png';
-    }
-
     const img = document.createElement('img');
-    img.src = imgUrl;
+    img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
     icon.appendChild(img);
 
     // Create some CSS to apply to the shadow dom
@@ -195,7 +188,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);
@@ -225,7 +218,6 @@ class PopUpInfo extends HTMLElement {
     // this will cause an error to be thrown when the element is defined.
   }
 }
-
 ```
 
 ## Specifications

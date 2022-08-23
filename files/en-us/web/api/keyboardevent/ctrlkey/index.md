@@ -19,7 +19,7 @@ boolean value that indicates if the <kbd>control</kbd> key was pressed
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
@@ -28,7 +28,7 @@ A boolean value
 <head>
 <title>ctrlKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

@@ -43,7 +43,7 @@ Let's revisit the simple [HTML document we covered in the previous article](/en-
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
@@ -172,7 +172,7 @@ For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Face
 <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
 <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+and HTML Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
 ```
 

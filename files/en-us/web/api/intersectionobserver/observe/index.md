@@ -52,12 +52,11 @@ None ({{jsxref("undefined")}}).
 // Register IntersectionObserver
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    // Add 'active' class if observation target is inside viewport
     if (entry.intersectionRatio > 0) {
+      // Add 'active' class if observation target is inside viewport
       entry.target.classList.add('active');
-    }
-    // Remove 'active' class otherwise
-    else {
+    } else {
+      // Remove 'active' class otherwise
       entry.target.classList.remove('active');
     }
   })

@@ -35,7 +35,7 @@ forEach(callbackFn, thisArg)
 // Inline callback function
 forEach(function(currentValue) { /* … */ })
 forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array){ /* … */ })
+forEach(function(currentValue, index, array) { /* … */ })
 forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
@@ -53,7 +53,7 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
       - : The KeyboardLayoutMap that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference
+  - : Value to use as **`this`** (i.e., the reference
     `Object`) when executing `callback`.
 
 ### Return value

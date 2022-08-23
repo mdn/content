@@ -12,7 +12,7 @@ tags:
   - getConstraints
 browser-compat: api.MediaStreamTrack.getConstraints
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`getConstraints()`** method of
 the {{domxref("MediaStreamTrack")}} interface returns a

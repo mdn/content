@@ -7,7 +7,6 @@ tags:
   - CSS
   - CSS Properties and Values API
   - CSSPropertyRule
-  - Experimental
   - Houdini
   - Property
   - Reference

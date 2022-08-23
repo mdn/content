@@ -10,6 +10,7 @@ tags:
   - Reference
   - payment
   - respondWith()
+  - Experimental
 browser-compat: api.PaymentRequestEvent.respondWith
 ---
 {{APIRef("Payment Request API")}}{{SeeCompatTable}}

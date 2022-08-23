@@ -149,7 +149,7 @@ For a document with a single stylesheet in which the following three rules are d
 
 ```css
 body { background-color: darkblue; }
-p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
+p { font-family: Arial; font-size: 10pt; margin-left: .125in; }
 #lumpy { display: none; }
 ```
 
@@ -319,7 +319,7 @@ function showEventProperties(e) {
   const tbody = document.createElement('tbody');
   table.appendChild(tbody);
 
-  for (let p in event) {
+  for (const p in event) {
     row = tbody.insertRow(-1);
     row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);
@@ -330,7 +330,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = function(event){
+window.onload = (event) => {
   showEventProperties(event);
 }
 </script>

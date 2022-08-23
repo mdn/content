@@ -11,7 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaStream
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream`** interface represents a stream of media content. A stream consists of several **tracks**, such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.
 
@@ -30,9 +30,9 @@ Some user agents subclass this interface to provide more precise information or 
 
 _This interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("MediaStream.active")}} {{readonlyinline}}
+- {{domxref("MediaStream.active")}} {{ReadOnlyInline}}
   - : A Boolean value that returns `true` if the `MediaStream` is active, or `false` otherwise.
-- {{domxref("MediaStream.id")}} {{readonlyInline}}
+- {{domxref("MediaStream.id")}} {{ReadOnlyInline}}
   - : A string containing a 36-character universally unique identifier ({{Glossary("UUID")}}) for the object.
 
 ## Methods

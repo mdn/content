@@ -52,12 +52,12 @@ const obj = {
 };
 
 // Non-standard and deprecated way
-obj.__lookupSetter__('foo')
-// (function(value) { this.bar = value; })
+obj.__lookupSetter__('foo');
+// function foo(value)
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, 'foo').set;
-// (function(value) { this.bar = value; })
+// function foo(value)
 ```
 
 ## Specifications

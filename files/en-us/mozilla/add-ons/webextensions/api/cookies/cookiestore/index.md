@@ -40,20 +40,19 @@ In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} m
 
 ```js
 function logStores(cookieStores) {
-  for (store of cookieStores) {
+  for (const store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
-let getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
+browser.cookies.getAllCookieStores().then(logStores);
 ```
 
 The following code snippet gets all cookie stores and then logs the total number of stores and how many of those stores are incognito.
 
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
-  let incognitoStores = stores.map((store) => store.incognito);
+  const incognitoStores = stores.map((store) => store.incognito);
   console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
 });
 ```

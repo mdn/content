@@ -30,18 +30,18 @@ Either way, you get the same kind of wrapper for the underlying function.  From 
 Let's look at an example to clear things up (you can find this on GitHub as [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); see it [running live also](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), and check out the wasm [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)):
 
 ```js
-var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
+const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then((obj) => {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
-  otherTable.set(0,tbl.get(0));
-  otherTable.set(1,tbl.get(1));
-  console.log(otherTable.get(0)());
-  console.log(otherTable.get(1)());
-});
+  .then((obj) => {
+    const tbl = obj.instance.exports.tbl;
+    console.log(tbl.get(0)());  // 13
+    console.log(tbl.get(1)());  // 42
+    otherTable.set(0,tbl.get(0));
+    otherTable.set(1,tbl.get(1));
+    console.log(otherTable.get(0)());
+    console.log(otherTable.get(1)());
+  });
 ```
 
 Here we create a table (`otherTable`) from JavaScript using the {{jsxref("WebAssembly.Table")}} constructor, then we load table.wasm into our page using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.
@@ -57,7 +57,7 @@ In the previous example, the return value of each [`Table.prototype.get()`](/en-
 It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a [WebAssembly-supporting browser](/en-US/docs/WebAssembly#browser_compatibility), and run the following lines in your console:
 
 ```js
-var testFunc = otherTable.get(0);
+const testFunc = otherTable.get(0);
 typeof testFunc;
 ```
 

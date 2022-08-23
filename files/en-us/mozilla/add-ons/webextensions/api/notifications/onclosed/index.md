@@ -56,8 +56,8 @@ Events have three functions:
 In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClosed")}} event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.
 
 ```js
-browser.notifications.onClosed.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' has closed.');
+browser.notifications.onClosed.addListener((notificationId) => {
+  console.log(`Notification ${notificationId} has closed.`);
 });
 ```
 

@@ -54,7 +54,7 @@ You may also add JavaScript code between `<script>` tags rather than providing a
 
 ```html
 <script>
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
   console.log('This function is executed once the page is fully loaded');
 });
 </script>

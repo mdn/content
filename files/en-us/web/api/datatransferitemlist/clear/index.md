@@ -13,6 +13,8 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList.clear
 ---
+{{APIRef("HTML Drag and Drop API")}}
+
 The {{domxref("DataTransferItemList")}} method
 **`clear()`** removes all {{domxref("DataTransferItem")}}
 objects from the drag data items list, leaving the list empty.
@@ -87,17 +89,17 @@ function drop_handler(ev) {
   for (let i = 0; i < data.length; i++) {
     if ((data[i].kind === 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
     } else if ((data[i].kind === 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
     } else if ((data[i].kind === 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
     }
@@ -135,5 +137,3 @@ function dragend_handler(ev) {
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("HTML Drag and Drop API")}}

@@ -60,7 +60,7 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
   const p = document.createElement("p");
   p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
   document.getElementById("output").appendChild(p);
@@ -168,7 +168,7 @@ refresh();
 Finally, the `addEventListener()` method is used to start listening for {{domxref("Element/keydown_event", "keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // Do nothing if event already handled
   }

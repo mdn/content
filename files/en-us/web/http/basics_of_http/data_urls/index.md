@@ -19,7 +19,7 @@ browser-compat: http.data-url
 
 Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
 
-```html
+```plain
 data:[<mediatype>][;base64],<data>
 ```
 
@@ -68,7 +68,7 @@ base64 a.txt>b.txt
 
 On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
-```bash
+```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
 # outputs to console: aGVsbG8=
 ```

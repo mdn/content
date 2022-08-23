@@ -81,7 +81,7 @@ async function enableHold(audioStream) {
     await audioTransceiver.sender.replaceTrack(audioStream.getAudioTracks()[0]);
     audioTransceiver.receiver.track.enabled = false;
     audioTransceiver.direction = "sendonly";
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -108,7 +108,7 @@ async function holdRequested(offer) {
     await audioTransceiver.sender.replaceTrack(null);
     audioTransceiver.direction = "recvonly";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -154,7 +154,7 @@ async function holdEnded(offer, micStream) {
     await audioTransceiver.sender.replaceTrack(micStream.getAudioTracks()[0]);
     audioTransceiver.direction = "sendrecv";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

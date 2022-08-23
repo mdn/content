@@ -153,7 +153,7 @@ console.log(\u4f60\u597d); // Hello
 
 Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
 
-```js
+```js example-bad
 function import() {} // Illegal: import is a reserved word.
 ```
 
@@ -207,6 +207,7 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
@@ -245,7 +246,6 @@ The following are only reserved when they are found in strict mode code:
 - `private`
 - `protected`
 - `public`
-- `static`
 
 #### Future reserved words in older standards
 
@@ -425,7 +425,7 @@ See also {{jsxref("Object")}} and [Object initializer](/en-US/docs/Web/JavaScrip
 ```js
 const o = { a: 'foo', b: 'bar', c: 42 };
 
-// shorthand notation. New in ES2015
+// shorthand notation
 const a = 'foo', b = 'bar', c = 42;
 const o = { a, b, c };
 
@@ -476,7 +476,7 @@ See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.char
 
 #### Unicode code point escapes
 
-A Unicode code point escape consists of `\u{`, followed by a code point in hexadecimal base, followed by `}`. The value of the hexadecimal digits must be in the range 0 and 0x10FFFF inclusive. Code points in the range U+10000 to U+10FFFF do not need to be represented as a surrogate pair. Code point escapes were added to JavaScript in ECMAScript 2015 (ES6).
+A Unicode code point escape consists of `\u{`, followed by a code point in hexadecimal base, followed by `}`. The value of the hexadecimal digits must be in the range 0 and 0x10FFFF inclusive. Code points in the range U+10000 to U+10FFFF do not need to be represented as a surrogate pair.
 
 See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.codePointAt()")}}.
 
@@ -492,12 +492,12 @@ See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.cod
 See also {{jsxref("RegExp")}} for more information.
 
 ```js
-/ab+c/g
+/ab+c/g;
 
 // An "empty" regular expression literal
 // The empty non-capturing group is necessary
 // to avoid ambiguity with single-line comments.
-/(?:)/
+/(?:)/;
 ```
 
 ### Template literals

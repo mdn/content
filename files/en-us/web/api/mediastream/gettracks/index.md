@@ -4,7 +4,6 @@ slug: Web/API/MediaStream/getTracks
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Media Streams API
   - MediaStream
   - MediaStreamTrack
@@ -13,7 +12,7 @@ tags:
   - getTracks
 browser-compat: api.MediaStream.getTracks
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{SeeCompatTable}}
+{{APIRef("Media Capture and Streams")}}
 
 The **_`getTracks()`_** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the

@@ -88,8 +88,8 @@ Content-Length: 282
 Content-Type: text/html
 Content-Range: bytes 0-50/1270
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <title>Example Do
 --3d6b6a416f9b5

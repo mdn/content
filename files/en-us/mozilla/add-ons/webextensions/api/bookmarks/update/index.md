@@ -57,23 +57,23 @@ function onFulfilled(bookmarkItem) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 function updateFolders(items) {
-  for (item of items) {
+  for (const item of items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
-      let updating = browser.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
-      });
-      updating.then(onFulfilled, onRejected);
+      browser.bookmarks
+        .update(item.id, {
+          title: "Mozilla Developer Network (MDN)",
+        })
+        .then(onFulfilled, onRejected);
     }
   }
 }
 
-let searching = browser.bookmarks.search({ title: "MDN" });
-searching.then(updateFolders, onRejected);
+browser.bookmarks.search({ title: "MDN" }).then(updateFolders, onRejected);
 ```
 
 {{WebExtExamples}}

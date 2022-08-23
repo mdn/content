@@ -99,12 +99,12 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 
 ```js
 navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
+.then((devices) => {
+  devices.forEach((device) => {
     const menu = document.getElementById("inputdevices");
     if (device.kind === "audioinput") {
       const item = document.createElement("option");
-      item.innerText = device.label;
+      item.textContent = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
     }
@@ -143,8 +143,8 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - {{domxref("MediaDevices.getUserMedia")}}
 - [HTML5's Media Recorder API in Action on Chrome and Firefox](https://blog.addpipe.com/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
 - [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [MediaStream Recorder API Now Available in Safari Technology Preview 73](https://blog.addpipe.com/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)

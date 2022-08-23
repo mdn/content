@@ -52,9 +52,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let detecting = browser.tabs.detectLanguage();
-  detecting.then(onLanguageDetected, onError);
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.detectLanguage().then(onLanguageDetected, onError);
 });
 ```
 
@@ -70,16 +69,15 @@ function onError(error) {
 }
 
 function detectLanguages(tabs) {
-  for (tab of tabs) {
-    let onFulfilled = onLanguageDetected.bind(null, tab.url);
-    let detecting = browser.tabs.detectLanguage(tab.id);
-    detecting.then(onFulfilled, onError);
+  for (const tab of tabs) {
+    browser.tabs
+      .detectLanguage(tab.id)
+      .then((lang) => onLanguageDetected(tab.url, lang), onError);
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let querying = browser.tabs.query({});
-  querying.then(detectLanguages, onError);
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.query({}).then(detectLanguages, onError);
 });
 ```
 

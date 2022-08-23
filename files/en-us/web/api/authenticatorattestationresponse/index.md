@@ -24,9 +24,9 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 ## Properties
 
-- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}} {{readonlyinline}}
+- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}} {{ReadOnlyInline}}
   - : Client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
-- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}} {{readonlyinline}}
+- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}} {{ReadOnlyInline}}
   - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.
 
 ## Methods
@@ -57,13 +57,12 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const response = newCredentialInfo.response;
     // Do something with the response
     // (sending it back to the relying party server maybe?)
-  }).catch(function (err) {
-     console.error(err);
-  });
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

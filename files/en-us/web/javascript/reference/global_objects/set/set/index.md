@@ -24,6 +24,8 @@ new Set()
 new Set(iterable)
 ```
 
+> **Note:** `Set()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `iterable` {{optional_inline}}
@@ -43,14 +45,14 @@ A new `Set` object.
 ### Using the `Set` object
 
 ```js
-let mySet = new Set()
+const mySet = new Set();
 
-mySet.add(1)           // Set [ 1 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add('some text') // Set [ 1, 5, 'some text' ]
-let o = {a: 1, b: 2}
-mySet.add(o)
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add('some text'); // Set [ 1, 5, 'some text' ]
+const o = { a: 1, b: 2 };
+mySet.add(o);
 ```
 
 ## Specifications

@@ -12,7 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.CanvasRenderingContext2D.drawWindow
 ---
-{{APIRef}} {{deprecated_header}}
+{{APIRef}} {{deprecated_header}}{{Non-standard_header}}
 
 The deprecated, non-standard and internal only
 **`CanvasRenderingContext2D.drawWindow()`**
@@ -120,5 +120,4 @@ only API.
 ## See also
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}}
 - [Using images](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images)

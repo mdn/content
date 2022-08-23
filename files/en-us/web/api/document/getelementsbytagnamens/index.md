@@ -64,7 +64,7 @@ extension.
 <head>
 <title>getElementsByTagNameNS example</title>
 
-<script type="text/javascript">
+<script>
 
 function getAllParaElems()
 {

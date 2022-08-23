@@ -65,7 +65,7 @@ new Option(text, value, defaultSelected, selected)
 const s = document.getElementById('s');
 const options = [Four, Five, Six];
 
-options.forEach(function(element,key) {
+options.forEach((element,key) => {
     s[key] = new Option(element,key);
 });
 ```
@@ -84,7 +84,7 @@ options.forEach(function(element,key) {
 const s = document.getElementById('s');
 const options = [ 'zero', 'one', 'two' ];
 
-options.forEach(function(element, key) {
+options.forEach((element, key) => {
   if (element === 'zero') {
     s[key] = new Option(element, s.options.length, false, false);
   }

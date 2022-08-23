@@ -30,7 +30,7 @@ HTMLFormElement.reportValidity()
 ## Example
 
 ```js
-document.forms['myform'].addEventListener('submit', function() {
+document.forms['myform'].addEventListener('submit', () => {
   document.forms['myform'].reportValidity();
 }, false);
 ```

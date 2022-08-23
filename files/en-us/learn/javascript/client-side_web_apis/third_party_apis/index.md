@@ -68,7 +68,7 @@ Third party APIs, on the other hand, are located on third party servers. To acce
 
 ```html
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<link rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 ```
 
 You can then start using the objects available in that library. For example:
@@ -246,7 +246,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 - The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
 - The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we want to return articles.
 
-Next, we use a couple of [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
 
 So, a complete URL would end up looking something like this:
 
@@ -286,11 +286,7 @@ function displayResults(json) {
 
   const articles = json.response.docs;
 
-  if (articles.length === 10) {
-    nav.style.display = 'block';
-  } else {
-    nav.style.display = 'none';
-  }
+  nav.style.display = articles.length === 10 ? 'block' : 'none';
 
   if (articles.length === 0) {
     const para = document.createElement('p');
@@ -338,8 +334,8 @@ There's a lot of code here; let's explain it step by step:
 
 - The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
 - Next, we set the `articles` variable to equal `json.response.docs` — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.
-- The first [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If fewer than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
-- The next `if()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the.`<section>`
+- The first [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If fewer than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
+- The next `if ()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the.`<section>`
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
 
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
@@ -367,7 +363,7 @@ This allows us to write a simplistic pagination function.
     };
 
     function previousPage(e) {
-      if(pageNumber > 0) {
+      if (pageNumber > 0) {
         pageNumber--;
       } else {
         return;

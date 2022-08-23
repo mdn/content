@@ -118,29 +118,28 @@ If you double click on it, you'll be moved to a code editor. As you can see, the
 
 ```js
 pc.script.create('boxAnimation', function (app) {
-    // Creates a new BoxAnimation instance
-    var BoxAnimation = function (entity) {
-        this.entity = entity;
-    };
+  class BoxAnimation {
+    constructor(entity) {
+      this.entity = entity;
+    }
 
-    BoxAnimation.prototype = {
-        // Called once after all resources are loaded and before the first update
-        initialize() {
-        },
+    // Called once after all resources are loaded and before the first update
+    initialize() {
+    }
 
-        // Called every frame, dt is time in seconds since last update
-        update(dt) {
-        }
-    };
+    // Called every frame, dt is time in seconds since last update
+    update(dt) {
+    }
+  }
 
-    return BoxAnimation;
+  return BoxAnimation;
 });
 ```
 
 The most interesting part is the `update()` function, which is where we can put any code that we want repeated on every frame. Add the following line inside this function, to rotate the cube on every frame:
 
 ```js
-this.entity.rotate(dt*10, dt*20, dt*30);
+this.entity.rotate(dt * 10, dt * 20, dt * 30);
 ```
 
 In the line above `this.entity` refers to the object to which the script will be attached (the box); using the `dt` variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.
@@ -191,7 +190,7 @@ To move the cone up and down we will use the `setPosition()` method — add the 
 
 ```js
 this.timer += dt;
-this.entity.setPosition(2, Math.sin(this.timer*2), 0);
+this.entity.setPosition(2, Math.sin(this.timer * 2), 0);
 ```
 
 The position of the cone will be animated on each frame by being passed the `Math.sin()` value of the `timer` at each point in time — we have doubled the `this.timer` value to make it move higher.

@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
-HTML5 comes with elements for embedding rich media in documents — {{htmlelement("video")}} and {{htmlelement("audio")}} — which in turn come with their own APIs for controlling playback, seeking, etc. This article shows you how to do common tasks such as creating custom playback controls.
+HTML comes with elements for embedding rich media in documents — {{htmlelement("video")}} and {{htmlelement("audio")}} — which in turn come with their own APIs for controlling playback, seeking, etc. This article shows you how to do common tasks such as creating custom playback controls.
 
 <table>
   <tbody>
@@ -42,7 +42,7 @@ HTML5 comes with elements for embedding rich media in documents — {{htmlelemen
   </tbody>
 </table>
 
-## HTML5 video and audio
+## HTML video and audio
 
 The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), a typical implementation looks like this:
 
@@ -50,7 +50,7 @@ The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to e
 <video controls>
   <source src="rabbit320.mp4" type="video/mp4">
   <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
 </video>
 ```
 
@@ -68,7 +68,7 @@ You can solve both these problems by hiding the native controls (by removing the
 
 ## The HTMLMediaElement API
 
-Part of the HTML5 spec, the {{domxref("HTMLMediaElement")}} API provides features to allow you to control video and audio players programmatically — for example {{domxref("HTMLMediaElement.play()")}}, {{domxref("HTMLMediaElement.pause()")}}, etc. This interface is available to both {{htmlelement("audio")}} and {{htmlelement("video")}} elements, as the features you'll want to implement are nearly identical. Let's go through an example, adding features as we go.
+Part of the HTML spec, the {{domxref("HTMLMediaElement")}} API provides features to allow you to control video and audio players programmatically — for example {{domxref("HTMLMediaElement.play()")}}, {{domxref("HTMLMediaElement.pause()")}}, etc. This interface is available to both {{htmlelement("audio")}} and {{htmlelement("video")}} elements, as the features you'll want to implement are nearly identical. Let's go through an example, adding features as we go.
 
 Our finished example will look (and function) something like the following:
 
@@ -78,7 +78,7 @@ Our finished example will look (and function) something like the following:
 
 To get started with this example, [download our media-player-start.zip](https://github.com/mdn/learning-area/blob/main/javascript/apis/video-audio/start/media-player-start.zip) and unzip it into a new directory on your hard drive. If you [downloaded our examples repo](https://github.com/mdn/learning-area), you'll find it in `javascript/apis/video-audio/start/`.
 
-At this point, if you load the HTML you should see a perfectly normal HTML5 video player, with the native controls rendered.
+At this point, if you load the HTML you should see a perfectly normal HTML video player, with the native controls rendered.
 
 #### Exploring the HTML
 
@@ -109,7 +109,7 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
 - The controls HTML is probably the most interesting:
 
   - We have four {{htmlelement("button")}}s — play/pause, stop, rewind, and fast forward.
-  - Each `<button>` has a `class` name, a `data-icon` attribute for defining what icon should be shown on each button (we'll show how this works in the below section), and an `aria-label` attribute to provide an understandable description of each button, since we're not providing a human-readable label inside the tags. The contents of `aria-label` attributes are read out by screenreaders when their users focus on the elements that contain them.
+  - Each `<button>` has a `class` name, a `data-icon` attribute for defining what icon should be shown on each button (we'll show how this works in the below section), and an `aria-label` attribute to provide an understandable description of each button, since we're not providing a human-readable label inside the tags. The contents of `aria-label` attributes are read out by screen readers when their users focus on the elements that contain them.
   - There is also a timer {{htmlelement("div")}}, which will report the elapsed time when the video is playing. Just for fun, we are providing two reporting mechanisms — a {{htmlelement("span")}} containing the elapsed time in minutes and seconds, and an extra `<div>` that we will use to create a horizontal indicator bar that gets longer as the time elapses. To get an idea of what the finished product will look like, [check out our finished version](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
 
 #### Exploring the CSS
@@ -260,7 +260,7 @@ Let's implement probably the most important control — the play/pause button.
 
     ```js
     function playPauseMedia() {
-      if(media.paused) {
+      if (media.paused) {
         play.setAttribute('data-icon','u');
         media.play();
       } else {
@@ -320,7 +320,7 @@ There are many ways that you can implement rewind and fast forward functionality
       clearInterval(intervalFwd);
       fwd.classList.remove('active');
 
-      if(rwd.classList.contains('active')) {
+      if (rwd.classList.contains('active')) {
         rwd.classList.remove('active');
         clearInterval(intervalRwd);
         media.play();
@@ -335,7 +335,7 @@ There are many ways that you can implement rewind and fast forward functionality
       clearInterval(intervalRwd);
       rwd.classList.remove('active');
 
-      if(fwd.classList.contains('active')) {
+      if (fwd.classList.contains('active')) {
         fwd.classList.remove('active');
         clearInterval(intervalFwd);
         media.play();
@@ -360,7 +360,7 @@ There are many ways that you can implement rewind and fast forward functionality
 
     ```js
     function windBackward() {
-      if(media.currentTime <= 3) {
+      if (media.currentTime <= 3) {
         rwd.classList.remove('active');
         clearInterval(intervalRwd);
         stopMedia();
@@ -370,7 +370,7 @@ There are many ways that you can implement rewind and fast forward functionality
     }
 
     function windForward() {
-      if(media.currentTime >= media.duration - 3) {
+      if (media.currentTime >= media.duration - 3) {
         fwd.classList.remove('active');
         clearInterval(intervalFwd);
         stopMedia();
@@ -387,7 +387,7 @@ There are many ways that you can implement rewind and fast forward functionality
 
 #### Updating the elapsed time
 
-The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Add the following `addEventListener()` line just below the others:
 
@@ -453,7 +453,7 @@ Here are some suggestions for ways you could enhance the existing example we've 
 
     ```js
     document.onclick = function(e) {
-      console.log(e.x) + ',' + console.log(e.y)
+      console.log(e.x, e.y);
     }
     ```
 

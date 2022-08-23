@@ -20,9 +20,9 @@ You can get an array of `XRHitTestResult` objects for a frame by calling {{domxr
 
 ## Properties
 
-- {{domxref("XRTransientInputHitTestResult.inputSource")}} {{readOnlyInline}}
+- {{domxref("XRTransientInputHitTestResult.inputSource")}} {{ReadOnlyInline}}
   - : Represents the {{domxref("XRInputSource")}} that was used to compute the `results` array.
-- {{domxref("XRTransientInputHitTestResult.results")}} {{readOnlyInline}}
+- {{domxref("XRTransientInputHitTestResult.results")}} {{ReadOnlyInline}}
   - : Represents an array of {{domxref("XRHitTestResult")}} objects containing the hit test results for the input source, ordered by the distance along the ray used to perform the hit test, with the closest result at position 0.
 
 ## Methods
@@ -59,7 +59,7 @@ function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
 
   hitTestResults.forEach((resultsPerInputSource) => {
-    if (resultsPerInputSource.inputSource == myPreferredInputSource) {
+    if (resultsPerInputSource.inputSource === myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
   });

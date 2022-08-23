@@ -27,15 +27,15 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 > **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
-- {{domxref("IDBCursor.source")}} {{readonlyInline}}
+- {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is iterating. This function never returns null or throws an exception, even if the cursor is currently being iterated, has iterated past its end, or its transaction is not active.
-- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
+- {{domxref("IDBCursor.direction")}} {{ReadOnlyInline}}
   - : Returns the direction of traversal of the cursor. See [Constants](#const_next) for possible values.
-- {{domxref("IDBCursor.key")}} {{readonlyInline}}
+- {{domxref("IDBCursor.key")}} {{ReadOnlyInline}}
   - : Returns the key for the record at the cursor's position. If the cursor is outside its range, this is set to `undefined`. The cursor's key can be any data type.
-- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
+- {{domxref("IDBCursor.primaryKey")}} {{ReadOnlyInline}}
   - : Returns the cursor's current effective primary key. If the cursor is currently being iterated or has iterated outside its range, this is set to `undefined`. The cursor's primary key can be any data type.
-- {{domxref("IDBCursor.request")}} {{readonlyInline}}
+- {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBRequest")}} that was used to obtain the cursor.
 
 ## Methods
@@ -71,9 +71,9 @@ function displayData() {
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);

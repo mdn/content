@@ -14,7 +14,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement
 ---
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement`** interface provides special properties and methods for manipulating the options, layout, and presentation of {{HtmlElement("input")}} elements.
 
@@ -24,10 +24,10 @@ The **`HTMLInputElement`** interface provides special properties and methods for
 
 Some properties only apply to input element types that support the corresponding attributes.
 
-- {{domxref("HTMLInputElement.align", "align")}} {{deprecated_inline}}
+- {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
   - : `string`: **Represents** the alignment of the element. _Use CSS instead._
 
-- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{experimental_inline}}
+- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{Experimental_Inline}}
   - : `string`: **Defines** the capitalization behavior for user input. Valid values are `none`, `off`, `characters`, `words` or `sentences`.
 
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
@@ -39,10 +39,10 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.inputmode", "inputmode")}}
   - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents.
 
-- {{domxref("HTMLInputElement.labels", "labels")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} array: **Returns** a list of {{ HTMLElement("label") }} elements that are labels for this element.
 
-- {{domxref("HTMLInputElement.list", "list")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLElement")}}: **Returns** the element pointed to by the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. The property may be `null` if no HTML element is found in the same tree.
 
 - {{domxref("HTMLInputElement.multiple", "multiple")}}
@@ -57,7 +57,7 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.type", "type")}}
   - : `string`: **Returns / Sets** the element's [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. For possible values, see the documentation for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
 
-- {{domxref("HTMLInputElement.useMap", "useMap")}} {{deprecated_inline}}
+- {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
   - : `string`: **Represents** a client-side image map.
 
 - {{domxref("HTMLInputElement.value", "value")}}
@@ -71,7 +71,7 @@ Some properties only apply to input element types that support the corresponding
 
 ### Properties related to the parent form
 
-- {{domxref("HTMLInputElement.form", "form")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLFormElement")}}: **Returns** a reference to the parent {{HtmlElement("form")}} element.
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
@@ -100,13 +100,13 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.required", "required")}}
   - : `boolean`: **Returns / Sets** the element's [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, indicating that the user must fill in a value before submitting a form.
 
-- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
   - : `string`: **Returns** a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ([`willValidate`](/en-US/docs/Web/API/HTMLObjectElement/willValidate) is `false`), or it satisfies its constraints. This value can be set by the {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} method.
 
-- {{domxref("HTMLInputElement.validity", "validity")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
   - : {{domxref("ValidityState")}}: **Returns** the element's current validity state.
 
-- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
   - : `boolean`: **Returns** whether the element is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation, including: its `type` is one of `hidden`, `reset` or `button`, it has a {{HTMLElement("datalist")}} ancestor or its `disabled` property is `true`.
 
 ### Properties that apply only to elements of type checkbox or radio
@@ -139,16 +139,16 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.accept", "accept")}}
   - : `string`: **Returns / Sets** the element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
 
-- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{non-standard_inline}}
+- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{Non-standard_Inline}}
   - : `boolean`: Part of the non-standard Directory Upload API. Indicates whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference.
 
 - {{domxref("HTMLInputElement.files", "files")}}
   - : {{domxref("FileList")}}: **Returns / Sets** a list of {{domxref("File")}} objects representing the files selected for upload.
 
-- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}}
+- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
   - : `boolean`: **Returns** the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
 
-- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}
+- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}}
   - : {{domxref("FileSystemEntry")}} array: **Describes** the currently selected files or directories.
 
 ### Properties that apply only to visible elements containing text or numbers
@@ -241,14 +241,11 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements, but we've listed it here because it is most commonly used with form input elements.
-    Also available via the [`oninput`](/en-US/docs/Web/API/GlobalEventHandlers/oninput) event handler property.
 - [`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.
-    Also available via the [`oninvalid`](/en-US/docs/Web/API/GlobalEventHandlers/oninvalid) event handler property.
-- [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event)
+- [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event) {{Non-standard_Inline}}
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
-    Also available via the [`onsearch`](/en-US/docs/Web/API/GlobalEventHandlers/onsearch) event handler property.
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{Experimental_Inline}}
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
 ## Specifications

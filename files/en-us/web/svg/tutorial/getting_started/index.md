@@ -29,7 +29,7 @@ Let us dive straight in with a simple example. Take a look at the following code
 
 Copy the code and paste it in a file demo1.svg. Then open the file in Firefox. It will render as shown in the following screenshot. (Firefox users: click [here](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
-![](svgdemo1.png)
+![Red background composed of a centered green circle. White text centered inside the circle is SVG.](svgdemo1.png)
 
 The rendering process involves the following:
 

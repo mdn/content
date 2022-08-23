@@ -25,7 +25,7 @@ As a two-dimensional layout method, when working with grid layout we always have
 
 The inline axis is the axis that corresponds to the direction that words in a sentence would run in the writing mode used. Therefore, in a horizontal language such as English or Arabic the inline direction runs horizontally. Should you be in a vertical writing mode the inline axis will run vertically.
 
-![](inline_axis.png)
+![Inline axes are horizontal.](inline_axis.png)
 
 To align things on the inline axis you use the properties that start with `justify-`, {{cssxref("justify-content")}}, {{cssxref("justify-items")}} and {{cssxref("justify-self")}}.
 
@@ -33,7 +33,7 @@ The block axis crosses the inline axis in the direction that blocks are displaye
 
 To align things on the block axis you use the properties that start with `align-`, {{cssxref("align-content")}}, {{cssxref("align-items")}} and {{cssxref("align-self")}}.
 
-![](block_axis.png)
+![The block axes are vertical.](block_axis.png)
 
 ## Self alignment
 

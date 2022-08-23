@@ -12,9 +12,10 @@ tags:
   - Virtual Reality
   - WebVR
   - fieldOfView
+  - Non-standard
 browser-compat: api.VREyeParameters.fieldOfView
 ---
-{{APIRef("WebVR API")}}{{Deprecated_header}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`fieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface returns a {{domxref("VRFieldOfView")}} object *describing t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 

@@ -36,11 +36,11 @@ An {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("CloseEvent.code", "code")}} {{readOnlyInline}}
+- {{domxref("CloseEvent.code", "code")}} {{ReadOnlyInline}}
   - : Returns an `unsigned short` containing the close code sent by the server.
-- {{domxref("CloseEvent.reason", "reason")}} {{readOnlyInline}}
+- {{domxref("CloseEvent.reason", "reason")}} {{ReadOnlyInline}}
   - : Returns a string indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
-- {{domxref("CloseEvent.wasClean", "wasClean")}} {{readOnlyInline}}
+- {{domxref("CloseEvent.wasClean", "wasClean")}} {{ReadOnlyInline}}
   - : Returns a boolean value that Indicates whether or not the connection was cleanly closed.
 
 ## Examples
@@ -56,7 +56,7 @@ exampleSocket.addEventListener('close', (event) => {
 You can perform the same actions using the event handler property, like this:
 
 ```js
-exampleSocket.onclose = function (event) {
+exampleSocket.onclose = (event) => {
   console.log('The connection has been closed successfully.');
 };
 ```

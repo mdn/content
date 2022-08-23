@@ -16,8 +16,7 @@ tags:
   - Deprecated
 browser-compat: api.MediaRecorder.warning_event
 ---
-
-{{Deprecated_header}}{{APIRef("Media Recorder API")}}
+{{APIRef("Media Recorder API")}}{{Deprecated_Header}}
 
 The `warning` event fires on non-fatal errors during media recording via a `MediaRecorder`. Non-fatal errors are one's that don't halt recording.
 
@@ -28,7 +27,7 @@ A function reference.
 ## Examples
 
 ```js
-mediaRecorder.onwarning = function(e) {
+mediaRecorder.onwarning = (e) => {
   console.warn(`A warning has been raised: ${e.message}`);
 }
 ```

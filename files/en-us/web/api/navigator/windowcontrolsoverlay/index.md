@@ -8,9 +8,10 @@ tags:
   - Property
   - Reference
   - Progressive Web Apps
+  - Experimental
 browser-compat: api.Navigator.windowControlsOverlay
 ---
-{{securecontext_header}}{{APIRef("")}}
+{{SecureContext_Header}}{{APIRef("")}}{{SeeCompatTable}}
 
 The **`windowControlsOverlay`** property of the {{domxref("Navigator")}}
 interface returns the {{domxref("WindowControlsOverlay")}} interface, which exposes

@@ -22,11 +22,11 @@ The **`SpeechSynthesis`** interface of the [Web Speech API](/en-US/docs/Web/API/
 
 _`SpeechSynthesis` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-- {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesis.paused")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if the `SpeechSynthesis` object is in a paused state.
-- {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesis.pending")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if the utterance queue contains as-yet-unspoken utterances.
-- {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesis.speaking")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if an utterance is currently in the process of being spoken — even if `SpeechSynthesis` is in a paused state.
 
 ## Methods
@@ -85,7 +85,7 @@ function populateVoiceList() {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-    if(voices[i].default) {
+    if (voices[i].default) {
       option.textContent += ' — DEFAULT';
     }
 
@@ -100,13 +100,13 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for (let i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }

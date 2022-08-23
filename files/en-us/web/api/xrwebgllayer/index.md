@@ -76,11 +76,11 @@ That function receives as input an {{domxref("XRFrame")}} which encapsulates the
 let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
-  let glLayer = xrSession.renderState.baseLayer;
+  const glLayer = xrSession.renderState.baseLayer;
   gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.Framebffer);
 
-  for (let view of pose.views) {
-    let viewport = glLayer.getViewport(view);
+  for (const view of pose.views) {
+    const viewport = glLayer.getViewport(view);
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     /* Render the view */

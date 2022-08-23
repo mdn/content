@@ -38,7 +38,7 @@ In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ
 ```js
 // Setting up the tear animations
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.animate(
     tearsFalling,
     {
@@ -52,13 +52,13 @@ tears.forEach(function(el) {
 
 // Play the tears falling when the ending needs to be shown.
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.play();
 });
 
 // Reset the crying tears animations and pause them.
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.pause();
   el.currentTime = 0;
 });

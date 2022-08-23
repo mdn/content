@@ -96,7 +96,7 @@ and then adds it to the tree for the document:
   <head>
     <script>
        // run this function when the document is loaded
-       window.onload = function() {
+       window.onload = () => {
 
          // create a couple of elements in an otherwise empty HTML page
          const heading = document.createElement("h1");
@@ -251,7 +251,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 - `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
 - `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
 - `{{domxref("window.content", "", "", "1")}}`
-- `{{domxref("GlobalEventHandlers/onload", "", "", "1")}}`
+- `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
 - `{{domxref("window.scrollTo", "", "", "1")}}()`
 
 ## Example
@@ -268,8 +268,11 @@ The following simple example illustrates using the DOM {{domxref("Document")}} A
   <title>Simple Document API example</title>
   <script>
     function setBodyAttr(attr, value) {
-      if (document.body) document.body[attr] = value;
-      else throw new Error("no support");
+      if (document.body) {
+        document.body[attr] = value;
+      } else {
+        throw new Error("no support");
+      }
     }
   </script>
 </head>

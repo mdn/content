@@ -32,7 +32,7 @@ JavaScript works best with events and callback functions. Modern browsers strive
 Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
 
 ```js
-window.main = function () {
+window.main = () => {
   window.requestAnimationFrame(main);
 
   // Whatever your main loop needs to do
@@ -51,7 +51,7 @@ Timing the main loop to when the browser paints to the display allows you to run
 
 But do not immediately assume animations require frame-by-frame control. Simple animations can be easily performed, even GPU-accelerated, with CSS animations and other tools included in the browser. There are a lot of them and they will make your life easier.
 
-## Building a _better_ main loop in Javascript
+## Building a _better_ main loop in JavaScript
 
 There are two obvious issues with our previous main loop: `main()` pollutes the `{{ domxref("window") }}` object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
@@ -63,7 +63,7 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
 * marks the beginning of our new line if the previous one was not empty or terminated.
 */
 
-;(function () {
+;(() => {
   function main() {
     window.requestAnimationFrame(main);
 
@@ -90,7 +90,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main() {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -107,7 +107,7 @@ We now have a variable declared in our `MyGame` namespace, which we call `stopMa
 window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
-The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In Javascript, you are using the browser's main loop and you are trying to do so effectively.
+The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In JavaScript, you are using the browser's main loop and you are trying to do so effectively.
 
 ## Building a _more_ _optimized_ main loop in JavaScript
 
@@ -144,7 +144,7 @@ Back to the topic of the main loop. You will often want to know when your main f
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -178,7 +178,7 @@ If your game can hit the maximum refresh rate of any hardware you support then y
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -258,7 +258,7 @@ A separate update and draw method could look like the following example. For the
 *                   It is just a generic example function that you might have added.
 */
 
-;(function () {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
     const nextTick = MyGame.lastTick + MyGame.tickLength;
@@ -279,8 +279,8 @@ A separate update and draw method could look like the following example. For the
   }
 
   function queueUpdates(numTicks) {
-    for(let i=0; i < numTicks; i++) {
-      MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; // Now lastTick is this tick.
+    for (let i = 0; i < numTicks; i++) {
+      MyGame.lastTick += MyGame.tickLength; // Now lastTick is this tick.
       update(MyGame.lastTick);
     }
   }

@@ -20,7 +20,7 @@ This function flattens nested layers of promise-like objects (e.g. a promise tha
 ## Syntax
 
 ```js
-Promise.resolve(value);
+Promise.resolve(value)
 ```
 
 ### Parameters
@@ -67,9 +67,9 @@ p.then((v) => {
 const original = Promise.resolve(33);
 const cast = Promise.resolve(original);
 cast.then((value) => {
-  console.log('value: ' + value);
+  console.log(`value: ${value}`);
 });
-console.log('original === cast ? ' + (original === cast));
+console.log(`original === cast ? ${original === cast}`);
 
 // logs, in order:
 // original === cast ? true

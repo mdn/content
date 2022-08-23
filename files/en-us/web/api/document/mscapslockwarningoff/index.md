@@ -18,7 +18,7 @@ Starting with Internet Explorer 10, input type=password fields will automaticall
 
 ## Syntax
 
-```html
+```js
 document.msCapsLockWarningOff = true;
 ```
 
@@ -39,19 +39,17 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
 ```html
 <html>
 <head>
-    <title>msCapsLockWarningOff example</title>
-    <script type="text/javascript">
-
-        function capsOff() {
-                  if(!document.msCapsLockWarningOff) {
-                document.msCapsLockWarningOff = true;
-                document.getElementById("caps").innerHTML = "Warning off";
-            } else {
-                document.msCapsLockWarningOff = false;
-                document.getElementById("caps").innerHTML = "Warning on";
-            }
-        }
-
+  <title>msCapsLockWarningOff example</title>
+  <script>
+    function capsOff() {
+      if (!document.msCapsLockWarningOff) {
+        document.msCapsLockWarningOff = true;
+        document.getElementById("caps").innerHTML = "Warning off";
+      } else {
+        document.msCapsLockWarningOff = false;
+        document.getElementById("caps").innerHTML = "Warning on";
+      }
+    }
     </script>
 </head>
 <body>

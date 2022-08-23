@@ -38,9 +38,9 @@ Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON
 {{jsxref("Global_Objects/eval", "eval")}} executes the string as JavaScript:
 
 ```js
-let code = '"\u2028\u2029"'
-JSON.parse(code)  // evaluates to "\u2028\u2029" in all engines
-eval(code)        // throws a SyntaxError in old engines
+const code = '"\u2028\u2029"';
+JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
+eval(code); // throws a SyntaxError in old engines
 ```
 
 Other differences include allowing only double-quoted strings and having no provisions

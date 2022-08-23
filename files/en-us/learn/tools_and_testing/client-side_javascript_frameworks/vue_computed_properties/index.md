@@ -75,7 +75,7 @@ computed: {
 
 Now we can add `\{{listSummary}}` directly to our template; we'll add this inside an `<h2>` element, just above our `<ul>`. We'll also add an `id` and an `aria-labelledby` attribute to assign the `<h2>` contents to be a label for the `<ul>` element.
 
-Add the described `<h2>` and update the `<ul>` inside your App's template as follows:
+Add the described `<h2>` and update the `<ul>` inside your `App`'s template as follows:
 
 ```html
 <h2 id="list-summary">\{{listSummary}}</h2>

@@ -426,12 +426,14 @@ Methods can be private as well.
 
 ```js
 class Color {
+  #values;
+
   constructor(r, g, b) {
     this.#myPrivateMethod();
     this.#values = [r, g, b];
   }
   #myPrivateMethod() {
-    // ...
+    // …
   }
 }
 ```
@@ -617,7 +619,8 @@ Instead, our class can override it to print the color's RGB values:
 
 ```js
 class Color {
-  // ...
+  #values;
+  // …
   toString() {
     return this.#values.join(", ");
   }
@@ -630,7 +633,8 @@ Within derived classes, you can access the parent class's methods by using `supe
 
 ```js
 class ColorWithAlpha extends Color {
-  // ...
+  #alpha;
+  // …
   toString() {
     // Call the parent class's toString() and build on the return value
     return `${super.toString()}, ${this.#alpha}`;
@@ -656,7 +660,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and do not grant access to _any_ outside code.
 
-```js
+```js example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
@@ -693,7 +697,7 @@ console.log(newDay); // 2019-06-20
 console.log(date); // 2019-06-20
 ```
 
-Mutability and internal state are important aspects of object-oriented programming, but often make code hard to reason with — because any seemingly innocent operation may have unexpected side effects and change the behavior in other parts of the program.
+Mutability and internal state are important aspects of object-oriented programming, but often make code hard to reason with — because any seemingly innocent operation may have unexpected side effects and change the behavior in other parts of the program.
 
 In order to reuse code, we usually resort to extending classes, which can create big hierarchies of inheritance patterns.
 

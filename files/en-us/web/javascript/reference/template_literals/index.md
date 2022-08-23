@@ -172,7 +172,7 @@ Tag functions don't even need to return a string!
 
 ```js
 function template(strings, ...keys) {
-  return (function(...values) {
+  return (...values) => {
     const dict = values[values.length - 1] || {};
     const result = [strings[0]];
     keys.forEach((key, i) => {
@@ -180,7 +180,7 @@ function template(strings, ...keys) {
       result.push(value, strings[i + 1]);
     });
     return result.join('');
-  });
+  };
 }
 
 const t1Closure = template`${0}${1}${0}!`;
@@ -262,7 +262,7 @@ This is useful for many tools which give special treatment to literals tagged by
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 // Some formatters will format this literal's content as HTML
 const doc = html`<!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Hello</title>
   </head>
@@ -275,27 +275,22 @@ const doc = html`<!DOCTYPE html>
 
 ### Tagged templates and escape sequences
 
-#### ES2016 behavior
+In normal template literals, the following escape sequences are allowed:
 
-As of ECMAScript 2016, tagged templates conform to the rules of the following escape sequences:
+- Unicode escapes started by `\u`, for example `\u00A9`
+- Unicode code point escapes indicated by `\u{}`, for example `\u{2F804}`
+- Hexadecimal escapes started by `\x`, for example `\xA9`
+- Octal literal escapes started by `\0o` and followed by one or more digits, for example `\0o251`
 
-- Unicode escapes started by "`\u`", for example `\u00A9`
-- Unicode code point escapes indicated by "`\u{}`", for example `\u{2F804}`
-- Hexadecimal escapes started by "`\x`", for example `\xA9`
-- Octal literal escapes started by "`\0o`" and followed by one or more digits, for example `\0o251`
+Any other non-well-formed escape sequence (e.g. one that begins with `\u` but is not followed by a four-digit hex sequence) is a syntax error. However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-This means that a tagged template like the following is problematic, because, per ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds malformed syntax:
+Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates.
 
 ```js
 latex`\unicode`
 // Throws in older ECMAScript versions (ES2016 and earlier)
 // SyntaxError: malformed Unicode character escape sequence
 ```
-
-#### ES2018 revision of illegal escape sequences
-
-Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/)
-(integrated in the ECMAScript 2018 standard) removed the syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 

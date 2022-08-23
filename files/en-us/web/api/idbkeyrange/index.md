@@ -48,13 +48,13 @@ A key is in a key range if the following conditions are true:
 
 ## Properties
 
-- {{domxref("IDBKeyRange.lower")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.lower")}} {{ReadOnlyInline}}
   - : Lower bound of the key range.
-- {{domxref("IDBKeyRange.upper")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.upper")}} {{ReadOnlyInline}}
   - : Upper bound of the key range.
-- {{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.lowerOpen")}} {{ReadOnlyInline}}
   - : Returns false if the lower-bound value is included in the key range.
-- {{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}
+- {{domxref("IDBKeyRange.upperOpen")}} {{ReadOnlyInline}}
   - : Returns false if the upper-bound value is included in the key range.
 
 ## Methods
@@ -89,9 +89,9 @@ function displayData() {
   const transaction = db.transaction(['fThings'], 'readonly');
   const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
       listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
       list.appendChild(listItem);

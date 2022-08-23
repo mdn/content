@@ -4,7 +4,6 @@ slug: Web/API/WindowClient/visibilityState
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Service Workers
@@ -29,9 +28,8 @@ A string (See {{domxref("Document.visibilityState")}} for values).
 ```js
 event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
-    for (let i = 0; i < clientList.length; i++) {
-      let client = clientList[i];
+  }).then((clientList) => {
+    for (const client of clientList) {
       if (client.url === '/' && 'focus' in client) {
         if (client.visibilityState === 'hidden') return client.focus();
       }

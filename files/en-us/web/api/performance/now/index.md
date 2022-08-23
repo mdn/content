@@ -48,7 +48,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns a {{domxref("DOMHighResTimeStamp")}} measured in milliseconds.
 
 ## Examples
 
@@ -122,4 +122,4 @@ of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## See also
 
-- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/) from HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/).

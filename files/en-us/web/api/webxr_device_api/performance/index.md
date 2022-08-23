@@ -54,11 +54,11 @@ Consider the following
 ```js
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
   // …
-  for (object in scene) {
-    let vertexList = [/* … */];
-    let normalMatrix = mat4.create();
-    let modelViewMatrix = mat4.create();
-    let objectMatrix = mat4.create();
+  for (const object in scene) {
+    const vertexList = [/* … */];
+    const normalMatrix = mat4.create();
+    const modelViewMatrix = mat4.create();
+    const objectMatrix = mat4.create();
 
     // Apply rotation updates to the object if needed
 
@@ -78,7 +78,7 @@ const modelViewMatrix = mat4.create();
 
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
   // …
-  for (object in scene) {
+  for (const object in scene) {
     // …
   }
 }
@@ -91,7 +91,3 @@ Now, instead of allocating variables every loop iteration, we're using global co
 - You can, however, still replace the *contents* of each of these objects, so they're reusable.
 
 You're now protected from several possible coding mistakes, and your entire animation will be smoother and more performant as well.
-
-## See also
-
-Some helpful links.

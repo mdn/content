@@ -25,7 +25,7 @@ The HTML document structure is quite simple, as the game will be rendered entire
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
@@ -34,8 +34,10 @@ The HTML document structure is quite simple, as the game will be rendered entire
 </head>
 <body>
 <script>
-    var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-      preload: preload, create: create, update: update
+    const game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
+      preload,
+      create,
+      update,
     });
     function preload() {}
     function create() {}

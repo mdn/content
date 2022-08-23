@@ -11,11 +11,11 @@ tags:
 ---
 {{MDNSidebar}}
 
-While MDN provides a built-in [live sample system](/en-US/docs/MDN/Structures/Live_samples) for presenting simple (and even not-so-simple) code samples with the code's output displayed in-context, there are samples that require a server to talk to. For those things, we have the MDN sample server, which solves these and other problems. This article is a guide to the use of the sample server.
+While MDN provides a built-in [live sample system](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for presenting simple (and even not-so-simple) code samples with the code's output displayed in-context, there are samples that require a server to talk to. For those things, we have the MDN sample server, which solves these and other problems. This article is a guide to the use of the sample server.
 
 ## Possible use cases
 
-Most samples can be presented using our built-in [live sample system](/en-US/docs/MDN/Structures/Live_samples), but there are exceptions. Here are some reasons an example might need to make use of the sample server:
+Most samples can be presented using our built-in [live sample system](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), but there are exceptions. Here are some reasons an example might need to make use of the sample server:
 
 - A sample requiring persistently running code on the server, such as a WebSocket server may have the server component and possibly also the client side component on the sample server.
 - A sample using technologies that don't work in the context of the MDN wiki or could interfere with readers' ability to focus on the content would be an obvious candidate; this might include samples that play sound effects or media or have significant amounts of animation.

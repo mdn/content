@@ -44,18 +44,18 @@ Similarly to needing to use JavaScript to ensure an element with `aria-disabled=
 }
 ```
 
-If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsable accordion panel is content that still needs to be legible.
+If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsible accordion panel is content that still needs to be legible.
 
 ```css
 @media (forced-colors: active) {
   [aria-disabled="true"] {
-    border-color: Graytext;
+    border-color: GrayText;
     color: GrayText;
   }
 }
 ```
 
-The [`forced-colors` media query](/en-US/docs/Web/CSS/@media/forced-colors) detects if the [user agent](https://developer.mozilla.org/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/color_value#system_colors).
+The [`forced-colors` media query](/en-US/docs/Web/CSS/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/color_value#system_colors).
 
 Another thing to keep in mind, when using `aria-disabled` over the native HTML attribute, is that the ARIA attribute will require the manual styling necessary to visually communicate the element as disabled in Windows High Contrast Mode.
 
@@ -67,7 +67,7 @@ function onClick(event) {
 }
 
 function toggleDisabled(element, status, update) {
-  if(status) {
+  if (status) {
     //element.input.disabled = false;
     element.setAttribute('aria-disabled', 'false');
     update.textContent = 'The element is now enabled.';

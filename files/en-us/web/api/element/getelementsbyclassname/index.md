@@ -124,9 +124,10 @@ that have a class of `test`:
 
 ```js
 const testElements = document.getElementsByClassName('test');
-const testDivs = Array.prototype.filter.call(testElements, function(testElement) {
-  return testElement.nodeName === 'DIV';
-});
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === 'DIV',
+);
 ```
 
 ## Specifications

@@ -155,15 +155,6 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
 
 {{Compat}}
 
-### Gecko-specific notes
-
-- Starting in Gecko 10.0 {{ geckoRelease("10.0") }}, non-finite values to any of these
-  parameters cause the call to `putImageData()` to be silently ignored,
-  rather than throwing an exception.
-- To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}},
-  a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now
-  throw an error ({{bug(762657)}}).
-
 ## See also
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

@@ -26,11 +26,6 @@ The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} 
 - {{domxref("ImageTrack.selected")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("boolean")}} indicating whether the track is selected for decoding.
 
-### Event handlers
-
-- {{domxref("ImageTrack.onchange")}}
-  - : An event handler fired at the `ImageTrack` when the {{domxref("ImageTrack.frameCount","frameCount")}} is altered.
-
 ## Specifications
 
 {{Specifications}}

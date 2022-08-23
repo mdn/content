@@ -23,7 +23,7 @@ methods that can be used with any typed array containing elements of any type.
 
 ## Description
 
-ECMAScript 2015 defines a `TypedArray` constructor that serves as
+The `TypedArray` constructor is a hidden global that serves as
 the `[[Prototype]]` of all `TypedArray` constructors.
 This constructor is not directly exposed: there is no global `%TypedArray%`
 or `TypedArray` property. It is only directly accessible through
@@ -76,6 +76,8 @@ new TypedArray(buffer, byteOffset, length)
 
 Where _TypedArray_ is a constructor for one of the concrete types.
 
+> **Note:** All `TypedArray` constructors can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call one without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `length`
@@ -113,7 +115,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
   - : Returns a number value of the element size for the different
     `TypedArray` objects.
 - {{jsxref("TypedArray.name")}}
-  - : Returns the string value of the constructor name (e.g, "`Int8Array`").
+  - : Returns the string value of the constructor name (e.g, `"Int8Array"`).
 - {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
 - {{jsxref("TypedArray")}}
@@ -240,22 +242,6 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     array.
 
 ## Examples
-
-### New is required
-
-Starting with ECMAScript 2015, `TypedArray` constructors must be constructed
-with the {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray`
-constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int8Array([1, 2, 3]);
-```
 
 ### Property access
 

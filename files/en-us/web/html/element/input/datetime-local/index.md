@@ -100,7 +100,7 @@ const dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';
 ```
 
-There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string, or you can do it manually. For example, the {{jsxref("Date.toISOString()")}} method can be used for this purpose.
+There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string. For example, the {{jsxref("Date.toISOString()")}} method returns the date/time in UTC with the suffix "`Z`" denoting that timezone; removing the "`Z`" would provide a value in the format expected by a `datetime-local` input.
 
 ## Additional attributes
 
@@ -236,18 +236,18 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span::after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span::after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -299,7 +299,7 @@ input:invalid + span {
   position: relative;
 }
 
-input:invalid + span:after {
+input:invalid + span::after {
   content: '✖';
   position: absolute;
   right: -18px;
@@ -309,7 +309,7 @@ input:valid + span {
   position: relative;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: '✓';
   position: absolute;
   right: -18px;
@@ -424,13 +424,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
@@ -464,7 +464,7 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
+// if it does, run the code inside the if () {} block
 if (test.type === 'text') {
   // hide the native picker and show the fallback
   nativePicker.style.display = 'none';
@@ -549,7 +549,7 @@ function populateHours() {
   // populate the hours <select> with the 24 hours of the day
   for (let i = 0; i <= 23; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
@@ -558,7 +558,7 @@ function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }

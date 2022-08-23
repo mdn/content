@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/isReload
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Property
   - Reference
@@ -13,9 +12,10 @@ tags:
   - Workers
   - isReload
   - Deprecated
+  - Non-standard
 browser-compat: api.FetchEvent.isReload
 ---
-{{APIRef("Service Workers API")}}{{deprecated_header}}
+{{APIRef("Service Workers API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`isReload`** read-only property of the
 {{domxref("FetchEvent")}} interface returns `true` if the event was
@@ -30,8 +30,8 @@ A boolean value.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function (event) {
-  event.respondWith(async function () {
+self.addEventListener('fetch', (event) => {
+  event.respondWith(async () => {
     if (event.isReload) {
       //Return something
     } else {

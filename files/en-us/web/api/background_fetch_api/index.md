@@ -41,7 +41,7 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 
 Before using Background Fetch, check for browser support.
 
-```css
+```js
 if (!('BackgroundFetchManager' in self)) {
   // Provide fallback downloading.
 }

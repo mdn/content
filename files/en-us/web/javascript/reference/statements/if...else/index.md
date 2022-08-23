@@ -127,11 +127,11 @@ if (b) // this condition is truthy
 ### Using if...else
 
 ```js
-if (cipher_char === from_char) {
-  result = result + to_char;
+if (cipherChar === fromChar) {
+  result += toChar;
   x++;
 } else {
-  result = result + clear_char;
+  result += clearChar;
 }
 ```
 
@@ -151,7 +151,7 @@ if (x > 50) {
 
 ### Using an assignment as a condition
 
-You should almost never have an `if...else` with an assignment like "`x = y`" as a condition:
+You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
 ```js example-bad
 if (x = y) {

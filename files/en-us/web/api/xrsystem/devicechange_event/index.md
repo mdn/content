@@ -54,11 +54,7 @@ if (navigator.xr) {
   navigator.xr.addEventListener("devicechange", (event) => {
     navigator.xr.isSessionSupported("immersive-vr")
     .then((immersiveOK) => {
-      if (immersiveOK) {
-        enableXRButton.disabled = false;
-      } else {
-        enableXRButton.disabled = true;
-      }
+      enableXRButton.disabled = !immersiveOK;
     });
   });
 }

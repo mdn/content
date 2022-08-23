@@ -141,7 +141,7 @@ Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/CSS_Image
 The advantage is that we can prime one piece of audio and have our sprites ready to go. To do this we can just play and instantly pause the larger piece of audio. You'll also reduce the number of server requests and save bandwidth.
 
 ```js
-var myAudio = document.createElement("audio");
+const myAudio = document.createElement("audio");
 myAudio.src = "mysprite.mp3";
 myAudio.play();
 myAudio.pause();
@@ -170,21 +170,21 @@ Now we have buttons with start and stop times in seconds. The "countdown.mp3" MP
 Let's add some JavaScript to make this work:
 
 ```js
-var myAudio = document.getElementById('myAudio');
-var buttons = document.getElementsByTagName('button');
-var stopTime = 0;
+const myAudio = document.getElementById('myAudio');
+const buttons = document.getElementsByTagName('button');
+let stopTime = 0;
 
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
-    myAudio.currentTime = this.getAttribute("data-start");
-    stopTime = this.getAttribute("data-stop");
+for (const button of buttons) {
+  button.addEventListener('click', () => {  
+    myAudio.currentTime = button.getAttribute("data-start");
+    stopTime = button.getAttribute("data-stop");
     myAudio.play();
   }, false);
 }
 
-myAudio.addEventListener('timeupdate', function() {
-  if (this.currentTime > stopTime) {
-    this.pause();
+myAudio.addEventListener('timeupdate', () => {
+  if (myAudio.currentTime > stopTime) {
+    myAudio.pause();
   }
 }, false);
 ```
@@ -279,8 +279,6 @@ Once they are available to play, we need to make sure they start at the correct 
 Let's create our audio context:
 
 ```js
-// for cross browser compatibility
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 ```
 
@@ -340,27 +338,26 @@ Finally, let's loop over our `<li>` elements, grab the correct file for each one
 ```js
 trackEls.forEach((el, i) => {
 
-  // get children
+  // Get children
   const anchor = el.querySelector('a');
   const loadText = el.querySelector('p');
   const playButton = el.querySelector('button');
 
-  // load file
+  // Load file
   loadFile(anchor.href).then((track) => {
-
-    // set loading to false
+    // Set loading to false
     el.dataset.loading = 'false';
 
-    // hide loading text
+    // Hide loading text
     loadText.style.display = 'none';
 
-    // show button
+    // Show button
     playButton.style.display = 'inline-block';
 
-    // allow play on click
-    playButton.addEventListener('click', function() {
+    // Allow play on click
+    playButton.addEventListener('click', () => {
 
-      // check if context is in suspended state (autoplay policy)
+      // Check if context is in suspended state (autoplay policy)
       if (audioCtx.state === 'suspended') {
         audioCtx.resume();
       }
@@ -390,11 +387,11 @@ if (offset === 0) {
   source.start();
   offset = context.currentTime;
 } else {
-  var relativeTime = context.currentTime - offset;
-  var beats = relativeTime / tempo;
-  var remainder = beats - Math.floor(beats);
-  var delay = tempo - (remainder*tempo);
-  source.start(context.currentTime+delay, relativeTime+delay);
+  const relativeTime = context.currentTime - offset;
+  const beats = relativeTime / tempo;
+  const remainder = beats - Math.floor(beats);
+  const delay = tempo - remainder * tempo;
+  source.start(context.currentTime + delay, relativeTime + delay);
 }
 ```
 
@@ -420,8 +417,6 @@ This is especially useful in a three-dimensional environment rendered using WebG
 
 - [Web Audio API on MDN](/en-US/docs/Web/API/Web_Audio_API)
 - [`<audio>` on MDN](/en-US/docs/Web/HTML/Element/audio)
-- [Developing Game Audio with the Web Audio API (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/games/)
-- [Mixing Positional Audio and WebGL (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)
 - [Making HTML5 Audio Actually Work on Mobile](https://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
 - [Audio Sprites (and fixes for iOS)](https://remysharp.com/2010/12/23/audio-sprites/)

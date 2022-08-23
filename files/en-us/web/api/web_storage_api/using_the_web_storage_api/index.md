@@ -64,7 +64,7 @@ function storageAvailable(type) {
         storage.removeItem(x);
         return true;
     }
-    catch(e) {
+    catch (e) {
         return e instanceof DOMException && (
             // everything except Firefox
             e.code === 22 ||
@@ -113,7 +113,7 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 To start with, in [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), we test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -182,7 +182,7 @@ The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domx
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', function(e) {
+window.addEventListener('storage', (e) => {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;

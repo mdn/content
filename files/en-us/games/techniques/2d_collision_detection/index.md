@@ -18,7 +18,7 @@ One of the simpler forms of collision detection is between two rectangles that a
 ```html hidden
 <div id="cr-stage"></div>
 <p>Move the rectangle with arrow keys. Green means collision, blue means no collision.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js
@@ -56,7 +56,7 @@ Another simple shape for collision detection is between two circles. This algori
 ```html hidden
 <div id="cr-stage"></div>
 <p>Move the circle with arrow keys. Green means collision, blue means no collision.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```css hidden
@@ -82,7 +82,7 @@ Crafty.c("Circle", {
         return this;
    },
 
-   draw: function() {
+   draw() {
        const ctx = Crafty.canvas.context;
        ctx.save();
        ctx.fillStyle = this.color;
@@ -104,9 +104,9 @@ const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 
 const circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
 
-circle2.bind("EnterFrame", function () {
-    const dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
-    const dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
+circle2.bind("EnterFrame", () => {
+    const dx = circle1.x - circle2.x;
+    const dy = circle1.y - circle2.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
     if (distance < circle1.radius + circle2.radius) {

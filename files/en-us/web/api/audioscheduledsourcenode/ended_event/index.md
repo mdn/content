@@ -50,7 +50,7 @@ node.addEventListener('ended', () => {
 You can also set up the event handler using the `onended` property:
 
 ```js
-node.onended = function() {
+node.onended = () => {
   document.getElementById("startButton").disabled = false;
 }
 ```

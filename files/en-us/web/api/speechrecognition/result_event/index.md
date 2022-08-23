@@ -32,13 +32,13 @@ An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("SpeechRecognitionEvent.emma")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
   - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
   - : Returns the semantic meaning of what the user said.
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
   - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
-- {{domxref("SpeechRecognitionEvent.results")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
 
 ## Examples
@@ -50,7 +50,7 @@ You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 ```js
 const recognition = new SpeechRecognition();
 
-recognition.addEventListener('result', function(event) {
+recognition.addEventListener('result', (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
@@ -60,7 +60,7 @@ recognition.addEventListener('result', function(event) {
 Or use the `onresult` event handler property:
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;

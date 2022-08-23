@@ -97,7 +97,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }

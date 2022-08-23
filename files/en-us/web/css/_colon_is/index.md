@@ -110,16 +110,16 @@ let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
+} catch (e) {
   try {
     matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
+  } catch (e) {
     try {
       matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
+    } catch (e) {
       try {
         matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
+      } catch (e) {
         console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
       }
     }
@@ -129,8 +129,8 @@ try {
 matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
+  elem.addEventListener('click', (e) => {
+    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
   });
 }
 ```
@@ -170,7 +170,7 @@ You can replace it with:
 
 ### Simplifying section selectors
 
-The `:is()` pseudo-class is particularly useful when dealing with HTML5 [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
+The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
 For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:
 

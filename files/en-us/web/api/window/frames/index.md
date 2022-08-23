@@ -35,7 +35,7 @@ A list of frame objects. It is similar to an
 ## Examples
 
 ```js
-const frames = window.frames; // or // var frames = window.parent.frames;
+const frames = window.frames; // or const frames = window.parent.frames;
 for (let i = 0; i < frames.length; i++) {
   // do something with each subframe as frames[i]
   frames[i].document.body.style.background = "red";

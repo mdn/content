@@ -11,13 +11,13 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver
 ---
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `ReportingObserver` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows you to collect and access reports.
 
 ## Constructor
 
-- {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}}
+- {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} {{Experimental_Inline}}
   - : Creates a new `ReportingObserver` object instance, which can be used to collect and access reports.
 
 ## Properties
@@ -26,11 +26,11 @@ _This interface has no properties defined on it._
 
 ## Methods
 
-- {{domxref("ReportingObserver.disconnect()")}} {{experimental_inline}}
+- {{domxref("ReportingObserver.disconnect()")}} {{Experimental_Inline}}
   - : Stops a reporting observer that had previously started observing from collecting reports.
-- {{domxref("ReportingObserver.observe()")}} {{experimental_inline}}
+- {{domxref("ReportingObserver.observe()")}} {{Experimental_Inline}}
   - : Instructs a reporting observer to start collecting reports in its report queue.
-- {{domxref("ReportingObserver.takeRecords()")}} {{experimental_inline}}
+- {{domxref("ReportingObserver.takeRecords()")}} {{Experimental_Inline}}
   - : Returns the current list of reports contained in the observer's report queue, and empties the queue.
 
 ## Events
@@ -42,12 +42,12 @@ _This interface has no events that fire on it._
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -61,7 +61,7 @@ observer.observe();
 Later on in the example we deliberately use the deprecated version of {{domxref("MediaDevices.getUserMedia()")}}:
 
 ```js
-if(navigator.mozGetUserMedia) {
+if (navigator.mozGetUserMedia) {
   navigator.mozGetUserMedia(
     constraints,
     success,

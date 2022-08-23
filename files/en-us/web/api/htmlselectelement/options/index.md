@@ -37,7 +37,7 @@ elements contained by the `<select>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
   for (const option of select.options) {
     console.log(option.label); // "Option 1" and "Option 2"

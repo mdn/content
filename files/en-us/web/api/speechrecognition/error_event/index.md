@@ -32,9 +32,9 @@ An {{domxref("SpeechRecognitionErrorEvent")}}. Inherits from {{domxref("Event")}
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns the type of error raised.
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
   - : Returns a message describing the error in more detail.
 
 ## Examples
@@ -44,16 +44,16 @@ You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('error', function(event) {
-  console.log(`Speech recognition error detected: ${event.error}`);
+recognition.addEventListener('error', (event) => {
+  console.error(`Speech recognition error detected: ${event.error}`);
 });
 ```
 
 Or use the `onerror` event handler property:
 
 ```js
-recognition.onerror = function(event) {
-  console.log(`Speech recognition error detected: ${event.error}`);
+recognition.onerror = (event) => {
+  console.error(`Speech recognition error detected: ${event.error}`);
 }
 ```
 

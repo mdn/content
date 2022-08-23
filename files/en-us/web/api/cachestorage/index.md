@@ -61,44 +61,44 @@ In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We co
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open('v1')
+      .then((cache) =>
+        cache.addAll([
+          '/sw-test/',
+          '/sw-test/index.html',
+          '/sw-test/style.css',
+          '/sw-test/app.js',
+          '/sw-test/image-list.js',
+          '/sw-test/star-wars-logo.jpg',
+          '/sw-test/gallery/bountyHunters.jpg',
+          '/sw-test/gallery/myLittleVader.jpg',
+          '/sw-test/gallery/snowTroopers.jpg',
+        ])
+      )
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
+self.addEventListener('fetch', (event) => {
+  event.respondWith(caches.match(event.request).then((response) => {
     // caches.match() always resolves
     // but in case of success response will have value
     if (response !== undefined) {
       return response;
     } else {
-      return fetch(event.request).then(function (response) {
+      return fetch(event.request).then((response) => {
         // response may be used only once
         // we need to save clone to put one copy in cache
         // and serve second one
         let responseClone = response.clone();
 
-        caches.open('v1').then(function (cache) {
+        caches.open('v1').then((cache) => {
           cache.put(event.request, responseClone);
         });
         return response;
-      }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
+      }).catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
     }
   }));
 });
@@ -109,56 +109,56 @@ This snippet shows how the API can be used outside of a service worker context, 
 ```js
 // Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
-   const cacheVersion = 1;
-   const cacheName = `myapp-${cacheVersion}`;
-   const url = 'https://jsonplaceholder.typicode.com/todos/1';
-   let cachedData = await getCachedData(cacheName, url);
+  const cacheVersion = 1;
+  const cacheName = `myapp-${cacheVersion}`;
+  const url = 'https://jsonplaceholder.typicode.com/todos/1';
+  let cachedData = await getCachedData(cacheName, url);
 
-   if (cachedData) {
-      console.log('Retrieved cached data');
-      return cachedData;
-   }
+  if (cachedData) {
+    console.log('Retrieved cached data');
+    return cachedData;
+  }
 
-   console.log('Fetching fresh data');
+  console.log('Fetching fresh data');
 
-   const cacheStorage = await caches.open(cacheName);
-   await cacheStorage.add(url);
-   cachedData = await getCachedData(cacheName, url);
-   await deleteOldCaches(cacheName);
+  const cacheStorage = await caches.open(cacheName);
+  await cacheStorage.add(url);
+  cachedData = await getCachedData(cacheName, url);
+  await deleteOldCaches(cacheName);
 
-   return cachedData;
+  return cachedData;
 }
 
 // Get data from the cache.
 async function getCachedData(cacheName, url) {
-   const cacheStorage = await caches.open(cacheName);
-   const cachedResponse = await cacheStorage.match(url);
+  const cacheStorage = await caches.open(cacheName);
+  const cachedResponse = await cacheStorage.match(url);
 
-   if (!cachedResponse || !cachedResponse.ok) {
-      return false;
-   }
+  if (!cachedResponse || !cachedResponse.ok) {
+    return false;
+  }
 
-   return await cachedResponse.json();
+  return await cachedResponse.json();
 }
 
 // Delete any old caches to respect user's disk space.
 async function deleteOldCaches(currentCache) {
-   const keys = await caches.keys();
+  const keys = await caches.keys();
 
-   for (const key of keys) {
-      const isOurCache = key.startsWith('myapp-');
-      if (currentCache === key || !isOurCache) {
-        continue;
-      }
-      caches.delete(key);
-   }
+  for (const key of keys) {
+    const isOurCache = key.startsWith('myapp-');
+    if (currentCache === key || !isOurCache) {
+      continue;
+    }
+    caches.delete(key);
+  }
 }
 
 try {
-   const data = await getData();
-   console.log({ data });
+  const data = await getData();
+  console.log({ data });
 } catch (error) {
-   console.error({ error });
+  console.error({ error });
 }
 ```
 
