@@ -101,7 +101,7 @@ function runPerformanceEntry() {
   // Use getEntries() to iterate through the each entry
   performance.getEntries()
     .forEach((entry, i) => {
-      log(`Entry[${i}]`);
+      console.log(`Entry[${i}]`);
       checkPerformanceEntry(entry);
     });
 }
