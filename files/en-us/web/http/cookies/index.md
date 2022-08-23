@@ -85,7 +85,7 @@ The lifetime of a cookie can be defined in two ways:
 
 For example:
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 ```
 

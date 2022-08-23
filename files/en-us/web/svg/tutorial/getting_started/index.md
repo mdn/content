@@ -76,14 +76,14 @@ Due to the potentially massive size SVG files can reach when used for some appli
 
 Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP headers:
 
-```
+```http
 Content-Type: image/svg+xml
 Vary: Accept-Encoding
 ```
 
 For gzip-compressed SVG files, servers should send the HTTP headers:
 
-```
+```http
 Content-Type: image/svg+xml
 Content-Encoding: gzip
 Vary: Accept-Encoding

@@ -324,7 +324,7 @@ In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) 
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-```
+```http
 Feature-Policy: display-capture 'self'
 ```
 

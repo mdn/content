@@ -33,7 +33,7 @@ robot is sending excessive, unwanted, or invalid requests.
 
 ## Syntax
 
-```
+```http
 From: <email>
 ```
 
@@ -44,7 +44,7 @@ From: <email>
 
 ## Examples
 
-```
+```http
 From: webmaster@example.org
 ```
 

@@ -29,7 +29,7 @@ indicate the protocol it switched to. The process is described in the following 
 
 Switching protocols might be used with [WebSockets](/en-US/docs/Web/API/WebSockets_API).
 
-```
+```http
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade

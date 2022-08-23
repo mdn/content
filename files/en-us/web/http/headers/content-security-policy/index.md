@@ -35,7 +35,7 @@ For more information, see the introductory article on [Content Security Policy (
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: <policy-directive>; <policy-directive>
 ```
 
@@ -260,7 +260,7 @@ restrict_ the capabilities of the protected resource, which means that there wil
 be no connection allowed and, as the strictest policy, `connect-src 'none'`
 is enforced.
 
-```
+```http
 Content-Security-Policy: default-src 'self' http://example.com;
                           connect-src 'none';
 Content-Security-Policy: connect-src http://example.com/;
@@ -274,27 +274,27 @@ scripts, etc.) over https:
 
 ### Using the HTTP header
 
-```
+```http
 Content-Security-Policy: default-src https:
 ```
 
 ### Using the HTML meta element
 
-```
+```html
 <meta http-equiv="Content-Security-Policy" content="default-src https:">
 ```
 
 Example: Pre-existing site that uses too much inline code to fix but wants to ensure
 resources are loaded only over HTTPS and to disable plugins:
 
-```
+```http
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
 ```
 
 Example: Do not implement the above policy yet; instead just report violations that
 would have occurred:
 
-```
+```http
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 

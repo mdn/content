@@ -40,7 +40,7 @@ Setting a source map by using a comment in the file:
 
 Or, alternatively, you can set a header to your JavaScript file:
 
-```plain example-good
+```http example-good
 X-SourceMap: /path/to/file.js.map
 ```
 

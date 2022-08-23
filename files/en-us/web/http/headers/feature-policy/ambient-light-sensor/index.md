@@ -14,7 +14,7 @@ The HTTP {{HTTPHeader('Feature-Policy')}} header `ambient-light-sensor` directiv
 
 ## Syntax
 
-```
+```http
 Feature-Policy: ambient-light-sensor <allowlist>;
 ```
 

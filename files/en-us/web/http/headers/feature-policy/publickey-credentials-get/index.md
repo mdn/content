@@ -18,7 +18,7 @@ When this policy is enabled, any attempt to query public key credentials will re
 
 ## Syntax
 
-```
+```http
 Feature-Policy: publickey-credentials-get <allowlist>;
 ```
 

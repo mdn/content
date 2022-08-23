@@ -46,7 +46,7 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempot
 
 ## Syntax
 
-```
+```http
 PUT /new.html HTTP/1.1
 ```
 
@@ -54,7 +54,7 @@ PUT /new.html HTTP/1.1
 
 ### Request
 
-```
+```http
 PUT /new.html HTTP/1.1
 Host: example.com
 Content-type: text/html
@@ -67,14 +67,14 @@ Content-length: 16
 
 If the target resource does not have a current representation and the `PUT` request successfully creates one, then the origin server must inform the user agent by sending a {{HTTPStatus("201")}} (`Created`) response.
 
-```
+```http
 HTTP/1.1 201 Created
 Content-Location: /new.html
 ```
 
 If the target resource does have a current representation and that representation is successfully modified in accordance with the state of the enclosed representation, then the origin server must send either a {{HTTPStatus("200")}} (`OK`) or a {{HTTPStatus("204")}} (`No Content`) response to indicate successful completion of the request.
 
-```
+```http
 HTTP/1.1 204 No Content
 Content-Location: /existing.html
 ```

@@ -30,7 +30,7 @@ a difference between the proxy's current date and the {{HTTPHeader("Date")}} gen
 
 ## Syntax
 
-```
+```http
 Age: <delta-seconds>
 ```
 
@@ -41,7 +41,7 @@ Age: <delta-seconds>
 
 ## Examples
 
-```
+```http
 Age: 24
 ```
 

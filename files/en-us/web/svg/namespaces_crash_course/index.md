@@ -269,31 +269,31 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
 
 The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) parameters**. So, to create an SVG `rect` *element* using `document.createElementNS()`, you must write:
 
-```javascript
+```js
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 ```
 
 But to retrieve the value of the `x`*parameter* on an SVG `rect` element, you must write:
 
-```javascript
+```js
 rect.getAttributeNS(null, 'x');
 ```
 
 Note that this isn't the case for parameters *with* a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as `xlink:href` require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` parameter of an `<a>` element in SVG you would write:
 
-```javascript
+```js
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
 ```
 
 For setting parameters that have a namespace, it is recommended (but not required) that you also include their prefix in the second parameter so that the DOM can later be more easily converted back to XML (if for instance you want to send it back to the server). For example:
 
-```javascript
+```js
 elt.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
 ```
 
 As a final example, here's a demonstration of how you should dynamically create an `<image>` element using script:
 
-```javascript
+```js
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const XLink_NS = 'http://www.w3.org/1999/xlink';
 const image = document.createElementNS(SVG_NS, 'image');

@@ -39,7 +39,7 @@ The hint allows a server to choose what information is sent based on the broad c
 
 ## Syntax
 
-```
+```http
 ECT: <value>
 ```
 
@@ -52,13 +52,13 @@ ECT: <value>
 
 A server first needs to opt in to receive the `ECT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `ECT`.
 
-```
+```http
 Accept-CH: ECT
 ```
 
 Then on subsequent requests the client might send an `ECT` header back:
 
-```
+```http
 ECT: 2g
 ```
 

@@ -41,7 +41,7 @@ There are two common use cases:
 
 ## Syntax
 
-```
+```http
 If-Match: <etag_value>
 If-Match: <etag_value>, <etag_value>, …
 ```

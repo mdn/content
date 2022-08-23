@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `usb` directive controls whethe
 
 ## Syntax
 
-```
+```http
 Feature-Policy: usb <allowlist>;
 ```
 

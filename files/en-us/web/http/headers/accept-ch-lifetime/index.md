@@ -45,13 +45,13 @@ include in subsequent requests.
 
 ## Syntax
 
-```
+```http
 Accept-CH-Lifetime: <age>
 ```
 
 ## Examples
 
-```
+```http
 Accept-CH: Viewport-Width
 Accept-CH-Lifetime: 86400
 ```
