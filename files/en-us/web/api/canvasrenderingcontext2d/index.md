@@ -114,9 +114,6 @@ The following properties control how text is laid out.
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
 - {{domxref("CanvasRenderingContext2D.letterSpacing")}}
   - : Letter spacing. Default: `0px`.
-
-
-  ----
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
 - {{domxref("CanvasRenderingContext2D.fontStretch")}}
@@ -183,6 +180,8 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
+  - : Creates a path for a rounded rectangle with a specified position, width, height, and corner radii.
 
 ### Drawing paths
 
