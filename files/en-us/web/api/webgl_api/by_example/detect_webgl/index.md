@@ -58,11 +58,9 @@ window.addEventListener("load", () => {
     const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
     // Report the result.
-    if (gl && gl instanceof WebGLRenderingContext) {
-      paragraph.textContent = "Congratulations! Your browser supports WebGL.";
-    } else {
-      paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
-    }
+    paragraph.textContent = gl instanceof WebGLRenderingContext
+      ? "Congratulations! Your browser supports WebGL."
+      : "Failed. Your browser or device may not support WebGL.";
   }
 }, false);
 ```

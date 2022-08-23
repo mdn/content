@@ -109,11 +109,8 @@ ctx.fill(circle);
 // Listen for mouse moves
 canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside circle
-  if (ctx.isPointInPath(circle, event.offsetX, event.offsetY)) {
-    ctx.fillStyle = 'green';
-  } else {
-    ctx.fillStyle = 'red';
-  }
+  const isPointInPath = ctx.isPointInPath(circle, event.offsetX, event.offsetY);
+  ctx.fillStyle = isPointInPath ? 'green' : 'red';
 
   // Draw circle
   ctx.clearRect(0, 0, canvas.width, canvas.height);

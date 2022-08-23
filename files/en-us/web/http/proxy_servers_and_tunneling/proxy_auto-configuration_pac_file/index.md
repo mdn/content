@@ -194,9 +194,9 @@ Is true if the hostname matches _exactly_ the specified hostname, or if there is
 #### Examples
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org")  // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org")              // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org")   // false (domain name mismatch)
 localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
 ```
 
@@ -245,9 +245,11 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(`${str} is ${eval(str)}`) }
+function alertEval(str) {
+  alert(`${str} is ${eval(str)}`);
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
