@@ -238,7 +238,7 @@ In this example, a panorama is scrolled left-to-right. We're using [an image of 
 
 ### HTML
 
-The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `CanvasXZSize` and `canvasYSize` variables in the JavaScript code.
+The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `canvasXSize` and `canvasYSize` variables in the JavaScript code.
 
 ```html
 <canvas id="canvas" width="800" height="200"></canvas>
