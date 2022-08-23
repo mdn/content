@@ -684,6 +684,7 @@ class Person {
 }
 
 const p = new Person("John");
+console.log(p.sayHello());
 ```
 
 JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time they are constructed, they return an object containing the methods and properties that they specified. They don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
