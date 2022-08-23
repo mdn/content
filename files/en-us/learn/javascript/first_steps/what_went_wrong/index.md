@@ -61,7 +61,7 @@ At this point, let's consult the developer console to see if it reports any synt
 
 Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
 
-1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: ![](not-a-function.png)
+1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: ![Screenshot of the "Number guessing game" demo page open in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:86:3)".](not-a-function.png)
 2. This is a pretty easy error to track down, and the browser gives you several useful bits of information to help you out (the screenshot above is from Firefox, but other browsers provide similar information). From left to right, we've got:
 
     - A red "x" to indicate that this is an error.
@@ -84,7 +84,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 ### Syntax errors round two
 
 1. Save your page and refresh, and you should see the error has gone.
-2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![](variable-is-null.png)
+2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![Screenshot of the same "Number guessing game" demo. This time, a different error is visible in the console, reading "X TypeError: lowOrHi is null".](variable-is-null.png)
 3. This time the error being reported is "TypeError: lowOrHi is null", on line 78.
 
     > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
@@ -111,7 +111,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
     > **Note:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 48.
 
-7. Save and refresh, and you should now see the `console.log()` result in your console. ![](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 48.
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 48.
 8. Let's think about what the problem could be. Line 48 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
     ```html
