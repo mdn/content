@@ -39,7 +39,7 @@ Example:
 
 The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-### Using `<link rel="canonical">`
+### Using <link rel="canonical">
 
 It is possible to add a special HTML {{HTMLElement("link")}} element to a page to indicate what the canonical address of a page is. This has no impact on the human reader of the page, but tells search engine crawlers where the page actually lives. This way, search engines don't index the same page several times, potentially leading to it being considered as duplicate content or spam, and even removing or lowering your page from the search engine result pages.
 
