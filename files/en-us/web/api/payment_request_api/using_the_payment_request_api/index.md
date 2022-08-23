@@ -130,7 +130,7 @@ if (window.PaymentRequest) {
       // the legacy web form checkout:
       window.location.href = '/legacy-web-form-checkout';
     });
-    
+
     // Every click on the checkout button should use a new instance of
     // PaymentRequest object, because PaymentRequest.show() can be
     // called only once per instance.
@@ -195,7 +195,7 @@ new PaymentRequest(supportedPaymentMethods, {
     shouldCallPaymentRequest = result;
   }).catch((error) => {
     console.error(error);
-    
+
     // The user may have turned off query ability in their privacy settings.
     // Let's use PaymentRequest by default and fallback to legacy
     // web form based checkout.

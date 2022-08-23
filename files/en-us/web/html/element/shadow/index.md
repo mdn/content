@@ -92,7 +92,7 @@ Here is a simple example of using the `<shadow>` element. It is an HTML file wit
     // Insert something into the older shadow root
     shadowroot1.innerHTML =
       '<p>Older shadow root inserted by &lt;shadow&gt;</p>';
-      
+
     // Insert into younger shadow root, including <shadow>.
     // The previous markup will not be displayed unless
     // <shadow> is used below.

@@ -783,7 +783,7 @@ email.addEventListener("input", () => {
 // This defines what happens when the user tries to submit the data
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  
+
   const test = email.value.length === 0 || emailRegExp.test(email.value);
   if (!test) {
     email.className = "invalid";
