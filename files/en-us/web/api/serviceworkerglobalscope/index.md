@@ -27,11 +27,11 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 ## Properties
 
-- {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
 
 ## Events

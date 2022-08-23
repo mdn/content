@@ -28,7 +28,7 @@ For any other underlying source, the stream will always satisfy read requests wi
 
 ## Properties
 
-- {{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}
+- {{domxref("ReadableStreamDefaultReader.closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released. This property enables you to write code that responds to an end to the streaming process.
 
 ## Methods

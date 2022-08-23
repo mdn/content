@@ -23,7 +23,7 @@ Link prefetching is a performance optimization technique that works by assuming 
 
 The prefetch hints are sent in HTTP headers:
 
-```
+```http
 Link: ; rel=dns-prefetch,
       ; as=script; rel=preload,
       ; rel=prerender,

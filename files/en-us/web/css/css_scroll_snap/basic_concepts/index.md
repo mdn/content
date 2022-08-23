@@ -17,7 +17,7 @@ The key properties of the Scroll Snap specification are:
 
 - {{CSSxRef("scroll-snap-type")}}: This property is used on the [scroll container](/en-US/docs/Glossary/Scroll_container) to state the type and direction of scrolling.
 - {{CSSxRef("scroll-snap-align")}}: This property must be used on child elements in order to set the position that scrolling will snap to.
-  
+
 The example below demonstrates scroll snapping along the vertical axis, which is defined by `scroll-snap-type`. Additionally, `scroll-snap-align` is used on the section element to dictate the point where the scrolling should stop.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-y.html", '100%', 700)}}

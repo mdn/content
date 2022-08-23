@@ -7,9 +7,10 @@ tags:
   - CSS
   - Method
   - Reference
+  - Non-standard
 browser-compat: api.Window.getDefaultComputedStyle
 ---
-{{APIRef("CSSOM")}} {{Non-standard_header}}
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 The **`getDefaultComputedStyle()`** method gives the default [computed values](/en-US/docs/Web/CSS/computed_value) of all the CSS
 properties of an element, ignoring author styling. That is, only user-agent and user

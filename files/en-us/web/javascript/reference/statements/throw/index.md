@@ -136,7 +136,7 @@ function verifyZipCode(z) {
   try {
     z = new ZipCode(z);
   } catch (e) {
-    const isInvalidCode = e instanceof ZipCodeFormatExceptio;
+    const isInvalidCode = e instanceof ZipCodeFormatException;
     return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
   }
   return z;

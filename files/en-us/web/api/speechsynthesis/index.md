@@ -22,11 +22,11 @@ The **`SpeechSynthesis`** interface of the [Web Speech API](/en-US/docs/Web/API/
 
 _`SpeechSynthesis` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-- {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesis.paused")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if the `SpeechSynthesis` object is in a paused state.
-- {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesis.pending")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if the utterance queue contains as-yet-unspoken utterances.
-- {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesis.speaking")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if an utterance is currently in the process of being spoken — even if `SpeechSynthesis` is in a paused state.
 
 ## Methods

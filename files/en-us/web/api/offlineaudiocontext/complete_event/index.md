@@ -37,7 +37,7 @@ An {{domxref("OfflineAudioCompletionEvent")}}. Inherits from {{domxref("Event")}
 
 _Also inherits properties from its parent, {{domxref("Event")}}_.
 
-- {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{readonlyinline}}
+- {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} containing the result of processing an {{domxref("OfflineAudioContext")}}.
 
 ## Examples

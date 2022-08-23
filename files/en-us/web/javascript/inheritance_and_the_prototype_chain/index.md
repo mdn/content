@@ -115,7 +115,7 @@ const parent = {
 };
 
 console.log(parent.method()); // 3
-// When calling parent.m in this case, 'this' refers to parent
+// When calling parent.method in this case, 'this' refers to parent
 
 // child is an object that inherits from parent
 const child = {

@@ -17,7 +17,7 @@ The **`<integer>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/C
 
 The `<integer>` data type consists of one or several decimal digits, 0 through 9 inclusive, optionally preceded by a single `+` or `-` sign. There is no unit associated with integers.
 
-> **Note:** There is no official range of valid `<integer>` values. Opera 12.1 supports values up to 2^15 - 1, IE up to 2^20 - 1, and other browsers even higher. During the CSS3 Values cycle there was a lot of discussion about setting a minimum range to support: the latest decision, [in April 2012 during the LC phase](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html), was \[-2^27 - 1; 2^27 - 1], but other values like 2^24 - 1 and 2^30 - 1 [were also proposed](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). However, the latest spec doesn't specify a range anymore.
+> **Note:** There is no official range of valid `<integer>` values and the specification do not specify a range.
 
 ## Interpolation
 

@@ -29,7 +29,7 @@ The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link
 
 The same prefetching hint using an HTTP `Link:` header:
 
-```
+```http
 Link: </images/big.jpeg>; rel=prefetch
 ```
 
@@ -84,7 +84,7 @@ This may impact referrer tracking that is commonly used on many sites. For this 
 
 Yes, we send the following header along with each prefetch request:
 
-```
+```http
 X-moz: prefetch
 ```
 

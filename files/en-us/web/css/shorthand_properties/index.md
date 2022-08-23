@@ -107,7 +107,7 @@ This 5 statements can be shortened to the following:
 font: italic bold .8em/1.2 Arial, sans-serif;
 ```
 
-This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal` and `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
+This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
 
 ## Border properties
 

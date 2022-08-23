@@ -246,7 +246,7 @@ The following code creates a copy of a given object.
 
 There are different ways to create a copy of an object. The following is just one way
 and is presented to explain how `Array.prototype.forEach()` works by using
-ECMAScript 5 `Object.*` meta property functions.
+`Object.*` utility functions.
 
 ```js
 const copy = (obj) => {

@@ -24,14 +24,14 @@ The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect stat
 
 ### Client request
 
-```
+```http
 GET /index.php HTTP/1.1
 Host: www.example.org
 ```
 
 ### Server response
 
-```
+```http
 HTTP/1.1 301 Moved Permanently
 Location: http://www.example.org/index.asp
 ```

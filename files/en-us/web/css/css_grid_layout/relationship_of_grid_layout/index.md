@@ -372,11 +372,11 @@ In the below example I have a wrapper containing four child items. Item three is
 
 You can see that the item is taking the area from grid column line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usual for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn't cause the additional row to be created to span to row line 3.
 
-If we remove `position:` `absolute` from the rules for `.box3` you can see how it would display without the positioning.
+If we remove `position: absolute` from the rules for `.box3` you can see how it would display without the positioning.
 
 ### A grid container as parent
 
-If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove `position:` `relative` from the wrapper above, positioning context is from the viewport, as shown in this image.
+If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove `position: relative` from the wrapper above, positioning context is from the viewport, as shown in this image.
 
 ![Image of grid container as parent](2_abspos_example.png)
 
@@ -512,7 +512,7 @@ In the following markup, I have a grid and the first item on the grid is set to 
 
 ### Using display: contents
 
-If I now add `display:` `contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
+If I now add `display: contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -567,7 +567,7 @@ If I now add `display:` `contents` to the rules for `box1`, the box for that ite
 
 {{ EmbedLiveSample('Using_display_contents', '400', '350') }}
 
-This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display:` `contents` in a similar way with flexbox to enable nested items to become flex items.
+This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display: contents` in a similar way with flexbox to enable nested items to become flex items.
 
 As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don't be afraid to mix it with other methods of doing layout to get the different effects you need.
 

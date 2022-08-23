@@ -30,11 +30,11 @@ If a feature policy blocks use of a feature, it's because your code is inconsist
 
 ## Properties
 
-- {{domxref('Magnetometer.x')}} {{readonlyinline}}
+- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}}
   - : Returns a double containing the magnetic field around the device's x axis.
-- {{domxref('Magnetometer.y')}} {{readonlyinline}}
+- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}}
   - : Returns a double containing the magnetic field around the device's y axis.
-- {{domxref('Magnetometer.z')}} {{readonlyinline}}
+- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}}
   - : Returns a double containing the magnetic field around the device's z axis.
 
 ## Methods

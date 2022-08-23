@@ -15,7 +15,7 @@ Note that some non-cacheable requests/responses to a specific URI may invalidate
 
 When both, the method of the request and the status of the response, are cacheable, the response to the request can be cached:
 
-```plain
+```http
 GET /pageX.html HTTP/1.1
 (…)
 
@@ -25,7 +25,7 @@ GET /pageX.html HTTP/1.1
 
 A {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for request to the same URI done via {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}:
 
-```plain
+```http
 PUT /pageX.html HTTP/1.1
 (…)
 
@@ -35,7 +35,7 @@ PUT /pageX.html HTTP/1.1
 
 A specific {{HTTPHeader("Cache-Control")}} header in the response can prevent caching:
 
-```plain
+```http
 GET /pageX.html HTTP/1.1
 (…)
 

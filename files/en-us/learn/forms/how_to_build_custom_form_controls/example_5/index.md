@@ -90,7 +90,6 @@ This is the last example that explain [how to build custom form widgets](/en-US/
   box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
 
   background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
   background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -161,14 +160,6 @@ This is the last example that explain [how to build custom form widgets](/en-US/
 ### JavaScript Content
 
 ```js
-// ------- //
-// HELPERS //
-// ------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-
 // -------------------- //
 // Function definitions //
 // -------------------- //

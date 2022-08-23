@@ -64,7 +64,7 @@ This example shows the use of the `types` and
       // Get the id of the target and add the moved element to the target's DOM
       const data = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(data));
-      
+
       // Print each format type
       for (let i=0; i < ev.dataTransfer.types.length; i++) {
         console.log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);

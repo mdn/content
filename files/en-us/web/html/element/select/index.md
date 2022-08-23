@@ -267,7 +267,7 @@ html body form fieldset#custom div.select div.header::after {
   padding: .5em;
 }
 
-html body form fieldset#custom div.select div.header:hover:after {
+html body form fieldset#custom div.select div.header:hover::after {
   background-color: blue;
 }
 
@@ -428,7 +428,7 @@ for (const select of selects) {
       };
     };
   };
-  
+
   function onkeyup(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -436,14 +436,14 @@ for (const select of selects) {
       this.click();
     }
   };
-  
+
   div.classList.add('select');
   header.classList.add('header');
   div.tabIndex = 1;
   select.tabIndex = -1;
   span.innerText = select.label;
   header.appendChild(span);
-  
+
   for (const attribute of select.attributes) {
     div.dataset[attribute.name] = attribute.value;
   }
@@ -470,7 +470,7 @@ for (const select of selects) {
     const optgroup = document.createElement('div');
     const label = document.createElement('div');
     const options = o.querySelectorAll('option');
-    
+
     Object.assign(optgroup, o);
     optgroup.classList.add('optgroup');
     label.classList.add('label');
@@ -480,7 +480,7 @@ for (const select of selects) {
     for (const o of options) {
       const option = document.createElement('div');
       const label = document.createElement('div');
-      
+
       for (const attribute of o.attributes) {
         option.dataset[attribute.name] = attribute.value;
       }
@@ -497,16 +497,16 @@ for (const select of selects) {
       optgroup.appendChild(option);
     };
   };
-  
+
   div.onclick = (e) => {
     e.preventDefault();
   }
-  
+
   parent.insertBefore(div, select);
   header.appendChild(select);
   div.appendChild(datalist);
   datalist.style.top = `${header.offsetTop + header.offsetHeight}px`;
-  
+
   div.onclick = (e) => {
     if (!multiple) {
       const open = this.hasAttribute("data-open");
@@ -518,25 +518,25 @@ for (const select of selects) {
       }
     }
   };
-  
+
   div.onkeyup = (event) => {
     event.preventDefault();
     if (event.keyCode === 13) {
       div.click();
     }
   };
-  
+
   document.addEventListener('click', (e) => {
     if (div.hasAttribute("data-open")) {
       div.removeAttribute("data-open");
     }
   });
-  
+
   const width = Math.max(...Array.from(options).map((e) => {
     span.innerText = e.label;
     return div.offsetWidth;
   }));
-  
+
   console.log(width)
   div.style.width = `${width}px`;
 }

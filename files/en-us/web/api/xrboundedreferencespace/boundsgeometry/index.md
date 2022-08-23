@@ -22,9 +22,10 @@ tags:
   - augmented
   - boundsGeometry
   - space
+  - Experimental
 browser-compat: api.XRBoundedReferenceSpace.boundsGeometry
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRBoundedReferenceSpace")}}
 property **`boundsGeometry`** is an array of

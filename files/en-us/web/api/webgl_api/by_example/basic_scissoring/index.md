@@ -35,7 +35,7 @@ The scissoring stage of the pipeline is disabled by default. We enable it here u
 ```html
 <p>Result of scissoring.</p>
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css

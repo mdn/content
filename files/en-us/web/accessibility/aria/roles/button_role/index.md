@@ -234,10 +234,10 @@ function toggleButton(element) {
 
   // Check to see if the button is pressed
   const pressed = element.getAttribute("aria-pressed") === "true";
-  
+
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
-  
+
   // Toggle the play state of the audio file
   if (pressed) {
      audio.pause();

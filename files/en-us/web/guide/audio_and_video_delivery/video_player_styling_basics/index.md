@@ -281,7 +281,7 @@ stop.addEventListener('click', (e) => {
   video.pause();
   video.currentTime = 0;
   progress.value = 0;
-  
+
   // Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
   changeButtonState('playpause');
 });
@@ -317,7 +317,7 @@ function checkVolume(dir) {
     } else if (dir === '-' && currentVolume > 0) {
        video.volume -= 0.1;
     }
-    
+
     // If the volume has been turned off, also set it as muted
     // Note: can only do this with the custom control set as when the 'volumechange' event is raised,
     // there is no way to know if it was via a volume or a mute change

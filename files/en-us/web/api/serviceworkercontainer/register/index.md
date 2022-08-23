@@ -109,7 +109,7 @@ a site, would apply to exactly the same pages as the example above. Remember the
 when included, uses the page's location as its base.
 
 Alternatively, if this code were included in a page at
-`example.com/product/description.html`, with the Javascript file residing
+`example.com/product/description.html`, with the JavaScript file residing
 at `example.com/product/sw.js`, then the service worker would only apply to
 resources under `example.com/product`.
 

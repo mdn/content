@@ -17,7 +17,7 @@ In addition, the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}
 
 ## Syntax
 
-```
+```http
 Feature-Policy: gamepad <allowlist>;
 ```
 
@@ -35,7 +35,7 @@ Default allow list for `gamepad` is `'self'`.
 SecureCorp Inc. wants to disable the Gamepad API within all browsing contexts except for its own origin and those whose origin is `https://example.com`.
 It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: gamepad 'self' https://example.com
 ```
 
@@ -44,7 +44,7 @@ Feature-Policy: gamepad 'self' https://example.com
 FastCorp Inc. wants to disable `gamepad` for all cross-origin child frames, except for a specific \<iframe>.
 It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: gamepad 'self'
 ```
 

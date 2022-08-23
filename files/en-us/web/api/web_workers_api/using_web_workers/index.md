@@ -525,7 +525,7 @@ const queryableFunctions = {
   getDifference(minuend, subtrahend) {
     reply('printStuff', minuend - subtrahend);
   },
-  
+
   // example #2: wait three seconds
   waitSomeTime() {
     setTimeout(() => { reply('doAlert', 3, 'seconds'); }, 3000);
@@ -572,13 +572,13 @@ For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app t
 
 ```js
 // Create a 32MB "file" and fill it with consecutive values from 0 to 255 – 32MB = 1024 * 1024 * 32
-const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 32 }, (v, i) => i);
+const uInt8Array = new Uint8Array(1024 * 1024 * 32).map((v, i) => i);
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
 ## Embedded workers
 
-There is not an "official" way to embed the code of a worker within a web page, like {{HTMLElement("script")}} elements do for normal scripts. But a {{HTMLElement("script")}} element that does not have a `src` attribute and has a `type` attribute that does not identify an executable MIME type can be considered a data block element that JavaScript could use. "Data blocks" is a more general feature of HTML5 that can carry almost any textual data. So, a worker could be embedded in this way:
+There is not an "official" way to embed the code of a worker within a web page, like {{HTMLElement("script")}} elements do for normal scripts. But a {{HTMLElement("script")}} element that does not have a `src` attribute and has a `type` attribute that does not identify an executable MIME type can be considered a data block element that JavaScript could use. "Data blocks" is a more general feature of HTML that can carry almost any textual data. So, a worker could be embedded in this way:
 
 ```html
 <!DOCTYPE html>

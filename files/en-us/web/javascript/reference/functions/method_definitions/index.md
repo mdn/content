@@ -160,7 +160,7 @@ new objA.method  // TypeError: obj.method is not a constructor
 const objB = {
   *g() {}
 }
-new objB.g       // TypeError: obj.g is not a constructor (changed in ES2016)
+new objB.g       // TypeError: obj.g is not a constructor
 ```
 
 ## Examples

@@ -19,7 +19,7 @@ Note that the [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https:/
 
 To disable autocompletion in forms, you can set the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to "off":
 
-```html
+```plain
 autocomplete="off"
 ```
 

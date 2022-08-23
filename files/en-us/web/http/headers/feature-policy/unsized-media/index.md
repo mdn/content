@@ -18,7 +18,7 @@ This restriction solves "layout instability" problem caused by providing default
 
 ## Syntax
 
-```
+```http
 Feature-Policy: unsized-media <allowlist>;
 ```
 

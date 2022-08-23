@@ -131,10 +131,7 @@ foo = 'f' // In non-strict mode, assumes you want to create a property named `fo
 Object.hasOwn(globalThis, 'foo') // true
 ```
 
-In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-Assignment to an unqualified identifier in strict mode will result in a
-`ReferenceError`, to avoid the accidental creation of properties on the
-global object.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), assignment to an unqualified identifier in strict mode will result in a `ReferenceError`, to avoid the accidental creation of properties on the global object.
 
 Note that the implication of the above, is that, contrary to popular misinformation,
 JavaScript does not have implicit or undeclared variables, it merely has a syntax that

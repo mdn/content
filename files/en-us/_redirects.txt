@@ -1723,7 +1723,7 @@
 /en-US/docs/DOM/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/DOM/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
+/en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/UserProximityEvent	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/DOM/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
@@ -9666,6 +9666,7 @@
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
+/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/en-US/docs/Web/API/Pointer_events
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent
@@ -11670,7 +11671,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
+/en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
@@ -11737,7 +11738,7 @@
 /en-US/docs/Web/Guide/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
+/en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
@@ -11756,7 +11757,7 @@
 /en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Events
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
+/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction

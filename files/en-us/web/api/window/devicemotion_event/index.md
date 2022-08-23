@@ -27,7 +27,7 @@ ondevicemotion = (event) => { };
 
 ## Event type
 
-An {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DeviceMotionEvent")}}
 

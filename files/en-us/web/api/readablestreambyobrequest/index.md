@@ -36,7 +36,7 @@ None. `ReadableStreamBYOBRequest` instance is created automatically by `Readable
 
 ## Properties
 
-- {{domxref("ReadableStreamBYOBRequest.view")}} {{readonlyInline}}
+- {{domxref("ReadableStreamBYOBRequest.view")}} {{ReadOnlyInline}}
   - : Returns the current view.
     This is a view on a buffer that will be transferred to the consumer when `ReadableStreamBYOBRequest.respond()` is called.
 

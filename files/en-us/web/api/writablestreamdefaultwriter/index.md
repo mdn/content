@@ -22,11 +22,11 @@ The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs
 
 ## Properties
 
-- {{domxref("WritableStreamDefaultWriter.closed")}} {{readonlyinline}}
+- {{domxref("WritableStreamDefaultWriter.closed")}} {{ReadOnlyInline}}
   - : Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed, or rejects if the stream errors or the writer's lock is released.
-- {{domxref("WritableStreamDefaultWriter.desiredSize")}} {{readonlyinline}}
+- {{domxref("WritableStreamDefaultWriter.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
-- {{domxref("WritableStreamDefaultWriter.ready")}} {{readonlyinline}}
+- {{domxref("WritableStreamDefaultWriter.ready")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the desired size of the stream's internal queue transitions from non-positive to positive, signaling that it is no longer applying backpressure.
 
 ## Methods

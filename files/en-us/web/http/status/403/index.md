@@ -22,7 +22,7 @@ This status is similar to {{HTTPStatus("401")}}, but for the **`403 Forbidden`**
 
 ## Example response
 
-```
+```http
 HTTP/1.1 403 Forbidden
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```

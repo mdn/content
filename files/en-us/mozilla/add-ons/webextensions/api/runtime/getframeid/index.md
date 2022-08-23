@@ -19,7 +19,9 @@ Returns the frame ID of any window global or frame element when called from a co
 ## Syntax
 
 ```js
-getFrameId()
+let gettingInfo = browser.runtime.getFrameId(
+  target               // object
+)
 ```
 
 ### Parameters

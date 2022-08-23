@@ -8,6 +8,7 @@ tags:
   - Reference
   - EyeDropper
   - open
+  - Experimental
 browser-compat: api.EyeDropper.open
 ---
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}

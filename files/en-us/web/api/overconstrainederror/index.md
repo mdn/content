@@ -27,11 +27,11 @@ The **`OverconstrainedError`** interface of the [Media Capture and Streams API](
 
 ## Properties
 
-- {{domxref("OverconstrainedError.constraint")}} {{readonlyInline}}
+- {{domxref("OverconstrainedError.constraint")}} {{ReadOnlyInline}}
   - : Returns the constraint that was supplied in the constructor, meaning the constraint that was not satisfied.
-- {{domxref("DOMException.message")}} {{readonlyInline}}
+- {{domxref("DOMException.message")}} {{ReadOnlyInline}}
   - : Returns the text supplied in the constructor.
-- {{domxref("DOMException.name")}} {{readonlyInline}}
+- {{domxref("DOMException.name")}} {{ReadOnlyInline}}
   - : Will always return `OverconstrainedError`.
 
 ## Methods

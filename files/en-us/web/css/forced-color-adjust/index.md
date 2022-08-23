@@ -41,7 +41,7 @@ The `forced-color-adjust` property's value must be one of the following keywords
 
 - `auto`
   - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
-- **`none`**
+- `none`
   - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
 
 ## Usage notes

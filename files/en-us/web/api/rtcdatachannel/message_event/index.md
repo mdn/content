@@ -47,15 +47,15 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("MessageEvent.data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{readonlyInline}}
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A reference to the message emitter, one of {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}}.
-- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples

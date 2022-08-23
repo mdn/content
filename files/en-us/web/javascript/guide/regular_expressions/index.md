@@ -127,7 +127,7 @@ If you want to look at all the special characters that can be used in regular ex
         <p>
           <a
             href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences"
-            >Groups and ranges</a
+            >Groups and backreferences</a
           >
         </p>
       </td>

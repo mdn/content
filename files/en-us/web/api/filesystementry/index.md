@@ -65,17 +65,17 @@ _This interface provides the following properties._
 
 _This interface defines the following methods._
 
-- {{domxref("FileSystemEntry.copyTo", "copyTo()")}}
+- {{domxref("FileSystemEntry.copyTo", "copyTo()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Copies the file or directory to a new location on the file system.
-- {{domxref("FileSystemEntry.getMetadata", "getMetadata()")}}
+- {{domxref("FileSystemEntry.getMetadata", "getMetadata()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Obtains metadata about the file, such as its modification date and size.
 - {{domxref("FileSystemEntry.getParent", "getParent()")}}
   - : Returns a {{domxref("FileSystemDirectoryEntry")}} representing the entry's parent directory.
-- {{domxref("FileSystemEntry.moveTo", "moveTo()")}}
+- {{domxref("FileSystemEntry.moveTo", "moveTo()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Moves the file or directory to a new location on the file system, or renames the file or directory.
-- {{domxref("FileSystemEntry.remove", "remove()")}}
+- {{domxref("FileSystemEntry.remove", "remove()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Removes the specified file or directory. You can only remove directories which are empty.
-- {{domxref("FileSystemEntry.toURL", "toURL()")}}
+- {{domxref("FileSystemEntry.toURL", "toURL()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates and returns a URL which identifies the entry. This URL uses the URL scheme `"filesystem:"`.
 
 ## Specifications

@@ -4,7 +4,6 @@ slug: Web/CSS/@media/-webkit-device-pixel-ratio
 tags:
   - '@media'
   - CSS
-  - NeedsBrowserCompatibility
   - Non-standard
   - WebKit
   - media feature
@@ -14,7 +13,7 @@ browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
 
 The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
 
-> **Note:** This media feature is a WebKit feature. If possible, use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature query instead.
+> **Note:** If possible, use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature query instead, which is a standard media feature. While this prefixed media feature is a WebKit feature, other browser engines may support it. See [browser compatibility](#browser-compatibility) below.
 
 ## Syntax
 

@@ -243,7 +243,7 @@ I put Modernizr inside my `js/lib` directory, then included it by putting the fo
 
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
 
-```java
+```js
 if (!Modernizr.mq('only all')) {
   require('respond');
 }
@@ -251,7 +251,7 @@ if (!Modernizr.mq('only all')) {
 
 `matchMedia` is also very useful in many other ways. Imagine you wanted to include some kind of WebGL chart in the desktop version of the site requiring a WebGL library like Three but didn't want it included in the mobile version? You could create a block to only load the library in the case of narrow screen devices:
 
-```java
+```js
 if (window.matchMedia("(min-width: 481px)").matches) {
   require('three');
 }
