@@ -18,7 +18,7 @@ browser-compat: api.PresentationConnection.state
 ---
 {{APIRef("Presentation API")}}{{SeeCompatTable}}
 
-The `state` attribute reflects the [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection)'s current state. Depending on the current [`PresentationConnectionState`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate), the `state` attribute can hold one of the following values.
+The **`state`** attribute reflects the [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection)'s current state. Depending on the current [`PresentationConnectionState`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate), the `state` attribute can hold one of the following values.
 
 - **`connecting`**: The user agent is attempting to [establish a presentation connection](https://www.w3.org/TR/presentation-api/#dfn-establish-a-presentation-connection) with the [destination browsing context](https://www.w3.org/TR/presentation-api/#dfn-destination-browsing-context). This is the initial state when a [`PresentationConnection`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection) object is created.
 - **`connected`**: The [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) is established and communication is possible.

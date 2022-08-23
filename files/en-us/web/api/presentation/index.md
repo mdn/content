@@ -13,7 +13,7 @@ browser-compat: api.Presentation
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-The `Presentation` can be defined as two possible user agents in the context: _Controlling user agent_ and _Receiving user agent_.
+The **`Presentation`** can be defined as two possible user agents in the context: _Controlling user agent_ and _Receiving user agent_.
 
 In controlling browsing context, the `Presentation` interface provides a mechanism to override the browser default behavior of launching presentation to external screen. In receiving browsing context, `Presentation` interface provides the access to the available presentation connections.
 
