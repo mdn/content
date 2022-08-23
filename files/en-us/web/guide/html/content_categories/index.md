@@ -40,15 +40,13 @@ A few other elements belong to this category, but only if a specific condition i
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
 - {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
-- {{HTMLElement("style")}}, if the {{htmlattrxref("scoped","style")}} {{deprecated_inline}} attribute is present
+- {{HTMLElement("style")}}, if the `scoped` {{deprecated_inline}} attribute is present
 
 ### Sectioning content
 
 Sectioning content is a subset of flow content, and can be used everywhere flow content is expected. Elements belonging to the sectioning content model create a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) that defines the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
 
 Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
-
-> **Note:** Do not confuse this content model with the [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots) category, which isolates its content from the regular outline.
 
 ### Heading content
 
@@ -87,8 +85,7 @@ Some elements belong to this category only under specific conditions:
 
 - {{HTMLElement("audio")}}, if the {{htmlattrxref("controls", "audio")}} attribute is present
 - {{HTMLElement("img")}}, if the {{htmlattrxref("usemap", "img")}} attribute is present
-- {{HTMLElement("input")}}, if the {{htmlattrxref("type", "input")}} attribute is not in the hidden state
-- {{HTMLElement("menu")}}, if the {{htmlattrxref("type", "menu")}} attribute is in the toolbar state
+- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
 - {{HTMLElement("object")}}, if the {{htmlattrxref("usemap", "object")}} attribute is present
 - {{HTMLElement("video")}}, if the {{htmlattrxref("controls", "video")}} attribute is present
 
@@ -151,7 +148,3 @@ If those elements were removed, this fragment would still be valid HTML (if not 
 ```html
 <p>We hold these truths to be <em>sacred &amp; undeniable</em> self-evident.</p>
 ```
-
-## Other content models
-
-Sectioning root.
