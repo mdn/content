@@ -2,6 +2,7 @@
   "problemMatcher": [
     {
       "owner": "markdownlint",
+      "severity": "warning",
       "pattern": [
         {
           "regexp": "^([^:]*):(\\d+):?(\\d+)?\\s([\\w-\\/]*)\\s(.*)$",
