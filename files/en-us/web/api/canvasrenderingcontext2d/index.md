@@ -105,13 +105,15 @@ The following methods and properties control how lines are drawn.
 The following properties control how text is laid out.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
-  - : Font setting. Default value `10px sans-serif`.
+  - : Font setting. Default value `"10px sans-serif"`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
   - : Text alignment setting. Possible values: `start` (default), `end`, `left`, `right`, `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
+  - : Letter spacing. Default: `0px`.
 
 ### Fill and stroke styles
 
