@@ -12,13 +12,23 @@ browser-compat: javascript.statements.for_of
 ---
 {{jsSidebar("Statements")}}
 
-The **`for...of` statement** creates a loop iterating over
-[iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol),
-including: built-in {{jsxref("String")}}, {{jsxref("Array")}},
-array-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}}
-or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}},
-{{jsxref("Set")}}, and user-defined iterables. It invokes a custom iteration hook with
-statements to be executed for the value of each distinct property of the object.
+The **`for...of` statement** executes a loop that operates on a sequence of values
+sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+Iterable objects including instances of built-ins such as
+{{jsxref("Array")}},
+{{jsxref("String")}},
+{{jsxref("TypedArray")}},
+{{jsxref("Map")}},
+{{jsxref("Set")}},
+{{jsxref("Functions/arguments", "arguments")}},
+{{domxref("NodeList")}} (and other DOM collections),
+user-defined iterables,
+and [iterable iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
+Iterable iterators include `Array` iterators
+(and iterators for other built-ins),
+user-defined iterable iterators,
+and {{jsxref("Generator", "generators")}}
+produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
@@ -26,58 +36,69 @@ statements to be executed for the value of each distinct property of the object.
 
 ```js
 for (variable of iterable) {
-  statement
+  statements
 }
 ```
 
-- `variable`
-  - : On each iteration a value of a different property is assigned to
-    `variable`. `variable` may be declared
-    with `const`, `let`, or `var`.
 - `iterable`
-  - : Object whose iterable properties are iterated.
+  - An iterable object.
+  - The source of the sequence of values on which the loop operates.
+- `variable`
+  - Receives a value from the sequence on each iteration.
+  - May be declared with `const`, `let`, or `var`.
+- `statements`
+  - A sequence of loop statements that execute on every iteration.
+  - May reference `variable`.
+  - May contain nested statements.
+
+## Description
+
+A `for...of` loop operates one by one and in sequential order
+on the values sourced from an iterable.
+Each operation of the loop on a value is called an iteration,
+and the loop is said to iterate over the iterable.
+Each iteration executes statements that may refer to the current sequence value.
+
+When a `for...of` loop iterates over an iterable,
+it first calls the iterable's `@@iterator` method,
+and then repeatedly calls the resulting iterator's `next` method
+to produce the sequence of values on which the loop operates.
+
+A `for...of` loop completes normally
+when the loop iterates over all the values in the sequence
+and in each iteration the execution of each loop statement completes normally.
+
+A `for...of` loop completes abruptly
+when some iteration of the loop executes a loop statement that completes abruptly.
+Statements that always complete abruptly are
+`break`, `continue`, `return`, and `throw`.
 
 ## Examples
 
 ### Iterating over an `Array`
 
 ```js
-const iterable = [10, 20, 30];
+const iterable = [1, 2, 3];
 
 for (const value of iterable) {
   console.log(value);
 }
-// 10
-// 20
-// 30
-```
-
-You can use {{jsxref("Statements/let", "let")}} instead of {{jsxref("Statements/const",
-  "const")}} too, if you reassign the variable inside the block.
-
-```js
-const iterable = [10, 20, 30];
-
-for (let value of iterable) {
-  value += 1;
-  console.log(value);
-}
-// 11
-// 21
-// 31
+// 1
+// 2
+// 3
 ```
 
 ### Iterating over a `String`
 
 ```js
-const iterable = 'boo';
+const iterable = '123';
 
 for (const value of iterable) {
   console.log(value);
 }
-// "b"
-// "o"
-// "o"
+// 1
+// 2
+// 3
 ```
 
 ### Iterating over a `TypedArray`
@@ -125,118 +146,45 @@ for (const value of iterable) {
 // 3
 ```
 
-### Iterating over the arguments object
-
-You can iterate over the {{jsxref("Functions/arguments", "arguments")}} object to
-examine all of the parameters passed into a JavaScript function:
+### Iterating over `arguments`
 
 ```js
-(function() {
-  for (const argument of arguments) {
-    console.log(argument);
+function foo() {
+  for (const value of arguments) {
+    console.log(value);
   }
-})(1, 2, 3);
+}
 
+foo(1, 2, 3);
 // 1
 // 2
 // 3
 ```
 
-### Iterating over a DOM collection
+### Iterating over a `NodeList`
 
-Iterating over DOM collections like [`NodeList`](/en-US/docs/Web/API/NodeList):
-the following example adds a `read` class to paragraphs that are direct
-descendants of an article:
+Note: This will only work on platforms that have implemented `NodeList.prototype[Symbol.iterator]`.
 
 ```js
-// Note: This will only work in platforms that have
-// implemented NodeList.prototype[Symbol.iterator]
-const articleParagraphs = document.querySelectorAll('article > p');
+const paragraphs = document.querySelectorAll('article > p');
 
-for (const paragraph of articleParagraphs) {
+for (const paragraph of paragraphs) {
   paragraph.classList.add('read');
 }
 ```
 
-### Closing iterators
+### Iterating over a user-defined iterable
 
-In `for...of` loops, abrupt iteration termination can be caused by
-`break`, `throw` or `return`. In these cases, the
-iterator is closed.
-
-```js
-function* foo(){
-  yield 1;
-  yield 2;
-  yield 3;
-};
-
-for (const o of foo()) {
-  console.log(o);
-  break; // closes iterator, execution continues outside of the loop
-}
-console.log('done');
-```
-
-### Iterating over generators
-
-You can also iterate over [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
-
-```js
-function* fibonacci() { // a generator function
-  let [prev, curr] = [0, 1];
-  while (true) {
-    [prev, curr] = [curr, prev + curr];
-    yield curr;
-  }
-}
-
-for (const n of fibonacci()) {
-  console.log(n);
-  // truncate the sequence at 1000
-  if (n >= 1000) {
-    break;
-  }
-}
-```
-
-#### Do not reuse generators
-
-Generators should not be re-used, even if the `for...of` loop is terminated
-early, for example via the {{jsxref("Statements/break", "break")}} keyword. Upon exiting
-a loop, the generator is closed and trying to iterate over it again does not yield any
-further results.
-
-```js example-bad
-const gen = (function *(){
-  yield 1;
-  yield 2;
-  yield 3;
-})();
-for (const o of gen) {
-  console.log(o);
-  break;  // Closes iterator
-}
-
-// The generator should not be re-used, the following does not make sense!
-for (const o of gen) {
-  console.log(o); // Never called.
-}
-```
-
-### Iterating over other iterable objects
-
-You can also iterate over an object that explicitly implements the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
-protocol:
+Iterating over an object having an `@@iterator` method:
 
 ```js
 const iterable = {
   [Symbol.iterator]() {
+    let i = 1;
     return {
-      i: 0,
       next() {
-        if (this.i < 3) {
-          return { value: this.i++, done: false };
+        if (i <= 3) {
+          return { value: i++, done: false };
         }
         return { value: undefined, done: true };
       }
@@ -247,9 +195,195 @@ const iterable = {
 for (const value of iterable) {
   console.log(value);
 }
-// 0
 // 1
 // 2
+// 3
+```
+
+Iterating over an object having an `@@iterator` generator method:
+
+```js
+const iterable = {
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+};
+
+for (const value of iterable) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+Iterating over a function object that is its own `@@iterator` method:
+
+```js
+function iterable() {
+  let i = 1;
+  return {
+    next() {
+      if (i <= 3) {
+        return { value: i++, done: false };
+      }
+      return { value: undefined, done: true };
+    }
+  };
+}
+
+iterable[Symbol.iterator] = iterable;
+
+for (const value of iterable) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+Iterating over a generator function object that is its own `@@iterator` generator method:
+
+```
+function* iterable() {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+iterable[Symbol.iterator] = iterable;
+
+for (const value of iterable) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+### Iterating over an `Array` iterator
+
+```js
+const iterator = [1, 2, 3][Symbol.iterator]();
+
+for (const value of iterator)
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+### Iterating over a user-defined iterable iterator
+
+```js
+let i = 1;
+
+const iterator = {
+  next() {
+    if (i <= 3) {
+      return { value: i++, done: false };
+    }
+    return { value: undefined, done: true };
+  },
+  [Symbol.iterator]() {
+    return this;
+  }
+};
+
+for (const value of iterator) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+### Iterating over a generator
+
+```js
+function* source() {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+const generator = source();
+
+for (const value of generator) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+### Abrupt Completion
+
+Execution of the `break` statement in the following loop completes abruptly,
+which causes the surrounding `if` statement to complete abruptly,
+which in turn causes the loop to complete abruptly.
+
+```js
+const source = [1, 2, 3];
+
+const iterator = source[Symbol.iterator]();
+
+for (const value of iterator) {
+  console.log(value);
+  if (value === 1) {
+    break;
+  }
+  console.log('This string will not be logged.');
+}
+// 1
+
+// Another loop using the same iterator
+// picks up where the last loop left off.
+for (const value of iterator) {
+  console.log(value);
+}
+// 2
+// 3
+
+// The iterator is used up.
+// This loop will execute no iteratations.
+for (const value of iterator) {
+  console.log(value);
+}
+// [No output]
+```
+
+Generators behave differently from other iterators
+in that only one loop can iterate over them,
+even if the first loop completes abruptly:
+
+```js example-bad
+function* source() {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+const generator = source();
+
+for (const value of generator) {
+  console.log(value);
+  if (value === 1) {
+    break;
+  }
+  console.log('This string will not be logged.');
+}
+// 1
+
+// The generator is used up.
+// This loop will execute no iteratations.
+for (const value of generator) {
+  console.log(value);
+}
+// [No output]
 ```
 
 ### Difference between `for...of` and `for...in`
