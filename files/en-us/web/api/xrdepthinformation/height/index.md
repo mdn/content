@@ -14,7 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRDepthInformation.height
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The *read-only* **`height`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the height of the depth buffer (number of rows).
 
