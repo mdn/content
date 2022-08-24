@@ -355,9 +355,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>
 );
 ```
 
@@ -425,9 +423,7 @@ Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice
 
 ```js
 root.render(
-  <React.StrictMode>
     <App subject="Clarice" />
-  </React.StrictMode>
 );
 ```
 
