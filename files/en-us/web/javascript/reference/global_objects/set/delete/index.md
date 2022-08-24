@@ -41,10 +41,10 @@ Returns `true` if `value` was already in
 const mySet = new Set();
 mySet.add('foo');
 
-mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
-mySet.delete('foo'); // Returns true. Successfully removed.
+console.log(mySet.delete('bar')); // Returns false. No "bar" element found to be deleted.
+console.log(mySet.delete('foo')); // Returns true. Successfully removed.
 
-mySet.has('foo');    // Returns false. The "foo" element is no longer present.
+console.log(mySet.has('foo'));    // Returns false. The "foo" element is no longer present.
 ```
 
 ### Deleting an object from a set

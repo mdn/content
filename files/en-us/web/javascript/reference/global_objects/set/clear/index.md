@@ -36,13 +36,13 @@ const mySet = new Set();
 mySet.add(1);
 mySet.add('foo');
 
-mySet.size;       // 2
-mySet.has('foo'); // true
+console.log(mySet.size);       // 2
+console.log(mySet.has('foo')); // true
 
 mySet.clear();
 
-mySet.size;       // 0
-mySet.has('bar')  // false
+console.log(mySet.size);       // 0
+console.log(mySet.has('bar')); // false
 ```
 
 ## Specifications
