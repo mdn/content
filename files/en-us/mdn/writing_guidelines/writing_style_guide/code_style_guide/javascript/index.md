@@ -600,7 +600,7 @@ Not writing the parameter list is called _optional catch binding_ and has been a
 
 ## Strings
 
-String literals can be enclosed with single quotes, like "A string", with double quotes, like `"A string"`. Which type of literal to use is the subject of never-ending discussions.
+String literals can be enclosed with single quotes, like `'A string'`, or with double quotes, like `"A string"`.
 
 [Prettier](https://prettier.io/docs/en/index.html) will enforce the following rule: it will use the type of quotes that will minimize escaping in a string, maximizing readability. In the case of equality, it will use double quotes (`""`).
 
