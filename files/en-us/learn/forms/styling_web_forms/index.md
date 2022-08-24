@@ -389,7 +389,7 @@ As you can see, as long as we want to build forms with just text fields and butt
 - [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
 - [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](#)
+- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
 - [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
