@@ -22,7 +22,7 @@ We have decided to use [Prettier](https://prettier.io/) as a code formatter to a
 
 Prettier is effective for code formatting but can't judge if a comment is helpful, for example, or recommend the best JavaScript feature for a specific task. This document describes other conventions that we follow for such cases beyond formatting. 
 
-To learn about the convention in detail, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+To learn more about the formatting conventions that are applied, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
 
 ### Modern JavaScript features
 
