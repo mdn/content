@@ -744,7 +744,7 @@ class Teacher extends Person {
 
 ### Checking object properties
 
-The `Object.hasOwnProperties()` is problematic and has been deprecated in favor of `Object.hasOwn()`. Use the latter.
+The `Object.hasOwnProperties()` method has been deprecated in favor of `Object.hasOwn()`.
 
 ## Functions and classes
 
