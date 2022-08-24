@@ -177,7 +177,7 @@ for (let i = 0; i < 4; i++ ){
 
 JS-style comments are marked with `//`, as opposed to C-style comments enclosed between `/* … */`.
 
-In general, use JS-style comments to comment code. There is a mark on each line, so it is easier to notice a commented-out line. In addition, this convention allows using `/* …*/` to comment out a section of code while debugging.
+In general, use JS-style comments to comment code. Writers must mark each line with `//`, so it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
 
 Leave a space between the slashes and the comment. Start with a capital letter, like if it was a sentence, but don't end the comment with a period.
 
