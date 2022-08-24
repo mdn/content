@@ -6,7 +6,7 @@ tags:
   - API
   - Accessibility
   - Draft
-  - HTML5
+  - HTML
   - Interface
   - Media
   - NeedsContent

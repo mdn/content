@@ -27,12 +27,6 @@ For security reasons, browsers restrict cross-origin HTTP requests initiated fro
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) to mitigate the risks of cross-origin HTTP requests.
 
-## Who should read this article?
-
-Everyone, really.
-
-More specifically, this article is for **web administrators**, **server developers** and **front-end developers**. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers.
-
 ## What requests use CORS?
 
 This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:

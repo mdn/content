@@ -3,7 +3,7 @@ title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 page-type: guide
 tags:
-  - HTML5
+  - HTML
   - Handshaking
   - NeedsMarkupWork
   - Tutorial
@@ -72,7 +72,7 @@ Methods:
 write(byte[] b, int off, int len)
 ```
 
-Writes _`len`_ bytes from the specified byte array starting at offset _`off`_ to this output stream.
+Writes `len` bytes from the specified byte array starting at offset `off` to this output stream.
 
 ### InputStream
 

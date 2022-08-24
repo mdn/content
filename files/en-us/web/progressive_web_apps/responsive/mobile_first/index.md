@@ -105,10 +105,9 @@ For this example app, the HTML structure is going to be very simple: I am just i
   </header>
 
   <div class="main">
-    <p>Lorem ipsum … </p>
+    <p>Lorem ipsum …</p>
     <a id="bottom" href="#top">Back to top</a>
   </div>
-
 </article>
 
 <button id="install-btn">Install</button>
@@ -144,9 +143,10 @@ One word of warning about this technique though - positioning doesn't work as ex
 The first one is to jump down from the top of the article to the navigation menu, and the second one is to jump back up to the top of the article again. I had to make sure both of these were NOT direct children of the `<article>`, otherwise the following would not work:
 
 ```css
-#bottom, #top {
+#bottom,
+#top {
   font-size: 0.8em;
-  position:absolute;
+  position: absolute;
   right: 1em;
   text-decoration: none;
 }
@@ -169,11 +169,13 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
 
 ```css
 @media (min-width: 480px) {
-  #bottom, #top {
+  #bottom,
+  #top {
     display: none;
   }
 
-  article, nav {
+  article,
+  nav {
     display: block;
   }
 
@@ -196,7 +198,6 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
   nav li:last-child a {
     border-right: none;
   }
-
 }
 
 @media (min-width: 600px) {
@@ -213,7 +214,7 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
   }
 
   .main > p {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
   }
 
   nav li a {
@@ -264,7 +265,7 @@ We can, therefore, save the bandwidth for browsers that don't need it.
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 
 ```html
-<html class=" js no-rgba no-multiplebgs">
+<html class="js no-rgba no-multiplebgs">
 ```
 
 When these are present, we can serve alternative styling rules to provide sensible fallbacks using descendant selectors — see the following in my code.
@@ -285,9 +286,7 @@ Modernizr also puts its feature detect results in a JavaScript `Modenizr` object
 
 ```js
 if (Modernizr.rgba) {
-
   // run code that depends on RGBA colors being supported.
-
 }
 ```
 

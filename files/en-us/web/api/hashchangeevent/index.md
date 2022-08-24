@@ -5,7 +5,7 @@ page-type: web-api-interface
 tags:
   - API
   - Event
-  - HTML5
+  - HTML
   - HashChange
   - Interface
   - Reference

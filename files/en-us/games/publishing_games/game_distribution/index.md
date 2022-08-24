@@ -7,7 +7,7 @@ tags:
   - Game publishing
   - Games
   - Gaming
-  - HTML5
+  - HTML
   - JavaScript
   - Mobile Game Distribution
   - Phonegap

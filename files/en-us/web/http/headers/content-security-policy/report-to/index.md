@@ -14,7 +14,7 @@ browser-compat: http.headers.Content-Security-Policy.report-to
 {{HTTPSidebar}}
 
 The `Content-Security-Policy`
-**_`Report-To`_** HTTP response header field
+**`Report-To`** HTTP response header field
 instructs the user agent to store reporting endpoints for an origin.
 
 ```http

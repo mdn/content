@@ -4,7 +4,7 @@ slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 tags:
   - Apps
   - Buffer
-  - HTML5
+  - HTML
   - TimeRanges
   - Video
   - buffering

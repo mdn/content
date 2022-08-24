@@ -24,7 +24,7 @@ onevent = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaRecorderErrorEvent")}}
 

@@ -28,7 +28,7 @@ onmessage = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaKeyMessageEvent")}}
 

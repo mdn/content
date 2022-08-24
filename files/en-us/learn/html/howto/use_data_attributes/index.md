@@ -6,7 +6,6 @@ tags:
   - Example
   - Guide
   - HTML
-  - HTML5
   - Web
 ---
 {{LearnSidebar}}

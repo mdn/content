@@ -196,7 +196,7 @@ Consider using metadata such as `<meta name="robots" content="noindex, nofollow"
 By not indexing the page, the likelihood that users will stumble upon it via search will be reduced.
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>…</title>
     <meta name="robots" content="noindex, nofollow">
@@ -266,8 +266,10 @@ To ensure that a video has controls that a user can access, ensure that you add 
 <video controls>
   <source src="myVideo.mp4" type="video/mp4">
   <source src="myVideo.webm" type="video/webm">
-  <p>Your browser doesn't support HTML video. Here is
-     a <a href="myVideo.mp4">link to the video</a> instead.</p>
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="myVideo.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -319,9 +321,9 @@ Translations and transformations can animate text in a div, and do harm. Althoug
 
 In the style sheet or within the {{HTMLElement('style')}} element, many options can combine together to create a powerful experience for the user. We've already mentioned the `animation` property earlier in this document. It's actually shorthand for all animation properties, including:
 
-- **`animation-play-state`**
-- **`animation-duration`** has a value of `<time>`; this is the duration an animation takes to complete one cycle. This may be specified in either seconds `(s)` or milliseconds `(ms)`. A default value of `0s` indicates no animation should occur.
-- **`animation-timing-function`**
+- `animation-play-state`
+- `animation-duration` has a value of `<time>`; this is the duration an animation takes to complete one cycle. This may be specified in either seconds `(s)` or milliseconds `(ms)`. A default value of `0s` indicates no animation should occur.
+- `animation-timing-function`
 
 The animation property is already powerful on its own, but combined with other properties and queries such as `prefers-reduced-motion`, a powerful set of options can be set up for the user. Setting `animation-duration` and `transition-duration` properties to a short duration rather than setting them to `animation: none` and `transition: none`, enables a safeguard to prevent issues in any case there is a dependency on the animation to run.
 
@@ -332,11 +334,9 @@ JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs.
 [document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 **Image sources for animation**
@@ -490,7 +490,7 @@ This can be useful if the ambient light API is not available. Support is emergin
 
 ```css
 @media (prefers-color-scheme: dark) {
-    /* adjust styles for dark mode */
+  /* adjust styles for dark mode */
 }
 ```
 
@@ -511,10 +511,11 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 
 ```css
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
-  * { animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion/#comment-1700170) */
-      transition-duration: 0.001ms !important;
-    }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion/#comment-1700170) */
+    transition-duration: 0.001ms !important;
+  }
 }
 ```
 

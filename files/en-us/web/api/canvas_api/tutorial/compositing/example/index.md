@@ -7,7 +7,6 @@ tags:
   - Example
   - Graphics
   - HTML
-  - HTML5
   - Tutorial
 ---
 {{CanvasSidebar}}

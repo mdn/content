@@ -66,7 +66,7 @@ The promise is rejected when the following exception is encountered:
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : Raised when the result is a {{domxref("CryptoKey")}} of type `secret` or
-    `private` but _`keyUsages`_ is empty.
+    `private` but `keyUsages` is empty.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Raised when the result is a {{domxref("CryptoKeyPair")}} and its
     `privateKey.usages` attribute is empty.

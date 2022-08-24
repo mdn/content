@@ -6,7 +6,6 @@ tags:
   - Advanced
   - Guide
   - HTML
-  - HTML5
   - drag and drop
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
