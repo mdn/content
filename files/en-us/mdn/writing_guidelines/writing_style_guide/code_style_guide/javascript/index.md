@@ -208,7 +208,7 @@ function myFunc() {
 
 ### Use comments to mark ellipsis
 
-Skipping code is necessary to keep examples short. We should do it carefully, as developers want to copy & paste our example inside their code base. We should try to have our code samples be valid JavaScript.
+Skipping redundant code is necessary to keep examples short. Still, writers should do it thoughtfully as developers frequently copy & paste examples into their code, and all of our code samples should be valid JavaScript.
 
 In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add. Don't write:
 
