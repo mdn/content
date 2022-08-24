@@ -277,7 +277,7 @@ To complete the exercise, follow the steps below, and make sure that the list be
 7. Append the span and the button as children of the list item.
 8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
 9. Append the list item as a child of the list.
-10. Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.
+10. Attach an event handler to the delete button, so that when clicked it will delete the entire list item inside it.
 11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
 > **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
