@@ -1,15 +1,13 @@
-name: Markdown lint (project files)
+name: Lint YAML
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - .markdownlint.json
       - yarn.lock
-      - "**/*.md"
-      - .github/workflows/markdown-lint.yml
-      - .github/workflows/markdownlint-problem-matcher.json
+      - "**/*.yml"
+      - .github/workflows/pr-check_yml.yml
 
 jobs:
   docs:
@@ -30,5 +28,4 @@ jobs:
 
       - name: Lint markdown files
         run: |
-          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn lint:md
+          yarn lint:yml
