@@ -20,7 +20,7 @@ A single writing convention is helpful for consistency, and consistent code exam
 
 We have decided to use [Prettier](https://prettier.io/) as a code formatter to avoid off-topic discussions and keep code style consistent. We plan to run Prettier automatically on our code snippets and enforce consistency throughout MDN. Reviewers may ask you to follow Prettier conventions, but we plan for CI to format your code example through automated Prettier runs regardless.
 
-Prettier deals with formatting, but not with what is the best JavaScript feature to use or doesn't judge if a comment is helpful or not. That's why we have additional conventions.
+Prettier is effective for code formatting but can't judge if a comment is helpful, for example, or recommend the best JavaScript feature for a specific task. This document describes other conventions that we follow for such cases beyond formatting. 
 
 To learn about the convention in detail, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
 
