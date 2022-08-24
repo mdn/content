@@ -434,7 +434,7 @@ The first line demonstrates no settings. The second line might be used to overla
 
 The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
-A cue text payload cannot contain the string `"-->"`, the ampersand character (`&`), or the less-than sign (`<`). Instead use the escape sequence `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
+A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). Instead use the escape sequence `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
 
 In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
 
