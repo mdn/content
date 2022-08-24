@@ -336,7 +336,7 @@ Where the components are defined as follows:
 - `mm`
   - : Represents minutes and must be between 00 and 59, inclusive.
 - `ss`
-  - : Represents seconds and must be between 00 and 59 ,inclusive.
+  - : Represents seconds and must be between 00 and 59, inclusive.
 - `ttt`
   - : Represents milliseconds and must be between 000 and 999, inclusive.
 
