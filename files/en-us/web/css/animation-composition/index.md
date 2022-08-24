@@ -40,14 +40,14 @@ animation-composition: revert-layer;
 animation-composition: unset;
 ```
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Values
 
 - `replace`
-  - : The effect value overrides the underlying value of the property. This is the default composite operation.
+  - : The effect value overrides the underlying value of the property. This is the default value.
 - `add`
-  - : The effect value builds on the underlying value of the property. This values produces an additive effect. For animation types where the addition operation is not commutative, the order of the operands is underlying value followed by the effect value.
+  - : The effect value builds on the underlying value of the property. This operation produces an additive effect. For animation types where the addition operation is not commutative, the order of the operands is underlying value followed by the effect value.
 - `accumulate`
   - : The effect and underlying values are combined. For animation types where the addition operation is not commutative, the order of the operands is underlying value followed by the effect value.
 
@@ -68,7 +68,7 @@ For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10
   0% {
     filter: blur(10px);
   }
-  10% {
+  100% {
     filter: blur(20px);
   }
 }
@@ -77,7 +77,7 @@ For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10
 Consider different values for the `animation-composition` property in the above example. The final effect value in each of those cases will be calculated as explained below:
 
 - With `replace`, `blur(10px)` will replace `blur(5px)` in the `0%` keyframe. This is the default behavior of the property.
-- With `add`, the composite effect value in `0%` keyframe will be `blur(5px) blur(10px)`.
+- With `add`, the composite effect value in the `0%` keyframe will be `blur(5px) blur(10px)`.
 - With `accumulate`, the composite effect value in `0%` keyframe will be `blur(15px)`.
 
 > **Note:** A composite operation can also be specified in a keyframe. In that case, the specified composite operation is used for each property first within that keyframe and then on each property in the next keyframe.
@@ -112,12 +112,18 @@ The example below shows the effect of different `animation-composition` values s
 
 #### CSS
 
-Here the underlying value is `translateX(50px) rotate(90deg)`.
+Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ```css
 @keyframes slide {
-  from {transform: translateX(100px);}
-  to {transform: translateX(150px);}
+  20%, 40% {
+    transform: translateX(100px);
+    background: yellow;
+  }
+  80%, 100% {
+    transform: translateX(150px);
+    background: orange;    
+  }
 }
 .container {
   width: 240px;
@@ -130,9 +136,12 @@ Here the underlying value is `translateX(50px) rotate(90deg)`.
   height: 50px;
   background: green;
   border-radius: 10px;
-  transform: translateX(50px) rotate(90deg);
-  animation: slide 2s linear infinite;
+  transform: translateX(50px) rotate(45deg);
+  animation: slide 5s linear infinite;
 }
+.target:hover {
+   animation-play-state: paused;
+ }
 #replace {
   animation-composition: replace;
 }
@@ -148,9 +157,9 @@ Here the underlying value is `translateX(50px) rotate(90deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, the composite effect value in the `from` keyframe is `transform: translateX(100px)` (replacing `translateX(50px) rotate(90deg)`).
-- With `add`, the composite effect value in the `from` keyframe is `translateX(50px) rotate(90deg)` followed by `transform: translateX(100px)`.
-- With `accumulate`, the composite effect value in the `from` keyframe is `translateX(150px) rotate(90deg)`.
+- With `replace`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(50px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 20% mark. This is the default behavior.
+- With `add`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(50px) rotate(45deg)` followed by `translateX(100px)`. So the element is moved `50px` to the right, rotated `45deg`, then translated `100px` more along the redirected X axis.
+- With `accumulate`, the final effect value in the `20%, 40%` keyframe is `translateX(150px) rotate(45deg)`. This means that the two X-axis translation values of `50px` and `100px` are combined or "accumulated".
 
 ## Specifications
 
