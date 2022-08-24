@@ -139,7 +139,7 @@ function PerformanceObservers() {
   // Create observer for all performance event types
   const observeAll = new PerformanceObserver((list, obs) => {
     // Print all entries
-    list.getEntries().forEach((entry) =>  {
+    list.getEntries().forEach((entry) => {
       printPerfEntry(entry);
     });
 
