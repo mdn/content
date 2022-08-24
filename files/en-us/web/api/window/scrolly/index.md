@@ -25,12 +25,8 @@ pixels the document is scrolled horizontally from the {{domxref("Window.scrollX"
 
 ## Value
 
-In practice, the returned value is a double-precision floating-point value with the
-range of E(min)=-1022 to E(max)=1023 indicating the number of pixels the document is
-currently scrolled vertically from the origin, where a positive value means the content
-is scrolled to upward. If the document is rendered on a subpixel-precise device, then 
-the returned value is also subpixel-precise and may contain a decimal component. If the
-document isn't scrolled at all up or down, then `scrollY` is 0.
+In practice, the returned value is a double-precision floating-point value with the range of 
+2^(-1022) to 2^(+1023). It indicates the number of pixels the document is currently scrolled vertically from the origin, where a positive value means the content is scrolled to upward. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component. If the document isn't scrolled at all up or down, then `scrollY` is 0.
 
 > **Note:** If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
 
