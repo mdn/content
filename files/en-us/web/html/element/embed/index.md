@@ -7,7 +7,6 @@ tags:
   - External content
   - HTML
   - HTML embedded content
-  - HTML5
   - Plugins
   - Reference
   - Web

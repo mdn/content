@@ -6,7 +6,7 @@ tags:
   - Advanced
   - Firefox
   - Guide
-  - HTML5
+  - HTML
   - JavaScript
   - WebWorkers
   - Workers

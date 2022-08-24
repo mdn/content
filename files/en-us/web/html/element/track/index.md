@@ -7,7 +7,6 @@ tags:
   - Element
   - HTML
   - HTML embedded content
-  - HTML5
   - Multimedia
   - Reference
   - TextTrack

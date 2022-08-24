@@ -7,7 +7,7 @@ tags:
   - DOM
   - DOM Element Methods
   - Gecko
-  - HTML5
+  - HTML
   - Method
   - Reference
 browser-compat: api.Document.getElementsByClassName

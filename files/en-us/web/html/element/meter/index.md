@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML forms
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.meter

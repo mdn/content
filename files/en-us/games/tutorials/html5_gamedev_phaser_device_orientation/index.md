@@ -5,7 +5,7 @@ tags:
   - Canvas
   - Device Orientation API
   - Game Development
-  - HTML5
+  - HTML
   - Phaser
   - Vibration API
 ---

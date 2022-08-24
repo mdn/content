@@ -5,7 +5,7 @@ page-type: web-api-overview
 tags:
   - Advanced
   - Guide
-  - HTML5
+  - HTML
   - Overview
   - XUL
   - drag and drop
