@@ -354,9 +354,7 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-    <App />
-);
+root.render(<App />);
 ```
 
 ## Variables and props
@@ -422,9 +420,7 @@ Let's open `index.js` and give our `<App/>` call its first prop.
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
 ```js
-root.render(
-    <App subject="Clarice" />
-);
+root.render(<App subject="Clarice" />);
 ```
 
 Back in `App.js`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
