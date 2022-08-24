@@ -218,7 +218,7 @@ function exampleFct() {
 }
 ```
 
-Using a comment will be more explicit, preventing errors when a developer copies & pasties the example:
+Using a comment will be more explicit, preventing errors when a developer copies & pastes the example:
 
 ```js example-good
 function exampleFct() {
