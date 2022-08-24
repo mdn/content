@@ -14,7 +14,7 @@ The following guidelines cover writing JavaScript example code for MDN Web Docs.
 
 ### Choosing a format
 
-How to align and indent JavaScript, where to add spaces, or where to split lines have always been controversial. We believe that these discussions are mostly pointless and very time-consuming.
+Opinions on correct indentation, whitespace, or splitting long lines have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
 
 A single writing convention is helpful for consistency, and consistent code examples are easier to read and understand.
 
