@@ -20,7 +20,7 @@ A single writing convention is helpful for consistency, and consistent code exam
 
 We have decided to use [Prettier](https://prettier.io/) as a code formatter to avoid off-topic discussions and keep code style consistent. We plan to run Prettier automatically on our code snippets and enforce consistency throughout MDN. Reviewers may ask you to follow Prettier conventions, but we plan for CI to format your code example through automated Prettier runs regardless.
 
-Prettier is effective for code formatting but can't judge if a comment is helpful, for example, or recommend the best JavaScript feature for a specific task. This document describes other conventions that we follow for such cases beyond formatting. 
+Prettier is effective for code formatting but can't judge if a comment is helpful, for example, or recommend the best JavaScript feature for a specific task. This document describes other conventions that we follow for such cases beyond formatting.
 
 To learn more about the formatting conventions that are applied, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
 
@@ -148,7 +148,6 @@ Add a comment if the purpose or logic of the code isn't obvious. Comments are no
 ```js example-bad
 closeConnection(); // Closing the connection
 ```
-
 
 A comment should describe the intention of the author rather than merely describe the code:
 
