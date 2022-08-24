@@ -48,8 +48,6 @@ The `forced-color-adjust` property's value must be one of the following keywords
 
 This property should only be used to makes changes that will support a user's color and contrast requirements. For example, if you become aware that the color optimizations made by the {{Glossary("user agent")}} result in a poor experience when in a high contrast or dark mode. Using this property would enable tweaking of the result in that mode to provide a better experience. **It should not be used to prevent user choices being respected**.
 
-The property is a standardized version of the [-ms-high-contrast-adjust](https://docs.microsoft.com/previous-versions/hh771863%28v%3dvs.85%29) property. The prefixed property can be used to achieve similar functionality in Internet Explorer 10 and EdgeHTML versions of Microsoft Edge.
-
 ## Formal definition
 
 {{cssinfo}}
