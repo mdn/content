@@ -108,7 +108,7 @@ All statements must end with semicolons (`;`). Although they're technically opti
 
 ### Spacing
 
-Both spacing and indentation are [enforced by Prettier](https://prettier.io/docs/en/index.html). In particular, follow the following rules:
+Both spacing and indentation are [enforced by Prettier](https://prettier.io/docs/en/index.html). The following rules are notable:
 
 - Separate A control or a loop statement from its opening parenthesis with a space. E.g., `if () { ... }` and `for (...) { ... }`. There should also be a space between its closing parenthesis and the opening curly brace.
 - Include spaces between operators and operands, parameters, etc. For example, this is more readable:
