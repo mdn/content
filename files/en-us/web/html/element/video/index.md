@@ -406,7 +406,10 @@ This example builds on the last one, offering three different sources for the me
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4">
 
-  Your browser doesn't support HTML video tag.
+Sorry, your browser doesn't support embedded videos,
+but don't worry, you can <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">download the MP4</a>
+and watch it with your favorite video player!
+
 </video>
 ```
 
