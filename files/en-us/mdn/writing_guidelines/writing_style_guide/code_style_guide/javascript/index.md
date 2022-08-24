@@ -143,7 +143,12 @@ Indentation is [enforced by Prettier](https://prettier.io/docs/en/index.html).
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
 
-Add a comment if the code isn't obvious or self-documenting. A code is self-documenting, for example, when calling a function with an explicit name: `closeConnection();` doesn't need a comment `// Closing the connection`.
+Add a comment if the purpose or logic of the code isn't obvious. Comments are not necessary, for example, when functions have explicit names that describe what they're doing. This comment doesn't add much value for the reader and can be left out:
+
+```js example-bad
+closeConnection(); // Closing the connection
+```
+
 
 A comment should describe the intention of the author rather than merely describe the code:
 
