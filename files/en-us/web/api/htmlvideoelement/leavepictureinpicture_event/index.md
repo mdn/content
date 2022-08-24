@@ -31,7 +31,7 @@ onleavepictureinpicture = (event) => { };
 
 ## Event type
 
-An {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
