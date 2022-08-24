@@ -191,7 +191,7 @@ Don't write:
 // poor comment
 ```
 
-Add an empty line if the comment doesn't start immediately after a new indentation. It will create a code block, making it obvious what the comment refers to.
+Add an empty line if the comment doesn't start immediately after a new indentation level. It will create a code block, making it obvious what the comment refers to.
 
 Put your comments on separate lines preceding the code they are referring to, like:
 
