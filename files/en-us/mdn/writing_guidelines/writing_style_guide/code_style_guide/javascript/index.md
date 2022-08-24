@@ -476,7 +476,7 @@ gerbils.forEach((gerbil, i) => {
 
 [Prettier](https://prettier.io/docs/en/index.html) will enforce that:
 
-- There is _a space_ between a control statement keyword (`if` or `ekse`) and its opening parenthesis.
+- There is _a space_ between a control statement keyword (`if` or `else`) and its opening parenthesis.
 - There is _a space_ between the parentheses and the opening curly brace.
 
 ```js example-good
