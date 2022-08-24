@@ -56,6 +56,7 @@ But do not immediately assume animations require frame-by-frame control. Simple 
 
 There are two obvious issues with our previous main loop: `main()` pollutes the `{{ domxref("window") }}` object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
+<!-- prettier-ignore-start -->
 ```js
 /*
  * Starting with the semicolon is in case whatever line of code above this example
@@ -64,7 +65,7 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
  * marks the beginning of our new line if the previous one was not empty or terminated.
  */
 
-(() => {
+;(() => {
   function main() {
     window.requestAnimationFrame(main);
 
@@ -74,6 +75,7 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
   main(); // Start the cycle
 })();
 ```
+<!-- prettier-ignore-end -->
 
 When the browser comes across this IIFE, it will define your main loop and immediately queue it for the next frame. It will not be attached to any object and `main` (or `main()` for methods) will be a valid unused name in the rest of the application, free to be defined as something else.
 
@@ -81,6 +83,7 @@ When the browser comes across this IIFE, it will define your main loop and immed
 
 For the second issue, stopping the main loop, you will need to cancel the call to `main()` with `{{ domxref("window.cancelAnimationFrame()") }}`. You will need to pass `cancelAnimationFrame()` the ID token given by `requestAnimationFrame()` when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called `MyGame`. Expanding our last example, the main loop would now look like:
 
+<!-- prettier-ignore-start -->
 ```js
 /*
  * Starting with the semicolon is in case whatever line of code above this example
@@ -91,7 +94,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
  * Let us also assume that MyGame is previously defined.
  */
 
-(() => {
+;(() => {
   function main() {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -101,6 +104,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
   main(); // Start the cycle
 })();
 ```
+<!-- prettier-ignore-end -->
 
 We now have a variable declared in our `MyGame` namespace, which we call `stopMain`, that contains the ID returned from our main loop's most recent call to `requestAnimationFrame()`. At any point, we can stop the main loop by telling the browser to cancel the request that corresponds to our token.
 
@@ -135,6 +139,7 @@ const tNow = window.performance.now();
 
 Back to the topic of the main loop. You will often want to know when your main function was invoked. Because this is common, `window.requestAnimationFrame()` always provides a `DOMHighResTimeStamp` to callbacks as an argument when they are executed. This leads to another enhancement to our previous main loops.
 
+<!-- prettier-ignore-start -->
 ```js
 /*
  * Starting with the semicolon is in case whatever line of code above this example
@@ -145,7 +150,7 @@ Back to the topic of the main loop. You will often want to know when your main f
  * Let us also assume that MyGame is previously defined.
  */
 
-(() => {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -156,6 +161,7 @@ Back to the topic of the main loop. You will often want to know when your main f
   main(); // Start the cycle
 })();
 ```
+<!-- prettier-ignore-end -->
 
 Several other optimizations are possible and it really depends on what your game attempts to accomplish. Your game genre will obviously make a difference but it could even be more subtle than that. You could draw every pixel individually on a canvas or you could layer DOM elements (including multiple WebGL canvases with transparent backgrounds if you want) into a complex hierarchy. Each of these paths will lead to different opportunities and constraints.
 
@@ -169,6 +175,7 @@ You will need to make hard decisions about your main loop: how to simulate the a
 
 If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can update, render, and then do nothing until VSync.
 
+<!-- prettier-ignore-start -->
 ```js
 /*
  * Starting with the semicolon is in case whatever line of code above this example
@@ -179,7 +186,7 @@ If your game can hit the maximum refresh rate of any hardware you support then y
  * Let us also assume that MyGame is previously defined.
  */
 
-(() => {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -190,6 +197,7 @@ If your game can hit the maximum refresh rate of any hardware you support then y
   main(); // Start the cycle
 })();
 ```
+<!-- prettier-ignore-end -->
 
 If the maximum refresh rate cannot be reached, quality settings could be adjusted to stay under your time budget. The most famous example of this concept is the game from id Software, RAGE. This game removed control from the user in order to keep its calculation time at roughly 16ms (or roughly 60fps). If computation took too long then rendered resolution would decrease, textures and other assets would fail to load or draw, and so forth. This (non-web) case study made a few assumptions and tradeoffs:
 
@@ -230,6 +238,7 @@ A separate update and draw method could look like the following example. For the
 
 > **Warning:** This example, specifically, is in need of technical review.
 
+<!-- prettier-ignore-start -->
 ```js
 /*
  * Starting with the semicolon is in case whatever line of code above this example
@@ -259,7 +268,7 @@ A separate update and draw method could look like the following example. For the
  *                   It is just a generic example function that you might have added.
  */
 
-(() => {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
     const nextTick = MyGame.lastTick + MyGame.tickLength;
@@ -294,6 +303,7 @@ A separate update and draw method could look like the following example. For the
   main(performance.now()); // Start the cycle
 })();
 ```
+<!-- prettier-ignore-end -->
 
 Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this was found over at The Artillery Blog for Artillery Games, where they [adjust their rate of garbage generation](https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).
 
