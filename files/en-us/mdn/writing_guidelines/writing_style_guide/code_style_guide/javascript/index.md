@@ -584,7 +584,7 @@ try {
 }
 ```
 
-[Prettier](https://prettier.io/docs/en/index.html) enforces this format.
+[Prettier](https://prettier.io/docs/en/index.html) enforces the following conventions.
 
 When you don't need the parameter of the `catch` statement, omit it:
 
