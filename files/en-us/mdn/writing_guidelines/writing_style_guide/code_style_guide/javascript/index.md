@@ -360,7 +360,7 @@ When possible, put on a single line, as shown below:
 let status = (age >= 18) ? 'adult' : 'minor';
 ```
 
-If needed (if the line is too long), Prettier will nest the conditional operators:
+If needed (if the line is too long), Prettier will add line breaks with indentation to conditional operators:
 
 ```js example-bad
 let status = (age >= 18)
