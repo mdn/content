@@ -34,15 +34,15 @@ clear()
 ```js
 const mySet = new Set();
 mySet.add(1);
-mySet.add('foo');
+mySet.add("foo");
 
 console.log(mySet.size);       // 2
-console.log(mySet.has('foo')); // true
+console.log(mySet.has("foo")); // true
 
 mySet.clear();
 
 console.log(mySet.size);       // 0
-console.log(mySet.has('bar')); // false
+console.log(mySet.has("bar")); // false
 ```
 
 ## Specifications
