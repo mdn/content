@@ -91,7 +91,7 @@ This gives us the following result and hovering over the link displays the title
 
 I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best place to find more information about Mozilla's mission and how to contribute">the Mozilla homepage</a>.
 
-> **Note:** A link title is only revealed on mouse hover, which means that people relying on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information.
+> **Note:** A link title is only revealed on mouse hover, which means that people using websites on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information.
 > If a title's information is truly important to the usability of the page, then you should present it in a manner that will be accessible to all users, for example by putting it in the regular text.
 
 ### Active learning: creating your own example link
