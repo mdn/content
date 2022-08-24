@@ -29,9 +29,7 @@ The CORS mechanism supports secure cross-origin requests and data transfers betw
 
 ## Who should read this article?
 
-Everyone, really.
-
-More specifically, this article is for **web administrators**, **server developers** and **front-end developers**. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers.
+This article is for **web administrators**, **server developers** and **front-end developers**. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers.
 
 ## What requests use CORS?
 
