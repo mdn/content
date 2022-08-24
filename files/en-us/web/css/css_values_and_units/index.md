@@ -201,9 +201,9 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
 
-| Unit  | Name      | Description                                             |
-| ----- | --------- | ------------------------------------------------------- |
-| `fr`  | Flex      | It represents a flexible length within a grid container |
+| Unit  | Name      | Description                                          |
+| ----- | --------- | ---------------------------------------------------- |
+| `fr`  | Flex      | Represents a flexible length within a grid container |
 
 #### Resolution units
 
