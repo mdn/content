@@ -79,7 +79,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
         ev.dataTransfer.setData("text/plain", ev.target.id);
       }
 
-      function dragOverUandler(ev) {
+      function dragOverHandler(ev) {
         console.log("dragOver");
         ev.preventDefault();
       }
@@ -109,7 +109,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
     <div
       id="target"
       ondrop="dropHandler(event);"
-      ondragover="dragOverUandler(event);">
+      ondragover="dragOverHandler(event);">
       Drop Zone
     </div>
   </body>
