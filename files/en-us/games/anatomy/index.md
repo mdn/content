@@ -7,6 +7,7 @@ tags:
   - Main Loop
   - requestAnimationFrame
 ---
+
 {{GamesSidebar}}
 
 This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to modern game development understand what is required when building a game and how web standards like JavaScript lend themselves as tools. Experienced game programmers who are new to web development could also benefit, too.
@@ -57,13 +58,13 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ */
 
-;(() => {
+(() => {
   function main() {
     window.requestAnimationFrame(main);
 
@@ -82,15 +83,15 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*
-* Let us also assume that MyGame is previously defined.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ *
+ * Let us also assume that MyGame is previously defined.
+ */
 
-;(() => {
+(() => {
   function main() {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -136,15 +137,15 @@ Back to the topic of the main loop. You will often want to know when your main f
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*
-* Let us also assume that MyGame is previously defined.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ *
+ * Let us also assume that MyGame is previously defined.
+ */
 
-;(() => {
+(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -170,15 +171,15 @@ If your game can hit the maximum refresh rate of any hardware you support then y
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*
-* Let us also assume that MyGame is previously defined.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ *
+ * Let us also assume that MyGame is previously defined.
+ */
 
-;(() => {
+(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -231,34 +232,34 @@ A separate update and draw method could look like the following example. For the
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*
-* Let us also assume that MyGame is previously defined.
-*
-* MyGame.lastRender keeps track of the last provided requestAnimationFrame timestamp.
-* MyGame.lastTick keeps track of the last update time. Always increments by tickLength.
-* MyGame.tickLength is how frequently the game state updates. It is 20 Hz (50ms) here.
-*
-* timeSinceTick is the time between requestAnimationFrame callback and last update.
-* numTicks is how many updates should have happened between these two rendered frames.
-*
-* render() is passed tFrame because it is assumed that the render method will calculate
-*          how long it has been since the most recently passed update tick for
-*          extrapolation (purely cosmetic for fast devices). It draws the scene.
-*
-* update() calculates the game state as of a given point in time. It should always
-*          increment by tickLength. It is the authority for game state. It is passed
-*          the DOMHighResTimeStamp for the time it represents (which, again, is always
-*          last update + MyGame.tickLength unless a pause feature is added, etc.)
-*
-* setInitialState() Performs whatever tasks are leftover before the main loop must run.
-*                   It is just a generic example function that you might have added.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ *
+ * Let us also assume that MyGame is previously defined.
+ *
+ * MyGame.lastRender keeps track of the last provided requestAnimationFrame timestamp.
+ * MyGame.lastTick keeps track of the last update time. Always increments by tickLength.
+ * MyGame.tickLength is how frequently the game state updates. It is 20 Hz (50ms) here.
+ *
+ * timeSinceTick is the time between requestAnimationFrame callback and last update.
+ * numTicks is how many updates should have happened between these two rendered frames.
+ *
+ * render() is passed tFrame because it is assumed that the render method will calculate
+ *          how long it has been since the most recently passed update tick for
+ *          extrapolation (purely cosmetic for fast devices). It draws the scene.
+ *
+ * update() calculates the game state as of a given point in time. It should always
+ *          increment by tickLength. It is the authority for game state. It is passed
+ *          the DOMHighResTimeStamp for the time it represents (which, again, is always
+ *          last update + MyGame.tickLength unless a pause feature is added, etc.)
+ *
+ * setInitialState() Performs whatever tasks are leftover before the main loop must run.
+ *                   It is just a generic example function that you might have added.
+ */
 
-;(() => {
+(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
     const nextTick = MyGame.lastTick + MyGame.tickLength;

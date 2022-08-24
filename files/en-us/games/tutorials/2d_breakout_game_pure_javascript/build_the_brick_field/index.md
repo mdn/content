@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
@@ -106,7 +107,7 @@ drawBricks();
 
 ## Compare your code
 
-At this point, the game has got a little more interesting again  :
+At this point, the game has got a little more interesting again :
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}
 

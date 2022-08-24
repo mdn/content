@@ -7,6 +7,7 @@ tags:
   - HTML
   - Mobile
 ---
+
 {{GamesSidebar}}
 
 ## Advantages
