@@ -16,7 +16,7 @@ The following guidelines cover writing JavaScript example code for MDN Web Docs.
 
 How to align and indent JavaScript, where to add spaces, or where to split lines have always been controversial. We believe that these discussions are mostly pointless and very time-consuming.
 
-On the other side, using a single convention is helpful: very quickly, readers get used to it and become able to parse the code quicker and better.
+A single writing convention is helpful for consistency, and consistent code examples are easier to read and understand.
 
 We have decided not to fight for the code convention and to use a code formatter, [Prettier](https://prettier.io/). We hope to be able to run Prettier automatically on our code snippets and to enforce a unique style throughout MDN. Meanwhile, reviewers may ask you to follow Prettier convention (some are tougher than the others). Remember that your code example will get reformated as soon as Prettier runs automatically.
 
