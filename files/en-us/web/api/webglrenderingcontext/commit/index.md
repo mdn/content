@@ -8,9 +8,10 @@ tags:
   - OffscreenCanvas
   - Reference
   - WebGL
+  - Experimental
 browser-compat: api.WebGLRenderingContext.commit
 ---
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{SeeCompatTable}}
 
 The
 **`WebGLRenderingContext.commit()`**

@@ -41,24 +41,22 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```html
-<html>
+<html lang="en">
+  <head>
+    <title>Write example</title>
 
-<head>
-  <title>Write example</title>
+    <script>
+      function newContent() {
+        document.open();
+        document.write("<h1>Out with the old, in with the new!</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      document.open();
-      document.write("<h1>Out with the old, in with the new!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>Some original document content.</p>
-</body>
-
+  <body onload="newContent();">
+    <p>Some original document content.</p>
+  </body>
 </html>
 ```
 
@@ -74,7 +72,7 @@ If the `document.write()` call is embedded within an inline HTML `<script>` tag,
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 

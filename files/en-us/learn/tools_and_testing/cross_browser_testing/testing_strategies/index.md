@@ -159,7 +159,7 @@ A and B grade:
 - Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
 - Toggling the button should make the information box appear/disappear.
 - The text should be readable.
-- Visually impaired users using screenreaders should be able to access the text.
+- Visually impaired users using screen readers should be able to access the text.
 
 A grade:
 

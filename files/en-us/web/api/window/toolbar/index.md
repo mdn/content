@@ -27,16 +27,16 @@ The following complete HTML example demonstrates how the `visible` property
 of the `toolbar` object is used.
 
 ```html
-<html>
-<head>
-  <title>Various DOM Tests</title>
-  <script>
-    const visible = window.toolbar.visible;
-  </script>
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+<html lang="en">
+  <head>
+    <title>Various DOM Tests</title>
+    <script>
+      const visible = window.toolbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

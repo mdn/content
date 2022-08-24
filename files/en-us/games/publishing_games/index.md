@@ -3,7 +3,7 @@ title: Publishing games
 slug: Games/Publishing_games
 tags:
   - Games
-  - HTML5
+  - HTML
   - JavaScript
   - Monetization
   - Promotion

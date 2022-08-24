@@ -9,9 +9,10 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRFrame.getHitTestResults
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getHitTestResults()`** method of the {{domxref("XRFrame")}} interface returns an array of {{domxref("XRHitTestResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
 

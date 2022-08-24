@@ -21,7 +21,7 @@ None. `ReadableStreamDefaultController` instances are created automatically duri
 
 ## Properties
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
 ## Methods

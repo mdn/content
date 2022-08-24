@@ -19,7 +19,7 @@ the use of [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrit
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: require-sri-for script;
 Content-Security-Policy: require-sri-for style;
 Content-Security-Policy: require-sri-for script style;
@@ -36,7 +36,7 @@ Content-Security-Policy: require-sri-for script style;
 
 If you set your site to require SRI for script and styles using this directive:
 
-```
+```http
 Content-Security-Policy: require-sri-for script style
 ```
 

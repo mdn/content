@@ -31,7 +31,7 @@ If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
 
 A response containing one single range:
 
-```
+```http
 HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
@@ -44,7 +44,7 @@ Content-Type: image/gif
 
 A response containing several ranges:
 
-```
+```http
 HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT

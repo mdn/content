@@ -33,7 +33,7 @@ For example, a server receiving a `POST` request with an unsupported media type 
 
 ## Syntax
 
-```
+```http
 Accept-Post: <MIME_type>/<MIME_subtype>
 Accept-Post: <MIME_type>/*
 Accept-Post: */*
@@ -47,7 +47,7 @@ None.
 
 ## Examples
 
-```
+```http
 Accept-Post: application/example, text/example
 Accept-Post: image/webp
 Accept-Post: */*

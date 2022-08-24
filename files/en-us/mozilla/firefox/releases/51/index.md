@@ -132,7 +132,7 @@ tags:
 
 ### Security
 
-- When login pages (i.e those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed out lock icon in the address bar to warn users ({{bug(1319119)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ({{bug(1319119)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 
 ### Removals
 

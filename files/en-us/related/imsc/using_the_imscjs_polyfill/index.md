@@ -26,7 +26,7 @@ Once the imscJS library is loaded, it can be used to render an IMSC document in 
 
 ## Parsing the IMSC document
 
-First of all, the IMSC document is parsed into an immutable Javascript object (`doc`, in our case):
+First of all, the IMSC document is parsed into an immutable JavaScript object (`doc`, in our case):
 
 ```js
 const doc = imsc.fromXML(source);
@@ -190,7 +190,7 @@ for (let i = 0; i < timeEvents.length; i++) {
   } else {
     myCue = new Cue(timeEvents[i], timeEvents[i + 1], ""); 
   }
-  
+
   myCue.onenter = function () {
     clearSubFromScreen();
     const myIsd = imsc.generateISD(imscDoc, this.startTime);

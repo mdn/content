@@ -36,7 +36,7 @@ For more information, see the main [Feature Policy](/en-US/docs/Web/HTTP/Feature
 
 ## Syntax
 
-```
+```http
 Feature-Policy: <directive> <allowlist>
 ```
 
@@ -131,7 +131,7 @@ Feature-Policy: <directive> <allowlist>
 
 SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: microphone 'none'; geolocation 'none'
 ```
 

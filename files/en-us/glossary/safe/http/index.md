@@ -15,19 +15,19 @@ It is the responsibility of the application on the server to implement the safe 
 
 A call to a safe method, not changing the state of the server:
 
-```
+```http
 GET /pageX.html HTTP/1.1
 ```
 
 A call to a non-safe method, that may change the state of the server:
 
-```
+```http
 POST /pageX.html HTTP/1.1
 ```
 
 A call to an idempotent but non-safe method:
 
-```
+```http
 DELETE /idX/delete HTTP/1.1
 ```
 

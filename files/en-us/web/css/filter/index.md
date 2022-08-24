@@ -108,7 +108,7 @@ filter: blur(5px)
       <td><img id="img2" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
-          <svg id="img3" overflow="visible" viewbox="0 0 212 161" color-interpolation-filters="sRGB">
+          <svg id="img3" overflow="visible" viewBox="0 0 212 161" color-interpolation-filters="sRGB">
             <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
               <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
             </filter>
@@ -208,7 +208,7 @@ filter: brightness(2)
     <tr>
       <td><img id="img1" class="internal default" src="test_form.jpg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form.jpg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 286 217" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 286 217" color-interpolation-filters="sRGB">
  <filter id="brightness">
     <feComponentTransfer>
         <feFuncR type="linear" slope="2"/>
@@ -302,7 +302,7 @@ filter: contrast(200%)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 240 151" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 240 151" color-interpolation-filters="sRGB">
  <filter id="contrast">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" intercept="-0.5"/>
@@ -364,7 +364,7 @@ table.standard-table td {
 
 #### drop-shadow()
 
-The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type `<shadow>` (defined in [CSS3 Backgrounds](https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow)), with the exception that the `inset` keyword and `spread` parameter are not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows:
+The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type `<shadow>` (defined in [CSS Backgrounds and Borders Module Level 3](https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow)), with the exception that the `inset` keyword and `spread` parameter are not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows:
 
 - `<offset-x>` `<offset-y>` (required)
   - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
@@ -409,7 +409,7 @@ filter: drop-shadow(16px 16px 10px black)
       <td><img id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
             <defs>
               <image id="MyImage" xlink:href="test_form_4.jpeg" width="213px" height="161px"/>
             </defs>
@@ -429,7 +429,7 @@ filter: drop-shadow(16px 16px 10px black)
       <td><img alt="test_form_4 distorted border - Live example" id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
             <defs>
               <image id="MyImage2" xlink:href="test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/>
             </defs>
@@ -527,7 +527,7 @@ filter: grayscale(100%)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 184" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 276 184" color-interpolation-filters="sRGB">
  <filter id="grayscale">
     <feColorMatrix type="matrix"
                values="0.2126 0.7152 0.0722 0 0
@@ -609,7 +609,7 @@ filter: hue-rotate(90deg)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 266 190" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 266 190" color-interpolation-filters="sRGB">
  <filter id="hue-rotate">
     <feColorMatrix type="hueRotate"
                values="90"/>
@@ -696,7 +696,7 @@ filter: invert(100%)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 183 276" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 183 276" color-interpolation-filters="sRGB">
  <filter id="invert">
     <feComponentTransfer>
         <feFuncR type="table" tableValues="1 0"/>
@@ -778,7 +778,7 @@ filter: opacity(50%)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 183" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 276 183" color-interpolation-filters="sRGB">
  <filter id="opacity">
     <feComponentTransfer>
         <feFuncA type="table" tableValues="0 0.5">
@@ -858,7 +858,7 @@ filter: saturate(200%)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 201 239" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 201 239" color-interpolation-filters="sRGB">
  <filter id="saturate">
     <feColorMatrix type="saturate"
                values="2"/>
@@ -937,7 +937,7 @@ filter: sepia(100%)
     <tr>
       <td><img id="img1" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /></td>
       <td><img id="img2" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 259 194" color-interpolation-filters="sRGB">
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 259 194" color-interpolation-filters="sRGB">
  <filter id="sepia">
     <feColorMatrix type="matrix"
                values="0.393 0.769 0.189 0 0

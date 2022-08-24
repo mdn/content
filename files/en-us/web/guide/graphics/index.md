@@ -6,7 +6,7 @@ tags:
   - 3D
   - Canvas
   - Graphics
-  - HTML5
+  - HTML
   - SVG
   - Web
   - WebGL

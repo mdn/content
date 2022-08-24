@@ -55,7 +55,7 @@ Note however that some of the values don't make sense for `base-uri`, such as th
 
 ### Apache configuration
 
-```html
+```
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>

@@ -664,7 +664,7 @@ The pagination links are displayed on the bottom, with next/previous links being
 The challenge in this article is to create the author detail and list views required to complete the project. These should be made available at the following URLs:
 
 - `catalog/authors/` — The list of all authors.
-- `catalog/author/<id>` — The detail view for the specific author with a primary key field named *`<id>`*
+- `catalog/author/<id>` — The detail view for the specific author with a primary key field named `<id>`
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behavior.
 

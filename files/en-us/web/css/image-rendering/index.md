@@ -85,7 +85,6 @@ img {
 }
 
 .pixelated {
-  -ms-interpolation-mode: nearest-neighbor;
   image-rendering: pixelated;
 }
 

@@ -31,7 +31,7 @@ The syntax of the `Server-Timing` header allows you to communicate metrics in di
 
 The specification advises that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
 
-```
+```http
 // Single metric without value
 Server-Timing: missedCache
 

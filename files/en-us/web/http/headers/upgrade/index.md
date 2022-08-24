@@ -37,7 +37,7 @@ The `Upgrade` header field may be used by clients to invite a server to switch t
 
 For example, the client might send a `GET` request as shown, listing the preferred protocols to switch to (in this case "example/1" and "foo/2"):
 
-```
+```http
 GET /index.html HTTP/1.1
 Host: www.example.com
 Connection: upgrade
@@ -66,7 +66,7 @@ More detail and examples are provided in the topic [Protocol upgrade mechanism](
 
 ## Syntax
 
-```
+```http
 Connection: upgrade
 Upgrade: protocol_name[/protocol_version]
 ```
@@ -76,7 +76,7 @@ Notes:
 - The {{HTTPHeader("Connection")}} header with type `upgrade` must _always_ be sent with the `Upgrade` header (as shown above).
 - Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
 
-```
+```http
 Connection: upgrade
 Upgrade: a_protocol/1, example ,another_protocol/2.2
 ```
@@ -88,12 +88,12 @@ Upgrade: a_protocol/1, example ,another_protocol/2.2
 
 ## Examples
 
-```
+```http
 Connection: upgrade
 Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
 ```
 
-```
+```http
 Connection: Upgrade
 Upgrade: websocket
 ```

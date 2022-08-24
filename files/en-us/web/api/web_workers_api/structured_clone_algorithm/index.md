@@ -5,7 +5,7 @@ page-type: guide
 tags:
   - Advanced
   - DOM
-  - HTML5
+  - HTML
   - JavaScript
   - Reference
 ---

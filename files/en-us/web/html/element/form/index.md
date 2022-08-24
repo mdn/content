@@ -100,7 +100,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Comma-separated [content types](/en-US/docs/Web/SVG/Content_type) the server accepts.
 
-    > **Note:** **This attribute was removed in HTML5 and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
+    > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
 
 - {{htmlattrdef("accept-charset")}}
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
@@ -138,7 +138,7 @@ The following attributes control behavior during form submission.
 
     - `application/x-www-form-urlencoded`: The default value.
     - `multipart/form-data`: Use this if the form contains {{HTMLElement("input")}} elements with `type=file`.
-    - `text/plain`: Introduced by HTML5 for debugging purposes.
+    - `text/plain`: Useful for debugging purposes.
 
     This value can be overridden by {{htmlattrxref("formenctype", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 

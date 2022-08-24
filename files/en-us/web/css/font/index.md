@@ -253,13 +253,13 @@ body, input {
   border-bottom-color: red;
 }
 
-.cf:before,
-.cf:after {
+.cf::before,
+.cf::after {
   content: " ";
   display: table;
 }
 
-.cf:after {
+.cf::after {
   clear: both;
 }
 

@@ -47,12 +47,8 @@ The value of the global is then changed, first to `42` using the `Global.value` 
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  output.innerHTML += `Testing ${msg}: `;
-  if (got !== expected) {
-    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  } else {
-    output.innerHTML += `SUCCESS! Got: ${got}<br>`;
-  }
+  const result = got === expected ? `SUCCESS! Got: ${got}<br>` : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  output.innerHTML += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");

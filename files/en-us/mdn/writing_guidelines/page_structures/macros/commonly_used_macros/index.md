@@ -30,7 +30,7 @@ This macro accepts one required parameter and one optional parameter:
 
 ### Linking to pages in references
 
-There are macros for locale-independent linking to pages in specific reference areas of MDN: Javascript, CSS, HTML elements, SVG etc.
+There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG etc.
 
 The macros are easy to use.
 Minimally all you need to do is specify the name of the item to link to in the first argument.

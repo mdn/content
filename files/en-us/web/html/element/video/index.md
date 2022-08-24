@@ -7,7 +7,6 @@ tags:
   - HTML Video
   - HTML Video Player
   - HTML embedded content
-  - HTML5
   - Media
   - Movie Playback
   - Movies

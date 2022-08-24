@@ -32,7 +32,7 @@ onpaymentmethodchange = (event) => { };
 
 ## Event type
 
-An {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentMethodChangeEvent")}}
 

@@ -4,7 +4,7 @@ slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sou
 tags:
   - Audio
   - HLS
-  - HTML5
+  - HTML
   - HTTP Live Streaming
   - MPEG-DASH
   - Video

@@ -54,7 +54,7 @@ with the entity returned.
 
 ## Syntax
 
-```
+```http
 Location: <url>
 ```
 
@@ -65,7 +65,7 @@ Location: <url>
 
 ## Examples
 
-```
+```http
 Location: /index.html
 ```
 

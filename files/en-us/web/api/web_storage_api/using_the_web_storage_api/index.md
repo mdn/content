@@ -33,8 +33,8 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 The two mechanisms within Web Storage are as follows:
 
-- **`sessionStorage`** maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
-- **`localStorage`** does the same thing, but persists even when the browser is closed and reopened.
+- `sessionStorage` maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
+- `localStorage` does the same thing, but persists even when the browser is closed and reopened.
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, in supporting browsers the `Window` object implements the `WindowLocalStorage` and `WindowSessionStorage` objects, which the `localStorage` and `sessionStorage` properties are members of) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved, and removed. A different Storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 

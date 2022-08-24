@@ -10,9 +10,10 @@ tags:
   - Read-only
   - Reference
   - receiver
+  - Experimental
 browser-compat: api.Presentation.receiver
 ---
-{{APIRef("Presentation")}}
+{{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **read-only** {{domxref("Presentation")}} attribute
 `receiver`, which is only available in browser contexts which are

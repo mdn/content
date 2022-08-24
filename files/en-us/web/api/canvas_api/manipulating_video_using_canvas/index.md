@@ -145,11 +145,11 @@ The `computeFrame()` method, shown below, is responsible for actually fetching a
 
 When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:
 
-![](video.png)
+![A single frame of the video element. There is a person wearing a black t-shirt. The background-color is yellow.](video.png)
 
 In line 2, that frame of video is copied into the graphics context `ctx1` of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size. Note that you can pass the video element into the context's `drawImage()` method to draw the current video frame into the context. The result is:
 
-![](sourcectx.png)
+![A single frame of the video element. There is a person wearing a black t-shirt. The background-color is yellow. This is a smaller version of the picture above.](sourcectx.png)
 
 Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the `getImageData()` method on the first context. This provides raw 32-bit pixel image data we can then manipulate. Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.
 
@@ -159,7 +159,7 @@ Every pixel in the frame's image data that is found that is within the parameter
 
 The resulting image looks like this:
 
-![](output.png)
+![A single frame of the video element shows the same person wearing a black t-shirt as in the photos above. The background is different: it is the Firefox logo.](output.png)
 
 This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.
 

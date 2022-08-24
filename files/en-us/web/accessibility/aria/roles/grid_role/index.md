@@ -352,7 +352,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
         moveto(parseInt(event.target.dataset.row, 10), 0);
       }
       break;
-    }  
+    }
     case "End": {
       if (event.ctrlKey) {
         let i = maxrow;

@@ -22,9 +22,9 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 
 ### Units
 
-- **`s`**
+- `s`
   - : Represents a time in seconds. Examples: `0s`, `1.5s`, `-60s`.
-- **`ms`**
+- `ms`
   - : Represents a time in milliseconds. Examples: `0ms`, `150.25ms`, `-60000ms`.
 
 > **Note:** Conversion between `s` and `ms` follows the logical `1s` = `1000ms`.

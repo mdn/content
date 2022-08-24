@@ -80,7 +80,7 @@ When **`calc()`** is used where an {{cssxref("&lt;integer&gt;")}} is expected, t
 This will give `.modal` a final `z-index` value of 2.
 
 > **Note:** The Chrome browser currently won't accept some values returned by **`calc()`** when an integer is expected.
-> This includes any division, even if it results in an integer. ie. `z-index: calc(4 / 2);` will not be accepted.
+> This includes any division, even if it results in an integer, i.e. `z-index: calc(4 / 2);` will not be accepted.
 
 ## Examples
 
@@ -166,4 +166,5 @@ After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2)
 
 ## See also
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)
+- [CSS functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

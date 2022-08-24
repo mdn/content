@@ -53,7 +53,7 @@ The `load_binary_resource()` function shown below loads binary data from the spe
 function load_binary_resource(url) {
   const req = new XMLHttpRequest();
   req.open('GET', url, false);
-  
+
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
   req.overrideMimeType('text/plain; charset=x-user-defined');
   req.send(null);
@@ -83,7 +83,7 @@ The following example creates a text file on-the-fly and uses the `POST` method 
 const req = new XMLHttpRequest();
 req.open("POST", url, true);
 req.onload = (event) => {
-  // Uploaded.
+  // Uploaded
 };
 
 const blob = new Blob(['abc123'], { type: 'text/plain' });
@@ -96,13 +96,12 @@ req.send(blob);
 You can send JavaScript typed arrays as binary data as well.
 
 ```js
-const array = new ArrayBuffer(512);
 // Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
-const longInt8View = Uint8Array.from(array, (v, i) => i % 256);
+const array = new Uint8Array(512).map((v, i) => i);
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);
-xhr.send(myArray);
+xhr.send(array);
 ```
 
 This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.

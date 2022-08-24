@@ -99,7 +99,7 @@ This hero-video code (above) is common to conference websites and corporate home
 
 Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called [FFmpeg](https://www.ffmpeg.org/) can do it for you. This is the FFmpeg command string to remove audio:
 
-```
+```bash
 ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
 ```
 

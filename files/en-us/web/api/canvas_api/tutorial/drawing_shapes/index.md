@@ -7,7 +7,6 @@ tags:
   - Graphics
   - HTML
   - HTML Canvas
-  - HTML5
   - Intermediate
   - Tutorial
 ---
@@ -43,7 +42,7 @@ Below is the `draw()` function from the previous page, but now it is making use 
 ### Rectangular shape example
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
@@ -109,7 +108,7 @@ The third, and an optional step, is to call `closePath()`. This method tries to 
 For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="100" height="100"></canvas>
   </body>
@@ -147,27 +146,27 @@ When the canvas is initialized or `beginPath()` is called, you typically will wa
 To try this for yourself, you can use the code snippet below. Just paste it into the `draw()` function we saw earlier.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
     ctx.stroke();
   }
 }
@@ -193,7 +192,7 @@ This method takes two arguments, `x` and `y`, which are the coordinates of the l
 The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
@@ -254,7 +253,7 @@ The statement for the `clockwise` parameter results in the first and third row b
 > **Note:** This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="200"></canvas>
   </body>
@@ -315,10 +314,10 @@ There's nothing very difficult in these examples. In both cases we see a success
 This example uses multiple quadratic Bézier curves to render a speech balloon.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
@@ -349,10 +348,10 @@ function draw() {
 This example draws a heart using cubic Bézier curves.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
@@ -392,7 +391,7 @@ Before this method is executed, the `moveTo()` method is automatically called wi
 So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
@@ -515,10 +514,10 @@ The `Path2D` API also adds a way to combine paths using the `addPath` method. Th
 In this example, we are creating a rectangle and a circle. Both are stored as a `Path2D` object, so that they are available for later usage. With the new `Path2D` API, several methods got updated to optionally accept a `Path2D` object to use instead of the current path. Here, `stroke` and `fill` are used with a path argument to draw both objects onto the canvas, for example.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 

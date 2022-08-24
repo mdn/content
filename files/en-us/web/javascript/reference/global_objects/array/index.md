@@ -145,14 +145,14 @@ const fruits = ['Apple', 'Banana'];
 console.log(fruits.length);
 // 2
 
-// 'fruits' array created using the Array() constructor.
+// 'fruits2' array created using the Array() constructor.
 const fruits2 = new Array('Apple', 'Banana');
-console.log(fruits.length);
+console.log(fruits2.length);
 // 2
 
-// 'fruits' array created using String.prototype.split().
+// 'fruits3' array created using String.prototype.split().
 const fruits3 = 'Apple, Banana'.split(', ');
-console.log(fruits.length);
+console.log(fruits3.length);
 // 2
 ```
 

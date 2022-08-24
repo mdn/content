@@ -292,5 +292,6 @@ This example replaces an element's content with an image. You can replace the co
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("url", "url()")}} function

@@ -31,7 +31,7 @@ The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referre
 
 ## Syntax
 
-```
+```http
 Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
@@ -163,7 +163,7 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 If you want to specify a fallback policy in case the desired policy hasn't got wide enough browser support, use a comma-separated list with the desired policy specified last:
 
-```
+```http
 Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 ```
 

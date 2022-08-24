@@ -514,7 +514,7 @@ That means that even though the browser doesn't automatically check the validity
 Our input to validate is an [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), which is `required`, and has a `minlength` of 8 characters. Let's check these using our own code, and show a custom error message for each one.
 
 We are aiming to show the error messages inside a `<span>` element.
-The [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute is set on that `<span>` to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.
+The [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute is set on that `<span>` to make sure that our custom error message will be presented to everyone, including it being read out to screen reader users.
 
 > **Note:** A key point here is that setting the `novalidate` attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.
 
@@ -783,7 +783,7 @@ email.addEventListener("input", () => {
 // This defines what happens when the user tries to submit the data
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  
+
   const test = email.value.length === 0 || emailRegExp.test(email.value);
   if (!test) {
     email.className = "invalid";

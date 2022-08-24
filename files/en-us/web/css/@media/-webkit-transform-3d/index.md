@@ -41,7 +41,8 @@ The **`-webkit-transform-3d`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature
   }
 }
 ```
-A better method for checking for browser support is using a feature query: 
+
+A better method for checking for browser support is using a feature query:
 
 ```css
 @supports (transform-style) {
@@ -49,7 +50,6 @@ A better method for checking for browser support is using a feature query:
     transform-style: preserve-3d;
   }
 }
-
 ```
 
 ## Specifications

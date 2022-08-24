@@ -24,7 +24,7 @@ To get to the `style` objects from the `document`, you can use the {{domxref("Do
 In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to blue.
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>Modifying a stylesheet rule with CSSOM</title>
     <style>
@@ -34,7 +34,7 @@ In this example the background of the page is set to red using CSS. The JavaScri
     </style>
     <script>
       const stylesheet = document.styleSheets[0];
-      stylesheet.cssRules[0].style.backgroundColor="aqua";
+      stylesheet.cssRules[0].style.backgroundColor = "aqua";
     </script>
   </head>
   <body>
@@ -87,7 +87,7 @@ To change a particular element's style, you can adapt the following example for 
   <body>
     <!-- passes a reference to the element's object as parameter 'this'. -->
     <p id="p1" onclick="alterStyle(this);">
-     Click here to change background color.
+      Click here to change background color.
     </p>
 
     <!-- passes the 'p1' id of another element's style to modify. -->
@@ -124,13 +124,13 @@ More important than the two properties noted here is the use of the `style` obje
         document.getElementById('d').style.color = 'black';
       }
     </script>
- </head>
+  </head>
 
- <body>
-  <div id="d" class="thunder">Thunder</div>
-  <button onclick="setStyle()">Click here to change text color</button>
-  <button onclick="resetStyle()">Reset text color</button>
- </body>
+  <body>
+    <div id="d" class="thunder">Thunder</div>
+    <button onclick="setStyle()">Click here to change text color</button>
+    <button onclick="resetStyle()">Reset text color</button>
+  </body>
 </html>
 ```
 

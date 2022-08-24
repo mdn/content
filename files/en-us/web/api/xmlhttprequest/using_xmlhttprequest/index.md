@@ -455,7 +455,7 @@ ways to _submit_, and to **upload files**:
               if (this.technique === 3) {
                 // enctype is multipart/form-data
                 this.segments.push(`Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`);
-              } else {  
+              } else {
                 // enctype is application/x-www-form-urlencoded or text/plain or method is GET
                 this.segments.push(`${filter(field.name)}=${filter(field.value)}`);
               }
@@ -623,10 +623,6 @@ XHRSubmit(myForm);
   "readAsBinaryString()")}} method of the `FileReader` API. As such, the above
 > script makes sense only when you are dealing with small files. If you do not intend to
 > upload binary content, consider instead using the `FormData` API.
-
-> **Note:** The non-standard `sendAsBinary` method
-> is considered deprecated as of Gecko 31 {{geckoRelease(31)}} and will be removed soon.
-> The standard `send(Blob data)` method can be used instead.
 
 ### Using FormData objects
 

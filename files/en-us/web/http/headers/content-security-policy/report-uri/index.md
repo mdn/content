@@ -22,7 +22,7 @@ documents sent via an HTTP POST request to the specified URI.
 > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
 > you can specify both **`report-uri`** and {{CSP("report-to")}}:
 >
-> ```html
+> ```http
 > Content-Security-Policy: …; report-uri https://endpoint.com; report-to groupname
 > ```
 >
@@ -53,7 +53,7 @@ with other directives.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: report-uri <uri>;
 Content-Security-Policy: report-uri <uri> <uri>;
 ```
@@ -66,7 +66,7 @@ Content-Security-Policy: report-uri <uri> <uri>;
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-```
+```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 

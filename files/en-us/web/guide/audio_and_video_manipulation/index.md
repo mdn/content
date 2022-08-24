@@ -6,7 +6,7 @@ tags:
   - Canvas
   - Examples
   - Guide
-  - HTML5
+  - HTML
   - Media
   - Video
   - Web Audio API

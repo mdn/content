@@ -27,7 +27,7 @@ new PerformanceObserver(callback)
 
 ### Parameters
 
-- _`callback`_
+- `callback`
   - : A `PerformanceObserverCallback` callback that will be invoked when
     _observed_ performance events are recorded. When the callback is invoked, its
     first parameter is a {{domxref("PerformanceObserverEntryList","list of performance

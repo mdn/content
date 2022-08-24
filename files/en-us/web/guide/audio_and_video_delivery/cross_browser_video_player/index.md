@@ -3,7 +3,7 @@ title: Creating a cross-browser video player
 slug: Web/Guide/Audio_and_video_delivery/cross_browser_video_player
 tags:
   - Apps
-  - HTML5
+  - HTML
   - Video
   - full screen
 ---

@@ -5,7 +5,7 @@ page-type: guide
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - MessageChannel
   - MessagePort
   - Tutorial

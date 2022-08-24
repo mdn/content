@@ -17,9 +17,9 @@ A `TreeWalker` can be created using the {{domxref("Document.createTreeWalker()")
 
 _This interface doesn't inherit any property._
 
-- {{domxref("TreeWalker.root")}} {{readonlyInline}}
+- {{domxref("TreeWalker.root")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Node")}} representing the root node as specified when the `TreeWalker` was created.
-- {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
+- {{domxref("TreeWalker.whatToShow")}} {{ReadOnlyInline}}
 
   - : Returns an `unsigned long` being a bitmask made of constants describing the types of {{domxref("Node")}} that must be presented. Non-matching nodes are skipped, but their children may be included, if relevant. The possible values are:
 
@@ -39,7 +39,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | Shows {{ domxref("ProcessingInstruction") }} nodes.                                                                                                                                                                                                                                                                                                                                                      |
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
 
-- {{domxref("TreeWalker.filter")}} {{readonlyInline}}
+- {{domxref("TreeWalker.filter")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
@@ -57,7 +57,7 @@ _This interface doesn't inherit any method._
 
     ```html
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       <head><title>Demo</title>
       <body>
         <div id="container"></div>

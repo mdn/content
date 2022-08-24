@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `encrypted-media` directive con
 
 ## Syntax
 
-```
+```http
 Feature-Policy: encrypted-media <allowlist>;
 ```
 
