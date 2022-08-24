@@ -5,7 +5,7 @@ tags:
   - Assessment
   - Beginner
   - Forms
-  - HTML5
+  - HTML
   - Learn
   - test your skills
 ---

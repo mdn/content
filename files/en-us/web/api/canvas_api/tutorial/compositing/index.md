@@ -6,7 +6,6 @@ tags:
   - Canvas
   - Graphics
   - HTML
-  - HTML5
   - Intermediate
   - Tutorial
 ---

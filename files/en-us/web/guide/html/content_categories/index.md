@@ -5,7 +5,6 @@ tags:
   - Advanced
   - Guide
   - HTML
-  - HTML5
   - NeedsUpdate
   - Web
 ---

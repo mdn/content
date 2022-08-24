@@ -6,7 +6,6 @@ tags:
   - Element
   - HTML
   - HTML embedded content
-  - HTML5
   - HTML:Embedded content
   - HTML:Flow content
   - HTML:Phrasing content

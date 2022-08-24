@@ -6,7 +6,6 @@ tags:
   - Development
   - Guide
   - HTML
-  - HTML5
   - Web
 ---
 

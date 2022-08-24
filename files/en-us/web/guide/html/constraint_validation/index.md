@@ -4,7 +4,7 @@ slug: Web/Guide/HTML/Constraint_validation
 tags:
   - CSS
   - Guide
-  - HTML5
+  - HTML
   - NeedsContent
   - Selectors
 ---

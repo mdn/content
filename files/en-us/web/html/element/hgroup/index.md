@@ -6,7 +6,6 @@ tags:
   - Element
   - Experimental
   - HTML
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.hgroup

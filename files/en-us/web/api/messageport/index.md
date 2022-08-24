@@ -5,7 +5,7 @@ page-type: web-api-interface
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - Interface
   - MessagePort
   - Reference
