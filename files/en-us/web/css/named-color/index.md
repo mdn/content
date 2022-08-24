@@ -855,12 +855,9 @@ The `transparent` keyword wasn't a true color in CSS Level 2 (Revision 1). It wa
 
 All names specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the terms used.
 
-There are a few caveats to consider when using color keywords:
+The color keywords all represent plain, solid colors without transparency.
 
-- [HTML](/en-US/docs/Web/HTML) only recognizes the 16 basic color keywords (`black`, `silver`, `gray`, `white`, `maroon`, `red`, `purple`, `fuchsia`, `green`, `lime`, `olive`, `yellow`, `navy`, `blue`, `teal`, and `aqua`). An algorithm converts all other values (a CSS color keyword or a random string) to a color (leading most of the time to completely different colors than the CSS color associated in the table below). Therefore, color keywords beside these 16 values should only be used in CSS and [SVG](/en-US/docs/Web/SVG), but not in HTML.
-- Unlike HTML, CSS completely ignores unknown keywords.
-- The color keywords all represent plain, solid colors without transparency.
-- Several keywords are aliases for each other:
+Several keywords are aliases for each other:
 
   - `aqua` / `cyan`
   - `fuchsia` / `magenta`
@@ -872,7 +869,7 @@ There are a few caveats to consider when using color keywords:
   - `gray` / `grey`
   - `slategray` / `slategrey`
 
-- Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
+Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
 
 ## Examples
 
