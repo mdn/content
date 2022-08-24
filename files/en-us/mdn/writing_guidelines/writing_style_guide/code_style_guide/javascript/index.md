@@ -18,7 +18,7 @@ Opinions on correct indentation, whitespace, or splitting long lines have always
 
 A single writing convention is helpful for consistency, and consistent code examples are easier to read and understand.
 
-We have decided not to fight for the code convention and to use a code formatter, [Prettier](https://prettier.io/). We hope to be able to run Prettier automatically on our code snippets and to enforce a unique style throughout MDN. Meanwhile, reviewers may ask you to follow Prettier convention (some are tougher than the others). Remember that your code example will get reformated as soon as Prettier runs automatically.
+We have decided to use [Prettier](https://prettier.io/) as a code formatter to avoid off-topic discussions and keep code style consistent. We plan to run Prettier automatically on our code snippets and enforce consistency throughout MDN. Reviewers may ask you to follow Prettier conventions, but we plan for CI to format your code example through automated Prettier runs regardless.
 
 Prettier deals with formatting, but not with what is the best JavaScript feature to use or doesn't judge if a comment is helpful or not. That's why we have additional conventions.
 
