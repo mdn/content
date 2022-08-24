@@ -335,7 +335,7 @@ reportWebVitals();
 
 As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run. `src/index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
-Line 7 calls React's `ReactDOM.createRoot()` function with argument - the DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
+Line 7 calls React's `ReactDOM.createRoot()` function with one argument - the DOM element inside which we want the component to be rendered, in this case, the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
 
 Line 8 calls React's `root.render()` function with argument - the component we want to render, `<App />` in this case.
 
