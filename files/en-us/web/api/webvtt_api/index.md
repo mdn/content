@@ -534,7 +534,7 @@ Different properties allowing to read and set the characteristics of the cue, li
 
 ### VTTRegion
 
-The {{domxref("VTTRegion"}} provides methods used for region are listed below along with description of their functionality, especially it allows to adjust the scrolling setting of all nodes present in the given region.
+The {{domxref("VTTRegion")}} provides methods used for region are listed below along with description of their functionality, especially it allows to adjust the scrolling setting of all nodes present in the given region.
 
 ## Tutorial on how to write a WebVTT file
 
