@@ -474,7 +474,7 @@ For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
 
 ### :has() pseudo-class
 
-The [`:has()`](/en-US/docs/Web/CSS/:has) selects elements that contain the selectors passed as parameters.
+The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
 (See {{bug(1771896)}} for more details.)
 
 <table>
