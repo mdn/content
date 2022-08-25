@@ -47,7 +47,7 @@ document.getElementById("open-search").addEventListener("click", async () => {
 });
 ```
 
-Once the user clicks on the button the async arrow function is called. The function waits till the module is loaded then calls the `loadAutoComplete` function so the browser only loads the code when needed. 
+Once the user clicks on the button, the async click handler is called. The function waits till the module is loaded, then calls the `loadAutoComplete()` function exported from that module. The `search.js` module is therefore only downloaded, parsed, and executed when the interaction happens.
 
 ### CSS
 
