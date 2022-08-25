@@ -53,7 +53,7 @@ The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not exp
 
 {{CSSRef}}{{Non-standard_header}}
 
-The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
+The [`-ms-high-contrast`](/en-US/docs/Web/CSS/@media/-ms-high-contrast) CSS media feature is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
 
 This will help not only users with low vision and contrast sensitivity issues but also users that are working on a computer or phone with direct sunlight.
 
