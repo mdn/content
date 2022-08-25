@@ -38,7 +38,7 @@ They will be downloaded and executed _after_ the document itself has been parsed
 
 Another technique is to load JavaScript modules using [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) only when needed.
 
-For example, if a website has a search button we can load the JavaScript for the search function after the user clicks on the search button:
+For example, if a website has a search button, we can load the JavaScript for the search function after the user clicks on the search button:
 
 ```js
 document.getElementById("open-search").addEventListener("click", async () => {
