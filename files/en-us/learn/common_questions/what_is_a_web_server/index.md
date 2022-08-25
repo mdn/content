@@ -99,7 +99,7 @@ On a web server, the HTTP server is responsible for processing and answering inc
 
 ### Static vs. dynamic content
 
-Roughly speaking, a server can serve either static or dynamic content. Remember that the term _static_ means "served as-is". Static websites are the easiest to set up, so we suggest you make your first site a static site.
+Roughly speaking, a server can serve either static or dynamic content. Remember that the term _static_ means "served as-is". Static websites are the easiest to set up, so we suggest you make your first site, a static site.
 
 The term _dynamic_ means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.
 
