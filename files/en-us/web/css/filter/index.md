@@ -405,11 +405,12 @@ filter: drop-shadow(16px 16px 10px black)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
+      <td><img alt="A rectangular image of a pencil marking a piece of paper. Most of the image is the light gray color of the paper." id="img1" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
+      <td><img alt="A black drop shadow is applied to the image, which is visible below the image and to the right. The offset and blur-radius values produce a soft, rounded shadow." id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg aria-labelledby="svg-drop-shadow-title" role="img" xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
+            <title id="svg-drop-shadow-title">The same image as the previous two examples, but embedded within an SVG element. A filter element with a gaussian blur and offset is applied. The offset and blur values (set with the stdDeviation attribute on the feGaussianBlur element) produce a shadow that has less spread and is more rectangular than the previous CSS example. The shadow is visible below and to the right of the image, but the spread of the shadow is much less. The result is a shadow that is more closer to the rectangular shape of the original image.</title>
             <defs>
               <image id="MyImage" xlink:href="test_form_4.jpeg" width="213px" height="161px"/>
             </defs>
@@ -422,14 +423,15 @@ filter: drop-shadow(16px 16px 10px black)
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_4_s.jpg" style="width: 100%;" /></td>
+      <td><img alt="A screenshot of the previous example image with drop shadow applied to show the effect in browsers that do not support the CSS or SVG filters." id="img4" class="internal default" src="test_form_4_s.jpg" style="width: 100%;" /></td>
     </tr>
     <tr>
-      <td><img alt="test_form_4 distorted border - Original image" id="img11" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
-      <td><img alt="test_form_4 distorted border - Live example" id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td><img alt="An edited version of the original image that uses transparency to achieve an irregular shape at the bottom and add a small hole. The image also has a gradient transparency that starts on the right edge and fades towards the other side." id="img11" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td><img alt="A black drop shadow is applied to the image, which is visible below the image and to the right. The shadow follows the curves of the irregular shaped bottom, and is visible through the hole as well. The shadow color has a slight transparency, so it displays as a dark gray over the white background of the page. Because of the transparent gradient across the image, the drop shadow is visible below most of the image, which makes it appear more gray than the original example." id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg aria-labelledby="svg-irregular-drop-shadow-title" role="img" xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
+            <title id="svg-irregular-drop-shadow-title">The same image as the previous two examples, but embedded within an SVG element. A drop shadow has been added with a filter element using a feGaussianBlur and an feOffset element. The shadow follows the irregular shape of the image and is visible under the transparent gradient of the image.</title>
             <defs>
               <image id="MyImage2" xlink:href="test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/>
             </defs>
@@ -445,7 +447,7 @@ filter: drop-shadow(16px 16px 10px black)
           </svg>
         </div>
       </td>
-      <td><img alt="test_form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
+      <td><img alt="A screenshot of the previous example image with drop shadow applied to show the effect in browsers that do not support the CSS or SVG filters." id="img14" class="internal default" src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
