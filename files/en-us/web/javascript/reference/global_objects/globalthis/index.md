@@ -38,23 +38,34 @@ Several other popular name choices such as `self` and `global` were removed from
 
 ### Search for the global across environments
 
-Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/CSP) violations in some settings, so [core-js](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js) uses a check like this, for example (slightly modified from the original source):
+Usually, the global object does not need to be explicitly specified — its properties are automatically accessible as global variables.
+
+```js
+console.log(window.NaN === NaN); // true
+```
+
+However, one case where one needs to explicitly access the global object is when _writing_ to it, usually for the purpose of [polyfills](/en-US/docs/Glossary/Polyfill).
+
+Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/CSP) violations in some settings, so [core-js](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js) uses a piecewise definition like this, for example (slightly modified from the original source):
 
 ```js
 function check(it) {
-  // Math is known to exist as global in every environment.
+  // Math is known to exist as a global in every environment.
   return it && it.Math === Math && it;
 }
 
 const globalObject =
-  check(typeof globalThis === 'object' && globalThis) ||
   check(typeof window === 'object' && window) ||
   check(typeof self === 'object' && self) ||
   check(typeof global === 'object' && global) ||
   // This returns undefined when running in strict mode
   (function () { return this; })() ||
   Function('return this')();
+```
 
+After obtaining the global object, we can define new globals on it. For example, adding an implementation for [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl):
+
+```js
 if (typeof globalObject.Intl === 'undefined') {
   // No Intl in this environment; define our own on the global scope
   Object.defineProperty(globalObject, 'Intl', {
