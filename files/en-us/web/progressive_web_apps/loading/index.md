@@ -34,7 +34,24 @@ To fix that we can, for example, add `defer` to JavaScript files:
 <script src="app.js" defer></script>
 ```
 
-They will be downloaded and executed _after_ the document itself has been parsed, so it won't block rendering the HTML structure. We can also split css files and add media types to them:
+They will be downloaded and executed _after_ the document itself has been parsed, so it won't block rendering the HTML structure.
+
+Another technique is to load JavaScript modules, using [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import), only when needed.
+
+For example, if a website has a search button we can load the JavaScript for the search function after the user clicks on the search button:
+
+```js
+document.getElementById("open-search").addEventListener("click", async () => {
+   let searchModule = await import ("/modules/search.js");
+   searchModule.loadAutoComplete();
+});
+```
+
+Once the user clicks on the button the async arrow function is called. The function waits till the module is loaded then calls the `loadAutoComplete` function so the browser only loads the code when needed. 
+
+### CSS
+
+We can also split css files and add media types to them:
 
 ```html
 <link rel="stylesheet" href="style.css">
