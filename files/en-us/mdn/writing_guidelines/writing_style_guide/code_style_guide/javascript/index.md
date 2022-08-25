@@ -16,11 +16,7 @@ The following guidelines cover writing JavaScript example code for MDN Web Docs.
 
 Opinions on correct indentation, whitespace, or splitting long lines have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
 
-A single writing convention is helpful for consistency, and consistent code examples are easier to read and understand.
-
-We have decided to use [Prettier](https://prettier.io/) as a code formatter to avoid off-topic discussions and keep code style consistent. We plan to run Prettier automatically on our code snippets and enforce consistency throughout MDN. Reviewers may ask you to follow Prettier conventions, but we plan for CI to format your code example through automated Prettier runs regardless.
-
-Prettier is effective for code formatting but can't judge if a comment is helpful, for example, or recommend the best JavaScript feature for a specific task. This document describes other conventions that we follow for such cases beyond formatting.
+We have decided to use [Prettier](https://prettier.io/) as a code formatter to avoid off-topic discussions and keep code style consistent.
 
 To learn more about the formatting conventions that are applied, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
 
@@ -34,15 +30,11 @@ Don't use experimental features. In all cases, readability is more important tha
 
 ## Generic syntax style
 
-Prettier formats and styles all the code. Nevertheless, there are a few additional rules that you need to follow.
+Prettier formats and styles all the code; the tool will fix your errors. Nevertheless, there are a few additional rules that you need to follow.
 
 ### One line per statement
 
-In general, we use expanded syntax for JavaScript, meaning that:
-
 - Each line of JavaScript is on a new line.
-- The opening brace of a block on the same line as its associated statement, separated with a space from it.
-- The closing brace on a new line.
 
 For example, a function definition will look like this:
 
@@ -52,17 +44,13 @@ function myFunc() {
 };
 ```
 
-Don't use this style:
+Don't put everything on one line:
 
 ```js example-bad
 function myFunc() { console.log("Hello!"); };
 ```
 
-Note that this style will be [enforced by Prettier](https://prettier.io/docs/en/index.html).
-
-There are two exceptions to the rule:
-
-- Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
+There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
 
   ```js example-bad
   function myMethod(myParam) {
@@ -87,57 +75,12 @@ There are two exceptions to the rule:
     // …
   }
   ```
-  
-- Tests before logging some information.
 
-  You can write:
-
-  ```js example-good
-  if (testIsValid) console.log("The test is valid!");
-  ```
-
-  The use of braces would be cumbersome:
-
-  ```js example-bad
-  if (testIsValid) {
-    console.log("The test is valid!");
-  }
-  ```
-
-All statements must end with semicolons (`;`). Although they're technically optional in JavaScript, we require them in all our code examples because we feel that they convey where each statement ends and make the code clearer. [Enforced by Prettier.](https://prettier.io/docs/en/index.html)
-
-### Spacing
-
-Both spacing and indentation are [enforced by Prettier](https://prettier.io/docs/en/index.html). The following rules are notable:
-
-- Separate A control or a loop statement from its opening parenthesis with a space. E.g., `if () { ... }` and `for (...) { ... }`. There should also be a space between its closing parenthesis and the opening curly brace.
-- Include spaces between operators and operands, parameters, etc. For example, this is more readable:
-
-  ```js example-good
-  if (dayOfWeek === 7 && weather === "sunny") {
-    goOnTrip("beach", "car", ["ice cream", "bucket and spade", "beach towel"]);
-  }
-  ```
-
-  Without spaces, the code is difficult to grasp:
-
-  ```js example-bad
-  if (dayOfWeek===7&&weather==='sunny'){
-    goOnTrip('beach',"car",['ice cream','bucket and spade','beach towel']);
-  }
-  ```
-
-There are a few rules about where to add spaces inside the different kinds of brackets ([Prettier](https://prettier.io/docs/en/index.html) enforces these):
-
-- Don't include padding spaces after and before opening and closing parentheses. For example, use `(myVar)`, not `( myVar )`.
-- Don't include padding spaces after and before opening and closing square brackets. For example `["red", "green"]`, not `[ "red", "green" ]`.
-- But do include padding spaces after and before opening and closing braces. For example `open(data, { option1: "now" })`.
-
-### Indentation and end-of-line character
+### Spacing and indentation
 
 Mark indentation with _2 spaces_. No tabulation. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorConfig`](https://editorconfig.org/) file in the repository, and many editors read its content and use it to configure their behavior.
 
-Indentation is [enforced by Prettier](https://prettier.io/docs/en/index.html).
+Anyway, both spacing and indentation are [enforced by Prettier](https://prettier.io/docs/en/index.html).
 
 ## Comments
 
@@ -400,11 +343,6 @@ Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true`
 
 When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
-[Prettier](https://prettier.io/docs/en/index.html) will enforce that:
-
-- There is _a space_ between a loop keyword and its opening parenthesis.
-- There is _a space_ between the parentheses and the opening curly brace.
-
 When possible, like iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `.forEach()`.
 
 ```js example-bad
@@ -474,36 +412,7 @@ gerbils.forEach((gerbil, i) => {
 
 ### Control statements (if...else)
 
-[Prettier](https://prettier.io/docs/en/index.html) will enforce that:
-
-- There is _a space_ between a control statement keyword (`if` or `else`) and its opening parenthesis.
-- There is _a space_ between the parentheses and the opening curly brace.
-
-```js example-good
-if (iceCream) {
-  console.log("Woo hoo!");
-}
-```
-
-The example below does not follow the spacing guidelines:
-
-```js example-bad
-if (iceCream){
-  console.log("Woo hoo!");
-}
-```
-
-The else statement must be on the same line as the last closing brace if any:
-
-```js
-if (iceCream) {
-  console.log("Woo hoo!");
-} else {
-  console.log("I'm sad…");
-}
-```
-
-If the `if` statement ends with a `return`, do not add An `else` statement; continue right after the `if` statement:
+There is one notable case to keep in mind for control statements. If the `if` statement ends with a `return`, do not add An `else` statement; continue right after the `if` statement:
 
 ```js example-bad
 if (test) {
@@ -531,46 +440,54 @@ if (test) {
 
 ### Switch statements
 
-[Prettier](https://prettier.io/docs/en/index.html) will enforce switch statements to be formatted like this:
+Switch statements can be a little tricky.
 
-```js example-good
-const expr = 'Papayas';
-switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+First, don't put a `break` after a `return` statement in a specific case.
+
+```js example-bad
+switch (species) {
+  case `chicken`:
+    return farm.shed;
     break;
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case `horse`:
+    return corral.entry;
     break;
   default:
-    console.log(`Sorry, we are out of ${expr}`);
+    return "";
 }
 ```
 
-- There should be _a space_ between the `switch` keyword and its opening parenthesis.
-- There should be _a space_ between the parentheses or the colon and the opening curly brace, if any.
-- Note the position of the break indented from the `case` keyword: we indent the code inside the case.
-- Don't put a `break` after a `return` statement in a specific case.
+The `break` statements are unreachable, and therefore useless. Do this instead:
 
-In addition to these rules:
+```js example-bad
+switch (species) {
+  case `chicken`:
+    return farm.shed;
+  case `horse`:
+    return corral.entry;
+  default:
+    return "";
+}
+```
 
-- Put `default` as the last case, and don't end it with a `break`. If you need to do it differently, add a comment explaining why.
-- Pay attention! When you declare a local variable for a case, you need to use braces to define a scope:
+Put `default` as the last case, and don't end it with a `break`. If you need to do it differently, add a comment explaining why.
 
-  ```js
-  switch (fruits) {
-    case 'Orange': {
-      let slice = fruit.slice();
-      eat(slice);
-      break;
-    }
-    case 'Apple': {
-      let core = fruit.extractCore();
-      recycle(core);
-      break;
-    }
-  }  
-  ```
+Pay attention! When you declare a local variable for a case, you need to use braces to define a scope:
+
+```js
+switch (fruits) {
+  case 'Orange': {
+    let slice = fruit.slice();
+    eat(slice);
+    break;
+  }
+  case 'Apple': {
+    let core = fruit.extractCore();
+    recycle(core);
+    break;
+  }
+}  
+```
 
 ### Error handling
 
@@ -583,8 +500,6 @@ try {
   console.error(e);
 }
 ```
-
-[Prettier](https://prettier.io/docs/en/index.html) enforces the following conventions.
 
 When you don't need the parameter of the `catch` statement, omit it:
 
@@ -600,9 +515,7 @@ Not writing the parameter list is called _optional catch binding_ and has been a
 
 ## Strings
 
-String literals can be enclosed with single quotes, like `'A string'`, or with double quotes, like `"A string"`.
-
-[Prettier](https://prettier.io/docs/en/index.html) will enforce the following rule: it will use the type of quotes that will minimize escaping in a string, maximizing readability. In the case of equality, it will use double quotes (`""`).
+String literals can be enclosed with single quotes, like `'A string'`, or with double quotes, like `"A string"`. Which one to use is enforced by Prettier, so don't worry about which one to use.
 
 ### Template literals
 
@@ -774,11 +687,6 @@ function notVeryObviousName() {
 
 ### Function declarations
 
-[Prettier](https://prettier.io/docs/en/index.html) will ensure that:
-
-- There is _no space_ between a function name and its opening parenthesis.
-- There is _a space_ between the parentheses and the opening curly brace.
-
 Where possible, use the `function` declaration to define functions over function expressions:
 
 Here is the recommended way to declare a function:
@@ -865,18 +773,6 @@ Writing asynchronous code improves performance and should be used when possible.
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await).
 
 When both techniques are possible, we don't have any preference.
-
-Note that:
-
-- When chaining promises, [Prettier](https://prettier.io/docs/en/index.html) will enforce the indentation of the `then()`, `catch()`, and `finally()` methods.
-- Unlike the `catch` of a `try...catch` block, there is no space between the `catch` keyword and the parenthesis; it is a method.
-
-```js example-good
-myPromise.then((param) => value1)
-  .then((param) => nextProcess(param))
-  .then((param) => finalProcess(param))
-  .catch((param) => errorValue(param));
-```
 
 ## Web APIs to avoid
 
