@@ -12,7 +12,7 @@ tags:
 
 ## Reduced Motion
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity. The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query enables providing an experience with fewer animations and transitions to users who have set their operating system's accessibility preferences to reduce motion.
 
 Also, this method of switching animation off according to the user's preference can also benefit users with low battery or low-end phones or computers.
 
@@ -37,7 +37,6 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 
 ```css
 .animation {
-  -webkit-animation: vibrate 0.3s linear infinite both;
   animation: vibrate 0.3s linear infinite both;
 }
 
@@ -47,6 +46,8 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
   }
 }
 ```
+
+The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with  `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)). 
 
 ## High Contrast Mode
 
@@ -84,3 +85,7 @@ The following declarations will match applications that are being displayed in h
   div { background-image: url('image-wb.png'); }
 }
 ```
+
+## See also
+
+- [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)
