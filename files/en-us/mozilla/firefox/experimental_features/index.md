@@ -144,7 +144,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
 
 ## CSS
 
-### Display stray control characters in CSS as hex boxes
+### Hex boxes to display stray control characters
 
 This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hexbox when they are not expected. (See {{bug(1099557)}} for more details.)
 
@@ -187,7 +187,7 @@ This feature renders control characters (Unicode category Cc) other than _tab_ (
   </tbody>
 </table>
 
-### Property: initial-letter
+### initial-letter property
 
 The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See {{bug(1223880)}} for more details.)
 
@@ -267,7 +267,7 @@ Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when 
   </tbody>
 </table>
 
-### Property: backdrop-filter
+### backdrop-filter property
 
 The {{cssxref("backdrop-filter")}} property applies filter effects to the area behind an element. (See {{bug(1178765)}} for more details.)
 
@@ -307,7 +307,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
-### Grid: Masonry layout
+### Masonry grid layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.
 
@@ -349,7 +349,7 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Ma
   </tbody>
 </table>
 
-### Property: math-style
+### math-style property
 
 The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)
 
@@ -389,7 +389,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
-### Function: fit-content()
+### fit-content() function
 
 The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
 
@@ -471,9 +471,51 @@ For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
   </tbody>
 </table>
 
-### Function: linear() easing
 
-The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
+### :has() pseudo-class
+
+The [`:has()`](/en-US/docs/Web/CSS/:has) selects elements that contain the selectors passed as parameters.
+(See {{bug(1771896)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.has-selector.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### linear() easing function
+
+The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
 (See {{bug(1764126)}} for more details.)
 
 <table>
@@ -512,7 +554,7 @@ The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines
   </tbody>
 </table>
 
-### Property: animation-composition
+### animation-composition property
 
 The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
 (See {{bug(1293490)}} for more details.)

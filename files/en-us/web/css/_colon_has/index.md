@@ -27,7 +27,7 @@ let test = document.querySelector('a:has(> img)');
 
 ## Description
 
-The `:has()` pseudo-class takes a relative selector list as an argument. In earlier revisions of the CSS Selectors Level 4 specification, `:has` had a limitation that it couldn't be used within stylesheets. Instead, it could only be used with functions like {{domxref("document.querySelector()")}}; this was due to performance concerns. _This limitation has been removed_ because no browser implemented it that way.
+The `:has()` pseudo-class takes a relative selector list as an argument.
 
 ## Examples
 
