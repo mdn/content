@@ -859,15 +859,15 @@ The color keywords all represent plain, solid colors without transparency.
 
 Several keywords are aliases for each other:
 
-  - `aqua` / `cyan`
-  - `fuchsia` / `magenta`
-  - `darkgray` / `darkgrey`
-  - `darkslategray` / `darkslategrey`
-  - `dimgray` / `dimgrey`
-  - `lightgray` / `lightgrey`
-  - `lightslategray` / `lightslategrey`
-  - `gray` / `grey`
-  - `slategray` / `slategrey`
+- `aqua` / `cyan`
+- `fuchsia` / `magenta`
+- `darkgray` / `darkgrey`
+- `darkslategray` / `darkslategrey`
+- `dimgray` / `dimgrey`
+- `lightgray` / `lightgrey`
+- `lightslategray` / `lightslategrey`
+- `gray` / `grey`
+- `slategray` / `slategrey`
 
 Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
 
