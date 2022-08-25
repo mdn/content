@@ -110,8 +110,7 @@ A camera entity can be created by adding an [`<a-camera>`](https://aframe.io/doc
   cursor-visible="true"
   cursor-scale="2"
   cursor-color="#0095DD"
-  cursor-opacity="0.5"
->
+  cursor-opacity="0.5">
 </a-camera>
 ```
 
@@ -141,8 +140,7 @@ We have a cube on the scene already; now let's try adding more shapes. We are no
     radiusTubular: 0.1;
     segmentsTubular: 12;"
   rotation="10 0 0"
-  position="-3 1 0"
->
+  position="-3 1 0">
 </a-entity>
 ```
 
@@ -164,8 +162,7 @@ The torus is now visible on the scene, but its color doesn't look very good — 
     roughness: 0.1;
     metalness: 0.5;"
   rotation="10 0 0"
-  position="-3 1 0"
->
+  position="-3 1 0">
 </a-entity>
 ```
 
@@ -208,8 +205,7 @@ There's a special [`<a-animation>`](https://aframe.io/docs/core/animation.html) 
     direction="alternate"
     dur="4000"
     repeat="indefinite"
-    easing="ease"
-  >
+    easing="ease">
   </a-animation>
 </a-box>
 ```
@@ -232,16 +228,14 @@ We can also add animation to entities with custom geometry like the torus, in mu
     roughness: 0.1;
     metalness: 0.5;"
   rotation="10 0 0"
-  position="-3 1 0"
->
+  position="-3 1 0">
   <a-animation
     attribute="scale"
     to="1 0.5 1"
     direction="alternate"
     dur="2000"
     repeat="indefinite"
-    easing="linear"
-  >
+    easing="linear">
   </a-animation>
 </a-entity>
 ```
