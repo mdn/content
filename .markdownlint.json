@@ -107,24 +107,38 @@
     "rules": [
       {
         "name": "curly-double-quotes",
-        "message": "Don't use curly double quotes.",
+        "message": "Don't use curly double quotes",
         "searchPattern": "/“|”/g",
         "replace": "\"",
         "skipCode": true
       },
       {
         "name": "curly-single-quotes",
-        "message": "Don't use curly single quotes.",
+        "message": "Don't use curly single quotes",
         "searchPattern": "/‘|’/g",
         "replace": "'",
         "skipCode": true
       },
       {
         "name": "m-dash",
-        "message": "Don't use '--'. Use m-dash — instead.",
+        "message": "Don't use '--'. Use m-dash — instead",
         "search": " -- ",
         "replace": " — ",
         "skipCode": true
+      },
+      {
+        "name": "relative-link",
+        "message": "Internal links should start with '/'",
+        "search": "(en-US/docs",
+        "replace": "(/en-US/docs",
+        "skipCode": true
+      },
+      {
+        "name": "trailing-spaces",
+        "message": "Avoid trailing spaces",
+        "searchPattern": "/  +$/gm",
+        "replace": "",
+        "skipCode": false
       }
     ]
   }
