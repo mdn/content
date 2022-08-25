@@ -25,9 +25,9 @@ The `AsyncGenerator` constructor is not available globally. Instances of `AsyncG
 
 ```js
 async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
-  yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+  yield Promise.resolve(1);
+  yield Promise.resolve(2);
+  yield Promise.resolve(3);
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next()
