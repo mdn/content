@@ -23,7 +23,7 @@ image smoothing.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `"low"`
   - : Low quality.
