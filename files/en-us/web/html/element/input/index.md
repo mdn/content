@@ -324,7 +324,7 @@ The `<input>` element is so powerful because of its attributes; the [`type`](#ty
 
 This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.
 
-Attributes for the `<input`> element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
+Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
 
 | Attribute                           | Type or Types                                                           | Description                                                                           |
 | ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
