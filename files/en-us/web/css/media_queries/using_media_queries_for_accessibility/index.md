@@ -8,7 +8,7 @@ tags:
   - CSS
   - Guide
 ---
-**Media Queries** can also be used to help users with disabilities understand your website better.
+[**Media Queries**](/en-US/docs/Web/CSS/@media/) can be used to help users with disabilities better experience your website.
 
 ## Reduced Motion
 
