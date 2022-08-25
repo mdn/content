@@ -18,12 +18,12 @@ The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}
 
 ## Constructor
 
-- {{domxref("USBConnectionEvent.USBConnectionEvent", "USBConnectionEvent()")}}
+- {{domxref("USBConnectionEvent.USBConnectionEvent", "USBConnectionEvent()")}} {{Experimental_Inline}}
   - : Returns a `USBConnectionEvent` object.
 
 ## Properties
 
-- {{domxref("USBConnectionEvent.device")}} {{ReadOnlyInline}}
+- {{domxref("USBConnectionEvent.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("USBDevice")}} object representing the current device.
 
 ## Examples

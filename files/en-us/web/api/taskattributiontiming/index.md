@@ -19,13 +19,13 @@ The **`TaskAttributionTiming`** interface of the [Long Tasks API](/en-US/docs/We
 
 ## Properties
 
-- {{domxref('TaskAttributionTiming.containerType')}} {{ReadOnlyInline}}
+- {{domxref('TaskAttributionTiming.containerType')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the type of frame container, one of `iframe`, `embed`, or `object`.
-- {{domxref('TaskAttributionTiming.containerSrc')}} {{ReadOnlyInline}}
+- {{domxref('TaskAttributionTiming.containerSrc')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the container's `src` attribute.
-- {{domxref('TaskAttributionTiming.containerId')}} {{ReadOnlyInline}}
+- {{domxref('TaskAttributionTiming.containerId')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the container's `id` attribute.
-- {{domxref('TaskAttributionTiming.containerName')}} {{ReadOnlyInline}}
+- {{domxref('TaskAttributionTiming.containerName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the container's `name` attribute.
 
 ## Specifications

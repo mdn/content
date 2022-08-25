@@ -26,13 +26,13 @@ _Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
 _Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
-- {{DOMxRef("StylePropertyMap.append()")}}
+- {{DOMxRef("StylePropertyMap.append()")}} {{Experimental_Inline}}
   - : Adds a new CSS declaration to the `StylePropertyMap` with the given property and value.
-- {{DOMxRef("StylePropertyMap.clear()")}}
+- {{DOMxRef("StylePropertyMap.clear()")}} {{Experimental_Inline}}
   - : Removes all declarations in the `StylePropertyMap`.
-- {{DOMxRef("StylePropertyMap.delete()")}}
+- {{DOMxRef("StylePropertyMap.delete()")}} {{Experimental_Inline}}
   - : Removes the CSS declaration with the given property.
-- {{DOMxRef("StylePropertyMap.set()")}}
+- {{DOMxRef("StylePropertyMap.set()")}} {{Experimental_Inline}}
   - : Changes the CSS declaration with the given property.
 
 ## Specifications
