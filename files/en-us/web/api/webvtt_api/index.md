@@ -396,12 +396,12 @@ The cue settings are added to the right of the cue timings. There must be one or
 
 - `position`
   - : Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
-  
+
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
     |-----------------|--------------------|---------------|---------------|
     | `position:0%`   | left               | top           | top           |
     | `position:100%` | right              | bottom        | bottom        |
-  
+
 - `size`
   - : Specifies the width of the text area. If vertical is set, size specifies the height of the text area. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
 
