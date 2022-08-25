@@ -20,7 +20,7 @@ The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolve
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `replace`
   - : The `keyframeEffect` value produced is independent of the current iteration.
