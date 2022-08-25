@@ -38,28 +38,59 @@ Several other popular name choices such as `self` and `global` were removed from
 
 ### Search for the global across environments
 
-Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/CSP) violations in some settings, so [es6-shim](https://github.com/paulmillr/es6-shim) uses a check like this, for example:
+Usually, the global object does not need to be explicitly specified — its properties are automatically accessible as global variables.
 
 ```js
-const getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
-};
+console.log(window.NaN === NaN); // true
+```
 
-const globals = getGlobal();
+However, one case where one needs to explicitly access the global object is when _writing_ to it, usually for the purpose of [polyfills](/en-US/docs/Glossary/Polyfill).
 
-if (typeof globals.setTimeout !== 'function') {
-  // no setTimeout in this environment!
+Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/CSP) violations in some settings, so authors would use a piecewise definition like this (slightly adapted from the [original core-js source](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js)):
+
+```js
+function check(it) {
+  // Math is known to exist as a global in every environment.
+  return it && it.Math === Math && it;
+}
+
+const globalObject =
+  check(typeof window === 'object' && window) ||
+  check(typeof self === 'object' && self) ||
+  check(typeof global === 'object' && global) ||
+  // This returns undefined when running in strict mode
+  (function () { return this; })() ||
+  Function('return this')();
+```
+
+After obtaining the global object, we can define new globals on it. For example, adding an implementation for [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl):
+
+```js
+if (typeof globalObject.Intl === 'undefined') {
+  // No Intl in this environment; define our own on the global scope
+  Object.defineProperty(globalObject, 'Intl', {
+    value: {
+      // Our Intl implementation
+    },
+    enumerable: false,
+    configurable: true,
+    writable: true,
+  });
 }
 ```
 
 With `globalThis` available, the additional search for the global across environments is not necessary anymore:
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
-  // no setTimeout in this environment!
+if (typeof globalThis.Intl === 'undefined') {
+  Object.defineProperty(globalThis, 'Intl', {
+    value: {
+      // Our Intl implementation
+    },
+    enumerable: false,
+    configurable: true,
+    writable: true,
+  });
 }
 ```
 
