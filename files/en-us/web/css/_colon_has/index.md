@@ -14,10 +14,12 @@ browser-compat: css.selectors.has
 
 The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.
 
+<!-- 
 ```js
 /* Selects any <a>, as long as it has an <img> element directly inside it  */
 let test = document.querySelector('a:has(> img)');
 ```
+-->
 
 ## Syntax
 
@@ -28,6 +30,7 @@ let test = document.querySelector('a:has(> img)');
 ## Description
 
 The `:has()` pseudo-class takes a relative selector list as an argument.
+<!-- Instead, it could only be used with functions like document.querySelector(); this was due to performance concerns. This limitation has been removed because no browser implemented it that way. -->
 
 ## Examples
 
