@@ -6,7 +6,7 @@ tags:
   - Directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.trusted-types
+browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 {{HTTPSidebar}}
 
@@ -16,7 +16,7 @@ Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Conte
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types <policyName>;

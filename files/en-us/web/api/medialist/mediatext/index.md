@@ -39,7 +39,7 @@ string, i.e. the value will be set to
 The following would log to the console a textual representation of the
 `MediaList` of the first stylesheet applied to the current document.
 
-```css
+```js
 const stylesheets = document.styleSheets;
 let stylesheet = stylesheets[0];
 console.log(stylesheet.media.mediaText);

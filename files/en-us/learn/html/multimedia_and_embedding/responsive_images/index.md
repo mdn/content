@@ -98,7 +98,7 @@ So, what is the problem that we want to solve with resolution switching? We want
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
 ```
 
-We can however use two new attributes — {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} — to provide several additional source images along with hints to help the browser pick the right one. You can see an example of this in our [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) example on GitHub (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)):
+We can however use two attributes — {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} — to provide several additional source images along with hints to help the browser pick the right one. You can see an example of this in our [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) example on GitHub (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
 <img srcset="elva-fairy-480w.jpg 480w,
@@ -226,7 +226,7 @@ New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_ima
 
 ## Active learning: Implementing your own responsive images
 
-For this active learning, we're expecting you to be brave and go it alone ... mostly. We want you to implement your own suitable art directed narrow screen/wide screen shot using `<picture>`, and a resolution switching example that uses `srcset`.
+For this active learning, we're expecting you to be brave and do it alone, mostly. We want you to implement your own suitable art-directed narrow screen/wide screenshot using `<picture>`, and a resolution switching example that uses `srcset`.
 
 1. Write some simple HTML to contain your code (use `not-responsive.html` as a starting point, if you like).
 2. Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this).

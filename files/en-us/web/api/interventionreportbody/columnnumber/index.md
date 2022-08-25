@@ -9,7 +9,7 @@ tags:
   - Experimental
   - columnNumber
   - InterventionReportBody
-spec-urls: https://wicg.github.io/intervention-reporting/#dom-interventionreportbody-columnnumber
+browser-compat: api.InterventionReportBody.columnNumber
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -26,13 +26,13 @@ An integer, or `null` if the column is not known.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `columnNumber` to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.sourceFile); // the source file
   console.log(firstReport.body.lineNumber); // the line in that file
@@ -46,4 +46,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

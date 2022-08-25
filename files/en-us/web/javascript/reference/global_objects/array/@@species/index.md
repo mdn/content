@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Method
   - Prototype
+  - Polyfill
 browser-compat: javascript.builtins.Array.@@species
 ---
 {{JSRef}}
@@ -53,8 +54,8 @@ class NotAnArray {
 
 const arr = [0, 1, 2];
 arr.constructor = { [Symbol.species]: NotAnArray };
-arr.map(i => i); // NotAnArray { '0': 0, '1': 1, '2': 2, length: 3 }
-arr.filter(i => i); // NotAnArray { '0': 1, '1': 2, length: 0 }
+arr.map((i) => i); // NotAnArray { '0': 0, '1': 1, '2': 2, length: 3 }
+arr.filter((i) => i); // NotAnArray { '0': 1, '1': 2, length: 0 }
 arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, length: 5 }
 ```
 
@@ -93,5 +94,6 @@ class MyArray extends Array {
 
 ## See also
 
+- [Polyfill of `Array[Symbol.species]` and support of `Symbol.species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

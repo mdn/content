@@ -13,4 +13,4 @@ _Over The Air_ (**OTA**) refers to automatic updating of software on connected d
 
 ## See also
 
-- {{Interwiki("wikipedia", "Over-the-air programming")}} on Wikipedia
+- [Over-the-air programming](https://en.wikipedia.org/wiki/Over-the-air_programming) on Wikipedia

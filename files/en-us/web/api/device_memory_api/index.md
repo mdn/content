@@ -21,7 +21,7 @@ There are two ways to determine the approximate amount of RAM a device has: use 
 You may query the approximate amount of RAM a device has by retrieving {{DOMxRef("Navigator.deviceMemory")}}
 
 ```js
-var RAM = navigator.deviceMemory;
+const RAM = navigator.deviceMemory;
 ```
 
 ### Client Hints

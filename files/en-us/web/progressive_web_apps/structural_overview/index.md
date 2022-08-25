@@ -281,7 +281,7 @@ self.addEventListener('fetch', (e) => {
 The games data for this app example is provided in a JavaScript source file called `games.js`. Other apps might use JSON or other formats for this data.
 
 ```js
-var games = [
+const games = [
   {
     slug: 'lost-in-cyberspace',
     name: 'Lost in Cyberspace',

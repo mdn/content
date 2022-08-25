@@ -10,7 +10,7 @@ tags:
   - HTTP
   - Security
   - frame-ancestors
-browser-compat: http.headers.csp.Content-Security-Policy.frame-ancestors
+browser-compat: http.headers.Content-Security-Policy.frame-ancestors
 ---
 {{HTTPSidebar}}
 
@@ -45,7 +45,7 @@ Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")
 
 One or more sources can be set for the `frame-ancestors` policy:
 
-```
+```http
 Content-Security-Policy: frame-ancestors <source>;
 Content-Security-Policy: frame-ancestors <source> <source>;
 ```
@@ -83,7 +83,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;

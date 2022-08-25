@@ -37,6 +37,8 @@ Basic keywords and general expressions in JavaScript.
   - : The `async function` defines an async function expression.
 - {{JSxRef("Operators/await", "await")}}
   - : Pause and resume an async function and wait for the promise's resolution/rejection.
+- {{JSxRef("Operators/async_function*", "async function*")}}
+  - : The `async function*` keywords define an async generator function expression.
 - {{JSxRef("Global_Objects/Array", "[]")}}
   - : Array initializer/literal syntax.
 - {{JSxRef("Operators/Object_initializer", "{}")}}

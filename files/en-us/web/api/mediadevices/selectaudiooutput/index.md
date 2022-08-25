@@ -54,29 +54,32 @@ The object describes the user-selected audio output device.
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Returned if the current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
-- `NotFoundError`  {{domxref("DOMException")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : Returned if there are no available audio output devices.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
 
 ## Examples
 
-Here's an example of using `selectAudioOutput()`, which you might call within a function that is triggered by a button click.
+Here's an example of using `selectAudioOutput()`, within a function that is triggered by a button click.
 It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.
 
 ```js
-if (!navigator.mediaDevices.selectAudioOutput) {
-  console.log("selectAudioOutput() not supported.");
-  return;
-}
+document.querySelector('#myButton').addEventListener('click', () => {
+  if (!navigator.mediaDevices.selectAudioOutput) {
+    console.log('selectAudioOutput() not supported.');
+    return;
+  }
 
-//Display prompt and log selected device or error
-navigator.mediaDevices.selectAudioOutput()
-.then( (device) => {
-    console.log(device.kind + ": " + device.label + " id = " + device.deviceId);
-  })
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
+  // Display prompt and log selected device or error
+  navigator.mediaDevices
+    .selectAudioOutput()
+    .then((device) => {
+      console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+    })
+    .catch((err) => {
+      console.error(`${err.name}: ${err.message}`);
+    });
 });
 ```
 

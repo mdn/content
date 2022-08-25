@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/clientId
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Property
   - Reference
@@ -28,7 +27,7 @@ A string that represents the client ID.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   console.log(event.clientId);
 });
 ```
@@ -44,7 +43,7 @@ self.addEventListener('fetch', function(event) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

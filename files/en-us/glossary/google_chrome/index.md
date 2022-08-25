@@ -14,7 +14,7 @@ Google Chrome is a free Web {{glossary("browser")}} developed by Google. It's ba
 
 ## See also
 
-- {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} on Wikipedia
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) on Wikipedia
 
 ### For Chrome Users
 

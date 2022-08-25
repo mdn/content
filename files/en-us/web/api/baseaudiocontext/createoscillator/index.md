@@ -39,15 +39,15 @@ An {{domxref("OscillatorNode")}}.
 ## Examples
 
 The following example shows basic usage of an AudioContext to create an oscillator
-node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/violent-theremin/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
+node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
 more information.
 
 ```js
 // create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
-var oscillator = audioCtx.createOscillator();
+const oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // value in hertz

@@ -43,29 +43,11 @@ A string with all array elements joined.
 ### Using join()
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
+const uint8 = new Uint8Array([1,2,3]);
 uint8.join();      // '1,2,3'
 uint8.join(' / '); // '1 / 2 / 3'
 uint8.join('');    // '123'
 ```
-
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis.
-
-```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
-if (!Uint8Array.prototype.join) {
-  Object.defineProperty(Uint8Array.prototype, 'join', {
-    value: Array.prototype.join
-  });
-}
-```
-
-If you need to support truly obsolete JavaScript engines that don't support
-{{jsxref("Object.defineProperty")}}, it's best not to polyfill
-`Array.prototype` methods at all, as you can't make them non-enumerable.
 
 ## Specifications
 

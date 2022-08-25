@@ -28,9 +28,9 @@ In browsers that support it, an instance of this interface may be passed in the 
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
+- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}}
   - : Returns a string containing a credential's federated identity provider.
-- {{domxref("FederatedCredential.protocol")}} {{readonlyInline}}
+- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}}
   - : Returns a string containing a credential's federated identity protocol.
 
 ### Event handlers
@@ -44,18 +44,18 @@ None.
 ## Examples
 
 ```js
-var cred = new FederatedCredential({
-  id: id,
-  name: name,
+const cred = new FederatedCredential({
+  id,
+  name,
   provider: 'https://account.google.com',
-  iconURL: iconUrl
+  iconURL,
 });
 
 // Store it
 navigator.credentials.store(cred)
-  .then(function() {
-  // Do something else.
-});
+  .then(() => {
+    // Do something else.
+  });
 ```
 
 ## Specifications

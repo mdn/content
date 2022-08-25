@@ -37,8 +37,9 @@ A number.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>Example</title>
     <style>
       div {
@@ -91,11 +92,11 @@ A number.
       }
     }
 
-    buttonOne.addEventListener('click', function() {
+    buttonOne.addEventListener('click', () => {
       alertOverflow(divOne);
     });
 
-    buttonTwo.addEventListener('click', function() {
+    buttonTwo.addEventListener('click', () => {
       alertOverflow(divTwo);
     });
   </script>

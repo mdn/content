@@ -49,8 +49,8 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the sync object's status.
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
-var status = gl.clientWaitSync(sync, 0, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const status = gl.clientWaitSync(sync, 0, 0);
 ```
 
 ## Specifications

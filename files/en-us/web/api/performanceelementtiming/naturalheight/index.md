@@ -8,9 +8,10 @@ tags:
   - Reference
   - naturalHeight
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.naturalHeight
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`naturalHeight`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic height of the image element.
 
@@ -28,7 +29,7 @@ In this example the image file has a width of 1000px and a height of 750px. Call
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalHeight);
     }

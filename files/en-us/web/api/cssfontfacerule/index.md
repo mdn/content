@@ -20,7 +20,7 @@ The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSFontFaceRule.style")}}{{readonlyinline}}
+- {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}}.
 
 ## Methods

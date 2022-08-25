@@ -17,12 +17,12 @@ This chapter introduces collections of data which are indexed by a key; `Map` an
 
 ### Map object
 
-ECMAScript 2015 introduces a new data structure to map values to values. A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order.
+A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order.
 
 The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of `[key, value]` for each iteration.
 
 ```js
-let sayings = new Map();
+const sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -33,8 +33,8 @@ sayings.has('bird'); // false
 sayings.delete('dog');
 sayings.has('dog'); // false
 
-for (let [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+for (const [key, value] of sayings) {
+  console.log(`${key} goes ${value}`);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -80,7 +80,8 @@ function Public() {
 
 Public.prototype.method = function () {
   const me = privates.get(this);
-  // Do stuff with private data in `me`...
+  // Do stuff with private data in `me`
+  // …
 };
 
 module.exports = Public;
@@ -95,7 +96,7 @@ module.exports = Public;
 The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 
 ```js
-let mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add('some text');
 mySet.add('foo');
@@ -104,7 +105,9 @@ mySet.has(1); // true
 mySet.delete('foo');
 mySet.size; // 2
 
-for (let item of mySet) console.log(item);
+for (const item of mySet) {
+  console.log(item);
+}
 // 1
 // "some text"
 ```
@@ -124,7 +127,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ### Array and Set compared
 
-Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new `Set` object, however, has some advantages:
+Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The `Set` object, however, has some advantages:
 
 - Deleting Array elements by value (`arr.splice(arr.indexOf(val), 1)`) is very slow.
 - `Set` objects let you delete elements by their value. With an array, you would have to `splice` based on an element's index.

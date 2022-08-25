@@ -6,7 +6,7 @@ tags:
   - API
   - Accessibility
   - Draft
-  - HTML5
+  - HTML
   - Interface
   - Media
   - NeedsContent
@@ -29,7 +29,7 @@ browser-compat: api.TextTrackCue
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 
-- {{domxref("TextTrackCue.track")}}{{readOnlyInline}}
+- {{domxref("TextTrackCue.track")}} {{ReadOnlyInline}}
   - : The {{domxref("TextTrack")}} that this cue belongs to, or `null` if it doesn't belong to any.
 - {{domxref("TextTrackCue.id")}}
   - : A string that identifies the cue.

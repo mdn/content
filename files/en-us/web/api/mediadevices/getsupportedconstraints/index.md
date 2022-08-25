@@ -57,16 +57,13 @@ body {
 ```
 
 ```js
-let constraintList = document.getElementById("constraintList");
-let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+const constraintList = document.querySelector("#constraintList");
+const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
-for (let constraint in supportedConstraints) {
-  if (supportedConstraints.hasOwnProperty(constraint)) {
-    let elem = document.createElement("li");
-
-    elem.innerHTML = "<code>" + constraint + "</code>";
-    constraintList.appendChild(elem);
-  }
+for (const constraint of Object.keys(supportedConstraints)) {
+  const elem = document.createElement("li");
+  elem.innerHTML = `<code>${constraint}</code>`;
+  constraintList.appendChild(elem);
 }
 ```
 

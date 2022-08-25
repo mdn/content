@@ -112,7 +112,7 @@ function onXRSessionStarted(xrSession) {
     space: xrReferenceSpace,
     viewPixelHeight: 512,
     viewPixelWidth: 512,
-    transform: new XRRigidTransform({z: -2});
+    transform: new XRRigidTransform({z: -2})
   });
   xrSession.updateRenderState({
     layers: [quadLayer]

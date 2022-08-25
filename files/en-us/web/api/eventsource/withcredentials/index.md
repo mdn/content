@@ -26,7 +26,7 @@ the default).
 ## Examples
 
 ```js
-var evtSource = new EventSource('sse.php');
+const evtSource = new EventSource('sse.php');
 console.log(evtSource.withCredentials);
 ```
 

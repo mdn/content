@@ -34,10 +34,10 @@ with the `<textArea>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const textArea = document.getElementById("test");
-  for(var i = 0; i < textArea.labels.length; i++) {
-    console.log(textArea.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of textArea.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

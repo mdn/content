@@ -60,14 +60,14 @@ await browser.scripting.registerContentScripts([
 
 // Retrieve all content scripts.
 let scripts = await browser.scripting.getRegisteredContentScripts();
-console.log(scripts.map(script => script.id)); // ["script-1", "script-2"]
+console.log(scripts.map((script) => script.id)); // ["script-1", "script-2"]
 
 // Only retrieve the second script.
 scripts = await browser.scripting.getRegisteredContentScripts({
   ids: ["script-2"],
 });
-console.log(scripts.map(script => script.id)); // ["script-2"]
-````
+console.log(scripts.map((script) => script.id)); // ["script-2"]
+```
 
 {{WebExtExamples}}
 

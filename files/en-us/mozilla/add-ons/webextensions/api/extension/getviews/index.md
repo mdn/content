@@ -34,13 +34,13 @@ let windows = browser.extension.getViews(
 
 ### Parameters
 
-- `fetchProperties`{{optional_inline}}
+- `fetchProperties` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `type`{{optional_inline}}
+    - `type` {{optional_inline}}
       - : `string`. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The window to restrict the search to. If omitted, this function returns all views. In Firefox version 92 and earlier, sidebar views are not matched and, therefore, not returned.
 
 ### Return value
@@ -56,9 +56,9 @@ let windows = browser.extension.getViews(
 Get all windows belonging to this extension, and log their URLs:
 
 ```js
-let windows = browser.extension.getViews();
+const windows = browser.extension.getViews();
 
-for (let extensionWindow of windows) {
+for (const extensionWindow of windows) {
   console.log(extensionWindow.location.href);
 }
 ```
@@ -66,13 +66,13 @@ for (let extensionWindow of windows) {
 Get only windows in browser tabs hosting content packaged with the extension:
 
 ```js
-let windows = browser.extension.getViews({type: "tab"});
+const windows = browser.extension.getViews({ type: "tab" });
 ```
 
 Get only windows in popups:
 
 ```js
-let windows = browser.extension.getViews({type: "popup"});
+const windows = browser.extension.getViews({ type: "popup" });
 ```
 
 {{WebExtExamples}}

@@ -97,14 +97,10 @@ ctx.fill(ellipse);
 ctx.stroke(ellipse);
 
 // Listen for mouse moves
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside ellipse's stroke
-  if (ctx.isPointInStroke(ellipse, event.offsetX, event.offsetY)) {
-    ctx.strokeStyle = 'green';
-  }
-  else {
-    ctx.strokeStyle = 'red';
-  }
+  const isPointInStroke = ctx.isPointInStroke(ellipse, event.offsetX, event.offsetY);
+  ctx.strokeStyle = isPointInStroke ? 'green' : 'red';
 
   // Draw ellipse
   ctx.clearRect(0, 0, canvas.width, canvas.height);

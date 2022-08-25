@@ -43,7 +43,7 @@ _Example 2: How the tabs widget might be styled visually. Users might recognize 
 
 **ARIA** enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behavior of most familiar UI widgets.
 
-> **Warning:** Many of these were later added in HTML5, and **developers should always prefer using the correct semantic HTML element over using ARIA**.
+> **Warning:** Many of these were later added when browsers didn't fully support modern HTML features. **Developers should always prefer using the correct semantic HTML element over using ARIA**.
 
 The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
 
@@ -86,9 +86,12 @@ Dynamic presentational changes include using CSS to change the appearance of con
 
 ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
 
-- **`aria-checked`**: indicates the state of a checkbox or radio button
-- **`aria-disabled`**: indicates that an element is visible, but not editable or otherwise operable
-- **`aria-grabbed`**: indicates the 'grabbed' state of an object in a drag-and-drop operation
+- `aria-checked`
+  - : Indicates the state of a checkbox or radio button.
+- `aria-disabled`
+  - : Indicates that an element is visible but not editable or otherwise operable.
+- `aria-grabbed`
+  - : Indicates the 'grabbed' state of an object in a drag-and-drop operation.
 
 (For a full list of ARIA states, consult the [ARIA list of states and properties](https://www.w3.org/TR/wai-aria-1.1/#introstates).)
 
@@ -132,7 +135,7 @@ The JavaScript to update the **`aria-hidden`** property has the form shown in Ex
 _Example 2c. JavaScript to update the aria-hidden attribute_
 
 ```js
-var showTip = function(el) {
+function showTip(el) {
   el.setAttribute('aria-hidden', 'false');
 }
 ```

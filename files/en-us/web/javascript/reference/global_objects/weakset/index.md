@@ -32,31 +32,30 @@ Functions that call themselves recursively need a way of guarding against circul
 
 ```js
 // Execute a callback on everything stored inside an object
-function execRecursively(fn, subject, _refs = null){
-  if(!_refs)
-    _refs = new WeakSet();
-
+function execRecursively(fn, subject, _refs = new WeakSet()) {
   // Avoid infinite recursion
-  if(_refs.has(subject))
+  if (_refs.has(subject)) {
     return;
+  }
 
   fn(subject);
-  if("object" === typeof subject){
+  if (typeof subject === "object") {
     _refs.add(subject);
-    for(let key in subject)
+    for (const key in subject) {
       execRecursively(fn, subject[key], _refs);
+    }
   }
 }
 
 const foo = {
   foo: "Foo",
   bar: {
-    bar: "Bar"
-  }
+    bar: "Bar",
+  },
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj => console.log(obj), foo);
+execRecursively((obj) => console.log(obj), foo);
 ```
 
 Here, a `WeakSet` is created on the first run, and passed along with every subsequent function call (using the internal `_refs` parameter).

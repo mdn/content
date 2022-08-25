@@ -17,12 +17,12 @@ round( decimal )
 
 ### Arguments
 
-- _`decimal`_
+- `decimal`
   - : The decimal number to be rounded.
 
 ### Returns
 
-The nearest integer less then, greater than, or equal to*`decimal`*.
+The nearest integer less then, greater than, or equal to `decimal`.
 
 ### Notes
 

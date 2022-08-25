@@ -35,7 +35,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -44,9 +44,9 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 gl.validateProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 
 gl.useProgram(program);

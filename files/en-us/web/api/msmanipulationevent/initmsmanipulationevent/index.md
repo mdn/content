@@ -52,7 +52,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```js
+```
 interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;

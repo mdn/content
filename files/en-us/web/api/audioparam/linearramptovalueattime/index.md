@@ -51,25 +51,20 @@ natural.
 
 ```js
 // create audio context
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
 // set basic variables for example
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const myAudio = document.querySelector('audio');
 
-pre.innerHTML = myScript.innerHTML;
-
-var linearRampPlus = document.querySelector('.linear-ramp-plus');
-var linearRampMinus = document.querySelector('.linear-ramp-minus');
+const linearRampPlus = document.querySelector('.linear-ramp-plus');
+const linearRampMinus = document.querySelector('.linear-ramp-minus');
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a gain node and set it's gain value to 0.5
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination
@@ -78,11 +73,11 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-linearRampPlus.onclick = function() {
+linearRampPlus.onclick = () => {
   gainNode.gain.linearRampToValueAtTime(1.0, audioCtx.currentTime + 2);
 }
 
-linearRampMinus.onclick = function() {
+linearRampMinus.onclick = () => {
   gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 2);
 }
 ```

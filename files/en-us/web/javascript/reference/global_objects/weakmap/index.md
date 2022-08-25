@@ -116,6 +116,81 @@ class ClearableWeakMap {
 }
 ```
 
+### Emulating private members
+
+Developers can use a {{jsxref("WeakMap")}} to associate private data to an object, with the following benefits:
+
+- Compared to a {{jsxref("Map")}}, a WeakMap does not hold strong references to the object used as the key, so the metadata shares the same lifetime as the object itself, avoiding memory leaks.
+- Compared to using non-enumerable and/or {{jsxref("Symbol")}} properties, a WeakMap is external to the object and there is no way for user code to retrieve the metadata through reflective methods like {{jsxref("Object.getOwnPropertySymbols")}}.
+- Compared to a [closure](/en-US/docs/Web/JavaScript/Closures), the same WeakMap can be reused for all instances created from a constructor, making it more memory-efficient, and allows different instances of the same class to read the private members of each other.
+
+```js
+let Thing;
+
+{
+  const privateScope = new WeakMap();
+  let counter = 0;
+
+  Thing = function() {
+    this.someProperty = 'foo';
+
+    privateScope.set(this, {
+      hidden: ++counter,
+    });
+  };
+
+  Thing.prototype.showPublic = function() {
+    return this.someProperty;
+  };
+
+  Thing.prototype.showPrivate = function() {
+    return privateScope.get(this).hidden;
+  };
+}
+
+console.log(typeof privateScope);
+// "undefined"
+
+const thing = new Thing();
+
+console.log(thing);
+// Thing {someProperty: "foo"}
+
+thing.showPublic();
+// "foo"
+
+thing.showPrivate();
+// 1
+```
+
+This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields):
+
+```js
+class Thing {
+  static #counter = 0;
+  #hidden;
+  constructor() {
+    this.someProperty = 'foo';
+    this.#hidden = ++Thing.#counter;
+  }
+  showPublic() {
+    return this.someProperty;
+  }
+  showPrivate() {
+    return this.#hidden;
+  }
+}
+
+console.log(thing);
+// Thing {someProperty: "foo"}
+
+thing.showPublic();
+// "foo"
+
+thing.showPrivate();
+// 1
+```
+
 ## Specifications
 
 {{Specifications}}

@@ -16,7 +16,7 @@ The **`Number.MAX_VALUE`** property represents the maximum numeric value represe
 
 ## Description
 
-The `MAX_VALUE` property has a value of approximately `1.79E+308`, or 1.7976931348623157 * (10^308). Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}}.
+The `MAX_VALUE` property has a value of approximately `1.79E+308`, or 1.7976931348623157 × 10<sup>308</sup>. Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}}.
 
 Because `MAX_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_VALUE`, rather than as a property of a {{jsxref("Number")}} object you created.
 

@@ -36,7 +36,7 @@ Values of this type are objects. They contain the following properties:
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use an ID to identify different events associated with the same request.
-- `requestHeaders`{{optional_inline}}
+- `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that will be sent with this request. Note that this is only included if the `"requestHeaders"` option was passed into `addListener()`.
 - `tabId`
   - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request is not related to a tab.

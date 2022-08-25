@@ -39,7 +39,7 @@ The hint allows a server to choose what information is sent based on the network
 
 ## Syntax
 
-```
+```http
 RTT: <number>
 ```
 
@@ -52,13 +52,13 @@ RTT: <number>
 
 A server first needs to opt in to receive the `RTT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `RTT`.
 
-```
+```http
 Accept-CH: RTT
 ```
 
 Then on subsequent requests the client might send an `RTT` header back:
 
-```
+```http
 RTT: 125
 ```
 

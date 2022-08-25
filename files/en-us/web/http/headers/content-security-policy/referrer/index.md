@@ -10,7 +10,7 @@ tags:
   - Reference
   - Security
   - referrer
-browser-compat: http.headers.csp.Content-Security-Policy.referrer
+browser-compat: http.headers.Content-Security-Policy.referrer
 ---
 {{HTTPSidebar}} {{deprecated_header}}
 
@@ -24,7 +24,7 @@ browsers.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: referrer <referrer-policy>;
 ```
 
@@ -51,7 +51,7 @@ where `<referrer-policy>` can be one of the following values:
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: referrer "none";
 ```
 

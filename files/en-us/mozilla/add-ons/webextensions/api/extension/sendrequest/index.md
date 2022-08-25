@@ -26,7 +26,7 @@ Sends a single request to other listeners within the extension. Similar to {{Web
 chrome.extension.sendRequest(
   extensionId,             // optional string
   request,                 // any
-  function(response) {...} // optional function
+  (response) => {/* … */}  // optional function
 )
 ```
 
@@ -34,11 +34,11 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
 
 ### Parameters
 
-- `extensionId`{{Optional_Inline}}
+- `extensionId` {{optional_inline}}
   - : `string`. The extension ID of the extension you want to connect to. If omitted, default is your own extension.
 - `request`
   - : `any`.
-- `responseCallback`{{Optional_Inline}}
+- `responseCallback` {{optional_inline}}
 
   - : `function`. The function is passed the following arguments:
 

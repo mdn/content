@@ -51,7 +51,7 @@ In requests, (such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}), the clie
 
 ## Syntax
 
-```
+```http
 Content-Type: text/html; charset=UTF-8
 Content-Type: multipart/form-data; boundary=something
 ```
@@ -81,7 +81,7 @@ In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the
 
 The request looks something like this (less interesting headers are omitted here):
 
-```
+```http
 POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575

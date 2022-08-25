@@ -46,10 +46,10 @@ Namespace URL for <code>xml</code> on &lt;svg&gt;: <output>Not tested</output>.<
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector('button');
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector('output');
+  const aSvgElt = document.querySelector('svg');
 
   const result = document.getElementsByTagName('output');
   result[0].value = aHtmlElt.lookupNamespaceURI("xlink");

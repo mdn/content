@@ -66,8 +66,7 @@ try {
 
   // Point in circle stroke
   console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
-  
-} catch(e) {
+} catch (e) {
   // for the browsers that still support the deprecated interface SVGPoint
   const svg = document.getElementsByTagName('svg')[0];
   const point = svg.createSVGPoint();

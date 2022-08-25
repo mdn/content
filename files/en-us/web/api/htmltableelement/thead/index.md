@@ -23,8 +23,8 @@ A {{domxref("HTMLTableSectionElement")}}.
 ## Examples
 
 ```js
-if (table.tHead == my_head_el) {
-  // ...
+if (table.tHead === my_head_el) {
+  // …
 }
 ```
 

@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML sections
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Sectioning content
@@ -113,7 +112,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     </p>
   </aside>
   <p>
-    More info about the movie...
+    More info about the movie…
   </p>
 </article>
 ```

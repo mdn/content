@@ -84,7 +84,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<sup>` element should only be used for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-For example, to style the {{interwiki("wikipedia", "wordmark")}} of a business or product which uses a raised baseline should be done using CSS (most likely {{cssxref("vertical-align")}}) rather than `<sup>`. This would be done using, for example, `vertical-align: super` or, to shift the baseline up 50%, `vertical-align: 50%`.
+For example, to style the [wordmark](https://en.wikipedia.org/wiki/Wordmark) of a business or product which uses a raised baseline should be done using CSS (most likely {{cssxref("vertical-align")}}) rather than `<sup>`. This would be done using, for example, `vertical-align: super` or, to shift the baseline up 50%, `vertical-align: 50%`.
 
 Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
@@ -94,7 +94,7 @@ Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
   ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
 
-- Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
+- Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
 
   <sup>lle</sup>
 

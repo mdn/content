@@ -41,7 +41,7 @@ None.
 
 ```js
 let myhead = mytable.createTHead();
-// Now this should be true: myhead == mytable.tHead
+// Now this should be true: myhead === mytable.tHead
 ```
 
 ## Specifications

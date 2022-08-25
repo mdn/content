@@ -14,7 +14,7 @@ This article details the four types of KumaScript error, and some steps you can 
 
 ## DocumentParsingError
 
-`DocumentParsingError` errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a [macro](/en-US/docs/MDN/Structures/Macros).
+`DocumentParsingError` errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a [macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
 Check for:
 
@@ -29,7 +29,7 @@ Check for:
 
 ## TemplateLoadingError
 
-`TemplateLoadingError` errors appear when KumaScript has trouble finding which [macro](/en-US/docs/MDN/Structures/Macros) to include on a page.
+`TemplateLoadingError` errors appear when KumaScript has trouble finding which [macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) to include on a page.
 
 Check for:
 

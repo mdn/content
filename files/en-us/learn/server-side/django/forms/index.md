@@ -53,7 +53,7 @@ First, a brief overview of [HTML Forms](/en-US/docs/Learn/Forms). Consider a sim
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
-The form is defined in HTML as a collection of elements inside `<form>...</form>` tags, containing at least one `input` element of `type="submit"`.
+The form is defined in HTML as a collection of elements inside `<form>…</form>` tags, containing at least one `input` element of `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">
@@ -243,7 +243,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -306,7 +306,7 @@ if request.method == 'POST':
         book_instance.save()
 
         # redirect to a new URL:
-        return HttpResponseRedirect(reverse('all-borrowed') )
+        return HttpResponseRedirect(reverse('all-borrowed'))
 
 context = {
     'form': form,
@@ -357,7 +357,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -435,7 +435,7 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 
 #### Other ways of using form template variable
 
-Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}` ) or as a paragraph (using `\{{ form.as_p }}`).
+Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}`) or as a paragraph (using `\{{ form.as_p }}`).
 
 It is also possible to have complete control over the rendering of each part of the form, by indexing its properties using dot notation. So, for example, we can access a number of separate items for our `renewal_date` field:
 
@@ -462,15 +462,15 @@ You can alternatively manually construct a test URL like this — `http://127.0.
 
 If you are successful, the default form will look like this:
 
-![](forms_example_renew_default.png)
+![Default form which displays the book details, due date, renewal date and a submit button appears in case the link works successfully](forms_example_renew_default.png)
 
 The form with an invalid value entered will look like this:
 
-![](forms_example_renew_invalid.png)
+![Same form as above with an error message: invalid date - renewal in the past](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 
-![](forms_example_renew_allbooks.png)
+![Displays list of all renewed books along with their details. Past due is in red.](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -648,17 +648,17 @@ Then navigate to the author create page, `http://127.0.0.1:8000/catalog/author/c
 
 Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot because it looks just like the "create" page!
 
-Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
+Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
 
-![](forms_example_delete_author.png)
+![Form with option to delete author](forms_example_delete_author.png)
 
 ## Challenge yourself
 
 Create some forms to create, edit, and delete `Book` records. You can use exactly the same structure as for `Authors`. If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
 
-![](forms_example_create_book.png)
+![Screenshot displaying various fields in the form like title, author, summary, ISBN, genre and language](forms_example_create_book.png)
 
 ## Summary
 

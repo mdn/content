@@ -7,6 +7,7 @@ tags:
   - Feature Policy
   - Feature-Policy
   - Reference
+  - Experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
@@ -18,7 +19,7 @@ specific feature for the current Feature Policy.
 ## Syntax
 
 ```js
-const allowlist = FeaturePolicy.getAllowlistForFeature(<feature>)
+const allowlist = FeaturePolicy.getAllowlistForFeature(feature);
 ```
 
 ### Parameter

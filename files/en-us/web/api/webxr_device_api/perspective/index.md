@@ -34,7 +34,7 @@ The majority of these values define the XR device's [viewing frustum](/en-US/doc
 
 Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the **[perspective projection matrix](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#perspective_projection_matrix)**. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.
 
-Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the `XRView` are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause {{interwiki("wikipedia", "virtual reality sickness")}} in at least some of your users.
+Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the `XRView` are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause [virtual reality sickness](https://en.wikipedia.org/wiki/Virtual_reality_sickness) in at least some of your users.
 
 For example, if your app uses a WebGL uniform named `uProjectionMatrix` to pass the projection matrix to your shaders, you might use code like this to pass the projection matrix for the `view` currently being rendered:
 
@@ -56,8 +56,8 @@ Once you have the viewing frustum, you can compute the perspective projection ma
 
 ```js
 function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
-  var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
-  var rangeInv = 1 / (near - far);
+  const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
+  const rangeInv = 1 / (near - far);
 
   return [
     f / aspectRatio, 0,                          0,   0,

@@ -43,7 +43,7 @@ A string representing the given number using fixed-point notation.
     {{jsxref("RangeError")}}. Implementations are allowed to support larger and smaller
     values as chosen.
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref( "Number")}}.
+  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
@@ -64,7 +64,7 @@ and returns a string in exponential notation.
 ### Using toFixed
 
 ```js
-let numObj = 12345.6789
+const numObj = 12345.6789;
 
 numObj.toFixed()       // Returns '12346': rounding, no fractional part
 numObj.toFixed(1)      // Returns '12345.7': it rounds up

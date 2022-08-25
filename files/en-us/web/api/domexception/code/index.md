@@ -9,6 +9,7 @@ tags:
   - Property
   - Reference
   - deprecated
+  - Deprecated
 browser-compat: api.DOMException.code
 ---
 {{ APIRef("DOM") }} {{deprecated_header}}

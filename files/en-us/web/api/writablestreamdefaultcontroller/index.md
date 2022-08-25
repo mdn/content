@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultController
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Interface
   - Reference
@@ -40,13 +39,13 @@ const writableStream = new WritableStream({
     controller.error('My stream is broken');
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 });
 ```

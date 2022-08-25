@@ -50,7 +50,7 @@ const mediaQueryList = window.matchMedia("(orientation: portrait)");
 
 // Define a callback function for the event listener.
 function handleOrientationChange(mql) {
-  // ...
+  // …
 }
 
 // Run the orientation change handler once.

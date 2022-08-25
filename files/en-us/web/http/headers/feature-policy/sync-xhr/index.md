@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `sync-xhr` directive controls w
 
 ## Syntax
 
-```
+```http
 Feature-Policy: sync-xhr <allowlist>;
 ```
 

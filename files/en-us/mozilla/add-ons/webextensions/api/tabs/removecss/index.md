@@ -38,17 +38,17 @@ let removing = browser.tabs.removeCSS(
 
   - : An object describing the CSS to remove from the page. It contains the following properties:
 
-    - `allFrames`{{optional_inline}}
+    - `allFrames` {{optional_inline}}
       - : `boolean`. If `true`, the code will be removed from all frames of the current page. If it is `false`, code is only removed from the top frame. Defaults to `false`.
-    - `code`{{optional_inline}}
+    - `code` {{optional_inline}}
       - : `string`. CSS to remove, as a text string. This must exactly match a CSS string previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
-    - `cssOrigin`{{optional_inline}}
+    - `cssOrigin` {{optional_inline}}
       - : `string`. This can take one of two values: "user", for CSS added as a user stylesheet, or "author" for CSS added as an author stylesheet. If this option was set previously by {{WebExtAPIRef("tabs.insertCSS()")}}, then it must exactly match.
-    - `file`{{optional_inline}}
+    - `file` {{optional_inline}}
       - : `string`. Path to a file containing the CSS to remove. This must exactly match a CSS file previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
-    - `frameId`{{optional_inline}}
+    - `frameId` {{optional_inline}}
       - : `integer`. The frame from which to remove the CSS. Defaults to `0` (the top-level frame).
-    - `matchAboutBlank`{{optional_inline}}
+    - `matchAboutBlank` {{optional_inline}}
       - : `boolean`. If `true`, the CSS will be removed from embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. Defaults to `false`.
 
 ### Return value

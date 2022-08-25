@@ -60,7 +60,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += localGreeting(user) + "<br>\r";
+  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
 }
 
 greetUser("Mike");

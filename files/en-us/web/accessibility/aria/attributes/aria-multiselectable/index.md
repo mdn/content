@@ -28,7 +28,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 ## Example
 
 ```html
-<p>
+<p id="colorOptions">
   Choose the colors for your flag.
 </p>
 <ul
@@ -177,7 +177,6 @@ Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/
 
 - `true`
   - : More than one item in the widget may be selected at a time
-  -
 - `false`
   - : Only one item can be selected
 

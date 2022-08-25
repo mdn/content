@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Push
   - Push API
@@ -14,7 +13,7 @@ tags:
   - getKey
 browser-compat: api.PushSubscription.getKey
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
 The `getKey()` method of the {{domxref("PushSubscription")}} interface
 returns an {{jsxref("ArrayBuffer")}} representing a client public key, which can then
@@ -47,8 +46,7 @@ An {{jsxref("ArrayBuffer")}}.
 ## Examples
 
 ```js
-reg.pushManager.getSubscription()
-  .then(function(subscription) {
+reg.pushManager.getSubscription().then((subscription) => {
   // Enable any UI which subscribes / unsubscribes from
   // push messages.
 
@@ -68,11 +66,12 @@ reg.pushManager.getSubscription()
 
   // initialize status, which includes setting UI elements for subscribed status
   // and updating Subscribers list via push
-  var endpoint = subscription.endpoint;
-  var key = subscription.getKey('p256dh');
-  var auth = subscription.getKey('auth');
+  const endpoint = subscription.endpoint;
+  const key = subscription.getKey('p256dh');
+  const auth = subscription.getKey('auth');
 
-    ...
+  // ...
+});
 ```
 
 ## Specifications

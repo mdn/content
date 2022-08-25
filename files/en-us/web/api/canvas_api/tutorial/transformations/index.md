@@ -7,7 +7,6 @@ tags:
   - Graphics
   - Guide
   - HTML
-  - HTML5
   - Intermediate
   - Web
 ---
@@ -98,7 +97,7 @@ function draw() {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = `rgb(${51 * i}, ${255 - 51 * i}, 255)`;
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -236,7 +235,7 @@ The parameters of this function are:
 
 - `a (m11)`
   - : Horizontal scaling.
-- _`b (m12)`_
+- `b (m12)`
   - : Horizontal skewing.
 - `c (m21)`
   - : Vertical skewing.
@@ -263,7 +262,7 @@ function draw() {
   let c = 0;
   for (let i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    ctx.fillStyle = `rgb(${c}, ${c}, ${c})`;
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }

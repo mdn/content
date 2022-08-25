@@ -46,12 +46,12 @@ function setResourceTimingBufferSize(maxSize) {
     log("Browser does not support Web Performance");
     return;
   }
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
+  const supported = typeof performance.setResourceTimingBufferSize === "function";
   if (supported) {
-    log("... Performance.setResourceTimingBufferSize() = Yes");
+    console.log("… Performance.setResourceTimingBufferSize() = Yes");
     performance.setResourceTimingBufferSize(maxSize);
   } else {
-    log("... Performance.setResourceTimingBufferSize() = NOT supported");
+    console.error("The method Performance.setResourceTimingBufferSize() is not supported.");
   }
 }
 ```

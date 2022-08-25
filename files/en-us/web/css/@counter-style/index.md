@@ -59,7 +59,7 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 <!---->
 
 - {{cssxref("@counter-style/pad", "pad")}}
-  - : Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start at 01 and go through 02, 03, 04 etc, then the pad descriptor is to be used. For representations larger than the specified pad value, the marker is constructed as normal.
+  - : Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start at 01 and go through 02, 03, 04, etc., then the pad descriptor is to be used. For representations larger than the specified pad value, the marker is constructed as normal.
 
 <!---->
 
@@ -125,8 +125,7 @@ Which will produce lists like this:
 Ⓒ Three
 Ⓓ Four
 Ⓔ Five
-...
-...
+…
 Ⓨ Twenty-five
 Ⓩ Twenty-six
 27 Twenty-seven

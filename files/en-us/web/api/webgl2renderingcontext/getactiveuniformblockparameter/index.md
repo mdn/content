@@ -59,13 +59,16 @@ getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
 ### Return value
 
 Depends on which information is requested using the `pname` parameter. If an
-error occurs, {{jsxref("null")}} is returned.
+error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
 ## Examples
 
 ```js
-var blockSize = gl.getActiveUniformBlockParameter(program,
-                      blockIndex, gl.UNIFORM_BLOCK_DATA_SIZE);
+const blockSize = gl.getActiveUniformBlockParameter(
+  program,
+  blockIndex,
+  gl.UNIFORM_BLOCK_DATA_SIZE
+);
 ```
 
 ## Specifications

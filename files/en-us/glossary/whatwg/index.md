@@ -6,7 +6,6 @@ tags:
   - DOM
   - Glossary
   - HTML
-  - HTML5
   - WHATWG
   - Web
   - standards
@@ -15,5 +14,5 @@ The WHATWG (_Web Hypertext Application Technology Working Group_) is a community
 
 ## See also
 
-- {{Interwiki("wikipedia", "WHATWG")}} on Wikipedia
+- [WHATWG](https://en.wikipedia.org/wiki/WHATWG) on Wikipedia
 - [WHATWG website](https://whatwg.org/)

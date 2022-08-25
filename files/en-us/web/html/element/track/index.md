@@ -7,7 +7,6 @@ tags:
   - Element
   - HTML
   - HTML embedded content
-  - HTML5
   - Multimedia
   - Reference
   - TextTrack
@@ -130,7 +129,7 @@ If the track _is_ associated with a media element, using the {{HTMLElement("trac
 ```js
 let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", event => {
+textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
@@ -156,7 +155,7 @@ textTrackElem.addEventListener("cuechange", event => {
    <track kind="metadata" src="keyStage3.vtt" srclang="en"
      label="Key Stage 3">
    <!-- Fallback -->
-   ...
+   …
 </video>
 ```
 

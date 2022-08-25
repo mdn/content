@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `legacy-image-formats` directiv
 
 ## Syntax
 
-```
+```http
 Feature-Policy: legacy-image-formats <allowlist>;
 ```
 

@@ -24,7 +24,7 @@ A boolean value, where `true` indicates that the key is pressed, and `false` ind
 
 ## Examples
 
-This example logs the `ctrlKey` property when you trigger a {{Event("click")}} event.
+This example logs the `ctrlKey` property when you trigger a {{domxref("Element/click_event", "click")}} event.
 
 ### HTML
 

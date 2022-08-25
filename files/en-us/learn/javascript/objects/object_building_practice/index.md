@@ -47,7 +47,7 @@ In previous articles we looked at all the essential JavaScript object theory and
 
 In this article we will write a classic "bouncing balls" demo, to show you how useful objects can be in JavaScript. Our little balls will bounce around on the screen, and change color when they touch each other. The finished example will look a little something like this:
 
-![](bouncing-balls.png)
+![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
 This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as **collision detection**).
 
@@ -94,18 +94,15 @@ The `random()` function takes two numbers as arguments, and returns a random num
 Our program will feature lots of balls bouncing around the screen. Since these balls will all behave in the same way, it makes sense to represent them with an object. Let's start by adding the following class definition to the bottom of our code.
 
 ```js
-
 class Ball {
-
-   constructor(x, y, velX, velY, color, size) {
-      this.x = x;
-      this.y = y;
-      this.velX = velX;
-      this.velY = velY;
-      this.color = color;
-      this.size = size;
-   }
-
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
 }
 ```
 
@@ -170,24 +167,24 @@ We can draw the ball in position, but to actually move the ball, we need an upda
 
 ```js
 update() {
-   if ((this.x + this.size) >= width) {
-      this.velX = -(this.velX);
-   }
+  if ((this.x + this.size) >= width) {
+    this.velX = -(this.velX);
+  }
 
-   if ((this.x - this.size) <= 0) {
-      this.velX = -(this.velX);
-   }
+  if ((this.x - this.size) <= 0) {
+    this.velX = -(this.velX);
+  }
 
-   if ((this.y + this.size) >= height) {
-      this.velY = -(this.velY);
-   }
+  if ((this.y + this.size) >= height) {
+    this.velY = -(this.velY);
+  }
 
-   if ((this.y - this.size) <= 0) {
-      this.velY = -(this.velY);
-   }
+  if ((this.y - this.size) <= 0) {
+    this.velY = -(this.velY);
+  }
 
-   this.x += this.velX;
-   this.y += this.velY;
+  this.x += this.velX;
+  this.y += this.velY;
 }
 ```
 
@@ -216,17 +213,17 @@ First, we need to create somewhere to store all our balls and then populate it. 
 const balls = [];
 
 while (balls.length < 25) {
-   const size = random(10,20);
-   const ball = new Ball(
-      // ball position always drawn at least one ball width
-      // away from the edge of the canvas, to avoid drawing errors
-      random(0 + size,width - size),
-      random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
-      randomRGB(),
-      size
-   );
+  const size = random(10,20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size
+  );
 
   balls.push(ball);
 }
@@ -238,15 +235,15 @@ Next, add the following to the bottom of your code:
 
 ```js
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 ```
 
@@ -272,17 +269,17 @@ First, add the following method definition to your `Ball` class.
 
 ```js
 collisionDetect() {
-   for (const ball of balls) {
-      if (!(this === ball)) {
-         const dx = this.x - ball.x;
-         const dy = this.y - ball.y;
-         const distance = Math.sqrt(dx * dx + dy * dy);
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
 
-         if (distance < this.size + ball.size) {
-           ball.color = this.color = randomRGB();
-         }
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
       }
-   }
+    }
+  }
 }
 ```
 
@@ -297,16 +294,16 @@ You also need to call this method in each frame of the animation. Update your `l
 
 ```js
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-     ball.collisionDetect();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 ```
 

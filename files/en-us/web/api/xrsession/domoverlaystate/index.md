@@ -15,14 +15,14 @@ tags:
   - XRSession
 browser-compat: api.XRSession.domOverlayState
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The *read-only* **`domOverlayState`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} provides information about the DOM overlay, if the feature is enabled.
 
 ## Value
 
-Returns {{jsxref("null")}} if the DOM overlay feature is not supported or not enabled or an object containing information about the DOM overlay state with the following properties:
+Returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the DOM overlay feature is not supported or not enabled or an object containing information about the DOM overlay state with the following properties:
 
 - `type`
 
@@ -53,3 +53,7 @@ if (session.domOverlayState) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}

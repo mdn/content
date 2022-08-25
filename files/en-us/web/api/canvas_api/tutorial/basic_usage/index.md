@@ -51,7 +51,7 @@ Telling the user to use a different browser that supports canvas does not help u
 
 As a consequence of the way fallback is provided, unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`). If this tag is not present, the rest of the document would be considered the fallback content and wouldn't be displayed.
 
-If fallback content is not needed, a simple `<canvas id="foo" ...></canvas>` is fully compatible with all browsers that support canvas at all.
+If fallback content is not needed, a simple `<canvas id="foo" …></canvas>` is fully compatible with all browsers that support canvas at all.
 
 ## The rendering context
 
@@ -89,7 +89,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>Canvas tutorial</title>
@@ -123,9 +123,10 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Canvas experiment</title>
   <script type="application/javascript">
     function draw() {
       const canvas = document.getElementById('canvas');

@@ -22,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSKeyframeRule.keyText")}}
   - : Represents the key of the keyframe, like `'10%'`, `'75%'`. The `from` keyword maps to `'0%'` and the `to` keyword maps to `'100%'`.
-- {{domxref("CSSKeyframeRule.style")}}{{readOnlyInline}}
+- {{domxref("CSSKeyframeRule.style")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.
 
 ## Methods

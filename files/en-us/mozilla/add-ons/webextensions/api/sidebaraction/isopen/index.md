@@ -53,7 +53,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Check the topmost window:
 
 ```js
-browser.sidebarAction.isOpen({}).then(result => {
+browser.sidebarAction.isOpen({}).then((result) => {
   console.log(result);
 });
 ```
@@ -62,12 +62,12 @@ Check all open windows:
 
 ```js
 async function checkWindow(windowId) {
-  let result = await browser.sidebarAction.isOpen({windowId});
+  const result = await browser.sidebarAction.isOpen({ windowId });
   console.log(`window: ${windowId} status: ${result}`);
 }
 
-browser.windows.getAll().then(all => {
-  for (let {id} of all) {
+browser.windows.getAll().then((all) => {
+  for (const { id } of all) {
     checkWindow(id);
   }
 });

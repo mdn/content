@@ -11,11 +11,11 @@ tags:
 
 ## What is JavaScript?
 
-**JavaScript** (often shortened to **JS**) is a lightweight, interpreted, object-oriented language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function), and is best known as the scripting language for Web pages, but it's [used in many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_Web_pages) as well. It is a [prototype-based](https://en.wikipedia.org/wiki/Prototype-based_programming "Prototype-based"), multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
+**JavaScript** (often shortened to **JS**) is a lightweight, interpreted, object-oriented language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function), and is best known as the scripting language for Web pages, but it's [used in many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) as well. It is a [prototype-based](https://en.wikipedia.org/wiki/Prototype-based_programming), multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
 
 JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is an easy to learn and also powerful scripting language, widely used for controlling web page behavior.
 
-Contrary to popular misconception, **JavaScript is _not_ "Interpreted Java"**. In a nutshell, JavaScript is a dynamic scripting language supporting [prototype based](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages) object construction. The basic syntax is intentionally similar to both Java and C++ to reduce the number of new concepts required to learn the language. Language constructs, such as `if` statements, `for` and `while` loops, and `switch` and `try ... catch` blocks function the same as in these languages (or nearly so).
+Contrary to popular misconception, **JavaScript is _not_ "Interpreted Java"**. In a nutshell, JavaScript is a dynamic scripting language supporting [prototype based](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) object construction. The basic syntax is intentionally similar to both Java and C++ to reduce the number of new concepts required to learn the language. Language constructs, such as `if` statements, `for` and `while` loops, and `switch` and `try ... catch` blocks function the same as in these languages (or nearly so).
 
 JavaScript can function as both a [procedural](https://en.wikipedia.org/wiki/Procedural_programming) and an [object oriented language](/en-US/docs/Learn/JavaScript/Objects). Objects are created programmatically in JavaScript, by attaching methods and properties to otherwise empty objects **at run time**, as opposed to the syntactic class definitions common in compiled languages like C++ and Java. Once an object has been constructed it can be used as a blueprint (or prototype) for creating similar objects.
 
@@ -42,8 +42,8 @@ Another common application for JavaScript is as a (Web) server side scripting la
 
 ## JavaScript resources
 
-- [Language resources](/en-US/docs/Web/JavaScript/Language_Resources)
-  - : Pointers to published JavaScript standards.
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
+  - : Pointers to published JavaScript standards and relevant resources.
 - [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   - : [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 

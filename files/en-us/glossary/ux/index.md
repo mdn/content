@@ -14,4 +14,4 @@ The system can be any kind of product or application that an end user is meant t
 
 ## See also
 
-- {{Interwiki("wikipedia", "User experience")}} on Wikipedia
+- [User experience](https://en.wikipedia.org/wiki/User_experience) on Wikipedia

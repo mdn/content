@@ -11,7 +11,7 @@ For example, the site admin can forbid crawlers to visit a certain folder (and a
 
 ## See also
 
-- {{Interwiki("wikipedia", "Robots.txt")}} on Wikipedia
+- [Robots.txt](https://en.wikipedia.org/wiki/Robots.txt) on Wikipedia
 - <https://developers.google.com/search/reference/robots_txt>
 - Standard specification draft: [https://datatracker.ietf.org/doc/html/draft-rep-wg-topic](https://datatracker.ietf.org/doc/html/draft-rep-wg-topic-00)
 - <https://www.robotstxt.org/>

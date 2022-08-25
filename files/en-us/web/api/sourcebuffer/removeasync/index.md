@@ -9,15 +9,15 @@ tags:
   - Media
   - Media Source Extensions
   - Method
-  - Experimental
   - Non-standard
   - Reference
   - SourceBuffer
   - Video
   - removeAsync
+  - Experimental
 browser-compat: api.SourceBuffer.removeAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`removeAsync()`** method of the
 {{domxref("SourceBuffer")}} interface starts the process of asynchronously removing
@@ -54,9 +54,9 @@ which clears the contents of the specified `SourceBuffer`.
 
 ```js
 async function emptySourceBuffer(msBuffer) {
-  await msBuffer.removeAsync(0, Infinity).catch(function(e) {
+  await msBuffer.removeAsync(0, Infinity).catch((e) => {
     handleException(e);
-  }
+  });
 }
 ```
 

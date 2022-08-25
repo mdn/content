@@ -25,7 +25,7 @@ A `double` floating point value.
 
 ## Examples
 
-This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 

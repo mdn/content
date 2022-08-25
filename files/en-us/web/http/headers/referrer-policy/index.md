@@ -31,7 +31,7 @@ The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referre
 
 ## Syntax
 
-```
+```http
 Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
@@ -163,7 +163,7 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 If you want to specify a fallback policy in case the desired policy hasn't got wide enough browser support, use a comma-separated list with the desired policy specified last:
 
-```
+```http
 Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 ```
 
@@ -193,7 +193,7 @@ All of these settings take the same set of values: `0 = no-referrer`, `1 = same-
 ## See also
 
 - [Web security > Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
+- [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - When using [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 - The obsolete {{HTTPHeader("Content-Security-Policy")}}'s {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

@@ -166,10 +166,6 @@ We create an `@scroll-timeline` called `squareTimeline`, setting the `source` as
 
 {{EmbedLiveSample("Simple_example")}}
 
-## Specifications
-
-{{Specifications}}
-
 ## Browser compatibility
 
 {{Compat}}

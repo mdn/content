@@ -31,11 +31,12 @@ An {{jsxref("object")}} with the following properties:
   - : A {{jsxref("string")}} which uniquely identifies the node. Each ID is unique within the user's profile and remains unchanged across browser restarts.
 - `index` {{optional_inline}}
   - : A number which represents the zero-based position of this node within its parent folder, where zero represents the first entry.
+  > **Note:** If you create or move multiple bookmarks, because the {{WebExtAPIRef("bookmarks.create()")}} and {{WebExtAPIRef("bookmarks.move()")}} methods are asynchronous, the requests may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the requests are completed. If the index associated with a bookmark matters to your extension, then – when creating or moving multiple bookmarks – the extension should wait for each `bookmarks.create` or `bookmarks.move` call to complete before creating or moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a create or move call executing concurrently while the original call is in progress.
 - `parentId` {{optional_inline}}
   - : A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.
 - `title`
   - : A {{jsxref("string")}} which contains the text displayed for the node in menus and lists of bookmarks.
-- `type`{{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `unmodifiable` {{optional_inline}}
   - : A {{jsxref("string")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.

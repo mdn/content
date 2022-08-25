@@ -7,6 +7,9 @@
   "MD007": {
     "indent": 2
   },
+  "MD010": {
+    "spaces_per_tab": 2
+  },
   "MD013": false,
   "MD014": false,
   "MD023": false,
@@ -98,5 +101,7 @@
     "style": "fenced"
   },
   "MD049": false,
-  "MD050": false
+  "MD050": false,
+  "MD051": false,
+  "MD052": false
 }

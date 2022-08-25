@@ -19,6 +19,8 @@ A `TypeError` may be thrown when:
 - when attempting to modify a value that cannot be changed; or
 - when attempting to use a value in an inappropriate way.
 
+`TypeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
@@ -27,9 +29,11 @@ A `TypeError` may be thrown when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "TypeError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}} {{non-standard_inline}}

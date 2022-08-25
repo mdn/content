@@ -41,8 +41,8 @@ If the intent is to create a "blanket" style that will apply to all targeted ele
 In the following example, there are five links that point to elements in the same document. Selecting the "First" link, for example, will cause `<h1 id="one">` to become the target element. Note that the document may jump to a new scroll position, since target elements are placed on the top of the browser window if possible.
 
 ```html
-<h4 id="one">...</h4> <p id="two">...</p>
-<div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
+<h4 id="one">…</h4> <p id="two">…</p>
+<div id="three">…</div> <a id="four">…</a> <em id="five">…</em>
 
 <a href="#one">First</a>
 <a href="#two">Second</a>

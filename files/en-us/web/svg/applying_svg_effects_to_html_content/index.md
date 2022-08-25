@@ -53,7 +53,7 @@ p {
 
 Note that in the CSS, the mask is specified using a URL to the ID `#mask-1`, which is the ID of the SVG mask specified below it. Everything else specifies details about the gradient mask itself.
 
-Applying the SVG effect to (X)HTML is accomplished by assigning the `target` class defined above to an element, like this:
+Applying the SVG effect to HTML is accomplished by assigning the `target` class defined above to an element, like this:
 
 ```html
 <p class="target" style="background:lime;">
@@ -62,8 +62,8 @@ Applying the SVG effect to (X)HTML is accomplished by assigning the `target` cla
 </p>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
+    <em class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</em>
     Ut enim ad minim veniam.
 </p>
 ```
@@ -83,8 +83,8 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
 </p>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
+    <em class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</em>
     Ut enim ad minim veniam.
 </p>
 
@@ -115,7 +115,7 @@ You can make changes to the SVG in real time and see them immediately affect the
 
 ```js
 function toggleRadius() {
-  var circle = document.getElementById("circle");
+  const circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
 ```
@@ -134,8 +134,8 @@ This demonstrates applying a filter to HTML content using SVG. It establishes se
 <pre class="target">lorem</pre>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    <b class="target">elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.</b>
+    <em class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</em>
     Ut enim ad minim veniam.
 </p>
 ```
@@ -191,8 +191,8 @@ The five filters are applied using the following CSS:
 ```css
 p.target { filter:url(#f3); }
 p.target:hover { filter:url(#f5); }
-b.target { filter:url(#f1); }
-b.target:hover { filter:url(#f4); }
+em.target { filter:url(#f1); }
+em.target:hover { filter:url(#f4); }
 pre.target { filter:url(#f2); }
 pre.target:hover { filter:url(#f3); }
 ```
@@ -251,4 +251,4 @@ The SVG is then imported from a file named `resources.svg`, using the clip path 
 ## See also
 
 - [SVG](/en-US/docs/Web/SVG)
-- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content/_04.html) (blog post)
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)

@@ -17,7 +17,7 @@ tags:
   - renderState
 browser-compat: api.XRSession.renderState
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The
 *read-only* **`renderState`** property of an

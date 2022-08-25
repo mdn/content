@@ -24,9 +24,9 @@ getAll(options)
 
 ### Parameters
 
-- `name`{{Optional_Inline}}
+- `name` {{optional_inline}}
   - : A string with the name of a cookie.
-- `options`{{Optional_Inline}}
+- `options` {{optional_inline}}
 
   - : An object containing:
 

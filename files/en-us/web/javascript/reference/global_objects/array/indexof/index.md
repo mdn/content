@@ -72,7 +72,7 @@ const indices = [];
 const array = ['a', 'b', 'a', 'c', 'a', 'd'];
 const element = 'a';
 let idx = array.indexOf(element);
-while (idx != -1) {
+while (idx !== -1) {
   indices.push(idx);
   idx = array.indexOf(element, idx + 1);
 }
@@ -84,18 +84,18 @@ console.log(indices);
 
 ```js
 function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('New veggies collection is : ' + veggies);
-    } else {
-        console.log(veggie + ' already exists in the veggies collection.');
-    }
+  if (veggies.indexOf(veggie) === -1) {
+    veggies.push(veggie);
+    console.log(`New veggies collection is: ${veggies}`);
+  } else {
+    console.log(`${veggie} already exists in the veggies collection.`);
+  }
 }
 
 const veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
 updateVegetablesCollection(veggies, 'spinach');
-// New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+// New veggies collection is: potato,tomato,chillies,green-pepper,spinach
 updateVegetablesCollection(veggies, 'spinach');
 // spinach already exists in the veggies collection.
 ```

@@ -46,7 +46,7 @@ The following example shows both uses of the `clearMarks()` method.
 // Create a small helper to show how many PerformanceMark entries there are.
 function logMarkCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("mark").length
+    `Found this many entries: ${performance.getEntriesByType("mark").length}`
   );
 }
 

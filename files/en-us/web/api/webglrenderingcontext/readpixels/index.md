@@ -119,9 +119,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
 gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
 console.log(pixels); // Uint8Array
 ```

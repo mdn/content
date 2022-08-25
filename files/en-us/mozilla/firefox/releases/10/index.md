@@ -21,7 +21,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 ### JavaScript
 
-- The method `WeakMap.set()` now returns _`undefined`_, instead of itself.
+- The method `WeakMap.set()` now returns `undefined`, instead of itself.
 - A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
 - You can no longer use [E4X](/en-US/docs/E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
 
@@ -87,7 +87,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 - When the proper MIME type is passed, `image/svg+xml`, [the `DOMParser` now creates a `SVGDocument`](/en-US/docs/Web/API/DOMParser#parsing_a_svg_document) when given a string with SVG.
 - In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.
-- The ESC key no longer incorrectly results in the {{ domxref("GlobalEventHandlers/onkeydown") }} handler incorrectly getting called.
+- The ESC key no longer incorrectly results in the {{ domxref("Element.keydown_event", "onkeydown") }} handler incorrectly getting called.
 - The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
 - The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
@@ -123,7 +123,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 ### Manifests
 
 - Support for [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictcompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
-- If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
+- If you wish to revert to the old behavior — that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
 
 ### XUL
 

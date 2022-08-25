@@ -17,14 +17,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('addtrack', event => { });
+addEventListener('addtrack', (event) => { });
 
-onaddtrack = event => { };
+onaddtrack = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamTrackEvent")}}
 

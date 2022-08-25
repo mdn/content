@@ -16,9 +16,10 @@ tags:
   - XRSession
   - augmented
   - environmentBlendMode
+  - Experimental
 browser-compat: api.XRSession.environmentBlendMode
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSession")}} interface's *read-only* **`environmentBlendMode`**
 property identifies if, and to what degree, the computer-generated imagery is overlaid atop the real world.

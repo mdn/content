@@ -79,7 +79,6 @@ This is the third example that explain [how to build custom form widgets](/en-US
   font-size   : 0.625em; /* 10px */
   font-family : Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -91,7 +90,6 @@ This is the third example that explain [how to build custom form widgets](/en-US
   box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
 
   background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
   background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -116,7 +114,6 @@ This is the third example that explain [how to build custom form widgets](/en-US
 
   padding-top : .1em;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   text-align : center;
@@ -142,7 +139,6 @@ This is the third example that explain [how to build custom form widgets](/en-US
 
   box-shadow: 0 .2em .4em rgba(0,0,0,.4);
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   min-width : 100%;
@@ -164,14 +160,6 @@ This is the third example that explain [how to build custom form widgets](/en-US
 ### JavaScript Content
 
 ```js
-// ------- //
-// HELPERS //
-// ------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-
 // -------------------- //
 // Function definitions //
 // -------------------- //
@@ -179,7 +167,7 @@ NodeList.prototype.forEach = function (callback) {
 function deactivateSelect(select) {
   if (!select.classList.contains('active')) return;
 
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   optList.classList.add('hidden');
   select.classList.remove('active');
@@ -193,15 +181,15 @@ function activeSelect(select, selectList) {
 };
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   optList.classList.toggle('hidden');
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll('.option');
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove('highlight');
   });
 
@@ -212,40 +200,40 @@ function highlightOption(select, option) {
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector('form');
+window.addEventListener("load", () => {
+  const form = document.querySelector('form');
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+  const selectList = document.querySelectorAll('.select');
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option');
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll('.option');
 
-    optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+    optionList.forEach((option) => {
+      option.addEventListener('mouseover', () => {
         highlightOption(select, option);
       });
     });
 
-    select.addEventListener('click', function (event) {
+    select.addEventListener('click', (event) => {
       toggleOptList(select);
     },  false);
 
-    select.addEventListener('focus', function (event) {
+    select.addEventListener('focus', (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener('blur', function (event) {
+    select.addEventListener('blur', (event) => {
       deactivateSelect(select);
     });
 
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener('keyup', (event) => {
       if (event.keyCode === 27) {
-         deactivateSelect(select);
+        deactivateSelect(select);
       }
     });
   });

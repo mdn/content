@@ -19,14 +19,28 @@ the expected type.
 ```js
 new TypeError()
 new TypeError(message)
+new TypeError(message, options)
 new TypeError(message, fileName)
 new TypeError(message, fileName, lineNumber)
+
+TypeError()
+TypeError(message)
+TypeError(message, options)
+TypeError(message, fileName)
+TypeError(message, fileName, lineNumber)
 ```
+
+> **Note:** `TypeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `TypeError` instance.
 
 ### Parameters
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error
+- `options` {{optional_inline}}
+  - : An object that has the following properties:
+    - `cause` {{optional_inline}}
+      - : A property indicating the specific cause of the error.
+          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}

@@ -451,10 +451,9 @@ This example uses microdata attributes to represent the following structured dat
 ## See also
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- Other, microdata related, global attributes:
+- Other microdata related global attributes:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)

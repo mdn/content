@@ -40,15 +40,15 @@ which is the endpoint URL.
 ## Examples
 
 ```js
-var req = navigator.push.register();
+const req = navigator.push.register();
 
-req.onsuccess = function(e) {
-  var endpoint = req.result;
-  debug("New endpoint: " + endpoint );
+req.onsuccess = (e) => {
+  const endpoint = req.result;
+  console.log(`New endpoint: ${endpoint}`);
 }
 
-req.onerror = function(e) {
-  debug("Error getting a new endpoint: " + JSON.stringify(e));
+req.onerror = (e) => {
+  console.error(`Error getting a new endpoint: ${e.error}`);
 }
 ```
 

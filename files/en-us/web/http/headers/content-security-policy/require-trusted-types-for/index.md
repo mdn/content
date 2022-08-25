@@ -6,7 +6,7 @@ tags:
   - Directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.require-trusted-types-for
+browser-compat: http.headers.Content-Security-Policy.require-trusted-types-for
 ---
 {{HTTPSidebar}}
 
@@ -16,7 +16,7 @@ When used, those functions only accept non-spoofable, typed values created by Tr
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: require-trusted-types-for 'script';
 ```
 

@@ -7,7 +7,7 @@ tags:
   - Document directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.base-uri
+browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
 {{HTTPSidebar}}
 
@@ -55,7 +55,7 @@ Note however that some of the values don't make sense for `base-uri`, such as th
 
 ### Apache configuration
 
-```html
+```
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>

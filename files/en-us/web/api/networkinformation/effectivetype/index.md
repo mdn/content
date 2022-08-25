@@ -7,6 +7,8 @@ tags:
   - Experimental
   - Network Information API
   - NetworkInformation
+  - Property
+  - Read-only
   - Reference
   - effectiveType
 browser-compat: api.NetworkInformation.effectiveType

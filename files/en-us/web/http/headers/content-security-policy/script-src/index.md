@@ -12,7 +12,7 @@ tags:
   - Security
   - script-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.script-src
+browser-compat: http.headers.Content-Security-Policy.script-src
 ---
 {{HTTPSidebar}}
 
@@ -87,7 +87,7 @@ document.getElementById("btn").addEventListener('click', doSomething);
 
 To allow inline scripts and inline event handlers, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 
-```
+```http
 Content-Security-Policy: script-src 'unsafe-inline';
 ```
 
@@ -95,13 +95,14 @@ The above Content Security Policy will allow inline {{HTMLElement("script")}} el
 
 ```html
 <script>
-  var inline = 1;
+  const inline = 1;
+  // …
 </script>
 ```
 
 You can use a nonce-source to only allow specific inline script blocks:
 
-```
+```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'
 ```
 
@@ -109,20 +110,21 @@ You will have to set the same nonce on the {{HTMLElement("script")}} element:
 
 ```html
 <script nonce="2726c7f26c">
-  var inline = 1;
+  const inline = 1;
+  // …
 </script>
 ```
 
 Alternatively, you can create hashes from your inline scripts. CSP supports sha256, sha384 and sha512.
 
-```
+```http
 Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
 ```
 
 When generating the hash, don't include the {{HTMLElement("script")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
 ```html
-<script>var inline = 1;</script>
+<script>const inline = 1;</script>
 ```
 
 ### Unsafe eval expressions
@@ -131,7 +133,7 @@ The `'unsafe-eval'` source expression controls several script execution methods 
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
-- When passing a string literal like to methods like: `window.setTimeout("alert(\"Hello World!\");", 500);`
+- When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
 
   - {{domxref("setTimeout()")}}
   - {{domxref("setInterval()")}}

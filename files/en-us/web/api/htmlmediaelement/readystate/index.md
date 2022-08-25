@@ -85,9 +85,9 @@ audio will play.
 ```js
 const obj = document.getElementById('example');
 
-obj.addEventListener('loadeddata', function() {
+obj.addEventListener('loadeddata', () => {
 
-  if(obj.readyState >= 2) {
+  if (obj.readyState >= 2) {
     obj.play();
   }
 

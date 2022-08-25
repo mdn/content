@@ -44,7 +44,7 @@ block is clicked by the user.
 [View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
 
 ```html
-<style type="text/css">
+<style>
   #mybox {
     background-image: -moz-element(#canvasbg);
     text-align: center;
@@ -66,7 +66,7 @@ function clicked() {
   canvas.setAttribute("height", 100);
 
   const ctx = canvas.getContext('2d');
-  ctx.fillStyle = "#" + c.toString(16) + "0000";
+  ctx.fillStyle = `#${c.toString(16)}0000`;
   ctx.fillRect(25, 25, 75, 75);
 
   c += 0x11;

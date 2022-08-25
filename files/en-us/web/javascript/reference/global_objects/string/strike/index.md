@@ -28,14 +28,13 @@ A string containing a {{HTMLElement("strike")}} HTML element.
 
 ## Description
 
-The `strike()` method embeds a string in a `<strike>`
-element: "`<strike>str</strike>`".
+The `strike()` method embeds a string in a `<strike>` element: `"<strike>str</strike>"`.
 
 ## Examples
 
 ### Using strike()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
 const worldString = 'Hello, world';

@@ -35,18 +35,18 @@ These are simple renames that were made in order to improve the consistency of t
 
 ```js
 // Old method names
-var gain = context.createGainNode();
-var delay = context.createDelayNode();
-var js = context.createJavascriptNode(1024);
+const gain = context.createGainNode();
+const delay = context.createDelayNode();
+const js = context.createJavaScriptNode(1024);
 ```
 
 you can rename the methods to look like this:
 
 ```js
 // New method names
-var gain = context.createGain();
-var delay = context.createDelay();
-var js = context.createScriptProcessor(1024);
+const gain = context.createGain();
+const delay = context.createDelay();
+const js = context.createScriptProcessor(1024);
 ```
 
 The semantics of these methods remain the same in the renamed versions.
@@ -58,11 +58,11 @@ In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBu
 In order to port your code, you can just rename the method that you're using.  For example, if you have code like the below:
 
 ```js
-var osc = context.createOscillator();
+const osc = context.createOscillator();
 osc.noteOn(1);
 osc.noteOff(1.5);
 
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 src.noteGrainOn(1, 0.25);
 src.noteOff(2);
 ```
@@ -70,11 +70,11 @@ src.noteOff(2);
 you can change it like this in order to port it to the standard AudioContext API:
 
 ```js
-var osc = context.createOscillator();
+const osc = context.createOscillator();
 osc.start(1);
 osc.stop(1.5);
 
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 src.start(1, 0.25);
 src.stop(2);
 ```
@@ -88,12 +88,12 @@ Because of these problems, this version of the `createBuffer()` method has been 
 The example below shows old code which downloads an audio file over the network, and then decoded it using `createBuffer()`:
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
-xhr.onload = function() {
-  var decodedBuffer = context.createBuffer(xhr.response, false);
+xhr.onload = () => {
+  const decodedBuffer = context.createBuffer(xhr.response, false);
   if (decodedBuffer) {
     // Decoding was successful, do something useful with the audio buffer
   } else {
@@ -105,16 +105,20 @@ xhr.onload = function() {
 Converting this code to use `decodeAudioData()` is relatively simple, as can be seen below:
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
-xhr.onload = function() {
-  context.decodeAudioData(xhr.response, function onSuccess(decodedBuffer) {
-    // Decoding was successful, do something useful with the audio buffer
-  }, function onFailure() {
-    alert("Decoding the audio buffer failed");
-  });
+xhr.onload = () => {
+  context.decodeAudioData(
+    xhr.response,
+    (decodedBuffer) => {
+      // Decoding was successful, do something useful with the audio buffer
+    }, 
+    () => {
+      alert("Decoding the audio buffer failed");
+    }
+  );
 };
 ```
 
@@ -125,14 +129,14 @@ Note that the `decodeAudioData()` method is asynchronous, which means that it wi
 The `setTargetValueAtTime()` method on the {{domxref("AudioParam")}} interface has been renamed to `setTargetAtTime()`.  This is also a simple rename to improve the understandability of the API, and the semantics of the method are the same.  If your code is using `setTargetValueAtTime()`, you can rename it to use `setTargetAtTime()`. For example, if we have code that looks like this:
 
 ```js
-  var gainNode = context.createGain();
+  const gainNode = context.createGain();
   gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
 ```
 
 you can rename the method, and be compliant with the standard, like so:
 
 ```js
-  var gainNode = context.createGain();
+  const gainNode = context.createGain();
   gainNode.gain.setTargetAtTime(0.0, 10.0, 1.0);
 ```
 
@@ -146,22 +150,24 @@ The original `webkitAudioContext` API used C-style number based enumerated value
 
 ```js
 // Old webkitAudioContext code:
-var osc = context.createOscillator();
+const osc = context.createOscillator();
 osc.type = osc.SINE;     // sine waveform
 osc.type = osc.SQUARE;   // square waveform
 osc.type = osc.SAWTOOTH; // sawtooth waveform
 osc.type = osc.TRIANGLE; // triangle waveform
 osc.setWaveTable(table);
-var isCustom = (osc.type == osc.CUSTOM); // isCustom will be true
+const isCustom = osc.type === osc.CUSTOM; // isCustom will be true
+```
 
+```js
 // New standard AudioContext code:
-var osc = context.createOscillator();
+const osc = context.createOscillator();
 osc.type = "sine";       // sine waveform
 osc.type = "square";     // square waveform
 osc.type = "sawtooth";   // sawtooth waveform
 osc.type = "triangle";   // triangle waveform
 osc.setPeriodicWave(table);  // Note: setWaveTable has been renamed to setPeriodicWave!
-var isCustom = (osc.type == "custom"); // isCustom will be true
+const isCustom = osc.type === "custom"; // isCustom will be true
 ```
 
 ### BiquadFilterNode.type
@@ -170,7 +176,7 @@ var isCustom = (osc.type == "custom"); // isCustom will be true
 
 ```js
 // Old webkitAudioContext code:
-var filter = context.createBiquadFilter();
+const filter = context.createBiquadFilter();
 filter.type = filter.LOWPASS;   // lowpass filter
 filter.type = filter.HIGHPASS;  // highpass filter
 filter.type = filter.BANDPASS;  // bandpass filter
@@ -179,9 +185,11 @@ filter.type = filter.HIGHSHELF; // highshelf filter
 filter.type = filter.PEAKING;   // peaking filter
 filter.type = filter.NOTCH;     // notch filter
 filter.type = filter.ALLPASS;   // allpass filter
+```
 
+```js
 // New standard AudioContext code:
-var filter = context.createBiquadFilter();
+const filter = context.createBiquadFilter();
 filter.type = "lowpass";        // lowpass filter
 filter.type = "highpass";       // highpass filter
 filter.type = "bandpass";       // bandpass filter
@@ -198,12 +206,14 @@ filter.type = "allpass";        // allpass filter
 
 ```js
 // Old webkitAudioContext code:
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.panningModel = panner.EQUALPOWER;  // equalpower panning
 panner.panningModel = panner.HRTF;        // HRTF panning
+```
 
+```js
 // New standard AudioContext code:
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.panningModel = "equalpower";       // equalpower panning
 panner.panningModel = "HRTF";             // HRTF panning
 ```
@@ -214,13 +224,15 @@ panner.panningModel = "HRTF";             // HRTF panning
 
 ```js
 // Old webkitAudioContext code:
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.distanceModel = panner.LINEAR_DISTANCE;      // linear distance model
 panner.distanceModel = panner.INVERSE_DISTANCE;     // inverse distance model
 panner.distanceModel = panner.EXPONENTIAL_DISTANCE; // exponential distance model
+```
 
+```js
 // Mew standard AudioContext code:
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.distanceModel = "linear";                    // linear distance model
 panner.distanceModel = "inverse";                   // inverse distance model
 panner.distanceModel = "exponential";               // exponential distance model
@@ -236,16 +248,18 @@ The `gain` attribute of {{domxref("AudioBufferSourceNode")}} has been removed.  
 
 ```js
 // Old webkitAudioContext code:
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 src.buffer = someBuffer;
 src.gain.value = 0.5;
 src.connect(context.destination);
 src.noteOn(0);
+```
 
+```js
 // New standard AudioContext code:
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 src.buffer = someBuffer;
-var gain = context.createGain();
+const gain = context.createGain();
 src.connect(gain);
 gain.gain.value = 0.5;
 gain.connect(context.destination);
@@ -258,16 +272,18 @@ The `gain` attribute of {{domxref("AudioBuffer")}} has been removed.  The same f
 
 ```js
 // Old webkitAudioContext code:
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 src.buffer = someBuffer;
 src.buffer.gain = 0.5;
 src.connect(context.destination);
 src.noteOn(0);
+```
 
+```js
 // New standard AudioContext code:
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 src.buffer = someBuffer;
-var gain = context.createGain();
+const gain = context.createGain();
 src.connect(gain);
 gain.gain.value = 0.5;
 gain.connect(context.destination);
@@ -279,14 +295,14 @@ src.start(0);
 The `looping` attribute of {{domxref("AudioBufferSourceNode")}} has been removed.  This attribute was an alias of the `loop` attribute, so you can just use the `loop` attribute instead. Instead of having code like this:
 
 ```js
-var source = context.createBufferSource();
+const source = context.createBufferSource();
 source.looping = true;
 ```
 
 you can change it to respect the last version of the specification:
 
 ```js
-var source = context.createBufferSource();
+const source = context.createBufferSource();
 source.loop = true;
 ```
 
@@ -303,17 +319,18 @@ The `playbackState` attribute of {{domxref("AudioBufferSourceNode")}} and {{domx
 
 ```js
 // Old webkitAudioContext code:
-var src = context.createBufferSource();
+const src = context.createBufferSource();
 // Some time later...
-var isFinished = (src.playbackState == src.FINISHED_STATE);
+const isFinished = src.playbackState === src.FINISHED_STATE;
+```
 
+```js
 // New AudioContext code:
-var src = context.createBufferSource();
-function endedHandler(event) {
+let isFinished = false;
+const src = context.createBufferSource();
+src.onended = (event) => { 
   isFinished = true;
-}
-var isFinished = false;
-src.onended = endedHandler;
+};
 ```
 
 The exact same changes have been applied to both {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}, so you can apply the same techniques to both kinds of nodes.
@@ -325,44 +342,47 @@ The `activeSourceCount` attribute has been removed from {{domxref("AudioContext"
 Code using the `activeSourceCount` attribute of the {{domxref("AudioContext")}}, like this snippet:
 
 ```js
-  var src0 = context.createBufferSource();
-  var src1 = context.createBufferSource();
-  // Set buffers and other parameters...
-  src0.start(0);
-  src1.start(0);
-  // Some time later...
-  console.log(context.activeSourceCount);
+const src0 = context.createBufferSource();
+const src1 = context.createBufferSource();
+// Set buffers and other parameters...
+src0.start(0);
+src1.start(0);
+// Some time later...
+console.log(context.activeSourceCount);
 ```
 
 could be rewritten like that:
 
 ```js
-  // Array to track the playing source nodes:
-  var sources = [];
-  // When starting the source, put it at the end of the array,
-  // and set a handler to make sure it gets removed when the
-  // AudioBufferSourceNode reaches its end.
-  // First argument is the AudioBufferSourceNode to start, other arguments are
-  // the argument to the |start()| method of the AudioBufferSourceNode.
-  function startSource() {
-    var src = arguments[0];
-    var startArgs = Array.prototype.slice.call(arguments, 1);
-    src.onended = function() {
-      sources.splice(sources.indexOf(src), 1);
-    }
-    sources.push(src);
-    src.start.apply(src, startArgs);
+// Array to track the playing source nodes:
+const sources = [];
+
+// When starting the source, put it at the end of the array,
+// and set a handler to make sure it gets removed when the
+// AudioBufferSourceNode reaches its end.
+// First argument is the AudioBufferSourceNode to start, other arguments are
+// the argument to the |start()| method of the AudioBufferSourceNode.
+function startSource(src, ...startArgs) {
+  src.onended = () => {
+    sources.splice(sources.indexOf(src), 1);
   }
-  function activeSources() {
-    return sources.length;
-  }
-  var src0 = context.createBufferSource();
-  var src0 = context.createBufferSource();
-  // Set buffers and other parameters...
-  startSource(src0, 0);
-  startSource(src1, 0);
-  // Some time later, query the number of sources...
-  console.log(activeSources());
+  sources.push(src);
+  src.start.apply(src, startArgs);
+}
+
+function activeSources() {
+  return sources.length;
+}
+
+const src0 = context.createBufferSource();
+const src1 = context.createBufferSource();
+
+// Set buffers and other parameters...
+startSource(src0, 0);
+startSource(src1, 0);
+
+// Some time later, query the number of sources...
+console.log(activeSources());
 ```
 
 ## Renaming of WaveTable
@@ -371,13 +391,15 @@ The {{domxref("WaveTable")}} interface has been renamed to {{domxref("PeriodicWa
 
 ```js
 // Old webkitAudioContext code:
-var osc = context.createOscillator();
-var table = context.createWaveTable(realArray, imaginaryArray);
+const osc = context.createOscillator();
+const table = context.createWaveTable(realArray, imaginaryArray);
 osc.setWaveTable(table);
+```
 
+```js
 // New standard AudioContext code:
-var osc = context.createOscillator();
-var table = context.createPeriodicWave(realArray, imaginaryArray);
+const osc = context.createOscillator();
+const table = context.createPeriodicWave(realArray, imaginaryArray);
 osc.setPeriodicWave(table);
 ```
 

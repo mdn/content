@@ -180,8 +180,7 @@ console.log('done');
 
 ### Iterating over generators
 
-You can also iterate over [generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*), i.e.
-functions generating an iterable object:
+You can also iterate over [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
 
 ```js
 function* fibonacci() { // a generator function
@@ -279,7 +278,7 @@ for (const i in iterable) {
 }
 
 for (const i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
+  if (Object.hasOwn(iterable, i)) {
     console.log(i); // logs "0", "1", "2", "foo"
   }
 }
@@ -323,14 +322,14 @@ thorough explanation of how {{jsxref("Statements/for...in", "array iteration and
 
 ```js
 for (const i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
+  if (Object.hasOwn(iterable, i)) {
     console.log(i); // logs 0, 1, 2, "foo"
   }
 }
 ```
 
 This loop is similar to the first one, but it uses
-{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} to check if the
+{{jsxref("Object.hasOwn()", "hasOwn()")}} to check if the
 found enumerable property is the object's own, i.e. not inherited. If it is, the
 property is logged. Properties `0`, `1`, `2` and
 `foo` are logged because they are own properties (**not

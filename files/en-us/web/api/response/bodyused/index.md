@@ -38,16 +38,18 @@ This returns `false` before and `true` afterwards, as at that point the body has
 ### JS Content
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').then(function(response) {
+const myImage = document.querySelector('.my-image');
+fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg')
+  .then((response) => {
     console.log(response.bodyUsed);
-    var res = response.blob();
+    const res = response.blob();
     console.log(response.bodyUsed);
     return res;
-}).then(function(response) {
-    var objectURL = URL.createObjectURL(response);
+  })
+  .then((response) => {
+    const objectURL = URL.createObjectURL(response);
     myImage.src = objectURL;
-});
+  });
 ```
 
 {{ EmbedLiveSample('Examples', '100%', '250px') }}

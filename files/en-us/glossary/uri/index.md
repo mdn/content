@@ -14,5 +14,5 @@ The most common are {{Glossary("URL","URL")}}s, which identify the resource by g
 
 ## See also
 
-- {{Interwiki("wikipedia", "URI")}} on Wikipedia
+- [URI](https://en.wikipedia.org/wiki/URI) on Wikipedia
 - [RFC 3986 on URI](https://datatracker.ietf.org/doc/html/rfc3986)

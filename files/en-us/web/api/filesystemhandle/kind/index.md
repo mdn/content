@@ -42,7 +42,7 @@ async function getFile() {
 
   if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.kind === 'directory')
+  } else if (fileHandle.kind === 'directory') {
     // run directory code
   }
 

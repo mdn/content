@@ -11,6 +11,7 @@ tags:
   - Property
   - Reference
   - fetchPriority
+  - Experimental
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
@@ -24,11 +25,14 @@ resources of the same type.
 
 A string representing the priority hint. Possible values are:
 
-- **`high`**: Fetch the preload at a high priority relative to other resources
+- `high`
+  - : Fetch the preload at a high priority relative to other resources
   of the same type.
-- **`low`**: Fetch the image at a low priority relative to other resources of
+- `low`
+  - : Fetch the image at a low priority relative to other resources of
   the same type.
-- **`auto`**: Default mode, which indicates no preference for
+- `auto`
+  - : Default mode, which indicates no preference for
   the fetch priority. The browser decides what is best for the user.
 
 The `fetchPriority` property allows you to signal high or low priority preload
@@ -46,7 +50,7 @@ degrading performance.
 ## Examples
 
 ```js
-var preloadLink = document.createElement("link");
+const preloadLink = document.createElement("link");
 preloadLink.href = "myimage.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";

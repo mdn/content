@@ -78,7 +78,7 @@ async function start() {
       pc.addTrack(track, stream);
     }
     selfVideo.srcObject = stream;
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -125,7 +125,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;
@@ -159,8 +159,8 @@ let ignoreOffer = false;
 signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
-      const offerCollision = (description.type == "offer") &&
-                             (makingOffer || pc.signalingState != "stable");
+      const offerCollision = (description.type === "offer") &&
+                             (makingOffer || pc.signalingState !== "stable");
 
       ignoreOffer = !polite && offerCollision;
       if (ignoreOffer) {
@@ -168,20 +168,20 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
       }
 
       await pc.setRemoteDescription(description);
-      if (description.type == "offer") {
+      if (description.type === "offer") {
         await pc.setLocalDescription();
         signaler.send({ description: pc.localDescription })
       }
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -209,7 +209,7 @@ On the other hand, if the received message contains an ICE candidate, we deliver
 
 ## Making negotiation perfect
 
-If you're curious what makes perfect negotiation so... perfect... this section is for you. Here, we'll look at each change made to the WebRTC API and to best practice recommendations to make perfect negotiation possible.
+If you're curious what makes perfect negotiation _so perfect_, this section is for you. Here, we'll look at each change made to the WebRTC API and to best practice recommendations to make perfect negotiation possible.
 
 ### Glare-free setLocalDescription()
 
@@ -224,7 +224,7 @@ pc.onnegotiationneeded = async () => {
   try {
     await pc.setLocalDescription(await pc.createOffer());
     signaler.send({description: pc.localDescription});
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 };
@@ -244,7 +244,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;
@@ -269,10 +269,10 @@ Doing so returns the local peer to the `stable` {{domxref("RTCPeerConnection.sig
 Using the previous API to implement incoming negotiation messages during perfect negotiation would look something like this:
 
 ```js example-bad
-signaler.onmessage = async({data: { description, candidate }}) => {
+signaler.onmessage = async ({data: { description, candidate }}) => {
   try {
     if (description) {
-      if (description.type == "offer" && pc.signalingState != "stable") {
+      if (description.type === "offer" && pc.signalingState !== "stable") {
         if (!polite) {
           return;
         }
@@ -285,20 +285,20 @@ signaler.onmessage = async({data: { description, candidate }}) => {
         await pc.setRemoteDescription(description);
       }
 
-      if (description.type == "offer") {
+      if (description.type === "offer") {
         await pc.setLocalDescription(await pc.createAnswer());
         signaler.send({ description: pc.localDescription });
       }
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 };
@@ -326,8 +326,8 @@ let ignoreOffer = false;
 signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
-      const offerCollision = (description.type == "offer") &&
-                             (makingOffer || pc.signalingState != "stable");
+      const offerCollision = (description.type === "offer") &&
+                             (makingOffer || pc.signalingState !== "stable");
 
       ignoreOffer = !polite && offerCollision;
       if (ignoreOffer) {
@@ -335,20 +335,20 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
       }
 
       await pc.setRemoteDescription(description);
-      if (description.type == "offer") {
+      if (description.type === "offer") {
         await pc.setLocalDescription();
         signaler.send({ description: pc.localDescription });
       }
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -370,14 +370,14 @@ On the other hand, if the received message is an ICE candidate—indicated by th
 
 ### Explicit restartIce() method added
 
-The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
+The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
 
 #### The old way
 
 In the past, if you encountered an ICE error and needed to restart negotiation, you might have done something like this:
 
 ```js example-bad
-pc.onnegotiationneeded = async options => {
+pc.onnegotiationneeded = async (options) => {
   await pc.setLocalDescription(await pc.createOffer(options));
   signaler.send({ description: pc.localDescription });
 };
@@ -395,9 +395,18 @@ This has a number of reliability issues and outright bugs (such as failing if th
 Now, you can use `restartIce()` to do this much more cleanly:
 
 ```js example-good
+let makingOffer = false;
+
 pc.onnegotiationneeded = async () => {
-  await pc.setLocalDescription();
-  signaler.send({ description: pc.localDescription });
+  try {
+    makingOffer = true;
+    await pc.setLocalDescription();
+    signaler.send({ description: pc.localDescription });
+  } catch (err) {
+    console.error(err);
+  } finally {
+    makingOffer = false;
+  }
 };
 pc.oniceconnectionstatechange = () => {
   if (pc.iceConnectionState === "failed") {

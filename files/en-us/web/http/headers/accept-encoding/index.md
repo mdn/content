@@ -40,7 +40,7 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
 
 ## Syntax
 
-```
+```http
 Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate
@@ -71,7 +71,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Examples
 
-```
+```http
 Accept-Encoding: gzip
 
 Accept-Encoding: gzip, compress, br

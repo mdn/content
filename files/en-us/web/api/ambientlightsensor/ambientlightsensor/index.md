@@ -8,6 +8,7 @@ tags:
   - AmbientLightSensor
   - Constructor
   - Reference
+  - Experimental
 browser-compat: api.AmbientLightSensor.AmbientLightSensor
 ---
 {{APIRef("Sensor API")}}{{SeeCompatTable}}

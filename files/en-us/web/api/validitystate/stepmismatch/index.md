@@ -22,7 +22,7 @@ Given the following:
 <input type="number" min="20" max="40" step="2"/>
 ```
 
-if `(value - min) % 2 != 0`, `stepMismatch` will be true.
+if `(value - min) % 2 !== 0`, `stepMismatch` will be true.
 
 If true, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 

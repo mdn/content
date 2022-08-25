@@ -59,8 +59,6 @@ In contrast, JavaScript descends in spirit from a line of smaller, dynamically t
 | Variable data types are not declared (dynamic typing, loosely typed).                                                                                                        | Variable data types must be declared (static typing, strongly typed).                                                                                                                    |
 | Cannot automatically write to hard disk.                                                                                                                                     | Can automatically write to hard disk.                                                                                                                                                    |
 
-For more information on the differences between JavaScript and Java, see the chapter [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
-
 ## JavaScript and the ECMAScript specification
 
 JavaScript is standardized at [Ecma International](https://www.ecma-international.org/) — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called ECMAScript, behaves the same way in all applications that support the standard. Companies can use the open standard language to develop their implementation of JavaScript. The ECMAScript standard is documented in the ECMA-262 specification.
@@ -91,7 +89,7 @@ To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Window
 
 The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:
 
-![](2019-04-04_00-15-29.png)
+![A browser window with the web console open at the bottom, containing two lines of input and output. Text can be entered below that.](2019-04-04_00-15-29.png)
 
 The console works the exact same way as `eval`: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by `console.log` around `eval`, like so:
 
@@ -112,7 +110,7 @@ To get started with writing JavaScript, open the Web Console in multi-line mode,
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
-    alert('Hello ' + yourName);
+    alert(`Hello ${yourName}`);
   }
 
   greetMe('World');

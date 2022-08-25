@@ -262,11 +262,8 @@ function sessionStarted(session) {
     baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 
-  if (SESSION_TYPE == "immersive-vr") {
-    refSpaceType = "local";
-  } else {
-    refSpaceType = "viewer";
-  }
+  const isImmersiveVr = SESSION_TYPE === "immersive-vr";
+  refSpaceType = isImmersiveVr ? "local" : "viewer";
 
   mat4.fromTranslation(cubeMatrix, viewerStartPosition);
 
@@ -291,7 +288,7 @@ Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousem
 
 Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) and its preceding articles [Creating 3D objects using WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL) and [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL). Then our `loadTexture()` function is called to load the texture file.
 
-Now that the rendering structures and data are loaded, we start preparing to run the `XRSession`. We connect the session to the WebGL layer so it knows what to use as a rendering surface by calling {{domxref("XRSession.updateRenderState()")}} with a `baseLayer`  set to a new {{domxref("XRWebGLLayer")}}.
+Now that the rendering structures and data are loaded, we start preparing to run the `XRSession`. We connect the session to the WebGL layer so it knows what to use as a rendering surface by calling {{domxref("XRSession.updateRenderState()")}} with a `baseLayer` set to a new {{domxref("XRWebGLLayer")}}.
 
 We then look at the value of the `SESSION_TYPE` constant to see whether the WebXR context should be immersive or inline. Immersive sessions use the `local` reference space, while inline sessions use the `viewer` reference space.
 
@@ -299,7 +296,7 @@ The `glMatrix` library's `fromTranslation()` function for 4x4 matrices is used t
 
 `sessionStarted()` finishes up by calling the session's {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method to get a reference space object describing the space in which the object is being created. When the promise returned resolves to a {{domxref("XRReferenceSpace")}} object, we call its {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace")}} method to obtain a reference space object to represent the object's coordinate system. The origin of the new space is located at the world coordinates specified by the `viewerStartPosition` and its orientation set to `cubeOrientation`. Then we let the session know we're ready to draw a frame by calling its {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method. We record the returned request ID in case we need to cancel the request later.
 
-Finally, `sessionStarted()` returns the {{domxref("XRSession")}}  representing the user's WebXR session.
+Finally, `sessionStarted()` returns the {{domxref("XRSession")}} representing the user's WebXR session.
 
 ### When the session ends
 
@@ -448,7 +445,7 @@ Our callback for {{domxref("XRSession.requestAnimationFrame()")}} is implemented
 let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
-  let session = frame.session;
+  const session = frame.session;
   let adjustedRefSpace = xrReferenceSpace;
   let pose = null;
 
@@ -457,7 +454,7 @@ function drawFrame(time, frame) {
   pose = frame.getViewerPose(adjustedRefSpace);
 
   if (pose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
 
     gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
     LogGLError("bindFrameBuffer");
@@ -470,8 +467,8 @@ function drawFrame(time, frame) {
     const deltaTime = (time - lastFrameTime) * 0.001;  // Convert to seconds
     lastFrameTime = time;
 
-    for (let view of pose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of pose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       LogGLError(`Setting viewport for eye: ${view.eye}`);
       gl.canvas.width = viewport.width * pose.views.length;
@@ -526,9 +523,9 @@ We copy the transform's {{domxref("XRRigidTransform.matrix", "matrix")}} into `m
 
 ### Rendering the scene
 
-The `renderScene()`  function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
+The `renderScene()` function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
 
-Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/webgl-examples/blob/master/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
+Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/master/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
 
 ```js
 const normalMatrix = mat4.create();

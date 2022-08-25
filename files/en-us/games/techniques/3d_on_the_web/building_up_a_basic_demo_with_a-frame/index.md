@@ -34,16 +34,16 @@ Let's start by setting up an environment to create something with A-Frame. We'll
 The first step is to create an HTML document — inside your project directory, create a new `index.html` file, and save the follow HTML inside it:
 
 ```html
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: A-Frame demo</title>
-  <script src="aframe.min.js"></script>
-</head>
-<body>
-  <!-- HTML goes here -->
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>MDN Games: A-Frame demo</title>
+    <script src="aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- HTML goes here -->
+  </body>
 </html>
 ```
 
@@ -88,7 +88,7 @@ A sky box is a background for the 3D world, represented by an [`<a-sky>`](https:
 
 At this point, if you save the code and refresh your browser you can already see the cube on the screen with our custom background:
 
-![](cube.png)
+![A 3D representation's illustration of a blue cube displayed on a lighter grey background.](cube.png)
 
 Here's the code we have created so far:
 
@@ -99,23 +99,8 @@ You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob
 A-Frame takes care of setting up everything you need:
 
 - A default light source and camera are included, so the cube is visible.
-- The controls are already working: you can use the mouse for looking around and the keyboard for movement (try the
-
-  <kbd>W</kbd>
-
-  ,
-
-  <kbd>A</kbd>
-
-  ,
-
-  <kbd>S</kbd>
-
-  , and
-
-  <kbd>D</kbd>
-
-  keys.)
+- The controls are already working: you can use the mouse for looking around and the keyboard for movement
+  (try the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys).
 
 - There's even an "Enter VR mode" button in the bottom right corner of the screen, to allow you to shift to full screen, stereoscopic image viewing if you have the necessary VR hardware set up and ready.
 
@@ -199,8 +184,8 @@ In the new `material` attribute, we set up the `color` of the material, then its
 It is possible to populate the scene with entities created using JavaScript too, so let's use it to add a third shape, a cylinder. Add a new {{htmlelement("script")}} element at the end of the `<body>` element, just after the `<a-scene>` element, then add the following JavaScript code inside it:
 
 ```js
-var scene = document.querySelector('a-scene');
-var cylinder = document.createElement('a-cylinder');
+const scene = document.querySelector('a-scene');
+const cylinder = document.createElement('a-cylinder');
 cylinder.setAttribute('color', '#FF9500');
 cylinder.setAttribute('height', '2');
 cylinder.setAttribute('radius', '0.75');
@@ -210,7 +195,7 @@ scene.appendChild(cylinder);
 
 We're getting a reference to the scene handler first, then we create the cylinder element as an A-Frame entity. After that it's all about setting the proper attributes: `color`, `height`, `radius` and `position`. The last line adds the newly created cylinder to the scene. That's it — you've created three different shapes with A-Frame! Here's how it looks right now:
 
-![](shapes.png)
+![A illustration of 3D representation of three different geometry shapes displayed on a grey background: the first one is a darker grey torus, the second is a blue cube and the last one is a yellow cylinder.](shapes.png)
 
 It is impressive to be able to create such a scene with just a few lines of HTML and JavaScript.
 
@@ -276,11 +261,11 @@ The attribute we want to animate for the torus is `scale`. The initial, default 
 We could use the `<a-animation>` to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the `<script>` tag:
 
 ```js
-var t = 0;
+let t = 0;
 function render() {
   t += 0.01;
   requestAnimationFrame(render);
-  cylinder.setAttribute('position', '3 '+(Math.sin(t*2)+1)+' 0');
+  cylinder.setAttribute('position', `3 ${Math.sin(t * 2) + 1} 0`);
 }
 render();
 ```

@@ -48,13 +48,12 @@ Log the permission warnings for the add-on whose ID is "my-add-on":
 let id = "my-add-on";
 
 function gotWarnings(warnings) {
-  for (warning of warnings) {
+  for (const warning of warnings) {
     console.log(warning);
   }
 }
 
-let gettingWarnings = browser.management.getPermissionWarningsById(id);
-gettingWarnings.then(gotWarnings);
+browser.management.getPermissionWarningsById(id).then(gotWarnings);
 ```
 
 {{WebExtExamples}}

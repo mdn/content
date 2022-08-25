@@ -23,7 +23,7 @@ The GamepadEvent interface of the Gamepad API contains references to gamepads co
 
 ## Properties
 
-- {{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}
+- {{ domxref("GamepadEvent.gamepad") }} {{ReadOnlyInline}}
   - : Returns a {{ domxref("Gamepad") }} object, providing access to the associated gamepad data for the event fired.
 
 ## Examples
@@ -31,7 +31,7 @@ The GamepadEvent interface of the Gamepad API contains references to gamepads co
 The gamepad property being called on a fired {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event.
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
@@ -41,7 +41,7 @@ window.addEventListener("gamepadconnected", function(e) {
 And on a {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} event.
 
 ```js
-window.addEventListener("gamepaddisconnected", function(e) {
+window.addEventListener("gamepaddisconnected", (e) => {
   console.log("Gamepad disconnected from index %d: %s",
   e.gamepad.index, e.gamepad.id);
 });

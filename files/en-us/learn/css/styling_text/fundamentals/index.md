@@ -61,7 +61,7 @@ Let's move straight on to look at properties for styling fonts. In this example,
 ```html
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -90,7 +90,7 @@ This will cause the paragraphs to become red, rather than the standard browser d
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -310,7 +310,7 @@ This gives us the following result:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -352,7 +352,7 @@ Our new result is like so:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -420,7 +420,7 @@ Our new result is like so:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -484,7 +484,7 @@ If we applied this to the {{htmlelement("h1")}} element in our Tommy The Cat exa
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -537,7 +537,7 @@ If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example,
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -588,7 +588,7 @@ Applying this to the {{htmlelement("p")}} elements in our example would give us 
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -643,7 +643,7 @@ This renders our HTML as:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -775,7 +775,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

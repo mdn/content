@@ -27,7 +27,7 @@ The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Se
 
 ## Properties
 
-- {{domxref('SensorErrorEvent.error')}} {{readonlyinline}}
+- {{domxref('SensorErrorEvent.error')}} {{ReadOnlyInline}}
   - : Returns the {{domxref('DOMException')}} object passed in the event's constructor.
 
 ## Specifications

@@ -68,9 +68,9 @@ function handleMessage(e) {
   para.innerHTML = e.data;
 }
 
-// in the iframe...
+// in the iframe…
 
-window.addEventListener('message', function (event) {
+window.addEventListener('message', (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });

@@ -75,7 +75,7 @@ pause
 To use that code:
 
 1. Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
-2. Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
+2. Right-click a file in the File Explorer, select **Send to…**, and then select `sri-hash`. You will see the integrity value in a command box.
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
 
@@ -83,7 +83,7 @@ To use that code:
 
 For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 

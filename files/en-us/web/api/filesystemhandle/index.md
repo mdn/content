@@ -27,9 +27,9 @@ Below is a list of interfaces based on the FileSystemHandle interface.
 
 ## Properties
 
-- {{domxref('FileSystemHandle.kind','kind')}} {{readonlyInline}}
+- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
   - : Returns the type of entry. This is `'file'` if the associated entry is a file or `'directory'`.
-- {{domxref('FileSystemHandle.name', 'name')}} {{readonlyInline}}
+- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
   - : Returns the name of the associated entry.
 
 ## Methods
@@ -57,7 +57,7 @@ async function getFile() {
 
   if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.kind === 'directory')
+  } else if (fileHandle.kind === 'directory') {
     // run directory code
   }
 
@@ -100,7 +100,7 @@ The following function compares a single entry with an array of entries, and ret
 ```js
 function removeMatches(fileEntry, entriesArr) {
 
-  let newArr = entriesArr.filter( entry => !fileEntry.isSameEntry(entry) )
+  const newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
 
   return newArr;
 }

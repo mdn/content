@@ -34,13 +34,13 @@ browser.tabs.connect(
 
 - `tabId`
   - : `integer`. ID of the tab whose content scripts we want to connect to.
-- `connectInfo`{{optional_inline}}
+- `connectInfo` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
-    - `frameId`{{optional_inline}}
+    - `frameId` {{optional_inline}}
       - : `integer`. Open a port to a specific frame identified by `frameId` instead of all frames in the tab.
 
 ### Return value
@@ -66,7 +66,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
     currentWindow: true, active: true
   });

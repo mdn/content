@@ -11,6 +11,7 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
@@ -27,11 +28,11 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 ## Properties
 
-- {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
 
 ## Events
@@ -49,7 +50,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
   - : Occurs when a user clicks on a displayed notification.
 - `notificationclose`
-  - : Occurs — when a user closes a displayed notification.
+  - : Occurs when a user closes a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
   - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}}
@@ -76,27 +77,30 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 The code also handles exceptions thrown from the {{domxref("fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", (event) => {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then((response) => {
       if (response) {
-        console.log('Found response in cache:', response);
+        console.log("Found response in cache:", response);
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network...');
+      console.log("No response found in cache. About to fetch from network…");
 
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
+      return fetch(event.request).then(
+        (response) => {
+          console.log("Response from network is:", response);
 
-        return response;
-      }, function(error) {
-        console.error('Fetching failed:', error);
+          return response;
+        },
+        (error) => {
+          console.error("Fetching failed:", error);
 
-        throw error;
-      });
+          throw error;
+        }
+      );
     })
   );
 });
@@ -113,6 +117,6 @@ self.addEventListener('fetch', function(event) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

@@ -43,18 +43,18 @@ various inputs.
 
 ```js
 // Retrieve params via url.search, passed into ctor
-var url = new URL('https://example.com?foo=1&bar=2');
-var params = new URLSearchParams(url.search);
+const url = new URL('https://example.com?foo=1&bar=2');
+const params = new URLSearchParams(url.search);
 
 // Pass in a string literal
-var params2 = new URLSearchParams("foo=1&bar=2");
-var params2a = new URLSearchParams("?foo=1&bar=2");
+const params2 = new URLSearchParams("foo=1&bar=2");
+const params2a = new URLSearchParams("?foo=1&bar=2");
 
 // Pass in a sequence of pairs
-var params3 = new URLSearchParams([["foo", "1"], ["bar", "2"]]);
+const params3 = new URLSearchParams([["foo", "1"], ["bar", "2"]]);
 
 // Pass in a record
-var params4 = new URLSearchParams({"foo": "1", "bar": "2"});
+const params4 = new URLSearchParams({"foo": "1", "bar": "2"});
 ```
 
 This example shows how to build a new URL with an object of search parameters from an existing URL that has search parameters.
@@ -92,7 +92,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ]).toString()}`
+    ])}`
   );
 ```
 

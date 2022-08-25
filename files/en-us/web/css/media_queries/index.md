@@ -47,7 +47,7 @@ You can learn more about programmatically using media queries in [Testing media 
   - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
-- [Using Media Queries for Accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [Using media queries for accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
   - : Learn how Media Queries can help users understand your website better.
 
 ## Specifications

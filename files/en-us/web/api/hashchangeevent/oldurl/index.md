@@ -23,8 +23,8 @@ A string.
 ## Examples
 
 ```js
-window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed from ' + event.oldURL);
+window.addEventListener('hashchange', (event) => {
+  console.log(`Hash changed from ${event.oldURL}`);
 });
 ```
 

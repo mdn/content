@@ -12,7 +12,7 @@ tags:
 
 ## See also
 
-- {{interwiki("wikipedia", "MathML", "MathML")}} on Wikipedia
+- [MathML](https://en.wikipedia.org/wiki/MathML) on Wikipedia
 - [MathML](/en-US/docs/Web/MathML)
 - [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
 - [What is MathML](https://www.w3.org/Math/whatIsMathML.html)

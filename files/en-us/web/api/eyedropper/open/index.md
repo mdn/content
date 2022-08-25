@@ -8,6 +8,7 @@ tags:
   - Reference
   - EyeDropper
   - open
+  - Experimental
 browser-compat: api.EyeDropper.open
 ---
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
@@ -18,7 +19,7 @@ The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promi
 
 ```js
 open()
-open( options )
+open(options)
 ```
 
 ### Parameters

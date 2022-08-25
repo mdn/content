@@ -17,11 +17,11 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 
 ## Properties
 
-- {{domxref('PerformanceServerTiming.description')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.description')}} {{ReadOnlyInline}}
   - : A string value of the server-specified metric description, or an empty string.
-- {{domxref('PerformanceServerTiming.duration')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.duration')}} {{ReadOnlyInline}}
   - : A double that contains the server-specified metric duration, or value `0.0`.
-- {{domxref('PerformanceServerTiming.name')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.name')}} {{ReadOnlyInline}}
   - : A string value of the server-specified metric name.
 
 ## Methods
@@ -46,7 +46,7 @@ function requestHandler(request, response) {
   };
   response.writeHead(200, headers);
   response.write('');
-  return setTimeout(_ => {
+  return setTimeout(() => {
    response.end();
  }, 1000)
 };

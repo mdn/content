@@ -50,7 +50,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>script</code></td>
       <td>
-        Access to error logging via {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} will be limited.
+        Access to error logging via {{domxref('Window.error_event', 'window.onerror')}} will be limited.
       </td>
     </tr>
     <tr>

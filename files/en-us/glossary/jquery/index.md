@@ -11,7 +11,7 @@ tags:
 jQuery uses a format, `$(selector).action()` to assign an element(s) to an event. To explain it in detail, `$(selector)` will call jQuery to select `selector` element(s), and assign it to an event {{Glossary("API")}} called `.action()`.
 
 ```js
-$(document).ready(function(){
+$(document).ready(() => {
   alert("Hello World!");
   $("#blackBox").hide();
 });
@@ -20,7 +20,7 @@ $(document).ready(function(){
 The above code carries out the same function as the following code:
 
 ```js
-window.onload = function() {
+window.onload = () => {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
 };
@@ -37,6 +37,6 @@ window.addEventListener("load", () => {
 
 ## See also
 
-- {{Interwiki("wikipedia", "jQuery")}} on Wikipedia
+- [jQuery](https://en.wikipedia.org/wiki/JQuery) on Wikipedia
 - [jQuery Official Website](https://jquery.com/)
 - [Official API reference documentation](https://api.jquery.com/)[](https://api.jquery.com/)

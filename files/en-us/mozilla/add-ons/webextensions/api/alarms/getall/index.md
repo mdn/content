@@ -37,13 +37,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function gotAll(alarms) {
-  for (let alarm of alarms) {
+  for (const alarm of alarms) {
     console.log(alarm.name);
   }
 }
 
-let getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);
+browser.alarms.getAll().then(gotAll);
 ```
 
 {{WebExtExamples}}

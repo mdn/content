@@ -19,7 +19,7 @@ tags:
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
-This article gets you started with HTML tables, covering the very basics such as rows and cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
+This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 
 <table>
   <tbody>
@@ -58,7 +58,6 @@ It is therefore no wonder that the creators of HTML provided a means by which to
 The point of a table is that it is rigid. Information is easily interpreted by making visual associations between row and column headers. Look at the table below for example and find a Jovian gas giant with 62 moons. You can find the answer by associating the relevant row and column headers.
 
 ```html hidden
-
 <table>
  <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
  <thead>
@@ -224,7 +223,7 @@ HTML tables should be used for tabular data — this is what they are designed f
 
 In short, using tables for layout rather than [CSS layout techniques](/en-US/docs/Learn/CSS/CSS_layout) is a bad idea. The main reasons are as follows:
 
-1. **Layout tables reduce accessibility for visually impaired users**: [Screenreaders](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders), used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.
+1. **Layout tables reduce accessibility for visually impaired users**: [screen readers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers), used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screen readers' output will be confusing to their users.
 2. **Tables produce tag soup**: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
 3. **Tables are not automatically responsive**: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
 
@@ -378,7 +377,7 @@ We have already partially answered this question — it is easier to find the da
 
 > **Note:** Table headings come with some default styling — they are bold and centered even if you don't add your own styling to the table, to help them stand out.
 
-Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. Screenreaders are then able to read out a whole row or column of data at once, which is pretty useful.
+Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. screen readers are then able to read out a whole row or column of data at once, which is pretty useful.
 
 ## Allowing cells to span multiple rows and columns
 

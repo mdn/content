@@ -22,14 +22,18 @@ new String(thing)
 String(thing)
 ```
 
+> **Note:** `String()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+
 ### Parameters
 
 - `thing`
   - : Anything to be converted to a string.
 
-## Description
+### Return value
 
-When `String` is called as a function, it coerces the parameter to a string primitive. When `String` is called as a constructor (with `new`), it creates a {{jsxref("String")}} object, which is **not** a primitive.
+When `String` is called as a constructor (with `new`), it creates a {{jsxref("String")}} object, which is **not** a primitive.
+
+When `String` is called as a function, it coerces the parameter to a string primitive.
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.
 

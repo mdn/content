@@ -29,7 +29,7 @@ setTimeout(functionRef)
 setTimeout(functionRef, delay)
 setTimeout(functionRef, delay, param1)
 setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN)
+setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN)
 - `param1`, …, `paramN` {{optional_inline}}
 
   - : Additional arguments which are passed through to the function specified by
-    `function`.
+    `functionRef`.
 
 ### Return value
 
@@ -181,15 +181,19 @@ A common way to solve the problem is to use a wrapper function that sets
 `this` to the required value:
 
 ```js
-setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+setTimeout(function () {
+  myArray.myMethod();
+}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
+setTimeout(function () {
+  myArray.myMethod('1');
+}, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 The wrapper function can be an arrow function:
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+setTimeout(() => {myArray.myMethod()}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
+setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 ##### Use bind()
@@ -220,7 +224,7 @@ setTimeout("console.log('Hello World!');", 500);
 
 ```js example-good
 // Do this instead
-setTimeout(function() {
+setTimeout(() => {
   console.log('Hello World!');
 }, 500);
 ```

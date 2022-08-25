@@ -28,7 +28,7 @@ The **`Timing-Allow-Origin`** response header specifies origins that are allowed
 
 ## Syntax
 
-```
+```http
 Timing-Allow-Origin: *
 Timing-Allow-Origin: <origin>[, <origin>]*
 ```
@@ -44,13 +44,13 @@ Timing-Allow-Origin: <origin>[, <origin>]*
 
 To allow any resource to see timing resources:
 
-```
+```http
 Timing-Allow-Origin: *
 ```
 
 To allow `https://developer.mozilla.org` to see timing resources, you can specify:
 
-```
+```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 

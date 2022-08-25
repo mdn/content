@@ -47,7 +47,7 @@ If the `Width` header appears more than once in a message the last occurrence is
 
 ## Syntax
 
-```
+```http
 Width: <number>
 ```
 
@@ -60,13 +60,13 @@ Width: <number>
 
 The server first needs to opt in to receive the `Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Width`.
 
-```
+```http
 Accept-CH: Width
 ```
 
 Then on subsequent requests the client might send `Width` header back:
 
-```
+```http
 Width: 1920
 ```
 

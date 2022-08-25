@@ -31,7 +31,7 @@ is a processing instruction whose `target` is `xml`.
 
 _This interface also inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("ProcessingInstruction.target")}} {{readonlyInline}}
+- {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}
   - : A name identifying the application to which the instruction is targeted.
 
 ## Methods

@@ -53,8 +53,8 @@ effect.
 
 ```js
 const revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return "[[" + name + "]]";
+  get(target, name) {
+    return `[[${name}]]`;
   }
 });
 const proxy = revocable.proxy;

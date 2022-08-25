@@ -29,7 +29,7 @@ The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link
 
 The same prefetching hint using an HTTP `Link:` header:
 
-```
+```http
 Link: </images/big.jpeg>; rel=prefetch
 ```
 
@@ -84,7 +84,7 @@ This may impact referrer tracking that is commonly used on many sites. For this 
 
 Yes, we send the following header along with each prefetch request:
 
-```
+```http
 X-moz: prefetch
 ```
 
@@ -114,15 +114,6 @@ Browsers based on Mozilla 1.2 (or later), as well as browsers based on Mozilla 1
 
 Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the Google results page will prefetch `www.amazon.com`, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see [Disabling third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).)
 
-### What about...?
-
-If you have any questions or comments about link prefetching, please feel free to send them my way :-)
-
 #### See also
 
 [Prefetching Hints](https://www.edochan.com/programming/pf.htm)
-
-## Original Document Information
-
-- Author(s): Darin Fisher (darin at meer dot net)
-- Last Updated Date: Updated: March 3, 2003

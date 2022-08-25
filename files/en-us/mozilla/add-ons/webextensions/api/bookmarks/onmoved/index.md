@@ -15,7 +15,9 @@ browser-compat: webextensions.api.bookmarks.onMoved
 ---
 {{AddonSidebar()}}
 
-Fired when a bookmark or folder is moved to a different parent folder and/or position within a folder.
+Fired when a bookmark or folder is moved to a different parent folder or position within a folder.
+
+> **Note:** If you're moving multiple bookmarks, because this API is asynchronous, the move calls may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the move calls are completed. If the index associated with a bookmark matters to your extension, then – when moving multiple bookmarks – the extension should wait for each `bookmarks.move` call to complete before moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a move call executing concurrently while the original call is in progress.
 
 ## Syntax
 
@@ -71,11 +73,11 @@ Events have three functions:
 
 ```js
 function handleMoved(id, moveInfo) {
-  console.log("Item: " + id + " moved");
-  console.log("Old index: " + moveInfo.oldIndex);
-  console.log("New index: " + moveInfo.index);
-  console.log("Old folder: " + moveInfo.oldParentId);
-  console.log("New folder: " + moveInfo.parentId);
+  console.log(`Item: ${id} moved`);
+  console.log(`Old index: ${moveInfo.oldIndex}`);
+  console.log(`New index: ${moveInfo.index}`);
+  console.log(`Old folder: ${moveInfo.oldParentId}`);
+  console.log(`New folder: ${moveInfo.parentId}`);
 }
 
 function handleClick() {

@@ -9,7 +9,6 @@ tags:
   - Reference
   - polyfill
   - at
-  - Experimental
   - Polyfill
 browser-compat: javascript.builtins.Array.at
 ---

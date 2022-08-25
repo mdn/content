@@ -18,32 +18,30 @@ browser-compat: api.Document.dragleave_event
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragleave", "ondragleave")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('dragleave', (event) => {});
+
+ondragleave = (event) => { };
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
 
@@ -95,14 +93,14 @@ body {
 #### JavaScript
 
 ```js
-document.addEventListener("dragenter", event => {
+document.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
-document.addEventListener("dragleave", event => {
+document.addEventListener("dragleave", (event) => {
   // reset background of potential drop target when the draggable element leaves it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");

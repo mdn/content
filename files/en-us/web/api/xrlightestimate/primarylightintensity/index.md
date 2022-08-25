@@ -14,7 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRLightEstimate.primaryLightIntensity
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`primaryLightIntensity`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{domxref("DOMPointReadOnly")}} representing the intensity of the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
 
@@ -34,7 +34,7 @@ const lightProbe = await xrSession.requestLightProbe();
 function onXRFrame(time, xrFrame) {
   let lightEstimate = xrFrame.getLightEstimate(lightProbe);
 
-  // Render lights ...
+  // Render lights
 
   // Available properties
   lightEstimate.primaryLightDirection;

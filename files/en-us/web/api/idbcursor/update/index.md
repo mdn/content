@@ -76,7 +76,7 @@ intermediary `updateData` variable.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
-you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function updateResult() {
@@ -84,7 +84,7 @@ function updateResult() {
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
       if (cursor.value.albumTitle === 'A farewell to kings') {
@@ -92,13 +92,13 @@ function updateResult() {
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
-        request.onsuccess = function() {
+        request.onsuccess = () => {
           console.log('A better album year?');
         };
       };
 
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.continue();
     } else {

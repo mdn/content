@@ -30,9 +30,9 @@ let capturing = browser.tabs.captureVisibleTab(
 
 ### Parameters
 
-- `windowId`{{optional_inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. The target window. Defaults to the current window.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
 
 ### Return value
@@ -52,7 +52,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });

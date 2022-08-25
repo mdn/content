@@ -40,7 +40,7 @@ When you're building a website, one top issue to consider is [Universal Design](
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 
@@ -223,4 +223,4 @@ You must also provide alternatives to multimedia content.
 Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local:
 
 - **Installed software.** [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (all platforms), [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux)
-- **Online tools.** Yahoo's [smushit!](http://smush.it/), Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)
+- **Online tools.** Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)

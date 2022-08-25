@@ -45,7 +45,7 @@ function onSessionStarted(xrSession) {
 
   gl = initGraphics(xrSession);
 
-  let glLayer = new XRWebGLLayer(xrSession, gl);
+  const glLayer = new XRWebGLLayer(xrSession, gl);
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {
@@ -60,13 +60,9 @@ function onSessionStarted(xrSession) {
 }
 
 function refSpaceCreated(refSpace) {
-  if (immersiveSession) {
-    xrReferenceSpace = refSpace;
-  } else {
-    xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform({y: -1.5});
-    );
-  }
+  xrReferenceSpace = immersiveSession
+    ? refSpace
+    : refSpace.getOffsetReferenceSpace(new XRRigidTransform({ y: -1.5 }));
   xrSession.requestAnimationFrame(onFrame);
 }
 ```

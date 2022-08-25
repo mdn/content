@@ -195,7 +195,6 @@ You can have private methods as well as private data properties. Just like priva
 
 ```js
 class Example {
-
   somePublicMethod() {
     this.#somePrivateMethod();
   }
@@ -203,7 +202,6 @@ class Example {
   #somePrivateMethod() {
     console.log('You called me?');
   }
-
 }
 
 const myExample = new Example();

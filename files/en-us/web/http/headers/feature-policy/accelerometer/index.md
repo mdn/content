@@ -16,7 +16,7 @@ The HTTP {{HTTPHeader('Feature-Policy')}} header `accelerometer` directive contr
 
 ## Syntax
 
-```
+```http
 Feature-Policy: accelerometer <allowlist>;
 ```
 

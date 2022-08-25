@@ -20,27 +20,27 @@ The first step is to create the {{ HTMLElement("video") }} element that we'll us
 
 ```js
 // will set to true when video can be copied to texture
-var copyVideo = false;
+let copyVideo = false;
 
 function setupVideo(url) {
   const video = document.createElement('video');
 
-  var playing = false;
-  var timeupdate = false;
+  let playing = false;
+  let timeupdate = false;
 
-  video.autoplay = true;
+  video.playsInline = true;
   video.muted = true;
   video.loop = true;
 
   // Waiting for these 2 events ensures
   // there is data in the video
 
-  video.addEventListener('playing', function() {
+  video.addEventListener('playing', () => {
      playing = true;
      checkReady();
   }, true);
 
-  video.addEventListener('timeupdate', function() {
+  video.addEventListener('timeupdate', () => {
      timeupdate = true;
      checkReady();
   }, true);
@@ -124,7 +124,7 @@ In the definition of `render()` if `copyVideo` is true, then we call `updateText
 
   const video = setupVideo('Firefox.mp4');
 
-  var then = 0;
+  let then = 0;
 
   // Draw the scene repeatedly
   function render(now) {
@@ -147,7 +147,7 @@ That's all there is to it!
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## See also
 

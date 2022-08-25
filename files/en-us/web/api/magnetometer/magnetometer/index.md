@@ -11,9 +11,10 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
-{{APIRef("Sensor API")}}
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer()`** constructor
 creates a new {{domxref("Magnetometer")}} object which returns information about the

@@ -36,7 +36,7 @@ For more information, see the main [Feature Policy](/en-US/docs/Web/HTTP/Feature
 
 ## Syntax
 
-```
+```http
 Feature-Policy: <directive> <allowlist>
 ```
 
@@ -114,9 +114,9 @@ Feature-Policy: <directive> <allowlist>
   - : Controls whether the current document is allowed to use the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) to list and select speakers.
 - {{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}
   - : Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.
-- {{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}}{{Non-standard_Inline}}
+- {{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}} {{Non-standard_Inline}}
   - : Controls whether the current document is allowed to download and display unoptimized images.
-- {{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}}{{Non-standard_Inline}}
+- {{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}} {{Non-standard_Inline}}
   - : Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
 - {{httpheader('Feature-Policy/usb', 'usb')}}
   - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).
@@ -131,7 +131,7 @@ Feature-Policy: <directive> <allowlist>
 
 SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: microphone 'none'; geolocation 'none'
 ```
 

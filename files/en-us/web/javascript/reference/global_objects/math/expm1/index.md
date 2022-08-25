@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Math.expm1
 ---
 {{JSRef}}
 
-The **`Math.expm1()`** function returns `e^x - 1`, where `x` is the argument, and {{jsxref("Math.E", "e", "", 1)}} is the base of natural logarithms.
+The **`Math.expm1()`** function returns e<sup>x</sup> - 1, where x is the argument, and {{jsxref("Math.E", "e", "", 1)}} is the base of natural logarithms.
 
 {{EmbedInteractiveExample("pages/js/math-expm1.html")}}
 
@@ -28,7 +28,7 @@ Math.expm1(x)
 
 ### Return value
 
-A number representing `e^x - 1`, where `e` is {{jsxref("Math.E", "the base of natural logarithms", "", 1)}} and `x` is the argument.
+A number representing e<sup>x</sup> - 1, where e is {{jsxref("Math.E", "the base of natural logarithms", "", 1)}} and x is the argument.
 
 ## Description
 

@@ -10,7 +10,7 @@ tags:
 ---
 The controller code for some of our _LocalLibrary_ pages will depend on the results of multiple asynchronous requests, which may be required to run either in some particular order or in parallel. In order to manage flow control, and render pages when we have all the required information available, we'll use the popular node [async](https://www.npmjs.com/package/async) module.
 
-> **Note:** There are a number of other ways to manage asynchronous behavior and flow control in JavaScript, including relatively recent JavaScript language features like [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises).
+> **Note:** There are a number of other ways to manage asynchronous behavior and flow control in JavaScript, including relatively recent JavaScript language features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Async has a lot of useful methods (check out [the documentation](https://caolan.github.io/async/v3/docs.html)). Some of the more important functions are:
 
@@ -28,10 +28,10 @@ If a controller only needs to _perform **one** asynchronous operation_ to get th
 exports.some_model_count = function(req, res, next) {
 
   SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
-    // ... do something if there is an err
+    // Do something if there is an err.
 
     // On success, render the result by passing count into the render function (here, as the variable 'data').
-    res.render('the_template', { data: count } );
+    res.render('the_template', { data: count });
   });
 }
 ```
@@ -52,14 +52,14 @@ The example below shows how this works when we pass an object as the first argum
 
 ```js
 async.parallel({
-  one: function(callback) { ... },
-  two: function(callback) { ... },
-  ...
-  something_else: function(callback) { ... }
+  one(callback) { /* … */ },
+  two(callback) { /* … */ },
+  // …
+  something_else(callback) { /* … */ }
   },
   // optional callback
   function(err, results) {
-    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
+    // 'results' is now equal to: {one: 1, two: 2, …, something_else: some_value}
   }
 );
 ```
@@ -72,14 +72,14 @@ The method [`async.series()`](https://caolan.github.io/async/v3/docs.html#series
 
 ```js
 async.series({
-  one: function(callback) { ... },
-  two: function(callback) { ... },
-  ...
-  something_else: function(callback) { ... }
+  one(callback) { /* … */ },
+  two(callback) { /* … */ },
+  // …
+  something_else(callback) { /* … */ }
   },
   // optional callback after the last asynchronous function completes.
   function(err, results) {
-    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
+    // 'results' is now equal to: {one: 1, two: 2, /* …, */ something_else: some_value}
   }
 );
 ```
@@ -89,11 +89,11 @@ async.series({
 ```js
 async.series([
   function(callback) {
-    // do some stuff ...
+    // do some stuff …
     callback(null, 'one');
   },
   function(callback) {
-    // do some more stuff ...
+    // do some more stuff …
     callback(null, 'two');
   }
  ],
@@ -131,7 +131,7 @@ async.waterfall([
 
 ## Installing async
 
-Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the _LocalLibrary_ project and entering the following command:
+Install the async module using the npm package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the _LocalLibrary_ project and entering the following command:
 
 ```bash
 npm install async

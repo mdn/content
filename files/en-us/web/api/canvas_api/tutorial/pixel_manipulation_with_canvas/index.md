@@ -40,31 +40,6 @@ const xCoord = 50;
 const yCoord = 100;
 const canvasWidth = 1024;
 
-function getColorIndicesForCoord(x, y, width) {
-  const red = y * (width * 4) + x * 4;
-  return [red, red + 1, red + 2, red + 3];
-}
-
-const colorIndices = getColorIndicesForCoord(xCoord, yCoord, canvasWidth);
-
-const redIndex = colorIndices[0];
-const greenIndex = colorIndices[1];
-const blueIndex = colorIndices[2];
-const alphaIndex = colorIndices[3];
-
-const redForCoord = imageData.data[redIndex];
-const greenForCoord = imageData.data[greenIndex];
-const blueForCoord = imageData.data[blueIndex];
-const alphaForCoord = imageData.data[alphaIndex];
-```
-
-Or, if ES2015 is appropriate:
-
-```js
-const xCoord = 50;
-const yCoord = 100;
-const canvasWidth = 1024;
-
 const getColorIndicesForCoord = (x, y, width) => {
   const red = y * (width * 4) + x * 4;
   return [red, red + 1, red + 2, red + 3];
@@ -89,7 +64,7 @@ To create a new, blank `ImageData` object, you should use the {{domxref("CanvasR
 const myImageData = ctx.createImageData(width, height);
 ```
 
-This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes i.e rgba(0,0,0,0)).
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgba(0,0,0,0)).
 
 You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 
@@ -113,7 +88,7 @@ This method is also demonstrated in the article [Manipulating video using canvas
 
 ### A color picker
 
-In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
+In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
 
 ```js
 const img = new Image();
@@ -121,7 +96,7 @@ img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-img.onload = function() {
+img.onload = () => {
   ctx.drawImage(img, 0, 0);
   img.style.display = 'none';
 };
@@ -141,10 +116,10 @@ function pick(event, destination) {
     return rgba;
 }
 
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener('mousemove', (event) => {
     pick(event, hoveredColor);
 });
-canvas.addEventListener('click', function(event) {
+canvas.addEventListener('click', (event) => {
     pick(event, selectedColor);
 });
 ```
@@ -183,15 +158,15 @@ img.src = './assets/rhino.jpg';
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-img.onload = function() {
+img.onload = () => {
     ctx.drawImage(img, 0, 0);
 };
 
-const original = function() {
+const original = () => {
     ctx.drawImage(img, 0, 0);
 };
 
-const invert = function() {
+const invert = () => {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
@@ -203,7 +178,7 @@ const invert = function() {
     ctx.putImageData(imageData, 0, 0);
 };
 
-const grayscale = function() {
+const grayscale = () => {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
@@ -218,7 +193,7 @@ const grayscale = function() {
 
 const inputs = document.querySelectorAll('[name=color]');
 for (const input of inputs) {
-    input.addEventListener("change", function(evt) {
+    input.addEventListener("change", (evt) => {
         switch (evt.target.value) {
             case "inverted":
                 return invert();
@@ -256,7 +231,7 @@ Zoom example:
 const img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
-img.onload = function() {
+img.onload = () => {
   draw(this);
 };
 
@@ -277,7 +252,7 @@ function draw(img) {
   pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
   pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
-  const zoom = function(ctx, x, y) {
+  const zoom = (ctx, x, y) => {
     ctx.drawImage(canvas,
         Math.min(Math.max(0, x - 5), img.width - 10),
         Math.min(Math.max(0, y - 5), img.height - 10),
@@ -286,7 +261,7 @@ function draw(img) {
         200, 200);
   };
 
-  canvas.addEventListener('mousemove', function(event) {
+  canvas.addEventListener('mousemove', (event) => {
     const x = event.layerX;
     const y = event.layerY;
     zoom(smoothedZoomCtx, x, y);

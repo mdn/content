@@ -34,8 +34,8 @@ A {{domxref("WebGLQuery")}} object.
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_disjoint_timer_query');
-var query = ext.createQueryExt();
+const ext = gl.getExtension('EXT_disjoint_timer_query');
+const query = ext.createQueryExt();
 ```
 
 ## Specifications

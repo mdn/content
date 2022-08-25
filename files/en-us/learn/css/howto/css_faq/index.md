@@ -20,14 +20,15 @@ Modern browsers have two main rendering modes:
 - _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
 - _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode (Gecko's_"Almost_Standards"_Mode))_ that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
+The standard `DOCTYPE` declaration that will trigger standards mode is:
 
 ```html
-<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                    parser, this is the recommended doctype */
+<!DOCTYPE html> 
 ```
+
+When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
@@ -48,8 +49,6 @@ This is a list of the most commonly used `DOCTYPE` declarations that will trigge
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
-
-When at all possible, you should just use the HTML5 doctype.
 
 ## Why doesn't my CSS, which is valid, render at all?
 
@@ -100,13 +99,13 @@ CSS does not exactly allow one style to be defined in terms of another. However,
 HTML elements can be assigned multiple classes by listing the classes in the `class` attribute, with a blank space to separate them.
 
 ```html
-<style type="text/css">
+<style>
 .news { background: black; color: white; }
 .today { font-weight: bold; }
 </style>
 
 <div class="news today">
-... content of today's news ...
+  Content of today's news goes here.
 </div>
 ```
 
@@ -128,7 +127,7 @@ The way CSS styles are applied to HTML elements depends also on the elements hie
 ```html
 <!-- news item text is black, but corporate name is red and in bold -->
 <div class="news">
-    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday…
 </div>
 ```
 
@@ -150,7 +149,7 @@ In CSS stylesheets, order **is** important. If you define a rule and then you re
 ```html
 <!-- most text is in bold, except "GE", which is red and not bold -->
 <div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    NYS: <span class="stockSymbol">GE</span> +1.0…
 </div>
 ```
 
@@ -167,7 +166,7 @@ Using shorthand properties for defining style rules is good because it uses a ve
 
 ```html
 <div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    NYS: <span class="stockSymbol">GE</span> +1.0…
 </div>
 ```
 
@@ -193,7 +192,7 @@ body * { font-weight: normal; }
 
 ```html
 <div id="section">
-    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0…
 </div>
 ```
 
@@ -215,17 +214,17 @@ div { color: black; }
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
-The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the [CSS 2.1 Specification chapter 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
+The rules are more complicated when the selector has multiple parts. A more detailed explanation about how selector specificity is calculated can be found in the [CSS specificity documentation](/en-US/docs/Web/CSS/Specificity).
 
 ## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
-These properties, called _prefixed properties_, are extensions to the CSS standard. They allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
+These properties, called _prefixed properties_, are extensions to the CSS standard. They were once used to allow the use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
 
-The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the `-webkit-` prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement `-webkit-` prefixed aliases to improve web compatibility, as specified in the [Compatibility Living Standard](https://compat.spec.whatwg.org/).
+The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only use the `-webkit-` prefixed version of a property when the non-prefixed version is fully supported across all browsers. This means a design relying on that property would not work in non-webkit-based browsers, when it could. This became a problem great enough that other browsers were pushed to implement `-webkit-` prefixed aliases to improve web compatibility, as specified in the [Compatibility Living Standard](https://compat.spec.whatwg.org/).
 
-In fact most browsers now do not use CSS prefixes when implementing experimental features, instead implementing those features only on Nightly browser versions or similar.
+Browsers no longer use CSS prefixes when implementing new experimental features. Rather, they test new features behind configurable experimental flags or only on Nightly browser versions or similar.
 
-If you need to use prefixes in your work, you are advised to write your code in a way that uses the prefixed versions first, but then includes a non-prefixed standard version afterwards so it can automatically override the prefixed versions where supported. For example:
+If you are required to use prefixes in your work, write the prefixed versions first followed by the non-prefixed standard version. This way the standard version will automatically override the prefixed versions when supported. For example:
 
 ```css
 -ms-transform: rotate(90deg);
@@ -235,7 +234,7 @@ transform: rotate(90deg);
 
 > **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
+> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions), [Microsoft CSS Extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

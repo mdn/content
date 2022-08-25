@@ -55,14 +55,9 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener('click', () => {
   const result = classes.toggle("c");
-
-  if (result) {
-    span.textContent = `'c' added; classList is now "${classes}".`;
-  } else {
-    span.textContent = `'c' removed; classList is now "${classes}".`;
-  }
+  span.textContent = `'c' ${result ? "added" : "removed"}; classList is now "${classes}".`;
 })
 ```
 

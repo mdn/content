@@ -19,9 +19,9 @@ The **`resize`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', event => { })
+addEventListener('resize', (event) => { })
 
-onresize = event => { }
+onresize = (event) => { }
 ```
 
 ## Event type
@@ -33,16 +33,16 @@ A generic {{domxref("Event")}}.
 You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-visualViewport.addEventListener('resize', function() {
-  /* ... */
+visualViewport.addEventListener('resize', () => {
+  // …
 });
 ```
 
 Or use the `onresize` event handler property:
 
 ```js
-visualViewport.onresize = function() {
-  /* ... */
+visualViewport.onresize = () => {
+  // …
 };
 ```
 

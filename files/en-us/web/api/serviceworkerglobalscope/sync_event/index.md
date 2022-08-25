@@ -21,14 +21,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('sync', event => { });
+addEventListener('sync', (event) => { });
 
-onsync = event => { };
+onsync = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
 
@@ -36,9 +36,9 @@ An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Examples
@@ -46,8 +46,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 The following example shows how to respond to a sync event in the service worker.
 
 ```js
-self.addEventListener('sync', event => {
-  if (event.tag == 'sync-messages') {
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-messages') {
     event.waitUntil(sendOutboxMessages());
   }
 });
@@ -56,8 +56,8 @@ self.addEventListener('sync', event => {
 You can also set up the event handler using the `onsync` property:
 
 ```js
-self.onsync = event => {
-  ...
+self.onsync = (event) => {
+  // ...
 };
 ```
 

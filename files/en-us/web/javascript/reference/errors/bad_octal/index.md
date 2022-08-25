@@ -16,9 +16,8 @@ as an octal number.
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
-Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
 ```
 
 ## Error type
@@ -33,7 +32,7 @@ is interpreted as an octal number. Because this is not the case with `08` and
 `09`, JavaScript warns about it.
 
 Note that octal literals and octal escape sequences are deprecated and will present an
-additional deprecation warning. With ECMAScript 6 and later, the syntax uses a leading
+additional deprecation warning. The standardized syntax for octal literals uses a leading
 zero followed by a lowercase or uppercase Latin letter "O" (`0o` or
 `0O)`. See the page about [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
 for more information.

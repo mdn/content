@@ -9,9 +9,10 @@ tags:
   - Method
   - Window
   - working with files
+  - Experimental
 browser-compat: api.Window.showSaveFilePicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showSaveFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to save a file.
@@ -25,7 +26,7 @@ showSaveFilePicker()
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object containing options, which are as follows:
 
@@ -49,7 +50,7 @@ showSaveFilePicker()
 
 ### Return value
 
-A {{domxref('FileSystemFileHandle')}}.
+A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemFileHandle')}} object.
 
 ### Exceptions
 
@@ -62,14 +63,14 @@ A {{domxref('FileSystemFileHandle')}}.
 The following function shows a file picker, with text files highlighted for selection.
 
 ```js
-function getNewFileHandle() {
+async function getNewFileHandle() {
   const opts = {
     types: [{
       description: 'Text file',
       accept: {'text/plain': ['.txt']},
     }],
   };
-  return window.showSaveFilePicker(opts);
+  return await window.showSaveFilePicker(opts);
 }
 ```
 

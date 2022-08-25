@@ -38,9 +38,9 @@ demonstrates how to prevent that from happening:
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-         event.preventDefault();
+document.querySelector("#id-checkbox").addEventListener("click", (event) => {
+  document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+  event.preventDefault();
 }, false);
 ```
 
@@ -113,12 +113,12 @@ whether to allow it:
 ```js
 function checkName(evt) {
   const charCode = evt.charCode;
-  if (charCode != 0) {
+  if (charCode !== 0) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only."
-        + "\n" + "charCode: " + charCode + "\n"
+        "Please use lowercase letters only.\n" +
+        `charCode: ${charCode}\n`
       );
     }
   }
@@ -137,16 +137,16 @@ function displayWarning(msg) {
   warningBox.innerHTML = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
     // insert warningBox after myTextbox
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = setTimeout(() => {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

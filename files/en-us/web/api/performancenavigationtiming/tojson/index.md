@@ -9,7 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.toJSON
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{APIRef("Navigation Timing")}}
 
 The **`toJSON()`** method is a _serializer_ - it returns
 a JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
@@ -34,13 +34,12 @@ A JSON object that is the serialization of the
 
 ```js
 // Get a resource performance entry
-var perfEntries = performance.getEntriesByType("navigation");
-var entry = perfEntries[0];
+const [entry] = performance.getEntriesByType("navigation");
 
 // Get the JSON and log it
-var json = entry.toJSON();
-var s = JSON.stringify(json);
-console.log("PerformanceNavigationTiming.toJSON() = " + s);
+const json = entry.toJSON();
+const s = JSON.stringify(json);
+console.log(`PerformanceNavigationTiming.toJSON() = ${s}`);
 ```
 
 ## Specifications

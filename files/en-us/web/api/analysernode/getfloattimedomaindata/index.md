@@ -38,7 +38,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 1024;
 const bufferLength = analyser.fftSize;
@@ -60,11 +60,11 @@ function draw() {
   const sliceWidth = WIDTH * 1.0 / bufferLength;
   let x = 0;
 
-  for(let i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const v = dataArray[i] * 200.0;
     const y = HEIGHT/2 + v;
 
-    if(i === 0) {
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
     } else {
       canvasCtx.lineTo(x, y);

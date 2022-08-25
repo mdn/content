@@ -38,11 +38,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : A string representing the forward relationship of the linked resource from the document to the resource.
-- {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
+- {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
-- {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
+- {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
-- {{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}
+- {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
   - : A string representing the MIME type of the linked resource.

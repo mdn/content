@@ -57,10 +57,10 @@ Getting the value of an element's `outerHTML` property:
 </div>
 ```
 
-### Javascript
+### JavaScript
 
 ```js
-var d = document.getElementById("d");
+const d = document.getElementById("d");
 console.log(d.outerHTML);
 
 // The string '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
@@ -77,11 +77,11 @@ Replacing a node by setting the `outerHTML` property:
 </div>
 ```
 
-### Javascript
+### JavaScript
 
 ```js
-var container = document.getElementById("container");
-var d = document.getElementById("d");
+const container = document.getElementById("container");
+const d = document.getElementById("d");
 
 console.log(container.firstElementChild.nodeName); // logs "DIV"
 
@@ -100,7 +100,7 @@ not change it or its descendants. Many browsers will also throw an exception. Fo
 example:
 
 ```js
-var div = document.createElement("div");
+const div = document.createElement("div");
 div.outerHTML = "<div class=\"test\">test</div>";
 console.log(div.outerHTML); // output: "<div></div>"
 ```
@@ -110,7 +110,7 @@ Also, while the element will be replaced in the document, the variable whose
 element:
 
 ```js
-var p = document.getElementsByTagName("p")[0];
+const p = document.querySelector("p");
 console.log(p.nodeName); // shows: "P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
@@ -119,7 +119,7 @@ console.log(p.nodeName); // still "P";
 The returned value will contain HTML escaped attributes:
 
 ```js
-var anc = document.createElement("a");
+const anc = document.createElement("a");
 anc.href = "https://developer.mozilla.org?a=b&c=d";
 console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a=b&amp;c=d'></a>"
 ```

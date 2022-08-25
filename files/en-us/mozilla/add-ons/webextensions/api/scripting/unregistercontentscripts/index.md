@@ -32,7 +32,7 @@ await browser.scripting.unregisterContentScripts(
 
 ### Parameters
 
-- `scripts`{{optional_inline}}
+- `scripts` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
 
 ### Return value

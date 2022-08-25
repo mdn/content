@@ -31,7 +31,7 @@ generated the response.
 
 ## Syntax
 
-```
+```http
 Server: <product>
 ```
 
@@ -49,7 +49,7 @@ versions with {{HTTPHeader('Content-Encoding')}} and
 
 ## Examples
 
-```
+```http
 Server: Apache/2.4.1 (Unix)
 ```
 

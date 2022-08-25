@@ -17,7 +17,7 @@ These styles can also decorate borders with lines or images, and make them squar
 
 ## Reference
 
-### CSS Properties
+### Properties
 
 - {{cssxref("background")}}
 - {{cssxref("background-attachment")}}

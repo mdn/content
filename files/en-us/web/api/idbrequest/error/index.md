@@ -65,7 +65,7 @@ const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoL
 // Get the do-do list with the specified title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -78,14 +78,14 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };
 
-objectStoreTitleRequest.onerror = function() {
+objectStoreTitleRequest.onerror = () => {
   // If an error occurs with the request, log what it is
-  console.log("There has been an error with retrieving your data: " + objectStoreTitleRequest.error);
+  console.log(`There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`);
 };
 ```
 

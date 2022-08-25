@@ -9,4 +9,4 @@ CIA (Confidentiality, Integrity, Availability) (also called the CIA triad or AIC
 
 ## See also
 
-- {{Interwiki("wikipedia", "Information_security#Key_concepts", "CIA")}} on Wikipedia
+- [CIA](https://en.wikipedia.org/wiki/Information_security#Key_concepts) on Wikipedia

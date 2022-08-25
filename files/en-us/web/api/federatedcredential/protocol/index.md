@@ -18,7 +18,7 @@ browser-compat: api.FederatedCredential.protocol
 The **`protocol`** property of the
 {{domxref("FederatedCredential")}} interface returns a read-only
 string containing a credential's federated identity protocol. If this
-property is {{jsxref("null")}}, the protocol may be inferred from the
+property is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the protocol may be inferred from the
 {{domxref("FederatedCredential.provider")}} property.
 
 ## Value

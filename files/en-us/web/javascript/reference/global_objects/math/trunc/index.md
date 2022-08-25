@@ -61,7 +61,7 @@ const truncated4 = original ^ 0; // Bitwise XOR with 0
 const truncated5 = original >> 0; // Bitwise shifting by 0
 ```
 
-Beware that this is essentially `toInt32`, which is not the same as `Math.trunc`. When the value does not satisfy `-2^31 - 1 < value < 2^31` (`-2147483649 < value < 2147483648`), the conversion would overflow.
+Beware that this is essentially `toInt32`, which is not the same as `Math.trunc`. When the value does not satisfy -2<sup>31</sup> - 1 < `value` < 2<sup>31</sup> (-2147483649 < `value` < 2147483648), the conversion would overflow.
 
 ```js
 const a = ~~2147483648; // -2147483648

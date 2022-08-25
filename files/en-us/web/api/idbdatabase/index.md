@@ -27,11 +27,11 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 
 ## Properties
 
-- {{domxref("IDBDatabase.name")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.name")}} {{ReadOnlyInline}}
   - : A string that contains the name of the connected database.
-- {{domxref("IDBDatabase.version")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.version")}} {{ReadOnlyInline}}
   - : A 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
-- {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.objectStoreNames")}} {{ReadOnlyInline}}
   - : A {{ domxref("DOMStringList") }} that contains a list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
 ## Methods
@@ -40,7 +40,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : Returns immediately and closes the connection to a database in a separate thread.
-- `IDBDatabase.createMutableFile()` {{deprecated_inline}}{{Non-standard_Inline}}
+- `IDBDatabase.createMutableFile()` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Creates a file handle, allowing files to be stored inside an IndexedDB database.
 - {{domxref("IDBDatabase.createObjectStore()")}}
   - : Creates and returns a new object store or index.
@@ -76,9 +76,9 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
-DBOpenRequest.onerror = event => { note.innerHTML += '<li>Error loading database.</li>'; };
+DBOpenRequest.onerror = (event) => { note.innerHTML += '<li>Error loading database.</li>'; };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
@@ -95,10 +95,10 @@ DBOpenRequest.onsuccess = event => {
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

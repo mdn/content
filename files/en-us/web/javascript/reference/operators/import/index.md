@@ -121,7 +121,7 @@ if (typeof window === "undefined") {
 
 Dynamic imports allow any expression as the module specifier, not necessarily string literals.
 
-Here, we load 10 modules: `/modules/module-0.js`, `/modules/module-1.js`... in parallel, and call the `load` functions that each one exports.
+Here, we load 10 modules, `/modules/module-0.js`, `/modules/module-1.js`, etc., in parallel, and call the `load` functions that each one exports.
 
 ```js
 Promise.all(

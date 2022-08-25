@@ -8,12 +8,11 @@ tags:
   - API:WebKit Extensions
   - HTML Editing
   - Method
-  - Non-standard
   - Reference
   - Selection
 browser-compat: api.Selection.modify
 ---
-{{APIRef("DOM")}}{{Non-standard_Header}}
+{{APIRef("DOM")}}
 
 The **`Selection.modify()`** method applies a change to the
 current selection or cursor position, using simple textual commands.

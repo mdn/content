@@ -8,6 +8,7 @@ tags:
   - EyeDropper
   - Interface
   - Reference
+  - Experimental
 browser-compat: api.EyeDropper
 ---
 {{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
@@ -16,14 +17,14 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 
 ## Constructor
 
-- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}}
+- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
   - : Returns a new `EyeDropper` instance.
 
 ## Methods
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
-- {{DOMxRef("EyeDropper.open()")}}
+- {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
   - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples
@@ -52,10 +53,10 @@ document.getElementById('start-button').addEventListener('click', () => {
 
   const eyeDropper = new EyeDropper();
 
-  eyeDropper.open().then(result => {
+  eyeDropper.open().then((result) => {
     resultElement.textContent = result.sRGBHex;
     resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch(e => {
+  }).catch((e) => {
     resultElement.textContent = e;
   });
 });
@@ -90,10 +91,10 @@ document.getElementById('start-button').addEventListener('click', () => {
   const eyeDropper = new EyeDropper();
   const abortController = new AbortController();
 
-  eyeDropper.open({ signal: abortController.signal }).then(result => {
+  eyeDropper.open({ signal: abortController.signal }).then((result) => {
     resultElement.textContent = result.sRGBHex;
     resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch(e => {
+  }).catch((e) => {
     resultElement.textContent = e;
   });
 

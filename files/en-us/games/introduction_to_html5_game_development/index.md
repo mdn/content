@@ -1,17 +1,17 @@
 ---
-title: Introduction to HTML5 Game Development
+title: Introduction to HTML Game Development
 slug: Games/Introduction_to_HTML5_Game_Development
 tags:
   - Firefox OS
   - Games
-  - HTML5
+  - HTML
   - Mobile
 ---
 {{GamesSidebar}}
 
 ## Advantages
 
-1. Games built with HTML5 work on smartphones, tablets, PCs and Smart TVs.
+1. Games built with HTML work on smartphones, tablets, PCs and Smart TVs.
 2. Advertise and promote your game all over the Web as well as other media.
 3. Payments. Charge what you want and use whatever payment processing service you like.
 4. Update your game whenever you want.

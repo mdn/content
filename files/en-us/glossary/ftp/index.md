@@ -14,4 +14,4 @@ For many years it was the defacto standard way of transferring files, but as it 
 ## See also
 
 - [Beginner's guide to uploading files via FTP](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-- {{interwiki("wikipedia", "File Transfer Protocol", "FTP")}} on Wikipedia
+- [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) on Wikipedia

@@ -17,14 +17,14 @@ starts-with(haystack, needle)
 
 ### Arguments
 
-- _`haystack`_
+- `haystack`
   - : The string to look in.
-- _`needle`_
+- `needle`
   - : The string to look for.
 
 ### Returns
 
-`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
+`true` if `haystack` starts with `needle`. Otherwise, `false`.
 
 ### Defined
 

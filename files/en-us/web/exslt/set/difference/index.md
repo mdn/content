@@ -14,7 +14,7 @@ The template version of `set:difference` applies templates to these nodes in `se
 
 ## Syntax
 
-```js
+```plain
 set:difference(nodeSet1, nodeSet2)
 ```
 

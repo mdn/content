@@ -17,7 +17,7 @@ tags:
   - XRWebGLLayer
 browser-compat: api.XRWebGLLayer
 ---
-{{securecontext_header}}{{APIRef("WebXR Device API")}}
+{{SecureContext_Header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRWebGLLayer`** interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device. In particular, it provides access to the WebGL framebuffer and viewport to ease access to the context.
 
@@ -76,11 +76,11 @@ That function receives as input an {{domxref("XRFrame")}} which encapsulates the
 let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
-  let glLayer = xrSession.renderState.baseLayer;
+  const glLayer = xrSession.renderState.baseLayer;
   gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.Framebffer);
 
-  for (let view of pose.views) {
-    let viewport = glLayer.getViewport(view);
+  for (const view of pose.views) {
+    const viewport = glLayer.getViewport(view);
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     /* Render the view */

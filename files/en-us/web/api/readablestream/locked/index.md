@@ -26,7 +26,7 @@ A {{Glossary("boolean")}} value indicating whether or not the readable stream is
 
 ```js
 const stream = new ReadableStream({
-  ...
+  // ...
 });
 
 const reader = stream.getReader();

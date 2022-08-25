@@ -19,9 +19,9 @@ browser-compat: webextensions.api.storage.StorageChange
 
 `StorageChange` objects contain the following properties:
 
-- `oldValue`{{optional_inline}}
+- `oldValue` {{optional_inline}}
   - : The old value of the item, if there was an old value. This can be any data type.
-- `newValue`{{optional_inline}}
+- `newValue` {{optional_inline}}
   - : The new value of the item, if there is a new value. This can be any data type.
 
 ## Browser compatibility

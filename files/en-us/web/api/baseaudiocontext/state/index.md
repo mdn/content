@@ -39,7 +39,7 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 current state to the console every time it changes.
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = () => {
   console.log(audioCtx.state);
 }
 ```
@@ -56,7 +56,7 @@ function play() {
     audioCtx.resume().then(() => play());
     return;
   }
-  // ... rest of the play() function
+  // rest of the play() function
 }
 ```
 
