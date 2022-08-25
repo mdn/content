@@ -31,7 +31,7 @@ onbegin = (event) => { };
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
