@@ -8,6 +8,7 @@ tags:
   - rendering
   - subtitles
 ---
+
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.
 
 ## Introducing imscJS
@@ -53,7 +54,7 @@ This point in time does not have to be one of the values returned by `getMediaTi
 In the third and final step, a snapshot is rendered into an HTML {{htmlelement("div")}} using `imsc.renderHTML()`:
 
 ```js
-const vdiv = document.getElementById('render-div');
+const vdiv = document.getElementById("render-div");
 imsc.renderHTML(isd, vdiv);
 ```
 
@@ -95,12 +96,12 @@ The browser will not retrieve the document automatically for us. In most browser
 ```js
 const client = new XMLHttpRequest();
 
-client.open('GET', ttmlUrl);
+client.open("GET", ttmlUrl);
 client.onreadystatechange = function () {
   initTrack(client.responseText);
-}
+};
 
-client.send()
+client.send();
 ```
 
 ## Setting the text track mode
@@ -188,7 +189,7 @@ for (let i = 0; i < timeEvents.length; i++) {
   if (i < timeEvents.length - 1) {
     myCue = Cue(timeEvents[i], myVideo.duration, "");
   } else {
-    myCue = new Cue(timeEvents[i], timeEvents[i + 1], ""); 
+    myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
   }
 
   myCue.onenter = function () {
@@ -249,7 +250,7 @@ We call this function again once the `onexit` event of the cue is thrown:
 
 ```js
 myCue.onexit = function () {
- clearSubFromScreen();
+  clearSubFromScreen();
 };
 ```
 
