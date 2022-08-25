@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Canvas
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.OffscreenCanvas
