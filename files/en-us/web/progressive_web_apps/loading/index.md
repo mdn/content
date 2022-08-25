@@ -42,8 +42,8 @@ For example, if a website has a search button, we can load the JavaScript for th
 
 ```js
 document.getElementById("open-search").addEventListener("click", async () => {
-   let searchModule = await import ("/modules/search.js");
-   searchModule.loadAutoComplete();
+  const searchModule = await import("/modules/search.js");
+  searchModule.loadAutoComplete();
 });
 ```
 
