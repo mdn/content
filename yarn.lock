@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.10.tgz#75a08680dfc967180e8dc89eaffb56431e8ff5ba"
   integrity sha512-o3U01sgGh9KHJRP+Oz4LA7QCX3nN+F2skVINle9jO8D33aXQfqwnq9qFXhFk98jEG2tcuWzUwTG2UZzzyineiA==
 
-"@mdn/yari@1.16.2":
-  version "1.16.2"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.16.2.tgz#a7b317f01ef57c62de7cf20f376be8d663ce8dde"
-  integrity sha512-louWncSfngQ4emSRoi6w6BhqYevzEMlwZrkeDgN9hDV5/oUB7Q//olTzxDdyG1p4Anwa0zXGK1aYxYzJHcPR/A==
+"@mdn/yari@1.17.0":
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.17.0.tgz#864cc613f7cc81a48530712719afcd8214d7bcaf"
+  integrity sha512-d4AxgV1zyq5/7NT57iQ8xbhA+h7r4Kje7zGfxo/sTwxoBmKCUiPemrFR2mlaZ1xcDYr7ufQJDK3D/V9ORBAQRg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -3854,6 +3854,11 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
+prettier@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
 prismjs@^1.29.0:
   version "1.29.0"
