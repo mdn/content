@@ -34,8 +34,7 @@ const { a: a1, b: b1 } = obj;
 const { a: a1 = aDefault, b = bDefault } = obj;
 const { a, b, ...rest } = obj;
 const { a: a1, b: b1, ...rest } = obj;
-const key = 'z';
-const { [key]: foo } = { z: 'bar' };
+const { [key]: a } = obj;
 
 let a, b, a1, b1, c, d, rest, pop, push;
 [a, b] = array;
