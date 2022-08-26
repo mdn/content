@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - '*.json'
-      - .github/workflows/json-lint.yml
+      - "**/*.json"
+      - .github/workflows/pr-check_json.yml
 
 
 jobs:
@@ -22,7 +22,9 @@ jobs:
           node-version: "16"
           cache: yarn
 
-      - name: Lint markdown files
+      - name: Install all yarn packages
         run: |
-          npm install --no-save eslint eslint-plugin-json
-          npx eslint . --ext .json
+          yarn --frozen-lockfile
+
+      - name: Lint JSON files
+        run: yarn lint:json
