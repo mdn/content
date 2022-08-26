@@ -11,8 +11,15 @@ tags:
 
 This is the landing page for the MDN project itself. Here you'll find guides on how the site works, how we do our documentation, what guidelines and conventions we adhere to, and how you can help.
 
-And we invite anyone to help! If you are interested in improving this essential web developer resource, you are welcome to add and edit content. You don't need to be a programmer or know a lot about technology; there are many different tasks that need to be performed, from the simple (proof-reading and correcting typos) to the complex (writing API documentation).
+And we invite anyone to help! MDN Web Docs is an open source project and accepts contributions. There are many different things you can help with, from the simple (proof-reading and correcting typos) to the complex (writing API documentation).
 
-To find out how to help, visit our [Contributing to MDN](/en-US/docs/MDN/Contribute) page. If you want to talk to us and ask questions, join the discussion on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+To find out how to help, visit our [Getting started with contributing](/en-US/docs/MDN/Community/Contributing/Getting_started) page. If you want to talk to us and ask questions, join the discussion on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
-{{LandingPageListSubPages()}}
+- [Community Guidelines](/en-US/docs/MDN/Community)
+    - : These guides are where to go to find out how to contribute to MDN Web Docs. How to help with tasks and issues, opening discussions, suggesting content and where to get help.
+
+- [Writing Guidelines](/en-US/docs/MDN/Writing_Guidelines)
+    - : This section contains all the information on how to write for MDN. It includes the policy for what content we write, the writing style guide, and how to structure our different pages.
+
+- [MDN Product Advisory Board](/en-US/docs/MDN/MDN_Product_Advisory_Board)
+    - : The MDN Product Advisory Board's mission is to build collaboration between Mozilla, its documentation team, and the key collaborating organizations that help the MDN community collectively maintain MDN.

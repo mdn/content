@@ -14,11 +14,23 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
   - : This section covers what we include on MDN Web Docs and want we don't, as well as a number of other policies, such as when we write about new technologies, the content suggestion process, and whether we accept external links. This is a good place to start if you're considering writing or updating content for us. This section also includes:
     - [Inclusion criteria](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
-      - : It provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
+      - : Provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
+
+- [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
+
+  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 - [How to write for MDN Web Docs](/en-US/docs/MDN/Writing_guidelines/Howto)
 
   - : This section covers all the information for creating and editing pages, including certain processes and techniques we adhere to. This section provides information about getting started, a general overview into how pages are structured, and where to find how-tos on specific tasks. This section includes topics such as:
+
+    - [How to research a technology](/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology)
+
+      - : This section provides some handy tips for researching a technology you are documenting.
+
+    - [How to create, move, and delete pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
+
+      - : This section explains how to create, move, or delete a page.
 
     - [Using markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
@@ -28,21 +40,21 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section describes the requirements for including media in pages, such as images.
 
+    - [Documenting a CSS property](/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_css_property)
+
+      - : This article explains how to write a CSS property page, including layout and content.
+
+    - [Write an API reference](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)
+
+      - : This section explains how to approach documenting a Web API.
+
+    - [Document an HTTP header](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_http_header)
+
+      - : This article explains how to create a new reference page for an HTTP header.
+
     - [Adding an entry to the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
-      - : This section explains how to add and link to entries in the MDN Web Docs glossary. It also provides guidelines about glossary entry layout and content.
-
-    - [How to research a technology](/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology)
-
-      - : This section provides some handy tips for researching a technology you are documenting.
-
-    - [How to move and delete pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
-
-      - : This section explains how to move or delete a page.
-
-- [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
-
-  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to format code examples.
+      - : This article explains how to add and link to entries in the MDN Web Docs glossary. It also provides guidelines about glossary entry layout and content.
 
 - [Page types on MDN Web Docs](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
@@ -52,9 +64,25 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
   - : This section covers the various page structures that we use to provide consistent presentation of information on MDN Web Docs. This includes:
 
+    - [Syntax sections](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections)
+
+      - : The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has. This article explains how to write syntax boxes for reference articles.
+
     - [Code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
       - : There are a lot of different ways to include code examples on pages. This section outlines them and provides syntax guidelines for the different languages.
+
+    - [Banners and notices](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
+
+      - : Sometimes, an article needs a special notice added to it. This might happen if the page covers deprecated technology or other material that shouldn't be used in production code. This article covers the most common such cases and what to do.
+
+    - [Specification tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
+
+      - : Every reference page on MDN should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to add them.
+
+    - [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
+
+      - : MDN has a standard format for compatibility tables for our open web documentation. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.
 
     - [Macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
 
