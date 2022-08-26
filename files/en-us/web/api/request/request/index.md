@@ -116,7 +116,7 @@ new Request(input, options)
 
 ## Examples
 
-In our [Fetch Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/master/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)) we
 create a new `Request` object using the constructor, then fetch it using a
 {{domxref("fetch()")}} call. Since we are fetching an image, we run
 {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
@@ -136,7 +136,7 @@ fetch(myRequest)
   });
 ```
 
-In our [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/master/fetch/fetch-with-init-then-request) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) we do the same thing except that we pass in an init object when we
 invoke `fetch()`:
 
 ```js
