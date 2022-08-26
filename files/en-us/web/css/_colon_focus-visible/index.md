@@ -57,7 +57,7 @@ input, button {
 
 {{EmbedLiveSample("Basic_example", "100%", 300)}}
 
-### Selectively showing the focus indicator
+### Providing a :focus fallback
 
 Users may still have browsers that do not support `:focus-visible`. For them, you can, by checking for the `:focus-visible` non-support, repeat the same focus styling, but with `:focus`. But even if you do not specify anything at all for `: focus`, then in old browsers there will simply be a native outline, which is also not bad.
 
