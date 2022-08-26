@@ -116,13 +116,13 @@ The following properties control how text is laid out.
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
-- {{domxref("CanvasRenderingContext2D.fontStretch")}}
+- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
   - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
-- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}}
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
   - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
-- {{domxref("CanvasRenderingContext2D.textRendering")}}
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
-- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
   - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
@@ -180,7 +180,7 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}}
+- {{domxref("CanvasRenderingContext2D.roundRect()")}} {{experimental_inline}}
   - : Creates a path for a rounded rectangle with a specified position, width, height, and corner radii.
 
 ### Drawing paths

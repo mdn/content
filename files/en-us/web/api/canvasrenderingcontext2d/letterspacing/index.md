@@ -8,9 +8,10 @@ tags:
   - CanvasRenderingContext2D
   - Property
   - Reference
+  - Experimental
 browser-compat: api.CanvasRenderingContext2D.letterSpacing
 ---
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.letterSpacing`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies the spacing between letters when drawing text.
 
