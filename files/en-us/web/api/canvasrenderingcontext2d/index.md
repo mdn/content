@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element. It is used for drawing shapes, text, images, and other objects.
@@ -28,8 +29,8 @@ To get a `CanvasRenderingContext2D` instance, you must first have an HTML `<canv
 To get the canvas' 2D rendering context, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on the `<canvas>` element, supplying `'2d'` as the argument:
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 With the context in hand, you can draw anything you like. This code draws a house:

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: html.elements.canvas
 ---
+
 {{CanvasSidebar}}
 
 The **Canvas API** provides a means for drawing graphics via [JavaScript](/en-US/docs/Web/JavaScript) and the [HTML](/en-US/docs/Web/HTML) {{HtmlElement("canvas")}} element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
@@ -34,10 +35,10 @@ The {{domxref("Document.getElementById()")}} method gets a reference to the HTML
 The actual drawing is done using the {{domxref("CanvasRenderingContext2D")}} interface. The {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property makes the rectangle green. The {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} method places its top-left corner at (10, 10), and gives it a size of 150 units wide by 100 tall.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 
@@ -54,7 +55,7 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("TextMetrics")}}
-- {{domxref("OffscreenCanvas")}} {{experimental_inline}}
+- {{domxref("OffscreenCanvas")}}
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
