@@ -1,3 +1,4 @@
+[CyberDefenderEbook.pdf](https://github.com/mdn/content/files/9428870/CyberDefenderEbook.pdf)
 ---
 title: The MDN Web Docs project
 slug: MDN
