@@ -87,4 +87,5 @@ setInterval(checkPageFocus, 300);
 
 ## See also
 
+- {{domxref("Document.activeElement")}}
 - [Using the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
