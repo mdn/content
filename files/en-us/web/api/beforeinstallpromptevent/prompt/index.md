@@ -30,8 +30,8 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} resolving to an information object containing an `outcome` and a `platform`.  
-The `outcome` is either **`"accepted"`** or **`"dismissed"`** (c.f. {{jsxref("BeforeInstallPrompt", "BeforeInstallPrompt.userChoice")}} {{experimental_inline}}).
-The `platform` is the selected platform (c.f. {{jsxref("BeforeInstallPrompt", "BeforeInstallPrompt.platform")}} {{experimental_inline}}).
+The `outcome` is either **`"accepted"`** or **`"dismissed"`** (c.f. {{jsxref("BeforeInstallPromptEvent", "BeforeInstallPromptEvent.userChoice")}} {{experimental_inline}}).
+The `platform` is the selected platform (c.f. {{jsxref("BeforeInstallPromptEvent", "BeforeInstallPromptEvent.platform")}} {{experimental_inline}})
 
 ## Examples
 
