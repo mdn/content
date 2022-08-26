@@ -58,7 +58,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. If the
 `albumTitle` of the current cursor is "Grace under pressure", we delete that
-entire record using `var request = cursor.delete();`.
+entire record using `const request = cursor.delete();`.
 
 The cursor does not require us to select the data based on a key; we can just grab all
 of it. Also note that in each iteration of the loop, you can grab data from the current

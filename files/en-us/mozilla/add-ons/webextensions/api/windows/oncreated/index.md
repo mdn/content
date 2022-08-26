@@ -55,7 +55,7 @@ Log the IDs of new windows as they are created:
 
 ```js
 browser.windows.onCreated.addListener((window) => {
-  console.log("New window: " + window.id);
+  console.log(`New window: ${window.id}`);
 });
 ```
 

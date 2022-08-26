@@ -87,7 +87,7 @@ async function handlePayment() {
       await response.retry();
     }
     await payResponse.complete("success");
-  } catch(err) {
+  } catch (err) {
     /* handle the exception */
   }
 }

@@ -24,14 +24,14 @@ The {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}}
 
 ## Constructor
 
-- {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}}
+- {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}} {{Experimental_Inline}}
   - : Creates and returns a new `ContentIndexEvent` object whose type and other options are configured as specified.
 
 ## Properties
 
 _In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("ExtendableEvent")}}._
 
-- {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}
+- {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref('String')}} which identifies the deleted content index via it's `id`.
 
 ## Methods

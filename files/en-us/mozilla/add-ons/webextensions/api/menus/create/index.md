@@ -26,7 +26,7 @@ For compatibility with other browsers, Firefox makes this method available via t
 ```js
 browser.menus.create(
   createProperties, // object
-  function() { }  // optional function
+  () => {/* … */}   // optional function
 )
 ```
 
@@ -129,7 +129,7 @@ browser.menus.create({
   contexts: ["selection"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "log-selection") {
     console.log(info.selectionText);
   }
@@ -141,7 +141,7 @@ This example adds two radio items, which you can use to choose whether to apply 
 ```js
 function onCreated() {
   if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
+    console.log("error creating item:", browser.runtime.lastError);
   } else {
     console.log("item created successfully");
   }
@@ -166,7 +166,7 @@ browser.menus.create({
 let makeItBlue = 'document.body.style.border = "5px solid blue"';
 let makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "radio-blue") {
     browser.tabs.executeScript(tab.id, {
       code: makeItBlue

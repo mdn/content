@@ -105,7 +105,7 @@ class MockHypotheticalSocket {
     this.socketdata = null;
   }
 
-  /* Method returning promise when this socket is readable. */
+  // Method returning promise when this socket is readable.
   select2() {
     // Object used to resolve promise
     const resultobj = {};
@@ -118,7 +118,7 @@ class MockHypotheticalSocket {
       }
 
       // Emulate slow read of data
-      window.setTimeout(() => {
+      setTimeout(() => {
         const numberBytesReceived = this.getNumberRandomBytesSocket();
         this.data_read += numberBytesReceived;
         this.socketdata = this.randomByteArray(numberBytesReceived);
@@ -144,32 +144,29 @@ class MockHypotheticalSocket {
     return length_data;
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random number bytes in this call of socket */
+  // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
-    //Capped to remaining data and the max min return-per-read range
+    // Capped to remaining data and the max min return-per-read range
     const remaining_data = this.max_data - this.data_read;
-    let numberBytesReceived = 0;
-    if (remaining_data < this.min_per_read) {
-      numberBytesReceived = remaining_data;
-    } else {
-      numberBytesReceived = this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
-    }
+    const numberBytesReceived = remaining_data < this.min_per_read
+      ? remaining_data
+      : this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
     return numberBytesReceived;
   }
 
-  /* Return random number between two values */
+  // Return random number between two values
   getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -275,7 +272,7 @@ function makeSocketStream(host, port) {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return socket.select2().then(() => {
-          // Since the socket can become readable even when there’s
+          // Since the socket can become readable even when there's
           // no pending BYOB requests, we need to handle both cases.
           let bytesRead;
           if (controller.byobRequest) {
@@ -428,7 +425,7 @@ class MockUnderlyingFileHandle {
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -452,16 +449,16 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -472,7 +469,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -669,7 +666,7 @@ class MockUnderlyingFileHandle {
     resultobj["bytesRead"] = 0;
 
     return new Promise((resolve/*, reject*/) => {
-      if (position >= this.maxdata) { //out of data
+      if (position >= this.maxdata) { // out of data
         resolve(resultobj);
         return;
       }
@@ -685,16 +682,16 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => resolve(resultobj), 1000);
+      setTimeout(() => resolve(resultobj), 1000);
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -705,7 +702,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -742,7 +739,6 @@ button {
   <ul>
   </ul>
 </div>
-
 ```
 
 ```js hidden
@@ -876,7 +872,7 @@ class MockUnderlyingFileHandle {
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -900,16 +896,16 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -920,7 +916,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));

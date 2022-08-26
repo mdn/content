@@ -28,19 +28,19 @@ function setupVideo(url) {
   let playing = false;
   let timeupdate = false;
 
-  video.autoplay = true;
+  video.playsInline = true;
   video.muted = true;
   video.loop = true;
 
   // Waiting for these 2 events ensures
   // there is data in the video
 
-  video.addEventListener('playing', function() {
+  video.addEventListener('playing', () => {
      playing = true;
      checkReady();
   }, true);
 
-  video.addEventListener('timeupdate', function() {
+  video.addEventListener('timeupdate', () => {
      timeupdate = true;
      checkReady();
   }, true);

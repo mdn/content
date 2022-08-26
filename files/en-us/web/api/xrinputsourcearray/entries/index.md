@@ -17,9 +17,10 @@ tags:
   - WebXR Device API
   - XR
   - XRInputSourceArray
+  - Experimental
 browser-compat: api.XRInputSourceArray.entries
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}} interface's
 **`entries()`** method returns a JavaScript
@@ -54,7 +55,7 @@ type of input device it supports using.
 ```js
 let sources = xrSession.inputSources;
 
-for (let input of sources.entries()) {
+for (const input of sources.entries()) {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
   } else if (

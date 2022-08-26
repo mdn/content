@@ -52,15 +52,15 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 
 ## Properties
 
-- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.db")}} {{ReadOnlyInline}}
   - : The database connection with which this transaction is associated.
-- {{domxref("IDBTransaction.durability")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.durability")}} {{ReadOnlyInline}}
   - : Returns the durability hint the transaction was created with.
-- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
-- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.mode")}} {{ReadOnlyInline}}
   - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
-- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.objectStoreNames")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
 ## Methods
@@ -129,16 +129,9 @@ Transactions can have one of three modes:
       <td>"versionchange" (2 in Chrome)</td>
       <td>
         Allows any operation to be performed, including ones that delete and
-        create object stores and indexes. This mode is for updating the version
-        number of transactions that were started using the
-        <a href="/en-US/docs/Web/API/IDBDatabase#setversion"
-          ><code>setVersion()</code></a
-        >
-        method of
-        <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects.
-        Transactions of this mode cannot run concurrently with other
-        transactions. Transactions in this mode are known as "upgrade
-        transactions."
+        create object stores and indexes. Transactions of this mode cannot run
+        concurrently with other transactions. Transactions in this mode are
+        known as "upgrade transactions."
       </td>
     </tr>
   </tbody>

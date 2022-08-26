@@ -64,7 +64,7 @@ The following code traps the {{jsxref("Operators/new", "new")}} operator.
 ```js
 const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
-    console.log('called: ' + argumentsList.join(', '));
+    console.log(`called: ${argumentsList}`);
     return { value: argumentsList[0] * 10 };
   }
 });
@@ -108,6 +108,6 @@ new p(); // TypeError is thrown, "p" is not a constructor
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy/Proxy", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/new", "new")}} operator.
 - {{jsxref("Reflect.construct()")}}

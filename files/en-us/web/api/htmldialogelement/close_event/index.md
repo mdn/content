@@ -5,7 +5,6 @@ page-type: web-api-event
 tags:
   - API
   - Event
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Reference

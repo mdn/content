@@ -301,11 +301,11 @@ trs.forEach((gridrow) => {
   gridrow.querySelectorAll('td').forEach((el) => {
     el.dataset.row = row;
     el.dataset.col = col;
-    col = col + 1;
+    col++;
   });
   if (col > maxcol) { maxcol = col - 1; }
   col = 0;
-  row = row + 1;
+  row++;
 });
 
 function moveto(newrow, newcol) {
@@ -352,7 +352,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
         moveto(parseInt(event.target.dataset.row, 10), 0);
       }
       break;
-    }  
+    }
     case "End": {
       if (event.ctrlKey) {
         let i = maxrow;

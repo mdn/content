@@ -103,9 +103,7 @@ It is, of course. But the elegant feature of promises is that _`then()` itself r
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then((response) => {
-    return response.json();
-  })
+  .then((response) => response.json())
   .then((data) => {
     console.log(data[0].name);
   });
@@ -291,7 +289,7 @@ async function fetchProducts() {
     const data = await response.json();
     console.log(data[0].name);
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -315,7 +313,7 @@ async function fetchProducts() {
     const data = await response.json();
     return data;
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -336,7 +334,7 @@ async function fetchProducts() {
     const data = await response.json();
     return data;
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }

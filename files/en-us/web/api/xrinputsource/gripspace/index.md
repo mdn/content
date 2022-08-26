@@ -6,7 +6,6 @@ tags:
   - API
   - AR
   - Augmented Reality
-  - Experimental
   - Property
   - Reference
   - VR
@@ -60,9 +59,9 @@ used to render a mesh that represents the position and orientation of the contro
 the virtual environment.
 
 ```js
-for (let source in xrSession.inputSources) {
+for (const source in xrSession.inputSources) {
   if (source.gripSpace) {
-    let gripPose = frame.getPose(source.gripSpace, xrRefSpace);
+    const gripPose = frame.getPose(source.gripSpace, xrRefSpace);
 
     if (gripPose) {
       myDrawMeshUsingTransform(controllerMesh, gripPose.transform.matrix);

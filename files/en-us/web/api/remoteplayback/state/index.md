@@ -30,7 +30,7 @@ One of:
 In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.
 
 ```js
-RemotePlayback.onconnect = function() {
+RemotePlayback.onconnect = () => {
   console.log(RemotePlayback.state);
 }
 ```

@@ -33,7 +33,7 @@ In this article we learn about **routing**, or URL-based filtering as it is some
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -90,13 +90,13 @@ To adjust our old way of rendering the TodoList app, we'll first need to replace
 
 Go to the `todomvc/app/templates/application.hbs` file and replace
 
-```html
+```hbs
 <TodoList />
 ```
 
 With
 
-```js
+```hbs
 \{{outlet}}
 ```
 
@@ -104,13 +104,13 @@ Next, in our `index.hbs`, `completed.hbs`, and `active.hbs` templates (also foun
 
 In each case, replace
 
-```js
+```hbs
 \{{outlet}}
 ```
 
 with
 
-```html
+```hbs
 <TodoList />
 ```
 
@@ -161,13 +161,13 @@ We can now update the `todomvc/app/templates/index.hbs` file so that when it inc
 
 In this file, change
 
-```html
+```hbs
 <TodoList />
 ```
 
 To
 
-```html
+```hbs
 <TodoList @todos=\{{ @model.allTodos }}/>
 ```
 
@@ -198,13 +198,13 @@ We can now update the `todomvc/app/templates/completed.hbs` file so that when it
 
 In this file, change
 
-```html
+```hbs
 <TodoList />
 ```
 
 To
 
-```html
+```hbs
 <TodoList @todos=\{{ @model.completedTodos }}/>
 ```
 
@@ -273,13 +273,13 @@ Update it to
 
 One small final thing that we need to fix is that previously, inside `todomvc/app/components/todo-list.hbs`, we were accessing the todo-data service directly and looping over all todos, as shown here:
 
-```js
+```hbs
 \{{#each this.todos.all as |todo| }}
 ```
 
 Since we now want to have our TodoList component show a filtered list, we'll want to pass an argument to the TodoList component representing the "current list of todos", as shown here:
 
-```js
+```hbs
 \{{#each @todos as |todo| }}
 ```
 

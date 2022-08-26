@@ -201,7 +201,7 @@ const deleteWords = words.filter((word, index, arr) => {
 })
 
 console.log(deleteWords);
-// Notice 'elite' is not even obtained as it’s been popped off 'words' before filter can even get there
+// Notice 'elite' is not even obtained as it's been popped off 'words' before filter can even get there
 // ["spray" ,"limit"]
 ```
 

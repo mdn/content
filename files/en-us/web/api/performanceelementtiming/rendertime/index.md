@@ -8,9 +8,10 @@ tags:
   - Reference
   - renderTime
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.renderTime
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`renderTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the render time of the associated element.
 
@@ -32,7 +33,7 @@ In this example calling `entry.renderTime` returns the render time of the image 
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.renderTime);
     }

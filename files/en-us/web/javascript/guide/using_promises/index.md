@@ -22,11 +22,11 @@ Here's some code that uses `createAudioFileAsync()`:
 
 ```js
 function successCallback(result) {
-  console.log("Audio file ready at URL: " + result);
+  console.log(`Audio file ready at URL: ${result}`);
 }
 
 function failureCallback(error) {
-  console.error("Error generating audio file: " + error);
+  console.error(`Error generating audio file: ${error}`);
 }
 
 createAudioFileAsync(audioSettings, successCallback, failureCallback);
@@ -77,7 +77,7 @@ In the old days, doing several asynchronous operations in a row would lead to th
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
-      console.log("Got the final result: " + finalResult);
+      console.log(`Got the final result: ${finalResult}`);
     }, failureCallback);
   }, failureCallback);
 }, failureCallback);
@@ -94,7 +94,7 @@ doSomething()
     return doThirdThing(newResult);
   })
   .then(function (finalResult) {
-    console.log("Got the final result: " + finalResult);
+    console.log(`Got the final result: ${finalResult}`);
   })
   .catch(failureCallback);
 ```
@@ -153,13 +153,13 @@ Therefore, as a rule of thumb, whenever your operation encounters a promise, ret
 const listOfIngredients = [];
 
 doSomething()
-  .then((url) => {
-    return fetch(url)
+  .then((url) =>
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      });
-  })
+      })
+  )
   .then(() => {
     console.log(listOfIngredients);
   });
@@ -235,7 +235,7 @@ try {
 }
 ```
 
-This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntactic sugar in ECMAScript 2017:
+This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntax:
 
 ```js
 async function foo() {
@@ -354,7 +354,7 @@ const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 ```
 
-In ECMAScript 2017, sequential composition can be done more with async/await:
+Sequential composition can also be done more succinctly with async/await:
 
 ```js
 let result;
@@ -429,7 +429,7 @@ doSomethingCritical()
       .catch((e) => {})
   ) // Ignore if optional stuff fails; proceed.
   .then(() => moreCriticalStuff())
-  .catch((e) => console.error("Critical failure: " + e.message));
+  .catch((e) => console.error(`Critical failure: ${e.message}`));
 ```
 
 Note that the optional steps here are nested, not from the indentation, but from the precarious placement of the outer `(` and `)` around them.

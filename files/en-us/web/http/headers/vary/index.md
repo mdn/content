@@ -30,7 +30,7 @@ The same `Vary` header value should be used on all responses for a given URL, in
 
 ## Syntax
 
-```
+```http
 Vary: *
 Vary: <header-name>, <header-name>, ...
 ```

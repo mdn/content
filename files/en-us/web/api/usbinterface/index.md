@@ -24,13 +24,13 @@ The `USBInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API)
 
 ## Properties
 
-- {{domxref("USBInterface.interfaceNumber")}} {{readonlyInline}}
+- {{domxref("USBInterface.interfaceNumber")}} {{ReadOnlyInline}}
   - : Returns the interface number of this interface. This is equal to the `bInterfaceNumber` field of the interface descriptor defining this interface.
-- {{domxref("USBInterface.alternate")}} {{readonlyInline}}
+- {{domxref("USBInterface.alternate")}} {{ReadOnlyInline}}
   - : Returns the currently selected alternative configuration of this interface. By default this is the `USBAlternateInterface` from `alternates` with `alternateSetting` equal to `0`. It can be changed by calling `USBDevice.selectAlternateInterface()` with any other value found in `alternates`.
-- {{domxref("USBInterface.alternates")}} {{readonlyInline}}
+- {{domxref("USBInterface.alternates")}} {{ReadOnlyInline}}
   - : Returns an array containing instances of the `USBAlternateInterface` interface describing each of the alternative configurations possible for this interface.
-- **{{domxref("USBInterface.claimed")}}**{{readonlyInline}}
+- {{domxref("USBInterface.claimed")}} {{ReadOnlyInline}}
   - : Returns whether or not this interface has been claimed by the current page by calling `USBDevice.claimInterface()`.
 
 ## Specifications

@@ -89,31 +89,29 @@ This function provides very basic support for 2-touch horizontal move/pinch/zoom
 // This is a very basic 2-touch move/pinch/zoom handler that does not include
 // error handling, only handles horizontal moves, etc.
 function handle_pinch_zoom(ev) {
+  if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
+    // Check if the two target touches are the same ones that started
+    // the 2-touch
+    let point1 = -1;
+    let point2 = -1;
+    for (let i = 0; i < tpCache.length; i++) {
+      if (tpCache[i].identifier === ev.targetTouches[0].identifier) point1 = i;
+      if (tpCache[i].identifier === ev.targetTouches[1].identifier) point2 = i;
+    }
+    if (point1 >= 0 && point2 >= 0) {
+      // Calculate the difference between the start and move coordinates
+      const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
+      const diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
 
- if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
-   // Check if the two target touches are the same ones that started
-   // the 2-touch
-   let point1 = -1;
-   let point2 = -1;
-   for (let i = 0; i < tpCache.length; i++) {
-     if (tpCache[i].identifier === ev.targetTouches[0].identifier) point1 = i;
-     if (tpCache[i].identifier === ev.targetTouches[1].identifier) point2 = i;
-   }
-   if (point1 >= 0 && point2 >= 0) {
-     // Calculate the difference between the start and move coordinates
-     const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
-     const diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
-
-     // This threshold is device dependent as well as application specific
-     const PINCH_THRESHOLD = ev.target.clientWidth / 10;
-     if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
-         ev.target.style.background = "green";
-   }
-   else {
-     // empty tpCache
-     tpCache = [];
-   }
- }
+      // This threshold is device dependent as well as application specific
+      const PINCH_THRESHOLD = ev.target.clientWidth / 10;
+      if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
+          ev.target.style.background = "green";
+    } else {
+      // empty tpCache
+      tpCache = [];
+    }
+  }
 }
 ```
 

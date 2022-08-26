@@ -33,7 +33,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : See {{domxref("HTMLAnchorElement.rel")}}.
 - {{domxref("SVGAElement.relList")}}
   - : See {{domxref("HTMLAnchorElement.relList")}}.
-- {{domxref("SVGAElement.target")}} {{readonlyInline}}
+- {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}}
   - : A string being a synonym for the {{domxref("Node.textContent")}} property.
@@ -52,7 +52,7 @@ In the example below, the {{SVGAttr("target")}} attribute of the {{SVGElement("a
 const linkRef = document.querySelector("a");
 linkRef.target = "_self";
 
-linkRef.onclick = function(){
+linkRef.onclick = () => {
   if (linkRef.target === "_blank") {
     console.log("BLANK!");
     linkRef.target = "_self";

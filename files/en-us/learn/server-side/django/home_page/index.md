@@ -43,7 +43,7 @@ The following diagram describes the main data flow, and the components required 
 - View functions to get the requested data from the models, create HTML pages that display the data, and return the pages to the user to view in the browser.
 - Templates to use when rendering data in the views.
 
-![](basic-django.png)
+![Main data flow diagram: URL, Model, View & Template component required when handling HTTP requests and responses in a Django application. A HTTP request hits a Django server gets forwarded to the 'urls.py' file of the URLS component. The request is forwarded to the appropriate view. The view can read and write data from the Models 'models.py' file containing the code related to models. The view also accesses the HTML file template component. The view returns the response back to the user.](basic-django.png)
 
 As you'll see in the next section, we have 5 pages to display, which is too much information to document in a single article. Therefore, this article will focus on how to implement the home page, and we'll cover the other pages in a subsequent article. This should give you a good end-to-end understanding of how URL mappers, views, and models work in practice.
 
@@ -57,7 +57,7 @@ The URLs that we'll need for our pages are:
 - `catalog/books/` — A list of all books.
 - `catalog/authors/` — A list of all authors.
 - `catalog/book/<id>` — The detail view for a particular book, with a field primary key of `<id>` (the default). For example, the URL for the third book added to the list will be `/catalog/book/3`.
-- `catalog/author/<id>` — The detail view for the specific author with a primary key field of *`<id>`*. For example, the URL for the 11th author added to the list will be `/catalog/author/11`.
+- `catalog/author/<id>` — The detail view for the specific author with a primary key field of `<id>`. For example, the URL for the 11th author added to the list will be `/catalog/author/11`.
 
 The first three URLs will return the index page, books list, and authors list. These URLs do not encode any additional information, and the queries that fetch data from the database will always be the same. However, the results that the queries return will depend on the contents of the database.
 
@@ -86,7 +86,7 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include "django.conf.urls.include"), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
+> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
 
 We also created a placeholder file for the *URLConf* module, named **/catalog/urls.py**.
 Add the following lines to that file:

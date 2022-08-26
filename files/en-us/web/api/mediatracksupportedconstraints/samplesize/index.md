@@ -15,7 +15,7 @@ tags:
   - sampleSize
 browser-compat: api.MediaTrackSupportedConstraints.sampleSize
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`sampleSize`** property is a read-only Boolean value which is
@@ -49,13 +49,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().sampleSize) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().sampleSize;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result

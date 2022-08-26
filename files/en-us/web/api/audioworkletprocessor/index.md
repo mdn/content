@@ -26,7 +26,7 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 
 ## Properties
 
-- {{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}
+- {{domxref("AudioWorkletProcessor.port", "port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the processor and the {{domxref("AudioWorkletNode")}} which it belongs to. The other end is available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
 ## Methods

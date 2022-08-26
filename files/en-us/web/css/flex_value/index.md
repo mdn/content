@@ -22,7 +22,7 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 
 ### Examples of correct values for the fr data type
 
-```css
+```plain
 1fr    /* Using an integer value */
 2.5fr  /* Using a float value */
 ```

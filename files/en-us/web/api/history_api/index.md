@@ -78,7 +78,7 @@ let numberOfEntries = window.history.length
 The following example assigns a listener to the `onpopstate` property. And then illustrates some of the methods of the history object to add, replace, and move within the browser history for the current tab.
 
 ```js
-window.onpopstate = function(event) {
+window.onpopstate = (event) => {
   alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
 }
 

@@ -37,7 +37,7 @@ These resources are created by forward-thinking companies and web developers who
 <!---->
 
 - [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
-  - : An HTML guide for beginners that includes explanations of common tags, including HTML5 tags. Also includes a step-by-step guide to creating a basic web page with code examples.
+  - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
 
@@ -78,6 +78,15 @@ These resources are created by forward-thinking companies and web developers who
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
+- [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+  - : Target HTML elements, including based on element state, with CSS.
+
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - : Understanding the browser algorithm to determine which CSS declarations get applied to element when there are compting declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
+
+- [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+  - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
+
 - [Styling text](/en-US/docs/Learn/CSS/Styling_text)
   - : Here we look at text styling fundamentals, including setting font, boldness, and italics, line and letter spacing, and drop shadows and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 - [Common CSS Questions](/en-US/docs/Learn/CSS/Howto/CSS_FAQ)
@@ -102,21 +111,9 @@ These resources are created by forward-thinking companies and web developers who
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-  - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
-
-<!---->
-
-- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/en/tutorials/webfonts/quick/)
-  - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
-- [Starting to Write CSS](https://davidwalsh.name/starting-css)
-  - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.
-
-<!---->
-
+  - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
-- [HTML5 Doctor](https://html5doctor.com/)
-  - : Articles about using HTML5 right now.
 
 ## JavaScript Tutorials
 

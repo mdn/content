@@ -27,13 +27,13 @@ takes up to two arguments: callback functions for the success and failure cases 
 ## Syntax
 
 ```js
-p.then(onFulfilled[, onRejected]);
+then(onFulfilled)
+then(onFulfilled, onRejected)
 
-p.then((value) => {
-  // fulfillment
-}, (reason) => {
-  // rejection
-});
+then(
+  (value) => { /* fulfillment handler */ },
+  (reason) => { /* rejection handler */ },
+);
 ```
 
 ### Parameters
@@ -148,8 +148,8 @@ Promise.resolve("foo")
         string += "bar";
         resolve(string);
       }, 1);
-    );
-  })
+    })
+  )
   // 2. receive "foobar", register a callback function to work on that string
   // and print it to the console, but not before returning the unworked on
   // string to the next then
@@ -253,7 +253,7 @@ You can also use chaining to implement one function with a Promise-based API on 
 another such function.
 
 ```js
-function fetch_current_data() {
+function fetchCurrentData() {
   // The fetch() API returns a Promise.  This function
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more

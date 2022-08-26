@@ -36,11 +36,11 @@ Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are 
 
 _This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+- {{domxref("EventSource.readyState")}} {{ReadOnlyInline}}
   - : A number representing the state of the connection. Possible values are `CONNECTING` (`0`), `OPEN` (`1`), or `CLOSED` (`2`).
-- {{domxref("EventSource.url")}} {{readonlyinline}}
+- {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : A string representing the URL of the source.
-- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
+- {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
 ## Methods
@@ -69,7 +69,7 @@ In this basic example, an `EventSource` is created to receive unnamed events fro
 const evtSource = new EventSource('sse.php');
 const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;
@@ -84,37 +84,38 @@ Each received event causes our `EventSource` object's `onmessage` event handler 
 To listen to named events, you'll require a listener for each type of event sent.
 
 ```js
-  const sse = new EventSource('/api/v1/sse');
+const sse = new EventSource('/api/v1/sse');
 
-  /* This will listen only for events
-   * similar to the following:
-   *
-   * event: notice
-   * data: useful data
-   * id: someid
-   *
-   */
-  sse.addEventListener("notice", function(e) {
-    console.log(e.data)
-  })
+/*
+ * This will listen only for events
+ * similar to the following:
+ *
+ * event: notice
+ * data: useful data
+ * id: someid
+ */
+sse.addEventListener("notice", (e) => {
+  console.log(e.data)
+})
 
-  /* Similarly, this will listen for events
-   * with the field `event: update`
-   */
-  sse.addEventListener("update", function(e) {
-    console.log(e.data)
-  })
+/*
+ * Similarly, this will listen for events
+ * with the field `event: update`
+ */
+sse.addEventListener("update", (e) => {
+  console.log(e.data)
+})
 
-  /* The event "message" is a special case, as it
-   * will capture events without an event field
-   * as well as events that have the specific type
-   * `event: message` It will not trigger on any
-   * other event type.
-   */
-  sse.addEventListener("message", function(e) {
-    console.log(e.data)
-  })
-
+/*
+ * The event "message" is a special case, as it
+ * will capture events without an event field
+ * as well as events that have the specific type
+ * `event: message` It will not trigger on any
+ * other event type.
+ */
+sse.addEventListener("message", (e) => {
+  console.log(e.data)
+});
 ```
 
 ## Specifications

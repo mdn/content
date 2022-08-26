@@ -772,10 +772,10 @@ function makePerson(first, last) {
   };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return `${person.first} ${person.last}`;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first;
+  return `${person.last}, ${person.first}`;
 }
 
 const s = makePerson('Simon', 'Willison');
@@ -791,10 +791,10 @@ function makePerson(first, last) {
     first: first,
     last: last,
     fullName() {
-      return this.first + ' ' + this.last;
+      return `${this.first} ${this.last}`;
     },
     fullNameReversed() {
-      return this.last + ', ' + this.first;
+      return `${this.last}, ${this.first}`;
     }
   };
 }
@@ -823,10 +823,10 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
   this.fullName = function() {
-    return this.first + ' ' + this.last;
+    return `${this.first} ${this.last}`;
   };
   this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+    return `${this.last}, ${this.first}`;
   };
 }
 const s = new Person('Simon', 'Willison');
@@ -840,10 +840,10 @@ Our person objects are getting better, but there are still some ugly edges to th
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return `${this.first} ${this.last}`;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return `${this.last}, ${this.first}`;
 }
 function Person(first, last) {
   this.first = first;
@@ -861,10 +861,10 @@ function Person(first, last) {
   this.last = last;
 }
 Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+  return `${this.first} ${this.last}`;
 };
 Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+  return `${this.last}, ${this.first}`;
 };
 ```
 
@@ -912,7 +912,7 @@ const s = new Person('Simon', 'Willison');
 s.toString(); // [object Object]
 
 Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
+  return `<Person: ${this.fullName()}>`;
 }
 
 s.toString(); // "<Person: Simon Willison>"

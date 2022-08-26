@@ -17,7 +17,7 @@ However, typed arrays are _not_ to be confused with normal arrays, as calling {{
 
 To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into **buffers** and **views**. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a context — that is, a data type, starting offset, and the number of elements — that turns the data into a typed array.
 
-![Typed arrays in an ArrayBuffer](typed_arrays.png)
+![A diagram showing how different typed arrays may be views of the same underlying buffer. Each one has a different element number and width.](typed_arrays.png)
 
 ### ArrayBuffer
 
@@ -100,7 +100,7 @@ Things start to get really interesting when you consider that you can create mul
 const int16View = new Int16Array(buffer);
 
 for (let i = 0; i < int16View.length; i++) {
-  console.log('Entry ' + i + ': ' + int16View[i]);
+  console.log(`Entry ${i}: ${int16View[i]}`);
 }
 ```
 
@@ -110,7 +110,7 @@ You can go a step farther, though. Consider this:
 
 ```js
 int16View[0] = 32;
-console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
+console.log(`Entry 0 in the 32-bit array is now ${int32View[0]}`);
 ```
 
 The output from this is `"Entry 0 in the 32-bit array is now 32"`.
@@ -156,7 +156,7 @@ const typedArray = new Uint8Array([1, 2, 3, 4]);
 const normalArray = Array.from(typedArray);
 ```
 
-as well as the {{jsxref("operators/spread_syntax", "spread operator", "", 1)}}
+as well as the {{jsxref("operators/spread_syntax", "spread syntax", "", 1)}}
 
 ```js
 const typedArray = new Uint8Array([1, 2, 3, 4]);
@@ -174,5 +174,5 @@ const normalArray = Array.prototype.slice.call(typedArray);
 
 - [Getting `ArrayBuffer`s or typed arrays from Base64-encoded strings](/en-US/docs/Glossary/Base64#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/)
-- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays/)
+- [Typed Arrays: Binary Data in the Browser](https://web.dev/webgl-typed-arrays/)
 - [Endianness](/en-US/docs/Glossary/Endianness)

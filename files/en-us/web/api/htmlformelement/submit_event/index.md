@@ -34,7 +34,7 @@ onsubmit = (event) => { };
 
 ## Event type
 
-An {{domxref("SubmitEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SubmitEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SubmitEvent")}}
 

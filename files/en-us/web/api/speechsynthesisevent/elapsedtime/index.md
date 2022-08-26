@@ -27,7 +27,7 @@ A float containing the elapsed time, in seconds.
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
+utterThis.onboundary = (event) => {
   console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```

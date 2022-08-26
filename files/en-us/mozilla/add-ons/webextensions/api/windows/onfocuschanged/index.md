@@ -57,7 +57,7 @@ Log focus changes:
 
 ```js
 browser.windows.onFocusChanged.addListener((windowId) => {
-  console.log("Newly focused window: " + windowId);
+  console.log(`Newly focused window: ${windowId}`);
 });
 ```
 

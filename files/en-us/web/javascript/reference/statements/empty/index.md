@@ -37,7 +37,7 @@ The empty statement is sometimes used with loop statements. See the following ex
 with an empty loop body:
 
 ```js
-let arr = [1, 2, 3];
+const arr = [1, 2, 3];
 
 // Assign all array values to 0
 for (let i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
@@ -54,8 +54,8 @@ not really obvious to distinguish from a normal semicolon.
 In the following example, the usage is probably not intentional:
 
 ```js example-bad
-if (condition);       // Caution, this "if" does nothing!
-   killTheUniverse()  // So this always gets executed!!!
+if (condition);      // Caution, this "if" does nothing!
+  killTheUniverse()  // So this always gets executed!!!
 ```
 
 ## Specifications

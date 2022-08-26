@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Clients
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -35,7 +34,7 @@ The following example shows an existing chat window or creates a new one when th
 
 ```js
 addEventListener('notificationclick', (event) => {
-  event.waitUntil(async function() {
+  event.waitUntil((async () => {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
     });
@@ -62,7 +61,7 @@ addEventListener('notificationclick', (event) => {
 
     // Message the client:
     chatClient.postMessage("New chat messages!");
-  }());
+  })());
 });
 ```
 

@@ -31,7 +31,7 @@ Finally, we note that color in WebGL is usually in {{Glossary("RGBA")}} format, 
 <!-- Text within a canvas element is displayed
     only if canvas is not supported. -->
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css

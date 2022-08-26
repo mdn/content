@@ -1,5 +1,5 @@
 ---
-title: Controlling Ratios of Flex Items Along the Main Axis
+title: Controlling ratios of flex items along the main axis
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 tags:

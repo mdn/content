@@ -8,9 +8,10 @@ tags:
   - Reference
   - flush
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.flush
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`flush()`** method of the {{domxref("VideoEncoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 

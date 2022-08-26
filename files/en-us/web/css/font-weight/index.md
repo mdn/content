@@ -30,10 +30,10 @@ font-weight: bolder;
 font-weight: 100;
 font-weight: 200;
 font-weight: 300;
-font-weight: 400;// normal
+font-weight: 400; /* normal */
 font-weight: 500;
 font-weight: 600;
-font-weight: 700;// bold
+font-weight: 700; /* bold */
 font-weight: 800;
 font-weight: 900;
 
@@ -213,7 +213,7 @@ p {
 /* Set div text to two steps heavier than
    normal but less than a standard bold. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Set span text to be one step lighter

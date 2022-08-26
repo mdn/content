@@ -19,6 +19,10 @@ The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/W
 
 Refer to the documentation for {{Cssxref("time")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Use in calc()

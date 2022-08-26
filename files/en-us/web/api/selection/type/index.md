@@ -39,7 +39,7 @@ text, or a range has been selected.
 ```js
 let selection;
 
-document.onselectionchange = function() {
+document.onselectionchange = () => {
   console.log('New selection made');
   selection = document.getSelection();
   console.log(selection.type);

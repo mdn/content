@@ -118,13 +118,13 @@ Here is the same WebAssembly module, simply replacing the import with an export.
   (tag $tagname (export "exptag") (param i32))
 
   (func $throwException (param i32)
-     local.get 0
-     throw $tagname
+    local.get 0
+    throw $tagname
   )
 
   (func (export "run")
-     i32.const 1
-     call $throwException
+    i32.const 1
+    call $throwException
   )
 )
 ```

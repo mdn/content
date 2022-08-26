@@ -13,7 +13,7 @@ tags:
   - polyfill
 browser-compat: api.Window.cancelIdleCallback
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 ## Summary
 

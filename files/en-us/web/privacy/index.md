@@ -162,7 +162,7 @@ Not all of these are generally directly used within code; notably, the [Permissi
 
 ## Bringing it all together
 
-<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc-->
+<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc.-->
 
 ### Permission requests in \<iframe> elements
 

@@ -71,34 +71,31 @@ Here is a simple example of using the `<shadow>` element. It is an HTML file wit
 > **Note:** This is an experimental technology. For this code to work, the browser you display it in must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
 
 ```html
-<html>
+<html lang="en">
   <head></head>
   <body>
-
-  <!-- This <div> will hold the shadow roots. -->
-  <div>
-    <!-- This heading will not be displayed -->
-    <h4>My Original Heading</h4>
-  </div>
-
+    <!-- This <div> will hold the shadow roots. -->
+    <div>
+      <!-- This heading will not be displayed -->
+      <h4>My Original Heading</h4>
+    </div>
   <script>
     // Get the <div> above with its content
-    var origContent = document.querySelector('div');
+    const origContent = document.querySelector('div');
     // Create the first shadow root
-    var shadowroot1 = origContent.createShadowRoot();
+    const shadowroot1 = origContent.createShadowRoot();
     // Create the second shadow root
-    var shadowroot2 = origContent.createShadowRoot();
+    const shadowroot2 = origContent.createShadowRoot();
 
     // Insert something into the older shadow root
     shadowroot1.innerHTML =
-      '<p>Older shadow root inserted by
-          &lt;shadow&gt;</p>';
+      '<p>Older shadow root inserted by &lt;shadow&gt;</p>';
+
     // Insert into younger shadow root, including <shadow>.
     // The previous markup will not be displayed unless
     // <shadow> is used below.
     shadowroot2.innerHTML =
-      '<shadow></shadow> <p>Younger shadow
-       root, displayed because it is the youngest.</p>';
+      '<shadow></shadow> <p>Younger shadow root, displayed because it is the youngest.</p>';
   </script>
 
   </body>

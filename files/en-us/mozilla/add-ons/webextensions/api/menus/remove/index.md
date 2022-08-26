@@ -48,7 +48,7 @@ function onRemoved() {
 }
 
 function onError() {
-  console.log("error removing item:" + browser.runtime.lastError);
+  console.log("error removing item:", browser.runtime.lastError);
 }
 
 browser.menus.create({
@@ -57,7 +57,7 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "remove-me") {
     let removing = browser.menus.remove(info.menuItemId);
     removing.then(onRemoved, onError);

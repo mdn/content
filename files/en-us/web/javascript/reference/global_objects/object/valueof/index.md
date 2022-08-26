@@ -76,7 +76,7 @@ myNumberType.valueOf()
 > {{jsxref("Object.toString", "toString()")}} method, which is different from
 > {{jsxref("String")}} objects converting to string primitives using
 > `valueOf`. All objects have a string conversion, if only
-> "`[object type]`". But many objects do not convert to number,
+> `"[object type]"`. But many objects do not convert to number,
 > boolean, or function.
 
 ## Examples

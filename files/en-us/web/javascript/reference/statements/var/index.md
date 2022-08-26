@@ -92,7 +92,7 @@ straightforward property of the global object. JavaScript has automatic memory
 management, and it would make no sense to be able to use the `delete`
 operator on a global variable.
 
-```js
+```js example-bad
 'use strict';
 var x = 1;
 Object.hasOwn(globalThis, 'x'); // true
@@ -131,10 +131,7 @@ foo = 'f' // In non-strict mode, assumes you want to create a property named `fo
 Object.hasOwn(globalThis, 'foo') // true
 ```
 
-In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-Assignment to an unqualified identifier in strict mode will result in a
-`ReferenceError`, to avoid the accidental creation of properties on the
-global object.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), assignment to an unqualified identifier in strict mode will result in a `ReferenceError`, to avoid the accidental creation of properties on the global object.
 
 Note that the implication of the above, is that, contrary to popular misinformation,
 JavaScript does not have implicit or undeclared variables, it merely has a syntax that
@@ -151,9 +148,11 @@ declaration is moved to the top of the function or global code.
 ```js
 bla = 2;
 var bla;
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 var bla;
 bla = 2;
 ```
@@ -172,9 +171,11 @@ function do_something() {
   var bar = 111;
   console.log(bar); // 111
 }
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 function do_something() {
   var bar;
   console.log(bar); // undefined
@@ -196,9 +197,11 @@ var a = 0, b = 0;
 ```js
 var a = 'A';
 var b = a;
+```
 
-// ...is equivalent to:
+This is equivalent to:
 
+```js
 var a, b = a = 'A';
 ```
 
@@ -210,7 +213,7 @@ console.log(x + y); // undefinedA
 ```
 
 Here, `x` and `y` are declared before any code is executed, but
-the assignments occur later. At the time "`x = y`" is evaluated,
+the assignments occur later. At the time `x = y` is evaluated,
 `y` exists so no `ReferenceError` is thrown and its value is
 `undefined`. So, `x` is assigned the undefined value. Then,
 `y` is assigned the value `'A'`. Consequently, after the first

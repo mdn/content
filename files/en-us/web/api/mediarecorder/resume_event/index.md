@@ -37,22 +37,22 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-pause.onclick = function() {
-  if(MediaRecorder.state === "recording") {
+pause.onclick = () => {
+  if (MediaRecorder.state === "recording") {
     mediaRecorder.pause();
     // recording paused
-  } else if(MediaRecorder.state === "paused") {
+  } else if (MediaRecorder.state === "paused") {
     mediaRecorder.resume();
     // resume recording
   }
 }
 
-mediaRecorder.onpause = function() {
+mediaRecorder.onpause = () => {
   // do something in response to
   // recording being paused
 }
 
-mediaRecorder.onresume = function() {
+mediaRecorder.onresume = () => {
   // do something in response to
   // recording being resumed
 }

@@ -205,14 +205,9 @@ There are a few ways you can decide upon a primary controller. We'll look at thr
 The most direct way to decide which controller is primary is to have a user-definable "Handedness" preference that the user sets to indicate which of their hands is dominant. You would then look at each input source and find one matching this, if available, falling back to another controller if no controller is in that hand.
 
 ```js
-let primaryInputSource = xrSession.inputSources[0];
-
-for (let i=0; i < xrSession.inputSources.length; i++) {
-  if (xrSession.inputSources[i].handedness === user.handedness) {
-    primaryInputSource = inputSources[i];
-    break;
-  }
-}
+const primaryInputSource =
+  xrSession.inputSources.find((src) => src.handedness === user.handedness) ??
+  xrSession.inputSources[0];
 ```
 
 This snippet of code starts by assuming that the first input source is the primary, but then looks for one whose {{domxref("XRInputSource.handedness", "handedness")}} matches the one specified in the `user` object. If it matches, that input source is selected as the primary.
@@ -224,7 +219,7 @@ Another option is to use the first input the user triggers the select action on.
 ```js
 let primaryInputSource = xrSession.inputSources[0];
 
-xrSession.onselect = function(event) {
+xrSession.onselect = (event) => {
   primaryInputSource = event.inputSource;
   xrSession.onselect = realSelectHandler;
   return realSelectHandler(event);

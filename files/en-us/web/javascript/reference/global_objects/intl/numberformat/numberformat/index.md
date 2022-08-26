@@ -584,27 +584,27 @@ const maxSigNS = new Intl.NumberFormat("en", {
 console.log(`maximumSignificantDigits:3 - ${maxSigNS.format(1.23456)}`);
 // > "maximumSignificantDigits:3 - 1.23"
 
-const both_auto = new Intl.NumberFormat("en", {
+const bothAuto = new Intl.NumberFormat("en", {
   maximumSignificantDigits: 3,
   maximumFractionDigits: 3,
 });
-console.log(`auto - ${both_auto.format(1.23456)}`);
+console.log(`auto - ${bothAuto.format(1.23456)}`);
 // > "auto - 1.23"
 
-const both_less = new Intl.NumberFormat("en", {
+const bothLess = new Intl.NumberFormat("en", {
   roundingPriority: "lessPrecision",
   maximumSignificantDigits: 3,
   maximumFractionDigits: 3,
 });
-console.log(`lessPrecision - ${both_less.format(1.23456)}`);
+console.log(`lessPrecision - ${bothLess.format(1.23456)}`);
 // > "lessPrecision - 1.23"
 
-const both_more = new Intl.NumberFormat("en", {
+const bothMore = new Intl.NumberFormat("en", {
   roundingPriority: "morePrecision",
   maximumSignificantDigits: 3,
   maximumFractionDigits: 3,
 });
-console.log(`morePrecision - ${both_more.format(1.23456)}`);
+console.log(`morePrecision - ${bothMore.format(1.23456)}`);
 // > "morePrecision - 1.235"
 ```
 
@@ -613,20 +613,20 @@ The example below formats the value `1` specifying `minimumFractionDigits: 2` (f
 Since `1.00` has more digits than `1.0`, this should be the result when prioritizing `morePrecision`, but in fact the opposite is true:
 
 ```js
-const both_less = new Intl.NumberFormat("en", {
+const bothLess = new Intl.NumberFormat("en", {
   roundingPriority: "lessPrecision",
   minimumFractionDigits: 2,
   minimumSignificantDigits: 2,
 });
-console.log(`lessPrecision - ${both_less.format(1)}`);
+console.log(`lessPrecision - ${bothLess.format(1)}`);
 // > "lessPrecision - 1.00"
 
-const both_more = new Intl.NumberFormat("en", {
+const bothMore = new Intl.NumberFormat("en", {
   roundingPriority: "morePrecision",
   minimumFractionDigits: 2,
   minimumSignificantDigits: 2,
 });
-console.log(`morePrecision - ${both_more.format(1)}`);
+console.log(`morePrecision - ${bothMore.format(1)}`);
 // > "morePrecision - 1.0"
 ```
 

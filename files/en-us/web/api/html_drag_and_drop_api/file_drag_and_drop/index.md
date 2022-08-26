@@ -62,18 +62,18 @@ function dropHandler(ev) {
 
   if (ev.dataTransfer.items) {
     // Use DataTransferItemList interface to access the file(s)
-    for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+    [...ev.dataTransfer.items].forEach((item, i) => {
       // If dropped items aren't files, reject them
-      if (ev.dataTransfer.items[i].kind === 'file') {
-        const file = ev.dataTransfer.items[i].getAsFile();
+      if (item.kind === 'file') {
+        const file = item.getAsFile();
         console.log(`… file[${i}].name = ${file.name}`);
       }
-    }
+    });
   } else {
     // Use DataTransfer interface to access the file(s)
-    for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log(`… file[${i}].name = ${ev.dataTransfer.files[i].name}`);
-    }
+    [...ev.dataTransfer.files].forEach((file, i) => {
+      console.log(`… file[${i}].name = ${file.name}`);
+    });
   }
 }
 ```
@@ -95,4 +95,4 @@ function dragOverHandler(ev) {
 
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

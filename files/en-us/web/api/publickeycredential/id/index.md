@@ -51,14 +51,14 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const id = newCredentialInfo.id;
     // Do something with the id
 
     // send attestation response and client extensions
     // to the server to proceed with the registration
     // of the credential
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```

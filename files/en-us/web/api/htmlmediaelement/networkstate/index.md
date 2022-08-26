@@ -41,7 +41,7 @@ still loading data.
 ```js
 const obj = document.getElementById('example');
 
-obj.addEventListener('playing', function() {
+obj.addEventListener('playing', () => {
 
   if (obj.networkState === 2) {
     // Still loading…

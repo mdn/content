@@ -78,9 +78,9 @@ You can now "query" the document with XPath expressions. Although walking the DO
 
 ```js
 // display the last names of all people in the doc
-const results = evaluateXPath(people, "//person/@last-name");
+let results = evaluateXPath(people, "//person/@last-name");
 for (const i in results)
-  console.log("Person #" + i + " has the last name " + results[i].value);
+  console.log(`Person #${i} has the last name ${results[i].value}`);
 
 // get the 2nd person node
 results = evaluateXPath(people, "/people/person[2]");
@@ -140,11 +140,11 @@ function getXPathForElement(el, xml) {
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI === null ? '' : el.namespaceURI)}'][${pos}]/${xpath}`;
+    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}'][${pos}]/${xpath}`;
 
     el = el.parentNode;
   }
-  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${el.namespaceURI === null ? '' : el.namespaceURI}']/${xpath}`;
+  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}']/${xpath}`;
   xpath = xpath.replace(/\/$/, '');
   return xpath;
 }

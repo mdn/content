@@ -27,7 +27,14 @@ new AsyncGeneratorFunction(functionBody)
 new AsyncGeneratorFunction(arg0, functionBody)
 new AsyncGeneratorFunction(arg0, arg1, functionBody)
 new AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+
+AsyncGeneratorFunction(functionBody)
+AsyncGeneratorFunction(arg0, functionBody)
+AsyncGeneratorFunction(arg0, arg1, functionBody)
+AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
 
 ### Parameters
 
@@ -83,5 +90,5 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 - {{jsxref("Global_Objects/Generator", "Generator")}}
 - {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}}
 - {{jsxref("Global_Objects/AsyncFunction", "AsyncFunction")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 - {{jsxref("Functions", "Functions", "", 1)}}

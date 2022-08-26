@@ -51,7 +51,6 @@ In the following example, the client area has a white background and a 24px blac
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);

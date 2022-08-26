@@ -59,18 +59,17 @@ This example gets the current window and logs the URLs of the tabs it contains. 
 
 ```js
 function logTabs(windowInfo) {
-  for (tabInfo of windowInfo.tabs) {
+  for (const tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.get(tab.windowId, {populate: true});
-  getting.then(logTabs, onError);
+  browser.windows.get(tab.windowId, { populate: true }).then(logTabs, onError);
 });
 ```
 

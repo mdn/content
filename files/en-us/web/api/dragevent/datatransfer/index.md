@@ -15,7 +15,7 @@ browser-compat: api.DragEvent.dataTransfer
 The **`DragEvent.dataTransfer`** property holds the drag
 operation's data (as a {{domxref("DataTransfer")}} object).
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 
@@ -31,7 +31,7 @@ function processData(d) {
    // Process the data …
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
+dragTarget.addEventListener("dragend", (ev) => {
    // Call the drag and drop data processor
    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
  }, false);

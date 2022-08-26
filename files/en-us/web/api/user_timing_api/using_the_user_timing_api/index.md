@@ -38,8 +38,9 @@ function create_marks(ev) {
     do_work(50000);
     performance.mark("mark-2");
     const marks = ["mark-1", "mark-2", "mark-2"];
-    for (let i=0; i < marks.length; i++)
-      log(`... Created mark = ${marks[i]}`, 0);
+    marks.forEach((mark) => {
+      log(`... Created mark = ${mark}`, 0);
+    });
   }
 }
 ```
@@ -59,31 +60,31 @@ function display_marks(ev) {
   // Display each mark using getEntries()
   let entries = performance.getEntries();
   let j=0;
-  for (let i = 0; i < entries.length; i++) {
-    if (entries[i].entryType === "mark") {
+  entries.forEach((entry, i) => {
+    if (entry.entryType === "mark") {
       if (j === 0) { log("= getEntries()", 0); j++ }
-      log(`... [${i}] = ${entries[i].name}`, 0);
-    }
-  }
+      log(`... [${i}] = ${entry.name}`, 0);
+    };
+  });
 
   // Display each mark using getEntriesByType()
   entries = performance.getEntriesByType("mark");
-  for (let i = 0; i < entries.length; i++) {
+  entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByType('mark')", 0);
-    log(`... [${i}] = ${entries[i].name}`, 0);
-  }
+    log(`... [${i}] = ${entry.name}`, 0);
+  });
 
   // Display each mark using getEntriesName(); must look for each mark separately
   entries = performance.getEntriesByName("mark-1","mark");
-  for (let i = 0; i < entries.length; i++) {
+  entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByName('mark-1', 'mark')", 0);
-    log(`... ${entries[i].name}`, 0);
-  }
+    log(`... ${entry.name}`, 0);
+  });
   entries = performance.getEntriesByName("mark-2","mark");
-  for (let i = 0; i < entries.length; i++) {
+  entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByName('mark-2', 'mark')", 0);
-    log(`... ${entries[i].name}`, 0);
-  }
+    log(`... ${entry.name}`, 0);
+  });
 }
 ```
 
@@ -141,12 +142,13 @@ function create_measures(ev) {
 
   // Log the marks and measures
   const marks = ["mark-A", "mark-B", "mark-C", "mark-D"];
-  for (let i = 0; i < marks.length; i++)
-    log(`... Created mark = ${marks[i]}`, 1);
+  marks.forEach((mark) => {
+    log(`... Created mark = ${mark}`, 1);
+  });
   const measures = ["measures-1", "measures-2"];
-  for (let i = 0; i < measures.length; i++)
-    log(`... Created measure = ${measures[i]}`, 1);
-
+  measures.forEach((measure) => {
+    log(`... Created measure = ${measure}`, 1);
+  });
 }
 ```
 
@@ -165,31 +167,31 @@ function display_measures(ev) {
   // Display each measure using getEntries()
   let entries = performance.getEntries();
   let j=0;
-  for (let i = 0; i < entries.length; i++) {
-    if (entries[i].entryType === "measure") {
+  entries.forEach((entry, i) => {
+    if (entry.entryType === "measure") {
       if (j === 0) { log("= getEntries()", 1); j++ }
-      log(`... [${i}] = ${entries[i].name}`, 1);
+      log(`... [${i}] = ${entry.name}`, 1);
     }
-  }
+  });
 
   // Display each measure using getEntriesByType
   entries = performance.getEntriesByType("measure");
-  for (let i = 0; i < entries.length; i++) {
+  entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByType('measure')", 1);
-    log(`... [${i}] = ${entries[i].name}`, 1);
-  }
+    log(`... [${i}] = ${entry.name}`, 1);
+  });
 
   // Display each measure using getEntriesName() - have to look for each measure separately
   entries = performance.getEntriesByName("measure-1","measure");
-  for (let i = 0; i < entries.length; i++) {
+  entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByName('measure-1', 'measure')", 1);
-    log(`... ${entries[i].name}`, 1);
-  }
+    log(`... ${entry.name}`, 1);
+  });
   entries = performance.getEntriesByName("measure-2","measure");
-  for (let i = 0; i < entries.length; i++) {
+  entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByName('measure-2', 'measure')", 1);
-    log(`... ${entries[i].name}`, 1);
-  }
+    log(`... ${entry.name}`, 1);
+  });
 }
 ```
 

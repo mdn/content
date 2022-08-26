@@ -5,7 +5,6 @@ tags:
   - Deprecated
   - Element
   - HTML
-  - HTML5
   - Navigation
   - Navigation Menus
   - Reference
@@ -139,4 +138,4 @@ Not part of any current specifications.
 
 ## See also
 
-- [HTML5 context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)
+- [HTML context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)

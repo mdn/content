@@ -18,21 +18,21 @@ The **`try...catch`** statement is comprised of a `try` block and either a `catc
 
 ```js
 try {
-  try_statements
-} catch (exception_var) {
-  catch_statements
+  tryStatements
+} catch (exceptionVar) {
+  catchStatements
 } finally {
-  finally_statements
+  finallyStatements
 }
 ```
 
-- `try_statements`
+- `tryStatements`
   - : The statements to be executed.
-- `catch_statements`
+- `catchStatements`
   - : Statement that is executed if an exception is thrown in the `try`-block.
-- `exception_var` {{optional_inline}}
-  - : An optional identifier to hold the caught exception for the associated `catch` block. If the `catch` block does not utilize the exception's value, you can omit the `exception_var` and its surrounding parentheses, as `catch {...}`.
-- `finally_statements`
+- `exceptionVar` {{optional_inline}}
+  - : An optional identifier to hold the caught exception for the associated `catch` block. If the `catch` block does not utilize the exception's value, you can omit the `exceptionVar` and its surrounding parentheses, as `catch {...}`.
+- `finallyStatements`
   - : Statements that are executed before control flow exits the `try...catch...finally` construct. These statements execute regardless of whether an exception was thrown or caught.
 
 ## Description
@@ -128,7 +128,7 @@ try {
 ### The exception identifier
 
 When an exception is thrown in the `try`-block,
-_`exception_var`_ (i.e., the `e` in `catch (e)`)
+`exception_var` (i.e., the `e` in `catch (e)`)
 holds the exception value. You can use this identifier to get information about the
 exception that was thrown. This identifier is only available in the
 `catch`-block's {{Glossary("Scope", "scope")}}. If you don't need the

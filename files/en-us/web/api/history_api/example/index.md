@@ -19,8 +19,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         ob_start();
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -67,8 +67,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         ob_start();
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -114,8 +114,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         echo json_encode(array("page" => $page_title, "content" => $page_content));
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -184,9 +184,9 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 
 **include/header.php**:
 
-```php
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="js/ajax_nav.js"></script>
+```html
+<meta charset="UTF-8" />
+<script src="js/ajax_nav.js"></script>
 <link rel="stylesheet" href="css/style.css" />
 ```
 
@@ -207,7 +207,7 @@ const ajaxRequest = new (function () {
 
     /* not customizable constants */
     const searchRegex = /\?.*$/;
-    const hostRegex = /^[^\?]*\?*&*/;
+    const hostRegex = /^[^?]*\?*&*/;
     const viewRegex = new RegExp(`&${viewKey}\\=[^&]*|&*$`, "i");
     const endQstMarkRegex = /\?$/;
     const loadingBox = document.createElement("div");
@@ -407,7 +407,7 @@ const ajaxRequest = new (function () {
     cover.appendChild(loadingImg);
     loadingBox.appendChild(cover);
 
-    onpopstate = function (event) {
+    onpopstate = (event) => {
         updateURL = false;
         pageInfo.title = event.state.title;
         pageInfo.url = event.state.url;

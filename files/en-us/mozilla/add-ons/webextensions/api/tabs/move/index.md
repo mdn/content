@@ -73,7 +73,7 @@ function firstToLast(windowInfo) {
   moving.then(onMoved, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingCurrent = browser.windows.getCurrent({populate: true});
   gettingCurrent.then(firstToLast, onError);
 });
@@ -96,7 +96,7 @@ function moveMoz(tabs) {
   moving.then(onMoved, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
   gettingMozTabs.then(moveMoz, onError);
 });
@@ -120,7 +120,7 @@ function moveMoz(tabs) {
   moving.then(onMoved, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
   gettingMozTabs.then(moveMoz, onError);
 });

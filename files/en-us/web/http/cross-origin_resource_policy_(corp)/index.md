@@ -34,7 +34,7 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
 - `cross-origin`
   - : Requests from any _{{Glossary("origin")}}_ (both same-site and cross-site) can read the resource. This is useful when COEP is used (see below).
 
-```
+```http
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 

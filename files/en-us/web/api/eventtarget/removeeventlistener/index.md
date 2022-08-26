@@ -128,11 +128,7 @@ const mouseOverTarget = document.getElementById('mouse-over-target')
 
 let toggle = false;
 function makeBackgroundYellow() {
-  if (toggle) {
-    body.style.backgroundColor = 'white';
-  } else {
-    body.style.backgroundColor = 'yellow';
-  }
+  body.style.backgroundColor = toggle ? 'white' : 'yellow';
 
   toggle = !toggle;
 }
@@ -142,7 +138,7 @@ clickTarget.addEventListener('click',
   false
 );
 
-mouseOverTarget.addEventListener('mouseover', function () {
+mouseOverTarget.addEventListener('mouseover', () => {
   clickTarget.removeEventListener('click',
     makeBackgroundYellow,
     false

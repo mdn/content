@@ -22,7 +22,7 @@ Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opp
 ```js
 myFunction(a, ...iterableObj, b)
 [1, ...iterableObj, '4', 'five', 6]
-({ ...obj, key: 'value' })
+{ ...obj, key: 'value' }
 ```
 
 ## Description
@@ -99,8 +99,7 @@ const d = new Date(...dateFields);
 Without spread syntax, to create a new array using an existing array as one part of it,
 the array literal syntax is no longer sufficient and imperative code must be used
 instead using a combination of {{jsxref("Array.prototype.push", "push()")}},
-{{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat",
-   "concat()")}}, etc. With spread syntax this becomes much more succinct:
+{{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax this becomes much more succinct:
 
 ```js
 const parts = ['shoulders', 'knees'];
@@ -217,7 +216,7 @@ const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
 // Nothing is logged; spread.foo is 1
 ```
 
-You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spread operator:
+You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spreading:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };
@@ -231,7 +230,7 @@ const mergedObj2 = merge({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread operator, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
+In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread syntax, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };

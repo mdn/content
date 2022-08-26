@@ -12,7 +12,6 @@
   },
   "MD013": false,
   "MD014": false,
-  "MD023": false,
   "MD024": false,
   "MD025": {
     "front_matter_title": "^\\s*title\\s*[:=]"
@@ -101,5 +100,7 @@
     "style": "fenced"
   },
   "MD049": false,
-  "MD050": false
+  "MD050": false,
+  "MD051": false,
+  "MD052": false
 }

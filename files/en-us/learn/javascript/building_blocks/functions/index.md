@@ -184,7 +184,7 @@ If no parameter is included to specify a joining/delimiting character, a comma i
 If you're writing a function and want to support optional parameters, you can specify default values by adding `=` after the name of the parameter, followed by the default value:
 
 ```js
-function hello(name='Chris') {
+function hello(name = 'Chris') {
   console.log(`Hello ${name}!`);
 }
 
@@ -205,9 +205,9 @@ function myFunction() {
 But you can also create a function that doesn't have a name:
 
 ```js
-function() {
+(function () {
   alert('hello');
-}
+})
 ```
 
 This is called an **anonymous function**, because it has no name. You'll often see anonymous functions when a function expects to receive another function as a parameter. In this case the function parameter is often passed as an anonymous function.
@@ -358,7 +358,7 @@ Keeping parts of your code locked away in functions avoids such problems, and is
 
 It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures, and only have access to the things inside their enclosures — in the same manner as the function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
 
-![](mdn-mozilla-zoo.png)
+![Four different animals enclosed in their respective habitat in a Zoo](mdn-mozilla-zoo.png)
 
 The zoo keeper is like the global scope — they have the keys to access every enclosure, to restock food, tend to sick animals, etc.
 
@@ -454,7 +454,7 @@ Let's look at a real example to demonstrate scoping.
 
     This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
-> **Note:** The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if() { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> **Note:** The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
 > **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 

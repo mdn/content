@@ -268,8 +268,7 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 - `arg1, arg2, ... argN`
   - : Zero or more names to be used by the function as formal argument names. Each must
     be a string that conforms to the rules for a valid JavaScript identifier or a list
-    of such strings separated with a comma; for example "`x`",
-    "`theValue`", or "`a,b`".
+    of such strings separated with a comma; for example `"x"`, `"theValue"`, or `"a,b"`.
 - `functionBody`
   - : A string containing the JavaScript statements comprising the function definition.
 
@@ -294,15 +293,12 @@ For more details, see [rest parameters](/en-US/docs/Web/JavaScript/Reference/Fun
 You can refer to a function's arguments within the function by using the
 `arguments` object. See [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments):
-  An array-like object containing the arguments passed to the currently executing
-  function.
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+  - : An array-like object containing the arguments passed to the currently executing function.
 - [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-  : The currently executing function.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller)
-  : The function that invoked the currently executing function.
-- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length):
-  The number of arguments passed to the function.
+  - : The currently executing function.
+- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length)
+  - : The number of arguments passed to the function.
 
 ## Defining method functions
 
@@ -321,9 +317,7 @@ The syntax for defining getters and setters uses the object literal syntax.
 
 ### Method definition syntax
 
-Starting with ECMAScript 2015, you are able to define own methods in a shorter syntax,
-similar to the getters and setters.
-See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
+In object literals, you are able to define own methods in a shorter syntax, similar to the getters and setters. See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
 const obj = {
@@ -380,37 +374,34 @@ body. Attempting to use it outside the function's body results in an error (or g
 
 ```js
 const y = function x() {};
-alert(x); // throws an error
+console.log(x); // ReferenceError: x is not defined
 ```
 
-The function name also appears when the function is serialized via
-[`Function`'s toString method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
+The function name also appears when the function is serialized via its
+[`toString()` method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
 
 On the other hand, the variable the function is assigned to is limited only by its
 scope, which is guaranteed to include the scope in which the function is declared.
 
-As the 4th example shows, the function name can be different from the variable the
+As the `const y = function x() {}` example shows, the function name can be different from the variable the
 function is assigned to. They have no relation to each other. A function declaration
 also creates a variable with the same name as the function name. Thus, unlike those
 defined by function expressions, functions defined by function declarations can be
-accessed by their name in the scope they were defined in:
+accessed by their name in the scope they were defined in, as well as in their own body.
 
-A function defined by `new Function` does not have a function name.
-However, the serialized form of the function shows as if it has the name "anonymous".
-For example, `alert(new Function())` outputs:
+A function defined by `new Function` will dynamically have its source assembled, which is observable when you serialize it. For example, `console.log(new Function().toString())` gives:
 
 ```js
-function anonymous() {
+function anonymous(
+) {
+
 }
 ```
 
-Since the function actually does not have a name, `anonymous` is not a
-variable that can be accessed within the function. For example, the following would
-result in an error:
+This is the actual source used to compile the function. However, although the `Function()` constructor will create the function with name `anonymous`, this name is not added to the scope of the body. The body only ever has access to global variables. For example, the following would result in an error:
 
 ```js
-const foo = new Function("alert(anonymous);");
-foo();
+new Function("alert(anonymous);")();
 ```
 
 Unlike functions defined by function expressions or by the `Function`
@@ -472,16 +463,16 @@ once, while those defined by the `Function` constructor are not. That is,
 the function body string passed to the `Function` constructor must be parsed
 each and every time the constructor is called. Although a function expression creates a
 closure every time, the function body is not reparsed, so function expressions are
-still faster than "`new Function(...)`". Therefore the `Function`
+still faster than `new Function(...)`. Therefore the `Function`
 constructor should generally be avoided whenever possible.
 
 It should be noted, however, that function expressions and function declarations nested
-within the function generated by parsing a `Function constructor` 's string
+within the function generated by parsing a `Function()` constructor's string
 aren't parsed repeatedly. For example:
 
 ```js
-const foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
-foo(); // The segment "function() {\n\talert(bar);\n}" of the function body string is not re-parsed.
+const foo = (new Function("const bar = 'FOO!'; return function() { alert(bar); };"))();
+foo(); // The segment "function() { alert(bar); }" of the function body string is not re-parsed.
 ```
 
 A function declaration is very easily (and often unintentionally) turned into a
@@ -610,7 +601,7 @@ function padZeros(num, totalLen) {
   let numStr = num.toString();             // Initialize return value as string
   const numZeros = totalLen - numStr.length; // Calculate no. of zeros
   for (let i = 1; i <= numZeros; i++) {
-    numStr = "0" + numStr;
+    numStr = `0${numStr}`;
   }
   return numStr;
 }

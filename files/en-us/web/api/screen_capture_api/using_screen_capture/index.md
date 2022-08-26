@@ -36,7 +36,7 @@ async function startCapture(displayMediaOptions) {
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+  } catch (err) {
     console.error(`Error: ${err}`);
   }
   return captureStream;
@@ -184,11 +184,11 @@ const displayMediaOptions = {
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
+startElem.addEventListener("click", (evt) => {
   startCapture();
 }, false);
 
-stopElem.addEventListener("click", function(evt) {
+stopElem.addEventListener("click", (evt) => {
   stopCapture();
 }, false);
 ```
@@ -217,7 +217,7 @@ async function startCapture() {
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
-  } catch(err) {
+  } catch (err) {
     console.error(`Error: ${err}`);
   }
 }
@@ -324,7 +324,7 @@ In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) 
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-```
+```http
 Feature-Policy: display-capture 'self'
 ```
 

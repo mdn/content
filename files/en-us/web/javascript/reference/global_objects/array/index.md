@@ -145,14 +145,14 @@ const fruits = ['Apple', 'Banana'];
 console.log(fruits.length);
 // 2
 
-// 'fruits' array created using the Array() constructor.
-const fruits = new Array('Apple', 'Banana');
-console.log(fruits.length);
+// 'fruits2' array created using the Array() constructor.
+const fruits2 = new Array('Apple', 'Banana');
+console.log(fruits2.length);
 // 2
 
-// 'fruits' array created using String.prototype.split().
-const fruits = 'Apple, Banana'.split(', ');
-console.log(fruits.length);
+// 'fruits3' array created using String.prototype.split().
+const fruits3 = 'Apple, Banana'.split(', ');
+console.log(fruits3.length);
 // 2
 ```
 
@@ -191,7 +191,7 @@ fruits[99]; // undefined
 
 ### Find the index of an item in an array
 
-This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array.
+This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string `"Banana"` in the `fruits` array.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -201,7 +201,7 @@ console.log(fruits.indexOf('Banana'));
 
 ### Check if an array contains a certain item
 
-This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
+This example shows two ways to check if the `fruits` array contains `"Banana"` and `"Cherry"`: first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -315,7 +315,7 @@ console.log(newLength);
 
 ### Remove a single item by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`".
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string `"Banana"` from the `fruits` array — by specifying the index position of `"Banana"`.
 
 ```js
 const fruits = ['Strawberry', 'Banana', 'Mango'];
@@ -330,7 +330,7 @@ console.log(removedItems);
 
 ### Remove multiple items by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings "`Banana`" and "`Strawberry`" from the `fruits` array — by specifying the index position of "`Banana`", along with a count of the number of total items to remove.
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings `"Banana"` and `"Strawberry"` from the `fruits` array — by specifying the index position of `"Banana"`, along with a count of the number of total items to remove.
 
 ```js
 const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
@@ -420,11 +420,11 @@ const fruitsCopy = [...fruits];
 // ["Strawberry", "Mango"]
 
 // Create a copy using the from() method.
-const fruitsCopy = Array.from(fruits);
+const fruitsCopy2 = Array.from(fruits);
 // ["Strawberry", "Mango"]
 
 // Create a copy using the slice() method.
-const fruitsCopy = fruits.slice();
+const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
@@ -463,7 +463,7 @@ const inventory = [
   { name: 'bananas',  type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
-  { name: 'fish', type: 'meat' }
+  { name: 'fish', type: 'meat' },
 ];
 ```
 
@@ -474,8 +474,8 @@ The result is an object that has properties named after the unique strings retur
 Each property is assigned an array containing the elements in the group.
 
 ```js
-let result = inventory.group(({ type }) => type);
-console.log(result.vegetables)
+const result = inventory.group(({ type }) => type);
+console.log(result.vegetables);
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
 
@@ -502,7 +502,7 @@ const board = [
   ['p','p','p','p','p','p','p','p'],
   ['r','n','b','q','k','b','n','r'] ];
 
-console.log(board.join('\n') + '\n\n');
+console.log(`${board.join('\n')}\n\n`);
 
 // Move King's Pawn forward 2
 board[4][4] = board[6][4];
@@ -567,7 +567,7 @@ Results in
 
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
 
-```js
+```js example-bad
 console.log(arr.0); // a syntax error
 ```
 
@@ -626,9 +626,9 @@ This is explained further on the {{jsxref("Array.length")}} page.
 
 ### Creating an array using the result of a match
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}}.
 
-To help explain these properties and elements, see the following example and then refer to the table below:
+For example:
 
 ```js
 // Match one d followed by one or more b's followed by one d
@@ -636,50 +636,14 @@ To help explain these properties and elements, see the following example and the
 // Ignore case
 
 const myRe = /d(b+)(d)/i;
-const myArray = myRe.exec('cdbBdbsbz');
+const execResult = myRe.exec('cdbBdbsbz');
+
+console.log(execResult.input); // 'cdbBdbsbz'
+console.log(execResult.index); // 1
+console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
 ```
 
-The properties and elements returned from this match are as follows:
-
-<table class="fullwidth-table standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">Property/Element</th>
-      <th class="header" scope="col">Description</th>
-      <th class="header" scope="col">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>input</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        The original string against which the regular expression was matched.
-      </td>
-      <td><code>"cdbBdbsbz"</code></td>
-    </tr>
-    <tr>
-      <td><code>index</code><br />{{ReadOnlyInline}}</td>
-      <td>The zero-based index of the match in the string.</td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>[0]</code><br />{{ReadOnlyInline}}</td>
-      <td>The last matched characters.</td>
-      <td><code>"dbBd"</code></td>
-    </tr>
-    <tr>
-      <td><code>[1], …[n]</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        Elements that specify the parenthesized substring matches (if included)
-        in the regular expression. The number of possible parenthesized
-        substrings is unlimited.
-      </td>
-      <td>
-        <code>[1]: "bB"<br />[2]: "d"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
 
 ## Specifications
 

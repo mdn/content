@@ -51,7 +51,7 @@ if (configuration.certificates?.length === 0) {
       hash: 'SHA-256',
       modulusLength: 2048,
       publicExponent: new Uint8Array([1, 0, 1])
-  }).then(function(cert) {
+  }).then((cert) => {
     configuration.certificates = [cert];
     myPeerConnection.setConfiguration(configuration);
   });

@@ -20,7 +20,7 @@ of the title bar area in desktop Progressive Web Apps, and an event to know when
 
 ## Properties
 
-- {{domxref("WindowControlsOverlay.visible")}} {{readonlyInline}}
+- {{domxref("WindowControlsOverlay.visible")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
 ## Methods

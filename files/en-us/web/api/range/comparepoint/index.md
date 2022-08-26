@@ -6,13 +6,12 @@ tags:
   - API
   - DOM
   - DOM Reference
-  - Experimental
   - Method
   - Range
   - Reference
 browser-compat: api.Range.comparePoint
 ---
-{{ApiRef("DOM")}} {{SeeCompatTable}}
+{{ApiRef("DOM")}}
 
 The **`Range.comparePoint()`** method returns `-1`,
 `0`, or `1` depending on whether the `referenceNode` is

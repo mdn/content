@@ -112,25 +112,23 @@ A good way to visualize these nodes is by drawing an audio graph so you can visu
 Now we can add the play and pause functionality.
 
 ```js
-// select our play button
+// Select our play button
 const playButton = document.querySelector('button');
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === 'suspended') {
+    audioContext.resume();
+  }
 
-    // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
-    }
-
-    // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
-    }
-
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === 'false') {
+    audioElement.play();
+    playButton.dataset.playing = 'true';
+  } else if (playButton.dataset.playing === 'true') {
+    audioElement.pause();
+    playButton.dataset.playing = 'false';
+  }
 }, false);
 ```
 
@@ -138,7 +136,7 @@ We also need to take into account what to do when the track finishes playing. Ou
 
 ```js
 audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
+  playButton.dataset.playing = 'false';
 }, false);
 ```
 
@@ -162,7 +160,7 @@ This will make our audio graph look like this:
 
 ![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](graph2.jpg)
 
-The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in Javascript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
+The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in JavaScript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
 Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
 
@@ -177,8 +175,8 @@ So let's grab this input's value and update the gain value when the input node h
 ```js
 const volumeControl = document.querySelector('#volume');
 
-volumeControl.addEventListener('input', function() {
-    gainNode.gain.value = this.value;
+volumeControl.addEventListener('input', () => {
+  gainNode.gain.value = volumeControl.value;
 }, false);
 ```
 
@@ -220,8 +218,8 @@ We use the values from that input to adjust our panner values in the same way as
 ```js
 const pannerControl = document.querySelector('#panner');
 
-pannerControl.addEventListener('input', function() {
-    panner.pan.value = this.value;
+pannerControl.addEventListener('input', () => {
+  panner.pan.value = pannerControl.value;
 }, false);
 ```
 

@@ -29,7 +29,7 @@ Let us dive straight in with a simple example. Take a look at the following code
 
 Copy the code and paste it in a file demo1.svg. Then open the file in Firefox. It will render as shown in the following screenshot. (Firefox users: click [here](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
-![](svgdemo1.png)
+![Red background composed of a centered green circle. White text centered inside the circle is SVG.](svgdemo1.png)
 
 The rendering process involves the following:
 
@@ -76,14 +76,14 @@ Due to the potentially massive size SVG files can reach when used for some appli
 
 Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP headers:
 
-```
+```http
 Content-Type: image/svg+xml
 Vary: Accept-Encoding
 ```
 
 For gzip-compressed SVG files, servers should send the HTTP headers:
 
-```
+```http
 Content-Type: image/svg+xml
 Content-Encoding: gzip
 Vary: Accept-Encoding

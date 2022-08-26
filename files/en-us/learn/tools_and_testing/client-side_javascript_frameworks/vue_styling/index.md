@@ -100,7 +100,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
 }
 button::-moz-focus-inner {
   border: 0;
@@ -374,8 +374,6 @@ Next, copy the following CSS into the newly created `<style>` element:
   padding: 5px;
   border: 2px solid #0b0c0c;
   border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .custom-checkbox > input:focus {
@@ -465,6 +463,15 @@ Next, copy the following CSS into the newly created `<style>` element:
 Now we need to add some CSS classes to our template to connect the styles.
 
 To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
+
+```html
+<template>
+  <div class="custom-checkbox">
+    <input type="checkbox" :id="id" :checked="isDone" class="checkbox" />
+    <label :for="id" class="checkbox-label">\{{label}}</label>
+  </div>
+</template>
+```
 
 The app should now have custom checkboxes. Your app should look something like the screenshot below.
 

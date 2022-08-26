@@ -79,9 +79,9 @@ _doesn't_ ordinarily throw in case of failure, such as
 
 ```js
 const handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
 const newProto = {}, target = {};
@@ -99,9 +99,9 @@ failure, or you want to throw a custom exception value.
 
 ```js
 const handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error('custom error');
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error('custom error');
+  },
 };
 
 const newProto = {}, target = {};
@@ -122,6 +122,6 @@ Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}

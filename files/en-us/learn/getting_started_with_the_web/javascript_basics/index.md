@@ -55,7 +55,9 @@ However, getting comfortable with JavaScript is more challenging than getting co
     myHeading.textContent = 'Hello world!';
     ```
 
-5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:![](hello-world.png)
+5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:!
+
+[Heading "hello world" above a firefox logo](hello-world.png)
 
 > **Note:** The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
 >
@@ -218,7 +220,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
         <code
-          >9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
+>9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
         >
       </td>
     </tr>
@@ -280,14 +282,14 @@ Conditionals are code structures used to test if an expression returns true or n
 
 ```js
 let iceCream = 'chocolate';
-if(iceCream === 'chocolate') {
+if (iceCream === 'chocolate') {
   alert('Yay, I love chocolate ice cream!');
 } else {
   alert('Awwww, but chocolate is my favorite…');
 }
 ```
 
-The expression inside the `if()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if ()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
 
 ### Functions
 
@@ -331,7 +333,7 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
+document.querySelector('html').addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -341,7 +343,7 @@ There are many ways to attach an event handler to an element. Here we select the
 Note that
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
+document.querySelector('html').addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -350,14 +352,14 @@ is equivalent to
 
 ```js
 let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function() {
+myHTML.addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
 
 It's just shorter.
 
-The functions we just passed to `addEventListener()` here are called *anonymous functions*, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an *arrow function*. An arrow function uses `() =>` instead of `function ()`:
+The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
 
 ```js
 document.querySelector('html').addEventListener('click', () => {
@@ -381,15 +383,15 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 4. Add the following JavaScript code to your `main.js` file.
 
     ```js
-    let myImage = document.querySelector('img');
+    const myImage = document.querySelector('img');
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute('src','images/firefox-icon.png');
-        }
+    myImage.onclick = () => {
+      const mySrc = myImage.getAttribute('src');
+      if (mySrc === 'images/firefox-icon.png') {
+        myImage.setAttribute('src','images/firefox2.png');
+      } else {
+        myImage.setAttribute('src','images/firefox-icon.png');
+      }
     }
     ```
 
@@ -424,9 +426,9 @@ Next, let's change the page title to a personalized welcome message when the use
 
     ```js
     function setUserName() {
-      let myName = prompt('Please enter your name.');
+      const myName = prompt('Please enter your name.');
       localStorage.setItem('name', myName);
-      myHeading.textContent = 'Mozilla is cool, ' + myName;
+      myHeading.textContent = `Mozilla is cool, ${myName}`;
     }
     ```
 
@@ -435,11 +437,11 @@ Next, let's change the page title to a personalized welcome message when the use
 4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
     ```js
-    if(!localStorage.getItem('name')) {
+    if (!localStorage.getItem('name')) {
       setUserName();
     } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla is cool, ' + storedName;
+      const storedName = localStorage.getItem('name');
+      myHeading.textContent = `Mozilla is cool, ${storedName}`;
     }
     ```
 
@@ -448,7 +450,7 @@ Next, let's change the page title to a personalized welcome message when the use
 5. Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 
     ```js
-    myButton.onclick = function() {
+    myButton.onclick = () => {
       setUserName();
     }
     ```
@@ -463,12 +465,12 @@ To avoid these problems, you could check that the user hasn't entered a blank na
 
 ```js
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  const myName = prompt('Please enter your name.');
+  if (!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
 }
 ```
@@ -479,7 +481,7 @@ In human language, this means: If `myName` has no value, run `setUserName()` aga
 
 If you have followed all the instructions in this article, you should end up with a page that looks something like the image below. You can also [view our version](https://mdn.github.io/beginner-html-site-scripted/).
 
-![](website-screen-scripted.png)
+![Final look of HTML page after creating elements: a header, large centered logo, content, and a button](website-screen-scripted.png)
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 

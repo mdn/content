@@ -36,7 +36,7 @@ The value returned by this property depends on the performance entry's
   {{domxref("PerformanceEntry.startTime","startTime")}}
   {{domxref("DOMHighResTimeStamp","timestamp")}}.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 
@@ -81,15 +81,16 @@ function check_PerformanceEntry(obj) {
   const properties = ["name", "entryType", "startTime", "duration"];
   const methods = ["toJSON"];
 
-  for (let i=0; i < properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // check each property
     const supported = properties[i] in obj;
-    if (supported)
+    if (supported) {
       console.log(`…${properties[i]} = ${obj[properties[i]]}`);
-    else
+    } else {
       console.log(`…${properties[i]} = Not supported`);
+    }
   }
-  for (let i=0; i < methods.length; i++) {
+  for (let i = 0; i < methods.length; i++) {
     // check each method
     const supported = typeof obj[methods[i]] === "function";
     if (supported) {

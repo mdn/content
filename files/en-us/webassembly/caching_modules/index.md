@@ -45,14 +45,14 @@ The first helper function contained inside `instantiateCachedURL()` — `openDat
 ```js
   function openDatabase() {
     return new Promise((resolve, reject) => {
-      var request = indexedDB.open(dbName, dbVersion);
+      const request = indexedDB.open(dbName, dbVersion);
       request.onerror = reject.bind(null, 'Error opening wasm cache database');
       request.onsuccess = () => { resolve(request.result) };
       request.onupgradeneeded = (event) => {
-        var db = request.result;
+        const db = request.result;
         if (db.objectStoreNames.contains(storeName)) {
-            console.log(`Clearing out version ${event.oldVersion} wasm cache`);
-            db.deleteObjectStore(storeName);
+          console.log(`Clearing out version ${event.oldVersion} wasm cache`);
+          db.deleteObjectStore(storeName);
         }
         console.log(`Creating version ${event.newVersion} wasm cache`);
         db.createObjectStore(storeName)
@@ -68,14 +68,15 @@ Our next function — `lookupInDatabase()` — provides a simple promise-based o
 ```js
   function lookupInDatabase(db) {
     return new Promise((resolve, reject) => {
-      var store = db.transaction([storeName]).objectStore(storeName);
-      var request = store.get(url);
+      const store = db.transaction([storeName]).objectStore(storeName);
+      const request = store.get(url);
       request.onerror = reject.bind(null, `Error getting wasm module ${url}`);
       request.onsuccess = (event) => {
-        if (request.result)
+        if (request.result) {
           resolve(request.result);
-        else
+        } else {
           reject(`Module ${url} was not found in wasm cache`);
+        }
       }
     });
   }
@@ -87,8 +88,8 @@ Next, we define a function `storeInDatabase()` that fires off an async operation
 
 ```js
   function storeInDatabase(db, module) {
-    var store = db.transaction([storeName], 'readwrite').objectStore(storeName);
-    var request = store.put(module, url);
+    const store = db.transaction([storeName], 'readwrite').objectStore(storeName);
+    const request = store.put(module, url);
     request.onerror = (err) => { console.log(`Failed to store in wasm cache: ${err}`) };
     request.onsuccess = (err) => { console.log(`Successfully stored ${url} in wasm cache`) };
   }
@@ -150,9 +151,9 @@ With the above library function defined, getting a wasm module instance and usin
 const wasmCacheVersion = 1;
 
 instantiateCachedURL(wasmCacheVersion, 'test.wasm').then((instance) =>
-  console.log("Instance says the answer is: " + instance.exports.answer())
+  console.log(`Instance says the answer is: ${instance.exports.answer()}`)
 ).catch((err) =>
-  console.error("Failure to instantiate: " + err)
+  console.error(`Failure to instantiate: ${err}`)
 );
 ```
 

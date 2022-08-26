@@ -71,7 +71,7 @@ A **data descriptor** also has the following optional keys:
 
 - `value`
   - : The value associated with the property. Can be any valid JavaScript value (number,
-    object, function, etc).
+    object, function, etc.).
     **Defaults to {{jsxref("undefined")}}.**
 - `writable`
   - : `true` if the value associated with the property may be changed with an
@@ -128,7 +128,7 @@ function withValue(value) {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: value
+      value,
     }
   );
 
@@ -175,7 +175,7 @@ Object.defineProperty(o, 'a', {
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
-const bValue = 38;
+let bValue = 38;
 Object.defineProperty(o, 'b', {
   get() { return bValue; },
   set(newValue) { bValue = newValue; },
@@ -221,16 +221,16 @@ o.a = 25; // No error thrown
 console.log(o.a); // logs 37. The assignment didn't work.
 
 // strict mode
-(function() {
+(() => {
   'use strict';
   const o = {};
   Object.defineProperty(o, 'b', {
     value: 2,
-    writable: false
+    writable: false,
   });
   o.b = 3; // throws TypeError: "b" is read-only
   return o.b; // returns 2 without the line above
-}());
+})();
 ```
 
 As seen in the example, trying to write into the non-writable property doesn't change
@@ -413,17 +413,16 @@ In this example, a getter always returns the same value.
 
 ```js
 const pattern = {
-    get() {
-        return 'I always return this string, ' +
-               'whatever you have assigned';
-    },
-    set() {
-        this.myname = 'this is my name string';
-    }
+  get() {
+    return 'I always return this string, whatever you have assigned';
+  },
+  set() {
+    this.myname = 'this is my name string';
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, 'myproperty', pattern);
 }
 
 const instance = new TestDefineSetAndGet();
@@ -471,10 +470,10 @@ function MyClass() {
 
 Object.defineProperty(MyClass.prototype, "x", {
   get() {
-    return this.stored_x;
+    return this.storedX;
   },
   set(x) {
-    this.stored_x = x;
+    this.storedX = x;
   }
 });
 

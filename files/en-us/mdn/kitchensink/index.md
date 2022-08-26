@@ -362,5 +362,3 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 {{Non-standard_Header}}
 {{Deprecated_Header}}
 [![Iceberg pic](iceberg.jpg)](iceberg.jpg)
-
-`geckoRelease:` {{ geckoRelease("1.9.3") }}

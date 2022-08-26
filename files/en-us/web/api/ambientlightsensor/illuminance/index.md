@@ -12,6 +12,7 @@ tags:
   - Sensor APIs
   - Sensors
   - illuminance
+  - Experimental
 browser-compat: api.AmbientLightSensor.illuminance
 ---
 {{APIRef("Sensor API")}}{{SeeCompatTable}}

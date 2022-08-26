@@ -19,7 +19,7 @@ Events can be created with the [`Event`](/en-US/docs/Web/API/Event) constructor 
 const event = new Event('build');
 
 // Listen for the event.
-elem.addEventListener('build', function (e) { /* … */ }, false);
+elem.addEventListener('build', (e) => { /* … */ }, false);
 
 // Dispatch the event.
 elem.dispatchEvent(event);
@@ -42,7 +42,7 @@ This will then allow you to access the additional data in the event listener:
 
 ```js
 function eventHandler(e) {
-  console.log('The time is: ' + e.detail);
+  console.log(`The time is: ${e.detail}`);
 }
 ```
 
@@ -58,7 +58,7 @@ const event = document.createEvent('Event');
 event.initEvent('build', true, true);
 
 // Listen for the event.
-elem.addEventListener('build', function (e) {
+elem.addEventListener('build', (e) => {
   // e.target matches elem
 }, false);
 

@@ -28,7 +28,7 @@ function Default() {
 
 // A new reference of a Default object assigned to a
 // local variable defaultReference
-var defaultReference = new Default();
+const defaultReference = new Default();
 ```
 
 ## See also

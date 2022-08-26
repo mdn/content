@@ -274,13 +274,13 @@ When defining an object class, use UpperCamelCasing (also known as PascalCasing)
 When defining an object instance, either a literal or via a constructor, use lowerCamelCase for the instance name, like so:
 
 ```js example-good
-let hanSolo = new Person('Han Solo', 25, 'male');
+const hanSolo = new Person('Han Solo', 25, 'male');
 
-let hanSolo = {
-  name: 'Han Solo',
+const luke = {
+  name: 'Luke Skywalker',
   age: 25,
   gender: 'male'
-}
+};
 ```
 
 ### Object creation
@@ -323,7 +323,7 @@ Use `extends` for inheritance:
 
 ```js example-good
 class Teacher extends Person {
-  ...
+  // …
 }
 ```
 

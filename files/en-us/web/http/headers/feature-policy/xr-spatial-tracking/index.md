@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `xr-spatial-tracking` directive
 
 ## Syntax
 
-```
+```http
 Feature-Policy: xr-spatial-tracking <allowlist>;
 ```
 

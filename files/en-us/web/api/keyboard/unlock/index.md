@@ -10,6 +10,7 @@ tags:
   - Reference
   - keyboard
   - unLock
+  - Experimental
 browser-compat: api.Keyboard.unlock
 ---
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}

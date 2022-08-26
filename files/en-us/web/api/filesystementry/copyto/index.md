@@ -14,7 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.copyTo
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`copyTo()`** copies the file
@@ -73,8 +73,8 @@ This example shows how a temporary log file might be moved into a more permanent
 directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  workingDirectory.getDirectory("log", {}, function(dirEntry) {
+workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
+  workingDirectory.getDirectory("log", {}, (dirEntry) => {
     fileEntry.copyTo(dirEntry);
   }, handleError);
 }, handleError);

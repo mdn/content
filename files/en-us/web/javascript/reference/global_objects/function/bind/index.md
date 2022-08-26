@@ -23,7 +23,7 @@ is called.
 
 ```js
 bind(thisArg)
-bind(thisArg, arg1, …, argN)
+bind(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters
@@ -97,8 +97,8 @@ inserted at the start of the arguments passed to the target function, followed b
 whatever arguments are passed to the bound function at the time it is called.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+function list(...args) {
+  return args;
 }
 
 function addArguments(arg1, arg2) {
@@ -185,14 +185,10 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-//  not supported in the polyfill below,
-
-//  works fine with native bind:
-
-const YAxisPoint = Point.bind(null, 0/*x*/);
+let YAxisPoint = Point.bind(null, 0/*x*/);
 
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+YAxisPoint = Point.bind(emptyObj, 0/*x*/);
 
 const axisPoint = new YAxisPoint(5);
 axisPoint.toString();                    // '0,5'

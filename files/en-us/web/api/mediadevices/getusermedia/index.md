@@ -18,7 +18,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Media Capture and Streams")}}
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
@@ -329,14 +329,14 @@ For example, this line in the HTTP headers will enable use of a camera for the d
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
-```
+```http
 Feature-Policy: camera 'self'
 ```
 
 This will request access to the microphone for the current origin and the specific
 origin https\://developer.mozilla.org:
 
-```
+```http
 Feature-Policy: microphone 'self' https://developer.mozilla.org
 ```
 

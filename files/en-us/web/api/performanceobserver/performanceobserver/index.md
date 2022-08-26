@@ -27,7 +27,7 @@ new PerformanceObserver(callback)
 
 ### Parameters
 
-- _`callback`_
+- `callback`
   - : A `PerformanceObserverCallback` callback that will be invoked when
     _observed_ performance events are recorded. When the callback is invoked, its
     first parameter is a {{domxref("PerformanceObserverEntryList","list of performance
@@ -42,7 +42,7 @@ A new {{domxref("PerformanceObserver")}} object which will call the specified
 ## Examples
 
 ```js
-const observer = new PerformanceObserver(function(list, obj) {
+const observer = new PerformanceObserver((list, obj) => {
   const entries = list.getEntries();
   for (let i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events

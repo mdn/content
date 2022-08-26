@@ -6,7 +6,7 @@ tags:
   - 3D
   - Canvas
   - Graphics
-  - HTML5
+  - HTML
   - SVG
   - Web
   - WebGL
@@ -28,7 +28,7 @@ Websites and applications often need to present graphics, such as images. Static
 
 ## Video
 
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : Embedding video and/or audio in a web page and controlling its playback.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
   - : The RTC in WebRTC stands for Real-Time Communications, a technology that enables audio/video streaming and data sharing between browser clients (peers).

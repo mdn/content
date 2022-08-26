@@ -38,7 +38,7 @@ a dedicated process for the to-be-loaded document, for example.
 
 ## Syntax
 
-```
+```http
 Large-Allocation: 0
 Large-Allocation: <megabytes>
 ```
@@ -53,7 +53,7 @@ Large-Allocation: <megabytes>
 
 ## Examples
 
-```
+```http
 Large-Allocation: 0
 Large-Allocation: 500
 ```

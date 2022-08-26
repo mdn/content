@@ -11,16 +11,12 @@ tags:
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
+## Syntax
+
 ```js
 function FindProxyForURL(url, host) {
   // …
 }
-```
-
-## Syntax
-
-```js
-function FindProxyForURL(url, host)
 ```
 
 ### Parameters
@@ -73,17 +69,9 @@ If all proxies are down, and there was no DIRECT option specified, the browser w
 - `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
   - : Use SOCKS if the primary proxy goes down.
 
-The auto-config file should be saved to a file with a .pac filename extension:
+The auto-config file should be saved to a file with a .pac filename extension: `proxy.pac`.
 
-```html
-proxy.pac
-```
-
-And the MIME type should be set to:
-
-```html
-application/x-ns-proxy-autoconfig
-```
+And the MIME type should be set to `application/x-ns-proxy-autoconfig`.
 
 Next, you should configure your server to map the .pac filename extension to the MIME type.
 
@@ -206,9 +194,9 @@ Is true if the hostname matches _exactly_ the specified hostname, or if there is
 #### Examples
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org")  // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org")              // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org")   // false (domain name mismatch)
 localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
 ```
 
@@ -257,9 +245,11 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alertEval(str) {
+  alert(`${str} is ${eval(str)}`);
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
@@ -440,14 +430,14 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```html
+```
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```html
+```
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
@@ -491,7 +481,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```html
+```js
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -528,7 +518,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 #### Syntax
 
-```html
+```js
 alert(message)
 ```
 
@@ -542,7 +532,7 @@ Logs the message in the browser console.
 #### Examples
 
 ```js
-alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
+alert(`${host} = ${dnsResolve(host)}`);            // logs the host name and its IP address
 alert("Error: shouldn't reach this clause.");      // log a simple message
 ```
 
@@ -598,10 +588,10 @@ This example will work in an environment where the internal DNS server is set up
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
+  if (isResolvable(host)) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -615,9 +605,8 @@ function FindProxyForURL(url, host) {
     isResolvable(host)
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
   }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -629,10 +618,10 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -669,21 +658,15 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
+  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
     return "DIRECT";
-
-  else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.com")) {
+    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.edu")) {
+    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else {
+    return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  }
 }
 ```
 
@@ -695,22 +678,16 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (url.startsWith("http:"))
+  if (url.startsWith("http:")) {
     return "PROXY http-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("ftp:"))
+  } else if (url.startsWith("ftp:")) {
     return "PROXY ftp-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("gopher:"))
+  } else if (url.startsWith("gopher:")) {
     return "PROXY gopher-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("https:") || url.startsWith("snews:"))
+  } else if (url.startsWith("https:") || url.startsWith("snews:")) {
     return "PROXY security-proxy.mydomain.com:8080";
-
-  else
-    return "DIRECT";
-
+  }
+  return "DIRECT";
 }
 ```
 

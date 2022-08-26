@@ -80,6 +80,10 @@ For each pixel among the layers to which it is applied, a blend mode takes the c
 
 Changes between blend modes are not interpolated. Any change occurs immediately.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Example using "normal"

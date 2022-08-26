@@ -219,7 +219,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > - In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/en-US/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`.
     >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/Media_Queries), which are a superset of the allowed values of HTML 4.
-    > - Browsers not supporting [CSS3 Media Queries](/en-US/docs/Web/CSS/Media_Queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
+    > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/Media_Queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
 - {{HTMLAttrDef("prefetch")}} {{secureContext_inline}} {{experimental_inline}}
   - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
@@ -347,15 +347,15 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ```html
 <script>
-var myStylesheet = document.querySelector('#my-stylesheet');
+  const stylesheet = document.querySelector('#my-stylesheet');
 
-myStylesheet.onload = function() {
-  // Do something interesting; the sheet has been loaded
-}
+  stylesheet.onload = () => {
+    // Do something interesting; the sheet has been loaded
+  }
 
-myStylesheet.onerror = function() {
-  console.log("An error occurred loading the stylesheet!");
-}
+  stylesheet.onerror = () => {
+    console.log("An error occurred loading the stylesheet!");
+  }
 </script>
 
 <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">

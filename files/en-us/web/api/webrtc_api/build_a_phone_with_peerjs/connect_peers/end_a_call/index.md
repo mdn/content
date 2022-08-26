@@ -13,17 +13,17 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
 
     ```js
     const hangUpBtn = document.querySelector('.hangup-btn');
-    hangUpBtn.addEventListener('click', function (){
-        conn.close();
-        showCallContent();
+    hangUpBtn.addEventListener('click', () => {
+      conn.close();
+      showCallContent();
     })
     ```
 
-2. When the connection has been closed, you also want to display the correct HTML content so you can just call your `showCallContent()` function. Within the `call` event, you also want to ensure the remote browser is updated. To achieve this, add another event listener within the `peer.on('call', function(stream){ }` event listener, within the conditional block.
+2. When the connection has been closed, you also want to display the correct HTML content so you can just call your `showCallContent()` function. Within the `call` event, you also want to ensure the remote browser is updated. To achieve this, add another event listener within the `peer.on('call', (stream) => { }` event listener, within the conditional block.
 
     ```js
-    conn.on('close', function (){
-        showCallContent();
+    conn.on('close', () => {
+      showCallContent();
     })
     ```
 

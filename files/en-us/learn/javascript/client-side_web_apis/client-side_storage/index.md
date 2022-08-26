@@ -154,7 +154,7 @@ Let's apply this new-found knowledge by writing a working example to give you an
 
 You can find the example HTML at [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — this contains a website with a header, content, and footer, and a form for entering your name.
 
-![](web-storage-demo.png)
+![A Screenshot of a website that has a header, content and footer sections. The header has a welcome text to the left-hand side and a button labelled 'forget' to the right-hand side. The content has an heading followed by a two paragraphs of dummy text. The footer reads 'Copyright nobody. Use the code as you like'.](web-storage-demo.png)
 
 Let's build up the example, so you can understand how it works.
 
@@ -212,7 +212,7 @@ Let's build up the example, so you can understand how it works.
     // define the nameDisplayCheck() function
     function nameDisplayCheck() {
       // check whether the 'name' data item is stored in web Storage
-      if(localStorage.getItem('name')) {
+      if (localStorage.getItem('name')) {
         // If it is, display personalized greeting
         const name = localStorage.getItem('name');
         h1.textContent = `Welcome, ${name}`;
@@ -255,7 +255,7 @@ Here we'll run you through an example that allows you to store notes in your bro
 
 The app looks something like this:
 
-![](idb-demo.png)
+![IndexDB notes demo screenshot with 4 sections. The first section is the header. The second section lists all the notes that have been created. It has two notes, each with a delete button. A third section is a form with 2 input fields for 'Note title' and 'Note text' and a button labeled 'Create new note'. The bottom section footer reads 'Copyright nobody. Use the code as you like'.](idb-demo.png)
 
 Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
 
@@ -343,11 +343,11 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
 So with this database schema set up, when we start adding records to the database, each one will be represented as an object along these lines:
 
-```js
+```json
 {
-  title: "Buy milk",
-  body: "Need both cows milk and soy.",
-  id: 8
+  "title": "Buy milk",
+  "body": "Need both cows milk and soy.",
+  "id": 8
 }
 ```
 
@@ -430,7 +430,7 @@ function displayData() {
     const cursor = e.target.result;
 
     // If there is still another data item to iterate through, keep running this code
-    if(cursor) {
+    if (cursor) {
       // Create a list item, h3, and p to put each data item inside when displaying it
       // structure the HTML fragment, and append it inside the list
       const listItem = document.createElement('li');
@@ -462,7 +462,7 @@ function displayData() {
       cursor.continue();
     } else {
       // Again, if list item is empty, display a 'No notes stored' message
-      if(!list.firstChild) {
+      if (!list.firstChild) {
         const listItem = document.createElement('li');
         listItem.textContent = 'No notes stored.'
         list.appendChild(listItem);
@@ -509,7 +509,7 @@ function deleteItem(e) {
     console.log(`Note ${noteId} deleted.`);
 
     // Again, if list item is empty, display a 'No notes stored' message
-    if(!list.firstChild) {
+    if (!list.firstChild) {
       const listItem = document.createElement('li');
       listItem.textContent = 'No notes stored.';
       list.appendChild(listItem);
@@ -560,7 +560,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
         const request = objectStore.get(video.name);
         request.addEventListener('success', () => {
           // If the result exists in the database (is not undefined)
-          if(request.result) {
+          if (request.result) {
             // Grab the videos from IDB and display them using displayVideo()
             console.log('taking videos from IDB');
             displayVideo(request.result.mp4, request.result.webm, request.result.name);
@@ -598,18 +598,12 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
     ```js
     // Define the storeVideo() function
-    function storeVideo(mp4Blob, webmBlob, name) {
+    function storeVideo(mp4, webm, name) {
       // Open transaction, get object store; make it a readwrite so we can write to the IDB
       const objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
-      // Create a record to add to the IDB
-      const record = {
-        mp4 : mp4Blob,
-        webm : webmBlob,
-        name : name
-      }
 
       // Add the record to the IDB using add()
-      const request = objectStore.add(record);
+      const request = objectStore.add({ mp4, webm, name });
 
       request.addEventListener('success', () => console.log('Record addition attempt finished'));
       request.addEventListener('error', () => console.error(request.error));
@@ -651,7 +645,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to be downloaded each time the site is accessed, meaning that it won't work when there is no network connection.
 
-![](ff-offline.png)
+![Firefox offline screen with an illustration of a cartoon character to the left-hand side holding a two-pin plug in its right hand and a two-pin socket in its left hand. On the right-hand side there is an Offline Mode message and  a button labeled 'Try again'.](ff-offline.png)
 
 This is where [Service workers](/en-US/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/en-US/docs/Web/API/Cache) come in.
 
@@ -673,7 +667,7 @@ The first thing to note is that there's an extra bit of code placed in the main 
 
 ```js
 // Register service worker to control making site work offline
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
     .then(() => console.log('Service Worker Registered'));
@@ -695,14 +689,16 @@ Here is where we see the Cache API in action. We use the {{domxref("CacheStorage
 ```js
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('video-store').then((cache) => {
-      return cache.addAll([
-        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
-      ]);
-    })
+    caches
+      .open('video-store')
+      .then((cache) =>
+        cache.addAll([
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css',
+        ])
+      )
   );
 });
 ```

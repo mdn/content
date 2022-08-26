@@ -79,10 +79,10 @@ SVG makes use of a number of data types. This article lists these types along wi
       - `45min` = 45 minutes
       - `30s` = 30 seconds
       - `5ms` = 5 milliseconds
-      - `12.467`= 12 seconds and 467 milliseconds
+      - `12.467` = 12 seconds and 467 milliseconds
     - Fractional values are just (base 10) floating point definitions of seconds. Thus:
-      - `00.5s = 500 milliseconds
-      - 00:00.005 = 5 milliseconds`
+      - `00.5s` = 500 milliseconds
+      - `00:00.005` = 5 milliseconds
 
 ## Color
 

@@ -48,7 +48,7 @@ Error.prototype.toString = function () {
     return name;
   }
 
-  return name + ': ' + msg;
+  return `${name}: ${msg}`;
 };
 ```
 

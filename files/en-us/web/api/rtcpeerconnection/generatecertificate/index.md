@@ -106,7 +106,7 @@ RTCPeerConnection.generateCertificate({
     hash: 'SHA-256',
     modulusLength: 2048,
     publicExponent: new Uint8Array([1, 0, 1])
-}).then(function(cert) {
+}).then((cert) => {
   const pc = new RTCPeerConnection({certificates: [cert]});
 });
 ```

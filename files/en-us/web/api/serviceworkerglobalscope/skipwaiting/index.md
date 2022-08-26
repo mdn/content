@@ -12,6 +12,7 @@ tags:
   - skipWaiting
 browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ServiceWorkerGlobalScope.skipWaiting()`** method of the {{domxref("ServiceWorkerGlobalScope")}} forces the waiting service worker to become the active service worker.
@@ -39,7 +40,7 @@ While `self.skipWaiting()` can be called at any point during the service worker'
 The following example causes a newly installed service worker to progress into the `activating` state, regardless of whether there is already an active service worker.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener("install", (event) => {
   // The promise that skipWaiting() returns can be safely ignored.
   self.skipWaiting();
 
@@ -60,7 +61,7 @@ self.addEventListener('install', function(event) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{domxref("Clients.claim()")}}
 - {{jsxref("Promise", "Promises")}}

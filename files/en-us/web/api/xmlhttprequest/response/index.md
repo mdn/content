@@ -57,7 +57,7 @@ const url = 'somePage.html'; //A local page
 function load(url, callback) {
   const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }

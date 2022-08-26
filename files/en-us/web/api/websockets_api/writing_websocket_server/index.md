@@ -3,7 +3,7 @@ title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
 tags:
-  - HTML5
+  - HTML
   - NeedsMarkupWork
   - Tutorial
   - WebSockets
@@ -147,7 +147,7 @@ You must:
 4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
 
 ```cs
- if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
@@ -300,9 +300,9 @@ class Server {
                     offset = 10;
                 }
 
-                if (msglen == 0)
+                if (msglen == 0) {
                     Console.WriteLine("msglen == 0");
-                else if (mask) {
+                } else if (mask) {
                     byte[] decoded = new byte[msglen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
@@ -325,64 +325,76 @@ class Server {
 ### client.html
 
 ```html
-<!doctype html>
-<style>
-    textarea { vertical-align: bottom; }
-    #output { overflow: auto; }
-    #output > p { overflow-wrap: break-word; }
-    #output span { color: blue; }
-    #output span.error { color: red; }
-</style>
-<h2>WebSocket Test</h2>
-<textarea cols=60 rows=6></textarea>
-<button>send</button>
-<div id=output></div>
-<script>
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    textarea {
+      vertical-align: bottom;
+    }
+    #output {
+      overflow: auto;
+    }
+    #output > p {
+      overflow-wrap: break-word;
+    }
+    #output span {
+      color: blue;
+    }
+    #output span.error {
+      color: red;
+    }
+  </style>
+  <body>
+    <h2>WebSocket Test</h2>
+    <textarea cols="60" rows="6"></textarea>
+    <button>send</button>
+    <div id="output"></div>
+  </body>
+  <script>
     // http://www.websocket.org/echo.html
-
     const button = document.querySelector("button");
     const output = document.querySelector("#output");
     const textarea = document.querySelector("textarea");
-        // wsUri = "ws://echo.websocket.org/",
-        wsUri = "ws://127.0.0.1/",
-        websocket = new WebSocket(wsUri);
+    const wsUri = "ws://127.0.0.1/";
+    const websocket = new WebSocket(wsUri);
 
     button.addEventListener("click", onClickButton);
 
-    websocket.onopen = function (e) {
-        writeToScreen("CONNECTED");
-        doSend("WebSocket rocks");
+    websocket.onopen = (e) => {
+      writeToScreen("CONNECTED");
+      doSend("WebSocket rocks");
     };
 
-    websocket.onclose = function (e) {
-        writeToScreen("DISCONNECTED");
+    websocket.onclose = (e) => {
+      writeToScreen("DISCONNECTED");
     };
 
-    websocket.onmessage = function (e) {
-        writeToScreen("<span>RESPONSE: " + e.data + "</span>");
+    websocket.onmessage = (e) => {
+      writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
     };
 
-    websocket.onerror = function (e) {
-        writeToScreen("<span class=error>ERROR:</span> " + e.data);
+    websocket.onerror = (e) => {
+      writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
     };
 
     function doSend(message) {
-        writeToScreen("SENT: " + message);
-        websocket.send(message);
+      writeToScreen(`SENT: ${message}`);
+      websocket.send(message);
     }
 
     function writeToScreen(message) {
-        output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
+      output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
     }
 
     function onClickButton() {
-        const text = textarea.value;
+      const text = textarea.value;
 
-        text && doSend(text);
-        textarea.value = "";
-        textarea.focus();
+      text && doSend(text);
+      textarea.value = "";
+      textarea.focus();
     }
-</script>
+  </script>
+</html>
 ```
 
 ## Related

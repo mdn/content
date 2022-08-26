@@ -28,7 +28,7 @@ A {{jsxref("number") }}.
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function() {
+window.addEventListener("gamepadconnected", () => {
   const gp = navigator.getGamepads()[0];
   gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}.`;
 });

@@ -24,7 +24,6 @@ First, create a new directory, "button", and create a file called "manifest.json
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -40,7 +39,6 @@ First, create a new directory, "button", and create a file called "manifest.json
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -95,7 +93,6 @@ Let's try adding a popup to the button. Replace manifest.json with this:
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -109,7 +106,6 @@ Let's try adding a popup to the button. Replace manifest.json with this:
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -123,20 +119,17 @@ So now we need to create that popup. Create a directory called "popup" then crea
 
 ```html
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="choose_page.css"/>
   </head>
-
-<body>
-  <div class="page-choice">developer.mozilla.org</div>
-  <div class="page-choice">support.mozilla.org</div>
-  <div class="page-choice">addons.mozilla.org</div>
-  <script src="choose_page.js"></script>
-</body>
-
+  <body>
+    <div class="page-choice">developer.mozilla.org</div>
+    <div class="page-choice">support.mozilla.org</div>
+    <div class="page-choice">addons.mozilla.org</div>
+    <script src="choose_page.js"></script>
+  </body>
 </html>
 ```
 
@@ -145,7 +138,8 @@ You can see that this is a normal HTML page containing three {{htmlelement("div"
 Create a file called "choose_page.css" inside the "popup" directory, and give it these contents:
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -167,16 +161,15 @@ This is just a bit of styling for our popup.
 Next, create a "choose_page.js" file inside the "popup" directory, and give it these contents:
 
 ```js
-document.addEventListener("click", function(e) {
-  if (!e.target.classList.contains("page-choice")) {
+document.addEventListener("click", (event) => {
+  if (!event.target.classList.contains("page-choice")) {
     return;
   }
 
-  let chosenPage = "https://" + e.target.textContent;
+  const chosenPage = `https://${event.target.textContent}`;
   browser.tabs.create({
     url: chosenPage
   });
-
 });
 ```
 

@@ -73,14 +73,14 @@ There are three main reasons:
 
 There are two different types of client-side validation that you'll encounter on the web:
 
-- **Built-in form validation** uses HTML5 form validation features, which we've discussed in many places throughout this module.
+- **Built-in form validation** uses HTML form validation features, which we've discussed in many places throughout this module.
   This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.
 - **JavaScript** validation is coded using JavaScript.
   This validation is completely customizable, but you need to create it all (or use a library).
 
 ## Using built-in form validation
 
-One of the most significant features of [HTML5 form controls](/en-US/docs/Learn/Forms/HTML5_input_types) is the ability to validate most user data without relying on JavaScript.
+One of the most significant features of [modern form controls](/en-US/docs/Learn/Forms/HTML5_input_types) is the ability to validate most user data without relying on JavaScript.
 This is done by using validation attributes on form elements.
 We've seen many of these earlier in the course, but to recap:
 
@@ -139,7 +139,7 @@ To begin, make a copy of `fruit-start.html` in a new directory on your hard driv
 
 ### The required attribute
 
-The simplest HTML5 validation feature is the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
+The simplest HTML validation feature is the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
 To make an input mandatory, add this attribute to the element.
 When this attribute is set, the element matches the {{cssxref(':required')}} UI pseudo-class and the form won't submit, displaying an error message on submission when the input is empty.
 While empty, the input will also be considered invalid, matching the {{cssxref(':invalid')}} UI pseudo-class.
@@ -439,7 +439,7 @@ The Constraint Validation API also makes the following methods available on the 
 
 #### Implementing a customized error message
 
-As you saw in the HTML5 validation constraint examples earlier, each time a user tries to submit an invalid form, the browser displays an error message. The way this message is displayed depends on the browser.
+As you saw in the HTML validation constraint examples earlier, each time a user tries to submit an invalid form, the browser displays an error message. The way this message is displayed depends on the browser.
 
 These automated messages have two drawbacks:
 
@@ -466,7 +466,7 @@ And add the following JavaScript to the page:
 ```js
 const email = document.getElementById("mail");
 
-email.addEventListener("input", function (event) {
+email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
     email.setCustomValidity("I am expecting an e-mail address!");
     email.reportValidity();
@@ -514,7 +514,7 @@ That means that even though the browser doesn't automatically check the validity
 Our input to validate is an [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), which is `required`, and has a `minlength` of 8 characters. Let's check these using our own code, and show a custom error message for each one.
 
 We are aiming to show the error messages inside a `<span>` element.
-The [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute is set on that `<span>` to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.
+The [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute is set on that `<span>` to make sure that our custom error message will be presented to everyone, including it being read out to screen reader users.
 
 > **Note:** A key point here is that setting the `novalidate` attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.
 
@@ -533,7 +533,6 @@ p * {
 }
 
 input[type=email]{
-  -webkit-appearance: none;
   appearance: none;
 
   width: 100%;
@@ -584,7 +583,7 @@ const form  = document.getElementsByTagName('form')[0];
 const email = document.getElementById('mail');
 const emailError = document.querySelector('#mail + span.error');
 
-email.addEventListener('input', function (event) {
+email.addEventListener('input', (event) => {
   // Each time the user types something, we check if the
   // form fields are valid.
 
@@ -599,10 +598,10 @@ email.addEventListener('input', function (event) {
   }
 });
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', (event) => {
   // if the email field is valid, we let the form submit
 
-  if(!email.validity.valid) {
+  if (!email.validity.valid) {
     // If it isn't, we display an appropriate error message
     showError();
     // Then we prevent the form from being sent by canceling the event
@@ -611,18 +610,18 @@ form.addEventListener('submit', function (event) {
 });
 
 function showError() {
-  if(email.validity.valueMissing) {
+  if (email.validity.valueMissing) {
     // If the field is empty,
     // display the following error message.
     emailError.textContent = 'You need to enter an e-mail address.';
-  } else if(email.validity.typeMismatch) {
+  } else if (email.validity.typeMismatch) {
     // If the field doesn't contain an email address,
     // display the following error message.
     emailError.textContent = 'Entered value needs to be an e-mail address.';
-  } else if(email.validity.tooShort) {
+  } else if (email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
-    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
   }
 
   // Set the styling appropriately
@@ -710,8 +709,7 @@ p * {
 }
 
 input.mail {
-  -webkit-appearance: none;
-
+  appearance: none;
   width: 100%;
   border: 1px solid #333;
   margin: 0;
@@ -785,7 +783,7 @@ email.addEventListener("input", () => {
 // This defines what happens when the user tries to submit the data
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  
+
   const test = email.value.length === 0 || emailRegExp.test(email.value);
   if (!test) {
     email.className = "invalid";

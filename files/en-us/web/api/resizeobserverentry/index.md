@@ -20,15 +20,15 @@ The **`ResizeObserverEntry`** interface represents the object passed to the {{do
 
 ## Properties
 
-- {{domxref('ResizeObserverEntry.borderBoxSize')}} {{readonlyinline}}
+- {{domxref('ResizeObserverEntry.borderBoxSize')}} {{ReadOnlyInline}}
   - : An object containing the new border box size of the observed element when the callback is run.
-- {{domxref('ResizeObserverEntry.contentBoxSize')}} {{readonlyinline}}
+- {{domxref('ResizeObserverEntry.contentBoxSize')}} {{ReadOnlyInline}}
   - : An object containing the new content box size of the observed element when the callback is run.
-- {{domxref('ResizeObserverEntry.devicePixelContentBoxSize')}} {{readonlyinline}}
+- {{domxref('ResizeObserverEntry.devicePixelContentBoxSize')}} {{ReadOnlyInline}}
   - : An object containing the new content box size in device pixels of the observed element when the callback is run.
-- {{domxref('ResizeObserverEntry.contentRect')}} {{readonlyinline}}
+- {{domxref('ResizeObserverEntry.contentRect')}} {{ReadOnlyInline}}
   - : A {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is better supported than the above two properties, but it is left over from an earlier implementation of the Resize Observer API, is still included in the spec for web compat reasons, and may be deprecated in future versions.
-- {{domxref('ResizeObserverEntry.target')}} {{readonlyinline}}
+- {{domxref('ResizeObserverEntry.target')}} {{ReadOnlyInline}}
   - : A reference to the {{domxref('Element')}} or {{domxref("SVGElement")}} being observed.
 
 > **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
@@ -43,8 +43,8 @@ The following snippet is taken from the [resize-observer-text.html](https://mdn.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
       h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
     } else {

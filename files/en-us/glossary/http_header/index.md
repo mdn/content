@@ -17,21 +17,21 @@ The HTTP and Fetch specifications refer to a number of header categories, includ
 
 A basic request with one header:
 
-```plain
+```http
 GET /example.http HTTP/1.1
 Host: example.com
 ```
 
 Redirects have mandatory headers ({{HTTPHeader("Location")}}):
 
-```plain
+```http
 302 Found
 Location: /NewPage.html
 ```
 
 A typical set of headers:
 
-```plain
+```http
 304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192

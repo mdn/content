@@ -22,7 +22,7 @@ The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array
 
 ## Instance properties
 
-- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} {{ReadOnlyInline}}
   - : Returns the length of the table, i.e. the number of elements.
 
 ## Instance methods
@@ -51,9 +51,7 @@ We then create an import object that contains the table:
 
 ```js
 const importObj = {
-  js: {
-    tbl: tbl
-  }
+  js: { tbl },
 };
 ```
 

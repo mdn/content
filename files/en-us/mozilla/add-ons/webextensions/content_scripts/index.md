@@ -72,7 +72,7 @@ Consider a web page like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   </head>
@@ -330,12 +330,12 @@ For example, as soon as it loads, the following content script:
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -359,14 +359,14 @@ let portFromCS;
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    portFromCS.postMessage({greeting: "In background script, received message from content script:" + m.greeting});
+  portFromCS.onMessage.addListener((m) => {
+    portFromCS.postMessage({greeting: `In background script, received message from content script: ${m.greeting}`});
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
@@ -439,7 +439,7 @@ window.addEventListener("message", (event) => {
     event.source === window &&
     event?.data?.direction === "from-page-script"
   ) {
-    alert("Content script received message: \"" + event.data.message + "\"");
+    alert(`Content script received message: "${event.data.message}"`);
   }
 });
 ```
@@ -535,7 +535,7 @@ The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInter
 >
 > let original = console.log;
 >
-> console.log = function() {
+> console.log = () => {
 >   original(true);
 > }
 > ```

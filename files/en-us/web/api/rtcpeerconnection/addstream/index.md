@@ -9,10 +9,10 @@ tags:
   - Reference
   - WebRTC
   - addStream
+  - Non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
-
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCPeerConnection")}} method
 **`addStream()`** adds a {{domxref("MediaStream")}} as a local
@@ -51,7 +51,7 @@ the connection.
 ```js
 navigator.mediaDevices.getUserMedia(
   { video: true, audio: true },
-  function (stream) {
+  (stream) => {
     const pc = new RTCPeerConnection();
     pc.addStream(stream);
   }
@@ -64,9 +64,9 @@ navigator.mediaDevices.getUserMedia(
 code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
 ```js
-navigator.getUserMedia({ video: true, audio: true }, function (stream) {
+navigator.getUserMedia({ video: true, audio: true }, (stream) => {
   const pc = new RTCPeerConnection();
-  stream.getTracks().forEach(function (track) {
+  stream.getTracks().forEach((track) => {
     pc.addTrack(track, stream);
   });
 });

@@ -14,7 +14,7 @@ tags:
   - getSupportedConstraints
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The
 **`getSupportedConstraints()`**

@@ -32,7 +32,7 @@ When either of these options occur, the associated handlers queued up by a promi
 
 A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending.
 
-![](promises.png)
+![Flowchart showing how the Promise state transitions between pending, fulfilled, and rejected via then/catch handlers. A pending promise can become either fulfilled or rejected. If fulfilled, the "on fulfillment" handler, or first parameter of the then() method, is executed and carries out further asynchronous actions. If rejected, the error handler, either passed as the second parameter of the then() method or as the sole parameter of the catch() method, gets executed.](promises.png)
 
 You will also hear the term _resolved_ used with promises — this means that the promise is settled or "locked-in" to match the eventual state of another promise, and further resolving or rejecting it has no effect. The [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) document from the original Promise proposal contains more details about promise terminology. Colloquially, "resolved" promises are often equivalent to "fulfilled" promises, but as illustrated in "States and fates", resolved promises can be pending or rejected as well. For example:
 
@@ -173,7 +173,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
   // bound is a built-in function — there is no user
   // code on the stack, so which realm do we use?
-  window.setTimeout(bound);
+  setTimeout(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack
 </script>
@@ -281,7 +281,7 @@ See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to l
 const myFirstPromise = new Promise((resolve, reject) => {
   // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
   // In this example, we use setTimeout(...) to simulate async code.
-  // In reality, you will probably be using something like XHR or an HTML5 API.
+  // In reality, you will probably be using something like XHR or an HTML API.
   setTimeout(() => {
     resolve("Success!"); // Yay! Everything went well!
   }, 250);
@@ -290,7 +290,7 @@ const myFirstPromise = new Promise((resolve, reject) => {
 myFirstPromise.then((successMessage) => {
   // successMessage is whatever we passed in the resolve(...) function above.
   // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-  console.log("Yay! " + successMessage);
+  console.log(`Yay! ${successMessage}`);
 });
 ```
 
@@ -300,7 +300,7 @@ This example shows diverse techniques for using Promise capabilities and diverse
 
 The example function `tetheredGetNumber()` shows that a promise generator will utilize `reject()` while setting up an asynchronous call, or within the call-back, or both. The function `promiseGetWord()` illustrates how an API function might generate and return a promise in a self-contained manner.
 
-Note that the function `troubleWithGetNumber()` ends with a `throw()`. That is forced because an ES6 promise chain goes through all the `.then()` promises, even after an error, and without the "throw()", the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`. The alternative is to throw a special value (in this case "-999", but a custom Error type would be more appropriate).
+Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`.
 
 This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 
@@ -312,30 +312,29 @@ function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
     const randomInt = Date.now();
     const value = randomInt % 10;
-    if (value >= THRESHOLD_A) {
-      reject(`Too large: ${value}`);
-    } else {
+    if (value < THRESHOLD_A) {
       resolve(value);
+    } else {
+      reject(`Too large: ${value}`);
     }
   }, 500);
 }
 
 function determineParity(value) {
   const isOdd = value % 2 === 1;
-  const parityInfo = { value, isOdd };
-  return parityInfo;
+  return { value, isOdd };
 }
 
 function troubleWithGetNumber(reason) {
-  console.error(`Trouble getting number: ${reason}`);
-  throw -999; // must "throw" something, to maintain error state down the chain
+  const err = new Error("Trouble getting number", { cause: reason });
+  console.error(err);
+  throw err;
 }
 
 function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value } = parityInfo;
-    const threshold_B = THRESHOLD_A - 1;
-    if (value >= threshold_B) {
+    if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
       parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
@@ -348,11 +347,11 @@ new Promise(tetheredGetNumber)
   .then(determineParity, troubleWithGetNumber)
   .then(promiseGetWord)
   .then((info) => {
-    console.log("Got: ", info.theNumber, " , ", info.wordEvenOdd);
+    console.log(`Got: ${info.value}, ${info.wordEvenOdd}`);
     return info;
   })
   .catch((reason) => {
-    if (reason === -999) {
+    if (reason.cause) {
       console.error("Had previously handled error");
     } else {
       console.error(`Trouble with promiseGetWord(): ${reason}`);
@@ -380,23 +379,26 @@ By clicking the button several times in a short amount of time, you'll even see 
 
 ```js
 "use strict";
+
 let promiseCount = 0;
 
 function testPromise() {
   const thisPromiseCount = ++promiseCount;
   const log = document.getElementById("log");
   // begin
-  log.insertAdjacentHTML("beforeend", thisPromiseCount + ") Started<br>");
-  // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Started<br>`);
+  // We make a new promise: we promise a numeric count of this promise,
+  // starting from 1 (after waiting 3s)
   const p1 = new Promise((resolve, reject) => {
-    // The executor function is called with the ability to resolve or reject the promise
+    // The executor function is called with the ability
+    // to resolve or reject the promise
     log.insertAdjacentHTML(
       "beforeend",
-      thisPromiseCount + ") Promise constructor<br>"
+      `${thisPromiseCount}) Promise constructor<br>`
     );
     // This is only an example to create asynchronism
     setTimeout(() => {
-      // We fulfill the promise !
+      // We fulfill the promise
       resolve(thisPromiseCount);
     }, Math.random() * 2000 + 1000);
   });
@@ -405,13 +407,13 @@ function testPromise() {
   // and what to do when the promise is rejected with the catch() call
   p1.then((val) => {
     // Log the fulfillment value
-    log.insertAdjacentHTML("beforeend", val + ") Promise fulfilled<br>");
+    log.insertAdjacentHTML("beforeend", `${val}) Promise fulfilled<br>`);
   }).catch((reason) => {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
   });
   // end
-  log.insertAdjacentHTML("beforeend", thisPromiseCount + ") Promise made<br>");
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Promise made<br>`);
 }
 
 const btn = document.getElementById("make-promise");

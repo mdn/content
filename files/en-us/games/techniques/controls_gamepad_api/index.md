@@ -9,13 +9,14 @@ tags:
   - JavaScript
   - controllers
 ---
+
 {{GamesSidebar}}
 
 This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by [Enclave Games](https://enclavegames.com/).
 
 ## Controls for web games
 
-Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now in the era of HTML5, we finally have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
+Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now we have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
 
 ## API status and browser support
 
@@ -58,7 +59,7 @@ const gamepadAPI = {
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -124,15 +125,15 @@ Beside `connect()` and `disconnect()`, there are two more methods in the `gamepa
 update() {
   // Clear the buttons cache
   gamepadAPI.buttonsCache = [];
-  
+
   // Move the buttons status from the previous frame to the cache
   for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
     gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
   }
-  
+
   // Clear the buttons status
   gamepadAPI.buttonsStatus = [];
-  
+
   // Get the gamepad object
   const c = gamepadAPI.controller || {};
 
@@ -145,7 +146,7 @@ update() {
       }
     }
   }
-  
+
   // Loop through axes and push their values to the array
   const axes = [];
   if (c.axes) {
@@ -153,11 +154,11 @@ update() {
       axes.push(c.axes[a].toFixed(2));
     }
   }
-  
+
   // Assign received values
   gamepadAPI.axesStatus = axes;
   gamepadAPI.buttonsStatus = pressed;
-  
+
   // Return buttons for debugging purposes
   return pressed;
 },
@@ -172,14 +173,14 @@ The `buttonPressed()` method is also placed in the main game loop to listen for 
 ```js
 buttonPressed(button, hold) {
   let newPress = false;
-  
+
   // Loop through pressed buttons
   for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
     // If we found the button we're looking for
     if (gamepadAPI.buttonsStatus[i] === button) {
       // Set the boolean variable to true
       newPress = true;
-      
+
       // If we want to check the single press
       if (!hold) {
         // Loop through the cached states from the previous frame
@@ -198,10 +199,10 @@ There are two types of action to consider for a button: a single press and a hol
 
 ```js
 if (gamepadAPI.turbo) {
-  if (gamepadAPI.buttonPressed('A', 'hold')) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if (gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -236,11 +237,11 @@ The {{domxref("Navigator.getGamepads()")}} method has been updated with [a longe
 
 The mapping type is now an enumerable object instead of a string:
 
-```js
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard",
+}
 ```
 
 This enum defines the set of known mappings for a Gamepad. For now, there's only the `standard` layout available, but new ones may appear in the future. If the layout is unknown, it is set to an empty string.

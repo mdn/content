@@ -41,10 +41,10 @@ execution and specify a value to be returned to the function caller.
 ### Missing curly brackets
 
 ```js example-bad
-const cheer = function (score) {
+function cheer(score) {
   if (score === 147)
     return 'Maximum!';
-  };
+  }
   if (score > 100) {
     return 'Century!';
   }
@@ -57,14 +57,14 @@ The curly brackets look correct at a first glance, but this code snippet is miss
 `{` after the first `if` statement. Correct would be:
 
 ```js example-good
-const cheer = function (score) {
+function cheer(score) {
   if (score === 147) {
     return 'Maximum!';
   }
   if (score > 100) {
     return 'Century!';
   }
-};
+}
 ```
 
 ## See also

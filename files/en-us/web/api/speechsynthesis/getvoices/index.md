@@ -40,7 +40,7 @@ A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
 ```js
 function populateVoiceList() {
-  if(typeof speechSynthesis === 'undefined') {
+  if (typeof speechSynthesis === 'undefined') {
     return;
   }
 
@@ -50,7 +50,7 @@ function populateVoiceList() {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-    if(voices[i].default) {
+    if (voices[i].default) {
       option.textContent += ' — DEFAULT';
     }
 

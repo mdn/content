@@ -4,7 +4,7 @@ slug: Web/CSS/element
 tags:
   - CSS
   - CSS Function
-  - CSS4-images
+  - CSS images
   - Function
   - Layout
   - Reference

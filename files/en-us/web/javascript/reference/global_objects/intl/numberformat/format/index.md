@@ -119,7 +119,7 @@ console.log(numberFormat.format(bigNum));
 // → "1,000,000,000,000,000,110,000"
 
 // Format as a string using the `E` syntax:
-console.log(numberFormat.format(bigNum + "E-6"));
+console.log(numberFormat.format(`${bigNum}E-6`));
 // → "1,000,000,000,000,000.11"
 ```
 

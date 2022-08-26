@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerContainer/getRegistrations
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -39,7 +38,7 @@ A {{jsxref("Promise")}} that resolves to an array of
 ## Examples
 
 ```js
-navigator.serviceWorker.getRegistrations().then(function(registrations) {
+navigator.serviceWorker.getRegistrations().then((registrations) => {
   document.querySelector('#status').textContent = 'ServiceWorkerRegistrations found.';
 });
 ```

@@ -59,16 +59,16 @@ be listed.
 
 ```js
 const filters = [
-        {vendorId: 0x1209, productId: 0xa800},
-        {vendorId: 0x1209, productId: 0xa850}
-      ];
-navigator.usb.requestDevice({filters: filters})
-.then((usbDevice) => {
-  console.log(`Product name: ${usbDevice.productName}`);
-})
-.catch((e) => {
-  console.log(`There is no device. ${e}`);
-});
+  { vendorId: 0x1209, productId: 0xa800 },
+  { vendorId: 0x1209, productId: 0xa850 },
+];
+navigator.usb.requestDevice({ filters })
+  .then((usbDevice) => {
+    console.log(`Product name: ${usbDevice.productName}`);
+  })
+  .catch((e) => {
+    console.error(`There is no device. ${e}`);
+  });
 ```
 
 ## Specifications

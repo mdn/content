@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Draft
-  - Experimental
   - Interface
   - NeedsContent
   - NeedsExample

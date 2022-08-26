@@ -34,7 +34,7 @@ An array of strings that corresponds to the properties found directly in the giv
 
 ## Description
 
-`Object.getOwnPropertyNames()` returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object `obj`. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. According to ES6, the non-negative integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.
+`Object.getOwnPropertyNames()` returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object `obj`. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. The non-negative integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.
 
 In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be coerced to an object.
 
@@ -62,7 +62,7 @@ console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array meth
 
 // Logging property names and values using Array.forEach
 Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
-  console.log(val + ' -> ' + obj[val]);
+  console.log(`${val} -> ${obj[val]}`);
 });
 // logs
 // 0 -> a
@@ -70,13 +70,13 @@ Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
 // 2 -> c
 
 // non-enumerable property
-const my_obj = Object.create({}, {
+const myObj = Object.create({}, {
   getFoo: {
     value() { return this.foo; },
-    enumerable: false
+    enumerable: false,
   }
 });
-my_obj.foo = 1;
+myObj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
 // logs ["foo", "getFoo"]
@@ -107,11 +107,11 @@ This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enum
 
 ```js
 const target = myObject;
-const enum_and_nonenum = Object.getOwnPropertyNames(target);
-const enum_only = new Set(Object.keys(target));
-const nonenum_only = enum_and_nonenum.filter((key) => !enum_only.has(key));
+const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumOnly = new Set(Object.keys(target));
+const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenum_only);
+console.log(nonenumOnly);
 ```
 
 ## Specifications

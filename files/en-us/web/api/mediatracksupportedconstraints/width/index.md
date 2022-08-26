@@ -4,7 +4,7 @@ slug: Web/API/MediaTrackSupportedConstraints/width
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.width
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`width`** property is a read-only Boolean value which is
@@ -44,13 +44,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().width) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().width;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result

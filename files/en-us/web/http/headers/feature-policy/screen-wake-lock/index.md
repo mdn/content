@@ -19,7 +19,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header **`screen-wake-lock`** directiv
 
 ## Syntax
 
-```
+```http
 Feature-Policy: screen-wake-lock <allowlist>;
 ```
 

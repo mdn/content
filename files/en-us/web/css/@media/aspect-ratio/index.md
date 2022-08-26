@@ -76,15 +76,15 @@ iframe{
 ```
 
 ```js hidden
-outer.style.width=outer.style.height="165px"
+outer.style.width = outer.style.height = "165px";
 
-w.onchange=w.oninput=function(){
-  outer.style.width=w.value+"px"
-  wf.textContent="width:"+w.value
-}
-h.onchange=h.oninput=function(){
-  outer.style.height=h.value+"px"
-  hf.textContent="height:"+h.value
+w.onchange = w.oninput = () => {
+  outer.style.width = `${w.value}px`;
+  wf.textContent = `width: ${w.value}`;
+};
+h.onchange = h.oninput = () => {
+  outer.style.height = `${h.value}px`;
+  hf.textContent = `height: ${h.value}`;
 }
 ```
 

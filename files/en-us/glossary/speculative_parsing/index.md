@@ -4,7 +4,6 @@ slug: Glossary/speculative_parsing
 tags:
   - Advanced
   - HTML
-  - HTML5
   - NeedsUpdate
   - Web Development
   - Web Performance

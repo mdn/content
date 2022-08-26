@@ -170,7 +170,7 @@ button.addEventListener('click', disableButton);
 function disableButton() {
   button.disabled = true;
   button.value = 'Disabled';
-  window.setTimeout(function() {
+  setTimeout(() => {
     button.disabled = false;
     button.value = 'Enabled';
   }, 2000);
@@ -202,7 +202,7 @@ button.addEventListener('click', disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  setTimeout(() => {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -263,18 +263,18 @@ span {
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+const canvas = document.querySelector('.myCanvas');
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight - 85;
+const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'rgb(0,0,0)';
 ctx.fillRect(0,0,width,height);
 
-var colorPicker = document.querySelector('input[type="color"]');
-var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
-var clearBtn = document.querySelector('input[type="button"]');
+const colorPicker = document.querySelector('input[type="color"]');
+const sizePicker = document.querySelector('input[type="range"]');
+const output = document.querySelector('.output');
+const clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
@@ -283,39 +283,39 @@ function degToRad(degrees) {
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
 }
 
 // store mouse pointer coordinates, and whether the button is pressed
-var curX;
-var curY;
-var pressed = false;
+let curX;
+let curY;
+let pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+document.onmousemove = (e) => {
+  curX = e.pageX;
+  curY = e.pageY;
 }
 
-canvas.onmousedown = function() {
+canvas.onmousedown = () => {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = () => {
   pressed = false;
 }
 
-clearBtn.onclick = function() {
+clearBtn.onclick = () => {
   ctx.fillStyle = 'rgb(0,0,0)';
   ctx.fillRect(0,0,width,height);
 }
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
     ctx.fill();
   }
 

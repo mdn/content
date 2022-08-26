@@ -29,9 +29,9 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 ## Instance properties
 
-- {{DOMxRef("Blob.prototype.size")}} {{readonlyinline}}
+- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
   - : The size, in bytes, of the data contained in the `Blob` object.
-- {{DOMxRef("Blob.prototype.type")}} {{readonlyinline}}
+- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
   - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
 
 ## Instance methods
@@ -78,7 +78,7 @@ function showViewLiveResultButton() {
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
     // to first open it in its own tab or window. Otherwise, this
-    // example won’t work.
+    // example won't work.
     const p = document.querySelector("p");
     p.textContent = "";
     const button = document.createElement("button");

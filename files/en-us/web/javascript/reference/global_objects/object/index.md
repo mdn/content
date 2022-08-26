@@ -17,7 +17,7 @@ Nearly all objects in JavaScript are instances of {{jsxref("Object")}}; a typica
 
 Changes to the `Object` prototype object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior.
 
-The `Object` constructor creates an object wrapper for the given value.
+The `Object` constructor's behavior depends on the input's type.
 
 - If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and return an empty object.
 - If the value is an object already, it will return the value.
@@ -34,7 +34,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 ## Constructor
 
 - {{jsxref("Object/Object", "Object()")}}
-  - : Creates a new `Object` object. It is a wrapper for the given value.
+  - : Turns the input into an object.
 
 ## Static methods
 
@@ -148,7 +148,7 @@ const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
-Object.prototype.valueOf = function () {
+Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
@@ -156,7 +156,7 @@ Object.prototype.valueOf = function () {
     // the default behavior by reproducing the current behavior as best we can.
     // The apply behaves like "super" in some other languages.
     // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, arguments);
+    return current.apply(this, args);
   }
 }
 ```

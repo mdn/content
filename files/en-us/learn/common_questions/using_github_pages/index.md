@@ -44,7 +44,7 @@ The other thing you need to do before moving on is to initialise your code direc
 
 The best way to upload your code to GitHub is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:
 
-![](command-line.png)
+![Terminal/command prompt opened. No command has been entered.](command-line.png)
 
 > **Note:** You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 
@@ -61,9 +61,9 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 1. Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose _New Repository_.
 2. On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
 3. Also fill in a description to say what your repository is going to contain. Your screen should look like this:
-    ![](create-new-repo.png)
+    ![New repository page opened in browser, repository owner input and the repository name are filled, same for the optional description input. The public check-box is selected, the private check-box is not, same goes for the initialize this repository with a readme.](create-new-repo.png)
 4. Click _Create repository_; this should bring you to the following page:
-    ![](github-repo.png)
+    ![The repository page is opened in browser, below the github header composed of search bar and navigation links to the repository's pull request, issues and gist. Next to the navigation links, a bell notification and a link to your account. Below, the name of the owner's repository follow by a slash with the repository's name. Below a horizontal navigation bar composed of different tabs relating to your repository, the code tab selected displaying a documentation explaining how to create a repository or how to push from using command line.](github-repo.png)
 
 ### Uploading your files to GitHub
 
@@ -94,7 +94,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 
 If you want to make more changes to your test site and upload those to GitHub, you need to make the change to your files just like you did before. Then, you need to enter the following commands (pressing Enter after each one) to push those changes to GitHub:
 
-```
+```bash
 git add --all
 git commit -m 'another commit'
 git push

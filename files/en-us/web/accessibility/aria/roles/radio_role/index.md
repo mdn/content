@@ -236,7 +236,6 @@ setChecked  = function () {
     // thisRadio.focus();
     // set the value of the radioGroup to the value of the currently selected radio
 };
-
 ```
 
 <!-- {{EmbedLiveSample("Examples", 230, 250)}} -->

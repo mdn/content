@@ -49,7 +49,7 @@ message.
 
 ## Syntax
 
-```
+```http
 Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
@@ -95,7 +95,7 @@ total size of the response may not be known until the request has been fully pro
 For example, when generating a large HTML table resulting from a database query or when
 transmitting large images. A chunked response looks like this:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/plain
 Transfer-Encoding: chunked

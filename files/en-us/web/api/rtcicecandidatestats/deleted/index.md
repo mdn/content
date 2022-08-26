@@ -47,7 +47,8 @@ is used to set up a function that runs periodically to display the latest statis
 candidates. Only candidates which have not been deleted are included in the output.
 
 ```js
-window.setInterval(function() {
+setInterval(() => {
+
   myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 
@@ -58,7 +59,6 @@ window.setInterval(function() {
 
         // Now the statistics for this report; we intentionally drop the ones we
         // sorted to the top above
-
         Object.keys(report).forEach((statName) => {
           if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
             statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;

@@ -82,7 +82,7 @@ You have been given the files needed to create a letterheaded paper template. Yo
 
 The following screenshot shows an example of what the finished design could look like:
 
-![](letterhead.png)
+![Full A4 page composed of at the top left two triangular shapes, first one is green, second one is red, at the top right darker red trapezoid shape. Below the green triangular, a red circle filled with a green star with white text on it: Awesome company. At the bottom left of the page, darker red trapezoid shape, follow by the two triangular shapes: the red one, then the green one. Above the green triangular shape, black text displaying a postal address.](letterhead.png)
 
 ## Assessment or further help
 
