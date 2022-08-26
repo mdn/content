@@ -39,7 +39,7 @@ Accept-Post: <MIME_type>/*
 Accept-Post: */*
 ```
 
-> **Note:** The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept-Language")}}, except that it has no notion of preference (i.e. "accept-params" or "q" arguments are not significant).
+> **Note:** The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept")}}, except that it has no notion of preference (i.e. "accept-params" or "q" arguments are not significant).
 
 ## Directives
 
