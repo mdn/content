@@ -7,6 +7,7 @@ tags:
   - Guide
   - Mobile
 ---
+
 {{GamesSidebar}}
 
 The modern web has quickly become a viable platform not only for creating stunning, high quality games, but also for distributing those games.

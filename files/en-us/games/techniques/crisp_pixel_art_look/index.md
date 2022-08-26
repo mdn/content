@@ -12,6 +12,7 @@ tags:
   - image-rendering
   - pixel
 ---
+
 {{GamesSidebar}}
 
 This article discusses a useful technique for giving your canvas/WebGL games a crisp pixel art look, even on high definition monitors.
@@ -83,15 +84,15 @@ And some JavaScript to set up the canvas and load the image:
 
 ```js
 // Get canvas context
-const ctx = document.getElementById('game').getContext('2d');
+const ctx = document.getElementById("game").getContext("2d");
 
 // Load image
 const image = new Image();
 image.onload = () => {
   // Draw the image into the canvas
   ctx.drawImage(image, 0, 0);
-}
-image.src = 'cat.png';
+};
+image.src = "cat.png";
 ```
 
 This code used together produces the following result:
