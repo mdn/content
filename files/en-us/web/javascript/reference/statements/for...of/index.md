@@ -212,9 +212,7 @@ for (const value of iterable) {
 // 3
 ```
 
-### Iterating over a user-defined iterable iterator
-
-Iterable iterators are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
+_Iterable iterators_ (iterators with a `[@@iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
 
 ```js
 let i = 1;
