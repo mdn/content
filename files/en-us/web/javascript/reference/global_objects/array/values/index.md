@@ -56,16 +56,16 @@ Array.prototype.values === Array.prototype[Symbol.iterator]      // true
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
-iterator.next();               // Object { value: "a", done: false }
-iterator.next().value;         // "b"
-iterator.next()["value"];      // "c"
-iterator.next();               // Object { value: "d", done: false }
-iterator.next();               // Object { value: "e", done: false }
-iterator.next();               // Object { value: undefined, done: true }
-iterator.next().value;         // undefined
+console.log(iterator.next());               // Object { value: "a", done: false }
+console.log(iterator.next().value);         // "b"
+console.log(iterator.next()["value"]);      // "c"
+console.log(iterator.next());               // Object { value: "d", done: false }
+console.log(iterator.next());               // Object { value: "e", done: false }
+console.log(iterator.next());               // Object { value: undefined, done: true }
+console.log(iterator.next().value);         // undefined
 ```
 
-> **Warning:** The array iterator object is one use or temporary object
+> **Warning**: The array iterator object is one use or temporary object
 
 example:
 
@@ -80,9 +80,9 @@ for (const letter of iterator) {
 } // undefined
 ```
 
-**reason:** When `next().done=true` or
-`currentIndex>length` the `for..of` loop ends.
-See [Iteration protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+**Reason**: When `next().done = true` or
+`currentIndex > length` the `for..of` loop ends.
+See [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 **Value**: there are no values stored in the array Iterator
 object; instead it stores the address of the array used in its creation and so depends
@@ -91,13 +91,13 @@ on the values stored in that array.
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
-console.log(iterator);        // Array Iterator {  }
-iterator.next().value;        // "a"
+console.log(iterator); // Array Iterator {  }
+console.log(iterator.next().value); // "a"
 arr[1] = 'n';
-iterator.next().value;        // "n"
+console.log(iterator.next().value); // "n"
 ```
 
-> **Note:** If the values in the array changed the array iterator object values change too.
+> **Note**: If the values in the array changed the array iterator object values change too.
 
 ## Specifications
 
