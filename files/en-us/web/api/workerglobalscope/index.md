@@ -31,6 +31,8 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
+- {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
 
 ### Non-standard properties
 

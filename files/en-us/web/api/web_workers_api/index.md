@@ -61,7 +61,11 @@ The following functions are **only** available to workers:
 
 > **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
 
+<<<<<<< HEAD
 The following Web APIs are available to workers:
+=======
+The following Web APIs are available to workers: {{domxref("Barcode_Detection_API","Barcode Detection API")}}, {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}}, {{domxref("Console API", "Console API")}}, [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API), [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}}), {{domxref("CustomEvent")}}, {{domxref("Encoding_API", "Encoding API")}} ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}}, etc.), {{domxref("Fetch_API", "Fetch API")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [Network Information API](/en-US/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "Notifications API")}}, {{domxref("Performance_API","Performance API")}} (including: {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}), {{jsxref("Promise")}}, [Server-sent events](/en-US/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }}), [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting `gfx.offscreencanvas.enabled`), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}}.
+>>>>>>> debf7bcffc (CSS Font Loading API fixes - FF104)
 
 - {{domxref("Barcode_Detection_API","Barcode Detection API")}}
 - {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}

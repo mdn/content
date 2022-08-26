@@ -15,7 +15,8 @@ browser-compat: api.FontFace
 
 {{APIRef("CSS Font Loading API")}}
 
-The **`FontFace`** interface represents a single usable font face. It allows control of the source of the font face, being a URL to an external resource, or a buffer; it also allows control of when the font face is loaded and its current status.
+The **`FontFace`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) represents a single usable font face.
+It allows control of the source of the font face, being a URL to an external resource, or a buffer; it also allows control of when the font face is loaded and its current status.
 
 ## Constructor
 
@@ -33,7 +34,7 @@ The **`FontFace`** interface represents a single usable font face. It allows con
 - {{domxref("FontFace.family")}}
   - : A string that retrieves or sets the _family_ of the font. It is equivalent to the {{cssxref("@font-face/font-family", "font-family")}} descriptor.
 - {{domxref("FontFace.featureSettings")}}
-  - : A string that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
+  - : A string that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the CSS {{cssxref("font-feature-settings")}} property.
 - {{domxref("FontFace.lineGapOverride")}}
   - : A string that retrieves or sets the _line-gap metric_ of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.
 - {{domxref("FontFace.loaded")}} {{ReadOnlyInline}}
