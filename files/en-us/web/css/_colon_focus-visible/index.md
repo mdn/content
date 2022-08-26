@@ -59,40 +59,50 @@ input, button {
 
 ### Selectively showing the focus indicator
 
-A custom control, such as a custom element button, can use `:focus-visible` to selectively apply a focus indicator only on keyboard-focus. This matches the native focus behavior for controls like {{htmlelement("button")}}.
+Users may still have browsers that do not support `:focus-visible`. For them, you can, by checking for the `:focus-visible` non-support, repeat the same focus styling, but with `:focus`. But even if you do not specify anything at all for `: focus`, then in old browsers there will simply be a native outline, which is also not bad.
 
 ```html
-<button class="custom-button">Click Me</button>
+<button class="button with-fallback" type="button">
+  Button with fallback
+</button>
+<button class="button without-fallback" type="button">
+  Button without fallback
+</button>
 ```
 
 ```css
-.custom-button {
-  display: inline-block;
+.button {
   margin: 10px;
+  border: 2px solid darkgray;
+  border-radius: 4px;
 }
 
-.custom-button:focus {
-  /* Provide a fallback style for browsers
-     that don't support :focus-visible */
-  outline: 2px solid red;
-  background: lightgrey;
+.button:focus-visible {
+  /* 
+  ** Draw the focus style you need for keyboard focus
+  ** in browsers that support :focus-visible.
+  */
+  outline: 3px solid deepskyblue;
+  outline-offset: 3px;
 }
 
-@supports selector(:focus-visible) {
-  .custom-button:focus {
-    /* Remove the focus indicator on mouse-focus for browsers
-       that do support :focus-visible */
-    outline: none;
-    background: transparent;
+@supports not selector(:focus-visible) {
+  .button.with-fallback:focus {
+    /*
+    ** Provide the same focus styles as a fallback
+    ** for browsers that don't support :focus-visible.
+    */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
   }
 }
 
-.custom-button:focus-visible {
-  /* Draw a very noticeable focus style for
-     keyboard-focus on browsers that do support
-     :focus-visible */
-  outline: 4px dashed darkorange;
-  background: transparent;
+.button.without-fallback:focus {
+  /*
+  ** Or just don't specify anything as a fallback.
+  ** Then browsers that don't support :focus-visible
+  ** will simply render the default focus style.
+  */
 }
 ```
 
