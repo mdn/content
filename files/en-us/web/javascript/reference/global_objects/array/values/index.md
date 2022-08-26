@@ -65,7 +65,7 @@ console.log(iterator.next());               // Object { value: undefined, done: 
 console.log(iterator.next().value);         // undefined
 ```
 
-> **Warning**: The array iterator object is one use or temporary object
+> **Warning:** The array iterator object is one use or temporary object
 
 example:
 
@@ -80,11 +80,11 @@ for (const letter of iterator) {
 } // undefined
 ```
 
-**Reason**: When `next().done = true` or
+**Reason:** When `next().done = true` or
 `currentIndex > length` the `for..of` loop ends.
 See [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
-**Value**: there are no values stored in the array Iterator
+**Value:** there are no values stored in the array Iterator
 object; instead it stores the address of the array used in its creation and so depends
 on the values stored in that array.
 
@@ -97,7 +97,7 @@ arr[1] = 'n';
 console.log(iterator.next().value); // "n"
 ```
 
-> **Note**: If the values in the array changed the array iterator object values change too.
+> **Note:** If the values in the array changed the array iterator object values change too.
 
 ## Specifications
 
