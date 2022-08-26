@@ -60,7 +60,7 @@ For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10
 ```css
 .icon:hover {
   filter: blur(5px);
-  animation: brightness-pulse 3s infinite;
+  animation: pulse 3s infinite;
   animation-composition: add;
 }
 
