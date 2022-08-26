@@ -609,7 +609,7 @@ This is because the video is inside the `<div>` — it is part of it — so clic
 This can be a very annoying behavior, but there is a way to prevent it!
 The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that the first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
 
-So we can fix our current problem by changing the JavaScript to this:
+We can fix our current problem by changing the JavaScript to this:
 
 ```js
 const btn = document.querySelector('button');
