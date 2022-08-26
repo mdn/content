@@ -43,8 +43,8 @@ Normal property addition through assignment creates properties which show up dur
 property enumeration ({{jsxref("Statements/for...in", "for...in")}} loop or
 {{jsxref("Object.keys")}} method), whose values may be changed, and which may be
 {{jsxref("Operators/delete", "deleted", "", 1)}}. This method allows these extra details
-to be changed from their defaults. By default, values added using
-`Object.defineProperty()` are immutable and not enumerable.
+to be changed from their defaults. By default, Properties added using
+`Object.defineProperty()` are not writable nor enumerable.
 
 Property descriptors present in objects come in two main flavors: data descriptors and
 accessor descriptors. A **data descriptor** is a property that has a
