@@ -85,7 +85,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Specifies the function that creates an object's prototype.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- {{jsxref("Object/proto","Object.prototype.__proto__")}} {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 
 ## Instance methods

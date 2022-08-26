@@ -10,7 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineSetter
 ---
-{{JSRef}}
+{{JSRef}}{{Deprecated_Header}}
 
 > **Warning:** This feature is deprecated in favor of defining setters using the
 > [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
