@@ -1,5 +1,5 @@
 ---
-title: 'Square tilemaps implementation: Scrolling maps'
+title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
 tags:
   - Canvas
@@ -11,6 +11,7 @@ tags:
   - tilemap
   - tiles
 ---
+
 {{GamesSidebar}}
 
 This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
@@ -61,14 +62,15 @@ for (let c = startCol; c <= endCol; c++) {
     const tile = map.getTile(c, r);
     const x = (c - startCol) * map.tsize + offsetX;
     const y = (r - startRow) * map.tsize + offsetY;
-    if (tile !== 0) { // 0 => empty tile
+    if (tile !== 0) {
+      // 0 => empty tile
       this.ctx.drawImage(
         this.tileAtlas, // image
         (tile - 1) * map.tsize, // source x
         0, // source y
         map.tsize, // source width
         map.tsize, // source height
-        Math.round(x),  // target x
+        Math.round(x), // target x
         Math.round(y), // target y
         map.tsize, // target width
         map.tsize // target height
