@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.sticky
+title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 tags:
   - ECMAScript 2015
@@ -20,13 +20,13 @@ The **`sticky`** accessor property indicates whether or not the `y` flag is used
 
 ## Description
 
-`RegExp.prototype.sticky` is a getter-only property that returns `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes).
+`RegExp.prototype.sticky` has the value `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes).
 
 When the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is called and the regex fails to match at the current position indicated by {{jsxref("RegExp.lastIndex", "lastIndex")}}, a global regex will continue to attempt at the next character, while a sticky regex immediately returns `null` and resets `lastIndex` to 0. When the match succeeds, `lastIndex` is advanced to the end of the match, just like global regexps do. When `lastIndex` is out of bounds of the currently matched string, it's reset to 0, just like global regexps do.
 
 For the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method, a regex that's both sticky and [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) behaves the same as a sticky and non-global regex. However, due to many other methods special-casing the behavior of global regexps, the global flag is, in general, orthogonal to the sticky flag. For more information about how each individual regex-related method (such as [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) and [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)) interact with the sticky and global flags, see their respective pages.
 
-You cannot change this property directly.
+The set accessor of `sticky` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

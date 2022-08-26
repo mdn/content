@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.source
+title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 tags:
   - JavaScript
@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.RegExp.source
 ---
 {{JSRef}}
 
-The **`source`** accessor property returns a {{jsxref("String")}} containing the source text of the regexp object, without the two forward slashes on both sides or any flags.
+The **`source`** accessor property is a string containing the source text of the regexp object, without the two forward slashes on both sides or any flags.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}
 

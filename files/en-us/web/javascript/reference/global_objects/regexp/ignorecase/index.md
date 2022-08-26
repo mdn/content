@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.ignoreCase
+title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 tags:
   - JavaScript
@@ -18,11 +18,11 @@ The **`ignoreCase`** accessor property indicates whether or not the `i` flag is 
 
 ## Description
 
-`RegExp.prototype.ignoreCase` is a getter-only property that returns `true` if the `i` flag was used; otherwise, `false`. The `i` flag indicates that case should be ignored while attempting a match in a string.
+`RegExp.prototype.ignoreCase` has the value `true` if the `i` flag was used; otherwise, `false`. The `i` flag indicates that case should be ignored while attempting a match in a string.
 
 If the regex has the [unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, the case mapping happens as specified in [`CaseFolding.txt`](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt). Otherwise, it uses the [Unicode Default Case Conversion](https://unicode-org.github.io/icu/userguide/transforms/casemappings.html) — the same algorithm used in [`String.prototype.toUpperCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) and [`String.prototype.toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
 
-You cannot change this property directly.
+The set accessor of `ignoreCase` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

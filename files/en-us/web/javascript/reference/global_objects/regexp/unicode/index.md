@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.unicode
+title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 tags:
   - ECMAScript 2015
@@ -19,13 +19,13 @@ The **`unicode`** accessor property indicates whether or not the `u` flag is use
 
 ## Description
 
-`RegExp.prototype.unicode` is a getter-only property that returns `true` if the `u` flag was used; otherwise, `false`. The `u` flag enables various Unicode-related features. With the "u" flag:
+`RegExp.prototype.unicode` has the value `true` if the `u` flag was used; otherwise, `false`. The `u` flag enables various Unicode-related features. With the "u" flag:
 
 - Any [Unicode codepoint escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) (`\u{xxxx}`, `\p{UnicodePropertyValue}`) will be interpreted as such instead of literal characters.
 - Surrogate pairs will be interpreted as whole characters instead of two separate characters. For example, `/[😄]/u` would only match `"😄"` but not `"\ud83d"`.
 - When [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is automatically advanced (such as when calling [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)), unicode regexps advance by Unicode codepoints instead of UTF-16 code units.
 
-You cannot change this property directly.
+The set accessor of `unicode` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

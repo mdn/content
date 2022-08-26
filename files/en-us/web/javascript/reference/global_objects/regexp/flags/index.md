@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.flags
+title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 tags:
   - ECMAScript 2015
@@ -20,11 +20,11 @@ The **`flags`** accessor property represents the [flags](/en-US/docs/Web/JavaScr
 
 ## Description
 
-`RegExp.prototype.flags` is a getter-only property that returns a string. Flags in the `flags` property are sorted alphabetically (from left to right, e.g. `"dgimsuy"`). It actually invokes the other flag accessors ([`hasIndices`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices), [`global`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global), etc.) one-by-one and concatenates the results.
+`RegExp.prototype.flags` has a string as its value. Flags in the `flags` property are sorted alphabetically (from left to right, e.g. `"dgimsuy"`). It actually invokes the other flag accessors ([`hasIndices`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices), [`global`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global), etc.) one-by-one and concatenates the results.
 
 All built-in functions read the `flags` property instead of reading individual flag accessors.
 
-You cannot change this property directly.
+The set accessor of `flag` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

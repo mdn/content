@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.multiline
+title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 tags:
   - JavaScript
@@ -18,9 +18,9 @@ The **`multiline`** accessor property indicates whether or not the `m` flag is u
 
 ## Description
 
-`RegExp.prototype.multiline` is a getter-only property that returns `true` if the `m` flag was used; otherwise, `false`. The `m` flag indicates that a multiline input string should be treated as multiple lines. For example, if `m` is used, `^` and `$` change from matching at only the start or end of the entire string to the start or end of any line within the string.
+`RegExp.prototype.multiline` has the value `true` if the `m` flag was used; otherwise, `false`. The `m` flag indicates that a multiline input string should be treated as multiple lines. For example, if `m` is used, `^` and `$` change from matching at only the start or end of the entire string to the start or end of any line within the string.
 
-You cannot change this property directly.
+The set accessor of `multiline` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

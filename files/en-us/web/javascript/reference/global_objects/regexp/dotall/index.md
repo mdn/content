@@ -1,5 +1,5 @@
 ---
-title: get RegExp.prototype.dotAll
+title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 tags:
   - JavaScript
@@ -19,7 +19,7 @@ The **`dotAll`** accessor property indicates whether or not the `s` flag is used
 
 ## Description
 
-`RegExp.prototype.dotAll` is a getter-only property that returns `true` if the `s` flag was used; otherwise, `false`. The `s` flag indicates that the dot special character (`.`) should additionally match the following line terminator ("newline") characters in a string, which it would not match otherwise:
+`RegExp.prototype.dotAll` has the value `true` if the `s` flag was used; otherwise, `false`. The `s` flag indicates that the dot special character (`.`) should additionally match the following line terminator ("newline") characters in a string, which it would not match otherwise:
 
 - U+000A LINE FEED (LF) (`\n`)
 - U+000D CARRIAGE RETURN (CR) (`\r`)
@@ -28,7 +28,7 @@ The **`dotAll`** accessor property indicates whether or not the `s` flag is used
 
 This effectively means the dot will match any character on the Unicode Basic Multilingual Plane (BMP). To allow it to match astral characters, the `u` (unicode) flag should be used. Using both flags in conjunction allows the dot to match any Unicode character, without exceptions.
 
-You cannot change this property directly.
+The set accessor of `dotAll` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
