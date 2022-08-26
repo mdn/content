@@ -12,7 +12,7 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager
 ---
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}
 
 The **`BackgroundFetchManager`** interface of the {{domxref('Background Fetch API','','',' ')}} is a map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
 

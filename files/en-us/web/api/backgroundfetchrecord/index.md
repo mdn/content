@@ -10,7 +10,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRecord
 ---
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}
 
 The **`BackgroundFetchRecord`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual request and response.
 

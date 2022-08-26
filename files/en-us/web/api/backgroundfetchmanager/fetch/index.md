@@ -13,7 +13,7 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.fetch
 ---
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}
 
 The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
 

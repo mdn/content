@@ -10,7 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData
 ---
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`AudioData`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents an audio sample.
 

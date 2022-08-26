@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioDecoder.decode
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to decode a given chunk of audio.
 

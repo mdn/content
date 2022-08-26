@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 

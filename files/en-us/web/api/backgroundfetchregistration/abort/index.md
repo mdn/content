@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.abort
 ---
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}
 
 The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.
 

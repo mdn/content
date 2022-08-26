@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder.close
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`close()`** method of the {{domxref("AudioEncoder")}} interface ends all pending work and releases system resources.
 

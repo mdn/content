@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData.copyTo
 ---
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a plane of an `AudioData` object to a destination buffer.
 

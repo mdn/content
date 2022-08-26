@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioDecoder.reset
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`reset()`** method of the {{domxref("AudioDecoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 

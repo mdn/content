@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData.clone
 ---
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new `AudioData` object with reference to the same media resource as the original.
 
