@@ -10,6 +10,7 @@ tags:
   - Phaser
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
@@ -45,7 +46,7 @@ The other two lines of code in the `preload()` function are responsible for alig
 We can also add a custom background color to our canvas, so it won't stay black. The `stage` object has a `backgroundColor` property for this purpose, which we can set using CSS color definition syntax. Add the following line below the other three you added earlier:
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## Compare your code

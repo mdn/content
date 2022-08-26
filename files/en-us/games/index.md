@@ -10,6 +10,7 @@ tags:
   - JavaScript Games
   - Web
 ---
+
 {{GamesSidebar}}
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
