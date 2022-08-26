@@ -21,6 +21,7 @@ spec-urls: https://drafts.csswg.org/css-position/
 - {{cssxref("right")}}
 - {{cssxref("bottom")}}
 - {{cssxref("left")}}
+- {{cssxref("inset")}}
 - {{cssxref("float")}}
 - {{cssxref("clear")}}
 - {{cssxref("position")}}
