@@ -18,6 +18,8 @@ The **`Math.SQRT2`** property represents the square root of 2, approximately 1.4
 
 ## Description
 
+`Math.SQRT2` is a constant and a more performant equivalent to [`Math.sqrt(2)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt).
+
 Because `SQRT2` is a static property of `Math`, you always use it as `Math.SQRT2`, rather than as a property of a `Math` object you created (`Math` is not a constructor).
 
 ## Examples

@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - controllers
 ---
+
 {{GamesSidebar}}
 
 This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by [Enclave Games](https://enclavegames.com/).
@@ -58,7 +59,7 @@ const gamepadAPI = {
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -198,10 +199,10 @@ There are two types of action to consider for a button: a single press and a hol
 
 ```js
 if (gamepadAPI.turbo) {
-  if (gamepadAPI.buttonPressed('A', 'hold')) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if (gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -239,7 +240,7 @@ The mapping type is now an enumerable object instead of a string:
 ```ts
 enum GamepadMappingType {
   "",
-  "standard"
+  "standard",
 }
 ```
 

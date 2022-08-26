@@ -37,7 +37,7 @@ onshippingaddresschange = (event) => { };
 
 ## Event type
 
-An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 

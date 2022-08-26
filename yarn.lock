@@ -34,19 +34,19 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.1.9":
-  version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.9.tgz#ab07c9942bd3f49460fa07c13b507569a2401a11"
-  integrity sha512-+Pa+ecijbf8HDuB2A3HoKC/bd+xugdX+3A6JQei5R4CJ2GO1m+p40S/rA+MMaLee1A52rX1bZ/8yRr9wFfBq6g==
+"@mdn/browser-compat-data@^5.1.10":
+  version "5.1.10"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.10.tgz#75a08680dfc967180e8dc89eaffb56431e8ff5ba"
+  integrity sha512-o3U01sgGh9KHJRP+Oz4LA7QCX3nN+F2skVINle9jO8D33aXQfqwnq9qFXhFk98jEG2tcuWzUwTG2UZzzyineiA==
 
-"@mdn/yari@1.15.13":
-  version "1.15.13"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.15.13.tgz#190c93268753aea8be81dc45bec2b5cc34778523"
-  integrity sha512-GqGkKhsrm/Q/4ITpaO7L0XScI071QuOYnpJPBYdYiwCMbAW54IAaxqvhHEueCU7+qnMXKyr7vS1pULiSPJi51Q==
+"@mdn/yari@1.17.0":
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.17.0.tgz#864cc613f7cc81a48530712719afcd8214d7bcaf"
+  integrity sha512-d4AxgV1zyq5/7NT57iQ8xbhA+h7r4Kje7zGfxo/sTwxoBmKCUiPemrFR2mlaZ1xcDYr7ufQJDK3D/V9ORBAQRg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.1.9"
+    "@mdn/browser-compat-data" "^5.1.10"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.0.1"
     accept-language-parser "^1.5.0"
@@ -3854,6 +3854,11 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
+prettier@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
 prismjs@^1.29.0:
   version "1.29.0"
