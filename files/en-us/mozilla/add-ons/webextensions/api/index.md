@@ -49,7 +49,7 @@ Not all browsers support all the APIs: for the details, see [Browser support for
 
 ## Examples
 
-Throughout the JavaScript API listings, you will find short code examples that illustrate how the API is used. You can experiment using these examples—_without_ needing to create a web extension—using the console in the [Toolbox](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox).
+Throughout the JavaScript API listings, short code examples illustrate how the API is used. You can experiment with most of these examples using the console in the [Toolbox](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox). However, you need Toolbox running in the context of a web extension. To do this, open `about:debugging` then **This Firefox**, click **Inspect** against any installed or temporary extension, and open **Console**. You can then paste and run the example code in the console.
 
 For example, here is the first code example on this page running in the Toolbox console in Firefox Developer Edition:
 
