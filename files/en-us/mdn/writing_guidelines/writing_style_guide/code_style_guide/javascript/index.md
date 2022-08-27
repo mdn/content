@@ -128,11 +128,6 @@ Leave a space between the slashes and the comment. Start with a capital letter, 
 // This is a well-written JavaScript-style comment
 ```
 
-Don't write:
-
-```js example-bad
-// poor comment
-```
 
 If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
 
