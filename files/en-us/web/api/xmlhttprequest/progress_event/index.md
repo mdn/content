@@ -74,7 +74,7 @@ input {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const xhrButtonSuccess = document.querySelector('.xhr.success');
