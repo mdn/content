@@ -48,11 +48,11 @@ The below graphic shows a summary of the available service worker events:
 
 ## Service workers demo
 
-To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [simple service worker](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
+To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [simple service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
 ![The words Star Wars followed by an image of a Lego version of the Darth Vader character](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), and the [simple service worker running live](https://bncb2v.csb.app/).
+You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), and the [simple service worker running live](https://bncb2v.csb.app/).
 
 ### Registering your worker
 

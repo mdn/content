@@ -6,7 +6,6 @@ tags:
   - CSS Custom Properties
   - CSS Function
   - CSS Variables
-  - Experimental
   - Function
   - Reference
   - Variables
