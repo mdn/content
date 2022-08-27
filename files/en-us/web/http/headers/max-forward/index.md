@@ -37,7 +37,6 @@ Max-Forwards: <integer>
 
 ```http
 Max-Forwards: 0
-
 Max-Forwards: 10
 ```
 
