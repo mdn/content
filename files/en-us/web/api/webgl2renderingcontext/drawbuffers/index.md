@@ -65,4 +65,4 @@ gl.drawBuffers([gl.NONE, gl.COLOR_ATTACHMENT1]);
 ## See also
 
 - {{domxref("WebGL2RenderingContext.clearBuffer",
-    "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
+    "WebGL2RenderingContext.clearBuffer[fiuv]\()")}}}

@@ -96,7 +96,7 @@ The **`Int8Array`** typed array represents an array of twos-complement 8-bit sig
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int8Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int8Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "Int8Array.prototype[@@iterator]\()")}}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

@@ -21,11 +21,11 @@ Whenever an object needs to be iterated (such as at the beginning of a `for..of`
 
 Some built-in types have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not. The built-in types with a `@@iterator` method are:
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]\()")}}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]\()")}}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]\()")}}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]\()")}}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]\()")}}}
 
 See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) for more information.
 
@@ -91,8 +91,8 @@ nonWellFormedIterable[Symbol.iterator] = () => 1;
 
 - [Polyfill of `Symbol.iterator` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]\()")}}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]\()")}}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]\()")}}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]\()")}}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]\()")}}}

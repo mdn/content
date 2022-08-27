@@ -33,7 +33,7 @@ The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-
   - : Returns a new `Iterator` object containing keys for each element in the status map, in insertion order.
 - {{domxref("MediaKeyStatusMap.values()")}} {{ReadOnlyInline}}
   - : Returns a new `Iterator` object containing values for each element in the status map, in insertion order.
-- {{domxref("MediaKeyStatusMap.[@@iterator]()")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeyStatusMap.[@@iterator]\()")}}} {{ReadOnlyInline}}
   - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.
 
 ## Specifications

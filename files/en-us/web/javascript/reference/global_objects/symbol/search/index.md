@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Symbol.search
 
 The **`Symbol.search`** well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.
 
-For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} and {{jsxref("String.prototype.search()")}}.
+For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]\()")}}} and {{jsxref("String.prototype.search()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-search.html")}}{{js_property_attributes(0,0,0)}}
 
@@ -49,4 +49,4 @@ console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]\()")}}}

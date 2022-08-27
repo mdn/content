@@ -96,7 +96,7 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float64Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float64Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "Float64Array.prototype[@@iterator]\()")}}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

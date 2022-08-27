@@ -237,7 +237,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also
     {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]\()")}}}
   - : Returns a new _array iterator_ object that contains the values for each index in the
     array.
 

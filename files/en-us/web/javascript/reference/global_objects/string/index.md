@@ -371,7 +371,7 @@ You must be careful which level of characters you are iterating on. For example,
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]\()")}}}
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
