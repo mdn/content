@@ -297,19 +297,21 @@ This section lists our recommendations of which operators to use and when.
 
 ### Conditional operators
 
-[Conditional (or ternary) operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) should be used when returning a value.
-When possible, put on a single line, as shown below:
+When you want to store to a variable a literal value depending on a condition, use a [Conditional (or ternary) operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), don't use an `if...else` statement. This rule also applies when returning a value. Write:
 
 ```js example-good
-let status = (age >= 18) ? 'adult' : 'minor';
+let x = condition ? 1 : 2;
 ```
 
-If needed (if the line is too long), Prettier will add line breaks with indentation to conditional operators:
+Do not write:
 
 ```js example-bad
-let status = (age >= 18)
-  ? 'adult'
-  : 'minor';
+let x;
+if (condition) {
+  x = 1;
+else {
+  x = 2;
+} 
 ```
 
 The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
