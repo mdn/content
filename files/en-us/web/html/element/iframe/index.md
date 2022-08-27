@@ -95,7 +95,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
-- {{htmlattrdef("allowpaymentrequest")}}
+- {{htmlattrdef("allowpaymentrequest")}} {{Experimental_Inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
@@ -104,7 +104,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("csp")}} {{experimental_inline}}
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
-- {{htmlattrdef("fetchpriority")}}
+- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
 
   - : Provides a hint of the relative priority to use when fetching the iframe document. Allowed values:
 
