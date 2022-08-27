@@ -68,7 +68,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 
 ### Fetching an image
 
-In our [basic fetch example](https://github.com/mdn/dom-examples/tree/master/fetch/basic-fetch) ([run example live](https://mdn.github.io/dom-examples/fetch/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element.
+In our [basic fetch example](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch) ([run example live](https://mdn.github.io/dom-examples/fetch/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element.
 The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
 
 You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.

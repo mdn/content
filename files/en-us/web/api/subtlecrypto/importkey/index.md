@@ -213,7 +213,7 @@ A JSON Web Key looks something like this (this is an EC private key):
 ### Raw import
 
 This example imports an AES key from an `ArrayBuffer` containing the bytes
-to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/raw.js)
+to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
 
 ```js
 const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
@@ -237,7 +237,7 @@ function importSecretKey(rawKey) {
 ### PKCS #8 import
 
 This example imports an RSA private signing key from a PEM-encoded PKCS #8 object.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/pkcs8.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/pkcs8.js)
 
 ```js
 /*
@@ -288,7 +288,7 @@ function importPrivateKey(pem) {
 ### SubjectPublicKeyInfo import
 
 This example imports an RSA public encryption key from a PEM-encoded
-SubjectPublicKeyInfo object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/spki.js)
+SubjectPublicKeyInfo object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/spki.js)
 
 ```js
   // from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
@@ -331,7 +331,7 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3Xo3U13dc+xojwQYWoJLCbOQ5fOVY8Llnqc
 ### JSON Web Key import
 
 This code imports an ECDSA private signing key, given a JSON Web Key object that
-represents it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/jwk.js)
+represents it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/jwk.js)
 
 ```js
 const jwkEcKey = {

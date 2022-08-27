@@ -649,7 +649,7 @@ This new functionality enables developers to specify a locale when creating an i
 We have a complete example using the IndexedDB API. The example uses IndexedDB to store and retrieve publications.
 
 - [Try the example](https://mdn.github.io/dom-examples/indexeddb-api/index.html)
-- [See the source code](https://github.com/mdn/dom-examples/tree/master/indexeddb-api)
+- [See the source code](https://github.com/mdn/dom-examples/tree/main/indexeddb-api)
 
 ## See also
 
