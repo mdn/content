@@ -203,7 +203,7 @@ The third and last variant of the `drawImage()` method has eight parameters in a
 
 To really understand what this does, it may help to look at this image:
 
-![](canvas_drawimage.jpg)
+![There is the source image(rhinoceros in water) on the top left corner. It is rectangular and it's top left corner is at co-ordinates (sx,sy) and whose width and height are sWidth and sHeight respectively. The translated image is shown at the bottom right corner. The top-left corner of the image in the destination canvas is at co-ordinates (dx,dy) and it is scaled to the size specified by dWidth and dHeight.](canvas_drawimage.jpg)
 
 The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
 
