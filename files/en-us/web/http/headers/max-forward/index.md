@@ -39,7 +39,6 @@ Max-Forwards: <integer>
 Max-Forwards: 0
 
 Max-Forwards: 10
-
 ```
 
 ## Specifications
