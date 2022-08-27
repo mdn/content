@@ -248,14 +248,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   var myName = "Chris";
   ```
 
-- Do not declare multiple variables in one line, separating them with commas or using chain declaration.
-
-  ```js example-bad
-  let var1, var2;
-  let var3 = var4 = "Apapou";
-  ```
-
-  Instead, declare one variable per line, like so:
+- Declare one variable per line, like so:
 
   ```js example-good
   let var1;
@@ -263,6 +256,15 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   let var3 = "Apapou";
   let var4 = var3;
   ```
+  
+  Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
+
+  ```js example-bad
+  let var1, var2;
+  let var3 = var4 = "Apapou";
+  ```
+
+  Instead, 
 
 ### Type coercion
 
