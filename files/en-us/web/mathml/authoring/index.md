@@ -200,7 +200,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
