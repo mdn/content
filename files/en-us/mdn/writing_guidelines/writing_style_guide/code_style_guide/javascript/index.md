@@ -10,17 +10,19 @@ tags:
 
 The following guidelines cover writing JavaScript example code for MDN Web Docs. This article is a list of rules for writing concise examples that will be understandable by as many people as possible.
 
-## Principles
+## General guidelines for JavaScript code examples
+
+This section explains the general guidelines to keep in mind while writing JavaScript code examples. The later sections will cover more specific details
 
 ### Choosing a format
 
-Opinions on correct indentation, whitespace, or splitting long lines have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
+Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
 
-We have decided to use [Prettier](https://prettier.io/) as a code formatter to avoid off-topic discussions and keep code style consistent.
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep code style consistent (and to avoid off-topic discussions).
 
-To learn more about the formatting conventions that are applied, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+To learn more about the formatting conventions used on MDN Web Docs, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
 
-### Modern JavaScript features
+### Using modern JavaScript features
 
 You can use the modern and well-supported JavaScript features in MDN Web Docs code examples.
 
@@ -50,7 +52,7 @@ Don't put everything on one line:
 function myFunc() { console.log("Hello!"); };
 ```
 
-There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
+- There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
 
   ```js example-bad
   function myMethod(myParam) {
@@ -78,9 +80,8 @@ There is one exception to the rule. Early returns after a condition (using `retu
 
 ### Spacing and indentation
 
-Mark indentation with _2 spaces_. No tabulation. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorConfig`](https://editorconfig.org/) file in the repository, and many editors read its content and use it to configure their behavior.
+Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorConfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
 
-Anyway, both spacing and indentation are [enforced by Prettier](https://prettier.io/docs/en/index.html).
 
 ## Comments
 
@@ -92,7 +93,7 @@ Add a comment if the purpose or logic of the code isn't obvious. Comments are no
 closeConnection(); // Closing the connection
 ```
 
-A comment should describe the intention of the author rather than merely describe the code:
+A comment should describe the intention of the author rather than merely describe the code For example, this is not a good use of a comment:
 
 ```js example-bad
 let total = 0;
@@ -104,7 +105,7 @@ for (let i = 0; i < 4; i++ ){
 }
 ```
 
-Describing the intention makes the example clearer:
+Using a comment to describe the intention of the code makes the example clearer, as shown below:
 
 ```js example-good
 let total = 0;
@@ -119,9 +120,9 @@ for (let i = 0; i < 4; i++ ){
 
 JS-style comments are marked with `//`, as opposed to C-style comments enclosed between `/* … */`.
 
-In general, use JS-style comments to comment code. Writers must mark each line with `//`, so it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
+In general, use JS-style comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
 
-Leave a space between the slashes and the comment. Start with a capital letter, like if it was a sentence, but don't end the comment with a period.
+Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
 
 ```js example-good
 // This is a well-written JavaScript-style comment
@@ -133,9 +134,7 @@ Don't write:
 // poor comment
 ```
 
-Add an empty line if the comment doesn't start immediately after a new indentation level. It will create a code block, making it obvious what the comment refers to.
-
-Put your comments on separate lines preceding the code they are referring to, like:
+If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
 
 ```js example-good
 function myFunc() {
@@ -151,9 +150,9 @@ function myFunc() {
 
 ### Use comments to mark ellipsis
 
-Skipping redundant code is necessary to keep examples short. Still, writers should do it thoughtfully as developers frequently copy & paste examples into their code, and all of our code samples should be valid JavaScript.
+Skipping redundant code using ellipses (…) is necessary to keep examples short. Still, writers should do it thoughtfully as developers frequently copy & paste examples into their code, and all of our code samples should be valid JavaScript.
 
-In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add. Don't write:
+In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add. So don't use ellipses (…) like this:
 
 ```js example-bad
 function exampleFct() {
@@ -161,31 +160,34 @@ function exampleFct() {
 }
 ```
 
-Using a comment will be more explicit, preventing errors when a developer copies & pastes the example:
+Using a comment for the ellipses (…), as shown below, will be more explicit, preventing errors when a developer copies and pastes a sample code:
 
 ```js example-good
 function exampleFct() {
-  // Add your specific behavior here
+  // Add your code here
   // …
 }
 ```
 
-### Commenting out parameters
+### Comment out parameters
 
 When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
 
-To do so, you use `/* … */` in the parameter list. It is an exception to the rule only to use JS-style comments (`//`).
+To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use JS-style comments (`//`).
 
 ## Variables
 
 ### Variable names
 
-Having good variable names is essential to understanding code. Use short identifiers, and avoid non-common abbreviations. Ideally, a variable name should be between 3 to 10-character long. (This is a hint, it is better to have a 12-character long variable name than to abbreviate it by removing the vowels. The identifier `accelerometer` is better than `acclmtr`).
+Good variable names are essential to understanding code.
+
+- Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
 
 - Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null`, or `name = "John Doe"` instead of `sName = "John Doe"`.
 - For collections, don't put the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. That way, your loops will be easy-to-read. E.g., `for (const car of cars)`.
 
-For variable names, use lowerCamelCasing. Use concise, human-readable, and semantic names where appropriate. Do not use `_`. For example, use `currencyName` rather than `currency_name`. Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`.
+- Use lowerCamelCasing. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
+- Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`.
 
 Use variable names like shown here:
 
@@ -246,14 +248,14 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   var myName = "Chris";
   ```
 
-- Declare one variable per line. Do not chain declarations or separate them with commas.
+- Do not declare multiple variables in one line, separating them with commas or using chain declaration.
 
   ```js example-bad
   let var1, var2;
   let var3 = var4 = "Apapou";
   ```
 
-  But write:
+  Instead, declare one variable per line, like so:
 
   ```js example-good
   let var1;
@@ -294,6 +296,8 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
 ## Operators
 
+This section lists our recommendations of which operators to use and when.
+
 ### Conditional operators
 
 [Conditional (or ternary) operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) should be used when returning a value.
@@ -331,7 +335,7 @@ name == 'Chris';
 age != 25;
 ```
 
-If you need to use `==` or `!=` consider adding a comment explaining why you need it (i.e., the type of coercion you want to perform).
+If you need to use `==` or `!=`, consider adding a comment to explain why you need it (i.e., the type of coercion you want to perform in the code).
 
 ### Shortcuts for boolean tests
 
@@ -343,7 +347,7 @@ Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true`
 
 When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
-When possible, like iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `.forEach()`.
+When iterating through all collection elements, avoid using the classical for (;;) loop; prefer for...of or .forEach().
 
 ```js example-bad
 const dogs = ["Rex", "Lassie"];
@@ -352,7 +356,7 @@ for (let i = 0; i < dogs.length; i++) {
 }
 ```
 
-Not only do you have to add an extra index, `i`, but you have to track the length of the array. It can be error-prone for beginners. Consider these two alternatives:
+As shown in the above example, not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners. Consider these two alternatives:
 
 ```js example-good
 const dogs = ["Rex", "Lassie"];
@@ -368,7 +372,7 @@ dogs.forEach((dog) => {
 });
 ```
 
-Make sure to define the initializer properly,  with a `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
+Make sure that you define the initializer properly by using the `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
 
 ```js example-good
 const cats = ['Athena', 'Luna'];
@@ -381,7 +385,7 @@ for (let i = 0; i < 4; i++) {
 }
 ```
 
-On the other side, the example below does not follow the recommended guidelines for the initialization (it is a `var`…).
+The example below does not follow the recommended guidelines for the initialization (it is a `var`…).
 
 ```js example-bad
 const cats = ['Athena', 'Luna'];
@@ -408,11 +412,11 @@ gerbils.forEach((gerbil, i) => {
 
 > **Warning:** Never use `for...in` with arrays and strings.
 
-> **Note:** Consider not using a for loop at all. If you are using an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (or even a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for some of them), consider instead using methods iterating over each element of the collection, like [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), or finding methods like[`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`findLast()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast), or [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), and many more.
+> **Note:** Consider not using a `for` loop at all. If you are using an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (or even a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for some of them), consider instead using methods iterating over each element of the collection, like [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), or finding methods like[`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`findLast()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast), or [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), and many more.
 
-### Control statements (if...else)
+### Control statements
 
-There is one notable case to keep in mind for control statements. If the `if` statement ends with a `return`, do not add An `else` statement; continue right after the `if` statement:
+There is one notable case to keep in mind for the `if...else` control statements. If the `if` statement ends with a `return`, do not add an `else` statement.
 
 ```js example-bad
 if (test) {
@@ -425,7 +429,7 @@ if (test) {
 }
 ```
 
-The correct way is:
+Continue right after the `if` statement, as shown below
 
 ```js example-good
 if (test) {
@@ -491,7 +495,7 @@ switch (fruits) {
 
 ### Error handling
 
-If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should therefore catch errors using a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, as shown below:
+If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should, therefore, catch errors using a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, as shown below:
 
 ```js example-good
 try {
@@ -515,7 +519,7 @@ Not writing the parameter list is called _optional catch binding_ and has been a
 
 ## Strings
 
-String literals can be enclosed with single quotes, like `'A string'`, or with double quotes, like `"A string"`. Which one to use is enforced by Prettier, so don't worry about which one to use.
+String literals can be enclosed within single quotes, as in `'A string'`, or within double quotes, as in `"A string"`. Don't worry about which one to use; Prettier keeps it consistent.
 
 ### Template literals
 
@@ -528,7 +532,7 @@ let myName = 'Chris';
 console.log(`Hi! I'm ${myName}!`);
 ```
 
-Don't concatenate strings like shown below:
+Don't concatenate strings like this:
 
 ```js example-bad
 let myName = 'Chris';
@@ -655,7 +659,7 @@ class Teacher extends Person {
 }
 ```
 
-### Checking object properties
+### Object properties
 
 The `Object.hasOwnProperties()` method has been deprecated in favor of `Object.hasOwn()`.
 
@@ -697,7 +701,7 @@ function sum(a, b) {
 }
 ```
 
-Here is not a good way to define a function:
+This is not a good way to define a function:
 
 ```js example-bad
 let sum = function(a, b) {
@@ -711,9 +715,7 @@ Here is the recommended way:
 
 ```js example-good
 const array1 = [1, 2, 3, 4];
-let sum = array1.reduce((a, b) =>
-  a + b
-);
+let sum = array1.reduce((a, b) => a + b);
 ```
 
 Instead of this:
@@ -769,25 +771,25 @@ const obj = {
 
 Writing asynchronous code improves performance and should be used when possible. In particular, you can use:
 
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), including the `finally()` method,
-- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await).
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), including the `finally()` method
+- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
 
 When both techniques are possible, we don't have any preference.
 
 ## Web APIs to avoid
 
-In addition to these JS language features, there are few guidelines related to Web APIs.
+In addition to these JavaScript language features, we reccomend a few guidelines related to Web APIs to keep in mind.
 
 ### Avoid browser prefixes
 
-If all browser supports a feature, don't prefix it.
+If all major browser (Chrome, Edge, Firefox, and Safari) supports a feature, don't prefix it.
 
 ```js example-bad
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const context = new AudioContext();
 ```
 
-should be
+The above snippet should be:
 
 ```js example-good
 const context = new AudioContext();
@@ -806,7 +808,7 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
 
 ### Use safe and reliable APIs
 
-- Do not use {{DOMxRef("Element.innerHTML")}} to insert purely textual content into an element, use {{DOMxRef("Node.textContent")}} instead. The property `innerHTML` leads to security problems if the developer doesn't control the parameter. The more we avoid it, the fewer security flaws are created by copying & pasting our code.
+- Do not use {{DOMxRef("Element.innerHTML")}} to insert purely textual content into an element; use {{DOMxRef("Node.textContent")}} instead. The property `innerHTML` leads to security problems if a developer doesn't control the parameter. The more we as writers avoid using it, the fewer security flaws are created when a developer copies and pastes our code.
 
   The example below demonstrates the use of `textContent`.
 
@@ -828,8 +830,9 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
 
 ### Use the appropriate log method
 
-- When logging a message, use `console.log()`. When logging an error, use `console.error()`.
+- When logging a message, use `console.log()`.
+- When logging an error, use `console.error()`.
 
 ## See also
 
-- [JavaScript language reference](/en-US/docs/Web/JavaScript/Reference) - browse through our JavaScript reference pages to check out some good, concise, meaningful CSS snippets.
+[JavaScript language reference](/en-US/docs/Web/JavaScript/Reference) - browse through our JavaScript reference pages to check out some good, concise, meaningful CSS snippets.
