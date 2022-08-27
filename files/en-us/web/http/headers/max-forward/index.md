@@ -6,7 +6,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-browser-compat: http.headers.Accept
+browser-compat: http.headers.Max-Forwards
 ---
 {{HTTPSidebar}}
 
