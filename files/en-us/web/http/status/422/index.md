@@ -22,7 +22,7 @@ the request entity is correct, but it was unable to process the contained instru
 
 ## Status
 
-```
+```plain
 422 Unprocessable Entity
 ```
 

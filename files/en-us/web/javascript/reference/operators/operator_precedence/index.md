@@ -17,13 +17,13 @@ tags:
 
 Consider an expression describable by the representation below, where both `OP1` and `OP2` are fill-in-the-blanks for OPerators.
 
-```
+```plain
 a OP1 b OP2 c
 ```
 
 The combination above has two possible interpretations:
 
-```
+```plain
 (a OP1 b) OP2 c
 a OP1 (b OP2 c)
 ```
@@ -57,7 +57,7 @@ Operators are first grouped by precedence, and then, for adjacent operators that
 
 For prefix unary operators, suppose we have the following pattern:
 
-```
+```plain
 OP1 a OP2 b
 ```
 
@@ -71,7 +71,7 @@ typeof a + b; // Equivalent to (typeof a) + b; result is "number2"
 
 If the unary operator is on the second operand:
 
-```
+```plain
 a OP2 OP1 b
 ```
 
@@ -87,7 +87,7 @@ Because `+` has higher precedence than [`yield`](/en-US/docs/Web/JavaScript/Refe
 
 If we have two prefix unary operators:
 
-```
+```plain
 OP1 OP2 a
 ```
 
@@ -164,7 +164,7 @@ console.log(echo("left", 4) / echo("middle", 3) ** echo("right", 2));
 
 If you are familiar with binary trees, think about it as a [post-order traversal](https://en.wikipedia.org/wiki/Tree_traversal#Post-order,_LRN).
 
-```
+```plain
                 /
        ┌────────┴────────┐
 echo("left", 4)         **

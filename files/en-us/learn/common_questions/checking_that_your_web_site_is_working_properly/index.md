@@ -150,7 +150,7 @@ Grades go from A to F. Our page is just small and meets most criteria. But we ca
 
 `ping` is a useful shell tool that tests the domain name you provide and tells you if the server's responding or not:
 
-```
+```bash
 $ ping mozilla.org
 PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms

@@ -29,7 +29,7 @@ Note in the above formulas that the values in the kernel matrix are applied such
 
 To illustrate, suppose you have a input image which is 5 pixels by 5 pixels, whose color values for one of the color channels are as follows:
 
-```
+```plain
 0    20  40 235 235
 100 120 140 235 235
 200 220 240 235 235
@@ -39,7 +39,7 @@ To illustrate, suppose you have a input image which is 5 pixels by 5 pixels, who
 
 and you define a 3-by-3 convolution kernel as follows:
 
-```
+```plain
 1 2 3
 4 5 6
 7 8 9
@@ -47,7 +47,7 @@ and you define a 3-by-3 convolution kernel as follows:
 
 Let's focus on the color value at the second row and second column of the image (source pixel value is 120). Assuming the simplest case (where the input image's pixel grid aligns perfectly with the kernel's pixel grid) and assuming default values for attributes ['divisor'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute), ['targetX'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute) and ['targetY'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute), then resulting color value will be:
 
-```
+```plain
 (9*0   + 8*20  + 7*40 +
  6*100 + 5*120 + 4*140 +
  3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)

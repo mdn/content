@@ -16,7 +16,7 @@ literals and octal escape sequences are used.
 
 ## Message
 
-```
+```plain
 SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
 SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
 SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)

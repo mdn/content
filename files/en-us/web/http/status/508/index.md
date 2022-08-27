@@ -21,7 +21,7 @@ entire operation failed.
 
 ## Status
 
-```
+```plain
 508 Loop Detected
 ```
 
