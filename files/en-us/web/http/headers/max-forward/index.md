@@ -1,6 +1,6 @@
 ---
 title: Max-Forwards
-slug: Web/HTTP/Headers/Accept
+slug: Web/HTTP/Headers/Max-Forwards
 tags:
   - HTTP
   - HTTP Header
