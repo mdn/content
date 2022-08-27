@@ -44,7 +44,7 @@ property enumeration ({{jsxref("Statements/for...in", "for...in")}} loop or
 {{jsxref("Object.keys")}} method), whose values may be changed, and which may be
 {{jsxref("Operators/delete", "deleted", "", 1)}}. This method allows these extra details
 to be changed from their defaults. By default, properties added using
-`Object.defineProperty()` are not writable nor enumerable.
+`Object.defineProperty()` are not writable nor enumerable nor configurable.
 
 Property descriptors present in objects come in two main flavors: data descriptors and
 accessor descriptors. A **data descriptor** is a property that has a
