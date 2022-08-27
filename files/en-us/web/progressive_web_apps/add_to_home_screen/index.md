@@ -28,7 +28,7 @@ See [caniuse.com](https://caniuse.com/#feat=web-app-manifest) for exact details.
 
 We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be added to a Home screen, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.
 
-If you have either Firefox for Android or Chrome for Android available, use it to navigate to our demo at <https://mdn.github.io/pwa-examples/a2hs/> (the URL bar appears on the top in Chrome and at the bottom in Firefox).
+If you have either Firefox for Android or Chrome for Android available, use it to navigate to our [demo](https://mdn.github.io/pwa-examples/a2hs/) (the URL bar appears on the top in Chrome and at the bottom in Firefox).
 
 ![URL bar menu](url_bar_menu.png)
 

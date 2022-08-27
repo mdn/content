@@ -86,7 +86,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Navigate the active tab in the current window to <https://developer.mozilla.org>:
+Navigate the active tab in the current window to `https://developer.mozilla.org`:
 
 ```js
 function onUpdated(tab) {
@@ -101,7 +101,7 @@ let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
 updating.then(onUpdated, onError);
 ```
 
-Activate the first tab in the current window, and navigate it to <https://developer.mozilla.org>:
+Activate the first tab in the current window, and navigate it to `https://developer.mozilla.org`:
 
 ```js
 function onUpdated(tab) {
