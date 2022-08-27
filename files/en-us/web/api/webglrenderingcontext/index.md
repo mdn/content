@@ -277,11 +277,11 @@ The following properties and methods provide general information and functionali
   - : Returns information about a vertex attribute at a given position.
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : Returns the address of a given vertex attribute.
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]\()")}}}
+- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]\()")}}
   - : Specifies a value for a uniform variable.
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
   - : Specifies a matrix value for a uniform variable.
-- {{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]\()")}}}
+- {{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]\()")}}
   - : Specifies a value for a generic vertex attribute.
 - {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
   - : Specifies the data formats and locations of vertex attributes in a vertex attributes array.

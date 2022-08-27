@@ -96,7 +96,7 @@ The **`Uint16Array`** typed array represents an array of 16-bit unsigned integer
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint16Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[@@iterator]\()")}}}
+- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[@@iterator]\()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

@@ -96,7 +96,7 @@ The **`Int32Array`** typed array represents an array of twos-complement 32-bit s
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int32Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]\()")}}}
+- {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]\()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

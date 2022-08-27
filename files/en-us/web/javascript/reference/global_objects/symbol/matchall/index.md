@@ -17,7 +17,7 @@ The **`Symbol.matchAll`** well-known symbol returns an iterator, that yields mat
 
 ## Description
 
-This Symbol is used for {{jsxref("String.prototype.matchAll()")}} and specifically in {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]\()")}}}. The following two examples return same result:
+This Symbol is used for {{jsxref("String.prototype.matchAll()")}} and specifically in {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]\()")}}. The following two examples return same result:
 
 ```js
 'abc'.matchAll(/a/);
@@ -47,7 +47,7 @@ console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
 ```
 
-See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]\()")}}} for more examples.
+See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]\()")}} for more examples.
 
 ## Specifications
 
@@ -61,4 +61,4 @@ See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", 
 
 - [Polyfill of `Symbol.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]\()")}}}
+- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]\()")}}

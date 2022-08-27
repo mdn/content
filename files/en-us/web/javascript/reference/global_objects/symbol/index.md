@@ -124,7 +124,7 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
   - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Returns the Symbol. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("Symbol.prototype.@@toPrimitive()", "Symbol.prototype[@@toPrimitive]\()")}}}
+- {{jsxref("Symbol.prototype.@@toPrimitive()", "Symbol.prototype[@@toPrimitive]\()")}}
   - : Returns the Symbol.
 
 ## Examples

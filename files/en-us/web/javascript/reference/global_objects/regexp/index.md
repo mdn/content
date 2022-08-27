@@ -102,15 +102,15 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
   - : Tests for a match in its string parameter.
 - {{JSxRef("RegExp.prototype.toString()")}}
   - : Returns a string representing the specified object. Overrides the {{JSxRef("Object.prototype.toString()")}} method.
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]\()")}}}
+- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]\()")}}
   - : Performs match to given string and returns match result.
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]\()")}}}
+- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]\()")}}
   - : Returns all matches of the regular expression against a string.
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]\()")}}}
+- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]\()")}}
   - : Replaces matches in given string with new substring.
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}}
+- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}
   - : Searches the match in given string and returns the index the pattern found in the string.
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]\()")}}}
+- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]\()")}}
   - : Splits given string into an array by separating the string into substrings.
 
 ## Examples

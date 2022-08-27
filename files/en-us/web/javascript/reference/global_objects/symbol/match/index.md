@@ -57,4 +57,4 @@ re[Symbol.match] = false;
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]\()")}}}
+- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]\()")}}
