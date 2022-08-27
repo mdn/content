@@ -79,9 +79,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 - {{htmlattrdef("cols")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS {{Cssxref("width")}} instead.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- {{htmlattrdef("width")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.
-- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+- {{htmlattrdef("wrap")}} {{non-standard_inline}} {{Deprecated_Inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
 ## Accessibility concerns
