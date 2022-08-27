@@ -35,7 +35,7 @@ This returns `false` before and `true` afterwards, as at that point the body has
 <img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
 ```
 
-### JS Content
+### JavaScript Content
 
 ```js
 const myImage = document.querySelector('.my-image');

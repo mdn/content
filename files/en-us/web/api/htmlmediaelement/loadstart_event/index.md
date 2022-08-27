@@ -84,7 +84,7 @@ video {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const loadVideo = document.querySelector('button');

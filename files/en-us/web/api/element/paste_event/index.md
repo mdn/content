@@ -58,7 +58,7 @@ div.source, div.target {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const target = document.querySelector('div.target');
