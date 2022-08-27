@@ -82,7 +82,6 @@ function exampleFunc() { console.log("Hello!"); };
 
 Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorConfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
 
-
 ## Comments
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
@@ -257,8 +256,6 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   let var1, var2;
   let var3 = var4 = "Apapou";
   ```
-
-  Instead, 
 
 ### Type coercion
 
@@ -512,7 +509,6 @@ When you don't need the parameter of the `catch` statement, omit it:
     console.error("An error happened!");
   }
 ```
-
 
 ## Strings
 
