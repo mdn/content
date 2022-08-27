@@ -41,7 +41,7 @@ Prettier formats and styles all the code; the tool will fix your errors. Neverth
 For example, a function definition will look like this:
 
 ```js example-good
-function myFunc() {
+function exampleFunc() {
   console.log("Hello!");
 };
 ```
@@ -49,14 +49,14 @@ function myFunc() {
 Don't put everything on one line:
 
 ```js example-bad
-function myFunc() { console.log("Hello!"); };
+function exampleFunc() { console.log("Hello!"); };
 ```
 
 - There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
 
   ```js example-bad
-  function myMethod(myParam) {
-    actionList = init(myParam);
+  function exampleMethod(param) {
+    actionList = init(param);
     if (actionList.length === 0) {
       return 0;
     }
@@ -69,8 +69,8 @@ function myFunc() { console.log("Hello!"); };
   Shortening the `if` statement renders the example easier to understand:
 
   ```js example-good
-  function myMethod(myParam) {
-    actionList = init(myParam);
+  function exampleMethod(param) {
+    actionList = init(param);
     if (actionList.length === 0) return 0;
 
     // No error, we continue
@@ -128,11 +128,10 @@ Leave a space between the slashes and the comment. Start with a capital letter, 
 // This is a well-written JavaScript-style comment
 ```
 
-
 If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
 
 ```js example-good
-function myFunc() {
+function exampleFunc() {
   // Output the string 'Hello' to the browser's JS console
   console.log("Hello");
 
@@ -150,7 +149,7 @@ Skipping redundant code using ellipses (…) is necessary to keep examples short
 In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add. So don't use ellipses (…) like this:
 
 ```js example-bad
-function exampleFct() {
+function exampleFunct() {
   …
 }
 ```
@@ -158,7 +157,7 @@ function exampleFct() {
 Using a comment for the ellipses (…), as shown below, will be more explicit, preventing errors when a developer copies and pastes a sample code:
 
 ```js example-good
-function exampleFct() {
+function exampleFunct() {
   // Add your code here
   // …
 }
@@ -209,38 +208,38 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - If a variable will not be reassigned, prefer `const`, like so:
 
   ```js example-good
-  const myName = "Chris";
-  console.log(myName);
+  const name = "Chris";
+  console.log(name);
   ```
 
 - If you'll change the value of a variable, use `let` as shown below:
 
   ```js example-good
-  let myAge = "40";
-  myAge++;
+  let age = "40";
+  age++;
   console.log("Happy birthday!");
   ```
 
 - The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
 
   ```js example-bad
-  let myName = "Chris";
+  let name = "Chris";
   console.log(myName);
   ```
 
 - The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
 
   ```js example-bad
-  const myAge = "40";
-  myAge++;
+  const age = "40";
+  age++;
   console.log("Happy birthday!");
   ```
 
 - The example below uses `var`, polluting the global scope:
 
   ```js example-bad
-  var myAge = "40";
-  var myName = "Chris";
+  var age = "40";
+  var name = "Chris";
   ```
 
 - Declare one variable per line, like so:
@@ -526,15 +525,15 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
 ```js example-good
-let myName = 'Chris';
-console.log(`Hi! I'm ${myName}!`);
+let name = 'Chris';
+console.log(`Hi! I'm ${name}!`);
 ```
 
 Don't concatenate strings like this:
 
 ```js example-bad
-let myName = 'Chris';
-console.log('Hi! I\'m' + myName + '!');
+let name = 'Chris';
+console.log("Hi! I'm" + name + "!");
 ```
 
 ## Arrays
@@ -620,13 +619,13 @@ For creating general objects (i.e., when classes are not involved), use literals
 For example, do this:
 
 ```js example-good
-let myObject = {};
+let object = {};
 ```
 
 Don't create a general object like this:
 
 ```js example-bad
-let myObject = new Object();
+let object = new Object();
 ```
 
 ### Object classes
