@@ -22,7 +22,7 @@ As a JavaScript developer, programmatically writing data to a stream is very use
 
 ## Introducing an example
 
-In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) repo you'll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
+In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams) repo you'll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/main/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
 
 ## How writable streams work
 

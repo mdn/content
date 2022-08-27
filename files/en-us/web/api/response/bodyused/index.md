@@ -21,7 +21,7 @@ A boolean value.
 
 ## Examples
 
-In our [fetch request example](https://github.com/mdn/dom-examples/tree/master/fetch/fetch-request) (run [fetch request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)),
+In our [fetch request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (run [fetch request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)),
 we create a new request using the {{domxref("Request.Request","Request()")}} constructor,
 then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}} out of the response using `blob()`,
 put it into an object URL using {{domxref("URL.createObjectURL")}}, and then set that URL as the source of an {{htmlelement("img")}} element to display the image.
