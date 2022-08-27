@@ -112,6 +112,6 @@ Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, bu
 - To run PHP server-side code, launch [PHP's built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash
-  $ cd path/to/your/php/code
-  $ php -S localhost:8000
+  cd path/to/your/php/code
+  php -S localhost:8000
   ```
