@@ -70,7 +70,7 @@ tags:
 ### JavaScript
 
 - The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ({{bug(888969)}}).
-- The ES2015 {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]\()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]\()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}}, and {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]\()")}}} methods, and {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter have been implemented ({{bug(887016)}}).
+- The ES2015 {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]\()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]\()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}, and {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]\()")}} methods, and {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter have been implemented ({{bug(887016)}}).
 - The deprecated, non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ({{bug(1108382)}}).
 - The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ({{bug(1265136)}}).
 
