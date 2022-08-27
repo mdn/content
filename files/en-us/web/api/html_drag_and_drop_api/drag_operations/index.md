@@ -192,8 +192,11 @@ A listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {
 If you want to allow a drop, you must prevent the default handling by cancelling both the `dragenter` and `dragover` events. You can do this either by returning `false` from attribute-defined event listeners, or by calling the event's {{domxref("Event.preventDefault","preventDefault()")}} method. The latter may be more feasible in a function defined in a separate script.
 
 ```html
-<div ondragover="return false">
-<div ondragover="event.preventDefault()">
+<div dragenter="return false">
+<div dragover="return false">
+    
+<div dragenter="event.preventDefault()">
+<div dragover="event.preventDefault()">
 ```
 
 Calling the {{domxref("Event.preventDefault","preventDefault()")}} method during both a {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} event will indicate that a drop is allowed at that location. However, you will commonly wish to call the {{domxref("Event.preventDefault","preventDefault()")}} method only in certain situations (for example, only if a link is being dragged).
