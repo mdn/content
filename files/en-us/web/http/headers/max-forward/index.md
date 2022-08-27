@@ -30,7 +30,8 @@ If the `Max-Forwards` header is not present in a `TRACE` request, a node will as
 ## Syntax
 
 ```http
-Max-Forwards: <Integer-Value>
+Max-Forwards: <integer>
+
 ```
 ## Examples
 
