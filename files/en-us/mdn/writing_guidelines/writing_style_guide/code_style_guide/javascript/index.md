@@ -514,7 +514,6 @@ When you don't need the parameter of the `catch` statement, omit it:
   }
 ```
 
-Not writing the parameter list is called _optional catch binding_ and has been available in every browser since 2019.
 
 ## Strings
 
