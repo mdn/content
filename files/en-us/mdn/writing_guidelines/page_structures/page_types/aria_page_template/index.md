@@ -29,13 +29,13 @@ In ARIA role or attribute subpages, you need to include the following tags (see 
 
 In the value of the `spec_urls` frontmatter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
 
-- ARIA: https\://w3c\.github.io/aria/
-- ARIA Authoring Practices: https\://w3c\.github.io/aria-practices/
+- ARIA: <https://w3c.github.io/aria/>
+- ARIA Authoring Practices: <https://w3c.github.io/aria-practices/>
 
 Additional resources:
 
-- Accessibility Object Model: https\://wicg.github.io/aom/spec/
-- ARIA in HTML: https\://w3c.github.io/html-aria/
+- Accessibility Object Model: <https://wicg.github.io/aom/spec/>
+- ARIA in HTML: <https://w3c.github.io/html-aria/>
 
 ## Page template
 

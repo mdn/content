@@ -176,7 +176,7 @@ DoF is directly related to the tracking of the user's head movement.
 
 Although our field of view is much larger (approximately 180º), we need to be aware that only in a small portion of that field can you perceive symbols (the center 60º) or read text (the center 10º). If you do not have an eye tracking sensor we assume that the center of the screen is where the user is focusing their eyes.
 
-This limitation is important to consider when deciding where place visuals on the app canvas — too far towards the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at https\://mixedreality.mozilla.org/ — see [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
+This limitation is important to consider when deciding where place visuals on the app canvas — too far towards the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at <https://mixedreality.mozilla.org/> — see [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
 
 ### 3D Positional Audio
 

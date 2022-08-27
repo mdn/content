@@ -6,4 +6,4 @@ tags:
   - UDPSocket
   - mozUDPSocket
 ---
-//TODO: docs are missing, see https\://bugzilla.mozilla.org/show_bug.cgi?id=745283
+<!-- TODO: docs are missing, see https://bugzilla.mozilla.org/show_bug.cgi?id=745283 -->

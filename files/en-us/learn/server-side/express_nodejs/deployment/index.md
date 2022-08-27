@@ -265,7 +265,7 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`).
 
 Now that the repository ("repo") is created we are going to want to clone it on our local computer:
 
