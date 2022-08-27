@@ -10,7 +10,9 @@ browser-compat: http.headers.Accept
 ---
 {{HTTPSidebar}}
 
-The **`Max-Forwards`** request HTTP header is used only with the TRACE method,to limit the number of proxies that request goes through.A Integer Value is given to these Header.If a TRACE Request is received with the Max-Forwards method,each hop should decrement it and then forward the request to next hop.If the received value is zero (and so cannot be deincremented further), the node becomes authortative for the given request, instead of the origin server.If the Max-Forwards Header is missing in a TRACE Request ,assume that there is no maximum number of forwards.
+The **`Max-Forwards`** request HTTP header is used with the [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE) method to limit the number of nodes (usually proxies) that request goes through. Its value is an integer value indicating the _maximum amount_ of nodes it must visit. At each node, the value is decremented and the `TRACE` request is forwarded to the next node, until the destination is reached, or the received value of `Max-Forwards` is zero. The request is then forwarded back, except for some headers, as the body of a `200 OK` response.
+
+If the `Max-Forwards` header is not present in a `TRACE` request, a node will assume that there is no maximum number of forwards.
 
 <table class="properties">
   <tbody>
