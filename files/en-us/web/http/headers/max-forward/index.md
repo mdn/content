@@ -51,7 +51,4 @@ Max-Forwards: 10
 
 ## See also
 
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
-- [List of default Accept values](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)
-- A header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
-- Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}
+- The HTTP [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE) method
