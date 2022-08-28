@@ -85,10 +85,7 @@ If your code has to work in old browser versions that do not support `:focus-vis
 
 @supports not selector(:focus-visible) {
   .button.with-fallback:focus {
-    /*
-    ** Provide the same focus styles as a fallback
-    ** for browsers that don't support :focus-visible.
-    */
+    /* Fallback for browsers without :focus-visible support */
     outline: 3px solid deepskyblue;
     outline-offset: 3px;
   }
