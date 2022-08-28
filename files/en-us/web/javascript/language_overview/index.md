@@ -109,9 +109,9 @@ console.log(`I am ${age} years old.`); // Template literal
 
 ### Other types
 
-JavaScript distinguishes between [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates absence of value. There are many ways to obtain `undefined`:
+JavaScript distinguishes between [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), which indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which indicates absence of value. There are many ways to obtain `undefined`:
 
-- A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement (`return;`) with no value implicitly returns `undefined`.
+- A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement with no value (`return;`) implicitly returns `undefined`.
 - Accessing a nonexistent [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) property (`obj.iDontExist`) returns `undefined`.
 - A variable declaration without initialization (`let x;`) will implicitly initialize the variable to `undefined`.
 
@@ -127,7 +127,7 @@ Boolean(""); // false
 Boolean(234); // true
 ```
 
-However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see [Control structures](#control_structures). For this reason, we sometimes speak of "[truthy](/en-US/docs/Glossary/Truthy)" and "[falsy](/en-US/docs/Glossary/Falsy)", meaning values that become `true` and `false`, respectively, when used in boolean contexts.
+However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see [Control structures](#control_structures)). For this reason, we sometimes speak of "[truthy](/en-US/docs/Glossary/Truthy)" and "[falsy](/en-US/docs/Glossary/Falsy)", meaning values that become `true` and `false`, respectively, when used in boolean contexts.
 
 Boolean operations such as `&&` (logical _and_), `||` (logical _or_), and `!` (logical _not_) are supported; see [Operators](#operators).
 
@@ -165,13 +165,15 @@ Pi = 1; // will throw an error because you cannot change a constant variable.
 const obj = {};
 obj.a = 1; // no error
 console.log(obj); // { a: 1 }
+
+obj = {}; // error
 ```
 
 `var` declarations can have surprising behaviors (for example, they are not block-scoped but function-scoped), and they are discouraged in modern JavaScript code.
 
 If you declare a variable without assigning any value to it, its value is `undefined`. You can't declare a `const` variable without an initializer, because you can't change it later anyway.
 
-`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz). This has some interesting interactions with variable shadowing, which is unseen in other languages.
+`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) before the actual line of declaration. This has some interesting interactions with variable shadowing, which is unseen in other languages.
 
 ```js
 function foo(x, condition) {
@@ -329,9 +331,9 @@ switch (action) {
 }
 ```
 
-Similar to the behavior in C, case labels are conceptually the same as [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label), so if you don't add a `break` statement, execution will "fall through" to the next level. However, they are not actually jump tables — any expression can be part of the `case` label, not just string or number literals, and they would be evaluated one-by-one until one equals the value being matched. Comparison takes place between the two using the `===` operator.
+Similar to C, case clauses are conceptually the same as [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label), so if you don't add a `break` statement, execution will "fall through" to the next level. However, they are not actually jump tables — any expression can be part of the `case` clause, not just string or number literals, and they would be evaluated one-by-one until one equals the value being matched. Comparison takes place between the two using the `===` operator.
 
-Unlike some languages like Rust, control-flow structures are statements in JavaScript, meaning you can't assign them to a value, like `const a = if (x) { 1 } else { 2 }`.
+Unlike some languages like Rust, control-flow structures are statements in JavaScript, meaning you can't assign them to a variable, like `const a = if (x) { 1 } else { 2 }`.
 
 JavaScript errors are handled using the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement.
 
@@ -403,20 +405,20 @@ const obj = {
 Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
 
 ```js
-// dot notation
+// Dot notation
 obj.name = "Simon";
 const name = obj.name;
 
-// bracket notation
+// Bracket notation
 obj["name"] = "Simon";
 const name = obj["name"];
 
-// can use a variable to define a key
+// Can use a variable to define a key
 const userName = prompt("what is your key?");
 obj[userName] = prompt("what is its value?");
 ```
 
-Attribute access can be chained together:
+Property access can be chained together:
 
 ```js
 obj.details.color; // orange
@@ -548,7 +550,7 @@ In the above code, the variable `args` holds all the values that were passed int
 
 The rest parameter will store all arguments _after_ where it's declared, but not before. i.e. `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
-If a function accepts a list of arguments and you already hold an array, you can use the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
+If a function accepts a list of arguments and you already hold an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
 We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows objects to be conveniently packed and unpacked.
 
@@ -587,7 +589,7 @@ const avg = function (...args) {
 };
 ```
 
-That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it's semantically equivalent to declaring the function using the `function avg()` named-function form.
+That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it's semantically equivalent to declaring the function using the `function avg() {}` declaration syntax.
 
 There's another way to define anonymous functions — using an [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
@@ -607,7 +609,7 @@ const sum = (a, b, c) => a + b + c;
 
 Arrow functions are not semantically equivalent to function expressions — for more information, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-There's a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript provides a mechanism for simultaneously declaring and invoking a function using a single expression. It's called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE), and the syntax for using it with an anonymous function looks like this:
+There's another way that anonymous functions can be useful: it can be simultaneously declared and invoked in a single expression, called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE):
 
 ```js
 (function () {
@@ -615,7 +617,7 @@ There's a way that anonymous functions can be useful even without ever being ass
 })();
 ```
 
-For use-cases of IIFEs, you can read [Emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures) section of the [Closures](/en-US/docs/Web/JavaScript/Closures) article.
+For use-cases of IIFEs, you can read [emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures).
 
 ### Recursive functions
 
@@ -684,9 +686,9 @@ function parentFunc() {
 }
 ```
 
-This provides a great deal of utility in writing more maintainable code. If a called function relies on one or two other functions that are not useful to any other part of your code, you can nest those utility functions inside it. This keeps the number of functions that are in the global scope down, which is always a good thing.
+This provides a great deal of utility in writing more maintainable code. If a called function relies on one or two other functions that are not useful to any other part of your code, you can nest those utility functions inside it. This keeps the number of functions that are in the global scope down.
 
-This is also a great counter to the lure of global variables. When writing complex code it is often tempting to use global variables to share values between multiple functions — which leads to code that is hard to maintain. Nested functions can share variables in their parent, so you can use that mechanism to couple functions together when it makes sense without polluting your global namespace — "local globals" if you like. This technique should be used with caution, but it's a useful ability to have.
+This is also a great counter to the lure of global variables. When writing complex code, it is often tempting to use global variables to share values between multiple functions, which leads to code that is hard to maintain. Nested functions can share variables in their parent, so you can use that mechanism to couple functions together without polluting your global namespace.
 
 ## Classes
 
@@ -706,7 +708,7 @@ const p = new Person("John");
 console.log(p.sayHello());
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is constructed, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>
