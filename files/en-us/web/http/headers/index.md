@@ -168,7 +168,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("Expect")}}
   - : Indicates expectations that need to be fulfilled by the server to properly handle the request.
 - {{HTTPHeader("Max-Forwards")}}
-  - : TBD
+  - : Indicates Maximum number of Forwards between Client and Server.
 
 ## Cookies
 
