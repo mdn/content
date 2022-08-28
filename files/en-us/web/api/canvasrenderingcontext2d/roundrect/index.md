@@ -109,7 +109,7 @@ ctx.stroke();
 ```
 
 Finally, we draw two rounded rectangles that have four values for the radii and the same starting point.
-The difference here is that the second is drawn with a negative width. 
+The difference here is that the second is drawn with a negative width.
 
 ```js
 // Rounded rectangle with four different radii

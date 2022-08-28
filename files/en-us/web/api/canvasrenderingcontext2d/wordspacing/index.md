@@ -15,6 +15,8 @@ browser-compat: api.CanvasRenderingContext2D.wordSpacing
 
 The **`CanvasRenderingContext2D.wordSpacing`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies the spacing between words when drawing text.
 
+This corresponds to the CSS [`word-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing) property.
+
 ## Value
 
 The word spacing as a string in the [CSS length](/en-US/docs/Web/CSS/length) data format.
