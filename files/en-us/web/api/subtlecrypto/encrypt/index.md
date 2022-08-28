@@ -211,7 +211,7 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     {
       name: "AES-CBC",
-      iv,
+      iv: iv,
     },
     key,
     encoded,
@@ -237,7 +237,7 @@ function encryptMessage(key) {
   // iv will be needed for decryption
   const iv = window.crypto.getRandomValues(new Uint8Array(12));
   return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
+    { name: "AES-GCM", iv: iv },
     key,
     encoded,
   );
