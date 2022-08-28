@@ -25,6 +25,8 @@ The **`unicode`** accessor property indicates whether or not the `u` flag is use
 - Surrogate pairs will be interpreted as whole characters instead of two separate characters. For example, `/[😄]/u` would only match `"😄"` but not `"\ud83d"`.
 - When [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is automatically advanced (such as when calling [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)), unicode regexps advance by Unicode codepoints instead of UTF-16 code units.
 
+There are other changes to the parsing behavior that prevents possible syntax mistakes (which is analogous to [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) for regex syntax). This is explained in more detail in [using unicode regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#using_unicode_regular_expressions).
+
 The set accessor of `unicode` is `undefined`. You cannot change this property directly.
 
 ## Examples
