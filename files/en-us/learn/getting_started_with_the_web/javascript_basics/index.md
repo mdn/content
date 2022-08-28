@@ -55,7 +55,7 @@ However, getting comfortable with JavaScript is more challenging than getting co
     myHeading.textContent = 'Hello world!';
     ```
 
-5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:!
+5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:Hello world!
 
 [Heading "hello world" above a firefox logo](hello-world.png)
 
