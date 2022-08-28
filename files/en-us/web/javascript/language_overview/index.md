@@ -86,7 +86,7 @@ Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/Java
 
 ```js
 console.log("Hello, world");
-console.log("你好，世界！"); // All Unicode characters "just work"
+console.log("你好，世界！"); // Nearly all Unicode characters can be written literally in string literals
 ```
 
 Strings can be written with either single or double quotes — JavaScript does not have the distinction between characters and strings. If you want to represent a single character, you just use a string consisting of that single character.
@@ -252,6 +252,16 @@ const name = cachedName || (cachedName = getName());
 ```
 
 For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+
+## Grammar
+
+JavaScript grammar is very similar to the C family. There are a few points worth mentioning:
+
+- [Identifiers](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) can have Unicode characters, but they cannot be one of the [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
+- [Comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) are commonly `//` or `/* */`, while many other scripting languages like Perl, Python, and Bash use `#`.
+- Semicolons are optional in JavaScript — the language [automatically inserts them](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) when needed. However, there are certain caveats to watch out, since unlike Python, semicolons are still part of the syntax.
+
+For an in-depth look at the JavaScript grammar, see the [reference page for lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar).
 
 ## Control structures
 
@@ -801,4 +811,4 @@ There are some essential parts of the language that we have omitted due to space
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
