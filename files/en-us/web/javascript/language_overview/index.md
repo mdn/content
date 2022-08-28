@@ -171,7 +171,7 @@ console.log(obj); // { a: 1 }
 
 If you declare a variable without assigning any value to it, its value is `undefined`. You can't declare a `const` variable without an initializer, because you can't change it later anyway.
 
-`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz). This has some interesting interactions with variable shadowing unseen in other languages.
+`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz). This has some interesting interactions with variable shadowing, which is unseen in other languages.
 
 ```js
 function foo(x, condition) {
@@ -220,7 +220,7 @@ If you add a string to a number (or other value) everything is converted into a 
 
 Adding an empty string to something is a useful way of converting it to a string itself.
 
-[Comparisons](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`, which work for both strings and numbers. For equality, the double-equals operator performs type coercion if you give it different types, with sometimes interesting results. On the other hand, the triple-equals operator does not attempt type coercion, and is usually preferred.
+[Comparisons](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`, which work for both strings and numbers. For equality, the [double-equals operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) performs type coercion if you give it different types, with sometimes interesting results. On the other hand, the [triple-equals operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) does not attempt type coercion, and is usually preferred.
 
 ```js
 123 == "123"; // true
@@ -255,7 +255,7 @@ For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/Java
 
 ## Control structures
 
-JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by [`if` and `else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else); you can chain them together if you like:
+JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by [`if` and `else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else); you can chain them together:
 
 ```js
 let name = "kittens";
@@ -269,9 +269,9 @@ if (name === "puppies") {
 name === "kittens meow";
 ```
 
-JavaScript doesn't have `elif`, and `else if` is really just an `else` block comprised of a single `if` statement.
+JavaScript doesn't have `elif`, and `else if` is really just an `else` branch comprised of a single `if` statement.
 
-JavaScript has [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loops and [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:
+JavaScript has [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loops and [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loops. The first is good for basic looping; the second is for loops where you wish to ensure that the body of the loop is executed at least once:
 
 ```js
 while (true) {
@@ -319,7 +319,7 @@ switch (action) {
 }
 ```
 
-Similar to the behavior in C, case labels act as jump tables, so if you don't add a `break` statement, execution will "fall through" to the next level. Any expression can be part of the `case` label, not just string or number literals. Comparisons take place between the two using the `===` operator.
+Similar to the behavior in C, case labels are conceptually the same as [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label), so if you don't add a `break` statement, execution will "fall through" to the next level. However, they are not actually jump tables — any expression can be part of the `case` label, not just string or number literals, and they would be evaluated one-by-one until one equals the value being matched. Comparison takes place between the two using the `===` operator.
 
 Unlike some languages like Rust, control-flow structures are statements in JavaScript, meaning you can't assign them to a value, like `const a = if (x) { 1 } else { 2 }`.
 
@@ -433,7 +433,7 @@ me.x = 1;
 console.log(stillMe.x); // 1
 ```
 
-For more on objects and prototypes see the [`Object` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For more information on the object initializer syntax, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+For more on objects and prototypes, see the [`Object` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For more information on the object initializer syntax, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 This page has omitted all details about object prototypes and inheritance because you can usually achieve inheritance with [classes](#classes) without touching the underlying mechanism (which you may have heard to be abstruse). To learn about them, see [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
@@ -536,11 +536,11 @@ avg(2, 3, 4, 5); // 3.5
 
 In the above code, the variable `args` holds all the values that were passed into the function.
 
-It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments _after_ its declaration, but not before. i.e. `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
+The rest parameter will store all arguments _after_ where it's declared, but not before. i.e. `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
 If a function accepts a list of arguments and you already hold an array, you can use the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
-We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Objects can be conveniently packed and unpacked.
+We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows objects to be conveniently packed and unpacked.
 
 ```js
 // Note the { } braces: this is destructuring an object
@@ -564,7 +564,7 @@ avg(1, 2); // 1.5, instead of NaN
 
 ### Anonymous functions
 
-JavaScript lets you create anonymous functions — that is, functions without names. In practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
+JavaScript lets you create anonymous functions — that is, functions without names. In practice, anonymous functions are typically used as arguments to other functions, immediately assigned to a variable that can be used to invoke the function, or returned from another function.
 
 ```js
 // Note that there's no function name before the parentheses
@@ -696,7 +696,7 @@ const p = new Person("John");
 console.log(p.sayHello());
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time they are constructed, they return an object containing the methods and properties that they specified. They don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is constructed, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>
@@ -705,6 +705,10 @@ const withAuthentication = (cls) =>
       // …
     }
   };
+
+class Admin extends withAuthentication(Person) {
+  // …
+}
 ```
 
 Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
@@ -713,9 +717,51 @@ For a detailed guide on various class features, you can read the [guide page](/e
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature.
+JavaScript is single-threaded by nature. There's no [_paralleling_](https://en.wikipedia.org/wiki/Parallel_computing); only [_concurrency_](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
 
-<!-- TODO -->
+There are three idiomatic ways to write asynchronous code in JavaScript:
+
+- Callback-based (such as [`setTimeout()`](/en-US/docs/Web/API/setTimeout))
+- [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based
+- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), which is a syntactic sugar for Promises
+
+For example, here's how a file-read operation may look like in JavaScript:
+
+```js
+// Callback-based
+fs.readFile(filename, (err, content) => {
+  // This callback is invoked when the file is read, which could be after a while
+  if (err) {
+    throw err;
+  }
+  console.log(content);
+}));
+// Code here will be executed while the file is waiting to be read
+
+// Promise-based
+fs.readFile(filename)
+  .then((content) => {
+    // What to do when the file is read
+    console.log(content);
+  }).catch((err) => {
+    throw err;
+  }));
+// Code here will be executed while the file is waiting to be read
+
+// Async/await
+async function readFile(filename) {
+  const content = await fs.readFile(filename);
+  console.log(content);
+}
+```
+
+The core language doesn't specify any asynchronous programming features, but it's crucial when interacting with the external environment — from [asking user permissions](/en-US/docs/Web/API/Permissions_API), to [fetching data](/en-US/docs/Web/API/Fetch_API/Using_Fetch), to [reading files](https://nodejs.org/api/fs.html). Keeping the potentially long-running operations async ensures that other processes can still run while this one waits — for example, the browser will not freeze while waiting for the user to click a button to grant permission.
+
+If you have an async value, it's not possible to get its value synchronously. For example, if you have a promise, you can only access the eventual result via the [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method. Similarly, [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can only be used in an async context, which is usually an async function or a module. Promises are _never blocking_ — only the logic depending on the promise's result will be deferred; everything else continues to execute in the meantime. If you are a functional programmer, you may recognize promises as [monads](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>) which can be mapped with `then()` (however, they are not _proper_ monads because they auto-flatten; i.e. you can't have a `Promise<Promise<T>>`).
+
+In fact, the single-threaded model has made Node.js a popular choice for server-side programming due to its non-blocking IO, making handling a large number of database or file-system requests very performant. However, CPU-bound (computationally intensive) tasks that's pure JavaScript will still block the main thread. To achieve real paralleling, you may need to use [workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+
+To learn more about asynchronous programming, you can read about [using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) or follow the [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) tutorial.
 
 ## Modules
 
