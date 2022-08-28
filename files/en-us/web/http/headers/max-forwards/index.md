@@ -6,7 +6,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-browser-compat: http.headers.Max-Forwards
+spec-urls: https://httpwg.org/specs/rfc7231.html#header.max-forwards
 ---
 {{HTTPSidebar}}
 
@@ -44,7 +44,8 @@ Max-Forwards: 10
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is neither targeted at, nor implemented in, browsers.
+
 
 ## See also
 
