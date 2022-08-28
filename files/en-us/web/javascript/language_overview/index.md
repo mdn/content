@@ -53,13 +53,13 @@ console.log(0.1 + 0.2); // 0.30000000000000004
 
 For operations that expect integers, such as bitwise operations, the number will be converted to a 32-bit integer.
 
-The [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) type is an arbitrary length integer. Its behavior is similar to C's integer types (e.g. division truncate to zero), except it can grow indefinitely. BigInts are specified with a number literal and an `n` suffix.
+The [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) type is an arbitrary length integer. Its behavior is similar to C's integer types (e.g. division truncates to zero), except it can grow indefinitely. BigInts are specified with a number literal and an `n` suffix.
 
 ```js
 console.log(-3n / 2n); // -1n
 ```
 
-The standard [arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators) are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. BigInts and Numbers cannot be mixed in arithmetic operations.
+The standard [arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators) are supported, including addition, subtraction, remainder arithmetic, etc. BigInts and numbers cannot be mixed in arithmetic operations.
 
 The {{jsxref("Math")}} object provides standard mathematical functions and constants.
 
@@ -783,6 +783,14 @@ However, the JavaScript language doesn't offer standard library modules — all 
 Different runtimes may use different module systems. For example, [Node.js](https://nodejs.org/en/) uses the package manager [npm](https://www.npmjs.com/) and is mostly file-system based, while [Deno](https://deno.land/) and browsers are fully URL-based and modules can be resolved from HTTP URLs.
 
 For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Guide/Modules).
+
+## Language and runtime
+
+Throughout this page, we've constantly mentioned that certain features are _language-level_ while others are _runtime-level_.
+
+JavaScript is a general-purpose scripting language. The [core language specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) focuses on pure computational logic. It doesn't deal with any input/output — in fact, without extra runtime-level APIs (most notably [`console.log()`](/en-US/docs/Web/API/console/log)), a JavaScript program's behavior is entirely unobservable.
+
+A runtime, or a host, is something that feeds data to the JavaScript engine (the interpreter), provides extra global properties, and provides hooks for the engine to interact with the outside world. Module resolution, reading data, printing messages, sending network requests, etc. are all runtime-level operations. Since its inception, JavaScript has been adopted in various environments, such as browsers (which provide APIs like [DOM](/en-US/docs/Web/API/Document_Object_Model)), Node.js (which provides APIs like [file system access](https://nodejs.org/api/fs.html)), etc. JavaScript has been successfully integrated in web (which was its primary purpose), mobile apps, desktop apps, server-side apps, serverless, embedded systems, and more. While you learn about JavaScript core features, it's also important to understand host-provided features in order to put the knowledge to use. For example, you can read about all [web platform APIs](/en-US/docs/Web/API), which are implemented by browsers, and sometimes non-browsers.
 
 ## Further exploration
 
