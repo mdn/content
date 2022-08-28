@@ -44,7 +44,8 @@ Max-Forwards: 10
 
 ## Browser compatibility
 
-This feature is neither targeted, nor implemented, at browsers.
+This feature is neither targeted at, nor implemented in, browsers.
+
 
 ## See also
 
