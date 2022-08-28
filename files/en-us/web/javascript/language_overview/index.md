@@ -82,17 +82,24 @@ By IEEE 754 specification, Number values also include {{jsxref("NaN")}} (short f
 
 ### Strings
 
-Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters). Strings can be written with either single or double quotes — JavaScript does not have the distinction between characters and strings. If you want to represent a single character, you just use a string consisting of that single character.
+Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
 
 ```js
 console.log("Hello, world");
+console.log("你好，世界！"); // All Unicode characters "just work"
 ```
 
-To find the length of a string (in code units), access its [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property.
+Strings can be written with either single or double quotes — JavaScript does not have the distinction between characters and strings. If you want to represent a single character, you just use a string consisting of that single character.
+
+```js
+console.log("Hello"[1] === "e"); // true
+```
+
+To find the length of a string (in [code units](/en-US/docs/Glossary/Code_unit)), access its [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property.
 
 Strings have [utility methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods) to manipulate the string and access information about the string. Because all primitives are immutable by design, these methods would return new strings.
 
-The `+` operator is overloaded for strings: when one of the operands is a string, it performs string concatenation instead of number addition. A special [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax allows you to write strings with embedded expressions more succinctly.
+The `+` operator is overloaded for strings: when one of the operands is a string, it performs string concatenation instead of number addition. A special [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax allows you to write strings with embedded expressions more succinctly. Unlike Python's f-strings or C#'s interpolated strings, template literals do not use single or double quotes, but use backticks.
 
 ```js
 const age = 25;
@@ -399,6 +406,13 @@ const userName = prompt("what is your key?");
 obj[userName] = prompt("what is its value?");
 ```
 
+Attribute access can be chained together:
+
+```js
+obj.details.color; // orange
+obj["details"]["size"]; // 12
+```
+
 Objects are always references, so unless something is explicitly copying the object, mutations to an object would be visible to the outside.
 
 ```js
@@ -414,16 +428,9 @@ This also means two separately created objects will never be equal (`!==`), beca
 
 ```js
 const me = {};
-const stillMe = {};
+const stillMe = me;
 me.x = 1;
 console.log(stillMe.x); // 1
-```
-
-Attribute access can be chained together:
-
-```js
-obj.details.color; // orange
-obj["details"]["size"]; // 12
 ```
 
 For more on objects and prototypes see the [`Object` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For more information on the object initializer syntax, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
@@ -475,7 +482,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-Or, since arrays are iterable, you can use the [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, which is synonymous to C++/Java's `for (int x : arr)` syntax:
+Or, since arrays are iterable, you can use the [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, which is synonymous to C++/Java's `for (int x : arr)` syntax:
 
 ```js
 for (const currentValue of a) {
@@ -636,9 +643,9 @@ const charsInBody = (function counter(elm) {
 
 The name provided to a function expression as above is only available to the function's own scope. This allows more optimizations to be done by the engine and results in more readable code. The name also shows up in the debugger and some stack traces, which can save you time when debugging.
 
-Note that JavaScript functions are themselves objects — like everything else in JavaScript — and you can add or change properties on them just like we've seen earlier in the Objects section.
+If you are used to functional programming, beware of the performance implications of recursion in JavaScript. Although the language specification specifies [tail-call optimization](https://en.wikipedia.org/wiki/Tail_call), only JavaScriptCore (used by Safari) has implemented it, due to the difficulty of recovering stack traces and debuggability. For deep recursion, consider using iteration instead to avoid stack overflow.
 
-### First-class functions
+### Functions are first-class objects
 
 JavaScript functions are first-class objects. This means that they can be assigned to variables, passed as arguments to other functions, and returned from other functions. In addition, JavaScript supports [closures](/en-US/docs/Web/JavaScript/Closures) out-of-the-box without explicit capturing, allowing you to conveniently apply functional programming styles.
 
@@ -648,6 +655,8 @@ const add = (x) => (y) => x + y;
 // Function accepting function
 const babies = ["dog", "cat", "hen"].map((name) => `baby ${name}`);
 ```
+
+Note that JavaScript functions are themselves objects — like everything else in JavaScript — and you can add or change properties on them just like we've seen earlier in the Objects section.
 
 ### Inner functions
 
@@ -723,6 +732,19 @@ export const a = 1;
 
 Unlike Haskell, Python, Java, etc., JavaScript module resolution is entirely host-defined — it's usually based on URLs or file paths, so relative file paths "just work" and are relative to the current module's path instead of some project root path.
 
-However, JavaScript doesn't have standard library modules offered by the language — all core functionalities are powered by global variables like [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) and [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instead. This is due to the long history of JavaScript lacking a module system, and the fact that opting into the module system involves some changes to the runtime setup.
+However, the JavaScript language doesn't offer standard library modules — all core functionalities are powered by global variables like [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) and [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instead. This is due to the long history of JavaScript lacking a module system, and the fact that opting into the module system involves some changes to the runtime setup.
+
+Different runtimes may use different module systems. For example, [Node.js](https://nodejs.org/en/) uses the package manager [npm](https://www.npmjs.com/) and is mostly file-system based, while [Deno](https://deno.land/) and browsers are fully URL-based and modules can be resolved from HTTP URLs.
 
 For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Guide/Modules).
+
+## Further exploration
+
+This page offers a very basic insight into how various JavaScript features compare with other languages. If you want to learn more about the language itself and the nuances with each feature, you can read the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+
+There are some essential parts of the language that we have omitted due to space and complexity, but you can explore on your own:
+
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Closures](/en-US/docs/Web/JavaScript/Closures)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
