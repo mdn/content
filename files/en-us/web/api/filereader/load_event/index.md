@@ -110,7 +110,7 @@ img.preview {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');
