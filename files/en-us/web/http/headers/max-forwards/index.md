@@ -6,7 +6,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-spec-urls: https://datatracker.ietf.org/doc/html/rfc7231#section-5.1.2
+spec-urls: https://www.ietf.org/rfc/rfc7231.html#section-5.1.2
 ---
 {{HTTPSidebar}}
 
