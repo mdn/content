@@ -8,7 +8,6 @@ on:
       - "**/*.json"
       - .github/workflows/pr-check_json.yml
 
-
 jobs:
   docs:
     runs-on: ubuntu-latest

@@ -2,9 +2,7 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 tags:
-  - Deprecated
   - Element
-  - Experimental
   - HTML
   - Reference
   - Web

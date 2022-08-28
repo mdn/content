@@ -147,7 +147,7 @@ That's all there is to it!
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## See also
 

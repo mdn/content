@@ -7,6 +7,7 @@ tags:
   - Web
   - Property
   - Houdini
+  - Experimental
 browser-compat: css.at-rules.property.inherits
 ---
 {{CSSRef}}{{SeeCompatTable}}

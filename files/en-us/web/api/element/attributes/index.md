@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.attributes
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.attributes`** property returns a live collection
@@ -30,8 +31,8 @@ A {{domxref("NamedNodeMap")}} object.
 
 ```js
 // Get the first <p> element in the document
-const para = document.getElementsByTagName("p")[0];
-const atts = para.attributes;
+const paragraph = document.querySelector("p");
+const attributes = paragraph.attributes;
 ```
 
 ### Enumerating elements attributes

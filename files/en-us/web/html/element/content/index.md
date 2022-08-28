@@ -13,10 +13,11 @@ tags:
   - Web
   - Web Components
   - shadow dom
+  - Non-standard
 browser-compat: html.elements.content
 ---
 
-{{Deprecated_header}}
+{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of the [Web Components](/en-US/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) as an {{glossary("insertion point")}}, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted.
 

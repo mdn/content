@@ -95,7 +95,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > - To align values, use the CSS {{cssxref("text-align")}} property instead.
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
   - : This attribute defines the background color of each cell of the column. It accepts a 6-digit hexadecimal color or a named color.  Alphatransparency is not supported.
 

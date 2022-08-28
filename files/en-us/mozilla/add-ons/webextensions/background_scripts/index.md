@@ -154,8 +154,8 @@ Use APIs that support event filters to restrict listeners to the cases the exten
 
 ```js
 browser.webNavigation.onCompleted.addListener(() => {
-  alert("This is my favorite website!");
-}, {url: [{urlMatches : 'https://www.google.com/'}]});
+  console.log("This is my favorite website!");
+}, { url: [{ urlMatches : 'https://www.mozilla.org/' }] });
 ```
 
 ### React to listeners

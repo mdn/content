@@ -32,7 +32,7 @@ GeneratorFunction(arg0, arg1, functionBody)
 GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
-> **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
+> **Note:** `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
 
 ### Parameters
 

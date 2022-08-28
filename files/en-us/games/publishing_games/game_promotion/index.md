@@ -10,6 +10,7 @@ tags:
   - blog
   - competitions
 ---
+
 {{GamesSidebar}}
 
 Developing and publishing your game is not enough. You have to let the world know that you have something interesting available that people will enjoy playing. There are many ways to promote your game — most of them being free, so even if you're struggling to make a living as an indie dev with zero budget you can still do a lot to let people know about your great new game. Promoting the game helps a lot when [monetizing](/en-US/docs/Games/Publishing_games/Game_monetization) it later on too, so it's important to do it correctly.
@@ -26,7 +27,7 @@ You should definitely create your own website containing all the information abo
 
 You should also blog about everything related to your gamedev activities. Write about your development process, nasty bugs you encounter, funny stories, lessons learned, and the ups and downs of being a game developer. Continually publishing information about your games will help educate others, increase your reputation in the community, and further improve SEO. A further option is to publish [monthly reports](https://end3r.com/blog/?s=monthly+report) that summarize all your progress — it helps you see what you've accomplished throughout the month and what's still left to do, and it keeps reminding people that your game is coming out soon — building buzz is always good.
 
-While you can create your website from scratch, there are also tools that can help make the process easier.  [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website.  [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
+While you can create your website from scratch, there are also tools that can help make the process easier. [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website. [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
 
 ## Social media
 
