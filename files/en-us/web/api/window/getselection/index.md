@@ -35,7 +35,7 @@ A {{domxref("Selection")}} object.
 When cast to string, either by appending an empty string (`""`) or using
 {{domxref("Selection.toString()")}}, this object returns the text selected.
 
-When called on an {{htmlelement("iframe")}} that is not displayed (eg. where
+When called on an {{htmlelement("iframe")}} that is not displayed (e.g. where
 `display: none` is set) Firefox will return `null`, whereas other
 browsers will return a {{domxref("Selection")}} object with
 {{domxref("Selection.type")}} set to `None`.
