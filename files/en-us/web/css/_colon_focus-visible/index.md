@@ -90,14 +90,6 @@ If your code has to work in old browser versions that do not support `:focus-vis
     outline-offset: 3px;
   }
 }
-
-.button.without-fallback:focus {
-  /*
-  ** Or just don't specify anything as a fallback.
-  ** Then browsers that don't support :focus-visible
-  ** will simply render the default focus style.
-  */
-}
 ```
 
 {{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 72)}}
