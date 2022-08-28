@@ -78,10 +78,7 @@ If your code has to work in old browser versions that do not support `:focus-vis
 }
 
 .button:focus-visible {
-  /* 
-  ** Draw the focus style you need for keyboard focus
-  ** in browsers that support :focus-visible.
-  */
+  /* Draw the focus when :focus-visible is supported */
   outline: 3px solid deepskyblue;
   outline-offset: 3px;
 }
