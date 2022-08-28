@@ -22,7 +22,7 @@ Sometimes, this status code indicates that the request cannot be processed until
 
 ## Example response
 
-```
+```http
 HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```

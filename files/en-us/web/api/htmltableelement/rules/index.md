@@ -20,7 +20,7 @@ borders to render in the table.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `none`
   - : No rules

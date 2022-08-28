@@ -14,7 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRDepthInformation.rawValueToMeters
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The *read-only* **`rawValueToMeters`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
 

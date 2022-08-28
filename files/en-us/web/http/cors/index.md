@@ -27,12 +27,6 @@ For security reasons, browsers restrict cross-origin HTTP requests initiated fro
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) to mitigate the risks of cross-origin HTTP requests.
 
-## Who should read this article?
-
-Everyone, really.
-
-More specifically, this article is for **web administrators**, **server developers** and **front-end developers**. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers.
-
 ## What requests use CORS?
 
 This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:
@@ -111,7 +105,7 @@ This operation performs a simple exchange between the client and the server, usi
 
 Let's look at what the browser will send to the server in this case:
 
-```
+```http
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -126,7 +120,7 @@ The request header of note is {{HTTPHeader("Origin")}}, which shows that the inv
 
 Now let's see how the server responds:
 
-```
+```http
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 00:23:53 GMT
 Server: Apache/2
@@ -141,13 +135,13 @@ Content-Type: application/xml
 
 In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 
-This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example`, (i.e no domain other than `https://foo.example` can access the resource in a cross-origin manner) they would send:
+This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example` (i.e., no domain other than `https://foo.example` can access the resource in a cross-origin manner), they would send:
 
-```
+```http
 Access-Control-Allow-Origin: https://foo.example
 ```
 
@@ -176,7 +170,7 @@ The example above creates an XML body to send with the `POST` request. Also, a n
 
 Let's look at the full exchange between client and server. The first exchange is the _preflight request/response_:
 
-```plain
+```http
 OPTIONS /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -226,7 +220,7 @@ Finally, {{HTTPHeader("Access-Control-Max-Age")}} gives the value in seconds for
 
 Once the preflight request is complete, the real request is sent:
 
-```plain
+```http
 POST /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -307,7 +301,7 @@ Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in ord
 
 Here is a sample exchange between client and server:
 
-```plain
+```http
 GET /resources/credentialed-content/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0

@@ -28,7 +28,7 @@ The **`Range`** HTTP request header indicates the part of a document that the se
 
 ## Syntax
 
-```
+```http
 Range: <unit>=<range-start>-
 Range: <unit>=<range-start>-<range-end>
 Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
@@ -51,13 +51,13 @@ Range: <unit>=-<suffix-length>
 
 Requesting three ranges from the file.
 
-```
+```http
 Range: bytes=200-1000, 2000-6576, 19000-
 ```
 
 Requesting the first 500 and last 500 bytes of the file. The request may be rejected by the server if the ranges overlap.
 
-```
+```http
 Range: bytes=0-499, -500
 ```
 

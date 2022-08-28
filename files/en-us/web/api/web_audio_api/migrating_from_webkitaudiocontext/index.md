@@ -37,7 +37,7 @@ These are simple renames that were made in order to improve the consistency of t
 // Old method names
 const gain = context.createGainNode();
 const delay = context.createDelayNode();
-const js = context.createJavascriptNode(1024);
+const js = context.createJavaScriptNode(1024);
 ```
 
 you can rename the methods to look like this:

@@ -38,7 +38,7 @@ The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explore
 
 ## Syntax
 
-```
+```http
 X-XSS-Protection: 0
 X-XSS-Protection: 1
 X-XSS-Protection: 1; mode=block
@@ -76,7 +76,7 @@ Setting the `X-XSS-Protection` header to either `0` or `1; mode=block` prevents 
 
 Block pages from loading when they detect reflected XSS attacks:
 
-```
+```http
 X-XSS-Protection: 1; mode=block
 ```
 

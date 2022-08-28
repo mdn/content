@@ -157,7 +157,7 @@ Check out the definition of each discussion category below so that you can start
       </td>
       <td>
         Discussions related to the existing
-        <a href="https://developer.mozilla.org/en-US/plus"
+        <a href="/en-US/plus"
           >MDN Plus feature set</a
         >
         as well as feature ideas. For MDN Plus support such as subscriptions,

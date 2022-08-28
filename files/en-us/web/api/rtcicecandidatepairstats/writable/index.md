@@ -15,9 +15,10 @@ tags:
   - WebRTC
   - WebRTC API
   - writable
+  - Non-standard
 browser-compat: api.RTCIceCandidatePairStats.writable
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
 property **`writable`** reports whether or not the connection

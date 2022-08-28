@@ -8,9 +8,10 @@ tags:
   - Reference
   - format
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.format
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`format`** property of the {{domxref("VideoFrame")}} interface returns the pixel format of the `VideoFrame`.
 

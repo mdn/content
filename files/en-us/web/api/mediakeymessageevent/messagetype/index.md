@@ -20,7 +20,7 @@ type of message. It may be one of `license-request`,
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `license-request`
 - `license-renewal`

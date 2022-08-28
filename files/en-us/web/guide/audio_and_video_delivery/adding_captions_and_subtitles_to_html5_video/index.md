@@ -3,7 +3,7 @@ title: Adding captions and subtitles to HTML video
 slug: >-
   Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 tags:
-  - HTML5
+  - HTML
   - Media
   - WebVTT
   - captions
@@ -182,7 +182,7 @@ function createMenuItem(id, lang, label) {
     subtitleMenuButtons.forEach((button) => {
       button.setAttribute('data-state', 'inactive');
     });
-    
+
     // Find the language to activate
     const lang = button.getAttribute('lang');
     for (let i = 0; i < video.textTracks.length; i++) {

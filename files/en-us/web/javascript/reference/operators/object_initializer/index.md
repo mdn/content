@@ -59,15 +59,20 @@ o = {
 
 An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of _properties_, which are used to describe an object. The values of object properties can either contain [primitive](/en-US/docs/Glossary/Primitive) data types or other objects.
 
-### Object literal notation vs JSON
+### Object literal syntax vs. JSON
 
-The object literal notation is not the same as the **J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON)). Although they look similar, there are differences between them:
+The object literal syntax is not the same as the **J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON)). Although they look similar, there are differences between them:
 
-- JSON permits _only_ property definition using `"property": value` syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.
-- In JSON the values can only be strings, numbers, arrays, `true`, `false`, `null`, or another (JSON) object.
-- A function value (see "Methods" below) can not be assigned to a value in JSON.
-- Objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
-- {{jsxref("JSON.parse()")}} will reject computed property names and an error will be thrown.
+- JSON _only_ permits property definition using the `"property": value` syntax. The property name must be double-quoted, and the definition cannot be a shorthand. Computed property names are not allowed either.
+- JSON object property values can only be strings, numbers, `true`, `false`, `null`, arrays, or another JSON object. This means JSON cannot express methods or non-plain objects like [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) or [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
+- In JSON, `"__proto__"` is a normal property key. In an object literal, it [sets the object's prototype](#prototype_setter).
+
+JSON is a _strict subset_ of the object literal syntax, meaning that every valid JSON text can be parsed as an object literal, and would likely not cause syntax errors. The only exception is that the object literal syntax prohibits duplicate `__proto__` keys, which does not apply to [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). The only time when the object value they represent (a.k.a. their semantic) differ is also when the source contains the `__proto__` key — for object literals, it sets the object's prototype; for JSON, it's a normal property.
+
+```js
+console.log(JSON.parse('{ "__proto__": {} }')); // { __proto__: {} }
+console.log({ "__proto__": {} }); // {} (with {} as prototype)
+```
 
 ## Examples
 
@@ -253,7 +258,7 @@ const mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-> **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread operator doesn't!
+> **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!
 
 ### Prototype setter
 
@@ -294,7 +299,7 @@ const obj3 = { ['__prot' + 'o__']: 17 };
 console.log(obj3.__proto__ === 17);
 ```
 
-Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
+Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
 ## Specifications
 

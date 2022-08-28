@@ -29,7 +29,7 @@ This header must be sent if the server responds with a {{HTTPStatus("405")}} `Me
 
 ## Syntax
 
-```
+```http
 Allow: <http-methods>
 ```
 
@@ -40,7 +40,7 @@ Allow: <http-methods>
 
 ## Examples
 
-```
+```http
 Allow: GET, POST, HEAD
 ```
 

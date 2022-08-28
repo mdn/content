@@ -27,15 +27,7 @@ new Uint16Array(buffer, byteOffset)
 new Uint16Array(buffer, byteOffset, length)
 ```
 
-## Description
-
-The `Uint16Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint16Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Uint16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
-// without new is forbidden
-```
+> **Note:** `Uint16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

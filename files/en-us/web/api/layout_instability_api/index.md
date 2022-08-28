@@ -7,9 +7,10 @@ tags:
   - Layout Instability API
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.LayoutShift
 ---
-{{DefaultAPISidebar("Layout Instability API")}}
+{{DefaultAPISidebar("Layout Instability API")}}{{SeeCompatTable}}
 
 The **Layout Instability API** provides interfaces for measuring and reporting layout shifts.
 

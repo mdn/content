@@ -18,7 +18,7 @@ If `display-capture` is disabled in a document, the document will not be able to
 
 ## Syntax
 
-```
+```http
 Feature-Policy: display-capture <allowlist>;
 ```
 

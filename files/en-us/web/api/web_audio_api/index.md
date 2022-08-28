@@ -92,7 +92,7 @@ Interfaces that define audio sources for use in the Web Audio API.
 - {{domxref("AudioBufferSourceNode")}}
   - : The **`AudioBufferSourceNode`** interface represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}. It is an {{domxref("AudioNode")}} that acts as an audio source.
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : The **`MediaElementAudioSourceNode`** interface represents an audio source consisting of an HTML5 {{ htmlelement("audio") }} or {{ htmlelement("video") }} element. It is an {{domxref("AudioNode")}} that acts as an audio source.
+  - : The **`MediaElementAudioSourceNode`** interface represents an audio source consisting of an HTML {{ htmlelement("audio") }} or {{ htmlelement("video") }} element. It is an {{domxref("AudioNode")}} that acts as an audio source.
 - {{domxref("MediaStreamAudioSourceNode")}}
   - : The **`MediaStreamAudioSourceNode`** interface represents an audio source consisting of a {{domxref("MediaStream")}} (such as a webcam, microphone, or a stream being sent from a remote computer). If multiple audio tracks are present on the stream, the track whose {{domxref("MediaStreamTrack.id", "id")}} comes first lexicographically (alphabetically) is used. It is an {{domxref("AudioNode")}} that acts as an audio source.
 - {{domxref("MediaStreamTrackAudioSourceNode")}}
@@ -220,18 +220,18 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/en/tutorials/webaudio/games/)
+- [Mixing Positional Audio and WebGL (2012)](https://web.dev/webaudio-positional-audio/)
+- [Developing Game Audio with the Web Audio API (2012)](https://auth.web.dev/webaudio-games/)
 - [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 
 ### Libraries
 
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
 - [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording, etc.
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [Pts.js](https://ptsjs.org/): Simplifies web audio visualization ([guide](https://ptsjs.org/guide/sound-0800))
 
 ### Related topics

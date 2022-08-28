@@ -21,7 +21,7 @@ a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: camera <allowlist>;
 ```
 

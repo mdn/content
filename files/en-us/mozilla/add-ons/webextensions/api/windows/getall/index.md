@@ -52,22 +52,23 @@ Log the URLs for the tabs across all "normal" browser windows. Note that you'll 
 
 ```js
 function logTabsForWindows(windowInfoArray) {
-  for (windowInfo of windowInfoArray) {
+  for (const windowInfo of windowInfoArray) {
     console.log(`Window: ${windowInfo.id}`);
     console.log(windowInfo.tabs.map((tab) => tab.url));
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.getAll({
-    populate: true,
-    windowTypes: ["normal"]
-  });
-  getting.then(logTabsForWindows, onError);
+  browser.windows
+    .getAll({
+      populate: true,
+      windowTypes: ["normal"],
+    })
+    .then(logTabsForWindows, onError);
 });
 ```
 

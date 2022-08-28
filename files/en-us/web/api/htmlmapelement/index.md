@@ -21,7 +21,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLMapElement.name")}}
   - : A string representing the {{HTMLElement("map")}} element for referencing it other context. If the `id` attribute is set, this must have the same value; and it cannot be `null` or empty.
-- {{domxref("HTMLMapElement.areas")}} {{readonlyInline}}
+- {{domxref("HTMLMapElement.areas")}} {{ReadOnlyInline}}
   - : A live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.
 
 ## Methods

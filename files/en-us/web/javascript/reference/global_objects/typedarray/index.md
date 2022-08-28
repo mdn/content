@@ -76,6 +76,8 @@ new TypedArray(buffer, byteOffset, length)
 
 Where _TypedArray_ is a constructor for one of the concrete types.
 
+> **Note:** All `TypedArray` constructors can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call one without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `length`
@@ -240,22 +242,6 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     array.
 
 ## Examples
-
-### New is required
-
-Starting with ECMAScript 2015, `TypedArray` constructors must be constructed
-with the {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray`
-constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int8Array([1, 2, 3]);
-```
 
 ### Property access
 

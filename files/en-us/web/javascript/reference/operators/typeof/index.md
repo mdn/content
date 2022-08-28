@@ -168,19 +168,10 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
 
 ### Errors
 
-Before ECMAScript 2015, `typeof` was always guaranteed to return a string
-for any operand it was supplied with. Even with undeclared identifiers,
-`typeof` will return `'undefined'`. Using `typeof`
-could never generate an error.
+`typeof` is generally always guaranteed to return a string
+for any operand it is supplied with. Even with undeclared identifiers, `typeof` will return `'undefined'` instead of throwing an error.
 
-However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
-{{JSxRef("Statements/const", "const")}}, using `typeof` on `let` and
-`const` variables (or using `typeof` on a `class`) in a
-block before they are declared will throw a {{JSxRef("ReferenceError")}}.
-Block scoped variables are in a
-"[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)"
-from the start of the block until the initialization is processed,
-during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{JSxRef("Statements/let", "let")}} {{JSxRef("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the line of declaration will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
 
 ```js
 typeof undeclaredVariable === 'undefined';
@@ -218,41 +209,40 @@ For greater specificity in checking types, here we present a custom `type(value)
 
 ```js
 function type(value) {
-  if (typeof value !== "object" && typeof value !== "function") {
-    return typeof value;
-  }
   if (value === null) {
     return "null";
   }
+  const baseType = typeof value;
+  // Primitive types
+  if (!["object", "function"].includes(baseType)) {
+    return baseType;
+  }
 
+  // Symbol.toStringTag often specifies the "display name" of the
+  // object's class. It's used in Object.prototype.toString().
+  const tag = value[Symbol.toStringTag];
+  if (typeof tag === "string") {
+    return tag;
+  }
+
+  // If it's a function whose source code starts with the "class" keyword
   if (
-    Object.getPrototypeOf(value) === Function.prototype &&
-    /^class/.test(String(value))
+    baseType === "function" &&
+    Function.prototype.toString.call(value).startsWith("class")
   ) {
     return "class";
   }
 
-  // Symbol.toStringTag often specifies the "display name" of the
-  // object's class.
-  if (
-    Symbol.toStringTag in value &&
-    typeof value[Symbol.toStringTag] === "string"
-  ) {
-    return value[Symbol.toStringTag];
-  }
-
   // The name of the constructor; for example `Array`, `GeneratorFunction`,
-  // `Number`, `String`, `Boolean` or `MyCustomObject`
-  if (
-    typeof value.constructor.name === "string" &&
-    value.constructor.name !== ""
-  ) {
-    return value.constructor.name;
+  // `Number`, `String`, `Boolean` or `MyCustomClass`
+  const className = value.constructor.name;
+  if (typeof className === "string" && className !== "") {
+    return className;
   }
 
   // At this point there's no robust way to get the type of value,
   // so we use the base implementation.
-  return typeof value;
+  return baseType;
 }
 ```
 

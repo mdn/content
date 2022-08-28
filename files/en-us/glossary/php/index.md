@@ -16,10 +16,10 @@ PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source s
 ### Basic syntax
 
 ```php
-  // start of PHP code
+// start of PHP code
 <?php
-     // PHP code goes here
- ?>
+  // PHP code goes here
+?>
 // end of PHP code
 ```
 
@@ -27,7 +27,7 @@ PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source s
 
 ```php
 <?php
-   echo "Hello World!";
+  echo "Hello World!";
 ?>
 ```
 
@@ -35,17 +35,17 @@ PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source s
 
 ```php
 <?php
- // variables
- $nome='Danilo';
- $sobrenome='Santos';
- $pais='Brasil';
- $email='danilocarsan@gmail.com';
+  // variables
+  $nome='Danilo';
+  $sobrenome='Santos';
+  $pais='Brasil';
+  $email='danilocarsan@gmail.com';
 
- // printing the variables
- echo $nome;
- echo $sobrenome;
- echo $pais;
- echo $email;
+  // printing the variables
+  echo $nome;
+  echo $sobrenome;
+  echo $pais;
+  echo $email;
 ?>
 ```
 

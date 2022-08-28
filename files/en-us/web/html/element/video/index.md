@@ -7,7 +7,6 @@ tags:
   - HTML Video
   - HTML Video Player
   - HTML embedded content
-  - HTML5
   - Media
   - Movie Playback
   - Movies
@@ -71,7 +70,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
 - {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
 
-  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc).
+  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.).
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
@@ -407,7 +406,10 @@ This example builds on the last one, offering three different sources for the me
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4">
 
-  Your browser doesn't support HTML video tag.
+Sorry, your browser doesn't support embedded videos,
+but don't worry, you can <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">download the MP4</a>
+and watch it with your favorite video player!
+
 </video>
 ```
 

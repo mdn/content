@@ -7,10 +7,9 @@ tags:
   - Interface
   - Reference
   - TaskController
-  - Experimental
 browser-compat: api.TaskController
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskController`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a controller object that can be used to both abort and change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of one or more prioritized tasks.
 If there is no need to change task priorities, then {{domxref("AbortController")}} can be used instead.
@@ -43,7 +42,7 @@ _This interface also inherits the methods of its parent, {{domxref("AbortControl
 
 _This interface also inherits the properties of its parent, {{domxref("AbortController")}}._
 
-- `TaskController.signal` {{readonlyInline}}
+- `TaskController.signal` {{ReadOnlyInline}}
   - : Returns a {{domxref("TaskSignal")}} object instance.
     The signal is passed to tasks so that they can be aborted or re-prioritized by the controller.
     The property is inherited from [`AbortController`](/en-US/docs/Web/API/AbortController#abortcontroller.signal).

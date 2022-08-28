@@ -15,11 +15,11 @@ A `DeviceMotionEventRotationRate` object provides information about the rate at 
 
 ## Properties
 
-- {{ domxref("DeviceMotionEventRotationRate.alpha") }} {{readonlyInline}}
+- {{ domxref("DeviceMotionEventRotationRate.alpha") }} {{ReadOnlyInline}}
   - : The amount of rotation around the Z axis, in degrees per second.
-- {{ domxref("DeviceMotionEventRotationRate.beta") }} {{readonlyInline}}
+- {{ domxref("DeviceMotionEventRotationRate.beta") }} {{ReadOnlyInline}}
   - : The amount of rotation around the X axis, in degrees per second.
-- {{ domxref("DeviceMotionEventRotationRate.gamma") }} {{readonlyInline}}
+- {{ domxref("DeviceMotionEventRotationRate.gamma") }} {{ReadOnlyInline}}
   - : The amount of rotation around the Y axis, in degrees per second.
 
 ## Specifications

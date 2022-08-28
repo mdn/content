@@ -6,7 +6,7 @@ tags:
   - Education
   - Example
   - Guide
-  - HTML5
+  - HTML
   - MathML
   - NeedsBeginnerUpdate
 ---

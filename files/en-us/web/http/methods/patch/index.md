@@ -56,7 +56,7 @@ Another (implicit) indication that `PATCH` is allowed, is the presence of the {{
 
 ## Syntax
 
-```
+```http
 PATCH /file.txt HTTP/1.1
 ```
 
@@ -64,7 +64,7 @@ PATCH /file.txt HTTP/1.1
 
 ### Request
 
-```
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
@@ -80,7 +80,7 @@ A successful response is indicated by any [2xx](https://datatracker.ietf.org/doc
 
 In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.
 
-```
+```http
 HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"

@@ -52,29 +52,31 @@ You can use this class to style SVG content using CSS.
 ## Example
 
 ```html
-<html>
-    <body>
-        <svg width="120" height="220"
-            viewPort="0 0 120 120" version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
+<html lang="en">
+  <body>
+    <svg
+      width="120"
+      height="220"
+      viewPort="0 0 120 120"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <style type="text/css">
+        <![CDATA[
+            rect.rectClass {
+                stroke: #000066;
+                fill:   #00cc00;
+            }
+            circle.circleClass {
+                stroke: #006600;
+                fill:   #cc0000;
+            }
+        ]]>
+      </style>
 
-            <style type="text/css" >
-                <![CDATA[
-                    rect.rectClass {
-                        stroke: #000066;
-                        fill:   #00cc00;
-                    }
-                    circle.circleClass {
-                        stroke: #006600;
-                        fill:   #cc0000;
-                    }
-                ]]>
-            </style>
-
-            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
-            <circle class="circleClass" cx="40" cy="50" r="26"/>
-        </svg>
-    </body>
+      <rect class="rectClass" x="10" y="10" width="100" height="100" />
+      <circle class="circleClass" cx="40" cy="50" r="26" />
+    </svg>
+  </body>
 </html>
 ```
 

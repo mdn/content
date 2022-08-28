@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML text-level semantics
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Phrasing content

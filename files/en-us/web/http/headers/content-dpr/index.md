@@ -48,7 +48,7 @@ If the `Content-DPR` header appears more than once in a message the last occurre
 
 ## Syntax
 
-```
+```http
 Content-DPR: <number>
 ```
 

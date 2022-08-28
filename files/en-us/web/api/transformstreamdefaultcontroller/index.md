@@ -17,7 +17,7 @@ When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultC
 
 ## Properties
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}} {{readonlyinline}}
+- {{domxref("TransformStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
 ## Methods

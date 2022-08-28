@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
   - Progressive Web Apps
+  - Experimental
 browser-compat: api.WindowControlsOverlay
 ---
 {{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}

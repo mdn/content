@@ -45,11 +45,11 @@ When you run the `build` command in your `todo` directory, your application comp
 In the `todo` directory, run the following command at the command line:
 
 ```bash
-ng  build --prod
+ng build -c production
 ```
 
 The CLI compiles the application and puts the output in a new `dist` directory.
-The `--prod` flag with `ng build` gets rid of stuff you don't need for production.
+The `--configuration production`/`-c production` flag with `ng build` gets rid of stuff you don't need for production.
 
 ## Deploying your application
 

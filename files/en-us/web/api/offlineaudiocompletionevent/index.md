@@ -27,7 +27,7 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `OfflineAudioCompletionEv
 
 _Also inherits properties from its parent, {{domxref("Event")}}_.
 
-- {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{readonlyinline}}
+- {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} containing the result of processing an {{domxref("OfflineAudioContext")}}.
 
 ## Methods

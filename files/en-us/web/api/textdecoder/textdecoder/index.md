@@ -6,7 +6,6 @@ tags:
   - API
   - Constructor
   - Encoding
-  - Experimental
   - Reference
   - TextDecoder
 browser-compat: api.TextDecoder.TextDecoder

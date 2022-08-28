@@ -62,7 +62,7 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 
 Let's further explore our paragraph element from the previous section:
 
-![](grumpy-cat-small.png)
+![A sample code snippet demonstrating the structure of an html element.<p> My cat is very grumpy </p>.](grumpy-cat-small.png)
 
 The anatomy of our element is:
 
@@ -276,9 +276,12 @@ An attribute should have:
 
 Another example of an element is {{htmlelement("a")}}. This stands for _anchor_. An anchor can make the text it encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
 
-- **`href`**: This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
-- **`title`**: The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
-- **`target`**: The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+- `href`
+  - : This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
+- `title`
+  - : The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
+- `target`
+  - : The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
 
 Edit the line below in the _Input_ area to turn it into a link to your favorite website.
 

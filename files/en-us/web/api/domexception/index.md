@@ -28,11 +28,11 @@ Each exception has a **name**, which is a short "PascalCase"-style string identi
 
 ## Properties
 
-- {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
+- {{domxref("DOMException.code")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns one of the legacy error code constants, or `0` if none match.
-- {{domxref("DOMException.message")}} {{readOnlyInline}}
+- {{domxref("DOMException.message")}} {{ReadOnlyInline}}
   - : Returns a string representing a message or description associated with the given [error name](#error_names).
-- {{domxref("DOMException.name")}} {{readOnlyInline}}
+- {{domxref("DOMException.name")}} {{ReadOnlyInline}}
   - : Returns a string that contains one of the strings associated with an [error name](#error_names).
 
 ## Error names

@@ -50,7 +50,7 @@ for (let i = 0; i < pluginsLength; i++) {
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
   newRow.insertCell().textContent = navigator.plugins[i].description;
-  newRow.insertCell().textContent = navigator.plugins[i].version?navigator.plugins[i].version:"";
+  newRow.insertCell().textContent = navigator.plugins[i].version ?? "";
 }
 ```
 

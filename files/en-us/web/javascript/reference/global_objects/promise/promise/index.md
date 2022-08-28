@@ -21,6 +21,8 @@ The **`Promise`** constructor is primarily used to wrap functions that do not al
 new Promise(executor)
 ```
 
+> **Note:** `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `executor`

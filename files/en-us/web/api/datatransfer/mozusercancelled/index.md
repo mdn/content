@@ -21,7 +21,7 @@ event.
 
 > **Note:** This property is Firefox-specific.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

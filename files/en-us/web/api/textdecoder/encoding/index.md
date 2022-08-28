@@ -5,13 +5,12 @@ page-type: web-api-instance-property
 tags:
   - API
   - Encoding
-  - Experimental
   - Property
   - Read-only
   - TextDecoder
 browser-compat: api.TextDecoder.encoding
 ---
-{{APIRef("Encoding API")}}{{SeeCompatTable}}
+{{APIRef("Encoding API")}}
 
 The **`TextDecoder.encoding`** read-only property
 returns a string containing the name of the decoding algorithm used by

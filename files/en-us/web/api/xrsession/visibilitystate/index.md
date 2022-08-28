@@ -17,7 +17,7 @@ tags:
   - visibilityState
 browser-compat: api.XRSession.visibilityState
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The *read-only* **`visibilityState`** property of the
 {{DOMxRef("XRSession")}} interface is a string indicating whether the WebXR content is

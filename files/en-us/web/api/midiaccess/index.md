@@ -17,11 +17,11 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 
 ## Properties
 
-- {{domxref("MIDIAccess.inputs")}} {{readonlyinline}}
+- {{domxref("MIDIAccess.inputs")}} {{ReadOnlyInline}}
   - : Returns an instance of {{domxref("MIDIInputMap")}} which provides access to any available MIDI input ports.
-- {{domxref("MIDIAccess.outputs")}} {{readonlyinline}}
+- {{domxref("MIDIAccess.outputs")}} {{ReadOnlyInline}}
   - : Returns an instance of {{domxref("MIDIOutputMap")}} which provides access to any available MIDI output ports.
-- {{domxref("MIDIAccess.sysexEnabled")}} {{readonlyinline}}
+- {{domxref("MIDIAccess.sysexEnabled")}} {{ReadOnlyInline}}
   - : A boolean attribute indicating whether system exclusive support is enabled on the current MIDIAccess instance.
 
 ### Events

@@ -9,10 +9,10 @@ tags:
   - Reference
   - WebRTC
   - addStream
+  - Non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
-
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCPeerConnection")}} method
 **`addStream()`** adds a {{domxref("MediaStream")}} as a local

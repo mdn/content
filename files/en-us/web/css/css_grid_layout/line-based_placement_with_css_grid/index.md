@@ -1,5 +1,5 @@
 ---
-title: Line-based placement with CSS Grid
+title: Grid layout using line-based placement
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 tags:
   - CSS

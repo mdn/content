@@ -17,7 +17,7 @@ tags:
   - inputSources
 browser-compat: api.XRSession.inputSources
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The *read-only* **`inputSources`** property of the
 {{DOMxRef("XRSession")}} interface returns an {{domxref("XRInputSourceArray")}} object

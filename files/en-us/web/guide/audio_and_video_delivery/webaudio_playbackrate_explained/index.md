@@ -20,7 +20,7 @@ audio.setAttribute('src','audiofile.mp3');
 audio.playbackRate = 0.5;
 ```
 
-Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate.)
+Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate).
 
 ## A complete example
 

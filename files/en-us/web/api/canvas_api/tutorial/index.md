@@ -7,7 +7,6 @@ tags:
   - Graphics
   - Guide
   - HTML
-  - HTML5
   - Intermediate
   - Web
 ---
