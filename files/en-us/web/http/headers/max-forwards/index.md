@@ -6,7 +6,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-browser-compat: http.headers.Max-Forwards
+spec-urls: https://datatracker.ietf.org/doc/html/rfc7231#section-5.1.2
 ---
 {{HTTPSidebar}}
 
@@ -44,7 +44,7 @@ Max-Forwards: 10
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is neither targeted, nor implemented, at browsers.
 
 ## See also
 
