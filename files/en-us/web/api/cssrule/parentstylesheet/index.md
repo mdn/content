@@ -24,7 +24,7 @@ A {{domxref("StyleSheet")}} object.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.parentStyleSheet);
+console.log(myRules[0].parentStyleSheet == document.styleSheets[0]); //returns true 
 ```
 
 ## Specifications
