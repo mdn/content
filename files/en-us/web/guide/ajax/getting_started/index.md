@@ -30,7 +30,6 @@ To make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, y
 const httpRequest = new XMLHttpRequest();
 ```
 
-> **Note:** For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.
 
 After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
 
