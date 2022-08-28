@@ -168,7 +168,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("Expect")}}
   - : Indicates expectations that need to be fulfilled by the server to properly handle the request.
 - {{HTTPHeader("Max-Forwards")}}
-  - : Indicates Maximum number of Forwards between Client and Server.
+  - : When using [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE), indicates the maximum number of hops the request can do before being reflected back to the sender..
 
 ## Cookies
 
