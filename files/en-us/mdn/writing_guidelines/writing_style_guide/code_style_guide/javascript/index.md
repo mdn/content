@@ -78,7 +78,7 @@ Prettier formats and styles all the code; the tool will fix your errors. Neverth
 
 ### Spacing and indentation
 
-Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorConfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
+Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorconfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
 
 ## Comments
 
