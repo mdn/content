@@ -156,12 +156,6 @@ function exampleFunct() {
 }
 ```
 
-### Comment out parameters
-
-When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
-
-To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
-
 ### Multi-line comments
 
 Short comments are usually better, so try to keep them in one line of 120 characters. If this is not possible, use `//` at the beginning of each line:
@@ -182,6 +176,12 @@ Don't use `/* … */`:
    Limitation 2 */
 ```
 
+### Comment out parameters
+
+When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
+
+To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
+
 ## Variables
 
 ### Variable names
@@ -193,7 +193,7 @@ Good variable names are essential to understanding code.
 - Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null`, or `name = "John Doe"` instead of `sName = "John Doe"`.
 - For collections, don't put the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. That way
 - For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
-- Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`.
+- Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general, without a practical context.
 
 Use variable names like shown here:
 
