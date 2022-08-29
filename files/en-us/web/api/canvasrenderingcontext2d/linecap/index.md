@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineCap
 ---
+
 {{APIRef}}
 
 The
@@ -17,8 +18,7 @@ The
 property of the Canvas 2D API determines the shape used to draw the end points of lines.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value
@@ -48,13 +48,13 @@ This example rounds the end caps of a straight line.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineWidth = 15;
-ctx.lineCap = 'round';
+ctx.lineCap = "round";
 ctx.lineTo(100, 100);
 ctx.stroke();
 ```
@@ -80,12 +80,12 @@ half the height of the line thickness.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const lineCap = ['butt', 'round', 'square'];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const lineCap = ["butt", "round", "square"];
 
 // Draw guides
-ctx.strokeStyle = '#09f';
+ctx.strokeStyle = "#09f";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);
@@ -94,7 +94,7 @@ ctx.lineTo(140, 140);
 ctx.stroke();
 
 // Draw lines
-ctx.strokeStyle = 'black';
+ctx.strokeStyle = "black";
 for (let i = 0; i < lineCap.length; i++) {
   ctx.lineWidth = 15;
   ctx.lineCap = lineCap[i];

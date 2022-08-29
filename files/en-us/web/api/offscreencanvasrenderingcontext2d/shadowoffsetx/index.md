@@ -20,10 +20,7 @@ horizontally.
 
 > **Note:** Shadows are only drawn if the
 > {{domxref("OffscreenCanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
-> a non-transparent value. One of the {{domxref("OffscreenCanvasRenderingContext2D.shadowBlur",
-
-    "shadowBlur")}}, `shadowOffsetX`, or
-
+> a non-transparent value. One of the {{domxref("OffscreenCanvasRenderingContext2D.shadowBlur",  "shadowBlur")}}, `shadowOffsetX`, or
 > {{domxref("OffscreenCanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
 > be non-zero, as well.
 

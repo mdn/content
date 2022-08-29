@@ -24,10 +24,7 @@ zero (i.e., with all endpoints and control points at the exact same position) ar
 ignored.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("OffscreenCanvasRenderingContext2D.stroke()",
-
-    "stroke()")}}, {{domxref("OffscreenCanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
-
+> {{domxref("OffscreenCanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("OffscreenCanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("OffscreenCanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value
