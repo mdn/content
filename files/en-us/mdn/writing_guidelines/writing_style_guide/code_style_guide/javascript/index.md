@@ -277,7 +277,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
     #name;
     #birthYear;
     
-    function Person(name, year) {
+    constructor(name, year) {
       this.#name = String(name);
       this.#birthYear = Number(year);
     }
