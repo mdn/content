@@ -147,7 +147,7 @@ function checkout(goodsPrice, shipmentPrice, taxes) {
 
 ### Output of logs
 
-In examples, but rarely in production code, we often use `console.log()`, `console.error()` or similar function to output messages. In such cases, you can put a comment after the function with the log that will produced. Write:
+In examples, but rarely in production code, we often use `console.log()`, `console.error()`, or similar functions to output messages. In such cases, you can put a comment after the function with the log that will be produced. Write:
 
 ```js example-good
 function exampleFunc(fruitBasket) {
