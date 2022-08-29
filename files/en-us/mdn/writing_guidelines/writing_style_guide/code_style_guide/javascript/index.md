@@ -404,7 +404,7 @@ gerbils.forEach((gerbil, i) => {
 
 > **Warning:** Never use `for...in` with arrays and strings.
 
-> **Note:** Consider not using a `for` loop at all. If you are using an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (or even a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for some of them), consider instead using methods iterating over each element of the collection, like [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), or finding methods like[`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`findLast()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast), or [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), and many more.
+> **Note:** Consider not using a `for` loop at all. If you are using an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (or a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for some operations), consider using more semantic iteration methods instead, like [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), and many more.
 
 ### Control statements
 
