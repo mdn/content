@@ -175,9 +175,8 @@ Good variable names are essential to understanding code.
 - Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
 
 - Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null`, or `name = "John Doe"` instead of `sName = "John Doe"`.
-- For collections, don't put the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. That way, your loops will be easy-to-read. E.g., `for (const car of cars)`.
-
-- Use lowerCamelCasing. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
+- For collections, don't put the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. That way
+- For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
 - Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`.
 
 Use variable names like shown here:
@@ -592,9 +591,9 @@ const pet = pets.pop(); // pet === "cat"
 
 ### Object names
 
-When defining an object class, use UpperCamelCasing (also known as PascalCasing) for the class name and lowerCamelCasing for the object property and method names.
+When defining an object class, use _CamelCase_ (starting with a capital letter, also known as PascalCase) for the class name and _camelCase_, starting with a lowercase letter, for the object property and method names.
 
-When defining an object instance, either a literal or via a constructor, use lowerCamelCase for the instance name. For example:
+When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
 ```js example-good
 const hanSolo = new Person('Han Solo', 25, 'male');
@@ -658,7 +657,7 @@ The `Object.hasOwnProperties()` method has been deprecated in favor of `Object.h
 
 ### Function names
 
-For function names, use lowerCamelCasing. Use concise, human-readable, and semantic names where appropriate.
+For function names, use camelCase, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
 The following is a correct example of a function name:
 
