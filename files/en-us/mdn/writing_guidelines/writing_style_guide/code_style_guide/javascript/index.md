@@ -690,7 +690,7 @@ class Teacher extends Person {
 
 The `Object.hasOwnProperties()` method has been deprecated in favor of `Object.hasOwn()`.
 
-## Functions and classes
+## Functions
 
 ### Function names
 
