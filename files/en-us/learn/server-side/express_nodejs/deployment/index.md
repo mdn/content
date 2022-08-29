@@ -244,7 +244,7 @@ That's all the overview you need in order to get started (see [Getting Started o
 
 ### Creating an application repository in GitHub
 
-Heroku is integrated with **git,** the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named _heroku._ It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
+Heroku is integrated with _git_, the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named _heroku._ It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
 > **Note:** If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.
 
