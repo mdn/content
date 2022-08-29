@@ -380,7 +380,7 @@ for (let i = 0; i < 4; i++) {
 }
 ```
 
-The example below does not follow the recommended guidelines for the initialization (it is a `var`…).
+The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode).
 
 ```js example-bad
 const cats = ['Athena', 'Luna'];
