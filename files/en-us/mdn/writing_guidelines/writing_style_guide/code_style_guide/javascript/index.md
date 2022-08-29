@@ -824,7 +824,7 @@ Writing asynchronous code improves performance and should be used when possible.
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), including the `finally()` method
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
 
-When both techniques are possible, we don't have any preference.
+When both techniques are possible, we prefer using the simpler `async`/`await` syntax. Unfortunately, it isn't possible everywhere. Especially, you can't use `await` at the top-level JavaScript, though you can do it in ECMAScript modules, and CommonJS modules used by Node.js and Express. If your example is intended to be used everywhere, avoid top-level `await`.
 
 ## Web APIs to avoid
 
