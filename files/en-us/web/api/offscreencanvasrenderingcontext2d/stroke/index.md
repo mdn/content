@@ -1,19 +1,20 @@
 ---
-title: CanvasRenderingContext2D.stroke()
-slug: Web/API/CanvasRenderingContext2D/stroke
+title: OffscreenCanvasRenderingContext2D.stroke()
+slug: Web/API/OffscreenCanvasRenderingContext2D/stroke
 page-type: web-api-instance-method
 tags:
   - API
   - Canvas
-  - CanvasRenderingContext2D
+  - OffscreenCanvasRenderingContext2D
   - Method
   - Reference
-browser-compat: api.CanvasRenderingContext2D.stroke
+browser-compat: api.OffscreenCanvasRenderingContext2D.stroke
 ---
+
 {{APIRef}}
 
 The
-**`CanvasRenderingContext2D.stroke()`**
+**`OffscreenCanvasRenderingContext2D.stroke()`**
 method of the Canvas 2D API strokes (outlines) the current or given path with the
 current stroke style.
 
@@ -26,8 +27,8 @@ means that path intersections will still get filled.
 ## Syntax
 
 ```js
-stroke()
-stroke(path)
+stroke();
+stroke(path);
 ```
 
 ### Parameters
@@ -55,8 +56,8 @@ it to the canvas using `stroke()`.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 150, 100);
 ctx.stroke();
 ```
@@ -67,7 +68,7 @@ ctx.stroke();
 
 ### Re-stroking paths
 
-Typically, you'll want to call {{domxref("CanvasRenderingContext2D.beginPath()",
+Typically, you'll want to call {{domxref("OffscreenCanvasRenderingContext2D.beginPath()",
   "beginPath()")}} for each new thing you want to stroke. If you don't, the previous
 sub-paths will remain part of the current path, and get stroked every time you call the
 `stroke()` method. In some cases, however, this may be the desired effect.
@@ -84,26 +85,26 @@ This code strokes the first path three times, the second path two times, and the
 path only once.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // First sub-path
 ctx.lineWidth = 26;
-ctx.strokeStyle = 'orange';
+ctx.strokeStyle = "orange";
 ctx.moveTo(20, 20);
 ctx.lineTo(160, 20);
 ctx.stroke();
 
 // Second sub-path
 ctx.lineWidth = 14;
-ctx.strokeStyle = 'green';
+ctx.strokeStyle = "green";
 ctx.moveTo(20, 80);
 ctx.lineTo(220, 80);
 ctx.stroke();
 
 // Third sub-path
 ctx.lineWidth = 4;
-ctx.strokeStyle = 'pink';
+ctx.strokeStyle = "pink";
 ctx.moveTo(20, 140);
 ctx.lineTo(280, 140);
 ctx.stroke();
@@ -129,11 +130,11 @@ the stroke.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 16;
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 
 // Stroke on top of fill
 ctx.beginPath();
@@ -162,4 +163,4 @@ ctx.fill();
 
 ## See also
 
-- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- The interface defining this method: {{domxref("OffscreenCanvasRenderingContext2D")}}
