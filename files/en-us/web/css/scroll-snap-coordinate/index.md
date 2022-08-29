@@ -8,9 +8,10 @@ tags:
   - Deprecated
   - Reference
   - recipe:css-property
+  - Non-standard
 browser-compat: css.properties.scroll-snap-coordinate
 ---
-{{CSSRef}}{{deprecated_header}}
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-coordinate`** [CSS](/en-US/docs/Web/CSS) property defines the x and y coordinate positions within an element that will align with its nearest ancestor scroll container's {{cssxref("scroll-snap-destination")}} for each respective axis.
 
