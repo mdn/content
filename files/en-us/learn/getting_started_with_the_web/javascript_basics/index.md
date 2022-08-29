@@ -57,7 +57,7 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:
 
-[Heading "hello world" above a firefox logo](hello-world.png)
+![Heading "hello world" above a firefox logo](hello-world.png)
 
 > **Note:** The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
 >
