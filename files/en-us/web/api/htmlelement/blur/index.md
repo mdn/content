@@ -39,7 +39,6 @@ None ({{jsxref("undefined")}}).
 <input type="text" id="myText" value="Sample Text">
 <br><br>
 <button type="button" onclick="focusInput()">Click me to gain focus</button>
-<button type="button" onclick="blurInput()">Click me to lose focus</button>
 ```
 
 #### JavaScript
@@ -47,9 +46,11 @@ None ({{jsxref("undefined")}}).
 ```js
 function focusInput() {
   document.getElementById('myText').focus();
-}
-function blurInput() {
-  document.getElementById('myText').blur();
+
+  // The input will lose focus after 3 seconds
+  setTimeout(() => {
+    document.getElementById('myText').blur();
+  }, 3000)
 }
 ```
 
