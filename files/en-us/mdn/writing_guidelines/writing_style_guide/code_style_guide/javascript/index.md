@@ -828,7 +828,7 @@ When both techniques are possible, we don't have any preference.
 
 ## Web APIs to avoid
 
-In addition to these JavaScript language features, we reccomend a few guidelines related to Web APIs to keep in mind.
+In addition to these JavaScript language features, we recommend a few guidelines related to Web APIs to keep in mind.
 
 ### Avoid browser prefixes
 
