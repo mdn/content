@@ -311,7 +311,7 @@ The conditional operator is helpful when creating strings to log information. In
 
 ### Strict equality operator
 
-Prefer the ["strict" equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and inequality operators over the traditional equality and inequality operators.
+Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple equals) and inequality operators over the loose equality (double equals) and inequality operators.
 
 Use the strict equality and inequality operators like this:
 
