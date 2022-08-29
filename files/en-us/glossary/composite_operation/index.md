@@ -13,6 +13,8 @@ The _composite operation_ is the specific operation that is used to combine an e
 - **add**: The effect value is added to the underlying value.
 - **accumulate**: The effect value is combined with the underlying value.
 
+> **Note:** Currently, composite operation in CSS only applies to animations. There has been a discussion about more general additive syntax, but as of late 2022, there are no other CSS properties to which `add` and `accumulate` apply.
+
 ## See also
 
 - [`animation-composition`](/en-us/web/css/animation-composition)

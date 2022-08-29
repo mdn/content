@@ -11,7 +11,7 @@ browser-compat: css.properties.animation-composition
 ---
 {{CSSRef}}
 
-The **`animation-composition`** [CSS](/en-US/docs/Web/CSS) property specifies the composite operation to use when multiple animations affect the same property simultaneously.
+The **`animation-composition`** [CSS](/en-US/docs/Web/CSS) property specifies the {{Glossary("composite operation")}} to use when multiple animations affect the same property simultaneously.
 
 <!--the interactive example will be created in a separate PR. Will uncomment the macro below when I have an interactive example in place. Note that this property is still behind a flag in FF and not yet implemented in Safari and Chrome.-->
 <!-- {{EmbedInteractiveExample("pages/css/animation-composition.html")}} -->
@@ -47,9 +47,9 @@ animation-composition: unset;
 - `replace`
   - : The effect value overrides the underlying value of the property. This is the default value.
 - `add`
-  - : The effect value builds on the underlying value of the property. This operation produces an additive effect. For animation types where the addition operation is not commutative, the order of the operands is underlying value followed by the effect value.
+  - : The effect value builds on the underlying value of the property. This operation produces an additive effect. For animation types where the addition operation is not commutative, the order of the operands is the underlying value followed by the effect value.
 - `accumulate`
-  - : The effect and underlying values are combined. For animation types where the addition operation is not commutative, the order of the operands is underlying value followed by the effect value.
+  - : The effect and underlying values are combined. For animation types where the addition operation is not commutative, the order of the operands is the underlying value followed by the effect value.
 
 ## Description
 
@@ -60,7 +60,7 @@ For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10
 ```css
 .icon:hover {
   filter: blur(5px);
-  animation: pulse 3s infinite;
+  animation: 3s infinite pulse;
   animation-composition: add;
 }
 
