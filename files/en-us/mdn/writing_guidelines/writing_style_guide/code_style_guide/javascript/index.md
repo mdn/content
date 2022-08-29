@@ -84,13 +84,18 @@ Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line charact
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
 
-Add a comment if the purpose or logic of the code isn't obvious. Comments are not necessary, for example, when functions have explicit names that describe what they're doing. This comment doesn't add much value for the reader and can be left out:
+Add a comment if the purpose or logic of the code isn't obvious, to describe the intention of the code makes the example clearer, as shown below:
 
-```js example-bad
-closeConnection(); // Closing the connection
+```js example-good
+let total = 0;
+
+// Calculate the sum of the four first elements of arr
+for (let i = 0; i < 4; i++ ){
+  total += arr[i];
+}
 ```
 
-A comment should describe the intention of the author rather than merely describe the code For example, this is not a good use of a comment:
+On the other side, restating in prose the code is not a good use of a comment:
 
 ```js example-bad
 let total = 0;
@@ -102,15 +107,16 @@ for (let i = 0; i < 4; i++ ){
 }
 ```
 
-Using a comment to describe the intention of the code makes the example clearer, as shown below:
+Comments are also not necessary when functions have explicit names that describe what they're doing. Write:
 
 ```js example-good
-let total = 0;
+closeConnection()
+```
 
-// Calculate the sum of the four first elements of arr
-for (let i = 0; i < 4; i++ ){
-  total += arr[i];
-}
+Don't write:
+
+```js example-bad
+closeConnection(); // Closing the connection
 ```
 
 ### Use single-line comments
@@ -143,20 +149,22 @@ function exampleFunc() {
 
 Skipping redundant code using ellipses (…) is necessary to keep examples short. Still, writers should do it thoughtfully as developers frequently copy & paste examples into their code, and all of our code samples should be valid JavaScript.
 
-In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add. So don't use ellipses (…) like this:
+In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add.
 
-```js example-bad
-function exampleFunct() {
-  …
-}
-```
-
-Using a comment for the ellipses (…), as shown below, will be more explicit, preventing errors when a developer copies and pastes a sample code:
+Using a comment for the ellipses (…) is more explicit, preventing errors when a developer copies and pastes a sample code. Write:
 
 ```js example-good
 function exampleFunct() {
   // Add your code here
   // …
+}
+```
+
+Don't use ellipses (…) like this:
+
+```js example-bad
+function exampleFunct() {
+  …
 }
 ```
 
@@ -276,21 +284,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
 ### Type coercion
 
-  Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without new, instead.
-
-  ```js example-bad
-  class Person {
-    #name;
-    #birthYear;
-    
-    function Person(name, year) {
-      this.#name = "" + name;
-      this.#birthYear = +year;
-    }
-  };
-  ```
-
-  The correct way is:
+  Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without new, instead. Write:
 
   ```js example-good
   class Person {
@@ -300,6 +294,20 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
     constructor(name, year) {
       this.#name = String(name);
       this.#birthYear = Number(year);
+    }
+  };
+  ```
+
+  Don't write:
+
+  ```js example-bad
+  class Person {
+    #name;
+    #birthYear;
+    
+    constructor(name, year) {
+      this.#name = "" + name;
+      this.#birthYear = +year;
     }
   };
   ```
@@ -361,14 +369,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
 
 When iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `forEach()`. Note that if you are using a collection that is not an `Array`, you have to check that `for...of` is actually supported (it requires the variable to be iterable), or that the `forEach()` method is actually present.
 
-```js example-bad
-const dogs = ["Rex", "Lassie"];
-for (let i = 0; i < dogs.length; i++) {
-  console.log(dogs[i]);
-}
-```
-
-As shown in the above example, not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners. Consider these two alternatives:
+Use `for...of`:
 
 ```js example-good
 const dogs = ["Rex", "Lassie"];
@@ -377,11 +378,22 @@ for (const dog of dogs) {
 }
 ```
 
+Or `forEach()`:
+
 ```js example-good
 const dogs = ["Rex", "Lassie"];
 dogs.forEach((dog) => {
   console.log(dog);
 });
+```
+
+Do not use `for (;;)`. not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
+
+```js example-bad
+const dogs = ["Rex", "Lassie"];
+for (let i = 0; i < dogs.length; i++) {
+  console.log(dogs[i]);
+}
 ```
 
 Make sure that you define the initializer properly by using the `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
@@ -406,20 +418,22 @@ for (i of cats) {
 }
 ```
 
-When you need to access both the value and the index, you can use `.forEach()` instead of `for (;;)`:
-
-```js example-bad
-const gerbils = ["Zoé", "Chloé"];
-for (let i = 0; i < gerbils.length; i++) {
-  console.log(`Gerbil #${i}: ${gerbils[i]}`);
-}
-```
+When you need to access both the value and the index, you can use `.forEach()` instead of `for (;;)`. Write:
 
 ```js example-good
 const gerbils = ["Zoé", "Chloé"];
 gerbils.forEach((gerbil, i) => {
   console.log(`Gerbil #${i}: ${gerbil}`);
 })
+```
+
+Do not write:
+
+```js example-bad
+const gerbils = ["Zoé", "Chloé"];
+for (let i = 0; i < gerbils.length; i++) {
+  console.log(`Gerbil #${i}: ${gerbils[i]}`);
+}
 ```
 
 > **Warning:** Never use `for...in` with arrays and strings.
@@ -430,18 +444,7 @@ gerbils.forEach((gerbil, i) => {
 
 There is one notable case to keep in mind for the `if...else` control statements. If the `if` statement ends with a `return`, do not add an `else` statement.
 
-```js example-bad
-if (test) {
-  // Perform something if test is true
-  // …
-  return;
-} else {
-  // Perform something if test is false
-  // …
-}
-```
-
-Continue right after the `if` statement, as shown below
+Continue right after the `if` statement. Write:
 
 ```js example-good
 if (test) {
@@ -454,33 +457,46 @@ if (test) {
 // …
 ```
 
+Do not write:
+
+```js example-bad
+if (test) {
+  // Perform something if test is true
+  // …
+  return;
+} else {
+  // Perform something if test is false
+  // …
+}
+```
+
 ### Switch statements
 
 Switch statements can be a little tricky.
 
-First, don't put a `break` after a `return` statement in a specific case.
+First, don't put a `break` after a `return` statement in a specific case:
 
 ```js example-bad
 switch (species) {
   case `chicken`:
     return farm.shed;
-    break;
   case `horse`:
     return corral.entry;
-    break;
   default:
     return "";
 }
 ```
 
-The `break` statements are unreachable, and therefore useless. Do this instead:
+If you add a `break`, it will be unreachable. Do not write:
 
 ```js example-bad
 switch (species) {
   case `chicken`:
     return farm.shed;
+    break;
   case `horse`:
     return corral.entry;
+    break;
   default:
     return "";
 }
@@ -790,16 +806,16 @@ In addition to these JavaScript language features, we reccomend a few guidelines
 
 ### Avoid browser prefixes
 
-If all major browser (Chrome, Edge, Firefox, and Safari) supports a feature, don't prefix it.
+If all major browser (Chrome, Edge, Firefox, and Safari) supports a feature, don't prefix it. Write:
 
-```js example-bad
-const AudioContext = window.AudioContext || window.webkitAudioContext;
+```js example-good
 const context = new AudioContext();
 ```
 
-The above snippet should be:
+Avoid the added complexity of prefixes. Don't write:
 
-```js example-good
+```js example-bad
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 const context = new AudioContext();
 ```
 
