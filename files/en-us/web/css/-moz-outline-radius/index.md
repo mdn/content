@@ -8,9 +8,10 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-shorthand-property
+  - Deprecated
 browser-compat: css.properties.-moz-outline-radius
 ---
-{{CSSRef}}{{deprecated_header}}
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 In Mozilla applications like Firefox, the **`-moz-outline-radius`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) can be used to give an element's {{cssxref("outline")}} rounded corners.
 
