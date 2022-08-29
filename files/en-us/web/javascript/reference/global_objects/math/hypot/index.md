@@ -14,6 +14,7 @@ browser-compat: javascript.builtins.Math.hypot
 The **`Math.hypot()`** function returns the square root of the
 sum of squares of its arguments, that is:
 
+<!-- markdownlint-disable MD049 -->
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo>
 <mo stretchy="false">(</mo>
 <msub><mi>v</mi>

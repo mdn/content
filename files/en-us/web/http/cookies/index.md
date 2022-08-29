@@ -143,7 +143,7 @@ It takes three possible values: `Strict`, `Lax`, and `None`.
 
 With `Strict`, the cookie is only sent to the site where it originated.
 `Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site.
-For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but *only in secure contexts* (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
+For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but _only in secure contexts_ (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
 If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
 Here's an example:
