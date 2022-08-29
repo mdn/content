@@ -814,7 +814,7 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
   para.innerHTML = text;
   ```
 
-- The `alert()` function is unreliable. It doesn't work in live example on MDN that are inside an {{HTMLElement("iframe")}}. Moreover, it is a modal to the whole window, which is annoying. Instead, use `console.log()` or `console.error()`, the {{HTMLElement("dialog")}} element, or a dedicated UI element in your example.
+- The `alert()` function is unreliable. It doesn't work in live example on MDN that are inside an {{HTMLElement("iframe")}}. Moreover, it is modal to the whole window, which is annoying. In static code examples, , use `console.log()` or `console.error()`. In [live examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), avoid `console.log()` and `console.error()` as they are not displayed, use a dedicated UI element.
 
 ### Use the appropriate log method
 
