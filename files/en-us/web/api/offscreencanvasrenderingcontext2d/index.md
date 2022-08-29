@@ -48,7 +48,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("OffscreenCanvasRenderingContext2D.isContextLost)}}
+- {{domxref("OffscreenCanvasRenderingContext2D.isContextLost")}}
   - : TODO
 
 ### Drawing rectangles
