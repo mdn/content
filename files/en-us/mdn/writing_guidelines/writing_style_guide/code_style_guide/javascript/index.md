@@ -799,8 +799,8 @@ Don't do:
 
 ```js example-bad
 const x = () => {
-   // …
-}
+  // …
+};
 ```
 
 When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
