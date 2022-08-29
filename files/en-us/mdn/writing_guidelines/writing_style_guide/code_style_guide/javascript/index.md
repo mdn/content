@@ -567,26 +567,6 @@ Don't add items to the array like this:
 pets[pets.length] = "cat";
 ```
 
-### Queues
-
-Queues are collection following the [FIFO](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)) principle. When using a JS `Array` as a queue, use the [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method to add an item and the [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method to remove the first item. Do not use an index.
-
-```js example-good
-pets.push("dog")
-pets.push("cat");
-const pet = pets.shift(); // pet === "dog"
-```
-
-### Stacks
-
-Stacks are collection following the [LIFO](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) principle. When using a JS `Array` as a stack, use the [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method to add an item and the [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) method to remove the last item. Do not use an index.
-
-```js example-good
-pets.push("dog")
-pets.push("cat");
-const pet = pets.pop(); // pet === "cat"
-```
-
 ## Objects
 
 ### Object names
