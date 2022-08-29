@@ -681,7 +681,7 @@ let sum = function(a, b) {
 }
 ```
 
-When using anonymous functions inside a method that requires a function as a parameter, when you do not need to bind `this`, use an arrow function to make the code shorter and cleaner.
+When using anonymous functions inside as a callback (a function passed to another method invocation) and you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
 
 Here is the recommended way:
 
@@ -698,6 +698,22 @@ let sum = array1.reduce(function (a, b) {
   return a + b;
 });
 ```
+
+Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use named functions with the keyword `function`:
+
+```js example-good
+function x() {
+  // …
+}
+```
+
+Don't do:
+
+```js example-bad
+const x = () => {
+   // …
+}
+````
 
 When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
 
