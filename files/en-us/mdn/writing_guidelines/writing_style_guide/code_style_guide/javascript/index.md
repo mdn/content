@@ -677,7 +677,7 @@ function SayHello() {
   console.log('Hello!');
 };
 
-function notVeryObviousName() {
+function doIt() {
   console.log('Hello!');
 };
 ```
