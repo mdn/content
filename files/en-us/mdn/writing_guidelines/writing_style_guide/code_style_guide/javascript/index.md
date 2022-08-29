@@ -633,7 +633,7 @@ pets[pets.length] = "cat";
 
 ### Object names
 
-When defining an object class, use _CamelCase_ (starting with a capital letter, also known as PascalCase) for the class name and _camelCase_, starting with a lowercase letter, for the object property and method names.
+When defining a class, use _PascalCase_ (starting with a capital letter) for the class name and _camelCase_ (starting with a lowercase letter) for the object property and method names.
 
 When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
