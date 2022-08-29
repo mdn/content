@@ -8,6 +8,7 @@ tags:
   - bounding boxes
   - collision detection
 ---
+
 {{GamesSidebar}}
 
 This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.
@@ -35,9 +36,14 @@ Or in JavaScript:
 
 ```js
 function isPointInsideAABB(point, box) {
-  return (point.x >= box.minX && point.x <= box.maxX) &&
-         (point.y >= box.minY && point.y <= box.maxY) &&
-         (point.z >= box.minZ && point.z <= box.maxZ);
+  return (
+    point.x >= box.minX &&
+    point.x <= box.maxX &&
+    point.y >= box.minY &&
+    point.y <= box.maxY &&
+    point.z >= box.minZ &&
+    point.z <= box.maxZ
+  );
 }
 ```
 
@@ -56,9 +62,14 @@ And in JavaScript, we'd use this:
 
 ```js
 function intersect(a, b) {
-  return (a.minX <= b.maxX && a.maxX >= b.minX) &&
-         (a.minY <= b.maxY && a.maxY >= b.minY) &&
-         (a.minZ <= b.maxZ && a.maxZ >= b.minZ);
+  return (
+    a.minX <= b.maxX &&
+    a.maxX >= b.minX &&
+    a.minY <= b.maxY &&
+    a.maxY >= b.minY &&
+    a.minZ <= b.maxZ &&
+    a.maxZ >= b.minZ
+  );
 }
 ```
 
@@ -82,9 +93,11 @@ Or in JavaScript:
 ```js
 function isPointInsideSphere(point, sphere) {
   // we are using multiplications because is faster than calling Math.pow
-  const distance = Math.sqrt((point.x - sphere.x) * (point.x - sphere.x) +
-                           (point.y - sphere.y) * (point.y - sphere.y) +
-                           (point.z - sphere.z) * (point.z - sphere.z));
+  const distance = Math.sqrt(
+    (point.x - sphere.x) * (point.x - sphere.x) +
+      (point.y - sphere.y) * (point.y - sphere.y) +
+      (point.z - sphere.z) * (point.z - sphere.z)
+  );
   return distance < sphere.radius;
 }
 ```
@@ -107,10 +120,12 @@ Or in JavaScript:
 ```js
 function intersect(sphere, other) {
   // we are using multiplications because it's faster than calling Math.pow
-  const distance = Math.sqrt((sphere.x - other.x) * (sphere.x - other.x) +
-                           (sphere.y - other.y) * (sphere.y - other.y) +
-                           (sphere.z - other.z) * (sphere.z - other.z));
-  return distance < (sphere.radius + other.radius);
+  const distance = Math.sqrt(
+    (sphere.x - other.x) * (sphere.x - other.x) +
+      (sphere.y - other.y) * (sphere.y - other.y) +
+      (sphere.z - other.z) * (sphere.z - other.z)
+  );
+  return distance < sphere.radius + other.radius;
 }
 ```
 
@@ -130,9 +145,11 @@ function intersect(sphere, box) {
   const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
 
   // this is the same as isPointInsideSphere
-  const distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
-                           (y - sphere.y) * (y - sphere.y) +
-                           (z - sphere.z) * (z - sphere.z));
+  const distance = Math.sqrt(
+    (x - sphere.x) * (x - sphere.x) +
+      (y - sphere.y) * (y - sphere.y) +
+      (z - sphere.z) * (z - sphere.z)
+  );
 
   return distance < sphere.radius;
 }

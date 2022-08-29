@@ -28,7 +28,7 @@ the script), then save the URL of the request in a variable:
 
 ```js
 const myRequest = new Request('flowers.jpg');
-const myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
+const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
 ```
 
 ## Specifications

@@ -299,7 +299,7 @@ const obj3 = { ['__prot' + 'o__']: 17 };
 console.log(obj3.__proto__ === 17);
 ```
 
-Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
+Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
 ## Specifications
 

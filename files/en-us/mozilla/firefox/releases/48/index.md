@@ -81,7 +81,7 @@ tags:
 - The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction()`) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).
 - The `String.prototype.contains()` method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ({{bug(1103588)}}).
 - The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) instead ({{bug(1219757)}}).
-- The {{jsxref("Object.__defineGetter__", "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}} methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).
+- The [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) and [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).
 
 ### Interfaces/APIs/DOM
 
