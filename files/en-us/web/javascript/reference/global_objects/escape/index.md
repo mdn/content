@@ -8,7 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.escape
 ---
-{{jsSidebar("Objects")}}
+{{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `escape()` is not
 > strictly deprecated (as in "removed from the Web standards"), it is defined in

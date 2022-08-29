@@ -46,7 +46,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 ## Methods
 
-*Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}*.
+_Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 
 ## Events
 

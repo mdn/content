@@ -140,7 +140,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -178,7 +178,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combine both the previous filters: log changes only:
 
 - to the `pinned` property of tabs
-- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -203,7 +203,7 @@ browser.tabs.onUpdated.addListener(
 Log changes only:
 
 - to the `pinned` property of tabs
-- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet"
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`
 - and which are part of the current browser window at the time the update event is fired:
 
 ```js

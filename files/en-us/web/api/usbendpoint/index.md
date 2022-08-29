@@ -18,14 +18,14 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
 ## Constructor
 
-- {{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}}
+- {{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}} {{Experimental_Inline}}
   - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAlternateInterface')}} with the given endpoint number and transfer direction.
 
 ## Properties
 
-- {{domxref("USBEndpoint.endpointNumber")}}
+- {{domxref("USBEndpoint.endpointNumber")}} {{Experimental_Inline}}
   - : Returns this endpoint's "endpoint number" which is a value from 1 to 15 extracted from the `bEndpointAddress` field of the endpoint descriptor defining this endpoint. This value is used to identify the endpoint when calling methods on `USBDevice`.
-- {{domxref("USBEndpoint.direction")}}
+- {{domxref("USBEndpoint.direction")}} {{Experimental_Inline}}
 
   - : Returns the direction in which this endpoint transfers data, one of:
 
@@ -35,7 +35,7 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
     - `"out"` - Data is transferred from host to device.
 
-- {{domxref("USBEndpoint.type")}}
+- {{domxref("USBEndpoint.type")}} {{Experimental_Inline}}
 
   - : Returns the type of this endpoint, one of:
 
@@ -51,7 +51,7 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
 <!---->
 
-- {{domxref("USBEndpoint.packetSize")}}
+- {{domxref("USBEndpoint.packetSize")}} {{Experimental_Inline}}
   - : Returns the size of the packets that data sent through this endpoint will be divided into.
 
 ## Examples

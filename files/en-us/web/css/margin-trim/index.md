@@ -13,7 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.margin-trim
 ---
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container's edges.
 
