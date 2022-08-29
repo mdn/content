@@ -113,16 +113,16 @@ for (let i = 0; i < 4; i++ ){
 }
 ```
 
-### Use JS-style comments
+### Use single-line comments
 
-JS-style comments are marked with `//`, as opposed to C-style comments enclosed between `/* … */`.
+Single-line comments are marked with `//`, as opposed to block comments enclosed between `/* … */`.
 
-In general, use JS-style comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
+In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
 
 Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
 
 ```js example-good
-// This is a well-written JavaScript-style comment
+// This is a well-written single-line comment
 ```
 
 If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
@@ -164,7 +164,7 @@ function exampleFunct() {
 
 When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
 
-To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use JS-style comments (`//`).
+To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
 
 ## Variables
 
