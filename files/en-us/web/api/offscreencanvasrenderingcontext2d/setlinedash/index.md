@@ -1,23 +1,24 @@
 ---
-title: CanvasRenderingContext2D.setLineDash()
-slug: Web/API/CanvasRenderingContext2D/setLineDash
+title: OffscreenCanvasRenderingContext2D.setLineDash()
+slug: Web/API/OffscreenCanvasRenderingContext2D/setLineDash
 page-type: web-api-instance-method
 tags:
   - API
   - Canvas
-  - CanvasRenderingContext2D
+  - OffscreenCanvasRenderingContext2D
   - Dashes
   - LInes
   - Method
   - Reference
   - patterns
   - setLineDash
-browser-compat: api.CanvasRenderingContext2D.setLineDash
+browser-compat: api.OffscreenCanvasRenderingContext2D.setLineDash
 ---
+
 {{APIRef}}
 
 The **`setLineDash()`** method of the Canvas 2D API's
-{{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when
+{{domxref("OffscreenCanvasRenderingContext2D")}} interface sets the line dash pattern used when
 stroking lines. It uses an array of values that specify alternating lengths of lines
 and gaps which describe the pattern.
 
@@ -27,7 +28,7 @@ and gaps which describe the pattern.
 ## Syntax
 
 ```js
-setLineDash(segments)
+setLineDash(segments);
 ```
 
 ### Parameters
@@ -60,8 +61,8 @@ solid line.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Dashed line
 ctx.beginPath();
@@ -107,8 +108,8 @@ function drawDashedLine(pattern) {
   y += 20;
 }
 
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let y = 15;
 
 drawDashedLine([]);
@@ -117,7 +118,7 @@ drawDashedLine([10, 10]);
 drawDashedLine([20, 5]);
 drawDashedLine([15, 3, 3, 3]);
 drawDashedLine([20, 3, 3, 3, 3, 3, 3, 3]);
-drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
+drawDashedLine([12, 3, 3]); // Equals [12, 3, 3, 12, 3, 3]
 ```
 
 #### Result
@@ -134,6 +135,6 @@ drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
 
 ## See also
 
-- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
+- The interface defining this method: {{domxref("OffscreenCanvasRenderingContext2D")}}
+- {{domxref("OffscreenCanvasRenderingContext2D.getLineDash()")}}
+- {{domxref("OffscreenCanvasRenderingContext2D.lineDashOffset")}}
