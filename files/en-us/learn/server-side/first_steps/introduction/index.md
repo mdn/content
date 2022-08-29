@@ -52,7 +52,7 @@ The body of a successful response to a request would contain the requested resou
 
 ### Static sites
 
-The diagram below shows a basic web server architecture for a *static site* (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.
+The diagram below shows a basic web server architecture for a _static site_ (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.
 
 The server retrieves the requested document from its file system and returns an HTTP response containing the document and a [success status](/en-US/docs/Web/HTTP/Status#successful_responses) (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and [server error responses](/en-US/docs/Web/HTTP/Status#server_error_responses)).
 
@@ -82,7 +82,7 @@ Let's now turn our attention to the code involved in server-side and client-side
 - They generally don't use the same programming languages (the exception being JavaScript, which can be used on the server- and client-side).
 - They run inside different operating system environments.
 
-Code running in the browser is known as **client-side code** and is primarily concerned with improving the appearance and behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc. By contrast, server-side website programming mostly involves choosing *which content* is returned to the browser in response to requests. The server-side code handles tasks like validating submitted data and requests, using databases to store and retrieve data and sending the correct data to the client as required.
+Code running in the browser is known as **client-side code** and is primarily concerned with improving the appearance and behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc. By contrast, server-side website programming mostly involves choosing _which content_ is returned to the browser in response to requests. The server-side code handles tasks like validating submitted data and requests, using databases to store and retrieve data and sending the correct data to the client as required.
 
 Client-side code is written using [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) — it is run inside a web browser and has little or no access to the underlying operating system (including limited access to the file system).
 
@@ -100,7 +100,7 @@ Again, while both client and server-side code use frameworks, the domains are ve
 
 ## What can you do on the server-side?
 
-Server-side programming is very useful because it allows us to *efficiently* deliver information tailored for individual users and thereby create a much better user experience.
+Server-side programming is very useful because it allows us to _efficiently_ deliver information tailored for individual users and thereby create a much better user experience.
 
 Companies like Amazon use server-side programming to construct search results for products, make targeted product suggestions based on client preferences and previous buying habits, simplify purchases, etc.
 
@@ -184,9 +184,9 @@ For example, Amazon and Google both advertise products based on previous searche
 
 Congratulations, you've reached the end of the first article about server-side programming.
 
-You've now learned that server-side code is run on a web server and that its main role is to control *what* information is sent to the user (while client-side code mainly handles the structure and presentation of that data to the user).
+You've now learned that server-side code is run on a web server and that its main role is to control _what_ information is sent to the user (while client-side code mainly handles the structure and presentation of that data to the user).
 
-You should also understand that it is useful because it allows us to create websites that *efficiently* deliver information tailored for individual users and have a good idea of some of the things you might be able to do when you're a server-side programmer.
+You should also understand that it is useful because it allows us to create websites that _efficiently_ deliver information tailored for individual users and have a good idea of some of the things you might be able to do when you're a server-side programmer.
 
 Lastly, you should understand that server-side code can be written in a number of programming languages and that you should use a web framework to make the whole process easier.
 

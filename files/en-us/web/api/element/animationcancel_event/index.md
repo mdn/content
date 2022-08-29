@@ -116,7 +116,7 @@ animated.style.display = 'none';
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const animation = document.querySelector('p.animation');

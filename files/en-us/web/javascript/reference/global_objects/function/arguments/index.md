@@ -7,9 +7,10 @@ tags:
   - JavaScript
   - Property
   - arguments
+  - Non-standard
 browser-compat: javascript.builtins.Function.arguments
 ---
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.
 

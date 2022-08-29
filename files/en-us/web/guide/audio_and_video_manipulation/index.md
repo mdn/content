@@ -114,7 +114,7 @@ You can achieve the same result by applying the {{cssxref("filter-function/grays
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
+> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Playback rate
 
