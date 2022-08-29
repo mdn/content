@@ -721,7 +721,7 @@ const obj = {
 
 ### Object properties
 
-The `Object.hasOwnProperties()` method has been deprecated in favor of `Object.hasOwn()`.
+The `Object.prototype.hasOwnProperty()` method has been deprecated in favor of `Object.hasOwn()`.
 
 ## Functions
 
