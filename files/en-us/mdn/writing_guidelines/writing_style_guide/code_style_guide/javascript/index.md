@@ -36,9 +36,7 @@ Prettier formats and styles all the code; the tool will fix your errors. Neverth
 
 ### One line per statement
 
-- Each line of JavaScript is on a new line.
-
-For example, a function definition will look like this:
+- Each line of JavaScript should be on a new line. For example, a function definition will look like this:
 
 ```js example-good
 function exampleFunc() {
