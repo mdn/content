@@ -319,7 +319,7 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 
 {{EmbedLiveSample('Accesskey_example', '100%', 130)}}
 
-_This example is embed in an iFrame. If you want to activate the key events, you have to click on it first._
+_This example is embedded in an iFrame. If you want to activate the key events, you have to click on it first._
 
 [begin-5-accesskey.svg](begin-5-accesskey.svg)
 
