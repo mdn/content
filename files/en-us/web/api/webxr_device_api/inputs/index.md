@@ -111,11 +111,11 @@ This means that if you use a 3D model to represent your controller, your player'
 **Figure: Mapping the grip space to the world coordinate system. The distances _x_, _y_, and _z_ together make up the world coordinates (_x_, _y_, z) corresponding to the origin of the grip space _G_.**
 ![A diagram showing the relationship between the grip space and the world space](gripspace-on-worldspace.svg)
 
-In the diagram above, we see the grip space, whose origin is located at *G*, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the *z* axis. Relative to the origin of the world space, *W*, the grip space's origin is located _x_ units to the right, _y_ units above, and _z_ units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (_x_, _y_, -_z_); _z_ is negative since the grip space is farther away along the _z_ axis, and is thus in the negative direction.
+In the diagram above, we see the grip space, whose origin is located at _G_, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the _z_ axis. Relative to the origin of the world space, _W_, the grip space's origin is located _x_ units to the right, _y_ units above, and _z_ units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (_x_, _y_, -_z_); _z_ is negative since the grip space is farther away along the _z_ axis, and is thus in the negative direction.
 
 If the controller were instead positioned to the left of and closer to the user than the world space origin (or possibly behind the user, if the user is located at the origin, although that's an uncomfortable way to hold a controller), the coordinates would have a negative value for _x_, but a positive value for _z_. The value of _y_ would still be positive unless the controller was moved below the world space origin.
 
-This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of *x* and *y* are both negative, while *z* is positive.
+This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of _x_ and _y_ are both negative, while _z_ is positive.
 
 **Figure Mapping a grip space to the world origin when the controller is positioned below and to the left of the world origin, and closer to us than the world origin is.**
 ![The relationship between another grip space and the world space](gripspace-on-worldspace-diag.svg)
@@ -196,7 +196,7 @@ See [Input profiles](#input_profiles) for more specific details on working with 
 
 In order to avoid having problems introduced by multiple controllers trying to inadvertently manipulate the UI at the same time, your app may need to have a "primary" controller. Not only would this controller then take the responsibility of clicking through the user interface of your app, but it would also be considered the "main hand," while other controllers would then be off-hand or additional controllers.
 
-> **Note:** This doesn't mean your app *needs* to decide upon a primary controller. But if it does, these strategies may help.
+> **Note:** This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
 
 There are a few ways you can decide upon a primary controller. We'll look at three.
 

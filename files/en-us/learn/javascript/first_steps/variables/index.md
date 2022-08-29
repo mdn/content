@@ -387,7 +387,7 @@ If you try to do this using `const` you will see an error:
 const count;
 ```
 
-Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called *reassigning* the variable):
+Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called _reassigning_ the variable):
 
 ```js
 let count = 1;

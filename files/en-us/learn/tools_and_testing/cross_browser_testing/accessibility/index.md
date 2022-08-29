@@ -118,7 +118,7 @@ As a test, you can turn off a site's CSS and see how understandable it is withou
 - Firefox: Select _View > Page Style > No Style_ from the main menu.
 - Safari: Select _Develop > Disable Styles_ from the main menu (to enable the _Develop_ menu, choose _Safari > Preferences > Advanced > Show Develop menu in menu bar_).
 - Chrome: Install the Web Developer Toolbar extension, then restart the browser. Click the gear icon that will appear, then select _CSS > Disable All Styles_.
-- Edge: Select *View > Style > No Style* from the main menu.
+- Edge: Select _View > Style > No Style_ from the main menu.
 
 #### Using native keyboard accessibility
 

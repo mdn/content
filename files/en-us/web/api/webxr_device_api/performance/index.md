@@ -88,6 +88,6 @@ Now, instead of allocating variables every loop iteration, we're using global co
 
 - The memory allocated for each value or structure will not need to be reallocated every frame. This reduces the potential for triggering garbage collection, and optimizes memory use.
 - You can't accidentally delete the objects that contain your vectors and matrices, since they're constants.
-- You can, however, still replace the *contents* of each of these objects, so they're reusable.
+- You can, however, still replace the _contents_ of each of these objects, so they're reusable.
 
 You're now protected from several possible coding mistakes, and your entire animation will be smoother and more performant as well.

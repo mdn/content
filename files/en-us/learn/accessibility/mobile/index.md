@@ -88,7 +88,7 @@ When TalkBack is turned on, unlocking the phone is a bit different.
 
 You can do a two-finger swipe up from the bottom of the lock screen. If you've set a passcode or pattern for unlocking your device, you will then be taken to the relevant entry screen to enter it.
 
-You can also explore by touch to find the *Unlock* button at the bottom middle of the screen, and then double-tap.
+You can also explore by touch to find the _Unlock_ button at the bottom middle of the screen, and then double-tap.
 
 #### Global and local menus
 
@@ -129,7 +129,7 @@ For example, with TalkBack turned on:
 
 A mobile version of VoiceOver is built into the iOS operating system.
 
-To turn it on, go to Your *Settings* app and select _Accessibility > VoiceOver_. Press the *VoiceOver* slider to enable it (you'll also see a number of other options related to VoiceOver on this page).
+To turn it on, go to Your _Settings_ app and select _Accessibility > VoiceOver_. Press the _VoiceOver_ slider to enable it (you'll also see a number of other options related to VoiceOver on this page).
 
 > **Note:** Some older iOS devices have the VoiceOver menu at _Settings app_ > _General_ > _Accessibility_ > _VoiceOver_.
 
@@ -141,7 +141,7 @@ Once VoiceOver is enabled, iOS's basic control gestures will be a bit different:
 4. Swipe with three fingers to scroll through a page.
 5. Tap with two fingers to perform a context-relevant action — for example, taking a photo while in the camera app.
 
-To turn it off again, navigate back to *Settings > General > Accessibility > VoiceOver* using the above gestures, and toggle the *VoiceOver* slider back to off.
+To turn it off again, navigate back to _Settings > General > Accessibility > VoiceOver_ using the above gestures, and toggle the _VoiceOver_ slider back to off.
 
 #### Unlock phone
 
@@ -182,7 +182,7 @@ Let's have a go at web browsing with VoiceOver:
     - _Form Controls_: Move between form controls on the page.
     - _Language_: Move between different translations, if they are available.
 
-7. Select *Headings*. Now you'll be able to swipe up and down to move between headings on the page.
+7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
 > **Note:** For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html).
 
