@@ -23,7 +23,7 @@ A {{domxref("StyleSheet")}} object.
 ## Examples
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
+const docRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].parentStyleSheet == document.styleSheets[0]); //returns true 
 ```
 
