@@ -100,7 +100,7 @@ In the following subsections, we outline the most important changes that you sho
 
 ### Set NODE_ENV to 'production'
 
-We can remove stack traces in error pages by setting the `NODE_ENV` environment variable to *production* (it is set to '_development_' by default). In addition to generating less-verbose error messages, setting the variable to *production* caches view templates and CSS files generated from CSS extensions. Tests indicate that setting `NODE_ENV` to _production_ can improve app performance by a factor of three!
+We can remove stack traces in error pages by setting the `NODE_ENV` environment variable to _production_ (it is set to '_development_' by default). In addition to generating less-verbose error messages, setting the variable to _production_ caches view templates and CSS files generated from CSS extensions. Tests indicate that setting `NODE_ENV` to _production_ can improve app performance by a factor of three!
 
 This change can be made either by using `export`, an environment file, or the OS initialization system.
 
@@ -244,7 +244,7 @@ That's all the overview you need in order to get started (see [Getting Started o
 
 ### Creating an application repository in GitHub
 
-Heroku is integrated with **git,** the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named *heroku.* It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
+Heroku is integrated with **git,** the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named _heroku._ It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
 > **Note:** If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.
 

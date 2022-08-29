@@ -44,7 +44,7 @@ The following sections show you how to call the application generator, and provi
 
 > **Note:** The _Express Application Generator_ is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a _minimal_ Express application, see [Hello world example](https://expressjs.com/en/starter/hello-world.html) (Express docs).
 
-> **Note:** This tutorial uses the version of _Express_ that is defined in the **package.json** created by the *Express Application Generator.* This is not (necessarily) the latest version!
+> **Note:** This tutorial uses the version of _Express_ that is defined in the **package.json** created by the _Express Application Generator_. This is not (necessarily) the latest version!
 
 ## Using the application generator
 
@@ -360,7 +360,7 @@ The scripts section first defines a "_start_" script, which is what we are invok
   },
 ```
 
-The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/www** file with _nodemon_ rather than *node* (this example is for Linux and macOS, as discussed above in [Enable server restart on file changes](#enable_server_restart_on_file_changes)).
+The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this example is for Linux and macOS, as discussed above in [Enable server restart on file changes](#enable_server_restart_on_file_changes)).
 
 ### www file
 
@@ -393,7 +393,7 @@ module.exports = app;
 
 Back in the **www** entry point file above, it is this `module.exports` object that is supplied to the caller when this file is imported.
 
-Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, *express*, *morgan* and _cookie-parser_ that we previously downloaded for our application using npm; and _path_, which is a core Node library for parsing file and directory paths.
+Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, _express_, _morgan_ and _cookie-parser_ that we previously downloaded for our application using npm; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
 const createError = require('http-errors');

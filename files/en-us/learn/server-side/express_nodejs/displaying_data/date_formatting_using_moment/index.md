@@ -12,7 +12,7 @@ The default rendering of dates from our models is very ugly: _Tue Oct 06 2020 15
 
 The approach we will use is to create a virtual property in our `BookInstance` model that returns the formatted date. We'll do the actual formatting using [luxon](https://www.npmjs.com/package/luxon), a powerful, modern, and friendly library for parsing, validating, manipulating, formatting and localising dates.
 
-> **Note:** It is possible to use *luxon* to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
+> **Note:** It is possible to use _luxon_ to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
 
 > **Note:** This tutorial previously used the [moment](https://www.npmjs.com/package/moment) library for date formatting. We've moved to Luxon because moment has [declared itself "legacy"](https://momentjs.com/docs/#/-project-status/). Luxon is one of the [moment project's main recommendations](https://momentjs.com/docs/#/-project-status/recommendations/) for a great alternative library.
 

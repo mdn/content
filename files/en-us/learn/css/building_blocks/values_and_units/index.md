@@ -53,7 +53,7 @@ Every property used in CSS has a value type defining the set of values that are 
 
 In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or [`<length>`](/en-US/docs/Web/CSS/length). When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-> **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term *value* refers to any particular expression supported by a value type that you choose to use.
+> **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
 > **Note:** Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the [`<color>`](/en-US/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
 

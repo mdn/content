@@ -6,7 +6,7 @@ tags:
   - Glossary
   - JavaScript
 ---
-A **method** is a {{glossary("function")}} which is a {{glossary("property")}} of an {{glossary("object")}}. There are two kind of methods: *Instance Methods* which are built-in tasks performed by an object instance, or _{{Glossary("static method", "Static Methods")}}_ which are tasks that are called directly on an object constructor.
+A **method** is a {{glossary("function")}} which is a {{glossary("property")}} of an {{glossary("object")}}. There are two kind of methods: _Instance Methods_ which are built-in tasks performed by an object instance, or _{{Glossary("static method", "Static Methods")}}_ which are tasks that are called directly on an object constructor.
 
 > **Note:** In JavaScript functions themselves are objects, so, in that context, a method is actually an {{glossary("object reference")}} to a function.
 

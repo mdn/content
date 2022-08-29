@@ -66,7 +66,7 @@ To test it:
 
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
-- Enable *Show Content Messages* in the menu:
+- Enable _Show Content Messages_ in the menu:
 
   ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
 - Open some web pages.

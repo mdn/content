@@ -829,7 +829,7 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a *static* function reference.
+the real issue; rather it is the lack of keeping a _static_ function reference.
 
 ### Improving scrolling performance with passive listeners
 
