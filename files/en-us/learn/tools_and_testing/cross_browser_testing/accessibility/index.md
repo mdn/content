@@ -319,7 +319,7 @@ Generally, screen readers are separate apps that run on the host operating syste
 
 Let's go through some tests with a couple of different screen readers to give you a general idea of how they work and how to test with them.
 
-> **Note:** WebAIM's [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screen reader/) provides some useful information about screen reader usage and what works best for screen readers. Also see [Screen Reader User Survey #9 Results](https://webaim.org/projects/screenreadersurvey9/#used) for some interesting screen reader usage statistics.
+> **Note:** WebAIM's [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) provides some useful information about screen reader usage and what works best for screen readers. Also see [Screen Reader User Survey #9 Results](https://webaim.org/projects/screenreadersurvey9/#used) for some interesting screen reader usage statistics.
 
 #### VoiceOver
 

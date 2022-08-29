@@ -84,4 +84,4 @@ The above example is taken from our [Web share test](https://mdn.github.io/dom-e
 
 ## See also
 
-- [Receiving shared data with the Web Share Target API](https://web.dev/web-share-target/) (https\://web.dev/)
+- [Receiving shared data with the Web Share Target API](https://web.dev/web-share-target/)
