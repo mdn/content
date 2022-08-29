@@ -387,7 +387,7 @@ Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true`
 
 ## Loops and conditional statements
 
-### Loops
+### Loop initialization
 
 When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
