@@ -528,17 +528,17 @@ switch (species) {
 
 Put `default` as the last case, and don't end it with a `break`. If you need to do it differently, add a comment explaining why.
 
-Pay attention! When you declare a local variable for a case, you need to use braces to define a scope:
+Remember that, when you declare a local variable for a case, you need to use braces to define a scope:
 
 ```js
 switch (fruits) {
   case 'Orange': {
-    let slice = fruit.slice();
+    const slice = fruit.slice();
     eat(slice);
     break;
   }
   case 'Apple': {
-    let core = fruit.extractCore();
+    const core = fruit.extractCore();
     recycle(core);
     break;
   }
