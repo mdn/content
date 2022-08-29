@@ -46,7 +46,6 @@ Max-Forwards: 10
 
 This feature is neither targeted at, nor implemented in, browsers.
 
-
 ## See also
 
 - The HTTP [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE) method
