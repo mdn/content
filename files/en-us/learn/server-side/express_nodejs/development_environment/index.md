@@ -41,9 +41,9 @@ _Node_ and _Express_ make it very easy to set up your computer in order to start
 
 The _Express_ development environment includes an installation of _Nodejs_, the _npm package manager_, and (optionally) the _Express Application Generator_ on your local computer.
 
-_Node_ and the _npm_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). *Express* is then installed by npm as a dependency of your individual *Express* web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.).
+_Node_ and the _npm_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). _Express_ is then installed by npm as a dependency of your individual _Express_ web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.).
 
-_npm_ can also be used to (globally) install the *Express Application Generator*, a handy tool for creating skeleton _Express_ web apps that follow the [MVC pattern](/en-US/docs/Glossary/MVC). The application generator is optional because you don't _need_ to use this tool to create apps that use Express, or construct Express apps that have the same architectural layout or dependencies. We'll be using it though, because it makes getting started a lot easier, and promotes a modular application structure.
+_npm_ can also be used to (globally) install the _Express Application Generator_, a handy tool for creating skeleton _Express_ web apps that follow the [MVC pattern](/en-US/docs/Glossary/MVC). The application generator is optional because you don't _need_ to use this tool to create apps that use Express, or construct Express apps that have the same architectural layout or dependencies. We'll be using it though, because it makes getting started a lot easier, and promotes a modular application structure.
 
 > **Note:** Unlike some other web frameworks, the development environment does not include a separate development web server. In _Node_/_Express_ a web application creates and runs its own web server!
 
@@ -59,7 +59,7 @@ In this article we provide setup instructions for Windows, macOS, and Ubuntu Lin
 
 There are many [releases of Node](https://nodejs.org/en/blog/release/) — newer releases contain bug fixes, support for more recent versions of ECMAScript (JavaScript) standards, and improvements to the Node APIs.
 
-Generally you should use the most recent *LTS (long-term supported)* release as this will be more stable than the "current" release while still having relatively recent features (and is still being actively maintained). You should use the _Current_ release if you need a feature that is not present in the LTS version.
+Generally you should use the most recent _LTS (long-term supported)_ release as this will be more stable than the "current" release while still having relatively recent features (and is still being actively maintained). You should use the _Current_ release if you need a feature that is not present in the LTS version.
 
 For _Express_ you should always use the latest version.
 
@@ -161,7 +161,7 @@ You can manually use npm to separately fetch each needed package. Typically we i
 
 The following steps show how you can use npm to download a package, save it into the project dependencies, and then require it in a Node application.
 
-> **Note:** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the *Express Application Generator*. This section is provided because it is useful to understand how npm works and what is being created by the application generator.
+> **Note:** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the _Express Application Generator_. This section is provided because it is useful to understand how npm works and what is being created by the application generator.
 
 1. First create a directory for your new application and navigate into it:
 
@@ -198,7 +198,7 @@ The following steps show how you can use npm to download a package, save it into
     npm install express
     ```
 
-    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include *Express*.
+    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
 
     ```json
     {
