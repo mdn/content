@@ -91,7 +91,7 @@ In addition to methods to read and alter individual components of the local date
   - : Returns the month (`0`–`11`) in the specified date according to universal time.
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
   - : Returns the seconds (`0`–`59`) in the specified date according to universal time.
-- {{jsxref("Date.prototype.getYear()")}}
+- {{jsxref("Date.prototype.getYear()")}} {{Deprecated_Inline}}
   - : Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} instead.
 - {{jsxref("Date.prototype.setDate()")}}
   - : Sets the day of the month for a specified date according to local time.
@@ -123,7 +123,7 @@ In addition to methods to read and alter individual components of the local date
   - : Sets the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCSeconds()")}}
   - : Sets the seconds for a specified date according to universal time.
-- {{jsxref("Date.prototype.setYear()")}}
+- {{jsxref("Date.prototype.setYear()")}} {{Deprecated_Inline}}
   - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} instead.
 - {{jsxref("Date.prototype.toDateString()")}}
   - : Returns the "date" portion of the {{jsxref("Date")}} as a human-readable string like `'Thu Apr 12 2018'`.
@@ -131,7 +131,7 @@ In addition to methods to read and alter individual components of the local date
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
   - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
-- {{jsxref("Date.prototype.toGMTString()")}}
+- {{jsxref("Date.prototype.toGMTString()")}} {{Deprecated_Inline}}
   - : Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
