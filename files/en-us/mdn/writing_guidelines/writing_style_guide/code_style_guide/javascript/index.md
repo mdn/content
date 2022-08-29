@@ -166,7 +166,7 @@ function exampleFunc(fruitBasket) {
 
 ### Multi-line comments
 
-Short comments are usually better, so try to keep them in one line of 120 characters. If this is not possible, use `//` at the beginning of each line:
+Short comments are usually better, so try to keep them in one line of 60–80 characters. If this is not possible, use `//` at the beginning of each line:
 
 ```js example-good
 // This is an example of a multi-line comment.
