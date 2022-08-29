@@ -507,6 +507,8 @@ When you don't need the parameter of the `catch` statement, omit it:
   }
 ```
 
+Keep in mind, that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
+
 ## Strings
 
 String literals can be enclosed within single quotes, as in `'A string'`, or within double quotes, as in `"A string"`. Don't worry about which one to use; Prettier keeps it consistent.
