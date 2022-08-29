@@ -18,9 +18,9 @@ The **`RTCIdentityAssertion`** interface of the [WebRTC API](/en-US/docs/Web/API
 
 ## Properties
 
-- {{domxref("RTCIdentityAssertion.idp")}}
+- {{domxref("RTCIdentityAssertion.idp")}} {{Experimental_Inline}}
   - : Indicates the provider of the identity assertion.
-- {{domxref("RTCIdentityAssertion.name")}}
+- {{domxref("RTCIdentityAssertion.name")}} {{Experimental_Inline}}
   - : Indicates the name of the identity assertion provider.
 
 ## Specifications
