@@ -17,7 +17,7 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a br
 
 This section details the basics of using the Payment Request API to make a payment.
 
-> **Note:** The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/master/payment-request/feature-detect-support.html).
+> **Note:** The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/main/payment-request/feature-detect-support.html).
 
 ### Creating a new payment request object
 

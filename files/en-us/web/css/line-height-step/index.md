@@ -7,11 +7,11 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+  - Experimental
 browser-compat: css.properties.line-height-step
 ---
-{{CSSRef}}
 
-{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
 

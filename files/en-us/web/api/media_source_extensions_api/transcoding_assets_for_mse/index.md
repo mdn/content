@@ -78,13 +78,13 @@ To check whether an MP4 file is a proper MP4 stream, you can again use the [mp4i
 If you have an asset that is not already an MP4, ffmpeg can handle emitting a properly fragmented MP4 during the transcode process, with the `-movflags frag_keyframe+empty_moov` command line flag:
 
 ```bash
-$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
+ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
 ```
 
 If you already have an MP4, but it's not properly fragmented, you can again use ffmpeg:
 
 ```bash
-$ ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
+ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
 ```
 
 In both cases, Chrome may require an extra movie flag to be set:

@@ -127162,10 +127162,6 @@
       "Hamstersoup"
     ]
   },
-  "Web/JavaScript/The_performance_hazards_of_prototype_mutation": {
-    "modified": "2020-04-30T10:28:18.041Z",
-    "contributors": ["fscholz", "Waldo"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:04:01.905Z",
     "contributors": [

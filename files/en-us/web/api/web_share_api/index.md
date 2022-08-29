@@ -72,7 +72,7 @@ btn.addEventListener('click', async () => {
 });
 ```
 
-The above example is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)). You can also see this as a live example in {{domxref("navigator.share()")}}.
+The above example is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)). You can also see this as a live example in {{domxref("navigator.share()")}}.
 
 ## Specifications
 

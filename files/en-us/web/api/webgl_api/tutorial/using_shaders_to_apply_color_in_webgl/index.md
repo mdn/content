@@ -129,6 +129,6 @@ Then, `drawScene()` can have the following added to it so it actually uses these
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample3) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

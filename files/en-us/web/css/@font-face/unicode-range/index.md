@@ -6,7 +6,6 @@ tags:
   - CSS
   - CSS Fonts
   - CSS Property
-  - Experimental
   - Layout
   - Reference
   - Web

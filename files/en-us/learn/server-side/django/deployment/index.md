@@ -331,7 +331,7 @@ The database connection information is supplied to the web dyno using a configur
 Install _dj-database-url_ locally so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server:
 
 ```bash
-$ pip3 install dj-database-url
+pip3 install dj-database-url
 ```
 
 ##### settings.py
@@ -411,7 +411,7 @@ The steps to set up _WhiteNoise_ to use with the project are [given here](https:
 Install whitenoise locally using the following command:
 
 ```bash
-$ pip3 install whitenoise
+pip3 install whitenoise
 ```
 
 ##### settings.py
