@@ -30,35 +30,25 @@ You can use new features once every major browser, Chrome, Edge, Firefox, and Sa
 
 Prettier formats and styles all the code; the tool will fix your errors. Nevertheless, there are a few additional rules that you need to follow.
 
-### One line per statement
+### Use braces with control statement.
 
-- Each line of JavaScript should be on a new line. For example, a function definition will look like this:
+- Even if, control statements like `if`, `for`, `while` don't mandate for the use of braces when the content is made of one single statement, always use braces. Write:
 
-```js example-good
-function exampleFunc() {
-  console.log("Hello!");
-};
-```
-
-Don't put everything on one line:
-
-```js example-bad
-function exampleFunc() { console.log("Hello!"); };
-```
-
-- There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
-
-  ```js example-bad
-  function exampleMethod(param) {
-    actionList = init(param);
-    if (actionList.length === 0) {
-      return 0;
-    }
-
-    // No error, we continue
-    // …
+  ```js example-good
+  for (const car of storedCars) {
+    car.paint("red");
   }
   ```
+
+  Don't write:
+
+  ```js example-bad
+  for (const car of storedCars) car.paint("red");
+  ```
+
+  This prevent forgetting to add the braces when adding more statements.
+
+- There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
 
   Shortening the `if` statement renders the example easier to understand:
 
@@ -66,6 +56,20 @@ function exampleFunc() { console.log("Hello!"); };
   function exampleMethod(param) {
     actionList = init(param);
     if (actionList.length === 0) return 0;
+
+    // No error, we continue
+    // …
+  }
+  ```
+
+  Using braces is more difficult to read in such a case:
+
+  ```js example-bad
+  function exampleMethod(param) {
+    actionList = init(param);
+    if (actionList.length === 0) {
+      return 0;
+    }
 
     // No error, we continue
     // …
