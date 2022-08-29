@@ -32,7 +32,7 @@ MDN provides useful information for Web technologies, and encourages learning, s
 
 MDN is also a place for Mozilla engineers, such as Gecko or Firefox hackers, add-on developers, and Firefox OS contributors.
 
-### The history of MDN<br>Pre-wiki era – Netscape DevEdge
+### The history of MDN: Pre-wiki era – Netscape DevEdge
 
 Time: _0:07:15 - 0:08:17_
 
