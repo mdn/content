@@ -72,7 +72,7 @@ We try to strike a balance between publishing the documentation early enough so 
 
 In general, our definition of the earliest we'll consider documenting a new technology is:
 
-_"When the feature is on a standards track and is implemented somewhere."_
+> When the feature is on a standards track and is implemented somewhere.
 
 We consider documenting a new technology if it is:
 

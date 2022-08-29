@@ -23,7 +23,7 @@ Possibly the most useful property on this interface is its {{DOMxRef("RTCSctpTra
 
 ## Properties
 
-_Also inherits properties from: {{DOMxRef("EventTarget")}}_
+_Also inherits properties from: {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("RTCSctpTransport.maxChannels")}} {{ReadOnlyInline}}
   - : An integer value indicating the maximum number of {{DOMxRef("RTCDataChannel", "<code>RTCDataChannel</code>s", "", 1)}} that can be open simultaneously.
@@ -41,7 +41,7 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_
 
 ## Methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}_
+This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}
 
 ## Example
 

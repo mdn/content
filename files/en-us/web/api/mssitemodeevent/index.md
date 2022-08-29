@@ -11,7 +11,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ### DOM Information
 
-_Inheritance Hierarchy_
+_Inheritance Hierarchy._
 
 [Event](/en-US/docs/Web/API/Event)
 

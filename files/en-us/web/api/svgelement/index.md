@@ -20,7 +20,7 @@ All of the SVG DOM interfaces that correspond directly to elements in the SVG la
 
 ## Properties
 
-_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}_
+Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}
 
 - {{DOMxRef("SVGElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{SVGAttr("style")}} attribute.
@@ -41,7 +41,7 @@ _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, 
 
 ## Methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}_
+_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}_.
 
 ## Events
 

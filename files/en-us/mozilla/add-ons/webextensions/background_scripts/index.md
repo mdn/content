@@ -62,7 +62,7 @@ You can specify multiple background scripts. If you do, they run in the same con
 
 Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES modules:
 
-**manifest.json**
+manifest.json:
 
 ```json
 "background": {
@@ -71,7 +71,7 @@ Instead of specifying background scripts, you can specify a background page. Thi
 }
 ```
 
-**background-page.html**
+background-page.html:
 
 ```html
 <!DOCTYPE html>

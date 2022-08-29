@@ -23,7 +23,7 @@ The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/A
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("EventTarget")}}_
+_Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 - {{domxref("MessagePort.postMessage","postMessage()")}}
   - : Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.

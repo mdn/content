@@ -158,7 +158,7 @@ benefit to providing your own is identity key continuity—if you use the same c
 for subsequent calls, the remote peer can tell you're the same caller. This also avoids
 the cost of generating new keys.
 
-**<<<--- add link to information about identity --->>>**
+<!--- add link to information about identity --->
 
 ## Specifications
 

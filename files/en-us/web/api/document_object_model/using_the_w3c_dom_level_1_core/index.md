@@ -89,7 +89,7 @@ Now that you are familiar with the basic concepts of the DOM, you may want to le
 
 See also the [DOM Level 1 Core specification](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our [other DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
 
-**Original Document Information**
-
-- Author(s): L. David Baron \<dbaron at dbaron dot org>
-- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/en-US/foundation/licensing/website-content/)
+> **Original Document Information**
+>
+> - Author(s): L. David Baron \<dbaron at dbaron dot org>
+> - Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/en-US/foundation/licensing/website-content/)
