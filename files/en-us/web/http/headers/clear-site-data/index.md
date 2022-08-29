@@ -48,7 +48,7 @@ Clear-Site-Data: "*"
 - `"cache"`
   - : Indicates that the server wishes to remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
 - `"cookies"`
-  - : Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So https\://example.com as well as https\://stage.example.com, will have cookies cleared.
+  - : Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.
 - `"storage"`
 
   - : Indicates that the server wishes to remove all DOM storage for the origin of the response URL. This includes storage mechanisms such as:
@@ -70,7 +70,7 @@ Clear-Site-Data: "*"
 
 ### Sign out of a web site
 
-If a user signs out of your website or service, you might want to remove locally stored data. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (https\://example.com/logout, for example):
+If a user signs out of your website or service, you might want to remove locally stored data. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
 
 ```http
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
@@ -78,7 +78,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 
 ### Clearing cookies
 
-If this header is delivered with the response at https\://example.com/clear-cookies, all cookies on the same domain https\://example.com and any subdomains (like https\://stage.example.com, etc.), will be cleared out.
+If this header is delivered with the response at `https://example.com/clear-cookies`, all cookies on the same domain `https://example.com` and any subdomains (like `https://stage.example.com`, etc.), will be cleared out.
 
 ```http
 Clear-Site-Data: "cookies"
