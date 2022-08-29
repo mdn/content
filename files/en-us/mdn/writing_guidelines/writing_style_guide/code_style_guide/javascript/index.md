@@ -327,7 +327,7 @@ name == 'Chris';
 age != 25;
 ```
 
-If you need to use `==` or `!=`, consider adding a comment to explain why you need it (i.e., the type of coercion you want to perform in the code).
+If you need to use `==` or `!=`, remember that `== null` is the only acceptable case. As TypeScript will fail on all other cases, we don't want to have them in our example code. Consider adding a comment to explain why you need it.
 
 ### Shortcuts for boolean tests
 
@@ -713,7 +713,7 @@ Don't do:
 const x = () => {
    // …
 }
-````
+```
 
 When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
 
