@@ -24,11 +24,7 @@ To learn more about the formatting conventions used on MDN Web Docs, read the [P
 
 ### Using modern JavaScript features
 
-You can use the modern and well-supported JavaScript features in MDN Web Docs code examples.
-
-You can use new methods once every major browser supports them. You can use new syntax once every major browser supports them and two years have elapsed.
-
-Don't use experimental features. In all cases, readability is more important than shaving a few characters.
+You can use new features once every major browser, Chrome, Edge, Firefox, and Safari, supports them.
 
 ## Generic syntax style
 
