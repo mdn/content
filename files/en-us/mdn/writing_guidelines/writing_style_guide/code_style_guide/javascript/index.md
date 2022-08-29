@@ -95,7 +95,7 @@ for (let i = 0; i < 4; i++ ){
 }
 ```
 
-On the other side, restating in prose the code is not a good use of a comment:
+On the other hand, restating the code in prose is not a good use of comments:
 
 ```js example-bad
 let total = 0;
