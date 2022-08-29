@@ -23,8 +23,7 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v28.0.0
         with:
-          files: |
-            **/*.md
+          files: '**/*.md'
           
       - name: Setup Node.js environment
         if: steps.changed-files.outputs.any_changed == 'true'
