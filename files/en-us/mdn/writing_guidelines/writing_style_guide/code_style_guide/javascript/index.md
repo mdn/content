@@ -498,9 +498,9 @@ if (test) {
 
 Switch statements can be a little tricky.
 
-First, don't put a `break` after a `return` statement in a specific case:
+First, don't put a `break` after a `return` statement in a specific case. Do write:
 
-```js example-bad
+```js example-good
 switch (species) {
   case `chicken`:
     return farm.shed;
