@@ -29,7 +29,7 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the {{Glossary("Composite operation")}} to use when multiple animations affect the same property simultaneously.
 -->
 - {{cssxref("animation-delay")}}
-  - : Specifies whether an animation should start immediately or add a delay before the start of an animation sequence.
+  - : Specifies the delay between an element loading and the start of an animation sequence and whether the animation should start immediately from its beginning or partway through the animation.
 - {{cssxref("animation-direction")}}
   - : Specifies whether an animation's first iteration should be forward or backward and whether subsequent iterations should alternate direction on each run through the sequence or reset to the start point and repeat.
 - {{cssxref("animation-duration")}}
