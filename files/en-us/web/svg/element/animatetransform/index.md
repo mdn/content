@@ -33,7 +33,6 @@ The `animateTransform` element animates a transformation attribute on its target
 </svg>
 ```
 
-
 {{ EmbedLiveSample('Example','120','120') }}
 
 ## Attributes
