@@ -164,6 +164,26 @@ function exampleFunc(fruitBasket) {
 }
 ```
 
+### Multi-line comments
+
+Short comments are usually better, so try to keep them in one line of 120 characters. If this is not possible, use `//` at the beginning of each line:
+
+```js example-good
+// This is an example of a multi-line comment.
+// The imaginary function that follows has some unusual limitation that I want to call out.
+// Limitation 1
+// Limitation 2
+```
+
+Don't use `/* … */`:
+
+```js example-bad
+/* This is an example of a multi-line comment.
+   The imaginary function that follows has some unusual limitation that I want to call out.
+   Limitation 1
+   Limitation 2 */
+```
+
 ### Use comments to mark ellipsis
 
 Skipping redundant code using ellipses (…) is necessary to keep examples short. Still, writers should do it thoughtfully as developers frequently copy & paste examples into their code, and all of our code samples should be valid JavaScript.
@@ -187,31 +207,17 @@ function exampleFunct() {
 }
 ```
 
-### Multi-line comments
-
-Short comments are usually better, so try to keep them in one line of 120 characters. If this is not possible, use `//` at the beginning of each line:
-
-```js example-good
-// This is an example of a multi-line comment.
-// The imaginary function that follows has some unusual limitation that I want to call out.
-// Limitation 1
-// Limitation 2
-```
-
-Don't use `/* … */`:
-
-```js example-bad
-/* This is an example of a multi-line comment.
-   The imaginary function that follows has some unusual limitation that I want to call out.
-   Limitation 1
-   Limitation 2 */
-```
-
 ### Comment out parameters
 
 When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
 
 To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
+
+```js
+array.forEach((value, /* index,  array ,*/) => {
+  // …
+};
+```
 
 ## Variables
 
