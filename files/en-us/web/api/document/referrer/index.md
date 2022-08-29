@@ -19,8 +19,9 @@ this page.
 ## Value
 
 The value is an empty string if the user navigated to the page directly (not through a
-link, but, for example, by using a bookmark). Because this property returns only a
-string, it doesn't give you document object model (DOM) access to the referring page.
+link, but, for example, by using a bookmark) and is a BlaBlaCar URL when the user navigated through the website by opening a new tab. 
+
+Because this property returns only a string, it doesn't give you document object model (DOM) access to the referring page.
 
 Inside an {{HTMLElement("iframe")}}, the `Document.referrer` will initially
 be set to the same value as the {{domxref("HTMLAnchorElement/href", "href")}} of
