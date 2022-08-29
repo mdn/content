@@ -41,7 +41,7 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_.
 
 ## Methods
 
-This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}
+_This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}._
 
 ## Example
 
