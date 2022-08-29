@@ -10,15 +10,15 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.blur
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLElement.blur()`** method
-removes keyboard focus from the current element.
+The **`HTMLElement.blur()`** method removes keyboard focus from the current element.
 
 ## Syntax
 
 ```js
-blur()
+blur();
 ```
 
 ### Parameters
@@ -36,8 +36,7 @@ None ({{jsxref("undefined")}}).
 #### HTML
 
 ```html
-<input type="text" id="myText" value="Sample Text">
-<br><br>
+<input type="text" id="sampleText" value="Sample Text" /> <br /><br />
 <button type="button" onclick="focusInput()">Click me to gain focus</button>
 ```
 
@@ -45,12 +44,14 @@ None ({{jsxref("undefined")}}).
 
 ```js
 function focusInput() {
-  document.getElementById('myText').focus();
+  const textField = document.getElementById("sampleText");
+
+  textField.focus();
 
   // The input will lose focus after 3 seconds
   setTimeout(() => {
-    document.getElementById('myText').blur();
-  }, 3000)
+    textField.blur();
+  }, 3000);
 }
 ```
 
