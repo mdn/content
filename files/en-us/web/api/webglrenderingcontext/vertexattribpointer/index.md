@@ -160,9 +160,10 @@ Similarly, if our vertex shader expects e.g. a 4-component attribute with
 on the array buffer, while the third and fourth components are taken from the default
 value.
 
+<!-- markdownlint-disable MD042 -->
 The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can
 specify a different default value with
-{{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]\()")}}.
+{{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}.
 
 For example, your vertex shader may be using a position and a color attribute. Most
 meshes have the color specified at a per-vertex level, but some meshes are of a uniform

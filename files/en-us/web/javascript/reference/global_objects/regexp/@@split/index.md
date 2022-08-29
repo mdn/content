@@ -101,10 +101,11 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## See also
 
+<!-- markdownlint-disable MD042 -->
 - [Polyfill of `RegExp.prototype[@@split]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.split()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]\()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]\()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

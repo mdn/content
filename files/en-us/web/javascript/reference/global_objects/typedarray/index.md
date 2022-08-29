@@ -148,6 +148,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("TypedArray.prototype.at()")}}
   - : Takes an integer value and returns the item at that index. This method allows for negative integers, which count back from the last item.
 - {{jsxref("TypedArray.prototype.copyWithin()")}}
@@ -237,7 +238,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also
     {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]\()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the
     array.
 

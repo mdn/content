@@ -47,6 +47,7 @@ The **`BigUint64Array`** typed array represents an array of 64-bit unsigned inte
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("TypedArray.copyWithin", "BigUint64Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "BigUint64Array.prototype.entries()")}}
@@ -97,7 +98,7 @@ The **`BigUint64Array`** typed array represents an array of 64-bit unsigned inte
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "BigUint64Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "BigUint64Array.prototype[@@iterator]\()")}}
+- {{jsxref("TypedArray.@@iterator", "BigUint64Array.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

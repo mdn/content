@@ -88,11 +88,12 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 ## Uniforms and attributes
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]\()")}}
+<!-- markdownlint-disable MD042 -->
+- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
   - : Methods specifying values of uniform variables.
 - {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
   - : Methods specifying matrix values for uniform variables.
-- {{domxref("WebGL2RenderingContext.vertexAttribI()", "WebGL2RenderingContext.vertexAttribI4[u]i[v]\()")}}
+- {{domxref("WebGL2RenderingContext.vertexAttribI()", "WebGL2RenderingContext.vertexAttribI4[u]i[v]()")}}
   - : Methods specifying integer values for generic vertex attributes.
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
   - : Specifies integer data formats and locations of vertex attributes in a vertex attributes array.
@@ -109,7 +110,7 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
   - : Renders primitives from array data in a given range.
 - {{domxref("WebGL2RenderingContext.drawBuffers()")}}
   - : Specifies a list of color buffers to be drawn into.
-- {{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]\()")}}
+- {{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
   - : Clears buffers from the currently bound framebuffer.
 
 ## Query objects
@@ -141,7 +142,7 @@ Methods for working with {{domxref("WebGLQuery")}} objects.
   - : Binds a given {{domxref("WebGLSampler")}} to a texture unit.
 - {{domxref("WebGL2RenderingContext.isSampler()")}}
   - : Returns `true` if a given object is a valid {{domxref("WebGLSampler")}} object.
-- {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]\()")}}
+- {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}
   - : Sets sampler parameters.
 - {{domxref("WebGL2RenderingContext.getSamplerParameter()")}}
   - : Returns sampler parameter information.

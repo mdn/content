@@ -128,12 +128,13 @@ console.log(newstr); // ###34567
 
 ## See also
 
+<!-- markdownlint-disable MD042 -->
 - [Polyfill of `RegExp.prototype[@@replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.replaceAll()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]\()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]\()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
 - [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)

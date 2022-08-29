@@ -128,10 +128,11 @@ console.log(result.group(3)); // 02
 
 ## See also
 
+<!-- markdownlint-disable MD042 -->
 - [Polyfill of `RegExp.prototype[@@match]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]\()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]\()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]\()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

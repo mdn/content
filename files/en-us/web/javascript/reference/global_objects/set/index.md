@@ -60,7 +60,8 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ### Iteration methods
 
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]\()")}}
+<!-- markdownlint-disable MD042 -->
+- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.

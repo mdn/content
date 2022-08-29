@@ -250,6 +250,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
@@ -371,7 +372,7 @@ You must be careful which level of characters you are iterating on. For example,
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]\()")}}
+- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 

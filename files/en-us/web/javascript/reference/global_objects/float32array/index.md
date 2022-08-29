@@ -46,6 +46,7 @@ The **`Float32Array`** typed array represents an array of 32-bit floating point 
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "Float32Array.prototype.entries()")}}
@@ -96,7 +97,7 @@ The **`Float32Array`** typed array represents an array of 32-bit floating point 
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]\()")}}
+- {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

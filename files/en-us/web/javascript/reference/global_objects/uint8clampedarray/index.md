@@ -46,6 +46,7 @@ The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned in
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("TypedArray.copyWithin", "Uint8ClampedArray.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "Uint8ClampedArray.prototype.entries()")}}
@@ -96,7 +97,7 @@ The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned in
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint8ClampedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]\()")}}
+- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

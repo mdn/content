@@ -302,7 +302,8 @@ console.log(contacts.size) // 1
 
 ### Iteration methods
 
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]\()")}}
+<!-- markdownlint-disable MD042 -->
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
   - : Returns a new Iterator object that contains **an array of `[key, value]`**
     for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.keys()")}}

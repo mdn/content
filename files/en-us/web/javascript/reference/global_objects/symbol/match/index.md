@@ -53,8 +53,9 @@ re[Symbol.match] = false;
 
 ## See also
 
+<!-- markdownlint-disable MD042 -->
 - [Polyfill of `Symbol.match` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]\()")}}
+- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}}

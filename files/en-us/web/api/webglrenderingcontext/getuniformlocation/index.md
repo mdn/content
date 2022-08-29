@@ -30,13 +30,14 @@ Once you have the uniform's location, you can access the uniform itself using on
 the other uniform access methods, passing in the uniform location as one of the
 inputs:
 
+<!-- markdownlint-disable MD042 -->
 - {{domxref("WebGLRenderingContext.getUniform", "getUniform()")}}
   - : Returns the value of the uniform at the given location.
-- {{domxref("WebGLRenderingContext.uniform", "uniform[1234][fi][v]\()")}}
+- {{domxref("WebGLRenderingContext.uniform", "uniform[1234][fi][v]()")}}
   - : Sets the uniform's value to the specified value, which may be a single floating
     point or integer number, or a 2-4 component vector specified either as a list of
     values or as a {{jsxref("Float32Array")}} or {{jsxref("Int32Array")}}.
-- {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]\()")}}
+- {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}
   - : Sets the uniform's value to the specified matrix, possibly with transposition. The
     value is represented as a sequence of `GLfloat` values or as a
     `Float32Array`.

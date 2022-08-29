@@ -46,6 +46,7 @@ The **`Uint32Array`** typed array represents an array of 32-bit unsigned integer
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("TypedArray.copyWithin", "Uint32Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "Uint32Array.prototype.entries()")}}
@@ -96,7 +97,7 @@ The **`Uint32Array`** typed array represents an array of 32-bit unsigned integer
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint32Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint32Array.prototype[@@iterator]\()")}}
+- {{jsxref("TypedArray.@@iterator", "Uint32Array.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

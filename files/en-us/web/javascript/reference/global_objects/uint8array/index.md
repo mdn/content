@@ -46,6 +46,7 @@ The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers.
 
 ## Instance methods
 
+<!-- markdownlint-disable MD042 -->
 - {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}
@@ -96,7 +97,7 @@ The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers.
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]\()")}}
+- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
