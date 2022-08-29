@@ -136,6 +136,15 @@ function exampleFunc(fruitBasket) {
 }
 ```
 
+In case the line becomes too long, put the comment _after_ the function, like this:
+
+```js example-good
+function exampleFunc(fruitBasket) {
+  console.log(fruitBasket); 
+  // ['banana', 'mango', 'orange', 'apple', 'pear', 'durian', 'lemon']
+}
+````
+
 ### Multi-line comments
 
 Short comments are usually better, so try to keep them in one line of 60–80 characters. If this is not possible, use `//` at the beginning of each line:
