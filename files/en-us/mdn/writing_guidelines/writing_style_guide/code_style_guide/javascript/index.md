@@ -751,7 +751,7 @@ function doIt() {
 
 ### Function declarations
 
-Where possible, use the `function` declaration to define functions over function expressions:
+Where possible, use the `function` declaration to define functions over function expressions.
 
 Here is the recommended way to declare a function:
 
