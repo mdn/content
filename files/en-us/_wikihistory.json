@@ -64061,10 +64061,6 @@
       "Warhammerkid"
     ]
   },
-  "Web/API/UDP_Socket_API": {
-    "modified": "2019-01-16T21:07:51.221Z",
-    "contributors": ["rolfedh", "SunboX"]
-  },
   "Web/API/UIEvent": {
     "modified": "2020-10-15T21:07:18.103Z",
     "contributors": [
