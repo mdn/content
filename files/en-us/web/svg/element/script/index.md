@@ -42,16 +42,16 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 - {{htmlattrxref("crossorigin", "script")}}
   - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `?`; *Animatable*: **yes**
+    _Value type_: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: `?`; _Animatable_: **yes**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} to the script to load.
-    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("type")}}
   - : This attribute defines type of the script language to use.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `application/ecmascript`; *Animatable*: **no**
+    _Value type_: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: `application/ecmascript`; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The {{Glossary("URL")}} to the script to load.
-    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
 
 ### Global attributes
 

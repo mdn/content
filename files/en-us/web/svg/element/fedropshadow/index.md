@@ -53,13 +53,13 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("dx")}}
   - : This attribute defines the x offset of the drop shadow.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *Default value*: `2`; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
 - {{SVGAttr("dy")}}
   - : This attribute defines the y offset of the drop shadow.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *Default value*: `2`; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
 - {{SVGAttr("stdDeviation")}}
   - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *Default value*: `2`; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
 
 ### Global attributes
 
