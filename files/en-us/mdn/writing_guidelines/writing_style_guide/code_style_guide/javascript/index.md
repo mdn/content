@@ -48,34 +48,6 @@ Prettier formats and styles all the code; the tool will fix your errors. Neverth
 
   This prevent forgetting to add the braces when adding more statements.
 
-- There is one exception to the rule. Early returns after a condition (using `return`, `break`, or `continue`) allow for writing more readable code. The braces and indentation are useless as there is only one statement.
-
-  Shortening the `if` statement renders the example easier to understand:
-
-  ```js example-good
-  function exampleMethod(param) {
-    actionList = init(param);
-    if (actionList.length === 0) return 0;
-
-    // No error, we continue
-    // …
-  }
-  ```
-
-  Using braces is more difficult to read in such a case:
-
-  ```js example-bad
-  function exampleMethod(param) {
-    actionList = init(param);
-    if (actionList.length === 0) {
-      return 0;
-    }
-
-    // No error, we continue
-    // …
-  }
-  ```
-
 ### Spacing and indentation
 
 Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorconfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
