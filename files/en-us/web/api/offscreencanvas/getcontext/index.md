@@ -15,9 +15,6 @@ browser-compat: api.OffscreenCanvas.getContext
 
 The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported.
 
-> **Note:** This API is currently implemented for [WebGL1](/en-US/docs/Web/API/WebGLRenderingContext) and [WebGL2](/en-US/docs/Web/API/WebGL2RenderingContext) contexts only.
-> See {{bug(801176)}} for [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) support from workers.
-
 ## Syntax
 
 ```js
@@ -31,7 +28,7 @@ getContext(contextType, contextAttributes)
   - : A string containing the context identifier defining the drawing context associated to the canvas. Possible values are:
 
     - `2d`
-      - : Creates a {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
+      - : Creates a {{domxref("OffscreenCanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
     - `webgl`
       - : Creates a {{domxref("WebGLRenderingContext")}} object representing a three-dimensional rendering context.
         This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
