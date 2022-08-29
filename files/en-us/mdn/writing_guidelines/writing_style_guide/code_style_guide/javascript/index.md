@@ -134,14 +134,33 @@ Leave a space between the slashes and the comment. Start with a capital letter, 
 If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
 
 ```js example-good
-function exampleFunc() {
-  // Output the string 'Hello' to the browser's JS console
-  console.log("Hello");
+function checkout(goodsPrice, shipmentPrice, taxes) {
+  // Calculate the total price
+  const total = goodsPrice + shipmentPrice + taxes;
 
   // Create and append a new paragraph to the document
   const para = document.createElement('p');
-  para.textContent = "My new paragraph";
+  para.textContent = `Total price is ${total}`;
   document.body.appendChild(para);
+}
+```
+
+### Output of logs
+
+In examples, but rarely in production code, we often use `console.log()`, `console.error()` or similar function to output messages. In such cases, you can put a comment after the function with the log that will produced. Write:
+
+```js example-good
+function exampleFunc(fruitBasket) {
+  console.log(fruitBasket); // ['banana', 'mango', 'orange']
+}
+```
+
+Don't write:
+
+```js example-bad
+function exampleFunc(fruitBasket) {
+  // Logs: ['banana', 'mango', 'orange']
+  console.log(fruitBasket);
 }
 ```
 
