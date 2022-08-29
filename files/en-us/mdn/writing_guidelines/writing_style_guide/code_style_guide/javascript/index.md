@@ -411,7 +411,7 @@ dogs.forEach((dog) => {
 });
 ```
 
-Do not use `for (;;)`. not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
+Do not use `for (;;)` — not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
 
 ```js example-bad
 const dogs = ["Rex", "Lassie"];
