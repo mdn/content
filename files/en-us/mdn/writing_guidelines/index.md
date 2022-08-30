@@ -66,7 +66,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
     - [Syntax sections](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections)
 
-      - : The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has. This article explains how to write syntax boxes for reference articles.
+      - : The syntax section of a reference page on MDN Web Docs contains a syntax box defining the exact syntax of a feature. This article explains how to write syntax boxes for reference articles.
 
     - [Code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
