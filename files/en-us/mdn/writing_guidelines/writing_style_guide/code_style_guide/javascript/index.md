@@ -38,7 +38,7 @@ Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line charact
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
 
-Add a comment if the purpose or logic of the code isn't obvious, to describe the intention of the code makes the example clearer, as shown below:
+If the purpose or logic of the code isn't obvious, add a comment with your intention, as shown below:
 
 ```js example-good
 let total = 0;
