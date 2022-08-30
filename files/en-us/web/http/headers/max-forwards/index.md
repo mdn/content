@@ -31,6 +31,8 @@ If the `Max-Forwards` header is not present in a `TRACE` request, a node will as
 
 ```http
 Max-Forwards: <integer>
+```
+
 ## Examples
 
 ```http
