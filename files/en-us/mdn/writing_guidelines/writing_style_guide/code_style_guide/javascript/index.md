@@ -148,7 +148,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
 
 ### Output of logs
 
-- In examples, but rarely in production code, we often use `console.log()`, `console.error()`, or similar functions to output messages. In such cases, you can put a comment after the function with the log that will be produced. Write:
+- In code intended to run in a production environment, you rarely need to comment when you log some data. In code examples, we often use `console.log()`, `console.error()`, or similar functions to output important values. To help the reader understand what will happen without running the code, you can put a comment _after_ the function with the log that will be produced. Write:
 
   ```js example-good
   function exampleFunc(fruitBasket) {
