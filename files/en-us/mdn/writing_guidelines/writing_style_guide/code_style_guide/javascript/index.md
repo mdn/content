@@ -77,7 +77,7 @@ Comments are critical to writing good code examples. They clarify the intent of 
 
 Single-line comments are marked with `//`, as opposed to block comments enclosed between `/* … */`.
 
-In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
+In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* … */` while debugging.
 
 - Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
 
@@ -175,7 +175,7 @@ function exampleFunct() {
 
 When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
 
-To do so, you use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
+To do so, use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
 
 ```js
 array.forEach((value, /* index,  array ,*/) => {
