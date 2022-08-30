@@ -492,7 +492,7 @@ Switch statements can be a little tricky.
   }
   ```
 
-  If you add a `break`, it will be unreachable. Do not write:
+  If you add a `break` statement, it will be unreachable. Do not write:
 
   ```js example-bad
   switch (species) {
