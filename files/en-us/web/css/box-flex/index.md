@@ -66,7 +66,7 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ```plain
 box-flex =
- <number>
+  <number>
 ```
 
 ## Examples

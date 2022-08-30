@@ -68,7 +68,7 @@ If the alignment is set using the element's `align` attribute, then the style is
 
 ```plain
 box-align = 
- start | center | end | baseline | stretch
+  start | center | end | baseline | stretch
 ```
 
 ## Examples

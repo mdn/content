@@ -39,7 +39,7 @@ scroll-snap-destination: unset;
 
 ```plain
 scroll-snap-destination =
- <position>
+  <position>
 ```
 
 ## Examples

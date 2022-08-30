@@ -52,7 +52,7 @@ font-smooth: unset;
 
 ```plain
 font-smooth =
- auto | never | always | <absolute-size> | <length>
+  auto | never | always | <absolute-size> | <length>
 ```
 
 ## Examples

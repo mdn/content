@@ -40,7 +40,7 @@ The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;int
 
 ```plain
 box-ordinal-group =
- <integer>
+  <integer>
 ```
 
 ## Examples

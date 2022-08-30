@@ -44,7 +44,7 @@ scroll-snap-points-x: unset;
 
 ```plain
 scroll-snap-points-x =
- none | repeat( <length-percentage> )
+  none | repeat( <length-percentage> )
 ```
 
 ## Examples

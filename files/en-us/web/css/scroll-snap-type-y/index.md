@@ -48,7 +48,7 @@ scroll-snap-type-y: unset;
 
 ```plain
 scroll-snap-type-y =
- none | mandatory | proximity
+  none | mandatory | proximity
 ```
 
 ## Specifications

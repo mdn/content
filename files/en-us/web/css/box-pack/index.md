@@ -85,7 +85,7 @@ If the packing is set using the element's `pack` attribute, then the style is ig
 
 ```plain
 box-pack =
- start | center | end | justify
+  start | center | end | justify
 ```
 
 ## Examples
