@@ -54,7 +54,7 @@ One or more of the following, in any order:
 
 ```plain
 -webkit-border-before =
- <'border-width'> || <'border-style'> || <color>
+  <'border-width'> || <'border-style'> || <color>
 ```
 
 ## Examples

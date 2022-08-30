@@ -50,7 +50,7 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 
 ```plain
 -moz-user-input =
-auto | none | enabled | disabled
+  auto | none | enabled | disabled
 ```
 
 ## Examples

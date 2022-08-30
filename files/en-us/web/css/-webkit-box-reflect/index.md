@@ -55,7 +55,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ```plain
 -webkit-box-reflect =
- [ above | below | right | left ]? <length>? <image>?
+  [ above | below | right | left ]? <length>? <image>?
 ```
 
 ## Specifications

@@ -74,7 +74,7 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ```plain
 -webkit-mask-composite =
- <composite-style>#
+  <composite-style>#
 ```
 
 ## Examples

@@ -70,7 +70,7 @@ One, two, three or four `<outline-radius>` values, represents one of:
 
 ```plain
  -moz-outline-radius =
- <outline-radius>{1,4} [ / <outline-radius>{1,4} ]?
+  <outline-radius>{1,4} [ / <outline-radius>{1,4} ]?
 ```
 
 ## Examples

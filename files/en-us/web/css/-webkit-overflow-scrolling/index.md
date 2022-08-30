@@ -30,7 +30,7 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ```plain
 -webkit-overflow-scrolling =
- auto | touch
+  auto | touch
 ```
 
 ## Examples

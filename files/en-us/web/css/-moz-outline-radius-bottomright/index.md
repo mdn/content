@@ -34,7 +34,7 @@ The value of `-moz-outline-radius-bottomright` is either a CSS {{cssxref("length
 
 ```plain
 -moz-outline-radius-bottomright =
- <outline-radius>
+  <outline-radius>
 ```
 
 ## Examples

@@ -48,7 +48,7 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 
 ```plain
 -webkit-mask-attachment =
- <attachment>#
+  <attachment>#
 ```
 
 ## Examples
