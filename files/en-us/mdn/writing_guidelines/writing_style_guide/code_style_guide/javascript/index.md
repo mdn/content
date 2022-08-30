@@ -479,7 +479,7 @@ This prevent forgetting to add the braces when adding more statements.
 
 Switch statements can be a little tricky.
 
-- First, don't put a `break` after a `return` statement in a specific case. Do write:
+- Don't add a `break` statement after a `return` statement in a specific case. Instead, write `return` statements like this:
 
   ```js example-good
   switch (species) {
