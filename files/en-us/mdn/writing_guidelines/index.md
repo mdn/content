@@ -48,7 +48,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section explains how to approach documenting a Web API.
 
-    - [Document an HTTP header](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_http_header)
+    - [How to document an HTTP header](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_http_header)
 
       - : This article explains how to create a new reference page for an HTTP header.
 
