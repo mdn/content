@@ -830,7 +830,7 @@ In addition to these JavaScript language features, we recommend a few guidelines
 
 ### Avoid browser prefixes
 
-If all major browser (Chrome, Edge, Firefox, and Safari) supports a feature, don't prefix it. Write:
+If all major browsers (Chrome, Edge, Firefox, and Safari) support a feature, don't prefix the feature. Write:
 
 ```js example-good
 const context = new AudioContext();
