@@ -44,7 +44,9 @@ This is the list of guides and pages in this section.
 
     - : On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. This article explains the details.
 
-- [Learn forum](/en-US/docs/MDN/Community/Learn_forum). Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month, and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for general help, or request that their assessments be marked. We'd love some help with answering posts, and growing our learning community.
+- [Learn forum](/en-US/docs/MDN/Community/Learn_forum)
+
+    - : Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250), where people go to ask for general help or request that their assessments be marked. We'd love some help with answering posts and growing our learning community. In this article, you'll learn what we need help with and the skills you'll need to provide help.
 
 - [Issues](/en-US/docs/MDN/Community/Issues). Issues are used to track all bugs and work that has a clear actionable outcome. This contains guidelines on opening and working on issues. Also in this area:
 
