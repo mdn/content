@@ -24,7 +24,7 @@ To learn more about the formatting conventions used on MDN Web Docs, read the [P
 
 ### Using modern JavaScript features
 
-You can use new features once every major browser, Chrome, Edge, Firefox, and Safari, supports them.
+You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
 
 ## Generic syntax style
 
