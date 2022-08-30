@@ -780,7 +780,7 @@ function doIt() {
 
   ```js example-bad
   const array1 = [1, 2, 3, 4];
-  let sum = array1.reduce(function (a, b) {
+  const sum = array1.reduce(function (a, b) {
     return a + b;
   });
   ```
