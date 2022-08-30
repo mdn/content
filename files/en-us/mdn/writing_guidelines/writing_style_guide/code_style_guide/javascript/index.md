@@ -396,7 +396,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   }
   ```
 
-  The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode).
+  The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode):
 
   ```js example-bad
   const cats = ['Athena', 'Luna'];
