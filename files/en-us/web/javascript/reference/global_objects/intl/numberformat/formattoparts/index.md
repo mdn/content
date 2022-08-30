@@ -55,7 +55,7 @@ looks like this:
 Possible types are the following:
 
 - compact
-  - : The exponent in "long" or "short" form, depending on how `compactDisplay` is specified when `notation` is set to `compact`,  defaults to `short`.
+  - : The exponent in `"long"` or `"short"` form, depending on how `compactDisplay` (which defaults to `short`) is specified when `notation` is set to `compact`.
 - currency
   - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
     depending on how `currencyDisplay` is specified.
