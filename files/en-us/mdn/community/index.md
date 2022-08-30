@@ -31,10 +31,10 @@ This is the list of guides and pages in this section.
 - [Contributing](/en-US/docs/MDN/Community/Contributing)
    - : This section explains how you can start contributing and the type of contributions we accept. This section covers the following topics:
 
-    - [Getting Started](/en-US/docs/MDN/Community/Contributing/Getting_started)
-    - [Our Repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories)
-    - [Translated Content](/en-US/docs/MDN/Community/Contributing/Translated_content)
-    - [Security Vulnerability Response Steps](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response)
+    - [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started)
+    - [Our repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories)
+    - [Translated content](/en-US/docs/MDN/Community/Contributing/Translated_content)
+    - [Security vulnerability response steps](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response)
 
 - [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette). How to behave when contributing to our open source project.
 
