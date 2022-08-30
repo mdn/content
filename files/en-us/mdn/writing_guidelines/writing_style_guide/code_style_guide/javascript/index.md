@@ -38,40 +38,40 @@ Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line charact
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
 
-If the purpose or logic of the code isn't obvious, add a comment with your intention, as shown below:
+- If the purpose or logic of the code isn't obvious, add a comment with your intention, as shown below:
 
-```js example-good
-let total = 0;
+  ```js example-good
+  let total = 0;
 
-// Calculate the sum of the four first elements of arr
-for (let i = 0; i < 4; i++) {
-  total += arr[i];
-}
-```
+  // Calculate the sum of the four first elements of arr
+  for (let i = 0; i < 4; i++) {
+    total += arr[i];
+  }
+  ```
 
-On the other hand, restating the code in prose is not a good use of comments:
+  On the other hand, restating the code in prose is not a good use of comments:
 
-```js example-bad
-let total = 0;
+  ```js example-bad
+  let total = 0;
 
-// For loop from 1 to 4
-for (let i = 0; i < 4; i++) {
-  // Add value to the total
-  total += arr[i];
-}
-```
+  // For loop from 1 to 4
+  for (let i = 0; i < 4; i++) {
+    // Add value to the total
+    total += arr[i];
+  }
+  ```
 
-Comments are also not necessary when functions have explicit names that describe what they're doing. Write:
+- Comments are also not necessary when functions have explicit names that describe what they're doing. Write:
 
-```js example-good
-closeConnection();
-```
+  ```js example-good
+  closeConnection();
+  ```
 
-Don't write:
+  Don't write:
 
-```js example-bad
-closeConnection(); // Closing the connection
-```
+  ```js example-bad
+  closeConnection(); // Closing the connection
+  ```
 
 ### Use single-line comments
 
@@ -79,53 +79,53 @@ Single-line comments are marked with `//`, as opposed to block comments enclosed
 
 In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* …*/` while debugging.
 
-Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
+- Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
 
-```js example-good
-// This is a well-written single-line comment
-```
+  ```js example-good
+  // This is a well-written single-line comment
+  ```
 
-If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
+- If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
 
-```js example-good
-function checkout(goodsPrice, shipmentPrice, taxes) {
-  // Calculate the total price
-  const total = goodsPrice + shipmentPrice + taxes;
+  ```js example-good
+  function checkout(goodsPrice, shipmentPrice, taxes) {
+    // Calculate the total price
+    const total = goodsPrice + shipmentPrice + taxes;
 
-  // Create and append a new paragraph to the document
-  const para = document.createElement('p');
-  para.textContent = `Total price is ${total}`;
-  document.body.appendChild(para);
-}
-```
+    // Create and append a new paragraph to the document
+    const para = document.createElement('p');
+    para.textContent = `Total price is ${total}`;
+    document.body.appendChild(para);
+  }
+  ```
 
 ### Output of logs
 
-In examples, but rarely in production code, we often use `console.log()`, `console.error()`, or similar functions to output messages. In such cases, you can put a comment after the function with the log that will be produced. Write:
+- In examples, but rarely in production code, we often use `console.log()`, `console.error()`, or similar functions to output messages. In such cases, you can put a comment after the function with the log that will be produced. Write:
 
-```js example-good
-function exampleFunc(fruitBasket) {
-  console.log(fruitBasket); // ['banana', 'mango', 'orange']
-}
-```
+  ```js example-good
+  function exampleFunc(fruitBasket) {
+    console.log(fruitBasket); // ['banana', 'mango', 'orange']
+  }
+  ```
 
-Don't write:
+  Don't write:
 
-```js example-bad
-function exampleFunc(fruitBasket) {
-  // Logs: ['banana', 'mango', 'orange']
-  console.log(fruitBasket);
-}
-```
+  ```js example-bad
+  function exampleFunc(fruitBasket) {
+    // Logs: ['banana', 'mango', 'orange']
+    console.log(fruitBasket);
+  }
+  ```
 
-In case the line becomes too long, put the comment _after_ the function, like this:
+- In case the line becomes too long, put the comment _after_ the function, like this:
 
-```js example-good
-function exampleFunc(fruitBasket) {
-  console.log(fruitBasket); 
-  // ['banana', 'mango', 'orange', 'apple', 'pear', 'durian', 'lemon']
-}
-````
+  ```js example-good
+  function exampleFunc(fruitBasket) {
+    console.log(fruitBasket); 
+    // ['banana', 'mango', 'orange', 'apple', 'pear', 'durian', 'lemon']
+  }
+  ````
 
 ### Multi-line comments
 
@@ -142,9 +142,10 @@ Don't use `/* … */`:
 
 ```js example-bad
 /* This is an example of a multi-line comment.
-   The imaginary function that follows has some unusual limitation that I want to call out.
-   Limitation 1
-   Limitation 2 */
+  The imaginary function that follows has some unusual limitation that I want to call out.
+  Limitation 1
+  Limitation 2 */
+
 ```
 
 ### Use comments to mark ellipsis
@@ -354,74 +355,74 @@ Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true`
 
 When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
-When iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `forEach()`. Note that if you are using a collection that is not an `Array`, you have to check that `for...of` is actually supported (it requires the variable to be iterable), or that the `forEach()` method is actually present.
+- When iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `forEach()`. Note that if you are using a collection that is not an `Array`, you have to check that `for...of` is actually supported (it requires the variable to be iterable), or that the `forEach()` method is actually present.
 
-Use `for...of`:
+  Use `for...of`:
 
-```js example-good
-const dogs = ["Rex", "Lassie"];
-for (const dog of dogs) {
-  console.log(dog);
-}
-```
+  ```js example-good
+  const dogs = ["Rex", "Lassie"];
+  for (const dog of dogs) {
+    console.log(dog);
+  }
+  ```
 
-Or `forEach()`:
+  Or `forEach()`:
 
-```js example-good
-const dogs = ["Rex", "Lassie"];
-dogs.forEach((dog) => {
-  console.log(dog);
-});
-```
+  ```js example-good
+  const dogs = ["Rex", "Lassie"];
+  dogs.forEach((dog) => {
+    console.log(dog);
+  });
+  ```
 
-Do not use `for (;;)` — not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
+  Do not use `for (;;)` — not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
 
-```js example-bad
-const dogs = ["Rex", "Lassie"];
-for (let i = 0; i < dogs.length; i++) {
-  console.log(dogs[i]);
-}
-```
+  ```js example-bad
+  const dogs = ["Rex", "Lassie"];
+  for (let i = 0; i < dogs.length; i++) {
+    console.log(dogs[i]);
+  }
+  ```
 
-Make sure that you define the initializer properly by using the `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
+- Make sure that you define the initializer properly by using the `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
 
-```js example-good
-const cats = ['Athena', 'Luna'];
-for (const cat of cats) {
-  console.log(cat);
-}
+  ```js example-good
+  const cats = ['Athena', 'Luna'];
+  for (const cat of cats) {
+    console.log(cat);
+  }
 
-for (let i = 0; i < 4; i++) {
-  result += arr[i];
-}
-```
+  for (let i = 0; i < 4; i++) {
+    result += arr[i];
+  }
+  ```
 
-The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode).
+  The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode).
 
-```js example-bad
-const cats = ['Athena', 'Luna'];
-for (i of cats) {
-  console.log(i);
-}
-```
+  ```js example-bad
+  const cats = ['Athena', 'Luna'];
+  for (i of cats) {
+    console.log(i);
+  }
+  ```
 
-When you need to access both the value and the index, you can use `.forEach()` instead of `for (;;)`. Write:
+- When you need to access both the value and the index, you can use `.forEach()` instead of `for (;;)`. Write:
 
-```js example-good
-const gerbils = ["Zoé", "Chloé"];
-gerbils.forEach((gerbil, i) => {
-  console.log(`Gerbil #${i}: ${gerbil}`);
-})
-```
+  ```js example-good
+  const gerbils = ["Zoé", "Chloé"];
+  gerbils.forEach((gerbil, i) => {
+    console.log(`Gerbil #${i}: ${gerbil}`);
+  })
+  ```
 
-Do not write:
+  Do not write:
 
-```js example-bad
-const gerbils = ["Zoé", "Chloé"];
-for (let i = 0; i < gerbils.length; i++) {
-  console.log(`Gerbil #${i}: ${gerbils[i]}`);
-}
-```
+  ```js example-bad
+  const gerbils = ["Zoé", "Chloé"];
+  for (let i = 0; i < gerbils.length; i++) {
+    console.log(`Gerbil #${i}: ${gerbils[i]}`);
+  }
+  ```
 
 > **Warning:** Never use `for...in` with arrays and strings.
 
@@ -479,76 +480,76 @@ This prevent forgetting to add the braces when adding more statements.
 
 Switch statements can be a little tricky.
 
-First, don't put a `break` after a `return` statement in a specific case. Do write:
+- First, don't put a `break` after a `return` statement in a specific case. Do write:
 
-```js example-good
-switch (species) {
-  case `chicken`:
-    return farm.shed;
-  case `horse`:
-    return corral.entry;
-  default:
-    return "";
-}
-```
-
-If you add a `break`, it will be unreachable. Do not write:
-
-```js example-bad
-switch (species) {
-  case `chicken`:
-    return farm.shed;
-    break;
-  case `horse`:
-    return corral.entry;
-    break;
-  default:
-    return "";
-}
-```
-
-Put `default` as the last case, and don't end it with a `break`. If you need to do it differently, add a comment explaining why.
-
-Remember that, when you declare a local variable for a case, you need to use braces to define a scope:
-
-```js
-switch (fruits) {
-  case 'Orange': {
-    const slice = fruit.slice();
-    eat(slice);
-    break;
+  ```js example-good
+  switch (species) {
+    case `chicken`:
+      return farm.shed;
+    case `horse`:
+      return corral.entry;
+    default:
+      return "";
   }
-  case 'Apple': {
-    const core = fruit.extractCore();
-    recycle(core);
-    break;
+  ```
+
+  If you add a `break`, it will be unreachable. Do not write:
+
+  ```js example-bad
+  switch (species) {
+    case `chicken`:
+      return farm.shed;
+      break;
+    case `horse`:
+      return corral.entry;
+      break;
+    default:
+      return "";
   }
-}  
-```
+  ```
+
+- Put `default` as the last case, and don't end it with a `break`. If you need to do it differently, add a comment explaining why.
+
+- Remember that, when you declare a local variable for a case, you need to use braces to define a scope:
+
+  ```js
+  switch (fruits) {
+    case 'Orange': {
+      const slice = fruit.slice();
+      eat(slice);
+      break;
+    }
+    case 'Apple': {
+      const core = fruit.extractCore();
+      recycle(core);
+      break;
+    }
+  }  
+  ```
 
 ### Error handling
 
-If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should, therefore, catch errors using a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, as shown below:
+- If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should, therefore, catch errors using a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, as shown below:
 
-```js example-good
-try {
-  console.log(getResult());
-} catch (e) {
-  console.error(e);
-}
-```
-
-When you don't need the parameter of the `catch` statement, omit it:
-
-```js example-good
+  ```js example-good
   try {
     console.log(getResult());
-  } catch {
-    console.error("An error happened!");
+  } catch (e) {
+    console.error(e);
   }
-```
+  ```
 
-Keep in mind that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
+- When you don't need the parameter of the `catch` statement, omit it:
+
+  ```js example-good
+    try {
+      console.log(getResult());
+    } catch {
+      console.error("An error happened!");
+    }
+  ```
+
+> **Note:** Keep in mind that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
 
 ## Strings
 
@@ -616,19 +617,19 @@ pets[pets.length] = "cat";
 
 ### Object names
 
-When defining a class, use _PascalCase_ (starting with a capital letter) for the class name and _camelCase_ (starting with a lowercase letter) for the object property and method names.
+- When defining a class, use _PascalCase_ (starting with a capital letter) for the class name and _camelCase_ (starting with a lowercase letter) for the object property and method names.
 
-When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
+- When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
-```js example-good
-const hanSolo = new Person('Han Solo', 25, 'male');
+  ```js example-good
+  const hanSolo = new Person('Han Solo', 25, 'male');
 
-const luke = {
-  name: 'Luke Skywalker',
-  age: 25,
-  gender: 'male'
-};
-```
+  const luke = {
+    name: 'Luke Skywalker',
+    age: 25,
+    gender: 'male'
+  };
+  ```
 
 ### Object creation
 
@@ -648,31 +649,31 @@ let object = new Object();
 
 ### Object classes
 
-Use ES class syntax for objects, not old-style constructors.
+- Use ES class syntax for objects, not old-style constructors.
 
-For example, this is the recommended way:
+  For example, this is the recommended way:
 
-```js example-good
-class Person {
-  constructor(name, age, gender) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+  ```js example-good
+  class Person {
+    constructor(name, age, gender) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+    }
+
+    greeting() {
+      console.log(`Hi! I'm ${this.name}`);
+    };
   }
+  ```
 
-  greeting() {
-    console.log(`Hi! I'm ${this.name}`);
-  };
-}
-```
+- Use `extends` for inheritance:
 
-Use `extends` for inheritance:
-
-```js example-good
-class Teacher extends Person {
-  // …
-}
-```
+  ```js example-good
+  class Teacher extends Person {
+    // …
+  }
+  ```
 
 ### Methods
 
@@ -749,71 +750,71 @@ function doIt() {
 
 ### Function declarations
 
-Where possible, use the `function` declaration to define functions over function expressions.
+- Where possible, use the `function` declaration to define functions over function expressions.
 
-Here is the recommended way to declare a function:
+  Here is the recommended way to declare a function:
 
-```js example-good
-function sum(a, b) {
-  return a + b;
-}
-```
+  ```js example-good
+  function sum(a, b) {
+    return a + b;
+  }
+  ```
 
-This is not a good way to define a function:
+  This is not a good way to define a function:
 
-```js example-bad
-let sum = function(a, b) {
-  return a + b;
-}
-```
+  ```js example-bad
+  let sum = function(a, b) {
+    return a + b;
+  }
+  ```
 
-When using anonymous functions as a callback (a function passed to another method invocation) and you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
+- When using anonymous functions as a callback (a function passed to another method invocation) and you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
 
-Here is the recommended way:
+  Here is the recommended way:
 
-```js example-good
-const array1 = [1, 2, 3, 4];
-let sum = array1.reduce((a, b) => a + b);
-```
+  ```js example-good
+  const array1 = [1, 2, 3, 4];
+  let sum = array1.reduce((a, b) => a + b);
+  ```
 
-Instead of this:
+  Instead of this:
 
-```js example-bad
-const array1 = [1, 2, 3, 4];
-let sum = array1.reduce(function (a, b) {
-  return a + b;
-});
-```
+  ```js example-bad
+  const array1 = [1, 2, 3, 4];
+  let sum = array1.reduce(function (a, b) {
+    return a + b;
+  });
+  ```
 
-Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use function declarations with the keyword `function`:
+- Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use function declarations with the keyword `function`:
 
-```js example-good
-function x() {
-  // …
-}
-```
+  ```js example-good
+  function x() {
+    // …
+  }
+  ```
 
-Don't do:
+  Don't do:
 
-```js example-bad
-const x = () => {
-  // …
-};
-```
+  ```js example-bad
+  const x = () => {
+    // …
+  };
+  ```
 
-When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
+- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
 
-```js example-good
-arr.map((e) => e.id);
-```
+  ```js example-good
+  arr.map((e) => e.id);
+  ```
 
-And not:
+  And not:
 
-```js example-bad
-arr.map((e) => { 
-  return e.id;
-});
-```
+  ```js example-bad
+  arr.map((e) => { 
+    return e.id;
+  });
+  ```
 
 ## Asynchronous methods
 
