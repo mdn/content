@@ -1,3 +1,11 @@
 {
-  "bracketSameLine": true
+  "bracketSameLine": true,
+  "overrides": [
+    {
+      "files": ["files/en-us/_wikihistory.json"],
+      "options": {
+        "parser": "json-stringify"
+      }
+    }
+  ]
 }
