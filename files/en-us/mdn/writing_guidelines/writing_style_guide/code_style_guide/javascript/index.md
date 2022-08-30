@@ -282,7 +282,7 @@ class Person {
     this.#name = String(name);
     this.#birthYear = Number(year);
   }
-};
+}
 ```
 
 Don't write:
