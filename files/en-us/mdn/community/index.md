@@ -48,7 +48,9 @@ This is the list of guides and pages in this section.
 
     - : Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250), where people go to ask for general help or request that their assessments be marked. We'd love some help with answering posts and growing our learning community. In this article, you'll learn what we need help with and the skills you'll need to provide help.
 
-- [Issues](/en-US/docs/MDN/Community/Issues). Issues are used to track all bugs and work that has a clear actionable outcome. This contains guidelines on opening and working on issues. Also in this area:
+- [Issues](/en-US/docs/MDN/Community/Issues)
+
+    - : Issues are used to track all bugs and work that has a clear actionable outcome. This article contains guidelines on opening and working on issues. This article also covers the following topics:
 
   - [Issue triage](/en-US/docs/MDN/Community/Issues/Issue_triage)
   - [Content and feature suggestions](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
