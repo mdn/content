@@ -31,9 +31,9 @@ Message channels on the other hand can provide a secure channel that allows you 
 
 ## Simple examples
 
-To get you started, we have published a couple of demos on GitHub. First, check our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+To get you started, we have published a couple of demos on GitHub. First, check our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 
-Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
+Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
 
 We'll be focusing on the latter example in this article, which looks like:
 

@@ -10,9 +10,8 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-only-whitespace
 ---
-{{CSSRef}}
 
-{{Non-standard_Header}}
+{{CSSRef}}{{Non-standard_header}}
 
 > **Note:** In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
 

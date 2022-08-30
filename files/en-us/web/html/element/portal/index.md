@@ -11,10 +11,11 @@ tags:
   - Reference
   - Web
   - Portal
+  - Experimental
 browser-compat: html.elements.portal
 ---
 
-{{HTMLRef}}
+{{HTMLRef}}{{SeeCompatTable}}
 
 The **`<portal>`** [HTML](/en-US/docs/Web/HTML) element enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages.
 

@@ -13,7 +13,7 @@ Adding _gestures_ to an application can significantly improve the user experienc
 
 This example shows how to detect the _pinch/zoom_ gesture, which uses {{domxref("Pointer_events","pointer events")}} to detect whether the user moves two pointers closer or farther apart from each other.
 
-A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/main/pointerevents/Pinch_zoom_gestures.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 

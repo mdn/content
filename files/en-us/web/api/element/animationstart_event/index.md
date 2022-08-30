@@ -110,7 +110,7 @@ animated.onanimationstart = () => {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const animation = document.querySelector('p.animation');

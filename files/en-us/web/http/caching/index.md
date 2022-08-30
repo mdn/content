@@ -604,7 +604,7 @@ The combined result is shown below.
 
 ```http
 # bundle.v123.js
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: application/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
@@ -642,7 +642,7 @@ For that case, `no-cache` would be appropriate — rather than `no-store` — si
 Furthermore, adding `Last-Modified` and `ETag` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
@@ -653,7 +653,7 @@ ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 That setting is appropriate for non-personalized HTML, but for a response that gets personalized using cookies — for example, after a login — don't forget to also specify `private`:
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private
