@@ -30,7 +30,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
     - [How to create, move, and delete pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
 
-      - : This section explains how to create, move, or delete a page.
+      - : This section explains how we create, move, or delete a page on MDN Web Docs. It also explains how we redirect a page when moving or deleting the page.
 
     - [How to use markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
