@@ -507,7 +507,7 @@ Switch statements can be a little tricky.
   }
   ```
 
-- Put `default` as the last case, and don't end it with a `break`. If you need to do it differently, add a comment explaining why.
+- Use `default` as the last case, and don't end it with a `break` statement. If you need to do it differently, add a comment explaining why.
 
 - Remember that, when you declare a local variable for a case, you need to use braces to define a scope:
 
