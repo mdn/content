@@ -70,7 +70,7 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a *Geometry Property* meaning this attribute can also be used as a CSS property for circles.
+> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
 
 ## ellipse
 
@@ -103,7 +103,7 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a *Geometry Property* meaning this attribute can also be used as a CSS property for ellipses.
+> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
 
 ## radialGradient
 

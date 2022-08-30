@@ -10,7 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`rotr`** instructions, short for *rotate-right*, are used for performing a bitwise right-rotate.
+The **`rotr`** instructions, short for _rotate-right_, are used for performing a bitwise right-rotate.
 
 {{EmbedInteractiveExample("pages/wat/rotr.html", "tabbed-taller")}}
 
