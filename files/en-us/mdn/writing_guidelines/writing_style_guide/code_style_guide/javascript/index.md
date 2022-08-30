@@ -704,7 +704,22 @@ const obj = {
 
 ### Object properties
 
-The `Object.prototype.hasOwnProperty()` method has been deprecated in favor of `Object.hasOwn()`.
+- The `Object.prototype.hasOwnProperty()` method has been deprecated in favor of `Object.hasOwn()`.
+- When possible, use the shorthand avoiding the duplication of the property identifier. Write:
+
+  ```js example-good
+  function createObject(name, age) {
+    return { name, age };  
+  }
+  ```
+  
+  Don't write:
+  
+  ```js example-bad
+  function createObject(name, age) {
+    return { name: name, age: age };
+  }
+  ```
 
 ## Functions
 
