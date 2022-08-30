@@ -15,8 +15,8 @@ We invite everyone to help! MDN Web Docs is an open-source project and accepts c
 
 To find out how to help, visit our [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started) page. If you want to talk to us and ask questions, join the discussion on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
-- [Community Guidelines](/en-US/docs/MDN/Community)
-    - : These guides are where to go to find out how to contribute to MDN Web Docs. How to help with tasks and issues, opening discussions, suggesting content and where to get help.
+- [Community guidelines](/en-US/docs/MDN/Community)
+    - : These guides help you get started with contributing to MDN Web Docs. They also cover topics such as how you can help with tasks and issues, open discussions, and suggest content. If you need help or want to contact us, you'll find the information here.
 
 - [Writing Guidelines](/en-US/docs/MDN/Writing_Guidelines)
     - : This section contains all the information on how to write for MDN. It includes the policy for what content we write, the writing style guide, and how to structure our different pages.
