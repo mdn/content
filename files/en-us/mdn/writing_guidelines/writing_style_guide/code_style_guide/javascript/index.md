@@ -18,7 +18,7 @@ This section explains the general guidelines to keep in mind while writing JavaS
 
 Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
 
-On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep code style consistent (and to avoid off-topic discussions).
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules.
 
 To learn more about the formatting conventions used on MDN Web Docs, read the [Prettier documentation](https://prettier.io/docs/en/index.html).
 
