@@ -55,7 +55,9 @@ This is the list of guides and pages in this section.
   - [Issue triage](/en-US/docs/MDN/Community/Issues/Issue_triage)
   - [Content and feature suggestions](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
-- [Pull requests](/en-US/docs/MDN/Community/Pull_requests). Guidelines for submitting pull requests and what you should expect from the review process.
+- [Pull requests](/en-US/docs/MDN/Community/Pull_requests)
+
+    - : This section covers our guidelines for submitting pull requests and what you should expect from the review process.
 
 - [Users and teams](/en-US/docs/MDN/Community/Users_teams). An overview of the users and teams that are part of the MDN project, and what it means to be in a team.
 
