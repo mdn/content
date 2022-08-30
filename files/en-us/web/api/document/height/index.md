@@ -16,7 +16,7 @@ browser-compat: api.Document.height
 ---
 {{APIRef("DOM")}} {{deprecated_header}}{{Non-standard_header}}
 
-> **Note:** Starting in {{Gecko("6.0")}}, `document.height` is
+> **Note:** `document.height` is
 > no longer supported. Instead, use `document.body.clientHeight`. See
 > {{domxref("element.clientHeight")}}.
 

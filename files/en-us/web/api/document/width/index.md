@@ -16,7 +16,7 @@ browser-compat: api.Document.width
 ---
 {{APIRef("DOM")}} {{deprecated_header}}{{Non-standard_header}}
 
-> **Note:** Starting in {{Gecko("6.0")}}, `document.width` is
+> **Note:**  `document.width` is
 > no longer supported. Instead, use `document.body.clientWidth`. See
 > {{domxref("element.clientWidth")}}.
 
