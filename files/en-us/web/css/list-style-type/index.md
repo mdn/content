@@ -140,7 +140,7 @@ Note that:
   - : Korean hanja numbering.
 - `lao`, `-moz-lao`
   - : Laotian numbering.
-- `lower-armenian`\*
+- `lower-armenian`
   - : Lowercase Armenian numbering.
 - `malayalam`, `-moz-malayalam`
   - : Malayalam numbering.
@@ -162,13 +162,13 @@ Note that:
   - : Telugu numbering.
 - `thai`, `-moz-thai`
   - : Thai numbering.
-- `tibetan`\*
+- `tibetan`
   - : Tibetan numbering.
 - `trad-chinese-formal`
   - : Traditional Chinese formal numbering.
 - `trad-chinese-informal`
   - : Traditional Chinese informal numbering.
-- `upper-armenian`\*
+- `upper-armenian`
   - : Traditional uppercase Armenian numbering.
 - `disclosure-open`
   - : Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.
