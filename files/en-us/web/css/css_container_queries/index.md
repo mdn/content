@@ -44,7 +44,7 @@ In addition the draft specification proposes some new properties:
 - `container`:
   - : A shorthand property to set both `container-type` and `container-name`.
 
-### `container-type`
+### `container-type` property
 
 The `container-type` property can have the following values:
 

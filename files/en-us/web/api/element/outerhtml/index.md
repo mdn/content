@@ -48,16 +48,12 @@ descendants with a new DOM tree constructed by parsing the specified
 
 Getting the value of an element's `outerHTML` property:
 
-### HTML
-
 ```html
 <div id="d">
   <p>Content</p>
   <p>Further Elaborated</p>
 </div>
 ```
-
-### JavaScript
 
 ```js
 const d = document.getElementById("d");
@@ -69,15 +65,11 @@ console.log(d.outerHTML);
 
 Replacing a node by setting the `outerHTML` property:
 
-### HTML
-
 ```html
 <div id="container">
   <div id="d">This is a div.</div>
 </div>
 ```
-
-### JavaScript
 
 ```js
 const container = document.getElementById("container");

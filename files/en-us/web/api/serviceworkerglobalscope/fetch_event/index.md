@@ -30,15 +30,13 @@ addEventListener("fetch", (event) => {});
 onfetch = (event) => {};
 ```
 
-## Event type
-
-A generic {{domxref("Event")}}.
-
-## Syntax
-
 ```js
 serviceWorkerGlobalScope.onfetch = (fetchEvent) => { /* … */ }
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 
