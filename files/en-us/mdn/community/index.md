@@ -40,7 +40,9 @@ This is the list of guides and pages in this section.
 
     - : This article explains how to behave when contributing to our open source project.
 
-- [Discussions](/en-US/docs/MDN/Community/Discussions). On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas.
+- [Discussions](/en-US/docs/MDN/Community/Discussions)
+
+    - : On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. This article explains the details.
 
 - [Learn forum](/en-US/docs/MDN/Community/Learn_forum). Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month, and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for general help, or request that their assessments be marked. We'd love some help with answering posts, and growing our learning community.
 
