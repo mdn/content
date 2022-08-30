@@ -30,9 +30,9 @@ You can use new features once every major browser, Chrome, Edge, Firefox, and Sa
 
 Prettier formats and styles all the code; the tool will fix your errors. Nevertheless, there are a few additional rules that you need to follow.
 
-### Use braces with control statement.
+### Use braces with control flow statements
 
-- Even if, control statements like `if`, `for`, `while` don't mandate for the use of braces when the content is made of one single statement, always use braces. Write:
+- While control flow statements like `if`, `for`, and `while` don't require the use of braces when the content is made of one single statement, you should always use braces. Write:
 
   ```js example-good
   for (const car of storedCars) {
@@ -62,7 +62,7 @@ Add a comment if the purpose or logic of the code isn't obvious, to describe the
 let total = 0;
 
 // Calculate the sum of the four first elements of arr
-for (let i = 0; i < 4; i++ ){
+for (let i = 0; i < 4; i++) {
   total += arr[i];
 }
 ```
@@ -73,7 +73,7 @@ On the other hand, restating the code in prose is not a good use of comments:
 let total = 0;
 
 // For loop from 1 to 4
-for (let i = 0; i < 4; i++ ){
+for (let i = 0; i < 4; i++) {
   // Add value to the total
   total += arr[i];
 }
@@ -82,7 +82,7 @@ for (let i = 0; i < 4; i++ ){
 Comments are also not necessary when functions have explicit names that describe what they're doing. Write:
 
 ```js example-good
-closeConnection()
+closeConnection();
 ```
 
 Don't write:
@@ -208,7 +208,7 @@ Good variable names are essential to understanding code.
 
 - Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
 - Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null`, or `name = "John Doe"` instead of `sName = "John Doe"`.
-- For collections, avoid adding the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like whenwant to show the abstract form of a feature outside a particular application.
+- For collections, avoid adding the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
 - For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
 - Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general, without a practical context.
 
@@ -225,7 +225,7 @@ Don't name variables like this:
 ```js example-bad
 let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 
-let s = d/t;
+let s = d / t;
 ```
 
 > **Note:** The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
@@ -548,7 +548,7 @@ When you don't need the parameter of the `catch` statement, omit it:
   }
 ```
 
-Keep in mind, that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
+Keep in mind that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
 
 ## Strings
 
@@ -750,7 +750,7 @@ let sum = function(a, b) {
 }
 ```
 
-When using anonymous functions inside as a callback (a function passed to another method invocation) and you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
+When using anonymous functions as a callback (a function passed to another method invocation) and you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
 
 Here is the recommended way:
 
@@ -768,7 +768,7 @@ let sum = array1.reduce(function (a, b) {
 });
 ```
 
-Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use named functions with the keyword `function`:
+Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use function declarations with the keyword `function`:
 
 ```js example-good
 function x() {
@@ -794,7 +794,7 @@ And not:
 
 ```js example-bad
 arr.map((e) => { 
-  return e.id
+  return e.id;
 });
 ```
 
