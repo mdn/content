@@ -28,7 +28,7 @@ You can use new features once every major browser, Chrome, Edge, Firefox, and Sa
 
 ## Generic syntax style
 
-Prettier formats and styles all the code; the tool will fix your errors. Nevertheless, there are a few additional rules that you need to follow.
+Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
 ### Spacing and indentation
 
