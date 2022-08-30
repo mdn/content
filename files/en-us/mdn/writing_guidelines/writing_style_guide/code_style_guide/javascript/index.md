@@ -802,7 +802,7 @@ arr.map((e) => {
 
 Writing asynchronous code improves performance and should be used when possible. In particular, you can use:
 
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), including the `finally()` method
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
 
 When both techniques are possible, we prefer using the simpler `async`/`await` syntax. Unfortunately, you can't use `await` at the top level unless you are in an ECMAScript module. CommonJS modules used by Node.js are not ES modules. If your example is intended to be used everywhere, avoid top-level `await`.
