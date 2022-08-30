@@ -30,24 +30,6 @@ You can use new features once every major browser, Chrome, Edge, Firefox, and Sa
 
 Prettier formats and styles all the code; the tool will fix your errors. Nevertheless, there are a few additional rules that you need to follow.
 
-### Use braces with control flow statements
-
-- While control flow statements like `if`, `for`, and `while` don't require the use of braces when the content is made of one single statement, you should always use braces. Write:
-
-  ```js example-good
-  for (const car of storedCars) {
-    car.paint("red");
-  }
-  ```
-
-  Don't write:
-
-  ```js example-bad
-  for (const car of storedCars) car.paint("red");
-  ```
-
-  This prevent forgetting to add the braces when adding more statements.
-
 ### Spacing and indentation
 
 Mark indentation with _2 spaces_. Don't use the tab key. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorconfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
@@ -474,6 +456,24 @@ if (test) {
   // …
 }
 ```
+
+### Use braces with control flow statements and loops
+
+While control flow statements like `if`, `for`, and `while` don't require the use of braces when the content is made of one single statement, you should always use braces. Write:
+
+```js example-good
+for (const car of storedCars) {
+  car.paint("red");
+}
+```
+
+Don't write:
+
+```js example-bad
+for (const car of storedCars) car.paint("red");
+```
+
+This prevent forgetting to add the braces when adding more statements.
 
 ### Switch statements
 
