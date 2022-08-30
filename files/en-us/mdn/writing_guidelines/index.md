@@ -40,7 +40,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section describes the requirements for including media in pages, such as images.
 
-    - [Documenting a CSS property](/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_css_property)
+    - [How to document a CSS property](/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_css_property)
 
       - : This article explains how to write a CSS property page, including layout and content.
 
