@@ -29,6 +29,7 @@ This extension exposes one new methods.
 
 The compressed texture formats are exposed by 28 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.
 
+<!-- markdownlint-disable MD037 -->
 <table class="no-markdown">
   <thead>
     <tr>

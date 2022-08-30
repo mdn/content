@@ -452,6 +452,7 @@ These operators work as they do in most other programming languages when used wi
 
 In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScript provides the arithmetic operators listed in the following table:
 
+<!-- markdownlint-disable MD037 -->
 <table class="fullwidth-table">
   <caption>
     Arithmetic operators

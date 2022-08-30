@@ -131,6 +131,7 @@ Each audio buffer may contain different numbers of channels. Most modern audio d
 
 When the numbers of channels of the input and the output don't match, up-mixing, or down-mixing, must be done. The following rules, controlled by setting the {{domxref("AudioNode.channelInterpretation")}} property to `speakers` or `discrete`, apply:
 
+<!-- markdownlint-disable MD037 -->
 <table class="standard-table">
   <thead>
     <tr>

@@ -190,6 +190,7 @@ If your comment contains no line breaks, it's an option to put it behind two sla
 
 An `{{Glossary("operator")}}` is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
 
+<!-- markdownlint-disable MD037 -->
 <table class="standard-table">
   <thead>
     <tr>
@@ -213,9 +214,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td>These do what you'd expect them to do in basic math.</td>
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
-        <code
->9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
-        >
+        <code>9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code>
       </td>
     </tr>
     <tr>
