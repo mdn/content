@@ -32,7 +32,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section explains how to create, move, or delete a page.
 
-    - [Using markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
+    - [How to use markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
       - : The markdown format we use derives from [GitHub flavored markdown (GFM)](https://github.github.com/gfm/). This section is a guide to the markdown we use on MDN Web Docs, including formats for specific in-page components, such as notes and definition lists.
 
