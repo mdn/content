@@ -194,22 +194,21 @@ Good variable names are essential to understanding code.
 - For collections, avoid adding the type (list, array, queue) in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
 - For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
 - Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general, without a practical context.
+- Use variable names like shown here:
 
-Use variable names like shown here:
+  ```js example-good
+  let playerScore = 0;
 
-```js example-good
-let playerScore = 0;
+  let speed = distance / time;
+  ```
 
-let speed = distance / time;
-```
+  Don't name variables like this:
 
-Don't name variables like this:
+  ```js example-bad
+  let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 
-```js example-bad
-let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
-
-let s = d / t;
-```
+  let s = d / t;
+  ```
 
 > **Note:** The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
 
