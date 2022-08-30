@@ -296,7 +296,7 @@ class Person {
     this.#name = "" + name;
     this.#birthYear = +year;
   }
-};
+}
 ```
 
 ## Operators
@@ -308,7 +308,7 @@ This section lists our recommendations of which operators to use and when.
 When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
 
 ```js example-good
-let x = condition ? 1 : 2;
+const x = condition ? 1 : 2;
 ```
 
 Do not write:
@@ -561,14 +561,14 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 - Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
   ```js example-good
-  let name = 'Chris';
+  const name = 'Chris';
   console.log(`Hi! I'm ${name}!`);
   ```
 
   Don't concatenate strings like this:
 
   ```js example-bad
-  let name = 'Chris';
+  const name = 'Chris';
   console.log("Hi! I'm" + name + "!");
   ```
 
@@ -594,7 +594,7 @@ const visitedCities = new Array(length);
 
 ### Item addition
 
-When adding items to an array, use [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) and not direct assignment. Let's consider the following array:
+When adding items to an array, use [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) and not direct assignment. Consider the following array:
 
 ```js
 const pets = [];
@@ -637,7 +637,7 @@ For creating general objects (i.e., when classes are not involved), use literals
 For example, do this:
 
 ```js example-good
-let object = {};
+const object = {};
 ```
 
 Don't create a general object like this:
@@ -662,7 +662,7 @@ let object = new Object();
 
     greeting() {
       console.log(`Hi! I'm ${this.name}`);
-    };
+    }
   }
   ```
 
@@ -732,7 +732,7 @@ The following is a correct example of a function name:
 ```js example-good
 function sayHello() {
   console.log('Hello!');
-};
+}
 ```
 
 Don't use function names like these:
@@ -740,16 +740,16 @@ Don't use function names like these:
 ```js example-bad
 function SayHello() {
   console.log('Hello!');
-};
+}
 
 function doIt() {
   console.log('Hello!');
-};
+}
 ```
 
 ### Function declarations
 
-- Where possible, use the `function` declaration to define functions over function expressions.
+- Where possible, use the function declaration over function expressions to define functions.
 
   Here is the recommended way to declare a function:
 
@@ -773,7 +773,7 @@ function doIt() {
 
   ```js example-good
   const array1 = [1, 2, 3, 4];
-  let sum = array1.reduce((a, b) => a + b);
+  const sum = array1.reduce((a, b) => a + b);
   ```
 
   Instead of this:
