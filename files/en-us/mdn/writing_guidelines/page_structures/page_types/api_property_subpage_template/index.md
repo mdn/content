@@ -38,7 +38,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 > - **title**
 >   - : Title heading displayed at top of page.
 >     Format as _NameOfTheParentInterface_**.**_NameOfTheProperty_.
->     For example, the [capabilities](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [VRDisplay](/en-US/docs/Web/API/VRDisplay) interface has a *title* of *VRDisplay.capabilities*.
+>     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay.capabilities`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.

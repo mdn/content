@@ -35,7 +35,7 @@ invoked to do so.
 > channels. However, plans are already in place to revise the specification to allow the
 > size of the audio blocks to be changed depending on circumstances (for example, if the
 > audio hardware or CPU utilization is more efficient with larger block sizes).
-> Therefore, you *must always check the size of the sample array* rather than
+> Therefore, you _must always check the size of the sample array_ rather than
 > assuming a particular size.
 >
 > This size may even be allowed to change over time, so you mustn't look at just the

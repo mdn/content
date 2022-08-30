@@ -40,7 +40,7 @@ This document provides a concise checklist of accessibility requirements for mob
 
 - Text equivalent must be provided for every non-strictly presentational non-text element within the app.
 
-  - Use _alt_ and _title_ where appropriate (*s*ee Steve Faulkner's post about [Using the HTML title attribute](https://www.tpgi.com/using-the-html-title-attribute-updated/) for a good guide.)
+  - Use _alt_ and _title_ where appropriate (see Steve Faulkner's post about [Using the HTML title attribute](https://www.tpgi.com/using-the-html-title-attribute-updated/) for a good guide.)
   - If the above attributes are not applicable, use appropriate [ARIA States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as `aria-label`, `aria-labelledby`, or `aria-describedby`.
 
 - Images of text must be avoided.

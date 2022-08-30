@@ -97,7 +97,9 @@
   "MD046": {
     "style": "fenced"
   },
-  "MD049": false,
+  "MD049": {
+    "style": "underscore"
+  },
   "MD050": {
     "style": "asterisk"
   },

@@ -10,9 +10,9 @@ tags:
 ---
 ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
 
-By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return *null*. The `role` attribute can provide semantics.
+By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return `null`. The `role` attribute can provide semantics.
 
-ARIA roles are added to HTML elements using `role="`*role type*`"`, where *role type* is the name of a role in the ARIA specification.  Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
+ARIA roles are added to HTML elements using `role="role type"`, where _role type_ is the name of a role in the ARIA specification.  Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
 
 For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab panel and accessibility has actually been negatively impacted.
 
