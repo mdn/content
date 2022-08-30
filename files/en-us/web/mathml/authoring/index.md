@@ -6,6 +6,8 @@ tags:
   - MathML
   - MathML Project
 ---
+{{MathMLRef}}
+
 This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Many such tools are available and it is impossible to provide an exhaustive list. Instead, this article focuses on common approaches and examples.
 
 ## Using MathML
@@ -18,9 +20,10 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
- <title>MathML in HTML5</title>
+  <meta charset="UTF-8">
+  <title>MathML in HTML5</title>
 </head>
 <body>
 
@@ -110,8 +113,9 @@ A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>MathML in HTML5</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
@@ -140,6 +144,7 @@ For authors not familiar with LaTeX, alternative input methods are available suc
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width">
+<title>ASCII MathML</title>
 ...
 <!-- ASCIIMathML.js -->
 <script src="/path/to/ASCIIMathML.js"></script>
@@ -171,8 +176,9 @@ Instead of generating MathML expression at page load, you can instead rely on co
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -194,15 +200,16 @@ Instead of generating MathML expression at page load, you can instead rely on co
 That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -224,7 +231,7 @@ After running that command, a file `output.html` containing the following HTML o
 There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into a HTML or EPUB document:
 
 ```bash
-latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
+latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html
 latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
 ```
 
@@ -245,11 +252,11 @@ In this section, we review a few editing tools providing graphical interfaces.
 
 A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example,  [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
-![LaTeX input box in Thunderbird ](thunderbird.png)
+![LaTeX input box in Thunderbird](thunderbird.png)
 
 > **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
 
-[LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the *StartMath* syntax provides extra equation panels to insert pre-defined mathematical constructions.
+[LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the _StartMath_ syntax provides extra equation panels to insert pre-defined mathematical constructions.
 
 ![StarMath input box in Libre Office](libreoffice.png)
 

@@ -7,6 +7,7 @@ tags:
   - Beginner
   - WebGL
 ---
+
 {{GamesSidebar}}
 
 [Babylon.js](https://www.babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
@@ -28,22 +29,30 @@ Here's the HTML structure we will use:
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
     <title>MDN Games: Babylon.js demo</title>
     <style>
-        html,body,canvas { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 0; }
+      html,
+      body,
+      canvas {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
     </style>
-</head>
-<body>
-<script src="babylon.js"></script>
-<canvas id="render-canvas"></canvas>
-<script>
-    const canvas = document.getElementById("render-canvas");
-    /* all our JavaScript code goes here */
-</script>
-</body>
+  </head>
+  <body>
+    <script src="babylon.js"></script>
+    <canvas id="render-canvas"></canvas>
+    <script>
+      const canvas = document.getElementById("render-canvas");
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -78,8 +87,8 @@ To make the scene actually visible we have to render it. Add these lines at the 
 
 ```js
 function renderLoop() {
-    scene.render();
-};
+  scene.render();
+}
 engine.runRenderLoop(renderLoop);
 ```
 
@@ -90,7 +99,11 @@ We're using the engine's `runRenderLoop()` method to execute the `renderLoop()` 
 Now the setup code is in place we need to think about implementing the standard scene components: camera, light and objects. Let's start with the camera — add this line to your code below the scene creation and the line where we defined the `clearColor`.
 
 ```js
-const camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
+const camera = new BABYLON.FreeCamera(
+  "camera",
+  new BABYLON.Vector3(0, 0, -10),
+  scene
+);
 ```
 
 There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
@@ -102,7 +115,11 @@ There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) availab
 There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
-const light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
+const light = new BABYLON.PointLight(
+  "light",
+  new BABYLON.Vector3(10, 10, 0),
+  scene
+);
 ```
 
 The parameters are very similar to the previously defined camera: the name of the light, a position in 3D space and the scene to which the light is added.
@@ -200,12 +217,12 @@ This works, but it is a bit boring. In a game something is usually happening —
 We already used `position` and `rotation` to adjust the position of the shapes; we could also scale them. To show actual animation, we need to make changes to these values inside the rendering loop at the end of our code, so they are updated on every frame. Define a helper variable — `t` — that we will use for animations, just before the `renderLoop`, and decrement it on every frame inside the loop, like this:
 
 ```js
-const t = 0;
+let t = 0;
 function renderLoop() {
-    scene.render();
-    t -= 0.01;
-    // animation code goes here
-};
+  scene.render();
+  t -= 0.01;
+  // animation code goes here
+}
 engine.runRenderLoop(renderLoop);
 ```
 

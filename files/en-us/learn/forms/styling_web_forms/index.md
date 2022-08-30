@@ -207,12 +207,12 @@ Add the above code into the body of your HTML.
 This is where the fun begins! Before we start coding, we need three additional assets:
 
 1. [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
-2. A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
-3. A hand drawn font: [The "Journal" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
+2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
+3. A hand drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
-1. Go to the fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
+1. Go to the fontsquirrel.com [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
 2. Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
 3. Unzip the provided zip file.
 4. Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) article for a lot more information.
@@ -236,8 +236,8 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 
 @font-face {
     font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
+    src: url('fonts/momt___-webfont.woff2') format('woff2'),
+         url('fonts/momt___-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -368,11 +368,11 @@ button:focus {
 
 And voila! Your form should now look like this:
 
-![](updated-form-screenshot.jpg)
+![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
 > **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
-## Test your skills!
+## Test your skills
 
 You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn/Forms/Test_your_skills:_Styling_basics).
 

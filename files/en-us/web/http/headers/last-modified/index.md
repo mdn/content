@@ -38,7 +38,7 @@ headers make use of this field.
 
 ## Syntax
 
-```
+```http
 Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -64,7 +64,7 @@ Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-```
+```http
 Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

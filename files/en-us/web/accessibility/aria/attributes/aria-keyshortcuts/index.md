@@ -30,7 +30,7 @@ The value of the `aria-keyshortcuts` attribute is a space-separated list of key 
 
 Examples of valid keyboard shortcuts include:
 
-```html
+```plain
 aria-keyshortcuts="A"
 aria-keyshortcuts="Shift+Space"
 aria-keyshortcuts="Control+Alt+."
@@ -51,7 +51,7 @@ Modifier keys must be listed first in each key combination. Possible key combina
 
 These two attribute declarations are equivalent.
 
-```html example-good
+```plain example-good
 aria-keyshortcuts="Shift+Control+V"
 aria-keyshortcuts="control+shift+v"
 ```
@@ -60,7 +60,7 @@ Note that text case doesn't matter. But order of non-modifier does.
 
 These two attribute declarations are invalid because the non-modifier must be last.
 
-```html example-bad
+```plain example-bad
 aria-keyshortcuts="V+Shift+Control"
 aria-keyshortcuts="V+Control+Shift"
 ```

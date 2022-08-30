@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/close
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method
@@ -13,8 +12,6 @@ tags:
 browser-compat: api.HTMLDialogElement.close
 ---
 {{ APIRef("HTML DOM") }}
-
-{{ SeeCompatTable() }}
 
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}
 interface closes the dialog. An optional string may be passed as an
@@ -77,7 +74,7 @@ button.
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -100,7 +97,7 @@ button.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
 > ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications

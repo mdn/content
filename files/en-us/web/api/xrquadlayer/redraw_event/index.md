@@ -47,7 +47,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can pass `redraw` to {{domxref("EventTarget.addEventListener()", "addEventListener()")}}:
 
 ```js
-quadLayer.addEventListener("redraw", function(event) {
+quadLayer.addEventListener("redraw", (event) => {
   // redraw the layer
 });
 ```
@@ -55,7 +55,7 @@ quadLayer.addEventListener("redraw", function(event) {
 Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
-quadLayer.onredraw = function(event) {
+quadLayer.onredraw = (event) => {
  // redraw the layer
 }
 ```

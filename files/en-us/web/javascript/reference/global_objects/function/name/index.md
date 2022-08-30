@@ -223,7 +223,7 @@ new Foo().getNames();
 You can use `obj.constructor.name` to check the "class" of an object.
 
 ```js
-function Foo() {}  // ES2015 Syntax: class Foo {}
+function Foo() {}  // Or: class Foo {}
 
 const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"

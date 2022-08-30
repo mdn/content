@@ -271,16 +271,16 @@ a:active {
 ```
 
 ```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+const htmlInput = document.querySelector(".html-input");
+const cssInput = document.querySelector(".css-input");
+const reset = document.getElementById("reset");
+const htmlCode = htmlInput.value;
+const cssCode = cssInput.value;
+const output = document.querySelector(".output");
+const solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+const styleElem = document.createElement('style');
+const headElem = document.querySelector('head');
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -288,15 +288,48 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", () => {
   htmlInput.value = htmlCode;
-  cssInput.value = 'p {\n  font-size: 1.2rem;\n  font-family: sans-serif;\n  line-height: 1.4;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n  padding: 2px 1px 0;\n}\n\na:link {\n  color: #265301;\n}\n\na:visited {\n  color: #437A16;\n}\n\na:focus {\n  border-bottom: 1px solid;\n  background: #BAE498;\n}\n\na:hover {\n  border-bottom: 1px solid;\n  background: #CDFEAA;\n}\n\na:active {\n  background: #265301;\n  color: #CDFEAA;\n}';
+  cssInput.value = `p {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #CDFEAA;
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}`;
   drawOutput();
 });
 
@@ -440,7 +473,7 @@ The HTML defines a {{HTMLElement("nav")}} element with a `"container"` class. Th
 The CSS includes the styling for the container and the links it contains.
 
 - The second rule says:
-  - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be *flex items*.
+  - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be _flex items_.
   - The gap between the flex items will be `0.625%` of the container's width.
 - The third rule styles the links:
   - The first declaration, `flex: 1`, means that the widths of the items will be adjusted so they use all the available space in the container.

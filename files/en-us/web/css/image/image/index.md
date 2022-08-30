@@ -18,7 +18,7 @@ The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 
 ## Syntax
 
-{{CSSSyntax("image()")}}
+{{CSSSyntax}}
 
 where:
 

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - Media
   - Media Capture and Streams API
   - Media Streams API

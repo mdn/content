@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Commerce
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse

@@ -62,7 +62,6 @@ This is the first example of code that explains [how to build a custom form widg
   font-size   : 0.625em; /* 10px */
   font-family : Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -98,7 +97,6 @@ This is the first example of code that explains [how to build a custom form widg
 
   padding-top : .1em;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   text-align : center;
@@ -235,7 +233,6 @@ This is the first example of code that explains [how to build a custom form widg
 
   padding-top : .1em;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   text-align : center;
@@ -337,7 +334,6 @@ This is the first example of code that explains [how to build a custom form widg
   font-size   : 0.625em; /* 10px */
   font-family : Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -398,7 +394,6 @@ This is the first example of code that explains [how to build a custom form widg
 
   box-shadow: 0 .2em .4em rgba(0,0,0,.4);
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   min-width : 100%;

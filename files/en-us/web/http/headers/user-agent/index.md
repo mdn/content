@@ -29,13 +29,13 @@ The **User-Agent** {{Glossary("request header")}} is a characteristic string tha
 
 ## Syntax
 
-```
+```http
 User-Agent: <product> / <product-version> <comment>
 ```
 
 Common format for web browsers:
 
-```
+```http
 User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
 ```
 

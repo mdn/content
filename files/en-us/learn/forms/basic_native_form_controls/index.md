@@ -43,7 +43,7 @@ You've already met some form elements, including {{HTMLelement('form')}}, {{HTML
 - The common input types {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, and {{HTMLelement('input/text', 'text')}}.
 - Some of the attributes that are common to all form controls.
 
-> **Note:** The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [\<input> types](/en-US/docs/Web/HTML/Element/input) reference.
+> **Note:** We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Element/input) reference.
 
 ## Text input fields
 
@@ -78,7 +78,7 @@ _The following screenshot shows default, focused and disabled text input types i
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
-> **Note:** HTML5 enhanced the basic original single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints and other features, for example specific to entering URLs or numbers. We'll cover those in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+> **Note:** We discuss values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 #### Password field
 
@@ -104,7 +104,7 @@ Another original text control is the `hidden` input type. This is used to create
 
 If you create such an element, it's required to set its `name` and `value` attributes. The value can be dynamically set via JavaScript. The `hidden` input type should not have an associated label.
 
-Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, and {{HTMLElement("input/tel", "tel")}}, were added with HTML5. Those will be covered in the next tutorial, [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, and {{HTMLElement("input/tel", "tel")}}, will be covered in the next tutorial, [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 ## Checkable items: checkboxes and radio buttons
 
@@ -369,7 +369,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-This article has covered the older input types — the original set introduced in the early days of HTML that is well supported in all browsers. In the next section, we'll take a look at the newer values of the `type` attribute that were added in HTML5.
+This article has covered the older input types — the original set introduced in the early days of HTML that is well supported in all browsers. In the next section, we'll take a look at the more modern values of the `type` attribute.
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 

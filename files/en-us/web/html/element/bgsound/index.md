@@ -7,14 +7,13 @@ tags:
   - Element
   - HTML
   - Internet Explorer
-  - Non-standard
   - Deprecated
   - Reference
   - Web
 browser-compat: html.elements.bgsound
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{Deprecated_Header}}
 
 The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets up a sound file to play in the background while the page is used; use {{HTMLElement("audio")}} instead.
 

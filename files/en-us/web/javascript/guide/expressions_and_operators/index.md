@@ -17,7 +17,7 @@ At a high level, an _expression_ is a valid unit of code that resolves to a valu
 
 The expression `x = 7` is an example of the first type. This expression uses the `=` _operator_ to assign the value seven to the variable `x`. The expression itself evaluates to `7`.
 
-The expression `3 + 4` is an example of the second type. This expression uses the `+` operator to add `3` and `4` together and produces a value, `7`. However, if it's not eventually part of a bigger construct (for example, a [variable declaration](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#declarations) like `const z = 3 + 4`), its result will be immediately discarded — this is usually a programmer mistake because the evaluation doesn't produce any effects.
+The expression `3 + 4` is an example of the second type. This expression uses the `+` operator to add `3` and `4` together and produces a value, `7`. However, if it's not eventually part of a bigger construct (for example, a [variable declaration](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) like `const z = 3 + 4`), its result will be immediately discarded — this is usually a programmer mistake because the evaluation doesn't produce any effects.
 
 As the examples above also illustrate, all complex expressions are joined by _operators_, such as `=` and `+`. In this section, we will introduce the following operators:
 
@@ -452,7 +452,7 @@ These operators work as they do in most other programming languages when used wi
 
 ```js
 1 / 2; // 0.5
-1 / 2 == 1.0 / 2.0; // this is true
+1 / 2 === 1.0 / 2.0; // this is true
 ```
 
 In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScript provides the arithmetic operators listed in the following table:
@@ -725,31 +725,31 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-const a1 =  true && true;     // t && t returns true
-const a2 =  true && false;    // t && f returns false
-const a3 = false && true;     // f && t returns false
-const a4 = false && (3 == 4); // f && f returns false
-const a5 = 'Cat' && 'Dog';    // t && t returns Dog
-const a6 = false && 'Cat';    // f && t returns false
-const a7 = 'Cat' && false;    // t && f returns false
+const a1 =  true && true; // t && t returns true
+const a2 =  true && false; // t && f returns false
+const a3 = false && true; // f && t returns false
+const a4 = false && (3 === 4); // f && f returns false
+const a5 = 'Cat' && 'Dog'; // t && t returns Dog
+const a6 = false && 'Cat'; // f && t returns false
+const a7 = 'Cat' && false; // t && f returns false
 ```
 
 The following code shows examples of the || (logical OR) operator.
 
 ```js
-const o1 =  true || true;     // t || t returns true
-const o2 = false || true;     // f || t returns true
-const o3 =  true || false;    // t || f returns true
-const o4 = false || (3 == 4); // f || f returns false
-const o5 = 'Cat' || 'Dog';    // t || t returns Cat
-const o6 = false || 'Cat';    // f || t returns Cat
-const o7 = 'Cat' || false;    // t || f returns Cat
+const o1 =  true || true; // t || t returns true
+const o2 = false || true; // f || t returns true
+const o3 =  true || false; // t || f returns true
+const o4 = false || (3 === 4); // f || f returns false
+const o5 = 'Cat' || 'Dog'; // t || t returns Cat
+const o6 = false || 'Cat'; // f || t returns Cat
+const o7 = 'Cat' || false; // t || f returns Cat
 ```
 
 The following code shows examples of the ! (logical NOT) operator.
 
 ```js
-const n1 = !true;  // !t returns false
+const n1 = !true; // !t returns false
 const n2 = !false; // !f returns true
 const n3 = !'Cat'; // !t returns false
 ```
@@ -766,9 +766,8 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
-or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
-It is one of JavaScript's primitive types.").
+Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 
 ## BigInt operators
@@ -1061,7 +1060,7 @@ if (theDay instanceof Date) {
 
 ## Basic expressions
 
-All operators eventually operate on one or more basic expressions. These basic expressions include [identifiers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#declarations) and [literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#literals), but there are a few other kinds as well. They are briefly introduced below, and their semantics are described in detail in their respective reference sections.
+All operators eventually operate on one or more basic expressions. These basic expressions include [identifiers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) and [literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals), but there are a few other kinds as well. They are briefly introduced below, and their semantics are described in detail in their respective reference sections.
 
 ### this
 

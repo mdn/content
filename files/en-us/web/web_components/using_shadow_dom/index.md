@@ -18,7 +18,7 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Simple DOM example</title>
@@ -116,27 +116,21 @@ Next, we use some DOM manipulation to create the element's internal shadow DOM s
 
 ```js
 // Create spans
-let wrapper = document.createElement('span');
+const wrapper = document.createElement('span');
 wrapper.setAttribute('class', 'wrapper');
-let icon = document.createElement('span');
+const icon = document.createElement('span');
 icon.setAttribute('class', 'icon');
 icon.setAttribute('tabindex', 0);
-let info = document.createElement('span');
+const info = document.createElement('span');
 info.setAttribute('class', 'info');
 
 // Take attribute content and put it inside the info span
-let text = this.getAttribute('data-text');
+const text = this.getAttribute('data-text');
 info.textContent = text;
 
 // Insert icon
-let imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
-} else {
-  imgUrl = 'img/default.png';
-}
-let img = document.createElement('img');
-img.src = imgUrl;
+const img = document.createElement('img');
+img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
 icon.appendChild(img);
 ```
 

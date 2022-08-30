@@ -195,7 +195,7 @@ The following code is intended to be placed in any JavaScript fragment within or
 To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is '`//h2`'. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
 
 ```js
-var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null);
+const headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null);
 ```
 
 Notice that, since HTML does not have namespaces, we have passed `null` for the `namespaceResolver` parameter.
@@ -322,7 +322,7 @@ If one wishes to provide flexibility in namespaces (as they are intended) by not
 
 While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/docs/Web/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en-US/docs/Web/XPath/Functions/namespace-uri) instead of [`name()`](/en-US/docs/Web/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
-For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
+For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
 This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes/attribute)).
 

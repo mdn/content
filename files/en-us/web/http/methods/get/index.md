@@ -44,7 +44,7 @@ The **HTTP `GET` method** requests a representation of the specified resource. R
 
 ## Syntax
 
-```
+```http
 GET /index.html
 ```
 

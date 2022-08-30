@@ -34,6 +34,7 @@ const { a: a1, b: b1 } = obj;
 const { a: a1 = aDefault, b = bDefault } = obj;
 const { a, b, ...rest } = obj;
 const { a: a1, b: b1, ...rest } = obj;
+const { [key]: a } = obj;
 
 let a, b, a1, b1, c, d, rest, pop, push;
 [a, b] = array;
@@ -303,7 +304,7 @@ When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Glob
 
 ```js
 function parseProtocol(url) {
-  const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+  const parsedURL = /^(\w+):\/\/([^/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
   }

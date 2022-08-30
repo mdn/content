@@ -72,7 +72,7 @@ Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if
 
 Let's get on and look at accessible HTML in more detail.
 
-> **Note:** It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) for more details.
+> **Note:** It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details.
 
 ## Good semantics
 
@@ -266,7 +266,7 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
 If you try our more modern structure example with a screen reader, you'll see that the layout markup no longer gets in the way and confuses the content readout. It is also much leaner and smaller in terms of code size, which means easier to maintain code, and less bandwidth for the user to download (particularly prevalent for those on slow connections).
 
-Another consideration when creating layouts is using HTML5 semantic elements as seen in the above example (see [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning)) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating (see [Screen Reader Support for new HTML5 Section Elements](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) for an idea of what screen reader support is like).
+Another consideration when creating layouts is using HTML semantic elements as seen in the above example (see [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning)) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating (see [Screen Reader Support for new HTML5 Section Elements](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) for an idea of what screen reader support is like).
 
 > **Note:** In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.
 
@@ -354,8 +354,8 @@ Basically, the {{htmlattrxref("tabindex")}} attribute is primarily intended to a
 While the above addition allows us to tab to the buttons, it does not allow us to activate them via the <kbd>Enter</kbd>/<kbd>Return</kbd> key. To do that, we had to add the following bit of JavaScript trickery:
 
 ```js
-document.onkeydown = function(e) {
-  if(e.key === "Enter") { // The Enter/Return key
+document.onkeydown = (e) => {
+  if (e.key === "Enter") { // The Enter/Return key
     document.activeElement.click();
   }
 };
@@ -371,7 +371,7 @@ UI control text labels are very useful to all users, but getting them right is p
 
 You should make sure that your button and link text labels are understandable and distinctive. Don't just use "Click here" for your labels, as screen reader users sometimes get up a list of buttons and form controls. The following screenshot shows our controls being listed by VoiceOver on Mac.
 
-![](voiceover-formcontrols.png)
+![List of form input labels being listed by VoiceOver software on Mac. This list contains meaningless labels like 'happy menu button` given to various form controls like button, textfield and link](voiceover-formcontrols.png)
 
 Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:
 
@@ -406,7 +406,7 @@ The following is a much better example:
 
 With code like this, the label will be clearly associated with the input; the description will be more like "Fill in your name: edit text."
 
-![](voiceover-good-form-label.png)
+![A good form label that reads 'Fill in your name' is given to a text input form control. ](voiceover-good-form-label.png)
 
 As an added bonus, in most browsers associating a label with a form input means that you can click the label to select or activate the form element. This gives the input a bigger hit area, making it easier to select.
 
@@ -513,16 +513,16 @@ Images also have another mechanisms available for providing descriptive text. Fo
 
 This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see [Accessible data tables](#accessible_data_tables)). However, `longdesc` is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.
 
-HTML5 includes two new elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which are supposed to associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:
+HTML includes two elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus">
-  <figcaption>A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</figcaption>
+  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus" aria-describedby="dinodescr">
+  <figcaption id="dinodescr">A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</figcaption>
 </figure>
 ```
 
-Unfortunately, most screen readers don't seem to associate figure captions with their figures yet. That said, the element structure is useful for CSS styling, plus it provides a way to place a description of the image next to it in the source.
+While there is mixed screen reader support of associating figure captions with their figures, including [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) creates the association if none is present. That said, the element structure is useful for CSS styling, plus it provides a way to place a description of the image next to it in the source.
 
 ### Empty alt attributes
 

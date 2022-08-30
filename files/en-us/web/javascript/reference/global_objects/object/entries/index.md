@@ -22,7 +22,7 @@ The order of the array returned by `Object.entries()` is
 the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. If
 there is a need for different ordering, then
 the array should be sorted first, like
-`Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));`.
+`Object.entries(obj).sort((a, b) => a[0].localeCompare(b[0]));`.
 
 {{EmbedInteractiveExample("pages/js/object-entries.html")}}
 

@@ -29,23 +29,23 @@ ondeviceorientation = (event) => { };
 
 ## Event type
 
-An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DeviceOrientationEvent")}}
 
 ## Event properties
 
-- {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
+- {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the device is providing orientation data absolutely.
-- {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
+- {{domxref("DeviceOrientationEvent.alpha")}} {{ReadOnlyInline}}
   - : A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
-- {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
+- {{domxref("DeviceOrientationEvent.beta")}} {{ReadOnlyInline}}
   - : A number representing the motion of the device around the x axis, expressed in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents the front to back motion of the device.
-- {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
+- {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}}
   - : A number representing the motion of the device around the y axis, expressed in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents the left to right motion of the device.
-- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{readonlyinline}}
+- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, expressed in degrees with values ranging from 0 to 360.
-- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{readonlyinline}}
+- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : The accuracy of the compass given as a positive or negative deviation. It's usually 10.
 
 ## Examples

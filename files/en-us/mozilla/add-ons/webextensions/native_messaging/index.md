@@ -10,7 +10,7 @@ tags:
 
 Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardware).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g., particular hardware).
 
 The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
@@ -181,7 +181,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*
@@ -212,7 +212,7 @@ Here's the example above, rewritten to use `runtime.sendNativeMessage()`:
 
 ```js
 function onResponse(response) {
-  console.log("Received " + response);
+  console.log(`Received ${response}`);
 }
 
 function onError(error) {
@@ -268,7 +268,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
         // The browser will emit the size as a header of the payload,
         // if it hasn't been read yet, do it.
         // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (ie. data.length >= payloadSize + 4)
+        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
         if (!sizeHasBeenRead()) {
             payloadSize = stringData.readUInt32LE(0);
         }

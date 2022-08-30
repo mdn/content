@@ -19,9 +19,18 @@ the expected type.
 ```js
 new TypeError()
 new TypeError(message)
+new TypeError(message, options)
 new TypeError(message, fileName)
 new TypeError(message, fileName, lineNumber)
+
+TypeError()
+TypeError(message)
+TypeError(message, options)
+TypeError(message, fileName)
+TypeError(message, fileName, lineNumber)
 ```
+
+> **Note:** `TypeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `TypeError` instance.
 
 ### Parameters
 

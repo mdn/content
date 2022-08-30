@@ -50,7 +50,7 @@ As the style already exists, as it is defined in the SVG, this should succeed.
 
 ```js
 const style = document.getElementById("InlineStyle")
-style.disabled = true;  
+style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the `disabled` value and button text.

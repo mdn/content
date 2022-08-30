@@ -13,10 +13,7 @@ browser-compat: javascript.operators.class
 ---
 {{jsSidebar("Operators")}}
 
-The **class expression** is one way to define a
-class in ECMAScript 2015. Similar to {{jsxref("Operators/function", "function
-    expressions", "", "true")}}, class expressions can be named or unnamed. If named, the
-name of the class is local to the class body only.
+The **class expression** is one way to define a class. Similar to [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function), class expressions can be named or unnamed. If named, the name of the class is local to the class body only.
 
 JavaScript classes use prototype-based inheritance.
 

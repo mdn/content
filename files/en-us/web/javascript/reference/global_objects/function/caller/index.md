@@ -2,13 +2,13 @@
 title: Function.prototype.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 tags:
-  - Deprecated
   - Function
   - JavaScript
   - Property
+  - Non-standard
 browser-compat: javascript.builtins.Function.caller
 ---
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}{{Non-standard_Header}}
 
 A {{jsxref("Function")}} object's **`caller`** property returns the function that invoked the specified function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `caller` property throws an exception.
 

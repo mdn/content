@@ -1115,7 +1115,7 @@ In the example shown here, a video is offered to the browser in two formats: Web
 
 The video is offered first in WebM format (with the {{htmlattrxref("type", "video")}} attribute set to `video/webm`).
 If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
-If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
+If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 
 ## Specifications
 

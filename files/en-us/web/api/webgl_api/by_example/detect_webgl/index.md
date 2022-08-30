@@ -45,7 +45,7 @@ button {
 window.addEventListener("load", () => {
   const paragraph = document.querySelector("p");
   const button = document.querySelector("button");
-  
+
   // Adding click event handler to button.
   button.addEventListener("click", detectWebGLContext, false);
   function detectWebGLContext () {
@@ -53,16 +53,14 @@ window.addEventListener("load", () => {
     // document itself, so it is never displayed in the
     // browser window.
     const canvas = document.createElement("canvas");
-    
+
     // Get WebGLRenderingContext from canvas element.
     const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    
+
     // Report the result.
-    if (gl && gl instanceof WebGLRenderingContext) {
-      paragraph.textContent = "Congratulations! Your browser supports WebGL.";
-    } else {
-      paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
-    }
+    paragraph.textContent = gl instanceof WebGLRenderingContext
+      ? "Congratulations! Your browser supports WebGL."
+      : "Failed. Your browser or device may not support WebGL.";
   }
 }, false);
 ```

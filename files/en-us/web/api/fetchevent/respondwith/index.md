@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/respondWith
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Method
   - Offline

@@ -6,7 +6,6 @@ tags:
   - Canvas
   - CanvasCaptureMediaStream
   - DOM
-  - Experimental
   - Frame Capture
   - Media
   - Method

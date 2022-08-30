@@ -7,7 +7,7 @@ tags:
 ---
 {{APIRef("File API")}}
 
-Using the File API, which was added to the DOM in HTML5, it's now possible for web content to ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
+Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
 
 ## Accessing selected file(s)
 
@@ -73,44 +73,47 @@ The following example shows a possible use of the `size` property:
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>File(s) size</title>
-</head>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>File(s) size</title>
+  </head>
 
-<body>
-  <form name="uploadForm">
-    <div>
-      <input id="uploadInput" type="file" name="myFiles" multiple>
-      selected files: <span id="fileNum">0</span>;
-      total size: <span id="fileSize">0</span>
-    </div>
-    <div><input type="submit" value="Send file"></div>
-  </form>
+  <body>
+    <form name="uploadForm">
+      <div>
+        <input id="uploadInput" type="file" multiple>
+        selected files: <output id="fileNum">0</output>;
+        total size: <output id="fileSize">0</output>
+      </div>
+      <div><input type="submit" value="Send file"></div>
+    </form>
 
-  <script>
-  function updateSize() {
-    let nBytes = 0,
-        oFiles = this.files,
-        nFiles = oFiles.length;
-    for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-      nBytes += oFiles[nFileId].size;
-    }
-    let sOutput = nBytes + " bytes";
-    // optional code for multiples approximation
-    const aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-    for (nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-      sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-    }
-    // end of optional code
-    document.getElementById("fileNum").innerHTML = nFiles;
-    document.getElementById("fileSize").innerHTML = sOutput;
-  }
+    <script>
+      const uploadInput = document.getElementById("uploadInput");
+      uploadInput.addEventListener("change", () => {
+        // Calculate total size
+        let numberOfBytes = 0;
+        for (const file of uploadInput.files) {
+          numberOfBytes += file.size;
+        }
 
-  document.getElementById("uploadInput").addEventListener("change", updateSize, false);
-  </script>
-</body>
+        // Approximate to the closest prefixed unit
+        const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+        const exponent = Math.min(
+          Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+          units.length - 1,
+        );
+        const approx = numberOfBytes / 1024 ** exponent;
+        const output = exponent === 0 
+          ? `${numberOfBytes} bytes` 
+          : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
+
+        document.getElementById("fileNum").textContent = fileList.length;
+        document.getElementById("fileSize").textContent = output;
+      }, false);
+    </script>
+  </body>
 </html>
 ```
 
@@ -162,11 +165,7 @@ and this CSS:
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
-input.visually-hidden:focus + label {
-  outline: thin dotted;
-}
-input.visually-hidden:focus-within + label {
+input.visually-hidden:is(:focus, :focus-within) + label {
   outline: thin dotted;
 }
 ```
@@ -438,10 +437,10 @@ if (isset($_FILES['myFile'])) {
     exit;
 }
 ?><!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <title>dnd binary upload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>dnd binary upload</title>
     <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";

@@ -134,9 +134,9 @@ The code below shows what happens if we call `reduce()` with an array and no ini
 ```js
 const array = [15, 16, 17, 18, 19];
 
-function reducer(previous, current, index) {
-  const returns = previous + current;
-  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+function reducer(previousValue, currentValue, index) {
+  const returns = previousValue + currentValue;
+  console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`);
   return returns;
 }
 
@@ -145,64 +145,14 @@ array.reduce(reducer);
 
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code> iteration
-      </th>
-      <th scope="col">
-        <code><var>previousValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentIndex</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>15</code></td>
-      <td><code>16</code></td>
-      <td><code>1</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>31</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>31</code></td>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>48</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>48</code></td>
-      <td><code>18</code></td>
-      <td><code>3</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>66</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>66</code></td>
-      <td><code>19</code></td>
-      <td><code>4</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>85</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `previousValue` | `currentValue` | `index` | Return value |
+| ------------|-----------------|----------------|---------|--------------|
+| First call  | `15`            | `16`           | `1`     | `31`         |
+| Second call | `31`            | `17`           | `2`     | `48`         |
+| Third call  | `48`            | `18`           | `3`     | `66`         |
+| Fourth call | `66`            | `19`           | `4`     | `85`         |
 
-The value returned by `reduce()` would be that of the last callback invocation (`85`).
+The `array` parameter never changes through the process — it's always `[15, 16, 17, 18, 19]`. The value returned by `reduce()` would be that of the last callback invocation (`85`).
 
 ### How reduce() works with an initial value
 
@@ -214,70 +164,13 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code> iteration
-      </th>
-      <th scope="col">
-        <code><var>previousValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentIndex</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>10</code></td>
-      <td><code>15</code></td>
-      <td><code>0</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>25</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>25</code></td>
-      <td><code>16</code></td>
-      <td><code>1</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>41</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>41</code></td>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>58</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>58</code></td>
-      <td><code>18</code></td>
-      <td><code>3</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>76</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fifth call</th>
-      <td><code>76</code></td>
-      <td><code>19</code></td>
-      <td><code>4</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>95</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `previousValue` | `currentValue` | `index` | Return value |
+| ------------|-----------------|----------------|---------|--------------|
+| First call  | `10`            | `15`           | `0`     | `25`         |
+| Second call | `25`            | `16`           | `1`     | `41`         |
+| Third call  | `41`            | `17`           | `2`     | `58`         |
+| Fourth call | `58`            | `18`           | `3`     | `76`         |
+| Fifth call  | `76`            | `19`           | `4`     | `95`         |
 
 The value returned by `reduce()` in this case would be `95`.
 
@@ -351,7 +244,7 @@ const groupedPeople = groupBy(people, 'age')
 // }
 ```
 
-### Concatenating arrays contained in an array of objects using the spread operator and initialValue
+### Concatenating arrays contained in an array of objects using the spread syntax and initialValue
 
 ```js
 // friends - an array of objects

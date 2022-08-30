@@ -24,7 +24,7 @@ onremovetrack = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamTrackEvent")}}
 

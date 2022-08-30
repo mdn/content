@@ -29,7 +29,7 @@ new SpeechSynthesisUtterance(text)
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis).
 
 ```js
 const synth = window.speechSynthesis;
@@ -48,7 +48,7 @@ inputForm.onsubmit = (event) => {
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for (i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }

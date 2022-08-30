@@ -23,6 +23,8 @@ No notable changes.
 
 - Three new viewport sizes have been introduced: small (`s`), large (`l`), and dynamic (`d`). These new sizes have added new [viewport-percentage length units](/en-US/docs/Web/CSS/length) in addition to the existing ones - `vh`, `vw`, `vmax`, and `vmin`. The new viewport-percentage length units include `svh`, `lvh`, `dvh`, `svw`, `lvw`, `dvw`, `svmax`, `lvmax`, `dvmax`, `svmin`, `lvmin`, and `dvmin` ({{bug(1610815)}}). Additionally, the units `vb` and `vi` are now supported by default ({{bug(1610815)}}).
 
+- Support for the [`inline-size`](/en-US/docs/Web/CSS/contain#inline-size) value for the `contain` property has been added. For more information, see  ({{bug(1755565)}}).
+
 ### JavaScript
 
 No notable changes.
@@ -52,6 +54,11 @@ No notable changes.
 - [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information, see {{bug(1611957)}}.
+
+#### SVG
+
+- SVG images in the Firefox UI that are styled using [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) will respect the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedder (previously `prefers-color-scheme` ignored the `color-scheme` of the embedder and triggered off either the device or browser theme).
+  This ensures that a favicon, for example, is always styled to match the theme of the elements that nest it, and not necessarily the (potentially different) theme of the device. ({{bug(1764354)}}).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

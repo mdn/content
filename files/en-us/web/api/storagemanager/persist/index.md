@@ -10,12 +10,9 @@ tags:
   - persist()
 browser-compat: api.StorageManager.persist
 ---
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Storage")}}
 
-The **`persist()`** method of the
-{{domxref("StorageManager")}} interface requests permission to use persistent storage,
-and returns a {{jsxref('Promise')}} that resolves to `true` if permission
-is granted and box mode is persistent, and `false` otherwise.
+The **`persist()`** method of the {{domxref("StorageManager")}} interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to `true` if permission is granted and box mode is persistent, and `false` otherwise.
 
 ## Syntax
 
@@ -34,13 +31,15 @@ A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
 ## Example
 
 ```js
-if (navigator.storage && navigator.storage.persist)
+if (navigator.storage && navigator.storage.persist) {
   navigator.storage.persist().then((persistent) => {
-    if (persistent)
+    if (persistent) {
       console.log("Storage will not be cleared except by explicit user action");
-    else
+    } else {
       console.log("Storage may be cleared by the UA under storage pressure.");
+    }
   });
+}
 ```
 
 ## Specifications

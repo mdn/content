@@ -54,7 +54,7 @@ The {{domxref("Document.pointerLockElement","pointerLockElement")}} property is 
 Here is an example of using `pointerLockElement`:
 
 ```js
-if(document.pointerLockElement === canvas ||
+if (document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
 } else {
@@ -84,7 +84,7 @@ if ("onpointerlockchange" in document) {
 }
 
 function lockChangeAlert() {
-  if(document.pointerLockElement === canvas ||
+  if (document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
     // Do something useful in response
@@ -126,7 +126,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 ## Simple example walkthrough
 
-We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). The demo looks like this:
+We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)). The demo looks like this:
 
 ![A red circle on top of a black background.](pointer-lock.png)
 
@@ -182,7 +182,7 @@ function lockChangeAlert() {
 }
 ```
 
-The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
+The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if ()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
 
 ```js
 const tracker = document.getElementById('tracker');

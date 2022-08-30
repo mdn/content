@@ -125,7 +125,7 @@ function onUpdated() {
 }
 
 function onError() {
-  console.log("error updating item:" + browser.runtime.lastError);
+  console.log("error updating item:", browser.runtime.lastError);
 }
 
 browser.menus.create({

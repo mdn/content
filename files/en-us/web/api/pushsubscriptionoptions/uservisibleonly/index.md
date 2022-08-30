@@ -22,12 +22,12 @@ A boolean value that indicates whether the returned push subscription will only 
 
 In the example below the value of `userVisibleOnly` is printed to the console.
 
-```css
+```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options.userVisibleOnly); // true if this is a user visible subscription
-  })
+  });
 });
 ```
 

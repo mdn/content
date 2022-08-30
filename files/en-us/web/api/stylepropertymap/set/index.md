@@ -10,6 +10,7 @@ tags:
   - Reference
   - StylePropertyMap
   - set()
+  - Experimental
 browser-compat: api.StylePropertyMap.set
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}

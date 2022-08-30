@@ -17,7 +17,7 @@ spec-urls:
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{cssxref("page-break-after")}}
 - {{cssxref("page-break-before")}}

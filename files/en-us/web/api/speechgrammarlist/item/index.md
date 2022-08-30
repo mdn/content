@@ -45,7 +45,7 @@ const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
-const myFirstGrammar = speechRecognitionList[0]; // var should contain the SpeechGrammar object created in line 4.
+const myFirstGrammar = speechRecognitionList[0]; // variable contain the object created above
 ```
 
 ## Specifications

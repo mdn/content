@@ -19,7 +19,7 @@ the event occurred.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 

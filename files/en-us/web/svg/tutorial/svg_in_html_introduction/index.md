@@ -15,7 +15,7 @@ To include an inline SVG in an HTML file, paste the entire SVG file into the HTM
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <title>SVG Demo</title>

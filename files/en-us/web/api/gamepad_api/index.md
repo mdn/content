@@ -4,7 +4,6 @@ slug: Web/API/Gamepad_API
 page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Gamepad API
   - Games
   - Overview
@@ -28,7 +27,7 @@ The **Gamepad API** is a way for developers to access and respond to signals fro
 - [`GamepadHapticActuator`](/en-US/docs/Web/API/GamepadHapticActuator)
   - : Represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
 - [`GamepadPose`](/en-US/docs/Web/API/GamepadPose)
-  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is *not* used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
+  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is _not_ used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
 
 See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#experimental_extensions_to_gamepad), for features that allow you to access the above information.
 

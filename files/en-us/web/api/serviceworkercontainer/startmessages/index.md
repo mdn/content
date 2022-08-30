@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerContainer/startMessages
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Reference
   - Service Workers
   - ServiceWorkerContainer
@@ -51,7 +50,7 @@ None.
 ## Examples
 
 ```js
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('/sw.js')
            .then(() => { console.log('Service Worker Registered'); });

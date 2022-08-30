@@ -349,7 +349,7 @@ We won't be looking at objects any more for now — you can learn more about tho
 
 ## Dynamic typing
 
-JavaScript is a "dynamically typed language", which means that, unlike some other languages, you don't need to specify what data type a variable will contain (numbers, strings, arrays, etc).
+JavaScript is a "dynamically typed language", which means that, unlike some other languages, you don't need to specify what data type a variable will contain (numbers, strings, arrays, etc.).
 
 For example, if you declare a variable and give it a value enclosed in quotes, the browser treats the variable as a string:
 
@@ -387,7 +387,7 @@ If you try to do this using `const` you will see an error:
 const count;
 ```
 
-Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called *reassigning* the variable):
+Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called _reassigning_ the variable):
 
 ```js
 let count = 1;

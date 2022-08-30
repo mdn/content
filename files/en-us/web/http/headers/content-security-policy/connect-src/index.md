@@ -79,13 +79,13 @@ The following connections are blocked and won't load:
 <a ping="https://not-example.com">
 
 <script>
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://not-example.com/');
   xhr.send();
 
-  var ws = new WebSocket("https://not-example.com/");
+  const ws = new WebSocket("https://not-example.com/");
 
-  var es = new EventSource("https://not-example.com/");
+  const es = new EventSource("https://not-example.com/");
 
   navigator.sendBeacon("https://not-example.com/", { /* … */ });
 </script>

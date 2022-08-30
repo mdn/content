@@ -6,7 +6,6 @@ tags:
   - API
   - Canvas
   - CanvasPattern
-  - Experimental
   - Method
   - Reference
 browser-compat: api.CanvasPattern.setTransform

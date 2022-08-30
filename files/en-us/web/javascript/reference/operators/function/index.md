@@ -43,7 +43,7 @@ function name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-As of ES2015, you can also use {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}}.
+You can also create functions using the [arrow function syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parameters
 

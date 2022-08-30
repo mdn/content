@@ -98,12 +98,7 @@ export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, length, length);
 
-  return {
-    length: length,
-    x: x,
-    y: y,
-    color: color
-  };
+  return { length, x, y, color };
 }
 ```
 
@@ -190,10 +185,10 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title></title>
-  <meta charset="utf-8">
   <link rel="stylesheet" href="">
 </head>
 <body>
@@ -231,7 +226,7 @@ Note the lack of curly braces.
 We could instead prepend `export default` onto the function and define it as an anonymous function, like this:
 
 ```js
-export default function(ctx) {
+export default function (ctx) {
   // …
 }
 ```

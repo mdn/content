@@ -55,8 +55,7 @@ There are two ways to access an individual character in a string. The first is t
 'cat'.charAt(1) // gives value "a"
 ```
 
-The other way (introduced in ECMAScript 5) is to treat the string as an array-like
-object, where individual characters correspond to a numerical index:
+The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
 'cat'[1] // gives value "a"
@@ -114,10 +113,14 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const strPrim = 'foo';
-const strObj = new String(strPrim);
+const strPrim = "foo"; // A literal is a string primitive
+const strPrim2 = String(1); // Coerced into the string primitive "1"
+const strPrim3 = String(true); // Coerced into the string primitive "true"
+const strObj = new String(strPrim); // String with new returns a string wrapper object.
 
 console.log(typeof strPrim); // Logs "string"
+console.log(typeof strPrim2); // Logs "string"
+console.log(typeof strPrim3); // Logs "string"
 console.log(typeof strObj);  // Logs "object"
 ```
 
@@ -197,7 +200,7 @@ Both of the above methods result in identical strings.
 
 ### UTF-16 characters, Unicode codepoints, and grapheme clusters
 
-Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many Easy Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
+Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
 
 However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. Therefore, "lone surrogates" are often not valid values for string manipulation — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates. Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
 
@@ -247,7 +250,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance methods
 
-- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}} {{Experimental_Inline}}
+- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
@@ -360,8 +363,7 @@ You must be careful which level of characters you are iterating on. For example,
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : Returns the calling string value converted to uppercase.
 - {{jsxref("String.prototype.trim()")}}
-  - : Trims whitespace from the beginning and end of the string. Part of the ECMAScript 5
-    standard.
+  - : Trims whitespace from the beginning and end of the string.
 - {{jsxref("String.prototype.trimStart()")}}
   - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.trimEnd()")}}
@@ -380,31 +382,31 @@ You must be careful which level of characters you are iterating on. For example,
 > They are of limited use, as they provide only a subset of the available HTML tags
 > and attributes.
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
-- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("blink")}}
-- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}}
+- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}}
+- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}}
+- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)
-- {{jsxref("String.prototype.small()")}}
+- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}}
+- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
 
 ## Examples

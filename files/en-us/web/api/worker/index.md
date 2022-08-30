@@ -65,13 +65,13 @@ const myWorker = new Worker('/worker.js');
 const first = document.querySelector('input#number1');
 const second = document.querySelector('input#number2');
 
-first.onchange = function() {
+first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Specifications
 

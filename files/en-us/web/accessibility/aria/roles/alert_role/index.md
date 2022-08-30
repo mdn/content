@@ -56,7 +56,7 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', triggerAlert);
 
 function triggerAlert() {
-  var alertEl = document.querySelector('.alert');
+  const alertEl = document.querySelector('.alert');
   alertEl.setAttribute("role", "alert");
 }
 ```

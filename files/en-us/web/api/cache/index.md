@@ -73,8 +73,8 @@ self.addEventListener('activate', (event) => {
   // there are multiple versioned caches.
   const expectedCacheNamesSet = new Set(Object.values(CURRENT_CACHES));
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
         cacheNames.map((cacheName) => {
           if (!expectedCacheNamesSet.has(cacheName)) {
             // If this cache name isn't present in the set of "expected" cache names, then delete it.
@@ -82,8 +82,8 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName);
           }
         })
-      );
-    })
+      )
+    )
   );
 });
 
@@ -164,7 +164,7 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

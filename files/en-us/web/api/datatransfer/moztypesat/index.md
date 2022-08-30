@@ -11,9 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozTypesAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
-
-{{deprecated_header}}{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozTypesAt()`** method returns a list of
 the format types that are stored for an item at the specified index. If the index is not

@@ -85,17 +85,17 @@ When reading the above form, a screen reader will speak "Fruit juice size small"
 
 The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.
 
-Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) interprets it. If it sounds odd, try to improve the form structure.
+Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) interprets it. If it sounds odd, try to improve the form structure.
 
 ## The \<label> element
 
-As we saw in the previous article, The {{HTMLElement("label")}} element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screenreaders will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:
+As we saw in the previous article, The {{HTMLElement("label")}} element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screen readers will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:
 
 ```html
 <label for="name">Name:</label> <input type="text" id="name" name="user_name">
 ```
 
-With the `<label>` associated correctly with the `<input>` via its `for` attribute (which contains the `<input>` element's `id` attribute), a screenreader will read out something like "Name, edit text".
+With the `<label>` associated correctly with the `<input>` via its `for` attribute (which contains the `<input>` element's `id` attribute), a screen reader will read out something like "Name, edit text".
 
 There is another way to associate a form control with a label — nest the form control within the `<label>`, implicitly associating it.
 
@@ -107,7 +107,7 @@ There is another way to associate a form control with a label — nest the form 
 
 Even in such cases however, it is considered best practice to set the `for` attribute to ensure all assistive technologies understand the relationship between label and widget.
 
-If there is no label, or if the form control is neither implicitly nor explicitly associated with a label, a screenreader will read out something like "Edit text blank", which isn't very helpful at all.
+If there is no label, or if the form control is neither implicitly nor explicitly associated with a label, a screen reader will read out something like "Edit text blank", which isn't very helpful at all.
 
 ### Labels are clickable, too!
 
@@ -168,13 +168,13 @@ The paragraph at the top states a rule for required elements. The rule must be i
 
 The above variants increase in effectiveness as you go through them:
 
-- In the first example, the label is not read out at all with the input — you just get "edit text blank", plus the actual labels are read out separately. The multiple `<label>` elements confuse the screenreader.
+- In the first example, the label is not read out at all with the input — you just get "edit text blank", plus the actual labels are read out separately. The multiple `<label>` elements confuse the screen reader.
 - In the second example, things are a bit clearer — the label read out along with the input is "name star name edit text required", and the labels are still read out separately. Things are still a bit confusing, but it's a bit better this time because the `<input>` has a label associated with it.
 - The third example is best — the actual label is read out all together, and the label read out with the input is "name required edit text".
 
-> **Note:** You might get slightly different results, depending on your screenreader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
+> **Note:** You might get slightly different results, depending on your screen reader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
 
-> **Note:** You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Don't test the example with 2 or 3 of the versions uncommented — screenreaders will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
+> **Note:** You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Don't test the example with 2 or 3 of the versions uncommented — screen readers will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
 
 ## Common HTML structures used with forms
 

@@ -194,19 +194,19 @@ canvasCtx.fillText('20k', width - spacing, height - spacing + fontSize);
 // Loop over our magnitude response data and plot our filter
 canvasCtx.beginPath();
 
-for (let i = 0; i < magResponseOutput.length; i++) {
+magResponseOutput.forEach((magResponseData, i) => {
   if (i === 0) {
     canvasCtx.moveTo(
       spacing,
-      height - magResponseOutput[i] * 100 - spacing,
+      height - magResponseData * 100 - spacing,
     );
   } else {
     canvasCtx.lineTo(
       width / totalArrayItems * i,
-      height - magResponseOutput[i] * 100 - spacing,
+      height - magResponseData * 100 - spacing,
     );
   }
-}
+});
 
 canvasCtx.stroke();
 ```

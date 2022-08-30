@@ -309,10 +309,10 @@ Now that we have a better understanding of origin type and cascade layer precede
   <tr><td>inline <code>style</code></td></tr>
   <tr><td rowspan="3">6</td><td>user - unlayered styles</td><td rowspan="3"><code>!important</td></tr>
   <tr><td>user - last declared layer</td></tr>
-  <tr><td>user - first declared styles</td></tr>
+  <tr><td>user - first declared layer</td></tr>
   <tr><td rowspan="3">7</td><td>user-agent  - unlayered styles</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>user-agent - last declared layer</td></tr>
-  <tr><td>user-agent - first declared styles</td></tr>
+  <tr><td>user-agent - first declared layer</td></tr>
   <tr><td>8</td><td>transitions</td><td></td></tr>
 </tbody>
 </table>

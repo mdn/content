@@ -21,7 +21,7 @@ The **`HTMLTemplateElement`** interface enables access to the contents of an HTM
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLTemplateElement.content", "content")}} {{readonlyinline}}
+- {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
   - : A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.
 
 ## Methods

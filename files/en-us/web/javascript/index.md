@@ -10,7 +10,7 @@ tags:
 ---
 {{JsSidebar}}
 
-**JavaScript** (**JS**) is a lightweight, interpreted, or [just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation) compiled programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a {{Glossary("Prototype-based programming", "prototype-based")}}, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more [about JavaScript](/en-US/docs/Web/JavaScript/About_JavaScript).
+**JavaScript** (**JS**) is a lightweight, interpreted, or [just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation) compiled programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more [about JavaScript](/en-US/docs/Web/JavaScript/About_JavaScript).
 
 This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about {{Glossary("API","APIs")}} that are specific to Web pages, please see [Web APIs](/en-US/docs/Web/API) and {{Glossary("DOM")}}.
 
@@ -67,7 +67,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-  - : Strict mode defines that you cannot use any variable before initializing it. It is a restricted variant of ECMAScript 5, for faster performance and easier debugging.
+  - : Strict mode defines that you cannot use any variable before initializing it. It is a restricted variant of the language, for faster performance and easier debugging.
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
   - : JavaScript typed arrays provide a mechanism for accessing raw binary data.
 - [Memory Management](/en-US/docs/Web/JavaScript/Memory_Management)

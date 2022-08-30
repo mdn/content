@@ -21,25 +21,17 @@ notation).
 ## Syntax
 
 ```js
-new Uint32Array(); // new in ES2017
-new Uint32Array(length);
-new Uint32Array(typedArray);
-new Uint32Array(object);
+new Uint32Array()
+new Uint32Array(length)
+new Uint32Array(typedArray)
+new Uint32Array(object)
 
-new Uint32Array(buffer);
-new Uint32Array(buffer, byteOffset);
-new Uint32Array(buffer, byteOffset, length);
+new Uint32Array(buffer)
+new Uint32Array(buffer, byteOffset)
+new Uint32Array(buffer, byteOffset, length)
 ```
 
-## Description
-
-The `Uint32Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint32Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Uint32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint32Array constructor
-// without new is forbidden
-```
+> **Note:** `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

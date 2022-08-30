@@ -25,7 +25,7 @@ browser-compat: api.XRInputSourceArray
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-The interface **`XRInputSourceArray`** represents a *live* list of WebXR input sources, and is used as the return value of the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}. Each entry is an {{domxref("XRInputSource")}} representing one input device connected to the WebXR system.
+The interface **`XRInputSourceArray`** represents a _live_ list of WebXR input sources, and is used as the return value of the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}. Each entry is an {{domxref("XRInputSource")}} representing one input device connected to the WebXR system.
 
 In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers inside square brackets), methods are available to allow the use of iterators and the {{domxref("XRInputSourceArray.forEach", "forEach()")}} method is also available.
 

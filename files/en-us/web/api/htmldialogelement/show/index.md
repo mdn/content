@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/show
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method
@@ -12,7 +11,7 @@ tags:
   - show
 browser-compat: api.HTMLDialogElement.show
 ---
-{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`show()`** method of the {{domxref("HTMLDialogElement")}}
 interface displays the dialog modelessly, i.e. still allowing interaction with content
@@ -72,7 +71,7 @@ button.
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');

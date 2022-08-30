@@ -82,7 +82,7 @@ const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.
 const target = document.getElementById("target");
-target.setHTML(unsanitized_string, {sanitizer: sanitizer});
+target.setHTML(unsanitized_string, { sanitizer });
 
 console.log(target.innerHTML);
 // "abc  def"

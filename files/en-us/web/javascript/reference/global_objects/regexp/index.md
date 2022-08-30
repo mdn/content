@@ -32,18 +32,18 @@ const re = /ab+c/i; // literal notation
 // OR
 const re = new RegExp('ab+c', 'i'); // constructor with string pattern as first argument
 // OR
-const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
+const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument
 ```
 
 Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
 
 The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
 
-Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
+Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#building_a_regular_expression_from_dynamic_inputs).
 
 ### Flags in constructor
 
-Starting with ECMAScript 6, `new RegExp(/ab+c/, 'i')` no longer throws a {{jsxref("TypeError")}} (`"can't supply flags when constructing one RegExp from another"`) when the first argument is a `RegExp` and the second `flags` argument is present. A new `RegExp` from the arguments is created instead.
+The expression `new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the flags provided by the second.
 
 When using the constructor function, the normal string escape rules (preceding special characters with `\` when included in a string) are necessary.
 

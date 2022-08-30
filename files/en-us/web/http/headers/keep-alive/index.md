@@ -35,7 +35,7 @@ The **`Keep-Alive`** general header allows the sender to hint about how the conn
 
 ## Syntax
 
-```
+```http
 Keep-Alive: parameters
 ```
 
@@ -52,7 +52,7 @@ Keep-Alive: parameters
 
 A response containing a `Keep-Alive` header:
 
-```
+```http
 HTTP/1.1 200 OK
 Connection: Keep-Alive
 Content-Encoding: gzip

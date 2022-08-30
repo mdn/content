@@ -101,9 +101,7 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   const colors = [];
 
-  for (let j = 0; j < faceColors.length; ++j) {
-    const c = faceColors[j];
-
+  for (const c of faceColors) 
     // Repeat each color four times for the four vertices of the face
     colors.push(c, c, c, c);
   }
@@ -179,6 +177,6 @@ At this point, we now have an animated cube rotating, its six faces rather vivid
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

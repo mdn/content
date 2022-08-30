@@ -98,18 +98,12 @@ dd {
   border: 1px solid black;
  }
 dd.none {
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
 }
 dd.manual {
-  -webkit-hyphens: manual;
-  -ms-hyphens: manual;
   hyphens: manual;
 }
 dd.auto {
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto;
 }
 ```

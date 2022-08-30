@@ -62,7 +62,7 @@ f.size = "6";
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
+The `<font>` element has been deprecated and is no longer supported and, as a result, neither is
 `<font>.size`.
 
 ## Browser compatibility

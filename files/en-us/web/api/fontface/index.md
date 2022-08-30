@@ -35,9 +35,9 @@ The **`FontFace`** interface represents a single usable font face. It allows con
   - : A string that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
 - {{domxref("FontFace.lineGapOverride")}}
   - : A string that retrieves or sets the _line-gap metric_ of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.
-- {{domxref("FontFace.loaded")}} {{readonlyinline}}
+- {{domxref("FontFace.loaded")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves with the current `FontFace` object when the font specified in the object's constructor is done loading or rejects with a `SyntaxError` {{domxref("DOMException")}}.
-- {{domxref("FontFace.status")}} {{readonlyinline}}
+- {{domxref("FontFace.status")}} {{ReadOnlyInline}}
   - : Returns an enumerated value indicating the status of the font, one of  `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 - {{domxref("FontFace.stretch")}}
   - : A string that retrieves or sets how the font _stretches_. It is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.

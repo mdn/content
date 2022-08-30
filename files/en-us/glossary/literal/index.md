@@ -42,11 +42,7 @@ The following is an example of an object literal. The first element of the `car`
 const sales = 'BMW';
 
 function carTypes(name) {
-  if (name === 'Honda') {
-    return name;
-  } else {
-    return `Sorry, we don't sell ${name}.`;
-  }
+  return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
 }
 
 const car = {

@@ -39,7 +39,7 @@ console.log("b");
 
 ### RegExp
 
-the following properties are deprecated. This does not affect their use in {{jsxref("String.replace", "replacement strings", "", 1)}}:
+The following properties are deprecated. This does not affect their use in [replacement strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace):
 
 <table class="standard-table">
   <tbody>
@@ -62,10 +62,6 @@ the following properties are deprecated. This does not affect their use in {{jsx
     <tr>
       <td>{{jsxref("RegExp.input", "$_")}}</td>
       <td>See <code>input</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.multiline", "$*")}}</td>
-      <td>See <code>multiline</code>.</td>
     </tr>
     <tr>
       <td>{{jsxref("RegExp.lastMatch", "$&amp;")}}</td>
@@ -106,19 +102,7 @@ the following properties are deprecated. This does not affect their use in {{jsx
   </tbody>
 </table>
 
-The following are now properties of `RegExp` instances, no longer of the `RegExp` object:
-
-| Property                                                     | Description                                                                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
-| {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Whether or not to search in strings across multiple lines.                                                         |
-| {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
-
-In addition, the {{jsxref("RegExp.compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
-
-The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("Object.prototype.valueOf()")}}, which returns itself.
+The {{jsxref("RegExp.compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
 ### Function
 
@@ -155,6 +139,20 @@ Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Re
 ## Obsolete features
 
 These obsolete features have been entirely removed from JavaScript and can no longer be used as of the indicated version of JavaScript.
+
+### RegExp
+
+The following are now properties of `RegExp` instances, no longer of the `RegExp` constructor:
+
+| Property                                                     | Description                                                                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
+| {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
+| {{jsxref("RegExp.multiline", "multiline")}} (also via `RegExp.$*`) | Whether or not to search in strings across multiple lines.                                                         |
+| {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
+
+The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("Object.prototype.valueOf()")}}, which returns itself.
 
 ### Function
 

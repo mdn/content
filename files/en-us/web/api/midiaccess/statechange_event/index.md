@@ -33,7 +33,7 @@ A {{domxref("MIDIConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("MIDIConnectionEvent.port")}} {{readonlyinline}}
+- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
 
 ## Example
@@ -42,7 +42,7 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
      access.onstatechange = (event) => {
        console.log(event.port.name, event.port.manufacturer, event.port.state);
      };

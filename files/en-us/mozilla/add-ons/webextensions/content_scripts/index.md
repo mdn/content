@@ -72,7 +72,7 @@ Consider a web page like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   </head>
@@ -360,7 +360,7 @@ function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
   portFromCS.onMessage.addListener((m) => {
-    portFromCS.postMessage({greeting: "In background script, received message from content script:" + m.greeting});
+    portFromCS.postMessage({greeting: `In background script, received message from content script: ${m.greeting}`});
   });
 }
 
@@ -439,7 +439,7 @@ window.addEventListener("message", (event) => {
     event.source === window &&
     event?.data?.direction === "from-page-script"
   ) {
-    alert("Content script received message: \"" + event.data.message + "\"");
+    alert(`Content script received message: "${event.data.message}"`);
   }
 });
 ```

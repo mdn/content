@@ -39,7 +39,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("text-shadow")}}
   - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
 - {{cssxref("text-decoration-color")}}
-  - : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
+  - : By default, text decorations (such as underlines, strikethroughs, etc.) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
 - {{cssxref("caret-color")}}
@@ -382,18 +382,18 @@ The CSS establishes a size for the box and some basic styling for appearances. T
 The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
 
 ```js
-let colorPicker = document.getElementById("colorPicker");
-let box = document.getElementById("box");
-let output = document.getElementById("output");
+const colorPicker = document.getElementById("colorPicker");
+const box = document.getElementById("box");
+const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
+colorPicker.addEventListener("input", (event) => {
   box.style.borderColor = event.target.value;
 }, false);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
+colorPicker.addEventListener("change", (event) => {
+  output.innerText = `Color set to ${colorPicker.value}.`;
 }, false);
 ```
 

@@ -28,8 +28,8 @@ class ImplementAbstraction {
   }
 
   display() {
-    console.log('a = ' + this.a);
-    console.log('b = ' + this.b);
+    console.log(`a = ${this.a}`);
+    console.log(`b = ${this.b}`);
   }
 }
 

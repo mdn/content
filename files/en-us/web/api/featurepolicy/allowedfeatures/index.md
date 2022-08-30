@@ -9,6 +9,7 @@ tags:
   - Feature-Policy
   - FeaturePolicy
   - Reference
+  - Experimental
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

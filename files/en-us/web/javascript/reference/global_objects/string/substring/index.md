@@ -82,7 +82,7 @@ know the starting and ending indices as you would in the above examples.
 ```js
 const text = 'Mozilla';
 
-// Takes 5 last characters of string
+// Takes 4 last characters of string
 console.log(text.substring(text.length - 4)); // prints "illa"
 
 // Takes 5 last characters of string
@@ -154,7 +154,7 @@ changes the string `Brave New World` to `Brave New Web`.
 // Replaces oldS with newS in the string fullS
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i < fullS.length; ++i) {
-    if (fullS.substring(i, i + oldS.length) == oldS) {
+    if (fullS.substring(i, i + oldS.length) === oldS) {
       fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
   }

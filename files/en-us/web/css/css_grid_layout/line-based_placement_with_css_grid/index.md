@@ -1,5 +1,5 @@
 ---
-title: Line-based placement with CSS Grid
+title: Grid layout using line-based placement
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 tags:
   - CSS
@@ -135,7 +135,7 @@ Addressing each item individually we can place all four items spanning row and c
 
 ## The `grid-column` and `grid-row` shorthands
 
-We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
+We have quite a lot of code here to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
 
 ```css hidden
 * {box-sizing: border-box;}

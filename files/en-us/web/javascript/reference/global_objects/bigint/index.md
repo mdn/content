@@ -152,7 +152,7 @@ mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0))
 Note that comparisons with `Object`-wrapped BigInt values act as with other objects, only indicating equality when the same object instance is compared:
 
 ```js
-0n === Object(0n)          // false
+Object(0n) === 0n          // false
 Object(0n) === Object(0n)  // false
 
 const o = Object(0n)
@@ -161,11 +161,13 @@ o === o                    // true
 
 ### Conditionals
 
-A BigInt value behaves like a Boolean value in cases where:
+A BigInt value follows the same conversion rules as Numbers when:
 
 - it is converted to a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean): via the [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) function;
 - when used with [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators) `||`, `&&`, and `!`; or
 - within a conditional test like an [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement.
+
+Namely, only `0n` is [falsy](/en-US/docs/Glossary/Falsy); everything else is [truthy](/en-US/docs/Glossary/Truthy).
 
 ```js
 if (0n) {

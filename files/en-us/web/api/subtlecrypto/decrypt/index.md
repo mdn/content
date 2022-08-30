@@ -67,16 +67,14 @@ method.
 
 ### RSA-OAEP
 
-This code decrypts `ciphertext` using RSA-OAEP. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js)
+This code decrypts `ciphertext` using RSA-OAEP. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)
 
 ```js
 function decryptMessage(privateKey, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "RSA-OAEP"
-    },
+    { name: "RSA-OAEP" },
     privateKey,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -84,18 +82,14 @@ function decryptMessage(privateKey, ciphertext) {
 ### AES-CTR
 
 This code decrypts `ciphertext` using AES in CTR mode. Note that
-`counter` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js)
+`counter` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CTR",
-      counter,
-      length: 64
-    },
+    { name: "AES-CTR", counter, length: 64 },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -103,17 +97,14 @@ function decryptMessage(key, ciphertext) {
 ### AES-CBC
 
 This code decrypts `ciphertext` using AES in CBC mode. Note that
-`iv` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js)
+`iv` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CBC",
-      iv: iv
-    },
+    { name: "AES-CBC", iv },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -121,17 +112,14 @@ function decryptMessage(key, ciphertext) {
 ### AES-GCM
 
 This code decrypts `ciphertext` using AES in GCM mode. Note that
-`iv` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js)
+`iv` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
+    { name: "AES-GCM", iv },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```

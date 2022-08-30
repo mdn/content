@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML sections
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Sectioning content

@@ -3,7 +3,7 @@ title: Game monetization
 slug: Games/Publishing_games/Game_monetization
 tags:
   - Games
-  - HTML5
+  - HTML
   - JavaScript
   - Monetization
   - advertisements
@@ -11,6 +11,7 @@ tags:
   - iap
   - licensing
 ---
+
 {{GamesSidebar}}
 
 When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavour on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
@@ -75,7 +76,7 @@ You can sell rights to use your game for branding, or do it yourself. In the fir
 
 ## Other non-game focused monetization strategies
 
-There are other ways you can earn money when building HTML5 games, and it doesn't even have to be game-related.
+There are other ways you can earn money when building HTML games, and it doesn't even have to be game-related.
 
 ### Selling resources
 
@@ -95,4 +96,4 @@ When all else fails you can try putting a donate button on your game's page and 
 
 ## Summary
 
-There are many ways to earn money — everything that applies to the "normal" AAA gaming world can be, more or less, applied to casual HTML5 games. You might however also focus on selling licenses, doing branding, or earning on a revenue share basis from the advertisements. It's totally up to you which path you're going to follow.
+There are many ways to earn money — everything that applies to the "normal" AAA gaming world can be, more or less, applied to casual HTML games. You might however also focus on selling licenses, doing branding, or earning on a revenue share basis from the advertisements. It's totally up to you which path you're going to follow.

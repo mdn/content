@@ -35,6 +35,10 @@ Current implementations in most browsers will remove from the [accessibility tre
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 In this first example, the paragraph with a class of secret is set to `display: none`; the box and any content is now not rendered.

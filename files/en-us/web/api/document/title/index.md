@@ -35,8 +35,9 @@ document).
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>Hello World!</title>
 </head>
 <body>

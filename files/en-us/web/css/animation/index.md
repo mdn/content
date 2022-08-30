@@ -131,12 +131,13 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
   height: 100%;
   width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
-        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+@keyframes move_eye { 
+  from { margin-left: -20%; } 
+  to { margin-left: 100%; }
+}
 ```
 
 {{EmbedLiveSample('Cylon_Eye')}}

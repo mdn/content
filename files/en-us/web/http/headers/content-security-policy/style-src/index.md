@@ -79,7 +79,7 @@ the following stylesheets are blocked and won't load:
 
 as well as styles loaded using the {{HTTPHeader("Link")}} header:
 
-```
+```http
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
@@ -102,7 +102,7 @@ However, styles properties that are set directly on the element's {{domxref("HTM
 document.querySelector('div').style.display = 'none';
 ```
 
-These types of manipulations can be prevented by disallowing Javascript via the {{CSP("script-src")}} CSP directive.
+These types of manipulations can be prevented by disallowing JavaScript via the {{CSP("script-src")}} CSP directive.
 
 ### Unsafe inline styles
 
@@ -126,7 +126,7 @@ The above Content Security Policy will allow inline styles like the {{HTMLElemen
 
 You can use a nonce-source to only allow specific inline style blocks:
 
-```
+```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
 ```
 
@@ -146,7 +146,7 @@ echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | op
 
 You can use a hash-source to only allow specific inline style blocks:
 
-```
+```http
 Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
 ```
 

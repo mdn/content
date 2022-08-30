@@ -36,7 +36,7 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("min-block-size")}}
 - {{CSSxRef("min-inline-size")}}
 
-### Properties for margins, borders and padding
+### Properties for margins, borders, and padding
 
 - {{CSSxRef("border-block")}}
 - {{CSSxRef("border-block-color")}}
@@ -116,9 +116,9 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 ## Guides
 
 - [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [Logical Properties for sizing](/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [Logical Properties for margins, borders and padding](/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
-- [Logical Properties for floating and positioning](/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
+- [Logical properties for sizing](/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing)
+- [Logical properties for margins, borders, and padding](/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
+- [Logical properties for floating and positioning](/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
 
 ## Specifications
 

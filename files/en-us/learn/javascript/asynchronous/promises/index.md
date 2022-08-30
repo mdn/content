@@ -103,15 +103,13 @@ It is, of course. But the elegant feature of promises is that _`then()` itself r
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then((response) => {
-    return response.json();
-  })
+  .then((response) => response.json())
   .then((data) => {
     console.log(data[0].name);
   });
 ```
 
-Instead of calling the second `then()` inside the handler for the first `then()`, we can *return* the promise returned by `json()`, and call the second `then()` on that return value. This is called **promise chaining** and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
+Instead of calling the second `then()` inside the handler for the first `then()`, we can _return_ the promise returned by `json()`, and call the second `then()` on that return value. This is called **promise chaining** and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
 
 Before we move on to the next step, there's one more piece to add. We need to check that the server accepted and was able to handle the request, before we try to read it. We'll do this by checking the status code in the response and throwing an error if it wasn't "OK":
 
@@ -136,7 +134,7 @@ This brings us to the last piece: how do we handle errors? The `fetch()` API can
 
 In the last article, we saw that error handling can get very difficult with nested callbacks, making us handle errors at every nesting level.
 
-To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation *succeeds*, the handler passed to `catch()` is called when the asynchronous operation *fails*.
+To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation _succeeds_, the handler passed to `catch()` is called when the asynchronous operation _fails_.
 
 If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fails. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
 
@@ -188,8 +186,8 @@ Sometimes, you need all the promises to be fulfilled, but they don't depend on e
 
 The promise returned by `Promise.all()` is:
 
-- fulfilled when and if *all* the promises in the array are fulfilled. In this case, the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`.
-- rejected when and if *any* of the promises in the array are rejected. In this case, the `catch()` handler is called with the error thrown by the promise that rejected.
+- fulfilled when and if _all_ the promises in the array are fulfilled. In this case, the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`.
+- rejected when and if _any_ of the promises in the array are rejected. In this case, the `catch()` handler is called with the error thrown by the promise that rejected.
 
 For example:
 

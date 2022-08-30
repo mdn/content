@@ -30,7 +30,7 @@ The selector weight categories are listed here in the order of decreasing specif
 - CLASS column
   - : Includes [class selectors](/en-US/docs/Web/CSS/Class_selectors), such as `.myClass`, attribute selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`. For each class, attribute selector, or pseudo-class in a matching selector, add 0-1-0 to the weight value.
 - TYPE column
-  - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`,  and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
+  - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`, and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
 - No value
   - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight, but they do match elements. The value for both the universal selector and the pseudo-class is 0-0-0; these selectors do not impact the specificity weight value.
 
@@ -143,7 +143,7 @@ Many JavaScript frameworks and libraries add inline styles. Using `!important` w
 ```
 
 ```css
-p[style*="purple"] { color: rebeccapurple; }
+p[style*="purple"] { color: rebeccapurple !important; }
 ```
 
 Make sure to include a comment with every inclusion of the important flag so code maintainers understand why a CSS anti-pattern was used.
@@ -180,7 +180,7 @@ footer a { /* 0-0-2 */
 
 ## Tips for handling specificity headaches
 
-Instead of using `!important`, consider using cascade layers and using low weight specificity throughout your CSS so that styles are easily overridden with slightly more specific rules.  Using semantic HTML helps provide anchors from which to apply styling.
+Instead of using `!important`, consider using cascade layers and using low weight specificity throughout your CSS so that styles are easily overridden with slightly more specific rules. Using semantic HTML helps provide anchors from which to apply styling.
 
 ### Making selectors specific with and without adding specificity
 
@@ -202,7 +202,7 @@ No matter the order, the heading will be green because that rule is the most spe
 
 #### Reducing ID specificity
 
-Specificity is based on the form of a selector.  Including the `id` of an element as an attribute selector rather than an id selector is a good way to make an element more specific without adding an overabundance of specificity. In the previous example, the selector `[id="myContent"]` counts as an attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.
+Specificity is based on the form of a selector. Including the `id` of an element as an attribute selector rather than an id selector is a good way to make an element more specific without adding an overabundance of specificity. In the previous example, the selector `[id="myContent"]` counts as an attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.
 
 You can also include the `id` or any part of a selector as a parameter in the `:where()` specificity-adjustment pseudo class if you need to make a selector more specific but don't want to add any specificity at all.
 
@@ -235,7 +235,8 @@ When two selectors from different layers match the same element, origin and impo
 ```html
 <style>
   @import TW.css layer();
-  p, p * {
+  p,
+  p * {
     font-size: 1rem;
   }
 </style>
@@ -272,9 +273,9 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 
 1. At the beginning of your stylesheet declarations, create a named cascade layer, like so:
 
-    ```css
-    @layer importantOverrides;
-    ```
+   ```css
+   @layer importantOverrides;
+   ```
 
 2. Each time you need to override an important declaration, declare it within the named layer. Only declare important rules within the layer.
 
@@ -322,7 +323,7 @@ h1 {
 ```
 
 ```html
-<html>
+<html lang="en">
   <body id="parent">
     <h1>Here is a title!</h1>
   </body>

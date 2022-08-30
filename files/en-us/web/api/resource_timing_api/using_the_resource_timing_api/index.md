@@ -22,7 +22,7 @@ The interface's properties create a _resource loading timeline_ with {{domxref("
 
 This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the [See also](#see_also) section.
 
-A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/main/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Resource loading phases
 
@@ -115,20 +115,23 @@ function display_size_data(){
   console.log("= Display Size Data");
   for (let i=0; i < list.length; i++) {
     console.log(`== Resource[${i}] - ${list[i].name}`);
-    if ("decodedBodySize" in list[i])
+    if ("decodedBodySize" in list[i]) {
       console.log(`… decodedBodySize[${i}] = ${list[i].decodedBodySize}`);
-    else
+    } else {
       console.log(`… decodedBodySize[${i}] = NOT supported`);
+    }
 
-    if ("encodedBodySize" in list[i])
+    if ("encodedBodySize" in list[i]) {
       console.log(`… encodedBodySize[${i}] = ${list[i].encodedBodySize}`);
-    else
+    } else {
       console.log(`… encodedBodySize[${i}] = NOT supported`);
+    }
 
-    if ("transferSize" in list[i])
+    if ("transferSize" in list[i]) {
       console.log(`… transferSize[${i}] = ${list[i].transferSize}`);
-    else
+    } else {
       console.log(`… transferSize[${i}] = NOT supported`);
+    }
   }
 }
 ```
@@ -157,10 +160,11 @@ function clear_resource_timings() {
   }
   // getEntries should now return zero
   const p = performance.getEntriesByType("resource");
-  if (p.length === 0)
+  if (p.length === 0) {
     console.log("… Performance data buffer cleared");
-  else
+  } else {
     console.log(`… Performance data buffer NOT cleared (still have '${p.length}' items`);
+  }
 }
 
 function set_resource_timing_buffer_size(n) {

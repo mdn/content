@@ -44,7 +44,8 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerStartPosition, viewerStartOrientation));
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation)
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
 }
@@ -173,7 +174,7 @@ Let's take a look at some real code that follows this basic pattern. Since in th
 let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
-  let session = frame.session;
+  const session = frame.session;
   let viewerPose;
 
   // Schedule the next frame to be painted when the time comes.
@@ -186,7 +187,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
   viewerPose = frame.getViewerPose(viewerRefSpace);
   if (viewerPose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     // Start by erasing the color and depth framebuffers.
@@ -205,8 +206,8 @@ function myDrawFrame(currentFrameTime, frame) {
     // Now call the scene rendering code once for each of
     // the session's views.
 
-    for (let view of viewerPose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of viewerPose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       myDrawSceneIntoView(view, deltaTime);
     }
@@ -298,7 +299,7 @@ function drawFrame(time, frame) {
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;
 
-  for (let view of pose.views) {
+  for (const view of pose.views) {
     /* render each view */
   }
 }

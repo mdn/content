@@ -16,7 +16,7 @@ Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Conte
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types <policyName>;

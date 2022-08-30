@@ -289,7 +289,6 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
-
       </td>
     </tr>
     <tr>
@@ -330,7 +329,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Browser fixefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
+            alt="Browser Firefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
             src="theme-bookmark_text.png"
           />
         </p>

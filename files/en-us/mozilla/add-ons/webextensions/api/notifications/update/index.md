@@ -66,14 +66,12 @@ let CAKE_PREP_INTERVAL = 0.005;
 let progress = 0;
 
 browser.alarms.onAlarm.addListener((alarm) => {
-  progress = progress + 10;
+  progress += 10;
   if (progress > 100) {
     browser.notifications.clear(cakeNotification);
     browser.alarms.clear("cake-progress");
   } else {
-    browser.notifications.update(cakeNotification, {
-      "progress": progress
-    });
+    browser.notifications.update(cakeNotification, { progress });
   }
 });
 
@@ -85,15 +83,15 @@ browser.browserAction.onClicked.addListener(() => {
     }
     progress = 0;
     browser.notifications.create(cakeNotification, {
-      "type": "progress",
-      "iconUrl": browser.extension.getURL("icons/cake-48.png"),
-      "title": "Your cake is being prepared…",
-      "message": "Something something cake",
-      "progress": progress
+      type: "progress",
+      iconUrl: browser.extension.getURL("icons/cake-48.png"),
+      title: "Your cake is being prepared…",
+      message: "Something something cake",
+      progress,
     });
     browser.alarms.create(
       "cake-progress",
-      {periodInMinutes: CAKE_PREP_INTERVAL}
+      { periodInMinutes: CAKE_PREP_INTERVAL }
     );
   });
 });

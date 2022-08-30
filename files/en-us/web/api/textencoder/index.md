@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Encoding
-  - Experimental
   - Interface
   - Reference
   - TextEncoder

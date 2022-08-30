@@ -37,7 +37,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.
 - {{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}
   - : A boolean flag indicating if the area is inactive (`true`) or active (`false`).
-- {{domxref("HTMLAreaElement.origin")}} {{readonlyInline}}
+- {{domxref("HTMLAreaElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("HTMLAreaElement.password")}}
   - : A string containing the password specified before the domain name.
@@ -51,7 +51,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "area")}} HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLAreaElement.rel")}}
   - : A string that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource.
-- {{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}
+- {{domxref("HTMLAreaElement.relList")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMTokenList")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource, as a list of tokens.
 - {{domxref("HTMLAreaElement.search")}}
   - : A string containing the search element (including leading question mark `'?'`), if any, of the referenced URL.

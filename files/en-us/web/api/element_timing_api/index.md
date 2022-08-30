@@ -8,9 +8,10 @@ tags:
   - Performance
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.PerformanceElementTiming
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{DefaultAPISidebar("Element Timing")}}{{SeeCompatTable}}
 
 The **Element Timing API** provides features for monitoring the loading performance of large image elements and text nodes as they appear on screen.
 

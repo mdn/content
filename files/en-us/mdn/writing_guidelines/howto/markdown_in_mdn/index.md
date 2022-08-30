@@ -53,28 +53,62 @@ It's permissible for the info string to contain multiple words, like:
 
 In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
-- `bash`
-- `batch`
-- `cpp` (for C/C++)
-- `css`
-- `html`
-- `java`
-- `js` (for JavaScript)
-- `json`
-- `php`
-- `python`
-- `sql`
-- `svg`
-- `xml`
-- `wasm` (for WebAssembly text format)
+- Programming Languages
+  - JavaScript
+    - `js` - JavaScript
+    - `ts` - TypeScript
+    - `jsx` - React JSX
+    - `tsx` - React TSX
+  - C-like
+    - `c` - C
+    - `cpp` - C++
+    - `cs` - C#
+    - `java` - Java
+    - `clike` - C-like (for any C-like language not defined)
+  - Other
+    - `python` - Python
+    - `php` - PHP
+    - `rust` - Rust
+    - `glsl` - GLSL (OpenGL Shaders)
+    - `wasm` - WebAssembly
+- Styling
+  - `css` - CSS
+  - `scss` - Sass (SCSS)
+  - `less` - Less
+- Markup
+  - `html` - HTML
+  - `svg` - SVG
+  - `xml` - XML
+  - `mathml` - MathML
+  - `md` - Markdown
+- Command Prompts
+  - `sh` - Bash/Shell
+  - `batch` - Batch (Windows Shell)
+  - `ps` - PowerShell
+- Configuration/Data Files
+  - `json` - JSON
+  - `ini` - INI
+  - `yaml` - YAML
+  - `toml` - TOML
+  - `sql` - SQL Database
+  - `diff` - Diff file
+  - `ignore` - Gitignore file
+- Other
+  - `http` - HTTP headers
+  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+  - `regex` - Regex
+  - `uri` - URIs and URLs
 
 For example:
 
 ````plain
 ```js
-const greeting = "I will get syntax highlighting";
+const greeting = "I will get JavaScript syntax highlighting";
 ```
 ````
+
+If the highlighting that you wish to use is not listed above you should markup the code block as `plain`.
+Additional languages may be requested by following the [this process](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
 Writers will be able to supply any one of the following additional words, which must come after the language word:
 
@@ -508,7 +542,6 @@ This issue was resolved in <https://github.com/mdn/content/issues/3923>.
 Writers will be able to include KumaScript macro calls in prose content:
 
 ```plain
-
 The **`margin`** [CSS](/en-US/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},

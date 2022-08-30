@@ -10,9 +10,10 @@ tags:
   - VR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRView.requestViewportScale
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestViewportScale()`** method of the {{domxref("XRView")}} interface requests that the user agent sets the requested viewport scale for this viewport to the given value. This is used for dynamic viewport scaling which allows rendering to a subset of the WebXR viewport using a scale factor that can be changed every animation frame.
 
@@ -46,12 +47,12 @@ Alternatively, you can use the {{domxref("XRView.recommendedViewportScale")}} pr
 The following example shows how to request and apply a new viewport scale. The call to {{domxref("XRWebGLLayer.getViewport()")}} applies the change and returns the updated viewport.
 
 ```js
-for (let view of pose.views) {
+for (const view of pose.views) {
   if (view.requestViewportScale) {
     view.requestViewportScale(0.8);
     // or use view.requestViewportScale(view.recommendedViewportScale);
   }
-  let viewport = glLayer.getViewport(view);
+  const viewport = glLayer.getViewport(view);
 }
 ```
 

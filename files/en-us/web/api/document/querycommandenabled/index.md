@@ -8,9 +8,10 @@ tags:
   - Method
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.queryCommandEnabled
 ---
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.queryCommandEnabled()`** method reports whether
 or not the specified editor command is enabled by the browser.
@@ -44,7 +45,7 @@ and `false` if the command isn't`.`
 ```js
 const flg = document.queryCommandEnabled("SelectAll");
 
-if(flg) {
+if (flg) {
   document.execCommand("SelectAll", false, null); // command is enabled, run it
 }
 ```

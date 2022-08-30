@@ -24,7 +24,7 @@ browsers.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: referrer <referrer-policy>;
 ```
 
@@ -51,7 +51,7 @@ where `<referrer-policy>` can be one of the following values:
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: referrer "none";
 ```
 

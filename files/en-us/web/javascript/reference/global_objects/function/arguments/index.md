@@ -7,15 +7,18 @@ tags:
   - JavaScript
   - Property
   - arguments
+  - Non-standard
 browser-compat: javascript.builtins.Function.arguments
 ---
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.
 
-A {{jsxref("Function")}} object's **`arguments`** property refers to an array-like object corresponding to the arguments passed to a function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `arguments` property throws an exception.
+The **`arguments`** accessor property represents the arguments passed to a {{jsxref("Function")}} object. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `arguments` property throws an exception.
 
 ## Description
+
+The value of `arguments` is an array-like object corresponding to the arguments passed to a function.
 
 In the case of recursion, i.e. if function `f` appears several times on the call stack, the value of `f.arguments` represents the arguments corresponding to the most recent invocation of the function.
 

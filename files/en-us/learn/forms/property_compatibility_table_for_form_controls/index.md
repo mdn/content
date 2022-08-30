@@ -42,7 +42,6 @@ For each property there are two possible renderings:
 ```css
 * {
   /* Turn off the native look and feel */
-  -webkit-appearance: none;
   appearance: none;
 
 /* for Internet Explorer */

@@ -39,7 +39,7 @@ matchAll(request, options)
 
     - `ignoreSearch`
       - : A boolean value that specifies whether the
-        matching process should ignore the query string in the URL.  If set to
+        matching process should ignore the query string in the URL. If set to
         `true`, the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
@@ -67,14 +67,16 @@ A {{jsxref("Promise")}} that resolves to an array of all matching responses in t
 
 ## Examples
 
+The following example deletes all cached entries in the `v1` cache matching the URL `/`, even including potential query parameters. By using `{ ignoreSearch: true }`, using `matchAll` would retrieve `/` as well as `/?value=bar`.
+
 ```js
 caches.open('v1').then((cache) => {
-  cache.matchAll('/images/').then((response) => {
-    response.forEach((element, index, array) => {
-      cache.delete(element);
-    });
+  cache.matchAll('/', { ignoreSearch: true }).then((responses) => {
+    for (const response of responses) {
+      cache.delete(response);
+    }
   });
-})
+});
 ```
 
 ## Specifications

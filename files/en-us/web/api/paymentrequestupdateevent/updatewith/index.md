@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Change
-  - Experimental
   - Method
   - Payment Change
   - Payment Details

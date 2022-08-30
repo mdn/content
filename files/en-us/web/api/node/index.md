@@ -168,7 +168,7 @@ This function remove each first child of an element, until there are none left.
 ```js
 function removeAllChildren(element) {
   while (element.firstChild) {
-    element.removeChild(element.firstChild)
+    element.removeChild(element.firstChild);
   }
 }
 ```
@@ -176,7 +176,7 @@ function removeAllChildren(element) {
 Using this function is a single call. Here we empty the body of the document:
 
 ```js
-removeAllChildren(document.body)
+removeAllChildren(document.body);
 ```
 
 An alternative could be to set the textContent to the empty string: `document.body.textContent = ""`.
@@ -189,22 +189,21 @@ a root node (including the root itself):
 ```js
 function eachNode(rootNode, callback) {
   if (!callback) {
-    const nodes = []
-    eachNode(rootNode, function(node) {
-      nodes.push(node)
+    const nodes = [];
+    eachNode(rootNode, (node) => {
+      nodes.push(node);
     })
-    return nodes
+    return nodes;
   }
 
-  if (false === callback(rootNode)) {
-    return false
+  if (callback(rootNode) === false) {
+    return false;
   }
 
   if (rootNode.hasChildNodes()) {
-    const nodes = rootNode.childNodes
-    for (let i = 0, l = nodes.length; i < l; ++i) {
-      if (false === eachNode(nodes[i], callback)) {
-        return
+    for (const node of rootNode.childNodes) {
+      if (eachNode(node, callback) === false) {
+        return;
       }
     }
   }
@@ -240,36 +239,32 @@ We use a wrapper function named `grep` to do the searching:
 
 ```js
 function grep(parentNode, pattern) {
-  let matches = []
-  let endScan = false
+  let matches = [];
+  let endScan = false;
 
-  eachNode(parentNode, function(node){
+  eachNode(parentNode, (node) => {
     if (endScan) {
-      return false
+      return false;
     }
 
     // Ignore anything which isn't a text node
     if (node.nodeType !== Node.TEXT_NODE) {
-      return
+      return;
     }
 
-    if (typeof pattern === "string") {
-      if (-1 !== node.textContent.indexOf(pattern)) {
-        matches.push(node)
-      }
-    }
-    else if (pattern.test(node.textContent)) {
+    if (typeof pattern === "string" && node.textContent.includes(pattern)) {
+      matches.push(node)
+    } else if (pattern.test(node.textContent)) {
       if (!pattern.global) {
-        endScan = true
-        matches = node
-      }
-      else {
-        matches.push(node)
+        endScan = true;
+        matches = node;
+      } else {
+        matches.push(node);
       }
     }
   })
 
-  return matches
+  return matches;
 }
 ```
 
