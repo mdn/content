@@ -26,7 +26,7 @@ tags:
 
 ## Guides in this section
 
-This is the lists of guides and pages you can find in this section.
+This is the list of guides and pages in this section.
 
 - [Contributing](/en-US/docs/MDN/Community/Contributing). How to get started with contributions and what type of contributions we accept. Pages within 'Contributing' are:
 
