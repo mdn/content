@@ -18,7 +18,7 @@ The **`hasIndices`** accessor property indicates whether or not the `d` flag is 
 
 ## Description
 
-`RegExp.prototype.hasIndices` has the value `true` if the `d` flag was used; otherwise, `false`. The `d` flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group. It does not change the regex's interpretation or matching behavior in any way, but only enables additional information in the matching result.
+`RegExp.prototype.hasIndices` has the value `true` if the `d` flag was used; otherwise, `false`. The `d` flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group. It does not change the regex's interpretation or matching behavior in any way, but only provides additional information in the matching result.
 
 The set accessor of `hasIndices` is `undefined`. You cannot change this property directly.
 
