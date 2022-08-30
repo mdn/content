@@ -558,21 +558,21 @@ String literals can be enclosed within single quotes, as in `'A string'`, or wit
 
 For inserting values into strings, use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
-Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
+- Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
-```js example-good
-let name = 'Chris';
-console.log(`Hi! I'm ${name}!`);
-```
+  ```js example-good
+  let name = 'Chris';
+  console.log(`Hi! I'm ${name}!`);
+  ```
 
-Don't concatenate strings like this:
+  Don't concatenate strings like this:
 
-```js example-bad
-let name = 'Chris';
-console.log("Hi! I'm" + name + "!");
-```
+  ```js example-bad
+  let name = 'Chris';
+  console.log("Hi! I'm" + name + "!");
+  ```
 
-Don't overuse template literals: if there are no substitutions, use a normal string literal instead.
+- Don't overuse template literals: if there are no substitutions, use a normal string literal instead.
 
 ## Arrays
 
