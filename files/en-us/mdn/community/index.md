@@ -59,7 +59,9 @@ This is the list of guides and pages in this section.
 
     - : This section covers our guidelines for submitting pull requests and what you should expect from the review process.
 
-- [Users and teams](/en-US/docs/MDN/Community/Users_teams). An overview of the users and teams that are part of the MDN project, and what it means to be in a team.
+- [Users and teams](/en-US/docs/MDN/Community/Users_teams)
+
+    - : This section provides an overview of the users and teams that are part of the MDN Wen Docs project and details what it means to be part of a team.
 
 ## Code of conduct
 
