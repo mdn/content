@@ -31,7 +31,7 @@ device as well as display useful feedback to the user.
 
 ## Value
 
-A {{jsxref("String")}}.
+A string primitive.
 
 ## Examples
 
