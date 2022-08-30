@@ -28,7 +28,8 @@ tags:
 
 This is the list of guides and pages in this section.
 
-- [Contributing](/en-US/docs/MDN/Community/Contributing). How to get started with contributions and what type of contributions we accept. Pages within 'Contributing' are:
+- [Contributing](/en-US/docs/MDN/Community/Contributing)
+   - : This section explains how you can start contributing and the type of contributions we accept. This section covers the following topics:
 
     - [Getting Started](/en-US/docs/MDN/Community/Contributing/Getting_started)
     - [Our Repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories)
