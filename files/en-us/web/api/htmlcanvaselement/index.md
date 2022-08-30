@@ -48,16 +48,16 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
+- [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
+  - : Fired if the user agent detects that the backing storage associated with a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context has been lost.
+- [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
+  - : Fired if the user agent successfully restores a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context.
 - [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - : Fired if the user agent is unable to create a `WebGLRenderingContext` or `WebGL2RenderingContext` context.
 - [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
   - : Fired if the user agent detects that the drawing buffer associated with a `WebGLRenderingContext` or `WebGL2RenderingContext` object has been lost.
 - [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
   - : Fired if the user agent restores the drawing buffer for a `WebGLRenderingContext` or `WebGL2RenderingContext` object.
-- [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
-  - : Fired if the user agent detects that the backing storage associated with a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context has been lost.
-- [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
-  - : Fired if the user agent successfully restores a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context.
 
 ## Specifications
 
