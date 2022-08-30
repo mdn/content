@@ -18,7 +18,7 @@ read-only property returns the form control's `type`.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `"select-multiple"` if multiple values can be selected.
 - `"select-one"` if only one value can be selected.

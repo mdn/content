@@ -201,7 +201,7 @@ If you use callbacks or fetch methods from an object with
 functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
 ```js
-// Written as of ES2019
+// Code written without optional chaining
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data

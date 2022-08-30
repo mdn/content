@@ -46,7 +46,7 @@ You might also think of accessibility as treating everyone the same, and giving 
 
 Accessibility is the right thing to do. Providing accessible sites is part of the law in some countries, which can open up some significant markets that otherwise would not be able to use your services or buy your products.
 
-Building accessible sites benefit everyone:
+Building accessible sites benefits everyone:
 
 - Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.
 - Caring about accessibility demonstrates good ethics and morals, which improves your public image.

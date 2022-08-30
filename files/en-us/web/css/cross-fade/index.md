@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Function
   - CSS-4 Images
-  - Experimental
   - Function
   - Reference
   - Web

@@ -6,7 +6,6 @@ tags:
   - Element
   - HTML
   - HTML scripting
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.canvas

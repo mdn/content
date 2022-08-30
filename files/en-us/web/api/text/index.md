@@ -16,9 +16,14 @@ The **`Text`** interface represents a text {{domxref("Node", "node")}} in a DOM 
 To understand what a text node is, consider the following document:
 
 ```html
-<html class="e"><head><title>Aliens?</title></head>
- <body>Why yes.
-</body></html>
+<html lang="en" class="e">
+  <head>
+    <title>Aliens?</title>
+  </head>
+  <body>
+    Why yes.
+  </body>
+</html>
 ```
 
 In that document, there are three text nodes, with the following contents:

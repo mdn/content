@@ -67,7 +67,7 @@ impact from the possibility of using spoofed values.
 
 ## Syntax
 
-```
+```http
 X-Forwarded-For: <client>, <proxy1>, <proxy2>
 ```
 
@@ -85,7 +85,7 @@ Elements are comma-separated, with optional whitespace surrounding the commas.
 
 ## Examples
 
-```
+```http
 X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
 
 X-Forwarded-For: 203.0.113.195

@@ -377,7 +377,7 @@ This might not be the best setting for everyone. You should read about [the othe
 
 While you could send the `X-Frame-Options` header for all of your website's pages, this has the potential downside that it forbids even any framing of your content (e.g.: when users visit your website using a Google Image Search results page).
 
-Nonetheless, you should ensure that you send the `X-Frame-Options` header for all pages that allow a user to make a state-changing operation (e.g: pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).
+Nonetheless, you should ensure that you send the `X-Frame-Options` header for all pages that allow a user to make a state-changing operation (e.g., pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).
 
 ```apache
 <IfModule mod_headers.c>
@@ -480,7 +480,7 @@ Be aware that Strict Transport Security is not revokable and you must ensure bei
 
     - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 

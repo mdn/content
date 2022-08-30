@@ -26,7 +26,7 @@ required protocol(s).
 
 ## Examples
 
-```
+```http
 HTTP/1.1 426 Upgrade Required
 Upgrade: HTTP/2.0
 Connection: Upgrade

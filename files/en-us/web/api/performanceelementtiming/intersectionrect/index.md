@@ -8,9 +8,10 @@ tags:
   - Reference
   - intersectionRect
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.intersectionRect
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`intersectionRect`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the rectangle of the element within the viewport.
 

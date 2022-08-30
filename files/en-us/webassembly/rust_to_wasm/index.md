@@ -37,7 +37,7 @@ Install Rust by going to the [Install Rust](https://www.rust-lang.org/tools/inst
 To build the package, we need an additional tool, `wasm-pack`. This helps compile the code to WebAssembly, as well as produce the right packaging for use in the browser. To download and install it, enter the following command into your terminal:
 
 ```bash
-$ cargo install wasm-pack
+cargo install wasm-pack
 ```
 
 ## Building our WebAssembly package
@@ -185,7 +185,7 @@ The last section is the `[dependencies]` section. Here's where we tell Cargo wha
 Now that we've got everything set up, let's build the package. Type this into your terminal:
 
 ```bash
-$ wasm-pack build --target web
+wasm-pack build --target web
 ```
 
 This does a number of things (and they take a lot of time, especially the first time you run `wasm-pack`). To learn about them in detail, check out [this blog post on Mozilla Hacks](https://hacks.mozilla.org/2018/04/hello-wasm-pack/). In short, `wasm-pack build`:
@@ -242,7 +242,7 @@ If you want to use the WebAssembly module with npm, we'll need to make a few cha
 Let's start by recompiling out Rust with the target bundler option:
 
 ```bash
-$ wasm-pack build --target bundler
+wasm-pack build --target bundler
 ```
 
 ### Install Node.js and npm
@@ -254,8 +254,8 @@ To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-star
 Next, let's use \`npm link\` to make this package available to other JavaScript packages installed
 
 ```bash
-$ cd pkg
-$ npm link
+cd pkg
+npm link
 ```
 
 We now have an npm package, written in Rust, but compiled to WebAssembly. It's ready for use from JavaScript, and doesn't require the user to have Rust installed; the code included was the WebAssembly code, not the Rust source.
@@ -267,10 +267,10 @@ Let's build a website that uses our new npm package. Many people use npm package
 Let's move back out of the `pkg` directory, and make a new directory, `site`, to try this out in:
 
 ```bash
-$ cd ..
-$ mkdir site
-$ cd site
-$ npm link hello-wasm
+cd ..
+mkdir site
+cd site
+npm link hello-wasm
 ```
 
 Create a new file, `package.json`, and put the following code in it:
@@ -333,8 +333,8 @@ Finally, we need to modify the HTML file; open the `index.html` file and replace
 We're done making files. Let's give this a shot:
 
 ```bash
-$ npm install
-$ npm run serve
+npm install
+npm run serve
 ```
 
 This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.

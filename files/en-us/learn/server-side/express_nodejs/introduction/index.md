@@ -248,7 +248,7 @@ Using non-blocking asynchronous APIs is even more important on Node than in the 
 
 There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.
 
-> **Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> **Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or refactoring the code to native JavaScript features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [async/await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Node offers the [`utils.promisify`](https://nodejs.org/api/util.html#utilpromisifyoriginal) function to do the callback → Promise conversion ergonomically.
 
 > **Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
 
@@ -326,7 +326,7 @@ To use third party middleware you first need to install it into your app using n
 For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 You could then call `use()` on the _Express application object_ to add the middleware to the stack:
@@ -441,7 +441,7 @@ _Express_ apps can use any database mechanism supported by _Node_ (_Express_ its
 In order to use these you have to first install the database driver using npm. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.

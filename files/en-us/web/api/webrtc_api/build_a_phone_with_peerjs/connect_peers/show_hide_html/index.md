@@ -27,7 +27,7 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 
     ```js
     const audioContainer = document.querySelector('.call-container');
-    
+
     // Displays the call button and peer ID
     function showCallContent() {
       window.caststatus.textContent = `Your device ID is: ${peer.id}`;

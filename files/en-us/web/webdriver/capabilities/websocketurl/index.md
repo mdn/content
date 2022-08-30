@@ -16,14 +16,14 @@ Requesting the WebSocket URL by setting the `webSocketUrl` capability to `true`:
 
 Request:
 
-```json
+```http
 POST /session HTTP/1.1
 {"capabilities": {"alwaysMatch": {"webSocketUrl": true}}}
 ```
 
 Response:
 
-```
+```json
 {"value":{"capabilities":{"webSocketUrl":"ws://localhost:9222/session/571f206f-c3fe-794c-9218-77fa89595eb9", [..]}, "sessionId":"571f206f-c3fe-794c-9218-77fa89595eb9"}}
 ```
 

@@ -12,7 +12,7 @@ The {{SVGAttr("target")}} attribute on the SVG {{SVGElement("a")}} element doesn
 page1.html:
 
 ```html
-<html>
+<html lang="en">
   <body>
     <p>This is a SVG button:</p>
     <object width="100" height="50" type="image/svg+xml" data="button.svg"/>

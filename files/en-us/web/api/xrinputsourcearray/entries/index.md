@@ -17,9 +17,10 @@ tags:
   - WebXR Device API
   - XR
   - XRInputSourceArray
+  - Experimental
 browser-compat: api.XRInputSourceArray.entries
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}} interface's
 **`entries()`** method returns a JavaScript

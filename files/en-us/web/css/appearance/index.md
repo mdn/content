@@ -307,4 +307,4 @@ The following values may be operational on historical browser versions using **`
 
 ## See also
 
-- [Definition of `appearance` in CSS Basic User Interface Module Level 4](https://drafts.csswg.org/css-ui/#appearance-switching) 
+- [Definition of `appearance` in CSS Basic User Interface Module Level 4](https://drafts.csswg.org/css-ui/#appearance-switching)

@@ -26,13 +26,8 @@ The **`UserProximityEvent`** indicates whether a nearby physical object is prese
 
 ```js
 window.addEventListener('userproximity', (event) => {
-  if (event.near) {
-    // let's power off the screen
-    navigator.mozPower.screenEnabled = false;
-  } else {
-    // Otherwise, let's power on the screen
-    navigator.mozPower.screenEnabled = true;
-  }
+  // if not near, power off the screen
+  navigator.mozPower.screenEnabled = !event.near;
 });
 ```
 

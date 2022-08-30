@@ -127,7 +127,7 @@ Someone (possibly you) added a script to the page and made a mistake. This will 
 
 Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the page:
 
-![A Javascript error is shown in the Console](js-error.png)
+![A JavaScript error is shown in the Console](js-error.png)
 
 In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series](/en-US/docs/Learn/JavaScript) of articles).
 

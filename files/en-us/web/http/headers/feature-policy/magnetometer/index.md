@@ -16,7 +16,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `magnetometer` directive contro
 
 ## Syntax
 
-```
+```http
 Feature-Policy: magnetometer <allowlist>;
 ```
 

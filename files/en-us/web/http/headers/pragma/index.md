@@ -49,7 +49,7 @@ chain. This header serves for backwards compatibility with the HTTP/1.0 caches t
 
 ## Syntax
 
-```
+```http
 Pragma: no-cache
 ```
 
@@ -61,7 +61,7 @@ Pragma: no-cache
 
 ## Examples
 
-```
+```http
 Pragma: no-cache
 ```
 

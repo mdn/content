@@ -83,7 +83,7 @@ function setupAnimation (evt) {
 
   const button = document.querySelector("button");
   let timer;
-  
+
   function startAnimation(evt) {
     button.removeEventListener(evt.type, startAnimation, false);
     button.addEventListener("click", stopAnimation, false);
@@ -91,14 +91,14 @@ function setupAnimation (evt) {
     timer = setInterval(drawAnimation, 17);
     drawAnimation();
   }
-  
+
   function stopAnimation(evt) {
     button.removeEventListener(evt.type, stopAnimation, false);
     button.addEventListener("click", startAnimation, false);
     document.querySelector("strong").textContent = "start";
     clearInterval(timer);
   }
-  
+
   stopAnimation({type: "click"});
 }
 

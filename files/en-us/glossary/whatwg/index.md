@@ -6,7 +6,6 @@ tags:
   - DOM
   - Glossary
   - HTML
-  - HTML5
   - WHATWG
   - Web
   - standards

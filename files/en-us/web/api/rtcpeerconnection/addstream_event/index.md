@@ -39,7 +39,7 @@ onaddstream = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamEvent")}}
 

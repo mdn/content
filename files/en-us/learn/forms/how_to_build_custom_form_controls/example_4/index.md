@@ -164,14 +164,6 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 ### JavaScript Content
 
 ```js
-// ------- //
-// HELPERS //
-// ------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-
 // -------------------- //
 // Function definitions //
 // -------------------- //

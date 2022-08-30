@@ -36,7 +36,7 @@ Explorer downloads a file with the following in the header, where
 `X-Download-Options` removes the file open button from the browser file
 download dialog:
 
-```
+```http
 Content-Length: <blob.size>
 Content-Type: <blob.type>
 Content-Disposition: attachment;filename=<defaultName>

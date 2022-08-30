@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
   - Web Bluetooth API
+  - Experimental
 browser-compat: api.Bluetooth
 ---
 {{DefaultAPISidebar("Bluetooth API")}}{{SeeCompatTable}}

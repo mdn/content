@@ -124,6 +124,7 @@ CSS uses dimensions to specify:
 - {{cssxref("&lt;angle&gt;")}}
 - {{cssxref("&lt;time&gt;")}}
 - {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;flex&gt;")}}
 - {{cssxref("&lt;resolution&gt;")}}
 
 These are all covered in subsections below.
@@ -195,6 +196,14 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 | `kHz` | KiloHertz | A kiloHertz is 1000 Hertz.                       |
 
 `1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
+
+#### Flex units
+
+Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
+
+| Unit  | Name      | Description                                          |
+| ----- | --------- | ---------------------------------------------------- |
+| `fr`  | Flex      | Represents a flexible length within a grid container |
 
 #### Resolution units
 

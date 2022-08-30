@@ -136,7 +136,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 @keyframes move_eye { 
   from { margin-left: -20%; } 
-  to { margin-left: 100%; }  
+  to { margin-left: 100%; }
 }
 ```
 

@@ -766,9 +766,8 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
-or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
-It is one of JavaScript's primitive types.").
+Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 
 ## BigInt operators

@@ -5,7 +5,7 @@ tags:
   - Apps
   - Audio
   - Guide
-  - HTML5
+  - HTML
   - Media
   - events
 ---

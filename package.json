@@ -7,15 +7,23 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "up-to-date-check": "node scripts/up-to-date-check.js",
-    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
-    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
+    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build"
+    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
+    "fix:json": "prettier -w \"**/*.json\"",
+    "fix:md": "npm run lint:md -- --fix",
+    "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:json": "prettier -c \"**/*.json\"",
+    "lint:md": "markdownlint \"**/*.md\" -i node_modules",
+    "lint:yml": "prettier -c \"**/*.yml\"",
+    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
-    "@mdn/yari": "1.14.39",
+    "@mdn/yari": "1.17.10",
     "cross-env": "7.0.3",
-    "env-cmd": "10.1.0"
+    "env-cmd": "10.1.0",
+    "markdownlint-cli": "0.32.2",
+    "prettier": "2.7.1"
   }
 }

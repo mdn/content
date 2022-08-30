@@ -30,7 +30,7 @@ onabort = (event) => { };
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 
@@ -112,7 +112,7 @@ img.preview {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');

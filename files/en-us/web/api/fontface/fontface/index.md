@@ -66,7 +66,11 @@ new FontFace(family, source, descriptors)
 
 ```js
 async function loadFonts() {
-    const font = new FontFace('myfont', 'url(myfont.woff)');
+    const font = new FontFace('myfont', 'url(myfont.woff)',{
+      style: 'normal',
+      weight: '400',
+      stretch: 'condensed'
+      });
     // wait for font to be loaded
     await font.load();
     // add font to document

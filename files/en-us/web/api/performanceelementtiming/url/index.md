@@ -8,9 +8,10 @@ tags:
   - Reference
   - url
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.url
 ---
-{{DefaultAPISidebar("Element Timing")}}
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the initial URL of the resource request when the element is an image.
 

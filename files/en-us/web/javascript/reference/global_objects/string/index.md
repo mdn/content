@@ -55,8 +55,7 @@ There are two ways to access an individual character in a string. The first is t
 'cat'.charAt(1) // gives value "a"
 ```
 
-The other way (introduced in ECMAScript 5) is to treat the string as an array-like
-object, where individual characters correspond to a numerical index:
+The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
 'cat'[1] // gives value "a"
@@ -114,10 +113,14 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const strPrim = 'foo';
-const strObj = new String(strPrim);
+const strPrim = "foo"; // A literal is a string primitive
+const strPrim2 = String(1); // Coerced into the string primitive "1"
+const strPrim3 = String(true); // Coerced into the string primitive "true"
+const strObj = new String(strPrim); // String with new returns a string wrapper object.
 
 console.log(typeof strPrim); // Logs "string"
+console.log(typeof strPrim2); // Logs "string"
+console.log(typeof strPrim3); // Logs "string"
 console.log(typeof strObj);  // Logs "object"
 ```
 
@@ -247,7 +250,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance methods
 
-- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}} {{Experimental_Inline}}
+- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
@@ -379,31 +382,31 @@ You must be careful which level of characters you are iterating on. For example,
 > They are of limited use, as they provide only a subset of the available HTML tags
 > and attributes.
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
-- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("blink")}}
-- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}}
+- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}}
+- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}}
+- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)
-- {{jsxref("String.prototype.small()")}}
+- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}}
+- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
 
 ## Examples

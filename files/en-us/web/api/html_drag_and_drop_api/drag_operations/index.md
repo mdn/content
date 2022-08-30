@@ -6,7 +6,6 @@ tags:
   - Advanced
   - Guide
   - HTML
-  - HTML5
   - drag and drop
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -322,4 +321,4 @@ After the {{domxref("HTMLElement/dragend_event", "dragend")}} event has finished
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [ HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

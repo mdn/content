@@ -57,7 +57,7 @@ Getting the value of an element's `outerHTML` property:
 </div>
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 const d = document.getElementById("d");
@@ -77,7 +77,7 @@ Replacing a node by setting the `outerHTML` property:
 </div>
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 const container = document.getElementById("container");

@@ -184,7 +184,7 @@ In addition to the browser, the GPU itself also needs to support the feature. So
 
 #### WebGL debugging and testing
 
-Starting with Gecko 10.0 {{geckoRelease("10.0")}}, there are two preferences available which let you control the capabilities of WebGL for testing purposes:
+Firefox provides two preferences available which let you control the capabilities of WebGL for testing purposes:
 
 - `webgl.min_capability_mode`
   - : A Boolean property that, when `true`, enables a minimum capability mode. When in this mode, WebGL is configured to only support the bare minimum feature set and capabilities required by the WebGL specification. This lets you ensure that your WebGL code will work on any device or browser, regardless of their capabilities. This is `false` by default.

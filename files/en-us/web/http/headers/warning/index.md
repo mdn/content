@@ -36,7 +36,7 @@ However, some warn-codes are specific to caches and can only be applied to respo
 
 ## Syntax
 
-```
+```http
 Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ```
 
@@ -72,7 +72,7 @@ The [HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http
 
 ## Examples
 
-```
+```http
 Warning: 110 anderson/1.3.37 "Response is stale"
 
 Date: Wed, 21 Oct 2015 07:28:00 GMT

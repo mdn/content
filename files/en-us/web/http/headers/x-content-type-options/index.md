@@ -49,7 +49,7 @@ Site security testers usually expect this header to be set.
 
 ## Syntax
 
-```
+```http
 X-Content-Type-Options: nosniff
 ```
 

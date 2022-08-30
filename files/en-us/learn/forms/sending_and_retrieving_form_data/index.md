@@ -125,7 +125,7 @@ The data is appended to the URL as a series of name/value pairs. After the URL w
 
 The HTTP request looks like this:
 
-```
+```http
 GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
@@ -156,7 +156,7 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 
 When the form is submitted using the `POST` method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:
 
-```
+```http
 POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded

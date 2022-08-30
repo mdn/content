@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.fill-rule
 ---
 {{SVGRef}}
 
-The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the *inside* part of a shape.
+The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the _inside_ part of a shape.
 
 > **Note:** As a presentation attribute, `fill-rule` can be used as a CSS property.
 

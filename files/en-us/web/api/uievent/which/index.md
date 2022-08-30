@@ -42,40 +42,34 @@ In this case, the values are read from right to left.
 ## Examples
 
 ```html
-<html>
-<head>
-<title>charCode/keyCode/which example</title>
+<html lang="en">
+  <head>
+    <title>charCode/keyCode/which example</title>
 
-<script>
+    <script>
+      function showKeyPress(evt) {
+        alert(
+          `onkeypress handler:\n` +
+            `keyCode property: ${evt.keyCode}\n` +
+            `which property: ${evt.which}\n` +
+            `charCode property: ${evt.charCode}\n` +
+            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`
+        );
+      }
 
-function showKeyPress(evt) {
-alert("onkeypress handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-      + "charCode property: " + evt.charCode + "\n"
-      + "Character Key Pressed: "
-      + String.fromCharCode(evt.charCode) + "\n"
-     );
-}
+      function keyDown(evt) {
+        alert(
+          `onkeydown handler:\n` +
+            `keyCode property: ${evt.keyCode}\n` +
+            `which property: ${evt.which}\n`
+        );
+      }
+    </script>
+  </head>
 
-function keyDown(evt) {
-alert("onkeydown handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-     );
-}
-
-</script>
-</head>
-
-<body
- onkeypress="showKeyPress(event);"
- onkeydown="keyDown(event);"
->
-
-<p>Please press any key.</p>
-
-</body>
+  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
+    <p>Please press any key.</p>
+  </body>
 </html>
 ```
 

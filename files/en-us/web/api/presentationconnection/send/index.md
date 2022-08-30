@@ -14,7 +14,7 @@ tags:
   - send
 browser-compat: api.PresentationConnection.send
 ---
-{{APIRef("Presentation")}}
+{{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **`send()`** method of the
 {{domxref("PresentationConnection")}} interface tells a controlling browsing context to

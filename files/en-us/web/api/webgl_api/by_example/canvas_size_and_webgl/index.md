@@ -28,8 +28,8 @@ The effect is clearly visible when using {{domxref("WebGLRenderingContext.scisso
 ```html
 <p>Compare the two canvases.</p>
 <canvas>Your browser does not seem to support
-    HTML canvas.</canvas>our browser does not seem to support
-    HTML canvaswser does not seem to support
+    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support
     HTML canvas.</canvas>
 ```
 

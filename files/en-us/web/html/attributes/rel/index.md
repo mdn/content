@@ -80,8 +80,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     - Both the [hreflang](hreflang) and [type](type) attributes specify links to versions of the document in an alternative format and language, intended for other media:
 
       ```html
-      <link rel=alternate href="/fr/html/print" hreflang=fr type=text/html media=print title="French HTML (for printing)">
-      <link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF">
+      <link rel="alternate" href="/fr/html/print" hreflang="fr" type="text/html" media="print" title="French HTML (for printing)">
+      <link rel="alternate" href="/fr/pdf" hreflang="fr" type="application/pdf" title="French PDF">
       ```
 
     > **Note:** The obsolete `rev="made"` is treated as `rel="alternate"`

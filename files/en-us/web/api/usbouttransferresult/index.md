@@ -20,14 +20,14 @@ The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/Web
 
 ## Constructor
 
-- {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}}
+- {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBOutTransferResult` object with the provided `status` and `bytesWritten` fields.
 
 ## Properties
 
-- {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}}
+- {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of bytes from the transfer request that were sent to the device.
-- {{domxref("USBOutTransferResult.status")}} {{ReadOnlyInline}}
+- {{domxref("USBOutTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
   - : Returns the status of the transfer request, one of:
 

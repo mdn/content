@@ -17,6 +17,8 @@ tags:
   - length
 browser-compat: api.DataTransferItemList.length
 ---
+{{APIRef("HTML Drag and Drop API")}}
+
 The read-only **`length`** property of the
 {{domxref("DataTransferItemList")}} interface returns the number of items currently in
 the drag item list.
@@ -124,5 +126,3 @@ div {
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("HTML Drag and Drop API")}}
