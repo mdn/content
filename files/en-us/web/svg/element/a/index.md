@@ -68,31 +68,31 @@ svg|a:hover, svg|a:active {
 
 - {{htmlattrxref("download", "a")}} {{experimental_inline}}
   - : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
-    *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
-    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 - {{htmlattrxref("hreflang", "a")}}
   - : The human language of the URL or URL fragment that the hyperlink points to.
-    *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{htmlattrxref("ping", "a")}} {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
-    *Value type*: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
 - {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
   - : Which [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
-    *Value type*: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
 - {{htmlattrxref("rel", "a")}} {{experimental_inline}}
   - : The relationship of the target object to the link object.
-    *Value type*: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Link_types)** ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Link_types)** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("target")}}
   - : Where to display the linked {{Glossary("URL")}}.
-    *Value type*: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; *Default value*: `_self`; *Animatable*: **yes**
+    _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Default value_: `_self`; _Animatable_: **yes**
 - {{htmlattrxref("type", "a")}}
   - : A {{Glossary("MIME type")}} for the linked URL.
-    *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
-    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 
