@@ -50,14 +50,8 @@ Events have three functions:
 
     - `request`
       - : `any`. The request sent by the calling script.
-
-    <!---->
-
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}.
-
-    <!---->
-
     - `sendResponse`
       - : `function`. Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.
 

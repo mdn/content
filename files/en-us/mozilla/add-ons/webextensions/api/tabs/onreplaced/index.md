@@ -46,9 +46,6 @@ Events have three functions:
 
     - `addedTabId`
       - : `integer`. ID of the replacement tab.
-
-    <!---->
-
     - `removedTabId`
       - : `integer`. ID of the tab that was replaced.
 

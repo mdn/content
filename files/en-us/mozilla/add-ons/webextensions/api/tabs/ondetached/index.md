@@ -44,9 +44,6 @@ Events have three functions:
 
     - `tabId`
       - : `integer`. ID of the tab that was detached.
-
-    <!---->
-
     - `detachInfo`
       - : [`object`](#detachinfo). ID of the previous window, and index of the tab within it.
 

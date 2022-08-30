@@ -44,9 +44,6 @@ Events have three functions:
 
     - `id`
       - : `string`. The new bookmark item's ID.
-
-    <!---->
-
     - `bookmark`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Information about the new bookmark item.
 

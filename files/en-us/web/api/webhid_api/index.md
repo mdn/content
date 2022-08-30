@@ -18,19 +18,10 @@ A Human Interface Device (HID) is a type of device that takes input from or prov
 
 - {{domxref("HID")}}
   - : Provides methods for connecting to HID devices, listing attached HID devices and event handlers for connected HID devices.
-
-<!---->
-
 - {{domxref("HIDDevice")}}
   - : Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` objects.
-
-<!---->
-
 - {{domxref("HIDInputReportEvent")}}
   - : Passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
-
-<!---->
-
 - {{domxref("HIDConnectionEvent")}}
   - : Passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when a device is connected or disconnected.
 
