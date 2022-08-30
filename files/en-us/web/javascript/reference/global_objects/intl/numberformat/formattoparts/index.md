@@ -54,11 +54,19 @@ looks like this:
 
 Possible types are the following:
 
+- compact
+  - : The exponent in "long" or "short" form, depending on how `compactDisplay` is specified when `notation` is set to `compact`,  defaults to `short`.
 - currency
   - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
     depending on how `currencyDisplay` is specified.
 - decimal
   - : The decimal separator string (".").
+- exponentInteger
+  - : The exponent integer value, when `notation` is set to `scientific` or `engineering`.
+- exponentMinusSign
+  - : The exponent minus sign string ("-").
+- exponentSeparator
+  - : The exponent separator, when `notation` is set to `scientific` or `engineering`.
 - fraction
   - : The fraction number.
 - group
@@ -80,6 +88,8 @@ Possible types are the following:
 - unit
   - : The unit string, such as the "l" or "litres", depending on how
     `unitDisplay` is specified.
+- unknown
+  - : The string for `unknown` type results
 
 ## Examples
 
