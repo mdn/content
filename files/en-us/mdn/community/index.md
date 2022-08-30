@@ -36,7 +36,9 @@ This is the list of guides and pages in this section.
     - [Translated content](/en-US/docs/MDN/Community/Contributing/Translated_content)
     - [Security vulnerability response steps](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response)
 
-- [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette). How to behave when contributing to our open source project.
+- [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette)
+
+    - : This article explains how to behave when contributing to our open source project.
 
 - [Discussions](/en-US/docs/MDN/Community/Discussions). On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas.
 
