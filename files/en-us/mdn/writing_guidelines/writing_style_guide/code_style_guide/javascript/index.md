@@ -572,6 +572,8 @@ let name = 'Chris';
 console.log("Hi! I'm" + name + "!");
 ```
 
+Don't overuse template literals: if there are no substitutions, use a normal string literal instead.
+
 ## Arrays
 
 ### Array creation
