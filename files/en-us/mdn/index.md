@@ -22,4 +22,4 @@ To find out how to help, visit our [Getting started](/en-US/docs/MDN/Community/C
     - : These guides provide all the information about how to write for MDN Web Docs. They outline the policies for the type of content we write and the type of content we don't write. You'll also find our writing style guide here, how-to guides to perform various content tasks, and also information about the structure of our different pages.
 
 - [MDN Product Advisory Board](/en-US/docs/MDN/MDN_Product_Advisory_Board)
-    - : The MDN Product Advisory Board's mission is to build collaboration between Mozilla, its documentation team, and the key collaborating organizations that help the MDN community collectively maintain MDN.
+    - : The MDN Product Advisory Board's mission is to build collaboration between Mozilla, its documentation team, and the key collaborating organizations that help the MDN community collectively maintain MDN Web Docs.
