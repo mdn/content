@@ -82,7 +82,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
     - [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
 
-      - : MDN has a standard format for compatibility tables for our open web documentation. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.
+      - : MDN Web Docs has a standard format for compatibility tables for our open web documentation. This article explains how to add to and maintain the database that is used to generate the compatibility tables as well as how to integrate the tables into articles.
 
     - [Macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
 
