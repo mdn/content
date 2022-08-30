@@ -767,7 +767,7 @@ function doIt() {
   }
   ```
 
-- When using anonymous functions as a callback (a function passed to another method invocation) and you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
+- When using anonymous functions as a callback (a function passed to another method invocation), if you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
 
   Here is the recommended way:
 
