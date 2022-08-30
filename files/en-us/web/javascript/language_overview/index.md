@@ -39,7 +39,7 @@ Functions aren't special data structures in JavaScript — they are just a speci
 
 JavaScript has two built-in numeric types: Number and BigInt.
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format), which means integers can be safely represented between [-(2<sup>53</sup> − 1)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) and [2<sup>53</sup> − 1](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) without loss of precision, and floating point numbers can be stored all the way up to [1.79 × 10<sup>308</sup>](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
+The Number type is a [IEEE 754 64-bit double-precision floating point value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format), which means integers can be safely represented between [-(2<sup>53</sup> − 1)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) and [2<sup>53</sup> − 1](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) without loss of precision, and floating point numbers can be stored all the way up to [1.79 × 10<sup>308</sup>](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
 
 ```js
 console.log(3 / 2); // 1.5, not 1
@@ -155,7 +155,14 @@ for (let myLetVariable = 0; myLetVariable < 5; myLetVariable++) {
 `const` allows you to declare variables whose values are never intended to change. The variable is available from the _block_ it is declared in.
 
 ```js
-const Pi = 3.14; // variable Pi is set
+const Pi = 3.14; // Declare variable Pi
+console.log(Pi); // 3.14
+```
+
+A variable declared with `const` cannot be reassigned.
+
+```js example-bad
+const Pi = 3.14;
 Pi = 1; // will throw an error because you cannot change a constant variable.
 ```
 
@@ -165,8 +172,6 @@ Pi = 1; // will throw an error because you cannot change a constant variable.
 const obj = {};
 obj.a = 1; // no error
 console.log(obj); // { a: 1 }
-
-obj = {}; // error
 ```
 
 `var` declarations can have surprising behaviors (for example, they are not block-scoped but function-scoped), and they are discouraged in modern JavaScript code.
