@@ -22,7 +22,7 @@ This interface has no constructor.
 
 ## Properties
 
-- {{domxref("DataTransferItemList.length")}} {{readonlyInline}}
+- {{domxref("DataTransferItemList.length")}} {{ReadOnlyInline}}
   - : An `unsigned long` that is the number of drag items in the list.
 
 ## Methods

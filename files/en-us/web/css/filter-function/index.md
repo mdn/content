@@ -168,11 +168,12 @@ function setSlider(filter) {
 }
 
 function setDiv(filter) {
-  if (filter === 'drop-shadow') {
-    divElem.style.filter = `${selectElem.value}(${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(Math.abs(slider.value/2))}${slider.getAttribute('data-unit')})`;
-  } else {
-    divElem.style.filter = `${selectElem.value}(${slider.value}${slider.getAttribute('data-unit')}`;
-  }
+  const unit = slider.getAttribute('data-unit');
+  const offset = `${Math.round(slider.value)}${unit}`;
+  const radius = `${Math.round(Math.abs(slider.value / 2))}${unit}`;
+  divElem.style.filter = filter === 'drop-shadow'
+    ? `${selectElem.value}(${offset} ${offset} ${radius})`
+    : `${selectElem.value}(${slider.value}${unit})`;
 
   updateOutput();
   updateCurValue();

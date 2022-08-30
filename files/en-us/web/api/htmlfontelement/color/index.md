@@ -42,8 +42,7 @@ f.color = "green";
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
-`<font>.color`.
+The `<font>` element has been deprecated and is no longer supported and, as a result, neither is `<font>.color`.
 
 ## Browser compatibility
 

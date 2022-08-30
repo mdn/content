@@ -168,7 +168,7 @@ Then we assign a handler for the volume slider's {{domxref("HTMLElement/input_ev
 
 Right after declaring the `setup()` function, we add a handler to the play checkbox's {{domxref("HTMLElement/change_event", "change")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and the stage is set. Let's see how the action plays out.
 
-```
+```js
 playButton.addEventListener("change", togglePlay, false);
 ```
 

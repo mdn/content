@@ -8,9 +8,10 @@ tags:
   - File System Access API
   - FileSystemHandle
   - Method
+  - Experimental
 browser-compat: api.FileSystemHandle.requestPermission
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the

@@ -11,9 +11,10 @@ tags:
   - Method
   - Reference
   - playEffect
+  - Non-standard
 browser-compat: api.GamepadHapticActuator.playEffect
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+{{APIRef("Gamepad")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware play a specific vibration pattern.
 

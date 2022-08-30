@@ -26,7 +26,7 @@ onnomatch = (event) => { }
 
 ## Event type
 
-An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionEvent")}}
 
@@ -34,13 +34,13 @@ An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("SpeechRecognitionEvent.emma")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
   - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
   - : Returns the semantic meaning of what the user said.
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
   - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
-- {{domxref("SpeechRecognitionEvent.results")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
 
 ## Examples

@@ -49,7 +49,7 @@ Queries involving unknown media types are always false.
 ## Targeting media types
 
 Media types describe the general category of a given device.
-Although websites are commonly designed with screens in mind, you may want to create styles that target special devices such as printers or audio-based screenreaders.
+Although websites are commonly designed with screens in mind, you may want to create styles that target special devices such as printers or audio-based screen readers.
 For example, this CSS targets printers:
 
 ```css

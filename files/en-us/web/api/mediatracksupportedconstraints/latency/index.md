@@ -42,13 +42,9 @@ If the property isn't present, this property is missing from the supported const
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().latency) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().latency;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result

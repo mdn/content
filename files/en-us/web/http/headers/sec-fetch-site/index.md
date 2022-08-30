@@ -39,7 +39,7 @@ Same-origin requests would usually be allowed by default, but what happens for r
 
 ## Syntax
 
-```
+```http
 Sec-Fetch-Site: cross-site
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Site: same-site
@@ -62,7 +62,7 @@ Sec-Fetch-Site: none
 A fetch request to `https://mysite.example/foo.json` originating from a web page on `https://mysite.example` (with the same port) is a same-origin request.
 The browser will generate the `Sec-Fetch-Site: same-origin` header as shown below, and the server will typically allow the request:
 
-```
+```http
 GET /foo.json
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
@@ -71,7 +71,7 @@ Sec-Fetch-Site: same-origin
 
 A fetch request to the same URL from another site, for example `potentially-evil.com`, causes the browser to generate a different header (e.g. `Sec-Fetch-Site: cross-site`), which the server can choose to accept or reject:
 
-```
+```http
 GET /foo.json
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors

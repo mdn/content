@@ -12,7 +12,7 @@ tags:
   - touch
 browser-compat: api.Touch.identifier
 ---
-{{ APIRef("Touch Events") }}{{SeeCompatTable}}
+{{ APIRef("Touch Events") }}
 
 The **`Touch.identifier`** returns a value uniquely identifying
 this point of contact with the touch surface. This value remains consistent for every

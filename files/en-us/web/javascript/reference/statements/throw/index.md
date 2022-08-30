@@ -136,11 +136,8 @@ function verifyZipCode(z) {
   try {
     z = new ZipCode(z);
   } catch (e) {
-    if (e instanceof ZipCodeFormatException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
-    }
+    const isInvalidCode = e instanceof ZipCodeFormatException;
+    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
   }
   return z;
 }

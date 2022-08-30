@@ -19,12 +19,12 @@ The `USBIsochronousOutTransferResult` interface of the [WebUSB API](/en-US/docs/
 
 ## Constructor
 
-- {{domxref("USBIsochronousOutTransferResult.USBIsochronousOutTransferResult", "USBIsochronousOutTransferResult()")}}
+- {{domxref("USBIsochronousOutTransferResult.USBIsochronousOutTransferResult", "USBIsochronousOutTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBIsochronousOutTransferResult` object with the provided `packet` field.
 
 ## Properties
 
-- {{domxref("USBIsochronousOutTransferResult.packets")}} {{readonlyInline}}
+- {{domxref("USBIsochronousOutTransferResult.packets")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of `USBIsochronousOutTransferPacket` objects containing the result of each request to send a packet to the device.
 
 ## Specifications

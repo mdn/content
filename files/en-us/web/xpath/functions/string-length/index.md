@@ -17,7 +17,7 @@ string-length( [string] )
 
 ### Arguments
 
-- _`string`_(optional)
+- `string` (optional)
   - : The string to evaluate. If omitted, string used will be the same as the context node converted to a string.
 
 ### Returns

@@ -87,7 +87,7 @@ document.getElementById("btn").addEventListener('click', doSomething);
 
 To allow inline scripts and inline event handlers, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 
-```
+```http
 Content-Security-Policy: script-src 'unsafe-inline';
 ```
 
@@ -102,7 +102,7 @@ The above Content Security Policy will allow inline {{HTMLElement("script")}} el
 
 You can use a nonce-source to only allow specific inline script blocks:
 
-```
+```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'
 ```
 
@@ -117,7 +117,7 @@ You will have to set the same nonce on the {{HTMLElement("script")}} element:
 
 Alternatively, you can create hashes from your inline scripts. CSP supports sha256, sha384 and sha512.
 
-```
+```http
 Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
 ```
 

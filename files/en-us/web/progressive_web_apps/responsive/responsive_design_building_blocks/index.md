@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 tags:
   - Apps
   - CSS
-  - HTML5
+  - HTML
   - Mobile
   - Responsive Design
 ---
@@ -79,8 +79,6 @@ The padding does not affect the overall width and height of the containers becau
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 ```
@@ -222,19 +220,11 @@ This rule changes the width of the gallery images so now there are two per line.
     width: 100%;
     position: absolute;
     z-index: 1000;
-
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 
   nav button {
     font-size: 6.8vw;
-
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
     flex: 1;
 
     border-left: 1px solid rgba(100,100,100,0.4);
@@ -300,10 +290,6 @@ We also came across some problems with orientation: the mobile-app layout of our
 @media all and (max-width: 480px) and (orientation: landscape) {
   nav {
     width: auto;
-
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -388,8 +374,7 @@ button {
   background: url(images/low-res-header.jpg) 1rem center;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and (min-resolution: 192dpi),
+@media only screen and (min-resolution: 192dpi),
        only screen and (min-resolution: 2dppx) {
   button {
     background: url(images/high-res-header.jpg) 1rem center;

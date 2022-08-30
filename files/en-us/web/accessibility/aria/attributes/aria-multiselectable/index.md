@@ -28,7 +28,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 ## Example
 
 ```html
-<p>
+<p id="colorOptions">
   Choose the colors for your flag.
 </p>
 <ul

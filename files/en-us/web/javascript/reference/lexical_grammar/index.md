@@ -207,6 +207,7 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
@@ -245,7 +246,6 @@ The following are only reserved when they are found in strict mode code:
 - `private`
 - `protected`
 - `public`
-- `static`
 
 #### Future reserved words in older standards
 
@@ -526,7 +526,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-There are three cases when semicolon are automatically inserted:
+There are three cases when semicolons are automatically inserted:
 
 1\. When a token not allowed by the grammar is encountered, and it's separated from the previous token by at least one [line terminator](#line_terminators), or the token is "}", then a semicolon is inserted before the token.
 

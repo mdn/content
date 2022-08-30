@@ -41,7 +41,7 @@ The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} a
 
 ## Properties
 
-*The Picture-in-Picture API augments the* {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} _interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating._
+The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating.
 
 ### Properties on the HTMLVideoElement interface
 

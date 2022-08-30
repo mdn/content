@@ -11,6 +11,7 @@ tags:
   - collision detection
   - three.js
 ---
+
 {{GamesSidebar}}
 
 This article shows how to implement **collision detection between bounding boxes and spheres using the Three.js** library. It is assumed that before reading this you have read our [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection) introductory article first, and have basic knowledge about Three.js.
@@ -26,12 +27,14 @@ To create a **`Box3` instance**, we need to provide the **lower and upper bounda
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({}));
+  new MeshNormalMaterial({})
+);
 
 knot.geometry.computeBoundingBox();
 const knotBBox = new Box3(
   knot.geometry.boundingBox.min,
-  knot.geometry.boundingBox.max);
+  knot.geometry.boundingBox.max
+);
 ```
 
 > **Note:** The `boundingBox` property takes the `Geometry` itself as reference, and not the `Mesh`. So any transformations such as scale, position, etc. applied to the `Mesh` will be ignored while computing the calculating box.
@@ -41,7 +44,8 @@ A more simple alternative that fixes the previous issue is to set those boundari
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({}));
+  new MeshNormalMaterial({})
+);
 
 const knotBBox = new Box3(new THREE.Vector3(), new THREE.Vector3());
 knotBBox.setFromObject(knot);
@@ -54,11 +58,13 @@ Instantiating **`Sphere` objects** is similar. We need to provide the sphere's c
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({}));
+  new MeshNormalMaterial({})
+);
 
 const knotBSphere = new Sphere(
   knot.position,
-  knot.geometry.boundingSphere.radius);
+  knot.geometry.boundingSphere.radius
+);
 ```
 
 Unfortunately, there is no equivalent of `Box3.setFromObject` for Sphere instances. So if we apply transformations or change the position of the `Mesh`, we need to manually update the bounding sphere. For instance:
@@ -108,12 +114,12 @@ Unfortunately this test is not implemented in Three.js, but we can patch Sphere 
 
 THREE.Sphere.__closest = new THREE.Vector3();
 THREE.Sphere.prototype.intersectsBox = function (box) {
-    // get box closest point to sphere center by clamping
-    THREE.Sphere.__closest.set(this.center.x, this.center.y, this.center.z);
-    THREE.Sphere.__closest.clamp(box.min, box.max);
+  // get box closest point to sphere center by clamping
+  THREE.Sphere.__closest.set(this.center.x, this.center.y, this.center.z);
+  THREE.Sphere.__closest.clamp(box.min, box.max);
 
-    const distance =  this.center.distanceToSquared(THREE.Sphere.__closest);
-    return distance < (this.radius * this.radius);
+  const distance = this.center.distanceToSquared(THREE.Sphere.__closest);
+  return distance < this.radius * this.radius;
 };
 ```
 
@@ -125,7 +131,7 @@ We have prepared some [live demos](https://mozdevs.github.io/gamedev-js-3d-aabb/
 - [Box vs. Box and Sphere](https://mozdevs.github.io/gamedev-js-3d-aabb/raw_box.html)
 - [Sphere vs. Box and Sphere](https://mozdevs.github.io/gamedev-js-3d-aabb/raw_sphere.html)
 
-![](screen_shot_2015-10-20_at_15.19.16.png)
+![A knot object, a large sphere object and a small sphere object in 3-D space. Three vectors are drawn on the small sphere. The vectors point in the directions of the three axes that define the space. Text at the bottom reads: Drag the ball around.](screen_shot_2015-10-20_at_15.19.16.png)
 
 ## Using `BoxHelper`
 
@@ -182,4 +188,4 @@ box3.containsPoint(point.position);
 
 There are **two demos** you can take a look at on our [live demos page](https://mozdevs.github.io/gamedev-js-3d-aabb/). The [first one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html) showcases point vs. box collisions using `BoxHelper`. The [second one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html) performs box vs. box tests.
 
-![](screen_shot_2015-10-19_at_12.10.06.png)
+![A knot object, a sphere object and a cube object in 3-D space. The knot and the sphere are encompassed by a virtual bounding box. The cube is intersecting the bounding box of the sphere. Text at the bottom reads: Drag the cube around. Press Esc to toggle B-Boxes.](screen_shot_2015-10-19_at_12.10.06.png)

@@ -52,7 +52,7 @@ into including credentials.
 
 ## Syntax
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
@@ -67,7 +67,7 @@ Access-Control-Allow-Credentials: true
 
 Allow credentials:
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 

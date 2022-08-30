@@ -7,7 +7,7 @@ tags:
 ---
 {{APIRef("File API")}}
 
-Using the File API, which was added to the DOM in HTML5, it's now possible for web content to ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
+Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
 
 ## Accessing selected file(s)
 
@@ -165,11 +165,7 @@ and this CSS:
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
-input.visually-hidden:focus + label {
-  outline: thin dotted;
-}
-input.visually-hidden:focus-within + label {
+input.visually-hidden:is(:focus, :focus-within) + label {
   outline: thin dotted;
 }
 ```

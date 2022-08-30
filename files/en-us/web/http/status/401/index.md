@@ -27,7 +27,7 @@ status code, user authentication can allow access to the resource.
 
 ## Example response
 
-```
+```http
 HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 WWW-Authenticate: Basic realm="Access to staging site"

@@ -31,7 +31,7 @@ actual request is made. This header is necessary as the preflight request is alw
 
 ## Syntax
 
-```
+```http
 Access-Control-Request-Method: <method>
 ```
 
@@ -43,7 +43,7 @@ Access-Control-Request-Method: <method>
 
 ## Examples
 
-```
+```http
 Access-Control-Request-Method: POST
 ```
 

@@ -26,7 +26,7 @@ The **`<font-face-src>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the 
 
 ### Specific attributes
 
-*None*
+_None._
 
 ## DOM Interface
 

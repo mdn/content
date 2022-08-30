@@ -37,7 +37,7 @@ For more information, see also this article on [Content Security Policy (CSP)](/
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
 ```
 
@@ -51,13 +51,13 @@ The CSP {{CSP("report-uri")}} directive should be used with this header, otherwi
 
 This header reports violations that would have occurred. You can use this to iteratively work on your content security policy. You observe how your site behaves, watching for violation reports, or [malware redirects](https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/), then choose the desired policy enforced by the {{HTTPHeader("Content-Security-Policy")}} header.
 
-```
+```http
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
 If you still want to receive reporting, but also want to enforce a policy, use the {{HTTPHeader("Content-Security-Policy")}} header with the {{CSP("report-uri")}} directive.
 
-```
+```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
@@ -88,7 +88,7 @@ The report JSON object contains the following data:
 
 Let's consider a page located at `http://example.com/signup.html`. It uses the following policy, disallowing everything but stylesheets from `cdn.example.com`.
 
-```
+```http
 Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
 ```
 

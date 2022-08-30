@@ -53,7 +53,7 @@ revoke(descriptor)
 > `notifications` and `push`.
 
 > **Note:** The `persistent-storage` permission allows an
-> origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
+> origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
 > storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
 ### Return value

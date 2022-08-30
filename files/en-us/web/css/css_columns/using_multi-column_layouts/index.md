@@ -59,7 +59,7 @@ The `column-count` property sets the number of columns to a particular number. E
 
 ### Result
 
-Will display the content in two columns (if you're using a multi-column compliant browser):
+The content will be displayed in two columns (if you're using a multi-column compliant browser):
 
 {{EmbedLiveSample("Example_1", "100%")}}
 
@@ -94,7 +94,7 @@ The `column-width` property sets the minimum desired column width. If `column-co
 
 {{EmbedLiveSample("Example_2", "100%")}}
 
-The exact details are described in [the CSS3 specification](https://www.w3.org/TR/css-multicol-1/).
+The exact details are described in [CSS Multi-column Layout Module Level 1](https://www.w3.org/TR/css-multicol-1/).
 
 In a multi-column block, content is automatically flowed from one column into the next as needed. All HTML, CSS and DOM functionality is supported within columns, as are editing and printing.
 

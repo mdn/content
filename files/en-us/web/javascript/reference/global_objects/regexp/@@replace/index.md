@@ -29,8 +29,8 @@ regexp[Symbol.replace](str, replacement)
   - : A {{jsxref("String")}} that is a target of the replacement.
 - `replacement`
   - : Can be a string or a function.
-    - If it's a string, it will replace the substring matched by the current regexp. A number of special replacement patterns are supported; see the [Specifying a string as the replacement](/en-US/Web/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_the_replacement) section of `String.prototype.replace`.
-    - If it's a function, it will be invoked for every match and the return value is used as the replacement text. The arguments supplied to this function are described in the [Specifying a function as the replacement](/en-US/Web/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_function_as_the_replacement) section of `String.prototype.replace`.
+    - If it's a string, it will replace the substring matched by the current regexp. A number of special replacement patterns are supported; see the [Specifying a string as the replacement](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_the_replacement) section of `String.prototype.replace`.
+    - If it's a function, it will be invoked for every match and the return value is used as the replacement text. The arguments supplied to this function are described in the [Specifying a function as the replacement](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_function_as_the_replacement) section of `String.prototype.replace`.
 
 ### Return value
 

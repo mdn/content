@@ -115,11 +115,15 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
 
 ## Usage notes
 
-The `<header>` element is not sectioning content and therefore does not introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements). That said, a `<header>` element is intended to usually contain the surrounding section's heading (an `h1`–`h6` element), but this is **not** required.
+The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+
+The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
+
+Otherwise, it is a `section` in the accessibility tree, and usually contain the surrounding section's heading (an `h1`–`h6` element) and optional subheading, but this is **not** required.
 
 ### Historical Usage
 
-Although the `<header>` element didn't make its way into specifications until {{glossary("HTML5")}}, it actually existed at the very beginning of HTML. As seen in [the very first website](http://info.cern.ch/), it was originally used as the `<head>` element. At some point, it was decided to use a different name. This allowed `<header>` to be free to fill a different role later on.
+The `<header>` element originally existed at the very beginning of HTML for headings. It is seen in [the very first website](http://info.cern.ch/). At some point, headings became [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements), allowing `<header>` to be free to fill a different role.
 
 ## Attributes
 
@@ -164,4 +168,3 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
 ## See also
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)

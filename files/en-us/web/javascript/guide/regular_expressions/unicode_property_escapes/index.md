@@ -45,7 +45,7 @@ See also [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/uc
 - `UnicodePropertyName`
   - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
 - `UnicodePropertyValue`
-  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the *`UnicodePropertyName`* part and equals sign may be omitted. If a *`UnicodePropertyName`* is specified, the value must correspond to the property type given.
+  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the `UnicodePropertyName` part and equals sign may be omitted. If a `UnicodePropertyName` is specified, the value must correspond to the property type given.
 
 > **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples.
 

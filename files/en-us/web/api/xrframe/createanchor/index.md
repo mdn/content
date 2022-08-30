@@ -10,9 +10,10 @@ tags:
   - VR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRFrame.createAnchor
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createAnchor()`** method of the {{domxref("XRFrame")}} interface creates a free-floating {{domxref("XRAnchor")}} which will be fixed relative to the real world.
 

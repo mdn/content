@@ -118,7 +118,7 @@ As a test, you can turn off a site's CSS and see how understandable it is withou
 - Firefox: Select _View > Page Style > No Style_ from the main menu.
 - Safari: Select _Develop > Disable Styles_ from the main menu (to enable the _Develop_ menu, choose _Safari > Preferences > Advanced > Show Develop menu in menu bar_).
 - Chrome: Install the Web Developer Toolbar extension, then restart the browser. Click the gear icon that will appear, then select _CSS > Disable All Styles_.
-- Edge: Select *View > Style > No Style* from the main menu.
+- Edge: Select _View > Style > No Style_ from the main menu.
 
 #### Using native keyboard accessibility
 
@@ -174,7 +174,7 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
 #### Text alternatives
 
-Text alternatives are very important for accessibility — if a person has a visual or hearing impairment that stops them being able to see or hear some content, then this is a problem. The simplest text alternative available is the humble `alt` attribute, which we should include on all images that contain relevant content. This should contain a description of the image that successfully conveys its meaning and content on the page, to be picked up by a screenreader and read out to the user.
+Text alternatives are very important for accessibility — if a person has a visual or hearing impairment that stops them being able to see or hear some content, then this is a problem. The simplest text alternative available is the humble `alt` attribute, which we should include on all images that contain relevant content. This should contain a description of the image that successfully conveys its meaning and content on the page, to be picked up by a screen reader and read out to the user.
 
 > **Note:** For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
 
@@ -224,7 +224,7 @@ There are many instances where a visual design will require that not all content
 
 Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.
 
-On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{cssxref("display")}}`:none`, because they do hide content from screenreaders. Unless of course, there is a good reason why you want this content to be hidden from screenreaders.
+On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{cssxref("display")}}`:none`, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
 
 > **Note:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
 
@@ -249,7 +249,7 @@ One of the main areas problematic for accessibility is complex apps that involve
 
 Non-native complicated form controls are problematic because they tend to involve a lot of nested `<div>`s, and the browser does not know what to do with them by default. If you are inventing them yourself, you need to make sure that they are keyboard accessible; if you are using some kind of third-party framework, carefully review the options available to see how accessible they are before diving in. [Bootstrap](https://getbootstrap.com/) looks to be fairly good for accessibility, for example, although [Making Bootstrap a Little More Accessible](https://www.sitepoint.com/making-bootstrap-accessible/) by Rhiana Heath explores some of its issues (mainly related to color contrast), and looks at some solutions.
 
-Regularly updated dynamic content can be a problem because screenreader users might miss it, especially if it updates unexpectedly. If you have a single-page app with a main content panel that is regularly updated using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API), a screenreader user might miss those updates.
+Regularly updated dynamic content can be a problem because screen reader users might miss it, especially if it updates unexpectedly. If you have a single-page app with a main content panel that is regularly updated using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API), a screen reader user might miss those updates.
 
 #### WAI-ARIA
 
@@ -270,7 +270,7 @@ Here's an example:
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-You can see an example in action at Freedom Scientific's [ARIA (Accessible Rich Internet Applications) Live Regions](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm) example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. [ARIA Live Regions - Atomic](https://www.freedomscientific.com/SurfsUp/AriaLiveRegionsAtomic.htm) provides another useful example.
+You can see an example in action at Freedom Scientific's [ARIA (Accessible Rich Internet Applications) Live Regions](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm) example — the highlighted paragraph should update its content every 10 seconds, and a screen reader should read this out to the user. [ARIA Live Regions - Atomic](https://www.freedomscientific.com/SurfsUp/AriaLiveRegionsAtomic.htm) provides another useful example.
 
 We don't have space to cover WAI-ARIA in detail here, you can learn a lot more about it at [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics).
 
@@ -307,19 +307,19 @@ These add an accessibility tab to the browser developer tools. For example, we i
 
 aXe is also installable using `npm`, and can be integrated with task runners like [Grunt](https://gruntjs.com/) and [Gulp](https://gulpjs.com/), automation frameworks like [Selenium](https://www.selenium.dev/) and [Cucumber](https://cucumber.io/), unit testing frameworks like [Jasmine](https://jasmine.github.io/), and more besides (again, see the [main aXe page](https://www.deque.com/axe/) for details).
 
-### Screenreaders
+### Screen readers
 
-It is definitely worth testing with a screenreader to get used to how severely visually impaired people use the Web. There are a number of screenreaders available:
+It is definitely worth testing with a screen reader to get used to how severely visually impaired people use the Web. There are a number of screen readers available:
 
 - Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Window Eyes](http://www.gwmicro.com/) (Windows).
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows, and macOS), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS and iOS), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. Screenreaders tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.
+Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. screen readers tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.
 
-Let's go through some tests with a couple of different screenreaders to give you a general idea of how they work and how to test with them.
+Let's go through some tests with a couple of different screen readers to give you a general idea of how they work and how to test with them.
 
-> **Note:** WebAIM's [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) provides some useful information about screenreader usage and what works best for screenreaders. Also see [Screen Reader User Survey #9 Results](https://webaim.org/projects/screenreadersurvey9/#used) for some interesting screenreader usage statistics.
+> **Note:** WebAIM's [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) provides some useful information about screen reader usage and what works best for screen readers. Also see [Screen Reader User Survey #9 Results](https://webaim.org/projects/screenreadersurvey9/#used) for some interesting screen reader usage statistics.
 
 #### VoiceOver
 
@@ -333,7 +333,7 @@ When VO is on, the display will look mostly the same, but you'll see a black box
 
 ![](voiceover.png)
 
-To use VO, you will make a lot of use of the "VO modifier" — this is a key or key combination that you need to press in addition to the actual VO keyboard shortcuts to get them to work. Using a modifier like this is common with screenreaders, to enable them to keep their commands from clashing with other commands. In the case of VO, the modifier can either be CapsLock, or Ctrl + Option.
+To use VO, you will make a lot of use of the "VO modifier" — this is a key or key combination that you need to press in addition to the actual VO keyboard shortcuts to get them to work. Using a modifier like this is common with screen readers, to enable them to keep their commands from clashing with other commands. In the case of VO, the modifier can either be CapsLock, or Ctrl + Option.
 
 VO has many keyboard commands, and we won't list them all here. The basic ones you'll need for web page testing are in the following table. In the keyboard shortcuts, "VO" means "the VoiceOver modifier".
 
@@ -445,7 +445,7 @@ VO has many keyboard commands, and we won't list them all here. The basic ones y
   </tbody>
 </table>
 
-This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screenreader testing](#screenreader_testing) section.
+This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screen reader testing](#screen reader_testing) section.
 
 #### NVDA
 
@@ -457,7 +457,7 @@ NVDA is Windows-only, and you'll need to install it.
 
 NVDA will now be active on your computer.
 
-To use NVDA, you will make a lot of use of the "NVDA modifier" — this is a key that you need to press in addition to the actual NVDA keyboard shortcuts to get them to work. Using a modifier like this is common with screenreaders, to enable them to keep their commands from clashing with other commands. In the case of NVDA, the modifier can either be Insert (the default), or CapsLock (can be chosen by checking the first checkbox in the NVDA welcome dialog before pressing _OK_).
+To use NVDA, you will make a lot of use of the "NVDA modifier" — this is a key that you need to press in addition to the actual NVDA keyboard shortcuts to get them to work. Using a modifier like this is common with screen readers, to enable them to keep their commands from clashing with other commands. In the case of NVDA, the modifier can either be Insert (the default), or CapsLock (can be chosen by checking the first checkbox in the NVDA welcome dialog before pressing _OK_).
 
 > **Note:** NVDA is more subtle than VoiceOver in terms of how it highlights where it is and what it is doing. When you are scrolling through headings, lists, etc., items you are selected on will generally be highlighted with a subtle outline, but this is not always the case for all things. If you get completely lost, you can press Ctrl + F5 to refresh the current page and begin from the top again.
 
@@ -568,19 +568,19 @@ NVDA has many keyboard commands, and we won't list them all here. The basic ones
   </tbody>
 </table>
 
-#### Screenreader testing
+#### Screen reader testing
 
-Now you've gotten used to using a screenreader, we'd like you to use it to do some quick accessibility tests, to get an idea of how screenreaders deal with good and bad webpage features:
+Now you've gotten used to using a screen reader, we'd like you to use it to do some quick accessibility tests, to get an idea of how screen readers deal with good and bad webpage features:
 
-- Look at [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html), and note how the headers are found by the screenreader and available to use for navigation. Now look at [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html), and note how the screenreader gets none of this information. Imagine how annoying this would be when trying to navigate a really long page of text.
+- Look at [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html), and note how the headers are found by the screen reader and available to use for navigation. Now look at [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html), and note how the screen reader gets none of this information. Imagine how annoying this would be when trying to navigate a really long page of text.
 - Look at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html), and note how they make sense when viewed out of context. This is not the case with [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) — they are all just "click here".
 - Look at [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html), and note how the form inputs are described using their labels because we've used `<label>` elements properly. In [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html), they get an unhelpful label along the lines of "blank".
-- Look at our [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html) example, and see how the screenreader is able to associate columns and rows of content and read them out all together because we've defined headers properly. In [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), none of the cells can be associated at all. Note that NVDA seems to behave slightly strangely when you've only got a single table on a page; you could try [WebAIM's table test page](https://webaim.org/articles/nvda/tables.htm) instead.
+- Look at our [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html) example, and see how the screen reader is able to associate columns and rows of content and read them out all together because we've defined headers properly. In [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), none of the cells can be associated at all. Note that NVDA seems to behave slightly strangely when you've only got a single table on a page; you could try [WebAIM's table test page](https://webaim.org/articles/nvda/tables.htm) instead.
 - Have a look at the [WAI-ARIA live regions example](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm) we saw earlier, and note how the screen reader will keep reading out the constantly updating section as it updates.
 
 ### User testing
 
-As mentioned above, you can't rely on automated tools alone for determining accessibility problems on your site. It is recommended that when you draw up your testing plan, you should include some accessibility user groups if at all possible (see our [User Testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#user_testing) section earlier on in the course for some more context). Try to get some screenreader users involved, some keyboard-only users, some non-hearing users, and perhaps other groups too, as suits your requirements.
+As mentioned above, you can't rely on automated tools alone for determining accessibility problems on your site. It is recommended that when you draw up your testing plan, you should include some accessibility user groups if at all possible (see our [User Testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#user_testing) section earlier on in the course for some more context). Try to get some screen reader users involved, some keyboard-only users, some non-hearing users, and perhaps other groups too, as suits your requirements.
 
 ## Accessibility testing checklist
 
@@ -591,11 +591,11 @@ The following list provides a checklist for you to follow to make sure you've ca
 3. Make sure your functionality is [keyboard accessible](#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
 4. Make sure your non-text content has [text alternatives](#text_alternatives). An [Auditing tool](#auditing_tools) is good for catching such problems.
 5. Make sure your site's [color contrast](#color_and_color_contrast) is acceptable, using a suitable checking tool.
-6. Make sure [hidden content](#hiding_content) is visible by screenreaders.
+6. Make sure [hidden content](#hiding_content) is visible by screen readers.
 7. Make sure that functionality is usable without JavaScript wherever possible.
 8. Use ARIA to improve accessibility where appropriate.
 9. Run your site through an [Auditing tool](#auditing_tools).
-10. Test it with a screenreader.
+10. Test it with a screen reader.
 11. Include an accessibility policy/statement somewhere findable on your site to say what you did.
 
 ## Finding help

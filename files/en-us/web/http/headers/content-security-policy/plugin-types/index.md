@@ -49,7 +49,7 @@ Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
 One or more [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can
 be set for the `plugin-types` policy:
 
-```
+```http
 Content-Security-Policy: plugin-types <type>/<subtype>;
 Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
@@ -73,7 +73,7 @@ is only used if you are allowing plugins with `object-src` at all.
 
 The content security policy
 
-```
+```http
 Content-Security-Policy: plugin-types application/x-shockwave-flash
 ```
 
@@ -88,7 +88,7 @@ will allow to load flash objects:
 To load an {{HTMLElement("applet")}} you must specify
 `application/x-java-applet`:
 
-```
+```http
 Content-Security-Policy: plugin-types application/x-java-applet
 ```
 

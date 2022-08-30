@@ -22,13 +22,14 @@ in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
 
 ## Syntax
 
-Literal, constructor, and factory notations are possible:
-
 ```js
-/pattern/flags
-new RegExp(pattern[, flags])
-RegExp(pattern[, flags])
+new RegExp(pattern)
+new RegExp(pattern, flags)
+RegExp(pattern)
+RegExp(pattern, flags)
 ```
+
+> **Note:** `RegExp()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RegExp` instance.
 
 ### Parameters
 
@@ -41,7 +42,7 @@ RegExp(pattern[, flags])
     [special characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#using_special_characters)
     to match a wider range of values than would a literal string.
 
-- `flags`
+- `flags` {{optional_inline}}
 
   - : If specified, `flags` is a string that contains the flags to
     add.
@@ -79,9 +80,10 @@ RegExp(pattern[, flags])
 
 ### Exceptions
 
-- If `pattern` cannot be parsed as a valid regular expression, a {{jsxref("SyntaxError")}} is thrown.
-- If `flags` contains repeated characters or any character outside of those allowed, a
-  {{jsxref("SyntaxError")}} is thrown.
+- {{jsxref("SyntaxError")}}
+  - : Thrown if one of the following is true:
+    - `pattern` cannot be parsed as a valid regular expression.
+    - `flags` contains repeated characters or any character outside of those allowed.
 
 ## Examples
 
@@ -105,7 +107,7 @@ Before regular expressions can be used, they have to be compiled. This process a
 
 The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
 
-Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
+Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#building_a_regular_expression_from_dynamic_inputs).
 
 ### Building a regular expression from dynamic inputs
 

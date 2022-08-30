@@ -28,7 +28,7 @@ Note how we embed the {{Glossary("WebGL")}} function calls inside the event hand
 <p>You can repeatedly click the empty canvas or the button below
     to change color.</p>
 <canvas id="canvas-view">Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 <button id="color-switcher">Press here to switch color</button>
 ```
 

@@ -8,14 +8,13 @@ tags:
   - File and Directory Entries API
   - Files
   - Method
-  - Non-standard
   - Offline
   - Reference
   - drag and drop
   - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
-{{APIRef("HTML Drag and Drop API")}}{{Non-standard_header}}
+{{APIRef("HTML Drag and Drop API")}}
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
 
@@ -177,7 +176,7 @@ If that's successful, we call `scanFiles()` to process the item—either by addi
 
 You can see how this works by trying it out below. Find some files and directories and drag them in, and take a look at the resulting output.
 
-{{ EmbedLiveSample('Examples', 600, 400) }}
+{{EmbedLiveSample('Examples', 600, 400)}}
 
 ## Specifications
 

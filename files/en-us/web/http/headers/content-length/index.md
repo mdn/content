@@ -40,7 +40,7 @@ The **`Content-Length`** header indicates the size of the message body, in bytes
 
 ## Syntax
 
-```
+```http
 Content-Length: <length>
 ```
 

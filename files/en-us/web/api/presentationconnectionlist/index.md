@@ -20,7 +20,7 @@ browser-compat: api.PresentationConnectionList
 
 ## Properties
 
-- {{domxref('PresentationConnectionList.connections')}} {{readonlyinline}}
+- {{domxref('PresentationConnectionList.connections')}} {{ReadOnlyInline}}
   - : Returns the non-terminated set of {{DOMxRef("PresentationConnection")}}s in the [set of presentation controllers](https://www.w3.org/TR/presentation-api/#dfn-set-of-presentation-controllers).
 
 ### Event Handlers

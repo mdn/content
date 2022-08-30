@@ -8,6 +8,7 @@ tags:
   - Property
   - Reference
   - UIEvent
+  - Experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
 {{APIRef("UI Events")}}{{SeeCompatTable}}

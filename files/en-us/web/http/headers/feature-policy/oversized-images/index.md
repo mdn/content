@@ -16,7 +16,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `oversized-images` directive co
 
 ## Syntax
 
-```
+```http
 Feature-Policy: oversized-images <allowlist>;
 ```
 

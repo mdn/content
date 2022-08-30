@@ -24,7 +24,7 @@ There are two recommended approaches for registering handlers. Event handler cod
 
 ### Using onevent properties
 
-By convention, Javascript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
+By convention, JavaScript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
 
 To set event handler code you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed the handler can be replaced by assigning another function to the same property.
 

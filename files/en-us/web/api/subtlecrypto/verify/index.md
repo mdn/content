@@ -73,7 +73,7 @@ method.
 ### RSASSA-PKCS1-v1_5
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -111,7 +111,7 @@ async function verifyMessage(publicKey) {
 ### RSA-PSS
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -152,7 +152,7 @@ async function verifyMessage(publicKey) {
 ### ECDSA
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -193,7 +193,7 @@ async function verifyMessage(publicKey) {
 ### HMAC
 
 This code uses a secret key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*

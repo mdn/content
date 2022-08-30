@@ -262,7 +262,7 @@ Here's a screenshot of what that might look like:
 
 As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.
 
-> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Making telephone numbers required
 
@@ -297,15 +297,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -349,15 +350,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -371,7 +373,7 @@ Notice how the entered value is reported as invalid unless the pattern xxx-xxx-x
 
 In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screenreader users about what to enter into it.
+Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
 <form>
@@ -470,8 +472,8 @@ It makes you wonder if it is worth going to all this trouble on the client-side,
 
 ```css hidden
 div {
-margin-bottom: 10px;
-position: relative;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 input[type="number"] {
@@ -482,15 +484,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }

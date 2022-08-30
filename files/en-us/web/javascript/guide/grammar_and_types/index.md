@@ -327,7 +327,7 @@ The latest ECMAScript standard defines eight data types:
   3. {{Glossary("undefined")}}. A top-level property whose value is not defined.
   4. {{Glossary("Number")}}. An integer or floating point number. For example: `42` or `3.14159`.
   5. {{Glossary("BigInt")}}. An integer with arbitrary precision. For example: `9007199254740992n`.
-  6. {{Glossary("String")}}. A sequence of characters that represent a text value. For example: "Howdy"
+  6. {{Glossary("String")}}. A sequence of characters that represent a text value. For example: `"Howdy"`.
   7. [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). A data type whose instances are unique and immutable.
 
 - and {{Glossary("Object")}}
@@ -526,7 +526,7 @@ More succinctly, the syntax is:
 
 For example:
 
-```
+```js
 3.1415926
 .123456789
 3.1E+12
@@ -545,11 +545,7 @@ The following is an example of an object literal. The first element of the `car`
 const sales = 'Toyota';
 
 function carTypes(name) {
-  if (name === 'Honda') {
-    return name;
-  } else {
-    return `Sorry, we don't sell ${name}.`;
-  }
+  return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
 }
 
 const car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
@@ -590,7 +586,7 @@ console.log(unusualPropertyNames['!']); // Bang!
 
 #### Enhanced Object literals
 
-In ES2015, object literals are extended to support setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making `super` calls, and computing property names with expressions.
+Object literals support a range of shorthand syntaxes that include setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making `super` calls, and computing property names with expressions.
 
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
@@ -606,7 +602,7 @@ const obj = {
     return 'd ' + super.toString();
   },
   // Computed (dynamic) property names
-  [ 'prop_' + (() => 42)() ]: 42,
+  ['prop_' + (() => 42)()]: 42,
 }
 ```
 
@@ -781,7 +777,7 @@ lines.'
 console.log(str);   // this string is broken across multiple lines.
 ```
 
-ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/en-US/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features, including multiline strings!
+There is also a [**template literal**](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax. This allows for many advanced text formatting use cases, including multiline strings!
 
 ```js
 const poem =

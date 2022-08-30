@@ -16,7 +16,7 @@ A loop is a sequence of instructions that is continually repeated until a certai
 #### Syntax:
 
 ```
-for (statement 1; statement 2; statement 3){
+for (statement 1; statement 2; statement 3) {
   execute code block
 }
 ```

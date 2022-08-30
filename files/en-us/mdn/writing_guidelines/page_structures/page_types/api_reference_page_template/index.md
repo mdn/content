@@ -16,7 +16,7 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 > **Note:** _Remove this whole explanatory note before publishing._
 >
 >
-> ```plain
+> ```md
 > ---
 > title: NameOfTheInterface
 > slug: Web/API/NameOfTheInterface

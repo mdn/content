@@ -13,6 +13,8 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList.clear
 ---
+{{APIRef("HTML Drag and Drop API")}}
+
 The {{domxref("DataTransferItemList")}} method
 **`clear()`** removes all {{domxref("DataTransferItem")}}
 objects from the drag data items list, leaving the list empty.
@@ -130,5 +132,3 @@ function dragendHandler(ev) {
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("HTML Drag and Drop API")}}

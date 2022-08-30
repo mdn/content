@@ -43,11 +43,7 @@ function setView() {
     posPara.textContent = `Position: x${roundToTwo(posState.position.x)} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if (-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
-    }
+    zPos = -posState.position.z > 0.01 ? -posState.position.z : 0.01;
   }
 
   if (posState.hasOrientation) {

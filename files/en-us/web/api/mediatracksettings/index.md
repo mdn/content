@@ -50,7 +50,7 @@ Some or all of the following will be included in the object, either because it's
   - : A long integer value indicating the current value of the {{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}} property, specifying the sample rate in samples per second of the audio data. Standard CD-quality audio, for example, has a sample rate of 41,000 samples per second.
 - {{domxref("MediaTrackSettings.sampleSize", "sampleSize")}}
   - : A long integer value indicating the current value of the {{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}} property, specifying the linear size, in bits, of each audio sample. CD-quality audio, for example, is 16-bit, so this value would be 16 in that case.
-- {{domxref("MediaTrackSettings.volume", "volume")}}
+- {{domxref("MediaTrackSettings.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.volume", "volume")}} property, specifying the volume level of the track. This value will be between 0.0 (silent) to 1.0 (maximum supported volume).
 
 ### Properties of video tracks

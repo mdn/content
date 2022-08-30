@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Math.fround
 {{JSRef}}
 
 The **`Math.fround()`** function returns the
-nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision floating-point format) float representation of a {{jsxref("Number")}}.
+nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a {{jsxref("Number")}}.
 
 {{EmbedInteractiveExample("pages/js/math-fround.html")}}
 

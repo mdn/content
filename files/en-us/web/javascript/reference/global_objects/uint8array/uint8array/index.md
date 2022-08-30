@@ -29,15 +29,7 @@ new Uint8Array(buffer, byteOffset)
 new Uint8Array(buffer, byteOffset, length)
 ```
 
-## Description
-
-The `Uint8Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint8Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
-```
+> **Note:** `Uint8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -57,7 +57,7 @@ A grid widget contains one or more rows with one or more cells of thematically r
 
 Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using `rowgroups`.
 
-If the grid is used as an interactive widget, [keyboard](#keyboard-use) interactions need to be implemented.
+If the grid is used as an interactive widget, [keyboard interactions](#keyboard_interactions) need to be implemented.
 
 ### Associated ARIA roles, states, and properties
 
@@ -352,7 +352,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
         moveto(parseInt(event.target.dataset.row, 10), 0);
       }
       break;
-    }  
+    }
     case "End": {
       if (event.ctrlKey) {
         let i = maxrow;

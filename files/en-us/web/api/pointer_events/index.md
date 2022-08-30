@@ -66,7 +66,7 @@ The following sub-sections contain short descriptions of each interface and prop
 
 ### PointerEvent interface
 
-The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties. (All of the following properties are {{readonlyInline}}.)
+The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties. (All of the following properties are {{ReadOnlyInline}}.)
 
 - {{ domxref('PointerEvent.pointerId','pointerId')}}
   - : A unique identifier for the pointer causing the event.
@@ -130,7 +130,7 @@ This section contains examples of basic usage of using the pointer events interf
 This example registers a handler for every event type for the given element.
 
 ```html
-<html>
+<html lang="en">
   <script>
     function over_handler(event) { }
     function enter_handler(event) { }
@@ -159,7 +159,7 @@ This example registers a handler for every event type for the given element.
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me… </div>
+    <div id="target">Touch me…</div>
   </body>
 </html>
 ```
@@ -169,7 +169,7 @@ This example registers a handler for every event type for the given element.
 This example illustrates accessing all of a pointer event's properties.
 
 ```html
-<html>
+<html lang="en">
   <script>
     const id = -1;
 
@@ -214,7 +214,7 @@ This example illustrates accessing all of a pointer event's properties.
           process_touch(ev);
           break;
         default:
-          console.log("pointerType " + ev.pointerType + " is Not supported");
+          console.log(`pointerType ${ev.pointerType} is not supported`);
       }
 
       // Call the tilt handler
@@ -228,13 +228,13 @@ This example illustrates accessing all of a pointer event's properties.
     }
 
     function init() {
-      const el=document.getElementById("target");
+      const el = document.getElementById("target");
       // Register pointerdown handler
       el.onpointerdown = down_handler;
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me… </div>
+    <div id="target">Touch me…</div>
   </body>
 </html>
 ```
@@ -273,29 +273,29 @@ Pointer capture allows events for a particular {{domxref("PointerEvent","pointer
 The following example shows pointer capture being set on an element.
 
 ```html
-<html>
-<script>
-  function downHandler(ev) {
-    let el = document.getElementById("target");
-    // Element 'target' will receive/capture further events
-    el.setPointerCapture(ev.pointerId);
-  }
+<html lang="en">
+  <script>
+    function downHandler(ev) {
+      let el = document.getElementById("target");
+      // Element 'target' will receive/capture further events
+      el.setPointerCapture(ev.pointerId);
+    }
 
-  function init() {
-    let el = document.getElementById("target");
-    el.onpointerdown = downHandler;
-  }
-</script>
-<body onload="init();">
-  <div id="target"> Touch me… </div>
-</body>
+    function init() {
+      let el = document.getElementById("target");
+      el.onpointerdown = downHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me…</div>
+  </body>
 </html>
 ```
 
 The following example shows a pointer capture being released (when a {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("Element/pointerup_event", "pointerup")}} or {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs.
 
 ```html
-<html>
+<html lang="en">
   <script>
     function downHandler(ev) {
       let el = document.getElementById("target");
@@ -317,7 +317,7 @@ The following example shows a pointer capture being released (when a {{domxref("
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me… </div>
+    <div id="target">Touch me…</div>
   </body>
 </html>
 ```
@@ -331,9 +331,9 @@ A value of `auto` means the browser is free to apply its default touch behavior 
 In the following example, the browser's default touch behavior is disabled for the `div` element.
 
 ```html
-<html>
+<html lang="en">
   <body>
-    <div style="touch-action:none;">Can't touch this… </div>
+    <div style="touch-action:none;">Can't touch this…</div>
   </body>
 </html>
 ```

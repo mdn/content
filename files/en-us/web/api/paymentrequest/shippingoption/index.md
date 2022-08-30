@@ -11,9 +11,11 @@ tags:
   - Reference
   - Secure context
   - shippingOption
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingOption
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`shippingOption`** read-only attribute of
 the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping

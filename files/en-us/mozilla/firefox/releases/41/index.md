@@ -161,7 +161,7 @@ _No change._
 
 ### Other
 
-- A new, internal, and chrome-context-only API to render the root widget of a window into a {{HTMLElement("canvas")}} has been added: {{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}}. This API uses the operating system to snapshot the widget on-screen. For more details see {{bug(1167477)}}.
+- A new, internal, and chrome-context-only API to render the root widget of a window into a {{HTMLElement("canvas")}} has been added: `CanvasRenderingContext2D.drawWidgetAsOnScreen()`. This API uses the operating system to snapshot the widget on-screen. For more details see {{bug(1167477)}}.
 
 ## Older versions
 

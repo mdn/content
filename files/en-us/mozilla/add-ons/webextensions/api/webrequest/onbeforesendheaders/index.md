@@ -170,7 +170,7 @@ Events have three functions:
 
 ## Examples
 
-This code changes the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under https\://httpbin.org/".
+This code changes the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under `https://httpbin.org/`.
 
 ```js
 "use strict";

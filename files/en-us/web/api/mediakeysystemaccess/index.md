@@ -20,7 +20,7 @@ The **`MediaKeySystemAccess`** interface of the [EncryptedMediaExtensions API](/
 
 ## Properties
 
-- {{domxref("MediaKeySystemAccess.keySystem")}} {{readonlyinline}}
+- {{domxref("MediaKeySystemAccess.keySystem")}} {{ReadOnlyInline}}
   - : Returns a string identifying the key system being used.
 
 ## Methods

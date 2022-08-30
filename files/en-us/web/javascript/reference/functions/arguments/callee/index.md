@@ -2,7 +2,6 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 tags:
-  - Deprecated
   - Functions
   - JavaScript
   - Property
@@ -55,13 +54,14 @@ However, the design of `arguments.callee` has multiple issues. The first problem
 const global = this;
 
 const sillyFunction = function (recursed) {
-  if (!recursed) {
-    return arguments.callee(true);
-  }
   if (this !== global) {
     console.log('This is: ', this);
   } else {
     console.log('This is the global');
+  }
+
+  if (!recursed) {
+    return arguments.callee(true);
   }
 }
 

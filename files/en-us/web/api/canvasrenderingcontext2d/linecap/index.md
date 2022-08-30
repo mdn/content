@@ -23,7 +23,7 @@ property of the Canvas 2D API determines the shape used to draw the end points o
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `"butt"`
   - : The ends of lines are squared off at the endpoints. Default value.

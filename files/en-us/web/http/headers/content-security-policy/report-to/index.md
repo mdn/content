@@ -14,10 +14,10 @@ browser-compat: http.headers.Content-Security-Policy.report-to
 {{HTTPSidebar}}
 
 The `Content-Security-Policy`
-**_`Report-To`_** HTTP response header field
+**`Report-To`** HTTP response header field
 instructs the user agent to store reporting endpoints for an origin.
 
-```html
+```http
 Content-Security-Policy: …; report-to groupname
 ```
 
@@ -45,7 +45,7 @@ with other directives.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: report-to <json-field-value>;
 ```
 
@@ -54,7 +54,7 @@ Content-Security-Policy: report-to <json-field-value>;
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-```
+```http
 Report-To: { "group": "csp-endpoint",
               "max_age": 10886400,
               "endpoints": [
@@ -68,7 +68,7 @@ Report-To: { "group": "csp-endpoint",
 Content-Security-Policy: …; report-to csp-endpoint
 ```
 
-```
+```http
 Report-To: { "group": "endpoint-1",
               "max_age": 10886400,
               "endpoints": [
@@ -79,7 +79,7 @@ Report-To: { "group": "endpoint-1",
 Content-Security-Policy: …; report-to endpoint-1
 ```
 
-```
+```http
 Reporting-Endpoints: endpoint-1="https://example.com/reports"
 
 Content-Security-Policy: …; report-to endpoint-1

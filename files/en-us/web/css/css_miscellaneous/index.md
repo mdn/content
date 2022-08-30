@@ -18,10 +18,6 @@ These pages contain CSS properties that are supported by browsers but either are
 - {{cssxref("all")}}
 - {{cssxref("text-rendering")}}
 
-## Guides
-
-_None._
-
 ## Specifications
 
 _These properties are mostly unrelated to each other. Consult their individual pages for specifications._

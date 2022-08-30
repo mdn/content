@@ -149,7 +149,7 @@ In our example:
 
   ```html
   <label for="guessField">Enter a guess: </label>
-  <input type="text" id="guessField" class="guessField">
+  <input type="number" id="guessField" class="guessField">
   <input type="submit" value="Submit guess" class="guessSubmit">
   ```
 
@@ -484,7 +484,7 @@ Let's play with some browser objects a bit.
 4. Now type in the following:
 
     ```js
-    guessField.value = 'Hello';
+    guessField.value = 2;
     ```
 
     The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!

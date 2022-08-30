@@ -24,7 +24,7 @@ The Web Authentication API is an extension of the [Credential Management API](/e
 
 ## Web authentication concepts and usage
 
-The Web Authentication API (also referred to as WebAuthn) uses [asymmetric (public-ke](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
+The Web Authentication API (also referred to as WebAuthn) uses [asymmetric (public-key)](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.

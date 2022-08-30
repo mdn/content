@@ -38,7 +38,7 @@ The **`If-Unmodified-Since`** HTTP header is commonly used in the following situ
 
 ## Syntax
 
-```
+```http
 If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -63,7 +63,7 @@ If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> G
 
 ## Examples
 
-```
+```http
 If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

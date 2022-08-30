@@ -24,8 +24,7 @@ toISOString()
 
 ### Return value
 
-A string representing the given date in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format according to
-universal time.
+A string representing the given date in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format according to universal time. It's the same format as the one required to be recognized by [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format).
 
 ## Examples
 
@@ -37,8 +36,7 @@ const today = new Date('05 October 2011 14:48 UTC');
 console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z
 ```
 
-The above example uses parsing of a non–standard string value that may not be correctly
-parsed in non–Mozilla browsers.
+The above example uses parsing of a non–standard string value that may not be correctly parsed in non–Mozilla browsers.
 
 ## Specifications
 
