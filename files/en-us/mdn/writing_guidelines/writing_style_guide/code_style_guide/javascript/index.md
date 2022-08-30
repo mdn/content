@@ -12,7 +12,7 @@ The following guidelines cover writing JavaScript example code for MDN Web Docs.
 
 ## General guidelines for JavaScript code examples
 
-This section explains the general guidelines to keep in mind while writing JavaScript code examples. The later sections will cover more specific details
+This section explains the general guidelines to keep in mind while writing JavaScript code examples. The later sections will cover more specific details.
 
 ### Choosing a format
 
