@@ -122,7 +122,10 @@ Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
 const testElements = document.getElementsByClassName('test');
-const testDivs = [...testElements].filter((testElement) => testElement.nodeName === 'DIV');
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === 'DIV',
+);
 ```
 
 ## Specifications
