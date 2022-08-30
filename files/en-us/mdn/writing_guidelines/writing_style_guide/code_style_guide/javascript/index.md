@@ -289,33 +289,33 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
 ### Type coercion
 
-  Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without new, instead. Write:
+Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without new, instead. Write:
 
-  ```js example-good
-  class Person {
-    #name;
-    #birthYear;
-    
-    constructor(name, year) {
-      this.#name = String(name);
-      this.#birthYear = Number(year);
-    }
-  };
-  ```
+```js example-good
+class Person {
+  #name;
+  #birthYear;
+  
+  constructor(name, year) {
+    this.#name = String(name);
+    this.#birthYear = Number(year);
+  }
+};
+```
 
-  Don't write:
+Don't write:
 
-  ```js example-bad
-  class Person {
-    #name;
-    #birthYear;
-    
-    constructor(name, year) {
-      this.#name = "" + name;
-      this.#birthYear = +year;
-    }
-  };
-  ```
+```js example-bad
+class Person {
+  #name;
+  #birthYear;
+  
+  constructor(name, year) {
+    this.#name = "" + name;
+    this.#birthYear = +year;
+  }
+};
+```
 
 ## Operators
 
