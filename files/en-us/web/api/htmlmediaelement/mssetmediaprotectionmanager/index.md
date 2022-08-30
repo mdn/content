@@ -27,7 +27,7 @@ msSetMediaProtectionManager(mediaProtectionManager);
 
 - `mediaProtectionManager` {{optional_inline}}
   - : A `MediaProtectionManager`.
-    (See [Windows.Media.Protection](https://docs.microsoft.com/en-us/uwp/api/windows.media.protection?view=winrt-22000)
+    (See [Windows.Media.Protection](https://docs.microsoft.com/uwp/api/windows.media.protection?view=winrt-22000)
     for more information to manage Digital Rights Management (DRM) media contents).
     It can be of any type.
 
