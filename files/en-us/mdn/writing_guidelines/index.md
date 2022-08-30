@@ -44,7 +44,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This article explains how to write a CSS property page, including layout and content.
 
-    - [Write an API reference](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)
+    - [How to document an API reference](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)
 
       - : This section explains how to approach documenting a Web API.
 
