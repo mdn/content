@@ -10,11 +10,11 @@ browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
 {{APIRef}}
 
-The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) or [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
-
+The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) context is lost.
 Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
 
-The `cancelable` attribute of this event is `true`. You can cancel this event in order to cancel the future restoration of the context.
+By default the user agent will attempt to restore the context and then fire the [`contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event).
+User code can the context from being restored by calling [`Event.preventDefault()`](http://localhost:5042/en-US/docs/Web/API/Event/preventDefault) during event handling.
 
 ## Syntax
 
@@ -32,13 +32,23 @@ A generic {{domxref("Event")}}.
 
 ## Example
 
-The code fragment below detects the context lost event.
+The code fragment below detects the `contextlost` event.
 
 ```js
 const canvas = document.getElementById('canvas');
 
 canvas.addEventListener('contextlost', (event) => {
   console.log(event);
+});
+```
+
+To prevent the context from being restored the code might instead look like this:
+
+```js
+const canvas = document.getElementById('canvas');
+
+canvas.addEventListener('contextlost', (event) => {
+  event.preventDefault();
 });
 ```
 
