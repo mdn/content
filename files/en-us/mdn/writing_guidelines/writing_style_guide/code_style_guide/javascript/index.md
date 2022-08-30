@@ -861,7 +861,7 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
   The example below demonstrates the use of `textContent`.
 
   ```js example-good
-  let text = 'Hello to all you good people';
+  const text = 'Hello to all you good people';
   const para = document.createElement('p');
   para.textContent = text;
   ```
@@ -869,7 +869,7 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
   Don't use `innerHTML` to insert _pure text_ into DOM nodes.
 
   ```js example-bad
-  let text = 'Hello to all you good people';
+  const text = 'Hello to all you good people';
   const para = document.createElement('p');
   para.innerHTML = text;
   ```
