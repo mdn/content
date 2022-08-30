@@ -94,11 +94,11 @@ step-end;
 
 ## Description
 
-The are three types of easing functions:
+There are three types of easing functions:
 
-- Linear
-- Cubic Bézier
-- Step
+- [Linear](#linear_easing_function)
+- [Cubic Bézier](#cubic_bézier_easing_function)
+- [Step](#step_easing_function)
 
 ### Linear easing function
 
