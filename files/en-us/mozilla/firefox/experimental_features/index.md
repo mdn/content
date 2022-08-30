@@ -471,7 +471,6 @@ For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
   </tbody>
 </table>
 
-
 ### :has() pseudo-class
 
 The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
