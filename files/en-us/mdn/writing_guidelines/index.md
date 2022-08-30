@@ -52,7 +52,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This article explains how to create a new reference page for an HTTP header.
 
-    - [Adding an entry to the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
+    - [How to add an entry to the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
       - : This article explains how to add and link to entries in the MDN Web Docs glossary. It also provides guidelines about glossary entry layout and content.
 
