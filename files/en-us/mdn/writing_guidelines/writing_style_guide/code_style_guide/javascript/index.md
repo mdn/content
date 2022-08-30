@@ -34,6 +34,53 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 Mark indentation with _2 spaces_. Don't use the tab character. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorconfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
 
+## Arrays
+
+### Array creation
+
+For creating arrays, use literals and not constructors.
+
+Create arrays like this:
+
+```js example-good
+const visitedCities = [];
+```
+
+Don't do this while creating arrays:
+
+```js example-bad
+const visitedCities = new Array(length);
+```
+
+### Item addition
+
+When adding items to an array, use [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) and not direct assignment. Consider the following array:
+
+```js
+const pets = [];
+```
+
+Add items to the array like this:
+
+```js example-good
+pets.push("cat");
+```
+
+Don't add items to the array like this:
+
+```js example-bad
+pets[pets.length] = "cat";
+```
+
+## Asynchronous methods
+
+Writing asynchronous code improves performance and should be used when possible. In particular, you can use:
+
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
+
+When both techniques are possible, we prefer using the simpler `async`/`await` syntax. Unfortunately, you can't use `await` at the top level unless you are in an ECMAScript module. CommonJS modules used by Node.js are not ES modules. If your example is intended to be used everywhere, avoid top-level `await`.
+
 ## Comments
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
@@ -183,170 +230,99 @@ array.forEach((value, /* index,  array ,*/) => {
 };
 ```
 
-## Variables
+## Functions
 
-### Variable names
+### Function names
 
-Good variable names are essential to understanding code.
+For function names, use camelCase, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
-- Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
-- Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null` or `name = "John Doe"` instead of `sName = "John Doe"`.
-- For collections, avoid adding the type such as list, array, queue in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
-- For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
-- Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general without a practical context.
-- Use variable names as shown here:
-
-  ```js example-good
-  let playerScore = 0;
-
-  let speed = distance / time;
-  ```
-
-  Don't name variables like this:
-
-  ```js example-bad
-  let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
-
-  let s = d / t;
-  ```
-
-> **Note:** The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
-
-### Variable declarations
-
-When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keywords, not [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var). The following examples show what's recommended and what's not on MDN Web Docs:
-
-- If a variable will not be reassigned, prefer `const`, like so:
-
-  ```js example-good
-  const name = "Chris";
-  console.log(name);
-  ```
-
-- If you'll change the value of a variable, use `let` as shown below:
-
-  ```js example-good
-  let age = "40";
-  age++;
-  console.log("Happy birthday!");
-  ```
-
-- The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
-
-  ```js example-bad
-  let name = "Chris";
-  console.log(myName);
-  ```
-
-- The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
-
-  ```js example-bad
-  const age = "40";
-  age++;
-  console.log("Happy birthday!");
-  ```
-
-- The example below uses `var`, polluting the global scope:
-
-  ```js example-bad
-  var age = "40";
-  var name = "Chris";
-  ```
-
-- Declare one variable per line, like so:
-
-  ```js example-good
-  let var1;
-  let var2;
-  let var3 = "Apapou";
-  let var4 = var3;
-  ```
-  
-  Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
-
-  ```js example-bad
-  let var1, var2;
-  let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
-  ```
-
-### Type coercion
-
-Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without new, instead. Write:
+The following is a correct example of a function name:
 
 ```js example-good
-class Person {
-  #name;
-  #birthYear;
-  
-  constructor(name, year) {
-    this.#name = String(name);
-    this.#birthYear = Number(year);
-  }
+function sayHello() {
+  console.log('Hello!');
 }
 ```
 
-Don't write:
+Don't use function names like these:
 
 ```js example-bad
-class Person {
-  #name;
-  #birthYear;
-  
-  constructor(name, year) {
-    this.#name = "" + name;
-    this.#birthYear = +year;
-  }
+function SayHello() {
+  console.log('Hello!');
+}
+
+function doIt() {
+  console.log('Hello!');
 }
 ```
 
-## Operators
+### Function declarations
 
-This section lists our recommendations of which operators to use and when.
+- Where possible, use the function declaration over function expressions to define functions.
 
-### Conditional operators
+  Here is the recommended way to declare a function:
 
-When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
+  ```js example-good
+  function sum(a, b) {
+    return a + b;
+  }
+  ```
 
-```js example-good
-const x = condition ? 1 : 2;
-```
+  This is not a good way to define a function:
 
-Do not write:
+  ```js example-bad
+  let sum = function(a, b) {
+    return a + b;
+  }
+  ```
 
-```js example-bad
-let x;
-if (condition) {
-  x = 1;
-else {
-  x = 2;
-} 
-```
+- When using anonymous functions as a callback (a function passed to another method invocation), if you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
 
-The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
+  Here is the recommended way:
 
-### Strict equality operator
+  ```js example-good
+  const array1 = [1, 2, 3, 4];
+  const sum = array1.reduce((a, b) => a + b);
+  ```
 
-Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple equals) and inequality operators over the loose equality (double equals) and inequality operators.
+  Instead of this:
 
-Use the strict equality and inequality operators like this:
+  ```js example-bad
+  const array1 = [1, 2, 3, 4];
+  const sum = array1.reduce(function (a, b) {
+    return a + b;
+  });
+  ```
 
-```js example-good
-name === 'Chris';
-age !== 25;
-```
+- Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use function declarations with the keyword `function`:
 
-Don't use the loose equality and inequality operators, as shown below:
+  ```js example-good
+  function x() {
+    // …
+  }
+  ```
 
-```js example-bad
-name == 'Chris';
-age != 25;
-```
+  Don't do:
 
-If you need to use `==` or `!=`, remember that `== null` is the only acceptable case. As TypeScript will fail on all other cases, we don't want to have them in our example code. Consider adding a comment to explain why you need it.
+  ```js example-bad
+  const x = () => {
+    // …
+  };
+  ```
 
-### Shortcuts for boolean tests
+- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
 
-Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true` and `x === false`.
+  ```js example-good
+  arr.map((e) => e.id);
+  ```
+
+  And not:
+
+  ```js example-bad
+  arr.map((e) => { 
+    return e.id;
+  });
+  ```
 
 ## Loops and conditional statements
 
@@ -550,68 +526,6 @@ Switch statements can be a little tricky.
 
 > **Note:** Keep in mind that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
 
-## Strings
-
-String literals can be enclosed within single quotes, as in `'A string'`, or within double quotes, as in `"A string"`. Don't worry about which one to use; Prettier keeps it consistent.
-
-### Template literals
-
-For inserting values into strings, use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
-
-- Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
-
-  ```js example-good
-  const name = 'Chris';
-  console.log(`Hi! I'm ${name}!`);
-  ```
-
-  Don't concatenate strings like this:
-
-  ```js example-bad
-  const name = 'Chris';
-  console.log("Hi! I'm" + name + "!");
-  ```
-
-- Don't overuse template literals. If there are no substitutions, use a normal string literal instead.
-
-## Arrays
-
-### Array creation
-
-For creating arrays, use literals and not constructors.
-
-Create arrays like this:
-
-```js example-good
-const visitedCities = [];
-```
-
-Don't do this while creating arrays:
-
-```js example-bad
-const visitedCities = new Array(length);
-```
-
-### Item addition
-
-When adding items to an array, use [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) and not direct assignment. Consider the following array:
-
-```js
-const pets = [];
-```
-
-Add items to the array like this:
-
-```js example-good
-pets.push("cat");
-```
-
-Don't add items to the array like this:
-
-```js example-bad
-pets[pets.length] = "cat";
-```
-
 ## Objects
 
 ### Object names
@@ -721,108 +635,194 @@ const obj = {
   }
   ```
 
-## Functions
+## Operators
 
-### Function names
+This section lists our recommendations of which operators to use and when.
 
-For function names, use camelCase, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
+### Conditional operators
 
-The following is a correct example of a function name:
+When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
 
 ```js example-good
-function sayHello() {
-  console.log('Hello!');
-}
+const x = condition ? 1 : 2;
 ```
 
-Don't use function names like these:
+Do not write:
 
 ```js example-bad
-function SayHello() {
-  console.log('Hello!');
-}
+let x;
+if (condition) {
+  x = 1;
+else {
+  x = 2;
+} 
+```
 
-function doIt() {
-  console.log('Hello!');
+The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
+
+### Strict equality operator
+
+Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple equals) and inequality operators over the loose equality (double equals) and inequality operators.
+
+Use the strict equality and inequality operators like this:
+
+```js example-good
+name === 'Chris';
+age !== 25;
+```
+
+Don't use the loose equality and inequality operators, as shown below:
+
+```js example-bad
+name == 'Chris';
+age != 25;
+```
+
+If you need to use `==` or `!=`, remember that `== null` is the only acceptable case. As TypeScript will fail on all other cases, we don't want to have them in our example code. Consider adding a comment to explain why you need it.
+
+### Shortcuts for boolean tests
+
+Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true` and `x === false`.
+
+## Strings
+
+String literals can be enclosed within single quotes, as in `'A string'`, or within double quotes, as in `"A string"`. Don't worry about which one to use; Prettier keeps it consistent.
+
+### Template literals
+
+For inserting values into strings, use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
+
+- Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
+
+  ```js example-good
+  const name = 'Chris';
+  console.log(`Hi! I'm ${name}!`);
+  ```
+
+  Don't concatenate strings like this:
+
+  ```js example-bad
+  const name = 'Chris';
+  console.log("Hi! I'm" + name + "!");
+  ```
+
+- Don't overuse template literals. If there are no substitutions, use a normal string literal instead.
+
+## Variables
+
+### Variable names
+
+Good variable names are essential to understanding code.
+
+- Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
+- Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null` or `name = "John Doe"` instead of `sName = "John Doe"`.
+- For collections, avoid adding the type such as list, array, queue in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
+- For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
+- Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general without a practical context.
+- Use variable names as shown here:
+
+  ```js example-good
+  let playerScore = 0;
+
+  let speed = distance / time;
+  ```
+
+  Don't name variables like this:
+
+  ```js example-bad
+  let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
+
+  let s = d / t;
+  ```
+
+> **Note:** The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
+
+### Variable declarations
+
+When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keywords, not [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var). The following examples show what's recommended and what's not on MDN Web Docs:
+
+- If a variable will not be reassigned, prefer `const`, like so:
+
+  ```js example-good
+  const name = "Chris";
+  console.log(name);
+  ```
+
+- If you'll change the value of a variable, use `let` as shown below:
+
+  ```js example-good
+  let age = "40";
+  age++;
+  console.log("Happy birthday!");
+  ```
+
+- The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
+
+  ```js example-bad
+  let name = "Chris";
+  console.log(myName);
+  ```
+
+- The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
+
+  ```js example-bad
+  const age = "40";
+  age++;
+  console.log("Happy birthday!");
+  ```
+
+- The example below uses `var`, polluting the global scope:
+
+  ```js example-bad
+  var age = "40";
+  var name = "Chris";
+  ```
+
+- Declare one variable per line, like so:
+
+  ```js example-good
+  let var1;
+  let var2;
+  let var3 = "Apapou";
+  let var4 = var3;
+  ```
+  
+  Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
+
+  ```js example-bad
+  let var1, var2;
+  let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
+  ```
+
+### Type coercion
+
+Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without new, instead. Write:
+
+```js example-good
+class Person {
+  #name;
+  #birthYear;
+  
+  constructor(name, year) {
+    this.#name = String(name);
+    this.#birthYear = Number(year);
+  }
 }
 ```
 
-### Function declarations
+Don't write:
 
-- Where possible, use the function declaration over function expressions to define functions.
-
-  Here is the recommended way to declare a function:
-
-  ```js example-good
-  function sum(a, b) {
-    return a + b;
+```js example-bad
+class Person {
+  #name;
+  #birthYear;
+  
+  constructor(name, year) {
+    this.#name = "" + name;
+    this.#birthYear = +year;
   }
-  ```
-
-  This is not a good way to define a function:
-
-  ```js example-bad
-  let sum = function(a, b) {
-    return a + b;
-  }
-  ```
-
-- When using anonymous functions as a callback (a function passed to another method invocation), if you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
-
-  Here is the recommended way:
-
-  ```js example-good
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce((a, b) => a + b);
-  ```
-
-  Instead of this:
-
-  ```js example-bad
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce(function (a, b) {
-    return a + b;
-  });
-  ```
-
-- Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use function declarations with the keyword `function`:
-
-  ```js example-good
-  function x() {
-    // …
-  }
-  ```
-
-  Don't do:
-
-  ```js example-bad
-  const x = () => {
-    // …
-  };
-  ```
-
-- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
-
-  ```js example-good
-  arr.map((e) => e.id);
-  ```
-
-  And not:
-
-  ```js example-bad
-  arr.map((e) => { 
-    return e.id;
-  });
-  ```
-
-## Asynchronous methods
-
-Writing asynchronous code improves performance and should be used when possible. In particular, you can use:
-
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
-
-When both techniques are possible, we prefer using the simpler `async`/`await` syntax. Unfortunately, you can't use `await` at the top level unless you are in an ECMAScript module. CommonJS modules used by Node.js are not ES modules. If your example is intended to be used everywhere, avoid top-level `await`.
+}
+```
 
 ## Web APIs to avoid
 
