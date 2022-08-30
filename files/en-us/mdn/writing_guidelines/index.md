@@ -78,7 +78,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
     - [Specification tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
 
-      - : Every reference page on MDN should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to add them.
+      - : Every reference page on MDN Web Docs should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to add them.
 
     - [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
 
