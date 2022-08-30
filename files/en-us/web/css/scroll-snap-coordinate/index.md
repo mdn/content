@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 The **`scroll-snap-coordinate`** [CSS](/en-US/docs/Web/CSS) property defines the x and y coordinate positions within an element that will align with its nearest ancestor scroll container's {{cssxref("scroll-snap-destination")}} for each respective axis.
@@ -19,8 +20,8 @@ The **`scroll-snap-coordinate`** [CSS](/en-US/docs/Web/CSS) property defines the
 scroll-snap-coordinate: none;
 
 /* <position> values */
-scroll-snap-coordinate: 50px 50px;                   /* Single coordinate */
-scroll-snap-coordinate: 100px 100px, 100px bottom;   /* Multiple coordinates */
+scroll-snap-coordinate: 50px 50px; /* Single coordinate */
+scroll-snap-coordinate: 100px 100px, 100px bottom; /* Multiple coordinates */
 
 /* Global values */
 scroll-snap-coordinate: inherit;
@@ -47,7 +48,7 @@ If the element has been transformed, the snap coordinates are likewise transform
 
 ```plain
 scroll-snap-coordinate =
-  none | <position>
+  none | <position>#
 ```
 
 ## Examples
@@ -94,7 +95,7 @@ scroll-snap-coordinate =
   display: flex;
 }
 
-#container > div:nth-child(-n+2) {
+#container > div:nth-child(-n + 2) {
   margin-right: 20px;
 }
 

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.zoom
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The non-standard **_`zoom`_** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
@@ -57,7 +58,7 @@ zoom: unset;
 
 ```plain
 zoom =
- auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation
+  normal | reset | <number> | <percentage>
 ```
 
 ## Examples
