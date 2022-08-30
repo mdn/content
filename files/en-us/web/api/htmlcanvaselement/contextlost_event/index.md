@@ -10,7 +10,11 @@ browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
 {{APIRef}}
 
-The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired (with the `cancelable` attribute initialized to `true`) if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) or [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
+The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) or [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
+
+Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
+
+The `cancelable` attribute of this event is `true`. You can cancel this event in order to cancel the future restoration of the context.
 
 ## Syntax
 

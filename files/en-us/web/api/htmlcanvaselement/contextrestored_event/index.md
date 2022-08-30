@@ -12,6 +12,8 @@ browser-compat: api.HTMLCanvasElement.contextrestored_event
 
 The **`contextrestored`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent restores the backing storage for a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) or [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D).
 
+You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -35,6 +37,7 @@ const canvas = document.getElementById('canvas');
 
 canvas.addEventListener('contextrestored', (e) => {
   console.log(e);
+  // call to redrawCanvas() or similar
 }, false);
 ```
 
