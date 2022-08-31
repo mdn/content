@@ -684,7 +684,7 @@ If you need to use `==` or `!=`, remember that `== null` is the only acceptable 
 
 ### Shortcuts for boolean tests
 
-Use shortcuts for boolean tests. For example, use `x` and `!x`, not `x === true` and `x === false`.
+Prefer shortcuts for boolean tests. For example, use `if (x)` and `if (!x)`, not `if (x === true)` and `if (x === false)`, unless different kinds of truthy or falsy values are handled differently.
 
 ## Strings
 
