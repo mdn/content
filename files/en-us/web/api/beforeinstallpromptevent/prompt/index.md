@@ -29,7 +29,13 @@ None.
 
 ### Return value
 
-An empty {{jsxref("Promise")}}.
+A {{jsxref("Promise")}} resolving to an object containing:
+
+- `userChoice` {{experimental_inline}}  
+  - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{jsxref("BeforeInstallPromptEvent.userChoice")}} property.
+
+- `platform` {{non-standard_inline}}  
+  - : A string containing the selected platform, reflecting the {{jsxref("BeforeInstallPromptEvent.platform")}} property.
 
 ## Examples
 
