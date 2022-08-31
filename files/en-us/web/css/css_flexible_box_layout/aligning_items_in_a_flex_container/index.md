@@ -1,5 +1,5 @@
 ---
-title: Aligning Items in a Flex Container
+title: Aligning items in a flex container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 tags:
   - Align

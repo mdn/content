@@ -28,7 +28,7 @@ onchange = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaQueryListEvent")}}
 

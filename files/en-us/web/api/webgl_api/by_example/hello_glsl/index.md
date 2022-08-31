@@ -30,7 +30,7 @@ A very simple first shader program.
 
 ```html hidden
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css hidden
@@ -90,7 +90,7 @@ function setupWebGL (evt) {
   const vertexShader = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vertexShader,source);
   gl.compileShader(vertexShader);
-  
+
   source = document.querySelector("#fragment-shader").innerHTML;
   const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fragmentShader,source);

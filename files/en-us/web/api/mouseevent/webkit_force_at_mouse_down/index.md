@@ -31,4 +31,4 @@ _Not part of any specification._ Apple has [a description at the Mac Developer L
 
 - {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}}
 - {{domxref("MouseEvent.webkitForce")}}
-- {{domxref("Force_Touch_events")}}
+- [Force Touch events](/en-US/docs/Web/API/Force_Touch_events)

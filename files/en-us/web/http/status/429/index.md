@@ -23,7 +23,7 @@ A {{HTTPHeader("Retry-After")}} header might be included to this response indica
 
 ## Example
 
-```
+```http
 HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
 Retry-After: 3600

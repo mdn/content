@@ -17,8 +17,8 @@ The **`SharedWorker()`** constructor creates a
 script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 > **Note:** there is disagreement among browser manufacturers about
-> whether a data URL is of the same origin or not. Although Gecko 10.0
-> {{geckoRelease("10.0")}} and later accept data URLs, that's not the case in all other
+> whether a data URL is of the same origin or not. Although Firefox 10.0
+> and later accept data URLs, that's not the case in all other
 > browsers.
 
 ## Syntax
@@ -93,7 +93,7 @@ myWorker.port.onmessage = (e) => {
 }
 ```
 
-For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
+For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ## Specifications
 

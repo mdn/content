@@ -29,14 +29,14 @@ The following table provides a complete list of JavaScript falsy values:
 Examples of _falsy_ values in JavaScript (which are coerced to false in Boolean contexts, and thus _bypass_ the `if` block):
 
 ```js
-if (false)
-if (null)
-if (undefined)
-if (0)
-if (-0)
-if (0n)
-if (NaN)
-if ("")
+if (false) {}
+if (null) {}
+if (undefined) {}
+if (0) {}
+if (-0) {}
+if (0n) {}
+if (NaN) {}
+if ("") {}
 ```
 
 ### The logical AND operator, &&
@@ -44,10 +44,10 @@ if ("")
 If the first object is falsy, it returns that object:
 
 ```js
-false && "dog"
+console.log(false && "dog");
 // ↪ false
 
-0 && "dog"
+console.log(0 && "dog");
 // ↪ 0
 ```
 

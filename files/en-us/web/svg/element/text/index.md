@@ -44,25 +44,25 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("x")}}
   - : The x coordinate of the starting point of the text baseline.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : The y coordinate of the starting point of the text baseline.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("dx")}}
   - : Shifts the text position horizontally from a previous text element.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("dy")}}
   - : Shifts the text position vertically from a previous text element.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("rotate")}}
   - : Rotates orientation of each individual glyph. Can rotate glyphs individually.
-    *Value type*: [**\<list-of-number>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: none; *Animatable*: **yes**
+    _Value type_: [**\<list-of-number>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("lengthAdjust")}}
   - : How the text is stretched or compressed to fit the width defined by the `textLength` attribute.
-    *Value type*: `spacing`|`spacingAndGlyphs`; *Default value*: `spacing`; *Animatable*: **yes**
+    _Value type_: `spacing`|`spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
 - {{SVGAttr("textLength")}}
   - : A width that the text should be scaled to fit.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 

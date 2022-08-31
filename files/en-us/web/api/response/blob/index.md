@@ -39,7 +39,7 @@ A promise that resolves with a {{domxref("Blob")}}.
 
 ## Examples
 
-In our [fetch request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we
+In our [fetch request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (run [fetch request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)), we
 create a new request using the {{domxref("Request.Request","Request()")}} constructor,
 then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
 out of the response using `blob()`, put it into an object URL using

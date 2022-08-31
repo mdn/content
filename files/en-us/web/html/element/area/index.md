@@ -93,7 +93,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
-- {{htmlattrdef("hreflang")}}
+- {{htmlattrdef("hreflang")}} {{Deprecated_Inline}}
   - : Indicates the language of the linked resource. Allowed values are defined by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("ping")}}
@@ -144,7 +144,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Indicates that no hyperlink exists for the associated area.
 
-    > **Note:** Since HTML5, omitting the `href` attribute is sufficient.
+    > **Note:** The `nohref` attribute is not necessary, as omitting the `href` attribute is sufficient.
 
 - {{htmlattrdef("type")}} {{deprecated_inline}}
   - : Hint for the type of the referenced resource. Ignored by browsers.

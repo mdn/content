@@ -124,7 +124,7 @@ npm install mongoose
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
-> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based *database as a service* free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
+> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based _database as a service_ free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
 
 ### Connecting to MongoDB
 
@@ -656,7 +656,7 @@ AuthorSchema
 // Virtual for author's URL
 AuthorSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return `/catalog/author/${this._id}`;
   });
 
@@ -695,7 +695,7 @@ const BookSchema = new Schema(
 // Virtual for book's URL
 BookSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return '/catalog/book/' + this._id;
   });
 
@@ -730,7 +730,7 @@ const BookInstanceSchema = new Schema(
 // Virtual for bookinstance's URL
 BookInstanceSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return `/catalog/bookinstance/${this._id}`;
   });
 
@@ -766,7 +766,7 @@ In order to test the models (and to create some example books and other items th
 
     > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2. Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials).
+2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials).
 
     ```bash
     npm install async

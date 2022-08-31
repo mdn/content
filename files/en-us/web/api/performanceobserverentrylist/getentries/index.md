@@ -86,7 +86,7 @@ observe_all.observe({
 
 const observe_frame = new PerformanceObserver((list, obs) => {
   const perfEntries = list.getEntries();
-  
+
   // Should only have 'frame' entries
   perfEntries.forEach((entry) => print_perf_entry(entry));
 });

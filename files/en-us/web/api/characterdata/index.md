@@ -19,11 +19,11 @@ _This interface also inherits properties from its parents, {{domxref("Node")}} a
 
 - {{domxref("CharacterData.data")}}
   - : A string representing the textual data contained in this object.
-- {{domxref("CharacterData.length")}} {{readonlyInline}}
+- {{domxref("CharacterData.length")}} {{ReadOnlyInline}}
   - : Returns a number representing the size of the string contained in the object.
-- {{domxref("CharacterData.nextElementSibling")}} {{readonlyInline}}
+- {{domxref("CharacterData.nextElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _follows_ this node, and is a sibling.
-- {{domxref("CharacterData.previousElementSibling")}} {{readonlyInline}}
+- {{domxref("CharacterData.previousElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _precedes_ this node, and is a sibling.
 
 ## Methods

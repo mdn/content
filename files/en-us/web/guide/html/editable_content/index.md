@@ -6,7 +6,6 @@ tags:
   - Example
   - Guide
   - HTML
-  - HTML5
   - NeedsBrowserCompatibility
   - NeedsContent
   - Text
@@ -39,7 +38,7 @@ Here's the above HTML in action:
 
 ## Executing commands
 
-When an HTML element has `contenteditable` set to `true`, the {{ domxref("document.execCommand()") }} method is made available. This lets you run [commands](/en-US/docs/Web/API/Document/execCommand#commands) to manipulate the contents of the editable region. Most commands affect the document's selection by, for example, applying a style to the text (bold, italics, etc), while others insert new elements (like adding a link) or affect an entire line (indenting). When using `contentEditable`, calling `execCommand()` will affect the currently active editable element.
+When an HTML element has `contenteditable` set to `true`, the {{ domxref("document.execCommand()") }} method is made available. This lets you run [commands](/en-US/docs/Web/API/Document/execCommand#commands) to manipulate the contents of the editable region. Most commands affect the document's selection by, for example, applying a style to the text (bold, italics, etc.), while others insert new elements (like adding a link) or affect an entire line (indenting). When using `contentEditable`, calling `execCommand()` will affect the currently active editable element.
 
 ## Differences in markup generation
 

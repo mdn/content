@@ -31,10 +31,6 @@ spec-urls: https://drafts.csswg.org/css-text-decor/
 - {{cssxref("text-underline-offset")}}
 - {{cssxref("text-underline-position")}}
 
-## Guides
-
-_None._
-
 ## Examples
 
 ```css

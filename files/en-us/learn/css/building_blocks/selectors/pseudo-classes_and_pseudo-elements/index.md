@@ -119,7 +119,7 @@ You could use these to insert a string of text, such as in the live example belo
 
 Inserting strings of text from CSS isn't really something we do very often on the web however, as that text is inaccessible to some screen readers and might be hard for someone to find and edit in the future.
 
-A more valid use of these pseudo-elements is to insert an icon, for example the little arrow added in the example below, which is a visual indicator that we wouldn't want read out by a screenreader:
+A more valid use of these pseudo-elements is to insert an icon, for example the little arrow added in the example below, which is a visual indicator that we wouldn't want read out by a screen reader:
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/after-icon.html", '100%', 400)}}
 

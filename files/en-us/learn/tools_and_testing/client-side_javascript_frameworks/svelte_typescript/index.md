@@ -101,7 +101,7 @@ TypeScript's main advantages are:
 - Rich IDE support: Type information allows code editors and IDEs to offer features like code navigation, autocompletion, and smarter hints.
 - Safer refactoring: Types allows IDEs to know more about your code, and assist you while refactoring large portions of your code base.
 - Type inference: Enables you to take advantage of many TypeScript features even without declaring variable types.
-- Availability of new and future JavaScript features: TypeScript transpiles many recent [ES6 features](http://es6-features.org/) to plain old-school JavaScript, allowing you to use them even on user-agents that don't support them natively yet.
+- Availability of new and future JavaScript features: TypeScript transpiles many recent JavaScript features to plain old-school JavaScript, allowing you to use them even on user-agents that don't support them natively yet.
 
 TypeScript also has some disadvantages:
 

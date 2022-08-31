@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - Message Channel API
   - MessageChannel
   - Property

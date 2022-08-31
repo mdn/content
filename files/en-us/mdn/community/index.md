@@ -78,7 +78,7 @@ You can communicate with the MDN Web Docs team and community through our [Matrix
 
 We are a small team working hard to keep up with the documentation demands of a continuously changing web ecosystem. Unfortunately, we just can't help with general support questions. For general help while learning to code, please refer to the following resources:
 
-- [Learn web development](https://developer.mozilla.org/docs/Learn)
+- [Learn web development](/en-US/docs/Learn)
 - [MDN Web Docs learn forum](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stackoverflow](https://stackoverflow.com/questions/)
 

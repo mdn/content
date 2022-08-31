@@ -19,7 +19,7 @@ To manipulate, for instance, the session storage for a domain, a call to {{domxr
 
 ## Properties
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
+- {{domxref("Storage.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of data items stored in the `Storage` object.
 
 ## Methods

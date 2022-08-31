@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 The **`nodeValue`** property of the {{domxref("Node")}} interface returns or sets the value of the current node.
@@ -45,11 +46,11 @@ The following table shows the return values for different types of nodes.
 and the following script:
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.querySelector("body").firstChild;
 let result = "<br/>Node names are:<br/>";
 while (node) {
   result += `Value of ${node.nodeName}: ${node.nodeValue}<br/>`;
-  node = node.nextSibling
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");

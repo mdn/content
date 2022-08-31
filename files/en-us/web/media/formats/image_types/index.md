@@ -66,7 +66,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
-          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
           <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
@@ -1093,7 +1093,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
             </tr>
             <tr>
               <th scope="row">
-                SVG as image ({{HTMLElement("img")}} etc)
+                SVG as image ({{HTMLElement("img")}}, etc.)
               </th>
               <td>28</td>
               <td>12</td>

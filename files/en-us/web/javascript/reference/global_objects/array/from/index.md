@@ -135,7 +135,7 @@ Array.from({length: 5}, (v, i) => i);
 ### Sequence generator (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
 const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 
 // Generate numbers range 0..4

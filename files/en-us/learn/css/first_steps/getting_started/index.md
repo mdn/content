@@ -251,7 +251,7 @@ We have removed the underline on our link on hover. You could remove the underli
 
 > **Note:** you will often see mention of [accessibility](/en-US/docs/Learn/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.
 >
-> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
+> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screen reader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
 >
 > A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.
 

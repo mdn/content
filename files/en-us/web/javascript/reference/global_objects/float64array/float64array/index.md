@@ -32,15 +32,7 @@ new Float64Array(buffer, byteOffset)
 new Float64Array(buffer, byteOffset, length)
 ```
 
-## Description
-
-The `Float64Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Float64Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Float64Array constructor
-// without new is forbidden
-```
+> **Note:** `Float64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

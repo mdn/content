@@ -29,7 +29,7 @@ Additional headers can be added to the safelist using {{HTTPHeader("Access-Contr
 
 You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:
 
-```plain
+```http
 Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 ```
 

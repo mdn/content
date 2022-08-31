@@ -36,7 +36,7 @@ The value returned by this property depends on the performance entry's
   {{domxref("PerformanceEntry.startTime","startTime")}}
   {{domxref("DOMHighResTimeStamp","timestamp")}}.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

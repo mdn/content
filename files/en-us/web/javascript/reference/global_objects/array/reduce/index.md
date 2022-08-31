@@ -244,7 +244,7 @@ const groupedPeople = groupBy(people, 'age')
 // }
 ```
 
-### Concatenating arrays contained in an array of objects using the spread operator and initialValue
+### Concatenating arrays contained in an array of objects using the spread syntax and initialValue
 
 ```js
 // friends - an array of objects

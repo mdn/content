@@ -35,7 +35,7 @@ data returned. This distinction may seem abstract without [examples](#examples).
 
 ## Syntax
 
-```
+```http
 Content-Location: <url>
 ```
 
@@ -76,7 +76,7 @@ as {{HTTPHeader("Accept-Language")}}.
 
 Say you're creating a new blog post through a site's API:
 
-```
+```http
 POST /new/post
 Host: example.com
 Content-Type: text/markdown
@@ -88,7 +88,7 @@ I made this through `example.com`'s API. I hope it worked.
 
 The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
-```
+```http
 HTTP/1.1 201 Created
 Content-Type: text/markdown
 Content-Location: /my-first-blog-post

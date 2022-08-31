@@ -15,7 +15,7 @@ browser-compat: css.properties.animation
 
 ## Reference
 
-### CSS Properties
+### Properties
 
 - {{cssxref("animation")}}
 - {{cssxref("animation-delay")}}
@@ -28,7 +28,7 @@ browser-compat: css.properties.animation
 - {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
-### CSS At-rules
+### At-rules
 
 - {{cssxref("@keyframes")}}
 - {{cssxref("@scroll-timeline")}}

@@ -45,11 +45,11 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 
 - `<length-percentage>`
   - : A length indicating the position of the left edge of the image relative to the box's left padding edge. Percentages are calculated against the horizontal dimension of the box padding area. That means, a value of `0%` means the left edge of the image is aligned with the box's left padding edge and a value of `100%` means the right edge of the image is aligned with the box's right padding edge.
-- **`left`**
+- `left`
   - : Equivalent to `0%`.
-- **`center`**
+- `center`
   - : Equivalent to `50%`.
-- **`right`**
+- `right`
   - : Equivalent to `100%`.
 
 ## Formal definition
@@ -58,7 +58,10 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-position-x =
+  [ <length-percentage> | left | center | right ]#
+```
 
 ## Examples
 

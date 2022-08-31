@@ -126,7 +126,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
 - **Ensure that pages aren't too similar**: If the content on different pages is similar textually, search engines will assume that the pages are about the same thing even if they aren't.
   For example, if an interface has the properties `width` and `height`, it's easy for the text to be surprisingly similar on the two pages documenting these two properties, with just a few words swapped out and using the same example. This makes it hard for search engines to know which is which, and they wind up sharing page rank, resulting in both being harder to find than they ought to be.
-  
+
   It's important, then, to ensure that every page has its own content. Here are some suggestions to help you accomplish that:
 
   - **Explain more unique concepts**: Consider use cases where there might be more differences than one would think. For instance, in the case of documenting `width` and `height` properties, perhaps write about the ways horizontal space and vertical space are used differently, and provide a discussion about the appropriate concepts. Perhaps you can mention the use of `width` in terms of making room for a sidebar, while using `height` to handle vertical scrolling or footers. Including information about accessibility issues is a useful and important idea as well.
@@ -179,7 +179,7 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
   - **Correct**: ... web browsers, and so on.
   - **Incorrect**: ... web browsers, etc.
-  
+
   - **Correct**: Web browsers such as Firefox can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
 
@@ -270,7 +270,7 @@ Use English-style plurals, not the Latin- or Greek-influenced forms.
 Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use straight quotes and apostrophes. This is because we need to choose one or the other for consistency. If curly quotes or apostrophes make their way into code snippets, even inline ones, readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
 
 ### Commas
 
@@ -337,7 +337,7 @@ Hyphenated compounds should be used when the last letter of the prefix is a vowe
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional *u* added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spellings.
 
 - **Correct**: localize, behavior

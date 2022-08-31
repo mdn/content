@@ -26,7 +26,7 @@ on the canvas to change the horizontal position of the square.</p>
 ```
 
 ```html hidden
-<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css hidden

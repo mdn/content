@@ -55,7 +55,9 @@ However, getting comfortable with JavaScript is more challenging than getting co
     myHeading.textContent = 'Hello world!';
     ```
 
-5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:![](hello-world.png)
+5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:
+
+![Heading "hello world" above a firefox logo](hello-world.png)
 
 > **Note:** The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
 >
@@ -218,7 +220,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
         <code
-          >9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
+>9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
         >
       </td>
     </tr>
@@ -357,7 +359,7 @@ myHTML.addEventListener('click', function () {
 
 It's just shorter.
 
-The functions we just passed to `addEventListener()` here are called *anonymous functions*, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an *arrow function*. An arrow function uses `() =>` instead of `function ()`:
+The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
 
 ```js
 document.querySelector('html').addEventListener('click', () => {
@@ -479,7 +481,7 @@ In human language, this means: If `myName` has no value, run `setUserName()` aga
 
 If you have followed all the instructions in this article, you should end up with a page that looks something like the image below. You can also [view our version](https://mdn.github.io/beginner-html-site-scripted/).
 
-![](website-screen-scripted.png)
+![Final look of HTML page after creating elements: a header, large centered logo, content, and a button](website-screen-scripted.png)
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 

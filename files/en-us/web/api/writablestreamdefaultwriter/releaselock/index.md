@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter/releaseLock
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -12,7 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface releases the writer's lock on the

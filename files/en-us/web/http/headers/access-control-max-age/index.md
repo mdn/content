@@ -27,7 +27,7 @@ The **`Access-Control-Max-Age`** response header indicates how long the results 
 
 ## Syntax
 
-```
+```http
 Access-Control-Max-Age: <delta-seconds>
 ```
 
@@ -44,7 +44,7 @@ Access-Control-Max-Age: <delta-seconds>
 
 Cache results of a preflight request for 10 minutes:
 
-```
+```http
 Access-Control-Max-Age: 600
 ```
 

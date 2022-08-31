@@ -47,13 +47,13 @@ See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_De
 
 ## Properties
 
-- {{DOMxRef("XRPose.angularVelocity")}} {{readonlyInline}}
+- {{DOMxRef("XRPose.angularVelocity")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.
-- {{DOMxRef("XRPose.emulatedPosition")}} {{readonlyInline}}
+- {{DOMxRef("XRPose.emulatedPosition")}} {{ReadOnlyInline}}
   - : A Boolean value which is `false` if the position and orientation given by {{DOMxRef("XRPose.transform", "transform")}} is obtained directly from a full six degree of freedom (6DoF) XR device (that is, a device which tracks not only the pitch, yaw, and roll of the head but also the forward, backward, and side-to-side motion of the viewer). If any component of the `transform` is computed or created artificially (such as by using mouse or keyboard controls to move through space), this value is instead `true`, indicating that the `transform` is in part emulated in software.
-- {{DOMxRef("XRPose.linearVelocity")}} {{readonlyInline}}
+- {{DOMxRef("XRPose.linearVelocity")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters per second relative to the base {{DOMxRef("XRSpace")}}.
-- {{DOMxRef("XRPose.transform")}} {{readonlyInline}}
+- {{DOMxRef("XRPose.transform")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("XRRigidTransform")}} which provides the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}.
 
 ## Specifications

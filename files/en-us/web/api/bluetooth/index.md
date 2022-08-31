@@ -23,7 +23,7 @@ options.
 
 _Inherits properties from its parent {{domxref("EventTarget")}}._
 
-- {{domxref("Bluetooth.referringDevice")}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref("Bluetooth.referringDevice")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the device, if any, from which the user opened the current
     page. For example, an Eddystone beacon might advertise a URL, which the user agent
     allows the user to open. A BluetoothDevice representing the beacon would be available

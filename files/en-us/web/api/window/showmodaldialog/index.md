@@ -8,9 +8,10 @@ tags:
   - HTML DOM
   - Method
   - Window
+  - Non-standard
 browser-compat: api.Window.showModalDialog
 ---
-{{deprecated_header}}{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** This feature has been removed. Please fix your Web sites and applications.
 >

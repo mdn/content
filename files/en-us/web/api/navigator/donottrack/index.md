@@ -38,4 +38,4 @@ console.log(navigator.doNotTrack);
 
 ## See also
 
-- [The Do Not Track field guide](/en-US/docs/Web/HTTP/Headers/DNT)
+- {{httpheader("DNT")}} HTTP header

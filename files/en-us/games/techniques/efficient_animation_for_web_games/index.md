@@ -6,6 +6,7 @@ tags:
   - Games
   - JavaScript
 ---
+
 {{GamesSidebar}}
 
 This article covers techniques and advice for creating efficient animation for web games, with a slant towards supporting lower end devices such as mobile phones. We touch on [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) and [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations), and JavaScript loops involving {{ domxref("window.requestAnimationFrame") }}.
@@ -82,12 +83,11 @@ How this conclusion was reached, however, is more important than the conclusion 
 To help combat poor animation performance, Chris Lord wrote [Animator.js](https://gitlab.com/Cwiiis/animator-js/blob/master/Animator.js), a simple, easy-to-use animation library, heavily influenced by various parts of [Clutter](https://blogs.gnome.org/clutter/), but with a focus on avoiding scope-creep. It does one thing, and it does it well. Animator.js is a fire-and-forget style animation library, designed to be used with games, or other situations where you need many, synchronized, custom animations. It includes a handful of built-in tweening functions, the facility to add your own, and helper functions for animating object properties. Puzzowl uses it to drive all the drawing updates and transitions, by overriding its `requestAnimationFrame` function with a custom version that makes the request, and appending the game's drawing function onto the end of the callback like so:
 
 ```js
-animator.requestAnimationFrame =
-  (callback) => {
-    requestAnimationFrame((t) => {
-      callback(t);
-      redraw();
-    });
+animator.requestAnimationFrame = (callback) => {
+  requestAnimationFrame((t) => {
+    callback(t);
+    redraw();
+  });
 };
 ```
 

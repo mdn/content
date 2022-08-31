@@ -22,7 +22,7 @@ pixels_ to the resolution in _CSS pixels_ for the current display
 device.
 
 This value could also be interpreted as the ratio of pixel sizes: the
-size of one *CSS pixel* to the size of one _physical pixel_. In simpler
+size of one _CSS pixel_ to the size of one _physical pixel_. In simpler
 terms, this tells the browser how many of the screen's actual pixels should be used to
 draw a single CSS pixel.
 

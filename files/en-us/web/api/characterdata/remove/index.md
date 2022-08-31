@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.remove
 ---
+
 {{APIRef("DOM")}}
 
 The **`remove()`** method of the {{domxref("CharacterData")}} removes the text contained in the node.
@@ -30,8 +31,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.remove(); // Removes the text
 ```

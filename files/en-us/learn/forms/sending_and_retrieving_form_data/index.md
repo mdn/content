@@ -116,14 +116,16 @@ Consider the following form:
 
 Since the `GET` method has been used, you'll see the URL `www.foo.com/?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
 
-![](url-parameters.png)The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case we are passing two pieces of data to the server:
+![The changed url with query parameters after submitting the form with GET method with a "server not found" browser error page](url-parameters.png)
+
+The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case we are passing two pieces of data to the server:
 
 - `say`, which has a value of `Hi`
 - `to`, which has a value of `Mom`
 
 The HTTP request looks like this:
 
-```
+```http
 GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
@@ -154,7 +156,7 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 
 When the form is submitted using the `POST` method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:
 
-```
+```http
 POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -179,7 +181,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 
 You can then get the form data, as shown in the image below.
 
-![](network-monitor.png)
+![HTTP requests and response data in network monitoring tab in browser's developer tools](network-monitor.png)
 
 The only thing displayed to the user is the URL called. As we mentioned above, with a `GET` request the user will see the data in their URL bar, but with a `POST` request they won't. This can be very important for two reasons:
 
@@ -207,7 +209,7 @@ Whichever HTTP method you choose, the server receives a string that will be pars
 
 This example displays a page with the data we sent. You can see this in action in our example [php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html) file — which contains the same example form as we saw before, with a `method` of `POST` and an `action` of `php-example.php`. When it is submitted, it sends the form data to [php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php), which contains the PHP code seen in the above block. When this code is executed, the output in the browser is `Hi Mom`.
 
-![](php-result.png)
+![Otherwise blank web page with "hi mom", the data received in response after submitting form data to a php file with POST method](php-result.png)
 
 > **Note:** This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux).
 >

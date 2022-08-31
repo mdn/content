@@ -25,7 +25,7 @@ For more details on autoplay and autoplay blocking, see the article [Autoplay gu
 
 ## Syntax
 
-```
+```http
 Feature-Policy: autoplay <allowlist>;
 ```
 

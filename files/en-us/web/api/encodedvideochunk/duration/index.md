@@ -8,9 +8,10 @@ tags:
   - Reference
   - duration
   - EncodedVideoChunk
+  - Experimental
 browser-compat: api.EncodedVideoChunk.duration
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`duration`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns an integer indicating the duration of the video in microseconds.
 

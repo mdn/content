@@ -4,6 +4,8 @@ slug: Web/HTML/Element/html/manifest
 tags:
   - Cache
   - application cache
+  - Deprecated
+  - Non-standard
 browser-compat: html.elements.html.manifest
 ---
 

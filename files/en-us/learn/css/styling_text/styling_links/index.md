@@ -473,7 +473,7 @@ The HTML defines a {{HTMLElement("nav")}} element with a `"container"` class. Th
 The CSS includes the styling for the container and the links it contains.
 
 - The second rule says:
-  - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be *flex items*.
+  - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be _flex items_.
   - The gap between the flex items will be `0.625%` of the container's width.
 - The third rule styles the links:
   - The first declaration, `flex: 1`, means that the widths of the items will be adjusted so they use all the available space in the container.

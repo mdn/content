@@ -28,12 +28,9 @@ continue label;
 ## Description
 
 In contrast to the {{jsxref("Statements/break", "break")}} statement,
-`continue` does not terminate the execution of the loop entirely: instead,
+`continue` does not terminate the execution of the loop entirely, but instead:
 
 - In a {{jsxref("Statements/while", "while")}} loop, it jumps back to the condition.
-
-<!---->
-
 - In a {{jsxref("Statements/for", "for")}} loop, it jumps to the update expression.
 
 The `continue` statement can include an optional label that allows the

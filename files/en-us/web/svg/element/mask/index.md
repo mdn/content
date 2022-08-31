@@ -40,22 +40,22 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : This attribute defines the height of the masking area.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `120%`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 - {{SVGAttr("maskContentUnits")}}
   - : This attribute defines the coordinate system for the contents of the `<mask>`.
-    *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `userSpaceOnUse`; *Animatable*: **yes**
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 - {{SVGAttr("maskUnits")}}
   - : This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
-    *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `objectBoundingBox`; *Animatable*: **yes**
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
-    *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `-10%`; *Animatable*: **yes**
+    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : This attribute defines the y-axis coordinate of the top-left corner of the masking area.
-    *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `-10%`; *Animatable*: **yes**
+    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : This attribute defines the width of the masking area.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `120%`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 
 ### Global attributes
 

@@ -6,7 +6,6 @@ tags:
   - Example
   - Guide
   - HTML
-  - HTML5
   - Web
 ---
 {{LearnSidebar}}
@@ -80,7 +79,7 @@ The main issues to consider are Internet Explorer support and performance. Inter
 
 That said, though, for custom element-associated metadata, they are a great solution.
 
-In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that exceed 1022 characters will not be read by Javascript (EcmaScript 4).
+In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that exceed 1022 characters will not be read by JavaScript (ECMAScript 4).
 
 ## See also
 

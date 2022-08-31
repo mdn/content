@@ -9,6 +9,7 @@ tags:
   - PasswordCredential
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.PasswordCredential
 ---
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
@@ -21,18 +22,18 @@ The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_
 
 ## Constructor
 
-- {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}} {{securecontext_inline}}
+- {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}} {{securecontext_inline}} {{Experimental_Inline}}
   - : Creates a new `PasswordCredential` object.
 
 ## Properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}} {{securecontext_inline}}
+- {{domxref("PasswordCredential.iconURL")}} {{ReadOnlyInline}} {{securecontext_inline}} {{Experimental_Inline}}
   - : A string containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
-- {{domxref("PasswordCredential.name")}} {{readonlyinline}} {{securecontext_inline}}
+- {{domxref("PasswordCredential.name")}} {{ReadOnlyInline}} {{securecontext_inline}} {{Experimental_Inline}}
   - : A human-readable string that provides public name for display in a credential chooser.
-- {{domxref("PasswordCredential.password")}} {{readonlyinline}} {{securecontext_inline}}
+- {{domxref("PasswordCredential.password")}} {{ReadOnlyInline}} {{securecontext_inline}} {{Experimental_Inline}}
   - : A string containing the password of the credential.
 
 ### Event handlers

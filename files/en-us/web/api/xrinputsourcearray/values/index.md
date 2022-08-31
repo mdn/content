@@ -22,9 +22,10 @@ tags:
   - XRInputSourceArray
   - augmented
   - values
+  - Experimental
 browser-compat: api.XRInputSourceArray.values
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}}
 method **`values()`** returns a {{Glossary("JavaScript")}}

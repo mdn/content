@@ -12,9 +12,8 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-tap-highlight-color
 ---
-{{ CSSRef() }}
 
-{{ Non-standard_header() }}
+{{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-tap-highlight-color`** is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user that their tap is being successfully recognized, and indicates which element they're tapping on.
 
@@ -35,7 +34,10 @@ A {{Cssxref("&lt;color&gt;")}}.
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-tap-highlight-color =
+  <color>
+```
 
 ## Specifications
 

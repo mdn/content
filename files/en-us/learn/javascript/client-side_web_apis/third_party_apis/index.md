@@ -95,7 +95,7 @@ Third party APIs have a slightly different permissions system — they tend to u
 
 You'll find a line similar to the following in the Mapquest API example:
 
-```
+```js
 L.mapquest.key = 'YOUR-API-KEY-HERE';
 ```
 
@@ -193,7 +193,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
-![](nytimes-example.png)
+![A screenshot of a sample search query and search results as retrieved from the New York Article Search API.](nytimes-example.png)
 
 ### Connect the API to your app
 
@@ -286,11 +286,7 @@ function displayResults(json) {
 
   const articles = json.response.docs;
 
-  if (articles.length === 10) {
-    nav.style.display = 'block';
-  } else {
-    nav.style.display = 'none';
-  }
+  nav.style.display = articles.length === 10 ? 'block' : 'none';
 
   if (articles.length === 0) {
     const para = document.createElement('p');
@@ -391,7 +387,7 @@ We also built another example for you to study and learn from — see our [YouTu
 
 This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Mapquest (with API-specific methods, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results.
 
-![](youtube-example.png)
+![A screenshot of a sample Youtube video search using two related APIs. The left side of the image has a sample search query using the YouTube Data API. The right side of the image displays the search results using the Youtube Iframe Player API.](youtube-example.png)
 
 We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
 
