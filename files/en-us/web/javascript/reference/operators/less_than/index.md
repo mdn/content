@@ -22,9 +22,9 @@ x < y
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarized below:
+The operands are compared using the [IsLessThan](https://tc39.es/ecma262/#sec-islessthan) algorithm, which is roughly summarized below:
 
-- First, objects are converted to primitives using [`Symbol.toPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter being `'number'`.
+- First, objects are converted to primitives using [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
 

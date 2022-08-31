@@ -24,9 +24,7 @@ x >= y
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for
-the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
-operator for a summary of this algorithm.
+The operands are compared using the [IsLessThan](https://tc39.es/ecma262/#sec-islessthan) algorithm. See the documentation for the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
 
 ## Examples
 
