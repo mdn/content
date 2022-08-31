@@ -24,6 +24,7 @@
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "markdownlint-cli": "0.32.2",
+    "markdownlint-rule-search-replace": "1.0.4",
     "prettier": "2.7.1"
   }
 }
