@@ -322,7 +322,7 @@ Here we grab our `main.js` file, run `jshint` on it and output the results to th
 
 Once this is all set up, you can run the `gulp` command inside your project directory, and you should get an output like this:
 
-![A code editor screen where lines show the time tasks start or finish, the task name, and the duration of 'Finished' tasks.](gulp-output.png)
+![Output in a code editor where lines show the time tasks start or finish, the task name, and the duration of 'Finished' tasks.](gulp-output.png)
 
 You can then try out the files output by your automated tasks by looking at them inside the `build` directory, and loading `build/index.html` in your web browser.
 
