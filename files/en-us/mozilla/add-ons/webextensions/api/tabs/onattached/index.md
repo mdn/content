@@ -44,9 +44,6 @@ Events have three functions:
 
     - `tabId`
       - : `integer`. ID of the tab that was attached to a new window.
-
-    <!---->
-
     - `attachInfo`
       - : [`object`](#attachinfo). ID of the new window, and index of the tab within it.
 

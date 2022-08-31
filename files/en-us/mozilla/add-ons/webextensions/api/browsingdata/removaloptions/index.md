@@ -26,8 +26,6 @@ Values of this type are objects. They contain the following properties:
 
     > **Note:** On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 
-<!---->
-
 - `hostnames` {{optional_inline}}
 
   - : `Array` of `string`. This property applies to cookie, indexedDB, local storage, and service worker registration items. Remove only cookie, indexedDB, local storage, and service worker registration items associated with these hostnames.

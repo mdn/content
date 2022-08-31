@@ -50,14 +50,8 @@ Events have three functions:
 
     - `request`
       - : `any`. The request sent by the calling script.
-
-    <!---->
-
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}.
-
-    <!---->
-
     - `sendResponse`
       - : `function`. Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response. If you have more than one `onRequest` listener in the same document, then only one may send a response.
 

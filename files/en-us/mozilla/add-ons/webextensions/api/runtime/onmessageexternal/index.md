@@ -53,14 +53,8 @@ Events have three functions:
 
     - `message`
       - : `object`. The message itself. This is a JSON-ifiable object.
-
-    <!---->
-
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
-
-    <!---->
-
     - `sendResponse`
 
       - : A function to call, at most once, to send a response to the message. The function takes a single argument, which may be any JSON-ifiable object. This argument is passed back to the message sender.

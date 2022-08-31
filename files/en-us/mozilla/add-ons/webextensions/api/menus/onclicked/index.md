@@ -46,9 +46,6 @@ Events have three functions:
 
     - `info`
       - : {{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.
-
-    <!---->
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
