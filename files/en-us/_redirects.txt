@@ -7342,8 +7342,6 @@
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
-/en-US/docs/Web/API/AddressErrors/languageCode	/en-US/docs/Web/API/AddressErrors
-/en-US/docs/Web/API/AddressErrors/regionCode	/en-US/docs/Web/API/AddressErrors
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
