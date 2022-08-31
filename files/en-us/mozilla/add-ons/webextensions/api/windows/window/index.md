@@ -27,9 +27,6 @@ Values of this type are `objects`. They contain the following properties:
   - : `boolean`. Whether the window is currently the focused window.
 - `height` {{optional_inline}}
   - : `integer`. The height of the window, including the frame, in pixels.
-
-<!---->
-
 - `id` {{optional_inline}}
   - : `integer`. The ID of the window. Window IDs are unique within a browser session.
 - `incognito`

@@ -47,9 +47,6 @@ Events have three functions:
 
     - `id`
       - : `string`. ID of the item that changed.
-
-    <!---->
-
     - `changeInfo`
       - : [`object`](#changeinfo). Object containing two properties: `title`, a string containing the item's title, and `url`, a string containing the item's URL. If the item is a folder, `url` is omitted.
 
