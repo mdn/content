@@ -17,7 +17,7 @@ The `SVGTransformList` defines a list of {{ domxref("SVGTransform") }} objects.
 
 An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** The `SVGTransformList` DOM interface is indexable and can be accessed like an array.
+An `SVGTransformList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
