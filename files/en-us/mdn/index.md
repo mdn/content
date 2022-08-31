@@ -20,7 +20,7 @@ To find out how to help, visit our [Getting started](/en-US/docs/MDN/Community/C
 
   - : These guides help you get started with contributing to MDN Web Docs. They also cover topics such as how you can help with tasks and issues, open discussions, and suggest content. If you need help or want to contact us, you'll find the information here.
 
-- [Writing guidelines](/en-US/docs/MDN/Writing_Guidelines)
+- [Writing guidelines](/en-US/docs/MDN/Writing_guidelines)
 
   - : These guides provide all the information about how to write for MDN Web Docs. They outline the policies for the type of content we write and the type of content we don't write. You'll also find our writing style guide here, how-to guides to perform various content tasks, and also information about the structure of our different pages.
 

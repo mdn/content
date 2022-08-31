@@ -40,7 +40,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section describes the requirements for including media in pages, such as images.
 
-    - [How to document a CSS property](/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_css_property)
+    - [How to document a CSS property](/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property)
 
       - : This article explains how to write a CSS property page, including layout and content.
 
@@ -48,7 +48,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section explains how to approach documenting a Web API.
 
-    - [How to document an HTTP header](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_http_header)
+    - [How to document an HTTP header](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)
 
       - : This article explains how to create a new reference page for an HTTP header.
 
