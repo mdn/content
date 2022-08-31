@@ -480,6 +480,7 @@
       "events": []
     },
     "Geometry Interfaces": {
+      "overview": ["Geometry interfaces"],
       "interfaces": [
         "DOMMatrix",
         "DOMMatrixReadOnly",
