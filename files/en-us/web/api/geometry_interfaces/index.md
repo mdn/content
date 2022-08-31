@@ -1,5 +1,5 @@
 ---
-title: Geometry Interfaces
+title: Geometry interfaces
 slug: Web/API/Geometry_Interfaces
 page-type: web-api-overview
 tags:
