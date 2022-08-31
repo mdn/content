@@ -191,7 +191,8 @@ Don't use `/* … */`:
 
 ```js example-bad
 /* This is an example of a multi-line comment.
-  The imaginary function that follows has some unusual limitation that I want to call out.
+  The imaginary function that follows has some unusual
+  limitations that I want to call out.
   Limitation 1
   Limitation 2 */
 ```
