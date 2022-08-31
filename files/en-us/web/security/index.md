@@ -120,9 +120,6 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 - {{Glossary("SQL injection")}}
 - {{Glossary("Symmetric-key cryptography")}}
 - {{Glossary("TOFU")}}
-
-<!---->
-
 - {{Glossary("TLS")}}
 
 ## See also

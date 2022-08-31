@@ -27,9 +27,6 @@ A string representing URI of the namespace in which the given node resides.
 ### Notes
 
 - If the given node does not have a specified namespace, the returned string will be an empty string.
-
-<!---->
-
 - For nodes other than element and attribute nodes, the returned string will always be an empty string.
 
 ### Defined

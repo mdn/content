@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
+- {{domxref("HTMLCanvasElement.captureStream()")}}
   - : Returns a {{domxref("CanvasCaptureMediaStreamTrack")}} that is a real-time video capture of the surface of the canvas.
 - {{domxref("HTMLCanvasElement.getContext()")}}
   - : Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with `"2d"` returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with `"webgl"` (or `"experimental-webgl"`) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API).
