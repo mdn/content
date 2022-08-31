@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the values for each index in the array.
@@ -44,12 +45,12 @@ Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 Because `values()` returns an iterable iterator, you can use a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to iterate it.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 
 for (const letter of iterator) {
   console.log(letter);
-} //"a" "b" "c" "d" "e"
+} // "a" "b" "c" "d" "e"
 ```
 
 ### Iteration using next()
@@ -57,7 +58,7 @@ for (const letter of iterator) {
 Because the return value is also an iterator, you can directly call its `next()` method.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 console.log(iterator.next()); // { value: "a", done: false }
 console.log(iterator.next().value); // "b"
@@ -70,19 +71,40 @@ console.log(iterator.next().value); // undefined
 
 ### Reusing the iterable
 
-> **Warning:** The array iterator object is a one-time use object. Do not reuse it.
+> **Warning:** The array iterator object should be a one-time use object. Do not reuse it.
 
 The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for..of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const values = arr.values();
 for (const letter of values) {
   console.log(letter);
-} //"a" "b" "c" "d" "e"
+}
+// "a" "b" "c" "d" "e"
 for (const letter of values) {
   console.log(letter);
-} // undefined
+}
+// undefined
+```
+
+If you use a [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement to end the iteration early, the iterator can resume from the current position when continuing to iterate it.
+
+```js
+const arr = ["a", "b", "c", "d", "e"];
+const values = arr.values();
+for (const letter of values) {
+  console.log(letter);
+  if (letter === "b") {
+    break;
+  }
+}
+// "a" "b"
+
+for (const letter of values) {
+  console.log(letter);
+}
+// "c" "d" "e"
 ```
 
 ### Mutations during iteration
@@ -90,11 +112,11 @@ for (const letter of values) {
 There are no values stored in the array iterator object returned from `values()`; instead, it stores the address of the array used in its creation, and reads the currently visited index on each iteration. Therefore, its iteration output depends on the value stored in that index at the time of stepping. If the values in the array changed, the array iterator object's values change too.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 console.log(iterator); // Array Iterator { }
 console.log(iterator.next().value); // "a"
-arr[1] = 'n';
+arr[1] = "n";
 console.log(iterator.next().value); // "n"
 ```
 
