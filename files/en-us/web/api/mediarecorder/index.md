@@ -34,9 +34,9 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
   - : Returns the current state of the `MediaRecorder` object (`inactive`, `recording`, or `paused`.)
 - {{domxref("MediaRecorder.stream")}} {{ReadOnlyInline}}
   - : Returns the stream that was passed into the constructor when the `MediaRecorder` was created.
-- {{domxref("MediaRecorder.videoBitsPerSecond")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("MediaRecorder.videoBitsPerSecond")}} {{ReadOnlyInline}}
   - : Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
-- {{domxref("MediaRecorder.audioBitsPerSecond")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("MediaRecorder.audioBitsPerSecond")}} {{ReadOnlyInline}}
   - : Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 
 ## Methods

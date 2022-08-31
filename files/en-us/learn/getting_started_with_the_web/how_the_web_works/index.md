@@ -21,7 +21,7 @@ This theory is not essential to writing web code in the short term, but before l
 
 ## Clients and servers
 
-Computers connected to the web are called **clients** and **servers**. A simplified diagram of how they interact might look like this:
+Computers connected to the internet are called **clients** and **servers**. A simplified diagram of how they interact might look like this:
 
 ![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 

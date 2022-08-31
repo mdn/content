@@ -31,8 +31,8 @@ The PNG format is recommended because it supports the ability to define a transp
 
 ### Specific attributes
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
+- {{SVGAttr("x")}} {{Deprecated_Inline}}
+- {{SVGAttr("y")}} {{Deprecated_Inline}}
 - {{SVGAttr("xlink:href")}}
 
 ## DOM Interface
