@@ -14,7 +14,7 @@
     "fix:md": "npm run lint:md -- --fix",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json\"",
-    "lint:md": "markdownlint \"**/*.md\" -i node_modules  -r markdownlint-rule-search-replace",
+    "lint:md": "markdownlint \"**/*.md\" -i node_modules -r markdownlint-rule-search-replace",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js"
@@ -24,7 +24,7 @@
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "markdownlint-cli": "0.32.2",
-    "markdownlint-rule-search-replace": "1.0.4",
+    "markdownlint-rule-search-replace": "1.0.5",
     "prettier": "2.7.1"
   }
 }
