@@ -322,7 +322,7 @@ Here we grab our `main.js` file, run `jshint` on it and output the results to th
 
 Once this is all set up, you can run the `gulp` command inside your project directory, and you should get an output like this:
 
-![A code editor screen with the output of the gulp command. Each line begins with the time in brackets of when a task starts or finishes. Each bracket is followed by the word 'Starting' or 'Finished' and the name of the task in the series of tasks: 'html', 'css', 'js'. Bellow the line for the start of the 'js' task, an error is logged for file src/main.js: line 4, col 23 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6'). In the lines that log the 'Finished' tasks, the name of the task is followed by the word 'after' and the total duration of the task in milliseconds. The last 2 lines of the output log the start and end of 'default' tasks.](gulp-output.png)
+![A code editor screen where lines show the time tasks start or finish, the task name, and the duration of 'Finished' tasks.](gulp-output.png)
 
 You can then try out the files output by your automated tasks by looking at them inside the `build` directory, and loading `build/index.html` in your web browser.
 
