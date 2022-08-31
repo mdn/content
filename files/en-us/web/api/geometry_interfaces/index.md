@@ -8,7 +8,7 @@ tags:
   - Geometry Interfaces
   - Landing
   - Reference
-  - Non-standard
+  - Overview
 browser-compat:
   - api.DOMMatrix
   - api.DOMMatrixReadOnly
