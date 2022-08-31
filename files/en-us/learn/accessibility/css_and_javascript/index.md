@@ -213,7 +213,6 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 ### Accept that users can override styles
 
-#### Accept that users can override your styles
 
 It is possible for users to override your styles with their own custom styles, for example:
 
