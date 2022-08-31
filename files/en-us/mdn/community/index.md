@@ -16,7 +16,6 @@ By participating in and contributing to our projects and discussions, you acknow
 
 ## Ways to contribute
 
-
 - [Fixing known high impact issues](https://github.com/orgs/mdn/projects/25/views/1)
 - [Reviewing pull requests](/en-US/docs/MDN/Community/Pull_requests/)
 - [Help beginners to learn on MDN Web Docs](/en-US/docs/MDN/Community/Learn_forum/)
@@ -30,6 +29,7 @@ By participating in and contributing to our projects and discussions, you acknow
 This is the list of guides and pages in this section.
 
 - [Contributing](/en-US/docs/MDN/Community/Contributing)
+
   - : This section explains how you can start contributing and the type of contributions we accept. This section covers the following topics:
 
     - [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started)
