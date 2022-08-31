@@ -483,6 +483,8 @@
       "interfaces": [
         "DOMMatrix",
         "DOMMatrixReadOnly",
+        "DOMPoint",
+        "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
       ],
