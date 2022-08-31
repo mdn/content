@@ -31,7 +31,7 @@ The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter ef
 - {{SVGAttr("y")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("height")}}
-- {{SVGAttr("filterRes")}}
+- {{SVGAttr("filterRes")}} {{Deprecated_Inline}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("primitiveUnits")}}
 - {{SVGAttr("xlink:href")}}
