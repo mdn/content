@@ -53,6 +53,15 @@ console.log(0.1 + 0.2); // 0.30000000000000004
 
 For operations that expect integers, such as bitwise operations, the number will be converted to a 32-bit integer.
 
+[Number literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) can also have prefixes to indicate the base (binary, octal, decimal, or hexadecimal), or an exponent suffix.
+
+```js
+console.log(0b111110111); // 503
+console.log(0o767); // 503
+console.log(0x1f7); // 503
+console.log(5.03e2); // 503
+```
+
 The [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) type is an arbitrary length integer. Its behavior is similar to C's integer types (e.g. division truncates to zero), except it can grow indefinitely. BigInts are specified with a number literal and an `n` suffix.
 
 ```js
