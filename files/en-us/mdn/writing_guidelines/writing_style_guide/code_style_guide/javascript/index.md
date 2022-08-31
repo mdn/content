@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 The following guidelines cover writing JavaScript example code for MDN Web Docs. This article is a list of rules for writing concise examples that will be understandable by as many people as possible.
@@ -140,7 +141,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
     const total = goodsPrice + shipmentPrice + taxes;
 
     // Create and append a new paragraph to the document
-    const para = document.createElement('p');
+    const para = document.createElement("p");
     para.textContent = `Total price is ${total}`;
     document.body.appendChild(para);
   }
@@ -169,10 +170,10 @@ In general, use single-line comments to comment code. Writers must mark each lin
 
   ```js example-good
   function exampleFunc(fruitBasket) {
-    console.log(fruitBasket); 
+    console.log(fruitBasket);
     // ['banana', 'mango', 'orange', 'apple', 'pear', 'durian', 'lemon']
   }
-  ````
+  ```
 
 ### Multi-line comments
 
@@ -192,7 +193,6 @@ Don't use `/* … */`:
   The imaginary function that follows has some unusual limitation that I want to call out.
   Limitation 1
   Limitation 2 */
-
 ```
 
 ### Use comments to mark ellipsis
@@ -225,9 +225,9 @@ When writing code, you usually omit parameters you don't need. But in some code 
 To do so, use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
 
 ```js
-array.forEach((value, /* index,  array ,*/) => {
+array.forEach((value, /* index, array */) => {
   // …
-};
+});
 ```
 
 ## Functions
@@ -240,7 +240,7 @@ The following is a correct example of a function name:
 
 ```js example-good
 function sayHello() {
-  console.log('Hello!');
+  console.log("Hello!");
 }
 ```
 
@@ -248,11 +248,11 @@ Don't use function names like these:
 
 ```js example-bad
 function SayHello() {
-  console.log('Hello!');
+  console.log("Hello!");
 }
 
 function doIt() {
-  console.log('Hello!');
+  console.log("Hello!");
 }
 ```
 
@@ -271,9 +271,9 @@ function doIt() {
   This is not a good way to define a function:
 
   ```js example-bad
-  let sum = function(a, b) {
+  let sum = function (a, b) {
     return a + b;
-  }
+  };
   ```
 
 - When using anonymous functions as a callback (a function passed to another method invocation), if you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
@@ -319,7 +319,7 @@ function doIt() {
   And not:
 
   ```js example-bad
-  arr.map((e) => { 
+  arr.map((e) => {
     return e.id;
   });
   ```
@@ -362,7 +362,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
 - Make sure that you define the initializer properly by using the `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
 
   ```js example-good
-  const cats = ['Athena', 'Luna'];
+  const cats = ["Athena", "Luna"];
   for (const cat of cats) {
     console.log(cat);
   }
@@ -375,7 +375,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode):
 
   ```js example-bad
-  const cats = ['Athena', 'Luna'];
+  const cats = ["Athena", "Luna"];
   for (i of cats) {
     console.log(i);
   }
@@ -387,7 +387,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   const gerbils = ["Zoé", "Chloé"];
   gerbils.forEach((gerbil, i) => {
     console.log(`Gerbil #${i}: ${gerbil}`);
-  })
+  });
   ```
 
   Do not write:
@@ -459,9 +459,9 @@ Switch statements can be a little tricky.
 
   ```js example-good
   switch (species) {
-    case `chicken`:
+    case "chicken":
       return farm.shed;
-    case `horse`:
+    case "horse":
       return corral.entry;
     default:
       return "";
@@ -472,10 +472,10 @@ Switch statements can be a little tricky.
 
   ```js example-bad
   switch (species) {
-    case `chicken`:
+    case "chicken":
       return farm.shed;
       break;
-    case `horse`:
+    case "horse":
       return corral.entry;
       break;
     default:
@@ -489,17 +489,17 @@ Switch statements can be a little tricky.
 
   ```js
   switch (fruits) {
-    case 'Orange': {
+    case "Orange": {
       const slice = fruit.slice();
       eat(slice);
       break;
     }
-    case 'Apple': {
+    case "Apple": {
       const core = fruit.extractCore();
       recycle(core);
       break;
     }
-  }  
+  }
   ```
 
 ### Error handling
@@ -517,11 +517,11 @@ Switch statements can be a little tricky.
 - When you don't need the parameter of the `catch` statement, omit it:
 
   ```js example-good
-    try {
-      console.log(getResult());
-    } catch {
-      console.error("An error happened!");
-    }
+  try {
+    console.log(getResult());
+  } catch {
+    console.error("An error happened!");
+  }
   ```
 
 > **Note:** Keep in mind that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
@@ -535,12 +535,12 @@ Switch statements can be a little tricky.
 - When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
   ```js example-good
-  const hanSolo = new Person('Han Solo', 25, 'male');
+  const hanSolo = new Person("Han Solo", 25, "male");
 
   const luke = {
-    name: 'Luke Skywalker',
+    name: "Luke Skywalker",
     age: 25,
-    gender: 'male'
+    gender: "male",
   };
   ```
 
@@ -557,7 +557,7 @@ const object = {};
 Don't create a general object like this:
 
 ```js example-bad
-let object = new Object();
+const object = new Object();
 ```
 
 ### Object classes
@@ -599,8 +599,8 @@ const obj = {
   },
   bar() {
     // …
-  }
-}
+  },
+};
 ```
 
 Instead of:
@@ -612,8 +612,8 @@ const obj = {
   },
   bar: function () {
     // …
-  }
-}
+  },
+};
 ```
 
 ### Object properties
@@ -623,12 +623,12 @@ const obj = {
 
   ```js example-good
   function createObject(name, age) {
-    return { name, age };  
+    return { name, age };
   }
   ```
-  
+
   Don't write:
-  
+
   ```js example-bad
   function createObject(name, age) {
     return { name: name, age: age };
@@ -653,9 +653,9 @@ Do not write:
 let x;
 if (condition) {
   x = 1;
-else {
+} else {
   x = 2;
-} 
+}
 ```
 
 The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
@@ -667,14 +667,14 @@ Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Stri
 Use the strict equality and inequality operators like this:
 
 ```js example-good
-name === 'Chris';
+name === "Chris";
 age !== 25;
 ```
 
 Don't use the loose equality and inequality operators, as shown below:
 
 ```js example-bad
-name == 'Chris';
+name == "Chris";
 age != 25;
 ```
 
@@ -695,14 +695,14 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 - Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
   ```js example-good
-  const name = 'Chris';
+  const name = "Chris";
   console.log(`Hi! I'm ${name}!`);
   ```
 
   Don't concatenate strings like this:
 
   ```js example-bad
-  const name = 'Chris';
+  const name = "Chris";
   console.log("Hi! I'm" + name + "!");
   ```
 
@@ -722,17 +722,15 @@ Good variable names are essential to understanding code.
 - Use variable names as shown here:
 
   ```js example-good
-  let playerScore = 0;
-
-  let speed = distance / time;
+  const playerScore = 0;
+  const speed = distance / time;
   ```
 
   Don't name variables like this:
 
   ```js example-bad
-  let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
-
-  let s = d / t;
+  const thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
+  const s = d / t;
   ```
 
 > **Note:** The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
@@ -751,7 +749,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - If you'll change the value of a variable, use `let` as shown below:
 
   ```js example-good
-  let age = "40";
+  let age = 40;
   age++;
   console.log("Happy birthday!");
   ```
@@ -766,7 +764,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
 
   ```js example-bad
-  const age = "40";
+  const age = 40;
   age++;
   console.log("Happy birthday!");
   ```
@@ -774,7 +772,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - The example below uses `var`, polluting the global scope:
 
   ```js example-bad
-  var age = "40";
+  var age = 40;
   var name = "Chris";
   ```
 
@@ -786,7 +784,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   let var3 = "Apapou";
   let var4 = var3;
   ```
-  
+
   Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
 
   ```js example-bad
@@ -802,7 +800,7 @@ Avoid old idioms when forcing a value to a type. In particular, avoid `+val` to 
 class Person {
   #name;
   #birthYear;
-  
+
   constructor(name, year) {
     this.#name = String(name);
     this.#birthYear = Number(year);
@@ -816,7 +814,7 @@ Don't write:
 class Person {
   #name;
   #birthYear;
-  
+
   constructor(name, year) {
     this.#name = "" + name;
     this.#birthYear = +year;
@@ -861,16 +859,16 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
   The example below demonstrates the use of `textContent`.
 
   ```js example-good
-  const text = 'Hello to all you good people';
-  const para = document.createElement('p');
+  const text = "Hello to all you good people";
+  const para = document.createElement("p");
   para.textContent = text;
   ```
 
   Don't use `innerHTML` to insert _pure text_ into DOM nodes.
 
   ```js example-bad
-  const text = 'Hello to all you good people';
-  const para = document.createElement('p');
+  const text = "Hello to all you good people";
+  const para = document.createElement("p");
   para.innerHTML = text;
   ```
 
