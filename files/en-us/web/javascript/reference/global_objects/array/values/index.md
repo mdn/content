@@ -15,9 +15,7 @@ browser-compat: javascript.builtins.Array.values
 ---
 {{JSRef}}
 
-The **`values()`** method returns a new
-_array iterator_ object that contains the values for each
-index in the array.
+The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the values for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -29,75 +27,76 @@ values()
 
 ### Return value
 
-A new {{jsxref("Array")}} iterator object.
+A new iterable iterator object.
+
+## Description
+
+`Array.prototype.values()` is the default implementation of [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator).
+
+```js
+Array.prototype.values === Array.prototype[Symbol.iterator]; // true
+```
 
 ## Examples
 
 ### Iteration using for...of loop
 
-```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
-const iterator = arr.values();
-
-for (const letter of iterator) {
-  console.log(letter);
-}  //"a" "b" "c" "d" "e"
-```
-
-**Array.prototype.values** is the default implementation of
-**Array.prototype\[Symbol.iterator]**.
-
-```js
-Array.prototype.values === Array.prototype[Symbol.iterator]      // true
-```
-
-### Iteration using .next()
+Because `values()` returns an iterable iterator, you can use a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to iterate it.
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
-console.log(iterator.next());               // Object { value: "a", done: false }
-console.log(iterator.next().value);         // "b"
-console.log(iterator.next()["value"]);      // "c"
-console.log(iterator.next());               // Object { value: "d", done: false }
-console.log(iterator.next());               // Object { value: "e", done: false }
-console.log(iterator.next());               // Object { value: undefined, done: true }
-console.log(iterator.next().value);         // undefined
-```
 
-> **Warning:** The array iterator object is one use or temporary object
-
-example:
-
-```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
-const iterator = arr.values();
 for (const letter of iterator) {
   console.log(letter);
 } //"a" "b" "c" "d" "e"
-for (const letter of iterator) {
+```
+
+### Iteration using next()
+
+Because the return value is also an iterator, you can directly call its `next()` method.
+
+```js
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
+console.log(iterator.next()); // { value: "a", done: false }
+console.log(iterator.next().value); // "b"
+console.log(iterator.next()["value"]); // "c"
+console.log(iterator.next()); // { value: "d", done: false }
+console.log(iterator.next()); // { value: "e", done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
+console.log(iterator.next().value); // undefined
+```
+
+### Reusing the iterable
+
+> **Warning:** The array iterator object is a one-time use object. Do not reuse it.
+
+The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for..of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
+
+```js
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const values = arr.values();
+for (const letter of values) {
+  console.log(letter);
+} //"a" "b" "c" "d" "e"
+for (const letter of values) {
   console.log(letter);
 } // undefined
 ```
 
-**Reason:** When `next().done = true` or
-`currentIndex > length` the `for..of` loop ends.
-See [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+### Mutations during iteration
 
-**Value:** there are no values stored in the array Iterator
-object; instead it stores the address of the array used in its creation and so depends
-on the values stored in that array.
+There are no values stored in the array iterator object returned from `values()`; instead, it stores the address of the array used in its creation, and reads the currently visited index on each iteration. Therefore, its iteration output depends on the value stored in that index at the time of stepping. If the values in the array changed, the array iterator object's values change too.
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
-console.log(iterator); // Array Iterator {  }
+console.log(iterator); // Array Iterator { }
 console.log(iterator.next().value); // "a"
 arr[1] = 'n';
 console.log(iterator.next().value); // "n"
 ```
-
-> **Note:** If the values in the array changed the array iterator object values change too.
 
 ## Specifications
 
