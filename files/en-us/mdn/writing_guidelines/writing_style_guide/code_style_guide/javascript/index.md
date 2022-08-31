@@ -717,6 +717,7 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 Good variable names are essential to understanding code.
 
 - Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
+- Try to use real-world relevant examples where each variable has clear semantics. Only fall back to placeholder names like `foo` and `bar` when the example is simple and contrived.
 - Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null` or `name = "John Doe"` instead of `sName = "John Doe"`.
 - For collections, avoid adding the type such as list, array, queue in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
 - For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
