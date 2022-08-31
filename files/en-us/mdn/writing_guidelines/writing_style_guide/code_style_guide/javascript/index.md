@@ -618,7 +618,7 @@ const obj = {
 
 ### Object properties
 
-- The `Object.prototype.hasOwnProperty()` method has been deprecated in favor of `Object.hasOwn()`.
+- The [`Object.prototype.hasOwnProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method has been deprecated in favor of [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn).
 - When possible, use the shorthand avoiding the duplication of the property identifier. Write:
 
   ```js example-good
@@ -881,4 +881,4 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
 
 ## See also
 
-[JavaScript language reference](/en-US/docs/Web/JavaScript/Reference) - browse through our JavaScript reference pages to check out some good, concise, meaningful CSS snippets.
+[JavaScript language reference](/en-US/docs/Web/JavaScript/Reference) - browse through our JavaScript reference pages to check out some good, concise, meaningful JavaScript snippets.
