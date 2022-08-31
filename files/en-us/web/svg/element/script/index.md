@@ -7,6 +7,9 @@ tags:
   - SVG
 browser-compat: svg.elements.script
 ---
+
+{{SVGRef}}
+
 The SVG `script` element allows to add scripts to an SVG document.
 
 > **Note:** While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
@@ -77,5 +80,3 @@ The SVG `script` element allows to add scripts to an SVG document.
 ## See also
 
 - [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
-
-{{SVGRef}}
