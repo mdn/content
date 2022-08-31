@@ -7,6 +7,7 @@ tags:
   - HTTP
   - Reference
   - Security
+  - Deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
 {{HTTPSidebar}}{{deprecated_header}}
