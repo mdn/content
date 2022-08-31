@@ -16,7 +16,6 @@ By participating in and contributing to our projects and discussions, you acknow
 
 ## Ways to contribute
 
-[//]: # "TODO: Remember to update these links as we move the documentation around."
 
 - [Fixing known high impact issues](https://github.com/orgs/mdn/projects/25/views/1)
 - [Reviewing pull requests](/en-US/docs/MDN/Community/Pull_requests/)
@@ -31,7 +30,7 @@ By participating in and contributing to our projects and discussions, you acknow
 This is the list of guides and pages in this section.
 
 - [Contributing](/en-US/docs/MDN/Community/Contributing)
-   - : This section explains how you can start contributing and the type of contributions we accept. This section covers the following topics:
+  - : This section explains how you can start contributing and the type of contributions we accept. This section covers the following topics:
 
     - [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started)
     - [Our repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories)
@@ -40,30 +39,30 @@ This is the list of guides and pages in this section.
 
 - [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette)
 
-    - : This article explains how to behave when contributing to our open source project.
+  - : This article explains how to behave when contributing to our open source project.
 
 - [Discussions](/en-US/docs/MDN/Community/Discussions)
 
-    - : On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. This article explains the details.
+  - : On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. This article explains the details.
 
 - [Learn forum](/en-US/docs/MDN/Community/Learn_forum)
 
-    - : Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250), where people go to ask for general help or request that their assessments be marked. We'd love some help with answering posts and growing our learning community. In this article, you'll learn what we need help with and the skills you'll need to provide help.
+  - : Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250), where people go to ask for general help or request that their assessments be marked. We'd love some help with answering posts and growing our learning community. In this article, you'll learn what we need help with and the skills you'll need to provide help.
 
 - [Issues](/en-US/docs/MDN/Community/Issues)
 
-    - : Issues are used to track all bugs and work that has a clear actionable outcome. This article contains guidelines on opening and working on issues. This article also covers the following topics:
+  - : Issues are used to track all bugs and work that has a clear actionable outcome. This article contains guidelines on opening and working on issues. This article also covers the following topics:
 
-  - [Issue triage](/en-US/docs/MDN/Community/Issues/Issue_triage)
-  - [Content and feature suggestions](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
+    - [Issue triage](/en-US/docs/MDN/Community/Issues/Issue_triage)
+    - [Content and feature suggestions](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
 - [Pull requests](/en-US/docs/MDN/Community/Pull_requests)
 
-    - : This section covers our guidelines for submitting pull requests and what you should expect from the review process.
+  - : This section covers our guidelines for submitting pull requests and what you should expect from the review process.
 
 - [Users and teams](/en-US/docs/MDN/Community/Users_teams)
 
-    - : This section provides an overview of the users and teams that are part of the MDN Wen Docs project and details what it means to be part of a team.
+  - : This section provides an overview of the users and teams that are part of the MDN Wen Docs project and details what it means to be part of a team.
 
 ## Code of conduct
 
