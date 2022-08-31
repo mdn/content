@@ -5,6 +5,7 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.elements.a.xlink_href
 ---
 {{SVGRef}}{{Deprecated_Header}}

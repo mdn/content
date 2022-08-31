@@ -10,6 +10,9 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feMergeNode
 ---
+
+{{SVGRef}}
+
 The `feMergeNode` takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
 
 ## Usage context
@@ -72,5 +75,3 @@ This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/DOM/SVGFEMerge
 - {{ SVGElement("set") }}
 - {{ SVGElement("feMerge") }}
 - [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
-
-{{SVGRef}}
