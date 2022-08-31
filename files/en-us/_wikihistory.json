@@ -28794,21 +28794,6 @@
       "20after4"
     ]
   },
-  "Web/API/Document/createEntityReference": {
-    "modified": "2020-10-15T21:11:24.334Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Navin_Jadhav",
-      "Sheppy",
-      "trevorh",
-      "Brettz9"
-    ]
-  },
   "Web/API/Document/createEvent": {
     "modified": "2020-10-17T14:21:31.316Z",
     "contributors": [
@@ -30043,30 +30028,6 @@
       "Marcoos"
     ]
   },
-  "Web/API/Document/height": {
-    "modified": "2020-10-15T21:04:20.574Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "ianbicking",
-      "TylerH",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Jürgen Jeka",
-      "timemachine3030",
-      "Ms2ger",
-      "George3",
-      "Ptak82",
-      "Mw22",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/Document/hidden": {
     "modified": "2020-11-10T16:23:18.928Z",
     "contributors": [
@@ -31012,32 +30973,6 @@
       "Sheppy",
       "George3",
       "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/Document/width": {
-    "modified": "2020-10-15T21:04:23.780Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "ianbicking",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "pimmhogeling",
-      "Jürgen Jeka",
-      "timemachine3030",
-      "Ms2ger",
-      "George3",
-      "Ptak82",
-      "Mw22",
-      "Nickolay",
       "Dria",
       "JesseW"
     ]
