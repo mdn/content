@@ -126,7 +126,7 @@ Certain HTML features can be selected using only the keyboard — this is defaul
 
 You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
-![A screenshot of three buttons demonstrating sample of the default behaviour of interactive native elements. The third button is highlighted by a blue border to indicate its focus state.](button-focused-unfocused.png)
+![A screenshot of three buttons demonstrating sample of the default behavior of interactive native elements. The third button is highlighted by a blue border to indicate its focus state.](button-focused-unfocused.png)
 
 > **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 

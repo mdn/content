@@ -202,7 +202,7 @@ In JavaScript, you should put the ellipses (`…`) in a comment. When possible, 
 Using a comment for the ellipses (…) is more explicit, preventing errors when a developer copies and pastes a sample code. Write:
 
 ```js example-good
-function exampleFunct() {
+function exampleFunc() {
   // Add your code here
   // …
 }
@@ -211,7 +211,7 @@ function exampleFunct() {
 Don't use ellipses (…) like this:
 
 ```js example-bad
-function exampleFunct() {
+function exampleFunc() {
   …
 }
 ```
