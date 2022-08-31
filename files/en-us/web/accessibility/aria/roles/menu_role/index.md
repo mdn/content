@@ -34,7 +34,7 @@ Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessi
 
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu).
 
-Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
+Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`.  For horizontally oriented menu use [`aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
 If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role instead.
 
