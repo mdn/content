@@ -705,7 +705,7 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 
   ```js example-bad
   const name = "Chris";
-  console.log("Hi! I'm" + name + "!");
+  console.log("Hi! I'm" + name + "!"); // Hi! I'mChris!
   ```
 
 - Don't overuse template literals. If there are no substitutions, use a normal string literal instead.
