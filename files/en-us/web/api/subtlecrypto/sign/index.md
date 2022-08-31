@@ -125,7 +125,7 @@ that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -151,7 +151,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -180,7 +180,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -209,7 +209,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a secret key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*

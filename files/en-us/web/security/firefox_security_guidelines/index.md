@@ -82,7 +82,7 @@ If so ensure they are safe and that no better alternatives are available.
 
 1. Does the application access any remote systems?
 
-- Ensure that TLS is used unless there's a *very* good reason not to.
+- Ensure that TLS is used unless there's a _very_ good reason not to.
 - Ensure that no user information is transmitted without the user's consent.
 
 ## Information Storage

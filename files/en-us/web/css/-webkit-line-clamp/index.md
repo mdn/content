@@ -5,7 +5,6 @@ tags:
   - '-webkit-line-clamp'
   - CSS
   - CSS Property
-  - Non-standard
   - recipe:css-property
 browser-compat: css.properties.-webkit-line-clamp
 ---

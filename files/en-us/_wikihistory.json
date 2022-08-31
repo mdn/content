@@ -20099,50 +20099,6 @@
     "modified": "2020-10-15T22:09:04.495Z",
     "contributors": ["sideshowbarker", "jpmedley"]
   },
-  "Web/API/AddressErrors": {
-    "modified": "2020-10-15T22:08:43.308Z",
-    "contributors": ["duanemoody", "Sheppy"]
-  },
-  "Web/API/AddressErrors/addressLine": {
-    "modified": "2020-10-15T22:08:45.905Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/city": {
-    "modified": "2020-10-15T22:08:46.865Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/country": {
-    "modified": "2020-10-15T22:08:48.622Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/dependentLocality": {
-    "modified": "2020-10-15T22:08:47.105Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/organization": {
-    "modified": "2020-10-15T22:08:47.486Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/phone": {
-    "modified": "2020-10-15T22:08:48.858Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/postalCode": {
-    "modified": "2020-10-15T22:08:47.903Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/recipient": {
-    "modified": "2020-10-15T22:08:48.068Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/region": {
-    "modified": "2020-10-15T22:08:48.893Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/AddressErrors/sortingCode": {
-    "modified": "2020-10-15T22:08:48.856Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/AesCbcParams": {
     "modified": "2019-03-18T20:56:28.611Z",
     "contributors": ["wbamberg", "chrisdavidmills"]
@@ -64060,10 +64016,6 @@
       "Sheppy",
       "Warhammerkid"
     ]
-  },
-  "Web/API/UDP_Socket_API": {
-    "modified": "2019-01-16T21:07:51.221Z",
-    "contributors": ["rolfedh", "SunboX"]
   },
   "Web/API/UIEvent": {
     "modified": "2020-10-15T21:07:18.103Z",
@@ -127161,10 +127113,6 @@
       "Azer",
       "Hamstersoup"
     ]
-  },
-  "Web/JavaScript/The_performance_hazards_of_prototype_mutation": {
-    "modified": "2020-04-30T10:28:18.041Z",
-    "contributors": ["fscholz", "Waldo"]
   },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:04:01.905Z",

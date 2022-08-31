@@ -9,6 +9,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.image-orientation
 ---
+
+{{CSSRef}}
+
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
 ```css
@@ -109,5 +112,3 @@ document.addEventListener('change', (evt) => {
 
 - Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
 - {{cssxref("transform")}} and {{cssxref("rotate")}}
-
-{{CSSRef}}

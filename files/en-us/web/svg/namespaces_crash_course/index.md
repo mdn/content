@@ -27,7 +27,7 @@ So what do these namespace declarations look like, and where do they go? Here is
 </svg>
 ```
 
-The namespace declaration is provided by the `xmlns` parameter. This parameter says that the `<svg>` element and its child elements belong to whichever XML dialect has the namespace name `http://www.w3.org/2000/svg` which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the *default* namespace, so the user agent knows that all the `<svg>` element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.
+The namespace declaration is provided by the `xmlns` parameter. This parameter says that the `<svg>` element and its child elements belong to whichever XML dialect has the namespace name `http://www.w3.org/2000/svg` which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the _default_ namespace, so the user agent knows that all the `<svg>` element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.
 
 Note that namespace names are just strings, so the fact that the SVG namespace name also looks like a URI isn't important. URIs are commonly used because they are unique, the intention is not to "link" somewhere. (In fact URIs are used so frequently that the term "namespace URI" is commonly used instead of "namespace name".)
 
@@ -270,19 +270,19 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
   </tbody>
 </table>
 
-The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) parameters**. So, to create an SVG `rect` *element* using `document.createElementNS()`, you must write:
+The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) parameters**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
 
 ```js
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 ```
 
-But to retrieve the value of the `x` *parameter* on an SVG `rect` element, you must write:
+But to retrieve the value of the `x` _parameter_ on an SVG `rect` element, you must write:
 
 ```js
 rect.getAttributeNS(null, 'x');
 ```
 
-Note that this isn't the case for parameters *with* a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as `xlink:href` require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` parameter of an `<a>` element in SVG you would write:
+Note that this isn't the case for parameters _with_ a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as `xlink:href` require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` parameter of an `<a>` element in SVG you would write:
 
 ```js
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');

@@ -56,7 +56,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 ## Methods
 
-*Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}*.
+_Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Registers an event handler of a specific event type on the `EventTarget`.

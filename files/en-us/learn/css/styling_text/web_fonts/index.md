@@ -179,7 +179,7 @@ Most of these services are easy to use, so we won't cover them in great detail. 
 1. Go to [Google Fonts](https://fonts.google.com/).
 2. Search for your favorite fonts or use the filters at the top of the page to display the kinds of fonts you want to choose and select a couple of fonts that you like.
 3. To select a font family, click on the font preview and press the ⊕ button alongside the font.
-4. When you've chosen the font families, press the *View your selected families* button in the top right corner of the page.
+4. When you've chosen the font families, press the _View your selected families_ button in the top right corner of the page.
 5. In the resulting screen, you first need to copy the line of HTML code shown and paste it into the head of your HTML file. Put it above the existing {{htmlelement("link")}} element, so that the font is imported before you try to use it in your CSS.
 6. You then need to copy the CSS declarations listed into your CSS as appropriate, to apply the custom fonts to your HTML.
 

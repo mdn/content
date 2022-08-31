@@ -54,7 +54,7 @@ The **`<feMerge>`** SVG element allows filter effects to be applied concurrently
 
 ### Specific attributes
 
-*None*
+_None._
 
 ## DOM Interface
 

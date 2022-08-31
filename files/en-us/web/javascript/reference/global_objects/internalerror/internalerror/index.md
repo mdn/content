@@ -6,9 +6,10 @@ tags:
   - InternalError
   - JavaScript
   - Reference
+  - Non-standard
 browser-compat: javascript.builtins.InternalError.InternalError
 ---
-{{JSRef}} {{non-standard_header}}
+{{JSRef}}{{Non-standard_Header}}
 
 The **`InternalError()`** constructor creates an error that indicates an error that occurred internally in the JavaScript engine.
 
@@ -32,16 +33,16 @@ InternalError(message, fileName, lineNumber)
 
 ### Parameters
 
-- `message` {{optional_inline}}
+- `message` {{Optional_Inline}}
   - : Human-readable description of the error.
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
   - : An object that has the following properties:
-    - `cause` {{optional_inline}}
+    - `cause` {{Optional_Inline}}
       - : A property indicating the specific cause of the error.
           When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
-- `fileName` {{optional_inline}} {{non-standard_inline}}
+- `fileName` {{Optional_Inline}} {{Non-standard_Inline}}
   - : The name of the file containing the code that caused the exception
-- `lineNumber` {{optional_inline}} {{non-standard_inline}}
+- `lineNumber` {{Optional_Inline}} {{Non-standard_Inline}}
   - : The line number of the code that caused the exception
 
 ## Examples

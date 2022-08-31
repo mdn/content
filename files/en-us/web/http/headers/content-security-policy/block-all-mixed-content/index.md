@@ -10,6 +10,7 @@ tags:
   - Reference
   - Security
   - block-all-mixed-content
+  - Deprecated
 browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
 ---
 {{HTTPSidebar}}{{deprecated_header}}

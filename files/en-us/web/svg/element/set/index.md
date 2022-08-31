@@ -40,7 +40,7 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("to")}}
   - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
-    *Value type*: [**\<anything>**](/en-US/docs/Web/SVG/Content_type#anything); *Default value*: none; *Animatable*: **no**
+    _Value type_: [**\<anything>**](/en-US/docs/Web/SVG/Content_type#anything); _Default value_: none; _Animatable_: **no**
 
 ### Animation Attributes
 

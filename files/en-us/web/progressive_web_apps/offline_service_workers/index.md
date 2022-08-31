@@ -198,7 +198,7 @@ self.addEventListener('activate', (e) => {
     return Promise.all(keyList.map((key) => {
       if (key === cacheName) { return; }
       return caches.delete(key);
-    }))
+    }));
   }));
 });
 ```

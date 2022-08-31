@@ -28,7 +28,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Examples
 
-- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## Specifications
 

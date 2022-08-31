@@ -59,14 +59,14 @@ The `result.value` will be a promise.
 
 ```js
 const result = Atomics.waitAsync(int32, 0, 0, 1000);
-// { async: true, value: Promise {<pending>} }
+// { async: true, value: Promise {<pending>} }
 ```
 
 In the reading thread or in another thread, the memory location 0 is called and the promise can be resolved with `"ok"`.
 
 ```js
 Atomics.notify(int32, 0);
-// { async: true, value: Promise {<fulfilled>: 'ok'} }
+// { async: true, value: Promise {<fulfilled>: 'ok'} }
 ```
 
 If it isn't resolving to `"ok"`, the value in the shared memory location wasn't the expected (the `value` would be `"not-equal"` instead of a promise) or the timeout was reached (the promise will resolve to `"time-out"`).
