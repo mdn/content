@@ -38,7 +38,7 @@ scrollTo(options)
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
+      - : Specifies the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or use `default value` which `scroll-behavior` is considered (`auto`, the default value).
 
 ### Return value
 
