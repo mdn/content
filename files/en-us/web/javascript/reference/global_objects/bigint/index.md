@@ -233,11 +233,26 @@ The operations supported on BigInt values are not constant-time, and are thus op
 
 ### Use within JSON
 
-Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, you can use the [replacer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt properties without error:
+Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, `JSON.stringify()` specifically leaves a backdoor for BigInt values: it would try to call the BigInt's `toJSON()` method. (It doesn't do so for any other primitive values.) Therefore, you can implement your own `toJSON()` method (which is one of the few cases where monkeypatching is not explicitly discouraged):
+
+```js
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
+```
+
+Instead of throwing, `JSON.stringify()` now produces a string like this:
+
+```js
+console.log(JSON.stringify({ a: 1n }));
+// {"a":"1"}
+```
+
+If you do not wish to monkeypatch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
 
 ```js
 function replacer(key, value) {
-  if (key === 'big') {
+  if (key === "big") {
     return value.toString();
   }
   return value;
@@ -245,19 +260,19 @@ function replacer(key, value) {
 
 const data = {
   number: 1,
-  big: BigInt('18014398509481982'),
+  big: 18014398509481982n,
 };
 const stringified = JSON.stringify(data, replacer);
 
 console.log(stringified);
-// ↪ '{"number":1,"big":"18014398509481982"}'
+// {"number":1,"big":"18014398509481982"}
 ```
 
-If you have JSON data containing values you know will be large integers, you can use the [reviver](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
+If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
 
 ```js
 function reviver(key, value) {
-  if (key === 'big') {
+  if (key === "big") {
     return BigInt(value);
   }
   return value;
@@ -267,7 +282,7 @@ const payload = '{"number":1,"big":"18014398509481982"}';
 const parsed = JSON.parse(payload, reviver);
 
 console.log(parsed);
-// ↪ {number: 1, big: 18014398509481982n}
+// { number: 1, big: 18014398509481982n }
 ```
 
 ## Examples
