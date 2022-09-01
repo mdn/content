@@ -26,15 +26,15 @@ The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-
 An `@document` rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:
 
 - `url()`
-  - : which matches an exact URL.
+  - : Matches an exact URL.
 - `url-prefix()`
-  - : which matches if the document URL starts with the value provided.
+  - : Matches if the document URL starts with the value provided.
 - `domain()`
-  - : which matches if the document URL is on the domain provided (or a subdomain of it).
+  - : Matches if the document URL is on the domain provided (or a subdomain of it).
 - `media-document()`
-  - : with the parameter of video, image, plugin or all.
+  - : Matches the media according to the string in parameter, one of `video`, `image`, `plugin` or `all`.
 - `regexp()` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : which matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
+  - : Matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
 
 The values provided to the `url()`, `url-prefix()`, `domain()`, and `media-document()` functions can be optionally enclosed by single or double quotes. The values provided to the `regexp()` function _must_ be enclosed in quotes.
 
