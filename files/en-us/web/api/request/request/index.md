@@ -73,10 +73,16 @@ new Request(input, options)
       - : A string specifying
         `no-referrer`, `client`, or a URL. The default is
         `about:client`.
+    - `referrerPolicy`
+      - : A string that changes how the referrer header is populated during certain actions (e.g., fetching subresources, prefetching, performing navigations).
     - `integrity`
       - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
         value of the request (e.g.,
         `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `keepalive`
+      - : A boolean that indicates whether to make a persistent connection for multiple requests/responses.
+    - `signal`
+      - : An [AbortSignal](/en-US/docs/Web/API/abortsignal) object which can be used to communicate with/abort a request.
 
     If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
 
