@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/clip
 tags:
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.attributes.presentation.clip
 ---
 {{SVGRef}}{{deprecated_header}}
