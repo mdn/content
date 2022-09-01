@@ -138,9 +138,9 @@ fetch('https://example.com/profile', {
   });
 ```
 
-## Uploading a file
+## Updating a file
 
-Files can be uploaded using an HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
+Files can be updated using an HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
 ```js
 const formData = new FormData();
