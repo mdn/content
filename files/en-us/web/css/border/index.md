@@ -15,13 +15,13 @@ browser-compat: css.properties.border
 
 The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border.html")}}
+{{EmbedInteractiveExample("pages/css/border.html")}}  
 
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-color`](/en-US/docs/Web/CSS/border-color)
+- [`border-color`](en-US/docs/Web/CSS/border-color)
 - [`border-style`](/en-US/docs/Web/CSS/border-style)
 - [`border-width`](/en-US/docs/Web/CSS/border-width)
 
