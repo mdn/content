@@ -11,9 +11,11 @@ tags:
   - Plugin
   - Plugins
   - Security
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
-{{HTTPSidebar}}{{deprecated_header}}
+{{HTTPSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`plugin-types`** directive restricts the set of plugins that

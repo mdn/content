@@ -107,7 +107,7 @@ One of the best accessibility aids a screen reader user can have is an excellent
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think is more interesting than the last one.</p>
+<p>This is the second subsection of my content, which I think is more interesting than the last one.</p>
 ```
 
 We've prepared a version with longer text for you to try out with a screen reader (see [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). If you try navigating through this, you'll see that this is pretty easy to navigate:

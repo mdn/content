@@ -204,7 +204,7 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 
 ## Using the package on the web
 
-Now that we've got a compiled wasm module. let's run it in the browser.
+Now that we've got a compiled wasm module, let's run it in the browser.
 
 Let's start by creating a file named `index.html` in the root of the project, and give it the following contents:
 
