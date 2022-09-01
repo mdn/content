@@ -30722,46 +30722,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/touchcancel_event": {
-    "modified": "2020-10-15T22:15:04.322Z",
-    "contributors": ["irenesmith", "mfuji09"]
-  },
-  "Web/API/Document/touchend_event": {
-    "modified": "2020-10-15T21:19:10.859Z",
-    "contributors": [
-      "irenesmith",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "erikadoyle",
-      "chrisdavidmills",
-      "AFBarstow",
-      "teoli",
-      "ethertank",
-      "leibovic",
-      "louisremi"
-    ]
-  },
-  "Web/API/Document/touchmove_event": {
-    "modified": "2020-10-15T21:19:12.683Z",
-    "contributors": [
-      "mfuji09",
-      "irenesmith",
-      "Sheppy",
-      "fscholz",
-      "erikadoyle",
-      "chrisdavidmills",
-      "AFBarstow",
-      "teoli",
-      "igorware",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/Document/touchstart_event": {
-    "modified": "2020-10-15T22:15:04.542Z",
-    "contributors": ["irenesmith", "mfuji09"]
-  },
   "Web/API/Document/visibilityState": {
     "modified": "2020-11-10T17:15:20.166Z",
     "contributors": [
