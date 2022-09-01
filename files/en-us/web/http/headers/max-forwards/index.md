@@ -6,7 +6,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-spec-urls: https://httpwg.org/specs/rfc7231.html#header.max-forwards
+spec-urls: https://httpwg.org/specs/rfc9110.html#field.max-forwards
 ---
 {{HTTPSidebar}}
 
