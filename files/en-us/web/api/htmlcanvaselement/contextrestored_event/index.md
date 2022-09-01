@@ -21,7 +21,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('contextrestored', (event) => {});
 
-onwebglcontextrestored = (event) => { };
+oncontextrestored = (event) => { };
 ```
 
 ## Event type
