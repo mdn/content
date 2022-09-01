@@ -134,7 +134,7 @@ const r = 10;
 }
 ```
 
-### Using with with a proxy to create a dynamic namespace
+### Using `with` with a proxy to create a dynamic namespace
 
 `with` will transform every variable lookup to a property lookup, while [Proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) allow trapping every property lookup call. You can create a dynamic namespace by combining them.
 
