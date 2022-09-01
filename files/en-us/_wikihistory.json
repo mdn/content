@@ -30234,22 +30234,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/Document/pointercancel_event": {
-    "modified": "2020-10-15T22:14:50.373Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
-  "Web/API/Document/pointerdown_event": {
-    "modified": "2020-10-15T22:14:54.800Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
-  "Web/API/Document/pointerenter_event": {
-    "modified": "2020-10-15T22:14:52.222Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
-  "Web/API/Document/pointerleave_event": {
-    "modified": "2020-10-15T22:14:50.804Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
   "Web/API/Document/pointerlockchange_event": {
     "modified": "2020-10-15T21:20:38.289Z",
     "contributors": [
@@ -30273,22 +30257,6 @@
       "ethertank",
       "louisremi"
     ]
-  },
-  "Web/API/Document/pointermove_event": {
-    "modified": "2020-10-15T22:14:51.032Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
-  "Web/API/Document/pointerout_event": {
-    "modified": "2020-10-15T22:14:54.140Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
-  "Web/API/Document/pointerover_event": {
-    "modified": "2020-10-15T22:14:51.743Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
-  "Web/API/Document/pointerup_event": {
-    "modified": "2020-10-15T22:14:53.398Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
   },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T21:13:11.203Z",
