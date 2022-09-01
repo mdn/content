@@ -583,7 +583,7 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 
 The "create" and "update" views use the same template by default, which will be named after your model: _model\_name_\_**form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example `template_name_suffix = '_other_suffix'`)
 
-Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
+Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
