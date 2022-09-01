@@ -14,8 +14,8 @@ browser-compat: api.CanvasRenderingContext2D.arc
 {{APIRef}}
 
 The
-**`CanvasRenderingContext2D.arc()`** and **`OffscreenCanvasRenderingContext2D.arc()`**
-methods of the [Canvas 2D API](/en-US/docs/Web/API/CanvasRenderingContext2D) add a circular arc to the current sub-path.
+**`CanvasRenderingContext2D.arc()`**
+method of the [Canvas 2D API](/en-US/docs/Web/API/CanvasRenderingContext2D) add a circular arc to the current sub-path.
 
 ## Syntax
 
