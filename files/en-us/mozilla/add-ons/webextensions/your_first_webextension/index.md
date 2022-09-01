@@ -17,16 +17,17 @@ The source code for this example is on GitHub: <https://github.com/mdn/webextens
 
 ## Writing the extension
 
-Create a new directory and navigate to it. For example, in your command line/terminal you do it like this:
+In a suitable location, such as in the `documents` directory on a Mac or Windows PC, create a new directory called `borderify` and navigate to it. You can do this using your computer's file explorer or [command line terminal](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. Using terminal on a Mac, you create the directory like this:
 
 ```bash
+cd ~/documents
 mkdir borderify
 cd borderify
 ```
 
 ### manifest.json
 
-Now create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
+Using a suitable [text editor](/en-US/docs/Learn/Common_questions/Available_text_editors), create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
 
 ```json
 {
