@@ -192,9 +192,14 @@ Although JavaScript does not directly expose the garbage collector API, the lang
 
 ### WeakMaps and WeakSets
 
-[`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) and [`WeakSet`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) are data structures whose APIs closely mirror their non-weak counterparts: [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). `WeakMap` allows you to maintain a collection of key-value pairs, while `WeakSet` allows you to maintain a collection of unique values, both with performant addition, deletion, and querying. The keys of `WeakMap` and `WeakSet` are _weakly held_, which allows the key to be garbage collected (for `WeakMap` objects, the values would then be eligible for garbage collection as well) as long as nothing else in the program is referencing the key. For more information, see the [keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide.
+[`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) and [`WeakSet`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) are data structures whose APIs closely mirror their non-weak counterparts: [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). `WeakMap` allows you to maintain a collection of key-value pairs, while `WeakSet` allows you to maintain a collection of unique values, both with performant addition, deletion, and querying.
 
-One important characteristic of `WeakMap` and `WeakSet` is that they are not iterable. This is because the keys aren't actual references, but [ephemerons](https://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak/jucs_14_21_3481_3497_barros.pdf). This fixes the issue of the value referencing the key:
+`WeakMap` and `WeakSet` got the name from the concept of _weakly held_ values. If `x` is weakly held by `y`, it means that although you can access the value of `x` via `y`, the mark-and-sweep algorithm won't consider `x` as reachable if nothing else _strongly holds_ to it. Most data structures, except the ones discussed here, strongly holds to the objects passed in so that you can retrieve them at any time. The keys of `WeakMap` and `WeakSet` can be garbage collected (for `WeakMap` objects, the values would then be eligible for garbage collection as well) as long as nothing else in the program is referencing the key. This is ensured by two characteristics:
+
+- `WeakMap` and `WeakSet` can only store objects. This is because only objects are garbage collected — primitive values can always be forged (that is, `1 === 1` but `{} !== {}`), making them stay in the collection forever.
+- `WeakMap` and `WeakSet` are not iterable. This prevents you from using `Array.from(map.keys()).length` to observe the liveliness of objects, or get hold of an arbitrary key which should otherwise be eligible for garbage collection. (Garbage collection should be as invisible as possible.)
+
+In typical explanations of `WeakMap` and `WeakSet` (such as the one above), it's often implied that the key is garbage-collected first, freeing the value for garbage collection as well. However, consider the case of the value referencing the key:
 
 ```js
 const wm = new WeakMap();
@@ -205,9 +210,13 @@ wm.set(key, { key });
 // and the value is strongly held in the map!
 ```
 
-If `key` is stored as an actual reference, it would cause a cyclic reference and make both the key and the value ineligible for garbage collection, even when nothing else references `key`. Ephemerons allow the key to still be collected in this case. As a rough mental model, think of a `WeakMap` as the following implementation:
+If `key` is stored as an actual reference, it would create a cyclic reference and make both the key and value ineligible for garbage collection, even when nothing else references `key` — because if `key` is garbage collected, it means that at some particular instant, `value.key` would point to a non-existent address, which is not legal. To fix this, the entries of `WeakMap` and `WeakSet` aren't actual references, but [ephemerons](https://dl.acm.org/doi/pdf/10.1145/263700.263733), an enhancement to the mark-and-sweep mechanism. [Barros et al.](https://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak/jucs_14_21_3481_3497_barros.pdf) offers a good summary of the algorithm (page 4). To quote a paragraph:
 
-> **Warning:** This is not a polyfill.
+> Ephemerons are a refinement of weak pairs where neither the key nor the value can be classified as weak or strong. The connectivity of the key determines the connectivity of the value, but the connectivity of the value does not affect the connectivity of the key. […] when the garbage collection offers support to ephemerons, it occurs in three phases instead of two (mark and sweep).
+
+As a rough mental model, think of a `WeakMap` as the following implementation:
+
+> **Warning:** This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {
@@ -228,6 +237,8 @@ class MyWeakMap {
 ```
 
 As you can see, the `MyWeakMap` never actually holds a collection of keys. It simply adds metadata to each object being passed in. The object is then garbage-collectable via mark-and-sweep. Therefore, it's not possible to iterate over the keys in a `WeakMap`, nor clear the `WeakMap` (as that also relies on the knowledge of the entire key collection).
+
+For more information on their APIs, see the [keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide.
 
 ### WeakRefs and FinalizationRegistry
 
@@ -287,8 +298,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 Due to performance and security concerns, there is no guarantee of when the callback will be called, or if it will be called at all. It should only be used for cleanup — and non-critical cleanup. There are other ways for more deterministic resource management, such as [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), which will always execute the `finally` block. `WeakRef` and `FinalizationRegistry` exist solely for optimization of memory usage in long-running programs.
 
-For more information on the API of [`WeakRef`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)) and [`FinalizationRegistry`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)), see their reference pages.
-
-## See also
-
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](<https://docs.microsoft.com/en-us/previous-versions/msdn10/ff728624(v=msdn.10)>)
+For more information on the API of [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) and [`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry), see their reference pages.
