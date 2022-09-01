@@ -121,7 +121,7 @@ In the next section, we'll look at a better example of indicating required field
 
 > **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
 
-> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}**.**
+> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
 
 ## Using generated content with pseudo-classes
 
