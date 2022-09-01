@@ -86,7 +86,7 @@ num = 6; // Initialization
 ```
 
 Note however that initialization also causes declaration (if not already declared).
-The code snippet below will work because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
+The code snippet below will work, because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
 
 ```js
 a = 'Cran'; // Initialize a
@@ -129,4 +129,3 @@ Therefore the expressions are not evaluated until the relevant line is executed.
 - [`let` statement](/en-US/docs/Web/JavaScript/Reference/Statements/let) — MDN
 - [`const` statement](/en-US/docs/Web/JavaScript/Reference/Statements/const) — MDN
 - [`function` statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN
-
