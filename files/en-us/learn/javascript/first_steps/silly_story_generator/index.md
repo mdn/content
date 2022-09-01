@@ -59,8 +59,7 @@ You have been provided with some raw HTML/CSS and a few text strings and JavaScr
 
 The following screenshot shows an example of what the finished program should output:
 
-![A screenshot of a sample finished program of a silly story generator app.
-The app contains a text field for entering a custom name. Two radio buttons of temperature and weight conversions with the values of US and UK respectively. A button to generate a random story depending on the custom name entered.](screen_shot_2018-09-19_at_10.01.38_am.png)
+![The silly story generator app consists of a text field,two radio buttons and a button to generate a random story.](screen_shot_2018-09-19_at_10.01.38_am.png)
 
 To give you more of an idea, [have a look at the finished example](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (no peeking at the source code!)
 
