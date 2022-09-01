@@ -7941,6 +7941,14 @@
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/Document/selectionchange_event
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
+/en-US/docs/Web/API/Document/pointercancel_event	/en-US/docs/Web/API/Element/pointercancel_event
+/en-US/docs/Web/API/Document/pointerdown_event	/en-US/docs/Web/API/Element/pointerdown_event
+/en-US/docs/Web/API/Document/pointerenter_event	/en-US/docs/Web/API/Element/pointerenter_event
+/en-US/docs/Web/API/Document/pointerleave_event	/en-US/docs/Web/API/Element/pointerleave_event
+/en-US/docs/Web/API/Document/pointermove_event	/en-US/docs/Web/API/Element/pointermove_event
+/en-US/docs/Web/API/Document/pointerout_event	/en-US/docs/Web/API/Element/pointerout_event
+/en-US/docs/Web/API/Document/pointerover_event	/en-US/docs/Web/API/Element/pointerover_event
+/en-US/docs/Web/API/Document/pointerup_event	/en-US/docs/Web/API/Element/pointerup_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/Document/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
