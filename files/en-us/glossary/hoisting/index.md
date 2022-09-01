@@ -48,7 +48,7 @@ The result of the code above is the same: "My cat's name is Tiger"
 
 Hoisting works with variables too, so you can use a variable in code before it is declared and/or initialized.
 
-However JavaScript only hoists declarations, not initializations!
+However, JavaScript only hoists declarations, not initializations!
 This means that initialization doesn't happen until the associated line of code is executed, even if the variable was originally initialized then declared, or declared and initialized in the same line.
 
 Until that point in the execution is reached the variable has its _default_ initialization (`undefined` for a variable declared using `var`, otherwise uninitialized).
@@ -59,7 +59,7 @@ Below are some examples showing what can happen if you use a variable before it 
 
 ### `var` hoisting
 
-Here we declare then initialize the value of a `var` after using it.
+Here we declare and then initialize the value of a `var` after using it.
 The default initialization of the `var` is `undefined`.
 
 ```js
@@ -78,7 +78,7 @@ console.log(num); // Returns 6 after the line with initialization is executed.
 ```
 
 If we forget the declaration altogether (and only initialize the value) the variable isn't hoisted.
-Trying to read the variable before it is initialized results in `ReferenceError` exception.
+Trying to read the variable before it is initialized results in a `ReferenceError` exception.
 
 ```js
 console.log(num); // Throws ReferenceError exception - the interpreter doesn't know about `num`.
@@ -86,7 +86,7 @@ num = 6; // Initialization
 ```
 
 Note however that initialization also causes declaration (if not already declared).
-The code snippet below will work, because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
+The code snippet below will work because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
 
 ```js
 a = 'Cran'; // Initialize a
@@ -119,8 +119,8 @@ However the class is not initialized by default, so any code that uses it before
 
 [Function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) are not hoisted.
 
-The expressions evaluate to a function or class (respectively), which are typically assigned to a variable.
-In this case the variable declaration is hoisted and the expression is its initialization.
+The expressions evaluate to a function or class (respectively), which is typically assigned to a variable.
+In this case, the variable declaration is hoisted and the expression is its initialization.
 Therefore the expressions are not evaluated until the relevant line is executed.
 
 ## See also
@@ -129,3 +129,4 @@ Therefore the expressions are not evaluated until the relevant line is executed.
 - [`let` statement](/en-US/docs/Web/JavaScript/Reference/Statements/let) — MDN
 - [`const` statement](/en-US/docs/Web/JavaScript/Reference/Statements/const) — MDN
 - [`function` statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN
+
