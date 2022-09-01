@@ -13,14 +13,14 @@ Below is a quick review of best practices, tools, APIs with links to provide mor
 ## Best practices
 
 - Start with learning the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
-- Using *resource hints* such as [`rel=preconnect`](/en-US/docs/Web/HTML/Link_types/preconnect), [`rel=dns-prefetch`](/en-US/docs/Web/HTML/Link_types/dns-prefetch), [`rel=prefetch`](/en-US/docs/Web/HTML/Link_types/prefetch), [`rel=preload`](/en-US/docs/Web/HTML/Link_types/preload).
+- Using _resource hints_ such as [`rel=preconnect`](/en-US/docs/Web/HTML/Link_types/preconnect), [`rel=dns-prefetch`](/en-US/docs/Web/HTML/Link_types/dns-prefetch), [`rel=prefetch`](/en-US/docs/Web/HTML/Link_types/prefetch), [`rel=preload`](/en-US/docs/Web/HTML/Link_types/preload).
 - Keep the size of JavaScript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much JavaScript as needed for the current page.
 - [CSS](/en-US/docs/Learn/Performance/CSS) performance factors
 - Use {{Glossary("HTTP_2", "HTTP/2")}} on your server (or CDN).
 - Use a CDN for resources which can reduce load times significantly.
 - Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
 - Image optimization (use CSS animation, or SVG if possible).
-- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the {{htmlattrxref("loading", "img")}} attribute on the {{HTMLElement("img")}} element
+- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g., render full page for bot traffic); for example, by using the {{htmlattrxref("loading", "img")}} attribute on the {{HTMLElement("img")}} element
 - It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/en-US/docs/Learn/Performance/Perceived_performance).
 
 ## Quick Wins

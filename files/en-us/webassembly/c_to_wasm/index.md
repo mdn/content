@@ -63,7 +63,7 @@ At this point in your source directory you should have:
 
 ### Running your example
 
-Now all that remains is for you to load the resulting `hello.html` in a browser that supports WebAssembly. It is enabled by default from Firefox 52, Chrome 57, Edge 57, Opera 44)
+Now all that remains is for you to load the resulting `hello.html` in a browser that supports WebAssembly. It is enabled by default from Firefox 52, Chrome 57, Edge 57, Opera 44.
 
 > **Note:** If you try to open generated HTML file (`hello.html`) directly from your local hard drive (e.g. `file://your_path/hello.html`), you will end up with an error message along the lines of _`both async and sync fetching of the wasm failed`._ You need to run your HTML file through an HTTP server (`http://`) — see [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for more information.
 

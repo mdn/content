@@ -77,7 +77,7 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
 
 ### Representing structured data for a recipe
 
-There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, http\://schema.org/Recipe.
+There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, `http://schema.org/Recipe`.
 
 <table class="standard-table">
   <tbody>

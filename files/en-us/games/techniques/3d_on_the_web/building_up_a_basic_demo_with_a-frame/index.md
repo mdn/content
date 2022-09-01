@@ -9,6 +9,7 @@ tags:
   - Web
   - WebGL
 ---
+
 {{GamesSidebar}}
 
 The [WebVR](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
@@ -37,7 +38,7 @@ The first step is to create an HTML document — inside your project directory, 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>MDN Games: A-Frame demo</title>
     <script src="aframe.min.js"></script>
   </head>
@@ -58,8 +59,7 @@ A scene is the place where everything happens. When creating new objects in the 
 Let's create the scene by adding an `<a-scene>` element inside the `<body>` element:
 
 ```html
-<a-scene>
-</a-scene>
+<a-scene></a-scene>
 ```
 
 ### Adding a cube
@@ -67,11 +67,7 @@ Let's create the scene by adding an `<a-scene>` element inside the `<body>` elem
 Adding the cube to the scene is done by adding a simple [`<a-box>`](https://aframe.io/docs/primitives/a-box.html) element inside the `<a-scene>` element. Add it now:
 
 ```html
-<a-box
-  color="#0095DD"
-  position="0 1 0"
-  rotation="20 40 0">
-</a-box>
+<a-box color="#0095DD" position="0 1 0" rotation="20 40 0"></a-box>
 ```
 
 It contains a few parameters already defined: `color`, `position` and `rotation` — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.
@@ -125,16 +121,9 @@ We've also defined a cursor for the given camera, using the `cursor-*` attribute
 The basic light types in A-Frame are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Add the new code below your previous additions — this uses the standard `<a-light>` element:
 
 ```html
-<a-light
-  type="directional"
-  color="#FFF"
-  intensity="0.5"
-  position="-1 1 2">
+<a-light type="directional" color="#FFF" intensity="0.5" position="-1 1 2">
 </a-light>
-<a-light
-  type="ambient"
-  color="#FFF">
-</a-light>
+<a-light type="ambient" color="#FFF"></a-light>
 ```
 
 The directional light has a white color, its intensity is set to `0.5`, and it is placed at position `-1 1 2`. The ambient light only needs a color, which is also white.
@@ -184,12 +173,12 @@ In the new `material` attribute, we set up the `color` of the material, then its
 It is possible to populate the scene with entities created using JavaScript too, so let's use it to add a third shape, a cylinder. Add a new {{htmlelement("script")}} element at the end of the `<body>` element, just after the `<a-scene>` element, then add the following JavaScript code inside it:
 
 ```js
-const scene = document.querySelector('a-scene');
-const cylinder = document.createElement('a-cylinder');
-cylinder.setAttribute('color', '#FF9500');
-cylinder.setAttribute('height', '2');
-cylinder.setAttribute('radius', '0.75');
-cylinder.setAttribute('position', '3 1 0');
+const scene = document.querySelector("a-scene");
+const cylinder = document.createElement("a-cylinder");
+cylinder.setAttribute("color", "#FF9500");
+cylinder.setAttribute("height", "2");
+cylinder.setAttribute("radius", "0.75");
+cylinder.setAttribute("position", "3 1 0");
 scene.appendChild(cylinder);
 ```
 
@@ -208,10 +197,7 @@ We've already used `rotation` and `position` to move the shapes on the scene, an
 There's a special [`<a-animation>`](https://aframe.io/docs/core/animation.html) entity that can help us animate elements. Add the `<a-animation>` element seen below to the `<a-box>` element as a child, as shown:
 
 ```html
-<a-box
-  color="#0095DD"
-  rotation="20 40 0"
-  position="0 1 0">
+<a-box color="#0095DD" rotation="20 40 0" position="0 1 0">
   <a-animation
     attribute="rotation"
     from="20 0 0"
@@ -265,7 +251,7 @@ let t = 0;
 function render() {
   t += 0.01;
   requestAnimationFrame(render);
-  cylinder.setAttribute('position', `3 ${Math.sin(t * 2) + 1} 0`);
+  cylinder.setAttribute("position", `3 ${Math.sin(t * 2) + 1} 0`);
 }
 render();
 ```

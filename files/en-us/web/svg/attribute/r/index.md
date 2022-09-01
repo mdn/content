@@ -83,7 +83,7 @@ For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `r` is a *Geometry Property* meaning this attribute can also be used as a CSS property for circles.
+> **Note:** Starting with SVG2, `r` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
 
 ## radialGradient
 

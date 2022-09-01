@@ -63,7 +63,7 @@ second.onchange = () => {
 }
 ```
 
-For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 

@@ -305,7 +305,7 @@ function draw() {
     // Don't add a canvas for the frame image
     if (document.images[i].getAttribute("id") !== "frame") {
       // Create canvas element
-      canvas = document.createElement("canvas");
+      const canvas = document.createElement("canvas");
       canvas.setAttribute("width", 132);
       canvas.setAttribute("height", 150);
 

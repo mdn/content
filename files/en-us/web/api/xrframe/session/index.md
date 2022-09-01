@@ -20,7 +20,7 @@ browser-compat: api.XRFrame.session
 ---
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-An `XRFrame` object's *read-only* **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
+An `XRFrame` object's _read-only_ **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
 
 ## Value
 

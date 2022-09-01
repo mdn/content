@@ -22,23 +22,23 @@ The **`OffscreenCanvas`** interface provides a canvas that can be rendered off s
 
 ## Constructors
 
-- {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}}
+- {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} {{Experimental_Inline}}
   - : `OffscreenCanvas` constructor. Creates a new `OffscreenCanvas` object.
 
 ## Properties
 
-- {{domxref("OffscreenCanvas.height")}}
+- {{domxref("OffscreenCanvas.height")}} {{Experimental_Inline}}
   - : The height of the offscreen canvas.
-- {{domxref("OffscreenCanvas.width")}}
+- {{domxref("OffscreenCanvas.width")}} {{Experimental_Inline}}
   - : The width of the offscreen canvas.
 
 ## Methods
 
-- {{domxref("OffscreenCanvas.getContext()")}}
+- {{domxref("OffscreenCanvas.getContext()")}} {{Experimental_Inline}}
   - : Returns a rendering context for the offscreen canvas.
-- {{domxref("OffscreenCanvas.convertToBlob()")}}
+- {{domxref("OffscreenCanvas.convertToBlob()")}} {{Experimental_Inline}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas.
-- {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
+- {{domxref("OffscreenCanvas.transferToImageBitmap()")}} {{Experimental_Inline}}
   - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
 
 ## Examples

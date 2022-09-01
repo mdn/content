@@ -72,7 +72,7 @@ The `readable` side of the `transformStream`.
 
 ## Examples
 
-In the following example (see [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) for the source code), an image is fetched and its body retrieved as a {{domxref("ReadableStream")}}.
+In the following example (see [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) for the source code), an image is fetched and its body retrieved as a {{domxref("ReadableStream")}}.
 
 Next, we log the contents of the readable stream, use `pipeThrough()` to send it to a new function that creates a gray-scaled version of the stream, then log the new stream's contents too.
 

@@ -11,6 +11,7 @@ tags:
   - iap
   - licensing
 ---
+
 {{GamesSidebar}}
 
 When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavour on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
@@ -51,7 +52,7 @@ Finding publishers might be hard at first — try to look for them at the [HTML5
 
 ### Exclusive licenses
 
-The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights— that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
+The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights — that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
 
 ### Non-exclusive licenses
 

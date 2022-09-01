@@ -50,7 +50,7 @@ This renders like so:
 
 The main difference between a `<textarea>` and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
 
-`<textarea>` also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is an empty element with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Attributes/value) attribute.
+`<textarea>` also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is an empty element with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
 Note that even though you can put anything inside a `<textarea>` element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).
 

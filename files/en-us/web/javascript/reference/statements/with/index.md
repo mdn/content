@@ -8,6 +8,8 @@ tags:
   - Statement
 browser-compat: javascript.statements.with
 ---
+{{Deprecated_Header}}
+
 > **Warning:** Use of the `with` statement is not recommended, as it may
 > be the source of confusing bugs and compatibility issues. See the "Ambiguity Contra"
 > paragraph in the "Description" section below for details.
@@ -132,7 +134,7 @@ const r = 10;
 }
 ```
 
-### Using with with a proxy to create a dynamic namespace
+### Creating dynamic namespaces using the with statement and a proxy
 
 `with` will transform every variable lookup to a property lookup, while [Proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) allow trapping every property lookup call. You can create a dynamic namespace by combining them.
 
