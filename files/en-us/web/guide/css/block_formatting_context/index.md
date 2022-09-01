@@ -125,7 +125,7 @@ In the following example, we are using `display:flow-root` and floats to impleme
 </section>
 <section>
   <div class="float">Try to resize this outer float</div>
-  <div class="box" style="display:flow-root"><p><code>display:flow-root</code><p></div>
+  <div class="box" style="display:flow-root"><p><code>display:flow-root</code></p></div>
 </section>
 ```
 

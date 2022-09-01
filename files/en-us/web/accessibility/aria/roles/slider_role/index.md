@@ -187,7 +187,7 @@ For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in
 
 If the slider is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to reference the slider status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
 
-HTML's `<input type="range">` implicitly has the `role` of `slider`. Do not use `aria-valuemax` or `aria-valuemin` attributes on `<input type="range">` elements; use `min` and `max` instead. Otherwise, any global aria-* attributes and any other aria-* attributes applicable to the slider role.
+HTML's `<input type="range">` implicitly has the `role` of `slider`. Do not use `aria-valuemax` or `aria-valuemin` attributes on `<input type="range">` elements; use `min` and `max` instead. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the slider role.
 
 ### Prefer HTML
 

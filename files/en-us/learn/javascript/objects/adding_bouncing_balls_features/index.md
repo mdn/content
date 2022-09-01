@@ -56,7 +56,7 @@ Our bouncy ball demo is fun, but now we want to make it a little bit more intera
 
 The following screenshot gives you an idea of what the finished program should look like:
 
-![](bouncing-evil-circle.png)
+![Screenshot of the bouncing balls demo page. A white-outlined circle is visible in addition to the colored balls, and the text "Ball count: 23" is visible under the heading.](bouncing-evil-circle.png)
 
 To give you more of an idea, have a look at the [finished example](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (no peeking at the source code!)
 

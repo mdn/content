@@ -5,6 +5,7 @@ tags:
   - NeedsContent
   - NeedsExample
 ---
+
 {{GamesSidebar}}
 
 This article is for Touch Event Horizon and A Game Related To It

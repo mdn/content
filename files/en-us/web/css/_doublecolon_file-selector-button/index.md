@@ -14,12 +14,6 @@ The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-file-selector-button.html", "tabbed-shorter")}}
 
-> **Note:** Older versions of WebKit/Blink compatible browsers like Chrome, Opera and Safari (indicated by the `-webkit` prefix) supported a non-standard pseudo-element `::-webkit-file-upload-button`.
->
-> Legacy Edge and later versions of IE supported a non-standard pseudo-element `::-ms-browse`.
->
-> Both of these pseudo-elements serve the same purpose as `::file-selector-button`.
-
 ## Syntax
 
 ```css
@@ -68,8 +62,6 @@ input[type=file]::file-selector-button:hover {
 
 {{EmbedLiveSample("Basic_example", "100%", 150)}}
 
-Example with fallback for older browsers supporting the `-webkit` and `-ms` prefixes. Note that as a selector you will need to write out the whole code block twice, as an unrecognized selector invalidates the whole list.
-
 Note that `::file-selector-button` is a whole element, and as such matches the rules from the UA stylesheet. In particular, fonts and colors won't necessarily inherit from the `input` element.
 
 ### Fallback example
@@ -94,21 +86,6 @@ form {
 ```
 
 ```css
-input[type=file]::-ms-browse {
-  border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
-  background-color: #a29bfe;
-}
-
-input[type=file]::-webkit-file-upload-button {
-  border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
-  background-color: #a29bfe;
-  transition: 1s;
-}
-
 input[type=file]::file-selector-button {
   border: 2px solid #6c5ce7;
   padding: .2em .4em;

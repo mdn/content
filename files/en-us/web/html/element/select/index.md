@@ -202,32 +202,22 @@ This example basically:
 
 ```html
 <form>
- <fieldset>
+  <fieldset>
     <legend>Standard controls</legend>
-    <select
-       name=1A
-       id=select
-       autocomplete=off
-       required
-       >
-       <option>Carrots</option>
-       <option>Peas</option>
-       <option>Beans</option>
-       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+    <select name="1A" id="select" autocomplete="off" required>
+      <option>Carrots</option>
+      <option>Peas</option>
+      <option>Beans</option>
+      <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
     </select>
- </fieldset>
- <fieldset id=custom>
+  </fieldset>
+  <fieldset id="custom">
     <legend>Custom controls</legend>
-    <select
-       name="2A"
-       id="select"
-       autocomplete="off"
-       required
-       >
-       <option>Carrots</option>
-       <option>Peas</option>
-       <option>Beans</option>
-       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+    <select name="2A" id="select" autocomplete="off" required>
+      <option>Carrots</option>
+      <option>Peas</option>
+      <option>Beans</option>
+      <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
     </select>
   </fieldset>
 </form>
@@ -264,7 +254,7 @@ html body form fieldset#custom div.select div.header::after {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 html body form fieldset#custom div.select div.header:hover::after {
@@ -357,11 +347,23 @@ html body form fieldset#custom div.select datalist div.option:checked {
   color: white;
 }
 
-html body form fieldset#custom div.select div.optgroup div.option[data-disabled] {
+html
+  body
+  form
+  fieldset#custom
+  div.select
+  div.optgroup
+  div.option[data-disabled] {
   color: gray;
 }
 
-html body form fieldset#custom div.select div.optgroup div.option[data-checked] {
+html
+  body
+  form
+  fieldset#custom
+  div.select
+  div.optgroup
+  div.option[data-checked] {
   background-color: blue;
   color: white;
 }
@@ -372,7 +374,7 @@ html body form fieldset#custom div.select div.optgroup div.label {
 
 html body form fieldset#custom div.select div.optgroup div.option div.label {
   font-weight: normal;
-  padding: .25em;
+  padding: 0.25em;
 }
 
 html body form fieldset#custom div.select div.header {
@@ -388,7 +390,7 @@ html body form fieldset#custom div.select div.header {
 
 html body form fieldset#custom div.select div.header span {
   flex: 1;
-  padding: .5em;
+  padding: 0.5em;
 }
 ```
 
@@ -417,17 +419,17 @@ for (const select of selects) {
           this.removeAttribute("data-checked");
         } else {
           this.setAttribute("data-checked", "");
-        };
+        }
       } else {
         const options = div.querySelectorAll('.option');
         for (let i = 0; i < options.length; i++) {
           const option = options[i];
           option.removeAttribute("data-checked");
-        };
+        }
         this.setAttribute("data-checked", "");
-      };
-    };
-  };
+      }
+    }
+  }
 
   function onkeyup(e) {
     e.preventDefault();
@@ -435,7 +437,7 @@ for (const select of selects) {
     if (e.keyCode === 13) {
       this.click();
     }
-  };
+  }
 
   div.classList.add('select');
   header.classList.add('header');
@@ -495,12 +497,12 @@ for (const select of selects) {
       option.tabIndex = i + 1;
       option.appendChild(label);
       optgroup.appendChild(option);
-    };
-  };
+    }
+  }
 
   div.onclick = (e) => {
     e.preventDefault();
-  }
+  };
 
   parent.insertBefore(div, select);
   header.appendChild(select);
@@ -537,14 +539,14 @@ for (const select of selects) {
     return div.offsetWidth;
   }));
 
-  console.log(width)
+  console.log(width);
   div.style.width = `${width}px`;
 }
 document.forms[0].onsubmit = (e) => {
   const data = new FormData(this);
   e.preventDefault();
   submit.innerText = JSON.stringify([...data.entries()]);
-}
+};
 ```
 
 #### Result

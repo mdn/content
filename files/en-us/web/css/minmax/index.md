@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Function
   - CSS Grid
-  - Experimental
   - Function
   - Layout
   - Reference

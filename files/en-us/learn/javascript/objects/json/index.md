@@ -195,7 +195,7 @@ We have made our JSON data available on our GitHub, at <https://mdn.github.io/le
 
 We are going to load the JSON into our script, and use some nifty DOM manipulation to display it, like this:
 
-![](json-superheroes.png)
+![Image of a document titled "Super hero squad" (in a fancy font) and subtitled "Hometown: Metro City // Formed: 2016". Three columns below the heading are titled "Molecule Man", "Madame Uppercut", and "Eternal Flame", respectively. Each column lists the hero's secret identity name, age, and superpowers.](json-superheroes.png)
 
 ### Top-level function
 

@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML text-level semantics
-  - HTML5
   - Highlighting
   - Highlighting Text
   - Marking Text

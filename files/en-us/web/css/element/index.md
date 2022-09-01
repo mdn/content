@@ -9,6 +9,7 @@ tags:
   - Layout
   - Reference
   - Web
+  - Experimental
 browser-compat: css.types.image.element
 ---
 {{CSSRef}}{{SeeCompatTable}}

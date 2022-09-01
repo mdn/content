@@ -265,7 +265,6 @@ blockquote i {
   display   : block;
   font-size : 0.8em;
   margin-top: 1rem;
-  text-style: italic;
   text-align: right;
 }
 ```

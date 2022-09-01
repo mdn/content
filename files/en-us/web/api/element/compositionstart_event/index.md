@@ -102,7 +102,7 @@ kbd {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');

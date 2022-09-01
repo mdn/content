@@ -39,7 +39,7 @@ onmerchantvalidation = (event) => { };
 
 ## Event type
 
-An {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MerchantValidationEvent")}}
 

@@ -163,7 +163,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         <tr style="cursor: alias">
           <th rowspan="7" scope="row" style="cursor: auto">Drag &#x26; drop</th>
           <td><code>alias</code></td>
-          <td><img src="alias.gif" alt="wide arrow pointing up and to the left partially obscuring a smaller folder icon with a curved arrow pointing up and the the right"/></td>
+          <td><img src="alias.gif" alt="wide arrow pointing up and to the left partially obscuring a smaller folder icon with a curved arrow pointing up and to the right"/></td>
           <td>An alias or shortcut is to be created.</td>
         </tr>
         <tr style="cursor: copy">

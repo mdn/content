@@ -47,7 +47,7 @@ Several layer types inherit from `XRCompositionLayer`:
 
 ## Methods
 
-*Inherits methods from its parent, {{domxref("EventTarget")}}*.
+_Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 - {{domxref("XRCompositionLayer.destroy()")}}
   - : Deletes the underlying layer attachments.

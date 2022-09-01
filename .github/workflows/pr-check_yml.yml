@@ -1,13 +1,13 @@
-name: JSON lint
+name: Lint YAML
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - '*.json'
-      - .github/workflows/json-lint.yml
-
+      - yarn.lock
+      - "**/*.yml"
+      - .github/workflows/pr-check_yml.yml
 
 jobs:
   docs:
@@ -22,7 +22,10 @@ jobs:
           node-version: "16"
           cache: yarn
 
+      - name: Install all yarn packages
+        run: |
+          yarn --frozen-lockfile
+
       - name: Lint markdown files
         run: |
-          npm install --no-save eslint eslint-plugin-json
-          npx eslint . --ext .json
+          yarn lint:yml

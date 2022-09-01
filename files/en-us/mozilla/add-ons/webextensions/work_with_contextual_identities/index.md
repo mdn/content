@@ -109,7 +109,7 @@ The script now uses contextualIdentities.query to determine whether there are an
       }
 ```
 
-If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to "create" or "close all" to the \<div> before it's added to the popup.
+If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the `<div>` element. The function `createOptions()` then adds the options to "create" or "close all" to the `<div>` before it's added to the popup.
 
 ```js
      for (const identity of identities) {

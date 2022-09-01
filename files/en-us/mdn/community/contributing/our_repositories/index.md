@@ -15,7 +15,7 @@ tags:
 
 ### Tier 1
 
-Code in these repositories are core to the MDN Web Docs project and runs on https://developer.mozilla.org, or another Mozilla owned domain.
+Code in these repositories is core to the MDN Web Docs project and runs on Mozilla-owned domains.
 
 - [mdn/content](https://github.com/mdn/content)
 - [Yari](https://github.com/mdn/yari)

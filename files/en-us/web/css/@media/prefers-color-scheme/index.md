@@ -10,6 +10,9 @@ tags:
   - prefers-color-scheme
 browser-compat: css.at-rules.media.prefers-color-scheme
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested a light or dark color theme.
 
 The user might indicate this preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
@@ -80,5 +83,3 @@ The elements below have an initial color theme. They can be further themed accor
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
 - Changing color schemes in [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/), [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019), or [other platforms](https://support.mozilla.org/en-US/questions/1271928).
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

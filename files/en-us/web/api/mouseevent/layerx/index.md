@@ -12,7 +12,6 @@ tags:
   - Non-standard
 browser-compat: api.MouseEvent.layerX
 ---
-
 {{APIRef("UI Events")}}{{Non-standard_Header}}
 
 The **`MouseEvent.layerX`** read-only property returns the

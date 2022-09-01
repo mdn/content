@@ -7,7 +7,6 @@ tags:
   - Canvas
   - Graphics
   - HTML
-  - HTML5
   - Tutorial
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
