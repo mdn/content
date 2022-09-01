@@ -66,7 +66,7 @@ Some elements are more difficult to style, requiring more complex CSS or some mo
 - Checkboxes and radio buttons
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 
-We describe how to handle these more specific features in the article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)[.](/en-US/docs/Learn/Forms/Advanced_form_styling)
+We describe how to handle these more specific features in the article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 #### The ugly
 
@@ -79,7 +79,7 @@ Some elements can't be styled thoroughly using CSS. These include:
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Again, we'll describe what can be done in terms of styling these elements in [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)[.](/en-US/docs/Learn/Forms/Advanced_form_styling)
+Again, we'll describe what can be done in terms of styling these elements in [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 The real problem with all these controls is that they have a very complex structure, and beyond some basic styling (such as changing the width or margin of the control) you generally don't have the ability to style the controls' internal components (such as the date picker calendar, or the button on the \<select> that causes the options list to display) making up those widgets.
 
