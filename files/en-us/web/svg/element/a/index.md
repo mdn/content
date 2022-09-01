@@ -66,7 +66,7 @@ svg|a:hover, svg|a:active {
 
 ## Attributes
 
-- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+- {{htmlattrxref("download", "a")}}
   - : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
@@ -78,10 +78,10 @@ svg|a:hover, svg|a:active {
 - {{htmlattrxref("ping", "a")}} {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
     _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
-- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+- {{htmlattrxref("referrerpolicy", "a")}}
   - : Which [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
-- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+- {{htmlattrxref("rel", "a")}}
   - : The relationship of the target object to the link object.
     _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Link_types)** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("target")}}
