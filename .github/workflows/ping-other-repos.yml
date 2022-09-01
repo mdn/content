@@ -13,7 +13,10 @@ on:
     branches: [main]
 jobs:
   ping:
-    if: github.repository == 'mdn/content' # Won’t be run from forks
+    # Don't run in forks, or when Dependabot merges a PR.
+    if: |
+      github.repository == 'mdn/content' &&
+      github.triggering_actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Ping w3c/mdn-spec-links

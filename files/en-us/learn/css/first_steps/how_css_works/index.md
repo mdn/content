@@ -90,7 +90,7 @@ P
     └─ "Sheets"
 ```
 
-This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:
+This is how a browser interprets the previous HTML snippet — it renders the above DOM tree and then outputs it in the browser like so:
 
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 

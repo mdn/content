@@ -13,7 +13,7 @@ browser-compat: api.WebGLRenderingContext.bindFramebuffer
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindFramebuffer()`** method of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) binds to the specified target the default {{domxref("WebGLFramebuffer")}}, or, if the second argument is non-null, the provided {{domxref("WebGLFramebuffer")}}.
+[WebGL API](/en-US/docs/Web/API/WebGL_API) binds to the specified target the provided {{domxref("WebGLFramebuffer")}}, or, if the `framebuffer` argument is null, the default {{domxref("WebGLFramebuffer")}}, which is associated with the canvas rendering context.
 
 ## Syntax
 
