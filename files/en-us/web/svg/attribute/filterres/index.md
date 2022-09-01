@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG Attribute
   - SVG Filter
+  - Deprecated
 browser-compat: svg.elements.filter.filterRes
 ---
 {{SVGRef}}{{deprecated_header}}

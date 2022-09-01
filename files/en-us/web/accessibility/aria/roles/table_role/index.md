@@ -103,15 +103,15 @@ None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility
        <span role="cell">header</span>
        <span role="cell">h1</span>
     </div>
-    <div role="row"  aria-rowindex="16">
+    <div role="row" aria-rowindex="16">
       <span role="cell">header</span>
       <span role="cell">h6</span>
     </div>
-    <div role="row"  aria-rowindex="18">
+    <div role="row" aria-rowindex="18">
       <span role="cell">rowgroup</span>
       <span role="cell">thead</span>
     </div>
-    <div role="row"  aria-rowindex="24">
+    <div role="row" aria-rowindex="24">
       <span role="cell">term</span>
       <span role="cell">dt</span>
     </div>

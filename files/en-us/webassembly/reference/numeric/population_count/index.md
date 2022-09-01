@@ -10,7 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`popcnt`** instructions, short for *population count*, are used to count the amount of `1`s in a numbers binary representation.
+The **`popcnt`** instructions, short for _population count_, are used to count the amount of `1`s in a numbers binary representation.
 
 {{EmbedInteractiveExample("pages/wat/popcnt.html", "tabbed-taller")}}
 

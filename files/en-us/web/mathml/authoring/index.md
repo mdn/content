@@ -256,7 +256,7 @@ A simple approach is to integrate [converters from a simple syntax](#conversion_
 
 > **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
 
-[LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the *StartMath* syntax provides extra equation panels to insert pre-defined mathematical constructions.
+[LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the _StartMath_ syntax provides extra equation panels to insert pre-defined mathematical constructions.
 
 ![StarMath input box in Libre Office](libreoffice.png)
 

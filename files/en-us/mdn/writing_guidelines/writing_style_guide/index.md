@@ -270,7 +270,7 @@ Use English-style plurals, not the Latin- or Greek-influenced forms.
 Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use straight quotes and apostrophes. This is because we need to choose one or the other for consistency. If curly quotes or apostrophes make their way into code snippets, even inline ones, readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
 
 ### Commas
 
