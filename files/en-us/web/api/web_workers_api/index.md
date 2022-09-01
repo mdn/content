@@ -9,6 +9,7 @@ tags:
   - Web Workers
 spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **Web Workers** makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
@@ -75,10 +76,11 @@ Workers can also spawn other workers, so these APIs are also available: {{domxre
 
 ## Examples
 
-We have created a couple of simple demos to show basic usage:
+We have created a couple of demos to show web worker usage:
 
 - [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 - [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)).
+- [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) ([run OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)).
 
 You can find out more information on how these demos work in [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 

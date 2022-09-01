@@ -117,6 +117,8 @@ onmessage = (evt) => {
 };
 ```
 
+For a full example, see our [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) ([run OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)).
+
 ## Specifications
 
 {{Specifications}}
