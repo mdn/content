@@ -31,10 +31,10 @@ None.
 
 A {{jsxref("Promise")}} resolving to an object containing:
 
-- `userChoice` {{experimental_inline}}  
+- `userChoice` {{experimental_inline}}
   - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{jsxref("BeforeInstallPromptEvent.userChoice")}} property.
 
-- `platform` {{non-standard_inline}}  
+- `platform` {{non-standard_inline}}
   - : A string containing the selected platform, reflecting the {{jsxref("BeforeInstallPromptEvent.platform")}} property.
 
 ## Examples
