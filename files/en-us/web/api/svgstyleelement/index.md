@@ -61,7 +61,7 @@ Given the following SVG element:
 You can create an SVG style element as shown:
 
 ```js
-// Get the the SVG element object by tag name
+// Get the SVG element object by tag name
 const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace

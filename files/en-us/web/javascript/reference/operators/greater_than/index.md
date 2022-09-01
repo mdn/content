@@ -23,7 +23,7 @@ x > y
 
 ## Description
 
-The operands are compared using the the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except the two operands are swapped.
+The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except the two operands are swapped.
 
 ## Examples
 

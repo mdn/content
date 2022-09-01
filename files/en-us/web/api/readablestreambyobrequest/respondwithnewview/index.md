@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}}).
 
 - {{jsxref("RangeError")}}
   - : Thrown if the new `view` does not match the backing memory region of {{domxref("ReadableStreamBYOBRequest.view")}}.
-    For example, it is not the same buffer (or a transferred version), has a different `byteOffset`, or is larger than the memory available to the the backing view.
+    For example, it is not the same buffer (or a transferred version), has a different `byteOffset`, or is larger than the memory available to the backing view.
 
 ## Examples
 

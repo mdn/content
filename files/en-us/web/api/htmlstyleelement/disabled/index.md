@@ -33,7 +33,7 @@ Note that you can also access any/all stylesheets in the document using [`Docume
 
 #### HTML
 
-The HTML contains an [HTML `<style>` element](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
+The HTML contains an HTML [`<style>`](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
 
 ```html
 <button>Enable</button>
