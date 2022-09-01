@@ -170,7 +170,7 @@ The immediate benefit of this approach is that cycles is no longer a problem. In
 
 However, the inability to manually control garbage collection remains. There are times when it would be convenient to manually decide when and what memory is released. In order to release the memory of an object, it needs to be made explicitly unreachable. It is also not possible to programmatically trigger garbage collection in JavaScript — and will likely never be within the core language, although engines may expose APIs behind opt-in flags.
 
-## Managing memory usage
+## Configuring engine memory model
 
 JavaScript engines typically offer flags that expose the memory model. For example, Node.js offers additional options and tools that expose the underlying V8 mechanisms for configuring and debugging memory issues. This configuration may not be available in browsers, and even less so for web pages (via HTTP headers, etc.).
 
@@ -186,9 +186,9 @@ We can also expose the garbage collector for debugging memory issues using a fla
 node --expose-gc --inspect index.js
 ```
 
-## Data structures observing garbage collection
+## Data structures aiding memory management
 
-Although JavaScript does not directly expose the garbage collector API, the language offers several data structures that indirectly observe garbage collection and objects' lifecycle.
+Although JavaScript does not directly expose the garbage collector API, the language offers several data structures that indirectly observe garbage collection and can be used to manage memory usage.
 
 ### WeakMaps and WeakSets
 
