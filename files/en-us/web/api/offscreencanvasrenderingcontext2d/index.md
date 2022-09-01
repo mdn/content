@@ -17,14 +17,9 @@ browser-compat: api.OffscreenCanvasRenderingContext2D
 The **`OffscreenCanvasRenderingContext2D`** interface is a {{domxref("CanvasRenderingContext2D")}} rendering context for drawing to the bitmap of an `OffscreenCanvas` object.
 It is similar to the `CanvasRenderingContext2D` object, with the following differences:
 
-- there is no support for user interface features;
-- its `canvas` attribute refers to an `OffscreenCanvas` object rather than a canvas element;
-- it has a `commit()` method for pushing the rendered image to the context's `OffscreenCanvas` object's placeholder canvas element.
-
-## Constructor
-
-- {{domxref("OffscreenCanvasRenderingContext2D.OffscreenCanvasRenderingContext2D()", "OffscreenCanvasRenderingContext2D()")}}
-  - : Creates a new `OffscreenCanvasRenderingContext2D` instance.
+- there is no support for user interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
+- its `canvas` attribute refers to an `OffscreenCanvas` object rather than a canvas element
+- it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder canvas element
 
 ## Additional methods
 
@@ -44,12 +39,12 @@ The following user interface methods are **not supported** by the `OffscreenCanv
 
 ## Inherited properties and methods
 
-_The following properties and methods are inherited from {{domxref("CanvasRenderingContext2D")}}._
+_The following properties and methods are inherited from {{domxref("CanvasRenderingContext2D")}}. They have the same usage as in `CanvasRenderingContext2D`_
 
 ### Context
 
 - {{domxref("OffscreenCanvasRenderingContext2D.isContextLost")}}
-  - : TODO
+  - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
 
@@ -71,7 +66,7 @@ The following methods and properties control drawing text. See also the {{domxre
 - {{domxref("CanvasRenderingContext2D.measureText()")}}
   - : Returns a {{domxref("TextMetrics")}} object.
 - {{domxref("CanvasRenderingContext2D.textRendering}")}}
-  - : TODO
+  - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`,
 
 ### Line styles
 
@@ -104,16 +99,18 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.fontKerning")}}
-  - : TODO
-- {{domxref("CanvasRenderingContext2D.fontStretch")}}
-  - : TODO
-- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}}
-  - : TODO
 - {{domxref("CanvasRenderingContext2D.letterSpacing")}}
-  - : TODO
-- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
-  - : TODO
+  - : Letter spacing. Default: `0px`.
+- {{domxref("CanvasRenderingContext2D.fontKerning")}}
+  - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
+- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
+  - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
+  - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
+  - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+  - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
 
@@ -257,7 +254,12 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ## Unsupported properties and methods
 
-## Examples
+The following methods are **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
+
+- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
+  - : If a given element is focused, this method draws a focus ring around the current path.
+- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
+  - : Scrolls the current path or a given path into the view.
 
 ## Specifications
 

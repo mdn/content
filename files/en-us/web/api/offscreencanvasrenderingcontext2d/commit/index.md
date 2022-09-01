@@ -20,11 +20,24 @@ The copy operation is synchronous. Calling this method is not needed for the tra
 
 ## Syntax
 
-<!-- TODO -->
+```js
+commit();
+```
 
 ## Examples
 
-<!-- TODO -->
+```javascript
+const placeholder = document.createElement("canvas");
+const offscreen = placeholder.transferControlToOffscreen();
+const ctx = offscreenCanvas.getContext("2d");
+
+// Perform some drawing using the 2d context
+ctx.fillStyle = "blue";
+ctx.fillRect(0, 0, 10, 10);
+
+// Push placeholder to the canvas element
+ctx.commit();
+```
 
 ## Specifications
 

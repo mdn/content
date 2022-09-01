@@ -14,9 +14,14 @@ browser-compat: api.CanvasRenderingContext2D
 
 {{APIRef}}
 
-The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element. It is used for drawing shapes, text, images, and other objects.
+The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element.
+It is used for drawing shapes, text, images, and other objects.
 
-See the interface's properties and methods in the sidebar and below. The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
+The interface's properties and methods are described in the reference section of this page.
+The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
+
+For [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas), there is an equivalent interface that provides the rendering context.
+The offscreen rendering context inherits most of the same properties and methods as the `CanvasRenderingContext2D` and is described in more detail in the {{domxref("OffscreenCanvasRenderingContext2D")}} reference page.
 
 ## Basic example
 
@@ -266,3 +271,4 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 - {{domxref("HTMLCanvasElement")}}
 - {{HTMLElement("canvas")}}
+- {{domxref("OffscreenCanvas")}}

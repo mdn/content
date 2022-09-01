@@ -56,8 +56,7 @@ To display the `ImageBitmap`, you can use a {{domxref("ImageBitmapRenderingConte
 Given these two {{HTMLElement("canvas")}} elements
 
 ```html
-<canvas id="one"></canvas>
-<canvas id="two"></canvas>
+<canvas id="one"></canvas> <canvas id="two"></canvas>
 ```
 
 the following code will provide the rendering using `OffscreenCanvas` as described above.
@@ -130,6 +129,7 @@ onmessage = (evt) => {
 
 - [WebGL Off the Main Thread – Mozilla Hacks](https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/)
 - {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("OffscreenCanvasRenderingContext2D")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageBitmapRenderingContext")}}
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
