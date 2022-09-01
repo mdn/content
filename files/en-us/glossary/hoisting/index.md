@@ -119,7 +119,7 @@ However the class is not initialized by default, so any code that uses it before
 
 [Function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) are not hoisted.
 
-The expressions evaluate to a function or class (respectively), which is typically assigned to a variable.
+The expressions evaluate to a function or class (respectively). They are typically then assigned to a variable or passed to other functions.
 In this case, the variable declaration is hoisted and the expression is its initialization.
 Therefore the expressions are not evaluated until the relevant line is executed.
 
