@@ -7,7 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
-spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-4
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.429
 ---
 {{HTTPSidebar}}
 
