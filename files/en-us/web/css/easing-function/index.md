@@ -23,12 +23,12 @@ This transition between two values may be applied in different situations. It ma
 
 ```css
 /* linear function and keyword */
-/* linear(list-of-points) */
+/* linear(<list-of-points>) */
 linear(1, -0.5, 0);
 linear;
 
 /* cubic-bezier function and keywords */
-/* cubic-bezier(x1, y1, x2, y2) */
+/* cubic-bezier(<x1>, <y1>, <x2>, <y2>) */
 cubic-bezier(0.42, 0.0, 1.0, 1.0);
 ease;
 ease-in;
@@ -36,7 +36,7 @@ ease-out;
 ease-in-out;
 
 /* steps function and keywords */
-/* steps(number-of-steps, direction) */
+/* steps(<number-of-steps>, <direction>) */
 steps(4, end);
 step-start;
 step-end;
@@ -53,22 +53,22 @@ step-end;
 - `ease`
   - : Indicates that the interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1.0)`. It is similar to [`ease-in-out`](#ease-in-out), though it accelerates more sharply at the beginning.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A curving line extends from the origin to the X 1 Y 1 position, quickly rising and arcing.](cubic-bezier-ease.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' with a curved line quickly rising from the origin to X1 Y1.](cubic-bezier-ease.png)
 
 - `ease-in`
   - : Indicates that the interpolation starts slowly, then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 1.0, 1.0)`.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position, with most of the curve close to the origin, straightening out as it approaches X 1 Y 1.](cubic-bezier-ease-in.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' shows a shallow curved line from the origin that straightens out as it approaches X1 Y1.](cubic-bezier-ease-in.png)
 
 - `ease-in-out`
   - : Indicates that the interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) function; at the end, it is like the [`ease-out`](#ease-out) function.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position. The curve is symmetrical, resembling a stretched out letter S.](cubic-bezier-ease-in-out.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' shows a symmetrical, 'S'-shaped line curving from the origin to X1 Y1.](cubic-bezier-ease-in-out.png)
 
 - `ease-out`
   - : Indicates that the interpolation starts abruptly and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position, starting as an almost straight diagonal line and curving as it gets close to X 1 Y 1.](cubic-bezer-ease-out.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' shows a straight diagonal line that slightly curves as it gets close to X1 Y1.](cubic-bezer-ease-out.png)
 
 - _number-of-steps_
   - : A strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
@@ -85,12 +85,12 @@ step-end;
 - `step-start`
   - : Indicates that the interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis.](steps-1-start.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' with one point at X0 Y0 and another at X1 Y1. A horizontal line extends from the Y axis to X1 Y1.](steps-1-start.png)
 
 - `step-end`
   - : Indicates that the interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis.](steps-1-end.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' with one point at X0 Y0 and another at X1 Y1. A horizontal line extends on the X axis from the origin towards X0 Y1.](steps-1-end.png)
 
 ## Description
 
@@ -110,13 +110,13 @@ Consider another example of the function: `linear(0, 0.25 75%, 1)`. This produce
 
 The `linear` keyword produces a `linear()` function with two points. This is equivalent to the easing function `cubic-bezier(0.0, 0.0, 1.0, 1.0)`.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A straight diagonal line extends from the origin to the X 1 Y 1 position.](cubic-bezier-linear.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' shows a straight diagonal line extending from the origin to X1 Y1.](cubic-bezier-linear.png)
 
 ### Cubic Bézier easing function
 
 The `cubic-bezier()` functional notation defines a cubic [Bézier curve](/en-US/docs/Glossary/Bezier_curve). The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions because they can be used to smooth down the start and end of the {{Glossary("interpolation")}}. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' shows an 'S'-shaped line curving from the origin to X1 Y1. The Bezier handle at X0 Y0 is labeled 'P₁ = (0.075, 0.75)' and at X1 Y1 is labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
 A cubic Bézier curve is defined by four points: P0, P1, P2, and P3.
 
@@ -149,26 +149,26 @@ steps(2, jump-start)
 steps(2, start)
 ```
 
-  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Three dots are present, the first at the X 0 Y 0 position, the second at the X 0.5 Y 0.5 position, and the third at the X 1 Y 1 position. The second and third dots have horizontal lines extending 0.5 units backwards towards the Y axis.](steps-2-start.png)
+  ![A 2D graph of 'Time ratio' to 'Output ratio' with points at X0 Y0, X0.5 Y0.5, and X1 Y1. Horizontal lines from the second and third points extend 0.5 units towards the Y axis.](steps-2-start.png)
 
 ```css
 steps(4, jump-end)
 steps(4, end)
 ```
 
-  ![Four steps, with a jump from the fourth step to the final value at the 100% mark.](steps-4-end.png)
+  ![A 2D steps graph showing four steps, with a jump from the fourth step to the final value at the 100% mark.](steps-4-end.png)
 
 ```css
 steps(5, jump-none)
 ```
 
-  ![Five steps, with no jumps, so 20% of the time is at the beginning state or 0% mark and the last 20% is at the final state, or 100% mark.](step5none.png)
+  ![A 2D steps graph showing five steps with no jump. Beginning 20% of the time is at the 0% mark, and the last 20% is at the 100% mark.](step5none.png)
 
 ```css
 steps(3, jump-both)
 ```
 
-  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Five dots are present, the first at the X 0 Y 0 position, the second at the X 0 Y 0.25 position, the third at the X 0.5 Y 0.5 position, the fourth at the X 0.75 Y 0.75 position, and the fifth at the X 1 Y 1 position. The second, third, and fourth dots have horizontal lines extending 0.25 units forwards away from the Y axis.](step3both.png)
+  ![A 2D steps graph showing points at X0 Y0, X0 Y0.25, X0.25 Y0.5, X0.75 Y0.75 and X1 Y1. The second, third, and fourth points have horizontal lines extending 0.25 units away from the Y axis.](step3both.png)
 
 The `steps()` function can also be specified using these keywords, each of which represent a specific `steps()` notation: [`step-start`](#step-start) and [`step-end`](#step-end).
 
