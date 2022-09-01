@@ -26,7 +26,7 @@ The **`<altGlyphDef>`** [SVG](/en-US/docs/Web/SVG) element defines a substitutio
 
 ### Specific attributes
 
-*None*
+_None._
 
 ## DOM Interface
 

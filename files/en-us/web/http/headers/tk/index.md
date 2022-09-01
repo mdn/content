@@ -8,6 +8,7 @@ tags:
   - Response
   - header
   - tracking
+  - Deprecated
 browser-compat: http.headers.Tk
 ---
 {{HTTPSidebar}}{{Deprecated_header}}

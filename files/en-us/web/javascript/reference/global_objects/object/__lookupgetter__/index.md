@@ -72,10 +72,10 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 ## See also
 
 - [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - {{jsxref("Functions/get", "get")}} operator
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and
   {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

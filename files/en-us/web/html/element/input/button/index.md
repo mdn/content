@@ -58,7 +58,7 @@ browser-compat: html.elements.input.type_button
 
 ### Button with a value
 
-An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label.
+An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me">
@@ -114,7 +114,7 @@ The script gets a reference to the {{domxref("HTMLInputElement")}} object repres
 
 ### Adding keyboard shortcuts to buttons
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
 
 In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
 
@@ -148,7 +148,7 @@ function updateButton() {
 
 ### Disabling and enabling a button
 
-To disable a button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) global attribute on it, like so:
 
 ```html
 <input type="button" value="Disable me" disabled>

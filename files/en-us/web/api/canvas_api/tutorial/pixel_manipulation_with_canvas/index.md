@@ -88,7 +88,7 @@ This method is also demonstrated in the article [Manipulating video using canvas
 
 ### A color picker
 
-In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
+In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
 
 ```js
 const img = new Image();
@@ -96,39 +96,37 @@ img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-img.onload = () => {
+img.addEventListener('load', () => {
   ctx.drawImage(img, 0, 0);
   img.style.display = 'none';
-};
+});
 const hoveredColor = document.getElementById('hovered-color');
 const selectedColor = document.getElementById('selected-color');
 
+
 function pick(event, destination) {
-  const x = event.layerX;
-  const y = event.layerY;
+  const bounding = canvas.getBoundingClientRect();
+  const x = event.clientX - bounding.left;
+  const y = event.clientY - bounding.top;
   const pixel = ctx.getImageData(x, y, 1, 1);
   const data = pixel.data;
 
-    const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-    destination.style.background = rgba;
-    destination.textContent = rgba;
+  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+  destination.style.background = rgba;
+  destination.textContent = rgba;
 
-    return rgba;
+  return rgba;
 }
 
-canvas.addEventListener('mousemove', (event) => {
-    pick(event, hoveredColor);
-});
-canvas.addEventListener('click', (event) => {
-    pick(event, selectedColor);
-});
+canvas.addEventListener('mousemove', event => pick(event, hoveredColor));
+canvas.addEventListener('click', event => pick(event, selectedColor));
 ```
 
 The code's usage is demonstrated in the following live example:
 
 {{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
 
-Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-picker.html), [JavaScript](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-picker.js).
+Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-picker.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-picker.js).
 
 ## Painting pixel data into a context
 
@@ -210,7 +208,7 @@ The code's usage is demonstrated in the following live example:
 
 {{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
 
-Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-manipulation.html), [JavaScript](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-manipulation.js).
+Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-manipulation.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-manipulation.js).
 
 ## Zooming and anti-aliasing
 
@@ -274,7 +272,7 @@ The code's usage is demonstrated in the following live example:
 
 {{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}
 
-Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/image-smoothing.html), [JavaScript](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/image-smoothing.js).
+Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/image-smoothing.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/image-smoothing.js).
 
 ## Saving images
 

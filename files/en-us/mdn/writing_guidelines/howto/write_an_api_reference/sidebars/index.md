@@ -71,7 +71,7 @@ So for example, "Response" will result in a link being created like so:
 
 There are a few exceptions.
 For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials.
-In this case the slugs are appended to the end of the MDN docs root — https\://developer.mozilla.org/_\<language-code>_/docs — allowing an article anywhere on MDN to be included.
+In this case the slugs are appended to the end of the MDN docs root — `https://developer.mozilla.org/_<language-code>/docs` — allowing an article anywhere on MDN to be included.
 
 Here are the available members.
 These are all technically optional, but it is strongly encouraged that instead of omitting them, you include empty arrays.

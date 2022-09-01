@@ -93,7 +93,7 @@ See the [Supported algorithms section of the `deriveKey()` documentation](/en-US
 
 In this example Alice and Bob each generate an ECDH key pair.
 
-We then use Alice's private key and Bob's public key to derive a shared secret. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/ecdh.js)
+We then use Alice's private key and Bob's public key to derive a shared secret. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)
 
 ```js
 async function deriveSharedSecret(privateKey, publicKey) {
@@ -153,7 +153,7 @@ Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
 ### PBKDF2
 
 In this example we ask the user for a password, then use it to derive some bits using
-PBKDF2. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/pbkdf2.js)
+PBKDF2. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/pbkdf2.js)
 
 ```js
 let salt;

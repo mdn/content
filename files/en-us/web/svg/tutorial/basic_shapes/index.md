@@ -78,7 +78,7 @@ The {{SVGElement("circle")}} element draws a circle on the screen. It takes 3 ba
 
 ## Ellipse
 
-An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle")}} element, where you can scale the x and y radius (commonly referred to as the *semimajor* and *semiminor* axes in maths) of the circle separately.
+An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle")}} element, where you can scale the x and y radius (commonly referred to as the _semimajor_ and _semiminor_ axes in maths) of the circle separately.
 
 ```xml
 <ellipse cx="75" cy="75" rx="20" ry="5"/>

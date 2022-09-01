@@ -6,6 +6,9 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.clip-rule
 ---
+
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
 The `clip-rule` attribute only applies to graphics elements that are contained within a {{ SVGElement("clipPath") }} element. The `clip-rule` attribute basically works as the {{ SVGAttr("fill-rule") }} attribute, except that it applies to {{ SVGElement("clipPath") }} definitions.

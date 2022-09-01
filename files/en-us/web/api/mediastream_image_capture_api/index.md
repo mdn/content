@@ -10,6 +10,7 @@ tags:
   - Overview
   - Reference
   - Video
+  - Experimental
 browser-compat: api.ImageCapture
 ---
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
@@ -55,7 +56,7 @@ let imageCapture = new ImageCapture(track);
 
 ## Interfaces
 
-- {{domxref("ImageCapture")}}
+- {{domxref("ImageCapture")}} {{Experimental_Inline}}
   - : An interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
 
 ## Specifications

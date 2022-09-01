@@ -72,7 +72,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 
 ## Examples
 
-The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/master/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/main/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Specifications
 

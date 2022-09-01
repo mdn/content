@@ -7,10 +7,11 @@ tags:
   - HTML
   - Reference
   - contextmenu
+  - Non-standard
 browser-compat: html.global_attributes.contextmenu
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 > **Warning:** The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) and will be removed from all browsers
 

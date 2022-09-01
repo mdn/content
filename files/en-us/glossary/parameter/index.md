@@ -29,9 +29,9 @@ Note the difference between _parameters_ and _arguments_:
 Two kinds of parameters:
 
 - input parameters
-  - : the most common kind; they pass values into functions. Depending on programming language, input parameters can be passed several ways (e.g., call-by-value, call-by-address, call-by-reference).
+  - : the most common kind; they pass values into functions. Depending on the programming language, input parameters can be passed in several ways (e.g., call-by-value, call-by-address, call-by-reference).
 - output/return parameters
-  - : primarily return multiple values from a function, but not recommended since they cause confusion
+  - : primarily return multiple values from a function, but are not recommended since they cause confusion
 
 ## See also
 

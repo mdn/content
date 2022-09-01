@@ -213,7 +213,7 @@ There are a lot of ways to work with git, but one of the easiest is to first set
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/django_local_library`.git**).
 
 Now that the repository ("repo") is created we are going to want to clone it on our local computer:
 
@@ -312,7 +312,7 @@ While we won't need _Gunicorn_ to serve our LocalLibrary application during deve
 
 Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/en-US/docs/Learn/Server-side/Django/development_environment)):
 
-> **Note:** Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with *pip*, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
+> **Note:** Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with _pip_, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
 
 ```bash
 pip3 install gunicorn
@@ -371,7 +371,7 @@ During development we used Django and the Django development web server to serve
 
 > **Note:** Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production.
 
-To make it easy to host static files separately from the Django web application, Django provides the *collectstatic* tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when _collectstatic_ is run). Django templates refer to the hosting location of the static files relative to a settings variable (`STATIC_URL`), so that this can be changed if the static files are moved to another host/server.
+To make it easy to host static files separately from the Django web application, Django provides the _collectstatic_ tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when _collectstatic_ is run). Django templates refer to the hosting location of the static files relative to a settings variable (`STATIC_URL`), so that this can be changed if the static files are moved to another host/server.
 
 The relevant setting variables are:
 

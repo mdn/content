@@ -163,7 +163,7 @@ The resulting image looks like this:
 
 This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.
 
-[View the full source for this example](https://github.com/mdn/dom-examples/tree/master/canvas/chroma-keying).
+[View the full source for this example](https://github.com/mdn/dom-examples/tree/main/canvas/chroma-keying).
 
 ## See also
 

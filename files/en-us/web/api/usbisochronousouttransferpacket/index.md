@@ -19,14 +19,14 @@ The `USBIsochronousOutTransferPacket` interface of the [WebUSB API](/en-US/docs/
 
 ## Constructor
 
-- {{domxref("USBIsochronousOutTransferPacket.USBIsochronousOutTransferPacket", "USBIsochronousOutTransferPacket()")}}
+- {{domxref("USBIsochronousOutTransferPacket.USBIsochronousOutTransferPacket", "USBIsochronousOutTransferPacket()")}} {{Experimental_Inline}}
   - : Creates a new `USBIsochronousOutTransferPacket` object with the provided `status` and `bytesWritten` fields.
 
 ## Properties
 
-- {{domxref("USBIsochronousOutTransferPacket.bytesWritten")}} {{ReadOnlyInline}}
+- {{domxref("USBIsochronousOutTransferPacket.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of bytes from the packet that were sent to the device.
-- {{domxref("USBIsochronousOutTransferPacket.status")}} {{ReadOnlyInline}}
+- {{domxref("USBIsochronousOutTransferPacket.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
   - : Returns the status of the transfer request, one of:
 

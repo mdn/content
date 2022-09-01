@@ -260,7 +260,7 @@ if (window.matchMedia("(min-width: 481px)").matches) {
 
 We can, therefore, save the bandwidth for browsers that don't need it.
 
-#### Modernizr CSS and JS
+#### Modernizr CSS and JavaScript
 
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 

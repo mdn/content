@@ -52,7 +52,7 @@ Other resource types like web fonts and workers may be considered active mixed c
 
 ## Loading mixed-content resources
 
-Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
+Most browsers prevent _mixed active content_ from loading, and some also block _mixed display content_.
 
 ### Loading locally delivered mixed-resources
 

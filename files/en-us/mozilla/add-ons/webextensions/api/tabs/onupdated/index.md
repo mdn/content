@@ -140,7 +140,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -178,7 +178,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combine both the previous filters: log changes only:
 
 - to the `pinned` property of tabs
-- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -203,7 +203,7 @@ browser.tabs.onUpdated.addListener(
 Log changes only:
 
 - to the `pinned` property of tabs
-- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet"
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`
 - and which are part of the current browser window at the time the update event is fired:
 
 ```js
@@ -235,7 +235,8 @@ browser.tabs.onUpdated.addListener(
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -262,6 +263,6 @@ browser.tabs.onUpdated.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
 {{AddonSidebar}}
