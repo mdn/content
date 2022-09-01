@@ -65,6 +65,11 @@ The resulting drawing looks like this:
 
 ## Reference
 
+### Context
+
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
+  - : Returns `true` if the rendering context was lost.
+
 ### Drawing rectangles
 
 There are three methods that immediately draw rectangles to the canvas.

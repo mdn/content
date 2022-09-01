@@ -43,7 +43,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("OffscreenCanvasRenderingContext2D.isContextLost")}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
@@ -65,7 +65,7 @@ The following methods and properties control drawing text. See also the {{domxre
   - : Draws (strokes) a given text at the given (x, y) position.
 - {{domxref("CanvasRenderingContext2D.measureText()")}}
   - : Returns a {{domxref("TextMetrics")}} object.
-- {{domxref("CanvasRenderingContext2D.textRendering}")}}
+- {{domxref("CanvasRenderingContext2D.textRendering")}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`,
 
 ### Line styles
