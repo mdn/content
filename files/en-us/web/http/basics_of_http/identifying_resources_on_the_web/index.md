@@ -15,7 +15,7 @@ tags:
   - port
   - query
   - resources
-spec-urls: https://httpwg.org/specs/rfc7230.html#section-2.7
+spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 {{HTTPSidebar}}
 
