@@ -13,12 +13,6 @@ browser-compat: css.properties.animation-composition
 
 The **`animation-composition`** [CSS](/en-US/docs/Web/CSS) property specifies the {{Glossary("composite operation")}} to use when multiple animations affect the same property simultaneously.
 
-<!--the interactive example will be created in a separate PR. Will uncomment the macro below when I have an interactive example in place. Note that this property is still behind a flag in FF and not yet implemented in Safari and Chrome.-->
-<!-- {{EmbedInteractiveExample("pages/css/animation-composition.html")}} -->
-
-<!--only longhand animation-composition is enabled in FF104, so commenting out the sentence below for now. Not removing the sentence because it can be uncommented when support in shorthand animation property is added.-->
-<!-- It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.-->
-
 ## Syntax
 
 ```css
