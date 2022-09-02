@@ -786,3 +786,4 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 - [`Worker`](/en-US/docs/Web/API/Worker) interface
 - [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
 - [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface
