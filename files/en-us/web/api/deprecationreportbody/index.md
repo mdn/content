@@ -29,7 +29,7 @@ This interface also inherits properties from {{domxref("ReportBody")}}.
 
 - {{domxref("DeprecationReportBody.id")}} {{experimental_inline}}
   - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`. This can be used to group reports by deprecated feature.
-- {{domxref("DeprecationReportBody.anticipatedRemoval")}}
+- {{domxref("DeprecationReportBody.anticipatedRemoval")}} {{Experimental_Inline}}
   - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
 - {{domxref("DeprecationReportBody.message")}} {{experimental_inline}}
   - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
