@@ -82,7 +82,6 @@ If you take on an issue we expect work to happen in a timely manner. If you can 
 
 Fork and branch the repository, do your work and open a [pull request](/en-US/docs/MDN/Community/Pull_requests).
 
-
 Now and then, you may run into problems while using MDN. Whether it's a problem with site infrastructure or an error in documentation content, you can either try to fix it yourself or report the problem. While the former is preferred, the latter is sometimes the best you can manage, and that's okay too.
 
 The best thing you can possibly do is fix problems you spot yourself — this is done by updating the site source:
