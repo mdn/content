@@ -276,7 +276,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 ### Filters
 
 - {{domxref("CanvasRenderingContext2D.filter")}}
-  - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or blurriness.
+  - : Applies a CSS or SVG filter to the canvas; e.g., to change its brightness or blurriness.
 
 ## Unsupported properties and methods
 
