@@ -10,15 +10,16 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRWebGLBinding
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRWebGLBinding`** interface is used to create layers that have a GPU backend.
 
 ## Constructor
 
-- {{domxref("XRWebGLBinding.XRWebGLBinding", "XRWebGLBinding()")}}
+- {{domxref("XRWebGLBinding.XRWebGLBinding", "XRWebGLBinding()")}} {{Experimental_Inline}}
   - : Creates a new `XRWebGLBinding` object for the specified XR session and WebGL rendering context.
 
 ## Properties
@@ -38,9 +39,9 @@ The **`XRWebGLBinding`** interface is used to create layers that have a GPU back
   - : Returns an {{domxref("XRProjectionLayer")}} object which is a layer that fills the entire view of the observer and is refreshed close to the device's native frame rate.
 - {{domxref("XRWebGLBinding.createQuadLayer()")}}
   - : Returns an {{domxref("XRQuadLayer")}} object which is a two-dimensional object positioned and oriented in 3D space.
-- {{domxref("XRWebGLBinding.getDepthInformation()")}}
+- {{domxref("XRWebGLBinding.getDepthInformation()")}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRWebGLDepthInformation")}} object containing WebGL depth information.
-- {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}
+- {{domxref("XRWebGLBinding.getReflectionCubeMap()")}} {{Experimental_Inline}}
   - : Returns a {{domxref("WebGLTexture")}} object containing a reflection cube map texture.
 - {{domxref("XRWebGLBinding.getSubImage()")}}
   - : Returns an {{domxref("XRWebGLSubImage")}} object representing the WebGL texture to render.

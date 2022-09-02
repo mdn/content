@@ -105,13 +105,25 @@ The following methods and properties control how lines are drawn.
 The following properties control how text is laid out.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
-  - : Font setting. Default value `10px sans-serif`.
+  - : Font setting. Default value `"10px sans-serif"`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
   - : Text alignment setting. Possible values: `start` (default), `end`, `left`, `right`, `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
+  - : Letter spacing. Default: `0px`.
+- {{domxref("CanvasRenderingContext2D.fontKerning")}}
+  - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
+- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
+  - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
+  - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
+  - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+  - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
 
@@ -168,6 +180,8 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
+- {{domxref("CanvasRenderingContext2D.roundRect()")}} {{experimental_inline}}
+  - : Creates a path for a rounded rectangle with a specified position, width, height, and corner radii.
 
 ### Drawing paths
 
@@ -247,6 +261,10 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
+- {{domxref("CanvasRenderingContext2D.reset()")}}
+  - : Resets the rendering context, including the backing buffer, the drawing state stack, path, and styles.
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
+  - : Returns `true` if the rendering context was lost.
 
 ### Filters
 

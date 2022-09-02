@@ -291,12 +291,6 @@ Because WebGL now requires textures to be loaded from secure contexts, you can't
 
 See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 
-> **Note:** CORS support for WebGL textures and the `crossOrigin` attribute for image elements is implemented in {{Gecko("8.0")}}.
-
 Tainted (write-only) 2D canvases can't be used as WebGL textures. A 2D {{ HTMLElement("canvas") }} becomes tainted, for example, when a cross-domain image is drawn on it.
-
-> **Note:** CORS support for Canvas 2D `drawImage` is implemented in {{Gecko("9.0")}}. This means that using a cross-domain image with CORS approval does no longer taint the 2D canvas, so the 2D canvas remains usable as the source of a WebGL texture.
-
-> **Note:** CORS support for cross-domain videos and the `crossorigin` attribute for {{ HTMLElement("video") }} elements is implemented in {{Gecko("12.0")}}.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

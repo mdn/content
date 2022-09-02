@@ -251,7 +251,7 @@ This ensures that the stream is handed a {{domxref("ReadableByteStreamController
 Since data can arrive at the socket before the consumer is ready to handle it, everything about reading the underlying source is configured in the `start()` callback method (we don't wait on a pull to start handling data).
 The implementation opens the "socket" and calls `select2()` to request data.
 When the returned promise resolves the code checks if `controller.byobRequest` exists (is not `null`), and if so calls `socket.readInto()` to copy data into the request and transfer it.
-If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisfied as as zero-copy transfer.
+If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisfied as a zero-copy transfer.
 In this case, `controller.enqueue()` used to copy data to the stream internal queues.
 
 The `select2()` request for more data is reposted until a request is returned with no data.
@@ -323,7 +323,7 @@ Note `processText()` is called recursively to read more data until the buffer is
 When the underlying source signals that it has no more data, the `reader.read()` will have `done` set to true, which in turn completes the read operation.
 
 This code is almost exactly the same as for the [Underlying pull source with byte reader](#underlying_pull_source_with_byte_reader) example above.
-The only difference is that the reader includes some code to slow down reading, so the the log output can demonstrate that data will be enqueued if not read fast enough.
+The only difference is that the reader includes some code to slow down reading, so the log output can demonstrate that data will be enqueued if not read fast enough.
 
 ```js
 const reader = stream.getReader({mode: "byob"});
@@ -648,7 +648,7 @@ Of particular note are that the:
 ### Underlying pull source with default reader
 
 This live example shows how the same data might be read as a zero-copy transfer using a default reader ({{domxref("ReadableStreamDefaultReader")}}).
-This uses the same same [mocked underlying file source](#mocked_underlying_file_source) as in the preceding example.
+This uses the same [mocked underlying file source](#mocked_underlying_file_source) as in the preceding example.
 
 ```js hidden
 class MockUnderlyingFileHandle {

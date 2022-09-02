@@ -18,7 +18,7 @@ The `SVGLengthList` defines a list of {{ domxref("SVGLength") }} objects.
 
 An `SVGLengthList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{Gecko("5.0") }},the `SVGLengthList` DOM interface is now indexable and can be accessed like arrays
+An `SVGLengthList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
