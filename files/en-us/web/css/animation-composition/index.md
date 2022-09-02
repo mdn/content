@@ -174,3 +174,4 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - [Composite property of KeyFrameEffect](/en-US/docs/Web/API/KeyframeEffect/composite)
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
