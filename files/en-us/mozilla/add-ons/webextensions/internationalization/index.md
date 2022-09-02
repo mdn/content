@@ -282,78 +282,14 @@ __MSG_@@ui_locale__
 
 The following table shows the different available predefined messages:
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Message name</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>@@extension_id</code></td>
-      <td>
-        <p>
-          The extension's internally-generated UUID. You might use this string
-          to construct URLs for resources inside the extension. Even unlocalized
-          extensions can use this message.
-        </p>
-        <p>You can't use this message in a manifest file.</p>
-        <p>
-          Also note that this ID is <em>not</em> the add-on ID returned by
-          {{WebExtAPIRef("runtime.id")}}, and that can be set using
-          the
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-            >applications</a
-          >
-          key in manifest.json. It's the generated UUID that appears in the
-          add-on's URL. This means that you can't use this value as the
-          <code>extensionId</code> parameter to
-          {{WebExtAPIRef("runtime.sendMessage()")}}, and can't
-          use it to check against the <code>id</code> property of a
-          {{WebExtAPIRef("runtime.MessageSender")}} object.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>@@ui_locale</code></td>
-      <td>
-        The current locale; you might use this string to construct
-        locale-specific URLs.
-      </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_dir</code></td>
-      <td>
-        The text direction for the current locale, either "ltr" for
-        left-to-right languages such as English or "rtl" for right-to-left
-        languages such as Arabic.
-      </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_reversed_dir</code></td>
-      <td>
-        If the <code>@@bidi_dir</code> is "ltr", then this is "rtl"; otherwise,
-        it's "ltr".
-      </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_start_edge</code></td>
-      <td>
-        If the <code>@@bidi_dir</code> is "ltr", then this is "left"; otherwise,
-        it's "right".
-      </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_end_edge</code></td>
-      <td>
-        If the <code>@@bidi_dir</code> is "ltr", then this is "right";
-        otherwise, it's "left".
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Message name          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `@@extension_id`      | The extension's internally-generated UUID. You might use this string to construct URLs for resources inside the extension. Even unlocalized extensions can use this message.<br><br>You can't use this message in a manifest file.<br><br>Also note that this ID is _not_ the add-on ID returned by {{WebExtAPIRef("runtime.id")}}, and that can be set using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json. It's the generated UUID that appears in the add-on's URL. This means that you can't use this value as the `extensionId` parameter to {{WebExtAPIRef("runtime.sendMessage()")}}, and can't use it to check against the `id` property of a {{WebExtAPIRef("runtime.MessageSender")}} object. |
+| `@@ui_locale`         | The current locale; you might use this string to construct locale-specific URLs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `@@bidi_dir`          | The text direction for the current locale, either "ltr" for left-to-right languages such as English or "rtl" for right-to-left languages such as Arabic.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `@@bidi_reversed_dir` | If the `@@bidi_dir` is "ltr", then this is "rtl"; otherwise, it's "ltr".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `@@bidi_start_edge`   | If the `@@bidi_dir` is "ltr", then this is "left"; otherwise, it's "right".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `@@bidi_end_edge`     | If the `@@bidi_dir` is "ltr", then this is "right"; otherwise, it's "left".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 Going back to our earlier example, it would make more sense to write it like this:
 

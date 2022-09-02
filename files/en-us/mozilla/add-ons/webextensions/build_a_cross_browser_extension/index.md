@@ -140,68 +140,13 @@ As a consequence, you need to approach adding and updating your extension for ea
 
 This table summarizes the approach and features of each store:
 
-<table>
-  <thead>
-    <tr>
-      <th>Browser</th>
-      <th>Registration fee</th>
-      <th>Upload utility</th>
-      <th>Pre-publication review process</th>
-      <th>Account two-factor authentication</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th><p>Chrome</p></th>
-      <td><p>Yes</p></td>
-      <td><p>Yes</p></td>
-      <td><p>Automatic, less than an hour</p></td>
-      <td><p>Yes</p></td>
-    </tr>
-    <tr>
-      <th><p>Edge</p></th>
-      <td><p>No</p></td>
-      <td><p>No</p></td>
-      <td><p>No SLA provided</p></td>
-      <td><p>Yes</p></td>
-    </tr>
-    <tr>
-      <th><p>Firefox</p></th>
-      <td><p>No</p></td>
-      <td>
-        <p>
-          <a
-            href="https://extensionworkshop.com/documentation/develop/web-ext-command-reference/"
-            >web-ext</a
-          >
-        </p>
-      </td>
-      <td>
-        <p>Automatic, a few seconds.</p>
-        <p>
-          A manual review of the extension takes place after publication, which
-          may result in the extension being suspended where issues that need
-          fixing are found.
-        </p>
-      </td>
-      <td><p>Yes</p></td>
-    </tr>
-    <tr>
-      <th><p>Opera</p></th>
-      <td><p>No</p></td>
-      <td><p>No</p></td>
-      <td><p>Manual, no SLA provided</p></td>
-      <td><p>No</p></td>
-    </tr>
-    <tr>
-      <th><p>Safari</p></th>
-      <td><p>Yes</p></td>
-      <td><p>No</p></td>
-      <td><p>Yes with, according to Apple, on average, 50% of apps reviewed in 24 hours and over 90% reviewed in 48 hours.</p></td>
-      <td><p>Yes</p></td>
-    </tr>
-  </tbody>
-</table>
+| Browser | Registration fee | Upload utility                                                                            | Pre-publication review process                                                                                                                                                              | Account two-factor authentication |
+| ------- | ---------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| Chrome  | Yes              | Yes                                                                                       | Automatic, less than an hour                                                                                                                                                                | Yes                               |
+| Edge    | No               | No                                                                                        | No SLA provided                                                                                                                                                                             | Yes                               |
+| Firefox | No               | [web-ext](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/) | Automatic, a few seconds.<br><br>A manual review of the extension takes place after publication, which may result in the extension being suspended where issues that need fixing are found. | Yes                               |
+| Opera   | No               | No                                                                                        | Manual, no SLA provided                                                                                                                                                                     | No                                |
+| Safari  | Yes              | No                                                                                        | Yes with, according to Apple, on average, 50% of apps reviewed in 24 hours and over 90% reviewed in 48 hours.                                                                               | Yes                               |
 
 ### Other considerations
 

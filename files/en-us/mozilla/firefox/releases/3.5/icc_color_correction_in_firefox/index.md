@@ -20,31 +20,11 @@ As you can see, Firefox 3 and Photoshop render the image identically, because bo
 
 Color correction can be controlled by setting the value of the `gfx.color_management.mode` preference, as follows:
 
-<table>
-  <tbody>
-    <tr>
-      <td>Value</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>
-        Color management disabled. <strong>(Default in Firefox 3.)</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Full color management.</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>
-        Color management applied only to tagged image.
-        <strong>(Default in Firefox 3.5.)</strong>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Value | Description                                                                  |
+| ----- | ---------------------------------------------------------------------------- |
+| 0     | Color management disabled. **(Default in Firefox 3.)**                       |
+| 1     | Full color management.                                                       |
+| 2     | Color management applied only to tagged image. **(Default in Firefox 3.5.)** |
 
 Full color management means that everything rendered by Firefox, with the exception of plugins, has its colors corrected.
 
@@ -60,56 +40,13 @@ In addition, you can choose to set the value of the `gfx.color_management.render
 
 The following table lists the possible values.
 
-<table>
-  <tbody>
-    <tr>
-      <td>Value</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>-1</td>
-      <td>
-        Use embedded intent. By default, the embedded intent on images is
-        ignored.
-      </td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>
-        Perceptual. Directs Firefox to render the image to preserve detail
-        throughout the tonal range of the image. Useful for general purpose
-        display of images in typical cases, especially for photographs and other
-        pictures.
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>
-        Media-relative colorimetric. This rescales the color spectrum so that
-        the white point of the rendering medium (such as the display screen) is
-        mapped to the white point of the reference medium. This is most useful
-        for colors that have been mapped to a medium with a smaller gamut than
-        the reference medium.
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>
-        Saturation. This preserves vividness of color at the expense of
-        preservation of precision of hue. This is particularly useful for charts
-        and diagrams, and other media whose colors should "pop" while precise
-        duplication of hue is less important.
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>
-        ICC-Absolute colorimetric. This is most useful for spot color and when
-        simulating one medium on another, as it doesn't alter in-gamut colors.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Value | Description                                                                                                                                                                                                                                                                                                       |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -1    | Use embedded intent. By default, the embedded intent on images is ignored.                                                                                                                                                                                                                                        |
+| 0     | Perceptual. Directs Firefox to render the image to preserve detail throughout the tonal range of the image. Useful for general purpose display of images in typical cases, especially for photographs and other pictures.                                                                                         |
+| 1     | Media-relative colorimetric. This rescales the color spectrum so that the white point of the rendering medium (such as the display screen) is mapped to the white point of the reference medium. This is most useful for colors that have been mapped to a medium with a smaller gamut than the reference medium. |
+| 2     | Saturation. This preserves vividness of color at the expense of preservation of precision of hue. This is particularly useful for charts and diagrams, and other media whose colors should "pop" while precise duplication of hue is less important.                                                              |
+| 3     | ICC-Absolute colorimetric. This is most useful for spot color and when simulating one medium on another, as it doesn't alter in-gamut colors.                                                                                                                                                                     |
 
 > **Note:** In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
 

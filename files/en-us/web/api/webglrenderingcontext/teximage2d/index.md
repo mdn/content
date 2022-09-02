@@ -62,644 +62,71 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     Possible values in both WebGL1 and WebGL2
 
-    <table>
-      <thead>
-        <tr>
-          <td>Format</td>
-          <td>Type</td>
-          <td>Channels</td>
-          <td>Bytes per pixel</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>RGBA</td>
-          <td>UNSIGNED_BYTE</td>
-          <td>4</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>RGB</td>
-          <td>UNSIGNED_BYTE</td>
-          <td>3</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>RGBA</td>
-          <td>UNSIGNED_SHORT_4_4_4_4</td>
-          <td>4</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>RGBA</td>
-          <td>UNSIGNED_SHORT_5_5_5_1</td>
-          <td>4</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>RGB</td>
-          <td>UNSIGNED_SHORT_5_6_5</td>
-          <td>3</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>LUMINANCE_ALPHA</td>
-          <td>UNSIGNED_BYTE</td>
-          <td>2</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>LUMINANCE</td>
-          <td>UNSIGNED_BYTE</td>
-          <td>1</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>ALPHA</td>
-          <td>UNSIGNED_BYTE</td>
-          <td>1</td>
-          <td>1</td>
-        </tr>
-      </tbody>
-    </table>
+    | Format | Type | Channels | Bytes per pixel |
+    | --- | --- | --- | --- |
+    | RGBA | UNSIGNED_BYTE | 4   | 4   |
+    | RGB | UNSIGNED_BYTE | 3   | 3   |
+    | RGBA | UNSIGNED\_SHORT\_4\_4\_4_4 | 4   | 2   |
+    | RGBA | UNSIGNED\_SHORT\_5\_5\_5_1 | 4   | 2   |
+    | RGB | UNSIGNED\_SHORT\_5\_6\_5 | 3   | 2   |
+    | LUMINANCE_ALPHA | UNSIGNED_BYTE | 2   | 2   |
+    | LUMINANCE | UNSIGNED_BYTE | 1   | 1   |
+    | ALPHA | UNSIGNED_BYTE | 1   | 1   |
 
     Other possible values in WebGL2 for the versions of `texImage2D` that
     take a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}, or a `GLintptr offset`
 
-    <table>
-      <thead>
-        <tr>
-          <td>
-            <strong>Sized<br />Format</strong>
-          </td>
-          <td>
-            <strong>Base<br />Format</strong>
-          </td>
-          <td>
-            <strong>R<br />bits</strong>
-          </td>
-          <td>
-            <strong>G<br />bits</strong>
-          </td>
-          <td>
-            <strong>B<br />bits</strong>
-          </td>
-          <td>
-            <strong>A<br />bits</strong>
-          </td>
-          <td>
-            <strong>Shared<br />bits</strong>
-          </td>
-          <td>
-            <strong>Color<br />renderable</strong>
-          </td>
-          <td>
-            <strong>Texture<br />filterable</strong>
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>R8</td>
-          <td>RED</td>
-          <td>8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>R8_SNORM</td>
-          <td>RED</td>
-          <td>s8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RG8</td>
-          <td>RG</td>
-          <td>8</td>
-          <td>8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RG8_SNORM</td>
-          <td>RG</td>
-          <td>s8</td>
-          <td>s8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB8</td>
-          <td>RGB</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB8_SNORM</td>
-          <td>RGB</td>
-          <td>s8</td>
-          <td>s8</td>
-          <td>s8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB565</td>
-          <td>RGB</td>
-          <td>5</td>
-          <td>6</td>
-          <td>5</td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGBA4</td>
-          <td>RGBA</td>
-          <td>4</td>
-          <td>4</td>
-          <td>4</td>
-          <td>4</td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB5_A1</td>
-          <td>RGBA</td>
-          <td>5</td>
-          <td>5</td>
-          <td>5</td>
-          <td>1</td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGBA8</td>
-          <td>RGBA</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGBA8_SNORM</td>
-          <td>RGBA</td>
-          <td>s8</td>
-          <td>s8</td>
-          <td>s8</td>
-          <td>s8</td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB10_A2</td>
-          <td>RGBA</td>
-          <td>10</td>
-          <td>10</td>
-          <td>10</td>
-          <td>2</td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB10_A2UI</td>
-          <td>RGBA</td>
-          <td>ui10</td>
-          <td>ui10</td>
-          <td>ui10</td>
-          <td>ui2</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>SRGB8</td>
-          <td>RGB</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>SRGB8_ALPHA8</td>
-          <td>RGBA</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td></td>
-          <td>●</td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>R16F</td>
-          <td>RED</td>
-          <td>f16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RG16F</td>
-          <td>RG</td>
-          <td>f16</td>
-          <td>f16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB16F</td>
-          <td>RGB</td>
-          <td>f16</td>
-          <td>f16</td>
-          <td>f16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGBA16F</td>
-          <td>RGBA</td>
-          <td>f16</td>
-          <td>f16</td>
-          <td>f16</td>
-          <td>f16</td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>R32F</td>
-          <td>RED</td>
-          <td>f32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG32F</td>
-          <td>RG</td>
-          <td>f32</td>
-          <td>f32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB32F</td>
-          <td>RGB</td>
-          <td>f32</td>
-          <td>f32</td>
-          <td>f32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA32F</td>
-          <td>RGBA</td>
-          <td>f32</td>
-          <td>f32</td>
-          <td>f32</td>
-          <td>f32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R11F_G11F_B10F</td>
-          <td>RGB</td>
-          <td>f11</td>
-          <td>f11</td>
-          <td>f10</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>RGB9_E5</td>
-          <td>RGB</td>
-          <td>9</td>
-          <td>9</td>
-          <td>9</td>
-          <td></td>
-          <td>5</td>
-          <td></td>
-          <td>●</td>
-        </tr>
-        <tr>
-          <td>R8I</td>
-          <td>RED</td>
-          <td>i8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R8UI</td>
-          <td>RED</td>
-          <td>ui8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R16I</td>
-          <td>RED</td>
-          <td>i16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R16UI</td>
-          <td>RED</td>
-          <td>ui16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R32I</td>
-          <td>RED</td>
-          <td>i32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R32UI</td>
-          <td>RED</td>
-          <td>ui32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG8I</td>
-          <td>RG</td>
-          <td>i8</td>
-          <td>i8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG8UI</td>
-          <td>RG</td>
-          <td>ui8</td>
-          <td>ui8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG16I</td>
-          <td>RG</td>
-          <td>i16</td>
-          <td>i16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG16UI</td>
-          <td>RG</td>
-          <td>ui16</td>
-          <td>ui16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG32I</td>
-          <td>RG</td>
-          <td>i32</td>
-          <td>i32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RG32UI</td>
-          <td>RG</td>
-          <td>ui32</td>
-          <td>ui32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB8I</td>
-          <td>RGB</td>
-          <td>i8</td>
-          <td>i8</td>
-          <td>i8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB8UI</td>
-          <td>RGB</td>
-          <td>ui8</td>
-          <td>ui8</td>
-          <td>ui8</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB16I</td>
-          <td>RGB</td>
-          <td>i16</td>
-          <td>i16</td>
-          <td>i16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB16UI</td>
-          <td>RGB</td>
-          <td>ui16</td>
-          <td>ui16</td>
-          <td>ui16</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB32I</td>
-          <td>RGB</td>
-          <td>i32</td>
-          <td>i32</td>
-          <td>i32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGB32UI</td>
-          <td>RGB</td>
-          <td>ui32</td>
-          <td>ui32</td>
-          <td>ui32</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA8I</td>
-          <td>RGBA</td>
-          <td>i8</td>
-          <td>i8</td>
-          <td>i8</td>
-          <td>i8</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA8UI</td>
-          <td>RGBA</td>
-          <td>ui8</td>
-          <td>ui8</td>
-          <td>ui8</td>
-          <td>ui8</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA16I</td>
-          <td>RGBA</td>
-          <td>i16</td>
-          <td>i16</td>
-          <td>i16</td>
-          <td>i16</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA16UI</td>
-          <td>RGBA</td>
-          <td>ui16</td>
-          <td>ui16</td>
-          <td>ui16</td>
-          <td>ui16</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA32I</td>
-          <td>RGBA</td>
-          <td>i32</td>
-          <td>i32</td>
-          <td>i32</td>
-          <td>i32</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RGBA32UI</td>
-          <td>RGBA</td>
-          <td>ui32</td>
-          <td>ui32</td>
-          <td>ui32</td>
-          <td>ui32</td>
-          <td></td>
-          <td>●</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    | Sized Format | Base Format | R bits | G bits | B bits | A bits | Shared bits | Color renderable | Texture filterable |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | R8  | RED | 8   |     |     |     |     | ●   | ●   |
+    | R8_SNORM | RED | s8  |     |     |     |     |     | ●   |
+    | RG8 | RG  | 8   | 8   |     |     |     | ●   | ●   |
+    | RG8_SNORM | RG  | s8  | s8  |     |     |     |     | ●   |
+    | RGB8 | RGB | 8   | 8   | 8   |     |     | ●   | ●   |
+    | RGB8_SNORM | RGB | s8  | s8  | s8  |     |     |     | ●   |
+    | RGB565 | RGB | 5   | 6   | 5   |     |     | ●   | ●   |
+    | RGBA4 | RGBA | 4   | 4   | 4   | 4   |     | ●   | ●   |
+    | RGB5_A1 | RGBA | 5   | 5   | 5   | 1   |     | ●   | ●   |
+    | RGBA8 | RGBA | 8   | 8   | 8   | 8   |     | ●   | ●   |
+    | RGBA8_SNORM | RGBA | s8  | s8  | s8  | s8  |     |     | ●   |
+    | RGB10_A2 | RGBA | 10  | 10  | 10  | 2   |     | ●   | ●   |
+    | RGB10_A2UI | RGBA | ui10 | ui10 | ui10 | ui2 |     | ●   |     |
+    | SRGB8 | RGB | 8   | 8   | 8   |     |     |     | ●   |
+    | SRGB8_ALPHA8 | RGBA | 8   | 8   | 8   | 8   |     | ●   | ●   |
+    | R16F | RED | f16 |     |     |     |     |     | ●   |
+    | RG16F | RG  | f16 | f16 |     |     |     |     | ●   |
+    | RGB16F | RGB | f16 | f16 | f16 |     |     |     | ●   |
+    | RGBA16F | RGBA | f16 | f16 | f16 | f16 |     |     | ●   |
+    | R32F | RED | f32 |     |     |     |     |     |     |
+    | RG32F | RG  | f32 | f32 |     |     |     |     |     |
+    | RGB32F | RGB | f32 | f32 | f32 |     |     |     |     |
+    | RGBA32F | RGBA | f32 | f32 | f32 | f32 |     |     |     |
+    | R11F\_G11F\_B10F | RGB | f11 | f11 | f10 |     |     |     | ●   |
+    | RGB9_E5 | RGB | 9   | 9   | 9   |     | 5   |     | ●   |
+    | R8I | RED | i8  |     |     |     |     | ●   |     |
+    | R8UI | RED | ui8 |     |     |     |     | ●   |     |
+    | R16I | RED | i16 |     |     |     |     | ●   |     |
+    | R16UI | RED | ui16 |     |     |     |     | ●   |     |
+    | R32I | RED | i32 |     |     |     |     | ●   |     |
+    | R32UI | RED | ui32 |     |     |     |     | ●   |     |
+    | RG8I | RG  | i8  | i8  |     |     |     | ●   |     |
+    | RG8UI | RG  | ui8 | ui8 |     |     |     | ●   |     |
+    | RG16I | RG  | i16 | i16 |     |     |     | ●   |     |
+    | RG16UI | RG  | ui16 | ui16 |     |     |     | ●   |     |
+    | RG32I | RG  | i32 | i32 |     |     |     | ●   |     |
+    | RG32UI | RG  | ui32 | ui32 |     |     |     | ●   |     |
+    | RGB8I | RGB | i8  | i8  | i8  |     |     |     |     |
+    | RGB8UI | RGB | ui8 | ui8 | ui8 |     |     |     |     |
+    | RGB16I | RGB | i16 | i16 | i16 |     |     |     |     |
+    | RGB16UI | RGB | ui16 | ui16 | ui16 |     |     |     |     |
+    | RGB32I | RGB | i32 | i32 | i32 |     |     |     |     |
+    | RGB32UI | RGB | ui32 | ui32 | ui32 |     |     |     |     |
+    | RGBA8I | RGBA | i8  | i8  | i8  | i8  |     | ●   |     |
+    | RGBA8UI | RGBA | ui8 | ui8 | ui8 | ui8 |     | ●   |     |
+    | RGBA16I | RGBA | i16 | i16 | i16 | i16 |     | ●   |     |
+    | RGBA16UI | RGBA | ui16 | ui16 | ui16 | ui16 |     | ●   |     |
+    | RGBA32I | RGBA | i32 | i32 | i32 | i32 |     | ●   |     |
+    | RGBA32UI | RGBA | ui32 | ui32 | ui32 | ui32 |     | ●   |     |
 
     Possible values in WebGL2 for the versions of `texImage2D` that take a
     texture an `HTMLImageElement`, `HTMLCanvasElement`,

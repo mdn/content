@@ -20,37 +20,12 @@ The order in which elements gain focus when using a keyboard, is the source orde
 
 The following table describes `tabindex` behavior in modern browsers:
 
-<table>
-  <thead>
-    <tr>
-      <th><code>tabindex</code> attribute</th>
-      <th>Focusable with mouse or JavaScript via <code>element.focus()</code></th>
-      <th>Tab navigable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>not present</td>
-      <td>Follows the platform convention of the element (yes for form controls,links, etc.).</td>
-      <td>Follows the platform convention of the element.</td>
-    </tr>
-    <tr>
-      <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
-      <td>Yes</td>
-      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/Element/focus_event"><code>focus()</code></a> in response to arrow or other key presses.</td>
-    </tr>
-    <tr>
-      <td>Zero (i.e. <code>tabindex="0"</code>)</td>
-      <td>Yes</td>
-      <td>In tab order relative to element's position in document (note that interactive elements like {{HTMLElement('a')}} have this behavior by default, they don't need the attribute).</td>
-    </tr>
-    <tr>
-      <td>Positive (e.g. <code>tabindex="33"</code>)</td>
-      <td>Yes</td>
-      <td><code>tabindex</code> value determines where this element is positioned in the tab order: smaller values will position elements earlier in the tab order than larger values (for example, <code>tabindex="7"</code> will be positioned before <code>tabindex="11"</code>).</td>
-    </tr>
-  </tbody>
-</table>
+| `tabindex` attribute            | Focusable with mouse or JavaScript via `element.focus()`                            | Tab navigable                                                                                                                                                                                                                             |
+| ------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| not present                     | Follows the platform convention of the element (yes for form controls,links, etc.). | Follows the platform convention of the element.                                                                                                                                                                                           |
+| Negative (i.e. `tabindex="-1"`) | Yes                                                                                 | No; author must focus the element with [`focus()`](/en-US/docs/Web/API/Element/focus_event) in response to arrow or other key presses.                                                                                                    |
+| Zero (i.e. `tabindex="0"`)      | Yes                                                                                 | In tab order relative to element's position in document (note that interactive elements like {{HTMLElement('a')}} have this behavior by default, they don't need the attribute).                                                          |
+| Positive (e.g. `tabindex="33"`) | Yes                                                                                 | `tabindex` value determines where this element is positioned in the tab order: smaller values will position elements earlier in the tab order than larger values (for example, `tabindex="7"` will be positioned before `tabindex="11"`). |
 
 #### Non-native controls
 

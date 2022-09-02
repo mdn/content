@@ -224,32 +224,11 @@ This guideline covers situations in which functionality may have a time limit. F
 
 This refers to content that, if not changed, could cause seizures in users with conditions such as epilepsy OR could cause physical reactions (like dizziness) for users with conditions such as vestibular disorders.
 
-<table>
-  <thead>
-    <tr>
-    <th scope="col">Success criteria</th>
-    <th scope="col">How to conform to the criteria</th>
-    <th scope="col">Practical resource</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2.3.1 Three flashes, or below threshold (A)</td>
-      <td>Content doesn't contain any aspect that Flashes more than three times per second, or flashing content is below acceptable <a href="https://www.w3.org/TR/WCAG20/#general-thresholddef">flash and red flash thresholds</a>.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>2.3.2 Three flashes (AAA)</td>
-      <td>Content doesn't contain any aspect that Flashes more than three times per second.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>2.3.3 Animations from Interactions (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-      <td>Allow users to disable animations from interactions (unless the animation is essential).</td>
-      <td><a href="https://www.w3.org/TR/WCAG21/#animation-from-interactions">Understanding Animations from Interactions</a></td>
-    </tr>
-  </tbody>
-</table>
+| Success criteria                                                                                                  | How to conform to the criteria                                                                                                                                                                                  | Practical resource                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 2.3.1 Three flashes, or below threshold (A)                                                                       | Content doesn't contain any aspect that Flashes more than three times per second, or flashing content is below acceptable [flash and red flash thresholds](https://www.w3.org/TR/WCAG20/#general-thresholddef). |                                                                                                         |
+| 2.3.2 Three flashes (AAA)                                                                                         | Content doesn't contain any aspect that Flashes more than three times per second.                                                                                                                               |                                                                                                         |
+| 2.3.3 Animations from Interactions (AAA) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_ | Allow users to disable animations from interactions (unless the animation is essential).                                                                                                                        | [Understanding Animations from Interactions](https://www.w3.org/TR/WCAG21/#animation-from-interactions) |
 
 > **Note:** Also see the WCAG description for [Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
 
@@ -479,47 +458,14 @@ The conformance criteria under this guideline relate to ways in which users can 
 
 The conformance criteria under this guideline ensures that users are able to interact with digital technology using different input methods beyond a keyboard or mouse (including touchscreen, voice, device motion, or alternative input devices).
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Success criteria</th>
-   <th scope="col">How to conform to the criteria</th>
-   <th scope="col">Practical resource</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>2.5.1 Pointer Gestures (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>All functionality that can be operated with a pointer can be operated with single-point actions. Path-based or multi-point gestures are not required to operate any functionality. Exceptions exist.</td>
-   <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html">Understanding Pointer Gestures</a></td>
-  </tr>
-  <tr>
-   <td>2.5.2 Pointer Cancellation (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>For functionality that can be operated using a single-pointer at least one of the following is true: no down-event, abort/undo, up reversal or essential.</td>
-   <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html">Understanding Pointer Cancellation</a></td>
-  </tr>
-  <tr>
-   <td>2.5.3 Label in Name (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>For each user interface component that includes a visible text label, make sure the accessible name matches (or includes) the visible text in the label.</td>
-   <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">Understanding Label in Name</a></td>
-  </tr>
-  <tr>
-   <td>2.5.4 Motion Actuation (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>Ensure that for functionality that can be triggered by a) device motion (like shaking, tilting) or b) user gestures detected by device sensors (including a camera) that both of the following are true: 1) motion actuation can be disabled, and 2) the functionality can be operated without using device motion or user gestures. Exceptions exist.</td>
-   <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html">Understanding Motion Actuation</a></td>
-  </tr>
-  <tr>
-   <td>2.5.5 Target Size (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height.  Exceptions exist.</td>
-   <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Target Size</a></td>
-  </tr>
-  <tr>
-   <td>2.5.6 Concurrent Input Mechanisms (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>Make sure people can use and switch between different modes of input when interacting with digital content including touchscreen, keyboard, mouse, voice commands, or alternative input devices. An essential exception exists. </td>
-   <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html">Understanding Concurrent Input Mechanism</a></td>
-  </tr>
- </tbody>
-</table>
+| Success criteria                                                                                                 | How to conform to the criteria                                                                                                                                                                                                                                                                                                                         | Practical resource                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| 2.5.1 Pointer Gestures (A) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_              | All functionality that can be operated with a pointer can be operated with single-point actions. Path-based or multi-point gestures are not required to operate any functionality. Exceptions exist.                                                                                                                                                   | [Understanding Pointer Gestures](https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html)                      |
+| 2.5.2 Pointer Cancellation (A) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_          | For functionality that can be operated using a single-pointer at least one of the following is true: no down-event, abort/undo, up reversal or essential.                                                                                                                                                                                              | [Understanding Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)              |
+| 2.5.3 Label in Name (A) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_                 | For each user interface component that includes a visible text label, make sure the accessible name matches (or includes) the visible text in the label.                                                                                                                                                                                               | [Understanding Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)                            |
+| 2.5.4 Motion Actuation (A) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_              | Ensure that for functionality that can be triggered by a) device motion (like shaking, tilting) or b) user gestures detected by device sensors (including a camera) that both of the following are true: 1) motion actuation can be disabled, and 2) the functionality can be operated without using device motion or user gestures. Exceptions exist. | [Understanding Motion Actuation](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html)                      |
+| 2.5.5 Target Size (AAA) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_                 | The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height. Exceptions exist.                                                                                                                                                                                                                               | [Understanding Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)                                |
+| 2.5.6 Concurrent Input Mechanisms (AAA) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_ | Make sure people can use and switch between different modes of input when interacting with digital content including touchscreen, keyboard, mouse, voice commands, or alternative input devices. An essential exception exists.                                                                                                                        | [Understanding Concurrent Input Mechanism](https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html) |
 
 > **Note:** Also see the WCAG description for [Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.](https://www.w3.org/TR/WCAG21/#input-modalities)
 

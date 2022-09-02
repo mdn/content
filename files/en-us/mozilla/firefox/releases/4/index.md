@@ -77,154 +77,47 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 #### New CSS properties
 
-<table>
-  <tbody>
-    <tr>
-      <td>Property</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code>-moz-font-feature-settings</code></td>
-      <td>Lets you customized advanced features of OpenType fonts.</td>
-    </tr>
-    <tr>
-      <td><code>-moz-tab-size</code></td>
-      <td>
-        Specifies the width in space characters of a tab character (U+0009) when
-        rendering text.
-      </td>
-    </tr>
-    <tr>
-      <td>{{cssxref("resize")}}</td>
-      <td>
-        Lets you control the dimensions in which an element may be resized.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Property                     | Description                                                                              |
+| ---------------------------- | ---------------------------------------------------------------------------------------- |
+| `-moz-font-feature-settings` | Lets you customized advanced features of OpenType fonts.                                 |
+| `-moz-tab-size`              | Specifies the width in space characters of a tab character (U+0009) when rendering text. |
+| {{cssxref("resize")}}        | Lets you control the dimensions in which an element may be resized.                      |
 
 #### New CSS pseudo-classes
 
-<table>
-  <tbody>
-    <tr>
-      <td>Pseudo-class</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":-moz-handler-crashed")}}</td>
-      <td>Used to style elements whose plugins have crashed.</td>
-    </tr>
-    <tr>
-      <td><code>:-moz-placeholder</code></td>
-      <td>Applied to placeholder text in form fields.</td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":-moz-submit-invalid")}}</td>
-      <td>
-        Applied to the submit button on forms when one or more of the form's
-        fields doesn't validate.
-      </td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":-moz-window-inactive")}}</td>
-      <td>Applied to elements in inactive windows.</td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":invalid")}}</td>
-      <td>
-        Automatically applied to {{HTMLElement("input")}} fields when
-        their contents are invalid.
-      </td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":optional")}}</td>
-      <td>
-        Automatically applied to {{HTMLElement("input")}} fields that
-        don't specify the <code>required</code> attribute.
-      </td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":required")}}</td>
-      <td>
-        Automatically applied to {{HTMLElement("input")}} fields that
-        specify the <code>required</code> attribute.
-      </td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":valid")}}</td>
-      <td>
-        Automatically applied to {{HTMLElement("input")}} fields when
-        their contents validate successfully.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Pseudo-class                         | Description                                                                                           |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| {{cssxref(":-moz-handler-crashed")}} | Used to style elements whose plugins have crashed.                                                    |
+| `:-moz-placeholder`                  | Applied to placeholder text in form fields.                                                           |
+| {{cssxref(":-moz-submit-invalid")}}  | Applied to the submit button on forms when one or more of the form's fields doesn't validate.         |
+| {{cssxref(":-moz-window-inactive")}} | Applied to elements in inactive windows.                                                              |
+| {{cssxref(":invalid")}}              | Automatically applied to {{HTMLElement("input")}} fields when their contents are invalid.             |
+| {{cssxref(":optional")}}             | Automatically applied to {{HTMLElement("input")}} fields that don't specify the `required` attribute. |
+| {{cssxref(":required")}}             | Automatically applied to {{HTMLElement("input")}} fields that specify the `required` attribute.       |
+| {{cssxref(":valid")}}                | Automatically applied to {{HTMLElement("input")}} fields when their contents validate successfully.   |
 
 #### New CSS pseudo-selectors
 
-<table>
-  <tbody>
-    <tr>
-      <td>Pseudo-selector</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>{{cssxref(":-moz-focusring")}}</td>
-      <td>
-        Lets you specify the appearance of an element when Gecko believes it
-        should have a focus indication rendered.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Pseudo-selector                | Description                                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| {{cssxref(":-moz-focusring")}} | Lets you specify the appearance of an element when Gecko believes it should have a focus indication rendered. |
 
 #### New CSS functions
 
-<table>
-  <tbody>
-    <tr>
-      <td>Function</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code>:-moz-any</code></td>
-      <td>Lets you group selectors and factorize combinators.</td>
-    </tr>
-    <tr>
-      <td><code>-moz-calc</code></td>
-      <td>
-        Lets you specify
-        {{cssxref("&lt;length&gt;")}} values as
-        mathematical expressions.
-      </td>
-    </tr>
-    <tr>
-      <td><code>-moz-element</code></td>
-      <td>
-        Lets you use an arbitrary element as a background for
-        {{cssxref("background-image")}} and
-        {{cssxref("background")}}.
-      </td>
-    </tr>
-    <tr>
-      <td><code>-moz-image-rect</code></td>
-      <td>
-        Lets you use a subrectangle of an image as a
-        {{cssxref("background-image")}} or
-        {{cssxref("background")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Function          | Description                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `:-moz-any`       | Lets you group selectors and factorize combinators.                                                                  |
+| `-moz-calc`       | Lets you specify {{cssxref("&lt;length>")}} values as mathematical expressions.                                      |
+| `-moz-element`    | Lets you use an arbitrary element as a background for {{cssxref("background-image")}} and {{cssxref("background")}}. |
+| `-moz-image-rect` | Lets you use a subrectangle of an image as a {{cssxref("background-image")}} or {{cssxref("background")}}.           |
 
 #### Renamed CSS properties
 
-| Old Name               | New Name                                 | Notes                                                                                                                                                                        |
-| ---------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Old Name               | New Name                       | Notes                                                                                                                                                                        |
+| ---------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `-moz-background-size` | {{cssxref("background-size")}} | The name `-moz-background-size` is no longer supported.                                                                                                                      |
-| `-moz-border-radius`   | {{cssxref("border-radius")}}     | The old name is supported for a limited time to allow you time to update your sites. Rendering changes have also been made to match the latest version of the specification. |
-| `-moz-box-shadow`      | {{cssxref("box-shadow")}}         |                                                                                                                                                                              |
+| `-moz-border-radius`   | {{cssxref("border-radius")}}   | The old name is supported for a limited time to allow you time to update your sites. Rendering changes have also been made to match the latest version of the specification. |
+| `-moz-box-shadow`      | {{cssxref("box-shadow")}}      |                                                                                                                                                                              |
 
 #### Miscellaneous CSS changes
 

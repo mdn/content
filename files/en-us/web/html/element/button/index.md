@@ -256,75 +256,22 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of `type="button"` and `type="submit"` are the same.
 
-<table>
-  <caption>
-    Does clicking on a {{HTMLElement("button")}} give it focus?
-  </caption>
-  <thead>
-    <tr>
-      <th>Desktop Browsers</th>
-      <th>Windows 8.1</th>
-      <th>OS X 10.X</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Firefox</th>
-      <td>✅ Yes - Firefox 30.0</td>
-      <td>❌ No (even with a <code>tabindex</code>) Firefox 63</td>
-    </tr>
-    <tr>
-      <th>Chrome</th>
-      <td>✅ Yes - Chrome 35</td>
-      <td>✅ Yes - Chrome 65</td>
-    </tr>
-    <tr>
-      <th>Safari</th>
-      <td>N/A</td>
-      <td>
-        ❌ No (even with a <code>tabindex</code>) Safari 12 (<a
-          href="https://bugs.webkit.org/show_bug.cgi?id=22261"
-          >bug 22261</a
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
-      <td>✅ Yes - Internet Explorer 11</td>
-      <td>N/A</td>
-    </tr>
-    <tr>
-      <th>Presto</th>
-      <td>✅ Yes - Opera 12</td>
-      <td>✅ Yes - Opera 12</td>
-    </tr>
-  </tbody>
-</table>
+Does clicking on a {{HTMLElement("button")}} give it focus?
 
-<table>
-  <caption>
-    Does tapping on a {{HTMLElement("button")}} give it focus?
-  </caption>
-  <thead>
-    <tr>
-      <th>Mobile Browsers</th>
-      <th>iOS 7.1.2</th>
-      <th>Android 4.4.4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Safari Mobile</th>
-      <td>❌ No (even with a <code>tabindex</code>)</td>
-      <td>N/A</td>
-    </tr>
-    <tr>
-      <th>Chrome 35</th>
-      <td>❌ No (even with a <code>tabindex</code>)</td>
-      <td>✅ Yes</td>
-    </tr>
-  </tbody>
-</table>
+| Desktop Browsers  | Windows 8.1                  | OS X 10.X                                                                                            |
+| ----------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Firefox           | ✅ Yes - Firefox 30.0         | ❌ No (even with a `tabindex`) Firefox 63                                                             |
+| Chrome            | ✅ Yes - Chrome 35            | ✅ Yes - Chrome 65                                                                                    |
+| Safari            | N/A                          | ❌ No (even with a `tabindex`) Safari 12 ([bug 22261](https://bugs.webkit.org/show_bug.cgi?id=22261)) |
+| Internet Explorer | ✅ Yes - Internet Explorer 11 | N/A                                                                                                  |
+| Presto            | ✅ Yes - Opera 12             | ✅ Yes - Opera 12                                                                                     |
+
+Does tapping on a {{HTMLElement("button")}} give it focus?
+
+| Mobile Browsers | iOS 7.1.2                     | Android 4.4.4 |
+| --------------- | ----------------------------- | ------------- |
+| Safari Mobile   | ❌ No (even with a `tabindex`) | N/A           |
+| Chrome 35       | ❌ No (even with a `tabindex`) | ✅ Yes         |
 
 ## Specifications
 
