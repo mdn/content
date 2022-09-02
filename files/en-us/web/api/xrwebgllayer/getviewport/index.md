@@ -20,9 +20,10 @@ tags:
   - augmented
   - getViewport
   - viewport
+  - Experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the
