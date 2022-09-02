@@ -398,7 +398,7 @@ In the next article we start working through a tutorial to build a complete web 
 - [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
 - [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
-- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)
+- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 

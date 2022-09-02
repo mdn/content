@@ -29,4 +29,4 @@ IE has gone through many releases and currently stands at version 11.0.12, with 
 - [http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11](https://support.microsoft.com/en-gb/windows/make-internet-explorer-your-default-browser-c7120423-82a6-e001-be2f-5d4fb9d442b4)
 - [http://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2)
 - [http://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2)
-- [http://support.microsoft.com/kb/969393](https://docs.microsoft.com/en-US/troubleshoot/developer/browsers/general/information-about-ie-version)
+- [http://support.microsoft.com/kb/969393](https://docs.microsoft.com/troubleshoot/developer/browsers/general/information-about-ie-version)
