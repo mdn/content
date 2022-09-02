@@ -12231,6 +12231,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/TypedArray.prototype.reduce()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
