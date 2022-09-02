@@ -18,8 +18,8 @@ The **`OffscreenCanvasRenderingContext2D`** interface is a {{domxref("CanvasRend
 It is similar to the `CanvasRenderingContext2D` object, with the following differences:
 
 - there is no support for user-interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
-- its `canvas` attribute refers to an `OffscreenCanvas` object rather than a canvas element
-- it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder canvas element
+- its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
+- it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element
 
 ## Example
 
