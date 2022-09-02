@@ -81,7 +81,7 @@ There are three ways to convert a string to a number:
 
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}, which parses the string for an integer.
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}, which parses the string for a floating-point number.
-- The [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function, which parses a string as if it's a number literal, which supports much more variety of number representations.
+- The [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function, which parses a string as if it's a number literal and supports many different number representations.
 
 You can also use the [unary plus `+`](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) as a shorthand for `Number()`.
 
