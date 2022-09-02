@@ -68,4 +68,4 @@ gl.canvas; // OffscreenCanvas
 ## See also
 
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-- {{domxref("OffscreenCanvas")}} interface
+- The {{domxref("OffscreenCanvas")}} interface
