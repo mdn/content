@@ -37,7 +37,7 @@ A list of {{domxref("PerformanceEntry")}} objects.
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  list.getEntries();
+  list.getEntries()
     .forEach((entry) => {
       // Process "mark" and "frame" events
     });
