@@ -138,7 +138,7 @@ A better alternative on UNIX systems is to install the OTF files for [Latin Mode
 You can actually install any [mathematical OpenType font](https://fred-wang.github.io/MathFonts/) and use them for MathML rendering. Some browsers provide a way to configure the default font for MathML in their font preference menu. Alternatively, you can try the [MathML-fontsettings add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/).
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
-- [Cambria Math](https://docs.microsoft.com/en-us/typography/font-list/?FID=360)
+- [Cambria Math](https://docs.microsoft.com/typography/font-list/?FID=360)
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math)
 - [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math)
