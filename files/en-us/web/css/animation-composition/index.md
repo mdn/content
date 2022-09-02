@@ -7,9 +7,10 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+  - Experimental
 browser-compat: css.properties.animation-composition
 ---
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-composition`** [CSS](/en-US/docs/Web/CSS) property specifies the {{Glossary("composite operation")}} to use when multiple animations affect the same property simultaneously.
 
@@ -116,7 +117,7 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
   }
   80%, 100% {
     transform: translateX(150px);
-    background: orange;    
+    background: orange;
   }
 }
 .container {

@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.FederatedCredential
 ---
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
@@ -21,16 +22,16 @@ In browsers that support it, an instance of this interface may be passed in the 
 
 ## Constructor
 
-- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}} {{Experimental_Inline}}
   - : Creates a new `FederatedCredential` object.
 
 ## Properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}}
+- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string containing a credential's federated identity provider.
-- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}}
+- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string containing a credential's federated identity protocol.
 
 ### Event handlers

@@ -123,7 +123,7 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
@@ -272,9 +272,9 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
-- {{domxref("CanvasRenderingContext2D.reset()")}}
+- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
   - : Resets the rendering context, including the backing buffer, the drawing state stack, path, and styles.
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
   - : Returns `true` if the rendering context was lost.
 
 ### Filters

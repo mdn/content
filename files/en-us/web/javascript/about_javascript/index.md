@@ -42,9 +42,8 @@ Another common application for JavaScript is as a (Web) server side scripting la
 
 ## JavaScript resources
 
-- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
-  - : Pointers to published JavaScript standards and relevant resources.
-- [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
-  - : [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview): Pointers to published JavaScript standards and relevant resources.
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_Overview): An overview of various JavaScript language features and syntaxes, designed for people familiar with other programming languages.
+- [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
 JavaScript® is a trademark or registered trademark of Oracle in the U.S. and other countries.

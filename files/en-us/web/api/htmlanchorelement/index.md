@@ -21,7 +21,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLElement.accessKey")}}
   - : A string representing a single character that switches input focus to the hyperlink.
-- {{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}
+- {{domxref("HTMLAnchorElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}
   - : A string representing the fragment identifier, including the leading hash mark ('`#`'), if any, in the referenced URL.
@@ -43,7 +43,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.protocol")}}
   - : A string representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
-- {{domxref("HTMLAnchorElement.referrerPolicy")}} {{experimental_inline}}
+- {{domxref("HTMLAnchorElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "a")}} HTML attribute indicating which referrer to use.
 - {{domxref("HTMLAnchorElement.rel")}}
   - : A string that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.
