@@ -61,7 +61,3 @@ const blob = new Blob(array, {type : 'text/html'}); // the blob
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The deprecated {{domxref("BlobBuilder")}} interface which this constructor replaces.

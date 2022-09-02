@@ -22587,24 +22587,6 @@
       "Crash"
     ]
   },
-  "Web/API/BlobBuilder": {
-    "modified": "2020-10-15T21:03:36.338Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "libbymc",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "evilpie",
-      "Sheppy",
-      "gert",
-      "FredB",
-      "myakura",
-      "ebidel",
-      "Sephr"
-    ]
-  },
   "Web/API/BlobEvent": {
     "modified": "2020-10-15T21:24:38.713Z",
     "contributors": [
@@ -49788,14 +49770,6 @@
   "Web/API/Navigator/msLaunchUri": {
     "modified": "2019-08-29T16:23:32.897Z",
     "contributors": ["Tigt", "ExE-Boss", "Sheppy", "mattwojo"]
-  },
-  "Web/API/Navigator/msSaveBlob": {
-    "modified": "2020-10-15T22:12:06.874Z",
-    "contributors": ["krosylight"]
-  },
-  "Web/API/Navigator/msSaveOrOpenBlob": {
-    "modified": "2020-10-15T22:12:12.445Z",
-    "contributors": ["HaveSpacesuit", "MyNameIsBond", "krosylight"]
   },
   "Web/API/Navigator/onLine": {
     "modified": "2020-12-14T11:30:49.586Z",
