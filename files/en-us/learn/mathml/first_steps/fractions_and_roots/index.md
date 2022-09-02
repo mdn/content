@@ -70,11 +70,11 @@ In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Gettin
 
 Below is a screenshot of how it is rendered by a browser:
 
+![Screenshot of mfrac, msqrt, mroot](mfrac-msqrt-mroot.png)
+
 - We already know that the `<mfrac>` element is rendered as a fraction: The first child (the numerator) is drawn above the second child (the denominator) separated by a horizontal bar.
 - The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Learn/MathML/First_steps/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
 - Finally, the `<mroot>` element is rendered as an nth root: The first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
-
-![Screenshot of mfrac, msqrt, mroot](mfrac-msqrt-mroot.png)
 
 ### Active learning: nesting different elements
 
@@ -234,31 +234,25 @@ checkboxes.forEach((checkbox) => {
 
 As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretches horizontally to cover their content. But actually the root symbol √ also stretches to be as tall as their content.
 
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
+
 ```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>My page with stretchy radical symbols</title>
-    <link
-      rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
-  </head>
-  <body>
-    <math display="block">
-      <mroot>
-        <msqrt>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-        </msqrt>
-        <mn>3</mn>
-      </mroot>
-    </math>
-  </body>
-</html>
+<math display="block">
+  <mroot>
+    <msqrt>
+      <mfrac>
+        <mn>1</mn>
+        <mn>2</mn>
+      </mfrac>
+    </msqrt>
+    <mn>3</mn>
+  </mroot>
+</math>
 ```
 
 {{ EmbedLiveSample('Stretchy_radical_symbols', 700, 200, "", "") }}
@@ -269,37 +263,31 @@ As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretche
 
 Some mathematical concepts are sometimes written using fraction-like notations such [binomial coefficients](https://en.wikipedia.org/wiki/Combination) or [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol). It is appropriate to use an `<mfrac>` element to markup such notations. For fraction-like notations that don't draw a horizontal bar, attach a `linethickness="0"` attribute to the `<mfrac>` element:
 
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
+
 ```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>My binomial coefficient</title>
-    <link
-      rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
-  </head>
-  <body>
-    <math display="block">
-      <mrow>
-        <mo>(</mo>
-        <mfrac linethickness="0">
-          <mi>3</mi>
-          <mi>2</mi>
-        </mfrac>
-        <mo>)</mo>
-      </mrow>
-      <mo>=</mo>
-      <mn>6</mn>
-      <mo>≠</mo>
-      <mfrac>
-        <mi>3</mi>
-        <mi>2</mi>
-      </mfrac>
-    </math>
-  </body>
-</html>
+<math display="block">
+  <mrow>
+    <mo>(</mo>
+    <mfrac linethickness="0">
+      <mi>3</mi>
+      <mi>2</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mn>6</mn>
+  <mo>≠</mo>
+  <mfrac>
+    <mi>3</mi>
+    <mi>2</mi>
+  </mfrac>
+</math>
 ```
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}

@@ -47,90 +47,84 @@ The MathML tabular elements are similar to the ones for [HTML tables](/en-US/doc
 
 Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
 
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>My first matrix</title>
+```html hidden
     <link
       rel="stylesheet"
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
     />
-  </head>
-  <body>
-    <math display="block">
-      <mrow>
-        <mo>(</mo>
-        <mtable>
-          <mtr>
-            <mtd>
-              <mi>a</mi>
-            </mtd>
-            <mtd>
-              <mi>c</mi>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>t</mi>
-                <mi>x</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mi>b</mi>
-            </mtd>
-            <mtd>
-              <mi>d</mi>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>t</mi>
-                <mi>y</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>)</mo>
-      </mrow>
-    </math>
-  </body>
-</html>
+```
+
+```html
+<math display="block">
+  <mrow>
+    <mo>(</mo>
+    <mtable>
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>t</mi>
+            <mi>x</mi>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>t</mi>
+            <mi>y</mi>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+</math>
 ```
 
 {{ EmbedLiveSample('MathML_tabular_elements', 700, 200, "", "") }}

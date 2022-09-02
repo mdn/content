@@ -74,14 +74,16 @@ Similarly to what we saw in the [previous article](/en-US/docs/Learn/MathML/Firs
 </p>
 ```
 
-Below is the rendering of the above example in your browser. You should notice that:
+Below is the rendering of the above example in your browser.
+
+{{ EmbedLiveSample('Subtrees_of_msub_msup_msubsup', 700, 200, "", "") }}
+
+You should notice that:
 
 - The second child of the `<msub>` element is attached as a subscript of its first child.
 - The second child of the `<msup>` element is attached as a superscript of its first child.
 - The second and third children of the `<msubsup>` element are respectively attached as a subscript and superscript of its first child.
 - The text inside scripts is scaled down.
-
-{{ EmbedLiveSample('Subtrees_of_msub_msup_msubsup', 700, 200, "", "") }}
 
 > **Note:** The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow to use an arbitrary MathML subtree as scripts, not just text.
 

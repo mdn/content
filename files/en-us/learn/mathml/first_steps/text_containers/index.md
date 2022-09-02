@@ -76,7 +76,7 @@ We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_s
 
 ### Active learning: recognize token elements
 
-Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is nonnegative. Spot the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed. Finally, read the MathML source to verify whether that corresponds to your expectation.
+Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is nonnegative. Spot the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed.
 
 ```html hidden
 <!DOCTYPE html>
@@ -149,6 +149,28 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 ```
 
 {{ EmbedLiveSample('Active_learning_recognize_token_elements', 700, 400, "", "") }}
+
+Finally, read the MathML source to verify whether that corresponds to your expectation:
+
+```xml
+<math display="block">
+  <mrow>
+    <mrow>
+      <mo>|</mo>
+      <mi>x</mi>
+      <mo>|</mo>
+    </mrow>
+    <mo>=</mo>
+    <mi>x</mi>
+  </mrow>
+  <mtext>&nbsp;iff&nbsp;</mtext>
+  <mrow>
+    <mi>x</mi>
+    <mo>≥</mo>
+    <mn>0</mn>
+  </mrow>
+</math>
+```
 
 > **Note:** It is sometimes difficult to decide the token element to use for a given text content. In practice, choosing the wrong element should not cause major issues because all token elements are generally rendered the same by browser implementations (for visual display and for assistive technologies). However, the `<mi>` and `<mo>` elements have special distinguishing features that one should be aware of. They are explained in the following sections.
 
@@ -298,7 +320,7 @@ document.getElementById("showSolution").addEventListener(
 
 ### Active learning: stretchy operators
 
-The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking a bit the [previous exercise](#active_learning_recognize_token_elements), one can make operators stretch vertically. Can you find them? As usual, you are invited to read the source code when you are done.
+The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking a bit the [previous exercise](#active_learning_recognize_token_elements), one can make operators stretch vertically. Can you find them?
 
 ```html hidden
 <!DOCTYPE html>
@@ -396,6 +418,43 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 ```
 
 {{ EmbedLiveSample('Active_learning_stretchy_fences', 700, 400, "", "") }}
+
+As usual, you are invited to read the source code when you are done:
+
+```xml
+<math display="block">
+  <mrow>
+    <mrow>
+      <mo>|</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mi>x</mi>
+      </mfrac>
+      <mo>|</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo>|</mo>
+        <mi>x</mi>
+        <mo>|</mo>
+      </mrow>
+    </mfrac>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>x</mi>
+    </mfrac>
+  </mrow>
+  <mtext>&nbsp;iff&nbsp;</mtext>
+  <mrow>
+    <mi>x</mi>
+    <mo>≥</mo>
+    <mn>0</mn>
+  </mrow>
+</math>
+```
 
 > **Warning:** Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
 
