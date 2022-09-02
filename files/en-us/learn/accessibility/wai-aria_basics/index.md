@@ -94,7 +94,7 @@ This last point is key — To use a screen reader in the first place, your opera
 
 Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screen readers recognize that information and present it to their users in a useful way.
 
-1. Browser support is almost universal, as stated by [caniuse.com](https://caniuse.com/#feat=wai-aria).
+1. Browser support is almost universal, according to [caniuse.com](https://caniuse.com/#feat=wai-aria).
 2. screen reader support for ARIA features isn't quite at this level, but the most popular screen readers are getting there. You can get an idea of support levels by looking at Powermapper's [WAI-ARIA Screen reader compatibility](https://www.powermapper.com/tests/screen-readers/aria/) article.
 
 In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.
