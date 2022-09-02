@@ -31,13 +31,13 @@ None.
 
 ## Methods
 
-- {{domxref("BluetoothUUID.canonicalUUID()")}}
+- {{domxref("BluetoothUUID.canonicalUUID()")}} {{Experimental_Inline}}
   - : Returns the 128-bit UUID when passed the 16- or 32-bit UUID alias.
-- {{domxref("BluetoothUUID.getCharacteristic()")}}
+- {{domxref("BluetoothUUID.getCharacteristic()")}} {{Experimental_Inline}}
   - : Returns the 128-bit UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
-- {{domxref("BluetoothUUID.getDescriptor()")}}
+- {{domxref("BluetoothUUID.getDescriptor()")}} {{Experimental_Inline}}
   - : Returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
-- {{domxref("BluetoothUUID.getService()")}}
+- {{domxref("BluetoothUUID.getService()")}} {{Experimental_Inline}}
   - : Returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
 
 ## Examples

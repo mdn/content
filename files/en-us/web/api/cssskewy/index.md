@@ -21,14 +21,14 @@ The **`CSSSkewY`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 
 ## Constructor
 
-- {{domxref("CSSSkewY.CSSSkewY", "CSSSkewY()")}}
+- {{domxref("CSSSkewY.CSSSkewY", "CSSSkewY()")}} {{Experimental_Inline}}
   - : Creates a new `CSSSkewY` object.
 
 ## Properties
 
 _Inherits properties from its ancestor_ {{domxref("CSSTransformValue")}}.
 
-- {{domxref('CSSSkewY.ay','ay')}}
+- {{domxref('CSSSkewY.ay','ay')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.
 
 ## Methods

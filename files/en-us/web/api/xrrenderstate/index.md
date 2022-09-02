@@ -32,7 +32,7 @@ When you apply changes using the `XRSession` method {{domxref("XRSession.updateR
   - : The distance, in meters, of the **near clip plane** from the viewer. The near clip plane is the plane, parallel to the display, at which rendering of the scene begins. Any closer to the viewer than this, and no portions of the scene are drawn.
 - {{DOMxRef("XRRenderState.inlineVerticalFieldOfView")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The default vertical field of view, defined in radians, to use when the session is in `inline` mode. `null` for all immersive sessions.
-- {{DOMxRef("XRRenderState.layers")}} {{ReadOnlyInline}}
+- {{DOMxRef("XRRenderState.layers")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An ordered array containing {{domxref("XRLayer")}} objects that are displayed by the XR compositor.
 
 ## Specifications
