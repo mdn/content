@@ -12,10 +12,7 @@ browser-compat: javascript.builtins.Reflect.isExtensible
 ---
 {{JSRef}}
 
-The static
-**`Reflect.isExtensible()`** method determines if an object is
-extensible (whether it can have new properties added to it). It is similar to
-{{jsxref("Object.isExtensible()")}}, but with some [differences](#difference_to_object.isextensible).
+The static **`Reflect.isExtensible()`** method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with [some differences](#difference_with_object.isextensible).
 
 {{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
@@ -37,12 +34,6 @@ A {{jsxref("Boolean")}} indicating whether or not the target is extensible.
 ### Exceptions
 
 A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
-
-## Description
-
-The `Reflect.isExtensible` method allows you determine if an object is
-extensible (whether it can have new properties added to it). It is the same method as
-{{jsxref("Object.isExtensible()")}}, but with some [differences](#difference_to_object.isextensible).
 
 ## Examples
 
@@ -68,18 +59,16 @@ const frozen = Object.freeze({});
 Reflect.isExtensible(frozen)  // === false
 ```
 
-### Difference to Object.isExtensible()
+### Difference with Object.isExtensible()
 
-If the `target` argument to this method is not an object (a
-primitive), then it will cause a {{jsxref("TypeError")}}. With
-{{jsxref("Object.isExtensible()")}}, a non-object `target` will return false without any errors.
+If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.isExtensible()")}}, a non-object `target` will return false without any errors.
 
 ```js
 Reflect.isExtensible(1)
 // TypeError: 1 is not an object
 
-Object.isExtensible(1);
-// false                         
+Object.isExtensible(1)
+// false
 ```
 
 ## Specifications
