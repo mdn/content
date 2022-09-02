@@ -67,15 +67,18 @@ Reflect.isExtensible(empty)  // === false
 
 If the `target` argument to this method is not an object (a
 primitive), then it will cause a {{jsxref("TypeError")}}. With
-{{jsxref("Object.preventExtensions()")}}, a non-object `target`
-will be coerced to an object.
+{{jsxref("Object.preventExtensions()")}}, a non-object `target` will throw a {{jsxref("TypeError")}} in ES5, 
+but in ES2015 it will be returned as-is without any errors, since primitives are already, by definition, immutable.
 
 ```js
 Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
 Object.preventExtensions(1);
-// 1
+// TypeError: 1 is not an object (ES5 code)
+
+Object.preventExtensions(1);
+// 1                             (ES2015 code)
 ```
 
 ## Specifications
