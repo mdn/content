@@ -116,7 +116,7 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
   }
   80%, 100% {
     transform: translateX(150px);
-    background: orange;    
+    background: orange;
   }
 }
 .container {
