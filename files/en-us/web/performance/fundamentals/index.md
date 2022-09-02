@@ -175,7 +175,7 @@ If your page contains JavaScript code that is taking a long time to run, the [Ja
 
 ![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
-The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
+The [Built-in Gecko Profiler](https://firefox-source-docs.mozilla.org/tools/profiler/index.html) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
