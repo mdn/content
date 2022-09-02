@@ -11,9 +11,10 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRLayerEvent.XRLayerEvent
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRLayerEvent`** constructor creates and returns a new {{domxref("XRLayerEvent")}} object. These events relate to a change of state of an {{domxref("XRLayer")}} object.
 
