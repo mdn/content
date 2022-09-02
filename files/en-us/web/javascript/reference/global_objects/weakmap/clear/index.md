@@ -7,9 +7,10 @@ tags:
   - Deprecated
   - Prototype
   - WeakMap
+  - Non-standard
 browser-compat: javascript.builtins.WeakMap.clear
 ---
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`clear()`** method used to remove all elements from a
 `WeakMap` object, but is no longer part of ECMAScript and its

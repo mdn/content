@@ -8,7 +8,6 @@ tags:
   - CSS Descriptor
   - CSS Fonts
   - CSS Property
-  - Experimental
   - Fonts
   - Reference
   - font-display

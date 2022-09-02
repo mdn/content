@@ -85,9 +85,9 @@ Try running your favorite website now, on both webpagetest.org and PageSpeed Ins
 
 ### Network tools
 
-Most browsers have tools available that you can use to run against loaded pages and determine how they are performing. For example, the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) returns detailed information on all the assets downloaded form the network, along with a time graph that shows how long each one took to download.
+Most browsers have tools available that you can use to run against loaded pages and determine how they are performing. For example, the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) returns detailed information on all the assets downloaded from the network, along with a time graph that shows how long each one took to download.
 
-![](network-monitor.png)
+![Firefox network monitor showing a list of assets that has loaded as well as load time per asset](network-monitor.png)
 
 You can also use the [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
 

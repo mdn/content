@@ -126,7 +126,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 ## Simple example walkthrough
 
-We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). The demo looks like this:
+We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)). The demo looks like this:
 
 ![A red circle on top of a black background.](pointer-lock.png)
 

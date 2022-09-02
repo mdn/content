@@ -85,19 +85,19 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Specifies the function that creates an object's prototype.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 
 ## Instance methods
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Associates a function with a property that, when accessed, executes that function and returns its return value.
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Associates a function with a property that, when set, executes that function which modifies the property.
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}} method.
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}} method.
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) method.
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) method.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}

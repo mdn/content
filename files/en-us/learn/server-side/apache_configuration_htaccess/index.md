@@ -377,7 +377,7 @@ This might not be the best setting for everyone. You should read about [the othe
 
 While you could send the `X-Frame-Options` header for all of your website's pages, this has the potential downside that it forbids even any framing of your content (e.g.: when users visit your website using a Google Image Search results page).
 
-Nonetheless, you should ensure that you send the `X-Frame-Options` header for all pages that allow a user to make a state-changing operation (e.g: pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).
+Nonetheless, you should ensure that you send the `X-Frame-Options` header for all pages that allow a user to make a state-changing operation (e.g., pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).
 
 ```apache
 <IfModule mod_headers.c>

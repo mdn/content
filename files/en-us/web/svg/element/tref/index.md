@@ -6,6 +6,7 @@ tags:
   - Reference
   - SVG
   - SVG Text Content
+  - Deprecated
 browser-compat: svg.elements.tref
 ---
 {{SVGRef}}{{deprecated_header}}

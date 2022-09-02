@@ -72,7 +72,7 @@ If the number of inputs and number of outputs are both set to 0, a `NotSupported
 
 If `outputChannelCount` isn't specified, and `numberOfInputs` and `numberOfOutputs` are both 1, the `AudioWorkletNode`'s initial channel count is set to 1. This has the effect of changing the output channel count to dynamically change to the computed number of channels, based on the input's channel count and the current setting of the {{domxref("AudioNode")}} property {{domxref("AudioNode.channelCountMode", "channelCountMode")}}.
 
-Otherwise, if `outputChannelCount` is provided *and* if the values of `numberOfInputs` and `numberOfOutputs` are both 1, the audio worklet node's channel count is set to the value of `outputChannelCount`. Otherwise, the channel count of each channel in the set of output channels is set to match the corresponding value in the `outputChannelCount` array.
+Otherwise, if `outputChannelCount` is provided _and_ if the values of `numberOfInputs` and `numberOfOutputs` are both 1, the audio worklet node's channel count is set to the value of `outputChannelCount`. Otherwise, the channel count of each channel in the set of output channels is set to match the corresponding value in the `outputChannelCount` array.
 
 ## Examples
 

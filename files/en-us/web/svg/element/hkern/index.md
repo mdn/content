@@ -26,11 +26,11 @@ The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the ho
 
 ### Specific attributes
 
-- {{SVGAttr("u1")}}
-- {{SVGAttr("g1")}}
-- {{SVGAttr("u2")}}
-- {{SVGAttr("g2")}}
-- {{SVGAttr("k")}}
+- {{SVGAttr("u1")}} {{Deprecated_Inline}}
+- {{SVGAttr("g1")}} {{Deprecated_Inline}}
+- {{SVGAttr("u2")}} {{Deprecated_Inline}}
+- {{SVGAttr("g2")}} {{Deprecated_Inline}}
+- {{SVGAttr("k")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

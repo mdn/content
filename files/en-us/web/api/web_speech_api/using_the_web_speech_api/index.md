@@ -25,7 +25,7 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To show simple usage of Web speech recognition, we've written a demo called [Speech color changer](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speech-color-changer). When the screen is tapped/clicked, you can say an HTML color keyword, and the app's background color will change to that color.
+To show simple usage of Web speech recognition, we've written a demo called [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). When the screen is tapped/clicked, you can say an HTML color keyword, and the app's background color will change to that color.
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that color. In this case it has turned the background red.](speech-color-changer.png)
 
@@ -180,7 +180,7 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis). This includes a set of form controls for entering text to be synthesized, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
+To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). This includes a set of form controls for entering text to be synthesized, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 

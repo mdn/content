@@ -6,7 +6,7 @@ tags:
   - HTTP
   - Reference
   - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.12
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.414
 ---
 {{HTTPSidebar}}
 

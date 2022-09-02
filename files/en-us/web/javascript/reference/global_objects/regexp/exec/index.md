@@ -79,7 +79,7 @@ The following table shows the state of `result` after running this script:
 | `[2]`     | `"Jumps"`                                                          |
 | `index`   | `4`                                                                |
 | `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
-| `input`   | `4`                                                                |
+| `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
 | `groups`  | `{ color: "brown" }`                                               |
 
 In addition, `re.lastIndex` will be set to `25`, due to this regex being global.

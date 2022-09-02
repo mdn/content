@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.deleteData
 ---
+
 {{APIRef("DOM")}}
 
 The **`deleteData()`** method of the {{domxref("CharacterData")}} interface
@@ -42,8 +43,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.deleteData(1, 5);
 ```

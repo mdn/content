@@ -52,11 +52,6 @@ single cookie at a time using this method. Consider also that:
     '`/mydir`') If not specified, defaults to the current path
     of the current document location.
 
-    > **Note:** Prior to {{Gecko("6.0")}}, paths
-    > with quotes were treated as if the quotes were part of the string,
-    > instead of as if they were delimiters surrounding the actual path
-    > string. This has been fixed.
-
   - `;domain=domain` (e.g.,
     '`example.com`' or '`subdomain.example.com`'). If
     not specified, this defaults to the host portion of the current document

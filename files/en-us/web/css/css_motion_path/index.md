@@ -4,14 +4,13 @@ slug: Web/CSS/CSS_Motion_Path
 tags:
   - CSS
   - CSS Motion Path
-  - Experimental
   - Guide
   - Motion Path
   - Overview
   - Reference
 browser-compat: css.properties.offset-path
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 **Motion Path** is a CSS module that allows authors to animate any graphical object along a custom path.
 

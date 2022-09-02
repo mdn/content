@@ -650,7 +650,7 @@ For {{SVGElement('foreignObject')}}, `height` defines the vertical length for th
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
 ## image
 
@@ -684,7 +684,7 @@ For {{SVGElement('image')}}, `height` defines the vertical length for the image.
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for images.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
 ## mask
 
@@ -774,7 +774,7 @@ For {{SVGElement('rect')}}, `height` defines the vertical length for the rectang
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rectangles.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
 ## svg
 
@@ -810,7 +810,7 @@ For {{SVGElement('svg')}}, `height` defines the vertical length for the renderin
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<svg>`.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
 ## use
 
@@ -846,7 +846,7 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
 
 > **Note:** `height` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
 ## Specifications
 
