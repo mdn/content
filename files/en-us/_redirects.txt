@@ -61,7 +61,7 @@
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
 /en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
 /en-US/docs/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
@@ -4057,7 +4057,7 @@
 /en-US/docs/JSON	/en-US/docs/Glossary/JSON
 /en-US/docs/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript,_the_DOM_and_the_BOM	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
-/en-US/docs/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/en-US/docs/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
 /en-US/docs/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/JavaScript/Data_structures	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
@@ -4725,7 +4725,7 @@
 /en-US/docs/JavaScript_API/navigator.mozApps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/JavaScript_API/navigator.mozApps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/JavaScript_Documention	/en-US/docs/Web/JavaScript
-/en-US/docs/JavaScript_Documention/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/en-US/docs/JavaScript_Documention/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
 /en-US/docs/JavaScript_Documention/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/JavaScript_Documention/Data_structures	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/JavaScript_Documention/Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
@@ -11956,6 +11956,7 @@
 /en-US/docs/Web/Houdini/Learn/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/learn/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API/Guide
 /en-US/docs/Web/Houdini/learn/Houdini:_CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
+/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
 /en-US/docs/Web/JavaScript/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
 /en-US/docs/Web/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
 /en-US/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
