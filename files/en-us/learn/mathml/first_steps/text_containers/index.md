@@ -217,7 +217,7 @@ This example should render similarly to the screenshot below. Observe the spacin
 
 ![Screenshot of the MathML formula with different operator spacing](operator-spacing.png)
 
-Operators have many other properties that we will see in more details later. For now, remember to use an `<mo>` container for characters in the operator dictionary and to properly group subexpressions with `<mrow>` elements in order to help MathML renderers to provide a good rendering.
+Operators have many other properties that we will see in more details later. For now, remember to use an `<mo>` container for characters in the operator dictionary and to properly group subexpressions with `<mrow>` elements in order to help MathML renderers.
 
 ### Active learning: spot the difference
 
