@@ -117,8 +117,7 @@ then become `item(0)`.
 
 ### Filtering the results using array methods
 
-We can also use methods of {{jsxref("Array.prototype")}} on any {{domxref("HTMLCollection")}} by transforming the {{domxref("HTMLCollection")}} in an array.
-Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
+We can also use {{jsxref("Array")}} methods on any {{domxref("HTMLCollection")}} by transforming the {{domxref("HTMLCollection")}} to an array. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
 const testElements = document.getElementsByClassName('test');
