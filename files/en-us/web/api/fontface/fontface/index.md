@@ -15,8 +15,7 @@ browser-compat: api.FontFace.FontFace
 
 {{APIRef("CSS Font Loading API")}}
 
-The **`FontFace()`** constructor creates a new
-{{domxref("FontFace")}} object.
+The **`FontFace()`** constructor creates a new {{domxref("FontFace")}} object.
 
 ## Syntax
 
@@ -28,19 +27,21 @@ new FontFace(family, source, descriptors)
 ### Parameters
 
 - `family`
-  - : Specifies a name that will be used as the font face value for font properties. Takes
-    the same type of values as the {{cssxref("@font-face/font-family", "font-family")}}
-    descriptor of {{cssxref("@font-face")}} .
+  - : Specifies a name that will be used as the font face value for font properties.
+    Takes the same type of values as the {{cssxref("@font-face/font-family", "font-family")}} descriptor of {{cssxref("@font-face")}}.
+
 - `source`
 
-  - : The font source. This can be either:
+  - : The font source.
+    This can be either:
 
-    - A URL
-    - Binary font data
+    - A URL to a font face file.
+    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (or {{domxref("ArrayBufferView")}}).
 
 - `descriptors` {{optional_inline}}
 
-  - : A set of optional descriptors passed as an object. It can contain any of the descriptors available for `@font-face`:
+  - : A set of optional descriptors passed as an object.
+    It can contain any of the descriptors available for `@font-face`:
 
     - `ascentOverride`
       - : With an allowable value for {{cssxref("@font-face/ascent-override")}}.
@@ -62,6 +63,11 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.
     - `weight`
       - : With an allowable value for {{cssxref("@font-face/font-weight")}}.
+
+### Exceptions
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : A descriptor string does not match the grammar of the corresponding {{cssxref("@font-face")}} descriptor.
 
 ## Examples
 
