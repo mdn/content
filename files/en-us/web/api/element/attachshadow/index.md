@@ -80,7 +80,7 @@ attachShadow(options)
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
 
     - `slotAssignment`
-      - : Either `manual` or `named` (default). When set to `manual`, use {{DOMxRef("HTMLSlotElement.assign()")}} to assign a value to`slot`.
+      - : Either `manual` or `named` (default). When set to `manual`, use {{DOMxRef("HTMLSlotElement.assign()")}} to assign a value to `slot`.
 
 ### Return value
 
