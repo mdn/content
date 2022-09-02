@@ -72,7 +72,7 @@ The `<mfrac>` element specifies a fraction with a numerator (its first child) an
 
 ### The display attribute
 
-Note that in the previous example, the formula is on the same line as the text of the paragraph. However, it is quite common to instead render large mathematical formulas centered on their own line as shown below. To achieve that, one only need to attach a `display="block"` attribute on the `<math>` element.
+Note that in the previous example, the formula is on the same line as the text of the paragraph. However, it is quite common to instead render large mathematical formulas centered on their own line as shown below. To achieve that, you need to attach a `display="block"` attribute on the `<math>` element.
 
 ```html hidden
 <!DOCTYPE html>
