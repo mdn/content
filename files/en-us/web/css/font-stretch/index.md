@@ -82,7 +82,38 @@ You can use `font-stretch` to select a condensed or expanded face from such font
 
 The face selected for a given value of `font-stretch` depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
 
+## Examples
+
 The table below demonstrates the effect of supplying various different percentage values of `font-stretch` on two different fonts:
+
+```html
+<div>
+  <div class="helvetica-neue-examples">
+    <p>In Helvetica Neue</p>
+    <p class="example1">This is font-stretch property set at 50%.</p>
+    <p class="example2">This is font-stretch property set at 62.5%.</p>
+    <p class="example3">This is font-stretch property set at 75%.</p>
+    <p class="example4">This is font-stretch property set at 87.5%.</p>
+    <p class="example5">This is font-stretch property set at 100%.</p>
+    <p class="example6">This is font-stretch property set at 112.5%.</p>
+    <p class="example7">This is font-stretch property set at 125%.</p>
+    <p class="example8">This is font-stretch property set at 150%.</p>
+    <p class="example9">This is font-stretch property set at 200%.</p>
+  </div>
+  <div class="league-mono-variable-examples">
+    <p>In League Mono Variable</p>
+    <p class="example1">This is font-stretch property set at 50%.</p>
+    <p class="example2">This is font-stretch property set at 62.5%.</p>
+    <p class="example3">This is font-stretch property set at 75%.</p>
+    <p class="example4">This is font-stretch property set at 87.5%.</p>
+    <p class="example5">This is font-stretch property set at 100%.</p>
+    <p class="example6">This is font-stretch property set at 112.5%.</p>
+    <p class="example7">This is font-stretch property set at 125%.</p>
+    <p class="example8">This is font-stretch property set at 150%.</p>
+    <p class="example9">This is font-stretch property set at 200%.</p>
+  </div>
+</div>
+```
 
 ```css
 .helvetica-neue-examples {
@@ -128,35 +159,6 @@ The table below demonstrates the effect of supplying various different percentag
 .example9 {
   font-stretch: ultra-expanded;
 }
-```
-
-```html
-<div>
-  <div class="helvetica-neue-examples">
-    <p>In Helvetica Neue</p>
-    <p class="example1">This is font-stretch property set at 50%.</p>
-    <p class="example2">This is font-stretch property set at 62.5%.</p>
-    <p class="example3">This is font-stretch property set at 75%.</p>
-    <p class="example4">This is font-stretch property set at 87.5%.</p>
-    <p class="example5">This is font-stretch property set at 100%.</p>
-    <p class="example6">This is font-stretch property set at 112.5%.</p>
-    <p class="example7">This is font-stretch property set at 125%.</p>
-    <p class="example8">This is font-stretch property set at 150%.</p>
-    <p class="example9">This is font-stretch property set at 200%.</p>
-  </div>
-  <div class="league-mono-variable-examples">
-    <p>In League Mono Variable</p>
-    <p class="example1">This is font-stretch property set at 50%.</p>
-    <p class="example2">This is font-stretch property set at 62.5%.</p>
-    <p class="example3">This is font-stretch property set at 75%.</p>
-    <p class="example4">This is font-stretch property set at 87.5%.</p>
-    <p class="example5">This is font-stretch property set at 100%.</p>
-    <p class="example6">This is font-stretch property set at 112.5%.</p>
-    <p class="example7">This is font-stretch property set at 125%.</p>
-    <p class="example8">This is font-stretch property set at 150%.</p>
-    <p class="example9">This is font-stretch property set at 200%.</p>
-  </div>
-</div>
 ```
 
 #### Result
