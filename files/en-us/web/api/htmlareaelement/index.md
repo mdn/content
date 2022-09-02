@@ -25,7 +25,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{ htmlattrxref("alt", "area") }} HTML attribute, containing alternative text for the element.
 - {{domxref("HTMLAreaElement.coords")}}
   - : A string that reflects the {{ htmlattrxref("coords", "area") }} HTML attribute, containing coordinates to define the hot-spot region.
-- {{domxref("HTMLAreaElement.download")}} {{experimental_inline}}
+- {{domxref("HTMLAreaElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
 - {{domxref("HTMLAreaElement.hash")}}
   - : A string containing the fragment identifier (including the leading hash mark (#)), if any, in the referenced URL.
@@ -47,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string containing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAreaElement.protocol")}}
   - : A string containing the protocol component (including trailing colon `':'`), of the referenced URL.
-- {{domxref("HTMLAreaElement.referrerPolicy")}} {{experimental_inline}}
+- {{domxref("HTMLAreaElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "area")}} HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLAreaElement.rel")}}
   - : A string that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource.
