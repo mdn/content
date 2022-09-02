@@ -122701,17 +122701,6 @@
     "modified": "2020-11-14T11:29:50.522Z",
     "contributors": ["mfuji09", "fscholz"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakMap/clear": {
-    "modified": "2020-10-15T21:26:41.183Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "m_gol",
-      "nmve",
-      "claudepache",
-      "realityking"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakMap/delete": {
     "modified": "2020-11-14T11:09:18.288Z",
     "contributors": [
