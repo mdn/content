@@ -8,7 +8,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
 
-We continue the review of basic math notations and focuses on building MathML elements with scripts.
+We continue the review of basic math notations and focus on building MathML elements with scripts.
 
 <table>
   <tbody>
