@@ -34,7 +34,7 @@ Before starting this module, you should have:
 This module contains the following articles, which will take you through all the basic theory of MathML, and provide opportunities for you to test out some skills.
 
 - [Getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started)
-  - : In this article, we will take a simple HTML document and view how to add MathML formulas into it, introducing a few elements along the way.
+  - : In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
 - [Text containers](/en-US/docs/Learn/MathML/First_steps/Text_containers)
   - : Now that you get a better idea of MathML, we move focus on text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
 - [Fractions and roots](/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots)
