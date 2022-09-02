@@ -15,8 +15,8 @@ browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 
 The
 **`OffscreenCanvasRenderingContext2D.commit()`**
-method of the [Canvas 2D API](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) copies the rendering context's bitmap to the bitmap of the placeholder canvas element of the associated `OffscreenCanvas` object.
-The copy operation is synchronous. Calling this method is not needed for the transfer, since it happens automatically during the event loop execution.
+method of the [Canvas 2D API](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) copies the rendering context's bitmap to the bitmap of the placeholder {{HtmlElement("canvas")}} element of the associated `OffscreenCanvas` object.
+The copy operation is synchronous. Calling this method is not needed for the transfer, since it happens automatically during the event-loop execution.
 
 ## Syntax
 
