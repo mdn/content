@@ -85,7 +85,7 @@ There are three ways to convert a string to a number:
 
 You can also use the [unary plus `+`](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) as a shorthand for `Number()`.
 
-By IEEE 754 specification, Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{jsxref("Infinity")}}. Many "invalid math" operations will return `NaN` — for example, if attempting to parse a non-numeric string, or using [`Math.log()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log) on a negative value. Division by zero produces `Infinity` (positive or negative).
+Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{jsxref("Infinity")}}. Many "invalid math" operations will return `NaN` — for example, if attempting to parse a non-numeric string, or using [`Math.log()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log) on a negative value. Division by zero produces `Infinity` (positive or negative).
 
 `NaN` is contagious: if you provide it as an operand to any mathematical operation, the result will also be `NaN`. `NaN`, per IEEE 754 specification, is the only value in JavaScript that's not equal to itself.
 
