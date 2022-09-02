@@ -70,7 +70,7 @@ In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Gettin
 
 Below is a screenshot of how it is rendered by a browser:
 
-- We already know that the `<mfrac>` element is rendered as a fraction: the first child (the numerator) and is drawn above the second child (the denominator) separated by a horizontal bar.
+- We already know that the `<mfrac>` element is rendered as a fraction: The first child (the numerator) is drawn above the second child (the denominator) separated by a horizontal bar.
 - The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Learn/MathML/First_steps/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
 - Finally, the `<mroot>` element is rendered as an nth root: the first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
 
