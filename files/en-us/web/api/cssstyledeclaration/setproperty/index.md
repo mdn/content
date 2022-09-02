@@ -160,12 +160,7 @@ function randomColor() {
 }
 
 const stylesheet = document.styleSheets[1];
-let boxParaRule;
-for (const cssRule of stylesheet.cssRules) {
-  if (cssRule.selectorText === '.box p') {
-    boxParaRule = cssRule;
-  }
-}
+const boxParaRule = [...stylesheet.cssRules].find((r) => r.selectorText === ".box p");
 
 function setRandomBorder() {
   const newBorder = `${random(1, 50)}px solid ${randomColor()}`;
