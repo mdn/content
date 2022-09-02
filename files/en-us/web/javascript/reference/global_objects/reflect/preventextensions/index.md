@@ -45,7 +45,8 @@ A {{jsxref("TypeError")}}, if `target` is not an
 
 The `Reflect.preventExtensions()` method allows you to prevent new
 properties from ever being added to an object (i.e., prevents future extensions to the
-object). It is similar to {{jsxref("Object.preventExtensions()")}}.
+object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
+some [differences](#difference_from_object.preventextensions).
 
 ## Examples
 
