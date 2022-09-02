@@ -47,7 +47,7 @@ No notable changes.
 
 #### Canvas
 
-- The `fontKerning` property is now supported on [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning) and [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D/fontKerning), enabling developers to specify how kerning is used when text is drawn to a canvas or offscreen canvas ({{bug(1778908)}}).
+- The `fontKerning` property is now supported on [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning) and [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D), enabling developers to specify how kerning is used when text is drawn to a canvas or an offscreen canvas ({{bug(1778908)}}).
 
 #### Media, WebRTC, and Web Audio
 
