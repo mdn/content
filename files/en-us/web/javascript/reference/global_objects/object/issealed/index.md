@@ -88,11 +88,9 @@ Object.isFrozen(s3); // === true
 // (only configurability matters for accessor properties)
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a sealed ordinary object, return `true`.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, it will return `true` without any errors if a non-object argument is passed, since primitives are, by definition, immutable.
 
 ```js
 Object.isSealed(1);

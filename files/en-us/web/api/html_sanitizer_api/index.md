@@ -60,7 +60,7 @@ This applies to both methods.
 
 ## Interfaces
 
-- {{domxref('Sanitizer')}}
+- {{domxref('Sanitizer')}} {{Experimental_Inline}}
   - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
   - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.

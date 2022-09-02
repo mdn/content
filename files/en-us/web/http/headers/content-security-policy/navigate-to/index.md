@@ -9,9 +9,10 @@ tags:
   - Navigation
   - Reference
   - Security
+  - Experimental
 browser-compat: http.headers.Content-Security-Policy.navigate-to
 ---
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`navigate-to`** directive
