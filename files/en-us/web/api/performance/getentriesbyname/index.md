@@ -46,11 +46,11 @@ A list of {{domxref("PerformanceEntry")}} objects that have the specified
 ## Examples
 
 ```js
-function use_PerformanceEntry_methods() {
+function usePerformanceEntryMethods() {
   console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    console.error("The property performance.mark is not supported.");
+    console.error("The property performance.mark is not supported");
     return;
   }
 
@@ -65,36 +65,49 @@ function use_PerformanceEntry_methods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  let p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
-
+  performance.getEntries()
+    .forEach((entry, i) => {
+      console.log(`Entry[${i}]`);
+      checkPerformanceEntry(entry);
+    });
+    
   // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (let i=0; i < p.length; i++) {
-    log(`Begin[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
+  performance.getEntries({ name: "Begin", entryType: "mark" })
+    .forEach((entry, i) => {
+      console.log(`Begin[${i}]`);
+      checkPerformanceEntry(entry);
+    });
 
   // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
-    log(`Mark only entry[${i}]:`);
-    log(`  name      = ${p[i].name}`);
-    log(`  startTime = ${p[i].startTime}`);
-    log(`  duration  = ${p[i].duration}`);
-  }
+  performance.getEntriesByType("mark")
+    .forEach((entry, i) => {
+      console.log(`Mark only entry[${i}]:`);
+      checkPerformanceEntry(entry);
+    });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
-    log(`Mark and Begin entry[${i}]:`);
-    log(`  name      = ${p[i].name}`);
-    log(`  startTime = ${p[i].startTime}`);
-    log(`  duration  = ${p[i].duration}`);
-  }
+  performance.getEntriesByName("Begin", "mark")
+    .forEach((entry, i) => {
+      console.log(`Mark and Begin entry[${i}]:`);
+      checkPerformanceEntry(entry);
+    });
+}
+
+function checkPerformanceEntry(obj) {
+  const properties = ["name", "entryType", "startTime", "duration"];
+  const methods = ["toJSON"];
+
+  // Check each property
+  properties.forEach((property) => {
+    const supported = property in obj;
+    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
+  });
+
+  // Check each method
+  methods.forEach((method) => {
+    const supported = typeof obj[method] === "function";
+    console.log(`…${method} = ${supported ? obj[method] : "Not supported"}`);
+  });
 }
 ```
 
