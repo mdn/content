@@ -106,9 +106,9 @@ console.log("Hello"[1] === "e"); // true
 
 To find the length of a string (in [code units](/en-US/docs/Glossary/Code_unit)), access its [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property.
 
-Strings have [utility methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods) to manipulate the string and access information about the string. Because all primitives are immutable by design, these methods would return new strings.
+Strings have [utility methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods) to manipulate the string and access information about the string. Because all primitives are immutable by design, these methods return new strings.
 
-The `+` operator is overloaded for strings: when one of the operands is a string, it performs string concatenation instead of number addition. A special [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax allows you to write strings with embedded expressions more succinctly. Unlike Python's f-strings or C#'s interpolated strings, template literals do not use single or double quotes, but use backticks.
+The `+` operator is overloaded for strings: when one of the operands is a string, it performs string concatenation instead of number addition. A special [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax allows you to write strings with embedded expressions more succinctly. Unlike Python's f-strings or C#'s interpolated strings, template literals use backticks (not single or double quotes).
 
 ```js
 const age = 25;
@@ -183,11 +183,11 @@ obj.a = 1; // no error
 console.log(obj); // { a: 1 }
 ```
 
-`var` declarations can have surprising behaviors (for example, they are not block-scoped but function-scoped), and they are discouraged in modern JavaScript code.
+`var` declarations can have surprising behaviors (for example, they are not block-scoped), and they are discouraged in modern JavaScript code.
 
 If you declare a variable without assigning any value to it, its value is `undefined`. You can't declare a `const` variable without an initializer, because you can't change it later anyway.
 
-`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) before the actual line of declaration. This has some interesting interactions with variable shadowing, which is unseen in other languages.
+`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) before the actual line of declaration. This has some interesting interactions with variable shadowing, which don't occur in other languages.
 
 ```js
 function foo(x, condition) {
@@ -743,7 +743,7 @@ For a detailed guide on various class features, you can read the [guide page](/e
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature. There's no [_paralleling_](https://en.wikipedia.org/wiki/Parallel_computing); only [_concurrency_](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
+JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
