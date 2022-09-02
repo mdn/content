@@ -17,7 +17,7 @@ browser-compat: api.OffscreenCanvasRenderingContext2D
 The **`OffscreenCanvasRenderingContext2D`** interface is a {{domxref("CanvasRenderingContext2D")}} rendering context for drawing to the bitmap of an `OffscreenCanvas` object.
 It is similar to the `CanvasRenderingContext2D` object, with the following differences:
 
-- there is no support for user interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
+- there is no support for user-interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a canvas element
 - it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder canvas element
 
