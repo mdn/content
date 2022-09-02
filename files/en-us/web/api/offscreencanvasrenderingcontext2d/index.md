@@ -52,7 +52,7 @@ For a full example, see our [OffscreenCanvas worker example](https://github.com/
 The following method is new to the `OffscreenCanvasRenderingContext2D` interface and does not exist in the `CanvasRenderingContext2D` interface:
 
 - {{domxref("OffscreenCanvasRenderingContext2D.commit()", "commit()")}}
-  - : Pushes the rendered image to the context's `OffscreenCanvas` object's placeholder canvas element.
+  - : Pushes the rendered image to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element.
 
 ## Unsupported features
 
