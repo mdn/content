@@ -64,23 +64,23 @@ Event handlers are registered for the following pointer events: {{domxref("HTMLE
 
 ```js
 function setHandlers(name) {
- // Install event handlers for the given element
- const el = document.getElementById(name);
- el.onpointerdown = pointerdownHandler;
- el.onpointermove = pointermoveHandler;
+  // Install event handlers for the given element
+  const el = document.getElementById(name);
+  el.onpointerdown = pointerdownHandler;
+  el.onpointermove = pointermoveHandler;
 
- // Use same handler for pointer{up,cancel,out,leave} events since
- // the semantics for these events - in this app - are the same.
- el.onpointerup = pointerupHandler;
- el.onpointercancel = pointerup_handler;
- el.onpointerout = pointerupHandler;
- el.onpointerleave = pointerupHandler;
+  // Use same handler for pointer{up,cancel,out,leave} events since
+  // the semantics for these events - in this app - are the same.
+  el.onpointerup = pointerupHandler;
+  el.onpointercancel = pointerupHandler;
+  el.onpointerout = pointerupHandler;
+  el.onpointerleave = pointerupHandler;
 }
 
 function init() {
- set_handlers("target1");
- set_handlers("target2");
- set_handlers("target3");
+  setHandlers("target1");
+  setHandlers("target2");
+  setHandlers("target3");
 }
 ```
 
@@ -92,12 +92,14 @@ In this application, when a pointer is placed down on an element, the background
 
 ```js
 function pointerdownHandler(ev) {
- // The pointerdown event signals the start of a touch interaction.
- // Save this event for later processing (this could be part of a
- // multi-touch interaction) and update the background color
- pushEvent(ev);
- if (logEvents) log(`pointerDown: name = ${ev.target.id}`, ev);
- updateBackground(ev);
+  // The pointerdown event signals the start of a touch interaction.
+  // Save this event for later processing (this could be part of a
+  // multi-touch interaction) and update the background color
+  pushEvent(ev);
+  if (logEvents) {
+    log(`pointerDown: name = ${ev.target.id}`, ev);
+  }
+  updateBackground(ev);
 }
 ```
 
@@ -109,14 +111,16 @@ In this application, a pointer move is represented by the target's border being 
 
 ```js
 function pointermoveHandler(ev) {
- // Note: if the user makes more than one "simultaneous" touch, most browsers
- // fire at least one pointermove event and some will fire several pointermoves.
- //
- // This function sets the target element's border to "dashed" to visually
- // indicate the target received a move event.
- if (logEvents) log("pointerMove", ev);
- updateBackground(ev);
- ev.target.style.border = "dashed";
+  // Note: if the user makes more than one "simultaneous" touch, most browsers
+  // fire at least one pointermove event and some will fire several pointermoves.
+  //
+  // This function sets the target element's border to "dashed" to visually
+  // indicate the target received a move event.
+  if (logEvents) {
+    log("pointerMove", ev);
+  }
+  updateBackground(ev);
+  ev.target.style.border = "dashed";
 }
 ```
 
@@ -128,7 +132,9 @@ In this application, this handler is also used for {{domxref("HTMLElement/pointe
 
 ```js
 function pointerupHandler(ev) {
-  if (logEvents) log(ev.type, ev);
+  if (logEvents) {
+    log(ev.type, ev);
+  }
   // Remove this touch point from the cache and reset the target's
   // background and border
   removeEvent(ev);
@@ -168,11 +174,11 @@ These functions manage the global event caches `evCache1`, `evCache2` and `evCac
 ```js
 function getCache(ev) {
   // Return the cache for this event's target element
-  switch(ev.target.id) {
+  switch (ev.target.id) {
     case "target1": return evCache1;
     case "target2": return evCache2;
     case "target3": return evCache3;
-    default: log("Error with cache handling",ev);
+    default: log("Error with cache handling", ev);
   }
 }
 
@@ -204,21 +210,21 @@ function updateBackground(ev) {
   //   lightblue - three or more pointers down
   const evCache = getCache(ev);
   switch (evCache.length) {
-   case 0:
-     // Target element has no touch points
-     ev.target.style.background = "white";
-     break;
-   case 1:
-     // Single touch point
-     ev.target.style.background = "yellow";
-     break;
-   case 2:
-     // Two simultaneous touch points
-     ev.target.style.background = "pink";
-     break;
-   default:
-     // Three or more simultaneous touches
-     ev.target.style.background = "lightblue";
+    case 0:
+      // Target element has no touch points
+      ev.target.style.background = "white";
+      break;
+    case 1:
+      // Single touch point
+      ev.target.style.background = "yellow";
+      break;
+    case 2:
+      // Two simultaneous touch points
+      ev.target.style.background = "pink";
+      break;
+    default:
+      // Three or more simultaneous touches
+      ev.target.style.background = "lightblue";
   }
 }
 ```
@@ -245,7 +251,7 @@ function log(name, ev) {
 }
 
 function clearLog(event) {
- const o = document.getElementsByTagName('output')[0];
- o.innerHTML = "";
+  const o = document.getElementsByTagName('output')[0];
+  o.innerHTML = "";
 }
 ```
