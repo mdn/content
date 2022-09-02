@@ -42,7 +42,7 @@ A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
 
 The `Reflect.isExtensible` method allows you determine if an object is
 extensible (whether it can have new properties added to it). It is the same method as
-{{jsxref("Object.isExtensible()")}}.
+{{jsxref("Object.isExtensible()")}}, but with some [differences](#difference_to_object.isextensible).
 
 ## Examples
 
@@ -72,15 +72,14 @@ Reflect.isExtensible(frozen)  // === false
 
 If the `target` argument to this method is not an object (a
 primitive), then it will cause a {{jsxref("TypeError")}}. With
-{{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an
-object at first.
+{{jsxref("Object.isExtensible()")}}, a non-object `target` will return false without any errors.
 
 ```js
 Reflect.isExtensible(1)
 // TypeError: 1 is not an object
 
-Object.isExtensible(1)
-// false
+Object.isExtensible(1);
+// false                         
 ```
 
 ## Specifications
