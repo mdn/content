@@ -10,8 +10,6 @@ tags:
 ---
 {{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
-
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
 This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.

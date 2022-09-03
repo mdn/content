@@ -25,7 +25,6 @@ tags:
   - photic seizure
   - seizure disorders
 ---
-## Introduction to Color and Accessibility
 
 When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:
 
@@ -36,7 +35,7 @@ When designing visual and readable content with the aim of accessibility for all
 
 While understanding these concepts are important for design and readability for all sighted users, they are especially important for those with reduced vision and color deficient vision, and also for those with certain neurological, cognitive, and other impairments.
 
-### Standards and Guidelines
+## Standards and Guidelines
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
