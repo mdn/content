@@ -229,7 +229,7 @@ Because coercing between Number values and BigInt values can lead to loss of pre
 
 ### Cryptography
 
-The operations supported on BigInt values are not constant-time, and are thus open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack). JavaScript BigInts are therefore not well-suited for use in cryptography.
+The operations supported on BigInt values are not constant-time, and are thus open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack). JavaScript BigInts are therefore could be dangerous for use in cryptography without mitigating factors. As a very generic example, attacker could measure time difference between 101n ** 65537n and 17n ** 9999n, and deduce secrets, such as private keys, based on the time passed. If you still have to use bigints, take a look at https://timing.attacks.cr.yp.to/programming.html for general advice regarding the issue.
 
 ### Use within JSON
 
