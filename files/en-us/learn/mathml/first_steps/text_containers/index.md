@@ -69,7 +69,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called _token_ elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
 
-- The `<mi>` element, which represents a symbolic name or arbitrary text that should be rendered as an identifier. Examples: `<mi>x</mi>` (variable), `<mi>cos</mi>` (function name) and `<mi>π</mi>` (symbolic constant).
+- The `<mi>` element, which represents an "identifier" which could be a symbolic name or arbitrary text. Examples: `<mi>x</mi>` (variable), `<mi>cos</mi>` (function name) and `<mi>π</mi>` (symbolic constant).
 - The `<mn>` element represents a "numeric literal" or other data that should be rendered as a numeric literal. Examples: `<mn>2</mn>` (integer), `<mn>0.123</mn>` (decimal number) or `<mn>0xFFEF</mn>` (hexadecimal value).
 - The `<mo>` element represents an operator or anything that should be rendered as an operator. For example `<mo>+</mo>` (binary operation), `<mo>≤</mo>` (binary relation), `<mo>∑</mo>` (summation symbol) or `<mo>[</mo>` (fence).
 - The `<mtext>` element is used to represent arbitrary text. For example short words in formulas such as `<mtext>if<mtext>` or `<mtext>maps to</mtext>`.

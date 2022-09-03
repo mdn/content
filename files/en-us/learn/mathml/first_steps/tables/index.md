@@ -43,7 +43,7 @@ Once all basic math notations are known, it remains to consider tabular layout w
 
 ## MathML tabular elements
 
-The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn/HTML/Tables): the `<mtable>` element represents a table, the `<mtr>` element represents a row and the `<mtd>` element represents a cell. An `<mtable>` table can be inserted anywhere in a MathML formula. The `<mtd>` cell can contain any number of MathML children and will lay them out as an `<mrow>` container.
+The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn/HTML/Tables): the `<mtable>` element represents a mathematical table, it has `<mtr>` elements as its children (representing rows), each of them having `<mtd>` elements as its children (representing cells). An `<mtable>` element can be inserted anywhere in a MathML formula. The `<mtd>` element can contain any number of MathML children and will lay them out as an `<mrow>` container.
 
 Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
 
@@ -302,7 +302,7 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
 
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
-> **Warning:** The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. This is inherited from the original design of MathML, that was supposed to work in engines that are not CSS-aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
+> **Warning:** The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
 
 ## Summary
 

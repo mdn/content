@@ -85,7 +85,7 @@ You should notice that:
 - The second and third children of the `<msubsup>` element are respectively attached as a subscript and superscript of its first child.
 - The text inside scripts is scaled down.
 
-> **Note:** The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow to use an arbitrary MathML subtree as scripts, not just text.
+> **Note:** The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow authors to provide arbitrary MathML subtrees as scripts, not just text.
 
 ## Underscripts and overscripts
 
@@ -372,7 +372,7 @@ We now realize that the bottom bracket "⎵" and the rightward arrow "→" stret
 
 ### Large operator and limits
 
-So far our example has actually been rendered with the [`display="block"`](/en-US/docs/Learn/MathML/First_steps/Getting_started#the_display_attribute) attribute. Let's detach it from the `<math>` element to show up some interesting changes:
+So far our example has actually been rendered with the [`display="block"`](/en-US/docs/Learn/MathML/First_steps/Getting_started#the_display_attribute) attribute. Let's look at the same example, as rendered without that attribute:
 
 ```html hidden
 <!DOCTYPE html>
