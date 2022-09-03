@@ -116,7 +116,7 @@ for (const value of ofInterest) {
   const cssProperty = document.createElement('dt');
   cssProperty.appendChild(document.createTextNode(value));
   stylesList.appendChild(cssProperty);
-  
+
   // Values
   const cssValue = document.createElement('dd');
   cssValue.appendChild(document.createTextNode(allComputedStyles.get(value)));

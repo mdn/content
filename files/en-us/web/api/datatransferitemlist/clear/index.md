@@ -115,7 +115,7 @@ function dragoverHandler(ev) {
 function dragendHandler(ev) {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
-  
+
   // Clear any remaining drag data
   dataList.clear();
 }
