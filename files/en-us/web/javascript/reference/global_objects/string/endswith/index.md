@@ -20,15 +20,15 @@ The **`endsWith()`** method determines whether a string ends with the characters
 
 ```js
 endsWith(searchString)
-endsWith(searchString, length)
+endsWith(searchString, endPosition)
 ```
 
 ### Parameters
 
 - `searchString`
   - : The characters to be searched for at the end of `str`. Cannot be a regex.
-- `length` {{optional_inline}}
-  - : If provided, it is used as the length of `str`. Defaults to `str.length`.
+- `endPosition` {{optional_inline}}
+  - : The end position at which `searchString` is expected to be found (the index of `searchString`'s last character plus 1). Defaults to `str.length`.
 
 ### Return value
 

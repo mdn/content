@@ -29,7 +29,7 @@ startsWith(searchString, position)
 - `searchString`
   - : The characters to be searched for at the start of this string. Cannot be a regex.
 - `position` {{optional_inline}}
-  - : The position in this string at which to begin searching for `searchString`. Defaults to `0`.
+  - : The start position at which `searchString` is expected to be found (the index of `searchString`'s first character). Defaults to `0`.
 
 ### Return value
 

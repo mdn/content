@@ -63,7 +63,7 @@ Some built-in methods would treat regexes specially. They decide whether `x` is 
 
 1. `x` must be an object (not a primitive).
 2. If [`x[Symbol.match]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) is not `undefined`, check if it's [truthy](/en-US/docs/Glossary/Truthy).
-3. Otherwise, check if `x` had been created with the `RegExp` constructor. (This step should rarely happen, since if `x` is a `RegExp` object that have not been tampered with, it should have a `Symbol.match` property.)
+3. Otherwise, if `x[Symbol.match]` is `undefined`, check if `x` had been created with the `RegExp` constructor. (This step should rarely happen, since if `x` is a `RegExp` object that have not been tampered with, it should have a `Symbol.match` property.)
 
 Note that in most cases, it would go through the `Symbol.match` check, which means:
 
