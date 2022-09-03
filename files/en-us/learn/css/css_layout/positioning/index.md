@@ -75,7 +75,7 @@ Relative positioning is the first position type we'll take a look at. This is ve
 position: relative;
 ```
 
-If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.
+If you save and refresh at this stage, you won't see a change in the result at all. So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.
 
 ### Introducing top, bottom, left, and right
 
