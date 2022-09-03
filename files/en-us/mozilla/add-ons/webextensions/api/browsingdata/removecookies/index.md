@@ -27,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let removing = browser.browsingData.removeCookies(
+browser.browsingData.removeCookies(
   removalOptions            // RemovalOptions object
 )
 ```
@@ -58,7 +58,7 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
+const oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
 browser.browsingData
   .removeCookies({ since: oneWeekAgo })

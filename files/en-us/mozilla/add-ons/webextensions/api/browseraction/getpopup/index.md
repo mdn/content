@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let gettingPopup = browser.browserAction.getPopup(
+browser.browserAction.getPopup(
   details               // object
 )
 ```
@@ -61,8 +61,7 @@ function gotPopup(popupURL) {
   console.log(popupURL);
 }
 
-let gettingPopup = browser.browserAction.getPopup({});
-gettingPopup.then(gotPopup);
+browser.browserAction.getPopup({}).then(gotPopup);
 ```
 
 {{WebExtExamples}}

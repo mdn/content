@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let movingBookmark = browser.bookmarks.move(
+browser.bookmarks.move(
   id,                    // string
   destination           // object
 )
@@ -65,10 +65,9 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let bookmarkId = "abcdefghijkl";
+const bookmarkId = "abcdefghijkl";
 
-let movingBookmark = browser.bookmarks.move(bookmarkId, { index: 0 });
-movingBookmark.then(onMoved, onRejected);
+browser.bookmarks.move(bookmarkId, { index: 0 }).then(onMoved, onRejected);
 ```
 
 {{WebExtExamples}}

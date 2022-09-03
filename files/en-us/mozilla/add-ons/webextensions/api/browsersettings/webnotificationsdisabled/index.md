@@ -37,7 +37,7 @@ Toggle the setting:
 
 ```js
 async function toggleWebNotifications() {
-  let current = await browser.browserSettings.webNotificationsDisabled.get({});
+  const current = await browser.browserSettings.webNotificationsDisabled.get({});
   console.log(`Current value: ${current.value}`);
   browser.browserSettings.webNotificationsDisabled.set({
     value: !current.value,

@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let registering = browser.contentScripts.register(
+browser.contentScripts.register(
   contentScriptOptions       // object
 )
 ```
@@ -87,7 +87,7 @@ async function register(hosts, code) {
 
 }
 
-let registered = register(defaultHosts, defaultCode);
+const registered = register(defaultHosts, defaultCode);
 ```
 
 This code registers the JS file at content_scripts/example.js:

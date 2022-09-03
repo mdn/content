@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let getCommands = browser.commands.getAll();
+browser.commands.getAll()
 ```
 
 ### Parameters
@@ -49,8 +49,7 @@ function logCommands(commands) {
   });
 }
 
-let getCommands = browser.commands.getAll();
-getCommands.then(logCommands);
+browser.commands.getAll().then(logCommands);
 ```
 
 {{WebExtExamples}}

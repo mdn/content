@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let gettingText = browser.action.getBadgeText(
+browser.action.getBadgeText(
   details               // object
 )
 ```
@@ -59,8 +59,7 @@ function gotBadgeText(text) {
   console.log(text);
 }
 
-let gettingBadgeText = browser.action.getBadgeText({});
-gettingBadgeText.then(gotBadgeText);
+browser.action.getBadgeText({}).then(gotBadgeText);
 ```
 
 {{WebExtExamples}}

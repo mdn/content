@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let updating = browser.bookmarks.update(
+browser.bookmarks.update(
   id,                    // string
   changes                // object
 )

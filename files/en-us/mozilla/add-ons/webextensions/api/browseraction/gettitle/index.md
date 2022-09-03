@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let gettingTitle = browser.browserAction.getTitle(
+browser.browserAction.getTitle(
   details               // object
 )
 ```
@@ -68,8 +68,7 @@ function toggleTitle(title) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let gettingTitle = browser.browserAction.getTitle({});
-  gettingTitle.then(toggleTitle);
+  browser.browserAction.getTitle({}).then(toggleTitle);
 });
 ```
 

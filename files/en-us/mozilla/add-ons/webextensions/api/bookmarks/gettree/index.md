@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let gettingTree = browser.bookmarks.getTree()
+browser.bookmarks.getTree()
 ```
 
 ### Parameters
@@ -68,8 +68,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let gettingTree = browser.bookmarks.getTree();
-gettingTree.then(logTree, onRejected);
+browser.bookmarks.getTree().then(logTree, onRejected);
 ```
 
 {{WebExtExamples}}

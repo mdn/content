@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let getAlarm = browser.alarms.get(
+browser.alarms.get(
   name                   // optional string
 )
 ```
@@ -46,8 +46,7 @@ function gotAlarm(alarm) {
   }
 }
 
-let getAlarm = browser.alarms.get("my-periodic-alarm");
-getAlarm.then(gotAlarm);
+browser.alarms.get("my-periodic-alarm").then(gotAlarm);
 ```
 
 {{WebExtExamples}}

@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let gettingSubTree = browser.bookmarks.getSubTree(
+browser.bookmarks.getSubTree(
   id                     // string
 )
 ```
@@ -72,7 +72,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let subTreeID = "root_____";
+const subTreeID = "root_____";
 
 browser.bookmarks.getSubTree(subTreeID).then(logSubTree, onRejected);
 ```

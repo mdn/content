@@ -19,7 +19,7 @@ Returns the time since the last request was completed.
 ## Syntax
 
 ```js-nolint
-let state = browser.captivePortal.getLastChecked()
+browser.captivePortal.getLastChecked()
 ```
 
 ### Return value

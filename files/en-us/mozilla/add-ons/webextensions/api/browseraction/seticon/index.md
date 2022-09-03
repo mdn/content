@@ -29,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let settingIcon = browser.browserAction.setIcon(
+browser.browserAction.setIcon(
   details         // object
 )
 ```
@@ -46,7 +46,7 @@ let settingIcon = browser.browserAction.setIcon(
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-        ```json
+        ```
         {
           16: image16,
           32: image32
@@ -61,7 +61,7 @@ let settingIcon = browser.browserAction.setIcon(
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-        ```json
+        ```
         {
           16: "path/to/image16.jpg",
           32: "path/to/image32.jpg"
@@ -132,8 +132,8 @@ The code below sets the icon using an [`ImageData`](/en-US/docs/Web/API/ImageDat
 
 ```js
 function getImageData() {
-  let canvas = document.createElement("canvas");
-  let ctx = canvas.getContext("2d");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
 
   ctx.fillStyle = "green";
   ctx.fillRect(10, 10, 100, 100);

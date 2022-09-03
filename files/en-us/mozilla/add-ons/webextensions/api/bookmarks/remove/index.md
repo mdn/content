@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let removingBookmark = browser.bookmarks.remove(
+browser.bookmarks.remove(
   id                 // string
 )
 ```
@@ -52,10 +52,9 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let bookmarkId = "abcdefghijkl";
+const bookmarkId = "abcdefghijkl";
 
-let removingBookmark = browser.bookmarks.remove(bookmarkId);
-removingBookmark.then(onRemoved, onRejected);
+browser.bookmarks.remove(bookmarkId).then(onRemoved, onRejected);
 ```
 
 {{WebExtExamples}}

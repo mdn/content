@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let createContext = browser.contextualIdentities.update(
+browser.contextualIdentities.update(
   cookieStoreId,           // string
   details                  // object
 )

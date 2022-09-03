@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let getBookmarks = browser.bookmarks.get(
+browser.bookmarks.get(
   idOrIdList                // string or string array
 )
 ```
@@ -50,8 +50,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
-gettingBookmarks.then(onFulfilled, onRejected);
+browser.bookmarks.get("bookmarkAAAA").then(onFulfilled, onRejected);
 ```
 
 {{WebExtExamples}}

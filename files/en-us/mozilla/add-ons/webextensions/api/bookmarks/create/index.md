@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let createBookmark = browser.bookmarks.create(
+browser.bookmarks.create(
   bookmark                  // CreateDetails object
 )
 ```
@@ -50,12 +50,11 @@ function onCreated(node) {
   console.log(node);
 }
 
-let createBookmark = browser.bookmarks.create({
+browser.bookmarks.create({
   title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
-});
-
-createBookmark.then(onCreated);
+  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
+})
+.then(onCreated);
 ```
 
 {{WebExtExamples}}

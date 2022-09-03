@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let clearAlarms = browser.alarms.clearAll()
+browser.alarms.clearAll()
 ```
 
 ### Parameters
@@ -41,8 +41,7 @@ function onClearedAll(wasCleared) {
   console.log(wasCleared); // true/false
 }
 
-let clearAlarms = browser.alarms.clearAll();
-clearAlarms.then(onClearedAll);
+browser.alarms.clearAll().then(onClearedAll);
 ```
 
 {{WebExtExamples}}

@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let searching = browser.bookmarks.search(
+browser.bookmarks.search(
   query                  // string or object
 )
 ```
