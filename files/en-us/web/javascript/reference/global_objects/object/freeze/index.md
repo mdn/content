@@ -43,7 +43,7 @@ The object that was passed to the function.
 Freezing an object is equivalent to [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and then changing all existing [properties' descriptors'](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) `configurable` to `false` — and for data properties, `writable` to `false` as well. Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}} exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}}).
 
 For data properties of a frozen object, their values cannot be changed since the writable and
-configurable attributes are set to false. Accessor properties (getters and setters) work the same (and still give the illusion that you are changing the value).Note that values
+configurable attributes are set to false. Accessor properties (getters and setters) work the same — the property value returned by the getter may still change, and the setter can still be called without throwing errors when setting the property. Note that values
 that are objects can still be modified, unless they are also frozen. As an object, an
 array can be frozen; after doing so, its elements cannot be altered and no elements can
 be added to or removed from the array.
