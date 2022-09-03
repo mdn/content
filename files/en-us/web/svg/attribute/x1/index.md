@@ -93,7 +93,7 @@ html,body,svg { height:100% }
 
 ## linearGradient
 
-For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the starting point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
+For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the starting point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
 <table class="properties">
   <tbody>

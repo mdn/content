@@ -34,23 +34,23 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.1.10":
-  version "5.1.10"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.10.tgz#75a08680dfc967180e8dc89eaffb56431e8ff5ba"
-  integrity sha512-o3U01sgGh9KHJRP+Oz4LA7QCX3nN+F2skVINle9jO8D33aXQfqwnq9qFXhFk98jEG2tcuWzUwTG2UZzzyineiA==
+"@mdn/browser-compat-data@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.0.tgz#938f8074437a13e34e435782040b5b337b6cd438"
+  integrity sha512-CVEdy5/Q2cZJXzynD3zpPWHhNpoY1AApKRW0YCWN0HdrlP+VF2+6tX5U5d7XmSL91c2kqdb7yTi93mrAhHX8zw==
 
-"@mdn/yari@1.17.3":
-  version "1.17.3"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.17.3.tgz#eb9fd55632aecd73789ae28dcf32cb6d3823e03d"
-  integrity sha512-v4CHj0E57CEDVLenlvwcc4R4Uli+bZqhWl1d9CwDhDYmGpOBUVep/ka6YWCSZLaPXO5dIp0icqGDdGC87LAPKQ==
+"@mdn/yari@1.18.9":
+  version "1.18.9"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.9.tgz#59baef51e413afb6204c922fe09486da4f9f6418"
+  integrity sha512-uQoX00AHr5em5Oj8IsWQakoqhaVptzxHDk60ZCYk0pPKGFxjvl7335u8bWcl5trR8sr5ZGSJSjImi/fVejtaHA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.1.10"
+    "@mdn/browser-compat-data" "^5.2.0"
     "@use-it/interval" "^1.0.0"
-    "@webref/css" "^5.0.1"
+    "@webref/css" "^5.1.0"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.18.0"
+    browser-specs "^3.21.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -60,7 +60,7 @@
     css-tree "^2.2.1"
     dayjs "^1.11.5"
     dexie "^3.2.2"
-    dotenv "^16.0.1"
+    dotenv "^16.0.2"
     ejs "^3.1.8"
     express "^4.18.1"
     fdir "^5.2.0"
@@ -86,7 +86,7 @@
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
-    mdn-data "^2.0.28"
+    mdn-data "^2.0.29"
     node-gettext "^3.0.0"
     open "^8.4.0"
     open-editor "^3.0.0"
@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-1.0.0.tgz#c42c68f22ca29a0dc929041746373d94496d2b3a"
   integrity sha512-WQFcnSt/xM/mS8ZtJ0ut5lhPrl+V0HDPPcI/J0eUClsfiD+/r8A7IeW/pVcfpSVGWRmN3+WnjNteWuKyWs2WZg==
 
-"@webref/css@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.0.1.tgz#867df2c74e0d4ab43b856c62dd21bbb758014bcd"
-  integrity sha512-x6begnIDBt051elWBEOwVuMvDwIb9gzcBZsEAurIcMCzd5CzRTJXEdi507V5QuHt2AgKwdFXMMCFE9gXNwtuHA==
+"@webref/css@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.1.0.tgz#3d0e08bbd8be8776e94b03d40435365ed9bcbaad"
+  integrity sha512-0R1VfNZhF8jJksmr2oAe7n8mw+CRgJ7Ug1CS3Csz6fKJtlO2xQmSdvDVzdO7fUEAMdgTURqJqsxYzTA4U/fsUQ==
 
 accept-language-parser@^1.5.0:
   version "1.5.0"
@@ -578,10 +578,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.18.0:
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.18.0.tgz#473f8db9dc0292baf39ec3804eac0dc13905549a"
-  integrity sha512-XIwvzRZMUb7JBVVB/JyKmalGSoHQcxrDFmIc9W87uhRqbAtXgNv/L2UmEg5Z8ifkuANCkVXJjkrtQOMfhn2qPg==
+browser-specs@^3.21.0:
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.21.0.tgz#b095fff688755b531125244dfd2e92fac2efdf82"
+  integrity sha512-6dok7o/bWj1MvIrM65QdwF+1Q9DlSZfetiu/9RXAi9YfTtdHa0IsbHlOcS+U2uhBQ8siiQ1LWh58GpuXmXZRGw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1354,10 +1354,10 @@ domutils@^3.0.1:
     domelementtype "^2.3.0"
     domhandler "^5.0.1"
 
-dotenv@^16.0.1:
-  version "16.0.1"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.1.tgz#8f8f9d94876c35dac989876a5d3a82a267fdce1d"
-  integrity sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==
+dotenv@^16.0.2:
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.2.tgz#0b0f8652c016a3858ef795024508cddc4bffc5bf"
+  integrity sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==
 
 download@^6.2.2:
   version "6.2.5"
@@ -3199,10 +3199,15 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.28, mdn-data@^2.0.28:
+mdn-data@2.0.28:
   version "2.0.28"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.28.tgz#5ec48e7bef120654539069e1ae4ddc81ca490eba"
   integrity sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==
+
+mdn-data@^2.0.29:
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.29.tgz#cbe9b6a7d29d1d38ed414f3c2678cac1d92e9ba0"
+  integrity sha512-7n1iU+/dq8AGSgYv/ZOagoaugnJQooGMTr/O29TTHDWV3gnz5gN4bTyhI2zCQH/P6hSDqzqCxJ2xMa2BFG/zlQ==
 
 mdurl@^1.0.0, mdurl@^1.0.1:
   version "1.0.1"

@@ -30,12 +30,12 @@ The `glyphRef` element provides a single possible glyph to the referencing {{ SV
 
 ### Specific attributes
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
-- {{SVGAttr("glyphRef")}}
-- {{SVGAttr("format")}}
+- {{SVGAttr("x")}} {{Deprecated_Inline}}
+- {{SVGAttr("y")}} {{Deprecated_Inline}}
+- {{SVGAttr("dx")}} {{Deprecated_Inline}}
+- {{SVGAttr("dy")}} {{Deprecated_Inline}}
+- {{SVGAttr("glyphRef")}} {{Deprecated_Inline}}
+- {{SVGAttr("format")}} {{Deprecated_Inline}}
 - {{SVGAttr("xlink:href")}}
 
 ## DOM Interface

@@ -377,7 +377,7 @@ We have already partially answered this question — it is easier to find the da
 
 > **Note:** Table headings come with some default styling — they are bold and centered even if you don't add your own styling to the table, to help them stand out.
 
-Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. screen readers are then able to read out a whole row or column of data at once, which is pretty useful.
+Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. Screen readers are then able to read out a whole row or column of data at once, which is pretty useful.
 
 ## Allowing cells to span multiple rows and columns
 

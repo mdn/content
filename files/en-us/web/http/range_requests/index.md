@@ -130,4 +130,4 @@ The {{HTTPHeader("Transfer-Encoding")}} header allows chunked encoding, which is
 
 - Related status codes {{HTTPStatus("200")}}, {{HTTPStatus("206")}}, {{HTTPStatus("416")}}.
 - Related headers: {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.
-- [Download resumption in Internet Explorer](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/download-resumption-in-internet-explorer)
+- [Download resumption in Internet Explorer](https://docs.microsoft.com/archive/blogs/ieinternals/download-resumption-in-internet-explorer)

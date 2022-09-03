@@ -8,9 +8,10 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.box-align
 ---
-{{CSSRef}}{{Non-standard_header}}
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard.
 
@@ -68,7 +69,10 @@ If the alignment is set using the element's `align` attribute, then the style is
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-align = 
+  start | center | end | baseline | stretch
+```
 
 ## Examples
 

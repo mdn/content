@@ -73,7 +73,7 @@ A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attri
 - `supported`
   - : `true` if the media content can be decoded at all. Otherwise, it is `false`.
 - `smooth`
-  - : `true` if playback of the media will be smooth (of high quality). Otherwise is is `false`.
+  - : `true` if playback of the media will be smooth (of high quality). Otherwise it is `false`.
 - `powerEfficient`
   - : `true` if playback of the media will be power efficient. Otherwise, it is `false`.
 

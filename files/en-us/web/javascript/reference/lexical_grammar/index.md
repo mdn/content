@@ -526,7 +526,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-There are three cases when semicolon are automatically inserted:
+There are three cases when semicolons are automatically inserted:
 
 1\. When a token not allowed by the grammar is encountered, and it's separated from the previous token by at least one [line terminator](#line_terminators), or the token is "}", then a semicolon is inserted before the token.
 

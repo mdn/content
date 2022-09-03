@@ -28,11 +28,11 @@ The **`<missing-glyph>`** [SVG](/en-US/docs/Web/SVG) element's content is render
 
 ### Specific attributes
 
-- {{SVGAttr("d")}}
-- {{SVGAttr("horiz-adv-x")}}
-- {{SVGAttr("vert-origin-x")}}
-- {{SVGAttr("vert-origin-y")}}
-- {{SVGAttr("vert-adv-y")}}
+- {{SVGAttr("d")}} {{Deprecated_Inline}}
+- {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-y")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-adv-y")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

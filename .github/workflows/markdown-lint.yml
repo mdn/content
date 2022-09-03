@@ -1,4 +1,4 @@
-name: Markdown lint (project files)
+name: Markdownlint (All files)
 
 on:
   pull_request:
@@ -6,8 +6,8 @@ on:
       - main
     paths:
       - .markdownlint.json
+      - package.json
       - yarn.lock
-      - "**/*.md"
       - .github/workflows/markdown-lint.yml
       - .github/workflows/markdownlint-problem-matcher.json
 

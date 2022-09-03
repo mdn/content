@@ -801,20 +801,22 @@ can respond to the change).
 ### Memory issues
 
 ```js
-const els = document.getElementsByTagName('*');
+const elts = document.getElementsByTagName('*');
 
 // Case 1
-for (let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", (e) => {/*do something*/}, false);
+for (const elt of elts) {
+  elt.addEventListener("click", (e) => {
+    // Do something
+  }, false);
 }
 
 // Case 2
-function processEvent(e){
-  /* do something */
+function processEvent(e) {
+  // Do something
 }
 
-for (let i = 0 ; i < els.length; i++){
-  els[i].addEventListener("click", processEvent, false);
+for (const elt of elts) {
+  elt.addEventListener("click", processEvent, false);
 }
 ```
 
@@ -829,7 +831,7 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a *static* function reference.
+the real issue; rather it is the lack of keeping a _static_ function reference.
 
 ### Improving scrolling performance with passive listeners
 

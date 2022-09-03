@@ -179,6 +179,10 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 - `String.prototype.quote` is removed from Firefox 37.
 - Non-standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are obsolete.
 
+### WeakMap
+
+- `WeakMap.prototype.clear()` was added in Firefox 20 and removed in Firefox 46. It is not possible to traverse all keys in a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap).
+
 ### Date
 
 - `Date.prototype.toLocaleFormat()` is obsolete. Use [`toLocaleString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.

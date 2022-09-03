@@ -54,7 +54,7 @@ Throws {{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Refer
 ## Description
 
 Unlike what common belief suggests (perhaps due to other programming languages like
-[delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)),
+[delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)),
 the `delete` operator has **nothing** to do with directly freeing memory.
 Memory management is done indirectly via breaking references.
 See the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.

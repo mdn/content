@@ -18,10 +18,10 @@ The SVG styling attributes are all the attributes that can be specified on any S
 
 - {{SVGAttr('class')}}
   - : Assigns a class name or set of class names to an element. It functions identically to the {{htmlattrxref('class')}} attribute in HTML.
-    *Value*: Any valid ID string; *Animatable*: **Yes**
+    _Value_: Any valid ID string; _Animatable_: **Yes**
 - {{SVGAttr('style')}}
   - : It specifies style information for its element. It functions identically to the {{htmlattrxref('style')}} attribute in HTML.
-    *Value*: Any valid style string; *Animatable*: **No**
+    _Value_: Any valid style string; _Animatable_: **No**
 
 ## Browser compatibility
 

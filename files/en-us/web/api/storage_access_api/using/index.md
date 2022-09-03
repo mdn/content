@@ -51,7 +51,7 @@ if (document.hasStorageAccess == null) {
       doThingsWithFirstPartyStorageAccess();
     } else {
       // As we don't have access, we need to request it. This request has to happen within
-      // an event handler for a user interaction (e.g clicking)
+      // an event handler for a user interaction (e.g., clicking)
       btn.addEventListener('click', () => {
         document.requestStorageAccess().then(() => {
           doThingsWithFirstPartyStorageAccess();

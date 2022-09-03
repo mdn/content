@@ -92,3 +92,4 @@ In early versions of the spec, loading a cross-origin worker script threw a `Sec
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Functions and classes available to Web Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - Other kind of workers: {{domxref("SharedWorker")}} and [Service Worker](/en-US/docs/Web/API/Service_Worker_API).
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface

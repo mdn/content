@@ -21,21 +21,21 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 ## Constructor
 
-- {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}}
+- {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}} {{Experimental_Inline}}
   - : Creates a new `SpeechGrammarList` object.
 
 ## Properties
 
-- {{domxref("SpeechGrammarList.length")}} {{ReadOnlyInline}}
+- {{domxref("SpeechGrammarList.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of {{domxref("SpeechGrammar")}} objects contained in the `SpeechGrammarList`.
 
 ## Methods
 
-- {{domxref("SpeechGrammarList.item()")}}
+- {{domxref("SpeechGrammarList.item()")}} {{Experimental_Inline}}
   - : Standard getter — allows individual {{domxref("SpeechGrammar")}} objects to be retrieved from the `SpeechGrammarList` using array syntax.
-- {{domxref("SpeechGrammarList.addFromURI()")}}
+- {{domxref("SpeechGrammarList.addFromURI()")}} {{Experimental_Inline}}
   - : Takes a grammar present at a specific URI and adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
-- {{domxref("SpeechGrammarList.addFromString()")}}
+- {{domxref("SpeechGrammarList.addFromString()")}} {{Experimental_Inline}}
   - : Adds a grammar in a string to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 
 ## Examples
