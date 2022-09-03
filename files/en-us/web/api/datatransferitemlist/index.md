@@ -50,7 +50,7 @@ function dragstartHandler(ev) {
   // know which element to add to its tree
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-  
+
   // Add some other items to the drag payload
   dataList.add("<p>Paragraph…</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
@@ -92,7 +92,7 @@ function dragoverHandler(ev) {
 function dragendHandler(ev) {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
-  
+
   // Clear any remaining drag data
   dataList.clear();
 }

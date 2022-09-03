@@ -88,7 +88,7 @@ function toBinary(string) {
     (element, index) => string.charCodeAt(i),
   );
   const charCodes = new Uint8Array(codeUnits.buffer);
-  
+
   let result = "";
   charCodes.forEach((char) => {
     result += String.fromCharCode(char);
