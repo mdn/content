@@ -48,7 +48,7 @@ This example shows the use of the `clear()` method.
    <p id="source" ondragstart="dragstartHandler(event);" ondragend="dragendHandler(event);" draggable="true">
      Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
  </div>
- <div id="target" ondrop="dropHhandler(event);" ondragover="dragoverHandler(event);">Drop Zone</div>
+ <div id="target" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">Drop Zone</div>
 ```
 
 #### CSS
