@@ -96,7 +96,7 @@ function printPerformanceEntry(ev) {
       properties.forEach((prop) => {
         // Check each property in window.performance
         const supported = prop in perfEntry;
-        log(`… ${prop} = ${suppported ? perfEntry[prop] : "Not supported"}`);
+        log(`… ${prop} = ${supported ? perfEntry[prop] : "Not supported"}`);
       });
     });
 }
