@@ -9,7 +9,7 @@ tags:
 ---
 {{learnsidebar}}
 
-This aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) article.
+The aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) article.
 
 > **Note:** You can try out solutions for the tasks below by downloading the code, putting it in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/), then working on the tasks.
 >
