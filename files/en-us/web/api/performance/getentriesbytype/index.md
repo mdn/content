@@ -65,7 +65,7 @@ function usePerformanceEntryMethods() {
       console.log(`Entry[${i}]`);
       checkPerformanceEntry(entry);
     });
-    
+
   // Use getEntries(name, entryType) to get specific entries
   performance.getEntries({ name: "Begin", entryType: "mark" })
     .forEach((entry, i) => {

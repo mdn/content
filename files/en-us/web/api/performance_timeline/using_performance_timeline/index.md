@@ -153,7 +153,7 @@ function PerformanceObservers() {
       printPerfEntry(entry);
     });
   });
-  
+
   // Subscribe to all performance event types
   observeAll.observe({
     entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'],
@@ -166,7 +166,7 @@ function PerformanceObservers() {
       printPerfEntry(entry);
     });
   });
-  
+
   // Subscribe to only the 'mark' event
   observeMark.observe({ entryTypes: ['mark'] });
 }
