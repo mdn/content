@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageBitmapRenderingContext
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageBitmapRenderingContext`** interface is a canvas rendering context that provides the functionality to replace the canvas's contents with the given {{domxref("ImageBitmap")}}. Its context id (the first argument to {{domxref("HTMLCanvasElement.getContext()")}} or {{domxref("OffscreenCanvas.getContext()")}}) is `"bitmaprenderer"`.
@@ -31,4 +32,4 @@ This interface is available in both the window and the [worker](/en-US/docs/Web/
 
 ## See also
 
-- {{domxref("OffScreenCanvas")}}
+- {{domxref("OffscreenCanvas")}}

@@ -49,10 +49,10 @@ html,body,svg { height:100% }
 - {{SVGAttr("method")}}
   - : Which method to render individual glyphs along the path.
     _Value type_: `align`|`stretch` ; _Default value_: `align`; _Animatable_: **yes**
-- {{SVGAttr("path")}}
+- {{SVGAttr("path")}} {{Experimental_Inline}}
   - : The path on which the text should be rendered.
     _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Content_type#path_data) ; _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("side")}}
+- {{SVGAttr("side")}} {{Experimental_Inline}}
   - : Which side of the path the text should be rendered.
     _Value type_: `left`|`right` ; _Default value_: `left`; _Animatable_: **yes**
 - {{SVGAttr("spacing")}}

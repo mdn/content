@@ -23,7 +23,7 @@ Each exception has a **name**, which is a short "PascalCase"-style string identi
 
 ## Constructor
 
-- {{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}
+- {{domxref("DOMException.DOMException()", "DOMException()")}}
   - : Returns a `DOMException` object with a specified message and name.
 
 ## Properties

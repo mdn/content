@@ -148,7 +148,7 @@ The use cases of `WeakSet` objects are limited. They will not leak memory, so it
 
 ## Key and value equality of Map and Set
 
-Both the key equality of `Map` objects and the value equality of `Set` objects, are based on the "[same-value-zero algorithm](https://tc39.es/ecma262/#sec-samevaluezero)":
+Both the key equality of `Map` objects and the value equality of `Set` objects are based on the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)":
 
 - Equality works like the identity comparison operator `===`.
 - `-0` and `+0` are considered equal.

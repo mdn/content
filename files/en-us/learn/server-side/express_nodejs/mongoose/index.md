@@ -346,7 +346,7 @@ If you specify a callback, as shown above, the query will execute immediately. T
 
 > **Note:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
 
-> **Note:** It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
+> **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
 
 If you don't specify a callback then the API will return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
 
@@ -597,7 +597,7 @@ Open **/app.js** (in the root of your project) and copy the following text below
 // Set up mongoose connection
 const mongoose = require('mongoose');
 const mongoDB = 'insert_your_database_url_here';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```

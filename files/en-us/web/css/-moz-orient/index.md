@@ -34,7 +34,10 @@ The `-moz-orient` property is specified as one of the keyword values chosen from
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-orient =
+  inline | block | horizontal | vertical
+```
 
 ## Examples
 

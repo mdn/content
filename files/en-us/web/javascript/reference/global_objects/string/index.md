@@ -149,6 +149,27 @@ the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 console.log(eval(s2.valueOf()))  // returns the number 4
 ```
 
+### String coercion
+
+Many built-in operations that expect strings would first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+
+- Strings are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `"null"`.
+- `true` turns into `"true"`; `false` turns into `"false"`.
+- Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+- [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
+- [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
+- Objects are first converted to a primitive by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+
+There are several ways to achieve nearly the same effect in JavaScript.
+
+- [Template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals): `` `${x}` `` does exactly the string coercion steps explained above for the embedded expression.
+- The [`String()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function: `String(x)` uses the same algorithm to convert `x`, except that [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) don't throw a {{jsxref("TypeError")}}, but return `"Symbol(description)"`, where `description` is the [description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) of the Symbol.
+- Using the [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition): `"" + x` coerces its operand to a _primitive_ instead of a _string_, and, for some objects, has entirely different behaviors from normal string coercion. See its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) for more details.
+
+Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in behavior) or `String(x)` (to handle symbol values without throwing an error), but you should not use `"" + x`.
+
 ### Escape sequences
 
 Special characters can be encoded using escape sequences:

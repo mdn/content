@@ -6,7 +6,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-spec-urls: https://httpwg.org/specs/rfc7231.html#header.max-forwards
+spec-urls: https://httpwg.org/specs/rfc9110.html#field.max-forwards
 ---
 {{HTTPSidebar}}
 
@@ -31,6 +31,8 @@ If the `Max-Forwards` header is not present in a `TRACE` request, a node will as
 
 ```http
 Max-Forwards: <integer>
+```
+
 ## Examples
 
 ```http

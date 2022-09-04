@@ -134,12 +134,6 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
         > **Note:** Not all browsers support prerendering.
 
-    - `unloaded`
-
-      - : The page is in the process of being unloaded from memory.
-
-        > **Note:** Not all browsers support the `unloaded` value.
-
 ## Events added to the Document interface
 
 The Page Visibility API adds the following events to the {{domxref("Document")}} interface:
