@@ -152,12 +152,12 @@ screen.addEventListener("orientationchange", () => {
 
 ### Preventing orientation change
 
-Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("Screen.lockOrientation()")}} method and unlocked using the {{domxref("Screen.unlockOrientation()")}}.
+Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("ScreenOrientation.lock()")}} method and unlocked using the {{domxref("Screen.orientation.unlock()")}}.
 
-The {{domxref("Screen.lockOrientation()")}} accepts a string (or series of strings) to define the kind of lock to apply. Accepted values are: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (See {{domxref("Screen.lockOrientation")}}  to know more about each of those values).
+The {{domxref("ScreenOrientation.lock()")}} accepts a string (or series of strings) to define the kind of lock to apply. Accepted values are: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (See {{domxref("ScreenOrientation.lock")}}  to know more about each of those values). It returns a {{domxref("promise")}} that resolves after the lock succeeds.
 
 ```js
-screen.lockOrientation('landscape');
+ScreenOrientation.lock('landscape');
 ```
 
 > **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
@@ -166,9 +166,7 @@ screen.lockOrientation('landscape');
 
 ## See also
 
-- {{domxref("Screen.orientation")}}
-- {{domxref("Screen.lockOrientation()")}}
-- {{domxref("Screen.unlockOrientation()")}}
+- {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
 - [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)
