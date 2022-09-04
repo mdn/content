@@ -55,6 +55,44 @@ const re = /\w+/;
 const re = new RegExp('\\w+');
 ```
 
+### Special handling for regexes
+
+> **Note:** Whether something is a "regex" can be [duck-typed](https://en.wikipedia.org/wiki/Duck_typing). It doesn't have to be a `RegExp`!
+
+Some built-in methods would treat regexes specially. They decide whether `x` is a regex through [multiple steps](https://tc39.es/ecma262/#sec-isregexp):
+
+1. `x` must be an object (not a primitive).
+2. If [`x[Symbol.match]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) is not `undefined`, check if it's [truthy](/en-US/docs/Glossary/Truthy).
+3. Otherwise, if `x[Symbol.match]` is `undefined`, check if `x` had been created with the `RegExp` constructor. (This step should rarely happen, since if `x` is a `RegExp` object that have not been tampered with, it should have a `Symbol.match` property.)
+
+Note that in most cases, it would go through the `Symbol.match` check, which means:
+
+- An actual `RegExp` object whose `Symbol.match` property's value is [falsy](/en-US/docs/Glossary/Falsy) but not `undefined` (even with everything else intact, like [`exec`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) and [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)) can be used as if it's not a regex.
+- A non-`RegExp` object with a `Symbol.match` property will be treated as if it's a regex.
+
+This choice was made because `@@match` is the most indicative property that something is intended to be used for matching. (`exec` could also be used, but because it's not a symbol property, there would be too many false positives.) The places that treat regexes specially include:
+
+- [`String.prototype.endsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith), [`startsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith), and [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) throw a {{jsxref("TypeError")}} if the first argument is a regex.
+- [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) and [`replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) check whether the [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) flag is set if the first argument is a regex before invoking its [`@@matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) or [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method.
+- The [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor directly returns the `pattern` argument only if `pattern` is a regex (among a few other conditions). If `pattern` is a regex, it would also interrogate `pattern`'s `source` and `flags` properties instead of coercing `pattern` to a string.
+
+For example, [`String.prototype.endsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) would coerce all inputs to strings, but it would throw if the argument is a regex, because it's only designed to match strings, and using a regex is likely a developer mistake.
+
+```js
+"foobar".endsWith({ toString: () => "bar" }); // true
+"foobar".endsWith(/bar/); // TypeError: First argument to String.prototype.endsWith must not be a regular expression
+```
+
+You can get around the check by setting `@@match` to a [falsy](/en-US/docs/Glossary/Falsy) value that's not `undefined`. This would mean that the regex cannot be used for `String.prototype.match()` (since without `@@match`, `match()` would construct a new `RegExp` object with the two enclosing slashes added by [`re.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString)), but it can be used for virtually everything else.
+
+```js
+const re = /bar/g;
+re[Symbol.match] = false;
+"/bar/g".endsWith(re); // true
+re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
+"bar & bar".replace(re, "foo"); // 'foo & foo'
+```
+
 ### Perl-like RegExp properties
 
 Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties).
