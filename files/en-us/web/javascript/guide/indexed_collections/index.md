@@ -291,7 +291,7 @@ const myArray = ['a', 'b', 'c', 'd', 'e'];
 myArray.at(-2); // "d", the second-last element of myArray
 ```
 
-The [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) removes elements from an array and (optionally) method replaces them. It returns the items which were removed from the array.
+The [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.
 
 ```js
 const myArray = ['1', '2', '3', '4', '5'];
