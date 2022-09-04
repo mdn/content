@@ -290,9 +290,9 @@ console.log(3 in trees); // true
 ```
 
 If instead, you want to remove an array element by changing the contents of the array,
-use the {{jsxref("Array/splice()", "splice()")}} method. In the following example,
+use the {{jsxref("Array/splice", "splice()")}} method. In the following example,
 `trees[3]` is removed from the array completely using
-{{jsxref("Array/splice()", "splice()")}}:
+{{jsxref("Array/splice", "splice()")}}:
 
 ```js
 const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];

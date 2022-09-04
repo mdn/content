@@ -644,16 +644,16 @@ are no brackets "()" after the function name so the actual function is not calle
 
 ## See also
 
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Function")}}
 - {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions/Arrow_functions", "Arrow functions")}}
-- {{jsxref("Functions/Default_parameters", "Default parameters")}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters")}}
-- {{jsxref("Functions/arguments", "Arguments object")}}
-- {{jsxref("Functions/get", "getter")}}
-- {{jsxref("Functions/set", "setter")}}
-- {{jsxref("Functions/Method_definitions", "Method definitions")}}
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [The `arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
