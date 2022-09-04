@@ -24,7 +24,7 @@ getUTCDay()
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer number corresponding to the day
 of the week for the given date, according to universal time: 0 for Sunday, 1 for Monday,
 2 for Tuesday, and so on.
