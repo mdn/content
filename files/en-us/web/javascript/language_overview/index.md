@@ -585,7 +585,7 @@ function avg(firstValue, secondValue, thirdValue = 0) {
   return (firstValue + secondValue + thirdValue) / 3;
 }
 
-avg(1, 2); // 1.5, instead of NaN
+avg(1, 2); // 1, instead of NaN
 ```
 
 ### Anonymous functions
