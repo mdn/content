@@ -597,7 +597,7 @@ Open **/app.js** (in the root of your project) and copy the following text below
 // Set up mongoose connection
 const mongoose = require('mongoose');
 const mongoDB = 'insert_your_database_url_here';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```
