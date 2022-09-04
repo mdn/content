@@ -37,7 +37,7 @@ The result of the C-like 32-bit multiplication of the given arguments.
 ## Description
 
 `Math.imul()` allows for 32-bit integer multiplication with C-like
-semantics. This feature is useful for projects like [Emscripten](https://en.wikipedia.org/wiki/Emscripten).
+semantics. This feature is useful for projects like [Emscripten](https://en.wikipedia.org/wiki/Emscripten) or bit intensive manipulations with multiplications as used by [MurmurHash](https://en.wikipedia.org/wiki/MurmurHash), where normal multiplication can lead to many more hash collisions.
 
 Because `imul()` is a static method of `Math`, you always use it
 as `Math.imul()`, rather than as a method of a `Math` object you
