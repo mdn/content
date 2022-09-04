@@ -26,7 +26,7 @@ The **`<font-face-name>`** element points to a locally installed copy of this fo
 
 ### Specific attributes
 
-- {{SVGATTR("name")}}
+- {{SVGATTR("name")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

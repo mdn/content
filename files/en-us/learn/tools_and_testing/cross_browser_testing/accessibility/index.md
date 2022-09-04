@@ -126,7 +126,7 @@ Certain HTML features can be selected using only the keyboard — this is defaul
 
 You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
-![](button-focused-unfocused.png)
+![A screenshot of three buttons demonstrating sample of the default behavior of interactive native elements. The third button is highlighted by a blue border to indicate its focus state.](button-focused-unfocused.png)
 
 > **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
@@ -220,7 +220,7 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
-![](20191022144107.png)
+![A screenshot demonstrating an example of accessible hiding and showing content in tabs. The example has three tabs namely Tab 1, Tab 2 and Tab 3. Tab 1 is currently focused and activated to display content.](20191022144107.png)
 
 Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.
 
@@ -303,7 +303,7 @@ Let's look at an example, using Wave.
 
 These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) example. We got the following results:
 
-![](axe-screenshot.png)
+![A screenshot of accessibility issues identified by the Axe tool.](axe-screenshot.png)
 
 aXe is also installable using `npm`, and can be integrated with task runners like [Grunt](https://gruntjs.com/) and [Gulp](https://gulpjs.com/), automation frameworks like [Selenium](https://www.selenium.dev/) and [Cucumber](https://cucumber.io/), unit testing frameworks like [Jasmine](https://jasmine.github.io/), and more besides (again, see the [main aXe page](https://www.deque.com/axe/) for details).
 
@@ -331,7 +331,7 @@ To turn it on, press Cmd + F5. If you've not used VO before, you will be given a
 
 When VO is on, the display will look mostly the same, but you'll see a black box at the bottom left of the screen that contains information on what VO currently has selected. The current selection will also be highlighted, with a black border — this highlight is known as the **VO cursor**.
 
-![](voiceover.png)
+![A sample screenshot demonstrating accessibility testing using VoiceOver on the MDN homepage. The bottom left of the image is a highlight of the information selected on the webpage.](voiceover.png)
 
 To use VO, you will make a lot of use of the "VO modifier" — this is a key or key combination that you need to press in addition to the actual VO keyboard shortcuts to get them to work. Using a modifier like this is common with screen readers, to enable them to keep their commands from clashing with other commands. In the case of VO, the modifier can either be CapsLock, or Ctrl + Option.
 

@@ -3307,4 +3307,4 @@ On Windows, some values of virtual keycode are defined (reserved) for OEM specif
 
 Starting Gecko 21 (and older than 15), OEM specific key values are available on the keyCode attribute only on Windows. So they are not useful for usual web applications. They are useful only for intranet applications or in similar situations.
 
-See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10))" in MSDN for the detail.
+See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](https://docs.microsoft.com/previous-versions/windows/embedded/aa452679(v=msdn.10))" in MSDN for the detail.

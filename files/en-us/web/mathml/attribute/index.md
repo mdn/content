@@ -50,9 +50,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
     <tr>
       <td><code>align</code> {{deprecated_inline}}</td>
       <td>
-        {{ MathMLElement("mtable") }}<br />{{ MathMLElement("munder") }},
-        {{ MathMLElement("mover") }},
-        {{ MathMLElement("munderover") }}
+        {{ MathMLElement("mtable") }}
       </td>
       <td>
         Specifies different alignments of several elements (see element pages
@@ -438,30 +436,6 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td>
         Specifies whether the operator stretches to the size of the adjacent
         element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>subscriptshift</code> {{deprecated_inline}}</td>
-      <td>
-        {{ MathMLElement("mmultiscripts") }},
-        {{ MathMLElement("msub") }},
-        {{ MathMLElement("msubsup") }}
-      </td>
-      <td>
-        The minimum space by which to shift the subscript below the baseline of
-        the expression.
-      </td>
-    </tr>
-    <tr>
-      <td><code>supscriptshift</code> {{deprecated_inline}}</td>
-      <td>
-        {{ MathMLElement("mmultiscripts") }},
-        {{ MathMLElement("msup") }},
-        {{ MathMLElement("msubsup") }}
-      </td>
-      <td>
-        The minimum space by which to shift the superscript above the baseline
-        of the expression.
       </td>
     </tr>
     <tr>

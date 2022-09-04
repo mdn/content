@@ -89,11 +89,10 @@ The example below draws three different paths, demonstrating each of the three
 
 ```js
 const ctx = document.getElementById('canvas').getContext('2d');
-const lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
-for (let i = 0; i < lineJoin.length; i++) {
-  ctx.lineJoin = lineJoin[i];
+['round', 'bevel', 'miter'].forEach((join, i) => {
+  ctx.lineJoin = join;
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);
   ctx.lineTo(35, 45 + i * 40);
@@ -101,7 +100,7 @@ for (let i = 0; i < lineJoin.length; i++) {
   ctx.lineTo(115, 45 + i * 40);
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
-}
+});
 ```
 
 {{EmbedLiveSample("Comparison_of_line_joins", "180", "180",

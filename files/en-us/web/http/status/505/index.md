@@ -6,7 +6,7 @@ tags:
   - Reference
   - Server error
   - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.6.6
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.505
 ---
 {{HTTPSidebar}}
 

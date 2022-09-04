@@ -31,7 +31,7 @@ matchAll(regexp)
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.matchAll` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp, 'g')`.
 
-    If `regexp` is a `RegExp` object (via the [`IsRegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match#disabling_the_isregexp_check) check), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
+    If `regexp` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
 
 ### Return value
 
@@ -40,7 +40,7 @@ An [iterable iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the `regexp` is a `RegExp` object that does not have the global (`g`) flag set.
+  - : Thrown if the `regexp` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes) that does not have the global (`g`) flag set (its [`flags`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) property does not contain `"g"`).
 
 ## Description
 

@@ -6,7 +6,7 @@ tags:
   - Client error
   - HTTP
   - Status code
-spec-urls: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 

@@ -30,7 +30,7 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 
 - {{domxref("AudioDecoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the audio decoder for decoding chunks.
-- {{domxref("AudioDecoder.decode()")}}
+- {{domxref("AudioDecoder.decode()")}} {{Experimental_Inline}}
   - : Enqueues a control message to decode a given chunk of audio.
 - {{domxref("AudioDecoder.flush()")}} {{Experimental_Inline}}
   - : Returns a promise that resolves once all pending messages in the queue have been completed.

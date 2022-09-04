@@ -23,7 +23,7 @@ An {{domxref("AudioParam")}}.
 
 ## Examples
 
-See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#example) for example code showing how to use an `AudioContext` to create a `GainNode`, which is then used to mute and unmute the audio by changing the gain property value.
+See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#examples) for example code showing how to use an `AudioContext` to create a `GainNode`, which is then used to mute and unmute the audio by changing the gain property value.
 
 ## Specifications
 
