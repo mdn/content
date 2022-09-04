@@ -150,7 +150,7 @@ To define the default value of an {{HTMLElement("input")}} element you have to u
 <input type="text" value="by default this element is filled with this text">
 ```
 
-On the other hand,  if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:
+On the other hand, if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:
 
 ```html
 <textarea>

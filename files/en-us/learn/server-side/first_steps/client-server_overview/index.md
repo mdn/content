@@ -123,7 +123,7 @@ At the end of the message we see the **body** content — which contains the act
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
-Vary: Accept,Cookie, Accept-Encoding
+Vary: Accept, Cookie, Accept-Encoding
 Content-Type: text/html; charset=utf-8
 Date: Wed, 07 Sep 2016 00:11:31 GMT
 Keep-Alive: timeout=5, max=999
