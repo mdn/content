@@ -94,7 +94,7 @@ try {
 
 - {{jsxref("Error")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("String.prototype.normalize()")}}

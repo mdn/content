@@ -1,5 +1,5 @@
 ---
-title: Intl.PluralRules.selectRange()
+title: Intl.PluralRules.prototype.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 tags:
   - Internationalization

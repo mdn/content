@@ -48,7 +48,7 @@ The following properties are deprecated. This does not affect their use in [repl
       <th>Description</th>
     </tr>
     <tr>
-      <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
+      <td>{{jsxref("RegExp/n", "$1-$9")}}</td>
       <td>
         <p>
           Parenthesized substring matches, if any.<br /><strong
@@ -102,7 +102,7 @@ The following properties are deprecated. This does not affect their use in [repl
   </tbody>
 </table>
 
-The {{jsxref("RegExp.compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
+The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
 ### Function
 
@@ -146,11 +146,11 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 | Property                                                     | Description                                                                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
-| {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}} (also via `RegExp.$*`) | Whether or not to search in strings across multiple lines.                                                         |
-| {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
+| {{jsxref("RegExp/global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
+| {{jsxref("RegExp/ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
+| {{jsxref("RegExp/lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
+| {{jsxref("RegExp/multiline", "multiline")}} (also via `RegExp.$*`) | Whether or not to search in strings across multiple lines.                                                         |
+| {{jsxref("RegExp/source", "source")}}             | The text of the pattern.                                                                                           |
 
 The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("Object.prototype.valueOf()")}}, which returns itself.
 

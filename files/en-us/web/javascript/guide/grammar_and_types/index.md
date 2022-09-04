@@ -630,7 +630,7 @@ The following are examples of string literals:
 
 You should use string literals unless you specifically need to use a `String` object. See {{jsxref("String")}} for details on `String` objects.
 
-You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `String.length` property with a string literal:
+You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `length` property with a string literal:
 
 ```js
 // Will print the number of symbols in the string including whitespace.

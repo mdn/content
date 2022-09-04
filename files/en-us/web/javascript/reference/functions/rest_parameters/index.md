@@ -68,8 +68,8 @@ There are three main differences between rest parameters and the
 
 - The `arguments` object is **not a real array**, while rest
   parameters are {{jsxref("Array")}} instances, meaning methods
-  like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
-  {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
+  like {{jsxref("Array/sort", "sort()")}}, {{jsxref("Array/map", "map()")}},
+  {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/pop", "pop()")}} can be
   applied on it directly.
 - The `arguments` object has additional functionality specific to itself
   (like the `callee` property).
@@ -159,7 +159,7 @@ myFun("one", "two");
 
 ### Argument length
 
-Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array.length", "length")}} property.
+Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array/length", "length")}} property.
 
 ```js
 function fun1(...theArgs) {

@@ -335,7 +335,7 @@ const bound = add.bind(obj);
 console.log(bound(1, 2, 3)); // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 

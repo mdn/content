@@ -518,7 +518,7 @@ console.log(MyClass.prototype.y); // 1
 
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
