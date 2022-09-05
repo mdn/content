@@ -23,9 +23,9 @@ A typical workflow for a loop looks like:
 4. Go to step 1.
 5. Execute the first statement after the loop statement.
 
-You can use control flow statements like [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/break) to break out of a loop (go to step 5) or to skip to the next loop iteration (go to step 1).
+`do...while` starts with step 2; everything else starts with step 1. You can use control flow statements like [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/break) to break out of a loop (go to step 5) or to skip to the next loop iteration (go to step 1).
 
-`do...while` starts with step 2; everything else starts with step 1. Step 2 and step 3, by their nature, should potentially change the condition's value. If the condition remains `false` forever, the loop is said to be _infinite_. Infinite loops can still be terminated through [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), or [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw).
+Step 2 and step 3, by their nature, should potentially change the condition's value. If the condition remains `false` forever, the loop is said to be _infinite_. Infinite loops can still be terminated through [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), or [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw).
 
 There are two other specialized loop syntaxes:
 
