@@ -230,7 +230,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Enables the style sheets for the specified style sheet set.
 - {{DOMxRef("Document.exitFullscreen()")}}
-  - : Stops document's fullscreen element from being displayed fullscreen.
+  - : Stops document’s fullscreen element from being displayed fullscreen.
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Remove the video from the floating picture-in-picture window back to its original container.
 - {{DOMxRef("Document.exitPointerLock()")}}
@@ -386,7 +386,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/freeze_event", "freeze")}} {{Experimental_Inline}}
   - : Fired when the document transitions to `FROZEN` state.
-- {{DOMxRef("Document/resume_event", "resume")}} {{Experimental_Inline}}
+- {{DOMxRef("Document/resume_event", "resume")}} {{Experimental_Inline}}  
   - : Fired when the document transitions from `FROZEN` to `ACTIVE` state.
 
 ### Load & unload events
