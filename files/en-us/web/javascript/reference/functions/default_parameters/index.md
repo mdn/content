@@ -19,7 +19,7 @@ browser-compat: javascript.functions.default_parameters
 
 ```js
 function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) {
-  /* … */
+  // …
 }
 ```
 
