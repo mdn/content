@@ -127,7 +127,7 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
   - : Whether or not the search is sticky.
 - {{JSxRef("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
-- {{jsxref("RegExp.lastIndex", "RegExp: lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
   - : The index at which to start the next match.
 
 ## Instance methods

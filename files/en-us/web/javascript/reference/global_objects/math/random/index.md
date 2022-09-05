@@ -22,7 +22,7 @@ generation algorithm; it cannot be chosen or reset by the user.
 
 > **Note:** `Math.random()` _does not_ provide cryptographically secure random
 > numbers. Do not use them for anything related to security. Use the Web Crypto API
-> instead, and more precisely the {{domxref("Crypto.getRandomValues",
+> instead, and more precisely the {{domxref("Crypto/getRandomValues",
     "window.crypto.getRandomValues()")}} method.
 
 ## Syntax
@@ -108,4 +108,4 @@ function getRandomIntInclusive(min, max) {
 
 ## See also
 
-- {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}}
+- {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}

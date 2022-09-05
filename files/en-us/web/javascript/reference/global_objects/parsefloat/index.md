@@ -58,7 +58,7 @@ Consider {{jsxref("Number", "Number(value)")}} for stricter parsing, which conve
 {{jsxref("NaN")}} for arguments with invalid characters anywhere.
 
 `parseFloat` will parse non-string objects if they have a
-{{jsxref("Object.toString", "toString")}} or {{jsxref("Object.valueOf", "valueOf")}}
+{{jsxref("Object/toString", "toString")}} or {{jsxref("Object/valueOf", "valueOf")}}
 method. The returned value is the same as if `parseFloat` had been called
 on the result of those methods.
 
@@ -118,5 +118,4 @@ parseFloat('900719925474099267n');
 - {{jsxref("parseInt", "parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("Number.prototype.toFixed()")}}

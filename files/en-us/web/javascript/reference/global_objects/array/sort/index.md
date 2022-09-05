@@ -201,7 +201,7 @@ mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 
 For sorting strings with non-ASCII characters, i.e. strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
-{{jsxref("String.localeCompare")}}. This function can compare those characters so they
+{{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.
 
 ```js

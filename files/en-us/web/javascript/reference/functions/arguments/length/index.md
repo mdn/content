@@ -16,7 +16,7 @@ The **`arguments.length`** property contains the number of arguments passed to t
 
 ## Description
 
-The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.length")}}). For example, for the function below:
+The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.prototype.length")}}). For example, for the function below:
 
 ```js
 function func1(a, b, c) {
@@ -53,4 +53,4 @@ function adder(base /*, num1, …, numN */) {
 ## See also
 
 - {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+- {{jsxref("Function.prototype.length")}}
