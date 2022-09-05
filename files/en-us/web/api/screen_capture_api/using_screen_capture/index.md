@@ -60,7 +60,7 @@ See [Options and constraints](#options_and_constraints), below, for more on both
 
 ### Example of a window allowing the user to select a display surface to capture
 
-[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
+[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
 
 You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
