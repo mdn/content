@@ -115,7 +115,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : This object may be used to expose additional information about the text fragment or other fragment directives in the future.
-- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}  
+- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}
   - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : Returns the date on which the document was last modified.
@@ -230,7 +230,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Enables the style sheets for the specified style sheet set.
 - {{DOMxRef("Document.exitFullscreen()")}}
-  - : Stops document’s fullscreen element from being displayed fullscreen.  
+  - : Stops document's fullscreen element from being displayed fullscreen.  
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Remove the video from the floating picture-in-picture window back to its original container.
 - {{DOMxRef("Document.exitPointerLock()")}}
