@@ -101,7 +101,7 @@ In a typical eye exam for acuity (ability to focus), legibility at a particular 
 
 This is the minimum for "just making out" letters at \~70% accuracy. That is legibility, not readability. For readability, the lower case [x-height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/) needs to be a minimum of twice that [cap height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/). This is called the critical font size for readability.
 
-This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for *read*ability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the [WCAG standard requires](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) that users have the ability to zoom text larger.
+This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for readability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the [WCAG standard requires](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) that users have the ability to zoom text larger.
 
 While text that is too small is hard to read, so is text that is too big. Above approximately 96px, reading speed decreases. Also, very large fonts make it difficult for a user to enlarge the smaller text on the page, as most browsers presently zoom all text regardless.
 

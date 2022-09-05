@@ -16,7 +16,7 @@ Generally speaking, a function is a "subprogram" that can be _called_ by code
 external (or internal in the case of recursion) to the function. Like the program
 itself, a function is composed of a sequence of statements called the _function
 body_. Values can be _passed_ to a function, and the function
-will *return* a value.
+will _return_ a value.
 
 In JavaScript, functions are first-class objects, because they can have properties and
 methods just like any other object. What distinguishes them from other objects is that

@@ -19,7 +19,7 @@ browser-compat: api.HTMLImageElement.align
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The *obsolete* **`align`**
+The _obsolete_ **`align`**
 property of the {{domxref("HTMLImageElement")}} interface is a string which indicates
 how to position the image relative to its container.
 

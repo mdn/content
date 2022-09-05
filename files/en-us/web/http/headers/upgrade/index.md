@@ -58,7 +58,7 @@ If the server decides to upgrade the connection, it must:
     Connection: Upgrade
     ```
 
-2. Send a response to the original request *using the new protocol* (the server may only switch to a protocol with which it can complete the original request).
+2. Send a response to the original request _using the new protocol_ (the server may only switch to a protocol with which it can complete the original request).
 
 A server may also send the header as part of a {{HTTPStatus("426")}} `Upgrade Required` response, to indicate that the server won't perform the request using the current protocol, but might do so if the protocol is changed. The client can then request a protocol change using the process above.
 

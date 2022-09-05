@@ -316,7 +316,7 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer.
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
 0e-5   // => 0

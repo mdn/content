@@ -41,7 +41,7 @@ the audio from the file specified by `url`. The new object's
 {{domxref("HTMLMediaElement.preload", "preload")}} property is set
 to `auto` and its `src` property is set to the specified URL
 or `null` if no URL is given. If a URL is specified, the browser begins
-to *asynchronously* load the media resource before returning the new object.
+to _asynchronously_ load the media resource before returning the new object.
 
 ## Usage notes
 

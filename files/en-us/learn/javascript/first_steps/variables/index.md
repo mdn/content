@@ -421,7 +421,7 @@ If you can't do as much with `const` as you can with `let`, why would you prefer
 
 In this course, we adopt the following principle about when to use `let` and when to use `const`:
 
-*Use `const` when you can, and use `let` when you have to.*
+_Use `const` when you can, and use `let` when you have to._
 
 This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 
