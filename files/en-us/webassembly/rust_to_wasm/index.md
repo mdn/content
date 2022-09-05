@@ -196,7 +196,7 @@ This does a number of things (and they take a lot of time, especially the first 
 4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
 5. Copies your `README.md` (if you have one) into the package.
 
-The end result? You have a package inside of the `pkg` directory.
+The end result? You have a package inside the `pkg` directory.
 
 #### A digression about code size
 
@@ -231,7 +231,7 @@ The script in this file will import the js glue code, initialize the wasm module
 
 Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
-> **Note:** Make sure to use an up to date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
+> **Note:** Make sure to use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 
 Load `index.html` from the web server (if you used the Python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
 
@@ -262,7 +262,7 @@ We now have an npm package, written in Rust, but compiled to WebAssembly. It's r
 
 ### Using the npm package on the web
 
-Let's build a website that uses our new npm package. Many people use npm packages through various bundler tools, and we'll be using one of them, `webpack`, in this tutorial. It's only a little bit complex, and shows a realistic use-case.
+Let's build a website that uses our new npm package. Many people use npm packages through various bundler tools, and we'll be using one of them, `webpack`, in this tutorial. It's only a bit complex, and shows a realistic use-case.
 
 Let's move back out of the `pkg` directory, and make a new directory, `site`, to try this out in:
 
