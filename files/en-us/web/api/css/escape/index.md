@@ -31,7 +31,7 @@ escape(str)
 
 ### Return value
 
-A string with the escaped string.
+The escaped string.
 
 ## Examples
 
