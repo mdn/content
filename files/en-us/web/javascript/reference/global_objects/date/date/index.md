@@ -32,7 +32,9 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 Date()
 ```
 
-> **Note:** `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> **Note:** 
+> 1. `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> 2. `new Date(year, monthIndex)` formats only works with individual arguments, will work limited when string with comma seperated values are passed i.e) `new Date("2010, 09")` will not work in browsers like Mozilla Firefox. 
 
 ### Parameters
 
