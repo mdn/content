@@ -11,11 +11,11 @@ tags:
 ---
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
-Screen orientation is something slightly different than [device orientation](/en-US/docs/Web/API/Events/Detecting_device_orientation). Even if a device doesn't have the capacity to detect its own orientation, a screen always has one. And if a device is able to know its orientation, it's good to have the ability to control the screen orientation in order to preserve or adapt the interface of a web application.
+The term _screen orientation_ refers to whether a browser [viewport](/en-US/docs/Glossary/Viewport) is in landscape mode (that is, the width of the viewport is greater than its height), or else in portrait mode (the height of the viewport is greater than its width)
 
-There are several ways to handle screen orientation, both with CSS and JavaScript. The first is the [orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation). This lets content adjust its layout using CSS, based on whether the browser window is in landscape mode (that is, its width is greater than its height) or portrait mode (its height is greater than its width).
+CSS provides the [`orientation`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) media feature to allow adjusting layout based on screen orientation.
 
-The second way is the JavaScript Screen orientation API that can be used to get the current orientation of the screen itself and eventually lock it.
+The [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides a programmatic JavaScript API for working with screen orientation — including the ability to lock the viewport to a specific orientation.
 
 ## Adjusting layout based on the orientation
 
@@ -80,7 +80,7 @@ li {
 Once we have some common styles we can start defining a special case for the orientation
 
 ```css
-/* For portrait, we want the tool bar on top */
+/* For portrait, we want the toolbar on top */
 
 @media screen and (orientation: portrait) {
   #toolbar {
@@ -88,7 +88,7 @@ Once we have some common styles we can start defining a special case for the ori
   }
 }
 
-/* For landscape, we want the tool bar stick on the left */
+/* For landscape, we want the toolbar stick on the left */
 
 @media screen and (orientation: landscape) {
   #toolbar {
@@ -168,7 +168,7 @@ It returns a {{domxref("promise")}} that resolves after the lock succeeds.
 
 ## See also
 
-- {{domxref("Screen.orientation", "screen.orientation")}} 
+- {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
