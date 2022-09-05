@@ -46,7 +46,7 @@ The `fetch` specification differs from `jQuery.ajax()` in three main ways:
 
 ### Aborting a fetch
 
-[Most browsers](https://caniuse.com/abortcontroller) have support for the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (aka The Abort API) since 2019, which allow operations like Fetch and XHR to be aborted if they have not already completed. See the interface pages for more details.
+To abort incomplete `fetch()`, and even `XMLHttpRequest`, operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
 
 ## Fetch Interfaces
 
