@@ -92,7 +92,7 @@ Two of the many options for creating WASM code are an online wasm assembler or [
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
 
-These are great resources for people who are trying to figure out where to start, but they lack some tooling and optimizations of Emscripten.
+These are great resources for people who are trying to figure out where to start, but they lack some of the tooling and optimizations of Emscripten.
 
 The Emscripten tool is able to take just about any C/C++ source code and compile it into a .wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
