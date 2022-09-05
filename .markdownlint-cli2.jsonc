@@ -111,7 +111,7 @@
       "style": "asterisk"
     },
     // Yari uses underscores rather than dash, and there is now config to use and alternate
-    // algorythim currently
+    // algorithm currently
     "MD051": false,
     // Incompatible with brackets in macros like MD042
     "MD052": false,
