@@ -366,7 +366,7 @@ math {
 
 {{ EmbedLiveSample('Stretching_in_horizontal_direction', 700, 200, "", "") }}
 
-We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substitued values. Recall that [some vertical operators can stretch](/en-US/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
+We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substituted values. Recall that [some vertical operators can stretch](/en-US/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
 
 > **Note:** Stretching can happen for any child of the `<munder>`, `<mover>` or `<munderover>` element, not just the underscript or overscript.
 

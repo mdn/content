@@ -219,7 +219,7 @@ This is again similar to [HTML tables](/en-US/docs/Learn/HTML/Tables/Basics#allo
 
 {{ EmbedLiveSample('allowing_cells_to_span_multiple_rows_and_columns', 700, 200, "", "") }}
 
-> **Note:** For historical reason, the MathML attribute for column spaning is called `columnspan` not `colspan`.
+> **Note:** For historical reason, the MathML attribute for column spanning is called `columnspan` not `colspan`.
 
 ## Usage for advanced layout
 
