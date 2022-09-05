@@ -376,7 +376,7 @@ Above we've defined the query conditions in the `find()` method. We can also do 
 Athlete.
   find().
   where('sport').equals('Tennis').
-  where('age').gt(17).lt(50).  //Additional where query
+  where('age').gt(17).lt(50). // Additional where query
   limit(5).
   sort({ age: -1 }).
   select('name age').
