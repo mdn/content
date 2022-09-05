@@ -31,7 +31,7 @@ Before attempting to learn MathML, it is assumed that you have some basic knowle
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps)
 
-Some familarity with mathematical notations and [TeX](https://fr.wikipedia.org/wiki/TeX) rendering rules might also come in handy, even though required concepts will be explained as needed.
+Some familiarity with mathematical notations and [TeX](https://fr.wikipedia.org/wiki/TeX) rendering rules might also come in handy, even though required concepts will be explained as needed.
 
 ## Modules
 
