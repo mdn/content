@@ -32,10 +32,6 @@ const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
 
-## Value
-
-A boolean value.
-
 ## Specifications
 
 {{Specifications}}

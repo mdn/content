@@ -23,7 +23,7 @@ the axis position from the lowest value (-1.0) to the highest value (1.0).
 
 ## Value
 
-An array.
+An array of numbers.
 
 ## Examples
 
@@ -49,10 +49,6 @@ function gameLoop() {
   const start = requestAnimationFrame(gameLoop);
 };
 ```
-
-## Value
-
-An array of {{domxref("double") }} values.
 
 ## Specifications
 

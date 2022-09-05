@@ -66,31 +66,6 @@ html, body, svg {
   </tbody>
 </table>
 
-## Example
-
-```html
-<svg viewBox="0 0 120 120" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5"
-        fx="0.35" fy="0.35" fr="5%">
-      <stop offset="0%" stop-color="red"/>
-      <stop offset="100%" stop-color="blue"/>
-    </radialGradient>
-  </defs>
-
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100"
-      fill="url(#Gradient)" stroke="black" stroke-width="2"/>
-
-  <circle cx="60" cy="60" r="50" fill="transparent" stroke="white" stroke-width="2"/>
-  <circle cx="45" cy="45" r="2" fill="white" stroke="white"/>
-  <circle cx="60" cy="60" r="2" fill="white" stroke="white"/>
-  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">(fx,fy)</text>
-  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">(cx,cy)</text>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "200", "200")}}
-
 ## Specifications
 
 {{Specifications}}
