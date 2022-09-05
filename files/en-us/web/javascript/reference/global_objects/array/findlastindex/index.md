@@ -17,7 +17,7 @@ If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
 
-See also the {{jsxref("Array/findLast()", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
+See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
 
 ## Syntax
 
