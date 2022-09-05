@@ -39,9 +39,9 @@ Prior to Firefox 63, to add support for a new web-based feed reader, you would n
 
 `number` should be replaced with the next highest unique number that hasn't already been used. For example, if you want to add a new feed reader called "Easy Reader", and there are already defined content handlers with numbers 0 through 4, you should use a `number` of 5, like this:
 
-- `browser.contentHandlers.types.5.title`: Easy Reader
-- `browser.contentHandlers.types.5.type`: application/vnd.mozilla.maybe.feed
-- `browser.contentHandlers.types.5.uri`: http\://www\.theeasyreaderurl.com?feed=%s
+- `browser.contentHandlers.types.5.title`: `Easy Reader`
+- `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
+- `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
 
 You can add these preferences by hand, by visiting `about:config`.
 

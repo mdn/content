@@ -91,7 +91,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 
 ## Examples
 
-We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
+We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams). The examples are as follows:
 
 - [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
 - [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.

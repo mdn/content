@@ -44,7 +44,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Suppose https\://www\.mozilla.org/foo.html executes the following JavaScript:
+Suppose `https://www.mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
 const stateObj = { foo: 'bar' };
@@ -69,7 +69,7 @@ Suppose now that the user navigates to
 `https://www.microsoft.com`, then clicks the Back button. At this
 point, the URL bar will display `https://www.mozilla.org/bar2.html`.
 If the user now clicks Back again, the URL bar will
-display https\://www\.mozilla.org/foo.html, and totally bypass bar.html.
+display `https://www.mozilla.org/foo.html`, and totally bypass bar.html.
 
 ## Specifications
 

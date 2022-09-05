@@ -139,7 +139,7 @@ For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in
 
 ## Best practices
 
-HTML's `<input type="number">` implicitly has the `role` of `spinbutton`. HTML's `<input type="date">` has 3 nested spin buttons, one each for month, day, and year. When using semantic HTML form elements for their intended purposes, do not use `aria-valuemax` or `aria-valuemin` attributes; use `min` and `max` instead. Otherwise, any global aria-* attributes and any other aria-* attributes are applicable to the `spinbutton` role.
+HTML's `<input type="number">` implicitly has the `role` of `spinbutton`. HTML's `<input type="date">` has 3 nested spin buttons, one each for month, day, and year. When using semantic HTML form elements for their intended purposes, do not use `aria-valuemax` or `aria-valuemin` attributes; use `min` and `max` instead. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes are applicable to the `spinbutton` role.
 
 ### Prefer semantic HTML
 

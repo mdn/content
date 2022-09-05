@@ -33,11 +33,11 @@ to local time. 0 corresponds to January, 1 to February, and so on.
 ### Using getMonth()
 
 The second statement below assigns the value 11 to the variable `month`,
-based on the value of the {{jsxref("Date")}} object `Xmas95`.
+based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const Xmas95 = new Date('December 25, 1995 23:15:30');
-const month = Xmas95.getMonth();
+const xmas95 = new Date('December 25, 1995 23:15:30');
+const month = xmas95.getMonth();
 
 console.log(month); // 11
 ```

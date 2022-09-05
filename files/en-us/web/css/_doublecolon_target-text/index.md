@@ -8,6 +8,7 @@ tags:
   - Reference
   - Selector
   - Web
+  - Experimental
 browser-compat: css.selectors.target-text
 ---
 {{CSSRef}}{{SeeCompatTable}}

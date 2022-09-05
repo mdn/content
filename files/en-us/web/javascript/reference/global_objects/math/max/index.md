@@ -62,7 +62,7 @@ Math.max(-10, 20);  //  20
 
 ### Getting the maximum element of an array
 
-{{jsxref("Array.prototype.reduce", "Array.reduce()")}} can be used to find the maximum
+{{jsxref("Array.prototype.reduce()")}} can be used to find the maximum
 element in a numeric array, by comparing each value:
 
 ```js

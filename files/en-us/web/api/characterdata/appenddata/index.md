@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.appendData
 ---
+
 {{APIRef("DOM")}}
 
 The **`appendData()`** method of the {{domxref("CharacterData")}} interface
@@ -34,8 +35,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.appendData(" - appended text.");
 ```

@@ -13,7 +13,7 @@ browser-compat: api.WebGLRenderingContext.readPixels
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.readPixels()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) reads a block of pixels from a
-specified rectangle of the current color framebuffer into a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}} object.
+specified rectangle of the current color framebuffer into a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 ## Syntax
 
@@ -110,7 +110,7 @@ None ({{jsxref("undefined")}}).
   - `type` is `gl.UNSIGNED_SHORT_5_6_5` and
     `format` is not `gl.RGB`.
   - `type` is `gl.UNSIGNED_SHORT_4_4_4_4` and
-    `format` is not `gl.RGB`A.
+    `format` is not `gl.RGBA`.
   - `type` does not match the typed array type of `pixels`.
 
 - A `gl.INVALID_FRAMEBUFFER_OPERATION` error is thrown if the currently

@@ -112,7 +112,7 @@ an attacker.
 ### RSA-OAEP
 
 This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it with using RSA-OAEP. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js)
+it with using RSA-OAEP. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)
 
 ```js
 function getMessageEncoding() {
@@ -137,7 +137,7 @@ function encryptMessage(publicKey) {
 ### AES-CTR
 
 This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it using AES in CTR mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js)
+it using AES in CTR mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
 
 ```js
 function getMessageEncoding() {
@@ -194,7 +194,7 @@ console.log(encrypted_content);
 ### AES-CBC
 
 This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it using AES in CBC mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js)
+it using AES in CBC mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
 
 ```js
 function getMessageEncoding() {
@@ -211,7 +211,7 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     {
       name: "AES-CBC",
-      iv,
+      iv: iv,
     },
     key,
     encoded,
@@ -222,7 +222,7 @@ function encryptMessage(key) {
 ### AES-GCM
 
 This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it using AES in GCM mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js)
+it using AES in GCM mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
 
 ```js
 function getMessageEncoding() {
@@ -237,7 +237,7 @@ function encryptMessage(key) {
   // iv will be needed for decryption
   const iv = window.crypto.getRandomValues(new Uint8Array(12));
   return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
+    { name: "AES-GCM", iv: iv },
     key,
     encoded,
   );

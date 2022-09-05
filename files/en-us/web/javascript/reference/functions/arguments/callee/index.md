@@ -2,7 +2,6 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 tags:
-  - Deprecated
   - Functions
   - JavaScript
   - Property

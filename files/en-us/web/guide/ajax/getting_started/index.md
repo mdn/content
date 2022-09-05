@@ -24,18 +24,11 @@ The two major features of AJAX allow you to do the following:
 
 ## Step 1 – How to make an HTTP request
 
-In order to make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where `XMLHttpRequest` comes in. Its predecessor originated in Internet Explorer as an ActiveX object called `XMLHTTP`. Then, Mozilla, Safari, and other browsers followed, implementing an `XMLHttpRequest` object that supported the methods and properties of Microsoft's original ActiveX object. Meanwhile, Microsoft implemented XMLHttpRequest as well.
+To make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where `XMLHttpRequest` comes in.
 
 ```js
-// Old compatibility code, no longer needed.
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+, etc.
-    httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 6 and older
-    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-}
+const httpRequest = new XMLHttpRequest();
 ```
-
-> **Note:** For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.
 
 After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
 

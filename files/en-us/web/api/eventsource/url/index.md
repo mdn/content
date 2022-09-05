@@ -28,7 +28,7 @@ const evtSource = new EventSource('sse.php');
 console.log(evtSource.url);
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

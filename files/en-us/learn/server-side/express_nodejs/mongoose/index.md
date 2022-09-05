@@ -124,7 +124,7 @@ npm install mongoose
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
-> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based *database as a service* free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
+> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based _database as a service_ free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
 
 ### Connecting to MongoDB
 
@@ -346,7 +346,7 @@ If you specify a callback, as shown above, the query will execute immediately. T
 
 > **Note:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
 
-> **Note:** It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
+> **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
 
 If you don't specify a callback then the API will return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
 
@@ -597,7 +597,7 @@ Open **/app.js** (in the root of your project) and copy the following text below
 // Set up mongoose connection
 const mongoose = require('mongoose');
 const mongoDB = 'insert_your_database_url_here';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```
@@ -766,7 +766,7 @@ In order to test the models (and to create some example books and other items th
 
     > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2. Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials).
+2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials).
 
     ```bash
     npm install async

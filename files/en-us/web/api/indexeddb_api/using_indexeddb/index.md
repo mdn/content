@@ -649,7 +649,7 @@ This new functionality enables developers to specify a locale when creating an i
 We have a complete example using the IndexedDB API. The example uses IndexedDB to store and retrieve publications.
 
 - [Try the example](https://mdn.github.io/dom-examples/indexeddb-api/index.html)
-- [See the source code](https://github.com/mdn/dom-examples/tree/master/indexeddb-api)
+- [See the source code](https://github.com/mdn/dom-examples/tree/main/indexeddb-api)
 
 ## See also
 
@@ -664,7 +664,7 @@ Further reading for you to find out more information if desired.
 ### Tutorials and guides
 
 - [Databinding UI Elements with IndexedDB (2012)](https://web.dev/indexeddb-uidatabinding/)
-- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
+- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10))
 
 ### Libraries
 

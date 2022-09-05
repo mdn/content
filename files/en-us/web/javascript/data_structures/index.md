@@ -121,8 +121,8 @@ JavaScript strings are immutable. This means that once a string is created, it i
 
 However, it is still possible to create another string based on an operation on the original string. For example:
 
-- A substring of the original by picking individual letters or using {{jsxref("String.substr()")}}.
-- A concatenation of two strings using the concatenation operator (`+`) or {{jsxref("String.concat()")}}.
+- A substring of the original by picking individual letters or using [`substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+- A concatenation of two strings using the concatenation operator (`+`) or [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
 #### Beware of "stringly-typing" your code!
 

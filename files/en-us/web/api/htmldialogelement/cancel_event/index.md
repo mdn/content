@@ -53,7 +53,7 @@ button, div {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const result = document.querySelector('.result');

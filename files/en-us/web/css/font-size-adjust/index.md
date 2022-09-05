@@ -9,6 +9,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-size-adjust
 ---
+
+{{CSSRef}}
+
 The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
 
 ```css
@@ -121,8 +124,6 @@ It is really specifying that the lowercase letters of the font should be `7px` h
 ## Browser compatibility
 
 {{Compat}}
-
-{{CSSRef}}
 
 ## See also
 

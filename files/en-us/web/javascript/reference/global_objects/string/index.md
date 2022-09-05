@@ -17,7 +17,7 @@ sequence of characters.
 ## Description
 
 Strings are useful for holding data that can be represented in text form. Some of the
-most-used operations on strings are to check their {{jsxref("String.length",
+most-used operations on strings are to check their {{jsxref("String/length",
   "length")}}, to build and concatenate them using the
 [+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators),
 checking for the existence or location of substrings with the
@@ -149,6 +149,27 @@ the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 console.log(eval(s2.valueOf()))  // returns the number 4
 ```
 
+### String coercion
+
+Many built-in operations that expect strings would first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+
+- Strings are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `"null"`.
+- `true` turns into `"true"`; `false` turns into `"false"`.
+- Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+- [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
+- [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
+- Objects are first converted to a primitive by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+
+There are several ways to achieve nearly the same effect in JavaScript.
+
+- [Template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals): `` `${x}` `` does exactly the string coercion steps explained above for the embedded expression.
+- The [`String()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function: `String(x)` uses the same algorithm to convert `x`, except that [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) don't throw a {{jsxref("TypeError")}}, but return `"Symbol(description)"`, where `description` is the [description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) of the Symbol.
+- Using the [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition): `"" + x` coerces its operand to a _primitive_ instead of a _string_, and, for some objects, has entirely different behaviors from normal string coercion. See its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) for more details.
+
+Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in behavior) or `String(x)` (to handle symbol values without throwing an error), but you should not use `"" + x`.
+
 ### Escape sequences
 
 Special characters can be encoded using escape sequences:
@@ -250,7 +271,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance methods
 
-- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}} {{Experimental_Inline}}
+- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
@@ -382,31 +403,31 @@ You must be careful which level of characters you are iterating on. For example,
 > They are of limited use, as they provide only a subset of the available HTML tags
 > and attributes.
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
-- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("blink")}}
-- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}}
+- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}}
+- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}}
+- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)
-- {{jsxref("String.prototype.small()")}}
+- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}}
+- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
 
 ## Examples

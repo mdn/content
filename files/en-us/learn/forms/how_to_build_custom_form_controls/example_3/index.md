@@ -221,7 +221,7 @@ window.addEventListener('load', () => {
 
     select.addEventListener('click', (event) => {
       toggleOptList(select);
-    },  false);
+    }, false);
 
     select.addEventListener('focus', (event) => {
       activeSelect(select, selectList);

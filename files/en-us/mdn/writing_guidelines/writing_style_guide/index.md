@@ -270,7 +270,7 @@ Use English-style plurals, not the Latin- or Greek-influenced forms.
 Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use straight quotes and apostrophes. This is because we need to choose one or the other for consistency. If curly quotes or apostrophes make their way into code snippets, even inline ones, readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
 
 ### Commas
 
@@ -337,7 +337,7 @@ Hyphenated compounds should be used when the last letter of the prefix is a vowe
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional *u* added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spellings.
 
 - **Correct**: localize, behavior
@@ -530,7 +530,7 @@ Keep the following guidelines in mind when writing titles:
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary

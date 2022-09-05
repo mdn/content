@@ -334,7 +334,7 @@ Feature-Policy: camera 'self'
 ```
 
 This will request access to the microphone for the current origin and the specific
-origin https\://developer.mozilla.org:
+origin `https://developer.mozilla.org`:
 
 ```http
 Feature-Policy: microphone 'self' https://developer.mozilla.org

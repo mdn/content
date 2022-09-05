@@ -121,7 +121,7 @@ The following is a list of usually shareable file types. However, you should alw
 ### Sharing a URL
 
 The example below shows a button click invoking the Web Share API to share MDN's URL.
-This is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)).
+This is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)).
 
 #### HTML
 

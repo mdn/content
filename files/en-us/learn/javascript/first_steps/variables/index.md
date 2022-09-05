@@ -96,7 +96,7 @@ One special thing about variables is that they can contain just about anything â
 
 > **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
-![](boxes.png)
+![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
 ## Declaring a variable
 
@@ -387,7 +387,7 @@ If you try to do this using `const` you will see an error:
 const count;
 ```
 
-Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called *reassigning* the variable):
+Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called _reassigning_ the variable):
 
 ```js
 let count = 1;

@@ -11,8 +11,6 @@ tags:
 ---
 {{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
-
 This example shows you how to create a WebSocket API server using Oracle Java.
 
 Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code.
@@ -21,7 +19,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the _java.net_ package.
 
 ### ServerSocket
 

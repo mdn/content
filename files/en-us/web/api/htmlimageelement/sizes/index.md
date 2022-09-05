@@ -90,7 +90,8 @@ and 50em.
                new-york-skyline-tall.jpg 1060w"
        sizes="((min-width: 50em) and (max-width: 60em)) 50em,
               ((min-width: 30em) and (max-width: 50em)) 30em,
-              (max-width: 30em) 20em">
+              (max-width: 30em) 20em"
+       alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle.">
   <p>Then there's even more amazing stuff to say down here. Can you
      believe it? I sure can't.</p>
 

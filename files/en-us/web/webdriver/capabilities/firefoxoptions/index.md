@@ -8,6 +8,9 @@ tags:
   - Extension capabilities
   - firefoxOptions
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
+
 The **`moz:firefoxOptions` capability** is a namespaced set of
 capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/). It is used to control the
 behavior of Firefox and can be used as a member of

@@ -20,9 +20,10 @@ tags:
   - XRWebGLLayer
   - augmented
   - ignoreDepthValues
+  - Experimental
 browser-compat: api.XRWebGLLayer.ignoreDepthValues
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`ignoreDepthValues`** is a Boolean value which is

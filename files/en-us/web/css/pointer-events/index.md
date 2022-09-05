@@ -101,7 +101,7 @@ img {
 
 ### Disabling pointer events on a single link
 
-This example disables pointer events on the link to http\://example.com.
+This example disables pointer events on the link to `http://example.com`.
 
 #### HTML
 

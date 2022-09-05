@@ -531,7 +531,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
+              >String.prototype.match()</a
             ></code
           >
           won't return groups if the <code>/.../g</code> flag is set. However,
@@ -539,7 +539,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
+              >String.prototype.matchAll()</a
             ></code
           >
           to get all matches.

@@ -32,7 +32,7 @@ unshift(element0, element1, /* … ,*/ elementN)
 
 ### Return value
 
-The new {{jsxref("Array.length", "length")}} property of the object upon which the
+The new {{jsxref("Array/length", "length")}} property of the object upon which the
 method was called.
 
 ## Description
@@ -42,9 +42,7 @@ array-like object.
 
 {{jsxref("Array.prototype.push()")}} has similar behavior to `unshift()`, but applied to the end of an array.
 
-`Array.prototype.unshift()` is intentionally generic. This method can be
-{{jsxref("Function.call", "called", "", 1)}} or {{jsxref("Function.apply", "applied",
-  "", 1)}} to objects resembling arrays. Objects which do not contain a
+`Array.prototype.unshift()` is intentionally generic. This method can be called on objects resembling arrays. Objects which do not contain a
 `length` property—reflecting the last in a series of consecutive, zero-based
 numerical properties—may not behave in any meaningful manner.
 
