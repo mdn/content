@@ -226,7 +226,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Enables the style sheets for the specified style sheet set.
 - {{DOMxRef("Document.exitFullscreen()")}}
-  - : Stops document’s fullscreen element from being displayed fullscreen.
+  - : Stops document's fullscreen element from being displayed fullscreen.
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Remove the video from the floating picture-in-picture window back to its original container.
 - {{DOMxRef("Document.exitPointerLock()")}}
