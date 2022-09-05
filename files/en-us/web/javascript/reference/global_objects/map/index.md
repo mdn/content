@@ -354,9 +354,9 @@ myMap.get(otherNaN);
 // "not a number"
 ```
 
-### Iterating Map with for..of
+### Iterating Map with for...of
 
-Maps can be iterated using a `for..of` loop:
+Maps can be iterated using a `for...of` loop:
 
 ```js
 const myMap = new Map();
