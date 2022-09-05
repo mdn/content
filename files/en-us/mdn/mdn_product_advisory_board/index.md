@@ -35,7 +35,7 @@ Current members of the MDN Product Advisory Board are:
   - : Brian is a Developer Advocate at Igalia. He participates in W3C where he is Igalia's Advisory Committee Representative and participates in various working groups and community groups. He also has represented the Open JS Foundation there.
 - **Joe Medley**
   Senior Technical Writer, Web Developer Relations at Google
-  - : Joe has lead Google's effort to create web platform reference documentation for the last five years, which means he spends much on MDN. In addition to editing the Chrome beta release announcements targeted at web developers, he writes the occasional article for web.dev. Joe came to Web Developer Relations after a long career writing developer reference documentation for enterprise applications and a degree in education from the University of Central Missouri.
+  - : Joe has led Google's effort to create web platform reference documentation for the last five years, which means he spends a lot of time on MDN. In addition to editing the Chrome beta release announcements targeted at web developers, he writes the occasional article for web.dev. Joe came to Web Developer Relations after a long career writing developer reference documentation for enterprise applications and a degree in education from the University of Central Missouri.
 - **Eric Meyer**
   Developer Advocate, Igalia
   - : [Eric](https://meyerweb.com/) ([@meyerweb](https://twitter.com/meyerweb)) is an [author](https://meyerweb.com/eric/writing.html), speaker, blogger, sometimes teacher and consultant, Developer Advocate at [Igalia](https://www.igalia.com/), and co-founder of [An Event Apart](https://aneventapart.com/). He's been working on the Web since 1993 and still finds it deeply compelling.
