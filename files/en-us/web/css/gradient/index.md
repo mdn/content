@@ -23,19 +23,19 @@ A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#descripti
 
 The `<gradient>` data type is defined with one of the function types listed below.
 
-#### Linear gradient
+### Linear gradient
 
 Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function.
 
-#### Radial gradient
+### Radial gradient
 
 Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function.
 
-#### Repeating gradient
+### Repeating gradient
 
 Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} functions.
 
-#### Conic gradient
+### Conic gradient
 
 Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function.
 

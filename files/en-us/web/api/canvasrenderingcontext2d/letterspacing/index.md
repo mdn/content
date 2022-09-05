@@ -30,13 +30,13 @@ The property value will remain unchanged if set to an invalid/unparsable value.
 In this example we display the text "Hello World" three times, using the `letterSpacing` property to modify the letter spacing in each case.
 The spacing is also displayed for each case, using the value of the property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -56,7 +56,7 @@ ctx.letterSpacing = '20px';
 ctx.fillText(`Hello world (${ctx.letterSpacing})`, 10, 140);
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 700, 180) }}
 

@@ -272,7 +272,7 @@ There is one last `<input>` type that came to us in early HTML: the file input t
 
 To create a [file picker widget](/en-US/docs/Web/HTML/Element/input/file), you use the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to `file`. The types of files that are accepted can be constrained using the {{htmlattrxref("accept","input")}} attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the {{htmlattrxref("multiple","input")}} attribute.
 
-#### Example
+### Example
 
 In this example, a file picker is created that requests graphic image files. The user is allowed to select multiple files in this case.
 

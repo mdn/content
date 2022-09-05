@@ -56,7 +56,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 
 In this example, the CSS file contains styling for the {{HTMLElement("blockquote")}} element in addition to some styling for the parent `<body>` element. Various outputs in the Results subsection demonstrate how the styling of the `<blockquote>` element is affected when different values are applied to the `all` property inside the `blockquote` rule.
 
-#### HTML
+### HTML
 
 ```html
 <blockquote id="quote">
@@ -65,7 +65,7 @@ In this example, the CSS file contains styling for the {{HTMLElement("blockquote
 Phasellus eget velit sagittis.
 ```
 
-#### CSS
+### CSS
 
 ```css
 body {
@@ -82,7 +82,7 @@ blockquote {
 }
 ```
 
-#### Results
+### Results
 
 #### A. No `all` property
 

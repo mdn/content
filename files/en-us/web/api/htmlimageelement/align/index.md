@@ -36,7 +36,7 @@ content attribute.
 A string specifying one of the following strings which set the
 alignment mode for the image.
 
-#### Baseline alignment
+### Baseline alignment
 
 These three values specify the alignment of the element relative to the text baseline.
 These should be replaced by using the CSS {{cssxref("vertical-align")}} property.
@@ -52,7 +52,7 @@ These should be replaced by using the CSS {{cssxref("vertical-align")}} property
 It may be worth noting that {{cssxref("vertical-align")}} offers several additional
 options for its value; you may wish to consider these when changing your code to use it.
 
-#### Floating images horizontally
+### Floating images horizontally
 
 The `left` and `right` properties don't affect the
 baseline-relative alignment. Instead, they cause the image to "float" to the left or
