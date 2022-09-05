@@ -53,7 +53,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 ### Other
 

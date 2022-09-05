@@ -35,7 +35,7 @@ uniquely identifies a single ongoing ICE interaction, including for any communic
 with the {{Glossary("STUN")}} server. The string may be up to 256 characters long, and
 has no default value.
 
-#### Randomization
+### Randomization
 
 At least 24 bits of the text in the `ufrag` are required to be randomly
 selected by the ICE layer at the beginning of the ICE session. The specifics for which

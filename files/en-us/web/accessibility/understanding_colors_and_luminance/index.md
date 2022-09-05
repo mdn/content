@@ -417,7 +417,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 
 ## Additional Resources
 
-#### MDN
+### MDN
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn/Accessibility)
@@ -425,7 +425,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [`<color>`](/en-US/docs/Web/CSS/color_value)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 
-#### W3C Issues and Discussions
+### W3C Issues and Discussions
 
 - [The Visual Contrast Research Group](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup) for WCAG 3.
 - [Light and dark text](https://github.com/w3c/silver/issues/261) & WCAG 3.0 contrast (Silver thread #261)
@@ -433,7 +433,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [Luminance / Luma confusion](https://github.com/w3c/wcag/issues/236) thread #236
 - [Non-sRGB color spaces](https://github.com/w3c/wcag/issues/360), outdated sRGB threshold thread #360
 
-#### W3C Standards and Guidelines
+### W3C Standards and Guidelines
 
 - [The latest draft of the new WCAG 3 standards](https://www.w3.org/TR/wcag-3.0/)
 - [Ensuring that a contrast ratio of 3:1 is provided for icons](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)
@@ -441,6 +441,6 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
 - [CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/)
 
-### Page Source
+## Page Source
 
 This page is based largely on the white paper on color and contrast by Andrew Somers, which is being developed for the W3 and Accessibility Guidelines Working Group, used herein by permission. Andrew Somers is an invited expert of the W3 and the AGWG, the author of the WCAG 3 Visual Contrast specifications, and the inventor of the APCA.

@@ -77,15 +77,15 @@ Returns a File that represents the current state of the file that this `FileEntr
 void file ();
 ```
 
-##### Parameter
+#### Parameter
 
 None.
 
-##### Returns
+#### Returns
 
 A `File` object.
 
-##### Exceptions
+#### Exceptions
 
 This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 

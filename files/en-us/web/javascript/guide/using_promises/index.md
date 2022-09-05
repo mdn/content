@@ -385,7 +385,7 @@ Promise.resolve()
 console.log(1); // 1, 2, 3, 4
 ```
 
-#### Task queues vs microtasks
+### Task queues vs microtasks
 
 Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as Task queues.
 
