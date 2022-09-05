@@ -492,7 +492,7 @@ If you think microtasks may help solve this problem, see the [microtask guide](/
 
 ## See also
 
-- {{jsxref("Promise.then()")}}
+- {{jsxref("Promise.prototype.then()")}}
 - [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)

@@ -47,13 +47,13 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 
 ## Instance methods
 
-- {{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}
+- {{jsxref("WeakMap.prototype.delete()")}}
   - : Removes any value associated to the `key`. `WeakMap.prototype.has(key)` will return `false` afterwards.
-- {{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}
+- {{jsxref("WeakMap.prototype.get()")}}
   - : Returns the value associated to the `key`, or `undefined` if there is none.
-- {{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}
+- {{jsxref("WeakMap.prototype.has()")}}
   - : Returns a Boolean asserting whether a value has been associated to the `key` in the `WeakMap` object or not.
-- {{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}
+- {{jsxref("WeakMap.prototype.set()")}}
   - : Sets the `value` for the `key` in the `WeakMap` object. Returns the `WeakMap` object.
 
 ## Examples

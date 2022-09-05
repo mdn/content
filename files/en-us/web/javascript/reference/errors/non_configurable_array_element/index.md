@@ -100,6 +100,6 @@ copy.length = 1;
 ## See also
 
 - [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
-- {{jsxref("Array.length")}}
+- {{jsxref("Array/length", "length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

@@ -86,7 +86,7 @@ In addition, `re.lastIndex` will be set to `25`, due to this regex being global.
 
 ### Finding successive matches
 
-If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}} property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the {{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a different string, it will start its search at its existing {{jsxref("RegExp.lastIndex", "lastIndex")}}.
+If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp/lastIndex", "lastIndex")}} property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} property). Note that the {{jsxref("RegExp/lastIndex", "lastIndex")}} property will not be reset when searching a different string, it will start its search at its existing {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 
 For example, assume you have this script:
 
@@ -110,9 +110,9 @@ Found ab. Next match starts at 9
 
 > **Warning:** There are many pitfalls that can lead to this becoming an infinite loop!
 >
-> - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition —  it will recreate the regex for every iteration and reset {{jsxref("RegExp.lastIndex", "lastIndex")}}.
+> - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition —  it will recreate the regex for every iteration and reset {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 > - Be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) is set, or `lastIndex` will never be advanced.
-> - If the regex may match zero-length characters (e.g. `/^/gm`), increase its {{jsxref("RegExp.lastIndex", "lastIndex")}} manually each time to avoid being stuck in the same place.
+> - If the regex may match zero-length characters (e.g. `/^/gm`), increase its {{jsxref("RegExp/lastIndex", "lastIndex")}} manually each time to avoid being stuck in the same place.
 
 You can usually replace this kind of code with {{jsxref("String.prototype.matchAll()")}} to make it less error-prone.
 
