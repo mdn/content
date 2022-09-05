@@ -49,7 +49,7 @@ number.
 - Leading spaces in the argument are ignored.
 - If the argument's first character can't be converted to a number (it's not any of
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
-- `Infinity` or `-Infinity` is returned if `Infinity` or `-Infinity` is used as an argument. Note that trailing characters will be ignored.
+- `Infinity` or `-Infinity` is returned if `"Infinity"` or `"-Infinity"` is used as an argument.
 - For numbers outside the `-1.7976931348623158e+308 - 1.7976931348623158e+308` range `-Infinity` or `Infinity` is returned.
 - `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number", "Numbers")}}, losing precision. This happens because the trailing `n`
   character is discarded.
