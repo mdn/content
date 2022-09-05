@@ -64,7 +64,6 @@ Current members of the MDN Product Advisory Board are:
 - Chris Mills, Mozilla
 - Kadir Topal, Mozilla
 
-
 ## See also
 
 - [Product Advisory Board Charter & Membership](/en-US/docs/MDN/MDN_Product_Advisory_Board/Membership)
