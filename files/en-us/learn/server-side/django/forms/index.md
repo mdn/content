@@ -601,7 +601,7 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format _model\_name_\_**confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
+The "delete" view expects to find a template named with the format _`model_name`_`_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
