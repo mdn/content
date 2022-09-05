@@ -11,9 +11,7 @@ browser-compat: javascript.builtins.Math.atan2
 
 {{JSRef}}
 
-The **`Math.atan2()`** function returns the angle in the plane (in radians) between the positive x-axis and the ray from (0, 0) to the point (x, y), for `Math.atan2(y, x)`. That is,
-
-<math display="block"><semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗𝟸</mo><mo stretchy="false">(</mo><mi>𝚢</mi><mo>,</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mrow><mo>(</mo><mfrac><mi>y</mi><mi>x</mi></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan2}(y, x)} = \arctan\left(\frac{y}{x}\right)</annotation></semantics></math>
+The **`Math.atan2()`** function returns the angle in the plane (in radians) between the positive x-axis and the ray from (0, 0) to the point (x, y), for `Math.atan2(y, x)`.
 
 {{EmbedInteractiveExample("pages/js/math-atan2.html")}}
 
@@ -36,11 +34,11 @@ The angle in radians (between -π and π, inclusive) between the positive x-axis
 
 ## Description
 
-The `Math.atan2()` method returns a numeric value between -π and π representing the angle θ of an `(x, y)` point. This is the counterclockwise angle, measured in radians, between the positive x-axis, and the point `(x, y)`. Note that the arguments to this function pass the y-coordinate first and the x-coordinate second.
+The `Math.atan2()` method measures the counterclockwise angle θ, in radians, between the positive x-axis and the point `(x, y)`. Note that the arguments to this function pass the y-coordinate first and the x-coordinate second.
 
 ![A simple diagram showing the angle returned by atan2(y, x)](atan2.png)
 
-`Math.atan2()` is passed separate `x` and `y` arguments, and `Math.atan()` is passed the ratio of those two arguments. `Math.atan2(y, x)` differs from `Math.atan(y / x)` in the following cases:
+`Math.atan2()` is passed separate `x` and `y` arguments, while [`Math.atan()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) is passed the ratio of those two arguments. `Math.atan2(y, x)` differs from `Math.atan(y / x)` in the following cases:
 
 | `x`                  | `y`         | `Math.atan2(y, x)` | `Math.atan(y / x)` |
 | -------------------- | ----------- | ------------------ | ------------------ |
