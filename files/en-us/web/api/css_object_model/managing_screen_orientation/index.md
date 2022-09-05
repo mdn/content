@@ -152,13 +152,15 @@ screen.addEventListener("orientationchange", () => {
 
 ### Preventing orientation change
 
-Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("ScreenOrientation.lock()")}} method and unlocked using the {{domxref("Screen.orientation.unlock()")}}.
+Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method and unlocked using the {{domxref("ScreenOrientation.unlock()", "screen.orientation.unlock()")}} method.
 
-The {{domxref("ScreenOrientation.lock()")}} accepts a string (or series of strings) to define the kind of lock to apply. Accepted values are: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (See {{domxref("ScreenOrientation.lock")}}  to know more about each of those values). It returns a {{domxref("promise")}} that resolves after the lock succeeds.
+The {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method accepts one of the following values to define the kind of lock to apply: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, and `landscape`:
 
 ```js
-ScreenOrientation.lock('landscape');
+{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} ;
 ```
+
+It returns a {{domxref("promise")}} that resolves after the lock succeeds.
 
 > **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
 >
@@ -166,6 +168,7 @@ ScreenOrientation.lock('landscape');
 
 ## See also
 
+- {{domxref("Screen.orientation", "screen.orientation")}} 
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
