@@ -34,4 +34,4 @@ jobs:
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
+          yarn markdownlint -r markdownlint-rule-search-replace ${{ steps.changed-files.outputs.all_changed_files }}

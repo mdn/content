@@ -23,10 +23,6 @@ representation of the PaymentAddress object's properties.
 
 ## Value
 
-None.
-
-## Value
-
 A JSON object.
 
 ## Browser compatibility

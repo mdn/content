@@ -31,7 +31,7 @@ escape(str)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The escaped string.
 
 ## Examples
 

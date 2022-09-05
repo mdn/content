@@ -32,11 +32,11 @@ date according to local time.
 ### Using getDate()
 
 The second statement below assigns the value 25 to the variable `day`, based
-on the value of the {{jsxref("Date")}} object `Xmas95`.
+on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const Xmas95 = new Date('December 25, 1995 23:15:30');
-const day = Xmas95.getDate();
+const xmas95 = new Date('December 25, 1995 23:15:30');
+const day = xmas95.getDate();
 
 console.log(day); // 25
 ```

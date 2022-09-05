@@ -36,7 +36,7 @@ The integer part of the given number.
 
 Unlike the other three `Math` methods: {{jsxref("Math.floor()")}},
 {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way
-`Math.trunc()` works is very simple. It *truncates* (cuts off) the dot
+`Math.trunc()` works is very simple. It _truncates_ (cuts off) the dot
 and the digits to the right of it, no matter whether the argument is a positive or
 negative number.
 

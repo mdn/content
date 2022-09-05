@@ -21,9 +21,8 @@ An {{domxref("HTMLCollection")}}.
 ## Examples
 
 ```js
-const links = document.links;
-for (let i = 0; i < links.length; i++) {
-  const linkHref = document.createTextNode(links[i].href);
+for (const link of document.links) {
+  const linkHref = document.createTextNode(link.href);
   const lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);
   document.body.appendChild(lineBreak);

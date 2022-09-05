@@ -49,7 +49,7 @@ AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 
 ## Description
 
-Async generator function objects created with the `AsyncGeneratorFunction` constructor are parsed when the function is created. This is less efficient than declaring a generator function with an {{jsxref("Operators/async_function*", "async function* expression")}} and calling it within your code, because such functions are parsed with the rest of the code.
+Async generator function objects created with the `AsyncGeneratorFunction` constructor are parsed when the function is created. This is less efficient than declaring a generator function with an [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) and calling it within your code, because such functions are parsed with the rest of the code.
 
 All arguments passed to the function, except the last, are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
 
@@ -85,7 +85,7 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function*", "async function*")}}
-- {{jsxref("Operators/function*", '<code>function*</code> expression', "", 1)}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
 - {{jsxref("Global_Objects/Generator", "Generator")}}
 - {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}}

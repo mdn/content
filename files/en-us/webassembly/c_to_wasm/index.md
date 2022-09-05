@@ -85,7 +85,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
     }
     ```
 
-2. Search for the file `shell_minimal.html` in your emsdk repo. Copy it into a sub-directory called `html_template` inside your previous new directory.
+2. Search for the file `shell_minimal.html` in your emsdk repo. Copy it into a subdirectory called `html_template` inside your previous new directory.
 3. Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:
 
     ```bash

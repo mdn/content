@@ -159,7 +159,7 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 
 ## Examples
 
-#### Example 1: A single select listbox that uses [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+### Example 1: A single select listbox that uses [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
 
 The snippet below shows how the listbox role is added directly into the HTML source code.
 
@@ -193,7 +193,7 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 </select>
 ```
 
-#### More examples
+### More examples
 
 - [Scrollable Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
 - [Collapsible Dropdown Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html): Single-select collapsible listbox that expands when activated, similar to HTML {{HTMLElement('select')}} with the attribute `size="1"`.

@@ -483,7 +483,7 @@ console.log(a.length); // 101
 console.log(a); // ['dog', 'cat', 'hen', empty × 97, 'fox']
 ```
 
-The array we got above is called a [_sparse array_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) because there are uninhabited slots in the middle, and will cause the engine to deoptimize it from an array to a hashtable. Make sure your array is densely populated!
+The array we got above is called a [_sparse array_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) because there are uninhabited slots in the middle, and will cause the engine to deoptimize it from an array to a hash table. Make sure your array is densely populated!
 
 Out-of-bounds indexing doesn't throw. If you query a non-existent array index, you'll get a value of `undefined` in return:
 
@@ -585,7 +585,7 @@ function avg(firstValue, secondValue, thirdValue = 0) {
   return (firstValue + secondValue + thirdValue) / 3;
 }
 
-avg(1, 2); // 1.5, instead of NaN
+avg(1, 2); // 1, instead of NaN
 ```
 
 ### Anonymous functions

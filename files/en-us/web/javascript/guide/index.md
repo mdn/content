@@ -52,8 +52,8 @@ Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_itera
 - [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
 - [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
 - [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
-- [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
-- [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [`for...in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
 ## Functions
 

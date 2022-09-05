@@ -1164,7 +1164,7 @@
 /en-US/docs/DOM/BiQuadFilterNode	/en-US/docs/Web/API/BiquadFilterNode
 /en-US/docs/DOM/Blob	/en-US/docs/Web/API/Blob
 /en-US/docs/DOM/Blob-redirect-1	/en-US/docs/Web/API/Blob
-/en-US/docs/DOM/BlobBuilder	/en-US/docs/Web/API/BlobBuilder
+/en-US/docs/DOM/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/DOM/Boolean	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /en-US/docs/DOM/CDATASection	/en-US/docs/Web/API/CDATASection
 /en-US/docs/DOM/CSS	/en-US/docs/Web/CSS/Reference
@@ -2720,7 +2720,7 @@
 /en-US/docs/Document_Object_Model_(DOM)	/en-US/docs/Glossary/DOM
 /en-US/docs/Document_Object_Model_(DOM)/Attr	/en-US/docs/Web/API/Attr
 /en-US/docs/Document_Object_Model_(DOM)/Blob	/en-US/docs/Web/API/Blob
-/en-US/docs/Document_Object_Model_(DOM)/BlobBuilder	/en-US/docs/Web/API/BlobBuilder
+/en-US/docs/Document_Object_Model_(DOM)/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Document_Object_Model_(DOM)/CSSRuleList	/en-US/docs/Web/API/CSSRuleList
 /en-US/docs/Document_Object_Model_(DOM)/CSSStyleDeclaration	/en-US/docs/Web/API/CSSStyleDeclaration
 /en-US/docs/Document_Object_Model_(DOM)/CSSStyleRule	/en-US/docs/Web/API/CSSStyleRule
@@ -7548,6 +7548,7 @@
 /en-US/docs/Web/API/Blob.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/Blob.slice	/en-US/docs/Web/API/Blob/slice
 /en-US/docs/Web/API/Blob.type	/en-US/docs/Web/API/Blob/type
+/en-US/docs/Web/API/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
 /en-US/docs/Web/API/Bluetooth/onavailabilitychanged	/en-US/docs/Web/API/Bluetooth/availabilitychanged_event
@@ -12230,6 +12231,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/TypedArray.prototype.reduce()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global

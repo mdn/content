@@ -14,44 +14,79 @@ browser-compat: javascript.builtins.Math.hypot
 The **`Math.hypot()`** function returns the square root of the
 sum of squares of its arguments, that is:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo>
-<mo stretchy="false">(</mo>
-<msub><mi>v</mi>
-<mn>1</mn>
-</msub><mo>,</mo>
-<msub><mi>v</mi>
-<mn>2</mn>
-</msub><mo>,</mo>
-<mo>…</mo>
-<mo>,</mo>
-<msub><mi>v</mi>
-<mi>n</mi>
-</msub><mo stretchy="false">)</mo>
-</mrow></mstyle><mo>=</mo>
-<msqrt><mrow><munderover><mo>∑</mo>
-<mrow><mi>i</mi>
-<mo>=</mo>
-<mn>1</mn>
-</mrow><mi>n</mi>
-</munderover><msubsup><mi>v</mi>
-<mi>i</mi>
-<mn>2</mn>
-</msubsup></mrow></msqrt><mo>=</mo>
-<msqrt><mrow><msubsup><mi>v</mi>
-<mn>1</mn>
-<mn>2</mn>
-</msubsup><mo>+</mo>
-<msubsup><mi>v</mi>
-<mn>2</mn>
-<mn>2</mn>
-</msubsup><mo>+</mo>
-<mo>…</mo>
-<mo>+</mo>
-<msubsup><mi>v</mi>
-<mi>n</mi>
-<mn>2</mn>
-</msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)}
-= \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
+<math display="block">
+  <semantics>
+    <mrow>
+      <mstyle mathvariant="monospace">
+        <mrow>
+          <mo lspace="0em" rspace="thinmathspace">Math.hypot</mo>
+          <mo stretchy="false">(</mo>
+          <msub><mi>v</mi>
+            <mn>1</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>v</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>,</mo>
+          <mo>…</mo>
+          <mo>,</mo>
+          <msub>
+            <mi>v</mi>
+            <mi>n</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </mstyle>
+      <mo>=</mo>
+      <msqrt>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
+            <mrow>
+              <mi>i</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </munderover>
+          <msubsup>
+            <mi>v</mi>
+            <mi>i</mi>
+            <mn>2</mn>
+          </msubsup>
+        </mrow>
+      </msqrt>
+      <mo>=</mo>
+      <msqrt>
+        <mrow>
+          <msubsup>
+            <mi>v</mi>
+            <mn>1</mn>
+            <mn>2</mn>
+          </msubsup>
+          <mo>+</mo>
+          <msubsup>
+            <mi>v</mi>
+            <mn>2</mn>
+            <mn>2</mn>
+          </msubsup>
+          <mo>+</mo>
+          <mo>…</mo>
+          <mo>+</mo>
+          <msubsup>
+            <mi>v</mi>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msubsup>
+        </mrow>
+      </msqrt>
+    </mrow>
+    <annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)}
+= \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation>
+  </semantics>
+</math>
 
 {{EmbedInteractiveExample("pages/js/math-hypot.html")}}
 

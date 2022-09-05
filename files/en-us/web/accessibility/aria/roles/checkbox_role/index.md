@@ -90,7 +90,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 The following example creates an otherwise non-semantic checkbox element using CSS and JavaScript to handle the checked or unchecked status of the element.
 
-#### HTML
+### HTML
 
 ```html
 <span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyDown="changeCheckbox(event.keyCode)"
@@ -98,7 +98,7 @@ The following example creates an otherwise non-semantic checkbox element using C
 <label id="chk1-label" onclick="changeCheckbox()" onKeyDown="changeCheckbox(event.keyCode)">Remember my preferences</label>
 ```
 
-#### CSS
+### CSS
 
 ```css
 [role="checkbox"] {
@@ -118,7 +118,7 @@ The following example creates an otherwise non-semantic checkbox element using C
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 function changeCheckbox(keyCode) {

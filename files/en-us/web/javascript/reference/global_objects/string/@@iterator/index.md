@@ -60,7 +60,7 @@ console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
 ```
 
-### Using \[@@iterator]\() with for..of
+### Using \[@@iterator]\() with for...of
 
 ```js
 const str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
