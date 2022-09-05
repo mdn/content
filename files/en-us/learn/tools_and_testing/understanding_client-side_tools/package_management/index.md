@@ -361,7 +361,7 @@ npm install date-fns
 yarn add date-fns
 ```
 
-We also saw `install` in action above. This would directly add the `date-fns` package to the working directory in a sub-directory called `node_modules`, along with `date-fns`'s own dependencies.
+We also saw `install` in action above. This would directly add the `date-fns` package to the working directory in a subdirectory called `node_modules`, along with `date-fns`'s own dependencies.
 
 By default, this command will install the latest version of `date-fns`, but you can control this too. You can ask for `date-fns@1`, which gives you the latest 1.x version (which is 1.30.1). Or you could try `date-fns@^2.3.0`, which means the latest version after or including 2.3.0 (2.8.1 at the time of writing).
 
