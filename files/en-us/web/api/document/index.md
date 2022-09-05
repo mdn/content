@@ -115,7 +115,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : This object may be used to expose additional information about the text fragment or other fragment directives in the future.
-- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}} 
+- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}  
   - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : Returns the date on which the document was last modified.
@@ -129,7 +129,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Sets or gets the title of the current document.
 - {{DOMxRef("Document.URL")}} {{ReadOnlyInline}}
   - : Returns the document location as a string.
-- {{DOMxRef("Document.wasDiscarded")}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.wasDiscarded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Indicates whether the page was discarded while in a hidden tab.
 
 ### Deprecated properties
@@ -384,9 +384,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Lifecycle events
 
-- {{DOMxRef("Document/freeze_event", "freeze")}}
+- {{DOMxRef("Document/freeze_event", "freeze")}} {{Experimental_Inline}}
   - : Fired when the document transitions to `FROZEN` state.
-- {{DOMxRef("Document/resume_event", "resume")}}
+- {{DOMxRef("Document/resume_event", "resume")}} {{Experimental_Inline}}
   - : Fired when the document transitions from `FROZEN` to `ACTIVE` state.
 
 ### Load & unload events
