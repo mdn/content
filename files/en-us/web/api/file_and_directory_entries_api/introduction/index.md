@@ -158,7 +158,7 @@ Because the file system is sandboxed, a web app cannot access another app's file
 
 ### You cannot run your app from file://
 
-You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.
+You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including Blob and FileReader.
 
 For testing purposes, you can bypass the restriction on Chrome by starting the browser with the `--allow-file-access-from-files` flag. Use this flag only for this purpose.
 

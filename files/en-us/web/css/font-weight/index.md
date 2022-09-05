@@ -142,7 +142,7 @@ Note that when using relative weights, only four font weights are considered —
 
 ### Common weight name mapping
 
-The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)):
+The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass)):
 
 | Value | Common weight name                                                                                                                |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -155,7 +155,7 @@ The numerical values `100` to `900` roughly correspond to the following common w
 | 700   | Bold                                                                                                                              |
 | 800   | Extra Bold (Ultra Bold)                                                                                                           |
 | 900   | Black (Heavy)                                                                                                                     |
-| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### Variable fonts
 

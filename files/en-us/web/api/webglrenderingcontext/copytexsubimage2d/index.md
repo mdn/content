@@ -46,7 +46,7 @@ copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal offset within the texture image.
 - `yoffset`

@@ -27,7 +27,7 @@ The value is initialized with the string specified in the corresponding style's 
 
 This example demonstrates programmatically getting and setting the media property on a style that was defined in an SVG definition.
 
-#### HTML
+### HTML
 
 The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that is conditional on the media query `"all and (min-width: 600px)"`.
 We also define a `button` that will be used to display the current style and change the style.
@@ -39,7 +39,7 @@ We also define a `button` that will be used to display the current style and cha
 </svg>
 ```
 
-#### JavaScript
+### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
@@ -76,7 +76,7 @@ button.addEventListener('click', () => {
    });
 ```
 
-#### Result
+### Result
 
 The result is shown below.
 The button text shows the value of the media attribute originally applied to the SVG style along with the width of the current frame (since the code is run in a frame).

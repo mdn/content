@@ -8,9 +8,11 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
+  - Experimental
 browser-compat: api.CanvasRenderingContext2D.reset
 ---
-{{APIRef}}
+
+{{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.reset()`** method of the Canvas 2D API resets the rendering context to its default state, allowing it to be reused for drawing something else without having to explicitly reset all the properties.
 
@@ -38,7 +40,9 @@ This example shows how we can use `reset()` to completely clear the context befo
 First we define a button and a canvas.
 
 ```css
-#toggle-reset { display:block; }
+#toggle-reset {
+  display: block;
+}
 ```
 
 ```html
@@ -51,10 +55,10 @@ It then defines functions that can use the context to draw a rectangle and a cir
 
 ```js
 // Get the 2d context
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 
-function DrawRect() {
+function drawRect() {
   // Set line width
   ctx.lineWidth = 10;
 
@@ -62,11 +66,11 @@ function DrawRect() {
   ctx.strokeRect(50, 50, 150, 100);
 
   // Create filled text
-  ctx.font = '50px serif';
-  ctx.fillText('Rect!', 70, 110);
+  ctx.font = "50px serif";
+  ctx.fillText("Rect!", 70, 110);
 }
 
-function DrawCircle() {
+function drawCircle() {
   // Set line width
   ctx.lineWidth = 5;
 
@@ -76,8 +80,8 @@ function DrawCircle() {
   ctx.stroke();
 
   // Create filled text
-  ctx.font = '25px sans-serif';
-  ctx.fillText('Circle!', 265, 100);
+  ctx.font = "25px sans-serif";
+  ctx.fillText("Circle!", 265, 100);
 }
 ```
 
@@ -86,18 +90,18 @@ The button toggles drawing the circle and rectangle.
 Note how `reset()` is called before drawing to clear the context.
 
 ```js
-DrawRect();
+drawRect();
 
 // Toggle between circle and rectangle using button
 let toggle = true;
-const mybutton = document.getElementById('toggle-reset');
+const mybutton = document.getElementById("toggle-reset");
 
 mybutton.addEventListener("click", () => {
   ctx.reset(); // Clear the context!
   if (toggle) {
-    DrawCircle();
+    drawCircle();
   } else {
-    DrawRect();
+    drawRect();
   }
   toggle = !toggle;
 });

@@ -81,7 +81,7 @@ The images are currently inaccessible to screen reader users. Can you fix this?
 
 ### The show/hide comment control
 
-The show/hide comment control button is not current keyboard-accessible. Can you make it keyboard accessible, both in terms of focusing it using the tab key, and activating it using the return key?
+The show/hide comment control button is not currently keyboard-accessible. Can you make it keyboard accessible, both in terms of focusing it using the tab key, and activating it using the return key?
 
 ### The table
 

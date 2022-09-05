@@ -12,7 +12,7 @@ tags:
 
 Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.
 
-> **Warning:** Note to translators and localizers: You should *not* translate any tags listed on this page. They are used for specific purposes such as certain site management tasks and automated data processing, and translating them would break these processes.
+> **Warning:** Note to translators and localizers: You should _not_ translate any tags listed on this page. They are used for specific purposes such as certain site management tasks and automated data processing, and translating them would break these processes.
 
 Tags used on MDN Web Docs can be classified into the following categories based on what the tags are used for or the information they convey:
 

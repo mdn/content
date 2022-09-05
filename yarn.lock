@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.0.tgz#938f8074437a13e34e435782040b5b337b6cd438"
   integrity sha512-CVEdy5/Q2cZJXzynD3zpPWHhNpoY1AApKRW0YCWN0HdrlP+VF2+6tX5U5d7XmSL91c2kqdb7yTi93mrAhHX8zw==
 
-"@mdn/yari@1.18.5":
-  version "1.18.5"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.5.tgz#c77a586647b1271360a90d06e772897e0c741442"
-  integrity sha512-w/DdkBe6kcDFSbxBbLLAHDS7Lcugk7rWS5g4W83CqYZC42158SFAC9WyP1zyBQyFcYOBSPmRksMRCapOWDmNLg==
+"@mdn/yari@1.18.9":
+  version "1.18.9"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.9.tgz#59baef51e413afb6204c922fe09486da4f9f6418"
+  integrity sha512-uQoX00AHr5em5Oj8IsWQakoqhaVptzxHDk60ZCYk0pPKGFxjvl7335u8bWcl5trR8sr5ZGSJSjImi/fVejtaHA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -50,7 +50,7 @@
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.1.0"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.20.0"
+    browser-specs "^3.21.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -578,10 +578,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.20.0:
-  version "3.20.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.20.0.tgz#7250576db2c8f050e609a89cd93ea8c59c2dfc9f"
-  integrity sha512-aL+kZWWOjaeri69cVYz1VC+1cJTK9uE92VnRgse5MuTz1kCxVqruuvOfqfFElt9kjvZg/2ZkrwnA62filZ27LQ==
+browser-specs@^3.21.0:
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.21.0.tgz#b095fff688755b531125244dfd2e92fac2efdf82"
+  integrity sha512-6dok7o/bWj1MvIrM65QdwF+1Q9DlSZfetiu/9RXAi9YfTtdHa0IsbHlOcS+U2uhBQ8siiQ1LWh58GpuXmXZRGw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -3069,6 +3069,13 @@ markdownlint-rule-helpers@~0.17.2:
   version "0.17.2"
   resolved "https://registry.yarnpkg.com/markdownlint-rule-helpers/-/markdownlint-rule-helpers-0.17.2.tgz#64d6e8c66e497e631b0e40cf1cef7ca622a0b654"
   integrity sha512-XaeoW2NYSlWxMCZM2B3H7YTG6nlaLfkEZWMBhr4hSPlq9MuY2sy83+Xr89jXOqZMZYjvi5nBCGoFh7hHoPKZmA==
+
+markdownlint-rule-search-replace@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.0.5.tgz#20cc1681e3c162dd43d19614e3d1515e75cf0299"
+  integrity sha512-PXpHZuZrqaPA0kpkPSsTPVndxtoM+wgG95V9vzL5sZl+SQUp8hJIHSqOnNJOwd85ykgjbnripZYf0IN40ADkdw==
+  dependencies:
+    markdownlint-rule-helpers "~0.17.2"
 
 markdownlint@~0.26.2:
   version "0.26.2"

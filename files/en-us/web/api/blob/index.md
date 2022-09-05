@@ -151,7 +151,6 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 
 ## See also
 
-- {{DOMxRef("BlobBuilder")}}
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}

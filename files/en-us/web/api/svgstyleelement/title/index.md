@@ -25,7 +25,7 @@ The value is initialized with the string specified in the corresponding style's 
 
 This example demonstrates programmatically getting and setting the `title` property on a style that was defined in an SVG definition.
 
-#### HTML
+### HTML
 
 The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that has a `title`.
 We also define a text area for logging the current title.
@@ -42,7 +42,7 @@ We also define a text area for logging the current title.
 </svg>
 ```
 
-#### JavaScript
+### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its tag name, logs the title, then changes and logs the title again.
 
@@ -56,7 +56,7 @@ style.title = "Altered Title";
 log.value += `New title: ${style.title}`;
 ```
 
-#### Result
+### Result
 
 The text in the log below shows that the title initially reflects the matching attribute on the `<style>` element, but can then be changed to another value.
 

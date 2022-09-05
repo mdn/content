@@ -73,7 +73,7 @@ myNumberType.valueOf()
 ```
 
 > **Note:** Objects in string contexts convert via the
-> {{jsxref("Object.toString", "toString()")}} method, which is different from
+> {{jsxref("Object/toString", "toString()")}} method, which is different from
 > {{jsxref("String")}} objects converting to string primitives using
 > `valueOf`. All objects have a string conversion, if only
 > `"[object type]"`. But many objects do not convert to number,

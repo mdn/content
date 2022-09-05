@@ -29,9 +29,9 @@ Below is a list of interfaces based on the `CSSStyleValue` interface.
 
 ## Methods
 
-- {{domxref("CSSStyleValue.parse()")}}
+- {{domxref("CSSStyleValue.parse()")}} {{Experimental_Inline}}
   - : Sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.
-- {{domxref("CSSStyleValue.parseAll()")}}
+- {{domxref("CSSStyleValue.parseAll()")}} {{Experimental_Inline}}
   - : Sets all occurrences of a specific CSS property to the specified value and returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.
 
 ## Specifications

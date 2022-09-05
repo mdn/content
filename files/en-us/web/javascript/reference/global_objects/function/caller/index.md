@@ -19,30 +19,34 @@ If the function `f` was invoked by the top-level code, the value of `f.caller` i
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), accessing `caller` of a function throws an error. This is to prevent a function from being able to "walk the stack", which both poses security risks and severely limits the possibility of optimizations like inlining and tail-call optimization. For more explanation, you can read [the rationale for the deprecation of `arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee#why_was_arguments.callee_removed_from_es5_strict_mode).
 
-Note that the only behavior specified by the ECMAScript specification is that `Function.prototype` has an initial `caller` accessor that unconditionally throws a {{jsxref("TypeError")}} for any `get` or `set` request (known as a "poison pill accessor"), and that implementations are not allowed to change this semantic for any function except non-strict plain functions, in which case it must not have the value of a strict mode function. The actual behavior of the `caller` property, if it's anything other than throwing an error, is implementation-defined. For example, in Chrome, it's defined as an own data property, while in Firefox and Safari, it's not accessible through reflective methods like [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) or [`Object.getOwnPropertyDescriptor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) at all.
+Note that the only behavior specified by the ECMAScript specification is that `Function.prototype` has an initial `caller` accessor that unconditionally throws a {{jsxref("TypeError")}} for any `get` or `set` request (known as a "poison pill accessor"), and that implementations are not allowed to change this semantic for any function except non-strict plain functions, in which case it must not have the value of a strict mode function. The actual behavior of the `caller` property, if it's anything other than throwing an error, is implementation-defined. For example, Chrome defines it as an own data property, while Firefox and Safari extend the initial poison-pill `Function.prototype.caller` accessor to specially handle `this` values that are non-strict functions.
 
 ```js
 (function f() {
-  console.log(f.caller);
   if (Object.hasOwn(f, "caller")) {
     console.log(
       "caller is an own property with descriptor",
       Object.getOwnPropertyDescriptor(f, "caller"),
     );
   } else {
-    console.log("f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller");
-    console.log(Object.getPrototypeOf(f).caller);
+    console.log(
+      "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller",
+    );
+    console.log(
+      Object.getOwnPropertyDescriptor(
+        Object.getPrototypeOf(f),
+        "caller",
+      ).get.call(f),
+    );
   }
 })();
 
 // In Chrome:
-// null
 // caller is an own property with descriptor {value: null, writable: false, enumerable: false, configurable: false}
 
 // In Firefox:
-// null
 // f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller
-// Uncaught TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+// null
 ```
 
 This property replaces the obsolete `arguments.caller` property of the {{jsxref("Functions/arguments", "arguments")}} object.

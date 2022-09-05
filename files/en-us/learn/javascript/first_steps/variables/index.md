@@ -96,7 +96,7 @@ One special thing about variables is that they can contain just about anything â
 
 > **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
-![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob",true and 35 respectively.](boxes.png)
+![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
 ## Declaring a variable
 
@@ -421,7 +421,7 @@ If you can't do as much with `const` as you can with `let`, why would you prefer
 
 In this course, we adopt the following principle about when to use `let` and when to use `const`:
 
-*Use `const` when you can, and use `let` when you have to.*
+_Use `const` when you can, and use `let` when you have to._
 
 This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 

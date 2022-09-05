@@ -68,8 +68,8 @@ Math.round(-20.51); // -21
 
 ## See also
 
-- {{jsxref("Number.toPrecision()")}}
-- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

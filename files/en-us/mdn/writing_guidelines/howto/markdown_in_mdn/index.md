@@ -160,9 +160,9 @@ The blockquote can contain code blocks or other block elements.
 
 Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
-#### Examples
+### Examples
 
-##### Note
+#### Note
 
 ```plain
 > **Note:** This is how you write a note.
@@ -185,7 +185,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple lines.
 
-##### Warnings
+#### Warnings
 
 ```plain
 > **Warning:** This is how you write a warning.
@@ -208,7 +208,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple paragraphs.
 
-##### Callouts
+#### Callouts
 
 ```plain
 > **Callout:** **This is how you write a callout.**
@@ -233,7 +233,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple paragraphs.
 
-##### Translated warning
+#### Translated warning
 
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
@@ -249,7 +249,7 @@ And this will produce:
 </div>
 ```
 
-##### Note containing a code block
+#### Note containing a code block
 
 This example contains a code block.
 
