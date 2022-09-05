@@ -113,6 +113,10 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets directionality (rtl/ltr) of the document.
 - {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
   - : Gets/sets the domain of the current document.
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : This object may be used to expose additional information about the text fragment or other fragment directives in the future.
+- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}} 
+  - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : Returns the date on which the document was last modified.
 - {{DOMxRef("Document.location")}} {{ReadOnlyInline}}
@@ -125,6 +129,8 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Sets or gets the title of the current document.
 - {{DOMxRef("Document.URL")}} {{ReadOnlyInline}}
   - : Returns the document location as a string.
+- {{DOMxRef("Document.wasDiscarded")}} {{ReadOnlyInline}}
+  - : Indicates whether the page was discarded while in a hidden tab.
 
 ### Deprecated properties
 
@@ -223,6 +229,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an array of all elements at the specified coordinates.
 - {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Enables the style sheets for the specified style sheet set.
+- {{DOMxRef("Document.exitFullscreen()")}}
+  - : Stops document’s fullscreen element from being displayed fullscreen.  
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Remove the video from the floating picture-in-picture window back to its original container.
 - {{DOMxRef("Document.exitPointerLock()")}}
@@ -312,6 +320,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{DOMxRef("SecurityPolicyViolationEvent", "securitypolicyviolation")}}
+  - : Fired when content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
@@ -371,6 +381,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a key that produces a character value is pressed down.
 - {{DOMxRef("Document/keyup_event", "keyup")}}
   - : Fired when a key is released.
+
+### Lifecycle events
+
+- {{DOMxRef("Document/freeze_event", "freeze")}}
+  - : Fired when the document transitions to `FROZEN` state.
+- {{DOMxRef("Document/resume_event", "resume")}}
+  - : Fired when the document transitions from `FROZEN` to `ACTIVE` state.
 
 ### Load & unload events
 
