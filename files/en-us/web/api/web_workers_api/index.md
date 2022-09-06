@@ -91,7 +91,7 @@ The following Web APIs are available to workers:
 - {{jsxref("Promise")}}
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
-- {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }})
+- {{domxref("URL_API","URL API")}} (e.g. {{domxref("URL")}})
 - [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
