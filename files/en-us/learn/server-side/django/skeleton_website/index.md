@@ -53,7 +53,7 @@ To get started:
 3. Register the new applications to include them in the project.
 4. Hook up the **url/path** mapper for each application.
 
-For the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), the website and project folders are named *locallibrary*, and includes one application named _catalog_.
+For the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), the website and project folders are named _locallibrary_, and includes one application named _catalog_.
 The top-level folder structure will therefore be as follows:
 
 ```bash
@@ -240,7 +240,7 @@ urlpatterns = [
 
 The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls`, which contains the Administration application's own URL mapping definitions.
 
-> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass *any_chars* to the view as a string with parameter name `id`. We discuss path methods and route patterns further in later topics.
+> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass _`any_chars`_ to the view as a string with the parameter name `id`. We discuss path methods and route patterns further in later topics.
 
 To add a new list item to the `urlpatterns` list, add the following lines to the bottom of the file. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **catalog/urls.py**).
 
@@ -313,7 +313,7 @@ urlpatterns = [
 
 ## Testing the website framework
 
-At this point we have a complete skeleton project. The website doesn't actually *do* anything yet, but it's worth running it to make sure that none of our changes have broken anything.
+At this point we have a complete skeleton project. The website doesn't actually _do_ anything yet, but it's worth running it to make sure that none of our changes have broken anything.
 
 Before we do that, we should first run a _database migration_. This updates our database (to include any models in our installed applications) and removes some build warnings.
 
@@ -330,7 +330,7 @@ python3 manage.py migrate
 
 > **Warning:** You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 
-The `makemigrations` command *creates* (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
+The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 

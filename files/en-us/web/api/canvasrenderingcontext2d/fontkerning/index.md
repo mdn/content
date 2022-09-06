@@ -37,13 +37,13 @@ Allowed values are:
 
 In this example we display the text "AVA Ta We" using each of the supported values of the `textRendering` property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700" height="140"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -62,7 +62,7 @@ ctx.fontKerning = 'none';
 ctx.fillText(`AVA Ta We (${ctx.fontKerning})`, 5, 110);
 ```
 
-#### Result
+### Result
 
 Note that the the last string has font kerning disabled, so adjacent characters are evenly spread.
 

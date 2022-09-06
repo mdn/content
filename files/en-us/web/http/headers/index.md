@@ -179,7 +179,7 @@ Network client hints allow a server to choose what information is sent based on 
 
 ## CORS
 
-_Learn more about CORS [here](CORS)._
+_Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.

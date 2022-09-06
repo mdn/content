@@ -24,7 +24,7 @@ The `DirectoryEntrySync` interface represents a directory in a file system. It i
 
 If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.
 
-#### Example
+### Example
 
 The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
 

@@ -60,7 +60,7 @@ const obj = { 0: 'a', 1: 'b', 2: 'c' };
 console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array method.
 // logs ["0", "1", "2"]
 
-// Logging property names and values using Array.forEach
+// Logging property names and values using forEach()
 Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
   console.log(`${val} -> ${obj[val]}`);
 });
@@ -130,4 +130,4 @@ console.log(nonenumOnly);
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.keys()")}}
-- {{jsxref("Array.forEach()")}}
+- {{jsxref("Array.prototype.forEach()")}}

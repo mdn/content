@@ -18,7 +18,7 @@ The **`Intl.Locale.prototype.numeric`** property is an accessor property that re
 
 ## Description
 
-Like {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.caseFirst")}}, `numeric` represents a modification to the collation rules utilized by the locale. `numeric` is a boolean value, which means that it can be either `true` or `false`. If `numeric` is set to `false`, there will be no special handling of numeric values in strings. If `numeric` is set to `true`, then the locale will take numeric characters into account when collating strings. This special numeric handling means that sequences of decimal digits will be compared as numbers. For example, the string "A-21" will be considered less than "A-123".
+Like {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}, `numeric` represents a modification to the collation rules utilized by the locale. `numeric` is a boolean value, which means that it can be either `true` or `false`. If `numeric` is set to `false`, there will be no special handling of numeric values in strings. If `numeric` is set to `true`, then the locale will take numeric characters into account when collating strings. This special numeric handling means that sequences of decimal digits will be compared as numbers. For example, the string "A-21" will be considered less than "A-123".
 
 ## Examples
 

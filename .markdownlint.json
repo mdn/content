@@ -11,7 +11,9 @@
     "spaces_per_tab": 2
   },
   "MD013": false,
-  "MD024": false,
+  "MD024": {
+    "allow_different_nesting": true
+  },
   "MD025": {
     "front_matter_title": "^\\s*title\\s*[:=]"
   },
@@ -97,10 +99,51 @@
   "MD046": {
     "style": "fenced"
   },
-  "MD049": false,
+  "MD049": {
+    "style": "underscore"
+  },
   "MD050": {
     "style": "asterisk"
   },
   "MD051": false,
-  "MD052": false
+  "MD052": false,
+  "search-replace": {
+    "rules": [
+      {
+        "name": "curly-double-quotes",
+        "message": "Don't use curly double quotes",
+        "searchPattern": "/“|”/g",
+        "replace": "\"",
+        "skipCode": true
+      },
+      {
+        "name": "curly-single-quotes",
+        "message": "Don't use curly single quotes",
+        "searchPattern": "/‘|’/g",
+        "replace": "'",
+        "skipCode": true
+      },
+      {
+        "name": "m-dash",
+        "message": "Don't use '--'. Use m-dash — instead",
+        "search": " -- ",
+        "replace": " — ",
+        "skipCode": true
+      },
+      {
+        "name": "relative-link",
+        "message": "Internal links should start with '/'",
+        "search": "(en-US/docs",
+        "replace": "(/en-US/docs",
+        "skipCode": true
+      },
+      {
+        "name": "trailing-spaces",
+        "message": "Avoid trailing spaces",
+        "searchPattern": "/  +$/gm",
+        "replace": "",
+        "skipCode": false
+      }
+    ]
+  }
 }

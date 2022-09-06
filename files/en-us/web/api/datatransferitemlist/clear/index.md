@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 
 This example shows the use of the `clear()` method.
 
-#### HTML
+### HTML
 
 ```html
  <div>
@@ -51,7 +51,7 @@ This example shows the use of the `clear()` method.
  <div id="target" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">Drop Zone</div>
 ```
 
-#### CSS
+### CSS
 
 ```css
   div {
@@ -67,7 +67,7 @@ This example shows the use of the `clear()` method.
   }
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 function dragstartHandler(ev) {
@@ -121,7 +121,7 @@ function dragendHandler(ev) {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample('Examples', 400, 300)}}
 

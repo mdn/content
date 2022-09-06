@@ -59,7 +59,7 @@ It is good practice to organize the links into three groups:
 
 - General knowledge
   - : These links provide higher-level information about the term or topic.
-    For example: a link to a relevant [Wikipedia](https://www.wikipedia.org/) page.
+    For example: a link to a relevant [Wikipedia](https://en.wikipedia.org/) page.
 - Technical reference
   - : These links offer in-depth technical information, on MDN Web Docs or other sites.
 - Learn about it

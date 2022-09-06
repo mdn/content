@@ -65,9 +65,9 @@ registry.unregister(tokenObject);
 
 ## Instance methods
 
-- {{jsxref("FinalizationRegistry.register", "FinalizationRegistry.prototype.register()")}}
+- {{jsxref("FinalizationRegistry.prototype.register()")}}
   - : Registers an object with the registry in order to get a cleanup callback when/if the object is garbage-collected.
-- {{jsxref("FinalizationRegistry.unregister", "FinalizationRegistry.prototype.unregister()")}}
+- {{jsxref("FinalizationRegistry.prototype.unregister()")}}
   - : Unregisters an object from the registry.
 
 ## Avoid where possible

@@ -28,7 +28,7 @@ Below is a list of interfaces based on the <code>XRLayer</code> interface.
 
 ## Methods
 
-*Inherits methods from its parent, {{domxref("EventTarget")}}*.
+_Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 ## Specifications
 

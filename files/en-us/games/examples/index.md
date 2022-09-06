@@ -35,7 +35,7 @@ This page lists a number of impressive web technology demos for you to get inspi
 - [Xibalba](https://phoboslab.org/xibalba/)
   - : Retro (Doom-style) first person shooter.
 - [Gorescript](https://timeinvariant.github.io/gorescript/play/)
-  - : Another retro style first person shooter.
+  - : Another retro style first-person shooter.
 - [The Wizard](https://hypnoticowl.com/games/the-wizard/)
   - : A turn-based, dungeon puzzle game.
 - [Hextris](https://hextris.io/)

@@ -78,7 +78,7 @@ The rest of this page summarizes these and other incompatibilities.
   );
   ```
 
-### Firefox supports both the *chrome* and *browser* namespaces
+### Firefox supports both the chrome and browser namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome`, using callbacks, as well as `browser`, using promises. This means that many Chrome extensions will just work in Firefox without any changes.
 
