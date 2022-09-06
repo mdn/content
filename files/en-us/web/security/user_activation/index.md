@@ -9,7 +9,7 @@ A user activation either implies that the user is currently interacting with the
 
 There are two types of user activation, sticky and transient.
 
-## Transient activation 
+## Transient activation
 
 {{Glossary("Transient activation")}} is a window state that indicates a user has recently pressed a button, moved a mouse, used a menu, or performed some other user interaction. Transient activation expires after a timeout (if not renewed by further interaction) and may also be consumed by some APIs (like {{domxref("Window.open()")}}).
 
@@ -43,7 +43,7 @@ Example APIs that require transient activation:
 - `Window.queryLocalFonts()`
 - {{domxref("XRSystem.requestSession()")}}
 
-## Sticky activation 
+## Sticky activation
 
 {{Glossary("Sticky activation")}} is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction. It is not reset during the frame's lifetime after it has been set initially (unlike transient activation).
 
