@@ -1,4 +1,4 @@
----
+---81d6344c0921d4de273049b4f660b65e977e7af2
 title: Quirks Mode and Standards Mode
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 tags:
