@@ -48,7 +48,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("btoa", "btoa()")}}
 - {{domxref("clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}
+- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 
