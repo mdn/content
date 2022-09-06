@@ -56,11 +56,11 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 ### WebGL
 
-_No change_
+_No change._
 
 ### SVG
 
-_No change_
+_No change._
 
 ### MathML
 

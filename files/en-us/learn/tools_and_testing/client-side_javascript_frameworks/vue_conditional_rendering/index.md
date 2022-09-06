@@ -340,9 +340,7 @@ Now when you save and reload, you'll find that the problem is solved — the che
 
 One of the most potentially confusing parts is the tangle of standard and custom events we've used to trigger all the interactivity in our app. To understand this better, it is a good idea to write out a flow chart, description, or diagram of what events are emitted where, where they are being listened for, and what happens as a result of them firing.
 
-For example:
-
-**App.vue**
+### App.vue
 
 `<to-do-form>` listens for:
 
@@ -358,12 +356,12 @@ For example:
 - `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edited` events!
   **Result**: `editToDo()` method invoked to update label of associated todo item.
 
-**ToDoForm.vue**
+### ToDoForm.vue
 
 `<form>` listens for `submit` event.
 **Result**: `onSubmit()` method is invoked, which checks that the new label is not empty, then emits the `todo-added` event (which is then listened for inside `App.vue`, see above), and finally clears the new label `<input>`.
 
-**ToDoItem.vue**
+### ToDoItem.vue
 
 `checkbox` `<input>` listens for `change` event.
 **Result**: `checkbox-changed` event emitted when the checkbox is checked/unchecked (which is then listened for inside `App.vue`; see above).
@@ -381,7 +379,7 @@ For example:
 - `edit-cancelled` event emitted by the `onCancel()` method inside the `ToDoItemEditForm` component when the "Cancel" button is clicked.
   **Result**: `editCancelled()` method is invoked, which sets `this.isEditing` back to `false`, so that the edit form is no longer shown on re-render.
 
-**ToDoItemEditForm.vue**
+### ToDoItemEditForm.vue
 
 `<form>` listens for `submit` event.
 **Result**: `onSubmit()` method is invoked, which checks to see if the new label value is not blank, and not the same as the old one, and if so emits the `item-edited` event (which is then listened for inside `ToDoItem.vue`, see above).

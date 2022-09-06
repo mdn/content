@@ -19,7 +19,7 @@ This article discusses making web content accessible for those with vestibular d
 
 From the article, "**[Understanding Success Criterion 2.3.1: Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)**"
 
-_"Flashing can be caused by the display, the computer rendering the image or by the content being rendered. The author has no control of the first two. They can be addressed by the design and speed of the display and computer"_
+> Flashing can be caused by the display, the computer rendering the image or by the content being rendered. The author has no control of the first two. They can be addressed by the design and speed of the display and computer
 
 ### Hardware and operating systems on many computers offer control that is not afforded to developers
 

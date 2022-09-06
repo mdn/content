@@ -131,13 +131,13 @@ Measuring the potential for harm is a good starting point. Factors considered wi
 
 In August, 2004, the Epilepsy Foundation of America convened a workshop to begin to develop an expert consensus on photosensitive seizures. The following, expert, and authoritative information is from: [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group.](https://pubmed.ncbi.nlm.nih.gov/16146438/)
 
-_"A flash is a potential hazard if it has luminance ≥20 cd/m<sup>2</sup>, occurs at a frequency of ≥3 Hz, and occupies a solid visual angle of ≥0.006 steradians (approximately 10% of the central visual field or 25% of screen area at typical viewing distances). A transition to or from saturated red also is considered a risk. A pattern with the potential for provoking seizures contains clearly discernible stripes, numbering more than five light-dark pairs of stripes in any orientation. When the light-dark stripes of any pattern collectively subtend at the eye from the minimal-expected viewing distance a solid angle of >0.006 steradians, the luminance of the lightest stripe is >50 cd/m2, and the pattern is presented for ≥0.5 s, then the pattern should display no more than five light-dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast; if the pattern is unchanging or smoothly drifting in one direction, no more than eight stripes. These principles are easier to apply in the case of fixed media, for example, a prerecorded TV show, which can be analyzed frame-by-frame, as compared with interactive media."_
+> A flash is a potential hazard if it has luminance ≥20 cd/m<sup>2</sup>, occurs at a frequency of ≥3 Hz, and occupies a solid visual angle of ≥0.006 steradians (approximately 10% of the central visual field or 25% of screen area at typical viewing distances). A transition to or from saturated red also is considered a risk. A pattern with the potential for provoking seizures contains clearly discernible stripes, numbering more than five light-dark pairs of stripes in any orientation. When the light-dark stripes of any pattern collectively subtend at the eye from the minimal-expected viewing distance a solid angle of >0.006 steradians, the luminance of the lightest stripe is >50 cd/m2, and the pattern is presented for ≥0.5 s, then the pattern should display no more than five light-dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast; if the pattern is unchanging or smoothly drifting in one direction, no more than eight stripes. These principles are easier to apply in the case of fixed media, for example, a prerecorded TV show, which can be analyzed frame-by-frame, as compared with interactive media.
 
 The "cd/m<sup>2</sup>" refers to candela per square meter. So for the web developer, how does this relate to measurements for color, luminance, and saturation?
 
 The candela is a SI unit (International System of units) of luminous intensity. It's a photometric term, and photometry deals with the measurement of visible light as perceived by human eyes. Wikipedia's article on ["Candela per square metre"](https://en.wikipedia.org/wiki/Candela_per_square_metre) puts it in terms of what we are familiar with as developers: on a display device, and in the RGB space. This is helpful, because there's a specific standard assumed to be used on monitors, printers, and the Internet, and it is the **sRGB** (standard Red Green Blue).
 
-_"As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. The [sRGB](https://en.wikipedia.org/wiki/SRGB) spec for monitors targets 80 cd/m<sup>2</sup>.[<sup>\[3\]</sup>](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-3) Typically, calibrated monitors should have a brightness of 120 cd/m<sup>2</sup>. Most consumer desktop [liquid crystal displays](https://en.wikipedia.org/wiki/Liquid_crystal_display) have luminances of 200 to 300 cd/m<sup>2</sup>.[<sup>\[4\]</sup>](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-4) [High-definition televisions](https://en.wikipedia.org/wiki/High-definition_television) range from 450 to about 1500 cd/m<sup>2</sup>."_
+> As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. The [sRGB](https://en.wikipedia.org/wiki/SRGB) spec for monitors targets 80 cd/m<sup>2</sup>.[<sup>\[3\]</sup>](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-3) Typically, calibrated monitors should have a brightness of 120 cd/m<sup>2</sup>. Most consumer desktop [liquid crystal displays](https://en.wikipedia.org/wiki/Liquid_crystal_display) have luminances of 200 to 300 cd/m<sup>2</sup>.[<sup>\[4\]</sup>](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-4) [High-definition televisions](https://en.wikipedia.org/wiki/High-definition_television) range from 450 to about 1500 cd/m<sup>2</sup>.
 
 The takeaway is that the **sRGB** color space is a common touch point between research, assessment tools, and developers, since it is easily converted from the commonly used Hex code.
 
@@ -339,7 +339,7 @@ document.getAnimations().forEach((animation) => {
 });
 ```
 
-**Image sources for animation**
+#### Image sources for animation
 
 One of the easiest ways is to start with an image that is already in existence, using it as an image source, and then animating it. Remember, you can use GIFs, JPGs, PNGs, SVGs and other file types here as an image source, as long as they are allowed file types—and sizes—in your environment. SVGs are often not allowed, due to security concerns. The MDN document, [Basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations), provides outstanding examples of this, using multiple image sources for the sun, earth, and moon, and using several canvas methods to control the speed and animation of the earth as it orbits around the sun, and the moon as it orbits around the earth. Use the codepen available with this tutorial to adjust `ctx.rotate` in the code to see how the animation is affected when changes are made.
 
@@ -411,7 +411,7 @@ As mentioned earlier in this document, the Epilepsy Foundation of America conven
 
 With the understanding that much of animation and flashing can be controlled via CSS methods, it's important to explore ways to make alternative options available to users, and to make the control of these options convenient and visible.
 
-**Alternative Style Sheets**
+#### Alternative Style Sheets
 
 Modern browsers will display the alternate CSS available in alternate style sheets if the users know where to look for them. In some cases, the alternate styles are revealed when the users go through the View menu, in other cases they are manifested in the settings, sometimes both. Not all users know to look for these options via the browser or settings, so it's worth considering doing things the old-fashioned way, with obvious buttons or links to change the style so that users can see them. Doing so won't conflict with, or override, the browser's ability to read the alternate style sheets, or the ability of the user to set preferences in the settings.
 
@@ -419,7 +419,7 @@ It's important to know that certain users, such as those who rely on speech-reco
 
 Common ways to include the alternative stylesheets into your HTML documents are to use the {{HTMLElement('link')}} element, and {{CSSxref('@import')}}.
 
-**The {{HTMLElement('link')}} element**
+#### The {{HTMLElement('link')}} element
 
 Use the {{HTMLElement('link')}} element, alongside with and together with the attributes of `rel="alternate stylesheet"` and for title, `title="…"` in the {{HTMLElement('head')}} section of the webpage.
 
