@@ -19,7 +19,7 @@ tags:
 Learn how to use HTTP with guides and tutorials.
 
 - [Overview of HTTP](/en-US/docs/Web/HTTP/Overview)
-  - : The basic features of the client-server protocol: what it can do and its intended uses.
+  - : The basic features of the client-server protocol: what it can do and its intended uses for the web browser and web server.
 - [HTTP Cache](/en-US/docs/Web/HTTP/Caching)
   - : Caching is very important for fast Web sites. This article describes different methods of caching and how to use HTTP Headers to control them.
 - [HTTP Cookies](/en-US/docs/Web/HTTP/Cookies)
