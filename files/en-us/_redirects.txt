@@ -7671,7 +7671,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /en-US/docs/Web/API/CanvasRenderingContext2D.drawImage	/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
 /en-US/docs/Web/API/CanvasRenderingContext2D.drawSystemFocusRing	/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-/en-US/docs/Web/API/CanvasRenderingContext2D.drawWindow	/en-US/docs/Web/API/CanvasRenderingContext2D/drawWindow
+/en-US/docs/Web/API/CanvasRenderingContext2D.drawWindow	/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
 /en-US/docs/Web/API/CanvasRenderingContext2D.ellipse	/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse
 /en-US/docs/Web/API/CanvasRenderingContext2D.fill	/en-US/docs/Web/API/CanvasRenderingContext2D/fill
 /en-US/docs/Web/API/CanvasRenderingContext2D.fillRect	/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect
@@ -7719,6 +7719,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.translate	/en-US/docs/Web/API/CanvasRenderingContext2D/translate
 /en-US/docs/Web/API/CanvasRenderingContext2D/currentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D/drawCustomFocusRing	/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
+/en-US/docs/Web/API/CanvasRenderingContext2D/drawWindow	/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozCurrentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozCurrentTransformInverse	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozDash	/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
