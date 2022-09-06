@@ -48,7 +48,7 @@ new FontFace(family, source, descriptors)
     - `descentOverride`
       - : With an allowable value for {{cssxref("@font-face/descent-override")}}.
     - `featureSettings`
-      - : With an allowable value for {{cssxref("@font-face/font-feature-settings")}}.
+      - : With an allowable value for {{cssxref("font-feature-settings")}}.
     - `lineGapOverride`
       - : With an allowable value for {{cssxref("@font-face/line-gap-override")}}.
     - `stretch`
@@ -68,6 +68,7 @@ new FontFace(family, source, descriptors)
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : A descriptor string does not match the grammar of the corresponding {{cssxref("@font-face")}} descriptor.
+    This error results in {{domxref("FontFace.status")}} being set to `error`.
 
 ## Examples
 
