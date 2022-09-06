@@ -138,6 +138,7 @@ The output is:
 | 0     | -0    | -0    | NaN   |
 | 0     | 0     | 0     | NaN   |
 | ∞     | -∞    | -π/4  | NaN   |
+| ∞     | ∞     | π/4   | NaN   |
 ```
 
 ## Specifications
