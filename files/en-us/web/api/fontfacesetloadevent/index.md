@@ -18,7 +18,7 @@ browser-compat: api.FontFaceSetLoadEvent
 
 The **`FontFaceSetLoadEvent`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) represents events fired at a {{domxref("FontFaceSet")}} after it starts loading font faces.
 
-Events are fired when font loading starts (`loading`), loading completes (`loadingdone`) or there is an error loading one of the fonts (`loadingerror`).
+Events are fired when font loading starts ([`loading`](/en-US/docs/Web/API/FontFaceSet/loading_event)), loading completes ([`loadingdone`](/en-US/docs/Web/API/FontFaceSet/loadingdone_event)) or there is an error loading one of the fonts ([`loadingerror`](/en-US/docs/Web/API/FontFaceSet/loadingerror_event)).
 
 {{InheritanceDiagram}}
 
