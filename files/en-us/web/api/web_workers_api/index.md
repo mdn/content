@@ -44,12 +44,13 @@ Workers run in a different global context than the current {{DOMxRef("window")}}
 
 Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are:
 
-* {{domxref("atob", "atob()")}}
-* {{domxref("btoa", "btoa()")}}
-* {{domxref("clearInterval", "clearInterval()")}}
-* {{domxref("clearTimeout()")}}
-* {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}
-* {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}
+- {{domxref("atob", "atob()")}}
+- {{domxref("btoa", "btoa()")}}
+- {{domxref("clearInterval", "clearInterval()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}
+- {{domxref("setInterval()")}}
+- {{domxref("setTimeout()")}}
 
 The following functions are **only** available to workers:
 
