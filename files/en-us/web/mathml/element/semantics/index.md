@@ -21,15 +21,13 @@ By default, only the first child of the `<semantics>` element is rendered while 
 >
 > - If no other rules apply: By default only the first child is rendered, which is supposed to be Presentation MathML.
 > - If the first child is a Presentation MathML element other than `<annotation>` or `<annotation-xml>`, render the first child.
-> - If no Presentation MathML is found, render the first `<annotation>` or `<annotation-xml>` child element of `<semantics>`.
->  Beware that `<annotation-xml>` elements are only recognized, if the encoding attribute is set to one of the following:
->
-> - `"application/mathml-presentation+xml"`
-> - `"MathML-Presentation"`
-> - `"SVG1.1"`
-> - `"text/html"`
-> - `"image/svg+xml"`
-> - `"application/xml`".
+> - If no Presentation MathML is found, render the first `<annotation>` or `<annotation-xml>` child element of `<semantics>` without an `src` attribute, with the additional requirement for `<annotation-xml>` elements that the `encoding` attribute is equal to one of following values:
+>   - `"application/mathml-presentation+xml"`
+>   - `"MathML-Presentation"`
+>   - `"SVG1.1"`
+>   - `"text/html"`
+>   - `"image/svg+xml"`
+>   - `"application/xml`".
 >
 > Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
 
@@ -37,15 +35,9 @@ By default, only the first child of the `<semantics>` element is rendered while 
 
 `<semantics>`, `<annotation>` and `<annotation-xml>` elements accept the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes). Additionally, the following attributes can be set on the `<annotation>` and `<annotation-xml>` elements:
 
-- `definitionURL`
-  - : The location of the annotation key symbol.
 - `encoding`
   - : The encoding of the semantic information in the annotation (e.g. `"MathML-Content"`, `"MathML-Presentation"`, `"application/openmath+xml"`, `"image/png"`)
-- `cd`
-  - : The content dictionary that contains the annotation key symbol.
-- `name`
-  - : The name of the annotation key symbol.
-- `src`
+- `src` {{deprecated_inline}}
   - : The location of an external source for semantic information.
 
 ## Example
