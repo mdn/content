@@ -46,8 +46,9 @@ Take the following document, for example:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>My Document</title>
 </head>
 <body>
@@ -333,7 +334,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  *  "\r" CR  \u000D
  *  " "  SPC \u0020
  *
- * This does not use Javascript's "\s" because that includes non-breaking
+ * This does not use JavaScript's "\s" because that includes non-breaking
  * spaces (and also some other characters).
  */
 

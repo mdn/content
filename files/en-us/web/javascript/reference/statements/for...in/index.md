@@ -34,7 +34,7 @@ for (const variable in object) {
 
 The loop will iterate over all enumerable properties of the object itself and those the object inherits from its prototype chain (properties of nearer prototypes take precedence over those of prototypes further away from the object in its prototype chain).
 
-A `for...in` loop only iterates over enumerable, non-Symbol properties. Objects created from built–in constructors like `Array` and `Object` have inherited non–enumerable properties from `Array.prototype` and `Object.prototype`, such as {{jsxref("Array")}}'s {{jsxref("Array.indexOf", "indexOf()")}} method or {{jsxref("Object")}}'s {{jsxref("Object.toString", "toString()")}} method, which will not be visited in the `for...in` loop.
+A `for...in` loop only iterates over enumerable, non-Symbol properties. Objects created from built–in constructors like `Array` and `Object` have inherited non–enumerable properties from `Array.prototype` and `Object.prototype`, such as {{jsxref("Array")}}'s {{jsxref("Array/indexOf", "indexOf()")}} method or {{jsxref("Object")}}'s {{jsxref("Object/toString", "toString()")}} method, which will not be visited in the `for...in` loop.
 
 The traversal order, as of modern ECMAScript specification, is well-defined and consistent across implementations. Within each component of the prototype chain, all non-negative integer keys (those that can be array indices) will be traversed first in ascending order by value, then other string keys in ascending chronological order of property creation.
 

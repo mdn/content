@@ -166,7 +166,7 @@ To implement these fonts in your demo, follow these steps:
 
 You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.
 
-![](web-font-example.png)
+![The finished design of a Web font active learning exercise. The page has two headings and three paragraphs. The page contains different fonts and text at different sizes.](web-font-example.png)
 
 > **Note:** If you have any problems getting this to work, feel free to compare your version to our finished files — see [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) and [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css). You can also download the [code from GitHub](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) or [run the finished example live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
 
@@ -174,12 +174,12 @@ You should end up with a demo page with some nice fonts implemented on them. Bec
 
 Online font services generally store and serve fonts for you so you don't have to worry about writing the `@font-face` code. Instead, you generally just need to insert a simple line or two of code into your site to make everything work. Examples include [Adobe Fonts](https://fonts.adobe.com/) and [Cloud.typography](https://www.typography.com/webfonts). Most of these services are subscription-based, with the notable exception of [Google Fonts](https://fonts.google.com/), a useful free service, especially for rapid testing work and writing demos.
 
-Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
+Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google Fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
 
 1. Go to [Google Fonts](https://fonts.google.com/).
 2. Search for your favorite fonts or use the filters at the top of the page to display the kinds of fonts you want to choose and select a couple of fonts that you like.
 3. To select a font family, click on the font preview and press the ⊕ button alongside the font.
-4. When you've chosen the font families, press the *View your selected families* button in the top right corner of the page.
+4. When you've chosen the font families, press the _View your selected families_ button in the top right corner of the page.
 5. In the resulting screen, you first need to copy the line of HTML code shown and paste it into the head of your HTML file. Put it above the existing {{htmlelement("link")}} element, so that the font is imported before you try to use it in your CSS.
 6. You then need to copy the CSS declarations listed into your CSS as appropriate, to apply the custom fonts to your HTML.
 

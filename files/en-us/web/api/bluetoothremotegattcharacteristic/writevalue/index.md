@@ -6,7 +6,6 @@ tags:
   - API
   - Bluetooth
   - BluetoothRemoteGATTCharacteristic
-  - Experimental
   - Method
   - Reference
   - Web Bluetooth API

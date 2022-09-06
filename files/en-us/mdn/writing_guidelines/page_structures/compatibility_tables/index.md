@@ -13,7 +13,7 @@ MDN has a standard format for compatibility tables for our open web documentatio
 
 For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's [contributor guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) as well as the [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
 
-If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ## How to access the data repository
 
@@ -154,9 +154,9 @@ In a basic browser compat data file, you'll only need to include "version_added"
 
 Inside the `status` member, you'll include three submembers:
 
-- `experimental`: This should be set to `true` if the feature is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental), or `false` otherwise.
+- `experimental`: This should be set to `true` if the feature is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), or `false` otherwise.
 - `standard_track`: This should be set to `true` if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or `false` otherwise.
-- `deprecated`: This should be set to `true` if the feature is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete), or `false` otherwise.
+- `deprecated`: This should be set to `true` if the feature is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), or `false` otherwise.
 
 The feature data for [border-width](/en-US/docs/Web/CSS/border-width#browser_compatibility) (also see [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json)) is shown below as an example:
 
@@ -488,10 +488,10 @@ You can also specify the desired API as the first argument to the macro as shown
 
 The macro calls generate the following tables (and corresponding set of notes):
 
-#### Compatibility table example
+### Compatibility table example
 
 {{Compat}}
 
-#### Specifications table examples
+### Specifications table examples
 
 {{Specifications}}

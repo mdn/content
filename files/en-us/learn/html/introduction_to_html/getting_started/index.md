@@ -62,7 +62,7 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 
 Let's further explore our paragraph element from the previous section:
 
-![](grumpy-cat-small.png)
+![A sample code snippet demonstrating the structure of an html element.<p> My cat is very grumpy </p>.](grumpy-cat-small.png)
 
 The anatomy of our element is:
 
@@ -119,18 +119,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<em>This is my text.</em>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -138,8 +141,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -149,16 +152,12 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<em>This is my text.</em>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -170,13 +169,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -185,10 +184,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -239,7 +238,7 @@ Consider the following example:
 
 > **Note:** HTML5 redefined the element categories: see [Element content categories](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories). While these definitions are more accurate and less ambiguous than their predecessors, the new definitions are a lot more complicated to understand than _block_ and _inline._ This article will stay with these two terms.
 
-> **Note:** The terms _block_ and _inline_, as used in this article, should not be confused with [the types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) that have the same names. While the names correlate by default, changing the CSS display type doesn't change the category of the element, and doesn't affect which elements it can contain and which elements it can be contained in. One reason HTML5 dropped these terms was to prevent this rather common confusion.
+> **Note:** The terms _block_ and _inline_, as used in this article, should not be confused with [the types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) that have the same names. While the names correlate by default, changing the CSS display type doesn't change the category of the element, and doesn't affect which elements it can contain and which elements it can be contained in. One reason HTML5 dropped these terms was to prevent this rather common confusion.
 
 > **Note:** Find useful reference pages that include lists of block and inline elements. See [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
 
@@ -277,9 +276,12 @@ An attribute should have:
 
 Another example of an element is {{htmlelement("a")}}. This stands for _anchor_. An anchor can make the text it encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
 
-- **`href`**: This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
-- **`title`**: The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
-- **`target`**: The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+- `href`
+  - : This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
+- `title`
+  - : The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
+- `target`
+  - : The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
 
 Edit the line below in the _Input_ area to turn it into a link to your favorite website.
 
@@ -333,18 +335,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -352,8 +357,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -363,16 +368,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -384,13 +386,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -399,10 +401,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -496,7 +498,7 @@ Individual HTML elements aren't very useful on their own. Next, let's examine ho
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
@@ -597,18 +599,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -616,8 +621,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -627,16 +632,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -648,13 +650,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -662,11 +664,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -707,7 +708,7 @@ You do this with character references. These are special codes that represent ch
 | '                 | `&apos;`                         |
 | &                 | `&amp;`                          |
 
-The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;' , quotation for ' \&quot; ' and similarly for others. To find more about entity reference, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
+The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;', quotation for ' \&quot; ' and similarly for others. To find more about entity reference, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 
 In the example below, there are two paragraphs:
 

@@ -11,7 +11,7 @@ browser-compat: svg.elements.feColorMatrix
 
 The **`<feColorMatrix>`** SVG filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
 
-> **Note:** The prime symbol ***`'`*** is used in mathematics indicate the result of a transformation.
+> **Note:** The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
 
 ```
 | R' |     | r1 r2 r3 r4 r5 |   | R |
@@ -47,7 +47,7 @@ R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 *
 New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old Alpha ] + [ shift of r5 ]
 ```
 
-If, say, we want to make a completely black image redder, we can make the `r5` a positive real number *x*, boosting the redness on every pixel of the new image by *x*.
+If, say, we want to make a completely black image redder, we can make the `r5` a positive real number _x_, boosting the redness on every pixel of the new image by _x_.
 
 An **identity matrix** looks like this:
 

@@ -76,7 +76,7 @@ Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This 
 
 ### 5. Create your page
 
-Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
 

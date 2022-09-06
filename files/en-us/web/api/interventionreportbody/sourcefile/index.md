@@ -9,7 +9,7 @@ tags:
   - Experimental
   - sourceFile
   - InterventionReportBody
-spec-urls: https://wicg.github.io/intervention-reporting/#dom-interventionreportbody-sourcefile
+browser-compat: api.InterventionReportBody.sourceFile
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -44,4 +44,4 @@ const observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

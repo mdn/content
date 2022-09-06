@@ -97,8 +97,8 @@ taken by the server, the current document is reloaded with the modified search s
 ### Example #6: Using bookmarks without changing the `hash` property:
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
   <meta charset="UTF-8"/>
   <title>MDN Example</title>
@@ -168,7 +168,7 @@ const showBookmark = (() => {
   let _itFrame;
   let _scrollId = -1;
   let _bookMark;
-  
+
   // duration: the duration in milliseconds of each frame
   // frames: number of frames for each scroll
   let duration = 200;
@@ -201,7 +201,7 @@ const showBookmark = (() => {
   }
 
   window.addEventListener("scroll", _chkOwner, false);
-  
+
   return (bookmark, useHash) => {
     const node = document.querySelector(bookmark);
     _scrollY = document.documentElement.scrollTop;

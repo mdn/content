@@ -65,13 +65,13 @@ const myWorker = new Worker('/worker.js');
 const first = document.querySelector('input#number1');
 const second = document.querySelector('input#number2');
 
-first.onchange = function() {
+first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Specifications
 
@@ -92,3 +92,4 @@ In early versions of the spec, loading a cross-origin worker script threw a `Sec
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Functions and classes available to Web Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - Other kind of workers: {{domxref("SharedWorker")}} and [Service Worker](/en-US/docs/Web/API/Service_Worker_API).
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface

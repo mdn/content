@@ -75,14 +75,14 @@ console.log(anyString.substring(0, 10));
 ### Using substring() with length property
 
 The following example uses the `substring()` method and
-{{jsxref("String.length", "length")}} property to extract the last characters of a
+{{jsxref("String/length", "length")}} property to extract the last characters of a
 particular string. This method may be easier to remember, given that you don't need to
 know the starting and ending indices as you would in the above examples.
 
 ```js
 const text = 'Mozilla';
 
-// Takes 5 last characters of string
+// Takes 4 last characters of string
 console.log(text.substring(text.length - 4)); // prints "illa"
 
 // Takes 5 last characters of string
@@ -92,7 +92,7 @@ console.log(text.substring(text.length - 5)); // prints "zilla"
 ### The difference between substring() and substr()
 
 There are subtle differences between the `substring()` and
-{{jsxref("String.substr", "substr()")}} methods, so you should be careful not to get
+{{jsxref("String/substr", "substr()")}} methods, so you should be careful not to get
 them confused.
 
 - The two parameters of `substr()` are `start` and `length`, while for `substring()`, they are `start` and `end`.
@@ -109,13 +109,13 @@ console.log(text.substr(2, 3));     // => "zil"
 
 ### Differences between substring() and slice()
 
-The `substring()` and {{jsxref("String.slice", "slice()")}} methods are
+The `substring()` and {{jsxref("String/slice", "slice()")}} methods are
 almost identical, but there are a couple of subtle differences between the two,
 especially in the way negative arguments are dealt with.
 
 The `substring()` method swaps its two arguments if
 `indexStart` is greater than `indexEnd`,
-meaning that a string is still returned. The {{jsxref("String.slice", "slice()")}}
+meaning that a string is still returned. The {{jsxref("String/slice", "slice()")}}
 method returns an empty string if this is the case.
 
 ```js
@@ -141,7 +141,7 @@ console.log(text.slice(-5, 2))   // => ""
 console.log(text.slice(-5, -2))  // => "zil"
 ```
 
-See the {{jsxref("String.slice", "slice()")}} page for more examples with negative
+See the {{jsxref("String/slice", "slice()")}} page for more examples with negative
 numbers.
 
 ### Replacing a substring within a string
@@ -154,7 +154,7 @@ changes the string `Brave New World` to `Brave New Web`.
 // Replaces oldS with newS in the string fullS
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i < fullS.length; ++i) {
-    if (fullS.substring(i, i + oldS.length) == oldS) {
+    if (fullS.substring(i, i + oldS.length) === oldS) {
       fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
   }

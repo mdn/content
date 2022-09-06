@@ -33,7 +33,7 @@ For more information see {{domxref("NavigationPreloadManager.setHeaderValue()")}
 
 ## Syntax
 
-```
+```http
 Service-Worker-Navigation-Preload: <value>
 ```
 

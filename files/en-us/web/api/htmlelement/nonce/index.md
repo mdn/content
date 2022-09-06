@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Content Security Policy
-  - Experimental
   - HTML DOM
   - HTMLElement
   - Property

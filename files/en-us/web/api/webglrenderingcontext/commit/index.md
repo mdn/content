@@ -4,14 +4,14 @@ slug: Web/API/WebGLRenderingContext/commit
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - OffscreenCanvas
   - Reference
   - WebGL
+  - Experimental
 browser-compat: api.WebGLRenderingContext.commit
 ---
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{SeeCompatTable}}
 
 The
 **`WebGLRenderingContext.commit()`**

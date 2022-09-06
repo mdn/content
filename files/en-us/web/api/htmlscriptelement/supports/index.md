@@ -8,11 +8,10 @@ tags:
   - Method
   - Reference
   - supports
-  - Experimental
   - Feature detection
 browser-compat: api.HTMLScriptElement.supports
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`supports()`** static method of the {{domxref("HTMLScriptElement")}} interface provides a simple and consistent method to feature-detect what types of scripts are supported by the user agent.
 

@@ -4,7 +4,6 @@ slug: Web/API/PaymentRequest/canMakePayment
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Payment Request
   - Payment Request API

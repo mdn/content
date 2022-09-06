@@ -47,7 +47,7 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 ## Interfaces
 
 - {{domxref("Clipboard")}} {{securecontext_inline}}
-  - : Provides an interface for reading and writing text and data to or from the system clipboard. The specification refers to this as the 'Async Clipboard API.'
+  - : Provides an interface for reading and writing text and data to or from the system clipboard. The specification refers to this as the 'Async Clipboard API'.
 - {{domxref("ClipboardEvent")}} {{securecontext_inline}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events. The specification refers to this as the 'Clipboard Event API'.
 - {{domxref("ClipboardItem")}} {{securecontext_inline}}

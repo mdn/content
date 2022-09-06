@@ -32,7 +32,7 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
 - Additionally:
 
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
-  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
+  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API (2011)](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
@@ -77,7 +77,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
+  - : Fired when the page used the [history API (2011)](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
 
 ## Browser compatibility
 
@@ -89,7 +89,8 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,4 +117,4 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

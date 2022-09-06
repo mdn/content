@@ -30,7 +30,7 @@ The same `Vary` header value should be used on all responses for a given URL, in
 
 ## Syntax
 
-```
+```http
 Vary: *
 Vary: <header-name>, <header-name>, ...
 ```
@@ -52,7 +52,7 @@ Vary: <header-name>, <header-name>, ...
 
 ### Compatibility notes
 
-- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/vary-with-care)
+- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/archive/blogs/ieinternals/vary-with-care)
 
 ## See also
 

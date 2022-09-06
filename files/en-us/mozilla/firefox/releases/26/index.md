@@ -27,7 +27,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### JavaScript
 
-[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+[ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
 
 - The ECMAScript 2015 compliant syntax for [Generators (yield)](https://web.archive.org/web/20170126155949/http://wiki.ecmascript.org/doku.php?id=harmony:generators) has been implemented ({{bug("666399")}}).
 - Generator/Iterator results are now boxed like `{ value: foo, done: bool }` ({{bug(907744)}}).

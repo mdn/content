@@ -218,25 +218,25 @@ First, we dynamically create the array buffer from JSON data using a
 data to be in little-endian.
 
 ```js
-//load geometry with fetch() and Response.json()
+// Load geometry with fetch() and Response.json()
 const response = await fetch('assets/geometry.json');
 const vertices = await response.json();
 
-//Create array buffer
+// Create array buffer
 const buffer = new ArrayBuffer(20 * vertices.length);
-//Fill array buffer
+// Fill array buffer
 const dv = new DataView(buffer);
-for (let i = 0; i < vertices.length; i++) {
-  dv.setFloat32(20 * i, vertices[i].position[0], true);
-  dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
-  dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7F);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7F);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7F);
+vertices.forEach((vertex, i) => {
+  dv.setFloat32(20 * i, vertex.position[0], true);
+  dv.setFloat32(20 * i + 4, vertex.position[1], true);
+  dv.setFloat32(20 * i + 8, vertex.position[2], true);
+  dv.setInt8(20 * i + 12, vertex.normal[0] * 0x7F);
+  dv.setInt8(20 * i + 13, vertex.normal[1] * 0x7F);
+  dv.setInt8(20 * i + 14, vertex.normal[2] * 0x7F);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xFFFF, true);
-}
+  dv.setUint16(20 * i + 16, vertex.texCoord[0] * 0xFFFF, true);
+  dv.setUint16(20 * i + 18, vertex.texCoord[1] * 0xFFFF, true);
+});
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on

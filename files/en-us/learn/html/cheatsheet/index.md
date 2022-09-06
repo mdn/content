@@ -212,7 +212,7 @@ format&#x3C;/code>.</pre
         <pre class="brush: html">
 &#x3C;audio controls="controls">
   &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
-  Your browser does not support Audio.
+  &#x3C;a href="t-rex-roar.mp3">Download MP3&#x3C;/a>
 &#x3C;/audio></pre
         >
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -225,7 +225,7 @@ format&#x3C;/code>.</pre
         <pre class="brush: html">
 &#x3C;video controls width="250"
   src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  The &#x3C;code>video&#x3C;/code> element is unsupported.
+  &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
 &#x3C;/video></pre
         >
         {{EmbedLiveSample("video-example", 100, 200)}}

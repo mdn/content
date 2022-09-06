@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - Constructor
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -14,7 +13,7 @@ tags:
   - Video
 browser-compat: api.MediaSource.MediaSource
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`MediaSource()`** constructor of the
 {{domxref("MediaSource")}} interface constructs and returns a new
@@ -32,7 +31,7 @@ None.
 
 ## Examples
 
-The following snippet is taken from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is taken from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
 
 ```js
 const video = document.querySelector('video');

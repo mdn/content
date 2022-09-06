@@ -156,7 +156,7 @@ Start out by making a local copy of our sample [simple-grid.html](https://github
 
 The aim is to turn this into a demonstration grid of two rows on a twelve column grid — the top row demonstrating the size of the individual columns, the second row some different sized areas on the grid.
 
-![](simple-grid-finished.png)
+![CSS grid with 16 grid items spread across twelve columns and two rows. The top row has 12 equal-width grid items in 12 columns. The second row has different-sized grid items. Item 13 spans 1 column, item 14 spans six columns, 15 spans three, and 16 spans two.](simple-grid-finished.png)
 
 In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
 
@@ -189,7 +189,7 @@ The gutters between the columns are 20 pixels wide. We create these gutters as a
 
 We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.
 
-Our next step is to create a rule for the class `.col`,  floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
+Our next step is to create a rule for the class `.col`, floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
 
 ```css
 .col {
@@ -408,7 +408,7 @@ Try replacing it with
 
 Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
 
-![](offset-grid-finished.png)
+![The grid has 2 rows. The first row has 12 equal-width grid items and the second row has 4 items of different widths. Item 13 spans 1 column, item 14 spans five columns, 15 spans three, and 16 spans two. Item 14 has the 'offset-by-one' class applied, which means it starts in the 3rd column, rather than the second, leaving a one-column wide empty space in the second-row second-column. ](offset-grid-finished.png)
 
 > **Note:** As an extra exercise, can you implement an `offset-by-two` class?
 
@@ -458,7 +458,7 @@ On `.col` we set the {{cssxref("flex")}} property's first value ({{cssxref("flex
 
 On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.
 
-![](flexbox-grid-incomplete.png)
+![The grid has two rows. Each row is a flex container. The first row has twelve equal-width flex items. The second row has four equal-width flex items.](flexbox-grid-incomplete.png)
 
 To fix this we still need to include our `span` classes to provide a width that will replace the value used by `flex-basis` for that element.
 

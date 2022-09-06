@@ -10,9 +10,10 @@ tags:
   - Reference
   - WebRTC
   - removeStream
+  - Non-standard
 browser-compat: api.RTCPeerConnection.removeStream
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The
 **`RTCPeerConnection.removeStream()`** method removes a

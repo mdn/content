@@ -63,10 +63,10 @@ recorded whenever it changes.
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener('chargingchange', () => {
     batteryIsCharging = battery.charging;
   });
 });

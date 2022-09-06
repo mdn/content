@@ -27,14 +27,13 @@ translation of language, region and script display names.
 new Intl.DisplayNames(locales, options)
 ```
 
+> **Note:** `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `locales`
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the
-    general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-    extension key is allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension key is allowed:
 
     - `nu`
       - : The numbering system to be used. Possible values include:

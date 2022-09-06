@@ -45,10 +45,10 @@ getAll(query, count)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to be queried. If nothing is passed, this will
     default to a key range that selects all the records in this object store.
-- *count* {{optional_inline}}
+- `count` {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.

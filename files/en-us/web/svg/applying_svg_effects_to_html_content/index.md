@@ -115,7 +115,7 @@ You can make changes to the SVG in real time and see them immediately affect the
 
 ```js
 function toggleRadius() {
-  var circle = document.getElementById("circle");
+  const circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
 ```

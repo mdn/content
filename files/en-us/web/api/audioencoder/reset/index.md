@@ -8,7 +8,7 @@ tags:
   - Reference
   - reset
   - AudioEncoder
-   - Experimental
+  - Experimental
 browser-compat: api.AudioEncoder.reset
 ---
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}

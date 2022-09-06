@@ -31,7 +31,7 @@ onrepeat = (event) => { };
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
@@ -86,7 +86,7 @@ animateElem.addEventListener('beginEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
+  if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;

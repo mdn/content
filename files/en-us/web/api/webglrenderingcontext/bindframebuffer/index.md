@@ -13,8 +13,7 @@ browser-compat: api.WebGLRenderingContext.bindFramebuffer
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindFramebuffer()`** method of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
-{{domxref("WebGLFramebuffer")}} to a target.
+[WebGL API](/en-US/docs/Web/API/WebGL_API) binds to the specified target the provided {{domxref("WebGLFramebuffer")}}, or, if the `framebuffer` argument is null, the default {{domxref("WebGLFramebuffer")}}, which is associated with the canvas rendering context.
 
 ## Syntax
 
@@ -41,8 +40,7 @@ bindFramebuffer(target, framebuffer)
       - : Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`.
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} object to bind.
-    If `framebuffer` is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
+  - : A {{domxref("WebGLFramebuffer")}} object to bind, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for binding the {{domxref("Canvas")}} or {{domxref("OffscreenCanvas")}} object associated with the rendering context.
 
 ### Return value
 

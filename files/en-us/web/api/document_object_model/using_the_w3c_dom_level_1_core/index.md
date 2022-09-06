@@ -15,14 +15,14 @@ The W3C's [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-cor
 A [DOM](https://www.w3.org/TR/REC-DOM-Level-1/introduction.html) tree is a kind of [tree](https://en.wikipedia.org/wiki/Tree_structure) whose nodes represent an HTML or XML document's contents. Each HTML or XML document has a unique DOM tree representation. For example, the following document
 
 ```html
-<html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>Paragraph</p>
-</body>
+<html lang="en">
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -46,9 +46,9 @@ Suppose the author wants to change the header of the above document and write tw
 
 ```html
 <body>
-<input type="button" value="Change this document." onclick="change()">
-<h2>Header</h2>
-<p>Paragraph</p>
+  <input type="button" value="Change this document." onclick="change()">
+  <h2>Header</h2>
+  <p>Paragraph</p>
 </body>
 ```
 
@@ -56,27 +56,27 @@ Suppose the author wants to change the header of the above document and write tw
 
 ```js
 function change() {
-    // document.getElementsByTagName("H2") returns a NodeList of the <h2>
-    // elements in the document, and the first is number 0:
+  // document.getElementsByTagName("h2") returns a NodeList of the <h2>
+  // elements in the document, and the first is number 0:
 
-    const header = document.getElementsByTagName("H2").item(0);
-    // the firstChild of the header is a Text node:
-    header.firstChild.data = "A dynamic document";
-    // now the header is "A dynamic document".
+  const header = document.getElementsByTagName("h2").item(0);
+  // the firstChild of the header is a Text node:
+  header.firstChild.data = "A dynamic document";
+  // now the header is "A dynamic document".
 
-    const para = document.getElementsByTagName("P").item(0);
-    para.firstChild.data = "This is the first paragraph.";
+  const para = document.getElementsByTagName("p").item(0);
+  para.firstChild.data = "This is the first paragraph.";
 
-    // create a new Text node for the second paragraph
-    const newText = document.createTextNode("This is the second paragraph.");
-    // create a new Element to be the second paragraph
-    const newElement = document.createElement("P");
-    // put the text in the paragraph
-    newElement.appendChild(newText);
-    // and put the paragraph on the end of the document by appending it to
-    // the BODY (which is the parent of para)
-    para.parentNode.appendChild(newElement);
-  }
+  // create a new Text node for the second paragraph
+  const newText = document.createTextNode("This is the second paragraph.");
+  // create a new Element to be the second paragraph
+  const newElement = document.createElement("p");
+  // put the text in the paragraph
+  newElement.appendChild(newText);
+  // and put the paragraph on the end of the document by appending it to
+  // the body (which is the parent of para)
+  para.parentNode.appendChild(newElement);
+}
 ```
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}

@@ -48,13 +48,13 @@ All ranges of content within a {{domxref("Document", "document")}} are described
 When trying to access the contents of an element, keep in mind that the element itself is a node, but so is any text inside it. In order to set a range endpoint within the text of an element, be sure to find the text node inside the element:
 
 ```js
-let startElem = document.querySelector("p");
-let endElem = startElem.querySelector("span");
-let range = document.createRange();
+const startElem = document.querySelector("p");
+const endElem = startElem.querySelector("span");
+const range = document.createRange();
 
 range.setStart(startElem, 0);
-range.setEnd(endElem, endElem.childNodes[0].length/2);
-let contents = range.cloneContents();
+range.setEnd(endElem, endElem.childNodes[0].length / 2);
+const contents = range.cloneContents();
 
 document.body.appendChild(contents);
 ```
@@ -102,7 +102,7 @@ In this diagram, the nodes representing HTML elements are shown in green. Eah ro
 If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum…"`, you can do so like this:
 
 ```js
-let pRange = document.createRange();
+const pRange = document.createRange();
 pRange.selectNodeContents(document.querySelector("#entry1 p"));
 ```
 
@@ -110,15 +110,15 @@ Since we wish to select the entire contents of the `<p>` element, including its 
 
 If we wish to instead copy the text "An interesting thing…" from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
 
-```html
-let r = document.createRange();
-let startNode = document.querySelector("section h2").childNodes[0];
-r.setStart(startNode, 11);
+```js
+const range = document.createRange();
+const startNode = document.querySelector("section h2").childNodes[0];
+range.setStart(startNode, 11);
 
-let endNode = document.querySelector("#entry1 p em").childNodes[0];
-r.setEnd(endNode, 2);
+const endNode = document.querySelector("#entry1 p em").childNodes[0];
+range.setEnd(endNode, 2);
 
-let fragment = r.cloneContents();
+const fragment = range.cloneContents();
 ```
 
 Here an interesting problem arises—we are capturing content from multiple nodes located at different levels of the DOM hierarchy, and then only part of one of them. What should the result look like?
@@ -135,7 +135,7 @@ The resulting document fragment looks like this:
 
 ![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
-Notice especially that the contents of this fragment are all *below* the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
+Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
 
 ## Example
 
@@ -148,14 +148,14 @@ Consider this simple HTML fragment of HTML.
 Imagine using a {{domxref("Range")}} to extract the word "paragraph" from this. The code to do that looks like the following:
 
 ```js
-let paraNode = document.querySelector("p");
-let paraTextNode = paraNode.childNodes[1];
+const paraNode = document.querySelector("p");
+const paraTextNode = paraNode.childNodes[1];
 
-let range = document.createRange();
+const range = document.createRange();
 range.setStart(paraTextNode, 6);
-range.setEnd(paraTextNode, paraTextNode.length-1);
+range.setEnd(paraTextNode, paraTextNode.length - 1);
 
-let fragment = range.cloneContents();
+const fragment = range.cloneContents();
 document.body.appendChild(fragment);
 ```
 

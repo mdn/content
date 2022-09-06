@@ -36,7 +36,7 @@ You can use only one pseudo-element in a selector. It must appear after the simp
 
 > **Note:** As a rule, double colons (`::`) should be used instead of a single colon (`:`). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.
 
-## Index
+## Alphabetical index
 
 Pseudo-elements defined by a set of CSS specifications include the following:
 

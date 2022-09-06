@@ -49,7 +49,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.values();
 
-for (let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value}) `;
 }
 ```

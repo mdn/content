@@ -58,11 +58,7 @@ Some subtle distinctions between {{jsxref("Array.of()")}} and
   not a constructor, `TypedArray.of()` will throw a
   {{jsxref("TypeError")}}, where `Array.of()` defaults to creating a new
   {{jsxref("Array")}}.
-- `TypedArray.of()` uses `[[Set]]` where
-  `Array.of()` uses `[[DefineOwnProperty]]`. Hence, when working with
-  {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set",
-    "handler.set")}} to create new elements rather than
-  {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}.
+- `TypedArray.of()` uses `[[Set]]` where `Array.of()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
 
 ## Examples
 

@@ -60,7 +60,7 @@ This applies to both methods.
 
 ## Interfaces
 
-- {{domxref('Sanitizer')}}
+- {{domxref('Sanitizer')}} {{Experimental_Inline}}
   - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
   - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
@@ -82,7 +82,7 @@ const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.
 const target = document.getElementById("target");
-target.setHTML(unsanitized_string, {sanitizer: sanitizer});
+target.setHTML(unsanitized_string, { sanitizer });
 
 console.log(target.innerHTML);
 // "abc  def"

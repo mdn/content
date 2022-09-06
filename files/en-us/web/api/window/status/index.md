@@ -10,9 +10,10 @@ tags:
   - Property
   - Reference
   - Window
+  - Deprecated
 browser-compat: api.Window.status
 ---
-{{APIRef}} {{Deprecated_Header}}
+{{APIRef}}{{Deprecated_Header}}
 
 The **`status`** property of the
 {{domxref("Window")}} interface was originally intended to set the text in the status

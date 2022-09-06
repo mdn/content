@@ -14,9 +14,10 @@ tags:
   - WebRTC API
   - addStream
   - events
+  - Non-standard
 browser-compat: api.RTCPeerConnection.addstream_event
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}} when new media, in the form of a {{domxref("MediaStream")}} object, has been added to it.
 
@@ -38,7 +39,7 @@ onaddstream = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamEvent")}}
 
@@ -46,7 +47,7 @@ An {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 _A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
-- {{domxref("MediaStreamEvent.stream")}} {{readOnlyInline}}
+- {{domxref("MediaStreamEvent.stream")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("MediaStream")}} containing the stream associated with the event.
 
 ## Examples

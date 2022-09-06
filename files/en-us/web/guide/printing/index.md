@@ -35,7 +35,7 @@ Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxr
 
 Here are some common examples.
 
-#### Open and automatically close a popup window when finished
+### Open and automatically close a popup window when finished
 
 If you want to be able to automatically close a [popup window](/en-US/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:
 
@@ -72,43 +72,43 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 If you want to be able to print an external page without opening it, you can utilize a hidden {{HTMLElement("iframe")}} (see: [HTMLIFrameElement](/en-US/docs/Web/API/HTMLIFrameElement)), automatically removing it after the user prints its contents. The following is a possible example which will print a file named `externalPage.html`:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width">
-<title>MDN Example</title>
-<script>
-function closePrint () {
-  document.body.removeChild(this.__container__);
-}
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width">
+    <title>MDN Example</title>
+    <script>
+      function closePrint () {
+        document.body.removeChild(this.__container__);
+      }
 
-function setPrint () {
-  this.contentWindow.__container__ = this;
-  this.contentWindow.onbeforeunload = closePrint;
-  this.contentWindow.onafterprint = closePrint;
-  this.contentWindow.focus(); // Required for IE
-  this.contentWindow.print();
-}
+      function setPrint () {
+        this.contentWindow.__container__ = this;
+        this.contentWindow.onbeforeunload = closePrint;
+        this.contentWindow.onafterprint = closePrint;
+        this.contentWindow.focus(); // Required for IE
+        this.contentWindow.print();
+      }
 
-function printPage (sURL) {
-  var oHideFrame = document.createElement("iframe");
-  oHideFrame.onload = setPrint;
-  oHideFrame.style.position = "fixed";
-  oHideFrame.style.right = "0";
-  oHideFrame.style.bottom = "0";
-  oHideFrame.style.width = "0";
-  oHideFrame.style.height = "0";
-  oHideFrame.style.border = "0";
-  oHideFrame.src = sURL;
-  document.body.appendChild(oHideFrame);
-}
-</script>
-</head>
+      function printPage (sURL) {
+        const hideFrame = document.createElement("iframe");
+        hideFrame.onload = setPrint;
+        hideFrame.style.position = "fixed";
+        hideFrame.style.right = "0";
+        hideFrame.style.bottom = "0";
+        hideFrame.style.width = "0";
+        hideFrame.style.height = "0";
+        hideFrame.style.border = "0";
+        hideFrame.src = sURL;
+        document.body.appendChild(hideFrame);
+      }
+    </script>
+  </head>
 
-<body>
-  <p><span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;">Print external page!</span></p>
-</body>
+  <body>
+    <p><span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;">Print external page!</span></p>
+  </body>
 </html>
 ```
 

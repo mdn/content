@@ -53,8 +53,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let detecting = browser.tabs.detectLanguage();
-  detecting.then(onLanguageDetected, onError);
+  browser.tabs.detectLanguage().then(onLanguageDetected, onError);
 });
 ```
 
@@ -70,16 +69,15 @@ function onError(error) {
 }
 
 function detectLanguages(tabs) {
-  for (tab of tabs) {
-    let onFulfilled = onLanguageDetected.bind(null, tab.url);
-    let detecting = browser.tabs.detectLanguage(tab.id);
-    detecting.then(onFulfilled, onError);
+  for (const tab of tabs) {
+    browser.tabs
+      .detectLanguage(tab.id)
+      .then((lang) => onLanguageDetected(tab.url, lang), onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let querying = browser.tabs.query({});
-  querying.then(detectLanguages, onError);
+  browser.tabs.query({}).then(detectLanguages, onError);
 });
 ```
 
@@ -93,7 +91,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,4 +119,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

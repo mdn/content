@@ -12,7 +12,7 @@ tags:
   - atob()
   - btoa()
 ---
-**Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term *Base64* originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
+**Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term _Base64_ originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
 Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII. This is to ensure that the data remain intact without modification during transport. Base64 is commonly used in a number of applications including email via [MIME](https://en.wikipedia.org/wiki/MIME), and storing complex data in [XML](/en-US/docs/Web/XML).
 
@@ -84,19 +84,8 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ```js
 "use strict";
-
-/*\
-|*|
-|*|  Base64 / binary data / UTF-8 strings utilities
-|*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding
-|*|
-\*/
-
-/* Array of bytes to Base64 string decoding */
-
-function b64ToUint6 (nChr) {
-
+// Array of bytes to Base64 string decoding
+function b64ToUint6(nChr) {
   return nChr > 64 && nChr < 91 ?
       nChr - 65
     : nChr > 96 && nChr < 123 ?
@@ -109,21 +98,27 @@ function b64ToUint6 (nChr) {
       63
     :
       0;
-
 }
 
-function base64DecToArr (sBase64, nBlocksSize) {
+function base64DecToArr(sBase64, nBlocksSize){ 
+  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, "");
+  const nInLen = sB64Enc.length;
+  const nOutLen = nBlocksSize ? Math.ceil((nInLen * 3 + 1 >> 2) / nBlocksSize) * nBlocksSize : nInLen * 3 + 1 >> 2;
+  const taBytes = new Uint8Array(nOutLen);
 
-  var
-    sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""), nInLen = sB64Enc.length,
-    nOutLen = nBlocksSize ? Math.ceil((nInLen * 3 + 1 >> 2) / nBlocksSize) * nBlocksSize : nInLen * 3 + 1 >> 2, taBytes = new Uint8Array(nOutLen);
-
-  for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
+  let nMod3;
+  let nMod4;
+  let nUint24 = 0;
+  let nOutIdx = 0;
+  for (let nInIdx = 0; nInIdx < nInLen; nInIdx++) {
     nMod4 = nInIdx & 3;
     nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 6 * (3 - nMod4);
     if (nMod4 === 3 || nInLen - nInIdx === 1) {
-      for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
+      nMod3= 0;
+      while (nMod3 < 3 && nOutIdx < nOutLen) {
         taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
+        nMod3++;
+        nOutIdx++;
       }
       nUint24 = 0;
 
@@ -134,9 +129,7 @@ function base64DecToArr (sBase64, nBlocksSize) {
 }
 
 /* Base64 string to array encoding */
-
-function uint6ToB64 (nUint6) {
-
+function uint6ToB64(nUint6) {
   return nUint6 < 26 ?
       nUint6 + 65
     : nUint6 < 52 ?
@@ -149,34 +142,36 @@ function uint6ToB64 (nUint6) {
       47
     :
       65;
-
 }
 
-function base64EncArr (aBytes) {
+function base64EncArr(aBytes) {
+  let nMod3 = 2;
+  let sB64Enc = "";
 
-  var nMod3 = 2, sB64Enc = "";
-
-  for (var nLen = aBytes.length, nUint24 = 0, nIdx = 0; nIdx < nLen; nIdx++) {
+  const nLen = aBytes.length;
+  let nUint24 = 0;
+  for (let nIdx = 0; nIdx < nLen; nIdx++) {
     nMod3 = nIdx % 3;
-    if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { sB64Enc += "\r\n"; }
+    if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { 
+      sB64Enc += "\r\n";
+    }
+
     nUint24 |= aBytes[nIdx] << (16 >>> nMod3 & 24);
     if (nMod3 === 2 || aBytes.length - nIdx === 1) {
       sB64Enc += String.fromCodePoint(uint6ToB64(nUint24 >>> 18 & 63), uint6ToB64(nUint24 >>> 12 & 63), uint6ToB64(nUint24 >>> 6 & 63), uint6ToB64(nUint24 & 63));
       nUint24 = 0;
     }
   }
-
   return sB64Enc.substr(0, sB64Enc.length - 2 + nMod3) + (nMod3 === 2 ? '' : nMod3 === 1 ? '=' : '==');
-
 }
 
 /* UTF-8 array to JS string and vice versa */
 
-function UTF8ArrToStr (aBytes) {
-
-  var sView = "";
-
-  for (var nPart, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
+function UTF8ArrToStr(aBytes) {
+  let sView = "";
+  let nPart;
+  const nLen = aBytes.length;
+  for (let nIdx = 0; nIdx < nLen; nIdx++) {
     nPart = aBytes[nIdx];
     sView += String.fromCodePoint(
       nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
@@ -194,18 +189,17 @@ function UTF8ArrToStr (aBytes) {
         nPart
     );
   }
-
   return sView;
-
 }
 
-function strToUTF8Arr (sDOMStr) {
-
-  var aBytes, nChr, nStrLen = sDOMStr.length, nArrLen = 0;
+function strToUTF8Arr(sDOMStr) {
+  let aBytes;
+  let nChr;
+  const nStrLen = sDOMStr.length;
+  let nArrLen = 0;
 
   /* mapping… */
-
-  for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
+  for (let nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
     nChr = sDOMStr.codePointAt(nMapIdx);
 
     if (nChr > 65536) {
@@ -218,8 +212,9 @@ function strToUTF8Arr (sDOMStr) {
   aBytes = new Uint8Array(nArrLen);
 
   /* transcription… */
-
-  for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
+  let nIdx = 0;
+  let nChrIdx = 0;
+  while (nIdx < nArrLen) {
     nChr = sDOMStr.codePointAt(nChrIdx);
     if (nChr < 128) {
       /* one byte */
@@ -258,10 +253,10 @@ function strToUTF8Arr (sDOMStr) {
       aBytes[nIdx++] = 128 + (nChr & 63);
       nChrIdx++;
     }
+    nChrIdx++;
   }
 
   return aBytes;
-
 }
 ```
 
@@ -270,17 +265,17 @@ function strToUTF8Arr (sDOMStr) {
 ```js
 /* Tests */
 
-var sMyInput = "Base 64 \u2014 Mozilla Developer Network";
+const sMyInput = "Base 64 \u2014 Mozilla Developer Network";
 
-var aMyUTF8Input = strToUTF8Arr(sMyInput);
+const aMyUTF8Input = strToUTF8Arr(sMyInput);
 
-var sMyBase64 = base64EncArr(aMyUTF8Input);
+const sMyBase64 = base64EncArr(aMyUTF8Input);
 
 alert(sMyBase64);
 
-var aMyUTF8Output = base64DecToArr(sMyBase64);
+const aMyUTF8Output = base64DecToArr(sMyBase64);
 
-var sMyOutput = UTF8ArrToStr(aMyUTF8Output);
+const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
 
 alert(sMyOutput);
 ```
@@ -291,10 +286,10 @@ These function let us to create also [uint8Arrays](/en-US/docs/Web/JavaScript/Re
 
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
-var myArray = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==");
+const myArray = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==");
 
 // "Base 64 \u2014 Mozilla Developer Network"
-var myBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer;
+const myBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer;
 
 alert(myBuffer.byteLength);
 ```

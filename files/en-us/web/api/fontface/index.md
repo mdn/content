@@ -35,25 +35,22 @@ The **`FontFace`** interface represents a single usable font face. It allows con
   - : A string that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
 - {{domxref("FontFace.lineGapOverride")}}
   - : A string that retrieves or sets the _line-gap metric_ of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.
-- {{domxref("FontFace.loaded")}} {{readonlyinline}}
+- {{domxref("FontFace.loaded")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves with the current `FontFace` object when the font specified in the object's constructor is done loading or rejects with a `SyntaxError` {{domxref("DOMException")}}.
-- {{domxref("FontFace.status")}} {{readonlyinline}}
+- {{domxref("FontFace.status")}} {{ReadOnlyInline}}
   - : Returns an enumerated value indicating the status of the font, one of  `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 - {{domxref("FontFace.stretch")}}
   - : A string that retrieves or sets how the font _stretches_. It is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
 - {{domxref("FontFace.style")}}
   - : A string that retrieves or sets the _style_ of the font. It is equivalent to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
 - {{domxref("FontFace.unicodeRange")}}
-  - : A string that retrieves or sets the *range of unicode codepoints* encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
+  - : A string that retrieves or sets the _range of unicode codepoints_ encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 - {{domxref("FontFace.variant")}}
   - : A string that retrieves or sets the _variant_ of the font. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}} descriptor.
 - {{domxref("FontFace.variationSettings")}}
   - : A string that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 - {{domxref("FontFace.weight")}}
   - : A string that contains the _weight_ of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
-
-<!---->
-
 - {{domxref("FontFace.load()")}}
   - : Loads a font based on current object's constructor-passed requirements, including a location or source buffer, and returns a {{jsxref('Promise')}} that resolves with the current FontFace object.
 

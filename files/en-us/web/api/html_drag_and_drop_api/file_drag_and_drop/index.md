@@ -11,7 +11,7 @@ tags:
 
 HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
 
-The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests and/or issues are welcome).
+The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/main/drag-and-drop) (pull requests and/or issues are welcome).
 
 Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
@@ -62,18 +62,18 @@ function dropHandler(ev) {
 
   if (ev.dataTransfer.items) {
     // Use DataTransferItemList interface to access the file(s)
-    for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+    [...ev.dataTransfer.items].forEach((item, i) => {
       // If dropped items aren't files, reject them
-      if (ev.dataTransfer.items[i].kind === 'file') {
-        const file = ev.dataTransfer.items[i].getAsFile();
+      if (item.kind === 'file') {
+        const file = item.getAsFile();
         console.log(`… file[${i}].name = ${file.name}`);
       }
-    }
+    });
   } else {
     // Use DataTransfer interface to access the file(s)
-    for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log(`… file[${i}].name = ${ev.dataTransfer.files[i].name}`);
-    }
+    [...ev.dataTransfer.files].forEach((file, i) => {
+      console.log(`… file[${i}].name = ${file.name}`);
+    });
   }
 }
 ```
@@ -95,4 +95,4 @@ function dragOverHandler(ev) {
 
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

@@ -30,7 +30,7 @@ oncontentdelete = (event) => { };
 
 ## Event type
 
-An {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ContentIndexEvent")}}
 

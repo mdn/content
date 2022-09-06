@@ -4,7 +4,7 @@ slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 page-type: guide
 tags:
   - Advanced
-  - HTML5
+  - HTML
   - Web-Based Protocol Handlers
 ---
 ## Background

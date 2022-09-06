@@ -49,7 +49,7 @@ A grid is a collection of horizontal and vertical lines creating a pattern again
 
 A grid will typically have **columns**, **rows**, and then gaps between each row and column. The gaps are commonly referred to as **gutters**.
 
-![](grid.png)
+![CSS grid with parts labelled as rows, columns and gutters. Rows are the horizontal segments of the grid and Columns are the vertical segments of the grid. The space between two rows is called as 'row gutter' and the space between 2 columns is called as 'column gutter'.](grid.png)
 
 ## Creating your grid in CSS
 
@@ -198,7 +198,6 @@ body {
   background-color: rgb(207,232,220);
   border: 2px solid rgb(79,185,227);
 }
-
 ```
 
 ```html hidden

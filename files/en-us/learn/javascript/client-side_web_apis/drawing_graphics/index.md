@@ -144,7 +144,7 @@ OK, our template is done and it's time to move on.
 
 As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, `ctx`). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.
 
-![](canvas_default_grid.png)
+![Gridded graph paper with small squares covering its area with a steelblue square in the middle. The top left corner of the canvas is point (0, 0) of the canvas x-axis and y-axis. The horizontal (x) axis runs from left to right denoting the width, and the vertical (y) axis runs from top to bottom denotes the height. The top left corner of the blue square is labeled as being a distance of x units from the y-axis and y units from the x-axis.](canvas_default_grid.png)
 
 Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.
 
@@ -267,7 +267,7 @@ Let's draw an equilateral triangle on the canvas.
     - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
     - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
 
-    ![](trigonometry.png)
+    ![A equilateral triangle pointing downwards with labeled angles and sides. The horizontal line at the top is labeled 'adjacent'. A perpendicular dotted line, from the middle of the adjacent line, labeled 'opposite', splits the triangle creating two equal right triangles. The right side of the triangle is labeled the hypotenuse, as it is the hypotenuse of the right triangle formed by the line labeled 'opposite'. while all three-sided of the triangle are of equal length, the hypotenuse is the longest side of the right triangle.](trigonometry.png)
 
     One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
 
@@ -487,7 +487,7 @@ To see how it works, let's quickly look again at our Bouncing Balls example ([se
 ```js
 function loop() {
    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0,  width, height);
+   ctx.fillRect(0, 0, width, height);
 
    for (const ball of balls) {
      ball.draw();
@@ -545,7 +545,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 
     Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen). The image looks like this:
 
-    ![](walk-right.png)
+    ![A sprite sheet with six sprite images of a pixelated character resembling a walking person from their right side at different instances of a single step forward. The character has a white shirt with sky blue buttons, black trousers, and black shoes. Each sprite is 102 pixels wide and 148 pixels high.](walk-right.png)
 
     It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
 
@@ -596,7 +596,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
     ```js
-      if(posX > width/2) {
+      if (posX > width/2) {
         let newStartPos = -((width/2) + 102);
         posX = Math.ceil(newStartPos);
         console.log(posX);
@@ -638,8 +638,8 @@ let pressed = false;
 
 // update mouse pointer coordinates
 document.addEventListener('mousemove', (e) => {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  curX = e.pageX;
+  curY = e.pageY;
 });
 
 canvas.addEventListener('mousedown', () => pressed = true);
@@ -660,7 +660,7 @@ The drawing loop is pretty simple this time around — if pressed is `true`, we 
 
 ```js
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
     ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);

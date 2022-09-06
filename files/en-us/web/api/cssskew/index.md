@@ -22,14 +22,14 @@ The **`CSSSkew`** interface of the {{domxref('CSS_Object_Model#css_typed_object_
 
 ## Constructor
 
-- {{domxref("CSSSkew.CSSSkew", "CSSSkew()")}}
+- {{domxref("CSSSkew.CSSSkew", "CSSSkew()")}} {{Experimental_Inline}}
   - : Creates a new `CSSSkew` object.
 
 ## Properties
 
-- {{domxref('CSSSkew.ax','ax')}}
+- {{domxref('CSSSkew.ax','ax')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.
-- {{domxref('CSSSkew.ay','ay')}}
+- {{domxref('CSSSkew.ay','ay')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.
 
 ## Examples

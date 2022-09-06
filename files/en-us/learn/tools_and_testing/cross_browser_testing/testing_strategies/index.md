@@ -94,7 +94,7 @@ These are both very North America-centric, and not particularly accurate, but th
 
 For example, let's go to [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0). You can see that Opera is listed as having small but visible usage figures, so we should add it to our support chart too as grade C.
 
-IE8 is listed as being significant too, but it is older and no longer capable. Opera Mini is also significant, but it isn't very capable in terms of running complex JavaScript at runtime, etc (see [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details). We should put this into grade B as well.
+IE8 is listed as being significant too, but it is older and no longer capable. Opera Mini is also significant, but it isn't very capable in terms of running complex JavaScript at runtime, etc. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
 
 ### Using analytics
 
@@ -159,7 +159,7 @@ A and B grade:
 - Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
 - Toggling the button should make the information box appear/disappear.
 - The text should be readable.
-- Visually impaired users using screenreaders should be able to access the text.
+- Visually impaired users using screen readers should be able to access the text.
 
 A grade:
 
@@ -218,7 +218,7 @@ More often than not though, you'll have to install some kind of emulator. The mo
 You can often find simulators for other mobile device environments too, for example:
 
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
-- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
+- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
 > **Note:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 

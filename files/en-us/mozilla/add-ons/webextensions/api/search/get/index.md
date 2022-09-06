@@ -32,7 +32,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [array](Web/JavaScript/Reference/Global_Objects/array) of search engine objects. Each search engine object may contain the following properties:
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of search engine objects. Each search engine object may contain the following properties:
 
 - `name`
   - : `string`. The search engine's name.
@@ -54,7 +54,7 @@ Get all installed search engines:
 ```js
 function retrieved(results) {
   console.log(`There were: ${results.length} search engines retrieved.`);
-  for (let searchEngine of results) {
+  for (const searchEngine of results) {
     console.log(JSON.stringify(searchEngine.name));
   }
 }

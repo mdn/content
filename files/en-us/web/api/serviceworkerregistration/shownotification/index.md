@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerRegistration/showNotification
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - NeedsExample
   - Reference
@@ -78,8 +77,8 @@ showNotification(title, options)
     - `renotify` {{experimental_inline}}
       - : A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a `tag` value.
-        If *options*'s `renotify` is true
-        and *options*'s `tag` is the empty string a TypeError will be
+        If _options_'s `renotify` is true
+        and _options_'s `tag` is the empty string a TypeError will be
         thrown. The default is `false`.
     - `requireInteraction` {{experimental_inline}}
       - : Indicates that on devices with sufficiently
@@ -89,8 +88,8 @@ showNotification(title, options)
         is `false`.
     - `silent`
       - : When set indicates that no sounds or vibrations should be
-        made. If *options*'s `silent` is true
-        and *options*'s `vibrate` is present a TypeError exception
+        made. If _options_'s `silent` is true
+        and _options_'s `vibrate` is present a TypeError exception
         will be thrown. The default value is `false`.
     - `tag`
       - : An ID for a given notification that allows you to find,

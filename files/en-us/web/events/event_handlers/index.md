@@ -24,7 +24,7 @@ There are two recommended approaches for registering handlers. Event handler cod
 
 ### Using onevent properties
 
-By convention, Javascript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
+By convention, JavaScript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
 
 To set event handler code you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed the handler can be replaced by assigning another function to the same property.
 
@@ -33,9 +33,8 @@ Below we show how to set a simple `greet()` function for the `click` event using
 ```js
 const btn = document.querySelector('button');
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log('greet:', event)
 }
 
 btn.onclick = greet;
@@ -54,9 +53,8 @@ Below we show how a simple `greet()` function can be set as a listener/event han
 ```js
 const btn = document.querySelector('button');
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log('greet:', event)
 }
 
 btn.addEventListener('click', greet);
@@ -73,10 +71,9 @@ This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("Ev
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', function(event) {
-  // print the event object to console
-  console.log('greet:', arguments)
-  }, { signal: controller.signal }); // pass an AbortSignal to this handler
+btn.addEventListener('click', (event) => {
+  console.log('greet:', event);
+}, { signal: controller.signal }); // pass an AbortSignal to this handler
 ```
 
 Then the event handler created by the code above can be removed like this:

@@ -345,4 +345,4 @@ it's not already a promise itself (as in the examples).
 - {{jsxref("Operators/async_function", "async function expression", "", 1)}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- [Decorating Async Javascript Functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on _innolitics.com_
+- [Decorating Async JavaScript Functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on _innolitics.com_

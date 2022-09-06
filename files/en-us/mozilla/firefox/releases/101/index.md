@@ -23,6 +23,8 @@ No notable changes.
 
 - Three new viewport sizes have been introduced: small (`s`), large (`l`), and dynamic (`d`). These new sizes have added new [viewport-percentage length units](/en-US/docs/Web/CSS/length) in addition to the existing ones - `vh`, `vw`, `vmax`, and `vmin`. The new viewport-percentage length units include `svh`, `lvh`, `dvh`, `svw`, `lvw`, `dvw`, `svmax`, `lvmax`, `dvmax`, `svmin`, `lvmin`, and `dvmin` ({{bug(1610815)}}). Additionally, the units `vb` and `vi` are now supported by default ({{bug(1610815)}}).
 
+- Support for the [`inline-size`](/en-US/docs/Web/CSS/contain#inline-size) value for the `contain` property has been added. For more information, see  ({{bug(1755565)}}).
+
 ### JavaScript
 
 No notable changes.
@@ -53,6 +55,11 @@ No notable changes.
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information, see {{bug(1611957)}}.
 
+#### SVG
+
+- SVG images in the Firefox UI that are styled using [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) will respect the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedder (previously `prefers-color-scheme` ignored the `color-scheme` of the embedder and triggered off either the device or browser theme).
+  This ensures that a favicon, for example, is always styled to match the theme of the elements that nest it, and not necessarily the (potentially different) theme of the device. ({{bug(1764354)}}).
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
@@ -78,7 +85,7 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 - Addition of the {{WebExtAPIRef("storage.StorageArea.onChanged")}} event that enables you to listen for changes in content in the `local` and `sync` storage areas ({{bug(1758475)}}).
 
-#### Removals
+### Removals
 
 ### Other
 

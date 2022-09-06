@@ -32,7 +32,7 @@ In our first Ember article we will look at how Ember works and what it's useful 
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -233,7 +233,7 @@ If everything is working correctly, you should see a page like this:
 
 ![The default start page when you create a new Ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
-> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
+> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 
 ## Summary
 

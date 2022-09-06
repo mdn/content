@@ -10,6 +10,7 @@ tags:
   - blog
   - competitions
 ---
+
 {{GamesSidebar}}
 
 Developing and publishing your game is not enough. You have to let the world know that you have something interesting available that people will enjoy playing. There are many ways to promote your game — most of them being free, so even if you're struggling to make a living as an indie dev with zero budget you can still do a lot to let people know about your great new game. Promoting the game helps a lot when [monetizing](/en-US/docs/Games/Publishing_games/Game_monetization) it later on too, so it's important to do it correctly.
@@ -26,7 +27,7 @@ You should definitely create your own website containing all the information abo
 
 You should also blog about everything related to your gamedev activities. Write about your development process, nasty bugs you encounter, funny stories, lessons learned, and the ups and downs of being a game developer. Continually publishing information about your games will help educate others, increase your reputation in the community, and further improve SEO. A further option is to publish [monthly reports](https://end3r.com/blog/?s=monthly+report) that summarize all your progress — it helps you see what you've accomplished throughout the month and what's still left to do, and it keeps reminding people that your game is coming out soon — building buzz is always good.
 
-While you can create your website from scratch, there are also tools that can help make the process easier.  [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website.  [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
+While you can create your website from scratch, there are also tools that can help make the process easier. [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website. [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
 
 ## Social media
 
@@ -40,7 +41,7 @@ Grow your fanbase by talking to them, sharing tips, offering discounts, giving a
 
 Using game portals is mostly concerned with [monetization](/en-US/docs/Games/Publishing_games/Game_monetization), but if you're not planning to [sell licenses](/en-US/docs/Games/Publishing_games/Game_monetization#licensing) to allow people to purchase your game and are intending to [implement adverts](/en-US/docs/Games/Publishing_games/Game_monetization#advertisements) or in-app purchases instead, promoting your game across free portals can be effective.
 
-There are a number of different game portals to which you can send your games for publication. Some portals have their own APIs that allow you to authorize users, save their progress and process in-app purchases. You can also sell a full version of the game from inside your browser demo version, which will be a great move considering high competition, some developers even manage to make full browser versions. Most portals offer revenue share deals or will buy non exclusive license.
+There are a number of different game portals to which you can send your games for publication. Some portals have their own APIs that allow you to authorize users, save their progress and process in-app purchases. You can also sell a full version of the game from inside your browser demo version, which will be a great move considering high competition, some developers even manage to make full browser versions. Most portals offer revenue share deals or will buy nonexclusive license.
 
 Free portals offer traffic, but only the best ones are popular enough to generate revenues from advertisements on in-app purchases. On the other hand they are a perfect tool to make games visible to a broader audience if you have no budget and limited time.
 
@@ -54,7 +55,7 @@ If you want to learn more about the etiquette of contacting the press you should
 
 It's good to share your knowledge with other devs — after all you probably learned a thing or two from online articles, so you take the time to pay that knowledge forward. Talking or writing about something you achieved or problems you overcame is something people would be interested it. And you can use your own game as an example, especially in a tutorial when you're [showing how to do something you've implemented already](/en-US/docs/Games/Techniques/Controls_Gamepad_API). That way everyone benefits — people learn new skills, your game gets promoted, and if you're lucky you can even get paid for writing a tutorial if it's good enough.
 
-There are portals like [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) which will be more than happy if you write for them - they pay for the content, but not all topic ideas will be accepted. When writing a tutorial remember to focus on delivering something valuable to the reader. They want to learn something - offer your expertise and use your game as a case study. Focus on one aspect and try to explain it throughout and in detail. Also remember to follow up discussion in comments if people have any questions.
+There are portals like [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) which will be more than happy if you write for them - they pay for the content, but not all topic ideas will be accepted. When writing a tutorial remember to focus on delivering something valuable to the reader. They want to learn something - offer your expertise and use your game as a case study. Focus on one aspect and try to explain it throughout and in detail. Also remember to follow-up discussion in comments if people have any questions.
 
 If portals you contact are not interested in your content because you don't have any experience yet, try writing tutorials and publish them on [your own blog](#website_and_blog) first. It's the easiest way to train your writing skills on your own.
 
@@ -86,6 +87,6 @@ You can help community grow and promote yourself and your games at the same time
 
 ## Summary
 
-Any way of promoting your game is good. You have a whole lot of options to chose from with most of them being free, so it's only about your enthusiasm and available time. Sometimes you have to spend more time promoting a game than actually developing it. Remember that it's no use to have the best game in the world if no one knows it exists.
+Any way of promoting your game is good. You have a lot of options to chose from with most of them being free, so it's only about your enthusiasm and available time. Sometimes you have to spend more time promoting a game than actually developing it. Remember that it's no use to have the best game in the world if no one knows it exists.
 
 Now lets get on with that [monetization](/en-US/docs/Games/Publishing_games/Game_monetization) part, and earn something for a living.

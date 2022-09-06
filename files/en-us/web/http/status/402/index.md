@@ -6,7 +6,7 @@ tags:
   - Client error
   - HTTP
   - Status code
-spec-urls: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
@@ -22,7 +22,7 @@ Sometimes, this status code indicates that the request cannot be processed until
 
 ## Example response
 
-```
+```http
 HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```

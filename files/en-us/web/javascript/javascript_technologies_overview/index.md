@@ -9,15 +9,13 @@ tags:
 ---
 {{JsSidebar("Introductory")}}
 
-## Introduction
-
 Whereas [HTML](/en-US/docs/Web/HTML) defines a webpage's structure and content and [CSS](/en-US/docs/Web/CSS) sets the formatting and appearance, [JavaScript](/en-US/docs/Web/JavaScript) adds interactivity to a webpage and creates rich web applications.
 
 However, the umbrella term "JavaScript" as understood in a web browser context contains several very different elements. One of them is the core language (ECMAScript), another is the collection of the [Web APIs](/en-US/docs/Web/API), including the DOM (Document Object Model).
 
 ## JavaScript, the core language (ECMAScript)
 
-The core language of JavaScript is standardized by the ECMA TC39 committee as a language named [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources). "ECMAScript" is the term for the language standard, but "ECMAScript" and "JavaScript" can be used interchangeably.
+The core language of JavaScript is standardized by the ECMA TC39 committee as a language named ECMAScript. "ECMAScript" is the term for the language standard, but "ECMAScript" and "JavaScript" can be used interchangeably.
 
 This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org).
 
@@ -40,7 +38,7 @@ ECMAScript editions are approved and published as a standard by the ECMA General
 
 Before the 6th edition of ECMAScript (known as ES6), specifications were published once several years, and are commonly referred by their major version numbers — ES3, ES5, etc. After ES6, the specification is named by the publishing year — ES2017, ES2018, etc. ES6 is synonymous with ES2015. _ESNext_ is a dynamic name that refers to whatever the next version is at the time of writing. ESNext features are more correctly called proposals, because, by definition, the specification has not been finalized yet.
 
-The current committee-approved snapshot of ECMA-262 can be found in [PDF form](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) and [HTML form](https://262.ecma-international.org/13.0/). ECMA-262 and ECMA-402 are continuously maintained and kept up to date by the specification editors; https://tc39.es/ecma262/ and https://tc39.es/ecma402/ host the latest, up-to-date versions.
+The current committee-approved snapshot of ECMA-262 can be found in [PDF form](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) and [HTML form](https://262.ecma-international.org/13.0/). ECMA-262 and ECMA-402 are continuously maintained and kept up to date by the specification editors; the TC39 website hosts the latest, up-to-date [ECMA-262](https://tc39.es/ecma262/) and [ECMA-402](https://tc39.es/ecma402/) versions.
 
 New language features, including introduction of new syntaxes and APIs and revision of existing behaviors, are discussed in the form of proposals. Each proposal goes through a [4-stage process](https://tc39.es/process-document/), and is typically implemented by JavaScript engines at stage 3 or stage 4 and thus available for public consumption.
 
@@ -74,7 +72,7 @@ The Document Object Model (DOM) is a cross-platform, **language-independent conv
 
 - The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): [`Node`](/en-US/docs/Web/API/Node), [`Element`](/en-US/docs/Web/API/Element), [`DocumentFragment`](/en-US/docs/Web/API/DocumentFragment), [`Document`](/en-US/docs/Web/API/Document), [`DOMImplementation`](/en-US/docs/Web/API/DOMImplementation), [`Event`](/en-US/docs/Web/API/Event), [`EventTarget`](/en-US/docs/Web/API/EventTarget), …
 - A less rigorous definition of the DOM Event Architecture, as well as specific events in [DOM events](https://w3c.github.io/uievents/).
-- Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://html5.org/specs/dom-range.html).
+- Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://dom.spec.whatwg.org/#ranges).
 
 From the ECMAScript point of view, objects defined in the DOM specification are called "host objects".
 

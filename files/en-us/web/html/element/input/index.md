@@ -324,7 +324,7 @@ The `<input>` element is so powerful because of its attributes; the [`type`](#ty
 
 This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.
 
-Attributes for the `<input`> element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
+Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
 
 | Attribute                           | Type or Types                                                           | Description                                                                           |
 | ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -1103,7 +1103,7 @@ If there is an error, supporting browsers will both alert the user and prevent t
 ```js
 function validate(input) {
   let validityState_object = input.validity;
-  if(validityState_object.valueMissing) {
+  if (validityState_object.valueMissing) {
      input.setCustomValidity('A value is required');
   } else if (validityState_object.rangeUnderflow) {
     input.setCustomValidity('Your value is too low');
@@ -1142,7 +1142,7 @@ nameInput.addEventListener('input', () => {
 });
 
 nameInput.addEventListener('invalid', () => {
-  if(nameInput.value === '') {
+  if (nameInput.value === '') {
     nameInput.setCustomValidity('Enter your username!');
   } else {
     nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
@@ -1157,7 +1157,7 @@ The example renders like so:
 In brief:
 
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
+- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
 - If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
 

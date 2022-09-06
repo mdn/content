@@ -113,7 +113,7 @@ function playerClick(evt) {
     gl.drawingBufferHeight - (evt.pageY - evt.target.offsetTop),
   ];
   // If the click falls inside the rectangle, we caught it.
-  
+
   // Increment score and create a new rectangle.
   const diffPos = [
     position[0] - rainingRect.position[0],

@@ -33,11 +33,11 @@ openKeyCursor(query, direction)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : The key range to be queried. If a single valid key is passed, this will default to a
     range containing only that key. If nothing is passed, this will default to a key range
     that selects all the records in this object store.
-- *direction* {{optional_inline}}
+- `direction` {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
     and `"prevunique"`. The default is `"next"`.

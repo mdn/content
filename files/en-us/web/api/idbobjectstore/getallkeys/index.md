@@ -40,9 +40,9 @@ getAllKeys(query, count)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A value that is or resolves to an {{domxref("IDBKeyRange")}}.
-- *count* {{optional_inline}}
+- `count` {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.

@@ -99,7 +99,7 @@ This code finds the first {{HTMLElement("input")}} element whose `type` is `date
 
 ## Additional attributes
 
-Along with the attributes common to all {{HTMLElement("input")}} elements, `date` inputs have the following attributes.
+The attributes common to all {{HTMLElement("input")}} elements apply to the `date` inputs as well, but might not influence its presentation. For example `size` and `placeholder` might not work. `date` inputs have the following additional attributes.
 
 ### max
 
@@ -370,7 +370,7 @@ try {
   console.log(e.message);
 }
 
-// if it does, run the code inside the if() {} block
+// if it does, run the code inside the if () {} block
 if (test.type === 'text') {
   // hide the native picker and show the fallback
   nativePicker.style.display = 'none';
@@ -391,7 +391,7 @@ function populateDays(month) {
   }
 
   // Create variable to hold new number of days to inject
-  var dayNum;
+  let dayNum;
 
   // 31 or 30 days?
   if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {

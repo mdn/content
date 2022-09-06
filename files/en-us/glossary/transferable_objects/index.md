@@ -33,11 +33,8 @@ The {{jsxref("Uint8Array")}} is copied (duplicated) in the worker while its buff
 After transfer any attempt to read or write `uInt8Array` from the main thread will throw, but you can still check the `byteLength` to confirm it is now zero.
 
 ```js
-// Create an 8MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024 * 1024 * 8); // 8MB
-for (var i = 0; i < uInt8Array.length; ++i) {
-  uInt8Array[i] = i;
-}
+// Create an 8MB "file" and fill it. 8MB = 1024 * 1024 * 8 B
+const uInt8Array = new Uint8Array(1024 * 1024 * 8).map((v, i) => i);
 console.log(uInt8Array.byteLength);  // 8388608
 
 // Transfer the underlying buffer to a worker

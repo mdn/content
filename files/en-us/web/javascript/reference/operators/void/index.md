@@ -38,8 +38,8 @@ parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
 ```js
-void 2 == '2';   // (void 2) == '2', returns false
-void (2 == '2'); // void (2 == '2'), returns undefined
+void 2 === '2';   // (void 2) === '2', returns false
+void (2 === '2'); // void (2 === '2'), returns undefined
 ```
 
 ## Examples
@@ -52,9 +52,7 @@ to be treated as an expression instead of a declaration.
 
 ```js
 void function iife() {
-
   console.log("Executed!");
-
 }();
 
 // Output: "Executed!"

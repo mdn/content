@@ -51,8 +51,8 @@ The **`handler.defineProperty()`** method is a trap for
 
 This trap can intercept these operations:
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}
 
@@ -127,6 +127,6 @@ Object.defineProperty(p, 'name', {
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}

@@ -32,7 +32,7 @@ Servers are encouraged to compress data as much as possible, and should use cont
 
 ## Syntax
 
-```
+```http
 Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
@@ -60,7 +60,7 @@ Content-Encoding: deflate, gzip
   - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
     structure (defined in {{rfc(1950)}}) with the [deflate](https://en.wikipedia.org/wiki/Deflate) compression
     algorithm (defined in {{rfc(1951)}}).
-- `br`
+- `br` {{Non-standard_Inline}}
   - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
 
 ## Examples
@@ -71,14 +71,14 @@ On the client side, you can advertise a list of compression schemes that will be
 along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for
 negotiating content encoding.
 
-```
+```http
 Accept-Encoding: gzip, deflate
 ```
 
 The server responds with the scheme used, indicated by the
 `Content-Encoding` response header.
 
-```
+```http
 Content-Encoding: gzip
 ```
 

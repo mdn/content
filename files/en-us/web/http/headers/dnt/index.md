@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Reference
   - header
+  - Deprecated
 browser-compat: http.headers.DNT
 ---
 {{HTTPSidebar}}{{Deprecated_header}}
@@ -29,7 +30,7 @@ users indicate whether they would prefer privacy rather than personalized conten
 
 ## Syntax
 
-```
+```http
 DNT: 0
 DNT: 1
 DNT: null

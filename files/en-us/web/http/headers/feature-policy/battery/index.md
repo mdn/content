@@ -14,7 +14,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `battery` directive controls wh
 
 ## Syntax
 
-```
+```http
 Feature-Policy: battery <allowlist>;
 ```
 

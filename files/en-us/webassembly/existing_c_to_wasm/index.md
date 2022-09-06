@@ -17,7 +17,7 @@ These libraries often rely on C's standard library, an operating system, a file 
 As an example, let's compile an encoder for WebP to wasm. The source for the WebP codec is written in C and [available on GitHub](https://github.com/webmproject/libwebp) as well as some extensive [API documentation](https://developers.google.com/speed/webp/docs/api). That's a pretty good starting point.
 
 ```bash
-$ git clone https://github.com/webmproject/libwebp
+git clone https://github.com/webmproject/libwebp
 ```
 
 To start off simple, expose `WebPGetEncoderVersion()` from `encode.h` to JavaScript by writing a C file called `webp.c`:

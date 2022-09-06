@@ -12,9 +12,10 @@ tags:
   - Virtual Reality
   - WebVR
   - resetPose()
+  - Non-standard
 browser-compat: api.VRDisplay.resetPose
 ---
-{{APIRef("WebVR API")}}{{deprecated_header}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`resetPose()`** method of the {{domxref("VRDisplay")}} interface resets the pose for the `VRDisplay`, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.
 

@@ -7,7 +7,6 @@ tags:
   - CSS Typed Object Model API
   - CSSPositionValue
   - Constructor
-  - Experimental
   - Houdini
   - Reference
   - Deprecated
@@ -31,7 +30,7 @@ new CSSPositionValue(x, y)
 - `x`
   - : A position along the web page's horizontal axis.
 - `y`
-  - : A position along the web page's vertical axix.
+  - : A position along the web page's vertical axis.
 
 ## Examples
 

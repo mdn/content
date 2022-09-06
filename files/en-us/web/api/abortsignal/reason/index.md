@@ -5,13 +5,12 @@ page-type: web-api-instance-property
 tags:
   - API
   - AbortSignal
-  - Experimental
   - Property
   - Reference
   - reason
 browser-compat: api.AbortSignal.reason
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`reason`** read-only property returns a JavaScript value that indicates the abort reason.
 

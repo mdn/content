@@ -27,7 +27,7 @@ varies depending on the type of URL:
   explicitly specified).
 - For `file:` URLs, the value is browser dependent.
 - for `blob:` URLs, the origin of the URL following `blob:` will
-  be used, e.g `"blob:https://mozilla.org"` will be returned as
+  be used. For example, `"blob:https://mozilla.org"` will be returned as
   `"https://mozilla.org".`
 
 {{AvailableInWorkers}}

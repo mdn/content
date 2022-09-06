@@ -3,7 +3,6 @@ title: 'HTML: HyperText Markup Language'
 slug: Web/HTML
 tags:
   - HTML
-  - HTML5
   - Landing
   - Web
   - l10n:priority

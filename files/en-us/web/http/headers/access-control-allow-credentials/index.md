@@ -52,7 +52,7 @@ into including credentials.
 
 ## Syntax
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
@@ -67,14 +67,14 @@ Access-Control-Allow-Credentials: true
 
 Allow credentials:
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
 Using [XHR](/en-US/docs/Web/API/XMLHttpRequest) with credentials:
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);

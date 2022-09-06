@@ -265,6 +265,7 @@ const intervalID = setInterval(updateTransition, 10000);
 ## See also
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

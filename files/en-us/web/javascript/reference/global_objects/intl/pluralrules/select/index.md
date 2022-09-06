@@ -1,5 +1,5 @@
 ---
-title: Intl.PluralRules.select()
+title: Intl.PluralRules.prototytpe.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 tags:
   - Internationalization
@@ -44,7 +44,7 @@ options of a {{jsxref("Intl.PluralRules")}} object.
 ### Using select()
 
 ```js
- new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules('ar-EG').select(0);
 // → 'zero'
 
 new Intl.PluralRules('ar-EG').select(1);

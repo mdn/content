@@ -462,15 +462,15 @@ You can alternatively manually construct a test URL like this — `http://127.0.
 
 If you are successful, the default form will look like this:
 
-![](forms_example_renew_default.png)
+![Default form which displays the book details, due date, renewal date and a submit button appears in case the link works successfully](forms_example_renew_default.png)
 
 The form with an invalid value entered will look like this:
 
-![](forms_example_renew_invalid.png)
+![Same form as above with an error message: invalid date - renewal in the past](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 
-![](forms_example_renew_allbooks.png)
+![Displays list of all renewed books along with their details. Past due is in red.](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -581,9 +581,9 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 
 ### Templates
 
-The "create" and "update" views use the same template by default, which will be named after your model: *model_name*\_**form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example `template_name_suffix = '_other_suffix'`)
+The "create" and "update" views use the same template by default, which will be named after your model: `model_name_form.html` (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example, `template_name_suffix = '_other_suffix'`)
 
-Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
+Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -601,7 +601,7 @@ Create the template file **locallibrary/catalog/templates/catalog/author_form.ht
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format *model_name*\_**confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
+The "delete" view expects to find a template named with the format _`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -652,13 +652,13 @@ You can test editing records by appending _/update/_ to the end of the detail vi
 
 Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
 
-![](forms_example_delete_author.png)
+![Form with option to delete author](forms_example_delete_author.png)
 
 ## Challenge yourself
 
 Create some forms to create, edit, and delete `Book` records. You can use exactly the same structure as for `Authors`. If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
 
-![](forms_example_create_book.png)
+![Screenshot displaying various fields in the form like title, author, summary, ISBN, genre and language](forms_example_create_book.png)
 
 ## Summary
 

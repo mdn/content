@@ -24,7 +24,7 @@ Number.parseFloat(string)
 ### Parameters
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one using the [`ToString`](https://tc39.es/ecma262/#sec-tostring) abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
@@ -42,7 +42,7 @@ This method has the same functionality as the global {{jsxref("parseFloat", "par
 Number.parseFloat === parseFloat; // true
 ```
 
-This method is also part of ECMAScript 2015. (Its purpose is modularization of globals.)
+Its purpose is modularization of globals.
 
 See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 

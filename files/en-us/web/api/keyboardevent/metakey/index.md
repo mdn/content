@@ -26,7 +26,7 @@ systems may intercept the key so it is never detected.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
@@ -42,7 +42,7 @@ function ismetaKey(e) {
 }
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 400, 90) }}
 

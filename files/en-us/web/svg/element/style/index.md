@@ -39,13 +39,13 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("type")}}
   - : This attribute defines type of the style sheet language to use as a media type string.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `text/css`; *Animatable*: **no**
+    _Value type_: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("media")}}
   - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `all`; *Animatable*: **no**
+    _Value type_: [**`<string>`**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: `all`; _Animatable_: **no**
 - {{SVGAttr("title")}}
-  - : This attribute the title of the style sheet which can be used to switch between alternate style sheets.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: *none*; *Animatable*: **no**
+  - : This attribute the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
+    _Value type_: [**`<string>`**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: _none_; _Animatable_: **no**
 
 ### Global attributes
 

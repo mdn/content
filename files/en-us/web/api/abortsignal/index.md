@@ -6,7 +6,6 @@ tags:
   - API
   - AbortSignal
   - DOM
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.AbortSignal
@@ -21,9 +20,9 @@ The **`AbortSignal`** interface represents a signal object that allows you to co
 
 _The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
+- {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
-- {{domxref("AbortSignal.reason")}} {{readonlyInline}}
+- {{domxref("AbortSignal.reason")}} {{ReadOnlyInline}}
   - : A JavaScript value providing the abort reason, once the signal has aborted.
 
 ## Methods
@@ -87,7 +86,7 @@ function fetchVideo() {
 
 > **Note:** When `abort()` is called, the `fetch()` promise rejects with an "`AbortError`" `DOMException`.
 
-You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
 ### Aborting a fetch operation with a timeout
 

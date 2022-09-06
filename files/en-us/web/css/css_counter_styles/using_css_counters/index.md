@@ -25,8 +25,10 @@ To use a counter it must first be initialized to a value with the {{cssxref("cou
 The counter's value can then be increased or decreased using {{cssxref("counter-increment")}} property.
 The current value of a counter is displayed using the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) {{CSSxRef("content")}} property.
 
-Note that counters can only be set, reset, or incremented in elements that generate boxes.
+Counters can only be set, reset, or incremented in elements that generate boxes.
 For example, if an element is set to `display: none` then any counter operation on that element will be ignored.
+
+The properties of counters can be scoped to specific elements using style containment which is described in more detail in the {{cssxref("contain")}} property.
 
 ### Manipulating a counter's value
 
@@ -308,6 +310,7 @@ li::before {
 
 ## See also
 
+- {{cssxref("contain")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}

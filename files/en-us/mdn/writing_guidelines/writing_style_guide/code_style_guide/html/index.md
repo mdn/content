@@ -12,7 +12,7 @@ The following guidelines cover how to write HTML example code for MDN Web Docs.
 
 ## General guidelines for HTML code examples
 
-> **Note:** The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
+> **Note:** The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
 
 ### Doctype
 
@@ -40,7 +40,7 @@ You should also define your document's characterset like so:
 <meta charset="utf-8">
 ```
 
-Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/en-US/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
+Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
 
 ### Viewport meta tag
 

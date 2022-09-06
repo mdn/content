@@ -6,12 +6,11 @@ tags:
   - API
   - Constructor
   - CountQueuingStrategy
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`CountQueuingStrategy()`** constructor
 creates and returns a `CountQueuingStrategy` object instance.

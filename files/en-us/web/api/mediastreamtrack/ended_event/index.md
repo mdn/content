@@ -58,7 +58,7 @@ track.addEventListener('ended', () => {
 You can also set up the event handler using the `onended` property:
 
 ```js
-track.onended = function() {
+track.onended = () => {
   let statusElem = document.getElementById("status-icon");
 
   statusElem.src = "/images/stopped-icon.png";

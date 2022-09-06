@@ -42,7 +42,6 @@ For each property there are two possible renderings:
 ```css
 * {
   /* Turn off the native look and feel */
-  -webkit-appearance: none;
   appearance: none;
 
 /* for Internet Explorer */
@@ -388,7 +387,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
 
 ### Buttons
 
-See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/submit", "submit")}}`, and `{{htmlelement("input/reset", "reset")}}` input types and the `{{htmlelement("button")}}` element.
+See the `{{htmlelement("input/button", "button")}}`, `{{htmlelement("input/submit", "submit")}}`, and `{{htmlelement("input/reset", "reset")}}` input types and the `{{htmlelement("button")}}` element.
 
 <table>
   <thead>
@@ -1105,7 +1104,7 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
 
 ### Select boxes (single line)
 
-See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{htmlelement("option")}}` elements.
+See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlelement("option")}}` elements.
 
 <table>
   <thead>

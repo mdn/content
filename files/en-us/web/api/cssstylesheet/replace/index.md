@@ -12,7 +12,7 @@ browser-compat: api.CSSStyleSheet.replace
 ---
 {{APIRef("CSSOM")}}
 
-The **`replace()`** method of the {{domxref("CSSStyleSheet")}} interface asynchronously replaces the content of the stylesheet with the content passed into it. The method returns a promise that resolves with a `CSSStyleSheet` object.
+The **`replace()`** method of the {{domxref("CSSStyleSheet")}} interface asynchronously replaces the content of the stylesheet with the content passed into it. The method returns a promise that resolves with the `CSSStyleSheet` object.
 
 The `replace()` and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only be used on a stylesheet created with the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
 
@@ -31,7 +31,7 @@ replace(text)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
+A {{jsxref("Promise")}} that resolves with the {{domxref("CSSStyleSheet")}}.
 
 ### Exceptions
 

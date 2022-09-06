@@ -40,7 +40,7 @@ With the IIRFIlter node it's up to you to set what `feedforward` and `feedback` 
 
 If you are looking to learn more there's some [information about the maths behind IIR filters here](http://ece.uccs.edu/~mwickert/ece2610/lecture_notes/ece2610_chap8.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
-If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the a*n* values refer to the `feedForward` values and the b*n* values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
+If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the `an` values refer to the `feedForward` values and the `bn` values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
 
 With that all in mind, let's take a look at the code to create an IIR filter with the Web Audio API.
 
@@ -194,19 +194,19 @@ canvasCtx.fillText('20k', width - spacing, height - spacing + fontSize);
 // Loop over our magnitude response data and plot our filter
 canvasCtx.beginPath();
 
-for (let i = 0; i < magResponseOutput.length; i++) {
+magResponseOutput.forEach((magResponseData, i) => {
   if (i === 0) {
     canvasCtx.moveTo(
       spacing,
-      height - magResponseOutput[i] * 100 - spacing,
+      height - magResponseData * 100 - spacing,
     );
   } else {
     canvasCtx.lineTo(
       width / totalArrayItems * i,
-      height - magResponseOutput[i] * 100 - spacing,
+      height - magResponseData * 100 - spacing,
     );
   }
-}
+});
 
 canvasCtx.stroke();
 ```

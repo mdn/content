@@ -15,7 +15,7 @@ tags:
 
 The **`msZoomTo`** method scrolls and/or zooms an element to its specified coordinate with animation.
 
-Zoomed elements can expose their zoom level through {{domxref("Element/msContentZoom_event", "msContentZoom")}} (ie. scrollTop/Left). The zoom level can be reset with `msZoomTo`.
+Zoomed elements can expose their zoom level through {{domxref("Element/msContentZoom_event", "msContentZoom")}} (i.e. scrollTop/Left). The zoom level can be reset with `msZoomTo`.
 
 This proprietary method is specific to Internet Explorer and Microsoft Edge.
 

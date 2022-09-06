@@ -19,6 +19,8 @@ Fragmentation occurs when an inline box wraps onto multiple lines. It also occur
 
 ## Reference
 
+### Properties
+
 - {{cssxref("box-decoration-break")}}
 - {{cssxref("break-after")}}
 - {{cssxref("break-before")}}

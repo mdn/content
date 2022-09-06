@@ -21,7 +21,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 ### JavaScript
 
-- The method `WeakMap.set()` now returns _`undefined`_, instead of itself.
+- The method `WeakMap.set()` now returns `undefined`, instead of itself.
 - A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
 - You can no longer use [E4X](/en-US/docs/E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
 

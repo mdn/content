@@ -9,6 +9,7 @@ tags:
   - HTMLIFrameElement
   - Policy
   - Property
+  - Experimental
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

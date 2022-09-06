@@ -66,7 +66,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
-          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
           <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
@@ -299,7 +299,7 @@ They're also commonly used for the animated portions of web browsers' user inter
 
 ### AVIF image
 
-AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes *AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.*
+AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes _AV1 bitstreams in the High Efficiency Image File Format (HEIF) container._
 
 > **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
@@ -1093,7 +1093,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
             </tr>
             <tr>
               <th scope="row">
-                SVG as image ({{HTMLElement("img")}} etc)
+                SVG as image ({{HTMLElement("img")}}, etc.)
               </th>
               <td>28</td>
               <td>12</td>

@@ -58,7 +58,7 @@ browser-compat: html.elements.input.type_button
 
 ### Button with a value
 
-An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label.
+An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me">
@@ -114,7 +114,7 @@ The script gets a reference to the {{domxref("HTMLInputElement")}} object repres
 
 ### Adding keyboard shortcuts to buttons
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
 
 In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
 
@@ -148,7 +148,7 @@ function updateButton() {
 
 ### Disabling and enabling a button
 
-To disable a button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) global attribute on it, like so:
 
 ```html
 <input type="button" value="Disable me" disabled>
@@ -170,7 +170,7 @@ button.addEventListener('click', disableButton);
 function disableButton() {
   button.disabled = true;
   button.value = 'Disabled';
-  setTimeout(function() {
+  setTimeout(() => {
     button.disabled = false;
     button.value = 'Enabled';
   }, 2000);
@@ -202,7 +202,7 @@ button.addEventListener('click', disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  setTimeout(function() {
+  setTimeout(() => {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -263,18 +263,18 @@ span {
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+const canvas = document.querySelector('.myCanvas');
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight - 85;
+const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'rgb(0,0,0)';
 ctx.fillRect(0,0,width,height);
 
-var colorPicker = document.querySelector('input[type="color"]');
-var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
-var clearBtn = document.querySelector('input[type="button"]');
+const colorPicker = document.querySelector('input[type="color"]');
+const sizePicker = document.querySelector('input[type="range"]');
+const output = document.querySelector('.output');
+const clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
@@ -283,39 +283,39 @@ function degToRad(degrees) {
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
 }
 
 // store mouse pointer coordinates, and whether the button is pressed
-var curX;
-var curY;
-var pressed = false;
+let curX;
+let curY;
+let pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+document.onmousemove = (e) => {
+  curX = e.pageX;
+  curY = e.pageY;
 }
 
-canvas.onmousedown = function() {
+canvas.onmousedown = () => {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = () => {
   pressed = false;
 }
 
-clearBtn.onclick = function() {
+clearBtn.onclick = () => {
   ctx.fillStyle = 'rgb(0,0,0)';
   ctx.fillRect(0,0,width,height);
 }
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
     ctx.fill();
   }
 

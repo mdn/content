@@ -32,7 +32,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element.
 
-A custom element's class object is written using standard ES 2015 class syntax. For example, `WordCount` is structured like so:
+A custom element's class object is written using the `class` syntax. For example, `WordCount` is structured like so:
 
 ```js
 class WordCount extends HTMLParagraphElement {
@@ -268,7 +268,7 @@ This is placed right at the top of the constructor, in our example.
 
 ## Transpilers vs. classes
 
-Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
+Please note that classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
 
 ## Libraries
 

@@ -158,9 +158,9 @@ a:active {
 
 The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):
 
-![](focus-highlight-firefox.png)
+![Screenshot of a list of links in Firefox browser. The list contains 4 items. The second list item is highlighted using a blue dotted outline when it is focussed via tabbing.](focus-highlight-firefox.png)
 
-![](focus-highlight-chrome.png)
+![Screenshot of a list of links in Chrome browser. The list contains 4 items. The third list item is highlighted using a blue outline when it is focussed via tabbing.](focus-highlight-chrome.png)
 
 You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.
 
@@ -203,9 +203,9 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
-![](tabbed-info-box.png)
+![Three tab interface with Tab 1 selected and only its contents are displayed. The contents of other tabs are hidden. If a tab is selected, then it's text-color changes from black to white and the background-color changes from orange-red to saddle brown.](tabbed-info-box.png)
 
-Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.
+Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect because it doesn't stop screen readers from getting to it.
 
 On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{cssxref("display")}}`:none`, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
 
@@ -213,12 +213,10 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 ### Accept that users can override styles
 
-#### Accept that users can override your styles
-
 It is possible for users to override your styles with their own custom styles, for example:
 
 - See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
-- It is probably easier to do it using an extension, for example, the Stylish extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) and [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe).
+- It is probably easier to do it using an extension. For example, the Stylus extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), with Stylish being a [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe) equivalent.
 
 Users might do this for a variety of reasons. A visually impaired user might want to make the text bigger on all websites they visit, or a user with severe color deficiency might want to put all websites in high contrast colors that are easy for them to see. Whatever the need, you should be comfortable with this, and make your designs flexible enough so that such changes will work in your design. As an example, you might want to make sure your main content area can handle bigger text (maybe it will start to scroll to allow it all to be seen), and won't just hide it, or break completely.
 
@@ -250,7 +248,7 @@ You should keep **unobtrusive JavaScript** in mind when creating your content. T
 Good example uses of unobtrusive JavaScript include:
 
 - Providing client-side form validation, which alerts users to problems with their form entries quickly, without having to wait for the server to check the data. If it isn't available, the form will still work, but validation might be slower.
-- Providing custom controls for HTML5 `<video>`s that are accessible to keyboard-only users, along with a direct link to the video that can be used to access it if JavaScript is not available (the default `<video>` browser controls aren't keyboard accessible in most browsers).
+- Providing custom controls for HTML `<video>`s that are accessible to keyboard-only users, along with a direct link to the video that can be used to access it if JavaScript is not available (the default `<video>` browser controls aren't keyboard accessible in most browsers).
 
 As an example, we've written a quick and dirty client-side form validation example — see [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) (also [see the demo live](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Here you'll see a simple form; when you try to submit the form with one or both fields left empty, the submit fails, and an error message box appears to tell you what is wrong.
 
@@ -274,13 +272,13 @@ function validate(e) {
   errorList.innerHTML = '';
   for(let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if(testItem.input.value === '') {
+    if (testItem.input.value === '') {
       errorField.style.left = '360px';
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== '') {
     e.preventDefault();
   }
 }
@@ -288,9 +286,9 @@ function validate(e) {
 
 > **Note:** In this example, we are hiding and showing the error message box using absolute positioning rather than another method such as visibility or display, because it doesn't interfere with the screen reader being able to read content from it.
 
-Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if(testItem.input.value === '')`).
+Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if (testItem.input.value === '')`).
 
-When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if(errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
+When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if (errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
 
 For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the `errorList`.
 
@@ -299,9 +297,10 @@ function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  const name = testItem.input.name;
+  anchor.textContent = `${name} field is empty: fill in your ${name}.`;
+  anchor.href = `#${name}`;
+  anchor.onclick = () => {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -326,7 +325,7 @@ As a final note, we have used some WAI-ARIA attributes in our demo to help solve
 
 We will explain these attributes in our next article, which covers [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) in much more detail.
 
-> **Note:** Some of you will probably be thinking about that fact that HTML5 forms have built-in validation mechanisms like the `required`, `min`/`minlength`, and `max`/`maxlength` attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).
+> **Note:** Some of you will probably be thinking about that fact that HTML forms have built-in validation mechanisms like the `required`, `min`/`minlength`, and `max`/`maxlength` attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).
 
 > **Note:** WebAIM's [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/) provides some further useful information about accessible form validation.
 

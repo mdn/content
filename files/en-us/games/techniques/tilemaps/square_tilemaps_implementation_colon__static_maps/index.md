@@ -1,5 +1,5 @@
 ---
-title: 'Square tilemaps implementation: Static maps'
+title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
 tags:
   - Canvas
@@ -12,6 +12,7 @@ tags:
   - tilemaps
   - tiles
 ---
+
 {{GamesSidebar}}
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
@@ -49,29 +50,24 @@ To store that map data, we can use a plain object or a custom class. For the sak
 The `getTile()` helper method returns the tile contained at the specified column and row. If `tiles` were a 2D matrix, then the returned value would just be `tiles[column][row]`. However, it's usually more common to represent the grid with a 1-dimensional array. In this case, we need to map the column and row to an array index:
 
 ```js
-var index = row * map.cols + column;
+const index = row * map.cols + column;
 ```
 
 Wrapping up, an example of a tilemap object could look like the following. This features an 8 x 8 map with tiles 64 x 64 pixels in size:
 
 ```js
-var map = {
+const map = {
   cols: 8,
   rows: 8,
   tsize: 64,
   tiles: [
-    1, 3, 3, 3, 1, 1, 3, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 2, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 2, 1, 1, 1, 1,
-    1, 1, 1, 1, 2, 1, 1, 1,
-    1, 1, 1, 1, 2, 1, 1, 1,
-    1, 1, 1, 0, 0, 1, 1, 1
+    1, 3, 3, 3, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1,
+    1, 1, 2, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1,
   ],
   getTile(col, row) {
-    return this.tiles[row * map.cols + col]
-  }
+    return this.tiles[row * map.cols + col];
+  },
 };
 ```
 
@@ -84,10 +80,11 @@ We can render the map by iterating over its columns and rows. This snippet assum
 - `map`: The tilemap object discussed above.
 
 ```js
-for (var c = 0; c < map.cols; c++) {
-  for (var r = 0; r < map.rows; r++) {
-    var tile = map.getTile(c, r);
-    if (tile !== 0) { // 0 => empty tile
+for (let c = 0; c < map.cols; c++) {
+  for (let r = 0; r < map.rows; r++) {
+    const tile = map.getTile(c, r);
+    if (tile !== 0) {
+      // 0 => empty tile
       context.drawImage(
         tileAtlas, // image
         (tile - 1) * map.tsize, // source x
@@ -108,4 +105,4 @@ for (var c = 0; c < map.cols; c++) {
 
 Our static tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can see a [live demo](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html) and grab the [full source code](https://github.com/mozdevs/gamedev-js-tiles).
 
-[![](no-scroll.png)](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html)
+[![Aerial view of a field with trees, grass, and ground made from repeated sections of the tilemap.](no-scroll.png)](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html)

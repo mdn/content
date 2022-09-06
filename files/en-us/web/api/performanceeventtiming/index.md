@@ -12,6 +12,9 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEventTiming
 ---
+
+{{APIRef}}
+
 The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
 - {{domxref("Element/auxclick_event", "auxclick")}}
@@ -55,18 +58,18 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 
 ## Properties
 
-- **`{{domxref("PerformanceEventTiming.processingStart")}}`**
+- {{domxref("PerformanceEventTiming.processingStart")}}
   - : Returns the time at which event dispatch started.
-- **`{{domxref("PerformanceEventTiming.processingEnd")}}`**
+- {{domxref("PerformanceEventTiming.processingEnd")}}
   - : Returns the time at which the event dispatch ended.
-- **`{{domxref("PerformanceEventTiming.cancelable")}}`**
+- {{domxref("PerformanceEventTiming.cancelable")}}
   - : Returns the associated event's cancelable attribute.
-- **`{{domxref("PerformanceEventTiming.target")}}`**
+- {{domxref("PerformanceEventTiming.target")}}
   - : Returns the associated event's last target, if it is not removed.
 
 ## Methods
 
-- **`{{domxref("PerformanceEventTiming.toJSON()")}}`**
+- {{domxref("PerformanceEventTiming.toJSON()")}}
   - : Converts the PerformanceEventTiming object to JSON.
 
 ## Examples

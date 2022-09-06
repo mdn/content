@@ -27,7 +27,7 @@ The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/We
 radial-gradient(circle at center, red 0, blue, green 100%)
 ```
 
-A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the *ending shape* (the 100% ellipse).
+A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the _ending shape_ (the 100% ellipse).
 
 ### Values
 
@@ -67,13 +67,15 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 
 ### Composition of a radial gradient
 
-![](radial_gradient.png)A radial gradient is defined by a _center point_, an _ending shape_, and two or more _color-stop points_.
+![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same aspect ratio as the box upon which it is declared.](radial_gradient.png)
+
+A radial gradient is defined by a _center point_, an _ending shape_, and two or more _color-stop points_.
 
 To create a smooth gradient, the `radial-gradient()` function draws a series of concentric shapes radiating out from the center to the _ending shape_ (and potentially beyond). The ending shape may be either a circle or an ellipse.
 
 Color-stop points are positioned on a _virtual gradient ray_ that extends horizontally from the center towards the right. Percentage-based color-stop positions are relative to the intersection between the ending shape and this gradient ray, which represents `100%`. Each shape is a single color determined by the color on the gradient ray it intersects.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 

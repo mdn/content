@@ -98,12 +98,7 @@ export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, length, length);
 
-  return {
-    length: length,
-    x: x,
-    y: y,
-    color: color
-  };
+  return { length, x, y, color };
 }
 ```
 
@@ -190,10 +185,10 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title></title>
-  <meta charset="utf-8">
   <link rel="stylesheet" href="">
 </head>
 <body>
@@ -231,7 +226,7 @@ Note the lack of curly braces.
 We could instead prepend `export default` onto the function and define it as an anonymous function, like this:
 
 ```js
-export default function(ctx) {
+export default function (ctx) {
   // …
 }
 ```
@@ -498,7 +493,7 @@ Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn
 
 In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) files — the module exports remain the same as before.
 
-Over in `main.js` we've grabbed a reference to each button using a [`Document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
+Over in `main.js` we've grabbed a reference to each button using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
 
 ```js
 const squareBtn = document.querySelector('.square');

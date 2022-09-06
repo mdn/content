@@ -76,7 +76,9 @@ The `submit` input will be displayed as a button (by default)—this can be pres
 
 Form handling uses all of the same techniques that we learned for displaying information about our models: the route sends our request to a controller function which performs any database actions required, including reading data from the models, then generates and returns an HTML page. What makes things more complicated is that the server also needs to be able to process the data provided by the user, and redisplay the form with error information if there are any problems.
 
-A process flowchart for processing form requests is shown below, starting with a request for a page containing a form (shown in green):![](web_server_form_handling.png)
+A process flowchart for processing form requests is shown below, starting with a request for a page containing a form (shown in green):
+
+![Web server form request processing flowchart. Browser requests for the page containing the form by sending an HTTP GET request. The server creates an empty default form and returns it to the user. The user populates or updates the form, submitting it via HTTP POST with form data. The server validates the received form data. If the user-provided data is invalid, the server recreates the form with the user-entered data and error messages and sends it back to the user for the user to update and resubmits via HTTP Post, and it validates again. If the data is valid, the server performs actions on the valid data and redirects the user to the success URL.](web_server_form_handling.png)
 
 As shown in the diagram above, the main things that form handling code needs to do are:
 
@@ -176,11 +178,10 @@ The functions are defined as below:
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
+        // There are errors. Render form again with sanitized values/errors messages.
+        // Error messages can be returned in an array using `errors.array()`.
+      } else {
+        // Data from form is valid.
       }
   }
   ```
@@ -253,7 +254,7 @@ A few tips:
 
 ## Summary
 
-_Express_, node, and third-party packages on NPM provide everything you need to add forms to your website. In this article, you've learned how to create forms using _Pug_, validate and sanitize input using _express-validator_, and add, delete, and modify records in the database.
+_Express_, node, and third-party packages on npm provide everything you need to add forms to your website. In this article, you've learned how to create forms using _Pug_, validate and sanitize input using _express-validator_, and add, delete, and modify records in the database.
 
 You should now understand how to add basic forms and form-handling code to your own node websites!
 

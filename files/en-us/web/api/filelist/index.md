@@ -43,10 +43,8 @@ In this example, we log the names of all the files selected by the user.
 #### HTML
 
 ```html
-
-<!--'multiple' is set to allow multiple files to be selected-->
 <input id="myfiles" multiple type="file">
-<div class="output"></div>
+<pre class="output">Selected files:</pre>
 ```
 
 #### CSS
@@ -63,18 +61,13 @@ In this example, we log the names of all the files selected by the user.
 
 ```js
 const output = document.querySelector('.output');
-const myFiles = document.querySelector("#myfiles");
+const fileInput = document.querySelector("#myfiles");
 
-function logFilenames(){
-  const fileInput = document.querySelector("#myfiles");
-  const files = fileInput.files;
-  const fileListLength = files.length;
-  for (let i = 0; i < fileListLength; i++) {
-    output.innerText = `${output.innerText}\n${files.item(i).name}`;
+fileInput.addEventListener("change", () => {
+  for (const file of fileInput.files) {
+    output.innerText += `\n${file.name}`;
   }
-}
-
-myFiles.addEventListener("change", logFilenames);
+});
 ```
 
 #### Result

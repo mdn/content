@@ -19,7 +19,7 @@ To manipulate, for instance, the session storage for a domain, a call to {{domxr
 
 ## Properties
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
+- {{domxref("Storage.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of data items stored in the `Storage` object.
 
 ## Methods
@@ -40,7 +40,7 @@ To manipulate, for instance, the session storage for a domain, a call to {{domxr
 Here we access a `Storage` object by calling `localStorage`. We first test whether the local storage contains data items using `!localStorage.getItem('bgcolor')`. If it does, we run a function called `setStyles()` that grabs the data items using {{domxref("Storage.getItem()")}} and uses those values to update page styles. If it doesn't, we run another function, `populateStorage()`, which uses {{domxref("Storage.setItem()")}} to set the item values, then runs `setStyles()`.
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();

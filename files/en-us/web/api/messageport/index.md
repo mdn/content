@@ -5,7 +5,7 @@ page-type: web-api-interface
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - Interface
   - MessagePort
   - Reference
@@ -69,7 +69,7 @@ function onMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

@@ -17,7 +17,7 @@ The `SVGNumberList` defines a list of {{ domxref("SVGNumber") }} objects.
 
 An `SVGNumberList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{ Gecko("5.0") }},the `SVGNumberList` DOM interface is now indexable and can be accessed like arrays.
+An `SVGNumberList` is indexable and can be accessed like an array.
 
 ### Interface overview
 

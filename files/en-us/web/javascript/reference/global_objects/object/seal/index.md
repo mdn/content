@@ -103,11 +103,9 @@ Object.defineProperty(obj, 'foo', {
 }); // changes existing property value
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a sealed ordinary object by returning it.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be returned as-is without any errors, since primitives are already, by definition, immutable.
 
 ```js
 Object.seal(1);

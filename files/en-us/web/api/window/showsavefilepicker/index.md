@@ -9,9 +9,10 @@ tags:
   - Method
   - Window
   - working with files
+  - Experimental
 browser-compat: api.Window.showSaveFilePicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showSaveFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to save a file.
@@ -25,7 +26,7 @@ showSaveFilePicker()
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object containing options, which are as follows:
 

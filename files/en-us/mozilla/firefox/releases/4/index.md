@@ -25,7 +25,7 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 - [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
-  - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
+  - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
 - [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
 - [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#hidden)
@@ -327,7 +327,7 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 - [Using the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
   - : The Web Console tool is a useful debugging aid for web developers and extension developers alike.
 
-> **Note:**The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
+> **Note:**The Error Console is disabled by default starting in Gecko 2.0. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
 
 ## Changes for Mozilla and add-on developers
 

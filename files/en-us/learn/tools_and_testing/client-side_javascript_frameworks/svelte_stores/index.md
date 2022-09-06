@@ -90,9 +90,9 @@ Moreover, when your app becomes complicated and your component hierarchy gets co
 
 A store is an object with a `subscribe()` method that allows interested parties to be notified whenever the store value changes, and an optional `set()` method that allows you to set new values for the store. This minimal API is known as the [store contract](https://svelte.dev/docs#component-format-script-4-prefix-stores-with-$-to-access-their-values-store-contract).
 
-Svelte provides functions for creating [readable](https://svelte.dev/docs#readable), [writable](https://svelte.dev/docs#writable), and [derived](https://svelte.dev/docs#derived) stores in the `svelte/store` module.
+Svelte provides functions for creating [readable](https://svelte.dev/docs#run-time-svelte-store-readable), [writable](https://svelte.dev/docs#run-time-svelte-store-writable), and [derived](https://svelte.dev/docs#run-time-svelte-store-derived) stores in the `svelte/store` module.
 
-Svelte also provides a very intuitive way to integrate stores into its reactivity system using the [reactive `$store` syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If you create your own stores honoring the store contract, you get this reactivity syntactic sugar for free.
+Svelte also provides a very intuitive way to integrate stores into its reactivity system using the [reactive `$store` syntax](https://svelte.dev/docs#component-format-script-4-prefix-stores-with-$-to-access-their-values). If you create your own stores honoring the store contract, you get this reactivity syntactic sugar for free.
 
 ## Creating the Alert component
 
@@ -304,9 +304,13 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     $: {
-      if (filter === 'all')               $alert = 'Browsing all to-dos'
-      else if (filter === 'active')       $alert = 'Browsing active to-dos'
-      else if (filter === 'completed')    $alert = 'Browsing completed to-dos'
+      if (filter === 'all') {
+        $alert = 'Browsing all to-dos';
+      } else if (filter === 'active') {
+        $alert = 'Browsing active to-dos';
+      } else if (filter === 'completed') {
+        $alert = 'Browsing completed to-dos';
+      }
     }
     ```
 
@@ -524,7 +528,7 @@ function myStore() {
 }
 ```
 
-If our to-do list app gets too complex, we could let our to-dos store handle every state modification. We could move all the methods that modify the `todo` array (like `addTodo()`, `removeTodo()`, etc) from our `Todos` component to the store. If you have a central place where all the state modification is applied, components could just call those methods to modify the app's state and reactively display the info exposed by the store. Having a unique place to handle state modifications makes it easier to reason about the state flow and spot issues.
+If our to-do list app gets too complex, we could let our to-dos store handle every state modification. We could move all the methods that modify the `todo` array (like `addTodo()`, `removeTodo()`, etc.) from our `Todos` component to the store. If you have a central place where all the state modification is applied, components could just call those methods to modify the app's state and reactively display the info exposed by the store. Having a unique place to handle state modifications makes it easier to reason about the state flow and spot issues.
 
 Svelte won't force you to organize your state management in a specific way; it just provides the tools for you to choose how to handle it.
 

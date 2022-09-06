@@ -8,6 +8,8 @@ tags:
   - Statement
 browser-compat: javascript.statements.with
 ---
+{{Deprecated_Header}}
+
 > **Warning:** Use of the `with` statement is not recommended, as it may
 > be the source of confusing bugs and compatibility issues. See the "Ambiguity Contra"
 > paragraph in the "Description" section below for details.
@@ -27,8 +29,7 @@ with (expression)
   - : Adds the given expression to the scope chain used when evaluating the statement. The
     parentheses around the expression are required.
 - `statement`
-  - : Any statement. To execute multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement ({
-    ... }) to group those statements.
+  - : Any statement. To execute multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement (`{ ... }`) to group those statements.
 
 ## Description
 
@@ -39,10 +40,7 @@ its statement body. If an unqualified name used in the body matches a property i
 scope chain, then the name is bound to the property and the object containing the
 property. Otherwise a {{jsxref("ReferenceError")}} is thrown.
 
-> **Note:** Using `with` is not recommended, and is forbidden in
-> ECMAScript 5 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-> The recommended alternative is to assign the object whose properties you
-> want to access to a temporary variable.
+> **Note:** Using `with` is not recommended, and is forbidden in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The recommended alternative is to assign the object whose properties you want to access to a temporary variable.
 
 ### Performance pro & contra
 
@@ -91,11 +89,11 @@ function f(foo, values) {
 If you call `f([1,2,3], obj)` in an ECMAScript 5 environment, then the
 `values` reference inside the `with` statement will resolve to
 `obj`. However, ECMAScript 2015 introduces a `values` property
-on {{jsxref("Array.prototype")}} (so that it will be available on every array). So, in
+on [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (so that it will be available on every array). So, in
 a JavaScript environment that supports ECMAScript 2015, the `values`
 reference inside the `with` statement could resolve to
 `[1,2,3].values`. However, in this particular example,
-{{jsxref("Array.prototype")}} has been defined with `values` in its
+[`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) has been defined with `values` in its
 {{jsxref("Symbol.unscopables")}} object. If it were not, one can see how this would be
 a difficult issue to debug.
 
@@ -120,7 +118,7 @@ with (Math) {
 }
 ```
 
-### Avoiding `with` by destructuring properties into the current scope
+### Avoiding with by destructuring properties into the current scope
 
 You can usually avoid using `with` through [property destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Here we create an extra block to mimic the behavior of `with` creating an extra scope — but in actual usage, this block can usually be omitted.
 
@@ -136,7 +134,7 @@ const r = 10;
 }
 ```
 
-### Using `with` with a proxy to create a dynamic namespace
+### Creating dynamic namespaces using the with statement and a proxy
 
 `with` will transform every variable lookup to a property lookup, while [Proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) allow trapping every property lookup call. You can create a dynamic namespace by combining them.
 

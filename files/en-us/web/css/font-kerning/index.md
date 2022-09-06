@@ -85,11 +85,11 @@ div {
 #### JavaScript
 
 ```js
-let input  = document.getElementById('input');
-let kern   = document.getElementById('kern');
-let nokern = document.getElementById('nokern');
+const input  = document.getElementById('input');
+const kern   = document.getElementById('kern');
+const nokern = document.getElementById('nokern');
 
-input.addEventListener('keyup', function() {
+input.addEventListener('keyup', () => {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

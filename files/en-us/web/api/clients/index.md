@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Clients
-  - Experimental
   - Interface
   - Reference
   - Service Workers

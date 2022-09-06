@@ -65,7 +65,7 @@ div.source, div.target {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const source = document.querySelector('div.source');
@@ -94,4 +94,4 @@ source.addEventListener('cut', (event) => {
 
 - Related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}}
 - This event on {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "cut")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/cut_event", "cut")}}

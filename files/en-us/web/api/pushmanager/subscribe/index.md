@@ -4,7 +4,6 @@ slug: Web/API/PushManager/subscribe
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - PushManager
   - Reference
@@ -12,7 +11,7 @@ tags:
   - subscribe
 browser-compat: api.PushManager.subscribe
 ---
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
 The **`subscribe()`** method of the {{domxref("PushManager")}}
 interface subscribes to a push service.
@@ -70,7 +69,7 @@ navigator.serviceWorker.ready.then(
   (serviceWorkerRegistration) => {
     const options = {
       userVisibleOnly: true,
-      applicationServerKey: applicationServerKey
+      applicationServerKey,
     };
     serviceWorkerRegistration.pushManager.subscribe(options).then(
       (pushSubscription) => {

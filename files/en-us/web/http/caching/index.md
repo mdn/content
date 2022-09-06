@@ -287,7 +287,7 @@ Cache-Control: no-cache
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
 
-```
+```http
 Cache-Control: max-age=0, must-revalidate
 ```
 
@@ -351,7 +351,7 @@ As a workaround for outdated implementations that ignore `no-store`, you may see
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-It is [recommended](https://docs.microsoft.com/en-us/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
+It is [recommended](https://docs.microsoft.com/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
 
 If it is the shared cache that you are concerned about, you can make sure to prevent unintended caching by also adding `private`:
 
@@ -604,7 +604,7 @@ The combined result is shown below.
 
 ```http
 # bundle.v123.js
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: application/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
@@ -642,7 +642,7 @@ For that case, `no-cache` would be appropriate — rather than `no-store` — si
 Furthermore, adding `Last-Modified` and `ETag` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
@@ -653,7 +653,7 @@ ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 That setting is appropriate for non-personalized HTML, but for a response that gets personalized using cookies — for example, after a login — don't forget to also specify `private`:
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private

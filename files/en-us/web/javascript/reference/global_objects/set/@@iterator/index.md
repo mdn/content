@@ -47,7 +47,7 @@ console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
 ```
 
-### Using \[@@iterator]\() with for..of
+### Using \[@@iterator]\() with for...of
 
 ```js
 const mySet = new Set();

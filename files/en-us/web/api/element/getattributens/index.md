@@ -62,12 +62,16 @@ custom namespace.
 </svg>
 ```
 
-In an HTML5 document the attribute has to be accessed with `test:foo` since
+In an HTML document the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>getAttributeNS() test page</title>
+</head>
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +92,7 @@ namespaces are not supported.
 
 ## Notes
 
-Namespaces are only supported in XML documents. HTML5 documents have to use
+Namespaces are only supported in XML documents. HTML documents have to use
 `getAttribute()` instead.
 
 `getAttributeNS()` differs from {{domxref("element.getAttribute()",

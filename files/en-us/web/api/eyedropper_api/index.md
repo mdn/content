@@ -31,7 +31,7 @@ To prevent malicious websites from getting pixel data from a user's screen witho
 
 ## Interfaces
 
-- {{DOMxRef("EyeDropper")}}
+- {{DOMxRef("EyeDropper")}} {{Experimental_Inline}}
 
 ## Specifications
 

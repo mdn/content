@@ -52,7 +52,7 @@ You should also consider the type of devices and the way people use your site, f
 
 Once you know the browsers that come to your site, you can assess any technology that you want to use against how well it is supported and how easily you can provide an alternative for visitors who do not have that technology available. We are trying to make this easy for you at MDN, by providing browser compatibility information on each page detailing a CSS property. For example, take a look at the page for {{cssxref("grid-template-columns")}}. At the bottom of this page is a table, which lists major browsers along with the version they began supporting this property.
 
-![](browser-table.png)
+![Browser compatibility table. This table provides information on which browsers are compatible with the technology that you are looking for and the version from which the browser started supporting that functionality. Browser and mobile phone browser compatibility information are displayed separately. The browser names take up the column headers.](browser-table.png)
 
 Another popular way to find out about how well a feature is supported is the [Can I Use](https://caniuse.com/) website. This site lists the majority of Web Platform features with information about their browser support status. You can view usage statistics by location — useful if you work on a site that has users mostly for a specific area of the world. You can even link your Google Analytics account to get analysis based on your user data.
 

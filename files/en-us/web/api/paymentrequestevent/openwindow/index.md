@@ -10,6 +10,7 @@ tags:
   - Reference
   - openWindow()
   - payment
+  - Experimental
 browser-compat: api.PaymentRequestEvent.openWindow
 ---
 {{APIRef("Payment Request API")}}{{SeeCompatTable}}

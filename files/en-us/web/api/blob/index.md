@@ -29,9 +29,9 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 ## Instance properties
 
-- {{DOMxRef("Blob.prototype.size")}} {{readonlyinline}}
+- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
   - : The size, in bytes, of the data contained in the `Blob` object.
-- {{DOMxRef("Blob.prototype.type")}} {{readonlyinline}}
+- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
   - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
 
 ## Instance methods
@@ -151,7 +151,6 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 
 ## See also
 
-- {{DOMxRef("BlobBuilder")}}
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}

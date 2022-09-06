@@ -52,7 +52,7 @@ getUserMedia(constraints, successCallback, errorCallback)
     function successCallback(stream) {
        const video = document.querySelector('video');
        video.srcObject = stream;
-       video.onloadedmetadata = function(e) {
+       video.onloadedmetadata = (e) => {
           // Do something with the video here.
        };
     }
@@ -84,14 +84,14 @@ navigator.getUserMedia = navigator.getUserMedia ||
 
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      function(stream) {
+      (stream) => {
          const video = document.querySelector('video');
          video.srcObject = stream;
-         video.onloadedmetadata = function(e) {
+         video.onloadedmetadata = (e) => {
            video.play();
          };
       },
-      function(err) {
+      (err) => {
          console.error(`The following error occurred: ${err.name}`);
       }
    );

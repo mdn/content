@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/showModal
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method
@@ -12,7 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
-{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the
 {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
@@ -79,7 +78,7 @@ button.
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -102,7 +101,7 @@ button.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
 > ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications

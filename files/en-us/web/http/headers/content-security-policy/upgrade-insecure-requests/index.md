@@ -36,7 +36,7 @@ not subject to SSL stripping attacks.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
@@ -44,7 +44,7 @@ Content-Security-Policy: upgrade-insecure-requests;
 
 ### Using the HTTP header
 
-```
+```http
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
@@ -86,7 +86,7 @@ With the help of the {{HTTPHeader("Content-Security-Policy-Report-Only")}} heade
 the {{CSP("report-uri")}} directive, you can set-up an enforced policy and a reported
 policy like this:
 
-```
+```http
 Content-Security-Policy: upgrade-insecure-requests; default-src https:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
 ```

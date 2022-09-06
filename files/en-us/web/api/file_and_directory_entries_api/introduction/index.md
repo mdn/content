@@ -104,7 +104,7 @@ Use temporary storage for caching and persistent storage for data that you want 
 
 To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
+How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
 
 ### The File and Directory Entries API has asynchronous and synchronous versions
 
@@ -158,7 +158,7 @@ Because the file system is sandboxed, a web app cannot access another app's file
 
 ### You cannot run your app from file://
 
-You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.
+You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including Blob and FileReader.
 
 For testing purposes, you can bypass the restriction on Chrome by starting the browser with the `--allow-file-access-from-files` flag. Use this flag only for this purpose.
 
@@ -186,4 +186,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](https://web.dev/read-files/) (HTML5 Rocks)
+- [Read files in JavaScript](https://web.dev/read-files/) (web.dev)

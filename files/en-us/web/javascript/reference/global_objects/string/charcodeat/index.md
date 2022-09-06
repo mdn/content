@@ -134,8 +134,7 @@ function knownCharCodeAt(str, idx) {
     const li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
-    }
-    else {
+    } else {
       break;
     }
   }

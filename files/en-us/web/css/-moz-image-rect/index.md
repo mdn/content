@@ -9,9 +9,10 @@ tags:
   - Function
   - Non-standard
   - Reference
+  - Experimental
 browser-compat: css.types.-moz-image-rect
 ---
-{{CSSRef}}{{Non-standard_Header}}
+{{CSSRef}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
 
@@ -127,16 +128,14 @@ This code handles the click event when the container receives a mouse click.
 
 ```js
 function rotate() {
-  var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  let prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating
-
-  for (var i=1; i<=4; i++) {
-    var curId = "box" + i;
+  for (let i=1; i<=4; i++) {
+    const curId = `box${i}`;
 
     // Shift the background images
-
-    var curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    const curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }

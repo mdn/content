@@ -74,10 +74,10 @@ of iterables (e.g., arrays, strings, or {{jsxref("Functions/arguments", "argumen
 objects).
 
 ```js
-function* g3() {
+function* g3(...args) {
   yield* [1, 2];
   yield* '34';
-  yield* Array.from(arguments);
+  yield* args;
 }
 
 const iterator = g3(5, 6);
@@ -91,7 +91,7 @@ console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
 ```
 
-### The value of `yield*` expression itself
+### The value of yield* expression itself
 
 `yield*` is an expression, not a statement—so it evaluates to a value.
 
@@ -127,5 +127,5 @@ console.log(iterator.next()); // {value: 'foo', done: true}
 
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

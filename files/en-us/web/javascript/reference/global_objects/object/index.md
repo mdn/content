@@ -85,19 +85,19 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Specifies the function that creates an object's prototype.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 
 ## Instance methods
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Associates a function with a property that, when accessed, executes that function and returns its return value.
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Associates a function with a property that, when set, executes that function which modifies the property.
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}} method.
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}} method.
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) method.
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) method.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
@@ -105,7 +105,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
   - : Returns a boolean indicating if the internal [ECMAScript \[\[Enumerable\]\] attribute](/en-US/docs/Web/JavaScript/Data_structures#properties) is set.
 - {{jsxref("Object.prototype.toLocaleString()")}}
-  - : Calls {{jsxref("Object.toString", "toString()")}}.
+  - : Calls {{jsxref("Object/toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}
   - : Returns a string representation of the object.
 - {{jsxref("Object.prototype.valueOf()")}}
@@ -148,7 +148,7 @@ const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
-Object.prototype.valueOf = function () {
+Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
@@ -156,7 +156,7 @@ Object.prototype.valueOf = function () {
     // the default behavior by reproducing the current behavior as best we can.
     // The apply behaves like "super" in some other languages.
     // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, arguments);
+    return current.apply(this, args);
   }
 }
 ```

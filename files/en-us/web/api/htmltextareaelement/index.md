@@ -73,7 +73,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>form</code> {{readonlyInline}}</td>
+      <td><code>form</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>object</em>:</code> Returns a reference to the parent form
         element. If this element is not contained in a form element, it can be
@@ -185,20 +185,20 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>textLength</code> {{readonlyInline}}</td>
+      <td><code>textLength</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>long</em>:</code> Returns the codepoint length of the
         control's <code>value</code>. Same as reading <code>value.length</code>
       </td>
     </tr>
     <tr>
-      <td><code>type</code> {{readonlyInline}}</td>
+      <td><code>type</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>string</em>:</code> Returns the string <code>textarea</code>.
       </td>
     </tr>
     <tr>
-      <td><code>validationMessage</code> {{readonlyInline}}</td>
+      <td><code>validationMessage</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>string</em>:</code> Returns a localized message that describes
         the validation constraints that the control does not satisfy (if any).
@@ -208,7 +208,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>validity</code> {{readonlyInline}}</td>
+      <td><code>validity</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>{{domxref("ValidityState")}} object</em>:</code>
         Returns the validity states that this element is in.
@@ -222,7 +222,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>willValidate</code> {{readonlyInline}}</td>
+      <td><code>willValidate</code> {{ReadOnlyInline}}</td>
       <td>
         <p>
           <code><em>boolean</em>:</code> Returns whether the element is a
@@ -253,7 +253,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
   </tbody>
 </table>
 
-The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
 
 ## Methods
 
@@ -323,7 +323,7 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
   </tbody>
 </table>
 
-The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
 
 ## Events
 

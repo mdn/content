@@ -104,7 +104,7 @@ Orientation data can be retrieved through the {{domxref("screen.orientation")}} 
 You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element. Bear in mind that many browsers still implement this with a vendor prefix, so you will probably need to fork your code something like this:
 
 ```js
-var elem = document.getElementById("myvideo");
+const elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {

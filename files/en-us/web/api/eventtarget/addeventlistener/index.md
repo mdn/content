@@ -229,11 +229,8 @@ clicks on an element.
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue === "three") {
-    t2.firstChild.nodeValue = "two";
-  } else {
-    t2.firstChild.nodeValue = "three";
-  }
+  const isNodeThree = t2.firstChild.nodeValue === "three";
+  t2.firstChild.nodeValue = isNodeThree ? "two" : "three";
 }
 
 // Add event listener to table
@@ -313,7 +310,7 @@ function modifyText(new_text) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener("click", function () { modifyText("four"); }, false);
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -804,20 +801,22 @@ can respond to the change).
 ### Memory issues
 
 ```js
-const els = document.getElementsByTagName('*');
+const elts = document.getElementsByTagName('*');
 
 // Case 1
-for (let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", (e) => {/*do something*/}, false);
+for (const elt of elts) {
+  elt.addEventListener("click", (e) => {
+    // Do something
+  }, false);
 }
 
 // Case 2
-function processEvent(e){
-  /* do something */
+function processEvent(e) {
+  // Do something
 }
 
-for (let i = 0 ; i < els.length; i++){
-  els[i].addEventListener("click", processEvent, false);
+for (const elt of elts) {
+  elt.addEventListener("click", processEvent, false);
 }
 ```
 
@@ -832,7 +831,7 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a *static* function reference.
+the real issue; rather it is the lack of keeping a _static_ function reference.
 
 ### Improving scrolling performance with passive listeners
 

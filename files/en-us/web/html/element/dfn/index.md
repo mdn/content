@@ -77,7 +77,7 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the ter
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In HTML5, the {{htmlattrxref("title")}} attribute has special meaning, as noted below.
+The {{htmlattrxref("title")}} attribute has special meaning, as noted below.
 
 ## Usage notes
 

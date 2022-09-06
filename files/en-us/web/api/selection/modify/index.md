@@ -8,12 +8,11 @@ tags:
   - API:WebKit Extensions
   - HTML Editing
   - Method
-  - Non-standard
   - Reference
   - Selection
 browser-compat: api.Selection.modify
 ---
-{{APIRef("DOM")}}{{Non-standard_Header}}
+{{APIRef("DOM")}}
 
 The **`Selection.modify()`** method applies a change to the
 current selection or cursor position, using simple textual commands.
@@ -41,12 +40,12 @@ modify(alter, direction, granularity)
     `"sentenceboundary"`, `"paragraphboundary"`, or
     `"documentboundary"`.
 
-> **Note:** Gecko does **not** implement
+> **Note:** Firefox does **not** implement
 > `"sentence"`, `"paragraph"`, `"sentenceboundary"`,
 > `"paragraphboundary"`, or `"documentboundary"`. WebKit and Blink
 > do.
 
-> **Note:** Starting in {{Gecko("5.0")}}, the `"word"`
+> **Note:** Starting in Firefox 5, the `"word"`
 > granularity no longer includes the following space, regardless of the default platform
 > behavior. This makes the behavior more consistent, as well as making it work the same
 > way WebKit used to work, but unfortunately they have recently changed their behavior.

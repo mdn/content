@@ -34,7 +34,7 @@ protocol capabilities of senders along the request/response chain.
 
 ## Syntax
 
-```
+```http
 Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
 Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 ```
@@ -52,7 +52,7 @@ Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 
 ## Examples
 
-```
+```http
 Via: 1.1 vegur
 Via: HTTP/1.1 GWA
 Via: 1.0 fred, 1.1 p.example.net

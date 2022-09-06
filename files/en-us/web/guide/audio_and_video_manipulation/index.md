@@ -6,7 +6,7 @@ tags:
   - Canvas
   - Examples
   - Guide
-  - HTML5
+  - HTML
   - Media
   - Video
   - Web Audio API
@@ -114,7 +114,7 @@ You can achieve the same result by applying the {{cssxref("filter-function/grays
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
+> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Playback rate
 
@@ -126,14 +126,14 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 
 ```html
 <video id="my-video" controls
-       src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
 </video>
 ```
 
 #### JavaScript
 
 ```js
-var myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;
 ```
 
@@ -149,26 +149,26 @@ myVideo.playbackRate = 2;
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-var myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 
@@ -203,16 +203,16 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 
 ```html
 <video id="my-video" controls
-       src="myvideo.mp4" type="video/mp4">
+  src="myvideo.mp4" type="video/mp4">
 </video>
 ```
 
 #### JavaScript
 
 ```js
-var context = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter = context.createBiquadFilter();
+const context = new AudioContext();
+const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
@@ -234,33 +234,34 @@ filter.gain.value = 25;
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-filter.type = "lowshelf";
-filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea>
+  filter.type = "lowshelf";
+  filter.frequency.value = 1000;
+  filter.gain.value = 25;
+</textarea>
 ```
 
 ```js hidden
-var context     = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter      = context.createBiquadFilter();
+const context = new AudioContext();
+const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const filter  = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 
@@ -294,7 +295,7 @@ It's also possible to apply impulse responses to audio using the {{domxref("Conv
 #### Example
 
 ```js
-var convolver = context.createConvolver();
+const convolver = context.createConvolver();
 convolver.buffer = this.impulseResponseBuffer;
 // Connect the graph.
 source.connect(convolver);
@@ -310,7 +311,7 @@ We can also position audio using a **panner node**. A panner node—{{domxref("P
 #### Example
 
 ```js
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.coneOuterGain = 0.2;
 panner.coneOuterAngle = 120;
 panner.coneInnerAngle = 0;
@@ -351,12 +352,12 @@ Libraries currently exist for the following formats :
 ### Tutorials
 
 - [Manipulating Video Using Canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [HTML5 playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
 - [Animating Textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Developing Game Audio with the Web Audio API (Room effects and filters) (2012)](https://web.dev/webaudio-games/#room-effects-and-filters)
 
 ### Reference
 

@@ -16,7 +16,6 @@ In JavaScript, every generator function is actually a `GeneratorFunction` object
 
 ```js
 const GeneratorFunction = (function* () {}).constructor;
-
 ```
 
 ## Syntax
@@ -26,7 +25,14 @@ new GeneratorFunction(functionBody)
 new GeneratorFunction(arg0, functionBody)
 new GeneratorFunction(arg0, arg1, functionBody)
 new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+
+GeneratorFunction(functionBody)
+GeneratorFunction(arg0, functionBody)
+GeneratorFunction(arg0, arg1, functionBody)
+GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
 
 ### Parameters
 
@@ -44,7 +50,7 @@ new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 {{jsxref("Statements/function*", "Generator function", "", "1")}} objects created with a
 constructor are parsed when the function is created. That
 is less efficient than declaring a generator function with a
-{{jsxref("Statements/function*", "function* expression")}} and calling it within your
+[`function*` expression](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and calling it within your
 code, because such functions are parsed with the rest of the code.
 
 All arguments passed to the function, except the last, are treated as the names of the identifiers of the

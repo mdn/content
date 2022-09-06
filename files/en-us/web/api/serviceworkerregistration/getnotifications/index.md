@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerRegistration/getNotifications
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Notifications
   - Reference

@@ -23,19 +23,14 @@ the axis position from the lowest value (-1.0) to the highest value (1.0).
 
 ## Value
 
-An array.
+An array of numbers.
 
 ## Examples
 
 ```js
 function gameLoop() {
-  let gp;
-  if (navigator.webkitGetGamepads) {
-    gp = navigator.webkitGetGamepads()[0];
-  } else {
-    gp = navigator.getGamepads()[0];
-  }
-  
+  const [gp] = navigator.getGamepads();
+
   let a = 0;
   let b = 0;
   if (gp.axes[0] !== 0) {
@@ -54,10 +49,6 @@ function gameLoop() {
   const start = requestAnimationFrame(gameLoop);
 };
 ```
-
-## Value
-
-An array of {{domxref("double") }} values.
 
 ## Specifications
 
