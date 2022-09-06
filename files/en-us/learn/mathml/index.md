@@ -13,7 +13,7 @@ tags:
 
 Mathematical Markup Language — or {{glossary("MathML")}} — is the markup language used to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. Although it was originally designed as an independent XML language, MathML is generally embedded inside {{Glossary('HTML')}} documents and can be seen as an extension of HTML.
 
-> **Warning:** In practice, MathML content is generated from [lightweight markup languages](https://en.wikipedia.org/wiki/Lightweight_markup_language) (e.g. [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)) or using [graphical user interface](https://en.wikipedia.org/wiki/Graphical_user_interface): if you just need to integrate mathematical formulas in your web pages, the tips from the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page should be enough.
+> **Warning:** In practice, MathML content is generated from [lightweight markup languages](https://en.wikipedia.org/wiki/Lightweight_markup_language) (e.g. [LaTeX](https://en.wikipedia.org/wiki/LaTeX)) or using [graphical user interface](https://en.wikipedia.org/wiki/Graphical_user_interface): if you just need to integrate mathematical formulas in your web pages, the tips from the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page should be enough.
 
 > **Callout:**
 >
@@ -31,7 +31,7 @@ Before attempting to learn MathML, it is assumed that you have some basic knowle
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps)
 
-Some familiarity with mathematical notations and [TeX](https://fr.wikipedia.org/wiki/TeX) rendering rules might also come in handy, even though required concepts will be explained as needed.
+Some familiarity with mathematical notations and [TeX](https://en.wikipedia.org/wiki/TeX) rendering rules might also come in handy, even though required concepts will be explained as needed.
 
 ## Modules
 
