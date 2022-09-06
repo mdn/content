@@ -1,4 +1,4 @@
----
+--- Hey
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 tags:
