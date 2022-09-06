@@ -82,12 +82,12 @@ The following Web APIs are available to workers:
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
 - {{domxref("Performance_API","Performance API")}}, including:
-    - {{domxref("Performance")}}
-    - {{domxref("PerformanceEntry")}}
-    - {{domxref("PerformanceMeasure")}}
-    - {{domxref("PerformanceMark")}}
-    - {{domxref("PerformanceObserver")}}
-    - {{domxref("PerformanceResourceTiming")}}
+  - {{domxref("Performance")}}
+  - {{domxref("PerformanceEntry")}}
+  - {{domxref("PerformanceMeasure")}}
+  - {{domxref("PerformanceMark")}}
+  - {{domxref("PerformanceObserver")}}
+  - {{domxref("PerformanceResourceTiming")}}
 - {{jsxref("Promise")}}
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
