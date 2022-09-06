@@ -40,6 +40,6 @@ Payload is the data that is carried on behalf of an application. It is usually o
 
 ## References used
 
-- <https://en.wikipedia.org/wiki/Network_packet>
-- [https://en.m.wikipedia.org/wiki/Hop\_(networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
-- <https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736>
+- [Network packet](https://en.wikipedia.org/wiki/Network_packet)
+- [Hop (networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
+- [How error detection and correction works](https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)

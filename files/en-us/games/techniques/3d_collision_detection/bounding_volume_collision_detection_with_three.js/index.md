@@ -135,7 +135,7 @@ We have prepared some [live demos](https://mozdevs.github.io/gamedev-js-3d-aabb/
 
 ## Using `BoxHelper`
 
-As an alternative to using raw `Box3` and `Sphere` objects, Three.js has a useful object to make handling **bounding boxes easier: [`BoxHelper`](https://threejs.org/docs/#api/helpers/BoxHelper)** (previously `BoundingBoxHelper`, which has been deprecated). This helper takes a `Mesh` and calculates a bounding box volume for it (including its child meshes). This results in a new box `Mesh` representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen `setFromObject` method in order to have a bounding box matching the `Mesh`.
+As an alternative to using raw `Box3` and `Sphere` objects, Three.js has a useful object to make handling **bounding boxes easier: [`BoxHelper`](https://threejs.org/docs/#api/helpers/BoxHelper)** (previously `BoundingBoxHelper`, which has been deprecated). This helper takes a `Mesh` and calculates a bounding box volume for it (including its child meshes). This results in a new box `Mesh` representing the bounding box, which shows the bounding box's shape, and can be passed to the previously seen `setFromObject` method in order to have a bounding box matching the `Mesh`.
 
 `BoxHelper` is the **recommended** way to handle 3D collisions with bounding volumes in Three.js. You will miss sphere tests, but the tradeoffs are well worth it.
 

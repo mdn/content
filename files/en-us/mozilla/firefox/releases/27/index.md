@@ -49,7 +49,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - The mathematical function {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} has been implemented ({{bug("896264")}}).
 - The {{jsxref("Operators/yield*", "yield*")}} expression is now implemented ({{bug(666396)}}).
 - The `MapIterator`, `SetIterator` and `ArrayIterator` objects now match the specification ({{bug("881226")}}).
-- [for..of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now expect the ES2015 standard [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) moving away from SpiderMonkey old iterator protocol using `StopIteration`.
+- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now expect the ES2015 standard [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) moving away from SpiderMonkey old iterator protocol using `StopIteration`.
 - {{jsxref("String.match")}} and {{jsxref("String.replace")}} now reset {{jsxref("RegExp.lastIndex")}} ({{bug(501739)}}).
 
 ### Interfaces/APIs/DOM

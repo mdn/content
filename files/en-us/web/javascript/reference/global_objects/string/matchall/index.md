@@ -77,7 +77,7 @@ for (const match of matches) {
 // expected output: "Found football start=6 end=14."
 // expected output: "Found foosball start=16 end=24."
 
-// matches iterator is exhausted after the for..of iteration
+// matches iterator is exhausted after the for...of iteration
 // Call matchAll again to create a new iterator
 Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
