@@ -76,7 +76,7 @@ If you leave all the testing to the end of a project, any bugs you uncover will 
 
 The workflow for testing and bug fixes on a project can be broken down into roughly the following four phases (this is only very rough — different people may do things quite differently to this):
 
-**Initial planning > Development > Testing/discovery > Fixes/iteration**
+**Initial planning** > **Development** > **Testing/discovery** > **Fixes/iteration**
 
 Steps 2–4 will tend to be repeated as many times as necessary to get all of the implementation done. We will look at the different parts of the testing process in much greater detail in subsequent articles, but for now let's just summarize what may occur in each step.
 

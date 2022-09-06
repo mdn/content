@@ -11,8 +11,6 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ### DOM Information
 
-_Inheritance Hierarchy_
-
 [Event](/en-US/docs/Web/API/Event)
 
 MSSiteModeEvent
