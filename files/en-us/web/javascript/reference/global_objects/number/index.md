@@ -83,22 +83,22 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : Determine whether the passed value is an integer.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
-- {{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}
+- {{jsxref("Number.parseFloat()")}}
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
-- {{jsxref("Number.parseInt()", "Number.parseInt(<var>string</var>, [<var>radix</var>])")}}
+- {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
 
 ## Instance methods
 
-- {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
+- {{jsxref("Number.prototype.toExponential()")}}
   - : Returns a string representing the number in exponential notation.
-- {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
+- {{jsxref("Number.prototype.toFixed()")}}
   - : Returns a string representing the number in fixed-point notation.
-- {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}
   - : Returns a string with a language sensitive representation of this number. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.
-- {{jsxref("Number.prototype.toPrecision()", "Number.prototype.toPrecision(<var>precision</var>)")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
   - : Returns a string representing the number to a specified precision in fixed-point or exponential notation.
-- {{jsxref("Number.prototype.toString()", "Number.prototype.toString([<var>radix</var>])")}}
+- {{jsxref("Number.prototype.toString()")}}
   - : Returns a string representing the specified object in the specified _radix_ ("base"). Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Number.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.

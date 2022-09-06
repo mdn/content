@@ -75,7 +75,7 @@ let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
 ```
 
-The explanation of these two lines above can be found at the above section *[Example of pushState() method](#example_of_pushstate_method)* section.
+The explanation of these two lines above can be found at the above section _[Example of pushState() method](#example_of_pushstate_method)_ section.
 
 Next, suppose `https://mozilla.org/bar.html` executes the following JavaScript:
 

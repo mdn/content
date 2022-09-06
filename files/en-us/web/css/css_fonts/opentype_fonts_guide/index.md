@@ -172,7 +172,7 @@ According to the specification you can either supply just the 4-character featur
 }
 ```
 
-#### More on font-feature-settings codes
+### More on font-feature-settings codes
 
 - ['The Complete CSS Demo for OpenType Features'](https://sparanoid.com/lab/opentype-features/) (can't vouch for the truth of the name, but it's pretty big)
 - [A list of OpenType features on Wikipedia](https://en.wikipedia.org/wiki/List_of_typographic_features)

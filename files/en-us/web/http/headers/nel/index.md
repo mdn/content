@@ -8,9 +8,10 @@ tags:
   - Reference
   - Response Header
   - header
+  - Experimental
 browser-compat: http.headers.NEL
 ---
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`NEL`** response header is used to configure network request logging.
 

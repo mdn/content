@@ -68,4 +68,4 @@ if (condition);      // Caution, this "if" does nothing!
 
 ## See also
 
-- {{jsxref("Statements/block", "Block statement")}}
+- [Block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)

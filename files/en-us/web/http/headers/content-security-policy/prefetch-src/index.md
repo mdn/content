@@ -8,9 +8,10 @@ tags:
   - HTTP
   - Reference
   - prefetch-src
+  - Experimental
 browser-compat: http.headers.Content-Security-Policy.prefetch-src
 ---
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`prefetch-src`** directive specifies valid resources that may

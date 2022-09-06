@@ -115,3 +115,5 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - CSS {{cssxref("&lt;url&gt;")}} type
+- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

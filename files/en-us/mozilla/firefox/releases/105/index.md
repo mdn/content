@@ -55,7 +55,7 @@ This article provides information about the changes in Firefox 105 that will aff
 
 - Support for defining persistent scripts using {{WebExtAPIRef("scripting")}} has been added. A script is identified as persistent using the `persistAcrossSessions` property in {{WebExtAPIRef("scripting.RegisteredContentScript")}} ({{bug("1751436")}}).
 
-#### Removals
+### Removals
 
 ### Other
 

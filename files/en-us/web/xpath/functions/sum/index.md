@@ -26,7 +26,7 @@ A number.
 
 ### Notes
 
-_(None)_
+None.
 
 ### Defined
 

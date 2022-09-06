@@ -87,7 +87,7 @@ const panner = new PannerNode(context);
 panner.panningModel = 'HRTF';
 ```
 
-Next, we set up the *cone* of our spatialized sound, determining the area in
+Next, we set up the _cone_ of our spatialized sound, determining the area in
 which it can be heard:
 
 ```js

@@ -34,10 +34,10 @@ By working through the articles listed below, you will go from nothing to gettin
   - : A website consists of many files: text content, code, stylesheets, media content, and so on. When you're building a website, you need to assemble these files into a sensible structure and make sure they can talk to one another. This article explains how to set up a sensible file structure for your website and what issues you should be aware of.
 
 - [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-  - : Hypertext Markup Language (HTML) is the code that you use to structure your web content and give it meaning and purpose. For example, is my content a set of paragraphs or a list of bullet points? Do I have images inserted on my page? Do I have a data table? Without overwhelming you, this article will provide enough information to make you familiar with HTML.
+  - : HyperText Markup Language (HTML) is the code that you use to structure your web content and give it meaning and purpose. For example, is my content a set of paragraphs or a list of bullet points? Do I have images inserted on my page? Do I have a data table? Without overwhelming you, this article will provide enough information to make you familiar with HTML.
 
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-  - : Cascading Stylesheets (CSS) is the code that you use to style your website. For example, do you want the text to be black or red? Where should content be drawn on the screen? What background images and colors should be used to decorate your website? In this article, we'll take you through what you need to get started.
+  - : Cascading Style Sheets (CSS) is the code that you use to style your website. For example, do you want the text to be black or red? Where should content be drawn on the screen? What background images and colors should be used to decorate your website? In this article, we'll take you through what you need to get started.
 
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : JavaScript is the programming language that you use to add interactive features to your website. Some examples could be games, things that happen when buttons are pressed or data is entered in forms, dynamic styling effects, animation, and much more. In this article, we'll give you an idea of what is possible with this exciting language, and how to get started.

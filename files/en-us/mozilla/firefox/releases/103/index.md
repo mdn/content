@@ -86,7 +86,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 - Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns false when run inside an extension). ({{bug(1593931)}})
 

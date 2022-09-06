@@ -86,10 +86,6 @@ _No changes._
 
 _No changes._
 
-### Security
-
-_No changes._
-
 ### WebDriver conformance (Marionette)
 
 - Fixed a bug that always caused Marionette to initialize when Firefox starts-up. It has been limited to the command line argument and environment variable now ({{bug(1622012)}}).

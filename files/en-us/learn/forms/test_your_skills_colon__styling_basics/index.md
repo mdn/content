@@ -12,7 +12,7 @@ tags:
 ---
 {{learnsidebar}}
 
-This aim of this skill test is to assess whether you've understood our [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms) article.
+The aim of this skill test is to assess whether you've understood our [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms) article.
 
 > **Note:** You can try out solutions by editing the starting point file locally, however it may be helpful to put your code in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >

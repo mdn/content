@@ -30,7 +30,7 @@ WebXR is an API for web content and apps to use to interface with mixed reality 
 
 WebXR additionally provides support for accepting inputs from control devices such as handheld VR controllers or specialized mixed reality gamepads.
 
-*WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display.* This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does *not* know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.
+_WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display._ This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does _not_ know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.
 
 ### How is WebXR different from WebVR?
 

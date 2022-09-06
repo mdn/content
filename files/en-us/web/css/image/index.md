@@ -110,7 +110,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a
 ## See also
 
 - {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("element","element()")}}
+- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}
 - {{CSSxRef("cross-fade","cross-fade()")}}

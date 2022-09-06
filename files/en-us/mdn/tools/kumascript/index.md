@@ -407,7 +407,7 @@ const text = mdn.localStringMap({
 %>
 ```
 
-The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string.  For example:
+The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string. For example:
 
 ```js
 <%

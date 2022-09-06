@@ -224,7 +224,7 @@ One common technique is to update the simulation at a constant frequency and the
 
 - Draw on `requestAnimationFrame` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
 
-  - This sleeps until `requestAnimationFrame` is called and does not pollute the main thread, plus you are not relying on old fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
+  - This sleeps until `requestAnimationFrame` is called and does not pollute the main thread, plus you are not relying on old-fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
 
 Each of these methods have similar tradeoffs:
 

@@ -39,4 +39,5 @@ To understand these values, take the example of a `keyframeEffect` value of `blu
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- Property of {{domxref("KeyframeEffect")}} objects.
+- Property of {{domxref("KeyframeEffect")}} objects
+- {{Glossary("Composite operation")}}

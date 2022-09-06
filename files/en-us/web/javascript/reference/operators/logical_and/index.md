@@ -55,7 +55,7 @@ To explicitly convert its return value (or any expression in general) to the cor
 The logical AND expression is a short-circuit operator.
 As each operand is converted to a boolean, if the result of one conversion is found to be `false`, the AND operator stops and returns the original value of that falsy operand; it does **not** evaluate any of the remaining operands.
 
-Consider the pseudo code below.
+Consider the pseudocode below.
 
 ```
 (some falsy expression) && expr

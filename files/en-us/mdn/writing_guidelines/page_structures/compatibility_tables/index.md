@@ -488,10 +488,10 @@ You can also specify the desired API as the first argument to the macro as shown
 
 The macro calls generate the following tables (and corresponding set of notes):
 
-#### Compatibility table example
+### Compatibility table example
 
 {{Compat}}
 
-#### Specifications table examples
+### Specifications table examples
 
 {{Specifications}}

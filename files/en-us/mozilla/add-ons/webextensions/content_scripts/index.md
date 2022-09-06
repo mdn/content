@@ -400,15 +400,12 @@ The choice between one-off and connection-based messaging depends on how your ex
 
 The recommended best practices are:
 
-**Use one-off messages when…**
-
-- Only one response is expected to a message.
-- A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
-
-**Use connection-based messaging when…**
-
-- Scripts engage in sessions where multiple messages are exchanged.
-- The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
+- **Use one-off messages when…**
+  - Only one response is expected to a message.
+  - A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
+- **Use connection-based messaging when…**
+  - Scripts engage in sessions where multiple messages are exchanged.
+  - The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
 
 ## Communicating with the web page
 

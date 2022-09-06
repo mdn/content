@@ -64,8 +64,6 @@ For grouping widgets such as menus, tablists, grids, or tree views, the parent e
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
 
-_Example 2: A menu control using tabindex to control keyboard access_
-
 ```html
 <ul id="mb1" tabindex="0">
   <li id="mb1_menu1" tabindex="-1"> Font

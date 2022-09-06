@@ -13,7 +13,7 @@ Iterators and Generators bring the concept of iteration directly into the core l
 
 For details, see also:
 
-- {{jsxref("Iteration_protocols")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/for...of","for...of")}}
 - {{jsxref("Statements/function*","function*")}} and {{jsxref("Generator")}}
 - {{jsxref("Operators/yield","yield")}} and {{jsxref("Operators/yield*","yield*")}}

@@ -29,7 +29,7 @@ It is worth noting that autoplay with sound is allowed if:
 
 Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.
 
-For more passive audio auto play, for example background music that starts as soon as a game loads, one trick is to detect _any_ user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a _Start_ button is pressed.
+For more passive audio autoplay, for example background music that starts as soon as a game loads, one trick is to detect _any_ user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a _Start_ button is pressed.
 
 To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about [best practices with the autoplay policy here](/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy).
 
@@ -212,7 +212,7 @@ All this is possible using the standard {{htmlelement("audio")}} element and ass
 
 ### Web Audio API for games
 
-The Web Audio API is supported across all modern desktop and mobile browsers, with the exception of Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the [Can I use Web Audio API page](https://caniuse.com/#feat=audio-api) for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
+The Web Audio API is supported across all modern desktop and mobile browsers, except for Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the [Can I use Web Audio API page](https://caniuse.com/#feat=audio-api) for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
 
 A feasible cross-browser strategy would be to provide basic audio using the standard `<audio>` element and, where supported, enhance the experience using the Web Audio API.
 
