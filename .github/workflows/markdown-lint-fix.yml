@@ -47,4 +47,4 @@ jobs:
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.
-            Please review the last action run of https://github.com/mdn/content/actions/workflows/markdown-lint-fix.yml
+            Please review the run log: https://github.com/mdn/content/actions/runs/${GITHUB_RUN_ID}?check_suite_focus=true#step:5:1
