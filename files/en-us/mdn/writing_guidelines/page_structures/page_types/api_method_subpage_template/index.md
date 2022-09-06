@@ -46,7 +46,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 > - **page-type**
 >   - : The `page-type` key for Web/API methods is either `web-api-instance-method` (for instance methods) or `web-api-static-method` (for static methods).
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Method**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
+>   - : Always include the following tags: **API**, **Reference**, **Method**, the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
 >
 >     Include the following tags as appropriate:
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.

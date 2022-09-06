@@ -52,7 +52,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`,  and report this action by logging an appropriate message to the console.
+In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`, and report this action by logging an appropriate message to the console.
 
 ```js
 function onFlushed() {
