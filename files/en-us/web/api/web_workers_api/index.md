@@ -101,7 +101,7 @@ Workers can also spawn other workers, so these APIs are also available:
 - {{domxref("Worker")}}
 - {{domxref("WorkerGlobalScope")}}
 - {{domxref("WorkerLocation")}}
-- {{domxref("WorkerNavigator")}}.
+- {{domxref("WorkerNavigator")}}
 
 ## Web Worker interfaces
 
