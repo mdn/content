@@ -15,6 +15,8 @@ browser-compat: api.FontFaceSet.delete
 
 The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a font from the set.
 
+Font faces that were added to the set using the CSS {{cssxref("@font-face")}} rule remain connected to the corresponding CSS, and cannot be deleted.
+
 ## Syntax
 
 ```js
@@ -28,9 +30,7 @@ delete(font)
 
 ### Return value
 
-A boolean value which is `true` if the deletion was successful.
-
-> **Note:** if the font passed into this method was added via the CSS {{cssxref("@font-face")}} rule, the method will return `false` as it is not possible to modify fonts added via CSS.
+A boolean value which is `true` if the deletion was successful, and `false` otherwise.
 
 ## Examples
 
