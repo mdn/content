@@ -1,7 +1,8 @@
 {
   "config": {
     "default": true,
-    // Some Callouts currently include headings that don't follow this rule
+    // MD001 - Heading levels should only increment by one level at a time.
+    // -> Disabled, as some callouts include headings.
     "MD001": false,
     "MD004": {
       "style": "dash"
@@ -110,8 +111,8 @@
     "MD050": {
       "style": "asterisk"
     },
-    // Yari uses underscores rather than dash, and there is now config to use and alternate
-    // algorithm currently
+    // MD051 - Link fragments should be valid.
+    // -> Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
     "MD051": false,
     // Incompatible with brackets in macros like MD042
     "MD052": false,
