@@ -70,9 +70,7 @@ The following Web APIs are available to workers:
 - {{domxref("Console API", "Console API")}}
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) (e.g. {{domxref("Crypto")}})
 - {{domxref("CustomEvent")}}
-- {{domxref("Encoding_API", "Encoding API")}}
-- ({{domxref("TextEncoder")}}
-- {{domxref("TextDecoder")}}, etc.)
+- {{domxref("Encoding_API", "Encoding API")}} (e.g. ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
 - {{domxref("Fetch_API", "Fetch API")}}
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}} (only works in workers!)
