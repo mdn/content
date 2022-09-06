@@ -741,9 +741,7 @@
     },
     "Largest Contentful Paint API": {
       "overview": ["Largest Contentful Paint API"],
-      "interfaces": [
-        "LargestContentfulPaint"
-      ],
+      "interfaces": ["LargestContentfulPaint"],
       "methods": [],
       "properties": [],
       "events": []
@@ -880,9 +878,7 @@
     },
     "Paint Timing API": {
       "overview": ["Paint Timing API"],
-      "interfaces": [
-        "PerformancePaintTiming"
-      ],
+      "interfaces": ["PerformancePaintTiming"],
       "methods": [],
       "properties": [],
       "events": []
