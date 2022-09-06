@@ -217,7 +217,7 @@ You'll start to see the kind of errors that the browser returns. Often these err
 
 ### Find out more
 
-Find more out about the JavaScript console in different browsers:
+Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [IE JavaScript console](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))
