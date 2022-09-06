@@ -739,6 +739,15 @@
       "properties": ["indexedDB"],
       "events": []
     },
+    "Largest Contentful Paint API": {
+      "overview": ["Largest Contentful Paint API"],
+      "interfaces": [
+        "LargestContentfulPaint"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -868,6 +877,15 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
+    },
+    "Paint Timing API": {
+      "overview": ["Paint Timing API"],
+      "interfaces": [
+        "PerformancePaintTiming"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],
