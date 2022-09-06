@@ -71,7 +71,7 @@ for (let i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-**Don't use [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to enumerate the items in `NodeList`s**, since they will _also_ enumerate its `length` and `item` properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for..in` is not guaranteed to visit the properties in any particular order.
+**Don't use [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to enumerate the items in `NodeList`s**, since they will _also_ enumerate its `length` and `item` properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for...in` is not guaranteed to visit the properties in any particular order.
 
 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops loop over `NodeList` objects correctly:
 

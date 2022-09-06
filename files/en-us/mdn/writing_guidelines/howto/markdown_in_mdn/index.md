@@ -53,22 +53,51 @@ It's permissible for the info string to contain multiple words, like:
 
 In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
-- `bash`
-- `batch`
-- `cpp` (for C/C++)
-- `css`
-- `html`
-- `java`
-- `js` (for JavaScript)
-- `json`
-- `php`
-- `pug` (for [pug templates](https://pugjs.org/api/getting-started.html), which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
-- `python`
-- `sql`
-- `svg`
-- `xml`
-- `wasm` (for WebAssembly text format)
-- `yaml`
+- Programming Languages
+  - JavaScript
+    - `js` - JavaScript
+    - `ts` - TypeScript
+    - `jsx` - React JSX
+    - `tsx` - React TSX
+  - C-like
+    - `c` - C
+    - `cpp` - C++
+    - `cs` - C#
+    - `java` - Java
+    - `clike` - C-like (for any C-like language not defined)
+  - Other
+    - `python` - Python
+    - `php` - PHP
+    - `rust` - Rust
+    - `glsl` - GLSL (OpenGL Shaders)
+    - `wasm` - WebAssembly
+- Styling
+  - `css` - CSS
+  - `scss` - Sass (SCSS)
+  - `less` - Less
+- Markup
+  - `html` - HTML
+  - `svg` - SVG
+  - `xml` - XML
+  - `mathml` - MathML
+  - `md` - Markdown
+- Command Prompts
+  - `sh` - Bash/Shell
+  - `batch` - Batch (Windows Shell)
+  - `ps` - PowerShell
+- Configuration/Data Files
+  - `json` - JSON
+  - `ini` - INI
+  - `yaml` - YAML
+  - `toml` - TOML
+  - `sql` - SQL Database
+  - `diff` - Diff file
+  - `ignore` - Gitignore file
+- Other
+  - `http` - HTTP headers
+  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+  - `regex` - Regex
+  - `uri` - URIs and URLs
 
 For example:
 
@@ -80,7 +109,6 @@ const greeting = "I will get JavaScript syntax highlighting";
 
 If the highlighting that you wish to use is not listed above you should markup the code block as `plain`.
 Additional languages may be requested by following the [this process](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
-
 
 Writers will be able to supply any one of the following additional words, which must come after the language word:
 
@@ -132,9 +160,9 @@ The blockquote can contain code blocks or other block elements.
 
 Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
-#### Examples
+### Examples
 
-##### Note
+#### Note
 
 ```plain
 > **Note:** This is how you write a note.
@@ -157,7 +185,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple lines.
 
-##### Warnings
+#### Warnings
 
 ```plain
 > **Warning:** This is how you write a warning.
@@ -180,7 +208,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple paragraphs.
 
-##### Callouts
+#### Callouts
 
 ```plain
 > **Callout:** **This is how you write a callout.**
@@ -205,7 +233,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple paragraphs.
 
-##### Translated warning
+#### Translated warning
 
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
@@ -221,7 +249,7 @@ And this will produce:
 </div>
 ```
 
-##### Note containing a code block
+#### Note containing a code block
 
 This example contains a code block.
 

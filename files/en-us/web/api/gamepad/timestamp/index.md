@@ -38,10 +38,6 @@ const gp = navigator.getGamepads()[0];
 console.log(gp.timestamp);
 ```
 
-## Value
-
-A {{domxref("DOMHighResTimeStamp")}}.
-
 ## Specifications
 
 {{Specifications}}

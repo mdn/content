@@ -526,7 +526,7 @@ More succinctly, the syntax is:
 
 For example:
 
-```
+```js
 3.1415926
 .123456789
 3.1E+12
@@ -586,7 +586,7 @@ console.log(unusualPropertyNames['!']); // Bang!
 
 #### Enhanced Object literals
 
-In ES2015, object literals are extended to support setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making `super` calls, and computing property names with expressions.
+Object literals support a range of shorthand syntaxes that include setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making `super` calls, and computing property names with expressions.
 
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
@@ -602,7 +602,7 @@ const obj = {
     return 'd ' + super.toString();
   },
   // Computed (dynamic) property names
-  [ 'prop_' + (() => 42)() ]: 42,
+  ['prop_' + (() => 42)()]: 42,
 }
 ```
 
@@ -630,7 +630,7 @@ The following are examples of string literals:
 
 You should use string literals unless you specifically need to use a `String` object. See {{jsxref("String")}} for details on `String` objects.
 
-You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `String.length` property with a string literal:
+You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `length` property with a string literal:
 
 ```js
 // Will print the number of symbols in the string including whitespace.
@@ -777,7 +777,7 @@ lines.'
 console.log(str);   // this string is broken across multiple lines.
 ```
 
-ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/en-US/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features, including multiline strings!
+There is also a [**template literal**](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax. This allows for many advanced text formatting use cases, including multiline strings!
 
 ```js
 const poem =

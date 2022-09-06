@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `layout-animations` directive c
 
 ## Syntax
 
-```
+```http
 Feature-Policy: layout-animations <allowlist>;
 ```
 

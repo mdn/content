@@ -86,7 +86,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website:
 
-- Hypertext markup language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
+- HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
 
   ```html
   <h1>This is a top-level heading</h1>
@@ -98,7 +98,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
 
-- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
+- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
   ```css
   p {

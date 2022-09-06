@@ -160,14 +160,6 @@ This is the third example that explain [how to build custom form widgets](/en-US
 ### JavaScript Content
 
 ```js
-// ------- //
-// HELPERS //
-// ------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-
 // -------------------- //
 // Function definitions //
 // -------------------- //
@@ -229,7 +221,7 @@ window.addEventListener('load', () => {
 
     select.addEventListener('click', (event) => {
       toggleOptList(select);
-    },  false);
+    }, false);
 
     select.addEventListener('focus', (event) => {
       activeSelect(select, selectList);

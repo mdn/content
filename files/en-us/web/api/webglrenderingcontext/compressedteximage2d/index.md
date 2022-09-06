@@ -74,7 +74,7 @@ compressedTexImage3D(target, level, internalformat, width, height, depth, border
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Compressed image

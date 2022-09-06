@@ -69,17 +69,9 @@ If all proxies are down, and there was no DIRECT option specified, the browser w
 - `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
   - : Use SOCKS if the primary proxy goes down.
 
-The auto-config file should be saved to a file with a .pac filename extension:
+The auto-config file should be saved to a file with a .pac filename extension: `proxy.pac`.
 
-```html
-proxy.pac
-```
-
-And the MIME type should be set to:
-
-```html
-application/x-ns-proxy-autoconfig
-```
+And the MIME type should be set to `application/x-ns-proxy-autoconfig`.
 
 Next, you should configure your server to map the .pac filename extension to the MIME type.
 
@@ -202,9 +194,9 @@ Is true if the hostname matches _exactly_ the specified hostname, or if there is
 #### Examples
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org")  // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org")              // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org")   // false (domain name mismatch)
 localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
 ```
 
@@ -253,9 +245,11 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(`${str} is ${eval(str)}`) }
+function alertEval(str) {
+  alert(`${str} is ${eval(str)}`);
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
@@ -436,14 +430,14 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```html
+```
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```html
+```
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
@@ -487,7 +481,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```html
+```js
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -524,7 +518,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 #### Syntax
 
-```html
+```js
 alert(message)
 ```
 
@@ -717,4 +711,4 @@ Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, 
 
 The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).

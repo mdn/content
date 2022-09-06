@@ -10,6 +10,7 @@ tags:
   - scoring
   - winning
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
@@ -46,7 +47,12 @@ function collisionDetection() {
     for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
       if (b.status === 1) {
-        if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
           dy = -dy;
           b.status = 0;
           score++;
@@ -73,7 +79,12 @@ function collisionDetection() {
     for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
       if (b.status === 1) {
-        if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
           dy = -dy;
           b.status = 0;
           score++;

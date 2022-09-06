@@ -126,7 +126,7 @@ Once we have a reference to our source image object we can use the `drawImage()`
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="180" height="150"></canvas>
   </body>
@@ -168,7 +168,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 > **Note:** Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
@@ -214,7 +214,7 @@ Slicing can be a useful tool when you want to make compositions. You could have 
 In this example, we'll use the same rhino as in the previous example, but we'll slice out its head and composite it into a picture frame. The picture frame image is a 24-bit PNG which includes a drop shadow. Because 24-bit PNG images include a full 8-bit alpha channel, unlike GIF and 8-bit PNG images, it can be placed onto any background without worrying about a matte color.
 
 ```html
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
@@ -254,7 +254,7 @@ In this case, every image has a fixed width and height, as does the frame that's
 The code below should be self-explanatory. We loop through the {{domxref("document.images")}} container and add new canvas elements accordingly. Probably the only thing to note, for those not so familiar with the DOM, is the use of the {{domxref("Node.insertBefore")}} method. `insertBefore()` is a method of the parent node (a table cell) of the element (the image) before which we want to insert our new node (the canvas element).
 
 ```html
-<html>
+<html lang="en">
   <body onload="draw();">
     <table>
       <tr>
@@ -269,8 +269,8 @@ The code below should be self-explanatory. We loop through the {{domxref("docume
         <td><img src="gallery_7.jpg"></td>
         <td><img src="gallery_8.jpg"></td>
       </tr>
-     </table>
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
   </body>
 </html>
 ```
@@ -300,28 +300,27 @@ Tying it all together is the JavaScript to draw our framed images:
 
 ```js
 function draw() {
-
   // Loop through all images
-  for (let i = 0; i < document.images.length; i++) {
-
+  for (const image of document.images) {
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') !== 'frame') {
+    if (image.getAttribute('id') !== 'frame') {
+
 
       // Create canvas element
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('width', 132);
-      canvas.setAttribute('height', 150);
+      const canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      image.parentNode.insertBefore(canvas, image);
 
-      ctx = canvas.getContext('2d');
+      ctx = canvas.getContext("2d");
 
       // Draw image to canvas
-      ctx.drawImage(document.images[i], 15, 20);
+      ctx.drawImage(image, 15, 20);
 
       // Add frame
-      ctx.drawImage(document.getElementById('frame'), 0, 0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

@@ -26,7 +26,7 @@ onnomatch = (event) => { }
 
 ## Event type
 
-An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionEvent")}}
 

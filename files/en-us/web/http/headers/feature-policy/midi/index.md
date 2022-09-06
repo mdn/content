@@ -17,7 +17,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `midi` directive controls wheth
 
 ## Syntax
 
-```
+```http
 Feature-Policy: midi <allowlist>;
 ```
 

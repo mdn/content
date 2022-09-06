@@ -311,9 +311,9 @@ function rotateAroundZAxis(a) {
 
 The real power of matrices comes from **matrix composition**. When matrices of a certain class are multiplied together they preserve the history of the transformations and are reversible. This means that if a translation, rotation, and scale matrix are all combined together, when the order of the matrices is reversed and re-applied then the original points are returned.
 
-The order that matrices are multiplied in matters. When multiplying numbers, a \* b = c, and b \* a = c are both true. For example 3 \* 4 = 12, and 4 \* 3 = 12. In math these numbers would be described as **commutative**. Matrices are *not* guaranteed to be the same if the order is switched, so matrices are **non-commutative**.
+The order that matrices are multiplied in matters. When multiplying numbers, a \* b = c, and b \* a = c are both true. For example 3 \* 4 = 12, and 4 \* 3 = 12. In math these numbers would be described as **commutative**. Matrices are _not_ guaranteed to be the same if the order is switched, so matrices are **non-commutative**.
 
-Another mind-bender is that matrix multiplication in WebGL and CSS needs to happen in the reverse order that the operations intuitively happen. For instance, to scale something down by 80%, move it down 200 pixels, and then rotate about the origin 90 degrees would look something like the following in pseudo-code.
+Another mind-bender is that matrix multiplication in WebGL and CSS needs to happen in the reverse order that the operations intuitively happen. For instance, to scale something down by 80%, move it down 200 pixels, and then rotate about the origin 90 degrees would look something like the following in pseudocode.
 
 ```plain
   transformation = rotate * translate * scale

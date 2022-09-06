@@ -6,7 +6,6 @@ tags:
   - Canvas
   - Graphics
   - HTML
-  - HTML5
   - Intermediate
   - Tutorial
 ---
@@ -77,7 +76,7 @@ This example is similar to the one above, but uses the `strokeStyle` property to
       for (let j = 0; j < 6; j++) {
         ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${Math.floor(255 - 42.5 * j)})`;
         ctx.beginPath();
-        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, 2 * Math.PI, true);
         ctx.stroke();
       }
     }
@@ -280,7 +279,6 @@ The line on the left uses the default `butt` option. You'll notice that it's dra
 ```js
 function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
-  const lineCap = ['butt', 'round', 'square'];
 
   // Draw guides
   ctx.strokeStyle = '#09f';
@@ -293,14 +291,14 @@ function draw() {
 
   // Draw lines
   ctx.strokeStyle = 'black';
-  for (let i = 0; i < lineCap.length; i++) {
+  ['butt', 'round', 'square'].forEach((lineCap, i) => {
     ctx.lineWidth = 15;
-    ctx.lineCap = lineCap[i];
+    ctx.lineCap = lineCap;
     ctx.beginPath();
     ctx.moveTo(25 + i * 50, 10);
     ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
-  }
+  });
 }
 ```
 
@@ -332,10 +330,9 @@ The example below draws three different paths, demonstrating each of these three
 ```js
 function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
-  const lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
-  for (let i = 0; i < lineJoin.length; i++) {
-    ctx.lineJoin = lineJoin[i];
+  ['round', 'bevel', 'miter'].forEach((lineJoin, i) => {
+    ctx.lineJoin = lineJoin;
     ctx.beginPath();
     ctx.moveTo(-5, 5 + i * 40);
     ctx.lineTo(35, 45 + i * 40);
@@ -343,7 +340,7 @@ function draw() {
     ctx.lineTo(115, 45 + i * 40);
     ctx.lineTo(155, 5 + i * 40);
     ctx.stroke();
-  }
+  });
 }
 ```
 
@@ -761,8 +758,10 @@ When using `fill` (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {
 
 Two values are possible:
 
-- **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
-- **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
+- `evenodd`
+  - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 In this example we are using the `evenodd` rule.
 

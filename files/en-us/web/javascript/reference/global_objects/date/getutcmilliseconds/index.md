@@ -24,14 +24,14 @@ getUTCMilliseconds()
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer between 0 and 999, representing
 the milliseconds portion of the given `Date` object according to universal time.
 Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
 if the `Date` object doesn't represent a valid date.
 
 Not to be confused with Unix epoch time. To get the total milliseconds since 1970/01/01,
-use the [`Date.getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
+use the [`getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
 
 ## Examples
 

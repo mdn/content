@@ -24,11 +24,10 @@ For [HTML](/en-US/docs/Web/HTML) documents, browsers use a DOCTYPE in the beginn
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8">
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

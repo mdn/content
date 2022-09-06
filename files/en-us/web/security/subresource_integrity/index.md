@@ -83,7 +83,7 @@ To use that code:
 
 For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 

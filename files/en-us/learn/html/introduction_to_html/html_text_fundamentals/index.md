@@ -164,7 +164,14 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<h1>My short story</h1>\n<p>I am a statistician and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
+const htmlSolution = `<h1>My short story</h1>
+<p>
+  I am a statistician and my name is Trish.
+</p>
+<p>
+  My legs are made of cardboard and I am married to a fish.
+</p>`;
+
 let solutionEntry = htmlSolution;
 
 reset.addEventListener('click', () => {
@@ -772,7 +779,7 @@ When we want to add emphasis in spoken language, we _stress_ certain words, subt
 
 The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one, with both the words "glad" and "late" in italics, sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.
 
-In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).
+In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers, which can be configured to speak them in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).
 
 ```html
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
@@ -786,7 +793,7 @@ To emphasize important words, we tend to stress them in spoken language and **bo
 >
 > I am counting on you. **Do not** be late!
 
-In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers and spoken in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps a {{htmlelement("b")}} element (see below).
+In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers, which can be configured to speak them in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps a {{htmlelement("b")}} element (see below).
 
 ```html
 <p>This liquid is <strong>highly toxic</strong>.</p>

@@ -59,23 +59,6 @@ const view = new Int32Array(buffer);
 
 {{Compat}}
 
-### Compatibility notes
-
-Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an
-`ArrayBuffer` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const buffer = ArrayBuffer(10);
-// TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden
-```
-
-```js example-good
-const buffer = new ArrayBuffer(10);
-```
-
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)

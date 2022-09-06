@@ -322,7 +322,7 @@ Here we grab our `main.js` file, run `jshint` on it and output the results to th
 
 Once this is all set up, you can run the `gulp` command inside your project directory, and you should get an output like this:
 
-![](gulp-output.png)
+![Output in a code editor where lines show the time tasks start or finish, the task name, and the duration of 'Finished' tasks.](gulp-output.png)
 
 You can then try out the files output by your automated tasks by looking at them inside the `build` directory, and loading `build/index.html` in your web browser.
 
@@ -703,7 +703,7 @@ Let's get started with a TestingBot Trial.
 
 #### The basics: Manual tests
 
-The [TestingBot dashboard](https://app.saucelabs.com/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the *Live Web Testing* tab.
+The [TestingBot dashboard](https://app.saucelabs.com/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the _Live Web Testing_ tab.
 
 1. Enter the URL of the page you want to test.
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.

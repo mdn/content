@@ -10,6 +10,7 @@ tags:
   - JavaScript Games
   - Web
 ---
+
 {{GamesSidebar}}
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
@@ -58,7 +59,4 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
   - : JavaScript coding competition for HTML game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.
-
-## See also
-
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)

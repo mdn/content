@@ -13,6 +13,7 @@ tags:
   - XPCOM
   - page scripts
 ---
+
 {{AddonSidebar}}
 
 > **Note:** The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
@@ -48,7 +49,7 @@ Let's take a simple example. Suppose a web page loads a script:
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <script src="main.js"></script>
@@ -146,10 +147,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: `Function call: ${message}`});
+  browser.runtime.sendMessage({ content: `Function call: ${message}` });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 This defines a function `notify()`, which just sends its argument to the background script. It then exports the function to the page script's scope. Now the page script can call this function:
@@ -267,12 +268,12 @@ document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"
 A Promise cannot be cloned directly using `cloneInto`, as Promise is not supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). However, the desired result can be achieved using `window.Promise` instead of `Promise`, and then cloning the resolution value like this:
 
 ```js
-let promise = new window.Promise(resolve => {
+const promise = new window.Promise((resolve) => {
   // if just a primitive, then cloneInto is not needed:
   // resolve("string is a primitive");
 
   // if not a primitive, such as an object, then the value must be cloned
-  let result = { exampleKey: "exampleValue" };
+  const result = { exampleKey: "exampleValue" };
   resolve(cloneInto(result, window));
 });
 // now the promise can be passed to the web page

@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 tags:
   - Apps
   - CSS
-  - HTML5
+  - HTML
   - Mobile
   - Responsive Design
 ---

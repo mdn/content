@@ -17,7 +17,7 @@ sequence of characters.
 ## Description
 
 Strings are useful for holding data that can be represented in text form. Some of the
-most-used operations on strings are to check their {{jsxref("String.length",
+most-used operations on strings are to check their {{jsxref("String/length",
   "length")}}, to build and concatenate them using the
 [+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators),
 checking for the existence or location of substrings with the
@@ -55,8 +55,7 @@ There are two ways to access an individual character in a string. The first is t
 'cat'.charAt(1) // gives value "a"
 ```
 
-The other way (introduced in ECMAScript 5) is to treat the string as an array-like
-object, where individual characters correspond to a numerical index:
+The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
 'cat'[1] // gives value "a"
@@ -114,10 +113,14 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const strPrim = 'foo';
-const strObj = new String(strPrim);
+const strPrim = "foo"; // A literal is a string primitive
+const strPrim2 = String(1); // Coerced into the string primitive "1"
+const strPrim3 = String(true); // Coerced into the string primitive "true"
+const strObj = new String(strPrim); // String with new returns a string wrapper object.
 
 console.log(typeof strPrim); // Logs "string"
+console.log(typeof strPrim2); // Logs "string"
+console.log(typeof strPrim3); // Logs "string"
 console.log(typeof strObj);  // Logs "object"
 ```
 
@@ -145,6 +148,27 @@ the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 ```js
 console.log(eval(s2.valueOf()))  // returns the number 4
 ```
+
+### String coercion
+
+Many built-in operations that expect strings would first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+
+- Strings are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `"null"`.
+- `true` turns into `"true"`; `false` turns into `"false"`.
+- Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+- [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
+- [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
+- Objects are first converted to a primitive by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+
+There are several ways to achieve nearly the same effect in JavaScript.
+
+- [Template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals): `` `${x}` `` does exactly the string coercion steps explained above for the embedded expression.
+- The [`String()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function: `String(x)` uses the same algorithm to convert `x`, except that [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) don't throw a {{jsxref("TypeError")}}, but return `"Symbol(description)"`, where `description` is the [description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) of the Symbol.
+- Using the [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition): `"" + x` coerces its operand to a _primitive_ instead of a _string_, and, for some objects, has entirely different behaviors from normal string coercion. See its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) for more details.
+
+Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in behavior) or `String(x)` (to handle symbol values without throwing an error), but you should not use `"" + x`.
 
 ### Escape sequences
 
@@ -231,11 +255,9 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Static methods
 
-- {{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[,
-    <var>numN</var>]])")}}
+- {{jsxref("String.fromCharCode()")}}
   - : Returns a string created by using the specified sequence of Unicode values.
-- {{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[,
-    <var>numN</var>)")}}
+- {{jsxref("String.fromCodePoint()")}}
   - : Returns a string created by using the specified sequence of code points.
 - {{jsxref("String.raw()")}}
   - : Returns a string created from a raw template string.
@@ -247,95 +269,74 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance methods
 
-- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}} {{Experimental_Inline}}
+- {{jsxref("String.prototype.at()")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
-- {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
+- {{jsxref("String.prototype.charAt()")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
     `index`.
-- {{jsxref("String.prototype.charCodeAt()",
-    "String.prototype.charCodeAt(<var>index</var>)")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
   - : Returns a number that is the UTF-16 code unit value at the given
     `index`.
-- {{jsxref("String.prototype.codePointAt()",
-    "String.prototype.codePointAt(<var>pos</var>)")}}
+- {{jsxref("String.prototype.codePointAt()")}}
   - : Returns a nonnegative integer Number that is the code point value of the UTF-16
     encoded code point starting at the specified `pos`.
-- {{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str </var>[,
-    ...<var>strN </var>])")}}
+- {{jsxref("String.prototype.concat()")}}
   - : Combines the text of two (or more) strings and returns a new string.
-- {{jsxref("String.prototype.includes()",
-    "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}
+- {{jsxref("String.prototype.includes()")}}
   - : Determines whether the calling string contains `searchString`.
-- {{jsxref("String.prototype.endsWith()",
-    "String.prototype.endsWith(<var>searchString</var> [, <var>length</var>])")}}
+- {{jsxref("String.prototype.endsWith()")}}
   - : Determines whether a string ends with the characters of the string
     `searchString`.
-- {{jsxref("String.prototype.indexOf()",
-    "String.prototype.indexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
+- {{jsxref("String.prototype.indexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
-- {{jsxref("String.prototype.lastIndexOf()",
-    "String.prototype.lastIndexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the last
     occurrence of `searchValue`, or `-1` if not found.
-- {{jsxref("String.prototype.localeCompare()",
-    "String.prototype.localeCompare(<var>compareString</var> [, <var>locales</var> [,
-    <var>options</var>]])")}}
+- {{jsxref("String.prototype.localeCompare()")}}
   - : Returns a number indicating whether the reference string
     `compareString` comes before, after, or is equivalent to the
     given string in sort order.
-- {{jsxref("String.prototype.match()", "String.prototype.match(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.match()")}}
   - : Used to match regular expression `regexp` against a string.
-- {{jsxref("String.prototype.matchAll()",
-    "String.prototype.matchAll(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.matchAll()")}}
   - : Returns an iterator of all `regexp`'s matches.
-- {{jsxref("String.prototype.normalize()",
-    "String.prototype.normalize([<var>form</var>])")}}
+- {{jsxref("String.prototype.normalize()")}}
   - : Returns the Unicode Normalization Form of the calling string value.
-- {{jsxref("String.prototype.padEnd()",
-    "String.prototype.padEnd(<var>targetLength</var> [, <var>padString</var>])")}}
+- {{jsxref("String.prototype.padEnd()")}}
   - : Pads the current string from the end with a given string and returns a new string of
     the length `targetLength`.
-- {{jsxref("String.prototype.padStart()",
-    "String.prototype.padStart(<var>targetLength</var> [, <var>padString</var>])")}}
+- {{jsxref("String.prototype.padStart()")}}
   - : Pads the current string from the start with a given string and returns a new string
     of the length `targetLength`.
-- {{jsxref("String.prototype.repeat()", "String.prototype.repeat(<var>count</var>)")}}
+- {{jsxref("String.prototype.repeat()")}}
   - : Returns a string consisting of the elements of the object repeated
     `count` times.
-- {{jsxref("String.prototype.replace()" ,
-    "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}
+- {{jsxref("String.prototype.replace()")}}
   - : Used to replace occurrences of `searchFor` using
     `replaceWith`. `searchFor` may be a string
     or Regular Expression, and `replaceWith` may be a string or
     function.
-- {{jsxref("String.prototype.replaceAll()" ,
-    "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}
+- {{jsxref("String.prototype.replaceAll()")}}
   - : Used to replace all occurrences of `searchFor` using
     `replaceWith`. `searchFor` may be a string
     or Regular Expression, and `replaceWith` may be a string or
     function.
-- {{jsxref("String.prototype.search()",
-    "String.prototype.search(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.search()")}}
   - : Search for a match between a regular expression `regexp` and
     the calling string.
-- {{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[,
-    <var>endIndex</var>])")}}
+- {{jsxref("String.prototype.slice()")}}
   - : Extracts a section of a string and returns a new string.
-- {{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var> [,
-    <var>limit</var>] ])")}}
+- {{jsxref("String.prototype.split()")}}
   - : Returns an array of strings populated by splitting the calling string at occurrences
     of the substring `sep`.
-- {{jsxref("String.prototype.startsWith()",
-    "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}
+- {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substring()",
-    "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}
+- {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
-- {{jsxref("String.prototype.toLocaleLowerCase()",
-    "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
 
   - : The characters within a string are converted to lowercase while respecting the
     current locale.
@@ -379,31 +380,31 @@ You must be careful which level of characters you are iterating on. For example,
 > They are of limited use, as they provide only a subset of the available HTML tags
 > and attributes.
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
-- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("blink")}}
-- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}}
+- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}}
+- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}}
+- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)
-- {{jsxref("String.prototype.small()")}}
+- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}}
+- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
 
 ## Examples

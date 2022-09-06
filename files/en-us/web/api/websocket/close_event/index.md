@@ -28,7 +28,7 @@ onclose = (event) => { }
 
 ## Event type
 
-An {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("CloseEvent")}}
 

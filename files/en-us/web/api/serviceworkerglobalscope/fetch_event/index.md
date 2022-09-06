@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: fetch event'
+title: "ServiceWorkerGlobalScope: fetch event"
 slug: Web/API/ServiceWorkerGlobalScope/fetch_event
 page-type: web-api-event
 tags:
@@ -13,6 +13,7 @@ tags:
   - onfetch
 browser-compat: api.ServiceWorkerGlobalScope.fetch_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **fetch** event is fired when the {{domxref("fetch()")}} method is called.
@@ -24,20 +25,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fetch', (event) => { });
+addEventListener("fetch", (event) => {});
 
-onfetch = (event) => { };
+onfetch = (event) => {};
 ```
 
 ## Event type
 
 A generic {{domxref("Event")}}.
-
-## Syntax
-
-```js
-serviceWorkerGlobalScope.onfetch = (fetchEvent) => { /* … */ };
-```
 
 ## Example
 
@@ -52,25 +47,27 @@ error response (e.g., 404) will not trigger an exception. It will return a norma
 response object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   console.log(`Handling fetch event for ${event.request.url}`);
 
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
-        console.log('Found response in cache:', response);
+        console.log("Found response in cache:", response);
         return response;
       }
-      console.log('No response found in cache. About to fetch from network…');
+      console.log("No response found in cache. About to fetch from network…");
 
-      return fetch(event.request).then((response) => {
-        console.log('Response from network is:', response);
+      return fetch(event.request)
+        .then((response) => {
+          console.log("Response from network is:", response);
 
-        return response;
-      }).catch((error) => {
-        console.error(`Fetching failed: ${error}`);
-        throw error;
-      });
+          return response;
+        })
+        .catch((error) => {
+          console.error(`Fetching failed: ${error}`);
+          throw error;
+        });
     })
   );
 });
@@ -87,7 +84,7 @@ self.addEventListener('fetch', (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

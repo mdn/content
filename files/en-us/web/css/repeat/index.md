@@ -52,8 +52,6 @@ repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
 
-## Syntax
-
 The `repeat()` function takes two arguments:
 
 - **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.

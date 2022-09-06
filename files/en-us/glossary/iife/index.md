@@ -11,7 +11,7 @@ tags:
 An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
 The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
 
-```
+```js
 (function () {
   // …
 })();
@@ -19,7 +19,7 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
 (() => {
   // …
 })();
-          
+
 (async () => {
   // …
 })();
@@ -54,7 +54,9 @@ using a function declaration or a function expression.
 An [`async`](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) IIFE allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for-await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) even in older browsers and JavaScript runtimes that have no [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await):
 
 ```js
-const getFileStream = async (url) => { /* implementation */ };
+const getFileStream = async (url) => { 
+  // implementation
+};
 
 (async () => {
   const stream = await getFileStream('https://domain.name/path/file.ext');
@@ -153,7 +155,6 @@ When clicked, these buttons alert 0 and 1.
 
 ## See also
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 

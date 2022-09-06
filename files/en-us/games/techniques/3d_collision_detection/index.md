@@ -8,6 +8,7 @@ tags:
   - bounding boxes
   - collision detection
 ---
+
 {{GamesSidebar}}
 
 This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.
@@ -35,9 +36,14 @@ Or in JavaScript:
 
 ```js
 function isPointInsideAABB(point, box) {
-  return (point.x >= box.minX && point.x <= box.maxX) &&
-         (point.y >= box.minY && point.y <= box.maxY) &&
-         (point.z >= box.minZ && point.z <= box.maxZ);
+  return (
+    point.x >= box.minX &&
+    point.x <= box.maxX &&
+    point.y >= box.minY &&
+    point.y <= box.maxY &&
+    point.z >= box.minZ &&
+    point.z <= box.maxZ
+  );
 }
 ```
 
@@ -56,9 +62,14 @@ And in JavaScript, we'd use this:
 
 ```js
 function intersect(a, b) {
-  return (a.minX <= b.maxX && a.maxX >= b.minX) &&
-         (a.minY <= b.maxY && a.maxY >= b.minY) &&
-         (a.minZ <= b.maxZ && a.maxZ >= b.minZ);
+  return (
+    a.minX <= b.maxX &&
+    a.maxX >= b.minX &&
+    a.minY <= b.maxY &&
+    a.maxY >= b.minY &&
+    a.minZ <= b.maxZ &&
+    a.maxZ >= b.minZ
+  );
 }
 ```
 
@@ -72,7 +83,7 @@ To check whether a sphere contains a point we need to calculate the distance bet
 
 ![Hand drawing of a 2D projection of a sphere and a point in a Cartesian coordinate system. The point is outside of the circle, to the lower right of it. The distance is denoted by a dashed line, labeled D, from the circle's center to the point. A lighter line shows the radius, labeled R, going from the center of the circle to the border of the circle.](point_vs_sphere.png)
 
-Taking into account that the Euclidean distance between two points _A_ and _B_ is <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x) ^ 2) + (A_y - B_y)^2 + (A_z - B_z)}</annotation></semantics></math> , our formula for point vs. sphere collision detection would work out like so:
+Taking into account that the Euclidean distance between two points _A_ and _B_ is <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x) ^ 2) + (A_y - B_y)^2 + (A_z - B_z)}</annotation></semantics></math>, our formula for point vs. sphere collision detection would work out like so:
 
 <math>
 <semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>S</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub><mo>≥</mo><msqrt><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>−</mo><msub><mi>S</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>−</mo><msub><mi>S</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>−</mo><msub><mi>S</mi><mi>z</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></msqrt></mrow><annotation encoding="TeX">f(P,S) = S_{radius} \ge \sqrt{(P_x - S_x)^2 + (P_y - S_y)^2 + (P_z - S_z)^2}</annotation></semantics></math>
@@ -82,9 +93,11 @@ Or in JavaScript:
 ```js
 function isPointInsideSphere(point, sphere) {
   // we are using multiplications because is faster than calling Math.pow
-  const distance = Math.sqrt((point.x - sphere.x) * (point.x - sphere.x) +
-                           (point.y - sphere.y) * (point.y - sphere.y) +
-                           (point.z - sphere.z) * (point.z - sphere.z));
+  const distance = Math.sqrt(
+    (point.x - sphere.x) * (point.x - sphere.x) +
+      (point.y - sphere.y) * (point.y - sphere.y) +
+      (point.z - sphere.z) * (point.z - sphere.z)
+  );
   return distance < sphere.radius;
 }
 ```
@@ -107,10 +120,12 @@ Or in JavaScript:
 ```js
 function intersect(sphere, other) {
   // we are using multiplications because it's faster than calling Math.pow
-  const distance = Math.sqrt((sphere.x - other.x) * (sphere.x - other.x) +
-                           (sphere.y - other.y) * (sphere.y - other.y) +
-                           (sphere.z - other.z) * (sphere.z - other.z));
-  return distance < (sphere.radius + other.radius);
+  const distance = Math.sqrt(
+    (sphere.x - other.x) * (sphere.x - other.x) +
+      (sphere.y - other.y) * (sphere.y - other.y) +
+      (sphere.z - other.z) * (sphere.z - other.z)
+  );
+  return distance < sphere.radius + other.radius;
 }
 ```
 
@@ -130,9 +145,11 @@ function intersect(sphere, box) {
   const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
 
   // this is the same as isPointInsideSphere
-  const distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
-                           (y - sphere.y) * (y - sphere.y) +
-                           (z - sphere.z) * (z - sphere.z));
+  const distance = Math.sqrt(
+    (x - sphere.x) * (x - sphere.x) +
+      (y - sphere.y) * (y - sphere.y) +
+      (z - sphere.z) * (z - sphere.z)
+  );
 
   return distance < sphere.radius;
 }

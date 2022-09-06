@@ -28,7 +28,7 @@ You can store any code you like in a GitHub repository, but to use the GitHub Pa
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "*c*hange *d*irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
+1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "**c**hange **d**irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
     ```bash
     cd Desktop/test-site
@@ -86,7 +86,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
     git push -u origin main
     ```
 
-4. Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath *Source*, choose the "main" branch. The page should refresh.
+4. Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath _Source_, choose the "main" branch. The page should refresh.
 5. Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at `https://xxxxxx`."
 6. If you click on this URL, you should go to a live version of your example, provided the home page is called `index.html` — it goes to this entry point by default. If your site's entry point is called something else, for example `myPage.html`, you'll need to go to `https://xxxxxx/myPage.html`.
 
@@ -94,7 +94,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 
 If you want to make more changes to your test site and upload those to GitHub, you need to make the change to your files just like you did before. Then, you need to enter the following commands (pressing Enter after each one) to push those changes to GitHub:
 
-```
+```bash
 git add --all
 git commit -m 'another commit'
 git push

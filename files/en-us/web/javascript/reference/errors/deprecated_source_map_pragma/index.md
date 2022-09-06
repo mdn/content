@@ -53,7 +53,7 @@ Use the "#" sign instead.
 
 Or, alternatively, you can set a {{HTTPHeader("SourceMap")}} header to your JavaScript file to avoid having a comment at all:
 
-```plain example-good
+```http example-good
 SourceMap: /path/to/file.js.map
 ```
 

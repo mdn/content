@@ -128,7 +128,7 @@ This stage of the development process is one that you want the least amount of a
 These generally take the form of a tool that will automatically run tests against your code to make sure it is correct before you go any further (for example, when you attempt to push changes to a GitHub repo). This can include linting, but also more sophisticated procedures like unit tests, where you run part of your code, making sure they behave as they should.
 
 - Frameworks for writing tests include [Jest](https://jestjs.io/), [Mocha](https://mochajs.org/), and [Jasmine](https://jasmine.github.io/).
-- Automated test running and notification systems include [Travis CI](https://travis-ci.org/), [Jenkins](https://www.jenkins.io/), [Circle CI](https://circleci.com/), and [others](https://en.m.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration).
+- Automated test running and notification systems include [Travis CI](https://travis-ci.org/), [Jenkins](https://www.jenkins.io/), [Circle CI](https://circleci.com/), and [others](https://en.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration).
 
 #### Deployment tools
 

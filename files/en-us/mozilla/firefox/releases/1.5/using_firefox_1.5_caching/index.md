@@ -11,8 +11,6 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-## Introduction
-
 [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5) uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as **bfcache** (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.
 
 There are instances in which Firefox doesn't cache pages. Below are some common programmatic reasons that a page is not cached:

@@ -25,7 +25,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
 ### Preparing the example
 
-1. First we need a wasm module! Grab our [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
+1. First we need a wasm module! Grab our [`simple.wasm`](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
 
@@ -243,12 +243,8 @@ The value of the global is then changed, first to `42` using the `Global.value` 
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  output.innerHTML += `Testing ${msg}: `;
-  if (got !== expected) {
-    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  } else {
-    output.innerHTML += `SUCCESS! Got: ${got}<br>`;
-  }
+  const result = got === expected ? `SUCCESS! Got: ${got}<br>` : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  output.innerHTML += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");

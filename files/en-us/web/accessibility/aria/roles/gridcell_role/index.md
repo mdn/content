@@ -24,7 +24,7 @@ Elements that have `role="gridcell"` applied to them must be the child of an ele
 </div>
 ```
 
-The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the HTML {{HTMLElement('td')}} element in conjunction with the and [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable):
+The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the HTML {{HTMLElement('td')}} element:
 
 ```html
 <td>Potato</td>

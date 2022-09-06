@@ -168,19 +168,10 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
 
 ### Errors
 
-Before ECMAScript 2015, `typeof` was always guaranteed to return a string
-for any operand it was supplied with. Even with undeclared identifiers,
-`typeof` will return `'undefined'`. Using `typeof`
-could never generate an error.
+`typeof` is generally always guaranteed to return a string
+for any operand it is supplied with. Even with undeclared identifiers, `typeof` will return `'undefined'` instead of throwing an error.
 
-However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
-{{JSxRef("Statements/const", "const")}}, using `typeof` on `let` and
-`const` variables (or using `typeof` on a `class`) in a
-block before they are declared will throw a {{JSxRef("ReferenceError")}}.
-Block scoped variables are in a
-"[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)"
-from the start of the block until the initialization is processed,
-during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{JSxRef("Statements/let", "let")}} {{JSxRef("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the line of declaration will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
 
 ```js
 typeof undeclaredVariable === 'undefined';

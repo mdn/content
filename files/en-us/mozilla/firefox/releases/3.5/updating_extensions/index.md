@@ -141,7 +141,7 @@ try {
 // you can now use |loadContext.associatedWindow| to get the Window object
 ```
 
-Another Javascript example if the above does not work:
+Another JavaScript example if the above does not work:
 
 ```js
 // SOURCE: http://stackoverflow.com/questions/10719606/is-it-possible-to-know-the-target-domwindow-for-an-httprequest

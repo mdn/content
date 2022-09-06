@@ -35,7 +35,7 @@ Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxr
 
 Here are some common examples.
 
-#### Open and automatically close a popup window when finished
+### Open and automatically close a popup window when finished
 
 If you want to be able to automatically close a [popup window](/en-US/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:
 

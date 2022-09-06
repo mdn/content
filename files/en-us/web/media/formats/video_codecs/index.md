@@ -2027,7 +2027,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 
 To prepare video for archival purposes from outside your web site or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
-```plain
+```bash
 x264 --crf 18 -preset ultrafast --output outfilename.mp4 infile
 ```
 

@@ -196,7 +196,7 @@ Consider using metadata such as `<meta name="robots" content="noindex, nofollow"
 By not indexing the page, the likelihood that users will stumble upon it via search will be reduced.
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>…</title>
     <meta name="robots" content="noindex, nofollow">
@@ -234,7 +234,7 @@ div {
 
 [`CSS Transitions`](https://www.w3.org/TR/css-transitions-1/) can be used to set the duration to zero for the initial stage of animation.
 
-```html
+```css
 div {
   transition-duration: 0s;
 }
@@ -266,8 +266,10 @@ To ensure that a video has controls that a user can access, ensure that you add 
 <video controls>
   <source src="myVideo.mp4" type="video/mp4">
   <source src="myVideo.webm" type="video/webm">
-  <p>Your browser doesn't support HTML video. Here is
-     a <a href="myVideo.mp4">link to the video</a> instead.</p>
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="myVideo.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -319,9 +321,9 @@ Translations and transformations can animate text in a div, and do harm. Althoug
 
 In the style sheet or within the {{HTMLElement('style')}} element, many options can combine together to create a powerful experience for the user. We've already mentioned the `animation` property earlier in this document. It's actually shorthand for all animation properties, including:
 
-- **`animation-play-state`**
-- **`animation-duration`** has a value of `<time>`; this is the duration an animation takes to complete one cycle. This may be specified in either seconds `(s)` or milliseconds `(ms)`. A default value of `0s` indicates no animation should occur.
-- **`animation-timing-function`**
+- `animation-play-state`
+- `animation-duration` has a value of `<time>`; this is the duration an animation takes to complete one cycle. This may be specified in either seconds `(s)` or milliseconds `(ms)`. A default value of `0s` indicates no animation should occur.
+- `animation-timing-function`
 
 The animation property is already powerful on its own, but combined with other properties and queries such as `prefers-reduced-motion`, a powerful set of options can be set up for the user. Setting `animation-duration` and `transition-duration` properties to a short duration rather than setting them to `animation: none` and `transition: none`, enables a safeguard to prevent issues in any case there is a dependency on the animation to run.
 
@@ -332,11 +334,9 @@ JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs.
 [document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 **Image sources for animation**
@@ -490,7 +490,7 @@ This can be useful if the ambient light API is not available. Support is emergin
 
 ```css
 @media (prefers-color-scheme: dark) {
-    /* adjust styles for dark mode */
+  /* adjust styles for dark mode */
 }
 ```
 
@@ -511,10 +511,11 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 
 ```css
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
-  * { animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion/#comment-1700170) */
-      transition-duration: 0.001ms !important;
-    }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion/#comment-1700170) */
+    transition-duration: 0.001ms !important;
+  }
 }
 ```
 
@@ -524,11 +525,11 @@ The `update` media feature is used to query the ability of the output device to 
 
 ## Developmental & Experimental Features
 
-#### MDN Navigator.doNotTrack
+### MDN Navigator.doNotTrack
 
 [From the documentation](/en-US/docs/Web/API/Navigator/doNotTrack): _"Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by web sites, content, or advertising"_.
 
-#### Media Queries Level 5
+### Media Queries Level 5
 
 EnvironmentMQ (Planned in Media Queries Level 5)
 
@@ -537,7 +538,7 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 - `environment-blending`
   - : From W3C's Draft document, Media Queries Level 5: _"The [`environment-blending`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending) media feature is used to query the characteristics of the user's display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility."_
 
-##### User Preference Media Features (Planned in Media Queries Level 5)
+#### User Preference Media Features (Planned in Media Queries Level 5)
 
 [User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences) in [W3C Editor's Draft Media Queries Level 5](https://drafts.csswg.org/mediaqueries-5/) are especially promising in providing user control over media. Here are some highlights:
 
@@ -568,7 +569,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 ## See also
 
-#### MDN
+### MDN
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
 - [Accessibility: Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
@@ -583,46 +584,46 @@ The Web Animations model is intended to provide the features necessary for expre
 - [WebGL: 2D and 3D graphics for the web](/en-US/docs/Web/API/WebGL_API)
 - [WebVR API](/en-US/docs/Web/API/WebVR_API)
 
-#### Color
+### Color
 
 - [Color Tutorial: describing color](https://colortutorial.design/) Tom Jewett
 - [Formula to Determine Brightness of RGB color](https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color) Stack Exchange Discussion Thread
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 
-#### Discussions
+### Discussions
 
 - [Problems with WCAG 2.0 Flash Definition #553](https://github.com/w3c/wcag/issues/553)
 - [WCAG 2.1 Understanding 2.3.1 - missing/vague dimension definitions #585](https://github.com/w3c/wcag/issues/585)
 
-#### Epilepsy and Seizures
+### Epilepsy and Seizures
 
 - [Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) Epilepsy Foundation: _"Certain individuals are born with special sensitivity to flashing lights or contrasting visual patterns, such as stripes, grids and checkerboards. Because of this condition, their brain will produce seizure-like discharges when exposed to this type of visual stimulation."_
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub) Current Biology [Volume 27, Issue 9](https://www.sciencedirect.com/journal/current-biology/vol/27/issue/9), 8 May 2017, Pages R336-R338: _"Certain [visual images](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/retina-image), even in the absence of motion or flicker, can trigger seizures in patients with photosensitive epilepsy."_
 - [Photosensitive Seizures. Cedars-Sinai](https://www.cedars-sinai.org/health-library/diseases-and-conditions/p/photosensitive-seizures.html) "_Photosensitive seizures are triggered by flashing or flickering lights. These seizures can also be triggered by certain patterns such as stripes._"
 - [Photic-and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](https://pubmed.ncbi.nlm.nih.gov/16146438/) Eplepsia 2005 Sept, 46(9):1423-5 PubMed.gov NCBI [Harding G](https://pubmed.ncbi.nlm.nih.gov/?term=Harding%20G%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Wilkins AJ](https://pubmed.ncbi.nlm.nih.gov/?term=Wilkins%20AJ%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Erba G](https://pubmed.ncbi.nlm.nih.gov/?term=Erba%20G%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Barkley GL](https://pubmed.ncbi.nlm.nih.gov/?term=Barkley%20GL%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Fisher RS](https://pubmed.ncbi.nlm.nih.gov/?term=Fisher%20RS%5BAuthor%5D&cauthor=true&cauthor_uid=16146438); [Epilepsy Foundation of America Working Group](https://pubmed.ncbi.nlm.nih.gov/?term=Epilepsy%20Foundation%20of%20America%20Working%20Group%5BCorporate%20Author%5D).
 
-#### GPII
+### GPII
 
 - [Accessibility Master List](https://ds.gpii.net/learn/accessibility-masterlist) Gregg Vanderheiden Ph.D. Editor
 
-#### Harding
+### Harding
 
 Along with the PEAT tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
 
 - [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com)
 
-#### ISO
+### ISO
 
 - [IEC 61966-2-2:2003(en)](https://www.iso.org/obp/ui/#iso:std:iec:61966:-2-2:ed-1:v1:en) Multimedia systems and equipment — Colour measurement and management — Part 2-2: Colour management — Extended RGB color space — scRGB
 
-#### Photosensitive Epilepsy Analysis Tool
+### Photosensitive Epilepsy Analysis Tool
 
 Along with the Harding tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
 
 - [Trace Research and Development Center](https://trace.umd.edu/peat/)
 - [Using PEAT To Create Seizureless Web Animations](https://www.useragentman.com/blog/2017/04/02/using-peat-to-create-seizureless-web-animations/)
 
-#### W3C
+### W3C
 
 - [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
 - [Personalization Semantics Explainer 1.0](https://www.w3.org/TR/personalization-semantics-1.0/). Working Draft

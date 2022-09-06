@@ -16,7 +16,7 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `picture-in-picture` directive 
 
 ## Syntax
 
-```
+```http
 Feature-Policy: picture-in-picture <allowlist>;
 ```
 

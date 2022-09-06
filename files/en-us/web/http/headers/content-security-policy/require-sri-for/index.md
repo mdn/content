@@ -9,9 +9,11 @@ tags:
   - Security
   - Subresource Integrity
   - require-sri-for
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Content-Security-Policy.require-sri-for
 ---
-{{deprecated_header}}
+{{deprecated_header}}{{Non-standard_header}}
 
 The [HTTP](/en-US/docs/Web/HTTP) {{HTTPHeader("Content-Security-Policy")}}
 **`require-sri-for`** directive instructs the client to require
@@ -19,7 +21,7 @@ the use of [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrit
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: require-sri-for script;
 Content-Security-Policy: require-sri-for style;
 Content-Security-Policy: require-sri-for script style;
@@ -36,7 +38,7 @@ Content-Security-Policy: require-sri-for script style;
 
 If you set your site to require SRI for script and styles using this directive:
 
-```
+```http
 Content-Security-Policy: require-sri-for script style
 ```
 

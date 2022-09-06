@@ -32,7 +32,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more *sources* can be allowed for the base-uri policy:
+One or more _sources_ can be allowed for the base-uri policy:
 
 ```http
 Content-Security-Policy: base-uri <source>;
@@ -55,7 +55,7 @@ Note however that some of the values don't make sense for `base-uri`, such as th
 
 ### Apache configuration
 
-```html
+```
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>

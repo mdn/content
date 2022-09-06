@@ -126,7 +126,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
 - **Ensure that pages aren't too similar**: If the content on different pages is similar textually, search engines will assume that the pages are about the same thing even if they aren't.
   For example, if an interface has the properties `width` and `height`, it's easy for the text to be surprisingly similar on the two pages documenting these two properties, with just a few words swapped out and using the same example. This makes it hard for search engines to know which is which, and they wind up sharing page rank, resulting in both being harder to find than they ought to be.
-  
+
   It's important, then, to ensure that every page has its own content. Here are some suggestions to help you accomplish that:
 
   - **Explain more unique concepts**: Consider use cases where there might be more differences than one would think. For instance, in the case of documenting `width` and `height` properties, perhaps write about the ways horizontal space and vertical space are used differently, and provide a discussion about the appropriate concepts. Perhaps you can mention the use of `width` in terms of making room for a sidebar, while using `height` to handle vertical scrolling or footers. Including information about accessibility issues is a useful and important idea as well.
@@ -179,7 +179,7 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
   - **Correct**: ... web browsers, and so on.
   - **Incorrect**: ... web browsers, etc.
-  
+
   - **Correct**: Web browsers such as Firefox can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
 
@@ -270,7 +270,7 @@ Use English-style plurals, not the Latin- or Greek-influenced forms.
 Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use straight quotes and apostrophes. This is because we need to choose one or the other for consistency. If curly quotes or apostrophes make their way into code snippets, even inline ones, readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
 
 ### Commas
 
@@ -308,12 +308,12 @@ The list below describes some of the common situations where we need to be aware
 - **Before "that" and "which"**: A restrictive clause is essential for the meaning of the sentence and does not need commas to be set off from the remaining sentence. A restrictive clause is usually introduced by "that" and **should not** be preceded by a comma.
 
   - **Correct**: "We have put together a course that includes all the essential information you need to work towards your goal."
-  - **Incorrect**: "We have put together a course, that includes all the essential information you need to work towards your goal."W
+  - **Incorrect**: "We have put together a course, that includes all the essential information you need to work towards your goal."
 
   A nonrestrictive clause provides additional information and is not essential to the meaning of the sentence. A nonrestrictive clause is usually introduced by "which" and should be preceded by a comma.
 
   - **Correct**: "You write a policy, which is an allowed list of origins for each feature."
-  - **Incorrect**: "You write a policy, which is an allowed list of origins for each feature."
+  - **Incorrect**: "You write a policy which is an allowed list of origins for each feature."
 
 - **Before "such as"**: If "such as" is part of a nonrestrictive clause and the remaining sentence is an independent clause, use comma before "such as".
 
@@ -337,7 +337,7 @@ Hyphenated compounds should be used when the last letter of the prefix is a vowe
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional *u* added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spellings.
 
 - **Correct**: localize, behavior
@@ -530,7 +530,7 @@ Keep the following guidelines in mind when writing titles:
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary

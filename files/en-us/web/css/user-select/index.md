@@ -96,7 +96,7 @@ user-select: unset;
 }
 ```
 
-> **Note:** `-webkit-user-select: all;` doesn't work in Safari; use only "none" or "text", or else it will allow typing in the `<html>` container. See the [browser compatability table](#browser-compatibility) for up-to-date information.
+> **Note:** `-webkit-user-select: all;` doesn't work in Safari; use only "none" or "text", or else it will allow typing in the `<html>` container. See the [browser compatibility table](#browser-compatibility) for up-to-date information.
 
 ### Result
 

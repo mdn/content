@@ -78,7 +78,7 @@ console.log("😄".match(/(?:)/gu)); // [ '', '' ]
 
 This method exists for customizing match behavior within `RegExp` subclasses.
 
-In addition, the `@@match` property is used to check whether an object is a regular expression — only when it's `undefined` will the language fall back to a branded check of whether the object actually extends `RegExp.prototype`. For an example, see [`Symbol.match`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match#disabling_the_isregexp_check).
+In addition, the `@@match` property is used to check [whether an object is a regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Examples
 

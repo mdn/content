@@ -60,7 +60,7 @@ See [Options and constraints](#options_and_constraints), below, for more on both
 
 ### Example of a window allowing the user to select a display surface to capture
 
-[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
+[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
 
 You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
@@ -131,10 +131,6 @@ Capturing audio is always optional, and even when web content requests a stream 
 ## Using the captured stream
 
 The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specified when `getDisplayMedia()` was called.
-
-## Security
-
-As is always the case when sharing content over a network, it's important to consider the privacy and safety implications of screen sharing.
 
 ### Potential risks
 
@@ -324,7 +320,7 @@ In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) 
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-```
+```http
 Feature-Policy: display-capture 'self'
 ```
 

@@ -492,7 +492,7 @@ You can nest one or more `try...catch` statements.
 If an inner `try` block does _not_ have a corresponding
 `catch` block:
 
-1. it *must* contain a `finally` block, and
+1. it _must_ contain a `finally` block, and
 2. the enclosing `try...catch` statement's `catch` block is
     checked for a match.
 
@@ -521,7 +521,7 @@ function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw (new Error('The message'));
   } else {
-    doSomethingToGetAJavascriptError();
+    doSomethingToGetAJavaScriptError();
   }
 }
 

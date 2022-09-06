@@ -209,7 +209,7 @@ const e = factorial(5); // e gets the value 120
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
 
-It turns out that _functions are themselves objects_—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.
+It turns out that _functions are themselves objects_ — and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) The [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [`apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) methods can be used to achieve this goal.
 
 ## Function scope
 

@@ -92,7 +92,7 @@ It is recommended that you have basic HTML knowledge before starting to learn CS
 
 #### How will I know I'm ready to move on?
 
-The assessments in each module are designed to test your knowledge of the subject matter.  Completing the assessments confirms that you are ready to move on to the next module.
+The assessments in each module are designed to test your knowledge of the subject matter. Completing the assessments confirms that you are ready to move on to the next module.
 
 #### Modules
 

@@ -515,7 +515,7 @@ Let's write an example:
 5. Now if you go to your [LambdaTest Automation dashboard](https://www.lambdatest.com/selenium-automation), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
     [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
-> **Note:** The *HELP* button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
+> **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
 
 > **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 

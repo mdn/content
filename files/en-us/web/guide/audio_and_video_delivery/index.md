@@ -5,7 +5,6 @@ tags:
   - Audio
   - Guide
   - HTML
-  - HTML5
   - Media
   - Video
 ---
