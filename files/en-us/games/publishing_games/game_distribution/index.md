@@ -97,7 +97,7 @@ If you're looking for more information about the different types of app stores y
 
 ### Native desktop
 
-To broaden your audience you can hit the desktop ecosystem with your HTML games too — just remember all the popular AAA games that take most of the market share, and think carefully about whether this suits your strategy. To do the desktop thing properly you should support all three operating systems: Windows, Mac OS and Linux. The biggest desktop store for games is definitely [Steam](https://steamcommunity.com/) — indie developers can get on Steam via the [Steam Direct](https://partner.steamgames.com/steamdirect) program. Remember that you have to deal with the cross-platform issues yourself by uploading separate versions for different platforms.
+To broaden your audience you can hit the desktop ecosystem with your HTML games too — just remember all the popular AAA games that take most of the market share, and think carefully about whether this suits your strategy. To do the desktop thing properly you should support all three operating systems: Windows, macOS and Linux. The biggest desktop store for games is definitely [Steam](https://steamcommunity.com/) — indie developers can get on Steam via the [Steam Direct](https://partner.steamgames.com/steamdirect) program. Remember that you have to deal with the cross-platform issues yourself by uploading separate versions for different platforms.
 
 After you've covered Steam, there's plenty of buzz around initiatives like [Humble Bundle](https://www.humblebundle.com/) where the most popular indie games get presented to a broader audience. It's more like an excellent promotional opportunity than a way to earn a lot of money, however, as the prices paid for the games in a bundle are usually quite low.
 
@@ -111,7 +111,7 @@ There are various tools to choose from depending on your skills, preferred frame
 
 - [Phonegap](https://phonegap.com/) — based on Cordova, this is the most popular tool for building/packaging JavaScript apps for native platforms.
 - [CocoonIO](http://cocoon.io/) — the most popular tool specifically for building HTML games for multiple native stores. It has its own performance optimizations for games rendered on Canvas and supports many game frameworks.
-- [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it only supports only one framework and app store.
+- [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it supports only one framework and app store.
 - [NW.js](https://nwjs.io/) — formerly known as Node-Webkit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
 
 Other alternative tools are:
