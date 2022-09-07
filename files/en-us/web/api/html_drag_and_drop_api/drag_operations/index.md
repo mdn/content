@@ -1,5 +1,5 @@
 ---
-title: Drag Operations
+title: Drag operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 page-type: guide
 tags:
