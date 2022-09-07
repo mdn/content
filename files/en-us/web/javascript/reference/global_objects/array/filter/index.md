@@ -20,7 +20,7 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 
 ## Syntax
 
-```js
+```js-nolints
 // Arrow function
 filter((element) => { /* … */ } )
 filter((element, index) => { /* … */ } )
