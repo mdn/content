@@ -251,7 +251,7 @@ The double-equals and triple-equals also have their inequality counterparts: `!=
 JavaScript also has [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators). Notably, logical operators don't work with boolean values only — they work by the "truthiness" of the value.
 
 ```js
-const a = 0 && "Hello"; // "Hello" because 0 is "falsy"
+const a = 0 && "Hello"; // 0 because 0 is "falsy"
 const b = "Hello" || "world"; // "Hello" because both "Hello" and "world" are "truthy"
 ```
 
