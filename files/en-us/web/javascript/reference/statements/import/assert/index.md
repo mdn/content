@@ -18,12 +18,12 @@ The **import assertion** feature of [`import`](/en-US/docs/Web/JavaScript/Refere
 ## Syntax
 
 ```js
-import { exports } from "module-name";
+export { exports } from "module-name" assert {};
 import { exports } from "module-name" assert { key: "data" };
 import { exports } from "module-name" assert { key: "data", key2: "data2" };
 import { exports } from "module-name" assert { key: "data", key2: "data2", /* …, */ keyN: "dataN" };
 
-export { exports } from "module-name";
+export { exports } from "module-name" assert {};
 export { exports } from "module-name" assert { key: "data" };
 export { exports } from "module-name" assert { key: "data", key2: "data2" };
 export { exports } from "module-name" assert { key: "data", key2: "data2", /* …, */ keyN: "dataN" };
