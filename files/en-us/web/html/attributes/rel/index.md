@@ -70,14 +70,14 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
       <link rel="alternate stylesheet" href="highcontrast.css" title="High contrast">
       ```
 
-    - With an [`hreflang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-hreflang) attribute that differs from the document language, it indicates a translation.
-    - With the [`type`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-type) attribute, it indicates that the referenced document is the same content in a different format. For example, with `type="application/rss+xml"` it creates a hyperlink referencing a syndication feed.
+    - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) attribute that differs from the document language, it indicates a translation.
+    - With the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute, it indicates that the referenced document is the same content in a different format. For example, with `type="application/rss+xml"` it creates a hyperlink referencing a syndication feed.
 
       ```html
       <link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog">
       ```
 
-    - Both the [`hreflang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-hreflang) and [`type`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-type) attributes specify links to versions of the document in an alternative format and language, intended for other media:
+    - Both the [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) and [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attributes specify links to versions of the document in an alternative format and language, intended for other media:
 
       ```html
       <link rel="alternate" href="/fr/html/print" hreflang="fr" type="text/html" media="print" title="French HTML (for printing)">
@@ -108,7 +108,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     <link rel="icon" href="favicon.ico">
     ```
 
-    If there are multiple `<link rel="icon">`s, the browser uses their [`media`](media) attribute, [`type`](), and [`sizes`](sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
+    If there are multiple `<link rel="icon">`s, the browser uses their [`media`](media) attribute, [`type`](/en-US/docs/Web/HTML/Element/link#attr-type), and [`sizes`](sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
     > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
@@ -165,11 +165,11 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.
 
 - {{htmlattrdef("stylesheet")}}
 
-  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
+  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
 
     While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.
 
