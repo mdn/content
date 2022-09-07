@@ -39,7 +39,7 @@ width: calc(asin(e / 4) * 100px);
 The `asin(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying an angle less than `-1` or greater than `1`, or `NaN`, the result is `NaN`. When specifying `0⁻`, the result is `0⁻`.
+  - : A {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying a number less than `-1` or greater than `1`, or `NaN`, the result is `NaN`.
 
 ### Formal syntax
 
