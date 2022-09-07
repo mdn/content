@@ -20,11 +20,6 @@ The **`asin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ## Syntax
 
 ```css
-/* Single <angle> values */
-width: calc(asin(45deg) * 100px);
-width: calc(asin(0.25turn) * 100px);
-width: calc(asin(1.0471967rad) * 100px);
-
 /* Single <number> values */
 width: calc(asin(-0.2) * 100px);
 width: calc(asin(2 * 0.125) * 100px);
