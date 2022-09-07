@@ -10,6 +10,7 @@ tags:
   - JavaScript
   - controllers
 ---
+
 {{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}
@@ -51,14 +52,14 @@ To update the state of the gamepad's currently pressed buttons we will need a fu
 
 ```js
 function gamepadUpdateHandler() {
-    buttonsPressed = [];
-    if (controller.buttons) {
-        for (let b = 0; b < controller.buttons.length; b++) {
-            if (controller.buttons[b].pressed) {
-                buttonsPressed.push(b);
-            }
-        }
+  buttonsPressed = [];
+  if (controller.buttons) {
+    for (let b = 0; b < controller.buttons.length; b++) {
+      if (controller.buttons[b].pressed) {
+        buttonsPressed.push(b);
+      }
     }
+  }
 }
 ```
 
@@ -66,13 +67,13 @@ We first reset the `buttonsPressed` array to get it ready to store the latest in
 
 ```js
 function gamepadButtonPressedHandler(button) {
-    let press = false;
-    for (let i = 0; i < buttonsPressed.length; i++) {
-        if (buttonsPressed[i] === button) {
-            press = true;
-        }
+  let press = false;
+  for (let i = 0; i < buttonsPressed.length; i++) {
+    if (buttonsPressed[i] === button) {
+      press = true;
     }
-    return press;
+  }
+  return press;
 }
 ```
 
@@ -98,7 +99,7 @@ function draw() {
     playerX += 5;
   }
   if (gamepadButtonPressedHandler(11)) {
-    alert('BOOM!');
+    alert("BOOM!");
   }
 
   // …
@@ -296,18 +297,18 @@ When on desktop, we can check if the controller is active and show the gamepad c
 We can offer even more flexibility to the player by giving him main and alternative gamepad movement controls:
 
 ```js
-if (GamepadAPI.buttons.pressed('DPad-Up','hold')) {
-    // move player up
-} else if (GamepadAPI.buttons.pressed('DPad-Down','hold')) {
-    // move player down
+if (GamepadAPI.buttons.pressed("DPad-Up", "hold")) {
+  // move player up
+} else if (GamepadAPI.buttons.pressed("DPad-Down", "hold")) {
+  // move player down
 }
 
-if (GamepadAPI.buttons.pressed('DPad-Left','hold')) {
-    // move player left
+if (GamepadAPI.buttons.pressed("DPad-Left", "hold")) {
+  // move player left
 }
 
-if (GamepadAPI.buttons.pressed('DPad-Right','hold')) {
-    // move player right
+if (GamepadAPI.buttons.pressed("DPad-Right", "hold")) {
+  // move player right
 }
 
 if (GamepadAPI.axes.status) {
@@ -332,7 +333,7 @@ Have you noticed that the current value of the axes is evaluated against `0.5`? 
 For the shooting controls, we used the `A` button — when it is held down, a new bullet is spawned, and everything else is handled by the game:
 
 ```js
-if (GamepadAPI.buttons.pressed('A', 'hold')) {
+if (GamepadAPI.buttons.pressed("A", "hold")) {
   this.spawnBullet();
 }
 ```
@@ -340,27 +341,27 @@ if (GamepadAPI.buttons.pressed('A', 'hold')) {
 Showing the screen with all the controls looks exactly the same as in the main menu:
 
 ```js
-this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed('Y', 'hold');
+this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed("Y", "hold");
 ```
 
 If the `B` button is pressed, the game is paused:
 
 ```js
-if (gamepadAPI.buttonPressed('B')) {
+if (gamepadAPI.buttonPressed("B")) {
   this.managePause();
 }
 ```
 
-## Pause and game over states
+## The paused and gameover states
 
 We already learned how to control the whole lifecycle of the game: pausing the gameplay, restarting it, or getting back to the main menu. It works smooth on mobile and desktop, and adding gamepad controls is just as straightforward — in the `update()` function, we check to see if the current state status is `paused` — if so, the relevant actions are enabled:
 
 ```js
-if (GamepadAPI.buttons.pressed('Start')) {
+if (GamepadAPI.buttons.pressed("Start")) {
   this.managePause();
 }
 
-if (GamepadAPI.buttons.pressed('Back')) {
+if (GamepadAPI.buttons.pressed("Back")) {
   this.stateBack();
 }
 ```
@@ -368,10 +369,10 @@ if (GamepadAPI.buttons.pressed('Back')) {
 Similarly, when the `gameover` state status is active, then we can allow the user to restart the game instead of continuing it:
 
 ```js
-if (GamepadAPI.buttons.pressed('Start')) {
+if (GamepadAPI.buttons.pressed("Start")) {
   this.stateRestart();
 }
-if (GamepadAPI.buttons.pressed('Back')) {
+if (GamepadAPI.buttons.pressed("Back")) {
   this.stateBack();
 }
 ```

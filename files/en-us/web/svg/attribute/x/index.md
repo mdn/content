@@ -952,7 +952,7 @@ For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper l
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
 ## glyphRef
 
@@ -1020,7 +1020,7 @@ For {{SVGElement('image')}}, `x` defines the x coordinate of the upper left corn
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for images.
+> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
 ## mask
 
@@ -1115,7 +1115,7 @@ For {{SVGElement('rect')}}, `x` defines the x coordinate of the upper left corne
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rectangles.
+> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
 ## svg
 
@@ -1150,11 +1150,11 @@ For {{SVGElement('svg')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<svg>`.
+> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
 ## text
 
-For {{SVGElement('text')}}, if it contains a single value, `x` defines the x coordinate where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
+For {{SVGElement('text')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
 If it contains multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
@@ -1229,7 +1229,7 @@ line {
 
 > **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
-For {{SVGElement('tref')}}, if it contains a single value, `x` defines the x coordinate where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
+For {{SVGElement('tref')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
 If it contains multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
@@ -1264,7 +1264,7 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 
 ## tspan
 
-For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by other properties, such as  {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
+For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as  {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
 If it contains multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
@@ -1370,7 +1370,7 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
+> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
 ## Specifications
 

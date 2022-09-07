@@ -326,7 +326,7 @@ To use third party middleware you first need to install it into your app using n
 For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 You could then call `use()` on the _Express application object_ to add the middleware to the stack:
@@ -441,7 +441,7 @@ _Express_ apps can use any database mechanism supported by _Node_ (_Express_ its
 In order to use these you have to first install the database driver using npm. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.

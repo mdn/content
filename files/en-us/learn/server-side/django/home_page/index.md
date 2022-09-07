@@ -86,9 +86,9 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
+> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included _URLconf_ module for further processing.
 
-We also created a placeholder file for the *URLConf* module, named **/catalog/urls.py**.
+We also created a placeholder file for the _URLConf_ module, named **/catalog/urls.py**.
 Add the following lines to that file:
 
 ```python
@@ -102,7 +102,7 @@ The `path()` function defines the following:
 - A URL pattern, which is an empty string: `''`. We'll discuss URL patterns in detail when working on the other views.
 - A view function that will be called if the URL pattern is detected: `views.index`, which is the function named `index()` in the **views.py** file.
 
-The `path()` function also specifies a `name` parameter, which is a unique identifier for *this* particular URL mapping. You can use the name to "reverse" the mapper, i.e. to dynamically create a URL that points to the resource that the mapper is designed to handle.
+The `path()` function also specifies a `name` parameter, which is a unique identifier for _this_ particular URL mapping. You can use the name to "reverse" the mapper, i.e. to dynamically create a URL that points to the resource that the mapper is designed to handle.
 For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:
 
 ```html
@@ -383,7 +383,7 @@ Here are a couple of tasks to test your familiarity with model queries, views, a
 
     > **Note:** The section [Extending templates](#extending_templates) explains how to create blocks and extend a block in another template.
 
-2. Modify the [view](<#view_(function-based)>) to generate counts for *genres* and *books* that contain a particular word (case insensitive), and pass the results to the `context.` You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
+2. Modify the [view](<#view_(function-based)>) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context.` You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
 
 ## Summary
 

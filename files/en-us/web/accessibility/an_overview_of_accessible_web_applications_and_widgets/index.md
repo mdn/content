@@ -103,9 +103,7 @@ When content visibility is changed (i.e., an element is hidden or shown), develo
 
 Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
 
-In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the **`aria-hidden`** state to `true`.
-
-_Example 2a. HTML for a tooltip_
+In this example, the HTML for the tooltip has the form shown. Line 9 sets the **`aria-hidden`** state to `true`.
 
 ```html
 <div class="text">
@@ -120,9 +118,7 @@ _Example 2a. HTML for a tooltip_
 </div>
 ```
 
-The CSS for this markup is shown in Example 2b. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute on line 1.
-
-_Example 2b. Attribute-based selector for indicating state_
+The CSS for this markup is shown in the following code. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute on line 1.
 
 ```css
 div.tooltip[aria-hidden="true"] {
@@ -130,9 +126,7 @@ div.tooltip[aria-hidden="true"] {
 }
 ```
 
-The JavaScript to update the **`aria-hidden`** property has the form shown in Example 2c. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
-
-_Example 2c. JavaScript to update the aria-hidden attribute_
+The JavaScript to update the **`aria-hidden`** property has the form shown in the following code. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
 
 ```js
 function showTip(el) {

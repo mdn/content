@@ -11,6 +11,7 @@ tags:
   - Tutorial
   - lives
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
@@ -36,9 +37,17 @@ These respectively will store the number of lives, the text label that displays 
 Defining the texts look like something we already did in [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` function:
 
 ```js
-livesText = game.add.text(game.world.width - 5, 5, `Lives: ${lives}`, { font: '18px Arial', fill: '#0095DD' });
+livesText = game.add.text(game.world.width - 5, 5, `Lives: ${lives}`, {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 livesText.anchor.set(1, 0);
-lifeLostText = game.add.text(game.world.width * 0.5, game.world.height * 0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  { font: "18px Arial", fill: "#0095DD" }
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -52,16 +61,26 @@ The `lifeLostText` will be shown only when the life is lost, so its visibility i
 As you probably noticed we're using the same styling for all three texts: `scoreText`, `livesText` and `lifeLostText`. If we ever want to change the font size or color we will have to do it in multiple places. To make it easier for us to maintain in the future we can create a separate variable that will hold our styling, let's call it `textStyle` and place it before the text definitions:
 
 ```js
-textStyle = { font: '18px Arial', fill: '#0095DD' };
+textStyle = { font: "18px Arial", fill: "#0095DD" };
 ```
 
 We can now use this variable when styling our text labels — update your code so that the multiple instances of the text styling are replaced with the variable:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
-livesText = game.add.text(game.world.width - 5, 5, `Lives: ${lives}`, textStyle);
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width * 0.5, game.world.height * 0.5, 'Life lost, click to continue', textStyle);
+scoreText = game.add.text(5, 5, "Points: 0", textStyle);
+livesText = game.add.text(
+  game.world.width - 5,
+  5,
+  `Lives: ${lives}`,
+  textStyle
+);
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  textStyle
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -74,7 +93,7 @@ To implement lives in our game, let's first change the ball's function bound to 
 
 ```js
 ball.events.onOutOfBounds.add(() => {
-  alert('Game over!');
+  alert("Game over!");
   location.reload();
 }, this);
 ```
@@ -100,7 +119,7 @@ function ballLeaveScreen() {
       ball.body.velocity.set(150, -150);
     }, this);
   } else {
-    alert('You lost, game over!');
+    alert("You lost, game over!");
     location.reload();
   }
 }

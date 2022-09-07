@@ -26,7 +26,7 @@ The **`<font-face-format>`** [SVG](/en-US/docs/Web/SVG) element describes the ty
 
 ### Specific attributes
 
-- {{SVGAttr("string")}}
+{{SVGAttr("string")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

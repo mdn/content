@@ -311,7 +311,7 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
-#### JavaScript
+### JavaScript
 
 ```js
 const nameField = document.getElementById("userName");
@@ -341,7 +341,7 @@ Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
 
-#### HTML
+### HTML
 
 The HTML for the form looks like this:
 
@@ -360,7 +360,7 @@ The HTML for the form looks like this:
 </form>
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 

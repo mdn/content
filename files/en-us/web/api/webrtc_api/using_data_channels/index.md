@@ -71,8 +71,6 @@ Doing this lets you create data channels with each peer using different properti
 
 WebRTC data channels support buffering of outbound data. This is handled automatically. While there's no way to control the size of the buffer, you can learn how much data is currently buffered, and you can choose to be notified by an event when the buffer starts to run low on queued data. This makes it easy to write efficient routines that make sure there's always data ready to send without over-using memory or swamping the channel completely.
 
-**<<\<write more about using bufferedAmount, bufferedAmountLowThreshold, onbufferedamountlow, and bufferedamountlow here>>>**
-
 ## Understanding message size limits
 
 For any data being transmitted over a network, there are size restrictions. At a fundamental level, the individual network packets can't be larger than a certain value (the exact number depends on the network and the transport layer being used). At the application level—that is, within the {{Glossary("user agent", "user agent's")}} implementation of WebRTC on which your code is running—the WebRTC implementation implements features to support messages that are larger than the maximum packet size on the network's transport layer.

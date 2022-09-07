@@ -13,6 +13,8 @@ tags:
 browser-compat: api.PerformanceEventTiming
 ---
 
+{{APIRef}}
+
 The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
 - {{domxref("Element/auxclick_event", "auxclick")}}

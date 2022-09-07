@@ -18,7 +18,7 @@ The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML
 
 ## Properties
 
-_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}_
+_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}_.
 
 - {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's `style` attribute.
@@ -27,7 +27,7 @@ _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, 
 
 ## Methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}_
+_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}_.
 
 ## Examples
 

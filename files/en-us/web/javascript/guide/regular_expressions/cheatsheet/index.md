@@ -531,7 +531,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
+              >String.prototype.match()</a
             ></code
           >
           won't return groups if the <code>/.../g</code> flag is set. However,
@@ -539,7 +539,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
+              >String.prototype.matchAll()</a
             ></code
           >
           to get all matches.
@@ -612,7 +612,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
-> **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
 
 <table class="standard-table">
   <thead>

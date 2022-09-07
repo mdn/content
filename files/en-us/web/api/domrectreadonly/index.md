@@ -33,7 +33,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties used by {{
 - {{domxref("DOMRectReadOnly.height")}} {{ReadOnlyInline}}
   - : The height of the `DOMRect`.
 - {{domxref("DOMRectReadOnly.top")}} {{ReadOnlyInline}}
-  - : Returns the top coordinate value of the `DOMRect` (usually the same as `y`.)
+  - : Returns the top coordinate value of the `DOMRect` (usually the same as `y`).
 - {{domxref("DOMRectReadOnly.right")}} {{ReadOnlyInline}}
   - : Returns the right coordinate value of the `DOMRect` (usually the same as `x + width`).
 - {{domxref("DOMRectReadOnly.bottom")}} {{ReadOnlyInline}}

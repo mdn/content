@@ -62,26 +62,26 @@ You can specify multiple background scripts. If you do, they run in the same con
 
 Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES modules:
 
-**manifest.json**
+- manifest.json
 
-```json
-"background": {
-  "page": "background-page.html",
-  "persistent": false
-}
-```
+  ```json
+  "background": {
+    "page": "background-page.html",
+    "persistent": false
+  }
+  ```
 
-**background-page.html**
+- background-page.html
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script type="module" src="background-script.js"></script>
-  </head>
-</html>
-```
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <script type="module" src="background-script.js"></script>
+    </head>
+  </html>
+  ```
 
 You cannot specify background scripts and a background page.
 
@@ -154,8 +154,8 @@ Use APIs that support event filters to restrict listeners to the cases the exten
 
 ```js
 browser.webNavigation.onCompleted.addListener(() => {
-  alert("This is my favorite website!");
-}, {url: [{urlMatches : 'https://www.google.com/'}]});
+  console.log("This is my favorite website!");
+}, { url: [{ urlMatches : 'https://www.mozilla.org/' }] });
 ```
 
 ### React to listeners
@@ -225,7 +225,7 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 
 Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern, moved to the top-level, and unnested.
 
-```
+```js
 browser.runtime.onStartup.addListener(() => {
   // run startup function
 })

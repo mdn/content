@@ -24,7 +24,7 @@ onerror = (event) => { }
 
 ## Event type
 
-An {{domxref("SpeechRecognitionErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SpeechRecognitionErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionErrorEvent")}}
 

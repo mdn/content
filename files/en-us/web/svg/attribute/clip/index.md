@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/clip
 tags:
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.attributes.presentation.clip
 ---
 {{SVGRef}}{{deprecated_header}}
@@ -66,7 +67,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-The value `auto` defines a clipping path along the bounds of the viewport created by the given element. The value `rect()` defines a clipping rectangle following the following syntax: `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values specify offsets from the *top border edge* of the element viewport, while `<right>` and `<left>` specify offsets from the *left border edge* of the element viewport.
+The value `auto` defines a clipping path along the bounds of the viewport created by the given element. The value `rect()` defines a clipping rectangle following the following syntax: `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values specify offsets from the _top border edge_ of the element viewport, while `<right>` and `<left>` specify offsets from the _left border edge_ of the element viewport.
 
 ## Specifications
 

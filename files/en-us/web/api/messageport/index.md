@@ -23,7 +23,7 @@ The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/A
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("EventTarget")}}_
+_Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 - {{domxref("MessagePort.postMessage","postMessage()")}}
   - : Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
@@ -69,7 +69,7 @@ function onMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

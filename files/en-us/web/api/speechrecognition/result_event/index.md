@@ -24,7 +24,7 @@ onresult = (event) => { }
 
 ## Event type
 
-An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionEvent")}}
 
@@ -43,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 

@@ -9,6 +9,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.align-items
 ---
+
+{{CSSRef}}
+
 The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In Flexbox, it controls the alignment of items on the {{glossary("Cross Axis")}}. In Grid Layout, it controls the alignment of items on the Block Axis within their {{glossary("Grid Areas", "grid area")}}.
 
 The interactive example below demonstrates some of the values for `align-items` using grid layout.
@@ -244,5 +247,3 @@ display.addEventListener('change', (evt) => {
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
 - The {{cssxref("align-self")}} property
-
-{{CSSRef}}

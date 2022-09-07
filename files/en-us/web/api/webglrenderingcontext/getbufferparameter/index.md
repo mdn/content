@@ -58,7 +58,7 @@ getBufferParameter(target, pname)
         of the buffer in bytes.
     - `gl.BUFFER_USAGE`
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
-        usage pattern of the buffer. One of the followings:
+        usage pattern of the buffer. One of the following:
         - `gl.STATIC_DRAW`
         - `gl.DYNAMIC_DRAW`
         - `gl.STREAM_DRAW`

@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 was released on August 23, 2020.
+This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 was released on August 23, 2022.
 
 ## Changes for web developers
 
@@ -45,6 +45,10 @@ No notable changes.
   Note that browsers may automatically provide visual indication on focused elements if the implementation determines that it will improve accessibility.
   (See {{bug(1765083)}} for more details.)
 
+#### Canvas
+
+- The `fontKerning` property is now supported on [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning) and [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D), enabling developers to specify how kerning is used when text is drawn to a canvas or an offscreen canvas ({{bug(1778908)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### SVG
@@ -78,7 +82,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 ### Other
 

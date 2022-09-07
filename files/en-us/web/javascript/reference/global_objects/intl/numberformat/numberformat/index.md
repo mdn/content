@@ -27,15 +27,19 @@ number formatting.
 new Intl.NumberFormat()
 new Intl.NumberFormat(locales)
 new Intl.NumberFormat(locales, options)
+
+Intl.NumberFormat()
+Intl.NumberFormat(locales)
+Intl.NumberFormat(locales, options)
 ```
+
+> **Note:** `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.NumberFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.NumberFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings.
-    For the general form and interpretation of the `locales` argument, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
-    The following Unicode extension key is allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension key is allowed:
 
     - `nu`
       - : The numbering system to be used. Possible values include:
@@ -242,6 +246,35 @@ new Intl.NumberFormat(locales, options)
     - `maximumSignificantDigits`
       - : The maximum number of significant digits to use.
         Possible values are from 1 to 21; the default is 21.
+
+### Return value
+
+A new `Intl.NumberFormat` object.
+
+> **Note:** The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
+
+Normally, `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), and a new `Intl.NumberFormat` instance is returned in both cases. However, if the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value is an object that is [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) `Intl.NumberFormat` (doesn't necessarily mean it's created via `new Intl.NumberFormat`; just that it has `Intl.NumberFormat.prototype` in its prototype chain), then the value of `this` is returned instead, with the newly created `Intl.NumberFormat` object hidden in a `[Symbol(IntlLegacyConstructedSymbol)]` property (a unique symbol that's reused between instances).
+
+```js
+const formatter = Intl.NumberFormat.call(
+  { __proto__: Intl.NumberFormat.prototype },
+  "en-US",
+  { notation: "scientific" },
+);
+console.log(Object.getOwnPropertyDescriptors(formatter));
+// {
+//   [Symbol(IntlLegacyConstructedSymbol)]: {
+//     value: NumberFormat [Intl.NumberFormat] {},
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+//   }
+// }
+```
+
+Note that there's only one actual `Intl.NumberFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)) would fail with "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+
+This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.NumberFormat`. If you call it directly as `Intl.NumberFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.NumberFormat` instance is created normally.
 
 ## Examples
 

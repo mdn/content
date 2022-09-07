@@ -71,7 +71,7 @@ So for example, "Response" will result in a link being created like so:
 
 There are a few exceptions.
 For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials.
-In this case the slugs are appended to the end of the MDN docs root — https\://developer.mozilla.org/_\<language-code>_/docs — allowing an article anywhere on MDN to be included.
+In this case the slugs are appended to the end of the MDN docs root — `https://developer.mozilla.org/_<language-code>/docs` — allowing an article anywhere on MDN to be included.
 
 Here are the available members.
 These are all technically optional, but it is strongly encouraged that instead of omitting them, you include empty arrays.
@@ -100,7 +100,7 @@ These are all technically optional, but it is strongly encouraged that instead o
     "title": "Detecting device orientation" }
     ```
 
-    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/Events/Detecting_device_orientation](/en-US/docs/Web/Events/Detecting_device_orientation).
+    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
 
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.

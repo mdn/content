@@ -30,7 +30,7 @@ onresize = (event) => { };
 
 ## Event type
 
-An {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureWindow")}}
 

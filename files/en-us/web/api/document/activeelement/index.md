@@ -87,3 +87,7 @@ textarea2.addEventListener('mouseup', onMouseUp, false);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.hasFocus")}}

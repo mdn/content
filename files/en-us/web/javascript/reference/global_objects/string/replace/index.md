@@ -70,7 +70,7 @@ The replacement string can include the following special replacement patterns:
 
 ```js
 "foo".replace(/(f)/, "$2"); // "$2oo"; the regex doesn't have the second group
-"foo".replace("f", "$1"); // "$1oo"
+"foo".replace("f", "$1"); // "$1oo"; the pattern is a string, so it doesn't have any groups
 "foo".replace(/(f)|(g)/, "$2"); // "oo"; the second group exists but isn't matched
 ```
 

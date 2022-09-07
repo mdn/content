@@ -61,7 +61,7 @@ Given the following SVG element:
 You can create an SVG style element as shown:
 
 ```js
-// Get the the SVG element object by tag name
+// Get the SVG element object by tag name
 const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
@@ -117,7 +117,7 @@ const style = document.querySelector("#circle_style_id");
 
 This example demonstrates how to get and set the properties of a style element, which in this case was specified in an SVG definition.
 
-#### HTML
+### HTML
 
 The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element, along with an HTML [`<button>`](/en-US/docs/Web/HTML/Element/button) element that will be used to enable and disable the style, and an HTML [`<textarea>`](/en-US/docs/Web/HTML/Element/button) element for logging the property values.
 
@@ -139,7 +139,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 Note that above we have set the `media` attribute on the `style` tag.
 We have not set `type` as it is deprecated, or `disabled` because there is no such attribute (only the property on the element).
 
-#### JavaScript
+### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
@@ -189,7 +189,7 @@ button.addEventListener('click', () => {
    });
 ```
 
-#### Result
+### Result
 
 The result is shown below.
 Toggle the button to enable and disable the SVG style element.

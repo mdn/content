@@ -51,7 +51,7 @@ In implementations with `Intl.NumberFormat`, this is equivalent to `new Intl.Num
 
 When formatting large numbers of numbers, it is better to create a
 {{jsxref("Intl.NumberFormat")}} object and use the function provided by its
-{{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}} property.
+{{jsxref("Intl/NumberFormat/format", "format()")}} method.
 
 ## Examples
 
@@ -130,4 +130,4 @@ console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 
 ## See also
 
-- {{jsxref("BigInt.toString()")}}
+- {{jsxref("BigInt.prototype.toString()")}}

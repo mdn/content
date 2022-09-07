@@ -19,7 +19,7 @@ It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constr
 
 ## Constructors
 
-- {{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}
+- {{domxref("ImageData.ImageData", "ImageData()")}}
   - : Creates an `ImageData` object from a given {{jsxref("Uint8ClampedArray")}} and the size of the image it contains. If no array is given, it creates an image of a transparent black rectangle. Note that this is the most common way to create such an object in workers as {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} is not available there.
 
 ## Properties

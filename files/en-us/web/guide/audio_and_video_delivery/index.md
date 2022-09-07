@@ -127,7 +127,7 @@ try {
       source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
-      // auto play
+      // autoplay
       source.start(0); // start was previously noteOn
     });
   };

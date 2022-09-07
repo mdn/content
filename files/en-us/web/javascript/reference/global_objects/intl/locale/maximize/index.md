@@ -45,9 +45,9 @@ programmers via the `maximize()` method. `maximize()` only
 affects the main subtags that comprise the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions): language, script, and region subtags.
 Other subtags after the "-u" in the locale identifier are called extension subtags and
 are not affected by the `maximize()` method. Examples of these subtags
-include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
-{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
-  "Locale.numeric")}}.
+include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
+{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric",
+  "numeric")}}.
 
 ## Examples
 
@@ -82,5 +82,5 @@ console.log(myLocMaximized.toString());
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}
 - [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)

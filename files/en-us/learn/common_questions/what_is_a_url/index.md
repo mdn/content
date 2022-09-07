@@ -174,7 +174,7 @@ To better understand the following examples, let's assume that the URLs are call
         <pre>Skills/Infrastructure/Understanding_URLs</pre>
         <p>
           Because that URL does not start with <code>/</code>, the browser will
-          attempt to find the document in a sub-directory of the one containing
+          attempt to find the document in a subdirectory of the one containing
           the current resource. So in this example, we really want to reach
           this URL:
           https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.

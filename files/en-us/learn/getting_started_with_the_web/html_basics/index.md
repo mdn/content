@@ -45,7 +45,7 @@ Elements can also have attributes that look like the following:
 
 ![Paragraph opening tag with a class attribute highlighted: class=editor-note](grumpy-cat-attribute-small.png)
 
-Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute *name* and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
+Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute _name_ and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
 
 An attribute should always have the following:
 

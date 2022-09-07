@@ -18,14 +18,14 @@ The **XMLDocument** interface represents an XML document. It inherits from the g
 
 ## Property
 
-_Also inherits properties from: {{DOMxRef("Document")}}_
+_Also inherits properties from: {{DOMxRef("Document")}}_.
 
 - {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.
 
 ## Methods
 
-_Also inherits methods from: {{DOMxRef("Document")}}_
+_Also inherits methods from: {{DOMxRef("Document")}}_.
 
 - {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Loads an XML document.

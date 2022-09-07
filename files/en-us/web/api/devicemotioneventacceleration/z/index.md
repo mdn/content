@@ -18,7 +18,7 @@ object.
 ## Value
 
 A `double` indicating the amount of acceleration along the Z axis.
-See [Accelerometer values explained](/en-US/docs/Web/Events/Detecting_device_orientation) for details.
+See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation) for details.
 
 ## Specifications
 

@@ -5,7 +5,6 @@ tags:
   - Accessibility
   - Developing Mozilla
 ---
-## Introduction
 
 The implementation of text and embedded objects in Mozilla is clever but confusing. Here is a bit of history and an explanation.
 

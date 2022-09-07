@@ -69,7 +69,7 @@ For {{SVGElement('ellipse')}}, `rx` defines the x-radius of the shape. With a va
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `rx` is a *Geometry Property* meaning this attribute can also be used as a CSS property for ellipses.
+> **Note:** Starting with SVG2, `rx` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
 
 ## rect
 
@@ -111,7 +111,7 @@ The way the value of the `rx` attribute is interpreted depend on both the {{SVGA
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `rx` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rects.
+> **Note:** Starting with SVG2, `rx` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rects.
 
 ## Specifications
 

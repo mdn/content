@@ -128,9 +128,9 @@ The `Number` prototype provides methods for retrieving information from `Number`
 
 | Method                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| {{jsxref("Number.toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
+| {{jsxref("Number/toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
+| {{jsxref("Number/toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
+| {{jsxref("Number/toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
 
 ## Math object
 
@@ -382,11 +382,11 @@ daysLeft = Math.round(daysLeft); //returns days left in the year
 
 This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
 
-The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `IPOdate` object:
+The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `ipoDate` object:
 
 ```js
-const IPOdate = new Date();
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+const ipoDate = new Date();
+ipoDate.setTime(Date.parse('Aug 9, 1995'));
 ```
 
 ### Example

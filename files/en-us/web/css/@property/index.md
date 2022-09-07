@@ -29,11 +29,11 @@ The `@property` rule represents a custom property registration directly in a sty
 
 ### Descriptors
 
-- {{cssxref("@property/syntax","syntax")}}
+- {{cssxref("@property/syntax","syntax")}} {{Experimental_Inline}}
   - : Describes the allowable syntax for the property.
-- {{cssxref("@property/inherits","inherits")}}
+- {{cssxref("@property/inherits","inherits")}} {{Experimental_Inline}}
   - : Controls whether the custom property registration specified by `@property` inherits by default.
-- {{cssxref("@property/initial-value","initial-value")}}
+- {{cssxref("@property/initial-value","initial-value")}} {{Experimental_Inline}}
   - : Sets the initial value for the property.
 
 A valid `@property` rule represents a custom property registration, with the property name being the serialization of the in the rule's prelude.

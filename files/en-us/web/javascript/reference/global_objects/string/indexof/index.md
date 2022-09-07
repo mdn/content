@@ -27,7 +27,9 @@ indexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to `"undefined"`. Therefore,`'undefined'.indexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
+  - : Substring to search for, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+
+    If the method is called with no arguments, `searchString` is coerced to `"undefined"`. Therefore,`"undefined".indexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `"undefine".indexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 

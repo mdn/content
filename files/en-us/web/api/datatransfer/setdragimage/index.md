@@ -97,7 +97,7 @@ default drag image.
         ev.dataTransfer.setDragImage(img, 10, 10);
       }
 
-      function dragOverUandler(ev) {
+      function dragOverHandler(ev) {
         console.log("dragOver");
         ev.preventDefault();
       }
@@ -122,7 +122,7 @@ default drag image.
     <div
       id="target"
       ondrop="dropHandler(event);"
-      ondragover="dragOverUandler(event);">
+      ondragover="dragOverHandler(event);">
       Drop Zone
     </div>
   </body>

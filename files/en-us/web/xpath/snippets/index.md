@@ -14,7 +14,7 @@ This article provides some XPath code snippets — simple examples of how to a f
 
 The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
-##### Example: Defining a custom node-specific `evaluateXPath()` utility function
+#### Example: Defining a custom node-specific `evaluateXPath()` utility function
 
 ```js
 // Evaluate an XPath expression aExpression against a given DOM node
@@ -97,7 +97,7 @@ console.log(results.length);
 
 The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
 
-##### Example: Defining a simple `docEvaluateArray()` utility function
+#### Example: Defining a simple `docEvaluateArray()` utility function
 
 ```js
 // Example usage:
@@ -123,7 +123,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.
 
-##### Example: Defining a `getXPathForElement()` utility function
+#### Example: Defining a `getXPathForElement()` utility function
 
 ```js
 function getXPathForElement(el, xml) {

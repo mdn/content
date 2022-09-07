@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - game over
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
@@ -23,11 +24,11 @@ It's fun to watch the ball bouncing off the walls and be able to move the paddle
 Let's try to implement game over in our game. Here's the piece of code from the third lesson where we made the ball bounce off the walls:
 
 ```js
-if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
   dx = -dx;
 }
 
-if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
   dy = -dy;
 }
 ```
@@ -51,7 +52,7 @@ Then replace the second if statement with the following:
 ```js
 if (y + dy < ballRadius) {
   dy = -dy;
-} else if (y + dy > canvas.height-ballRadius) {
+} else if (y + dy > canvas.height - ballRadius) {
   alert("GAME OVER");
   document.location.reload();
   clearInterval(interval); // Needed for Chrome to end game
@@ -65,7 +66,7 @@ The last thing to do in this lesson is to create some kind of collision detectio
 ```js
 if (y + dy < ballRadius) {
   dy = -dy;
-} else if (y + dy > canvas.height-ballRadius) {
+} else if (y + dy > canvas.height - ballRadius) {
   if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
   } else {
@@ -76,7 +77,7 @@ if (y + dy < ballRadius) {
 }
 ```
 
-If the ball hits the bottom edge of the Canvas we need to check whether it hits the paddle . if yes, then it bounces off just like you'd expect; if not then the game is over as before.
+If the ball hits the bottom edge of the Canvas we need to check whether it hits the paddle. If so, then it bounces off just like you'd expect; if not, then the game is over as before.
 
 ## Compare your code
 

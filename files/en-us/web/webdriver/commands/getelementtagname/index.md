@@ -8,6 +8,9 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.GetElementTagName
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+
 The _Get Element Tag Name_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the tag name of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). If for example the element is an {{HTMLElement("img")}}, the returned tag name is `"IMG"`, which is equivalent to calling {{domxref("Element.tagName")}} on the element. For XML/XHTML documents it may be cased differently.
 
 ## Syntax

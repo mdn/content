@@ -13,7 +13,7 @@ Programming languages all have built-in data structures, but these often differ 
 
 ## Dynamic typing
 
-JavaScript is a *loosely typed* and *dynamic* language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+JavaScript is a _loosely typed_ and _dynamic_ language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
 
 ```js
 let foo = 42;    // foo is now a number
@@ -78,7 +78,7 @@ console.log(42 / +0); // Infinity
 console.log(42 / -0); // -Infinity
 ```
 
-Although a number often represents only its value, JavaScript provides {{jsxref("Operators", "binary (bitwise) operators")}}.
+Although a number often represents only its value, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
 
 > **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
@@ -121,8 +121,8 @@ JavaScript strings are immutable. This means that once a string is created, it i
 
 However, it is still possible to create another string based on an operation on the original string. For example:
 
-- A substring of the original by picking individual letters or using {{jsxref("String.substr()")}}.
-- A concatenation of two strings using the concatenation operator (`+`) or {{jsxref("String.concat()")}}.
+- A substring of the original by picking individual letters or using [`substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+- A concatenation of two strings using the concatenation operator (`+`) or [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
 #### Beware of "stringly-typing" your code!
 

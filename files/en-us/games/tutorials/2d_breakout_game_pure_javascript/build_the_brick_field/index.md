@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
@@ -31,7 +32,7 @@ const brickOffsetTop = 30;
 const brickOffsetLeft = 30;
 ```
 
-Here we've defined the number of rows and columns of bricks , their width and height, the padding between the bricks so they won't touch each other and a top and left offset so they won't start being drawn right from the edge of the Canvas.
+Here we've defined the number of rows and columns of bricks, their width and height, the padding between the bricks so they won't touch each other and a top and left offset so they won't start being drawn right from the edge of the Canvas.
 
 We will hold all our bricks in a two-dimensional array. It will contain the brick columns (c), which in turn will contain the brick rows (r), which in turn will each contain an object containing the `x` and `y` position to paint each brick on the screen. Add the following just below your variables:
 
@@ -106,7 +107,7 @@ drawBricks();
 
 ## Compare your code
 
-At this point, the game has got a little more interesting again  :
+At this point, the game has got a little more interesting again:
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}
 

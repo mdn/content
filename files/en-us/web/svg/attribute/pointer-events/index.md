@@ -106,7 +106,7 @@ window.addEventListener('mouseup', (e) => {
   </tbody>
 </table>
 
-*For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation.*
+_For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation._
 
 ## Specifications
 

@@ -5,15 +5,16 @@ tags:
   - CSP
   - Content-Security-Policy
   - Directive
-  - Flash
   - HTTP
   - Java
   - Plugin
   - Plugins
   - Security
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
-{{HTTPSidebar}}{{deprecated_header}}
+{{HTTPSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`plugin-types`** directive restricts the set of plugins that
@@ -67,20 +68,6 @@ is only used if you are allowing plugins with `object-src` at all.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-```
-
-### Allowing Flash content
-
-The content security policy
-
-```http
-Content-Security-Policy: plugin-types application/x-shockwave-flash
-```
-
-will allow to load flash objects:
-
-```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
 ```
 
 ### Allowing Java applets

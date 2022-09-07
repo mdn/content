@@ -54,6 +54,8 @@ let gettingInfo = browser.runtime.getBrowserInfo();
 gettingInfo.then(gotBrowserInfo);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}

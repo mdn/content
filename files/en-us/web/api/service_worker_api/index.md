@@ -134,6 +134,6 @@ In the future, service workers will be able to do a number of other useful thing
 
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

@@ -30,7 +30,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 ## Properties
 
 - {{domxref("ReadableStream.locked")}} {{ReadOnlyInline}}
-  - : The `locked` getter returns whether or not the readable stream is locked to a reader.
+  - : Returns a boolean indicating whether or not the readable stream is locked to a reader.
 
 ## Methods
 

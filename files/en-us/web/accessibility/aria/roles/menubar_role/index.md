@@ -59,7 +59,7 @@ When focus is in a `menubar` it is always on a menu item within the menu bar. Wh
 - <kbd>Down Arrow</kbd>
   - : If the currently focused `menuitem` has a submenu, opens the submenu and places focus on the first item in the submenu.
 - <kbd>Up Arrow</kbd>
-  - : (Optional) If the currently focused `menuitem` has a submenu, opens the submenu and places focus on the *last* item in the submenu.
+  - : (Optional) If the currently focused `menuitem` has a submenu, opens the submenu and places focus on the _last_ item in the submenu.
 - <kbd>Right Arrow</kbd>
   - : Moves focus to the next item, optionally wrapping from the last to the first.
 - <kbd>Left Arrow</kbd>

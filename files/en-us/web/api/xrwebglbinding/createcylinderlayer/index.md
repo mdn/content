@@ -9,9 +9,10 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.createCylinderLayer
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createCylinderLayer()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRCylinderLayer")}} object, which is a layer that takes up a curved rectangular space in the virtual environment.
 

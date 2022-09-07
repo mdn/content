@@ -18,14 +18,14 @@ The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model
 
 ## Constructor
 
-- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue", "CSSVariableReferenceValue()")}}
+- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue", "CSSVariableReferenceValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSVariableReferenceValue` object.
 
 ## Properties
 
-- {{domxref('CSSVariableReferenceValue.variable')}}
+- {{domxref('CSSVariableReferenceValue.variable')}} {{Experimental_Inline}}
   - : Returns the custom name passed to the constructor.
-- {{domxref('CSSVariableReferenceValue.fallback')}} {{ReadOnlyInline}}
+- {{domxref('CSSVariableReferenceValue.fallback')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the built-in CSS value for the custom name.
 
 ## Methods

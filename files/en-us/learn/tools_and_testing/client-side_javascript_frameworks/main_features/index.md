@@ -297,7 +297,7 @@ All applications benefit from test coverage that ensures your software continues
 
 Each framework has extensive tools in its ecosystem, with capabilities for unit and integration testing alike.
 
-[Testing Library](https://testing-library.com/) is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular.  The Ember docs cover the [testing of Ember apps](https://guides.emberjs.com/release/testing/).
+[Testing Library](https://testing-library.com/) is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular. The Ember docs cover the [testing of Ember apps](https://guides.emberjs.com/release/testing/).
 
 Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
 

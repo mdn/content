@@ -39,7 +39,7 @@ None.
 
 ## Examples
 
-The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example. This uses a simple feature detection test to see if the browser supports the newer `contentBoxSize` property — if so, it uses that to get the sizing data it needs. If not, it uses the older `contentRect` property.
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example. This uses a simple feature detection test to see if the browser supports the newer `contentBoxSize` property — if so, it uses that to get the sizing data it needs. If not, it uses the older `contentRect` property.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {

@@ -48,7 +48,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## Description
 
-If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types http\://www\.foo.com/ or even just foo.com.
+If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types `http://www.foo.com/` or even just foo.com.
 This creates an opportunity for a man-in-the-middle attack.
 The redirect could be exploited to direct visitors to a malicious site instead of the secure version of the original site.
 

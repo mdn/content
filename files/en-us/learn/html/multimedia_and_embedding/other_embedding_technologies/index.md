@@ -17,7 +17,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
-By now you should really be getting the hang of embedding things into your web pages, including images, video and audio. At this point we'd like to take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed PDFs, SVG, and even Flash — a technology that is on the way out, but which you'll still see semi-regularly.
+By now you should really be getting the hang of embedding things into your web pages, including images, video and audio. At this point we'd like to take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
 
 <table>
   <tbody>
@@ -346,7 +346,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   </tbody>
 </table>
 
-Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
+Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
 <object data="mypdf.pdf" type="application/pdf"

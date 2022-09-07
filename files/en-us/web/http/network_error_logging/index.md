@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Network Error Logging
   - Reference
+  - Experimental
 browser-compat: http.headers.NEL
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
