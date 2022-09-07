@@ -1,6 +1,6 @@
 ---
 title: Detecting device orientation
-slug: Web/Events/Detecting_device_orientation
+slug: Web/API/Device_orientation_events/Detecting_device_orientation
 tags:
   - API
   - Device Orientation
@@ -12,7 +12,6 @@ tags:
 browser-compat:
   - api.DeviceMotionEvent
   - api.DeviceOrientationEvent
-
 ---
 {{DefaultAPISidebar("Device Orientation Events")}} {{securecontext_header}}
 

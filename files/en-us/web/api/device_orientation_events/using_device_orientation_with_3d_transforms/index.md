@@ -1,6 +1,6 @@
 ---
 title: Using device orientation with 3D transforms
-slug: Web/Events/Using_device_orientation_with_3D_transforms
+slug: Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
 tags:
   - Advanced
   - CSS
