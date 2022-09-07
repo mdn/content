@@ -66,7 +66,7 @@ body {
 div.box {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background: linear-gradient(orange, red);
 }
 
 div.box-1 {
