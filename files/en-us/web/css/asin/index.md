@@ -26,12 +26,12 @@ width: calc(asin(0.25turn) * 100px);
 width: calc(asin(1.0471967rad) * 100px);
 
 /* Single <number> values */
-width: calc(asin(63.673) * 100px);
+width: calc(asin(-0.2) * 100px);
 width: calc(asin(2 * 0.125) * 100px);
 
 /* Other values */
-width: calc(asin(pi / 2) * 100px);
-width: calc(asin(e / 4) * 100px);
+width: calc(asin(pi / 5) * 100px);
+width: calc(asin(e / 3) * 100px);
 ```
 
 ### Parameter
@@ -44,6 +44,54 @@ The `asin(number)` function accepts only one value as its parameter.
 ### Formal syntax
 
 {{CSSSyntax}}
+
+## Example
+
+The `asin()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
+
+```html hidden
+<div class="box"></div>
+<div class="box box-1"></div>
+<div class="box box-2"></div>
+<div class="box box-3"></div>
+<div class="box box-4"></div>
+```
+
+```css hidden
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+```
+
+```css
+div.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+div.box-1 {
+  transform: rotate(asin(-0.2));
+}
+
+div.box-2 {
+  transform: rotate(asin(2 * 0.125));
+}
+
+div.box-3 {
+  transform: rotate(asin(pi / 5));
+}
+
+div.box-4 {
+  transform: rotate(asin(e / 3));
+}
+```
+
+{{EmbedLiveSample('example', '100%', '200px')}}
 
 ## Specifications
 
