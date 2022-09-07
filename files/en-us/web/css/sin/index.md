@@ -13,6 +13,7 @@ tags:
 browser-compat: css.types.sin
 spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the sine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `sin(45deg)`, `sin(0.125turn)`, and `sin(3.14159 / 4)` all represent the same value, approximately `0.707`.
@@ -54,8 +55,8 @@ For example, when creating a 100x100 box based on external parameters, in this c
 ```css
 div {
   background-color: red;
-  width: calc( sin(90deg) * 100px );
-  height: calc( sin(90deg) * 100px );
+  width: calc(sin(90deg) * 100px);
+  height: calc(sin(90deg) * 100px);
 }
 ```
 
@@ -66,7 +67,7 @@ Another use-case is to control the {{cssxref("animation-duration")}}. Reducing d
 ```css
 div {
   animation-name: myAnimation;
-  animation-duration: calc( sin(0.25turn) * 1s );
+  animation-duration: calc(sin(0.25turn) * 1s);
 }
 ```
 
