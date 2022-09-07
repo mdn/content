@@ -21,20 +21,25 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 ```css
 /* Single <angle> values */
-width: calc( sin(45deg) * 100px );
-width: calc( sin(0.25turn) * 100px );
-width: calc( sin(1.0471967rad) * 100px );
+width: calc(sin(45deg) * 100px);
+width: calc(sin(0.25turn) * 100px);
+width: calc(sin(1.0471967rad) * 100px);
 
 /* Single <number> values */
-width: calc( sin(63.673) * 100px );
-width: calc( sin(2 * 0.125) * 100px );
+width: calc(sin(63.673) * 100px);
+width: calc(sin(2 * 0.125) * 100px);
 
 /* Other values */
-width: calc( sin(pi / 2) * 100px );
-width: calc( sin(e / 4) * 100px );
+width: calc(sin(pi / 2) * 100px);
+width: calc(sin(e / 4) * 100px);
 ```
 
-The `sin()` function takes only one expression as its argument.
+### Parameter
+
+The `sin(angle)` function accepts only one value as its parameter.
+
+- `angle`
+  - : A {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`. When specifying `0⁻`, the result is `0⁻`.
 
 ### Formal syntax
 
