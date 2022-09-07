@@ -7,6 +7,7 @@ tags:
   - Reference
   - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`local.tee`** instruction sets the value of a local variable and loads the value onto the stack.

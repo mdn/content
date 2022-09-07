@@ -14,6 +14,7 @@ tags:
   - was
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 To enable WebAssembly to be read and edited by humans, there is a textual representation of the wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing wasm in JavaScript.
@@ -184,10 +185,9 @@ If you want to follow along with the example, save the above our module into a f
 Next, we'll load our binary into a typed array called `addCode` (as described in [Fetching WebAssembly Bytecode](/en-US/docs/WebAssembly/Loading_and_running)), compile and instantiate it, and execute our `add` function in JavaScript (we can now find `add()` in the [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) property of the instance):
 
 ```js
-WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then((obj) => {
-    console.log(obj.instance.exports.add(1, 2));  // "3"
-  });
+WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
+  console.log(obj.instance.exports.add(1, 2)); // "3"
+});
 ```
 
 > **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see {{JSxRef("WebAssembly.instantiateStreaming()")}} for more details about the instantiate function.
@@ -223,10 +223,9 @@ This is functionally equivalent to including a separate function statement outsi
 The JavaScript code to call our above module looks like so:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('call.wasm'))
-  .then((obj) => {
-    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-  });
+WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
+  console.log(obj.instance.exports.getAnswerPlus1()); // "43"
+});
 ```
 
 ### Importing functions from JavaScript
@@ -256,14 +255,15 @@ const importObject = {
   console: {
     log(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then((obj) => {
+WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
+  (obj) => {
     obj.instance.exports.logIt();
-  });
+  }
+);
 ```
 
 > **Note:** You can find this example on GitHub as [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
@@ -290,7 +290,7 @@ This looks similar to what we've seen before, except that we specify a global va
 To create an equivalent value using JavaScript, you'd use the {{JSxRef("WebAssembly.Global()")}} constructor:
 
 ```js
-const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 ```
 
 ### WebAssembly Memory
@@ -316,7 +316,7 @@ On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/Tex
 ```js
 function consoleLogString(offset, length) {
   const bytes = new Uint8Array(memory.buffer, offset, length);
-  const string = new TextDecoder('utf8').decode(bytes);
+  const string = new TextDecoder("utf8").decode(bytes);
   console.log(string);
 }
 ```
@@ -353,12 +353,16 @@ Now from JavaScript we can create a Memory with 1 page and pass it in. This resu
 ```js
 const memory = new WebAssembly.Memory({ initial: 1 });
 
-const importObject = { console: { log: consoleLogString }, js: { mem: memory } };
+const importObject = {
+  console: { log: consoleLogString },
+  js: { mem: memory },
+};
 
-WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then((obj) => {
+WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
+  (obj) => {
     obj.instance.exports.writeHi();
-  });
+  }
+);
 ```
 
 > **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
@@ -471,12 +475,11 @@ The full module all together looks like this, and can be found in our [wasm-tabl
 We load it into a webpage using the following JavaScript:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then((obj) => {
-    console.log(obj.instance.exports.callByIndex(0)); // returns 42
-    console.log(obj.instance.exports.callByIndex(1)); // returns 13
-    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-  });
+WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
+  console.log(obj.instance.exports.callByIndex(0)); // returns 42
+  console.log(obj.instance.exports.callByIndex(1)); // returns 13
+  console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+});
 ```
 
 > **Note:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
@@ -542,16 +545,16 @@ After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in J
 ```js
 const importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
+  WebAssembly.instantiateStreaming(fetch("shared0.wasm"), importObj),
+  WebAssembly.instantiateStreaming(fetch("shared1.wasm"), importObj),
 ]).then((results) => {
-  console.log(results[1].instance.exports.doIt());  // prints 42
+  console.log(results[1].instance.exports.doIt()); // prints 42
 });
 ```
 
@@ -633,13 +636,17 @@ As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/Web
 Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
 
 ```js
-const memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true,
+});
 ```
 
 the memory's [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:
 
 ```js
-memory.buffer // returns SharedArrayBuffer
+memory.buffer; // returns SharedArrayBuffer
 ```
 
 Over in the text format, you can create a shared memory using the `shared` keyword, like this:
