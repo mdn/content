@@ -16,7 +16,7 @@ The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element *at that child position* is of the specified element type.
+Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element _at that child position_ is of the specified element type.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
-    It can be read as the *An+B*th element of a list.
+    It can be read as the `An+B`-th element of a list.
 
 ## Examples
 

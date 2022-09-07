@@ -236,7 +236,7 @@ vertices.forEach((vertex, i) => {
   dv.setInt8(20 * i + 15, 0);
   dv.setUint16(20 * i + 16, vertex.texCoord[0] * 0xFFFF, true);
   dv.setUint16(20 * i + 18, vertex.texCoord[1] * 0xFFFF, true);
-}
+});
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on

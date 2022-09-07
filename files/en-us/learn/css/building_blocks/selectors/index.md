@@ -171,7 +171,7 @@ article > p { }
 
 ## Summary
 
-In this article we've introduced CSS selectors, which enable you to target particular HTML elements.  Next, we'll take a closer look at [type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors).
+In this article we've introduced CSS selectors, which enable you to target particular HTML elements. Next, we'll take a closer look at [type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors).
 
 For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 

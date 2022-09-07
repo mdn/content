@@ -133,7 +133,7 @@ We use the {{jsxref("Classes/extends", "extends")}} keyword to say that this cla
 
 The `Professor` class adds a new property `teaches`, so we declare that.
 
-Since we want to set `teaches` when a new `Professor` is created, we define a constructor,  which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
+Since we want to set `teaches` when a new `Professor` is created, we define a constructor, which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
 
 > **Note:** If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
 

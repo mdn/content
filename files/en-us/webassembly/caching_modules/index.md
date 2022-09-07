@@ -14,7 +14,7 @@ tags:
 
 > **Warning:** Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and [this spec issue](https://github.com/WebAssembly/spec/issues/821).
 
-Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client so they don't have to be downloaded and compiled every time. This article explains the best practices around this.
+Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client, so they don't have to be downloaded and compiled every time. This article explains the best practices around this.
 
 ## Caching via IndexedDB
 

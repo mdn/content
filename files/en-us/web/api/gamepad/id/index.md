@@ -31,7 +31,7 @@ device as well as display useful feedback to the user.
 
 ## Value
 
-A string.
+A string primitive.
 
 ## Examples
 
@@ -41,10 +41,6 @@ window.addEventListener("gamepadconnected", () => {
   gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}.`;
 });
 ```
-
-## Value
-
-A {{jsxref("String")}}.
 
 ## Specifications
 

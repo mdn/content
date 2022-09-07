@@ -130,7 +130,7 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
   </tbody>
 </table>
 
-#### Example
+### Example
 
 ```css hidden
 html,body,svg { height:100% }

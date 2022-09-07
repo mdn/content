@@ -105,7 +105,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
   - : Returns a boolean indicating if the internal [ECMAScript \[\[Enumerable\]\] attribute](/en-US/docs/Web/JavaScript/Data_structures#properties) is set.
 - {{jsxref("Object.prototype.toLocaleString()")}}
-  - : Calls {{jsxref("Object.toString", "toString()")}}.
+  - : Calls {{jsxref("Object/toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}
   - : Returns a string representation of the object.
 - {{jsxref("Object.prototype.valueOf()")}}

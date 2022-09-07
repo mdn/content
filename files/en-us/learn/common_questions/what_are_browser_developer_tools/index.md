@@ -183,41 +183,41 @@ This will give you a window like the following:
 
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
-1. ```js
-    alert('hello!');
-    ```
+```js
+alert('hello!');
+```
 
-2. ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js
-    const myWordmark = document.createElement('img');
-    myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js
+const myWordmark = document.createElement('img');
+myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+document.querySelector('h1').appendChild(myWordmark);
+```
 
 Now try entering the following incorrect versions of the code and see what you get.
 
-1. ```js example-bad
-    alert('hello!);
-    ```
+```js example-bad
+alert('hello!);
+```
 
-2. ```js example-bad
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
+```js example-bad
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js example-bad
-    const myWordmark = document.createElement('img');
-    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js example-bad
+const myWordmark = document.createElement('img');
+myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+document.querySelector('h1').appendChild(myWordmark);
+```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!
 
 ### Find out more
 
-Find more out about the JavaScript console in different browsers:
+Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [IE JavaScript console](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))

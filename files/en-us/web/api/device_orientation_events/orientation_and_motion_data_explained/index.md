@@ -1,6 +1,6 @@
 ---
 title: Orientation and motion data explained
-slug: Web/Events/Orientation_and_motion_data_explained
+slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 tags:
   - Intermediate
   - Mobile

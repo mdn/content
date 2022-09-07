@@ -33,10 +33,6 @@ window.addEventListener("gamepadconnected", (e) => {
 });
 ```
 
-## Value
-
-A {{domxref("Gamepad")}} object.
-
 ## Specifications
 
 {{Specifications}}

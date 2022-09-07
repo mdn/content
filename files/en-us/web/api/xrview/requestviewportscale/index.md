@@ -23,18 +23,16 @@ The **`requestViewportScale()`** method of the {{domxref("XRView")}} interface r
 requestViewportScale(scale)
 ```
 
-### Parameters
+## Parameters
 
 - `scale`
   - : A number greater than 0.0 and less than or equal to 1.0 representing the scale factor.
 
-### Return value
+## Return value
 
 None ({{jsxref("undefined")}}).
 
-## Examples
-
-### Dynamic viewport scaling
+## Dynamic viewport scaling
 
 Dynamic viewport scaling allows applications to only use a subset of the available {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}}. The feature may not be available on all systems since it depends on driver support, so you might want to ensure that `requestViewportScale()` exists before calling it.
 

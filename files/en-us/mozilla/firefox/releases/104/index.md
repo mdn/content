@@ -82,7 +82,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 ### Other
 

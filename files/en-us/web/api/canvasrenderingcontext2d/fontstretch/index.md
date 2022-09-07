@@ -29,13 +29,13 @@ The property can be used to get or set the font stretch value.
 In this example we display the text "Hello World" using each of the supported values of the `fontStretch` property.
 The stretch value is also displayed for each case by reading the property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700" height="310"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -82,7 +82,7 @@ ctx.fontStretch = 'ultra-expanded';
 ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 290);
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 700, 300) }}
 

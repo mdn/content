@@ -69,7 +69,7 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 - {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}
   - : Gets the most likely values for the language, script, and region of the locale based on existing values.
 - {{jsxref("Intl/Locale/minimize", "Intl.Locale.prototype.minimize()")}}
-  - : Attempts to remove information about the locale that would be added by calling {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.
+  - : Attempts to remove information about the locale that would be added by calling {{jsxref("Intl/Locale/maximize", "maximize()")}}.
 - {{jsxref("Intl/Locale/toString", "Intl.Locale.prototype.toString()")}}
   - : Returns the Locale's full locale identifier string.
 

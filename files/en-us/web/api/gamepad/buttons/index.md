@@ -82,10 +82,6 @@ function gameLoop() {
 };
 ```
 
-## Value
-
-An array of {{domxref("gamepadButton")}} objects.
-
 ## Specifications
 
 {{Specifications}}
