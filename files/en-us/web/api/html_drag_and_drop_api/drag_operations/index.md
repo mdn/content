@@ -201,7 +201,7 @@ Within the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElem
 
 A listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events are used to indicate valid drop targets, that is, places where dragged items may be dropped. Most areas of a web page or application are not valid places to drop data. Thus, the default handling of these events is not to allow a drop.
 
-If you want to allow a drop, you must prevent the default behavior by cancelling both the `dragenter` and `dragover` events. YOu can do this by calling their {{domxref("Event.preventDefault","preventDefault()")}} methods:
+If you want to allow a drop, you must prevent the default behavior by cancelling both the `dragenter` and `dragover` events. You can do this by calling their {{domxref("Event.preventDefault","preventDefault()")}} methods:
 
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
