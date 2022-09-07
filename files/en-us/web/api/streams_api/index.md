@@ -27,11 +27,7 @@ But this has never been available to JavaScript before. Previously, if we wanted
 
 With Streams being available to JavaScript, this all changes — you can now start processing raw data with JavaScript bit by bit as soon as it is available on the client-side, without needing to generate a buffer, string, or blob.
 
-<<<<<<< HEAD
 ![The basic concept of the stream API is data is fetched from the network in several data packets. The data is processed, and then sent to the browser in a stream of data packets.](concept.png)
-=======
-![A diagram illustrating the basic concept of the stream API. First, there is a cloud labelled "Fetch from network", beside it are arrows labelled "data" which point to some gears labelled "Process Data". From there, more arrows labelled "data" point towards an illustration of a page with images and text labelled "Render Data".](concept.png)
->>>>>>> 3387c2f828 (Added alt attribute to the "concept" diagram on the Streams API page.)
 
 There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed the stream is being read at.
 
@@ -95,7 +91,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 
 ## Examples
 
-We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams). The examples are as follows:
+We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
 
 - [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
 - [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
