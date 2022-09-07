@@ -7,7 +7,17 @@ To ensure applications are unable to abuse APIs that can create bad user experie
 
 A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load. Typically, this is a click on a button or some other user interaction with the UI.
 
-There are two types of user activation window states: sticky and transient.
+More precisely, an _activation triggering input event_ is an event which:
+
+- has the [`isTrusted`](/en-US/docs/Web/API/Event/isTrusted) attribute set to `true`, and
+- is an event of the following types:
+  - [`keydown`](/en-US/docs/Web/API/Element/keydown_event) (except for the <kbd>Esc</kbd> key nor a shortcut key reserved by the user agent)
+  - [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event) (if `pointerType` is "mouse")
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event) (if `pointerType` is not "mouse")
+  - [`touchend`](/en-US/docs/Web/API/Element/touchend_event)
+
+If an activation has been triggered, the user agent differentiates between two types of user activation window states: sticky and transient.
 
 ## Transient activation
 
