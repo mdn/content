@@ -637,20 +637,7 @@ class A {
 }
 ```
 
-And therefore will be a syntax error around `{`. Similarly, computed class fields start with `[` and may be merged with the previous line.
-
-```js example-bad
-class A {
-  a = 1
-  [1 + 1] = 2
-}
-
-// seen as:
-
-class A {
-  a = 1[1 + 1] = 2
-}
-```
+And therefore will be a syntax error around `{`.
 
 There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
 
