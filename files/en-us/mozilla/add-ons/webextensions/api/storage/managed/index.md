@@ -27,7 +27,7 @@ Here's an example manifest:
 
 ```json
 {
-  "name":  "favourite-colour-examples@mozilla.org",
+  "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
   "data": {
