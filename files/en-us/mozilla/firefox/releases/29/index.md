@@ -41,7 +41,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 ### HTML
 
 - `<input type=color>` and `<input type=number>` are available by default.
-- Support for the non standard `<pre cols>` has been removed, as well as the layout effect of `<pre wrap>` . Both effects can, and should, be achieved using CSS. ({{bug("949879")}})
+- Support for the non standard `<pre cols>` has been removed, as well as the layout effect of `<pre wrap>`. Both effects can, and should, be achieved using CSS. ({{bug("949879")}})
 
 ### JavaScript
 
