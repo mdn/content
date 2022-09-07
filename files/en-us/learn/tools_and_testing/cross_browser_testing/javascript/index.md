@@ -84,7 +84,7 @@ As with [HTML and CSS](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing
 
 The [JSHint homepage](https://jshint.com/) provides an online linter, which allows you to enter your JavaScript code on the left and provides an output on the right, including metrics, warnings, and errors.
 
-![JSHint screen shot. Left panel is a color coded and line numbered code editor. Right panel is divided into metrics on the number, size and makeup of functions and warnings. The warnings include the issue and the line number.](jshint-online.png)
+![JSHint screenshot. Left panel is a color-coded and line-numbered code editor. Right panel is divided into metrics on the number, size, and makeup of functions and warnings. The warnings include the issue and the line number.](jshint-online.png)
 
 #### Code editor plugins
 
@@ -98,7 +98,7 @@ To install it:
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
 5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
 
-![Screen shot of JS Hint app. The narrow left panel is a file explorer or tree. The right panel has two sections. The top has a tab open to a color coded and line-numbered JavaScript file. The very bottom has errors and warnings. Errors are red and warnings are orange. If there is an error or warning on a line, there is a red or orange dot, respectively, next to the line number.](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
+![Screenshot of the JS Hint app. The narrow left panel is a file explorer or tree. The right panel has two sections. The top has a tab open to a color-coded and line-numbered JavaScript file. The very bottom has errors and warnings. Errors are red, and warnings are orange. If there is an error or warning on a line, there is a red or orange dot, respectively, next to the line number.](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
 
 #### Other uses
 
@@ -346,7 +346,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     ```
 
 6. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
-    ![heading reading fetch basic example with a photo of purple flowers.](fetch-image.jpg)
+    ![heading reading fetch basic example with a photo of purple flowers](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 
