@@ -1,5 +1,5 @@
 ---
-title: import assertions
+title: Import assertion
 slug: Web/JavaScript/Reference/Statements/import/assert
 tags:
   - JavaScript
