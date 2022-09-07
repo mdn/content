@@ -41,7 +41,7 @@ The `aria-describedby` property is appropriate when the associated content conta
 ## Values
 
 - ID reference list
-  - : The `id` or space-separated list of elements IDs that describe the current element.
+  - : The `id` or space-separated list of element IDs that describe the current element.
 
 ## Associated roles
 

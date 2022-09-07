@@ -54,6 +54,9 @@ jobs:
 
           curl --retry-connrefused --retry 5 http://localhost:5042 > /dev/null
 
+          curl --fail http://localhost:5042/en-US/docs/MDN/Kitchensink > /dev/null
+          curl --fail http://localhost:5042/en-US/docs/MDN/Kitchensink/index.json > /dev/null
+
       - name: Debug server's stdout and stderr if tests failed
         if: failure()
         run: |
