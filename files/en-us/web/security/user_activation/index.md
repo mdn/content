@@ -34,6 +34,7 @@ Example APIs that require transient activation:
 - {{domxref("Element.requestPointerLock()")}}
 - `GPUAdapter.requestAdapterInfo()`
 - {{domxref("HID.requestDevice()")}}
+- {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
 - {{domxref("IdleDetector.requestPermission()")}}
 - {{domxref("MediaDevices.selectAudioOutput()")}}
