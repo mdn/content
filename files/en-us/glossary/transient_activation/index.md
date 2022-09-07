@@ -13,7 +13,7 @@ For example, scripts cannot arbitrarily launch a popup that requires _transient 
 
 See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for examples of APIs that require _transient activation_.
 
-> **Note:** Transient activation expires after a timeout (if not renewed by further interaction), and may also be "consumed" by some APIs. See {{Glossary("Sticky activation")}} for a user activation that doesn't reset during the frame's lifetime after it has once been set.
+> **Note:** Transient activation expires after a timeout (if not renewed by further interaction), and may also be "consumed" by some APIs. See {{Glossary("Sticky activation")}} for a user activation that doesn't reset after it has been set initially.
 
 ## See also
 

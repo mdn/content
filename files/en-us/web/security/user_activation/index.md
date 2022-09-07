@@ -45,7 +45,7 @@ Example APIs that require transient activation:
 
 ## Sticky activation
 
-{{Glossary("Sticky activation")}} is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction. It is not reset during the frame's lifetime after it has been set initially (unlike transient activation).
+{{Glossary("Sticky activation")}} is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction. It is not reset after it has been set initially (unlike transient activation).
 
 Examples APIs that require sticky activation:
 
