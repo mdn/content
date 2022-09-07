@@ -39,15 +39,15 @@ demonstrates how to prevent that from happening:
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener(
-  "click",
-  (event) => {
-    document.getElementById("output-box").innerHTML +=
-      "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-    event.preventDefault();
-  },
-  false
-);
+const checkbox = document.querySelector("#id-checkbox");
+
+checkbox.addEventListener("click", checkboxClick, false);
+
+function checkboxClick(event) {
+  let warn = "preventDefault() won't let you check this!<br>";
+  document.getElementById("output-box").innerHTML += warn;
+  event.preventDefault();
+}
 ```
 
 #### HTML
