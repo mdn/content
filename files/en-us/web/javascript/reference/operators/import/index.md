@@ -34,7 +34,7 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 - `moduleName`
   - : The module to import from. The evaluation of the specifier is host-specified, but always follows the same algorithm as static [import declarations](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `options`
-  - : An object containing import options, which correspond to the appendices of the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement. The follow keys are recognized:
+  - : An object containing import options, which correspond to the appendices of the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement. The following key is recognized:
     - `assert`
       - : The [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert).
 
