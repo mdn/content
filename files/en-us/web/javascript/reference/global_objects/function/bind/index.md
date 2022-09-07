@@ -39,9 +39,9 @@ A copy of the given function with the specified `this` value, and initial argume
 
 ## Description
 
-The `bind()` function creates a new _bound function_. Calling the bound function generally results in the execution of the function it wraps, called the _target function_. The bound function will store the parameters passed — which include the value of `this` and the first few arguments — as its internal state. These values are stored in advance, instead of being passed at call time. You can generally see `const boundFn = fn.bind(thisArg, arg1, arg2)` as being equivalent to `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` for the effect when it's called (but not when `boundFn` is constructed).
+The `bind()` function creates a new _bound function_. Calling the bound function generally results in the execution of the function it wraps, which is also called the _target function_. The bound function will store the parameters passed — which include the value of `this` and the first few arguments — as its internal state. These values are stored in advance, instead of being passed at call time. You can generally see `const boundFn = fn.bind(thisArg, arg1, arg2)` as being equivalent to `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` for the effect when it's called (but not when `boundFn` is constructed).
 
-A bound function can be further bound, creating another bound function `boundFn2`. The newly bound `thisArg` value is ignored, because the target function of `boundFn2`, which is `boundFn`, already has a bound `this`. When `boundFn2` is called, it would call `boundFn`, which, in turn, calls `fn`. The arguments that `fn` ultimately receives are, in order: the arguments bound by `boundFn`, arguments bound by `boundFn2`, and the arguments received by `boundFn2`.
+A bound function can be further bound by calling `boundFn.bind(thisArg, /* more args */)`, which creates another bound function `boundFn2`. The newly bound `thisArg` value is ignored, because the target function of `boundFn2`, which is `boundFn`, already has a bound `this`. When `boundFn2` is called, it would call `boundFn`, which in turn calls `fn`. The arguments that `fn` ultimately receives are, in order: the arguments bound by `boundFn`, arguments bound by `boundFn2`, and the arguments received by `boundFn2`.
 
 ```js
 function log(...args) {
@@ -80,10 +80,10 @@ When using a bound function as the right-hand side of [`instanceof`](/en-US/docs
 ```js
 class Base {}
 const BoundBase = Base.bind(null, 1, 2);
-new Base() instanceof BoundBase; // true
+console.log(new Base() instanceof BoundBase); // true
 ```
 
-The bound function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property is the `length` of the target function minus the number of arguments being bound (not counting the `thisArg` parameter), with 0 being the minimum value. The bound function's [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property is the `name` of the target function with `"bound "` prepended.
+The bound function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property is the `length` of the target function minus the number of arguments being bound (not counting the `thisArg` parameter), with 0 being the minimum value. The bound function's [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property is the `name` of the target function plus a `"bound "` prefix.
 
 ## Examples
 
