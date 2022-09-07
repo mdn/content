@@ -4705,7 +4705,7 @@
 /en-US/docs/JavaScript/Reference/default_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /en-US/docs/JavaScript/Reference/rest_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /en-US/docs/JavaScript/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
-/en-US/docs/JavaScript/Shells	/en-US/docs/Web/JavaScript/Shells
+/en-US/docs/JavaScript/Shells	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/JavaScript/Typed_arrays	/en-US/docs/Web/JavaScript/Typed_arrays
 /en-US/docs/JavaScript/Typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
@@ -5144,12 +5144,12 @@
 /en-US/docs/JavaScript_Documention/Reference/Statements/with	/en-US/docs/Web/JavaScript/Reference/Statements/with
 /en-US/docs/JavaScript_Documention/Reference/Symbols	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/JavaScript_Documention/Reference/rest_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
-/en-US/docs/JavaScript_Documention/Shells	/en-US/docs/Web/JavaScript/Shells
+/en-US/docs/JavaScript_Documention/Shells	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript_Methods_Index_(Alphabetical)	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript_Properties_Index	/en-US/docs/Web/JavaScript/Reference
-/en-US/docs/JavaScript_shells	/en-US/docs/Web/JavaScript/Shells
+/en-US/docs/JavaScript_shells	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_technologies_overview	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_templates	/en-US/docs/Web/JavaScript/Reference/Template_literals
 /en-US/docs/JavaScript_typed_arrays	/en-US/docs/Web/JavaScript/Typed_arrays
@@ -12279,6 +12279,7 @@
 /en-US/docs/Web/JavaScript/Reference/rest_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /en-US/docs/Web/JavaScript/Reference/template_strings	/en-US/docs/Web/JavaScript/Reference/Template_literals
 /en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
+/en-US/docs/Web/JavaScript/Shells	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /en-US/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /en-US/docs/Web/JavaScript/Tutorials	/en-US/docs/Web/JavaScript
