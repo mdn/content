@@ -45,10 +45,6 @@ The `asin(angle)` function accepts only one value as its parameter.
 
 {{CSSSyntax}}
 
-## Example
-
-<!-- TODO -->
-
 ## Specifications
 
 {{Specifications}}
