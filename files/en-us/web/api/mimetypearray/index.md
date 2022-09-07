@@ -28,17 +28,14 @@ The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} in
 
 ## Example
 
-The following example tests whether a plugin is available for the application/pdf mime type and if so, which plugin that is.
+The following example tests whether a plugin is available for the 'application/pdf' mime type and if so, logs its description.
 
 ```js
 const mimeTypes = navigator.mimeTypes;
-const flashPlugin = mimeTypes['video/x-flv'];
-if (typeof flashPlugin === "undefined") {
-  const vid = document.createElement('video');
-  // Use vid.canPlayType() to test for a supported mime type.
-} else {
-  // Notify the user that flash is being deprecated and they
-  //   should upgrade their browser.
+const pdf = mimeTypes.namedItem('application/pdf');
+
+if (pdf) {
+  console.log(pdf.description);
 }
 ```
 
