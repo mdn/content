@@ -9,9 +9,10 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.getSubImage
 ---
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("XRWebGLSubImage")}} object representing the WebGL texture to render.
 

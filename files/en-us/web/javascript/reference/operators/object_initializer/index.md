@@ -134,7 +134,7 @@ const c = {};
 const o = { a, b, c };
 
 // In other words,
-console.log((o.a === {a}.a)) // true
+console.log(o.a === { a }.a); // true
 ```
 
 #### Duplicate property names
@@ -146,7 +146,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
+In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
@@ -172,7 +172,7 @@ const o = {
   property: function (parameters) {},
   get property() {},
   set property(value) {},
-}
+};
 ```
 
 A shorthand notation is available, so that the keyword `function` is no longer necessary.
@@ -181,7 +181,7 @@ A shorthand notation is available, so that the keyword `function` is no longer n
 // Shorthand method names
 const o = {
   property(parameters) {},
-}
+};
 ```
 
 There is also a way to concisely define generator methods.
@@ -262,7 +262,7 @@ const mergedObj = { ...obj1, ...obj2 };
 
 ### Prototype setter
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value. (If the value is not an object or `null`, the object is not changed.)
 
 ```js
 const obj1 = {};
@@ -299,7 +299,7 @@ const obj3 = { ['__prot' + 'o__']: 17 };
 console.log(obj3.__proto__ === 17);
 ```
 
-Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
+Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
 ## Specifications
 

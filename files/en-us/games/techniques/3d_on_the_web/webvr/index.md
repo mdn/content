@@ -26,7 +26,7 @@ With the popularity of Oculus Rift and a lot of other devices in production comi
 
 The [WebVR API](/en-US/docs/Web/API/WebVR_API) is the central API for capturing information on VR Devices connected to a computer and headset position/orientation/velocity/acceleration information, and converting that into useful data you can use in your games and other applications.
 
-> **Note:** There are of course other APIs useful for creating games, for example [The Gamepad API](/en-US/docs/Web/API/Gamepad_API) for control inputs, and the [Device Orientation API](/en-US/docs/Web/Events/Detecting_device_orientation) for handling display orientation on mobile.
+> **Note:** There are of course other APIs useful for creating games, for example [The Gamepad API](/en-US/docs/Web/API/Gamepad_API) for control inputs, and the [Device Orientation API](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation) for handling display orientation on mobile.
 
 ### Browser support and spec status
 

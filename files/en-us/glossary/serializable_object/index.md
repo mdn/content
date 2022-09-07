@@ -11,7 +11,7 @@ tags:
 **Serializable objects** are objects that can be serialized and later deserialized in any JavaScript environment ("realm").
 This allows them to, for example, be stored on disk and later restored, or cloned with {{domxref("structuredClone()")}}, or shared between workers using {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}.
 
-The serialization may not include all the properties and other aspects of the the original object.
+The serialization may not include all the properties and other aspects of the original object.
 For example, a serialization of a {{domxref("DOMException")}} must include the `name` and `message` properties, but whether it includes other properties is implementation dependent.
 As a result, a deserialized object may not be an identical clone/copy of the original object.
 The new deserialized object will however be a {{glossary("deep copy")}}, so any properties that were serialized from the original object and then deserialized into the new object will share no references with the original object.

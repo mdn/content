@@ -57,7 +57,7 @@ _No changes._
 
 ### SVG
 
-_No changes_
+_No changes._
 
 ### JavaScript
 

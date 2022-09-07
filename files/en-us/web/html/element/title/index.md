@@ -121,8 +121,6 @@ A common navigation technique for users of assistive technology is to read the p
 
 If a form submission contains errors and the submission re-renders the current page, the title can be used to help make users aware of any errors with their submission. For instance, update the page `title` value to reflect significant page state changes (such as form validation problems).
 
-### Example
-
 ```html
 <title>2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!</title>
 ```

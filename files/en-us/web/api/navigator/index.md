@@ -76,7 +76,7 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.
-- {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WindowControlsOverlay")}} interface which exposes information about the geometry of the title bar in desktop Progressive Web Apps, and an event to know whenever it changes.
 - {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).

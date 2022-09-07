@@ -116,7 +116,7 @@ _No change._
 
 ### Interfaces
 
-_No change_
+_No change._
 
 ### XUL
 

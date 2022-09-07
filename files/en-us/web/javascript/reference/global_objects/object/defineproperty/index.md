@@ -100,7 +100,7 @@ descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exce
 
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
-preserved, you might freeze the {{jsxref("Object")}} upfront, specify all
+preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all
 options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create",
   "Object.create(null)")}}.
 
@@ -518,7 +518,7 @@ console.log(MyClass.prototype.y); // 1
 
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}

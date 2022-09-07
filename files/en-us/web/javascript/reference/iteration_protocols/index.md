@@ -145,15 +145,15 @@ Array Iterator {}
 
 There are many APIs that accept iterables. Some examples include:
 
-- {{jsxref("Map", "new Map([<var>iterable</var>])")}}
-- {{jsxref("WeakMap", "new WeakMap([<var>iterable</var>])")}}
-- {{jsxref("Set", "new Set([<var>iterable</var>])")}}
-- {{jsxref("WeakSet", "new WeakSet([<var>iterable</var>])")}}
-- {{jsxref("Promise.all()", "Promise.all(<var>iterable</var>)")}}
-- {{jsxref("Promise.allSettled()", "Promise.allSettled(<var>iterable</var>)")}}
-- {{jsxref("Promise.race()", "Promise.race(<var>iterable</var>)")}}
-- {{jsxref("Promise.any()", "Promise.any(<var>iterable</var>)")}}
-- {{jsxref("Array.from()", "Array.from(<var>iterable</var>)")}}
+- {{jsxref("Map/Map", "Map()")}}
+- {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
+- {{jsxref("Set/Set", "Set()")}}
+- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
+- {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettled()")}}
+- {{jsxref("Promise.race()")}}
+- {{jsxref("Promise.any()")}}
+- {{jsxref("Array.from()")}}
 
 ```js
 const myObj = {};
@@ -431,5 +431,5 @@ console.log(`${someString}`); // "hi"
 
 ## See also
 
-- {{jsxref("Statements/function*", "the <code>function*</code> documentation", "", 1)}}
+- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [Iteration in the ECMAScript specification](https://tc39.es/ecma262/#sec-iteration)

@@ -54,7 +54,7 @@ Throws {{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Refer
 ## Description
 
 Unlike what common belief suggests (perhaps due to other programming languages like
-[delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)),
+[delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)),
 the `delete` operator has **nothing** to do with directly freeing memory.
 Memory management is done indirectly via breaking references.
 See the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
@@ -290,9 +290,9 @@ console.log(3 in trees); // true
 ```
 
 If instead, you want to remove an array element by changing the contents of the array,
-use the {{jsxref("Array.splice()", "splice()")}} method. In the following example,
+use the {{jsxref("Array/splice", "splice()")}} method. In the following example,
 `trees[3]` is removed from the array completely using
-{{jsxref("Array.splice()", "splice()")}}:
+{{jsxref("Array/splice", "splice()")}}:
 
 ```js
 const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];

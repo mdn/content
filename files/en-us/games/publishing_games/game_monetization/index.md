@@ -24,7 +24,7 @@ How much you charge for your game depends on the market, quality of your game an
 
 ## In-app purchases
 
-Instead of having people pay for your game up front, you can offer a free game with in-app purchases (IAPs.) In this case the game can be acquired without spending a dime — give the game to the players, but offer in-game currency, bonuses or benefits for real money. Specific examples can include bonus levels, better weapons or spells, or refilling the energy needed to play. Designing a good IAP system is an art of it's own.
+Instead of having people pay for your game up front, you can offer a free game with in-app purchases (IAPs.) In this case the game can be acquired without spending a dime — give the game to the players, but offer in-game currency, bonuses or benefits for real money. Specific examples can include bonus levels, better weapons or spells, or refilling the energy needed to play. Designing a good IAP system is an art of its own.
 
 Remember that you need thousands of downloads of your game to make IAPs effective — only a small fraction of players will actually pay for IAPs. How small? It varies, but around one person in every thousand is about average. The more people that play your game, the higher the chance someone will pay, so your earnings heavily depend on your [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) activities.
 
@@ -34,7 +34,7 @@ Games that feature IAPs are often referred to a **freemium** — a freemium game
 
 ### Add-ons and DLCs
 
-Add-ons and downloadable content are a good way to provide extra value to an already released game, but remember that you'll have to offer decent, entertaining content to attract people to buy it. A totally new set of levels with new characters, weapons and story is a good material for DLC, but to have enough sales the game itself has to be popular, or else there won't be any players interested in spending their hard earned money on it.
+Add-ons and downloadable content are a good way to provide extra value to an already released game, but remember that you'll have to offer decent, entertaining content to attract people to buy it. A totally new set of levels with new characters, weapons and story is a good material for DLC, but to have enough sales the game itself has to be popular, or else there won't be any players interested in spending their hard-earned money on it.
 
 ## Advertisements
 
@@ -42,17 +42,17 @@ Instead of actively selling the games you can also try to get yourself a passive
 
 There are many companies offering advert systems — you sign up and allow them to show adverts in exchange for a percentage of the earnings. Google AdSense is said to be the most effective one, but it's not designed for games and it's a pretty bad practice to use it for that purpose. Instead of risking of having your account closed and all the money blocked try to use the usual, gamedev targeted portals like [LeadBolt](https://www.leadboltapps.com/). They offer easy to implement systems to show the adverts in your games and split the earnings with you.
 
-Video ads are getting more and more popular, especially in the form of a pre-roll — they are shown at the beginning of your game while it's still loading. And on the topic of where to put the advertisements in your game it really depends on you. It should be as subtle as possible so as to not annoy the players too much, but visible enough to make them click it or at least take notice. Adding adverts between game sessions on game over screens is a popular approach.
+Video ads are getting more and more popular, especially in the form of a pre-roll — they are shown at the beginning of your game while it's still loading. And on the topic of where to put the advertisements in your game it really depends on you. It should be as subtle as possible to not annoy the players too much, but visible enough to make them click it or at least take notice. Adding adverts between game sessions on game over screens is a popular approach.
 
 ## Licensing
 
-There's an approach that can work as a monetization model on it's own, and that's selling licenses for distribution of your game. There are more and more portals interested in showing your games on their websites. They follow various strategies to earn money via your games, but you don't have to worry about all that as selling the license is usually a one-time deal. You get the money and they can get creative with using your game to make money.
+There's an approach that can work as a monetization model on its own, and that's selling licenses for distribution of your game. There are more and more portals interested in showing your games on their websites. They follow various strategies to earn money via your games, but you don't have to worry about all that as selling the license is usually a one-time deal. You get the money and they can get creative with using your game to make money.
 
 Finding publishers might be hard at first — try to look for them at the [HTML5 Gamedevs forums](https://www.html5gamedevs.com/). If you're well known they may reach out to you. Most of the deals are done through emails when talking to a dedicated person on the publisher side. Some publisher websites have that information easily available, while some others are harder to find. When reaching a publisher try to be nice and straight to the point — they are busy people.
 
 ### Exclusive licenses
 
-The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights— that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
+The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights — that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
 
 ### Non-exclusive licenses
 

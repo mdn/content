@@ -3,7 +3,6 @@ title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 tags:
   - Class
-  - Experimental
   - Internationalization
   - Intl
   - JavaScript

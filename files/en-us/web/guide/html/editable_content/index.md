@@ -56,7 +56,7 @@ If you want to use a different paragraph separator, the above browsers all suppo
 document.execCommand("defaultParagraphSeparator", false, "p");
 ```
 
-Additionally, Firefox supports the *non-standard* argument, `br`, for `defaultParagraphSeparator` since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:
+Additionally, Firefox supports the _non-standard_ argument, `br`, for `defaultParagraphSeparator` since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:
 
 ```js
 document.execCommand("defaultParagraphSeparator", false, "br");

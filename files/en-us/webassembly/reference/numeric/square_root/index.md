@@ -10,7 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`sqrt`** instructions, short for *square root*, are used to get the square root of a number.
+The **`sqrt`** instructions, short for _square root_, are used to get the square root of a number.
 
 {{EmbedInteractiveExample("pages/wat/sqrt.html", "tabbed-standard")}}
 

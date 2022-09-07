@@ -49,7 +49,7 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 
 The following example creates a list of items with a background image that rotates between three different colors and three widths. In a supporting browser you will see something like the image below.
 
-![The width and color of the background image changes based on the custom properties](Guide/boxbg.png)
+![The width and color of the background image changes based on the custom properties](guide/boxbg.png)
 
 To achieve this we'll define two custom CSS properties, `--boxColor` and `--widthSubtractor`.
 

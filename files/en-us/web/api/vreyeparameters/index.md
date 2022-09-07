@@ -27,9 +27,9 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 ## Properties
 
 - {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : *Represents the o*ffset from the center point between the user's eyes to the center of the eye, measured in meters.
+  - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
 - {{domxref("VREyeParameters.fieldOfView")}}  {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : *Describes t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
+  - : Describes the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 - {{domxref("VREyeParameters.renderWidth")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.
 - {{domxref("VREyeParameters.renderHeight")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}

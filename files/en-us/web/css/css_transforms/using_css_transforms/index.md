@@ -542,6 +542,6 @@ Once you have done this, you can work on the element in the 3D space.
 
 ## See also
 
-- [Using device orientation with 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
+- [Using device orientation with 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)
 - [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

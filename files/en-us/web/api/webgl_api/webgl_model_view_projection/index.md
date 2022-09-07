@@ -551,7 +551,7 @@ In WebGL, the near and far clipping planes are defined by specifying the distanc
 
 ![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](cameraviewfustum.svg)
 
-The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are *entirely* outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustum so that they no longer exit it.
+The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are _entirely_ outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustum so that they no longer exit it.
 
 Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like [back-face culling](https://en.wikipedia.org/wiki/Back-face_culling) (removing polygons whose back side is facing the camera) and occlusion culling using [hidden-surface determination](https://en.wikipedia.org/wiki/Hidden-surface_determination) (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
 
@@ -646,8 +646,6 @@ Consider a box sitting on a table and a camera resting on the table one meter aw
 Now let's reset the scene, placing the box back in its starting point, with the camera two meters from, and directly facing, the box. This time, however, the camera is locked down on the table and cannot be moved or turned. This is what working in WebGL is like. So how do we simulate moving the camera through space?
 
 Instead of moving the camera backward and to the left, we apply the inverse transform to the box: we move the _box_ backward one meter, and then 10 centimeters to its right. The result, from the perspective of each of the two objects, is identical.
-
-**<<< insert image(s) here >>>**
 
 The final step in all of this is to create the **view matrix**, which transforms the objects in the scene so they're positioned to simulate the camera's current location and orientation. Our code as it stands can move the cube around in world space and project everything to have perspective, but we still can't move the camera.
 

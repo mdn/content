@@ -85,7 +85,7 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 - Addition of the {{WebExtAPIRef("storage.StorageArea.onChanged")}} event that enables you to listen for changes in content in the `local` and `sync` storage areas ({{bug(1758475)}}).
 
-#### Removals
+### Removals
 
 ### Other
 

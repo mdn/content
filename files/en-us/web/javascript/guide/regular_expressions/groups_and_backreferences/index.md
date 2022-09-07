@@ -55,7 +55,7 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
+              >String.prototype.match()</a
             ></code
           >
           won't return groups if the <code>/.../g</code> flag is set. However,
@@ -63,7 +63,7 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
+              >String.prototype.matchAll()</a
             ></code
           >
           to get all matches.

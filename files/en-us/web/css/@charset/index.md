@@ -41,7 +41,7 @@ As there are several ways to define the character encoding of a style sheet, the
 ```
 
 - _charset_
-  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with *preferred* must be used.
+  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with _preferred_ must be used.
 
 ## Examples
 

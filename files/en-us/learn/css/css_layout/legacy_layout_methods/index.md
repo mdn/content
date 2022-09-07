@@ -189,7 +189,7 @@ The gutters between the columns are 20 pixels wide. We create these gutters as a
 
 We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.
 
-Our next step is to create a rule for the class `.col`,  floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
+Our next step is to create a rule for the class `.col`, floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
 
 ```css
 .col {

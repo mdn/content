@@ -91,7 +91,7 @@ Highlights:
 #### Removals
 
 - Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Statements/let#let_blocks) has been dropped ({{bug(1167029)}}.
-- The non-standard and deprecated property {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} has been removed ({{bug(683218)}}).
+- The non-standard and deprecated property `Object.prototype.__noSuchMethod__` has been removed ({{bug(683218)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -197,7 +197,7 @@ _No change._
 
 ### Interfaces
 
-_No change_
+_No change._
 
 ### XUL
 

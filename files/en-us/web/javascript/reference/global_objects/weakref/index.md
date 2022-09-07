@@ -25,7 +25,7 @@ A `WeakRef` object contains a weak reference to an object, which is called its _
 
 ## Instance methods
 
-- {{jsxref("WeakRef.deref", "WeakRef.prototype.deref()")}}
+- {{jsxref("WeakRef.prototype.deref()")}}
   - : Returns the `WeakRef` object's target object, or `undefined` if the target object has been reclaimed.
 
 ## Avoid where possible

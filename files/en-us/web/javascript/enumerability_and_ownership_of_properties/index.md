@@ -58,7 +58,7 @@ Note that this is not the most efficient algorithm for all cases, but useful for
 const SimplePropertyRetriever = {
   getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-      // Or could use for..in filtered with Object.hasOwn or just this: return Object.keys(obj);
+      // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
   getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
@@ -78,7 +78,7 @@ const SimplePropertyRetriever = {
   },
   getOwnAndPrototypeEnumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
-    // Or could use unfiltered for..in
+    // Or could use unfiltered for...in
   },
   getOwnAndPrototypeNonenumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);

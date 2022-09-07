@@ -65,4 +65,4 @@ console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}

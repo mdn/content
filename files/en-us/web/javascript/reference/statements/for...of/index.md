@@ -59,6 +59,15 @@ for (let value of iterable) {
 
 You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) or an object property like `for (x.y of iterable)` as well.
 
+However, a special rule forbids using `async` as the variable name. This is invalid syntax:
+
+```js example-bad
+let async;
+for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
+```
+
+This is to avoid syntax ambiguity with the valid code `for (async of => {};;)`, which is a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop.
+
 ## Examples
 
 ### Iterating over an Array

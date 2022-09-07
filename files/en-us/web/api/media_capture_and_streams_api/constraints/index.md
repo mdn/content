@@ -303,7 +303,7 @@ h3 {
 }
 ```
 
-#### Defaults and variables
+### Defaults and variables
 
 First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.
 
@@ -360,7 +360,7 @@ videoConstraintEditor.value = videoDefaultConstraintString;
 audioConstraintEditor.value = audioDefaultConstraintString;
 ```
 
-#### Updating the settings display
+### Updating the settings display
 
 To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.
 
@@ -378,7 +378,7 @@ function getCurrentSettings() {
 
 This gets called after the stream first starts up, as well as any time we've applied updated constraints, as you'll see below.
 
-#### Building the track constraint set objects
+### Building the track constraint set objects
 
 The `buildConstraints()` function builds the {{domxref("MediaTrackConstraints")}} objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.
 
@@ -395,7 +395,7 @@ function buildConstraints() {
 
 This uses {{jsxref("JSON.parse()")}} to parse the code in each editor into an object. If either call to JSON.parse() throws an exception, `handleError()` is called to output the error message to the log.
 
-#### Configuring and starting the stream
+### Configuring and starting the stream
 
 The `startVideo()` method handles setting up and starting the video stream.
 
@@ -453,7 +453,7 @@ document.getElementById("startButton").addEventListener(
 );
 ```
 
-#### Applying constraint set updates
+### Applying constraint set updates
 
 Next, we set up an event listener for the "Apply Constraints" button. If it's clicked and there's not already media in use, we call `startVideo()`, and let that function handle starting the stream with the specified settings in place. Otherwise, we follow these steps to apply the updated constraints to the already-active stream:
 
@@ -496,7 +496,7 @@ document.getElementById("applyButton").addEventListener(
 );
 ```
 
-#### Handling the stop button
+### Handling the stop button
 
 Then we set up the handler for the stop button.
 
@@ -517,7 +517,7 @@ document.getElementById("stopButton").addEventListener("click", () => {
 
 This stops the active tracks, sets the `videoTrack` and `audioTrack` variables to `null` so we know they're gone, and removes the stream from the {{HTMLElement("video")}} element by setting {{domxref("HTMLMediaElement.srcObject")}} to `null`.
 
-#### Simple tab support in the editor
+### Simple tab support in the editor
 
 This code adds simple support for tabs to the {{HTMLElement("textarea")}} elements by making the tab key insert two space characters when either constraint edit box is focused.
 
@@ -541,7 +541,7 @@ videoConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 ```
 
-#### Show constrainable properties the browser supports
+### Show constrainable properties the browser supports
 
 The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getSupportedConstraints", "Example")}} for details on how this code works.
 
@@ -559,7 +559,7 @@ for (const constraint in supportedConstraints) {
 }
 ```
 
-#### Error handling
+### Error handling
 
 We also have some simple error handling code; `handleError()` is called to handle promises which fail, and the `log()` function appends the error message to a special logging {{HTMLElement("div")}} box under the video.
 

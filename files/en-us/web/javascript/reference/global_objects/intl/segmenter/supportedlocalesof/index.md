@@ -18,15 +18,14 @@ The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing
 ## Syntax
 
 ```js
-supportedLocalesOf(locales)
-supportedLocalesOf(locales, options)
+Intl.Segmenter.supportedLocalesOf(locales)
+Intl.Segmenter.supportedLocalesOf(locales, options)
 ```
 
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
   - : An object that may have the following property:
     - `localeMatcher`

@@ -18,7 +18,7 @@ browser-compat: api.HTMLImageElement.name
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The {{domxref("HTMLImageElement")}}
-interface's *deprecated* **`name`** property specifies
+interface's _deprecated_ **`name`** property specifies
 a name for the element. This has been replaced by the {{domxref("Element.id", "id")}}
 property available on all elements.
 

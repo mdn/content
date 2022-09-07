@@ -120,7 +120,7 @@ This works fine. You can escape other characters in the same way, e.g. `\"`, and
 
 ## Concatenating strings
 
-Concatenate just means "join together". To join together strings in JavaScript you can use a different type of string, called a *template literal*.
+Concatenate just means "join together". To join together strings in JavaScript you can use a different type of string, called a _template literal_.
 
 A template literal looks just like a normal string, but instead of using single or double quote marks  (`'` or `"`), you use backtick characters (`` ` ``):
 

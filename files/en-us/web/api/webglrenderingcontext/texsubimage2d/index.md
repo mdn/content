@@ -53,7 +53,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel x coordinate of a width-wide
     by height-wide rectangular subregion of the texture array.

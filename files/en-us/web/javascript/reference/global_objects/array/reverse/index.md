@@ -29,9 +29,7 @@ The reference to the original array, now reversed. Note that the array is revers
 The `reverse` method transposes the elements of the calling array object in
 place, mutating the array, and returning a reference to the array.
 
-`reverse` is intentionally generic; this method can be
-{{jsxref("Function.call", "called", "", 1)}} or {{jsxref("Function.apply", "applied",
-  "", 1)}} to objects resembling arrays. Objects which do not contain a
+`reverse` is intentionally generic; this method can be called on objects resembling arrays. Objects which do not contain a
 `length` property reflecting the last in a series of consecutive, zero-based
 numerical properties may not behave in any meaningful manner.
 

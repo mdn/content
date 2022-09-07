@@ -11,7 +11,7 @@ browser-compat: javascript.operators.await
 ---
 {{jsSidebar("Operators")}}
 
-The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with [JavaScript modules.](/en-US/docs/Web/JavaScript/Guide/Modules)
+The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
 ## Syntax
 
@@ -72,7 +72,7 @@ f1();
 
 ### Thenable objects
 
-{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just
+[Thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) will be fulfilled just
 the same.
 
 ```js
@@ -153,6 +153,6 @@ export default await colors;
 ## See also
 
 - {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("Operators/async_function", "async function expression")}}
+- [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
 - {{jsxref("AsyncFunction")}} object
 - [Top level await](https://v8.dev/features/top-level-await) on v8.dev

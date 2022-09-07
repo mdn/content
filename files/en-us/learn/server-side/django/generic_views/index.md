@@ -245,7 +245,7 @@ urlpatterns = [
 
 For the _book-detail_ path the URL pattern uses a special syntax to capture the specific id of the book that we want to see.
 The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data.
-For example, **\<something>** , will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
+For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
 
 In this case we use `'<int:pk>'` to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named `pk` (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 
@@ -369,7 +369,7 @@ Let's consider a few real examples of patterns:
           <strong>The captured values are always passed as a string!</strong>
         </p>
         <p>
-          For example, this would match <code>book/1234</code> , and send a
+          For example, this would match <code>book/1234</code>, and send a
           variable <code>pk='1234'</code> to the view.
         </p>
       </td>

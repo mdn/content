@@ -144,7 +144,7 @@ OK, our template is done and it's time to move on.
 
 As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, `ctx`). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.
 
-![Gridded graph paper with small squares covering its area with a steelblue square in the middle. The top left corner of the canvas is point (0, 0) of the canvas x-axis and y-axis. . The horizontal (x) axis runs from left to right denoting the width, and the vertical (y) axis runs from top to bottom denotes the height. The top left corner of the blue square is labeled as being a distance of x units from the y-axis and y units from the x-axis.](canvas_default_grid.png)
+![Gridded graph paper with small squares covering its area with a steelblue square in the middle. The top left corner of the canvas is point (0, 0) of the canvas x-axis and y-axis. The horizontal (x) axis runs from left to right denoting the width, and the vertical (y) axis runs from top to bottom denotes the height. The top left corner of the blue square is labeled as being a distance of x units from the y-axis and y units from the x-axis.](canvas_default_grid.png)
 
 Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.
 
@@ -267,7 +267,7 @@ Let's draw an equilateral triangle on the canvas.
     - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
     - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
 
-    ![A equilateral triangle pointing downwards with labeled angles and sides. The horizontal line at the top is labeled 'adjacent'. A perpendicular dotted line, from the middle of the adjacent line, labeled 'opposite', splits the triangle creating two equal right triangles.  The right side of the triangle is labeled the hypotenuse, as it is the hypotenuse of the right triangle formed by the line labeled 'opposite'. while all three-sided of the triangle are of equal length, the hypotenuse is the longest side of the right triangle.](trigonometry.png)
+    ![A equilateral triangle pointing downwards with labeled angles and sides. The horizontal line at the top is labeled 'adjacent'. A perpendicular dotted line, from the middle of the adjacent line, labeled 'opposite', splits the triangle creating two equal right triangles. The right side of the triangle is labeled the hypotenuse, as it is the hypotenuse of the right triangle formed by the line labeled 'opposite'. while all three-sided of the triangle are of equal length, the hypotenuse is the longest side of the right triangle.](trigonometry.png)
 
     One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
 
@@ -487,7 +487,7 @@ To see how it works, let's quickly look again at our Bouncing Balls example ([se
 ```js
 function loop() {
    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0,  width, height);
+   ctx.fillRect(0, 0, width, height);
 
    for (const ball of balls) {
      ball.draw();

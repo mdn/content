@@ -101,9 +101,8 @@ table below.
 The following example shows the use of the `entryType` property.
 
 ```js
-function run_PerformanceEntry() {
-
-  // check for feature support before continuing
+function runPerformanceEntry() {
+  // Check for feature support before continuing
   if (performance.mark === undefined) {
     console.log("performance.mark not supported");
     return;
@@ -113,11 +112,10 @@ function run_PerformanceEntry() {
   performance.mark("begin");
 
   // Check the entryType of all the "begin" entries
-  const entriesNamedBegin = performance.getEntriesByName("begin");
-  for (let i=0; i < entriesNamedBegin.length; i++) {
-      const typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log(`Entry is type: ${typeOfEntry}`);
-  }
+  performance.getEntriesByName("begin")
+    .forEach((entry) => {
+      console.log(`Entry is type: ${entry.entryType}`);
+    });
 
 }
 ```

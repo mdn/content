@@ -32,7 +32,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more *sources* can be allowed for the base-uri policy:
+One or more _sources_ can be allowed for the base-uri policy:
 
 ```http
 Content-Security-Policy: base-uri <source>;

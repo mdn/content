@@ -10,7 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`shr`** instructions, short for *shift-right*, are used for performing a bitwise right-shift, similar to the **`>>>`** operator in other languages.
+The **`shr`** instructions, short for _shift-right_, are used for performing a bitwise right-shift, similar to the **`>>>`** operator in other languages.
 
 {{EmbedInteractiveExample("pages/wat/shr.html", "tabbed-taller")}}
 

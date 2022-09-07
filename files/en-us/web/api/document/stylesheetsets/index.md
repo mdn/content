@@ -32,10 +32,9 @@ const sheets = document.styleSheetSets;
 
 list.textContent = '';
 
-for (let i = 0; i < sheets.length; i++) {
+for (const sheet of sheets) {
   const item = document.createElement('li');
-
-  item.textContent = sheets[i];
+  item.textContent = sheet;
   list.appendChild(item);
 }
 ```
