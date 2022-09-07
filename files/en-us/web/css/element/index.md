@@ -87,6 +87,58 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 {{EmbedLiveSample("Page_Preview")}}
 
+### Emulating -webkit-box-reflect
+
+Firefox does not support -webkit-box-reflect. You can emulate it -to some extent- using element. 
+
+#### HTML for webkit
+
+```html
+<img id="pictureWReflection"
+     src="/media/cc0-images/grapefruit-slice-332-332.jpg">
+```
+
+#### CSS for webkit
+
+```css
+#pictureWReflection {
+    -webkit-box-reflect: below 20px -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,1)), color-stop(40%, transparent) , to(transparent));
+}
+```
+
+
+#### HTML for Firefox
+
+```html
+<span id="#container">
+<img id="pictureWReflection"
+     src="/media/cc0-images/grapefruit-slice-332-332.jpg">
+</span>
+```
+
+#### CSS for firefox
+
+```css
+#container {
+ position:relative;
+}
+#container:after
+{
+ background: -moz-element(#pictureWReflection) no-repeat;
+ transform:scaleY(-1);
+ margin-top:20px;
+ mask-image: linear-gradient(to top, rgba(255,255,255,1), transparent 40%);
+
+ z-index:10;
+ content:"";
+ position:absolute;
+ top:100%;
+ left:0px;
+ width:100%;
+ height:100%;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
