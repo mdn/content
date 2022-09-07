@@ -31,14 +31,23 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* �
 
 > **Note:** Assertions can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc.
 
+> **Note:** The grammar does not allow a line break between the `"module-name"` specifier and the `assert` keyword, to avoid syntactical ambiguity in the following valid code where `assert` is a variable name via [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion):
+>
+> ```js
+> import { something } from "module-name"
+> assert(something)
+> ```
+
+### Parameters
+
 - `keyN`
-  - : One assertion key. Can be an identifier or a string literal — similar to what you can use in an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), except number literals and computed properties.
+  - : One assertion key. Can be an identifier or a string literal — similar to what you can use in an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), except for number literals and computed properties.
 - `"dataN"`
   - : One assertion value. Must be a string literal.
 
 ## Description
 
-Import assertions allow hosts to do addition checks about the module that has just been loaded. The primary motivation was JSON modules. Consider the following statement:
+Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary motivation was JSON modules. Consider the following statement:
 
 ```js
 import data from "https://exmaple.com/data.json";
