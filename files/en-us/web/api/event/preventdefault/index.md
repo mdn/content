@@ -75,7 +75,8 @@ instead.
 
 #### HTML
 
-Here's the form:
+We have a basic HTML form below to capture user input.
+Since we're only interested in keystrokes, we're disabling `autocomplete` to prevent the browser from filling in the input field with cached values.
 
 ```html
 <div class="container">
