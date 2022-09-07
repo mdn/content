@@ -55,7 +55,7 @@ function handleOrientation(event) {
 
 ### Orientation values explained
 
-The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) article which is summarized below.
+The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) article which is summarized below.
 
 - The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
 - The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.
@@ -156,7 +156,7 @@ The motion event contains four properties:
 
 ### Motion values explained
 
-The {{domxref("DeviceMotionEvent")}} objects provide web developers with information about the speed of changes for the device's position and orientation. The changes are provided along three axis (see [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details).
+The {{domxref("DeviceMotionEvent")}} objects provide web developers with information about the speed of changes for the device's position and orientation. The changes are provided along three axis (see [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details).
 
 For {{domxref("DeviceMotionEvent.acceleration","acceleration")}} and {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}}, those axes correspond to the following:
 
@@ -184,6 +184,6 @@ Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the int
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
-- [Using deviceorientation in 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [Using deviceorientation in 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Cyber Orb: 2D maze game with device orientation](/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
