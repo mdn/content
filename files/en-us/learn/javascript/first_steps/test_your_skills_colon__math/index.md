@@ -35,6 +35,28 @@ So, try updating the live code below to recreate the finished example, following
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math1-download.html) to work in your own editor or in an online editor.
+> 
+> var num1 = 7;
+var num2 = 5;
+var num3 = 4;
+var num4 = 16;
+var num5;
+var num6;
+
+num5 = num1 + num2;
+num6 = num4 / num3;
+
+var finalResult;
+
+finalResult = num5 * num6;
+console.log(finalResult);
+var evenOddResult = finalResult;
+
+if (evenOddResult % 2 == 0) {
+   console.log("Final Result Is Even. Hrm");
+} else {
+   console.log("Final Result Is Odd. Hrm");
+}
 
 ## Math 2
 
