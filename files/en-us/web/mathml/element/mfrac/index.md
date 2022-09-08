@@ -59,7 +59,6 @@ denominator "3 − b":
   </mfrac>
 ```
 
-
 {{ EmbedLiveSample('simple_fraction', 700, 200, "", "") }}
 
 ### Fraction without bar
