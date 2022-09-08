@@ -265,10 +265,11 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["Device orientation events"],
       "guides": [
-        "/docs/Web/Events/Detecting_device_orientation",
-        "/docs/Web/Events/Orientation_and_motion_data_explained",
-        "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
+        "/docs/Web/API/Device_orientation_events/Detecting_device_orientation",
+        "/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained",
+        "/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms"
       ],
       "interfaces": [
         "DeviceMotionEvent",
@@ -280,7 +281,7 @@
       "properties": [],
       "events": [
         "Window: deviceorientation",
-        "Window: compassneedscalibration",
+        "Window: deviceorientationabsolute",
         "Window: devicemotion"
       ]
     },

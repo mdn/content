@@ -33,7 +33,7 @@ This page lists a number of impressive web technology demos for you to get inspi
 - [X-Type](https://phoboslab.org/xtype/)
   - : Vertically scrolling space shooter demo.
 - [Xibalba](https://phoboslab.org/xibalba/)
-  - : Retro (Doom-style) first person shooter.
+  - : Retro (Doom-style) first-person shooter.
 - [Gorescript](https://timeinvariant.github.io/gorescript/play/)
   - : Another retro style first-person shooter.
 - [The Wizard](https://hypnoticowl.com/games/the-wizard/)

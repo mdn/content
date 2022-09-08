@@ -23,7 +23,7 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 It is possible for extensions to make conflicting requests. If two extensions listen to `onHeadersReceived` for the same request and return `responseHeaders` to set the same header (for example, `Set-Cookie`) not present in the original response, only one of the changes will succeed.
 
-However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict.  For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`.  Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
+However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict. For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`. Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
 
 If you want to see the headers that are processed by the system, without the risk that another extension will alter them, use {{WebExtAPIRef("webRequest.onResponseStarted")}}, although you can't modify headers on this event.
 

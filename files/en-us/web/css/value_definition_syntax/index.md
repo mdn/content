@@ -259,6 +259,34 @@ But not:
 - `bold smaller smaller smaller`, as the different occurrence of `smaller` must be separated by commas.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
+The hash mark may optionally be followed by curly braces to indicate precisely how many times the repetition occurs.
+
+```css
+bold smaller#{1,3}
+```
+
+This example matches the following values:
+
+- `bold smaller`
+- `bold smaller, smaller`
+- `bold smaller, smaller, smaller`
+
+But not:
+
+- `bold smaller, smaller, smaller, smaller`, as `smaller` must appear at most three times.
+
+```css
+bold smaller#{2}
+```
+
+This example matches the following value:
+
+- `bold smaller, smaller`
+
+But not:
+
+- `bold smaller`, as `smaller` must appear exactly two times.
+
 ### Exclamation point (`!`)
 
 The _exclamation point multiplier_ after a group indicates that the group is required, and must produce at least one value; even if the grammar of the items within the group would otherwise allow the entire contents to be omitted, at least one component value must not be omitted.

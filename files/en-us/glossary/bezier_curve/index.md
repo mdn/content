@@ -18,5 +18,5 @@ To draw the curve, two imaginary lines are drawn, one from P<sub>0</sub> to P<su
 ## See also
 
 - [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) on Wikipedia
-- [Cubic Bézier timing functions in CSS](</en-US/docs/Web/CSS/easing-function#cubic_bézier_functions)
+- [Cubic Bézier timing functions in CSS](/en-US/docs/Web/CSS/easing-function#using_the_cubic-bezier_function)
 - {{SVGAttr("keySplines")}} SVG attribute
