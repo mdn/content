@@ -18,17 +18,16 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ## Examples
 
-The following example will display the message "division by zero" followed by the fraction which generated it. It uses special style to highlight that error:
+In the following example, `<merror>` is used to indicate a parsing error for some LaTeX-like input:
 
 ```html
-<math>
-  <merror>
-    <mtext>Division by zero:</mtext>
-    <mfrac>
-      <mn>1</mn>
-      <mn>0</mn>
-    </mfrac>
-  </merror>
+<math display="block">
+  <mfrac>
+    <merror>
+      <mtext>Syntax error: \frac{1}</mtext>
+    </merror>
+    <mn>3</mn>
+  </mfrac>
 </math>
 ```
 
