@@ -27,22 +27,21 @@ Here's an example manifest:
 
 ```json
 {
-  "name": "favorite-color-examples@mozilla.org",
+  "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
-    "color": "management thinks it should be blue!"
+  "data": {
+    "colour": "management thinks it should be blue!"
   }
 }
 ```
 
-Given this manifest, the "favorite-color-examples\@mozilla.org" extension could access the data using code like this:
+Given this manifest, the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) extension could access the data using code like this:
 
 ```js
-let storageItem = browser.storage.managed.get('color');
+let storageItem = browser.storage.managed.get('colour');
 storageItem.then((res) => {
-  console.log(`Managed color is: ${res.color}`);
+  console.log(`Managed colour is: ${res.colour}`);
 });
 ```
 
