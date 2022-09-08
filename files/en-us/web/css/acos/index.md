@@ -23,6 +23,7 @@ The **`acos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 /* Single <number> values */
 transform: rotate(acos(-0.2));
 transform: rotate(acos(2 * 0.125));
+
 /* Other values */
 transform: rotate(acos(pi / 5));
 transform: rotate(acos(e / 3));
