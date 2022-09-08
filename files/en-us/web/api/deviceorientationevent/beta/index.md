@@ -17,7 +17,7 @@ browser-compat: api.DeviceOrientationEvent.beta
 
 Returns the rotation of the device around the X axis; that is, the number of degrees,
 ranged between -180 and 180,  by which the device is tipped forward or backward.
-See [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details.
+See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.
 
 ## Value
 
@@ -34,7 +34,7 @@ A number.
 ## See also
 
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}

@@ -53,8 +53,8 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 - [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
-- [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
-  - : An overview for those who _think_ they know JavaScript.
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
+  - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
   - : Overview of available data structures in JavaScript.
 - [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
@@ -94,7 +94,7 @@ Helpful tools for writing and debugging your **JavaScript** code.
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), and more.
-- [JavaScript Shells](/en-US/docs/Web/JavaScript/Shells)
+- [JavaScript Shells](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#shells)
   - : A JavaScript shell allows you to quickly test snippets of JavaScript code.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.

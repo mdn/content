@@ -45,7 +45,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > - **page-type**
 >   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Constructor**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**).
+>   - : Always include the following tags: **API**, **Reference**, **Constructor**, the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**).
 >
 >     Include the following tags as appropriate:
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.

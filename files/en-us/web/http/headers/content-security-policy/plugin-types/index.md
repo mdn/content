@@ -5,7 +5,6 @@ tags:
   - CSP
   - Content-Security-Policy
   - Directive
-  - Flash
   - HTTP
   - Java
   - Plugin
@@ -69,20 +68,6 @@ is only used if you are allowing plugins with `object-src` at all.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-```
-
-### Allowing Flash content
-
-The content security policy
-
-```http
-Content-Security-Policy: plugin-types application/x-shockwave-flash
-```
-
-will allow to load flash objects:
-
-```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
 ```
 
 ### Allowing Java applets

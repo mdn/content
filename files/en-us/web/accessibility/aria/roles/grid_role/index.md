@@ -53,7 +53,7 @@ The `grid` role is a composite widget containing a collection of one or more row
 </table>
 ```
 
-A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) for more details
+A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) for more details.
 
 Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using `rowgroups`.
 
@@ -87,10 +87,10 @@ When a keyboard user encounters a grid, they navigate the rows and columns using
 
 | Key                               | Action                                                                                                                                                                                                                                |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>→</kbd>                      | Moves focus one cell to the right. If focus is on the right-most cell in the row, focus does not move.                                                                                                                                |
-| <kbd>←</kbd>                      | Moves focus one cell to the left. If focus is on the left-most cell in the row, focus does not move.                                                                                                                                  |
-| <kbd>↓</kbd>                      | Moves focus one cell down. If focus is on the bottom cell in the column, focus does not move.                                                                                                                                         |
-| <kbd>↑</kbd>                      | Moves focus one cell up. If focus is on the top cell in the column, focus does not move.                                                                                                                                              |
+| <kbd>→</kbd>                      | Moves focus one cell to the right. Optionally (layout grids), if focus is on the right-most cell in the row, focus may move to the first cell in the following row. If focus is on the last cell in the grid, focus does not move.                                                                                                                                |
+| <kbd>←</kbd>                      | Moves focus one cell to the left. Optionally (layout grids), if focus is on the left-most cell in the row, focus may move to the last cell in the previous row. If focus is on the first cell in the grid, focus does not move.                                                                                                                                  |
+| <kbd>↓</kbd>                      | Moves focus one cell down. Optionally (layout grids), if focus is on the bottom cell in the column, focus may move to the top cell in the following column. If focus is on the last cell in the grid, focus does not move.                                                                                                                                         |
+| <kbd>↑</kbd>                      | Moves focus one cell up. Optionally (layout grids), if focus is on the top cell in the column, focus may move to the bottom cell in the previous column. If focus is on the first cell in the grid, focus does not move.                                                                                                                                              |
 | <kbd>Page Down</kbd>              | Moves focus down an author-determined number of rows, typically scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row of the grid, focus does not move. |
 | <kbd>Page Up</kbd>                | Moves focus up an author-determined number of rows, typically scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row of the grid, focus does not move.      |
 | <kbd>Home</kbd>                   | Moves focus to the first cell in the row that contains focus.                                                                                                                                                                         |
@@ -135,7 +135,7 @@ If cells, rows, or columns can be selected, the following key combination are co
   </thead>
   <tbody role="rowgroup">
     <tr role="row">
-      <th scope="row" role="rowheader">Week 35</th>
+      <th scope="row" role="rowheader">Week 1</th>
       <td>26</td>
       <td>27</td>
       <td>28</td>
@@ -145,7 +145,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       <td role="gridcell" tabindex="-1">1</td>
     </tr>
     <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
+      <th scope="row" role="rowheader">Week 2</th>
       <td role="gridcell" tabindex="-1">
         2
       </td>
@@ -169,7 +169,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       </td>
     </tr>
     <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
+      <th scope="row" role="rowheader">Week 3</th>
       <td role="gridcell" tabindex="-1">
         9
       </td>
@@ -193,7 +193,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       </td>
     </tr>
     <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
+      <th scope="row" role="rowheader">Week 4</th>
       <td role="gridcell" tabindex="-1">
         16
       </td>
@@ -217,7 +217,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       </td>
     </tr>
     <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
+      <th scope="row" role="rowheader">Week 5</th>
       <td role="gridcell" tabindex="-1">
         23
       </td>
@@ -241,7 +241,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       </td>
     </tr> 
     <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
+      <th scope="row" role="rowheader">Week 6</th>
       <td role="gridcell" tabindex="-1">
         30
       </td>
@@ -323,18 +323,26 @@ function moveto(newrow, newcol) {
 }
 
 document.querySelector('table').addEventListener("keydown", (event) => {
+  const col = parseInt(event.target.dataset.col, 10);
+  const row = parseInt(event.target.dataset.row, 10);
   switch (event.key) {
-    case "ArrowRight":
-      moveto(parseInt(event.target.dataset.row, 10), parseInt(event.target.dataset.col, 10) + 1);
+    case "ArrowRight": {
+      const newrow = col === 6 ? row + 1 : row;
+      const newcol = col === 6 ? 0 : col + 1;
+      moveto(newrow, newcol);
       break;
-    case "ArrowLeft":
-      moveto(parseInt(event.target.dataset.row, 10), parseInt(event.target.dataset.col, 10) - 1);
+    }
+    case "ArrowLeft": {
+      const newrow = col === 0 ? row - 1 : row;
+      const newcol = col === 0 ? 6 : col - 1;
+      moveto(newrow, newcol);
       break;
+    }
     case "ArrowDown":
-      moveto(parseInt(event.target.dataset.row, 10) + 1, parseInt(event.target.dataset.col, 10));
+      moveto(row + 1, col);
       break;
     case "ArrowUp":
-      moveto(parseInt(event.target.dataset.row, 10) - 1, parseInt(event.target.dataset.col, 10));
+      moveto(row - 1, col);
       break;
     case "Home": {
       if (event.ctrlKey) {
@@ -349,7 +357,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
           i++;
         } while (!result);
       } else {
-        moveto(parseInt(event.target.dataset.row, 10), 0);
+        moveto(row, 0);
       }
       break;
     }
@@ -366,7 +374,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
           i--;
         } while (!result);
       } else {
-        moveto(parseInt(event.target.dataset.row, 10), document.querySelector(`[data-row="${event.target.dataset.row}"]:last-of-type`).dataset.col);
+        moveto(row, document.querySelector(`[data-row="${event.target.dataset.row}"]:last-of-type`).dataset.col);
       }
       break;
     }
@@ -374,7 +382,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
       let i = 0;
       let result;
       do {
-        result = moveto(i, event.target.dataset.col);
+        result = moveto(i, col);
         i++;
       } while (!result);
       break;
@@ -383,7 +391,7 @@ document.querySelector('table').addEventListener("keydown", (event) => {
       let i = maxrow;
       let result;
       do {
-        result = moveto(i, event.target.dataset.col);
+        result = moveto(i, col);
         i--;
       } while (!result);
       break;
