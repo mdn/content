@@ -265,9 +265,7 @@ The following example shows a slightly more thorough version of the example we'v
 </form>
 ```
 
-There's not much new to note here except for the addition of {{htmlelement("fieldset")}} and {{htmlelement("legend")}} elements, which help to group the functionality nicely and in a semantic way.
-
-The CSS involved is a bit more significant:
+The CSS involved in this example is a bit more significant:
 
 ```css
 html {
