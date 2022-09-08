@@ -21,12 +21,12 @@ The **`asin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 
 ```css
 /* Single <number> values */
-width: calc(asin(-0.2) * 100px);
-width: calc(asin(2 * 0.125) * 100px);
+transform: rotate(asin(-0.2));
+transform: rotate(asin(2 * 0.125));
 
 /* Other values */
-width: calc(asin(pi / 5) * 100px);
-width: calc(asin(e / 3) * 100px);
+transform: rotate(asin(pi / 5));
+transform: rotate(asin(e / 3));
 ```
 
 ### Parameter
