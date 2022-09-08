@@ -20,7 +20,7 @@
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
-    "@mdn/yari": "1.18.23",
+    "@mdn/yari": "1.18.28",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "markdownlint-cli2": "0.5.1",
