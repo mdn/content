@@ -34,7 +34,7 @@ _No changes._
 
 - The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ({{bug(1369815)}}). See also the [Web app manifest `display` field](/en-US/docs/Web/Manifest#display).
 - The `grid-row-gap` and `grid-column-gap` properties are no longer reset by the {{CSSxRef("grid")}} shorthand ({{bug(1387410)}}).
-- The `layout.css.clip-path-shapes.enabled` preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}.  This support was shipped in Firefox 54 and can no longer be disabled.
+- The `layout.css.clip-path-shapes.enabled` preference has been removed ({{bug(1399767)}}). This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}. This support was shipped in Firefox 54 and can no longer be disabled.
 
 #### Quantum CSS notes
 
