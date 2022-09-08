@@ -117,8 +117,7 @@ Object.defineProperty(Employee, 'name', { configurable: false });
 console.log(delete Employee.name);  // returns false
 ```
 
-{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, and
-{{jsxref("Statements/const","const")}} create non-configurable properties that cannot
+{{jsxref("Statements/var","var")}} creates non-configurable properties that cannot
 be deleted with the `delete` operator:
 
 ```js
