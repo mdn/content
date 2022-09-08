@@ -125,7 +125,7 @@ JavaScript execution environments (windows, frames, etc.) are each in their own 
 
 This may not make sense at first, but for scripts dealing with multiple frames or windows, and passing objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is in fact an Array using {{jsxref("Array.isArray()")}}, neglecting which realm it comes from.
 
-For example, checking if a [`Node`](/en-US/docs/Web/API/Node) is an [`SVGElement`](/en-US/docs/Web/API/SVGElement) in a different context, you can use `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
+For example, to check if a [`Node`](/en-US/docs/Web/API/Node) is an [`SVGElement`](/en-US/docs/Web/API/SVGElement) in a different context, you can use `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 
 ## Examples
 
