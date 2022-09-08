@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.0.tgz#938f8074437a13e34e435782040b5b337b6cd438"
-  integrity sha512-CVEdy5/Q2cZJXzynD3zpPWHhNpoY1AApKRW0YCWN0HdrlP+VF2+6tX5U5d7XmSL91c2kqdb7yTi93mrAhHX8zw==
+"@mdn/browser-compat-data@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.1.tgz#69b77aa47a501996d90f5fb0a3cf9667ae9edabb"
+  integrity sha512-r0qWJp2sHvwu2FubWDRVXF5Olaly9pFDNwRuMUJCQmTFkHK9Bsfg3RVOuyJLGmJZ7B2v5Fx2JQ+XZE8VKz3qDw==
 
-"@mdn/yari@1.18.23":
-  version "1.18.23"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.23.tgz#43070c22a7b160a921b4291190b6a89a869281f0"
-  integrity sha512-rftYiQs0Byfo0ueKBC+VQTsZ5QR4DQcrsFVgY03s4gc2G77jhSRF9DXSIvf1CNM/kpY+ehN7F/nS6T9nX3Tvew==
+"@mdn/yari@1.18.28":
+  version "1.18.28"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.28.tgz#42feb819ff89c495459c1bbdf7a359c58d0a1836"
+  integrity sha512-W7EHblBlvXDYXrjcxJZu7K3CP1X0+7caStSRigmTRGM6ezv84MfM9YSxxbrApQnw7bhFNbtmh/Zg8GbD4VwpAw==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.2.0"
+    "@mdn/browser-compat-data" "^5.2.1"
     "@use-it/interval" "^1.0.0"
-    "@webref/css" "^5.1.0"
+    "@webref/css" "^5.1.1"
     accept-language-parser "^1.5.0"
     browser-specs "^3.22.0"
     chalk "^4.1.2"
@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-1.0.0.tgz#c42c68f22ca29a0dc929041746373d94496d2b3a"
   integrity sha512-WQFcnSt/xM/mS8ZtJ0ut5lhPrl+V0HDPPcI/J0eUClsfiD+/r8A7IeW/pVcfpSVGWRmN3+WnjNteWuKyWs2WZg==
 
-"@webref/css@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.1.0.tgz#3d0e08bbd8be8776e94b03d40435365ed9bcbaad"
-  integrity sha512-0R1VfNZhF8jJksmr2oAe7n8mw+CRgJ7Ug1CS3Csz6fKJtlO2xQmSdvDVzdO7fUEAMdgTURqJqsxYzTA4U/fsUQ==
+"@webref/css@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.1.1.tgz#79e3d7fa1688339867bc1570fdbeb46ba685b1ae"
+  integrity sha512-BGDrXxVV6znNY2Xq6DuI8y78KmxLFItCeZTIIRXXu5zD+880asvyUtaaLfI/qwI7eshTHGRhlFuLCP/vNbwmlw==
 
 accept-language-parser@^1.5.0:
   version "1.5.0"
