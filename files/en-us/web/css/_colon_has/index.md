@@ -14,7 +14,13 @@ browser-compat: css.selectors.has
 
 {{CSSRef}}
 
-The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.
+The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. It takes a [forgiving relative selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_relative_selector_list) as an argument.
+
+```css
+/* Selects any h1 heading with a
+paragraph element immediately after it */
+h1:has(+ p) { margin-bottom: 0; }
+```
 
 ## Syntax
 
@@ -22,9 +28,7 @@ The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represen
 :has( <forgiving-relative-selector-list> )
 ```
 
-## Description
-
-The `:has()` pseudo-class takes a relative selector list as an argument.
+> **Note:** The `:has()` pseudo-class cannot be nested within another `:has()`. Also, pseudo-elements are not valid selectors within `:has()` because many of them exist conditionally based on the styling of their ancestors.
 
 ## Examples
 
@@ -54,5 +58,6 @@ h1:has(+ p)
 
 ## See also
 
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-- [`:scope`](/en-US/docs/Web/CSS/:scope)

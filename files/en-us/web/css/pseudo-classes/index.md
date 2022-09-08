@@ -17,7 +17,7 @@ spec-urls:
 
 {{CSSRef}}
 
-A [CSS](/en-US/docs/Web/CSS) **_pseudo-class_** is a keyword added to a selector that specifies a special state of the selected element(s). For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.
+A [CSS](/en-US/docs/Web/CSS) **_pseudo-class_** is a keyword added to a selector that specifies a special state of the selected element(s). For example, the pseudo-class {{CSSxRef(":hover")}} can be used to select a button when a user's pointer hovers over the button and this selected button can then be styled.
 
 ```css
 /* Any button over which the user's pointer is hovering */
@@ -25,6 +25,8 @@ button:hover {
   color: blue;
 }
 ```
+
+A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parenthesis to define the arguments (e.g., `:dir()`).
 
 Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
@@ -82,7 +84,7 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 ## Linguistic pseudo-classes
 
-These pseudo-classes reflect the document language, and enable the selection of elements based on language or script direction.
+These pseudo-classes reflect the document language and enable the selection of elements based on language or script direction.
 
 - {{CSSxRef(":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
