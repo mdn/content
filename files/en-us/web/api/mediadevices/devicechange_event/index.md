@@ -111,9 +111,9 @@ h2 {
 
 ```js hidden
 // UI elements
-const videoElement = document.queryElement("#video");
-const logElement = document.queryElement("output");
-const startButton = document.queryElement("#startButton");
+const videoElement = document.querySelector("#video");
+const logElement = document.querySelector("output");
+const startButton = document.querySelector("#startButton");
 
 function log(msg) {
   logElement.innerHTML += `${msg}<br>`;
