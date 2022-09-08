@@ -68,15 +68,19 @@ div.box {
   height: 100px;
   background: linear-gradient(orange, red);
 }
+
 div.box-1 {
   transform: rotate(acos(-0.2));
 }
+
 div.box-2 {
   transform: rotate(acos(2 * 0.125));
 }
+
 div.box-3 {
   transform: rotate(acos(pi / 5));
 }
+
 div.box-4 {
   transform: rotate(acos(e / 3));
 }
