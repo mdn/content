@@ -47,9 +47,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A Boolean attribute which if `true` indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.
 - {{htmlattrdef("controls")}}
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}
+- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
 
-  - : The [`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) attribute, when specified, helps the browser select what controls to show on the media element whenever the browser shows its own set of controls (e.g. when the `controls` attribute is specified).
+  - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `video` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
