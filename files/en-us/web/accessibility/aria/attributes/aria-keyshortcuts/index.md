@@ -22,7 +22,7 @@ The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assis
 
 Keyboard shortcuts applied to disabled elements should also be disabled. For example, when disabling an element for mouse users, remember to disable it for keyboard shortcut users.
 
-Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology. If your application is complex enough to need keyboard shortcuts, also known as "hot keys", include a guided tour of your application, an accessibility page documenting shortcuts and other accessibility features, a shortcut cheat sheet page or dialog pop up, or other method of making the availability of keyboard short cuts known.  In addition, show the shortcut in menus and tooltips.
+Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology. If your application is complex enough to need keyboard shortcuts, also known as "hot keys", include a guided tour of your application, an accessibility page documenting shortcuts and other accessibility features, a shortcut cheat sheet page or dialog pop up, or other method of making the availability of keyboard short cuts known. In addition, show the shortcut in menus and tooltips.
 
 ### Property value rules
 
@@ -47,7 +47,7 @@ Since the plus sign is used in writing key combinations, it is written as `plus`
 
 If you want to use a character that might cause problems, like a double quote character within double quotes, escape the character: `Control+&#39;`.
 
-Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
+Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`. When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
 
 These two attribute declarations are equivalent.
 
@@ -75,7 +75,7 @@ In trying to improve the accessibility of your sites and applications, there are
 
 When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web applications where printing is common, like email applications or Google Docs, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
 
-Unless you're creating an HTML version of a productivity application, you should likely avoid implementing keyboard shortcut.  While overriding an operating system or browser keyboard shortcut can be annoying for non-assistive technology users, if you override a screen reader's keyboard functionality you can completely shut down access for the assistive technology user. If you must create keyboard shortcuts, avoid single letter keyboard shortcuts and common screen reader keyboard shortcuts.
+Unless you're creating an HTML version of a productivity application, you should likely avoid implementing keyboard shortcut. While overriding an operating system or browser keyboard shortcut can be annoying for non-assistive technology users, if you override a screen reader's keyboard functionality you can completely shut down access for the assistive technology user. If you must create keyboard shortcuts, avoid single letter keyboard shortcuts and common screen reader keyboard shortcuts.
 
 #### Consider language and keyboard differences
 
