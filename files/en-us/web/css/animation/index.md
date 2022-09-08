@@ -61,10 +61,6 @@ Each individual animation is specified as:
 
 - an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
 
-The order of time values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.
-
-The order of other values within each animation definition is also important for distinguishing an {{cssxref("animation-name")}} value from other values. If values in the animation definition can be parsed for properties other than `animation-name` and if those properties are assigned values for the first time in the shorthand, then they must be accepted for those properties and not for `animation-name`. Furthermore, when serialized, default values of other properties must be output in at least the cases necessary to distinguish an `animation-name` that could be a value of another property and may be output in additional cases.
-
 ### Values
 
 - `<single-easing-function>`
@@ -77,6 +73,16 @@ The order of other values within each animation definition is also important for
   - : Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.
 - `<single-animation-play-state>`
   - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.
+
+## Description
+
+The order of time values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.
+
+The order of other values within each animation definition is also important for distinguishing an {{cssxref("animation-name")}} value from other values. If values in the animation definition can be parsed for properties other than `animation-name` and if those properties are assigned values for the first time in the shorthand, then they must be accepted for those properties and not for `animation-name`. Furthermore, when serialized, default values of other properties must be output in at least the cases necessary to distinguish an `animation-name` value that could be a value of another property and may be output in additional cases.
+
+An `animation-name` value is not required to be declared in the `animation` shorthand property. If no name exists, there is no animation to apply on any of the properties.
+
+When the `animation-duration` value is omitted from the `animation` shorthand property, the value for this property defaults to `0s`. In this case, the animation will still occur (the animation start and end events will be fired) but no animation will be visible.
 
 ## Accessibility concerns
 

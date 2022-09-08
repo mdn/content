@@ -12,7 +12,7 @@ browser-compat: css.properties.animation-name
 
 {{CSSRef}}
 
-The **`animation-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@keyframes")}} at-rules describing the animation or animations to apply to the element.
+The **`animation-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@keyframes")}} at-rules describing the animation or animations to apply to the element. If the specified name does not match any `@keyframe` at-rule, no properties are animated.
 
 {{EmbedInteractiveExample("pages/css/animation-name.html")}}
 

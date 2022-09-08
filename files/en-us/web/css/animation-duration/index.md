@@ -40,7 +40,12 @@ animation-duration: unset;
 ### Values
 
 - `{{cssxref("&lt;time&gt;")}}`
-  - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required. A value of `0s`, which is the default value, indicates that no animation should occur.
+  - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required.
+  
+    If no value is provided, the default value of `0s` is used, in which case the animation still executes (the animation start and end events are fired). Whether or not the animation will be visible when duration is `0s` will depend on the value of [`animation-fill-mode`](/en-US/docs/Web/CSS/animation-fill-mode), as explained below:
+    - If `animation-fill-mode` is set to `backwards` or `both`, that is, the first frame of the animation, then as defined by `animation-direction`, the animation will be displayed during [`animation-delay`](/en-US/docs/Web/CSS/animation-delay).
+    - If `animation-fill-mode` is set to `forwards` or `both`, the last frame of the animation will be displayed, as defined by `animation-direction`, after `animation-delay`.
+    - If `animation-fill-mode` is set to `none`, the animation will have no visible effect.
 
 > **Note:** Negative values are invalid, causing the declaration to be ignored. Some early, prefixed, implementations may consider them as identical to `0s`.
 
