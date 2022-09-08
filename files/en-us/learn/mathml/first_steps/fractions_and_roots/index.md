@@ -275,8 +275,8 @@ Some mathematical concepts are sometimes written using fraction-like notations s
   <mrow>
     <mo>(</mo>
     <mfrac linethickness="0">
-      <mi>3</mi>
-      <mi>2</mi>
+      <mn>3</mn>
+      <mn>2</mn>
     </mfrac>
     <mo>)</mo>
   </mrow>
@@ -284,8 +284,8 @@ Some mathematical concepts are sometimes written using fraction-like notations s
   <mn>6</mn>
   <mo>≠</mo>
   <mfrac>
-    <mi>3</mi>
-    <mi>2</mi>
+    <mn>3</mn>
+    <mn>2</mn>
   </mfrac>
 </math>
 ```

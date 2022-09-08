@@ -65,14 +65,6 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       </td>
     </tr>
     <tr>
-      <td><code>bevelled</code> {{deprecated_inline}}</td>
-      <td>{{ MathMLElement("mfrac") }}</td>
-      <td>
-        Specifies the style how the fraction should be displayed. Deprecated.
-        Use U+2044 (fraction slash) instead.
-      </td>
-    </tr>
-    <tr>
       <td><code>close</code></td>
       <td>{{ MathMLElement("mfenced") }}</td>
       <td>A string for the closing delimiter.</td>
