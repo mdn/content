@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent()`** constructor

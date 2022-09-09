@@ -16,6 +16,7 @@ tags:
   - transportID
 browser-compat: api.RTCRtpStreamStats.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

@@ -14,6 +14,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.addFromURI
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`addFromURI()`** method of the

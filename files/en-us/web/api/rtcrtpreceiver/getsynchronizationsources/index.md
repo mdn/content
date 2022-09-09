@@ -13,6 +13,7 @@ tags:
   - getSynchronizationSources
 browser-compat: api.RTCRtpReceiver.getSynchronizationSources
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`getSynchronizationSources()`**

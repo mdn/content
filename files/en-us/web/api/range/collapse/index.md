@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.collapse
 ---
+
 {{APIRef("DOM")}}
 
 The **`Range.collapse()`** method collapses the

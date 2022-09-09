@@ -10,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.clear
 ---
+
 {{APIRef("SVG")}}
 
 The **`clear()`** method of the {{domxref("SVGPointList")}} interface removes all items from the list.

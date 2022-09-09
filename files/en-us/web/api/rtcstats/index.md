@@ -14,6 +14,7 @@ tags:
   - rtc
 spec-urls: https://w3c.github.io/webrtc-stats/#dom-rtcstats
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCStats`** dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.

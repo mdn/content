@@ -18,6 +18,7 @@ tags:
   - relatedPort
 browser-compat: api.RTCIceCandidate.relatedPort
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`relatedPort`** property indicates the port number of reflexive or relay candidates.

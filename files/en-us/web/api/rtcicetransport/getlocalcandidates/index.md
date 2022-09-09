@@ -18,6 +18,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport.getLocalCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceTransport")}}** method

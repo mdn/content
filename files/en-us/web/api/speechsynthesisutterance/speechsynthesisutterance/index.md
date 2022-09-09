@@ -12,6 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}
 
 The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUtterance")}} interface returns a new `SpeechSynthesisUtterance` object instance.

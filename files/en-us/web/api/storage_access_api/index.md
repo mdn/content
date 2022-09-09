@@ -11,6 +11,7 @@ browser-compat:
   - api.Document.hasStorageAccess
   - api.Document.requestStorageAccess
 ---
+
 {{DefaultAPISidebar("Storage Access API")}}
 
 The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin's _first-party_ storage).

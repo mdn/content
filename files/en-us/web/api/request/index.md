@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.Request
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Request`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents a resource request.

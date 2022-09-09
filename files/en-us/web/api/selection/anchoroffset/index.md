@@ -11,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorOffset
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.anchorOffset`** read-only property returns the

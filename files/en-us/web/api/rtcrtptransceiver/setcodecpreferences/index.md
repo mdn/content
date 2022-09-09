@@ -17,6 +17,7 @@ tags:
   - setCodecPreferences
 browser-compat: api.RTCRtpTransceiver.setCodecPreferences
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} method

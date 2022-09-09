@@ -11,6 +11,7 @@ tags:
   - contentBoxSize
 browser-compat: api.ResizeObserverEntry.contentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`contentBoxSize`** read-only property of

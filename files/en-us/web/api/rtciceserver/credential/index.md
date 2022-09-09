@@ -11,6 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer.credential
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's

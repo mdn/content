@@ -11,6 +11,7 @@ tags:
   - datachannel
 browser-compat: api.RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent`** interface

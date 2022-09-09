@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.resume_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`resume`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when a paused utterance is resumed.

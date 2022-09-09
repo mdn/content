@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGPolygonElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGPolygonElement`** interface provides access to the properties of {{SVGElement("polygon")}} elements, as well as methods to manipulate them.

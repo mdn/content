@@ -11,6 +11,7 @@ tags:
   - availHeight
 browser-compat: api.Screen.availHeight
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{DOMxRef("Screen")}} interface's

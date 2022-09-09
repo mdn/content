@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.containsNode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.containsNode()`** method indicates whether a

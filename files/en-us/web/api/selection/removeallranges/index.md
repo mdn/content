@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.removeAllRanges
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.removeAllRanges()`** method removes all ranges

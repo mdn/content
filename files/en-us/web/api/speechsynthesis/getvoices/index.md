@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.getVoices
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`getVoices()`** method of the
