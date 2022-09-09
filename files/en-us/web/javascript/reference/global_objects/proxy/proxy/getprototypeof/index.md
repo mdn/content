@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`handler.getPrototypeOf()`** method is a trap for the

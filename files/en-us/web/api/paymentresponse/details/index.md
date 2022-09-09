@@ -13,6 +13,7 @@ tags:
   - details
 browser-compat: api.PaymentResponse.details
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`details`** read-only property of the

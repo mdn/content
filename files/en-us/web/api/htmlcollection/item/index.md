@@ -11,6 +11,7 @@ tags:
   - item
 browser-compat: api.HTMLCollection.item
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLCollection")}} method `item()`

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getSeconds
 ---
+
 {{JSRef}}
 
 The **`getSeconds()`** method returns the seconds in the

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.URL
 ---
+
 {{APIRef("DOM")}}
 
 The **`URL`** read-only property of the {{domxref("Document")}}

@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.close
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.close()`** method closes the

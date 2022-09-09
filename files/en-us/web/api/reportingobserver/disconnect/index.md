@@ -11,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver.disconnect
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`disconnect()`** method of the

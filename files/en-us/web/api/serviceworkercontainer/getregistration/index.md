@@ -11,6 +11,7 @@ tags:
   - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.getRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getRegistration()`** method of the

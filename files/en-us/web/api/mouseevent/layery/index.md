@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.MouseEvent.layerY
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_Header}}
 
 The **`MouseEvent.layerY`** read-only property returns the

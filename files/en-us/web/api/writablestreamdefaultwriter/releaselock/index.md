@@ -11,6 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
+
 {{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the

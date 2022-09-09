@@ -17,6 +17,7 @@ tags:
   - receivedAlert
 browser-compat: api.RTCError.receivedAlert
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} read-only property

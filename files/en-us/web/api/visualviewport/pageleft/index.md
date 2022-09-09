@@ -12,6 +12,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport.pageLeft
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`pageLeft`** read-only property of the

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injects JavaScript code into a page.

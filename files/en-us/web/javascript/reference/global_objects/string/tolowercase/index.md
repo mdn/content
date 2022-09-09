@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLowerCase()`** method returns the calling string value

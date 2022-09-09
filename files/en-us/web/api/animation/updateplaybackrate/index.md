@@ -15,6 +15,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`updatePlaybackRate()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.supportedLocalesOf()`** method

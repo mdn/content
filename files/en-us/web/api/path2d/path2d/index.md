@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Path2D.Path2D
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D()`** constructor returns a newly instantiated

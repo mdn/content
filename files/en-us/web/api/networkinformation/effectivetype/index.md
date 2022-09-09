@@ -13,6 +13,7 @@ tags:
   - effectiveType
 browser-compat: api.NetworkInformation.effectiveType
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`effectiveType`** read-only property of the

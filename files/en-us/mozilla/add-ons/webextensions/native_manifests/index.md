@@ -5,6 +5,7 @@ tags:
   - Extensions
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Native manifests are specially formatted JSON files that are provisioned on the user's computer by some means outside the extension installation process. For example, a native manifest might be provisioned by a device administrator or by a native application installer.

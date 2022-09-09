@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object

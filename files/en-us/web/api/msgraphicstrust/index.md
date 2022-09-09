@@ -7,6 +7,7 @@ tags:
   - Interface
   - Non-standard
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}

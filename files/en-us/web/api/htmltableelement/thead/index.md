@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.tHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tHead`** represents the

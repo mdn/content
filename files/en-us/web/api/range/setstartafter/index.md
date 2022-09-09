@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setStartAfter
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStartAfter()`** method sets the start position

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.remove
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.remove()`** method removes the element

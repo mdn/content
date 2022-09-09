@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserverEntry
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The **`IntersectionObserverEntry`** interface of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) describes the intersection between the target element and its root container at a specific moment of transition.

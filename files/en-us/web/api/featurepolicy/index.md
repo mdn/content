@@ -16,6 +16,7 @@ tags:
   - Experimental
 browser-compat: api.FeaturePolicy
 ---
+
 {{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
 The `FeaturePolicy` interface of the [Feature Policy API](/en-US/docs/Web/HTTP/Feature_Policy) represents the set of policies applied to the current execution context.

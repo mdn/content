@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once

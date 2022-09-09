@@ -13,6 +13,7 @@ tags:
   - getFrequencyResponse
 browser-compat: api.BiquadFilterNode.getFrequencyResponse
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")

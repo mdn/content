@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.tBodies
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tBodies`** read-only property returns a

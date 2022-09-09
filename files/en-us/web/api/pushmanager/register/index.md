@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.register
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 The **`register`** method is used to ask the system to request

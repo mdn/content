@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.drawImage
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.drawImage()`** method of the

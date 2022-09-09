@@ -10,6 +10,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.yield
 ---
+
 {{jsSidebar("Operators")}}
 
 The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).

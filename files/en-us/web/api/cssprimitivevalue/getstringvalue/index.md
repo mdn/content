@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getStringValue()`** method of the

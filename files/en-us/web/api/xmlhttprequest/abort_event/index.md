@@ -11,6 +11,7 @@ tags:
   - abort
 browser-compat: api.XMLHttpRequest.abort_event
 ---
+
 {{APIRef}}
 
 The `abort` event is fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.

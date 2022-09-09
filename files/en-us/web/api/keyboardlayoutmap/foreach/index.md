@@ -14,6 +14,7 @@ tags:
   - keyboard
 browser-compat: api.KeyboardLayoutMap.forEach
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the

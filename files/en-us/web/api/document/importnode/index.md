@@ -13,6 +13,7 @@ tags:
   - importNode
 browser-compat: api.Document.importNode
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} object's **`importNode()`** method creates a copy of a

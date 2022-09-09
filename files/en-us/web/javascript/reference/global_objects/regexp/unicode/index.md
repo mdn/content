@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.unicode
 ---
+
 {{JSRef}}
 
 The **`unicode`** accessor property indicates whether or not the `u` flag is used with the regular expression.

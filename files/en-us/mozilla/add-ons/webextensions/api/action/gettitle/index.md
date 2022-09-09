@@ -13,6 +13,7 @@ tags:
   - getTitle
 browser-compat: webextensions.api.action.getTitle
 ---
+
 {{AddonSidebar()}}
 
 Gets the browser action's title.

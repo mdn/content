@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.clientWaitSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.clientWaitSync()`** method of the

@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: api.HTMLImageElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property

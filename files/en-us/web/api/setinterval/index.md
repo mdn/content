@@ -16,6 +16,7 @@ tags:
   - Polyfill
 browser-compat: api.setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setInterval()`** method,

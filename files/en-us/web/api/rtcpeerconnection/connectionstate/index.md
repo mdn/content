@@ -10,6 +10,7 @@ tags:
   - connectionState
 browser-compat: api.RTCPeerConnection.connectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`connectionState`** property

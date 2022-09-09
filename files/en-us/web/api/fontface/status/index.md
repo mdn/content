@@ -13,6 +13,7 @@ tags:
   - status
 browser-compat: api.FontFace.status
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`status`** read-only property of the

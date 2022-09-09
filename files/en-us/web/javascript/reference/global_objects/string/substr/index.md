@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.substr
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`substr()`** method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.

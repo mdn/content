@@ -7,6 +7,7 @@ tags:
   - Gecko
   - Guide
 ---
+
 {{ ApiRef() }}
 
 It's easy to get confused about which event target to examine when writing an event handler. This article should clarify the use of the target properties.

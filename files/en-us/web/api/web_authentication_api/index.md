@@ -18,6 +18,7 @@ browser-compat:
   - api.AuthenticatorAttestationResponse
   - api.AuthenticatorAssertionResponse
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 The Web Authentication API is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure second-factor authentication without SMS texts.

@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: api.AbortController
 ---
+
 {{MDNSidebar}}
 
 MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.

@@ -14,6 +14,7 @@ tags:
   - dragend
 browser-compat: api.HTMLElement.dragend_event
 ---
+
 {{APIRef}}
 
 The `dragend` event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).

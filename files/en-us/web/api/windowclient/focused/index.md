@@ -12,6 +12,7 @@ tags:
   - focused
 browser-compat: api.WindowClient.focused
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`focused`** read-only property of the

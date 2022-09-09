@@ -10,6 +10,7 @@ tags:
   - has
 browser-compat: api.Headers.has
 ---
+
 {{APIRef("Fetch")}}
 
 The **`has()`** method of the {{domxref("Headers")}} interface

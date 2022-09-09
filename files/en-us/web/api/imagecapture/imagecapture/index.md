@@ -14,6 +14,7 @@ tags:
   - Reference
 browser-compat: api.ImageCapture.ImageCapture
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`ImageCapture()`** constructor

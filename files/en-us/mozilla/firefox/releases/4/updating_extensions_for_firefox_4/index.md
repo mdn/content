@@ -11,6 +11,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article offers details on changes in Firefox 4 that may impact existing extensions.

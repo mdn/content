@@ -11,6 +11,7 @@ tags:
   - NeedsUpdate
   - Web
 ---
+
 {{learnsidebar}}
 
 The following compatibility tables try to summarize the state of CSS support for HTML forms. Due to the complexity of CSS and HTML forms, these tables can't be considered a perfect reference. However, they will give you good insight into what can and can't be done, which will help you learn how to do things.

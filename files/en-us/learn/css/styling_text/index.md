@@ -17,6 +17,7 @@ tags:
   - shadow
   - web fonts
 ---
+
 {{LearnSidebar}}
 
 With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.

@@ -12,6 +12,7 @@ tags:
   - escape()
 browser-compat: api.CSS.escape
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSS.escape()`** static method returns a

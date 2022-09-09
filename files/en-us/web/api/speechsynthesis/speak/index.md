@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.speak
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speak()`** method of the {{domxref("SpeechSynthesis")}}

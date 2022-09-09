@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame.copyTo
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`copyTo()`** method of the {{domxref("VideoFrame")}} interface copies the contents of the `VideoFrame` to an `ArrayBuffer`.

@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.framebufferTextureLayer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.framebufferTextureLayer()`**

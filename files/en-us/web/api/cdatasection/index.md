@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CDATASection
 ---
+
 {{APIRef("DOM")}}
 
 The **`CDATASection`** interface represents a CDATA section

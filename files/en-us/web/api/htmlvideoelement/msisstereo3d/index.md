@@ -11,6 +11,7 @@ tags:
   - msIsStereo3D
 browser-compat: api.HTMLVideoElement.msIsStereo3D
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
 
 **`msIsStereo3D`** is a read-only property which determines

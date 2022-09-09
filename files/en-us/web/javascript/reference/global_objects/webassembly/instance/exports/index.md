@@ -11,6 +11,7 @@ tags:
   - instance
 browser-compat: javascript.builtins.WebAssembly.Instance.exports
 ---
+
 {{JSRef}}
 
 The **`exports`** readonly property of the

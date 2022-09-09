@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 One of the most common use cases for an extension is to modify a web page. For example, an extension might want to change the style applied to a page, hide particular DOM nodes, or inject extra DOM nodes into the page.

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
 ---
+
 {{JSRef}}
 
 The **`handler.ownKeys()`** method is a trap for

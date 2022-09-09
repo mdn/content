@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.values
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.values()`** method returns an

@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onCompleted
 ---
+
 {{AddonSidebar()}}
 
 Fired when a request has completed.

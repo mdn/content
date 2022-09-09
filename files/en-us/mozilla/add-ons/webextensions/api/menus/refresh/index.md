@@ -12,6 +12,7 @@ tags:
   - refresh
 browser-compat: webextensions.api.menus.refresh
 ---
+
 {{AddonSidebar()}}
 
 Refreshes a menu that's being shown.

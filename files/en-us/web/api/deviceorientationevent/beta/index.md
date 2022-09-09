@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.beta
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 Returns the rotation of the device around the X axis; that is, the number of degrees,

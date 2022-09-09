@@ -9,6 +9,7 @@ tags:
   - Layout
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how a [grid and grid items](/en-US/docs/Learn/CSS/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.

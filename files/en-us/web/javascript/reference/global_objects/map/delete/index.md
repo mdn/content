@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a `Map` object by

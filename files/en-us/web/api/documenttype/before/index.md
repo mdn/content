@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentType.before
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.before()`** method inserts a set of

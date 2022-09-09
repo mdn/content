@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.anchor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`anchor()`** method creates a string beginning with an

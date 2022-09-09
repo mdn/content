@@ -12,6 +12,7 @@ tags:
   - copyToChannel
 browser-compat: api.AudioBuffer.copyToChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `copyToChannel()` method of the {{ domxref("AudioBuffer") }} interface copies

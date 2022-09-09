@@ -13,6 +13,7 @@ tags:
   - Sensors
 browser-compat: api.Gyroscope.Gyroscope
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`Gyroscope()`** constructor

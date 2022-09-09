@@ -16,6 +16,7 @@ tags:
   - isTypeSupported
 browser-compat: api.MediaSource.isTypeSupported
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`MediaSource.isTypeSupported()`** static method returns a boolean value which is `true` if the given MIME type and (optional) codec are _likely_ to be supported by the current {{Glossary("user agent")}}.

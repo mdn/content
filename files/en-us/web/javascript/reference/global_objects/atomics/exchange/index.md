@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.exchange
 ---
+
 {{JSRef}}
 
 The static **`Atomics.exchange()`** method stores a given value

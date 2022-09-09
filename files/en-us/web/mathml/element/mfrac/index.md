@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mfrac
 ---
+
 {{MathMLRef}}
 
 The MathML `<mfrac>` element is used to display fractions.  It can also be used

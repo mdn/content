@@ -8,6 +8,7 @@ tags:
   - ReferenceError
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
+
 {{JSRef}}
 
 The **`ReferenceError`** object represents an error when a

@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.toJSON
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCSessionDescription.toJSON()`** method generates a

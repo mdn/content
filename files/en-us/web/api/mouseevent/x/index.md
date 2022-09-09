@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.x
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.x`** property is an alias for the {{domxref("MouseEvent.clientX")}} property.

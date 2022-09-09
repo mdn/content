@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.assignedNodes
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assignedNodes()`** method of the {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to this slot.

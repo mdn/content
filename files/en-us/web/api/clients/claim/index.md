@@ -12,6 +12,7 @@ tags:
   - claim
 browser-compat: api.Clients.claim
 ---
+
 {{APIRef("Service Worker Clients")}}
 
 The **`claim()`** method of the {{domxref("Clients")}} interface allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.

@@ -13,6 +13,7 @@ tags:
   - equals()
 browser-compat: api.CSSNumericValue.equals
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`equals()`** method of the

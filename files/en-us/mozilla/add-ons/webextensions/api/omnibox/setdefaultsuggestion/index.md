@@ -12,6 +12,7 @@ tags:
   - setDefaultSuggestion
 browser-compat: webextensions.api.omnibox.setDefaultSuggestion
 ---
+
 {{AddonSidebar()}}
 
 Set the default suggestion to appear in the address bar drop-down list when the user starts interacting with your extension.

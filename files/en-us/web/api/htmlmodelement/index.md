@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLModElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLModElement`** interface provides special properties (beyond the regular methods and properties available through the {{domxref("HTMLElement")}} interface they also have available to them by inheritance) for manipulating modification elements, that is {{HTMLElement("del")}} and {{HTMLElement("ins")}}.

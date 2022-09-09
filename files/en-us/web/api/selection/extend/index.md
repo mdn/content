@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.extend
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.extend()`** method moves the focus of the

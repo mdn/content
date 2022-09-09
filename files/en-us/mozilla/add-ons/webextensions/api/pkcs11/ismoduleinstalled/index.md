@@ -12,6 +12,7 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11.isModuleInstalled
 ---
+
 {{AddonSidebar()}}
 
 Checks whether the named PKCS #11 module is currently installed in Firefox.

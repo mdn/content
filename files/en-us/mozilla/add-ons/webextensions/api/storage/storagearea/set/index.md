@@ -14,6 +14,7 @@ tags:
   - set
 browser-compat: webextensions.api.storage.StorageArea.set
 ---
+
 {{AddonSidebar()}}
 
 Stores one or more items in the storage area, or update existing items.

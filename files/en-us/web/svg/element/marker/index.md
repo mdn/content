@@ -7,6 +7,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.marker
 ---
+
 {{SVGRef}}
 
 The **`<marker>`** element defines the graphic that is to be used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.

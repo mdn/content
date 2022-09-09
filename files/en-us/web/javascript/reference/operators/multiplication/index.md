@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
 The multiplication operator (`*`) produces the product of the operands.

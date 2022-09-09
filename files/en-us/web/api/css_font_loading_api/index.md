@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.FontFace
 ---
+
 {{DefaultAPISidebar("CSS Font Loading API")}}
 
 The CSS Font Loading API provides events and interfaces for dynamically loading font resources.

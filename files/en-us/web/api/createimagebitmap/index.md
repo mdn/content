@@ -11,6 +11,7 @@ tags:
   - createImageBitmap
 browser-compat: api.createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`createImageBitmap()`** method creates a bitmap from a

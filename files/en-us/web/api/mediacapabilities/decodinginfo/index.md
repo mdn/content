@@ -13,6 +13,7 @@ tags:
   - decodingInfo()
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
+
 {{APIRef("MediaCapabilities")}}
 
 The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities info.

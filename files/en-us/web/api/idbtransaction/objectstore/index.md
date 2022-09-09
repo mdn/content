@@ -13,6 +13,7 @@ tags:
   - objectStore
 browser-compat: api.IDBTransaction.objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore()`** method of the

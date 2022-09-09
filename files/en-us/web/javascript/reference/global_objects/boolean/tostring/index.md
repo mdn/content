@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

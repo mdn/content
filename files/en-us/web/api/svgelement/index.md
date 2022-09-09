@@ -12,6 +12,7 @@ tags:
   - SVGElement
 browser-compat: api.SVGElement
 ---
+
 {{APIRef("SVG")}}
 
 All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the `SVGElement` interface.

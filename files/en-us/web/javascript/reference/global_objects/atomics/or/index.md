@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.or
 ---
+
 {{JSRef}}
 
 The static **`Atomics.or()`**

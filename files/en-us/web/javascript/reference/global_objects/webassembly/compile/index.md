@@ -11,6 +11,7 @@ tags:
   - compile
 browser-compat: javascript.builtins.WebAssembly.compile
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.compile()`** function compiles WebAssembly

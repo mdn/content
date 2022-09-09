@@ -13,6 +13,7 @@ tags:
   - decoding
 browser-compat: api.SVGImageElement.decoding
 ---
+
 {{APIRef}}
 
 The **`decoding`** property of the {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how it should decode the image.

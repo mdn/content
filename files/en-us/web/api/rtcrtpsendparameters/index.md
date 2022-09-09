@@ -21,6 +21,7 @@ tags:
   - sender
 browser-compat: api.RTCRtpSendParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC API's **`RTCRtpSendParameters`** dictionary is used to specify the parameters for an {{domxref("RTCRtpSender")}} when calling its {{domxref("RTCRtpSender.setParameters", "setParameters()")}} method.

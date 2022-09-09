@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.IDBObjectStore.delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the

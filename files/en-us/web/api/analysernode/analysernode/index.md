@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.AnalyserNode
 ---
+
 {{APIRef("'Web Audio API'")}}
 
 The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("AnalyserNode")}} object instance.

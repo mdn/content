@@ -13,6 +13,7 @@ tags:
   - onCreated
 browser-compat: webextensions.api.bookmarks.onCreated
 ---
+
 {{AddonSidebar()}}
 
 Fired when a bookmark item (a bookmark or a folder) is created.

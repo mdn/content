@@ -6,6 +6,7 @@ tags:
   - MathML
   - Landing
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
 
 In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.

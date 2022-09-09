@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.ResourceType
 ---
+
 {{AddonSidebar()}}
 
 This type is a string, which represents the context in which a resource was fetched in a web request.

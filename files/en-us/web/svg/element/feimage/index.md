@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feImage
 ---
+
 {{SVGRef}}
 
 The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image data from an external source and provides the pixel data as output (meaning if the external source is an SVG image, it is rasterized.)

@@ -13,6 +13,7 @@ tags:
   - min()
 browser-compat: api.CSSNumericValue.min
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`min()`** method of the

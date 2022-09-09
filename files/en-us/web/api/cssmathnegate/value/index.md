@@ -12,6 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSMathNegate.value
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathNegate.value read-only property of the

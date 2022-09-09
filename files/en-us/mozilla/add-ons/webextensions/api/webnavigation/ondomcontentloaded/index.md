@@ -13,6 +13,7 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onDOMContentLoaded
 ---
+
 {{AddonSidebar()}}
 
 Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event is fired in the page. At this point the document is loaded and parsed, and the DOM is fully constructed, but linked resources such as images, stylesheets and subframes may not yet be loaded.

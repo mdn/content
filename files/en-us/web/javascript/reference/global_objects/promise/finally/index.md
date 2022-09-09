@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
+
 {{JSRef}}
 
 The **`finally()`** method of a {{jsxref("Promise")}} schedules a function,

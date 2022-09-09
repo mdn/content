@@ -14,6 +14,7 @@ tags:
   - artwork
 browser-compat: api.MediaMetadata.artwork
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`artwork`** property of the

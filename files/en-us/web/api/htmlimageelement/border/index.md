@@ -15,6 +15,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.border
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("HTMLImageElement")}}

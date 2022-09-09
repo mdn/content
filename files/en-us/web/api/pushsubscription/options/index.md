@@ -11,6 +11,7 @@ tags:
   - Service Worker
 browser-compat: api.PushSubscription.options
 ---
+
 {{APIRef("Push API")}}
 
 The **`options`** read-only property

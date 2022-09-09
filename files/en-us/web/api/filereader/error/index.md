@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.error
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`error`** property returns the

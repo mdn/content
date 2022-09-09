@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.connectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`connectEnd`** read-only property returns the

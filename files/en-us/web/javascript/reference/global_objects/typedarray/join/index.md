@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.join
 ---
+
 {{JSRef}}
 
 The **`join()`** method joins all elements of an array into a

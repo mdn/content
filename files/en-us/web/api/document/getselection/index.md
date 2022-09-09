@@ -10,6 +10,7 @@ tags:
   - getSelection
 browser-compat: api.Document.getSelection
 ---
+
 {{APIRef("DOM")}}
 
 The **`getSelection()`** property of

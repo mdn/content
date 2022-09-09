@@ -12,6 +12,7 @@ tags:
   - Unlock
 browser-compat: api.ScreenOrientation.unlock
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`unlock()`** property of the

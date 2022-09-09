@@ -10,6 +10,7 @@ tags:
   - Response
 browser-compat: api.Response.Response
 ---
+
 {{APIRef("Fetch")}}
 
 The **`Response()`** constructor creates a new {{domxref("Response")}} object.

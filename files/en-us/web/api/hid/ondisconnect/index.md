@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HID.ondisconnect
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`ondisconnect`** [event handler](/en-US/docs/Web/Events/Event_handlers) of the {{domxref("HID")}} interface processes the events when the user agent disconnects from the HID device.

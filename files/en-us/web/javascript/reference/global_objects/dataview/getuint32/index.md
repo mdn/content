@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint32
 ---
+
 {{JSRef}}
 
 The **`getUint32()`** method gets an unsigned 32-bit integer

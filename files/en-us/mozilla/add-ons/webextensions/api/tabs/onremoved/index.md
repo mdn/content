@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is closed.

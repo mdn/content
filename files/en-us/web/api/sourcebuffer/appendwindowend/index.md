@@ -14,6 +14,7 @@ tags:
   - appendWindowEnd
 browser-compat: api.SourceBuffer.appendWindowEnd
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`appendWindowEnd`** property of the

@@ -13,6 +13,7 @@ tags:
   - stop()
 browser-compat: api.Sensor.stop
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`stop`** method of the

@@ -11,6 +11,7 @@ tags:
   - borderBoxSize
 browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`borderBoxSize`** read-only property of

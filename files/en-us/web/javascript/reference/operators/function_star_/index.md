@@ -11,6 +11,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.generator_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function*`** keyword can be used to define a generator

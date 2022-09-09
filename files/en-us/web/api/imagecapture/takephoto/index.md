@@ -14,6 +14,7 @@ tags:
   - takePhoto
 browser-compat: api.ImageCapture.takePhoto
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`takePhoto()`** method of the

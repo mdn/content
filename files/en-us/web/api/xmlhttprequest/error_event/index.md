@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.error_event
 ---
+
 {{APIRef}}
 
 The `error` event is fired when the request encountered an error.

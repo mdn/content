@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.depthRange
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.depthRange()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the depth range mapping

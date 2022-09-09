@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer()`** constructor

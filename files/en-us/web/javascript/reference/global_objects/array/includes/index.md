@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether an array

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.reset()`** method restores a form

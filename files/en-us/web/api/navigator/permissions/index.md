@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.permissions
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Navigator.permissions`** read-only property returns a

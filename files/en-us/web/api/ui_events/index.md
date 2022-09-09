@@ -9,6 +9,7 @@ tags:
   - UI Events
 spec-urls: https://w3c.github.io/uievents/
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 ## Concepts and Usage

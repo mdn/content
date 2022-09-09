@@ -5,6 +5,7 @@ tags:
   - Guide
   - SVG
 ---
+
 {{SVGRef}}
 
 The {{SVGAttr("target")}} attribute on the SVG {{SVGElement("a")}} element doesn't work in Mozilla Firefox 1.5. When SVG documents are embedded within a parent HTML document using the tag:

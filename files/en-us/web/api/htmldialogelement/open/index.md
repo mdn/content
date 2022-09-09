@@ -11,6 +11,7 @@ tags:
   - open
 browser-compat: api.HTMLDialogElement.open
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`open`** property of the

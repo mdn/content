@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.types
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.types`** read-only property returns an

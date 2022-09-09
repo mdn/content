@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_debug_shaders.getTranslatedShaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_debug_shaders.getTranslatedShaderSource()`**

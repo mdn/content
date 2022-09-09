@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedTransformList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated transform list interface

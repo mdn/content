@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.set
 ---
+
 {{JSRef}}
 
 The static **`Reflect.set()`** method works like setting a

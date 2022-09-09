@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **function declaration** (function statement) defines a function with

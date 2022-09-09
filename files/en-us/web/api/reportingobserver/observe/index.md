@@ -12,6 +12,7 @@ tags:
   - observe
 browser-compat: api.ReportingObserver.observe
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`observe()`** method of the

@@ -12,6 +12,7 @@ tags:
   - toggle
 browser-compat: webextensions.api.sidebarAction.toggle
 ---
+
 {{AddonSidebar()}}
 
 Toggles the visibility of the sidebar in the active window, if the sidebar belongs to the extension.

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.timestamp
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.timestamp`** property of the

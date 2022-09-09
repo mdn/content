@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MessagePort
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.

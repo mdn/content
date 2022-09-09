@@ -18,6 +18,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.sortingCode
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`sortingCode`** read-only property of the

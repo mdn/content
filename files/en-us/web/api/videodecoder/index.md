@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.VideoDecoder
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes chunks of video.

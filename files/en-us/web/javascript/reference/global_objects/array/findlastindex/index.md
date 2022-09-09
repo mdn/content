@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLastIndex
 ---
+
 {{JSRef}}
 
 The **`findLastIndex()`** method returns the index of the last element in an array that satisfies the provided testing function.

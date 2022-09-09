@@ -13,6 +13,7 @@ tags:
   - decodeAudioData
 browser-compat: api.BaseAudioContext.decodeAudioData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `decodeAudioData()` method of the {{ domxref("BaseAudioContext") }}

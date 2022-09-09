@@ -11,6 +11,7 @@ tags:
   - encodeURI
 browser-compat: javascript.builtins.encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`encodeURI()`** function encodes a {{glossary("URI")}} by

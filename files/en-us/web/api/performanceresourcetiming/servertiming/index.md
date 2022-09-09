@@ -11,6 +11,7 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceResourceTiming.serverTiming
 ---
+
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
 
 The **`serverTiming`** read-only property returns an array of

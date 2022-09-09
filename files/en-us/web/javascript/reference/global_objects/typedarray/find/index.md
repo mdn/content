@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.find
 ---
+
 {{JSRef}}
 
 The **`find()`** method returns a value of an element in the

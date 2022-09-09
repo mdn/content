@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.toggle
 ---
+
 {{APIRef("DOM")}}
 
 The **`toggle()`** method of the {{domxref("DOMTokenList")}} interface

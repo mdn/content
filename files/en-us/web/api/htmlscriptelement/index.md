@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).

@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaHasPopup
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaHasPopup`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.

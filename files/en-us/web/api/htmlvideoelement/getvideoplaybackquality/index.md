@@ -19,6 +19,7 @@ tags:
   - getVideoPlaybackQuality
 browser-compat: api.HTMLVideoElement.getVideoPlaybackQuality
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **{{domxref("HTMLVideoElement")}}** method

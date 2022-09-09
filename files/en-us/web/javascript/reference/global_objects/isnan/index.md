@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`isNaN()`** function determines whether a value is

@@ -12,6 +12,7 @@ tags:
   - lock
 browser-compat: api.ScreenOrientation.lock
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`lock()`** property of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.

@@ -11,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.CSSImportRule.styleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only **`styleSheet`** property of the

@@ -11,6 +11,7 @@ tags:
   - importScripts
 browser-compat: api.WorkerGlobalScope.importScripts
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the worker's scope.

@@ -13,6 +13,7 @@ tags:
   - max()
 browser-compat: api.CSSNumericValue.max
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`max()`** method of the

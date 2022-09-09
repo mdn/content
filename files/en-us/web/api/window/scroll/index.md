@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.scroll
 ---
+
 {{APIRef}}
 
 The **`Window.scroll()`** method scrolls the window to a

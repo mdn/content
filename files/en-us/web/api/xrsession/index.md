@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.XRSession
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The {{domxref("WebXR Device API")}}'s **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.

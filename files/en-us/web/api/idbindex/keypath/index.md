@@ -13,6 +13,7 @@ tags:
   - keyPath
 browser-compat: api.IDBIndex.keyPath
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`keyPath`** property of the {{domxref("IDBIndex")}}

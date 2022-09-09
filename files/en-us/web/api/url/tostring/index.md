@@ -11,6 +11,7 @@ tags:
   - URL API
 browser-compat: api.URL.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URL.toString()`** {{Glossary("stringifier")}} method returns a

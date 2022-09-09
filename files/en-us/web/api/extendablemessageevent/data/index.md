@@ -11,6 +11,7 @@ tags:
   - data
 browser-compat: api.ExtendableMessageEvent.data
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`data`** read-only property of the

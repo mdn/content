@@ -14,6 +14,7 @@ tags:
   - write
 browser-compat: api.BluetoothCharacteristicProperties.write
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`write`** read-only property of the

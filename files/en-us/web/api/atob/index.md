@@ -11,6 +11,7 @@ tags:
   - atob
 browser-compat: api.atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`atob()`** function decodes a

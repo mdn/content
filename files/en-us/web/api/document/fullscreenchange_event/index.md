@@ -11,6 +11,7 @@ tags:
   - fullscreenchange
 browser-compat: api.Document.fullscreenchange_event
 ---
+
 {{APIRef}}
 
 The `fullscreenchange` event is fired immediately after the browser switches into or out of fullscreen mode.

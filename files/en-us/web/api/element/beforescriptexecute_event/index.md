@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Element.beforescriptexecute_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 > **Warning:** This event was a proposal in an early version of the specification. Do not rely on it.

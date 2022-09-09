@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTranslate()`** constructor creates a

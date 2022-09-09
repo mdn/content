@@ -8,6 +8,7 @@ tags:
   - advanced text
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting).

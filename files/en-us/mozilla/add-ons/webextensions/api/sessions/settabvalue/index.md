@@ -12,6 +12,7 @@ tags:
   - setTabValue
 browser-compat: webextensions.api.sessions.setTabValue
 ---
+
 {{AddonSidebar()}}
 
 Stores a key/value pair to associate with a given tab. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getTabValue")}}.

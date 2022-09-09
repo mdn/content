@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toUpperCase
 ---
+
 {{JSRef}}
 
 The **`toUpperCase()`** method returns the calling string value

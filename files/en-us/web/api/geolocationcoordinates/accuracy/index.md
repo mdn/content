@@ -11,6 +11,7 @@ tags:
   - accuracy
 browser-compat: api.GeolocationCoordinates.accuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.accuracy`** read-only property is

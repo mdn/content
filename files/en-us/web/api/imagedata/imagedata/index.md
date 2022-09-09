@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageData()`** constructor returns a newly instantiated

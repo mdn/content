@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.HTMLAudioElement.Audio
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Audio()`** constructor creates

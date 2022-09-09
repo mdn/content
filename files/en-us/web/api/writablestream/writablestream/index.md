@@ -10,6 +10,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream.WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStream()`** constructor creates

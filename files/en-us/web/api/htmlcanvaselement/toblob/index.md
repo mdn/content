@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.toBlob()`** method creates a {{domxref("Blob")}} object representing the image contained in the canvas.

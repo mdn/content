@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msub
 ---
+
 {{MathMLRef}}
 
 The MathML `<msub>` element is used to attach a subscript to an expression.

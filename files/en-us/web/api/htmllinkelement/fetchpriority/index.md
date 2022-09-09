@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 The **`fetchPriority`** property of the

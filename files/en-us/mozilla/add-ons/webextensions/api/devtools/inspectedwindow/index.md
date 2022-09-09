@@ -10,6 +10,7 @@ tags:
   - devtools.inspectedWindow
 browser-compat: webextensions.api.devtools.inspectedWindow
 ---
+
 {{AddonSidebar}}
 
 > **Note:** This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/mv3/devtools/), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).

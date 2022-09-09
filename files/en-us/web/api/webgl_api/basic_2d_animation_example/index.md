@@ -12,6 +12,7 @@ tags:
   - WebGL
   - WebGL API
 ---
+
 {{WebGLSidebar}}
 
 In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).

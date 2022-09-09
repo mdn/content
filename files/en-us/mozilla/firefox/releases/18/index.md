@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 18
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 18 was released on January 8, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.

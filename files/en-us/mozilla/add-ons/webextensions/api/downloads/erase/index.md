@@ -13,6 +13,7 @@ tags:
   - erase
 browser-compat: webextensions.api.downloads.erase
 ---
+
 {{AddonSidebar()}}
 
 The **`erase()`** function of the {{WebExtAPIRef("downloads")}} API erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.

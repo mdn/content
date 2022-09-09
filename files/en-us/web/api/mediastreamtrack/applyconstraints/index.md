@@ -12,6 +12,7 @@ tags:
   - applyConstraints
 browser-compat: api.MediaStreamTrack.applyConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The

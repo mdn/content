@@ -18,6 +18,7 @@ tags:
   - setParameters
 browser-compat: api.RTCRtpSender.setParameters
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`setParameters()`** method of

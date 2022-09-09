@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.HTMLDialogElement.close_event
 ---
+
 {{ APIRef() }}
 
 The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed.

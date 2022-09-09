@@ -24,6 +24,7 @@ tags:
   - Polyfill
 browser-compat: api.queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`queueMicrotask()`** method,

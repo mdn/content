@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.polygonOffset
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.polygonOffset()`** method of the

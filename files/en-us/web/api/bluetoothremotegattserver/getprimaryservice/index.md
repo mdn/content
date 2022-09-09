@@ -13,6 +13,7 @@ tags:
   - getPrimaryService()
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryService
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.getPrimaryService()`** method

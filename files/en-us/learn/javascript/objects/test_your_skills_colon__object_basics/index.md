@@ -8,6 +8,7 @@ tags:
   - Objects
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article.

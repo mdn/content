@@ -11,6 +11,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 When a drag occurs, a translucent image is generated from the drag target (the element

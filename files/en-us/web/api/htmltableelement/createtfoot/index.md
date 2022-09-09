@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTFoot()`** method of

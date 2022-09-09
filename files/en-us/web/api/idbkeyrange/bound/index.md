@@ -13,6 +13,7 @@ tags:
   - bound
 browser-compat: api.IDBKeyRange.bound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`bound()`** method of the {{domxref("IDBKeyRange")}}

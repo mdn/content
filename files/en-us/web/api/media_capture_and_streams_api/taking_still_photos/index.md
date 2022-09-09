@@ -14,6 +14,7 @@ tags:
   - getusermedia
   - webcam
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article shows how to use [`navigator.mediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.

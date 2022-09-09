@@ -11,6 +11,7 @@ tags:
   - get
 browser-compat: api.Headers.get
 ---
+
 {{APIRef("Fetch")}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface

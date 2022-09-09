@@ -12,6 +12,7 @@ tags:
   - stop
 browser-compat: api.Window.stop
 ---
+
 {{APIRef}}
 
 The **`window.stop()`** stops further resource loading in the current

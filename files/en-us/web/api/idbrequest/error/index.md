@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBRequest.error
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`error`** read-only property of the

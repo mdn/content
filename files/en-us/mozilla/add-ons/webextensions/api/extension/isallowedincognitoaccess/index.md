@@ -13,6 +13,7 @@ tags:
   - isAllowedIncognitoAccess
 browser-compat: webextensions.api.extension.isAllowedIncognitoAccess
 ---
+
 {{AddonSidebar()}}
 
 Check whether the extension is allowed access to tabs opened in "private browsing" mode.

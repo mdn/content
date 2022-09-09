@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement.selectedIndex`** is a

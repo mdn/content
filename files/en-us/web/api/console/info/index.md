@@ -10,6 +10,7 @@ tags:
   - web console
 browser-compat: api.console.info
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.info()`** method outputs an

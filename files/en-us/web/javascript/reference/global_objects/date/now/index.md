@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.now
 ---
+
 {{JSRef}}
 
 The static **`Date.now()`** method returns the number of

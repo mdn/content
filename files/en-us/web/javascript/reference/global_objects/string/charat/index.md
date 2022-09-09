@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.charAt
 ---
+
 {{JSRef}}
 
 The {{jsxref("String")}} object's

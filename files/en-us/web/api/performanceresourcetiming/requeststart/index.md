@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.requestStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`requestStart`** read-only property returns a

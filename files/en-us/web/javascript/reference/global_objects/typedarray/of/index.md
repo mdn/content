@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.of
 ---
+
 {{JSRef}}
 
 The **`TypedArray.of()`** method creates a new

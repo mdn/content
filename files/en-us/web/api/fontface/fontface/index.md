@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FontFace.FontFace
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`FontFace()`** constructor creates a new

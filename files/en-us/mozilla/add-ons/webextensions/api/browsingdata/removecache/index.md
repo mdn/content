@@ -12,6 +12,7 @@ tags:
   - removeCache
 browser-compat: webextensions.api.browsingData.removeCache
 ---
+
 {{AddonSidebar()}}
 
 Clears the browser's cache.

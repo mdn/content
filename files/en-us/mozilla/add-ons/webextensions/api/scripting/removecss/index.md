@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.removeCSS
 ---
+
 {{AddonSidebar()}}
 
 Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertCSS()")}}.

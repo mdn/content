@@ -11,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.rangeCount
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.rangeCount`** read-only property returns the

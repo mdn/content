@@ -12,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognition()`** constructor creates a new

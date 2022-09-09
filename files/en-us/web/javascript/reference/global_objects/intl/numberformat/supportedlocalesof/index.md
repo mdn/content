@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.supportedLocalesOf()`** method returns

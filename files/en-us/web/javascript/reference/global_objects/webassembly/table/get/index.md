@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.get
 ---
+
 {{JSRef}}
 
 The **`get()`** prototype method of

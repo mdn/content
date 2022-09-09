@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.status
 ---
+
 {{AddonSidebar()}}
 
 A string that describes the current status of the request. It will be one of the following values:

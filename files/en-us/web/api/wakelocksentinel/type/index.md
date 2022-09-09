@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel.type
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The read-only **`type`** property of the

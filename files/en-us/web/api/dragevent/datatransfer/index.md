@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DragEvent.dataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DragEvent.dataTransfer`** property holds the drag

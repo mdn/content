@@ -18,6 +18,7 @@ tags:
   - uniformMatrix4fv
 browser-compat: api.WebGLRenderingContext.uniformMatrix2fv
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.uniformMatrix[234]fv()`** methods

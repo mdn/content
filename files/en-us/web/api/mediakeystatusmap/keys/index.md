@@ -11,6 +11,7 @@ tags:
   - keys()
 browser-compat: api.MediaKeyStatusMap.keys
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`keys`** property of the

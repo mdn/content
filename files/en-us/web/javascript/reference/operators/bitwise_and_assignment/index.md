@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise AND assignment operator (`&=`) uses the binary

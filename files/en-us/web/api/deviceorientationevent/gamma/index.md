@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.gamma
 ---
+
 {{ apiref("Device Orientation Events") }}
 
 Returns the rotation of the device around the Y axis; that is, the number of degrees,

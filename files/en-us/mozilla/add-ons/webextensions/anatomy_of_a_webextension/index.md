@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 An extension consists of a collection of files, packaged for distribution and installation. In this article, we will quickly go through the files that might be present in an extension.

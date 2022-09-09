@@ -13,6 +13,7 @@ tags:
   - move
 browser-compat: webextensions.api.bookmarks.move
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.move()`** method moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.

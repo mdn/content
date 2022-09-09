@@ -10,6 +10,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace.toJSON
 ---
+
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **`toJSON()`** method of the {{domxref("VideoColorSpace")}} interface is a _serializer_ that returns a JSON representation of the `VideoColorSpace` object.

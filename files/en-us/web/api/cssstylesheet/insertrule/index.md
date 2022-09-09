@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleSheet.insertRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet.insertRule()`**

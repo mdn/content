@@ -14,6 +14,7 @@ tags:
   - height
 browser-compat: api.SVGImageElement.height
 ---
+
 {{APIRef("SVG")}}
 
 The **`height`** read-only property of the

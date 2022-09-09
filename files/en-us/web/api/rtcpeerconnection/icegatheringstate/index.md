@@ -11,6 +11,7 @@ tags:
   - iceGatheringState
 browser-compat: api.RTCPeerConnection.iceGatheringState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.iceGatheringState`** returns a string

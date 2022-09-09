@@ -11,6 +11,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver.ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserver`** constructor creates a

@@ -9,6 +9,7 @@ tags:
   - interactive
 browser-compat: api.Document.readystatechange_event
 ---
+
 {{APIRef}}
 
 The **`readystatechange`** event is fired when the {{domxref("Document.readyState", "readyState")}} attribute of a document has changed.

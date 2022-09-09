@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMinutes
 ---
+
 {{JSRef}}
 
 The **`getMinutes()`** method returns the minutes in the

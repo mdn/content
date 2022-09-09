@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
+
 {{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface is a _serializer_, and returns a JSON representation of the `LargestContentfulPaint` object.

@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.image
 ---
+
 {{SVGRef}}
 
 The **`<image>`** SVG element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.
