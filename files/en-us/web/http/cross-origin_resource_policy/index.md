@@ -1,6 +1,6 @@
 ---
 title: Cross-Origin Resource Policy (CORP)
-slug: Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
+slug: Web/HTTP/Cross-Origin_Resource_Policy
 tags:
   - HTTP
   - Reference
