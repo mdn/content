@@ -8,6 +8,7 @@ tags:
   - MDN Meta
   - Tools
 ---
+
 {{MDNSidebar}}
 
 This article details the four types of KumaScript error, and some steps you can take to fix them.
