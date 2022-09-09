@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.CONNECT
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `CONNECT` method** starts two-way communications

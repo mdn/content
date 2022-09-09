@@ -8,6 +8,7 @@ tags:
   - Response header
 browser-compat: http.headers.Want-Digest
 ---
+
 {{HTTPSidebar}}
 
 The **`Want-Digest`** HTTP header is primarily used in a request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.

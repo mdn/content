@@ -10,6 +10,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows

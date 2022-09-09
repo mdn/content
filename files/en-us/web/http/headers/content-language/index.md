@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Language
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Language`** {{Glossary("representation header")}} is used to **describe the language(s) intended for the audience**, so users can differentiate it according to their own preferred language.

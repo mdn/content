@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.manifest-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP

@@ -7,6 +7,7 @@ tags:
   - HTTP
   - Reference
 ---
+
 {{HTTPSidebar}}
 
 This article documents the default values for the HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header for specific inputs and browser versions.

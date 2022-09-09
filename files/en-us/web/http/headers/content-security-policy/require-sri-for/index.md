@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Content-Security-Policy.require-sri-for
 ---
+
 {{deprecated_header}}{{Non-standard_header}}
 
 The [HTTP](/en-US/docs/Web/HTTP) {{HTTPHeader("Content-Security-Policy")}}
