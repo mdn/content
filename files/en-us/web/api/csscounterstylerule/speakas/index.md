@@ -27,7 +27,7 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
   suffix: ': ';
-  speak-as: "bullets";
+  speak-as: bullets;
 }
 ```
 
