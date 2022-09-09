@@ -9,6 +9,7 @@ tags:
   - borders
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders).

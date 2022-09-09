@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 In this assessment you'll update a page to play a series of animations in a sequence. To do this you'll use some of the techniques we learned in the [How to use Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) article.

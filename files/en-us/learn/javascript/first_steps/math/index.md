@@ -16,6 +16,7 @@ tags:
   - maths
   - modulo
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 At this point in the course we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.

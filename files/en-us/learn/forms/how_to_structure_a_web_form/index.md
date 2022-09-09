@@ -12,6 +12,7 @@ tags:
   - Structure
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 With the basics out of the way, we'll now look in more detail at the elements used to provide structure and meaning to the different parts of a form.

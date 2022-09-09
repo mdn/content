@@ -10,6 +10,7 @@ tags:
   - Multimedia
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to [embed video and audio content in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), also using [object, iframe and other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).

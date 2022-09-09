@@ -11,6 +11,7 @@ tags:
   - django
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 In this assessment you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) module to create a very basic blog.

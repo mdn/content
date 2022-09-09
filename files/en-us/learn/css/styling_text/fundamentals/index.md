@@ -15,6 +15,7 @@ tags:
   - spacing
   - weight
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 In this article we'll start you on your journey towards mastering text styling with {{glossary("CSS")}}. Here we'll go through all the basic fundamentals of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.

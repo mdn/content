@@ -6,6 +6,7 @@ tags:
   - MathML
   - Landing
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
 
 <table>

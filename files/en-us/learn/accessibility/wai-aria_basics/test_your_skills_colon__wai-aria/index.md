@@ -9,6 +9,7 @@ tags:
   - WAI-ARIA
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) article.

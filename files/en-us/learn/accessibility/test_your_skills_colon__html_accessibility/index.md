@@ -8,6 +8,7 @@ tags:
   - Learn
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article.

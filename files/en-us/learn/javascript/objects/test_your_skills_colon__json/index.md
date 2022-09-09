@@ -7,6 +7,7 @@ tags:
   - JSON
   - JavaScript
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Working with JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) article.

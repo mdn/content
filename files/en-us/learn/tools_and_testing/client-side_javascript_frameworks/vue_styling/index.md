@@ -11,6 +11,7 @@ tags:
   - client-side
   - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
