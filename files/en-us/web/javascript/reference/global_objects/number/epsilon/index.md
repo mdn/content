@@ -14,8 +14,6 @@ browser-compat: javascript.builtins.Number.EPSILON
 
 The **`Number.EPSILON`** property represents the difference between 1 and the smallest floating point number greater than 1.
 
-Because `EPSILON` is a static property of {{jsxref("Number")}}, you always use it as `Number.EPSILON`, rather than as a property of a number value.
-
 {{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0, 0, 0)}}
 
 ## Description
@@ -23,6 +21,8 @@ Because `EPSILON` is a static property of {{jsxref("Number")}}, you always use i
 The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or 2<sup>-52</sup>. This is the smallest value that can be added to 1 to get a distinct number, because [double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 53 bits (with the highest bit always being 1) to represent the [significand](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding), and the lowest bit has a significance of 2<sup>-52</sup>.
 
 Note that the absolute accuracy of floating numbers decreases as the number gets larger, because the exponent grows while the significand's accuracy stays the same. {{jsxref("Number.MIN_VALUE")}} is the smallest representable positive number, which is much smaller than `Number.EPSILON`.
+
+Because `EPSILON` is a static property of {{jsxref("Number")}}, you always use it as `Number.EPSILON`, rather than as a property of a number value.
 
 ## Examples
 

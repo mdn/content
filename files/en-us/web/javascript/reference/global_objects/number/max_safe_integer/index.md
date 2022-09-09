@@ -24,7 +24,7 @@ The `MAX_SAFE_INTEGER` constant has a value of `9007199254740991` (9,007,199,254
 
 [Double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 53 bits (with the highest bit always being 1) to represent the [significand](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding), so it can only safely represent integers between -(2<sup>53</sup> – 1) and 2<sup>53</sup> – 1. "Safe" in this context refers to the ability to represent integers exactly and to compare them correctly. For example, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` will evaluate to true, which is mathematically incorrect. See {{jsxref("Number.isSafeInteger()")}} for more information.
 
-Because `MAX_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_SAFE_INTEGER`, rather than as a property of a {{jsxref("Number")}} object you created.
+Because `MAX_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_SAFE_INTEGER`, rather than as a property of a number value.
 
 ## Examples
 
