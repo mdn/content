@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.storage
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to store and retrieve data, and listen for changes to stored items.

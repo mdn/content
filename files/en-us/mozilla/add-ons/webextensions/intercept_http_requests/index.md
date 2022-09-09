@@ -7,6 +7,7 @@ tags:
   - How-to
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 To intercept HTTP requests, use the {{WebExtAPIRef("webRequest")}} API.

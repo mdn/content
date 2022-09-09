@@ -12,6 +12,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.create
 ---
+
 {{AddonSidebar()}}
 
 Adds a new panel to the devtools.

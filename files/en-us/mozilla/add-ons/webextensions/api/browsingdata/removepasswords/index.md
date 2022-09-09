@@ -12,6 +12,7 @@ tags:
   - removePasswords
 browser-compat: webextensions.api.browsingData.removePasswords
 ---
+
 {{AddonSidebar()}}
 
 Clears saved passwords.

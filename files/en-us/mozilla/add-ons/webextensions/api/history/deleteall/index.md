@@ -13,6 +13,7 @@ tags:
   - deleteAll
 browser-compat: webextensions.api.history.deleteAll
 ---
+
 {{AddonSidebar()}}
 
 Deletes all visits from the browser's history.

@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.create
 ---
+
 {{AddonSidebar()}}
 
 Creates and displays a notification.

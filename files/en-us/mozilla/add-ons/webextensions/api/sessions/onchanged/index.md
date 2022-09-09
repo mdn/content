@@ -13,6 +13,7 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired whenever the list of closed tabs or windows changes.

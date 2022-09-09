@@ -12,6 +12,7 @@ tags:
   - onInputCancelled
 browser-compat: webextensions.api.omnibox.onInputCancelled
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user has cancelled their interaction with your extension (for example, by clicking outside the address bar).

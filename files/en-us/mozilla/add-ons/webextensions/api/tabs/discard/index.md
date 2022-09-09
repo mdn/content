@@ -11,6 +11,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.discard
 ---
+
 {{AddonSidebar()}}
 
 Discards one or more tabs.

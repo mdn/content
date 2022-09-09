@@ -12,6 +12,7 @@ tags:
   - reset
 browser-compat: webextensions.api.theme.reset
 ---
+
 {{AddonSidebar()}}
 
 Resets any theme that was applied using the {{WebExtAPIRef("theme.update()")}} method.

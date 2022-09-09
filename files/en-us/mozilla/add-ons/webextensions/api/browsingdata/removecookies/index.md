@@ -12,6 +12,7 @@ tags:
   - removeCookies
 browser-compat: webextensions.api.browsingData.removeCookies
 ---
+
 {{AddonSidebar()}}
 
 Clears the browser's cookies.

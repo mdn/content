@@ -13,6 +13,7 @@ tags:
   - getPopup
 browser-compat: webextensions.api.action.getPopup
 ---
+
 {{AddonSidebar()}}
 
 Gets the HTML document set as the popup for this browser action.

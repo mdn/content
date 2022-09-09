@@ -13,6 +13,7 @@ tags:
   - action
 browser-compat: webextensions.api.action.ColorArray
 ---
+
 {{AddonSidebar()}}
 
 ## Type

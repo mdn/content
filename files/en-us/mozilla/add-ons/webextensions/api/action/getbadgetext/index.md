@@ -13,6 +13,7 @@ tags:
   - getBadgeText
 browser-compat: webextensions.api.action.getBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Gets the browser action's badge text.

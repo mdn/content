@@ -13,6 +13,7 @@ tags:
   - setShelfEnabled
 browser-compat: webextensions.api.downloads.setShelfEnabled
 ---
+
 {{AddonSidebar()}}
 
 The **`setShelfEnabled()`** function of the {{WebExtAPIRef("downloads")}} API enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.

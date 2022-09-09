@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onResponseStarted
 ---
+
 {{AddonSidebar()}}
 
 Fired when the first byte of the response body is received.

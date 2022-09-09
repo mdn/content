@@ -13,6 +13,7 @@ tags:
   - topSites
 browser-compat: webextensions.api.topSites.get
 ---
+
 {{AddonSidebar()}}
 
 Gets an array containing information about pages that the user has visited often and recently.

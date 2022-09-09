@@ -12,6 +12,7 @@ tags:
   - contextualIdentities
 browser-compat: webextensions.api.contextualIdentities.update
 ---
+
 {{AddonSidebar()}}
 
 Updates properties of a contextual identity, given its cookie store ID.

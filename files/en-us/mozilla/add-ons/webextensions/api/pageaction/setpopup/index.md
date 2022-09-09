@@ -13,6 +13,7 @@ tags:
   - setPopup
 browser-compat: webextensions.api.pageAction.setPopup
 ---
+
 {{AddonSidebar()}}
 
 Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.

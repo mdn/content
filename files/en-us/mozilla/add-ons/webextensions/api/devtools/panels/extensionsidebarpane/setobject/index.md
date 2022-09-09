@@ -13,6 +13,7 @@ tags:
   - setObject
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 ---
+
 {{AddonSidebar()}}
 
 Displays a JSON object in the extension's sidebar pane.

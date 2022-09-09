@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Mozilla
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 21 was released on May 14, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.

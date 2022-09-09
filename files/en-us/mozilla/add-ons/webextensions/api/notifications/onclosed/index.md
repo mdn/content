@@ -13,6 +13,7 @@ tags:
   - onClosed
 browser-compat: webextensions.api.notifications.onClosed
 ---
+
 {{AddonSidebar()}}
 
 Fired when a notification is closed, either by the system or by the user.

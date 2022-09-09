@@ -12,6 +12,7 @@ tags:
   - removeLocalStorage
 browser-compat: webextensions.api.browsingData.removeLocalStorage
 ---
+
 {{AddonSidebar()}}
 
 Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.

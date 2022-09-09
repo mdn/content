@@ -12,6 +12,7 @@ tags:
   - get
 browser-compat: webextensions.api.search.search
 ---
+
 {{AddonSidebar()}}
 
 Gets an array of all installed search engines.

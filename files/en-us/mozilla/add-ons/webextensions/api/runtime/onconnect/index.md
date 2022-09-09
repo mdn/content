@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onConnect
 ---
+
 {{AddonSidebar()}}
 
 Fired when a connection is made with either an extension process or a content script.

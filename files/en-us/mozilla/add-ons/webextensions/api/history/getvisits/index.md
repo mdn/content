@@ -13,6 +13,7 @@ tags:
   - getVisits
 browser-compat: webextensions.api.history.getVisits
 ---
+
 {{AddonSidebar()}}
 
 Retrieves information about all visits to the given URL.

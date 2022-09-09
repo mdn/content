@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.alarms.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all active alarms for the extension.

@@ -11,6 +11,7 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.getState
 ---
+
 {{AddonSidebar()}}
 
 Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.

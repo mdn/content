@@ -13,6 +13,7 @@ tags:
   - onImportEnded
 browser-compat: webextensions.api.bookmarks.onImportEnded
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has finished importing a set of bookmarks.

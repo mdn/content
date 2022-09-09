@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.

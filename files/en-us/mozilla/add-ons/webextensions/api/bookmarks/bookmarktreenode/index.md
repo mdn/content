@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNode
 ---
+
 {{AddonSidebar()}}
 
 An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark tree, where each node is a bookmark, a bookmark folder, or a separator. Child nodes are ordered by an `index` within their respective parent folders.

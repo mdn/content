@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 54 was released on June 13, 2017. This article lists key changes that are useful for web developers.

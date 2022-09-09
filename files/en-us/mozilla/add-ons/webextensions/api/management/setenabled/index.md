@@ -11,6 +11,7 @@ tags:
   - setEnabled
 browser-compat: webextensions.api.management.setEnabled
 ---
+
 {{AddonSidebar()}}
 
 Enables or disables the given add-on.

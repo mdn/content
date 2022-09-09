@@ -12,6 +12,7 @@ tags:
   - eval
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
 ---
+
 {{AddonSidebar()}}
 
 Executes JavaScript in the window that the devtools are attached to.

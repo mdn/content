@@ -12,6 +12,7 @@ tags:
   - removePluginData
 browser-compat: webextensions.api.browsingData.removePluginData
 ---
+
 {{AddonSidebar()}}
 
 Clears data stored by browser plugins.

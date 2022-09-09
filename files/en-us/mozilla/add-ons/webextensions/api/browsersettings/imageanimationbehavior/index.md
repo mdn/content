@@ -11,6 +11,7 @@ tags:
   - imageAnimationBehavior
 browser-compat: webextensions.api.browserSettings.imageAnimationBehavior
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the way the browser handles animated images, such as GIFs.

@@ -5,6 +5,7 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 Using the {{WebExtAPIRef("omnibox")}} API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.

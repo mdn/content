@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.BlockingResponse
 ---
+
 {{AddonSidebar()}}
 
 An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument.

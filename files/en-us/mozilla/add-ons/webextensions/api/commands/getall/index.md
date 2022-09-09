@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.commands.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all commands for the extension that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).

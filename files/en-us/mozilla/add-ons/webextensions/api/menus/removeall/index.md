@@ -14,6 +14,7 @@ tags:
   - removeAll
 browser-compat: webextensions.api.menus.removeAll
 ---
+
 {{AddonSidebar()}}
 
 Removes all menu items added by the extension.
