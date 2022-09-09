@@ -24,21 +24,19 @@ CSS stylesheets allow authors to use custom fonts; specifying fonts to download 
 The point at which a font is downloaded is controlled by the user agent.
 Most agents only fetch and load fonts when they are first needed, which can result in a perceptible delay.
 
-The CSS Font Loading API overcomes this problem by allowing authors to control and track when a font is fetched and loaded, and when it is made available to the document or worker for drawing (or automated download).
+The CSS Font Loading API overcomes this problem by letting authors control and track when a font face is fetched and loaded, and when it is added to the font face set owned by the document or worker.
+Adding a font face to the document or worker font face set allows the user agent to fetch and load the associated font resource automatically if needed.
+A font face can be loaded either before or after it is added to a font face set, but it _must_ be added to the set before it can be used for drawing.
 
 Font faces are defined in {{domxref('FontFace')}} objects, which specify a binary or URL font source and other properties of font in much the same way as the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule.
+`FontFace` objects are added to the document or worker {{domxref('FontFaceSet')}} using {{domxref("Document.fonts")}} and {{domxref("WorkerGlobalScope.fonts")}}, respectively.
+Authors can trigger download of fonts using either `FontFace` or `FontFaceSet`, and monitor loading completion.
+`FontFaceSet` can additionally be used to determine when all fonts required by a page have loaded and the document layout is complete.
+
 The {{domxref('FontFace.status')}} property indicates the font face loading status: `unloaded`, `loading`, `loaded` or `failed`.
 This status is initially `unloaded`.
 It is set to `loading` when the file is being downloaded or the font data is being processed, and to `failed` if the font definition is invalid or the font data cannot be loaded.
 The status is set to `loaded` when the font face data has been successfully fetched (if needed) and loaded.
-
-Font faces added to the document or worker {{domxref('FontFaceSet')}} ({{domxref("Document.fonts")}} and {{domxref("WorkerGlobalScope.fonts")}} respectively), which represents the set of custom font faces available to the user agent.
-Authors can use the `FontFaceSet` API to load the fonts, or the user agent will automatically do so when fonts are needed to render a particular element.
-
-Authors can also load fonts using the `FontFace` object (even before adding the font face to the document).
-Note however that a font can only be used for drawing if it has been both loaded and added to a `FontFaceSet`.
-
-Loading of individual `FontFace` can be tracked with promises returned by the `loading` property and `load()` method, while loading of all required fonts can be tracked for a `FontFaceSet` using both promise and event based mechanisms.
 
 ### Defining a font face
 
@@ -58,10 +56,10 @@ const font = new FontFace('myfont', 'url(myfont.woff)', {
 ```
 
 > **Note:** As with `@font-face`, some descriptors represent the expected data in the font data and are used for font matching, while others actually set/define properties of the generated font face.
-> For example, setting the `style` to "italic" indicates that the file contains italic fonts, but this could be incorrect.
+> For example, setting the `style` to "italic" indicates that the file contains italic fonts; it is up to the author to specify a file for which this is true.
 
-Font faces with a binary source are automatically loaded if the font definition is valid and the font data can be loaded ({{domxref('FontFace.status')}} is `loaded` on success and `failed` otherwise).  
-Font faces with a URL source are not automatically loaded ({{domxref('FontFace.status')}} is `unloaded`, or `failed` if the font definition is invalid).
+Font faces with a _binary source_ are automatically loaded if the font definition is valid and the font data can be loaded — {{domxref('FontFace.status')}} is set to `loaded` on success and `failed` otherwise.  
+Font faces with a URL source are validated but not automatically loaded — {{domxref('FontFace.status')}} is set `unloaded` if the font face definition is valid and `failed` otherwise.
 
 ### Adding a font to a document or worker
 
@@ -145,7 +143,7 @@ mycanvas.width = 650;
 mycanvas.height = 75;
 ```
 
-Next we define a `FontFace` that has a URL source that is a goggle font and add it to `document.fonts`.
+Next we define a `FontFace` that has a URL source that is a Google Font and add it to `document.fonts`.
 We then log the font status, which should be `unloaded`.
 
 ```js
@@ -154,7 +152,7 @@ document.fonts.add(bitterFontFace);
 log.textContent+=`Bitter font: ${bitterFontFace.status}\n`;  // > Bitter status: unloaded
 ```
 
-Next we call {{domxref('FontFace.load()')}} method to load the font face, and wait on the returned promise.
+Then we call the {{domxref('FontFace.load()')}} method to load the font face, and wait on the returned promise.
 Once the promise resolves we log the loaded status (which should be `loaded`) and draw text in the loaded font to the canvas.
 
 ```js
@@ -182,7 +180,8 @@ It should show the name of the font drawn on the canvas in the downloaded font, 
 
 ### Font loading with events
 
-This example is similar to the last one, except that it uses {{domxref('FontFaceSet.load()')}} to load the font, 
+This example is similar to the previous one, except that it uses {{domxref('FontFaceSet.load()')}} to load the font.
+It also demonstrates how to listen for font loading events.
 
 #### HTML
 
@@ -193,7 +192,7 @@ This example is similar to the last one, except that it uses {{domxref('FontFace
 
 #### JavaScript
 
-This example is similar to the previous one except that it uses {{domxref('FontFaceSet.load()')}} to load to load the font.
+The code below defines a canvas context for drawing text, defines a font face, and adds it to the document font face set.
 
 ```js
 const log = document.getElementById('log');
@@ -209,7 +208,9 @@ log.textContent+=`Oxygen status: ${oxygenFontFace.status}\n`;
 ```
 
 Next we use `load()` on the font face set to load the font, specifying which of the fonts to load.
-On success we use the font to draw.
+The method returns a {{jsxref("Promise")}}.
+If the promise is resolved we use the font to draw some text.
+If it is rejected the error is logged.
 
 ```js
 document.fonts.load('36px FontFamily Oxygen').then((fonts) => {
@@ -223,8 +224,8 @@ document.fonts.load('36px FontFamily Oxygen').then((fonts) => {
 });
 ```
 
-We can also use events to track the font loading operation.
-For the `loading` and `loadingerror` event listeners we just log the number of font faces that are loading and errored.
+Instead of waiting on a promise we might instead use events to track the font loading operation.
+The code below listens for the `loading` and `loadingerror` events and logs the number of font faces for each case.
 In the `loadingdone` event listener we additionally iterate through the font faces and log the family names.
 
 ```js
@@ -242,7 +243,7 @@ document.fonts.addEventListener('loadingdone', (event) => {
 });
 ```
 
-Lastly we "additionally" monitor the completion of font loading using the promise returned by {{domxref('FontFaceSet.ready')}}.
+The last bit of code demonstrates how you can monitor the completion of font loading using the promise returned by {{domxref('FontFaceSet.ready')}}.
 Unlike the other mechanisms this returns when all fonts defined in the document have been downloaded and layout is complete.
 
 When the promise resolves we iterate the values in the document's font faces.
