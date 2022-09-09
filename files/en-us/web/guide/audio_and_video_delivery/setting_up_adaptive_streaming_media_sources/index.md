@@ -10,6 +10,7 @@ tags:
   - Video
   - adaptive streaming
 ---
+
 Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 
 ## Choosing formats

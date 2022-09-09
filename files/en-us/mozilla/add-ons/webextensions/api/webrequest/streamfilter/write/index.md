@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.write
 ---
+
 {{AddonSidebar()}}
 
 Writes some response data to the output stream.

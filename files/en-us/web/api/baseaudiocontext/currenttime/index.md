@@ -12,6 +12,7 @@ tags:
   - currentTime
 browser-compat: api.BaseAudioContext.currentTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `currentTime` read-only property of the {{ domxref("BaseAudioContext") }}

@@ -13,6 +13,7 @@ tags:
   - setBadgeText
 browser-compat: webextensions.api.action.setBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.

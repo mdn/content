@@ -12,6 +12,7 @@ tags:
   - getElementsByTagNameNS
 browser-compat: api.Document.getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 Returns a list of elements with the given tag name belonging to the given namespace.

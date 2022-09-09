@@ -12,6 +12,7 @@ tags:
   - createPanner
 browser-compat: api.BaseAudioContext.createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPanner()` method of the {{ domxref("BaseAudioContext") }}

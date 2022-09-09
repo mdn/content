@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translate
 ---
+
 {{CSSRef}}
 
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element in the horizontal and/or vertical

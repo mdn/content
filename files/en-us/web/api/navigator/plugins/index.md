@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.plugins
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 Returns a {{DOMxRef("PluginArray")}} object, listing the {{DOMxRef("Plugin")}} objects describing the plugins installed in the application.

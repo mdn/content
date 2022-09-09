@@ -13,6 +13,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList.clear
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The {{domxref("DataTransferItemList")}} method

@@ -12,6 +12,7 @@ tags:
   - generateRequest
 browser-compat: api.MediaKeySession.generateRequest
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.generateRequest()` method returns a

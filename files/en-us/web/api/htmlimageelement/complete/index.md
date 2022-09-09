@@ -14,6 +14,7 @@ tags:
   - complete
 browser-compat: api.HTMLImageElement.complete
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} interface's

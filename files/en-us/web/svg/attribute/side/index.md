@@ -7,6 +7,7 @@ tags:
   - Experimental
 browser-compat: svg.elements.textPath.side
 ---
+
 {{SVGRef}}{{SeeCompatTable}}
 
 The **`side`** attribute determines the side of a path the text is placed on (relative to the path direction).

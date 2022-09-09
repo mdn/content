@@ -8,6 +8,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.color-profile
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`color-profile`** attribute is used to define which color profile a raster image included through the {{SVGElement("image")}} element should use.

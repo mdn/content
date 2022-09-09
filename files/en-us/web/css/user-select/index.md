@@ -11,6 +11,7 @@ tags:
   - user-select
 browser-compat: css.properties.user-select
 ---
+
 {{CSSRef}}
 
 The **`user-select`** [CSS](/en-US/docs/Web/CSS) property controls whether the user can select text. This doesn't have any effect on content loaded as part of a browser's user interface (its {{Glossary("Chrome", "chrome")}}), except in textboxes.

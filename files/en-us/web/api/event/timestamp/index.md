@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Event.timeStamp
 ---
+
 {{APIRef("DOM")}}
 
 The **`timeStamp`** read-only property of the

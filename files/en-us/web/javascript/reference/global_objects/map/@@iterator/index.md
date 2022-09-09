@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.@@iterator
 ---
+
 {{JSRef}}
 
 The initial value of the **`@@iterator`** property is the same function object as the initial value of the {{jsxref("Map.prototype.entries()")}} method.

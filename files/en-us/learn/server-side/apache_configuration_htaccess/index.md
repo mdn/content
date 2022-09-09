@@ -9,6 +9,7 @@ tags:
   - Permanent Redirect
   - Redirect
 ---
+
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
 While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.

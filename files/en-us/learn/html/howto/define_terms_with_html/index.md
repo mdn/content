@@ -7,6 +7,7 @@ tags:
   - HTML
   - Learn
 ---
+
 HTML provides several ways to convey description semantics, whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 
 <table class="standard-table">

@@ -15,6 +15,7 @@ tags:
   - submit
 browser-compat: api.SubmitEvent.SubmitEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`SubmitEvent()`** constructor creates and returns a new {{domxref("SubmitEvent")}} object,

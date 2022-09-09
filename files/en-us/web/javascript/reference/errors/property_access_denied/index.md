@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Security
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "Permission denied to access property" occurs when there was

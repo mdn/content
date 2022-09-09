@@ -10,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.getItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`getItem()`** method of the {{domxref("SVGPointList")}} interface gets one item from the list at the specified index.

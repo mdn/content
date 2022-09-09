@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndexEvent
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`ContentIndexEvent`** interface of the [content index](/en-US/docs/Web/API/Content_Index_API) defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event.

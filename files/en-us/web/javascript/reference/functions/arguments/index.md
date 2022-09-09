@@ -9,6 +9,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** is an `Array`-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.

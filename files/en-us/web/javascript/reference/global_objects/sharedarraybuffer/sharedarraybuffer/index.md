@@ -8,6 +8,7 @@ tags:
   - SharedArrayBuffer
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 > **Note:** `SharedArrayBuffer` was disabled by default in all major

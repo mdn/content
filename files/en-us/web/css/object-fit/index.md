@@ -13,6 +13,7 @@ tags:
   - size
 browser-compat: css.properties.object-fit
 ---
+
 {{CSSRef}}
 
 The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as an {{HTMLElement("img")}} or {{HTMLElement("video")}}, should be resized to fit its container.

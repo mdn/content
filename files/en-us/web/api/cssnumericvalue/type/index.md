@@ -13,6 +13,7 @@ tags:
   - Type
 browser-compat: api.CSSNumericValue.type
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`type()`** method of the

@@ -10,6 +10,7 @@ tags:
   - font-weight
 browser-compat: css.at-rules.font-face.font-weight
 ---
+
 {{CSSRef}}
 
 The **`font-weight`** CSS descriptor allows authors to specify font weights for the fonts specified in the {{cssxref("@font-face")}} rule. The {{cssxref("font-weight")}} property can separately be used to set how thick or thin characters in text should be displayed.

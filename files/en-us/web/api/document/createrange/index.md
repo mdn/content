@@ -12,6 +12,7 @@ tags:
   - Range
 browser-compat: api.Document.createRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.createRange()`** method returns a new

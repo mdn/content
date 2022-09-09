@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Array.groupToMap
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`groupToMap()`** method groups the elements of the calling array using the values returned by a provided testing function.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollHeight`** read-only property is a

@@ -13,6 +13,7 @@ tags:
   - onMoved
 browser-compat: webextensions.api.bookmarks.onMoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a bookmark or folder is moved to a different parent folder or position within a folder.

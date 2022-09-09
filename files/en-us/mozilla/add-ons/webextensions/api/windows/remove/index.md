@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: webextensions.api.windows.remove
 ---
+
 {{AddonSidebar()}}
 
 Closes a window and all the tabs inside it, given the window's ID.

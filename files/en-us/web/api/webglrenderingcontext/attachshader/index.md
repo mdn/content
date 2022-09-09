@@ -7,6 +7,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLRenderingContext.attachShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.attachShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches either a fragment or

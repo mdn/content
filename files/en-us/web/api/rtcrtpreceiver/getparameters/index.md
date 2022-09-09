@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpReceiver.getParameters
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`getParameters()`** method of

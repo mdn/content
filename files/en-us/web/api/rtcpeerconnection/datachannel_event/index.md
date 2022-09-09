@@ -18,6 +18,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.datachannel_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`datachannel`** event is sent to an {{domxref("RTCPeerConnection")}} instance when an {{domxref("RTCDataChannel")}} has been added to the connection, as a result of the remote peer calling {{domxref("RTCPeerConnection.createDataChannel()")}}.

@@ -8,6 +8,7 @@ tags:
   - governance
   - open-source
 ---
+
 {{MDNSidebar}}
 
 If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs (or other open source projects). There are a few best practices to adopt that will help ensure that you and the other project contributors feel valued and safe, and stay productive.

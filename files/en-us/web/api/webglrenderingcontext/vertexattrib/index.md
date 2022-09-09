@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.vertexAttrib1f
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.vertexAttrib[1234]f[v]()`**

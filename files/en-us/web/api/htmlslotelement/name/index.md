@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.name
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`name`** property of the {{domxref("HTMLSlotElement")}}

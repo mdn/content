@@ -6,6 +6,7 @@ tags:
   - MathML
   - Project
 ---
+
 Fonts with appropriate Unicode coverage and Open Font Format features are required for good math rendering.
 This page describes how users can install such math fonts to properly display MathML in browsers.
 

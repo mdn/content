@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy
 ---
+
 {{AddonSidebar}}
 
 Access and modify various privacy-related browser settings.

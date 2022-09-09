@@ -11,6 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.values
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`values()`** method of the

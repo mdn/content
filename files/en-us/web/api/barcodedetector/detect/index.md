@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector.detect
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`detect()`** method of the

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.parse
 ---
+
 {{JSRef}}
 
 The **`Date.parse()`** method parses a string representation of

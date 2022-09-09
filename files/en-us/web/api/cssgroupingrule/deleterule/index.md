@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule.deleteRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`deleteRule()`** method of the

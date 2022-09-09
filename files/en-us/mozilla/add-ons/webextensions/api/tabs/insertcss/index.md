@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.insertCSS
 ---
+
 {{AddonSidebar()}}
 
 Injects CSS into a page.

@@ -12,6 +12,7 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator.evaluate
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `evaluate()` method of the {{domxref("XPathEvaluator")}} interface

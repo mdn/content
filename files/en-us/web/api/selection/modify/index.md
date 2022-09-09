@@ -12,6 +12,7 @@ tags:
   - Selection
 browser-compat: api.Selection.modify
 ---
+
 {{APIRef("DOM")}}
 
 The **`Selection.modify()`** method applies a change to the

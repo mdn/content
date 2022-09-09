@@ -14,6 +14,7 @@ tags:
   - inherit
 browser-compat: css.types.global_keywords.inherit
 ---
+
 {{CSSRef}}
 
 The **`inherit`** CSS keyword causes the element to take the [computed value](/en-US/docs/Web/CSS/computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.

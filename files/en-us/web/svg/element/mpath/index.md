@@ -9,6 +9,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.mpath
 ---
+
 {{SVGRef}}
 
 The **`<mpath>`** sub-element for the {{SVGElement("animateMotion")}} element provides the ability to reference an external {{SVGElement("path")}} element as the definition of a motion path.

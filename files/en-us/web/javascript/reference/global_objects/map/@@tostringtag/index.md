@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.@@toStringTag
 ---
+
 {{JSRef}}
 
 The **`Map[@@toStringTag]`** property has an initial value of "Map".

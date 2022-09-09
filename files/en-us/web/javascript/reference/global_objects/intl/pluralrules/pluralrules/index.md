@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules()`** constructor creates

@@ -16,6 +16,7 @@ tags:
   - Method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method

@@ -8,6 +8,7 @@ tags:
   - Window
 browser-compat: api.Window.beforeunload_event
 ---
+
 {{APIRef}}
 
 The **`beforeunload`** event is fired when the window, the document and its resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.

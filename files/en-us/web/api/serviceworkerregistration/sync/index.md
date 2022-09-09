@@ -12,6 +12,7 @@ tags:
   - Sync
 browser-compat: api.ServiceWorkerRegistration.sync
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`sync`** property of the

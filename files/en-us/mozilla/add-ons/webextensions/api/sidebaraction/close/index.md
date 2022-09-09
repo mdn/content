@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.close
 ---
+
 {{AddonSidebar()}}
 
 Closes the sidebar in the active window, if it is the extension's own sidebar.

@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.openDialog
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 `window.openDialog()` is an extension to {{domxref("window.open()")}}. It

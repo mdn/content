@@ -9,6 +9,7 @@ tags:
   - Security
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 There are times when you might want or need to include content from an external source in your extension. But, there is the risk that the source may have malicious scripts embedded in it—added by either the developer of the source or by a malicious third-party.

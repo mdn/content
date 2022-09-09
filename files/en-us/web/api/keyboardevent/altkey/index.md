@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.altKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.altKey`** read-only property is a

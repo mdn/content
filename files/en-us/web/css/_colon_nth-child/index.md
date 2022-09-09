@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.nth-child
 ---
+
 {{CSSRef}}
 
 The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings.

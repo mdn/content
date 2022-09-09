@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-text-fill-color
 ---
+
 {{CSSRef}}
 
 The **`-webkit-text-fill-color`** CSS property specifies the fill [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.

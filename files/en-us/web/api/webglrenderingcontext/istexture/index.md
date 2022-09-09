@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isTexture()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the

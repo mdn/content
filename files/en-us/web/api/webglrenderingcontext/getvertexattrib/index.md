@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttrib
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getVertexAttrib()`** method of the

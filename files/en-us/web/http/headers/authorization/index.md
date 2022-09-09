@@ -11,6 +11,7 @@ tags:
   - Authentication
 browser-compat: http.headers.Authorization
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Authorization`** request header can be used to provide credentials that authenticate a user agent with a server, allowing access to a protected resource.

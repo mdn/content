@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MathMLElement
 ---
+
 {{APIRef("MathML")}}
 
 The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML) element.

@@ -13,6 +13,7 @@ tags:
   - sendNativeMessage
 browser-compat: webextensions.api.runtime.sendNativeMessage
 ---
+
 {{AddonSidebar()}}
 
 Sends a single message from an extension to a native application.

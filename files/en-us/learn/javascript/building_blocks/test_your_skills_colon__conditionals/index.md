@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals) article.

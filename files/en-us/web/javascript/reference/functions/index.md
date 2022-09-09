@@ -10,6 +10,7 @@ tags:
   - parameters
 browser-compat: javascript.functions
 ---
+
 {{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code

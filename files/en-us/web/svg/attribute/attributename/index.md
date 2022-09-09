@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
 ---
+
 {{SVGRef}}
 
 The **`attributeName`** attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.

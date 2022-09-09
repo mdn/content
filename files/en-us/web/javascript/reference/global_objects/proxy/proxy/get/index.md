@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.get
 ---
+
 {{JSRef}}
 
 The **`handler.get()`** method is a trap for getting a property

@@ -14,6 +14,7 @@ tags:
   - getNotifications
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getNotifications()`** method of

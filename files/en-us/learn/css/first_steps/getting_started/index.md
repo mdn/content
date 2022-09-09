@@ -12,6 +12,7 @@ tags:
   - Syntax
   - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 In this article, we will take a simple HTML document and apply CSS to it, learning some practical things about the language along the way.

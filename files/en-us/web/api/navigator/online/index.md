@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Returns the online status of the browser. The property returns a boolean value, with

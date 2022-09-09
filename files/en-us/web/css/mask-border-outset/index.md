@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-border-outset
 ---
+
 {{CSSRef}}
 
 The **`mask-border-outset`** [CSS](/en-US/docs/Web/CSS) property specifies the distance by which an element's [mask border](/en-US/docs/Web/CSS/mask-border) is set out from its border box.

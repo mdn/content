@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.message_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC **`message`** event is sent to the {{domxref("RTCDataChannel.message_event", "onmessage")}} event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.

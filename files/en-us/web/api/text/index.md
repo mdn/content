@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Text
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Text`** interface represents a text {{domxref("Node", "node")}} in a DOM tree.

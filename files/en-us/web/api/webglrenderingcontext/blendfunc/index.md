@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFunc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) defines which function is used for

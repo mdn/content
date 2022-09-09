@@ -12,6 +12,7 @@ tags:
   - TransitionEvent
 browser-compat: api.TransitionEvent.elapsedTime
 ---
+
 {{ apiref("CSSOM") }}
 
 The **`TransitionEvent.elapsedTime`** read-only property is a

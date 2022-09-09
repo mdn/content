@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
 ## Express template choices

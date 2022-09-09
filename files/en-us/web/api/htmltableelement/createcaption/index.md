@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.createCaption()`** method returns the

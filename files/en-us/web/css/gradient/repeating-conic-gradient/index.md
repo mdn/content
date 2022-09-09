@@ -13,6 +13,7 @@ tags:
   - gradient
 browser-compat: css.types.image.gradient.repeating-conic-gradient
 ---
+
 {{CSSRef}}
 
 The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a {{cssxref("gradient/conic-gradient","single gradient")}}) with color transitions rotated around a center point (rather than {{cssxref("gradient/repeating-radial-gradient","radiating from the center")}}).

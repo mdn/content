@@ -15,6 +15,7 @@ spec-urls:
   - https://w3c.github.io/mediacapture-main/
   - https://w3c.github.io/webrtc-pc/
 ---
+
 {{WebRTCSidebar}}
 
 The **WebRTC API** is designed to allow JavaScript applications to create real-time connections containing audio and video streams as well as data channels for arbitrary data. These connections are created to directly link two users' browsers, without necessarily requiring any intermediary servers which support the WebRTC protocols. WebRTC also leverages the {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} method to get access to microphone and camera data. In this article, we'll take a look at how peer-to-peer connections are created and managed using WebRTC and its {{domxref("RTCPeerConnection")}} interface.

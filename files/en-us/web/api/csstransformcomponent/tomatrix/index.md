@@ -13,6 +13,7 @@ tags:
   - toMatrix
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toMatrix()`** method of the

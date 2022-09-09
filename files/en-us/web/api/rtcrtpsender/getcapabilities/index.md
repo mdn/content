@@ -19,6 +19,7 @@ tags:
   - getCapabilities
 browser-compat: api.RTCRtpSender.getCapabilities
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The _static function_

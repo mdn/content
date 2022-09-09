@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.go
 ---
+
 {{APIRef("History API")}}
 
 The **`History.go()`** method loads a specific page from the

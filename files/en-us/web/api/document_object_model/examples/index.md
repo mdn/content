@@ -6,6 +6,7 @@ tags:
   - DOM
   - DOM Reference
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.

@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.at-rules.font-face.unicode-range
 ---
+
 {{CSSRef}}
 
 The **`unicode-range`** CSS descriptor sets the specific range of characters to be used from a font defined by {{cssxref("@font-face")}} and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.

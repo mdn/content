@@ -13,6 +13,7 @@ tags:
   - web console
 browser-compat: api.console.dir
 ---
+
 {{APIRef("Console API")}}
 
 The method **`console.dir()`** displays an interactive list of the properties of

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.values
 ---
+
 {{APIRef("DOM")}}
 
 The **`values()`** method of the {{domxref("DOMTokenList")}} interface

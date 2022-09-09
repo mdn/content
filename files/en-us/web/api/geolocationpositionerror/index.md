@@ -10,6 +10,7 @@ tags:
   - Secure context
 browser-compat: api.GeolocationPositionError
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPositionError`** interface represents the reason of an error occurring when using the geolocating device.

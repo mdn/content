@@ -8,6 +8,7 @@ tags:
   - Guide
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 There's no strict right or wrong way when writing creative code. As long as you consider security, performance, and accessibility, you can adapt to your own style. In this article, we'll share a number of _best practices_ — guidelines, tips, and tricks for working with the Web Audio API.

@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.controlTransferIn
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`controlTransferIn()`** method of the

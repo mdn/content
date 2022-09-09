@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`toJSON()`** method is a _serializer_ that returns

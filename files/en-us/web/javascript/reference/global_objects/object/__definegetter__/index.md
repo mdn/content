@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineGetter
 ---
+
 {{JSRef}}{{Deprecated_Header}}
 
 > **Warning:** This feature is deprecated in favor of defining getters using the

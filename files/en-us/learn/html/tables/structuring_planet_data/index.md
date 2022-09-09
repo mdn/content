@@ -9,6 +9,7 @@ tags:
   - Learn
   - Tables
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 In our table assessment, we provide you with some data on the planets in our solar system, and get you to structure it into an HTML table.

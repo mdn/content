@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 ---
+
 {{APIRef}}
 
 The

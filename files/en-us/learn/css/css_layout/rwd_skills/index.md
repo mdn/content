@@ -9,6 +9,7 @@ tags:
   - Media Queries
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [how to use media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries) and get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the layout lessons in the [CSS layout module](/en-US/docs/Learn/CSS/CSS_layout).

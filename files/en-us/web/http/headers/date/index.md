@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Date
 ---
+
 {{HTTPSidebar}}
 
 The **`Date`** general HTTP header contains the date and time

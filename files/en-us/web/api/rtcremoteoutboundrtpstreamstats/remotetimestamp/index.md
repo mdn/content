@@ -19,6 +19,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.remoteTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRemoteOutboundRtpStreamStats")}} property

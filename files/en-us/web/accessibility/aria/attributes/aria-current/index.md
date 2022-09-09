@@ -9,6 +9,7 @@ tags:
   - aria-current
 spec-urls: https://w3c.github.io/aria/#aria-current
 ---
+
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 
 ## Description

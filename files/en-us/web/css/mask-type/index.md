@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-type
 ---
+
 {{CSSRef}}
 
 The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property sets whether an SVG {{svgElement("mask")}} element is used as a _luminance_ or an _alpha_ mask. It applies to the `<mask>` element itself.

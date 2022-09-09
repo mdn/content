@@ -16,6 +16,7 @@ tags:
   - Reference
 browser-compat: api.MerchantValidationEvent.MerchantValidationEvent
 ---
+
 {{deprecated_header}}{{securecontext_header}}{{APIRef()}}
 
 The **`MerchantValidationEvent()`** constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event.

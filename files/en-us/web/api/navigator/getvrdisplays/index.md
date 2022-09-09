@@ -17,6 +17,7 @@ tags:
   - Non-standard
 browser-compat: api.Navigator.getVRDisplays
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getVRDisplays()`** method of the

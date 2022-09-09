@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.releaseInterface
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`releaseInterface()`** method of the

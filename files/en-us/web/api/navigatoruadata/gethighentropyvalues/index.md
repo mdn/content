@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
+
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.

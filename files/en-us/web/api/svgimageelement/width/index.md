@@ -14,6 +14,7 @@ tags:
   - width
 browser-compat: api.SVGImageElement.width
 ---
+
 {{APIRef("SVG")}}
 
 The **`width`** read-only property of the

@@ -8,6 +8,7 @@ tags:
   - Reference
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow
 ---
+
 {{HTTPSidebar}}
 
 The **`Allow`** header lists the set of methods supported by a resource.

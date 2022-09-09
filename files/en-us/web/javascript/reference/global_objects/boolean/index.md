@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean
 ---
+
 {{JSRef}}
 
 The **`Boolean`** object is an object wrapper for a boolean value.

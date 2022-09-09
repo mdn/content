@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.sendRequest
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("tabs.sendMessage()")}} instead.

@@ -10,6 +10,7 @@ tags:
   - Secure context
 browser-compat: api.GeolocationCoordinates
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates`** interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.

@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Table()`** constructor creates a new

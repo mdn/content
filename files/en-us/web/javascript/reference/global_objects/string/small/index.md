@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.small
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`small()`** method creates a {{HTMLElement("small")}}

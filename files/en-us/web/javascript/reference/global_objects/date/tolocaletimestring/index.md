@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
+
 {{JSRef}}
 
 The **`toLocaleTimeString()`** method returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.

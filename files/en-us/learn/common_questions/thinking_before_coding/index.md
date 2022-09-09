@@ -7,6 +7,7 @@ tags:
   - NeedsActiveLearning
   - needsSchema
 ---
+
 This article covers the all-important first step of every project: define what you want to accomplish with it.
 
 <table>

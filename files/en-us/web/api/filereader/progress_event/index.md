@@ -12,6 +12,7 @@ tags:
   - progress
 browser-compat: api.FileReader.progress_event
 ---
+
 {{APIRef}}
 
 The `progress` event is fired periodically as the `FileReader` reads data.

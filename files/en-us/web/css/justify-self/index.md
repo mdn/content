@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.justify-self
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.

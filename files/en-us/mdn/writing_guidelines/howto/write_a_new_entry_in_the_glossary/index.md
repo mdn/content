@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This article explains how to add and link to entries in the [MDN Web Docs glossary](/en-US/docs/Glossary).

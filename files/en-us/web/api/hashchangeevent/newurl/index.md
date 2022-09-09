@@ -10,6 +10,7 @@ tags:
   - Web API
 browser-compat: api.HashChangeEvent.newURL
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`newURL`** read-only property of the

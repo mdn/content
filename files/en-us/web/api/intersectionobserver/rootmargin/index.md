@@ -12,6 +12,7 @@ tags:
   - rootMargin
 browser-compat: api.IntersectionObserver.rootMargin
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only

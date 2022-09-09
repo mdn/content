@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.hasAttributes
 ---
+
 {{ApiRef("DOM")}}
 
 The **`hasAttributes()`** method of the {{domxref("Element")}}

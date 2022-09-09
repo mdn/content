@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLabelElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLabelElement`** interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits methods and properties from the base {{domxref("HTMLElement")}} interface.

@@ -19,6 +19,7 @@ tags:
   - Non-standard
 browser-compat: api.RTCPeerConnection.removestream_event
 ---
+
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The obsolete **`removestream`** event was sent to an {{domxref("RTCPeerConnection")}} to inform it that a {{domxref("MediaStream")}} had been removed from the connection.

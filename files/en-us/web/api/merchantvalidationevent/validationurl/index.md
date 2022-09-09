@@ -18,6 +18,7 @@ tags:
   - Deprecated
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 The {{domxref("MerchantValidationEvent")}} property

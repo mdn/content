@@ -10,6 +10,7 @@ tags:
   - Web Workers
 browser-compat: api.SharedWorker.SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`SharedWorker()`** constructor creates a

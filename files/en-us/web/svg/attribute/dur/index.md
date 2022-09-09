@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animate.dur
 ---
+
 {{SVGRef}}
 
 The **`dur`** attribute indicates the simple duration of an animation.

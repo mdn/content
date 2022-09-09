@@ -11,6 +11,7 @@ tags:
   - setPage
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setPage
 ---
+
 {{AddonSidebar}}
 
 Sets an HTML page to be displayed in the sidebar pane.

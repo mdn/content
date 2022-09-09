@@ -10,6 +10,7 @@ tags:
   - speech
 spec-urls: https://www.w3.org/TR/CSS22/aural.html
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 The `aural` [CSS](/en-US/docs/Web/CSS) [media type](/en-US/docs/Web/CSS/@media#media_types) is used for devices that have speech output capabilities.

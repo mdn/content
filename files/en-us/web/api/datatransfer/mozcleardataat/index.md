@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozClearDataAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozClearDataAt()`** method removes the data

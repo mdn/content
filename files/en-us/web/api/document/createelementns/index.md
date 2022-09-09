@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.

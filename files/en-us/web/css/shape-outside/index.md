@@ -16,6 +16,7 @@ tags:
   - wrapping
 browser-compat: css.properties.shape-outside
 ---
+
 {{CSSRef}}
 
 The **`shape-outside`** [CSS](/en-US/docs/Web/CSS) property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than simple boxes.

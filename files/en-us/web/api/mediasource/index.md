@@ -15,6 +15,7 @@ tags:
   - Video
 browser-compat: api.MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.

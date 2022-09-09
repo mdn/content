@@ -12,6 +12,7 @@ tags:
   - reload
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
 ---
+
 {{AddonSidebar()}}
 
 Reloads the window that the devtools are attached to.

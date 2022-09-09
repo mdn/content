@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Attr.ownerElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`ownerElement`** property of the {{domxref("Attr")}} interface returns the {{domxref("Element")}} the attribute belongs to.

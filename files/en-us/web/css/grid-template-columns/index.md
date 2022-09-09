@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.grid-template-columns
 ---
+
 {{CSSRef}}
 
 The **`grid-template-columns`** CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.

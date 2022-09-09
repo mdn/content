@@ -11,6 +11,7 @@ spec-urls:
   - https://w3c.github.io/aria/#tab
   - https://w3c.github.io/aria-practices/#tabpanel
 ---
+
 The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
 
 ```html

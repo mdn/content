@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.append
 ---
+
 {{ApiRef("URL API")}}
 
 The **`append()`** method of the {{domxref("URLSearchParams")}}

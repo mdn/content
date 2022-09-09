@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.HTMLElement.contextMenu
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLElement.contextMenu`** property refers to the

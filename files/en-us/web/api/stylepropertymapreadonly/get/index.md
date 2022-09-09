@@ -12,6 +12,7 @@ tags:
   - get()
 browser-compat: api.StylePropertyMapReadOnly.get
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the

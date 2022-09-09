@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.nodeType
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`nodeType`** property of a {{domxref("Node")}} interface is an integer

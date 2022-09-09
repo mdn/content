@@ -7,6 +7,7 @@ tags:
   - name
 browser-compat: html.manifest.name
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

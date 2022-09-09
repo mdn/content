@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_actions
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A browser action is a button you can add to the browser toolbar. Users can click the button to interact with your extension.

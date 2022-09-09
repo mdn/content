@@ -10,6 +10,7 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.speakAs
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`speakAs`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/speak-as","speak-as")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.

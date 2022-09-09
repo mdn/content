@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-emphasis-style
 ---
+
 {{CSSRef}}
 
 The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.

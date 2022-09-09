@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.with
 ---
+
 {{Deprecated_Header}}
 
 > **Warning:** Use of the `with` statement is not recommended, as it may

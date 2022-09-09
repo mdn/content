@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoEncoder.encode
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to encode a given {{domxref("VideoFrame")}}.

@@ -8,6 +8,7 @@ tags:
   - Response Header
 browser-compat: http.headers.Last-Modified
 ---
+
 {{HTTPSidebar}}
 
 The **`Last-Modified`** response HTTP header contains a date

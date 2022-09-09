@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.sizeToContent
 ---
+
 {{APIRef}}{{Non-standard_Header}}
 
 The **`Window.sizeToContent()`** method sizes the window

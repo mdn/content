@@ -10,6 +10,7 @@ tags:
   - isPrototype
 browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`isPrototypeOf()`** method checks if an object exists in

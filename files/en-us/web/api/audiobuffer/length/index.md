@@ -11,6 +11,7 @@ tags:
   - length
 browser-compat: api.AudioBuffer.length
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`length`** property of the {{ domxref("AudioBuffer") }}

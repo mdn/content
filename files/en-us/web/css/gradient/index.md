@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.types.image.gradient
 ---
+
 {{CSSRef}}
 
 The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.

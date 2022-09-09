@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Document.fgColor
 ---
+
 {{ApiRef}}{{Deprecated_header}}
 
 **`fgColor`** gets/sets the foreground color, or text color, of

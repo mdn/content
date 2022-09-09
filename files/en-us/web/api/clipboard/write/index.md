@@ -17,6 +17,7 @@ tags:
   - write
 browser-compat: api.Clipboard.write
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} method

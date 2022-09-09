@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.selectNode
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.selectNode()`** method sets the

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Keyboard.lock
 ---
+
 {{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the

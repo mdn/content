@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramInfoLog
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.getProgramInfoLog** returns the information

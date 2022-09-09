@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.allSettled
 ---
+
 {{JSRef}}
 
 The **`Promise.allSettled()`** method returns a promise that

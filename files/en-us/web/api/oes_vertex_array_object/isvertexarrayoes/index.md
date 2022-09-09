@@ -11,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_vertex_array_object.isVertexArrayOES
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_vertex_array_object.isVertexArrayOES()`** method of

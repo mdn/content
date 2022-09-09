@@ -13,6 +13,7 @@ tags:
   - onButtonClicked
 browser-compat: webextensions.api.notifications.onButtonClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user clicks one of the notification's buttons.

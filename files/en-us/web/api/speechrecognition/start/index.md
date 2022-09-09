@@ -13,6 +13,7 @@ tags:
   - start
 browser-compat: api.SpeechRecognition.start
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`start()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) starts the speech

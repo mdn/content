@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.AbsoluteOrientationSensor.AbsoluteOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`AbsoluteOrientationSensor()`** constructor creates a new {{domxref("AbsoluteOrientationSensor")}} object which describes the device's physical orientation in relation to the Earth's reference coordinate system.

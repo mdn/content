@@ -9,6 +9,7 @@ tags:
   - NeedsExample
   - OOP
 ---
+
 An {{glossary("object")}} created by a {{glossary("constructor")}} is an instance of that constructor.
 
 ## See also

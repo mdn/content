@@ -15,6 +15,7 @@ tags:
   - web console
 browser-compat: api.console.log
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.log()`** method outputs a message to the web console.

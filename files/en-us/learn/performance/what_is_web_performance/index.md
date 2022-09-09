@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
 
 Web performance is all about making web sites fast, including making slow processes _seem_ fast. Does the site load quickly, allow the user to start interacting with it quickly, and offer reassuring feedback if something is taking time to load (e.g. a loading spinner)? Are scrolling and animations smooth? This article provides a brief introduction to objective, measurable web performance\*, looking at what technologies, techniques, and tools are involved in web optimization.

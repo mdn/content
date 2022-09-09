@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MessageChannel.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}

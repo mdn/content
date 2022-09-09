@@ -18,6 +18,7 @@ tags:
   - parameters
 browser-compat: api.RTCRtpParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCRtpParameters`** dictionary is the basic object describing the parameters of an {{Glossary("RTP")}} transport. It is extended separately for senders and receivers in the form of the {{domxref("RTCRtpSendParameters")}} and {{domxref("RTCRtpReceiveParameters")}} dictionaries.

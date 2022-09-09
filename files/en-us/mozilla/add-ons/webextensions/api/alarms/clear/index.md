@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: webextensions.api.alarms.clear
 ---
+
 {{AddonSidebar()}}
 
 Cancels an alarm, given its name.

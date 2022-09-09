@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.vertexAttribI4i
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.vertexAttribI4[u]i[v]()`**

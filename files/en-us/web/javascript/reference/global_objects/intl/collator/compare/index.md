@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.compare
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.prototype.compare()`** method compares two

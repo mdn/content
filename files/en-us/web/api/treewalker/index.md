@@ -7,6 +7,7 @@ tags:
   - DOM
 browser-compat: api.TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker`** object represents the nodes of a document subtree and a position within them.

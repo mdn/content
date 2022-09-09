@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`globalThis`** property contains the global `this` value, which is akin to the [global object](/en-US/docs/Glossary/Global_object).

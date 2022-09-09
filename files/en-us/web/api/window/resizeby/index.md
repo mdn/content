@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.resizeBy
 ---
+
 {{APIRef}}
 
 The **`Window.resizeBy()`** method resizes the current window

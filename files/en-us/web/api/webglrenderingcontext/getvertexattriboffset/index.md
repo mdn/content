@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttribOffset
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getVertexAttribOffset()`** method

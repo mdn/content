@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Range.Range
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range()`** constructor returns a newly created

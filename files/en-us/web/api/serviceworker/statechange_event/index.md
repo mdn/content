@@ -11,6 +11,7 @@ tags:
   - statechange
 browser-compat: api.ServiceWorker.statechange_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} changes.

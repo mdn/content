@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#navigation
   - https://w3c.github.io/aria-practices/#aria_lh_navigation
 ---
+
 The `navigation` role is used to identify major groups of links used for navigating through a website or page content.
 
 ```html

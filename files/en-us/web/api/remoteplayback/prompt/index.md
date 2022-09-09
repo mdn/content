@@ -10,6 +10,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.prompt
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The **`prompt()`** method of the {{domxref("RemotePlayback")}} interface prompts the user to select an available remote playback device and give permission for the current media to be played using that device.

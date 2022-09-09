@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animateTransform.by
 ---
+
 {{SVGRef}}
 
 The **`by`** attribute specifies a relative offset value for an attribute that will be modified during an animation.

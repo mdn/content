@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndex
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`ContentIndex`** interface of the [Content Index API](/en-US/docs/Web/API/Content_Index_API) allows developers to register their offline enabled content with the browser.

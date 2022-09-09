@@ -15,6 +15,7 @@ tags:
   - scrolling
 browser-compat: api.Window.pageYOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 The read-only {{domxref("Window")}} property **`pageYOffset`**

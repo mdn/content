@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.offset-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`offset-position`** CSS property defines the [initial position](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) of the {{cssxref("offset-path")}}.

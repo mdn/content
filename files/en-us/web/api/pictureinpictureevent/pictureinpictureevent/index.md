@@ -8,6 +8,7 @@ tags:
   - Constructor
 browser-compat: api.PictureInPictureEvent.PictureInPictureEvent
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The **`PictureInPictureEvent()`** constructor returns a new {{domxref("PictureInPictureEvent")}} object with an optional {{domxref("EventTarget")}}.

@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.min-inline-size
 ---
+
 {{CSSRef}}
 
 The **`min-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.

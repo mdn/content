@@ -16,6 +16,7 @@ tags:
   - print
 browser-compat: api.console.debug
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.debug()`** method outputs a message to the web console at

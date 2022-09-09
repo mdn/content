@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawElementsInstanced
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.drawElementsInstanced()`** method

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once per each key/value

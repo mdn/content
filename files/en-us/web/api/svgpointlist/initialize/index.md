@@ -10,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.initialize
 ---
+
 {{APIRef("SVG")}}
 
 The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clears the list then adds a single new {{domxref("SVGPoint")}} object to the list.

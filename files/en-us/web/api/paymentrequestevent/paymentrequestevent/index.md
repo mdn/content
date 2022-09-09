@@ -12,6 +12,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
+
 {{APIRef("Payment Request API")}}{{SeeCompatTable}}
 
 The **`PaymentRequestEvent`** constructor creates a new

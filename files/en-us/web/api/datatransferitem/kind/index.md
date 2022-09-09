@@ -13,6 +13,7 @@ tags:
   - kind
 browser-compat: api.DataTransferItem.kind
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only **`DataTransferItem.kind`** property returns a

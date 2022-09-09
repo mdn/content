@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.UTC
 ---
+
 {{JSRef}}
 
 The **`Date.UTC()`** method accepts parameters similar to the

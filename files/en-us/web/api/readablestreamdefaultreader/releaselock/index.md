@@ -11,6 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
+
 {{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the {{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the stream.

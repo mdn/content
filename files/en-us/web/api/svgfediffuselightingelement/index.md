@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDiffuseLightingElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDiffuseLightingElement`** interface corresponds to the {{SVGElement("feDiffuseLighting")}} element.

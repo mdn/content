@@ -8,6 +8,7 @@ tags:
   - WebGLShader
 browser-compat: api.WebGLShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLShader** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and can either be a vertex or a fragment shader. A {{domxref("WebGLProgram")}} requires both types of shaders.

@@ -13,6 +13,7 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11
 ---
+
 {{AddonSidebar}}
 
 The `pkcs11` API enables an extension to enumerate [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) security modules and to make them accessible to the browser as sources of keys and certificates.

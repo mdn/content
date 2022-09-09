@@ -12,6 +12,7 @@ tags:
   - isEnabled
 browser-compat: webextensions.api.action.isEnabled
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the browser action is enabled.

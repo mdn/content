@@ -12,6 +12,7 @@ tags:
 browser-compat: api.Element.transitionend_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`transitionend`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed. In the case where a transition is removed before completion, such as if the {{cssxref("transition-property")}} is removed or {{cssxref("display")}} is set to `none`, then the event will not be generated.

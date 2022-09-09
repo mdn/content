@@ -10,6 +10,7 @@ tags:
   - details
   - suggestions
 ---
+
 WAI-ARIA version 1.3 sees the addition of a set of new features, collectively known as ARIA annotations, which allow the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review).
 
 Below we'll introduce the new features associated with ARIA annotations, and have a look at some code examples that show them in action.

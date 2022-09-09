@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCSeconds
 ---
+
 {{JSRef}}
 
 The **`setUTCSeconds()`** method sets the seconds for a

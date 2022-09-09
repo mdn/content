@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat()`** constructor creates

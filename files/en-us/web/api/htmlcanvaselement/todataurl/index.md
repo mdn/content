@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.toDataURL()`** method returns a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) containing a representation of the image in the format specified by the `type` parameter.

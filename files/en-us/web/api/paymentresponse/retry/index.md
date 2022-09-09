@@ -15,6 +15,7 @@ tags:
   - retry
 browser-compat: api.PaymentResponse.retry
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentResponse")}} interface's

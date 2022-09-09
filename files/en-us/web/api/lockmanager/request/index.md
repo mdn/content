@@ -11,6 +11,7 @@ tags:
   - request()
 browser-compat: api.LockManager.request
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.

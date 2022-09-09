@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.keyFor
 ---
+
 {{JSRef}}
 
 The **`Symbol.keyFor(sym)`** method retrieves a shared symbol

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.revocable
 ---
+
 {{JSRef}}
 
 The **`Proxy.revocable()`** method is used to create a

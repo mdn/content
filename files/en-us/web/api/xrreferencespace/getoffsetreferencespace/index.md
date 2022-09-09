@@ -25,6 +25,7 @@ tags:
   - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRReferenceSpace")}}

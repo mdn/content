@@ -12,6 +12,7 @@ tags:
   - SVGAltGlyphRefElement
 browser-compat: api.SVGAltGlyphElement.glyphRef
 ---
+
 {{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
 
 The **`SVGAltGlyphElement.glyphRef`** property is a

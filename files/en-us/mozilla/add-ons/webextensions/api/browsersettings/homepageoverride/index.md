@@ -12,6 +12,7 @@ tags:
   - homepageOverride
 browser-compat: webextensions.api.browserSettings.homepageOverride
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to get a string representing the URL currently set as the browser's homepage.

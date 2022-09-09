@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.sub
 ---
+
 {{JSRef}}
 
 The static **`Atomics.sub()`** method subtracts a given value

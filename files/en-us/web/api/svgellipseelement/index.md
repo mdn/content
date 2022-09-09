@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGEllipseElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGEllipseElement`** interface provides access to the properties of {{SVGElement("ellipse")}} elements.

@@ -16,6 +16,7 @@ tags:
   - datetime-local
 browser-compat: html.elements.input.type_datetime-local
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.

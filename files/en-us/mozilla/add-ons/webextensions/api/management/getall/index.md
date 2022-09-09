@@ -11,6 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.

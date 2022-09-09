@@ -12,6 +12,7 @@ tags:
   - TransitionEvent
 browser-compat: api.TransitionEvent.TransitionEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`TransitionEvent()`** constructor returns a new {{domxref("TransitionEvent")}} object, representing an event in relation with a transition.

@@ -16,6 +16,7 @@ tags:
   - setLocalDescription
 browser-compat: api.RTCPeerConnection.setLocalDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method

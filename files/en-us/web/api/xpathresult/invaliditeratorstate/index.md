@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.invalidIteratorState
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`invalidIteratorState`** property of the

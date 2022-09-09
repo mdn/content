@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.CustomEvent.detail
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`detail`** property of the {{domxref("CustomEvent")}} interface

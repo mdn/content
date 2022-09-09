@@ -5,6 +5,7 @@ tags:
   - Composing
   - Glossary
 ---
+
 An encoding defines a mapping between bytes and text. A sequence of bytes allows for different textual interpretations. By specifying a particular encoding (such as UTF-8), we specify how the sequence of bytes is to be interpreted.
 
 For example, in HTML we normally declare a character encoding of UTF-8, using the following line:

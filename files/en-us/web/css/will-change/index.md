@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.will-change
 ---
+
 {{CSSRef}}
 
 The **`will-change`** [CSS](/en-US/docs/Web/CSS) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.

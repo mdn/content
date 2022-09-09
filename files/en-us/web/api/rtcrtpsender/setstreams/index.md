@@ -19,6 +19,7 @@ tags:
   - setStreams
 browser-compat: api.RTCRtpSender.setStreams
 ---
+
 {{DefaultAPISidebar("WebRTC API")}}
 
 The {{domxref("RTCRtpSender")}} method **`setStreams()`**

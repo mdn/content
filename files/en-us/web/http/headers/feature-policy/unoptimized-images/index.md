@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.unoptimized-images
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `unoptimized-images` directive controls whether the current document is allowed to download and display unoptimized images.

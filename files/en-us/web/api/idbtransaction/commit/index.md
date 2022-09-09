@@ -11,6 +11,7 @@ tags:
   - commit
 browser-compat: api.IDBTransaction.commit
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`commit()`** method of the {{domxref("IDBTransaction")}} interface commits the transaction if it is called on an active transaction.

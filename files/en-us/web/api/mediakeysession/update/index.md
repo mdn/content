@@ -12,6 +12,7 @@ tags:
   - Update
 browser-compat: api.MediaKeySession.update
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.update()` method loads messages and licenses to the

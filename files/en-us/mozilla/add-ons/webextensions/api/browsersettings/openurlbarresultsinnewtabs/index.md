@@ -12,6 +12,7 @@ tags:
   - openUrlbarResultsInNewTabs
 browser-compat: webextensions.api.browserSettings.openUrlbarResultsInNewTabs
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.

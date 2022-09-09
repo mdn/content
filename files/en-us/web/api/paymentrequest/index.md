@@ -16,6 +16,7 @@ tags:
   - Secure context
 browser-compat: api.PaymentRequest
 ---
+
 {{APIRef("Payment Request API")}}{{SecureContext_Header}}
 
 The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentRequest`** interface is the primary access point into the API, and lets web content and apps accept payments from the end user on behalf of the operator of the site or the publisher of the app.

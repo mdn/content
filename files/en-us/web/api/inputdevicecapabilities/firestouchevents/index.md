@@ -7,6 +7,7 @@ tags:
   - Experimental
 browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`InputDeviceCapabilities.firesTouchEvents`** read-only

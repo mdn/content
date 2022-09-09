@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 The **`Uint8ClampedArray()`** constructor creates a typed array

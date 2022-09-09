@@ -15,6 +15,7 @@ tags:
   - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The

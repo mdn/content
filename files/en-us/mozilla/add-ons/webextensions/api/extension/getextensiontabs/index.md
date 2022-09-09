@@ -13,6 +13,7 @@ tags:
   - getExtensionTabs
 browser-compat: webextensions.api.extension.getExtensionTabs
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("extension.getViews()")}} instead.

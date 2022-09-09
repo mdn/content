@@ -13,6 +13,7 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a previously created menu item.

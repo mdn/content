@@ -14,6 +14,7 @@ tags:
   - message
 browser-compat: api.MediaError.message
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.message`** returns a

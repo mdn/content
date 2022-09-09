@@ -14,6 +14,7 @@ tags:
   - effects
   - shapes
 ---
+
 {{LearnSidebar}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.

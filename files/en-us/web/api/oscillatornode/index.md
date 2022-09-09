@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`OscillatorNode`** interface represents a periodic waveform, such as a sine wave. It is an {{domxref("AudioScheduledSourceNode")}} audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.

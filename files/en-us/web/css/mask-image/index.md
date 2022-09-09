@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-image
 ---
+
 {{CSSRef}}
 
 The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element.

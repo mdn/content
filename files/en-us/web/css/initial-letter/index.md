@@ -13,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.initial-letter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.

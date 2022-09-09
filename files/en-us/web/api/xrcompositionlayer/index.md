@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.XRCompositionLayer
 ---
+
 {{securecontext_header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRCompositionLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a base class that defines a set of common properties and behaviors for WebXR layer types. It is not constructable on its own.

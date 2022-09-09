@@ -12,6 +12,7 @@ tags:
   - referrer
 browser-compat: http.headers.Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referrer information](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests. Aside from the HTTP header, you can [set this policy in HTML](#integration_with_html).

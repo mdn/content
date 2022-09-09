@@ -12,6 +12,7 @@ tags:
   - delete
 browser-compat: api.CacheStorage.delete
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`delete()`** method of the {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`.

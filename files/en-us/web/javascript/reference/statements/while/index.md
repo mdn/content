@@ -8,6 +8,7 @@ tags:
   - while
 browser-compat: javascript.statements.while
 ---
+
 {{jsSidebar("Statements")}}
 
 The **while statement** creates a loop that executes a specified statement

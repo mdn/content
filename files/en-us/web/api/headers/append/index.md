@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.append
 ---
+
 {{APIRef("Fetch")}}
 
 The **`append()`** method of the {{domxref("Headers")}}

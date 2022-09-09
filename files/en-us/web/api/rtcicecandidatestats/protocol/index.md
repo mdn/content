@@ -18,6 +18,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

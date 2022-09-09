@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Notification.badge
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`badge`** property of the {{domxref("Notification")}}

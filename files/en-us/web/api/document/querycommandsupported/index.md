@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.queryCommandSupported
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.queryCommandSupported()`** method reports

@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.NotificationOptions
 ---
+
 {{AddonSidebar()}}
 
 This type contains all the data needed to:

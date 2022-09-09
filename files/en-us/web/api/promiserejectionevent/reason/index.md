@@ -14,6 +14,7 @@ tags:
   - reason
 browser-compat: api.PromiseRejectionEvent.reason
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("PromiseRejectionEvent")}} **`reason`** read-only

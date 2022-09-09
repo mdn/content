@@ -14,6 +14,7 @@ tags:
   - web console
 browser-compat: api.console.profileEnd
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 > **Warning:** Calling this API immediately after console.profile() can cause it to not work. To

@@ -8,6 +8,7 @@ tags:
   - Reference
 spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
+
 {{CSSRef}}
 
 The [top](/en-US/docs/Web/CSS/margin-top) and [bottom](/en-US/docs/Web/CSS/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/float) and [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements never collapse.

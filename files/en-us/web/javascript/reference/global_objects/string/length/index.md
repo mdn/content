@@ -10,6 +10,7 @@ tags:
   - length
 browser-compat: javascript.builtins.String.length
 ---
+
 {{JSRef}}
 
 The **`length`** property of a {{jsxref("String")}} object contains the length of the string, in UTF-16 code units. `length` is a read-only data property of string instances.

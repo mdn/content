@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DocumentFragment.querySelector()`** method returns the

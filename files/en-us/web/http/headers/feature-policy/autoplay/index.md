@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.autoplay
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header

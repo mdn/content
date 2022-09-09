@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new tab.

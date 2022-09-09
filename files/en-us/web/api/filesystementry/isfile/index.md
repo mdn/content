@@ -13,6 +13,7 @@ tags:
   - isFile
 browser-compat: api.FileSystemEntry.isFile
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isFile`** property of

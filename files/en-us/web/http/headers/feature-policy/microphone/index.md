@@ -9,6 +9,7 @@ tags:
   - microphone
 browser-compat: http.headers.Feature-Policy.microphone
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header

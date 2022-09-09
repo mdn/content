@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnparsedValue.entries
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.entries()`** method

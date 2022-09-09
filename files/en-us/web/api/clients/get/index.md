@@ -11,6 +11,7 @@ tags:
   - get
 browser-compat: api.Clients.get
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`get()`** method of the

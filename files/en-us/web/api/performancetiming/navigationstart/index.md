@@ -15,6 +15,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.navigationStart
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).

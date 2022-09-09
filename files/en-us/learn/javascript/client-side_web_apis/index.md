@@ -16,6 +16,7 @@ tags:
   - WebAPI
   - data
 ---
+
 {{LearnSidebar}}
 
 When writing client-side JavaScript for web sites or applications, you will quickly encounter **Application Programming Interfaces** (**APIs**). APIs are programming features for manipulating different aspects of the browser and operating system the site is running on, or manipulating data from other web sites or services. In this module, we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.

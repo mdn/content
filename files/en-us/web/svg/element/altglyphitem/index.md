@@ -10,6 +10,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.altGlyphItem
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<altGlyphItem>`** element provides a set of candidates for glyph substitution by the {{ SVGElement("altGlyph") }} element.

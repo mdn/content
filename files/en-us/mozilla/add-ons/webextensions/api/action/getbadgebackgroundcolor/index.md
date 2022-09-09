@@ -13,6 +13,7 @@ tags:
   - getBadgeBackgroundColor
 browser-compat: webextensions.api.action.getBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Gets the background color of the browser action's badge.

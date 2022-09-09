@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMPathElement`** interface corresponds to the {{SVGElement("mpath")}} element.

@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.search
 ---
+
 {{AddonSidebar()}}
 
 Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.

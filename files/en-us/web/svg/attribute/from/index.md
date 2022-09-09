@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animate.from
 ---
+
 {{SVGRef}}
 
 The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.

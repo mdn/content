@@ -8,6 +8,7 @@ tags:
   - slot
   - slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 This article explains how you can use the {{htmlelement("template")}} and {{htmlelement("slot")}} elements to create a flexible template that can then be used to populate the shadow DOM of a web component.

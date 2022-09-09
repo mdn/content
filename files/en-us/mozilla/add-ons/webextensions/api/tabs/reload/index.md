@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.reload
 ---
+
 {{AddonSidebar()}}
 
 Reload a tab, optionally bypassing the local web cache.

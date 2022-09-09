@@ -15,6 +15,7 @@ browser-compat:
   - webextensions.manifest.sidebar_action
   - webextensions.manifest.options_ui
 ---
+
 {{AddonSidebar}}
 
 Certain user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - are specified by your extension in essentially the same way:

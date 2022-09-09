@@ -11,6 +11,7 @@ tags:
   - ReportBody
 browser-compat: api.ReportBody.toJSON
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.

@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.SyncManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}
 
 {{DefaultAPISidebar("Background Sync")}}

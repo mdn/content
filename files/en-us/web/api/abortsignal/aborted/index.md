@@ -10,6 +10,7 @@ tags:
   - aborted
 browser-compat: api.AbortSignal.aborted
 ---
+
 {{APIRef("DOM")}}
 
 The **`aborted`** read-only property returns a value that indicates whether the DOM requests the signal is communicating with are aborted (`true`) or not (`false`).

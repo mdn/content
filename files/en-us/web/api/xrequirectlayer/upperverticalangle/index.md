@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XREquirectLayer.upperVerticalAngle
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`upperVerticalAngle`** property of the {{domxref("XREquirectLayer")}} interface represents the upper vertical angle in radians for the sphere.

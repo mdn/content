@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConvolverNode.buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`buffer`** property of the {{ domxref("ConvolverNode") }} interface represents a mono, stereo, or 4-channel {{domxref("AudioBuffer")}} containing the (possibly multichannel) impulse response used by the `ConvolverNode` to create the reverb effect.

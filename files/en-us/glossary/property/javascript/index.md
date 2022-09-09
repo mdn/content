@@ -5,6 +5,7 @@ tags:
   - CodingScripting
   - Glossary
 ---
+
 A **JavaScript property** is a characteristic of an object, often describing attributes associated with a data structure.
 
 There are two kinds of properties:

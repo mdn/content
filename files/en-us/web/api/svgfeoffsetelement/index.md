@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEOffsetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEOffsetElement`** interface corresponds to the {{SVGElement("feOffset")}} element.

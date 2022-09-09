@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method extracts a section of a string and

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLBinding.createProjectionLayer
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createProjectionLayer()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRProjectionLayer")}} object which is a layer that fills the entire view of the observer and is refreshed close to the device's native frame rate.

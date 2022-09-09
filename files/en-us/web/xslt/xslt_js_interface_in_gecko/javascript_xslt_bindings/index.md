@@ -7,6 +7,7 @@ tags:
   - XML
   - XSLT
 ---
+
 ## JavaScript/XSLT Bindings
 
 JavaScript can run XSLT transformations through the {{domxref('XSLTProcessor')}} object. Once instantiated, an {{domxref('XSLTProcessor')}} has an {{domxref('XSLTProcessor.importStylesheet()')}} method that takes as an argument the XSLT stylesheet to be used in the transformation. The stylesheet has to be passed in as an XML document, which means that the .xsl file has to be loaded by the page before calling {{domxref('XSLTProcessor.importStylesheet()')}}. This can be done via {{domxref('XMLHttpRequest')}} or {{domxref('XMLDocument.load()')}}.

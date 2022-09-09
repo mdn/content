@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.PerformanceElementTiming.renderTime
 ---
+
 {{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`renderTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the render time of the associated element.

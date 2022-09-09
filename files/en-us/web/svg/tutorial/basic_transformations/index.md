@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.

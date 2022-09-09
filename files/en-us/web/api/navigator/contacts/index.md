@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Navigator.contacts
 ---
+
 {{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`contacts`** read-only property of the

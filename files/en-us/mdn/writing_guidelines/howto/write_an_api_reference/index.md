@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This guide takes you through all you need to know to write an API reference on MDN.
@@ -119,7 +120,7 @@ Example:
 
 #### Property pages
 
-Each interface has zero or more properties, documented on subpages of the interface's page. each page describes the purpose of the property and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the property, and the title is interface name, dot, then property name.
+Each interface has zero or more properties, documented on subpages of the interface's page. Each page describes the purpose of the property and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the property, and the title is interface name, dot, then property name.
 
 Examples:
 
@@ -131,7 +132,7 @@ Examples:
 
 #### Method pages
 
-Each interface has zero or more methods, documented on subpages of the interface's page. each page describes the purpose of the method and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the method, and the title is interface name, dot, method name, then parentheses.
+Each interface has zero or more methods, documented on subpages of the interface's page. Each page describes the purpose of the method and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the method, and the title is interface name, dot, method name, then parentheses.
 
 Examples:
 

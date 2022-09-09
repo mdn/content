@@ -9,6 +9,7 @@ tags:
   - Optimization
   - Performance
 ---
+
 {{DefaultAPISidebar("Navigation Timing")}}
 
 The Navigation Timing API lets you easily obtain detailed and highly accurate timing information to help isolate performance problems with your site's code or resources.

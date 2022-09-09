@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInFill
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.isPointInFill()`** method determines

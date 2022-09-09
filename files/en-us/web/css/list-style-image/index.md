@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.list-style-image
 ---
+
 {{CSSRef}}
 
 The **`list-style-image`** [CSS](/en-US/docs/Web/CSS) property sets an image to be used as the list item marker.

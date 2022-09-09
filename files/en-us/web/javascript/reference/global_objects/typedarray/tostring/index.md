@@ -9,6 +9,7 @@ tags:
   - TypedArray
 browser-compat: javascript.builtins.TypedArray.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

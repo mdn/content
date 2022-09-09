@@ -7,6 +7,7 @@ tags:
   - Web
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.

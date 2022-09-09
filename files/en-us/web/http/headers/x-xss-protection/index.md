@@ -10,6 +10,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.X-XSS-Protection
 ---
+
 {{HTTPSidebar}}{{Non-standard_header}}
 
 The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).

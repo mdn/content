@@ -10,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceObserver()`** constructor creates a new

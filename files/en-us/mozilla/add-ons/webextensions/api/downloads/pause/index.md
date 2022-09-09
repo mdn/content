@@ -13,6 +13,7 @@ tags:
   - pause
 browser-compat: webextensions.api.downloads.pause
 ---
+
 {{AddonSidebar()}}
 
 The **`pause()`** function of the {{WebExtAPIRef("downloads")}} API pauses a download.

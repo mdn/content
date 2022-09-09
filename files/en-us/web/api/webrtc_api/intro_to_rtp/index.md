@@ -14,6 +14,7 @@ tags:
   - RTP
   - WebRTC
 ---
+
 {{APIRef("WebRTC")}}
 
 The **Real-time Transport Protocol** (**RTP**), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.

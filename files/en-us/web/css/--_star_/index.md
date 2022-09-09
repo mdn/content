@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: css.properties.custom-property
 ---
+
 {{CSSRef}}
 
 Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var", "var()")}} function.

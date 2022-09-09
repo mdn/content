@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FileSystemDirectoryReader
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The `FileSystemDirectoryReader` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) lets you access the {{domxref("FileSystemFileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.

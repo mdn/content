@@ -7,6 +7,7 @@ tags:
   - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)  **`510 Not Extended`**

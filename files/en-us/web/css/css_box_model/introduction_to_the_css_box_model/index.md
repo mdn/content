@@ -8,6 +8,7 @@ tags:
   - Layout
 spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
+
 {{CSSRef}}
 
 When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard **CSS basic box model**. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.

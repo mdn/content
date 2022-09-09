@@ -15,6 +15,7 @@ tags:
   - name
 browser-compat: api.HTMLImageElement.name
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The {{domxref("HTMLImageElement")}}

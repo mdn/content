@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.setCustomValidity()`** method sets the

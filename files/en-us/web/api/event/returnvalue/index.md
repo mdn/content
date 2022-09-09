@@ -8,6 +8,7 @@ tags:
   - Deprecated
 browser-compat: api.Event.returnValue
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{domxref("Event")}} property

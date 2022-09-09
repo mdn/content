@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("DOMTokenList")}} interface

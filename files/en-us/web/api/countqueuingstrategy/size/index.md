@@ -11,6 +11,7 @@ tags:
   - size
 browser-compat: api.CountQueuingStrategy.size
 ---
+
 {{APIRef("Streams")}}
 
 The **`size()`** method of the

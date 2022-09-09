@@ -12,6 +12,7 @@ tags:
   - replaceChildren
 browser-compat: api.DocumentFragment.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.replaceChildren()`** method replaces the

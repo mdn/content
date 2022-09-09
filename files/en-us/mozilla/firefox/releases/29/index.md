@@ -5,6 +5,7 @@ tags:
   - firefox developers
   - firefox29
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 29 was released on April 29, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.

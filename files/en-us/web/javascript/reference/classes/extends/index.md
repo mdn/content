@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.extends
 ---
+
 {{jsSidebar("Classes")}}
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or

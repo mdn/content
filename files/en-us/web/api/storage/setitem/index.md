@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`setItem()`** method of the {{domxref("Storage")}}

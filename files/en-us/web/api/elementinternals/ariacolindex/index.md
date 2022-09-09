@@ -12,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaColIndex
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaColIndex`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.

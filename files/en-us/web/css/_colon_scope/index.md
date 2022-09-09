@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: css.selectors.scope
 ---
+
 {{CSSRef}}
 
 The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that are a reference point for selectors to match against.

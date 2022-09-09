@@ -10,6 +10,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.version
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`version`** read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.

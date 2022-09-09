@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.ime-mode
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 The **`ime-mode`** [CSS](/en-US/docs/Web/CSS) property controls the state of the input method editor (IME) for text fields. This property is obsolete.

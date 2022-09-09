@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSourceElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSourceElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating {{htmlelement("source")}} elements.

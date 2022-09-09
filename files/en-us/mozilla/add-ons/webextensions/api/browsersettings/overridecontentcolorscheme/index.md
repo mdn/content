@@ -12,6 +12,7 @@ tags:
   - overrideContentColorScheme
 browser-compat: webextensions.api.browserSettings.overrideContentColorScheme
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a string.

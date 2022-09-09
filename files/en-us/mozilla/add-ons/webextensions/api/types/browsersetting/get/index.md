@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - get
 ---
+
 {{AddonSidebar()}}
 
 The `BrowserSetting.get()` method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.
