@@ -1,5 +1,5 @@
 ---
-title: 'CSP source values'
+title: "CSP source values"
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
 tags:
   - CSP
@@ -10,6 +10,7 @@ tags:
   - Security
   - source
 ---
+
 {{HTTPSidebar}}
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) header directives that specify a `<source>` from which resources may be loaded can use any one of the values listed below.
@@ -45,8 +46,11 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     You must include the single quotes. Some browsers specifically exclude `blob` and `filesystem` from source directives.
     Sites needing to allow these content types can specify them using the Data attribute.
 - `'unsafe-eval'`
-  - : Allows the use of `eval()` and similar methods for creating code from strings.
+  - : Allows the use of `eval()` and other unsafe methods for creating code from strings.
     You must include the single quotes.
+- `'wasm-unsafe-eval'`
+  - : Allows the loading and execution of WebAssembly modules without the need to also allow unsafe JavaScript execution via `'unsafe-eval'`.
+    The single quotes are required.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline [event handlers](/en-US/docs/Web/Events/Event_handlers).
     If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or `javascript:` URLs, this is a safer method than using the `unsafe-inline` expression.
@@ -103,6 +107,7 @@ Directives for which the above sources apply include:
   - {{CSP("worker-src")}}
 
 - {{Glossary("Document directive", "Document directives")}}:
+
   - {{CSP("base-uri")}}
 
 - {{Glossary("Navigation directive", "Navigation directives")}}:
