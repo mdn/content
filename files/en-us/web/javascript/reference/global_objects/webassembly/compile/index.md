@@ -17,8 +17,8 @@ browser-compat: javascript.builtins.WebAssembly.compile
 The **`WebAssembly.compile()`** function compiles WebAssembly binary code into a {{jsxref("WebAssembly.Module")}} object.
 This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the {{jsxref("WebAssembly.instantiate()")}} function should be used).
 
-> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing.
-> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/CSP/script-src).
+> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
 
