@@ -9,6 +9,7 @@ tags:
   - SVG Light Source
 browser-compat: svg.elements.fePointLight
 ---
+
 {{SVGRef}}
 
 The **`<fePointLight>`** filter primitive defines a light source which allows to create a point light effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feComposite.k3
 ---
+
 {{SVGRef}}
 
 The **`k3`** attribute defines one of the values to be used within the `arithmetic` operation of the {{SVGElement("feComposite")}} filter primitive.

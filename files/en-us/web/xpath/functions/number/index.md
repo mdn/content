@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `number` function converts an object to a number and returns the number.

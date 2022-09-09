@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.version
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`version`** attribute is used to indicate what specification a SVG document conforms to. It is only allowed on the root {{SVGElement("svg")}} element. It is purely advisory and has no influence on rendering or processing.

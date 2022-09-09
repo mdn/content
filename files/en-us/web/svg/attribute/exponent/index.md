@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-exponent
 ---
+
 {{SVGRef}}
 
 The **`exponent`** attribute defines the exponent of the gamma function.

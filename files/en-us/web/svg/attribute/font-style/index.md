@@ -13,6 +13,7 @@ tags:
   - font
 browser-compat: svg.attributes.presentation.font-style
 ---
+
 {{SVGRef}}
 
 The **`font-style`** attribute specifies whether the text is to be rendered using a normal, italic, or oblique face.

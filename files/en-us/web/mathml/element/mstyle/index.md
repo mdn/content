@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mstyle
 ---
+
 {{MathMLRef}}
 
 The MathML `<mstyle>` element is used to change the style of its children.

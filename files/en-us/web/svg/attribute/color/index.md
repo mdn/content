@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.color
 ---
+
 {{SVGRef}}
 
 The **`color`** attribute is used to provide a potential indirect value, `currentcolor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.

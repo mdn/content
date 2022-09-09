@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.core.id
 ---
+
 {{SVGRef}}
 
 The **`id`** attribute assigns a unique name to an element.

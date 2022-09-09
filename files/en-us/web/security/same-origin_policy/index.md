@@ -11,6 +11,7 @@ tags:
   - origin
   - secure
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The **same-origin policy** is a critical security mechanism that restricts how a document or script loaded by one {{Glossary("origin")}} can interact with a resource from another origin.

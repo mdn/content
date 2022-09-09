@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
 ---
+
 {{SVGRef}}
 
 The **`keyTimes`** attribute represents a list of time values used to control the pacing of the animation.

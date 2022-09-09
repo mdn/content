@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## Patterns

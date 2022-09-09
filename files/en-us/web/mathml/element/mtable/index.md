@@ -8,6 +8,7 @@ tags:
   - MathML:Tabular Math
 browser-compat: mathml.elements.mtable
 ---
+
 {{MathMLRef}}
 
 The MathML `<mtable>` element allows you to create tables or matrices. Inside a `<mtable>` only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).

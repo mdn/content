@@ -8,6 +8,7 @@ tags:
   - SVG
 browser-compat: svg.elements.feDropShadow
 ---
+
 {{SVGRef}}
 
 The SVG **`<feDropShadow>`** filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.

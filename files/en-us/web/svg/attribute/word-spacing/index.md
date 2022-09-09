@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.word-spacing
 ---
+
 {{SVGRef}}
 
 The **`word-spacing`** attribute specifies spacing behavior between words.

@@ -8,6 +8,7 @@ tags:
   - Deprecated
 browser-compat: mathml.global_attributes.mathbackground
 ---
+
 {{MathMLRef("Global_attributes")}}{{Deprecated_Header}}
 
 The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [background-color](/en-US/docs/Web/CSS/background-color) of a MathML element.

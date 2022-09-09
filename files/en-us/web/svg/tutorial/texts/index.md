@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 
 When talking about text in SVG we have to differentiate two almost completely separate topics. The one is the inclusion and display of text in an image, and the other are SVG fonts. The latter may be described in a later section of the tutorial, while we will focus completely on the first part: Bringing text into an SVG image.

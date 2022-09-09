@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDistantLight.azimuth
 ---
+
 {{SVGRef}}
 
 The **`azimuth`** attribute specifies the direction angle for the light source on the XY plane (clockwise), in degrees from the x axis.
