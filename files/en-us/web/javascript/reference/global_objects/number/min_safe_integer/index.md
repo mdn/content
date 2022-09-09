@@ -20,7 +20,7 @@ To represent integers smaller than this, consider using {{jsxref("BigInt")}}.
 
 ## Description
 
-The `MIN_SAFE_INTEGER` constant has a value of `-9007199254740991` (-9,007,199,254,740,991 or about -9 quadrillion).
+The `MIN_SAFE_INTEGER` constant has a value of `-9007199254740991` (-9,007,199,254,740,991, or about -9 quadrillion).
 
 [Double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 53 bits (with the highest bit always being 1) to represent the significand, so it can only safely represent integers between -(2<sup>53</sup> – 1) and 2<sup>53</sup> – 1. Safe in this context refers to the ability to represent integers exactly and to correctly compare them. For example, `Number.MIN_SAFE_INTEGER - 1 === Number.MIN_SAFE_INTEGER - 2` will evaluate to true, which is mathematically incorrect. See {{jsxref("Number.isSafeInteger()")}} for more information.
 
