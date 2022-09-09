@@ -19,7 +19,7 @@ Sends a single message to event listeners within your extension or a different e
 
 If sending to your extension, omit the `extensionId` argument. The {{WebExtAPIRef('runtime.onMessage')}} event will be fired in each page in your extension, except for the frame that called `runtime.sendMessage`.
 
-If sending to a different extension, include the `extensionId` argument set to the other extension's ID. {{WebExtAPIRef('runtime.onMessageExternal')}} will be fired in the other extension. By default, your extension can exchange messages with any other extension. However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions.
+If sending to a different extension, include the `extensionId` argument set to the other extension's ID. {{WebExtAPIRef('runtime.onMessageExternal')}} will be fired in the other extension. By default, your extension can exchange messages with itself and any other extension (defined by `extensionId`). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions.
 
 Extensions cannot send messages to content scripts using this method. To send messages to content scripts, use {{WebExtAPIRef('tabs.sendMessage')}}.
 

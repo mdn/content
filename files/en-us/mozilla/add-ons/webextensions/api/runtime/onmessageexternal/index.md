@@ -15,7 +15,7 @@ browser-compat: webextensions.api.runtime.onMessageExternal
 ---
 {{AddonSidebar()}}
 
-Use this event to listen for messages.
+Use this event to listen for messages from other extensions or web pages.
 
 By default, an extension can receive messages from any other extension. However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites.
 
