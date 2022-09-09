@@ -33,7 +33,7 @@ The boolean value `true` if the given value is a number that is a safe integer. 
 
 ## Description
 
-The safe integers consist of all integers from -(2<sup>53</sup> - 1) inclusive to 2<sup>53</sup> - 1 inclusive (±9,007,199,254,740,991). A safe integer is an integer that:
+The safe integers consist of all integers from -(2<sup>53</sup> - 1) to 2<sup>53</sup> - 1, inclusive (±9,007,199,254,740,991). A safe integer is an integer that:
 
 - can be exactly represented as an IEEE-754 double precision number, and
 - whose IEEE-754 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation.
