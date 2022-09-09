@@ -571,7 +571,7 @@ HTML tables are fine for displaying tabular data, but many years ago — before 
 
 The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables".
 
-The example below shows one such use. It must be noted, that using CSS tables for layout should be considered a legacy method at this point, for those situations where you have very old browsers that lack support for Flexbox or Grid.
+The example below shows one such use. It must be noted, that using CSS tables for layout should be considered a legacy method at this point, and should only be used to support old browsers that lack support for Flexbox or Grid.
 
 Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.
 
