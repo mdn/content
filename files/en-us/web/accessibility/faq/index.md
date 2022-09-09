@@ -5,6 +5,7 @@ tags:
   - Accessibility
   - FAQ
 ---
+
 ## Where can I find more about accessibility?
 
 [Mozilla Accessibility Project](/en-US/docs/Web/Accessibility)

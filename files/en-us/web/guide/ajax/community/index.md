@@ -4,6 +4,7 @@ slug: Web/Guide/AJAX/Community
 tags:
   - AJAX
 ---
+
 If you know of useful mailing lists, newsgroups, forums, or other communities related to AJAX, please link to them here.
 
 ## Ajax Resources

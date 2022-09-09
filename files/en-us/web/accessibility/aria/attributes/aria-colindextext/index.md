@@ -9,6 +9,7 @@ tags:
   - aria-colindextext
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
+
 The `aria-colindextext` attribute defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description

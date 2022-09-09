@@ -10,6 +10,7 @@ tags:
   - document structure role
 spec-urls: https://w3c.github.io/aria/#note
 ---
+
 A `note` role suggests a section whose content is parenthetic or ancillary to the main content.
 
 ## Description

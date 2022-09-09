@@ -10,6 +10,7 @@ tags:
   - Web
   - Web Performance
 ---
+
 These tips are based on common knowledge and experimentation.
 
 An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.

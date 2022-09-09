@@ -12,6 +12,7 @@ tags:
   - Mobile Development
   - Mobile first
 ---
+
 This article provides a guide to implementing a website layout that follows the principle of **mobile first**. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.
 
 ## First things first — mobile as a default

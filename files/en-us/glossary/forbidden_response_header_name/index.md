@@ -7,6 +7,7 @@ tags:
   - Response
   - forbidden
 ---
+
 A _forbidden response header name_ is an [HTTP header](/en-US/docs/Web/HTTP/Headers) name (`Set-Cookie`) that cannot be modified programmatically.
 
 ## See also

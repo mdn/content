@@ -5,6 +5,7 @@ page-type: guide
 tags:
   - DOM
 ---
+
 ```html
  <html>
  <head>

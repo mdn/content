@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#tabpanel
   - https://w3c.github.io/aria-practices/#tabpanel
 ---
+
 The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
 
 ## Description

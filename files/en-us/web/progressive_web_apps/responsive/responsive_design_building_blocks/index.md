@@ -8,6 +8,7 @@ tags:
   - Mobile
   - Responsive Design
 ---
+
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.
 
 For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.

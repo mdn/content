@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#menuitemradio
   - https://w3c.github.io/aria-practices/#menu
 ---
+
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
 
 ## Description

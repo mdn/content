@@ -13,6 +13,7 @@ spec-urls:
   - https://w3c.github.io/aria/#form
   - https://w3c.github.io/aria-practices/#aria_lh_form
 ---
+
 The `form` role can be used to identify a group of elements on a page that provide equivalent functionality to an HTML form.
 
 ```html

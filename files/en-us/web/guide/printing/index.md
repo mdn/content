@@ -8,6 +8,7 @@ tags:
   - NeedsRelocation
   - printing
 ---
+
 There may be times in which your web site or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.

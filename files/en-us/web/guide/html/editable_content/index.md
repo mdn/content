@@ -14,6 +14,7 @@ tags:
   - text entry
   - text input
 ---
+
 > **Warning:** As the [`execCommand()` spec](https://w3c.github.io/editing/docs/execCommand/) warns, its features "are not implemented consistently or fully by user agents", and in addition, it is marked as deprecated on the [`Document.execCommand()`](/en-US/docs/Web/API/Document/execCommand) reference page. Therefore, much of the content on this page cannot be trusted for use in production code.
 
 In HTML, any element can be editable. By using some JavaScript event handlers, you can transform your web page into a full and fast rich text editor. This article provides some information about this functionality.
