@@ -32,7 +32,7 @@ Number.isNaN(value)
 
 ### Return value
 
-The boolean value `false` if the given value is a number with value {{jsxref("NaN")}}. Otherwise, `false`.
+The boolean value `true` if the given value is a number with value {{jsxref("NaN")}}. Otherwise, `false`.
 
 ## Description
 
