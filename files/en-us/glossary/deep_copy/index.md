@@ -15,11 +15,11 @@ In JavaScript, standard built-in object-copy operations ([spread syntax](/en-US/
 One way to make a deep copy of a JavaScript object, if it can be [serialized](/en-US/docs/Glossary/Serialization), is to use {{jsxref("JSON.stringify()")}} to convert the object to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a (completely new) JavaScript object:
 
 ```js
-let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
+let ingredients_list = ["noodles", { list: ["eggs", "flour", "water"] }];
 let ingredients_list_deepcopy = JSON.parse(JSON.stringify(ingredients_list));
 
 // Change the value of the 'list' property in ingredients_list_deepcopy.
-ingredients_list_deepcopy[1].list = ["rice flour","water"]
+ingredients_list_deepcopy[1].list = ["rice flour", "water"];
 // The 'list' property does not change in ingredients_list.
 console.log(ingredients_list[1].list);
 // Array(3) [ "eggs", "flour", "water" ]

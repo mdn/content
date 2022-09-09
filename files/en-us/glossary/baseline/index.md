@@ -17,5 +17,5 @@ East Asian scripts have no baseline. Their glyphs are placed in a square box wit
 
 ## See also
 
-- [Baseline](https://en.wikipedia.org/wiki/Baseline_(typography)) on Wikipedia
+- [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) on Wikipedia
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment#types_of_alignment) on MDN

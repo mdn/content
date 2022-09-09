@@ -10,4 +10,4 @@ A **shim** is a piece of code used to correct the behavior of code that already 
 
 ## See also
 
-- [Shim](https://en.wikipedia.org/wiki/Shim_(computing)) on Wikipedia
+- [Shim](<https://en.wikipedia.org/wiki/Shim_(computing)>) on Wikipedia

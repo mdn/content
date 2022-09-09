@@ -18,7 +18,7 @@ function greeting(name) {
 }
 
 function processUserInput(callback) {
-  const name = prompt('Please enter your name.');
+  const name = prompt("Please enter your name.");
   callback(name);
 }
 
@@ -31,4 +31,4 @@ Note, however, that callbacks are often used to continue code execution after an
 
 ## See also
 
-- [Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming)) on Wikipedia
+- [Callback](<https://en.wikipedia.org/wiki/Callback_(computer_programming)>) on Wikipedia

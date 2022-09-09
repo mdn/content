@@ -15,4 +15,4 @@ For example, the default port for the {{Glossary("HTTP")}} protocol is 80 and th
 
 ## See also
 
-- [Port](https://en.wikipedia.org/wiki/Port_(computer_networking)) on Wikipedia
+- [Port](<https://en.wikipedia.org/wiki/Port_(computer_networking)>) on Wikipedia

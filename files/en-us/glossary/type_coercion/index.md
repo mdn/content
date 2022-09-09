@@ -12,7 +12,7 @@ Type coercion is the automatic or implicit conversion of values from one data ty
 ## Examples
 
 ```js
-const value1 = '5';
+const value1 = "5";
 const value2 = 9;
 let sum = value1 + value2;
 

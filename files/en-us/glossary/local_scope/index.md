@@ -11,4 +11,4 @@ Local scope is a characteristic of {{glossary("variable","variables")}} that mak
 
 ## See also
 
-- [Scope](https://en.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia
+- [Scope](<https://en.wikipedia.org/wiki/Scope_(computer_science)>) on Wikipedia

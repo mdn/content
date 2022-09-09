@@ -12,4 +12,4 @@ The concept of object references becomes clear when assigning the same object to
 
 ## See also
 
-- [Reference (computer science)](https://en.wikipedia.org/wiki/Reference_(computer_science)) on Wikipedia
+- [Reference (computer science)](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) on Wikipedia

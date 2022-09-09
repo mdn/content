@@ -21,4 +21,4 @@ Frameworks are said to have a "clean" syntax if they produce simple, readable, c
 
 ## See also
 
-- [Syntax (programming languages)](https://en.wikipedia.org/wiki/Syntax_(programming_languages)) on Wikipedia
+- [Syntax (programming languages)](<https://en.wikipedia.org/wiki/Syntax_(programming_languages)>) on Wikipedia

@@ -11,7 +11,7 @@ An encoding defines a mapping between bytes and text. A sequence of bytes allows
 For example, in HTML we normally declare a character encoding of UTF-8, using the following line:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 This ensures that you can use characters from just about any human language in your HTML document, and they will display reliably.
