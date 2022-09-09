@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.PeriodicSyncManager.register
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`register()`** method of the

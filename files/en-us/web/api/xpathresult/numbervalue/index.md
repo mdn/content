@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.numberValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`numberValue`** property of the

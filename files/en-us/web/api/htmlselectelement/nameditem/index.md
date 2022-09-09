@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.namedItem
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.namedItem()`** method returns the

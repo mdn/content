@@ -13,6 +13,7 @@ tags:
   - continue
 browser-compat: api.IDBCursor.continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`continue()`** method of the {{domxref("IDBCursor")}}

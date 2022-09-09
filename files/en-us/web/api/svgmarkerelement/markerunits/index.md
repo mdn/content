@@ -10,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.markerUnits
 ---
+
 {{APIRef("SVG")}}
 
 The **`markerUnits`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object. This object returns an integer which represents the keyword values that the {{SVGattr("markerUnits")}} attribute accepts.

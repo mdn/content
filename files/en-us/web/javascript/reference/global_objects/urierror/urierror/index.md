@@ -8,6 +8,7 @@ tags:
   - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
+
 {{JSRef}}
 
 The **`URIError()`** constructor creates an error when a global

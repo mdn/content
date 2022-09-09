@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.@@toStringTag
 ---
+
 {{JSRef}}
 
 The **`Intl[@@toStringTag]`** property has an initial value of

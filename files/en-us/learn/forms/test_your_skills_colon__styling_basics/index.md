@@ -10,6 +10,7 @@ tags:
   - Styling
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms) article.

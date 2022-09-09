@@ -17,6 +17,7 @@ tags:
   - fromPoint
 browser-compat: api.DOMPoint.fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The static **{{domxref("DOMPoint")}}** method

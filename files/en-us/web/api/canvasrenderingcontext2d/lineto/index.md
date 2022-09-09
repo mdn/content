@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasRenderingContext2D")}} method

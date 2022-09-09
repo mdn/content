@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.DeviceProximityEvent
 ---
+
 {{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** `DeviceProximityEvent` is not supported by any current major browser, and should not be used.

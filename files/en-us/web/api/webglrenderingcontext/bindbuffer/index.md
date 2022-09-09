@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given

@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.composite
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The **`composite`** property of a {{domxref("KeyframeEffect")}} resolves how an element's animation impacts its underlying property values.

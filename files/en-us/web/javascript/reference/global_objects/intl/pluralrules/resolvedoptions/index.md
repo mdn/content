@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.prototype.resolvedOptions()`** method

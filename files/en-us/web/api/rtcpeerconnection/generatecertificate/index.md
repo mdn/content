@@ -15,6 +15,7 @@ tags:
   - generateCertificate
 browser-compat: api.RTCPeerConnection.generateCertificate
 ---
+
 {{APIRef("WebRTC")}}
 
 The static **`RTCPeerConnection.generateCertificate()`**

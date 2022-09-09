@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.text
 ---
+
 {{APIRef("Fetch")}}
 
 The **`text()`** method of the {{domxref("Request")}} interface

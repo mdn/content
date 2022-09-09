@@ -14,6 +14,7 @@ tags:
   - dragenter
 browser-compat: api.HTMLElement.dragenter_event
 ---
+
 {{APIRef}}
 
 The `dragenter` event is fired when a dragged element or text selection enters a valid drop target.

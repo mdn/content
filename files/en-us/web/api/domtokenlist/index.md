@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMTokenList`** interface represents a set of space-separated tokens. Such a set is returned by {{domxref("Element.classList")}} or {{domxref("HTMLLinkElement.relList")}}, and many others.

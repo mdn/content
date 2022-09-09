@@ -13,6 +13,7 @@ tags:
   - endPoint
 browser-compat: api.PushSubscription.endpoint
 ---
+
 {{APIRef("Push API")}}
 
 The **`endpoint`** read-only property of the

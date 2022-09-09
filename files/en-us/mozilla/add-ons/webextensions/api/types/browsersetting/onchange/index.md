@@ -13,6 +13,7 @@ tags:
   - onchange
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
+
 {{AddonSidebar()}}
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.

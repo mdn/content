@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.keys
 ---
+
 {{JSRef}}
 
 The **`Object.keys()`** method returns

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRMediaBinding.createCylinderLayer
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createCylinderLayer()`** method of the {{domxref("XRMediaBinding")}} interface returns an {{domxref("XRCylinderLayer")}} object which is a layer that takes up a curved rectangular space in the virtual environment.

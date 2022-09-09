@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
 ---
+
 {{JSRef}}
 
 The **`BigUint64Array()`** typed array constructor creates a

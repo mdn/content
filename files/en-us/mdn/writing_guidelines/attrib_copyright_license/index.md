@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 MDN Web Doc's content is available free of charge and is available under various open-source licenses.

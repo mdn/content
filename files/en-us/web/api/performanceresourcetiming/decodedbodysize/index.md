@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.decodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`decodedBodySize`** read-only property returns the size

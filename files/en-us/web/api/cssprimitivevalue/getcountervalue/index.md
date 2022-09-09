@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getCounterValue()`** method of the

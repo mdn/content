@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.MediaMetadata.album
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`album`** property of the

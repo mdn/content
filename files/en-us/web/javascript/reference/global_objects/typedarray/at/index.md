@@ -12,6 +12,7 @@ tags:
   - at
 browser-compat: javascript.builtins.TypedArray.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.

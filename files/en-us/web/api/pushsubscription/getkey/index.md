@@ -13,6 +13,7 @@ tags:
   - getKey
 browser-compat: api.PushSubscription.getKey
 ---
+
 {{APIRef("Push API")}}
 
 The `getKey()` method of the {{domxref("PushSubscription")}} interface

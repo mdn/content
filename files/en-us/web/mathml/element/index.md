@@ -5,6 +5,7 @@ tags:
   - MathML
   - MathML Reference
 ---
+
 {{MathMLRef}}
 
 This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.

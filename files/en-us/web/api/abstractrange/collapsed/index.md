@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.AbstractRange.collapsed
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`collapsed`** property of the {{domxref("AbstractRange")}} interface returns `true` if the range's start position and end position are the same.

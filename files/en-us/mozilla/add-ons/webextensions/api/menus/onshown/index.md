@@ -12,6 +12,7 @@ tags:
   - onShown
 browser-compat: webextensions.api.menus.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has shown a menu.

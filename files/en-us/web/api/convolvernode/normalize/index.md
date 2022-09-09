@@ -11,6 +11,7 @@ tags:
   - parent
 browser-compat: api.ConvolverNode.normalize
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `normalize` property of the {{ domxref("ConvolverNode") }} interface

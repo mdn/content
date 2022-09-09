@@ -11,6 +11,7 @@ tags:
   - Web Audio API
   - sequencer
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We will introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and looking for an introduction to their application with the Web Audio API, you've come to the right place.

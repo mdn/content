@@ -15,6 +15,7 @@ tags:
   - flexbox
   - flow
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 This article will recap some of the CSS layout features we've already touched upon in previous modules, such as different {{cssxref("display")}} values, as well as introduce some of the concepts we'll be covering throughout this module.

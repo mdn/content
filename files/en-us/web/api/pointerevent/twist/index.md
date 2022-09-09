@@ -12,6 +12,7 @@ tags:
   - twist
 browser-compat: api.PointerEvent.twist
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`twist`** read-only property of the

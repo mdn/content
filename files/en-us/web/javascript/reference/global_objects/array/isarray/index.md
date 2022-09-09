@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.isArray
 ---
+
 {{JSRef}}
 
 The **`Array.isArray()`** method determines whether the passed

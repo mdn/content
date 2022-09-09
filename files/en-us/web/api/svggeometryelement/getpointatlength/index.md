@@ -12,6 +12,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.getPointAtLength
 ---
+
 {{APIRef("SVG")}}
 
 The

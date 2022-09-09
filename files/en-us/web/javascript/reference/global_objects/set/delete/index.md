@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes a specified value from a

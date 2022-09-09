@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.reload
 ---
+
 {{AddonSidebar()}}
 
 Reloads the extension.

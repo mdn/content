@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.json
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`json()`** method of the {{domxref("Request")}} interface

@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `g`, `i`, `m`, `s`, `u`, `y` or `d`.

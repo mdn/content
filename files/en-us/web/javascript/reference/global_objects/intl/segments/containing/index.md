@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
 ---
+
 {{JSRef}}
 
 The **`Intl.Segments.prototype.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.

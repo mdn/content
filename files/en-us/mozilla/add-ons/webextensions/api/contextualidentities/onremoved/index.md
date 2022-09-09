@@ -12,6 +12,7 @@ tags:
   - onRemoved
 browser-compat: webextensions.api.contextualIdentities.onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a new contextual identity is removed. Contextual identities may be removed by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.

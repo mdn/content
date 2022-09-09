@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection()`**

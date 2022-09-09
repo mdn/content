@@ -12,6 +12,7 @@ tags:
   - unobserve()
 browser-compat: api.ResizeObserver.unobserve
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`unobserve()`** method of the

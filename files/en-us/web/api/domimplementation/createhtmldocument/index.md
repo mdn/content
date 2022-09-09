@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The

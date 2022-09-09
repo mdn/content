@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
 ---
+
 {{SVGRef}}
 
 The **`kernelMatrix`** attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.

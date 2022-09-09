@@ -13,6 +13,7 @@ tags:
   - onRequest
 browser-compat: webextensions.api.extension.onRequest
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) instead.

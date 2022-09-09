@@ -11,6 +11,7 @@ tags:
   - ports
 browser-compat: api.ExtendableMessageEvent.ports
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ports`** read-only property of the

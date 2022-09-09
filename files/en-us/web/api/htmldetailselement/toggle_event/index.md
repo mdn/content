@@ -10,6 +10,7 @@ tags:
   - toggle
 browser-compat: api.HTMLDetailsElement.toggle_event
 ---
+
 {{APIRef}}
 
 The **`toggle`** event fires when the `open`/`closed` state of a {{HtmlElement("details")}} element is toggled.

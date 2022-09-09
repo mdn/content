@@ -10,6 +10,7 @@ tags:
   - TextMetrics
 browser-compat: api.TextMetrics.width
 ---
+
 {{APIRef("Canvas API")}}
 
 The read-only **`width`** property of the {{domxref("TextMetrics")}} interface contains the text's advance width (the width of that inline box) in CSS pixels.

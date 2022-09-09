@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEFuncBElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEFuncBElement`** interface corresponds to the {{SVGElement("feFuncB")}} element.

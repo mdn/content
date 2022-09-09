@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.PopStateEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PopStateEvent`** is an interface for the [`popstate`](/en-US/docs/Web/API/Window/popstate_event) event.

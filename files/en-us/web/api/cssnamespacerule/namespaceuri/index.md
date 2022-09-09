@@ -11,6 +11,7 @@ tags:
   - namespaceURI
 browser-compat: api.CSSNamespaceRule.namespaceURI
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`namespaceURI`** property of the {{domxref("CSSNamespaceRule")}} returns a string containing the text of the URI of the given namespace.

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feBlend.mode
 ---
+
 {{SVGRef}}
 
 The **`mode`** attribute defines the blending mode on the {{SVGElement("feBlend")}} filter primitive.

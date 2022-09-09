@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.EncodedVideoChunk.type
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns a value indicating whether the video chunk is a key chunk, which does not rely on other frames for decoding.

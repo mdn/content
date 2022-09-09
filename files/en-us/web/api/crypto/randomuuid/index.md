@@ -13,6 +13,7 @@ tags:
   - randomUUID
 browser-compat: api.Crypto.randomUUID
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`randomUUID()`** method of the {{domxref("Crypto")}} interface is used to generate a v4 {{Glossary("UUID")}} using a cryptographically secure random number generator.

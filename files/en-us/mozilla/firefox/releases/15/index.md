@@ -6,6 +6,7 @@ tags:
   - Firefox 15
   - Gecko 15
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 15 shipped on August 28, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.

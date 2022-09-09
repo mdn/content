@@ -16,6 +16,7 @@ tags:
   - password
 browser-compat: api.RTCIceServer.credentialType
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's

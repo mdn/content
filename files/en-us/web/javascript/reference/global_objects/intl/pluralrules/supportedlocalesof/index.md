@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.supportedLocalesOf()`** method returns

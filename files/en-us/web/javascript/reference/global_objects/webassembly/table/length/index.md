@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.length
 ---
+
 {{JSRef}}
 
 The read-only **`length`** prototype property of the

@@ -9,6 +9,7 @@ tags:
   - events
 browser-compat: api.Window.unload_event
 ---
+
 {{APIRef}}
 
 > **Warning:** Developers should avoid using this event. See "Usage notes" below.

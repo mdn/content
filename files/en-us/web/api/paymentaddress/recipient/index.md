@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.recipient
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`recipient`** property of the

@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastIndex
 ---
+
 {{JSRef}}
 
 **`lastIndex`** is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.

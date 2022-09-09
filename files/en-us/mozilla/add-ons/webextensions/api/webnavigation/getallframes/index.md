@@ -13,6 +13,7 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.getAllFrames
 ---
+
 {{AddonSidebar()}}
 
 Given a tab ID, retrieves information about all the frames it contains.

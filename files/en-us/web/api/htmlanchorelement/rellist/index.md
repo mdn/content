@@ -11,6 +11,7 @@ tags:
   - relList
 browser-compat: api.HTMLAnchorElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.relList`** read-only property reflects

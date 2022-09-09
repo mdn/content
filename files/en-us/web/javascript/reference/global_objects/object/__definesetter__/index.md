@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineSetter
 ---
+
 {{JSRef}}{{Deprecated_Header}}
 
 > **Warning:** This feature is deprecated in favor of defining setters using the

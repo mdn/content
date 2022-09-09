@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#EndAttribute
 ---
+
 {{SVGRef}}
 
 The **`end`** attribute defines an end value for the animation that can constrain the active duration.

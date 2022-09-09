@@ -17,6 +17,7 @@ tags:
   - baseLayer
 browser-compat: api.XRRenderState.baseLayer
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`baseLayer`** property of the

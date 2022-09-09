@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.media
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute of the given SVG style element.

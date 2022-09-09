@@ -10,6 +10,7 @@ tags:
   - reason
 browser-compat: api.AbortSignal.reason
 ---
+
 {{APIRef("DOM")}}
 
 The **`reason`** read-only property returns a JavaScript value that indicates the abort reason.

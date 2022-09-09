@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getZoom
 ---
+
 {{AddonSidebar()}}
 
 Gets the current zoom factor for the specified tab.

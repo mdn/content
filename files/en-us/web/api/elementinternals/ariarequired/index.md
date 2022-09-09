@@ -12,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaRequired
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.

@@ -13,6 +13,7 @@ tags:
   - onClicked
 browser-compat: webextensions.api.menus.onClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when a menu item is clicked.

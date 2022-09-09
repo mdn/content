@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.elementFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`elementFromPoint()`**

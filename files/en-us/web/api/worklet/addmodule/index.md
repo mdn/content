@@ -15,6 +15,7 @@ tags:
   - addModule
 browser-compat: api.Worklet.addModule
 ---
+
 {{APIRef("Worklets")}}
 
 The **`addModule()`** method of the

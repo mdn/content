@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGDefsElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGDefsElement`** interface corresponds to the {{SVGElement("defs")}} element.

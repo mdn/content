@@ -16,6 +16,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpStreamStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}}, and {{domxref("RTCRtpReceiver.getStats()")}} methods to provide detailed statistics about WebRTC connectivity.

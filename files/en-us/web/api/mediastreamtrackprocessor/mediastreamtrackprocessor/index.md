@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 ---
+
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.

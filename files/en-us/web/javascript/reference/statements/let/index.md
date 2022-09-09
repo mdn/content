@@ -11,6 +11,7 @@ tags:
   - let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`let`** declaration declares a block-scoped local variable, optionally initializing it to a value.

@@ -5,6 +5,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 MDN stores data in well-defined structures when possible. This information is then centralized and can be updated once, while being used in numerous places.

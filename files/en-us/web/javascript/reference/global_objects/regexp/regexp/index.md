@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
+
 {{JSRef}}
 
 The **`RegExp`** constructor creates a regular expression object for matching text with a pattern.

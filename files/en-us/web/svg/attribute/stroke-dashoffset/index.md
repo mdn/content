@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-dashoffset
 ---
+
 {{SVGRef}}
 
 The **`stroke-dashoffset`** attribute is a presentation attribute defining an offset on the rendering of the associated dash array.

@@ -7,6 +7,7 @@ tags:
   - Method
 browser-compat: javascript.builtins.Function.call
 ---
+
 {{JSRef}}
 
 The **`call()`** method calls the function with a given `this` value and arguments provided individually.

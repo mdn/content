@@ -14,6 +14,7 @@ tags:
   - getURL
 browser-compat: webextensions.api.extension.getURL
 ---
+
 {{AddonSidebar}}
 
 > **Warning:** This function is deprecated. Please use [`runtime.getURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).

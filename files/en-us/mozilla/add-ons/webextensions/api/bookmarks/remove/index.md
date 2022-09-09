@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.bookmarks.remove
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.remove()`** method removes a single bookmark or an empty bookmark folder.

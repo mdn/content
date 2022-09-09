@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.apply
 ---
+
 {{JSRef}}
 
 The static **`Reflect.apply()`** method calls a target function

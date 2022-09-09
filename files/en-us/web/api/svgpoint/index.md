@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.SVGPoint
 ---
+
 {{APIRef("SVG")}}{{Deprecated_Header}}
 
 > **Warning:** `SVGPoint` is deprecated.

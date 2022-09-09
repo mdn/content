@@ -20,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.error_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's `onerror` event handler when an error occurs on the data channel.

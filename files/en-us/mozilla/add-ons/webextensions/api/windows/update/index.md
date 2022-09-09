@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.update
 ---
+
 {{AddonSidebar()}}
 
 Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.

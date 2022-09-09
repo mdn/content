@@ -11,6 +11,7 @@ tags:
   - scrollBy
 browser-compat: api.Element.scrollBy
 ---
+
 {{APIRef}}
 
 The **`scrollBy()`** method of the {{domxref("Element")}}

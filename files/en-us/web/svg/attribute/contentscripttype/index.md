@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.contentScriptType
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`contentScriptType`** attribute specifies the default scripting language for the given document fragment on the {{SVGElement("svg")}} element.

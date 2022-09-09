@@ -13,6 +13,7 @@ tags:
   - upperOpen
 browser-compat: api.IDBKeyRange.upperOpen
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`upperOpen`** read-only property of the

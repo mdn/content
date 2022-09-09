@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.cssText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`cssText`** property of the {{domxref("CSSStyleDeclaration")}} interface returns or sets the text of the element's **inline** style declaration only.

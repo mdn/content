@@ -14,6 +14,7 @@ tags:
   - Subscription
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
 ---
+
 {{APIRef("Push API")}}
 
 The **`pushsubscriptionchange`** event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}} to indicate a change in push subscription that was triggered outside the application's control.

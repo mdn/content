@@ -12,6 +12,7 @@ tags:
   - XPCOM
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 4, which shipped on March 22, 2011, enhances performance, adds more support for HTML5 and other evolving Web technologies, and further improves security. This article provides information about this release and what features are available for Web developers, add-on developers, and Gecko platform developers alike.

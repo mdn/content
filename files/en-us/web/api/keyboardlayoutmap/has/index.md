@@ -14,6 +14,7 @@ tags:
   - keyboard
 browser-compat: api.KeyboardLayoutMap.has
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
 The **`has()`** method of the

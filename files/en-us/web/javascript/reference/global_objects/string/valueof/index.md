@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a

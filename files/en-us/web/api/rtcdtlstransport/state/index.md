@@ -12,6 +12,7 @@ tags:
   - state
 browser-compat: api.RTCDtlsTransport.state
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`state`** read-only property of the

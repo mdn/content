@@ -11,6 +11,7 @@ tags:
   - verify
 browser-compat: api.SubtleCrypto.verify
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`verify()`** method of the {{domxref("SubtleCrypto")}}

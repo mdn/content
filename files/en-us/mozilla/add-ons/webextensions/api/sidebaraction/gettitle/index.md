@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.getTitle
 ---
+
 {{AddonSidebar()}}
 
 Gets the sidebar's title.

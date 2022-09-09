@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
+
 {{JSRef}}
 
 The **`Object.preventExtensions()`** method prevents new

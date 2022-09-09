@@ -13,6 +13,7 @@ tags:
   - keyboard
 browser-compat: api.Navigator.keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`keyboard`** read-only property

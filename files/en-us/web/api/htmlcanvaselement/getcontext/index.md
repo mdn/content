@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 The

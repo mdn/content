@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Path2D.addPath
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D.addPath()`** method

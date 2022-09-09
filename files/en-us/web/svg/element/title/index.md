@@ -8,6 +8,7 @@ tags:
   - SVG Descriptive
 browser-compat: svg.elements.title
 ---
+
 {{SVGRef}}
 
 The **`<title>`** element provides an accessible, short-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).

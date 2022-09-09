@@ -12,6 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new

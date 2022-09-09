@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.javaEnabled
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 This method always returns false.

@@ -13,6 +13,7 @@ tags:
   - createOffer
 browser-compat: api.RTCPeerConnection.createOffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createOffer()`** method

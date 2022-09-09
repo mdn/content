@@ -13,6 +13,7 @@ tags:
   - Usage
 browser-compat: api.StorageManager
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
 The Storage Standard defines a common, shared storage system to be used by all APIs and technologies that store content-accessible data for individual Web sites. The Storage API gives sites' code the ability to find out how much space they can use, how much they are already using, and even control whether or not they need to be alerted before the {{Glossary("user agent")}} disposes of site data in order to make room for other things.

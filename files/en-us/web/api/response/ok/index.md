@@ -11,6 +11,7 @@ tags:
   - ok
 browser-compat: api.Response.ok
 ---
+
 {{APIRef("Fetch")}}
 
 The **`ok`** read-only property of the {{domxref("Response")}} interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.

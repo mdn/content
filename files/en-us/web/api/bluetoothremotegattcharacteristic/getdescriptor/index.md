@@ -13,6 +13,7 @@ tags:
   - getDescriptor()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptor
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.getDescriptor()`** method

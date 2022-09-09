@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.formatToParts()`** method

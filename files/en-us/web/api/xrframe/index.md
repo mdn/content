@@ -20,6 +20,7 @@ tags:
   - Experimental
 browser-compat: api.XRFrame
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 A [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRFrame`** object is passed into the {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} callback function and provides access to the information needed in order to render a single frame of animation for an {{domxref("XRSession")}} describing a VR or AR scene. Events which communicate the tracking state of objects also provide an `XRFrame` reference as part of their structure.

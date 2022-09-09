@@ -13,6 +13,7 @@ tags:
   - start()
 browser-compat: api.Sensor.start
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`start`** method activates one

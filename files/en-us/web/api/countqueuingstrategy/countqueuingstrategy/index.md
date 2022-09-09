@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`CountQueuingStrategy()`** constructor

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fixed()`** method creates a {{HTMLElement("tt")}} HTML

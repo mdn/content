@@ -12,6 +12,7 @@ tags:
   - goForward
 browser-compat: webextensions.api.tabs.goForward
 ---
+
 {{AddonSidebar()}}
 
 Navigate to the next page in tab's history, if available.

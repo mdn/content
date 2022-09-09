@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_and
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise AND operator (`&`) returns a `1` in each bit

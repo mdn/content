@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 The `readAsDataURL` method is used to read the contents of the specified

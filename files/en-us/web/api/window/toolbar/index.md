@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.toolbar
 ---
+
 {{APIRef}}
 
 The **`Window.toolbar`** property returns the toolbar object,

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.EventSource.error_event
 ---
+
 {{APIRef}}
 
 The `error` event of the {{domxref("EventSource")}} API is fired when a connection with an event source fails to be opened.

@@ -11,6 +11,7 @@ tags:
   - tabIndex
 browser-compat: api.HTMLElement.tabIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`tabIndex`** property of the

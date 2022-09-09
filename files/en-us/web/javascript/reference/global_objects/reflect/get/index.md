@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.get
 ---
+
 {{JSRef}}
 
 The static **`Reflect.get()`** method works like getting a

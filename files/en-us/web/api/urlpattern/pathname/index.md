@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.pathname
 ---
+
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`pathname`** property of the {{domxref("URLPattern")}} interface is a

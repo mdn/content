@@ -22,6 +22,7 @@ tags:
   - viewport
 browser-compat: api.XRViewport.height
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} property

@@ -10,6 +10,7 @@ tags:
 browser-compat: api.Element.pointerup_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The `pointerup` event is fired when a pointer is no longer active.

@@ -7,6 +7,7 @@ tags:
   - Preferences
   - features
 ---
+
 {{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them.

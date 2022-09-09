@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.getGamepads
 ---
+
 {{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The **`Navigator.getGamepads()`** method returns an array of

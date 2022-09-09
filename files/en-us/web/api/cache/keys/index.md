@@ -12,6 +12,7 @@ tags:
   - keys
 browser-compat: api.Cache.keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface

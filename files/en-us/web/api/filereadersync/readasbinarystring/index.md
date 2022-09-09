@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: api.FileReaderSync.readAsBinaryString
 ---
+
 {{APIRef("File API")}}{{deprecated_header}}
 
 > **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.

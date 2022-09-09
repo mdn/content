@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
+
 {{JSRef}}
 
 The

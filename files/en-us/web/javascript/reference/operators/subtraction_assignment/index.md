@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The subtraction assignment operator (`-=`) subtracts the value of the right

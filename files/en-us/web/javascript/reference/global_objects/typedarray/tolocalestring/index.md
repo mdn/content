@@ -10,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing

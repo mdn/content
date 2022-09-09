@@ -15,6 +15,7 @@ tags:
   - size
 browser-compat: api.HTMLImageElement.height
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`height`** property of the

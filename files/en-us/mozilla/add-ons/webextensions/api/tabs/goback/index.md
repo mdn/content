@@ -12,6 +12,7 @@ tags:
   - goBack
 browser-compat: webextensions.api.tabs.goBack
 ---
+
 {{AddonSidebar()}}
 
 Navigate to the previous page in tab's history, if available.

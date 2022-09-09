@@ -15,6 +15,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **{{domxref("HTMLVideoElement")}}** method

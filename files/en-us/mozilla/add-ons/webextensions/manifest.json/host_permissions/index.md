@@ -11,6 +11,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.host_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

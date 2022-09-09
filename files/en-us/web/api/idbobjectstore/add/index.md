@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.add
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`add()`** method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the value, and stores the cloned value in the object store. This is for adding new records to an object store.

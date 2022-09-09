@@ -13,6 +13,7 @@ tags:
   - deleteRange
 browser-compat: webextensions.api.history.deleteRange
 ---
+
 {{AddonSidebar()}}
 
 Removes all visits to pages that the user made during the given time range. If this removes all visits made to a given page, then the page will be no longer appear in the browser history and {{WebExtAPIRef("history.onVisitRemoved")}} will fire for it.

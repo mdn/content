@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.printPreview
 ---
+
 {{AddonSidebar()}}
 
 Opens print preview for the active tab.

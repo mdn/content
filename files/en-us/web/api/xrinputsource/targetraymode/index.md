@@ -22,6 +22,7 @@ tags:
   - targetRayMode
 browser-compat: api.XRInputSource.targetRayMode
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}}

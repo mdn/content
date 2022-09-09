@@ -15,6 +15,7 @@ tags:
   - XRSession
 browser-compat: api.XRSession.depthUsage
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`depthUsage`** property of an `immersive-ar`

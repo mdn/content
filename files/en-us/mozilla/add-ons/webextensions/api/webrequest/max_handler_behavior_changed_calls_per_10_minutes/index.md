@@ -14,6 +14,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 ---
+
 {{AddonSidebar}}
 
 The maximum number of times that `{{WebExtAPIRef("webRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}}` can be called in a 10 minute period.

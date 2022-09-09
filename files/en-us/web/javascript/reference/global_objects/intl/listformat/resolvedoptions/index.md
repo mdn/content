@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.resolvedOptions()`** method

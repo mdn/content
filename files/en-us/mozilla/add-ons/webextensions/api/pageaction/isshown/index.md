@@ -12,6 +12,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.isShown
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the page action is being shown for the given tab.

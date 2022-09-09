@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGNumber
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGNumber`** interface corresponds to the {{cssxref("&lt;number&gt;")}} basic data type.

@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.HTMLKeygenElement
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Note:** This page describes the Keygen Element interface as specified, not as currently implemented by Gecko. See {{Bug(101019)}} for details and status.

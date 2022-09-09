@@ -14,6 +14,7 @@ tags:
   - ServiceWorker
 browser-compat: api.FetchEvent.FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`FetchEvent()`** constructor creates a new {{domxref("FetchEvent")}} object.

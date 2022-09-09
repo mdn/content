@@ -14,6 +14,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.touches
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`touches`** is a read-only {{ domxref("TouchList") }} listing

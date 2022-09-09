@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feComponentTransfer
 ---
+
 {{SVGRef}}
 
 The **`<feComponentTransfer>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding.

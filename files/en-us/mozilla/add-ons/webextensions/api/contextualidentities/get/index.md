@@ -12,6 +12,7 @@ tags:
   - get
 browser-compat: webextensions.api.contextualIdentities.get
 ---
+
 {{AddonSidebar()}}
 
 Gets information about a contextual identity, given its cookie store ID.

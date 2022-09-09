@@ -10,6 +10,7 @@ tags:
   - Web Storage API
 browser-compat: api.StorageEvent
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`StorageEvent`** interface is implemented by the {{domxref("Window/storage_event", "storage")}} event, which is

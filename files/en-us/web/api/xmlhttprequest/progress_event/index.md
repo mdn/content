@@ -12,6 +12,7 @@ tags:
   - progress
 browser-compat: api.XMLHttpRequest.progress_event
 ---
+
 {{APIRef}}
 
 The **`progress`** event is fired periodically when a request receives more data.

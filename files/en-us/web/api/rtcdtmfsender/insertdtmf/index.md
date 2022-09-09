@@ -16,6 +16,7 @@ tags:
   - insertDTMF
 browser-compat: api.RTCDTMFSender.insertDTMF
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`insertDTMF()`** method on the {{domxref("RTCDTMFSender")}} interface

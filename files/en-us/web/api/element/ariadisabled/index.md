@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaDisabled
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.

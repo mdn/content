@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.close
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("USBDevice")}}

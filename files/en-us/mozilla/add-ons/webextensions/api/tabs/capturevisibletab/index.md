@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.captureVisibleTab
 ---
+
 {{AddonSidebar()}}
 
 Creates a data URL encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).

@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.items
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only {{domxref("DataTransfer")}} property `items` property is a

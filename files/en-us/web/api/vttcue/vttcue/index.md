@@ -15,6 +15,7 @@ tags:
   - vtt
 browser-compat: api.VTTCue.VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`VTTCue()`** constructor creates and returns a new

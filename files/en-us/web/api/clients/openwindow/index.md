@@ -12,6 +12,7 @@ tags:
   - openWindow
 browser-compat: api.Clients.openWindow
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`openWindow()`** method of the {{domxref("Clients")}}

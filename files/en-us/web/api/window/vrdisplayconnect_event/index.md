@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.vrdisplayconnect_event
 ---
+
 {{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplayconnect`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when a compatible VR display is connected to the computer.

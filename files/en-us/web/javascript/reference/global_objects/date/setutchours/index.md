@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCHours
 ---
+
 {{JSRef}}
 
 The **`setUTCHours()`** method sets the hour for a specified

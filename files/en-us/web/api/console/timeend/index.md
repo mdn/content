@@ -12,6 +12,7 @@ tags:
   - web console
 browser-compat: api.console.timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeEnd()`** stops a timer that was previously started by calling {{domxref("console.time()")}}.

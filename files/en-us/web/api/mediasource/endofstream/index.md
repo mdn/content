@@ -14,6 +14,7 @@ tags:
   - endOfStream
 browser-compat: api.MediaSource.endOfStream
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`endOfStream()`** method of the

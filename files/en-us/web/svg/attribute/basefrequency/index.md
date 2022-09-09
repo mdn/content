@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feTurbulence.baseFrequency
 ---
+
 {{SVGRef}}
 
 The **`baseFrequency`** attribute represents the base frequency parameter for the noise function of the {{SVGElement("feTurbulence")}} filter primitive.

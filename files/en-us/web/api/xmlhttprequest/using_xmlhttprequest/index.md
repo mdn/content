@@ -15,6 +15,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 In this guide, we'll take a look at how to use

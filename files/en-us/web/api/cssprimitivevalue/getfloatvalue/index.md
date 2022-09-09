@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getFloatValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getFloatValue()`** method of the

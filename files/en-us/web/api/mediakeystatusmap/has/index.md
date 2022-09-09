@@ -11,6 +11,7 @@ tags:
   - has()
 browser-compat: api.MediaKeyStatusMap.has
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`has`** property of the

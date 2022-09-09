@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.compareExchange
 ---
+
 {{JSRef}}
 
 The static

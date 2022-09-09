@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamDefaultReader`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a default reader that can be used to read stream data supplied from a network (such as a fetch request).

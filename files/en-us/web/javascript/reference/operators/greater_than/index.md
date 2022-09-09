@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.greater_than
 ---
+
 {{jsSidebar("Operators")}}
 
 The greater than operator (`>`) returns `true` if the left

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`Notification()`** constructor creates a new

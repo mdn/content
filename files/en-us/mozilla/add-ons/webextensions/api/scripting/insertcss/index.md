@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.insertCSS
 ---
+
 {{AddonSidebar()}}
 
 Injects CSS into a page.

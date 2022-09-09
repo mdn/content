@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isSealed
 ---
+
 {{JSRef}}
 
 The **`Object.isSealed()`** method determines if an object is

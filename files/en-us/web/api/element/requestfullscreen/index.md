@@ -18,6 +18,7 @@ tags:
   - screen
 browser-compat: api.Element.requestFullscreen
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The **`Element.requestFullscreen()`**

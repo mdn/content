@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation operator (`**`) returns the result of raising the first

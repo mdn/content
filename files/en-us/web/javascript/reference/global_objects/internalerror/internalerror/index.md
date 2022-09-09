@@ -9,6 +9,7 @@ tags:
   - Non-standard
 browser-compat: javascript.builtins.InternalError.InternalError
 ---
+
 {{JSRef}}{{Non-standard_Header}}
 
 The **`InternalError()`** constructor creates an error that indicates an error that occurred internally in the JavaScript engine.

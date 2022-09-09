@@ -13,6 +13,7 @@ tags:
   - touchstart
 browser-compat: api.Element.touchstart_event
 ---
+
 {{APIRef}}
 
 The `touchstart` event is fired when one or more touch points are placed on the touch surface.

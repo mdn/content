@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.unicode-range
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`unicode-range`** attribute defines the range of [ISO 10646](https://www.iso.org/standard/56921.html) characters possibly covered by the glyphs in a font.

@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.toJSON
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`toJSON()`** method is a _serializer_; it returns

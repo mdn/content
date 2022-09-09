@@ -13,6 +13,7 @@ tags:
   - Window
   - back
 ---
+
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
 The obsolete and non-standard method `back()` on the {{domxref("window")}}

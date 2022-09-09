@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Error.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

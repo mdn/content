@@ -11,6 +11,7 @@ tags:
   - supportedContentEncodings
 browser-compat: api.PushManager.supportedContentEncodings
 ---
+
 {{APIRef("Push API")}}
 
 The **`supportedContentEncodings`** read-only property of the

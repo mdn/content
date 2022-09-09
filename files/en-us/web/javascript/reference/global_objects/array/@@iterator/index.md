@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.@@iterator
 ---
+
 {{JSRef}}
 
 The **`@@iterator`** method is part of

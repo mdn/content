@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface

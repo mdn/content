@@ -9,6 +9,7 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.decode
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecode.decode()`** method returns a

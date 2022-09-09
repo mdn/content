@@ -11,6 +11,7 @@ tags:
 browser-compat: api.Element.lostpointercapture_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.

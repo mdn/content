@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`glyph-orientation-horizontal`** attribute affects the amount that the current text position advances as each {{Glossary("glyph")}} is rendered.

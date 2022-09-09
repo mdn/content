@@ -10,6 +10,7 @@ tags:
   - scrollTo
 browser-compat: api.Element.scrollTo
 ---
+
 {{APIRef}}
 
 The **`scrollTo()`** method of the {{domxref("Element")}}

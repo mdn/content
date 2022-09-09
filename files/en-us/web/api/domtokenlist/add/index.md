@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.add
 ---
+
 {{APIRef("DOM")}}
 
 The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given tokens to the list, omitting any that are already present.

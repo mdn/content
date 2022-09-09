@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FontFace
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`FontFace`** interface represents a single usable font face. It allows control of the source of the font face, being a URL to an external resource, or a buffer; it also allows control of when the font face is loaded and its current status.

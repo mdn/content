@@ -24,6 +24,7 @@ browser-compat:
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 The **Fullscreen API** adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in fullscreen mode, and to exit fullscreen mode once it is no longer needed. This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until fullscreen mode is shut off.

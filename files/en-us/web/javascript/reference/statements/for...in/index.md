@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.for_in
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`for...in` statement** iterates over all

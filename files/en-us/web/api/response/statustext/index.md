@@ -11,6 +11,7 @@ tags:
   - statusText
 browser-compat: api.Response.statusText
 ---
+
 {{APIRef("Fetch")}}
 
 The **`statusText`** read-only property of the {{domxref("Response")}} interface contains the status message corresponding to the HTTP status code in {{domxref("Response.status")}}.

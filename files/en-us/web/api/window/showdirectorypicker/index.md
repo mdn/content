@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the

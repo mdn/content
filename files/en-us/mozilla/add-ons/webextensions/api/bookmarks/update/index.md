@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.update
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.

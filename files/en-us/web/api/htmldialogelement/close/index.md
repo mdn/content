@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.HTMLDialogElement.close
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}

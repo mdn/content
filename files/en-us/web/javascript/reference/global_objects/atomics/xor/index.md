@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.xor
 ---
+
 {{JSRef}}
 
 The static **`Atomics.xor()`**

@@ -11,6 +11,7 @@ tags:
   - Keyboard
 browser-compat: api.HTMLElement.enterKeyHint
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`enterKeyHint`** property is an enumerated property defining

@@ -14,6 +14,7 @@ tags:
   - pip
 browser-compat: api.Document.exitPictureInPicture
 ---
+
 {{ApiRef("Picture-in-Picture API")}}
 
 The {{domxref("Document")}} method

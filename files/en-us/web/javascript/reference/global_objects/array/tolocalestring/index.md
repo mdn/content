@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing

@@ -12,6 +12,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMathMax.CSSMathMax
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathMax()`** constructor creates a

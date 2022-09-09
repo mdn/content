@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.table
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.table()`** method displays tabular data as a table.

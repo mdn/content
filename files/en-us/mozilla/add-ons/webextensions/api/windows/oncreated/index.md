@@ -13,6 +13,7 @@ tags:
   - onCreated
 browser-compat: webextensions.api.windows.onCreated
 ---
+
 {{AddonSidebar()}}
 
 Fired when a window is created.

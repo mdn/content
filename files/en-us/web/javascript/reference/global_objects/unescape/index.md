@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.unescape
 ---
+
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `unescape()` is not strictly deprecated

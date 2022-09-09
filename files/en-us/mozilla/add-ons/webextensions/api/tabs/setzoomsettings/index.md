@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.setZoomSettings
 ---
+
 {{AddonSidebar()}}
 
 Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab.

@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.cookies.remove
 ---
+
 {{AddonSidebar()}}
 
 The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.

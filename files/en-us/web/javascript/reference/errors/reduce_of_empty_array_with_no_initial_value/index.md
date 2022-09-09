@@ -7,6 +7,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "reduce of empty array with no initial value" occurs when a

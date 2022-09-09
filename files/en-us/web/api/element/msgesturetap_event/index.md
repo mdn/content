@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Element.MSGestureTap_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSGestureTap`** event is fired when the user "taps" the pointing device (e.g., touches the touch surface with their finger, taps the touch surface with a pen device, clicks with a mouse). Typically, it's preferable to listen for the {{domxref("Element/click_event", "click")}} event instead.

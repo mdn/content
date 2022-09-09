@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.display
 ---
+
 {{SVGRef}}
 
 The **`display`** attribute lets you control the rendering of graphical or container elements.

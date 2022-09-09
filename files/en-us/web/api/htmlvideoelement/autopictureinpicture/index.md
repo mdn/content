@@ -16,6 +16,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}}

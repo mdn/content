@@ -12,6 +12,7 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes
 ---
+
 {{AddonSidebar}}
 
 Some common types used in other WebExtension APIs.

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.setZoom
 ---
+
 {{AddonSidebar()}}
 
 Zooms the specified tab.

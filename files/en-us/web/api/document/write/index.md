@@ -11,6 +11,7 @@ tags:
   - write
 browser-compat: api.Document.write
 ---
+
 {{ApiRef("DOM")}}
 
 > **Warning:** Use of the `document.write()` method is strongly discouraged.

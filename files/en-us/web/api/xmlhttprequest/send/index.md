@@ -16,6 +16,7 @@ tags:
   - send
 browser-compat: api.XMLHttpRequest.send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method

@@ -11,6 +11,7 @@ tags:
   - XPath
 browser-compat: api.XPathException
 ---
+
 {{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
 In the [DOM XPath API](/en-US/docs/Web/XPath) the **`XPathException`** interface represents exception conditions that can be encountered while performing XPath operations.

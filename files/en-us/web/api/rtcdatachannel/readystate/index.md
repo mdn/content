@@ -11,6 +11,7 @@ tags:
   - readyState
 browser-compat: api.RTCDataChannel.readyState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`readyState`** returns a string which indicates the state of the data channel's underlying data connection.

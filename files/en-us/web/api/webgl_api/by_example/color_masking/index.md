@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Simple_color_animation","Learn/WebGL/By_example/Basic_scissoring")}}
 
 This WebGL example modifies random colors by applying color masking to limit the range of displayed colors to specific shades.

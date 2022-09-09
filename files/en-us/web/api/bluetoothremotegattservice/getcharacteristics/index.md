@@ -13,6 +13,7 @@ tags:
   - getCharacteristics()
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristics
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.getCharacteristics()`** method

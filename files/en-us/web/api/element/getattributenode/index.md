@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 Returns the specified attribute of the specified element, as an `Attr` node.

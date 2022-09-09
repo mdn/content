@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.storage_event
 ---
+
 {{APIRef}}
 
 The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage`) has been modified in the context of another document.

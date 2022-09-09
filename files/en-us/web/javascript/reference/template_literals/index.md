@@ -13,6 +13,7 @@ tags:
   - strings
 browser-compat: javascript.grammar.template_literals
 ---
+
 {{JsSidebar("More")}}
 
 Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string_interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged_templates).

@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.createObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`createObjectStore()`** method of the

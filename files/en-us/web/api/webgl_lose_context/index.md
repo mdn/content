@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_lose_context
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.

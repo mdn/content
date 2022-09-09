@@ -13,6 +13,7 @@ tags:
   - register
 browser-compat: api.ServiceWorkerContainer.register
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`register()`** method of the

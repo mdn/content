@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trim
 ---
+
 {{JSRef}}
 
 The **`trim()`** method removes whitespace from both ends of a

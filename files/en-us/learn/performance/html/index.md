@@ -6,6 +6,7 @@ tags:
   - Learning
   - Web Performance
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 
 HTML is by default fast and accessible. It is our job, as developers, to ensure that we preserve these two properties when creating or editing HTML code. Complications can occur when, for example, the file size of a {{htmlelement("video")}} embed is too large, or when a webpage is not optimized for mobile devices. This module intends to walk you through the key HTML performance features that can drastically improve the quality of your webpage.

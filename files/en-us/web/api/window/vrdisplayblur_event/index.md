@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.vrdisplayblur_event
 ---
+
 {{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplayblur`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.

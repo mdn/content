@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Array.group
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`group()`** method groups the elements of the calling array according to the string values returned by a provided testing function.

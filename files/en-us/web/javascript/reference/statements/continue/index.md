@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.continue
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`continue` statement** terminates execution of the

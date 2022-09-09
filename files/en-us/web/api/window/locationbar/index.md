@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.locationbar
 ---
+
 {{APIRef}}
 
 Returns the `locationbar` object, whose visibility can be checked.

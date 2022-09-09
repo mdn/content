@@ -15,6 +15,7 @@ tags:
   - sampleRate
 browser-compat: api.MediaTrackSupportedConstraints.sampleRate
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's

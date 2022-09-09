@@ -9,6 +9,7 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.UIEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent()`** constructor creates a new {{domxref("UIEvent")}} object.

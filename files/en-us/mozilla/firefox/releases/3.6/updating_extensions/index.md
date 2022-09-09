@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Firefox 3.6
 ---
+
 {{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.

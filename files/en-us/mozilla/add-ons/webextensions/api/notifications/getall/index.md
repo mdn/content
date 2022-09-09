@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.notifications.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all currently active notifications created by the extension.

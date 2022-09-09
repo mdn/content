@@ -10,6 +10,7 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScript
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.

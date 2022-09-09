@@ -13,6 +13,7 @@ tags:
   - requestFrame
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} method

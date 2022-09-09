@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Node.hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasChildNodes()`** method of the {{domxref("Node")}} interface

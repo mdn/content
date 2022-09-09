@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`seek()`** method of the

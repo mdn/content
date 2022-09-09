@@ -12,6 +12,7 @@ tags:
   - SVG Reference
   - Vector Graphics
 ---
+
 {{SVGRef}}
 
 SVG elements can be modified using attributes that specify details about exactly how the element should be handled or rendered.

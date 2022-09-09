@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendFuncSeparate()`** method of

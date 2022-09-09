@@ -18,6 +18,7 @@ tags:
   - seek
 browser-compat: api.HTMLMediaElement.currentTime
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}} interface's

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the

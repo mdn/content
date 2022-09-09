@@ -11,6 +11,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#Sizing
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
 ---
+
 {{SVGRef}}
 
 The **`width`** attribute defines the horizontal length of an element in the user coordinate system.

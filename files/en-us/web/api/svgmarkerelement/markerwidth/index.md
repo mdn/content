@@ -10,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.markerWidth
 ---
+
 {{APIRef("SVG")}}
 
 The **`markerWidth`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerWidth")}} attribute.

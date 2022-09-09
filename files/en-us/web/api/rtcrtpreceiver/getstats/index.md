@@ -15,6 +15,7 @@ tags:
   - getStats
 browser-compat: api.RTCRtpReceiver.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpReceiver")}} method **`getStats()`**

@@ -11,6 +11,7 @@ tags:
   - theory
   - website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
 A website consists of many files: text content, code, stylesheets, media content, and so on. When you're building a website, you need to assemble these files into a sensible structure on your local computer, make sure they can talk to one another, and get all your content looking right before you eventually [upload them to a server](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website). _Dealing with files_ discusses some issues you should be aware of so you can set up a sensible file structure for your website.

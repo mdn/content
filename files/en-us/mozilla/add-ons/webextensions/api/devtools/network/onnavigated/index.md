@@ -11,6 +11,7 @@ tags:
   - devtools.network
 browser-compat: webextensions.api.devtools.network.onNavigated
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user navigates the inspected window to a new page.

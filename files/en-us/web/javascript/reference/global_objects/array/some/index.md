@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether

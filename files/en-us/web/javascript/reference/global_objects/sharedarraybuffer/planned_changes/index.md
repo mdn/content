@@ -11,6 +11,7 @@ tags:
   - Spectre
   - postMessage
 ---
+
 {{JSRef}}
 
 There is standardization work ongoing that enables developers to create [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) objects again, but changes are needed in order to be use these across threads (i.e., `postMessage()` for `SharedArrayBuffer` objects throws by default). These changes provide further isolation between sites and help reduce the impact of attacks with high-resolution timers, which can be created with shared memory.

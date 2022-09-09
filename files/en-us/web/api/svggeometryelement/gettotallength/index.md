@@ -12,6 +12,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.getTotalLength
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.getTotalLength()`** method returns
