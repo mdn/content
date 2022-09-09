@@ -20,6 +20,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform.position
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property

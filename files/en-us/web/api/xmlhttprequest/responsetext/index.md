@@ -13,6 +13,7 @@ tags:
   - responseText
 browser-compat: api.XMLHttpRequest.responseText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The read-only {{domxref("XMLHttpRequest")}} property

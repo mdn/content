@@ -11,6 +11,7 @@ tags:
   - XPathExpression
 browser-compat: api.XPathExpression.evaluate
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`evaluate()`** method of the

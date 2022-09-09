@@ -14,6 +14,7 @@ tags:
   - overrideMimeType
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.XRMediaBinding.XRMediaBinding
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRMediaBinding()`** constructor creates and returns a new {{domxref("XRMediaBinding")}} object.
