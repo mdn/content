@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateMotion
 ---
+
 {{SVGRef}}
 
 The SVG **`<animateMotion>`** element provides a way to define how an element moves along a motion path.

@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feDisplacementMap
 ---
+
 {{SVGRef}}
 
 The **`<feDisplacementMap>`** [SVG](/en-US/docs/Web/SVG) filter primitive uses the pixel values from the image from {{SVGAttr("in2")}} to spatially displace the image from {{SVGAttr("in")}}.

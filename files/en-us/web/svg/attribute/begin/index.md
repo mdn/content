@@ -9,6 +9,7 @@ spec-urls:
   - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
   - https://svgwg.org/specs/animations/#BeginAttribute
 ---
+
 {{SVGRef}}
 
 The **`begin`** attribute defines when an animation should begin or when an element should be discarded.

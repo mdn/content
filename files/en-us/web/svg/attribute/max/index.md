@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#MaxAttribute
 ---
+
 {{SVGRef}}
 
 The **`max`** attribute specifies the maximum value of the active animation duration.

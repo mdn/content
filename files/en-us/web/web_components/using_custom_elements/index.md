@@ -10,6 +10,7 @@ tags:
   - custom elements
   - customized
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.

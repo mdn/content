@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.polygon
 ---
+
 {{SVGRef}}
 
 The **`<polygon>`** element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point.

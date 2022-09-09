@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.attributes.presentation.filter
 ---
+
 {{SVGRef}}
 
 The **`filter`** attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.

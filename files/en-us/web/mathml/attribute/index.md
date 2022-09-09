@@ -5,6 +5,7 @@ tags:
   - MathML
   - MathML Reference
 ---
+
 {{MathMLRef}}
 
 This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). See the [Values](/en-US/docs/Web/MathML/Attribute/Values) page for notes on values and units in MathML.

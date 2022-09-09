@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.path
 ---
+
 {{SVGRef}}
 
 The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to define a shape. All the basic shapes can be created with a path element.

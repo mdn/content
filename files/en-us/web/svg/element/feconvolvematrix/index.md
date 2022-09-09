@@ -8,6 +8,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feConvolveMatrix
 ---
+
 {{SVGRef}}
 
 The **`<feConvolveMatrix>`** [SVG](/en-US/docs/Web/SVG) filter primitive applies a matrix convolution filter effect. A convolution combines pixels in the input image with neighboring pixels to produce a resulting image. A wide variety of imaging operations can be achieved through convolutions, including blurring, edge detection, sharpening, embossing and beveling.

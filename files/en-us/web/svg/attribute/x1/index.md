@@ -13,6 +13,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX1Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX1Attribute
 ---
+
 {{SVGRef}}
 
 The **`x1`** attribute is used to specify the first x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.

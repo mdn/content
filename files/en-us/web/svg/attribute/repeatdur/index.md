@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#RepeatDurAttribute
 ---
+
 {{SVGRef}}
 
 The **`repeatDur`** attribute specifies the total duration for repeating an animation.

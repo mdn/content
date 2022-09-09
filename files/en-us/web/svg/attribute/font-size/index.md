@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.font-size
 ---
+
 {{SVGRef}}
 
 The **`font-size`** attribute refers to the size of the font from {{Glossary("baseline")}} to baseline when multiple lines of text are set solid in a multiline layout environment.

@@ -8,6 +8,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.a
 ---
+
 {{SVGRef}}
 
 The **\<a>** SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.

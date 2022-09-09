@@ -9,6 +9,7 @@ tags:
   - js13kGames
   - progressive
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 Now that we've seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). We examine how to add offline functionality.

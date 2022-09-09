@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.path.d
 ---
+
 {{SVGRef}}
 
 The **`d`** attribute defines a path to be drawn.

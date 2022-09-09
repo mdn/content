@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-result
 ---
+
 {{SVGRef}}
 
 The **`result`** attribute defines the assigned name for this filter primitive. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its `in` attribute.

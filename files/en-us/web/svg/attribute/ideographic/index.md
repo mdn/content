@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.ideographic
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`ideographic`** attribute indicates the alignment coordinate for {{Glossary("glyphs")}} to achieve ideographic {{Glossary("baseline")}} alignment for horizontally oriented glyph layouts. The value is an offset in the font coordinate system.

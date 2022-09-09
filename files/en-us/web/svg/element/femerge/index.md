@@ -8,6 +8,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feMerge
 ---
+
 {{SVGRef}}
 
 The **`<feMerge>`** SVG element allows filter effects to be applied concurrently instead of sequentially. This is achieved by other filters storing their output via the {{ SVGAttr("result") }} attribute and then accessing it in a {{ SVGElement("feMergeNode") }} child.

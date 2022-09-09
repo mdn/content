@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.linearGradient.spreadMethod
 ---
+
 {{SVGRef}}
 
 The **`spreadMethod`** attribute determines how a shape is filled beyond the defined edges of a gradient.

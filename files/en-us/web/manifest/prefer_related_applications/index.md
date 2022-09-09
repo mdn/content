@@ -8,6 +8,7 @@ tags:
   - Experimental
 browser-compat: html.manifest.prefer_related_applications
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">

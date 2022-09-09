@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#RestartAttribute
 ---
+
 {{SVGRef}}
 
 The **`restart`** attribute specifies whether or not an animation can restart.
