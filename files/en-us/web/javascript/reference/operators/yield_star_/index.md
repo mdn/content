@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.yield_star
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`yield*` expression** is used to

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.toFixed
 ---
+
 {{JSRef}}
 
 The **`toFixed()`** method formats a number using fixed-point

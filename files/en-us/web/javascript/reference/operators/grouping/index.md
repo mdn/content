@@ -8,6 +8,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 The grouping operator `( )` controls the precedence of evaluation in

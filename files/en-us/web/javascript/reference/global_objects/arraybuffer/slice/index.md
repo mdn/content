@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.ArrayBuffer.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a new `ArrayBuffer`

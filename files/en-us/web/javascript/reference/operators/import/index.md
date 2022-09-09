@@ -11,6 +11,7 @@ tags:
   - import
 browser-compat: javascript.operators.import
 ---
+
 {{jsSidebar("Operators")}}
 
 The `import()` call, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.

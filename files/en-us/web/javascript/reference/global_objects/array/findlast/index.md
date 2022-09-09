@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
+
 {{JSRef}}
 
 The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.

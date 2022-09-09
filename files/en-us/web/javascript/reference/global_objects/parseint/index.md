@@ -8,6 +8,7 @@ tags:
   - parseInt
 browser-compat: javascript.builtins.parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseInt()`** function parses a string argument and

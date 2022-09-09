@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The right shift assignment operator (`>>=`) moves the specified amount

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
 The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.

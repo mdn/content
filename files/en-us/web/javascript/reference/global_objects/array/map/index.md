@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method **creates

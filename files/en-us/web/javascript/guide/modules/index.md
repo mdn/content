@@ -11,6 +11,7 @@ browser-compat:
   - javascript.statements.import
   - javascript.statements.export
 ---
+
 {{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setHours
 ---
+
 {{JSRef}}
 
 The **`setHours()`** method sets the hours for a specified date

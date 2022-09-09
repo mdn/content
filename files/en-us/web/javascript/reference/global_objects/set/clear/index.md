@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.clear
 ---
+
 {{JSRef}}
 
 The **`clear()`** method removes all elements from a

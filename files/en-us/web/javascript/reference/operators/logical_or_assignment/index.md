@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical OR assignment (`x ||= y`) operator only assigns if

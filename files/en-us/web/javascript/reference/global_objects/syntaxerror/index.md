@@ -9,6 +9,7 @@ tags:
   - SyntaxError
 browser-compat: javascript.builtins.SyntaxError
 ---
+
 {{JSRef}}
 
 The **`SyntaxError`** object represents an error when trying to interpret syntactically invalid code. It is thrown when the JavaScript engine encounters tokens or token order that does not conform to the syntax of the language when parsing code.

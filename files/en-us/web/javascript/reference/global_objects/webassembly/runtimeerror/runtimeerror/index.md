@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.RuntimeError()`** constructor creates a new

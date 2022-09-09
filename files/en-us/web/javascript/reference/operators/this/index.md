@@ -10,6 +10,7 @@ tags:
   - this
 browser-compat: javascript.operators.this
 ---
+
 {{jsSidebar("Operators")}}
 
 A **function's `this` keyword** behaves a little differently in

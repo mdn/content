@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`Object.getPrototypeOf()`** method returns the prototype

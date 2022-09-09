@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setMonth
 ---
+
 {{JSRef}}
 
 The **`setMonth()`** method sets the month for a specified date according to the currently set year.

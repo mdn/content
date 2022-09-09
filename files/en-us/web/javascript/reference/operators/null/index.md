@@ -8,6 +8,7 @@ tags:
   - Primitive
 browser-compat: javascript.operators.null
 ---
+
 {{jsSidebar("Operators")}}
 
 The value `null` represents the intentional absence of any object value. It

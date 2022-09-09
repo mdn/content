@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.

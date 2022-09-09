@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.var
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`var` statement** declares a function-scoped or

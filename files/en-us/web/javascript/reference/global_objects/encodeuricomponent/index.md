@@ -8,6 +8,7 @@ tags:
   - URI
 browser-compat: javascript.builtins.encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`encodeURIComponent()`** function encodes a

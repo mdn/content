@@ -9,6 +9,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`async function`** keyword can be used to define

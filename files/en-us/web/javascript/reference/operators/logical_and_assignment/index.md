@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND assignment (`x &&= y`) operator only assigns if

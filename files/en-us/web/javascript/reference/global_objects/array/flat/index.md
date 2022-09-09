@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flat
 ---
+
 {{JSRef}}
 
 The **`flat()`** method creates a new array with all sub-array

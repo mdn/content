@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.findLastIndex
 ---
+
 {{JSRef}}
 
 The **`findLastIndex()`** method returns the index of the first element in a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) that satisfies the provided testing function.

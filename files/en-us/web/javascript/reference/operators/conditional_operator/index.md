@@ -14,6 +14,7 @@ tags:
   - ternary
 browser-compat: javascript.operators.conditional
 ---
+
 {{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:

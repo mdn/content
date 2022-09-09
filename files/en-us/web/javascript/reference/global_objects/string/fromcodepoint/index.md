@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fromCodePoint
 ---
+
 {{JSRef}}
 
 The static **`String.fromCodePoint()`** method returns a string
