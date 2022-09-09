@@ -46,8 +46,9 @@ browser-compat: webextensions.manifest.externally_connectable
 
 Externally connectable controls which other extensions and web pages can communicate with an extension using {{WebExtAPIRef("runtime.connect","runtime.connect()")}} and {{WebExtAPIRef("runtime.sendMessage", "runtime.sendMessage()")}} message passing. If `externally_connectable` is not specified, all extensions can communicate with each other but not with web pages.
 
-> **Note:** 
+> **Note:**
 > For communication with web pages:
+>
 > - In Chrome, `chrome.runtime.connect` and `chrome.runtime.sendMessage` are used. These methods are only available when there is at least one extension listening for messages, see [chrome.runtime will no longer be defined unconditionally in Chrome 106](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/tCWVZRq77cg/m/KB6-tvCdAgAJ) for more details.
 > - In Safari, `browser.runtime.connect` and `browser.runtime.sendMessage` are used.
 > - In Firefox, neither API is supported. See {{bug(1319168)}}.
