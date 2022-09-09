@@ -93,7 +93,7 @@ The methods that can change how elements are laid out in CSS are:
 
 ## The display property
 
-The main methods for achieving page layout in CSS all involve specifying values for the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a default value for `display`; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
+The main methods for achieving page layout in CSS involve specifying values for the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a default value for `display`; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
 
 You can change this default display behavior. For example, the {{htmlelement("li")}} element is `display: block` by default, meaning that list items display one below the other in our English document. If we were to change the display value to `inline` they would display next to each other, as words would do in a sentence. The fact that you can change the value of `display` for any element means that you can pick HTML elements for their semantic meaning without being concerned about how they will look. The way they look is something that you can change.
 
@@ -107,7 +107,7 @@ Flexbox is the short name for the [Flexible Box Layout](/en-US/docs/Web/CSS/CSS_
 
 The HTML markup below gives us a containing element with a class of `wrapper`, inside of which are three {{htmlelement("div")}} elements. By default these would display as block elements, that is, below one another in our English language document.
 
-However, if we add `display: flex` to the parent, the three items now arrange themselves into columns. This is due to them becoming _flex items_ and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row because the property {{cssxref("flex-direction")}} of the parent element has an initial value of `row`. They all appear to stretch in height because the property {{cssxref("align-items")}} of their parent element has an initial value of `stretch`. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.
+However, if we add `display: flex` to the parent, the three items now arrange themselves into columns. This is due to them becoming _flex items_ and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row because the property {{cssxref("flex-direction")}} of the parent element has an initial value of `row`. They all appear to stretch in height because the property {{cssxref("align-items")}} of their parent element have an initial value of `stretch`. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -179,7 +179,7 @@ While flexbox is designed for one-dimensional layout, Grid Layout is designed fo
 
 ### Setting display: grid
 
-Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
+Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grids created.
 
 ```css hidden
 * {
@@ -469,7 +469,7 @@ p {
 
 {{ EmbedLiveSample('Absolute_positioning', '100%', 300) }}
 
-This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning).
+This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case, the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning).
 
 ### Fixed positioning
 
@@ -524,7 +524,7 @@ body {
 
 ### Sticky positioning
 
-Sticky positioning is the final positioning method that we have at our disposal. It mixes relative positioning with fixed positioning. When an item has `position: sticky`, it'll scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had `position: fixed` applied.
+Sticky positioning is the final positioning method that we have at our disposal. It mixes relative positioning with fixed positioning. When an item has `position: sticky`, it'll scroll in normal flow until it hits offsets from the viewport that we have defined. At that point, it becomes "stuck" as if it had `position: fixed` applied.
 
 ```html hidden
 <h1>Sticky positioning</h1>
@@ -563,7 +563,7 @@ body {
 
 {{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
 
-> **Note:** To find more out about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
+> **Note:** To find out more about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
 
 ## Table layout
 
@@ -571,7 +571,7 @@ HTML tables are fine for displaying tabular data, but many years ago — before 
 
 The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables".
 
-The example below shows one such use. It must be noted, using CSS tables for layout should be considered a legacy method at this point, for those situations where you have very old browsers that lack support for Flexbox or Grid.
+The example below shows one such use. It must be noted, that using CSS tables for layout should be considered a legacy method at this point, for those situations where you have very old browsers that lack support for Flexbox or Grid.
 
 Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.
 
