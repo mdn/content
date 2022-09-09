@@ -85,7 +85,7 @@ new Request(input, options)
     - `signal`
       - : An [AbortSignal](/en-US/docs/Web/API/abortsignal) object which can be used to communicate with/abort a request.
 
-    If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
+    If you construct a new `Request` from an existing `Request`, any options you set in an _options_ argument for the new request replace any corresponding options set in the original `Request`. For example:
 
     ```js
     const oldRequest = new Request(
@@ -143,7 +143,7 @@ fetch(myRequest)
   });
 ```
 
-In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) we do the same thing except that we pass in an init object when we
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) we do the same thing except that we pass in an _options_ object when we
 invoke `fetch()`:
 
 ```js
@@ -166,7 +166,7 @@ fetch(myRequest).then((response) => {
 });
 ```
 
-Note that you could also pass the init object into the `fetch` call to get
+Note that you could also pass `myOptions` into the `fetch` call to get
 the same effect, e.g.:
 
 ```js
@@ -175,7 +175,7 @@ fetch(myRequest, myOptions).then((response) => {
 });
 ```
 
-You can also use an object literal as `headers` in `init`.
+You can also use an object literal as `headers` in `myOptions`.
 
 ```js
 const myOptions = {
