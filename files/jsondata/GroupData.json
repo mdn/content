@@ -189,7 +189,8 @@
       "methods": [],
       "properties": [
         "Document.fonts",
-        "WorkerGlobalScope.fonts"],
+        "WorkerGlobalScope.fonts"
+      ],
       "events": [
         "FontFaceSet: loading event",
         "FontFaceSet: loadingdone event",
