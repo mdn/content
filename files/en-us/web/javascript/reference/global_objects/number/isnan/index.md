@@ -40,7 +40,7 @@ Due to both equality operators, [`==`](/en-US/docs/Web/JavaScript/Reference/Oper
 
 Since `x !== x` is only true for `NaN` among all possible JavaScript values, `Number.isNaN(x)` can also be replaced with a test for `x !== x`, despite the latter being less readable.
 
-In comparison to the global {{jsxref("isNaN", "isNaN()")}} function, `Number.isNaN()` doesn't suffer the problem of forcefully converting the parameter to a number. This means it is now safe to pass values that would normally convert to {{jsxref("NaN")}}, but aren't actually the same value as {{jsxref("NaN")}}. This also means that only values of the type number, that are also {{jsxref("NaN")}}, return `true`.
+As opposed to the global {{jsxref("isNaN", "isNaN()")}} function, the `Number.isNaN()` method doesn't force-convert the parameter to a number. This makes it safe to pass values that would normally convert to {{jsxref("NaN")}} but aren't actually the same value as {{jsxref("NaN")}}. This also means that only values of the Number type that are also {{jsxref("NaN")}} return `true`.
 
 ## Examples
 
