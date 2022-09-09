@@ -19,6 +19,16 @@ The MathML `<mstyle>` element is used to change the style of its children.
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
+- `background` {{deprecated_inline}}
+  - : Specifies a <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a>.
+- `color` {{deprecated_inline}}
+  - : Specifies a <a href="/en-US/docs/Web/CSS/color"><code>color</code></a>.
+- `fontsize` {{deprecated_inline}}
+  - : Specifies a <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a>.
+- `fontstyle` {{deprecated_inline}}
+  - : Specifies a <a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a>.
+- `fontweight` {{deprecated_inline}}
+  - : Specifies a <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a>.
 - `scriptminsize` {{deprecated_inline}}
   - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is `8pt`.
 - `scriptsizemultiplier` {{deprecated_inline}}
