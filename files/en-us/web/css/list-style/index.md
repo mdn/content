@@ -80,7 +80,7 @@ The most straightforward way to address this is to add an explicit `role="list"`
 </ul>
 ```
 
-A CSS-only workaround is also available for those who do not have access to the markup: Adding any [pseudo-content](/en-US/docs/Web/CSS/content) before each list item will also restore list semantics:
+A CSS-only workaround is also available for those who do not have access to the markup: Adding any {{cssxref("content", "pseudo-content")}} before each list item will also restore list semantics:
 
 ```css
 ul {
@@ -120,7 +120,7 @@ nav ol, nav ul {
 
 These CSS workarounds should be used only when the HTML solution is not available, and only after testing to ensure that they don't result in unexpected behaviors that may negatively impact users' experiences.
 
-- [Bug #170179 | WebKit Bugzilla](https://bugs.webkit.org/show_bug.cgi?id=170179)
+- {{WebkitBug(170179)}}
 - ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
 - [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
