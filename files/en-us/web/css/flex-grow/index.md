@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-grow
 ---
+
 {{CSSRef}}
 
 The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor of a flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).

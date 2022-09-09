@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transition-timing-function
 ---
+
 {{CSSRef}}
 
 The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).

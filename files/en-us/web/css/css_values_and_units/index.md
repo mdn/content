@@ -11,6 +11,7 @@ spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-images/
 ---
+
 {{CSSRef}}
 
 Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.

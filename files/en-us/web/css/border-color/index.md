@@ -15,6 +15,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
 ---
+
 {{CSSRef}}
 
 The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.

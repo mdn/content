@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.page-break-inside
 ---
+
 {{CSSRef}}
 
 > **Warning:** This property has been replaced by the {{cssxref("break-inside")}} property.

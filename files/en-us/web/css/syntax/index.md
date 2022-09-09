@@ -7,6 +7,7 @@ tags:
   - Reference
   - Web
 ---
+
 {{CSSRef}}
 
 The basic goal of the Cascading Stylesheet ([CSS](/en-US/docs/Web/CSS)) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The _CSS syntax_ reflects this goal and its basic building blocks are:

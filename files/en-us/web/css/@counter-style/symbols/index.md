@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.symbols
 ---
+
 {{CSSRef}}
 
 The **`symbols`** [CSS](/en-US/docs/Web/CSS) descriptor is used to specify the symbols that the specified counter system will use to construct counter representations.

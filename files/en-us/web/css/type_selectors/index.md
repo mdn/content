@@ -10,6 +10,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.type
 ---
+
 {{CSSRef}}
 
 The CSS **type selector** matches elements by node name. In other words, it selects all elements of the given type within a document.

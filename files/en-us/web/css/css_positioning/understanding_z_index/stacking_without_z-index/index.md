@@ -9,6 +9,7 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 When the {{cssxref("z-index")}} property is not specified on any element, elements are stacked in the following order (from bottom to top):

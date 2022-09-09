@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-size
 ---
+
 {{CSSRef}}
 
 The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image.

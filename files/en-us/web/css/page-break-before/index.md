@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.page-break-before
 ---
+
 {{CSSRef}}
 
 > **Warning:** This property has been replaced by the {{cssxref("break-before")}} property.

@@ -11,6 +11,7 @@ tags:
   - values
 browser-compat: css.types.frequency-percentage
 ---
+
 {{CSSRef}}
 
 The **`<frequency-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("frequency")}} or a {{Cssxref("percentage")}}. Frequency values, e.g. the pitch of a speaking voice, are not currently used in any CSS properties.

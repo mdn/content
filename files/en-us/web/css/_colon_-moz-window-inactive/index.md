@@ -10,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-window-inactive
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches any element while it's in an inactive window.

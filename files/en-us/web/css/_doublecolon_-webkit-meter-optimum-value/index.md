@@ -10,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-meter-optimum-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-meter-optimum-value`** CSS [pseudo-element](/en-US/docs/Glossary/Pseudo-element) styles the {{htmlelement("meter")}} element when its value is inside the low-high range.

@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: css.types.image
 ---
+
 {{CSSRef}}
 
 The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a two-dimensional image.

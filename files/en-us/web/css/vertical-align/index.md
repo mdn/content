@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.vertical-align
 ---
+
 {{CSSRef}}
 
 The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.

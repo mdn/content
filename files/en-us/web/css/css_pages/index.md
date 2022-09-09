@@ -11,6 +11,7 @@ spec-urls:
   - https://drafts.csswg.org/css-page/
   - https://drafts.csswg.org/css-break/
 ---
+
 {{CSSRef}}
 
 **CSS Paged Media** is a module of CSS that defines how page switches are handled.

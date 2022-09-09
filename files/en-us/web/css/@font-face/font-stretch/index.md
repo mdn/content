@@ -10,6 +10,7 @@ tags:
   - font-stretch
 browser-compat: css.at-rules.font-face.font-stretch
 ---
+
 {{CSSRef}}
 
 The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} rule.

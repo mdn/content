@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.image-rendering
 ---
+
 {{CSSRef}}
 
 The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.

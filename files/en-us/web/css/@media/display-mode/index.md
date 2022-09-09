@@ -12,6 +12,7 @@ tags:
   - web app manifest
 browser-compat: css.at-rules.media.display-mode
 ---
+
 {{CSSRef}}
 
 The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the display mode of an application. You can use it to provide a consistent user experience between launching a site from a URL and launching it from a desktop icon.
