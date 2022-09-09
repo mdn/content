@@ -55,7 +55,7 @@ And what's even better is that it is being developed as a web standard via the [
 - {{jsxref("WebAssembly.compile()")}}
   - : The `WebAssembly.compile()` function compiles WebAssembly binary code into a `WebAssembly.Module` object.
 - {{jsxref("WebAssembly.compileStreaming()")}}
-  - : The `WebAssembly.compileStreaming()` function compiles a WebAssembly.Module directly from a streamed underlying source.
+  - : The `WebAssembly.compileStreaming()` function compiles a `WebAssembly.Module` directly from a streamed underlying source.
 - {{jsxref("WebAssembly.instantiate()")}}
   - : The `WebAssembly.instantiate()` function allows you to compile and instantiate WebAssembly code.
 - {{jsxref("WebAssembly.instantiateStreaming()")}}
