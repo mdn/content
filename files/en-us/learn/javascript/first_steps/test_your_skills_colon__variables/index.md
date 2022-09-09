@@ -8,6 +8,7 @@ tags:
   - Text your skills
   - Variables
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables) article.

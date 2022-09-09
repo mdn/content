@@ -11,6 +11,7 @@ tags:
   - Web
   - Widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 We now look at the functionality of non-`<input>` form elements in detail, from other control types such as drop-down lists and multi-line text fields, to other useful form features such as the {{htmlelement('output')}} element (which we saw in action in the previous article), and progress bars.

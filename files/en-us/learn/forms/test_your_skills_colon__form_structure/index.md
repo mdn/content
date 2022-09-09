@@ -8,6 +8,7 @@ tags:
   - Learn
   - Structure
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) article.

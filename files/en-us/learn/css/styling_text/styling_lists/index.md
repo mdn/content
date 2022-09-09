@@ -11,6 +11,7 @@ tags:
   - bullets
   - lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [Lists](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) behave like any other text for the most part, but there are some CSS properties specific to lists that you need to know about, as well as some best practices to consider. This article explains all.

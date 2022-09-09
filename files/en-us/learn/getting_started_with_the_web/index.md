@@ -12,6 +12,7 @@ tags:
   - publishing
   - theory
 ---
+
 {{LearnSidebar}}
 
 _Getting started with the web_ is a concise series introducing you to the practicalities of web development. You'll set up the tools you need to construct a simple webpage and publish your own simple code.

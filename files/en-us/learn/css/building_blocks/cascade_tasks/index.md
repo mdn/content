@@ -8,6 +8,7 @@ tags:
   - Cascade
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).

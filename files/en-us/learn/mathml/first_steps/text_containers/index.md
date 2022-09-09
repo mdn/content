@@ -6,6 +6,7 @@ tags:
   - MathML
   - Landing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
 
 Now that you get a better idea of MathML, we move focus on text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.

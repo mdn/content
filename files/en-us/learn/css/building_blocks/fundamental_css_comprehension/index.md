@@ -13,6 +13,7 @@ tags:
   - comments
   - rules
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 

@@ -11,6 +11,7 @@ tags:
   - client-side
   - Angular
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.

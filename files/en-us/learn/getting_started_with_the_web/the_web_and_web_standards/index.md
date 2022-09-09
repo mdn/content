@@ -8,6 +8,7 @@ tags:
   - Web
   - Web Standards
 ---
+
 {{learnsidebar}}
 
 This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.

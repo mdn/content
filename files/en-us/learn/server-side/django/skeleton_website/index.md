@@ -12,6 +12,7 @@ tags:
   - django
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 This second article in our [Django Tutorial](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.
