@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimStart
 ---
+
 {{JSRef}}
 
 The **`trimStart()`** method removes whitespace from the

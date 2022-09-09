@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`throw` statement** throws a user-defined exception.

@@ -11,6 +11,7 @@ tags:
   - import.meta
 browser-compat: javascript.operators.import_meta
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`import.meta`** object exposes context-specific metadata

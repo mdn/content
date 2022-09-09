@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than
 ---
+
 {{jsSidebar("Operators")}}
 
 The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.

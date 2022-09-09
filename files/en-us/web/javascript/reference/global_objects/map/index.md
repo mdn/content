@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 The **`Map`** object holds key-value pairs and remembers the original insertion

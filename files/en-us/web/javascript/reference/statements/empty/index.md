@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.empty
 ---
+
 {{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the

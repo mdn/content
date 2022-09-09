@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The simple assignment operator (`=`) is used to assign a value to a

@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint16
 ---
+
 {{JSRef}}
 
 The **`getUint16()`** method gets an unsigned 16-bit integer

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.resolvedOptions()`**

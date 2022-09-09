@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.codePointAt
 ---
+
 {{JSRef}}
 
 The **`codePointAt()`** method returns a non-negative integer

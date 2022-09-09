@@ -9,6 +9,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.size
 ---
+
 {{JSRef}}
 
 The **`size`** accessor property returns the number of (unique) elements in a {{jsxref("Set")}} object.

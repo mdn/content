@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 The **`toLocaleUpperCase()`** method returns the calling string

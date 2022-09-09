@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.subarray
 ---
+
 {{JSRef}}
 
 The **`subarray()`** method returns a new _TypedArray_

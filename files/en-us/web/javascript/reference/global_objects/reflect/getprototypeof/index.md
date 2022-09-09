@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The static **`Reflect.getPrototypeOf()`** method is almost the

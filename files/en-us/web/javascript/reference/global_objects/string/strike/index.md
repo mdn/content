@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.strike
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`strike()`** method creates a {{HTMLElement("strike")}}

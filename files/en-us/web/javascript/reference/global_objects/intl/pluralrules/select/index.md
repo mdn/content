@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.select
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.prototype.select()`** method returns a

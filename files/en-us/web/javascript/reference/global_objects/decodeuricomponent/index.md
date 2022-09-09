@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`decodeURIComponent()`** function decodes a Uniform

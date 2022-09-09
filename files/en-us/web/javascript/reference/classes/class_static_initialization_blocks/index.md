@@ -11,6 +11,7 @@ tags:
   - Initialization
 browser-compat: javascript.classes.static_initialization_blocks
 ---
+
 {{jsSidebar("Classes")}}
 
 **Class static initialization blocks** are a special feature of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.

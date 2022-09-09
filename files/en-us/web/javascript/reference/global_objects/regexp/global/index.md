@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.global
 ---
+
 {{JSRef}}
 
 The **`global`** accessor property indicates whether or not the `g` flag is used with the regular expression.

@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.return
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and

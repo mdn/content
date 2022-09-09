@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the wrapped primitive value

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.@@iterator
 ---
+
 {{JSRef}}
 
 The initial value of the `@@iterator` property is the same function object

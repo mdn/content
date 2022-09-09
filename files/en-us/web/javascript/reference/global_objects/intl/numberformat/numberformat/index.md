@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat()`** constructor creates

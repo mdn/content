@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames.supportedLocalesOf()`** method returns

@@ -11,6 +11,7 @@ tags:
   - validate
 browser-compat: javascript.builtins.WebAssembly.validate
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of WebAssembly binary

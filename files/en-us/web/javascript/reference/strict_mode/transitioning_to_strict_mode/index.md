@@ -6,6 +6,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 5 introduced [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) which is now implemented in all major browsers (including IE10). While making web browsers interpret code as strict is easy (just add `'use strict';` at the top of your source code), transitioning an existing code base to strict mode requires a bit more work.

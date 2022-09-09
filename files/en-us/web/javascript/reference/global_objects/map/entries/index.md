@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Map.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new

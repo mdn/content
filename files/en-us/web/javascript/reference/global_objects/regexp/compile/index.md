@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The deprecated **`compile()`** method is used to (re-)compile a regular expression during execution of a script. It is basically the same as the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor.

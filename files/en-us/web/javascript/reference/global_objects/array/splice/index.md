@@ -12,6 +12,7 @@ tags:
   - splice
 browser-compat: javascript.builtins.Array.splice
 ---
+
 {{JSRef}}
 
 The **`splice()`** method changes the contents of an array by

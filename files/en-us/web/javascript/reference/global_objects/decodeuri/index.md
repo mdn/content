@@ -13,6 +13,7 @@ tags:
   - decoding
 browser-compat: javascript.builtins.decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`decodeURI()`** function decodes

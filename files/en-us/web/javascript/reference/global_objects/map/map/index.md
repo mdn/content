@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Map.Map
 ---
+
 {{JSRef}}
 
 The **`Map()` constructor** creates {{jsxref("Map")}} objects.

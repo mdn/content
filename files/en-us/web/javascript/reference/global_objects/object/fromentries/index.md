@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.fromEntries
 ---
+
 {{JSRef}}
 
 The **`Object.fromEntries()`** method transforms a list of

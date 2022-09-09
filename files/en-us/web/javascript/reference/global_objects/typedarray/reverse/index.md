@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reverse
 ---
+
 {{JSRef}}
 
 The **`reverse()`** method reverses a typed array in place. The

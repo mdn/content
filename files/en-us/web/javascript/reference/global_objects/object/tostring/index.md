@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

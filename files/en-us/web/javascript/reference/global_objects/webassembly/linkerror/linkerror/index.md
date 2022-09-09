@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.LinkError()`** constructor creates a new
