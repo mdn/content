@@ -13,6 +13,7 @@ tags:
   - setUpdateUrlData
 browser-compat: webextensions.api.extension.setUpdateUrlData
 ---
+
 {{AddonSidebar()}}
 
 Sets parameters for the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.

@@ -11,6 +11,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction
 ---
+
 {{AddonSidebar}}
 
 Gets and sets properties of an extension's sidebar.

@@ -13,6 +13,7 @@ tags:
   - getCurrent
 browser-compat: webextensions.api.windows.getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Gets the current browser window, passing its details into a callback.

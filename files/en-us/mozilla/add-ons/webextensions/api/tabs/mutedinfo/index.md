@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.MutedInfo
 ---
+
 {{AddonSidebar()}}
 
 This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.

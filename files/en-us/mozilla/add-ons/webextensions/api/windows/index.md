@@ -12,6 +12,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows
 ---
+
 {{AddonSidebar}}
 
 Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.

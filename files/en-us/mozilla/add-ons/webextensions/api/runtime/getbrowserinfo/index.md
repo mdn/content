@@ -12,6 +12,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getBrowserInfo
 ---
+
 {{AddonSidebar}}
 
 Returns information about the browser in which the extension is installed.

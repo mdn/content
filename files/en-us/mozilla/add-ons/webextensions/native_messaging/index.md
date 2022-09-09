@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.

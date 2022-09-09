@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.scripting.unregisterContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Unregisters one or more content scripts.

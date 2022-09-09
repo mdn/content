@@ -11,6 +11,7 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.onConnectivityAvailable
 ---
+
 {{AddonSidebar()}}
 
 Fires when the captive portal service determines that the user can connect to the internet.

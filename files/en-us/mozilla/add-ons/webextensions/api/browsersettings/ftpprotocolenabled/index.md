@@ -13,6 +13,7 @@ tags:
   - ftpProtocolEnabled
 browser-compat: webextensions.api.browserSettings.ftpProtocolEnabled
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that determines whether the FTP protocol is enabled in the browser.

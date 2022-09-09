@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.WindowState
 ---
+
 {{AddonSidebar()}}
 
 The state of this browser window.

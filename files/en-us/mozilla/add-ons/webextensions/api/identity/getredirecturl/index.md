@@ -12,6 +12,7 @@ tags:
   - getRedirectURL
 browser-compat: webextensions.api.identity.getRedirectURL
 ---
+
 {{AddonSidebar()}}
 
 Generates a URL that you can use as a redirect URL.

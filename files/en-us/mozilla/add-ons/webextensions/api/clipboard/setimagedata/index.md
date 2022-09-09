@@ -12,6 +12,7 @@ tags:
   - setImageData
 browser-compat: webextensions.api.clipboard.setImageData
 ---
+
 {{AddonSidebar()}}
 
 Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.

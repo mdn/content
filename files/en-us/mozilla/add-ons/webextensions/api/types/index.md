@@ -9,6 +9,7 @@ tags:
   - Types
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Defines the `BrowserSetting` type, which is used to represent a browser setting.

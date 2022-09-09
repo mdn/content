@@ -13,6 +13,7 @@ tags:
   - menus
 browser-compat: webextensions.api.menus
 ---
+
 {{AddonSidebar}}
 
 Add items to the browser's menu system.

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.TabStatus
 ---
+
 {{AddonSidebar()}}
 
 Indicates whether the tab has finished loading.

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.get
 ---
+
 {{AddonSidebar()}}
 
 Given a tab ID, get the tab's details as a {{WebExtAPIRef("tabs.Tab")}} object.

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.MutedInfoReason
 ---
+
 {{AddonSidebar()}}
 
 Specifies the reason a tab was muted or unmuted.

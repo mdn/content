@@ -13,6 +13,7 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new menu item, given an options object defining properties for the item.

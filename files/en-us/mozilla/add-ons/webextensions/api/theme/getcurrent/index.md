@@ -12,6 +12,7 @@ tags:
   - getCurrent
 browser-compat: webextensions.api.theme.getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Gets the currently used theme as a {{WebExtAPIRef("theme.Theme", "Theme")}} object. The arguments available in the color object are listed in the [properties of the color](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).

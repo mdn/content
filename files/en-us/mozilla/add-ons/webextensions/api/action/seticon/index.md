@@ -13,6 +13,7 @@ tags:
   - setIcon
 browser-compat: webextensions.api.action.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the browser action.

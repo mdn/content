@@ -12,6 +12,7 @@ tags:
   - removeHistory
 browser-compat: webextensions.api.browsingData.removeHistory
 ---
+
 {{AddonSidebar()}}
 
 Clears the record of web pages that the user has visited (browsing history).

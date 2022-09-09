@@ -12,6 +12,7 @@ tags:
   - topSites
 browser-compat: webextensions.api.topSites
 ---
+
 {{AddonSidebar}}
 
 Use the topSites API to get an array containing pages that the user has visited frequently.

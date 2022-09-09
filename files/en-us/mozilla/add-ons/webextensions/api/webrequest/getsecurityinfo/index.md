@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 Use this function to get detailed information about the [TLS](/en-US/docs/Glossary/TLS) connection associated with a particular request.

@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.RequestUpdateCheckStatus
 ---
+
 {{AddonSidebar()}}
 
 Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.

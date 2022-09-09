@@ -13,6 +13,7 @@ tags:
   - getSubTree
 browser-compat: webextensions.api.bookmarks.getSubTree
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.getSubTree()`** method asynchronously retrieves a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, given its ID.

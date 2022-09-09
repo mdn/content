@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onBeforeRedirect
 ---
+
 {{AddonSidebar()}}
 
 Fired when a server-initiated redirect is about to occur.

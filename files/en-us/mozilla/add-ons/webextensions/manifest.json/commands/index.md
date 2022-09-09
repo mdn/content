@@ -8,6 +8,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.commands
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

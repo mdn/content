@@ -12,6 +12,7 @@ tags:
   - toggleReaderMode
 browser-compat: webextensions.api.tabs.toggleReaderMode
 ---
+
 {{AddonSidebar()}}
 
 Toggles Reader Mode for the given tab.
