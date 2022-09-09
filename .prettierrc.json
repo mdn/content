@@ -1,3 +1,4 @@
 {
-  "bracketSameLine": true
+  "bracketSameLine": true,
+  "trailingComma": "all"
 }
