@@ -101,7 +101,7 @@ p {margin:0;}
 
 ## Applying CSS to the DOM
 
-Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:
+Let's say we add some CSS to our document, to style it. Again, the HTML is as follows:
 
 ```html
 <p>
@@ -121,7 +121,7 @@ span {
 }
 ```
 
-The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS has a `span` selector, the browser will be able to sort the CSS very quickly! It will apply that rule to each one of the three `<span>`s, then paint the final visual representation to the screen.
+The browser parses the HTML and creates a DOM from it. Next, it parses the CSS. Since the only rule available in the CSS has a `span` selector, the browser sorts the CSS very quickly! It applies that rule to each one of the three `<span>`s, then paints the final visual representation to the screen.
 
 The updated output is as follows:
 
