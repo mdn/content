@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#menuitemcheckbox
   - https://w3c.github.io/aria-practices/#menu
 ---
+
 A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible values are `true`, `false`, or `mixed`.
 
 ## Description

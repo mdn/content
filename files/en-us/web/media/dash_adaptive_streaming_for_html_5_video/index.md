@@ -5,6 +5,7 @@ tags:
   - Guide
   - HTML
 ---
+
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 
 ## Browser Support

@@ -9,6 +9,7 @@ tags:
   - aria-controls
 spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
+
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
 
 ## Description

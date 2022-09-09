@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
+
 The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
 
 ## Description

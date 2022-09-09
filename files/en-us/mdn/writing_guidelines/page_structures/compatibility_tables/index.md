@@ -474,6 +474,7 @@ For example, for the {{domxref("AbortController")}} this would be added as shown
 
 ```plain
 ---
+
 title: AbortController
 slug: Web/API/AbortController
 
@@ -481,6 +482,7 @@ slug: Web/API/AbortController
 
 browser-compat: api.AbortController
 ---
+
 ```
 
 The compatibility and specification tables corresponding to the key are then automatically rendered in place of the `\{{Compat}}` and `\{{Specifications}}` macros in the source.

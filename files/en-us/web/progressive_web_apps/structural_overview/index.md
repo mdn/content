@@ -14,6 +14,7 @@ tags:
   - Webapps
   - contents
 ---
+
 While progressive web apps (PWAs) can do anything any web content can do, they need to have a particular structure and include specific components in order to be recognized as a web app that can be used both on the web and installed and run as a local application. In this structural overview, we'll look at the features that make up a standard web application, as well as some design patterns you can follow when building your PWA.
 
 ## Architecture of an app

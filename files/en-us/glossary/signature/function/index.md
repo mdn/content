@@ -7,6 +7,7 @@ tags:
   - Java
   - JavaScript
 ---
+
 A **function signature** (or _type_ signature, or _method_ signature) defines input and output of {{Glossary("Function", "functions")}} or {{Glossary("Method", "methods")}}.
 
 A signature can include:

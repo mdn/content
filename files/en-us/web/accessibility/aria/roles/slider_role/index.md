@@ -12,6 +12,7 @@ tags:
   - slider role
 spec-urls: https://w3c.github.io/aria/#slider
 ---
+
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description

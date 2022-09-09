@@ -14,6 +14,7 @@ spec-urls:
   - https://w3c.github.io/aria/#figure
   - https://w3c.github.io/aria-practices/#describing_with_captions
 ---
+
 The ARIA `figure` role can be used to identify a figure inside page content where appropriate semantics do not already exist. A figure is generally considered to be one or more images, code snippets, or other content that puts across information in a different way to a regular flow of text.
 
 ## Description

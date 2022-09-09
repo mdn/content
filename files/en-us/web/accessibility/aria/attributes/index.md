@@ -10,6 +10,7 @@ tags:
   - States
   - Properties
 ---
+
 This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attributes discussed on MDN.
 
 <abbr>ARIA</abbr> attributes enable modifying an element's states and properties as defined in the accessibility tree.

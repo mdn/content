@@ -8,6 +8,7 @@ tags:
   - QA
   - Testing
 ---
+
 A smoke test consists of functional or unit tests of critical software functionality. Smoke testing comes before further, in-depth testing.
 
 Smoke testing answers questions like

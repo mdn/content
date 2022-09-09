@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onUpdated
 ---
+
 Fired when a tab is updated.
 
 When the user navigates to a new URL in a tab, this will typically generate several  `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.

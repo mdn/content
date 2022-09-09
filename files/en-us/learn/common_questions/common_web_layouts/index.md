@@ -8,6 +8,7 @@ tags:
   - HTML
   - NeedsActiveLearning
 ---
+
 When designing pages for your website, it's good to have an idea of the most common layouts.
 
 <table class="standard-table">
