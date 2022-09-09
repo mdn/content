@@ -16,6 +16,7 @@ tags:
   - longitude
 browser-compat: api.GeolocationCoordinates.longitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The {{domxref("GeolocationCoordinates")}} interface's read-only

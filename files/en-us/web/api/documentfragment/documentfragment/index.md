@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.DocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DocumentFragment()`** constructor returns a new, empty

@@ -11,6 +11,7 @@ tags:
   - postMessage
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`postMessage()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it.

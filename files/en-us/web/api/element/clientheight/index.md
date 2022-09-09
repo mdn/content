@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientHeight`** read-only property is zero for

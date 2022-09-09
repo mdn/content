@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozSetDataAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSetDataAt()`** method is used to add

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemWritableFileStream.write
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`write()`** method of the

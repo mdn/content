@@ -11,6 +11,7 @@ tags:
   - insertAdjacentHTML
 browser-compat: api.Element.insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentHTML()`** method of the

@@ -15,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The

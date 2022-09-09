@@ -16,6 +16,7 @@ tags:
   - screen
 browser-compat: api.Document.exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The {{domxref("Document")}} method

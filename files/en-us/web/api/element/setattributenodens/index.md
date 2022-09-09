@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` adds a new namespaced attribute node to an element.

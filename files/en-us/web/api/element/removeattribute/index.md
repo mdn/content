@@ -12,6 +12,7 @@ tags:
   - removeAttribute
 browser-compat: api.Element.removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 The {{domxref("Element")}} method

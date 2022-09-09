@@ -10,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.loadingdone_event
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `loadingdone` event fires when the document has loaded all events.

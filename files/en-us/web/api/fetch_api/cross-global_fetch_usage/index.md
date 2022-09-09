@@ -8,6 +8,7 @@ tags:
   - edge case
   - relative URL
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 This article explains an edge case that occurs with fetch (and potentially other APIs exhibiting the same kind of resource retrieval behavior). When a cross-origin fetch involving a relative URL is initiated from an {{htmlelement("iframe")}}, the relative URL used to be resolved against the current global location, rather than the iframe's location.

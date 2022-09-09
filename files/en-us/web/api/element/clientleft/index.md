@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientLeft
 ---
+
 {{ APIRef("DOM") }}
 
 The width of the left border of an element in pixels. It includes the width of the

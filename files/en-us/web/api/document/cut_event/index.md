@@ -12,6 +12,7 @@ tags:
   - cut
 browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 The **`cut`** event fires when the user initiates a cut action through the browser's user interface.

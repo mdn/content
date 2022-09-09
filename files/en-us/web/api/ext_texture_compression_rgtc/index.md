@@ -9,6 +9,7 @@ tags:
   - WebGL extensions
 browser-compat: api.EXT_texture_compression_rgtc
 ---
+
 {{APIRef("WebGL")}}
 
 The `EXT_texture_compression_rgtc` extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes 4 RGTC compressed texture formats. RGTC is a block-based texture compression format suited for unsigned and signed red and red-green textures (**R**ed-**G**reen **T**exture **C**ompression).

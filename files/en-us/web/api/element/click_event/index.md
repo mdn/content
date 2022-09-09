@@ -17,6 +17,7 @@ tags:
   - mouse
 browser-compat: api.Element.click_event
 ---
+
 {{APIRef}}
 
 An element receives a **`click`** event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.

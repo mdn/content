@@ -13,6 +13,7 @@ tags:
   - Style
 browser-compat: api.FontFace.style
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`style`** property of the

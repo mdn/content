@@ -6,6 +6,7 @@ tags:
   - Property
   - Non-standard
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

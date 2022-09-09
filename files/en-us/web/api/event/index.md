@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Event
 ---
+
 {{APIRef("DOM")}}
 
 The **`Event`** interface represents an event which takes place in the DOM.

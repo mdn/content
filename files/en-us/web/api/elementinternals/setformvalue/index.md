@@ -10,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.setFormValue
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.

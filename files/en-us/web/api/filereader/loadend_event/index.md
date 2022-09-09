@@ -11,6 +11,7 @@ tags:
   - loadend
 browser-compat: api.FileReader.loadend_event
 ---
+
 {{APIRef}}
 
 The `loadend` event is fired when a file read has completed, successfully or not.

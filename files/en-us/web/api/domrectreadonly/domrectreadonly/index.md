@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMRectReadOnly()`** constructor creates a new

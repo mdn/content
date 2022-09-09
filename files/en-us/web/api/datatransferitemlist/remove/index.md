@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: api.DataTransferItemList.remove
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList.remove()`** method removes the

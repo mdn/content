@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.after
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.after()`** method inserts a set of

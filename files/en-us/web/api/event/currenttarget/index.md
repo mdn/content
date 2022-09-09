@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 The **`currentTarget`** read-only property of the

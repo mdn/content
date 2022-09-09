@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.anchors
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`anchors`** read-only property of the

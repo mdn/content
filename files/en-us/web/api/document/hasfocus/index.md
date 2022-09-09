@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.hasFocus
 ---
+
 {{APIRef}}
 
 The **`hasFocus()`** method of the {{domxref("Document")}}

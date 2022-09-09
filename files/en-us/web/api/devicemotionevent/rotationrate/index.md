@@ -14,6 +14,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.rotationRate
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`DeviceMotionEvent.rotationRate`** read-only property returns the rate at which the device is rotating around each of its axes in degrees per

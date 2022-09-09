@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemWritableFileStream.truncate
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`truncate()`** method of the

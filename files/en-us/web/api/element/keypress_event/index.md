@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.Element.keypress_event
 ---
+
 {{APIRef}} {{deprecated_header}}
 
 The **`keypress`** event is fired when a key that produces a character value is pressed down.

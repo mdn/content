@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - whitespace
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Model) can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.

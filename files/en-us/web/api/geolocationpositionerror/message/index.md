@@ -11,6 +11,7 @@ tags:
   - message
 browser-compat: api.GeolocationPositionError.message
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPositionError.message`** read-only property

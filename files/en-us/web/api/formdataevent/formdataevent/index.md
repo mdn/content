@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FormDataEvent.FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}} object.

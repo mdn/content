@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.close
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.close()`** method finishes writing to a

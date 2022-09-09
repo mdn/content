@@ -10,6 +10,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.releaseCapture
 ---
+
 {{ApiRef("DOM")}}{{Non-standard_header}}
 
 The **`releaseCapture()`** method releases mouse capture if
