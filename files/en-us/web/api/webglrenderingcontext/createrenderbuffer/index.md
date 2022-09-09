@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createRenderbuffer()`** method of

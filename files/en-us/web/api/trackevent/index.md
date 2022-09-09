@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.

@@ -25,6 +25,7 @@ tags:
   - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} method

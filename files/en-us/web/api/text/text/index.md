@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Text.Text
 ---
+
 {{ APIRef("DOM")}}
 
 The **`Text()`** constructor returns a new {{domxref("Text")}} object

@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.uniformMatrix2fv
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`**

@@ -14,6 +14,7 @@ tags:
   - createObjectURL
 browser-compat: api.URL.createObjectURL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL.createObjectURL()`** static

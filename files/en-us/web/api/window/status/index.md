@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.Window.status
 ---
+
 {{APIRef}}{{Deprecated_Header}}
 
 The **`status`** property of the

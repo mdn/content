@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.statusbar
 ---
+
 {{APIRef}}
 
 The **`Window.statusbar`** property returns the statusbar

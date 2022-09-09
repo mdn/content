@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Window.name
 ---
+
 {{APIRef}}
 
 The `Window.name` property

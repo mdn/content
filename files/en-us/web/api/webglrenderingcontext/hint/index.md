@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.hint
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.hint()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies hints for certain

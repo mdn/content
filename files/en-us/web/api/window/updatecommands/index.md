@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.updateCommands
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
 ## Summary

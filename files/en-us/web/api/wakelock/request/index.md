@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLock.request
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`request()`** method of the

@@ -12,6 +12,7 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient.navigate
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`navigate()`** method of the {{domxref("WindowClient")}}

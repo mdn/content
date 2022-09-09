@@ -14,6 +14,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`USBConfiguration()`** constructor

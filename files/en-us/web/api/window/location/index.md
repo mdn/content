@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.location
 ---
+
 {{APIRef}}
 
 The **`Window.location`** read-only property returns a

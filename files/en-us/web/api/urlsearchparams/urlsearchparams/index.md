@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URLSearchParams()`** constructor creates and returns a

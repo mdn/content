@@ -19,6 +19,7 @@ tags:
   - track
 browser-compat: api.TextTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("TextTrackList")}}** method

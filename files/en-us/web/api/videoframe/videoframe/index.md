@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame.VideoFrame
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`VideoFrame()`** constructor creates a new {{domxref("VideoFrame")}} object representing a frame of a video.

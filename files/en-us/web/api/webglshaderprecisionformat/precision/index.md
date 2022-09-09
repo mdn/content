@@ -9,6 +9,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat.precision
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLShaderPrecisionFormat.precision`** property returns the number of bits of precision that can be represented.

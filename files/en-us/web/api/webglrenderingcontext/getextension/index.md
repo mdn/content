@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getExtension
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getExtension()`** method enables a

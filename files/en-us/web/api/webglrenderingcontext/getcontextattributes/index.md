@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getContextAttributes
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getContextAttributes()`** method

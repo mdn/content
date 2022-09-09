@@ -10,6 +10,7 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.encoding
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecoder.encoding`** read-only property

@@ -11,6 +11,7 @@ tags:
   - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the

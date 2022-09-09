@@ -9,6 +9,7 @@ tags:
   - Tutorial
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 The {{domxref("RTCDataChannel")}} interface is a feature of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.

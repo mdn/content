@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
+
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{SecureContext_Header}}
 
 > **Warning:**: Application cache is being removed from web platform. Consider using [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.

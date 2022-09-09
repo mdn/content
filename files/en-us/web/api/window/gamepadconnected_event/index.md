@@ -11,6 +11,7 @@ tags:
   - gamepadconnected
 browser-compat: api.Window.gamepadconnected_event
 ---
+
 {{APIRef}}
 
 The `gamepadconnected` event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
