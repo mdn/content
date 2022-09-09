@@ -309,7 +309,7 @@ Often compat tables will include footnotes related to certain entries that expla
 
 ### Including a vendor prefix
 
-If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
+If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. Imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
 
 ```json
 "firefox": {
