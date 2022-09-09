@@ -48,7 +48,7 @@ const z = 0.1;
 console.log(equal(x + z, y)); // true
 ```
 
-However, `Number.EPSILON` is inappropriate for any arithmetic with a larger range. If your data is on the 10<sup>3</sup> order of magnitude, the decimal part will have a much smaller accuracy than `Number.EPSILON`:
+However, `Number.EPSILON` is inappropriate for any arithmetic operating on a larger magnitude. If your data is on the 10<sup>3</sup> order of magnitude, the decimal part will have a much smaller accuracy than `Number.EPSILON`:
 
 ```js
 function equal(x, y) {
