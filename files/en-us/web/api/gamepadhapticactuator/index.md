@@ -13,6 +13,7 @@ tags:
   - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
+
 {{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.

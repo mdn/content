@@ -11,6 +11,7 @@ tags:
   - getElementsByClassName
 browser-compat: api.Element.getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} method

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getElementsByTagNameNS()`** method returns a

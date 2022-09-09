@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 The **`EventSource`** interface is web content's interface to [server-sent events](/en-US/docs/Web/API/Server-sent_events).

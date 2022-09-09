@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 The global **`fetch()`** method starts the process of fetching a

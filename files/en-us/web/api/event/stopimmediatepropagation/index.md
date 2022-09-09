@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Event.stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 The **`stopImmediatePropagation()`** method of the

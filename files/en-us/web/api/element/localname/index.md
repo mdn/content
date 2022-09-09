@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.localName
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.localName`** read-only property returns the

@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Element.nextElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.nextElementSibling`** read-only

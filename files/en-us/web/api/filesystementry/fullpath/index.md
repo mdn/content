@@ -13,6 +13,7 @@ tags:
   - fullPath
 browser-compat: api.FileSystemEntry.fullPath
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`fullPath`** property

@@ -18,6 +18,7 @@ tags:
   - perspective
 browser-compat: api.DOMPointReadOnly.w
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

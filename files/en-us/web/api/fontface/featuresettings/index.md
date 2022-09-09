@@ -13,6 +13,7 @@ tags:
   - featureSettings
 browser-compat: api.FontFace.featureSettings
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`featureSettings`** property of the

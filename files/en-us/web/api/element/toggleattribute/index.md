@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.toggleAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`toggleAttribute()`** method of the

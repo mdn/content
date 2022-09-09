@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.composed
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The read-only **`composed`** property of the

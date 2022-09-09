@@ -9,6 +9,7 @@ tags:
   - Property
   - Read-only
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollTop`** property gets or sets the number of pixels that an element's content is scrolled vertically.

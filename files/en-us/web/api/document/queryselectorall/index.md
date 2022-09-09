@@ -17,6 +17,7 @@ tags:
   - querySelectorAll
 browser-compat: api.Document.querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelectorAll()`**

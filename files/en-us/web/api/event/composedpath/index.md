@@ -8,6 +8,7 @@ tags:
   - Web Components
 browser-compat: api.Event.composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`composedPath()`** method of the {{domxref("Event")}}

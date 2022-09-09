@@ -11,6 +11,7 @@ tags:
   - Web Animations
 browser-compat: api.Element.animate
 ---
+
 {{APIRef('Web Animations')}}
 
 The {{domxref("Element")}} interface's **`animate()`** method

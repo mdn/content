@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsText
 ---
+
 {{APIRef("File API")}}
 
 The **`readAsText()`** method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}.

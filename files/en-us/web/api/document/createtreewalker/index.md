@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.Document.createTreeWalker
 ---
+
 {{ApiRef("Document")}}
 
 The **`Document.createTreeWalker()`** creator method returns a

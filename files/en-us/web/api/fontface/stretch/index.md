@@ -13,6 +13,7 @@ tags:
   - stretch
 browser-compat: api.FontFace.stretch
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`stretch`** property of the

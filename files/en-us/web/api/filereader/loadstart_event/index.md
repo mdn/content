@@ -11,6 +11,7 @@ tags:
   - loadstart
 browser-compat: api.FileReader.loadstart_event
 ---
+
 {{APIRef}}
 
 The `loadstart` event is fired when a file read operation has begun.

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Document.bgColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The deprecated  `bgColor` property gets or sets the background color of the

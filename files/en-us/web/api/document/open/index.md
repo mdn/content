@@ -11,6 +11,7 @@ tags:
   - open
 browser-compat: api.Document.open
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.open()`** method opens a document for

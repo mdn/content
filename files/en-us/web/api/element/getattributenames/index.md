@@ -11,6 +11,7 @@ tags:
   - getAttributeNames
 browser-compat: api.Element.getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttributeNames()`** method of the

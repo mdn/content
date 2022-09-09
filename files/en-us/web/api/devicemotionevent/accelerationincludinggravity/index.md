@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.accelerationIncludingGravity
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`accelerationIncludingGravity`** property returns the

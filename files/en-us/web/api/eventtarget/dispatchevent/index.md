@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.EventTarget.dispatchEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`dispatchEvent()`** method of the {{domxref("EventTarget")}} sends an {{domxref("Event")}} to the object, (synchronously) invoking the affected

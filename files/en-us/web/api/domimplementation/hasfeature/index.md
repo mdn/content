@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.hasFeature
 ---
+
 {{ApiRef("DOM")}}{{Deprecated_Header}}
 
 The

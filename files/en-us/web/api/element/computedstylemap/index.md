@@ -14,6 +14,7 @@ tags:
   - computedStyleMap()
 browser-compat: api.Element.computedStyleMap
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`computedStyleMap()`** method of

@@ -13,6 +13,7 @@ tags:
   - load
 browser-compat: api.FontFace.load
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`load()`** method of the {{domxref("FontFace")}} interface requests and loads a font whose `source` was specified as a URL. It returns a {{jsxref('Promise')}} that resolves with the current `FontFace` object.

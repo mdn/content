@@ -12,6 +12,7 @@ tags:
   - mouse lock
 browser-compat: api.Element.requestPointerLock
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.requestPointerLock()`** method lets you

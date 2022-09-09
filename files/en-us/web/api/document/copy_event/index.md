@@ -12,6 +12,7 @@ tags:
   - copy
 browser-compat: api.Element.copy_event
 ---
+
 {{APIRef}}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.

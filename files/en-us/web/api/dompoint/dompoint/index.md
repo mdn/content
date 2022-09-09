@@ -14,6 +14,7 @@ tags:
   - Reference
 browser-compat: api.DOMPoint.DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint()`** constructor
