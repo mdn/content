@@ -327,7 +327,7 @@ node quick_test.js
 
 You should see the button's text label reported inside the console.
 
-let's do something a bit more useful. delete the previous code entry, then add this line at the bottom instead:
+Let's do something a bit more useful. Delete the previous code entry, then add this line at the bottom instead:
 
 ```js
 button.click();

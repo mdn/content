@@ -71,7 +71,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 The [Media Session API](/en-US/docs/Web/API/Media_Session_API) is now partially implemented. This API provides a standard mechanism for your content to share with the underlying operating system information about the state of media it's playing. This includes metadata such as artist, album, and track name, as well as potentially album artwork ({{bug(1580602)}}).
 
-The API also provides a way to receive notifications when the device's media controls (such as play, pause, and seek buttons) are activated by the user. To that end, the {{domxref("MediaSession")}} interface is now partially implemented, with support for setting and fetching the currently-playing media's metadata. and for the {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method. To access the `MediaSession` API, use the {{domxref("navigator.mediaSession")}} property.
+The API also provides a way to receive notifications when the device's media controls (such as play, pause, and seek buttons) are activated by the user. To that end, the {{domxref("MediaSession")}} interface is now partially implemented, with support for setting and fetching the currently-playing media's metadata and for the {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method. To access the `MediaSession` API, use the {{domxref("navigator.mediaSession")}} property.
 
 #### DOM
 
