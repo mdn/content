@@ -219,7 +219,7 @@ Using the command line, we can create the project, install the initial tooling, 
 
 ### Initial setup
 
-OK, let's get the initial project setup out the way.
+OK, let's get the initial project setup out of the way.
 
 1. Start off by opening your terminal, and navigating to a place that you'll be able to find and get to easily. The Desktop perhaps, or your home or documents folder?
 2. Next, run the following commands to create a folder to keep your project in, and go inside the folder:

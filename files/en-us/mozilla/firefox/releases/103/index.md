@@ -2,11 +2,12 @@
 title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
 tags:
-  - '103'
+  - "103"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 was released on July 26, 2022.
@@ -16,6 +17,9 @@ This article provides information about the changes in Firefox 103 that will aff
 ### HTML
 
 #### Removals
+
+- Support for the `<menuitem>` element has been removed along with the `dom.menuitem.enabled` preference.
+  For more details, see [Bug 1372276](https://bugzilla.mozilla.org/show_bug.cgi?id=1372276).
 
 ### MathML
 
@@ -86,7 +90,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 - Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns false when run inside an extension). ({{bug(1593931)}})
 

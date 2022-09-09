@@ -33,7 +33,7 @@ Marking up a dialog element with the `dialog` role helps assistive technology id
 
 The sections below describe how these two requirements can be met.
 
-#### Labeling
+### Labeling
 
 Even though it is not required for the dialog itself to be able to receive focus, it still needs to be labeled. The label given to the dialog will provide contextual information for the interactive controls inside the dialog. In other words, the dialog's label acts like a grouping label for the controls inside it (similar to how a `<legend>` element provides a grouping label for the controls inside a `<fieldset>` element).
 
@@ -81,7 +81,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 ## Examples
 
-#### A dialog containing a form
+### A dialog containing a form
 
 ```html
  <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">

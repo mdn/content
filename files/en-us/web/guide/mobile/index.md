@@ -36,7 +36,7 @@ You can also make use of CSS properties to implement visual effects like [gradie
 
 ### Mobile APIs
 
-Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/en-US/docs/Web/Events/Detecting_device_orientation) and [geolocation](/en-US/docs/Web/API/Geolocation_API).
+Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation) and [geolocation](/en-US/docs/Web/API/Geolocation_API).
 
 ## Cross-browser development
 

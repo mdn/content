@@ -74,10 +74,8 @@ The following code shows how to clone an array and transfer its underlying resou
 On return, the original `uInt8Array.buffer` will be cleared.
 
 ```js
-const uInt8Array = new Uint8Array(1024 * 1024 * 16); // 16MB
-for (let i = 0; i < uInt8Array.length; ++i) {
-  uInt8Array[i] = i;
-}
+// 16MB = 1024 * 1024 * 16
+const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i); 
 
 const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
 console.log(uInt8Array.byteLength);  // 0

@@ -24,13 +24,13 @@ There are two types of basic state machines:
 - non-deterministic finite state machine
   - : Given some state, an input can lead to more than one different state.
 
-_Figure 1: Deterministic Finite State Machine_
+_Figure 1: Deterministic Finite State Machine._
 
 ![The machine transitions from state 1 to state 2 for input X and from state 1 to state 3 for input Y](statemachine1.png)
 
 In _Figure 1_, the state begins in State 1; the state changes to State 2 given input 'X', or to State 3 given input 'Y'.
 
-_Figure 2: Non-Deterministic Finite State Machine_
+_Figure 2: Non-Deterministic Finite State Machine._
 
 ![The machine may remain in state 1, transitioning to itself, or may transition from state 1 to state 2 for input X](statemachine2.png)
 

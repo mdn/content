@@ -376,7 +376,7 @@ Above we've defined the query conditions in the `find()` method. We can also do 
 Athlete.
   find().
   where('sport').equals('Tennis').
-  where('age').gt(17).lt(50).  //Additional where query
+  where('age').gt(17).lt(50). // Additional where query
   limit(5).
   sort({ age: -1 }).
   select('name age').
@@ -597,7 +597,7 @@ Open **/app.js** (in the root of your project) and copy the following text below
 // Set up mongoose connection
 const mongoose = require('mongoose');
 const mongoDB = 'insert_your_database_url_here';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```

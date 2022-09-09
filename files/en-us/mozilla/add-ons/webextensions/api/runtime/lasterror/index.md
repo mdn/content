@@ -36,7 +36,7 @@ let myError = browser.runtime.lastError;  // null or Error object
 
 ### Value
 
-An {{jsxref("Error")}} object representing the error. The {{jsxref("Error.message", "message")}} property is a `string` with a human-readable description of the error . If `lastError` has not been set, the value is `null`.
+An {{jsxref("Error")}} object representing the error. The {{jsxref("Error.message", "message")}} property is a `string` with a human-readable description of the error. If `lastError` has not been set, the value is `null`.
 
 ## Examples
 

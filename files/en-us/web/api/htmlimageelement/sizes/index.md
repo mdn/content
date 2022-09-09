@@ -36,7 +36,7 @@ comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition
 evaluates to `true`.
 
-#### Media conditions
+### Media conditions
 
 Each source size descriptor consists of a media condition as defined by the media
 queries standard. Because a source size descriptor is used to specify the width to use
@@ -45,7 +45,7 @@ necessarily) based entirely on width information. See
 {{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
 details on how to construct a media condition.
 
-#### Source size values
+### Source size values
 
 The source size value is a [CSS length](/en-US/docs/Web/CSS/length). It may
 be specified using font-relative units (such as `em` or `ex`),

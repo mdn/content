@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - .markdownlint.json
+      - .markdownlint-cli2.jsonc
       - package.json
       - yarn.lock
       - .github/workflows/markdown-lint.yml

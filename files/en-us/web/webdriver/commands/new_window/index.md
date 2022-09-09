@@ -3,6 +3,9 @@ title: New Window
 slug: Web/WebDriver/Commands/New_Window
 browser-compat: webdriver.commands.NewWindow
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+
 The _New Window_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API opens a new top-level browsing context of type _window_ or _tab_, and returns with a dictionary containing the _handle_ of the new [WebWindow](/en-US/docs/Web/WebDriver/WebWindow) and its created _type_. If the requested _type_ cannot be created by the browser, the alternative type will be tried to create.
 
 ## Syntax

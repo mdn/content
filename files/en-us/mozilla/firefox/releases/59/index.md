@@ -61,7 +61,7 @@ _No changes._
 
 - The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ({{bug(1293277)}}) .
 - Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ({{bug(1293277)}}) and ({{bug(1426979)}}).
-- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
+- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL. In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead. This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
 - `FetchEvent.respondWith()` will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is `"same-origin"` and the provided {{domxref("Response.type")}} is `"cors"`. ({{bug(1222008)}})
 
 #### Media and WebRTC
@@ -109,7 +109,7 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g. `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
 
 ### CSS
 

@@ -42,7 +42,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 
 ## Example
 
-#### SVG
+### SVG
 
 ```html
 <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 </svg>
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Example",235,150)}}
 

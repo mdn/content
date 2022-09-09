@@ -121,7 +121,7 @@ Designed to improve the extensibility of CSS,
 this API enables developers to write their own layout algorithms,
 like masonry or line snapping.
 
-_This API has some partial support in Chrome Canary. It is not yet documented on MDN_
+_This API has some partial support in Chrome Canary. It is not yet documented on MDN._
 
 ### CSS Parser API
 

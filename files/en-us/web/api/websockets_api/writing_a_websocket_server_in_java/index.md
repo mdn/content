@@ -11,8 +11,6 @@ tags:
 ---
 {{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
-
 This example shows you how to create a WebSocket API server using Oracle Java.
 
 Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code.

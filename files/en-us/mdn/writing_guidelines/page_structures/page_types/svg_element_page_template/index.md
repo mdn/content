@@ -42,7 +42,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
 > - **tags**
->   - : Always include the following tags: **SVG**, **Reference**, **Element**,  the _NameOfTheElement_ (e.g. **g**).
+>   - : Always include the following tags: **SVG**, **Reference**, **Element**, the _NameOfTheElement_ (e.g. **g**).
 >
 >     Include the following tags as appropriate:
 >     - Relevant category: **SVG Container**, **SVG Animation**, **SVG Light Source**, **SVG Text Content**, **SVG Font**.

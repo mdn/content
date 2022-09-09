@@ -581,9 +581,9 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 
 ### Templates
 
-The "create" and "update" views use the same template by default, which will be named after your model: *model_name*\_**form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example `template_name_suffix = '_other_suffix'`)
+The "create" and "update" views use the same template by default, which will be named after your model: `model_name_form.html` (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example, `template_name_suffix = '_other_suffix'`)
 
-Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
+Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -601,7 +601,7 @@ Create the template file **locallibrary/catalog/templates/catalog/author_form.ht
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format *model_name*\_**confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
+The "delete" view expects to find a template named with the format _`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}

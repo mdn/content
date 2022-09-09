@@ -48,7 +48,7 @@ The above chunk of code has two statements. The first statement creates a functi
 
 Of course this loop is not perfect. Before we discuss ways to change it, let us discuss what it already does well.
 
-Timing the main loop to when the browser paints to the display allows you to run your loop as frequently as the browser wants to paint. You are given control over each frame of animation. It is also very simple because `main()` is the only function getting looped. A First Person Shooter (or a similar game) presents a new scene once every frame. You cannot really get more smooth and responsive than that.
+Timing the main loop to when the browser paints to the display allows you to run your loop as frequently as the browser wants to paint. You are given control over each frame of animation. It is also very simple because `main()` is the only function getting looped. A First-Person Shooter (or a similar game) presents a new scene once every frame. You cannot really get more smooth and responsive than that.
 
 But do not immediately assume animations require frame-by-frame control. Simple animations can be easily performed, even GPU-accelerated, with CSS animations and other tools included in the browser. There are a lot of them and they will make your life easier.
 
@@ -224,7 +224,7 @@ One common technique is to update the simulation at a constant frequency and the
 
 - Draw on `requestAnimationFrame` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
 
-  - This sleeps until `requestAnimationFrame` is called and does not pollute the main thread, plus you are not relying on old fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
+  - This sleeps until `requestAnimationFrame` is called and does not pollute the main thread, plus you are not relying on old-fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
 
 Each of these methods have similar tradeoffs:
 

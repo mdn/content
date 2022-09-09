@@ -308,12 +308,12 @@ The list below describes some of the common situations where we need to be aware
 - **Before "that" and "which"**: A restrictive clause is essential for the meaning of the sentence and does not need commas to be set off from the remaining sentence. A restrictive clause is usually introduced by "that" and **should not** be preceded by a comma.
 
   - **Correct**: "We have put together a course that includes all the essential information you need to work towards your goal."
-  - **Incorrect**: "We have put together a course, that includes all the essential information you need to work towards your goal."W
+  - **Incorrect**: "We have put together a course, that includes all the essential information you need to work towards your goal."
 
   A nonrestrictive clause provides additional information and is not essential to the meaning of the sentence. A nonrestrictive clause is usually introduced by "which" and should be preceded by a comma.
 
   - **Correct**: "You write a policy, which is an allowed list of origins for each feature."
-  - **Incorrect**: "You write a policy, which is an allowed list of origins for each feature."
+  - **Incorrect**: "You write a policy which is an allowed list of origins for each feature."
 
 - **Before "such as"**: If "such as" is part of a nonrestrictive clause and the remaining sentence is an independent clause, use comma before "such as".
 

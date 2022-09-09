@@ -22,7 +22,7 @@ A {{domxref("CSSStyleSheet")}}, or `null` if the element has no associated style
 
 This example demonstrates how to get the CSS sheet associated with an element.
 
-#### HTML
+### HTML
 
 The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle).
 
@@ -33,7 +33,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 </svg>
 ```
 
-#### JavaScript
+### JavaScript
 
 The code below creates a `style` element (an `SVGStyleElement`) and adds it to the SVG.
 
@@ -55,7 +55,7 @@ const log = document.getElementById("log")
 log.value = `${style.sheet} with rules[0].cssText:\n ${style.sheet.rules[0].cssText}`;
 ```
 
-#### Result
+### Result
 
 The result is shown below.
 On success, the log shows the `CSSStyleSheet` object applied to the SVG circle.

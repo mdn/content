@@ -30,7 +30,7 @@ A `figure` is a perceivable section of content that typically contains a graphic
 
 In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`.
 
-For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
+For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure. When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
 If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be used.
 
 ```html

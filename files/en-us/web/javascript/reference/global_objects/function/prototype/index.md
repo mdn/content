@@ -15,6 +15,8 @@ A {{jsxref("Function")}} object's **`prototype`** property is used when the func
 
 {{js_property_attributes(1, 0, 0)}}
 
+> **Note:** The `prototype` property of [classes](/en-US/docs/Web/JavaScript/Reference/Classes) is not writable.
+
 ## Description
 
 When a function is called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), the constructor's `prototype` property will become the resulting object's prototype.
@@ -36,12 +38,13 @@ function* generatorFunction() {}
 
 Instead, generator functions' `prototype` property is used when they are called _without_ `new`. The `prototype` property will become the returned [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object's prototype.
 
+In addition, some functions may have a `prototype` but throw unconditionally when called with `new`. For example, the [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol) and [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) functions throw when called with `new`, because `Symbol.prototype` and `BigInt.prototype` are only intended to provide methods for the primitive values, but the wrapper objects should not be directly constructed.
+
 The following functions do not have `prototype`, and are therefore ineligible as constructors, even if a `prototype` property is later manually assigned:
 
 ```js
 const method = { foo() {} }.foo;
 const arrowFunction = () => {};
-const boundFunction = (function () {}).bind(null);
 async function asyncFunction() {}
 ```
 
@@ -52,7 +55,21 @@ class Class {}
 function fn() {}
 ```
 
-A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. It is writable, non-enumerable, and configurable.
+A [bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) does not have a `prototype` property, but may be constructable. When it's constructed, the target function is constructed instead, and if the target function is constructable, it would return a normal instance.
+
+```js
+const boundFunction = (function () {}).bind(null);
+```
+
+A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. The `constructor` property is writable, non-enumerable, and configurable.
+
+If the `prototype` of a function is reassigned with something other than an {{jsxref("Object")}}, when the function is called with `new`, the returned object's prototype would be `Object.prototype` instead. (In other words, `new` ignores the `prototype` property and constructs a plain object.)
+
+```js
+function Ctor() {}
+Ctor.prototype = 3;
+console.log(Object.getPrototypeOf(new Ctor()) === Object.prototype); // true
+```
 
 ## Examples
 

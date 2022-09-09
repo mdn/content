@@ -132,11 +132,11 @@ Now the scene is properly rendering we can start adding 3D shapes to it. To spee
 const box = BABYLON.Mesh.CreateBox("box", 2, scene);
 ```
 
-A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with it's own name, a size of 2, and a declaration of which scene we want it added to.
+A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
 
 > **Note:** The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
-If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:
+If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little rotation to the box, so we can see more than one face — again, add these lines below the previous one:
 
 ```js
 box.rotation.x = -0.2;

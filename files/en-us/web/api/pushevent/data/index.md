@@ -19,7 +19,7 @@ The `data` read-only property of the **`PushEvent`** interface returns a referen
 
 A {{domxref("PushMessageData")}} object.
 
-**Examples**
+## Examples
 
 The following example takes data from a PushEvent and displays it on all of the service workers' clients.
 

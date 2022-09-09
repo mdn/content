@@ -91,7 +91,7 @@ Both functions take an event as a parameter, represented by the `e` variable. Fr
 
 ### The paddle moving logic
 
-We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all of the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
+We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
 
 ```js
 if (rightPressed) {
