@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: api.HTMLAnchorElement.protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The

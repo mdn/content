@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.length`**

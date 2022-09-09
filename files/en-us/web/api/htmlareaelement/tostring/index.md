@@ -9,6 +9,7 @@ tags:
   - Stringifier
 browser-compat: api.HTMLAreaElement.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`HTMLAreaElement.toString()`** {{Glossary("stringifier")}}

@@ -10,6 +10,7 @@ tags:
   - Reference
   - msHorizontalMirror
 ---
+
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 **`msHorizontalMirror`** is a read/write property which gets or

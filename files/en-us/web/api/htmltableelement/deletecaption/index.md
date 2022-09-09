@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteCaption()`** method removes the

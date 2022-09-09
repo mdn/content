@@ -13,6 +13,7 @@ tags:
   - NeedsSpecTable
 browser-compat: api.HTMLOptionElement.Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Option()`** constructor creates a new

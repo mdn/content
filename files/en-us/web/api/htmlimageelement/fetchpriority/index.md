@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLImageElement.fetchPriority
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`fetchPriority`** property of the

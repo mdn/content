@@ -15,6 +15,7 @@ tags:
   - getPhotoCapabilities
 browser-compat: api.ImageCapture.getPhotoCapabilities
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`getPhotoCapabilities()`**

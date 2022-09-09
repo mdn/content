@@ -13,6 +13,7 @@ tags:
   - size
 browser-compat: api.HTMLImageElement.naturalHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} interface's

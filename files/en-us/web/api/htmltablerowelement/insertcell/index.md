@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement.insertCell
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableRowElement.insertCell()`** method inserts a new

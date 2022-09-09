@@ -11,6 +11,7 @@ tags:
   - returnValue
 browser-compat: api.HTMLDialogElement.returnValue
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`returnValue`** property of the

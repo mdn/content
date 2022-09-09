@@ -12,6 +12,7 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBObjectStore.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the

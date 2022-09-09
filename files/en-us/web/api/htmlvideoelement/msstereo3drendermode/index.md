@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 tags:
   - msStereo3DRenderMode
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

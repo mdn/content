@@ -12,6 +12,7 @@ tags:
   - events
 spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 **HTML Drag and Drop** interfaces enable applications to use drag-and-drop features in browsers.

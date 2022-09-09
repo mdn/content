@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.bgColor
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.bgcolor`** property represents the

@@ -15,6 +15,7 @@ tags:
   - autoplay
 browser-compat: api.HTMLMediaElement.autoplay
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.autoplay`**

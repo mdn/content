@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.shiftKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.shiftKey`** read-only property is a

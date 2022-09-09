@@ -11,6 +11,7 @@ tags:
   - InterventionReportBody
 browser-compat: api.InterventionReportBody.lineNumber
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`lineNumber`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the line in the source file in which the intervention occurred.

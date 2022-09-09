@@ -6,6 +6,7 @@ tags:
   - Guide
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.

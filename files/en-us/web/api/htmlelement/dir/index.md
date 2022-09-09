@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLElement.dir`** property gets or sets the text

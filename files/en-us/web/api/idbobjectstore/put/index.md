@@ -13,6 +13,7 @@ tags:
   - put
 browser-compat: api.IDBObjectStore.put
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.

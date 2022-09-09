@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteRow()`** method removes a

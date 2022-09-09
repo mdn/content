@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.HTMLFontElement
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Implements the document object model (DOM) representation of the font element. The HTML Font Element {{HTMLElement("font")}} defines the font size, font face and color of text.

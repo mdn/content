@@ -6,6 +6,7 @@ tags:
 - Property
 browser-compat: api.HTMLMediaElement.disableRemotePlayback
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.disableRemotePlayback`** property

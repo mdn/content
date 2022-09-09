@@ -11,6 +11,7 @@ tags:
   - Property
 browser-compat: api.HTMLLabelElement.htmlFor
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLLabelElement.htmlFor`** property reflects the value

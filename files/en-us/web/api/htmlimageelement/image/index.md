@@ -14,6 +14,7 @@ tags:
   - img
 browser-compat: api.HTMLImageElement.Image
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Image()`**

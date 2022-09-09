@@ -13,6 +13,7 @@ tags:
   - takeRecords
 browser-compat: api.IntersectionObserver.takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method

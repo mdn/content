@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMediaElement.controlsList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`controlsList`** property of the

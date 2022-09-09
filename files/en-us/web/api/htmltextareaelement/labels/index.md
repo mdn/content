@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTextAreaElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLTextAreaElement.labels`** read-only property returns

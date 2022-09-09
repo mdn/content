@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.insertRow()`** method inserts a new row

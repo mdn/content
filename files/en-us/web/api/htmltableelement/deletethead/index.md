@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteTHead()`** removes the

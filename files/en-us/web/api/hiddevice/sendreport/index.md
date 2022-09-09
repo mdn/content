@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HIDDevice.sendReport
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`sendReport()`** method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.

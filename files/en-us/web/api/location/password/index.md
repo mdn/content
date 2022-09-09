@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Location.password
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`password`** property of the {{domxref("Location")}}

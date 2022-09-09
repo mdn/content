@@ -14,6 +14,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement`** interface provides special properties and methods for manipulating the options, layout, and presentation of {{HtmlElement("input")}} elements.

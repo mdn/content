@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.innerText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`innerText`** property of the {{domxref("HTMLElement")}} interface represents the rendered text content of a node and its descendants.

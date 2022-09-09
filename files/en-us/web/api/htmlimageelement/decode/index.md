@@ -18,6 +18,7 @@ tags:
   - decoding
 browser-compat: api.HTMLImageElement.decode
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`decode()`**

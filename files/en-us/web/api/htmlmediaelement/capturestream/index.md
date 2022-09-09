@@ -15,6 +15,7 @@ tags:
   - captureStream
 browser-compat: api.HTMLMediaElement.captureStream
 ---
+
 {{APIRef("HTML Media Capture")}}
 
 The **`captureStream()`** property of the
