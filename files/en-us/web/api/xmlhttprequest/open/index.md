@@ -13,6 +13,7 @@ tags:
   - open
 browser-compat: api.XMLHttpRequest.open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method **`open()`**

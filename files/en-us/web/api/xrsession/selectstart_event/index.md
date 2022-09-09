@@ -24,6 +24,7 @@ tags:
   - Experimental
 browser-compat: api.XRSession.selectstart_event
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) **`selectstart`** event is sent to an {{domxref("XRSession")}} when the user begins a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action) on one of its input sources.

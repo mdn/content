@@ -11,6 +11,7 @@ tags:
   - load
 browser-compat: api.XMLHttpRequest.load_event
 ---
+
 {{APIRef}}
 
 The `load` event is fired when an {{domxref("XMLHttpRequest")}} transaction completes successfully.

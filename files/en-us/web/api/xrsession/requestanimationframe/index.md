@@ -17,6 +17,7 @@ tags:
   - requestAnimationFrame()
 browser-compat: api.XRSession.requestAnimationFrame
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSession")}}

@@ -24,6 +24,7 @@ tags:
   - 'y'
 browser-compat: api.XRViewport.y
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} interface's

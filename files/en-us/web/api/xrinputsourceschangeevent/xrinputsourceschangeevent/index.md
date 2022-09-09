@@ -22,6 +22,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRInputSourcesChangeEvent()`**

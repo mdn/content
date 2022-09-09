@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.snapshotItem
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`snapshotItem()`** method of the

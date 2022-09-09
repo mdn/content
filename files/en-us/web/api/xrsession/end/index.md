@@ -17,6 +17,7 @@ tags:
   - end()
 browser-compat: api.XRSession.end
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`end()`** method shuts down the

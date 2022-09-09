@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRSession.inputsourceschange_event
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when the set of available WebXR input devices changes.

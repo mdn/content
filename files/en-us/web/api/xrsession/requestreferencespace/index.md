@@ -20,6 +20,7 @@ tags:
   - tracking
 browser-compat: api.XRSession.requestReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestReferenceSpace()`** method of the

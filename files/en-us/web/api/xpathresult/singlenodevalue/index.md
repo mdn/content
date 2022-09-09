@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.singleNodeValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`singleNodeValue`** property of the

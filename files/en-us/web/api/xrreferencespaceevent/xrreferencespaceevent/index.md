@@ -22,6 +22,7 @@ tags:
   - events
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRReferenceSpaceEvent()`**

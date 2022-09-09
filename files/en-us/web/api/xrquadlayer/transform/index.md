@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRQuadLayer.transform
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`transform`** property of the {{domxref("XRQuadLayer")}} interface represents the offset and orientation relative to the layer's {{domxref("XRQuadLayer.space", "space")}}.

@@ -14,6 +14,7 @@ tags:
   - withCredentials
 browser-compat: api.XMLHttpRequest.withCredentials
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.withCredentials`** property is a boolean value that indicates whether or not cross-site `Access-Control` requests should be made using credentials such as cookies, authorization headers or TLS client certificates. Setting `withCredentials` has no effect on same-site requests.
