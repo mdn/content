@@ -41,7 +41,6 @@ The stretch value is also displayed for each case by reading the property.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-// let font_file = new FontFace('League Spartan', 'url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2) format("woff2")');
 let font_file = new FontFace('30px "Inconsolata"', 'url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2) format("woff2")', {stretch: '50% 200%'});
 //font_file.stretch= 'normal semi-expanded'; // https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200
 //font_file.stretch= '30% 200%';
