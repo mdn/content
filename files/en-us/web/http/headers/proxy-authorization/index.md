@@ -9,6 +9,7 @@ tags:
   - header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.proxy-authorization
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Proxy-Authorization`** request header contains the

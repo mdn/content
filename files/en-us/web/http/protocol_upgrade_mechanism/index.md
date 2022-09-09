@@ -11,6 +11,7 @@ tags:
   - WebSocket
   - WebSockets
 ---
+
 {{HTTPSidebar}}
 
 The [HTTP/1.1 protocol](/en-US/docs/Web/HTTP) provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.

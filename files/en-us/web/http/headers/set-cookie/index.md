@@ -10,6 +10,7 @@ tags:
   - samesite
 browser-compat: http.headers.Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 The **`Set-Cookie`** HTTP response header is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.

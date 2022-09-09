@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Content-Security-Policy.navigate-to
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

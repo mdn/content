@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Location
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Location`** header indicates an alternate

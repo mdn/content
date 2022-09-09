@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.footer
 ---
+
 {{HTMLRef}}
 
 The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.

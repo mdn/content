@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.502
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`502 Bad Gateway`** server error response code indicates that the server, while acting as a gateway or proxy, received an invalid response from the upstream server.

@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.301
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect status response code indicates that the requested resource has been definitively moved to the URL given by the {{HTTPHeader("Location")}} headers. A browser redirects to the new URL and search engines update their links to the resource.

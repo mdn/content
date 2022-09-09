@@ -7,6 +7,7 @@ tags:
   - Request method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `PATCH` request method** applies partial modifications to a resource.

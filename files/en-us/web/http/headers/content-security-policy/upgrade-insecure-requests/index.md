@@ -13,6 +13,7 @@ tags:
   - upgrade-insecure-requests
 browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

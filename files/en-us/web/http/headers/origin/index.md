@@ -9,6 +9,7 @@ tags:
   - origin
 browser-compat: http.headers.Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Origin`** request header indicates the {{glossary("origin")}} (scheme, hostname, and port) that _caused_ the request.

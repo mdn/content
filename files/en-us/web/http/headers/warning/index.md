@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: http.headers.Warning
 ---
+
 {{HTTPSidebar}} {{deprecated_header}}
 
 The **`Warning`** HTTP header contains information about possible problems with the status of the message.

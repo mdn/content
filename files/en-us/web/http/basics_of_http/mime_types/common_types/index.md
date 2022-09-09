@@ -14,6 +14,7 @@ tags:
   - Types
   - Video
 ---
+
 {{HTTPSidebar}}
 
 This topic lists most common MIME types, with corresponding document types, ordered by their common extensions.

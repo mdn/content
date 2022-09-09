@@ -12,6 +12,7 @@ tags:
   - header
 browser-compat: http.headers.Sec-WebSocket-Accept
 ---
+
 {{HTTPSidebar}}
 
 The **Sec-WebSocket-Accept** header is used in the websocket opening

@@ -9,6 +9,7 @@ tags:
   - Performance
   - WebMechanics
 ---
+
 {{HTTPSidebar}}
 
 Connection management is a key topic in HTTP: opening and maintaining connections largely impacts the performance of Web sites and Web applications. In HTTP/1.x, there are several models: _short-lived connections_, _persistent connections_, and _HTTP pipelining._

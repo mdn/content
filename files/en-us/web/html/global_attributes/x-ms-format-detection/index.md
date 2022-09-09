@@ -9,6 +9,7 @@ tags:
   - Reference
   - x-ms-format-detection
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 The [`x-ms-format-detection`](<https://docs.microsoft.com/previous-versions/dn337007(v%3Dvs.85)>) attribute determines whether data formats within the element's text, like phone numbers, are automatically converted to followable links.

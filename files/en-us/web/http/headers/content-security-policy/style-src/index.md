@@ -14,6 +14,7 @@ tags:
   - style-src
 browser-compat: http.headers.Content-Security-Policy.style-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directive specifies valid sources for stylesheets.
