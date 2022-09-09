@@ -55,6 +55,7 @@ Requesting three ranges from the file.
 ```http
 Range: bytes=200-1000, 2000-6576, 19000-
 ```
+The byte-ranges-specifier value `19000-` is using the suffix-byte-range-spec  `-` to indicates that all bytes from 19000 onwards shall be part of the third range. 
 
 Requesting the first 500 and last 500 bytes of the file. The request may be rejected by the server if the ranges overlap.
 
