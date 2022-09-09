@@ -315,6 +315,7 @@ function doDrop(event) {
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);
+    // Use this type of data…
   }
   event.preventDefault();
 }
