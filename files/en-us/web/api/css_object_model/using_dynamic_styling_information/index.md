@@ -73,7 +73,7 @@ To change a particular element's style, you can adapt the following example for 
       }
 
       function resetStyle(elemId) {
-        elem = document.getElementById(elemId);
+        const elem = document.getElementById(elemId);
         elem.style.background = 'white';
       }
     </script>
