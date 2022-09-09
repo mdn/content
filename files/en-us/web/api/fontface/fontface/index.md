@@ -45,25 +45,25 @@ new FontFace(family, source, descriptors)
   - : A set of optional descriptors passed as an object.
     It can contain any of the descriptors available for `@font-face`:
 
-    - `ascentOverride`
+    - [`ascentOverride`](/en-US/docs/Web/API/FontFace/ascentOverride)
       - : With an allowable value for {{cssxref("@font-face/ascent-override")}}.
-    - `descentOverride`
+    - [`descentOverride`](/en-US/docs/Web/API/FontFace/descentOverride)
       - : With an allowable value for {{cssxref("@font-face/descent-override")}}.
-    - `featureSettings`
+    - [`featureSettings`](/en-US/docs/Web/API/FontFace/featureSettings)
       - : With an allowable value for {{cssxref("font-feature-settings")}}.
-    - `lineGapOverride`
+    - [`lineGapOverride`](/en-US/docs/Web/API/FontFace/lineGapOverride)
       - : With an allowable value for {{cssxref("@font-face/line-gap-override")}}.
-    - `stretch`
+    - [`stretch`](/en-US/docs/Web/API/FontFace/stretch)
       - : With an allowable value for {{cssxref("@font-face/font-stretch")}}.
-    - `style`
+    - [`style`](/en-US/docs/Web/API/FontFace/style)
       - : With an allowable value for {{cssxref("@font-face/font-style")}}.
-    - `unicodeRange`
+    - [`unicodeRange`](/en-US/docs/Web/API/FontFace/unicodeRange)
       - : With an allowable value for {{cssxref("@font-face/unicode-range")}}.
-    - `variant`
+    - [`variant`](/en-US/docs/Web/API/FontFace/variant)
       - : With an allowable value for {{cssxref("@font-face/font-variant")}}.
-    - `variationSettings`
+    - [`variationSettings`](/en-US/docs/Web/API/FontFace/variationSettings)
       - : With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.
-    - `weight`
+    - [`weight`](/en-US/docs/Web/API/FontFace/weight)
       - : With an allowable value for {{cssxref("@font-face/font-weight")}}.
 
 ### Exceptions

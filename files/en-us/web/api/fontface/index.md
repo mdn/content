@@ -58,6 +58,38 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 - {{domxref("FontFace.load()")}}
   - : Loads a font based on current object's constructor-passed requirements, including a location or source buffer, and returns a {{jsxref('Promise')}} that resolves with the current FontFace object.
 
+## Examples
+
+The code below defines a font face using data at the URL "myfont.woff" with a few font descriptors.
+Just to show how it works, we then define the `stretch` descriptor using a property.
+
+```js
+//Define a FontFace
+const font = new FontFace('myfont', 'url(myfont.woff)', {
+  style: 'italic',
+  weight: '400'
+});
+
+font.stretch = 'condensed';
+```
+
+Next we load the font using {{domxref("FontFace.load()")}} and use the returned promise to track completion or report an error.
+
+```js
+//Load the font
+font.load().then(() => {
+  // Resolved - add font to document.fonts
+  },
+(err) => {
+  console.error(err)
+});
+```
+
+To actually _use_ the font we will need to add it to a {{domxref("FontFaceSet")}}.
+We could do that before or after loading the font.
+
+For additional examples see [CSS Font Loading API > Examples](/en-US/docs/Web/API/CSS_Font_Loading_API#examples).
+
 ## Specifications
 
 {{Specifications}}
