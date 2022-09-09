@@ -4,6 +4,7 @@ slug: MDN/Kitchensink
 tags:
   - Kitchensink
   - MDN Meta
+browser-compat: html.elements.video
 ---
 
 {{MDNSidebar}}
@@ -238,7 +239,7 @@ Listening for mouse movement is even easier than listening for key presses: all 
 
 ## Browser compatibility
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## Axis-Aligned Bounding Box
 
