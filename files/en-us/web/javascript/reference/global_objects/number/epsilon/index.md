@@ -62,7 +62,7 @@ console.log(x + y); // 2000.3000000000002; error of 10^-13 instead of 10^-16
 console.log(equal(x + y, z)); // false
 ```
 
-In this case, you should use a larger tolerance, such as `2000 * Number.EPSILON`, since the numbers we are comparing have the magnitude of about `2000`:
+In this case, a larger tolerance is required. As the numbers compared have a magnitude of approximately `2000`, a multiplier such as `2000 * Number.EPSILON` creates enough tolerance for this instance.
 
 ```js
 function equal(x, y, tolerance = Number.EPSILON) {
