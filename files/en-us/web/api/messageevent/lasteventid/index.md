@@ -12,6 +12,7 @@ tags:
   - messaging
 browser-compat: api.MessageEvent.lastEventId
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`lastEventId`** read-only property of the

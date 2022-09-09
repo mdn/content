@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.pressure
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`pressure`** read-only property of the

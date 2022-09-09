@@ -15,6 +15,7 @@ tags:
   - addSourceBuffer
 browser-compat: api.MediaSource.addSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`addSourceBuffer()`** method of the

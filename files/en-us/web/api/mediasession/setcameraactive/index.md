@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.MediaSession.setCameraActive
 ---
+
 {{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The {{domxref("MediaSession")}} method **`setCameraActive()`** is used to indicate to the user agent whether the user's camera is considered to be active.

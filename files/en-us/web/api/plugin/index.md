@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Plugin
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The `Plugin` interface provides information about a browser plugin.

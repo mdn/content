@@ -16,6 +16,7 @@ tags:
   - channelCount
 browser-compat: api.MediaTrackSupportedConstraints.channelCount
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's

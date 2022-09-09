@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.PeriodicSyncManager.getTags
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`getTags()`** method of the

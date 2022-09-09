@@ -18,6 +18,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
+
 {{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The

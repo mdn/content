@@ -11,6 +11,7 @@ tags:
   - get()
 browser-compat: api.MediaKeyStatusMap.get
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`get`** property of the

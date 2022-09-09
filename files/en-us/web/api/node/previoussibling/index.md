@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`previousSibling`** property of the {{domxref("Node")}} interface

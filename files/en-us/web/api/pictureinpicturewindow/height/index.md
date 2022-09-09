@@ -12,6 +12,7 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow.height
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The read-only {{domxref("PictureInPictureWindow")}} property

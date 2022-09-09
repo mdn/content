@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.transferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`transferSize`** read-only property represents the size

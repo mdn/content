@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
+
 {{APIRef("Pointer Events")}}
 
 The **`PointerEvent()`** constructor creates a new synthetic

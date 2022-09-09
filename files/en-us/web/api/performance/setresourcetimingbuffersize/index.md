@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`setResourceTimingBufferSize()`** method sets the

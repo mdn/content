@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`getRootNode()`** method of the {{domxref("Node")}} interface

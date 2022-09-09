@@ -12,6 +12,7 @@ tags:
   - data
 browser-compat: api.Notification.data
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`data`** read-only property of the

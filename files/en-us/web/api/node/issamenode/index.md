@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.isSameNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`isSameNode()`** method of the {{domxref("Node")}} interface

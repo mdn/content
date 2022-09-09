@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
+
 {{APIRef("Media Streams API")}}
 
 The **`MediaStreamTrackEvent()`** constructor returns a new {{domxref("MediaStreamTrackEvent")}} object,

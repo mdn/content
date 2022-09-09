@@ -13,6 +13,7 @@ tags:
   - status
 browser-compat: api.PermissionStatus.name
 ---
+
 {{APIRef("Permissions API")}}
 
 The **`name`** read-only property of the {{domxref("PermissionStatus")}} interface returns the name of a requested permission.
