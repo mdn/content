@@ -511,7 +511,7 @@ The conformance criteria under this guideline ensures that users are able to int
   </tr>
   <tr>
    <td>2.5.5 Target Size (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height.  Exceptions exist.</td>
+   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height. Exceptions exist.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Target Size</a></td>
   </tr>
   <tr>

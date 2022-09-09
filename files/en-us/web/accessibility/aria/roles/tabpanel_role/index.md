@@ -33,7 +33,7 @@ Each `tab` in a `tablist` serves as the label for one of the tab panels and can 
 
 You can also optionally associate each `tabpanel` with its associated `tab` by including the {{HTMLAttrXRef('id')}} of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute.
 
-When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active.  Hide the non-visible tabpanels with the HTML {{htmlattrxref('hidden')}} attribute or set [`aria-hidden="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Browsers won't render elements with the `hidden` attribute set, so long as [CSS is declared on a `hidden` attribute selector to remove it](/en-US/docs/Web/CSS/display#none).
+When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active. Hide the non-visible tabpanels with the HTML {{htmlattrxref('hidden')}} attribute or set [`aria-hidden="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Browsers won't render elements with the `hidden` attribute set, so long as [CSS is declared on a `hidden` attribute selector to remove it](/en-US/docs/Web/CSS/display#none).
 
 If using `aria-hidden`, use CSS to hide the hidden tab panels. When a new `tab` is selected, remove the `hidden` attribute from the newly active panel or set the `aria-hidden` attribute to `false`, while adding `hidden` or `aria-hidden="true"` to the previously active `tabpanel`.
 
