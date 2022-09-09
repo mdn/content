@@ -9,6 +9,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.

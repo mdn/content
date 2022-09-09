@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 The **`Number.NEGATIVE_INFINITY`** property represents the negative Infinity value.

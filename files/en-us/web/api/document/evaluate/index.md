@@ -10,6 +10,7 @@ tags:
   - XPath
 browser-compat: api.Document.evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XPath)

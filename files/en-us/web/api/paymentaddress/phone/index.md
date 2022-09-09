@@ -20,6 +20,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.phone
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`phone`** property of the

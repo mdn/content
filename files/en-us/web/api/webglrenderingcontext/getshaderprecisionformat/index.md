@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderPrecisionFormat
 ---
+
 {{APIRef("WebGL")}}
 
 The

@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-required
 ---
+
 The `aria-required` attribute indicates that user input is required on the element before a form may be submitted.
 
 ## Description

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.width
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`width`** property returns and sets the width of an

@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGHKernElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGHKernElement`** interface corresponds to the {{SVGElement("hkern")}} elements.

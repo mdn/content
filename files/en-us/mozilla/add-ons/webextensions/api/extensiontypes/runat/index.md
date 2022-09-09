@@ -13,6 +13,7 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes.RunAt
 ---
+
 {{AddonSidebar()}}
 
 The soonest that the JavaScript or CSS will be injected into the tab.

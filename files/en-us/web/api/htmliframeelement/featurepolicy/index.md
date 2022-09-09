@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`featurePolicy`** read-only

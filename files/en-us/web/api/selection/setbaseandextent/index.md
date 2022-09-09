@@ -10,6 +10,7 @@ tags:
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the

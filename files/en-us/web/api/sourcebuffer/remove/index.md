@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: api.SourceBuffer.remove
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`remove()`** method of the {{domxref("SourceBuffer")}}

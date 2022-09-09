@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray
 ---
+
 {{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an

@@ -5,6 +5,7 @@ page-type: guide
 tags:
   - Draft
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 ## Virtual object hit testing

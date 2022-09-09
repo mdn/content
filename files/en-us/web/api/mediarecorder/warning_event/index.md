@@ -16,6 +16,7 @@ tags:
   - Deprecated
 browser-compat: api.MediaRecorder.warning_event
 ---
+
 {{APIRef("Media Recorder API")}}{{Deprecated_Header}}
 
 The `warning` event fires on non-fatal errors during media recording via a `MediaRecorder`. Non-fatal errors are one's that don't halt recording.

@@ -15,6 +15,7 @@ spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-images/
 ---
+
 {{CSSRef}}
 
 **CSS functional notation** is a type of [CSS value](/en-US/docs/Web/CSS/CSS_Values_and_Units) that can represent more complex data types or invoke special data processing or calculations.

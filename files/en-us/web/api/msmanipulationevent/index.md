@@ -12,6 +12,7 @@ tags:
   - Non-standard
   - Reference
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_Header}}
 
 **`MSManipulationEvent`** provides contextual information when contact is made to the screen and an element is manipulated.

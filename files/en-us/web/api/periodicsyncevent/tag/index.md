@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.PeriodicSyncEvent.tag
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`tag`** read-only property of the

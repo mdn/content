@@ -12,6 +12,7 @@ tags:
   - fastSeek
 browser-compat: api.HTMLMediaElement.fastSeek
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.fastSeek()`** method quickly seeks the

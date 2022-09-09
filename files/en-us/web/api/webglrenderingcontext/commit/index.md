@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WebGLRenderingContext.commit
 ---
+
 {{APIRef("WebGL")}}{{SeeCompatTable}}
 
 The

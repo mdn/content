@@ -8,6 +8,7 @@ tags:
   - cookbook
   - recipes
 ---
+
 {{CSSRef}}
 
 The CSS layout cookbook aims to bring together recipes for common layout patterns, things you might need to implement in your own sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used, and the choices you can make as a developer.

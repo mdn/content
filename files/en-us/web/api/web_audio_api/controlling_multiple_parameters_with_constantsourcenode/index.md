@@ -12,6 +12,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.

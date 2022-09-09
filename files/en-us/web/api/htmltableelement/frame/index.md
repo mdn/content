@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The {{domxref("HTMLTableElement")}} interface's **`frame`**

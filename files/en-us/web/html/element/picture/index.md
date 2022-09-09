@@ -13,6 +13,7 @@ tags:
   - picture
 browser-compat: html.elements.picture
 ---
+
 {{HTMLRef}}
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.

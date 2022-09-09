@@ -13,6 +13,7 @@ tags:
   - upperBound
 browser-compat: api.IDBKeyRange.upperBound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`upperBound()`** method of the

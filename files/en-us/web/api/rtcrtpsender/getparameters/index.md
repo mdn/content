@@ -14,6 +14,7 @@ tags:
   - getParameters()
 browser-compat: api.RTCRtpSender.getParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`getParameters()`** method of

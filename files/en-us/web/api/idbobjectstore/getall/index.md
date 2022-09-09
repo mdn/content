@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: api.IDBObjectStore.getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the

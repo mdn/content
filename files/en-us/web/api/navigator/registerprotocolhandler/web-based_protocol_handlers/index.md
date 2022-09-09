@@ -7,6 +7,7 @@ tags:
   - HTML
   - Web-Based Protocol Handlers
 ---
+
 ## Background
 
 It's fairly common to find web pages link to resources using non-`http` protocols. An example is the `mailto:` protocol:

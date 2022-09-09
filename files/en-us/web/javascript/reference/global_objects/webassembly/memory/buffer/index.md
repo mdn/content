@@ -11,6 +11,7 @@ tags:
   - memory
 browser-compat: javascript.builtins.WebAssembly.Memory.buffer
 ---
+
 {{JSRef}}
 
 The read-only **`buffer`** prototype property of the {{jsxref("WebAssembly.Memory")}} object returns the buffer contained in the memory. Depending on whether or not the memory was constructed with `shared: true`, the buffer is either an {{jsxref("ArrayBuffer")}} or a {{jsxref("SharedArrayBuffer")}}.

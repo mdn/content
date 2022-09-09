@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msup
 ---
+
 {{MathMLRef}}
 
 The MathML `<msup>` element is used to attach a superscript to an expression.

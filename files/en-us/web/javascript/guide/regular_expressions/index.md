@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Regular expressions are patterns used to match character combinations in strings.

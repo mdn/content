@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.at-rules.page
 ---
+
 {{CSSRef}}
 
 The **`@page`** CSS at-rule is used to modify some CSS properties when printing a document.

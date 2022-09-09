@@ -12,6 +12,7 @@ tags:
   - XPathNSResolver
 browser-compat: api.XPathNSResolver.lookupNamespaceURI
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `lookupNamespaceURI` method looks up the namespace URI associated to the

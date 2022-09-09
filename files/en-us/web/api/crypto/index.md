@@ -15,6 +15,7 @@ tags:
   - Web Crypto API
 browser-compat: api.Crypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 The **`Crypto`** interface represents basic cryptography features available in the current context.

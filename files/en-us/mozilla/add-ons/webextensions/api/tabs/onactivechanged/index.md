@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onActiveChanged
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This event is deprecated. Use {{WebExtAPIRef("tabs.onActivated")}} instead.

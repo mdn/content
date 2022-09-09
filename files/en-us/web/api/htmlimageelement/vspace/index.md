@@ -21,6 +21,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.vspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _obsolete_ **`vspace`** property of the

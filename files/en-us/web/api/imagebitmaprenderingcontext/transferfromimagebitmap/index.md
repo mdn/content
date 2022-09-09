@@ -11,6 +11,7 @@ tags:
   - transferFromImageBitmap
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageBitmapRenderingContext.transferFromImageBitmap()`**

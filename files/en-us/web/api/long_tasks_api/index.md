@@ -18,6 +18,7 @@ browser-compat:
   - api.PerformanceLongTaskTiming
   - api.TaskAttributionTiming
 ---
+
 {{DefaultAPISidebar("Long Tasks")}}
 
 ## Motivation

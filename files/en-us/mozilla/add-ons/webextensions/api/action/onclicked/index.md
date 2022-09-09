@@ -13,6 +13,7 @@ tags:
   - onClicked
 browser-compat: webextensions.api.action.onClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.

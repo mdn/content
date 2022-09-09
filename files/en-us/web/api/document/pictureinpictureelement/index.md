@@ -15,6 +15,7 @@ tags:
   - pip
 browser-compat: api.Document.pictureInPictureElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The

@@ -11,6 +11,7 @@ tags:
   - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`postMessage()`** method of the

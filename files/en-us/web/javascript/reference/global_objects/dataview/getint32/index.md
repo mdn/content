@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getInt32
 ---
+
 {{JSRef}}
 
 The **`getInt32()`** method gets a signed 32-bit integer (long)

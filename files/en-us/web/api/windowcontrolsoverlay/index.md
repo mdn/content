@@ -11,6 +11,7 @@ tags:
   - Progressive Web Apps
 browser-compat: api.WindowControlsOverlay
 ---
+
 {{APIRef("Window Controls Overlay API")}}{{securecontext_header}}
 
 The **`WindowControlsOverlay`** interface of the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) exposes information about the geometry

@@ -9,6 +9,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`handler.setPrototypeOf()`** method is a trap for

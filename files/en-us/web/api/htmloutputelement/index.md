@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOutputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOutputElement`** interface provides properties and methods (beyond those inherited from {{domxref("HTMLElement")}}) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.

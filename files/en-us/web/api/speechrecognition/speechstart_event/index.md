@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.speechstart_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speechstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when sound recognized by the speech recognition service as speech has been detected.

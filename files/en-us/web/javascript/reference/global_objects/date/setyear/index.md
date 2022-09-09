@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The legacy **`setYear()`** method sets the year for a specified date according to local time.

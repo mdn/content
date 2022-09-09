@@ -7,6 +7,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.pattern
 ---
+
 {{SVGRef}}
 
 The **`<pattern>`** element defines a graphics object which can be redrawn at repeated x- and y-coordinate intervals ("tiled") to cover an area.

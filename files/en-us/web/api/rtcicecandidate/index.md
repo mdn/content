@@ -18,6 +18,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceCandidate`** interface—part of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API)—represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration which may be used to establish an {{domxref("RTCPeerConnection")}}.

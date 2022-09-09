@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMError
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`DOMError`** interface describes an error object that contains an error name.

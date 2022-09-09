@@ -10,6 +10,7 @@ tags:
   - Styling
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) and [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes) articles.

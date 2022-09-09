@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Notification.timestamp
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`timestamp`** read-only property of the

@@ -13,6 +13,7 @@ tags:
   - showNotification
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `showNotification()` method of the

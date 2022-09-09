@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.registerContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Registers one or more content scripts.

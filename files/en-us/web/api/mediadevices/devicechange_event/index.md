@@ -14,6 +14,7 @@ tags:
   - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
+
 {{APIRef}}
 
 A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.

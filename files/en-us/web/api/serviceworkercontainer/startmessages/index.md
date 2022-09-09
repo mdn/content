@@ -10,6 +10,7 @@ tags:
   - startMessages
 browser-compat: api.ServiceWorkerContainer.startMessages
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`startMessages()`** method of

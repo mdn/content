@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex.getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the {{domxref("IDBIndex")}}

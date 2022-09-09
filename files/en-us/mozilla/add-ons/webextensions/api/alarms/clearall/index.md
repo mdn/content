@@ -13,6 +13,7 @@ tags:
   - clearAll
 browser-compat: webextensions.api.alarms.clearAll
 ---
+
 {{AddonSidebar()}}
 
 Cancels all active alarms.

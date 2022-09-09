@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.currentScript
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.currentScript`** property returns the {{HTMLElement("script")}} element whose script is currently being processed and [isn't a JavaScript module](https://github.com/whatwg/html/issues/997). (For modules use [import.meta](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) instead.)

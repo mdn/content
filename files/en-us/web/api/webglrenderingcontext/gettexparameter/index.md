@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getTexParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getTexParameter()`** method of the

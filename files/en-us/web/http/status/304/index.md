@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.304
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`304 Not Modified`** client redirection response

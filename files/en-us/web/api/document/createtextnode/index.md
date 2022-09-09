@@ -11,6 +11,7 @@ tags:
   - createTextNode
 browser-compat: api.Document.createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 Creates a new {{domxref("Text")}} node. This method can be used to escape HTML

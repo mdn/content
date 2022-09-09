@@ -13,6 +13,7 @@ tags:
   - removeFile
 browser-compat: webextensions.api.downloads.removeFile
 ---
+
 {{AddonSidebar()}}
 
 The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.

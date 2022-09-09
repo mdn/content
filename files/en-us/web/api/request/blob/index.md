@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.blob
 ---
+
 {{APIRef("Fetch")}}
 
 The **`blob()`** method of the {{domxref("Request")}} interface

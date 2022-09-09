@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.marker-mid
 ---
+
 {{SVGRef}}
 
 The **`marker-mid`** attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).

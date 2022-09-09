@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.is
 ---
+
 {{CSSRef}}
 
 > **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).

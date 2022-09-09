@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.right
 ---
+
 {{CSSRef}}
 
 The **`right`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.

@@ -9,6 +9,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.aspect-ratio
 ---
+
 {{CSSRef}}
 
 The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.

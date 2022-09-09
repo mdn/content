@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`entries()`** method of the {{domxref("DOMTokenList")}} interface

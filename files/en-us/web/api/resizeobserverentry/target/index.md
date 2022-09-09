@@ -15,6 +15,7 @@ tags:
   - target
 browser-compat: api.ResizeObserverEntry.target
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`target`** read-only property of the

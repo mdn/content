@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.removeChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`removeChild()`** method of the {{domxref("Node")}} interface

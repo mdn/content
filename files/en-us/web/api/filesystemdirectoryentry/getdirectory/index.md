@@ -12,6 +12,7 @@ tags:
   - getDirectory
 browser-compat: api.FileSystemDirectoryEntry.getDirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method

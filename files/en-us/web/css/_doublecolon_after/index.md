@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.after
 ---
+
 {{CSSRef}}
 
 In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property. It is inline by default.

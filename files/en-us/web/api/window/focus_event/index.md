@@ -13,6 +13,7 @@ tags:
   - onfocus
 browser-compat: api.Window.focus_event
 ---
+
 {{APIRef}}
 
 The **`focus`** event fires when an element has received focus.

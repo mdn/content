@@ -18,6 +18,7 @@ spec-urls:
   - https://w3c.github.io/mediacapture-main/
   - https://w3c.github.io/mediacapture-fromelement/
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communication) is a technology that enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary. The set of standards that comprise WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install plug-ins or any other third-party software.

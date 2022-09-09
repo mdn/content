@@ -12,6 +12,7 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.assignedElements
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assignedElements()`** method of the {{domxref("HTMLSlotElement")}}

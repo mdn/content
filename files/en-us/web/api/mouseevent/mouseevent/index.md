@@ -11,6 +11,7 @@ tags:
   - events
 browser-compat: api.MouseEvent.MouseEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent()`** constructor creates a new {{domxref("MouseEvent")}} object.

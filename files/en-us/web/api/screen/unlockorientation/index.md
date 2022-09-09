@@ -11,6 +11,7 @@ tags:
   - Screen Orientation
 browser-compat: api.Screen.unlockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 The **`Screen.unlockOrientation()`** method removes all the

@@ -11,6 +11,7 @@ tags:
   - supportedEntryTypes
 browser-compat: api.PerformanceObserver.supportedEntryTypes
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`supportedEntryTypes`** read-only property of the

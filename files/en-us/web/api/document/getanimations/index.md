@@ -18,6 +18,7 @@ tags:
   - web animations api
 browser-compat: api.Document.getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 The `getAnimations()` method of the {{domxref("Document")}} interface

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setMinutes
 ---
+
 {{JSRef}}
 
 The **`setMinutes()`** method sets the minutes for a specified

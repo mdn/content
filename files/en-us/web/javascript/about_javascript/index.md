@@ -7,6 +7,7 @@ tags:
   - Introduction
   - JavaScript
 ---
+
 {{JsSidebar}}
 
 ## What is JavaScript?

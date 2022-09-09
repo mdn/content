@@ -16,6 +16,7 @@ tags:
   - aspectRatio
 browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`aspectRatio`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the

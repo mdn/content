@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.padStart
 ---
+
 {{JSRef}}
 
 The **`padStart()`** method pads the

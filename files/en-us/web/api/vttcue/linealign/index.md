@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.lineAlign
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`lineAlign`** property of the {{domxref("VTTCue")}} interface represents the alignment of this VTT cue.

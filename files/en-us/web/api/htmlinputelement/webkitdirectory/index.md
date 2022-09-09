@@ -14,6 +14,7 @@ tags:
   - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The **`HTMLInputElement.webkitdirectory`** is a property

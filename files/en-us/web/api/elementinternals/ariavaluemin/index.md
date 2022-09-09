@@ -12,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaValueMin
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaValueMin`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.

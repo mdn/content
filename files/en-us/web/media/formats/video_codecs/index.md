@@ -22,6 +22,7 @@ tags:
   - mp4
   - streaming
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 This guide introduces the video codecs you're most likely to encounter or consider using on the web, summaries of their capabilities and any compatibility and utility concerns, and advice to help you choose the right codec for your project's video.

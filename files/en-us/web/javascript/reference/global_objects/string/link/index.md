@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.link
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`link()`** method creates a string representing the code

@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.enableStyleSheetsForSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 Enables the style sheets matching the specified name in the current style sheet set,

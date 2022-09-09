@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).

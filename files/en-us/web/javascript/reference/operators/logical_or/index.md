@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical OR (`||`) operator (logical disjunction) for a set of operands

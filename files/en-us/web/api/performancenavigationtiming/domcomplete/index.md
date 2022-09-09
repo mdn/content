@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domComplete
 ---
+
 {{APIRef("Navigation Timing")}}
 
 The **`domComplete`** read-only property returns a

@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.TRACE
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `TRACE` method** performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism.

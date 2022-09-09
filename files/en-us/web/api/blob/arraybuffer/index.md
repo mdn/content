@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.arrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 The **`arrayBuffer()`** method in the {{domxref("Blob")}}

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.text-rendering
 ---
+
 {{SVGRef}}
 
 The **`text-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering text.

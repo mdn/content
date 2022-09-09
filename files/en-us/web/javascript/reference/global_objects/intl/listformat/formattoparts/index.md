@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.formatToParts()`** method

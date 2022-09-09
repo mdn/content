@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.attestationObject
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`attestationObject`** property of the

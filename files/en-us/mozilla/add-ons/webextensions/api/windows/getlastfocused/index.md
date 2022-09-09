@@ -13,6 +13,7 @@ tags:
   - getLastFocused
 browser-compat: webextensions.api.windows.getLastFocused
 ---
+
 {{AddonSidebar()}}
 
 Gets the window that was most recently focused — typically the window 'on top'.

@@ -15,6 +15,7 @@ tags:
   - facingMode
 browser-compat: api.MediaTrackSupportedConstraints.facingMode
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's

@@ -11,6 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getSelf
 ---
+
 {{AddonSidebar()}}
 
 Retrieves an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object containing information about the calling add-on.

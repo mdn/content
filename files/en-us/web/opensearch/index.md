@@ -10,6 +10,7 @@ tags:
   - Web
   - Web Standards
 ---
+
 {{AddonSidebar}}
 
 The **[OpenSearch description format](https://github.com/dewitt/opensearch)** lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)

@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.childNodes
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`childNodes`** property of the {{domxref("Node")}} interface returns a live

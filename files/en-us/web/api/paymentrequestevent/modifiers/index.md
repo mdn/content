@@ -4,6 +4,7 @@ slug: Web/API/PaymentRequestEvent/modifiers
 page-type: web-api-instance-property
 browser-compat: api.PaymentRequestEvent.modifiers
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`modifiers`** read-only property of the

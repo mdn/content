@@ -18,6 +18,7 @@ tags:
   - vertex shader
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} method

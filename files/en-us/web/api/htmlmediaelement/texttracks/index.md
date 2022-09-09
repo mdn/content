@@ -16,6 +16,7 @@ tags:
   - textTracks
 browser-compat: api.HTMLMediaElement.textTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`textTracks`**

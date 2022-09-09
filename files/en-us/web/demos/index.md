@@ -13,6 +13,7 @@ tags:
   - VR
   - Video
 ---
+
 Mozilla supports a wide variety of exciting open web technologies, and we encourage their use. This page offers links to interesting demonstrations of these technologies.
 
 If you know of a good demonstration or application of open web technology, please add a link to the appropriate section here.

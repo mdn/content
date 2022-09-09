@@ -12,6 +12,7 @@ tags:
   - getBigInt64()
 browser-compat: javascript.builtins.DataView.getBigInt64
 ---
+
 {{JSRef}}
 
 The **`getBigInt64()`** method gets a signed 64-bit integer

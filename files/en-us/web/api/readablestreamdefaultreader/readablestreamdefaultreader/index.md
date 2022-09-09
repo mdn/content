@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamDefaultReader()`**

@@ -10,6 +10,7 @@ tags:
   - Request header
 browser-compat: http.headers.Accept-Language
 ---
+
 {{HTTPSidebar}}
 
 The **`Accept-Language`** request HTTP header indicates the natural language and locale that the client prefers.

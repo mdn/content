@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.defineProperty
 ---
+
 {{JSRef}}
 
 The static method **`Object.defineProperty()`** defines a new

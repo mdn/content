@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement`** interface represents a {{HTMLElement("style")}} element. It inherits properties and methods from its parent, {{domxref("HTMLElement")}}.

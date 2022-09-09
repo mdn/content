@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen.colorDepth
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`Screen.colorDepth`** read-only property returns the

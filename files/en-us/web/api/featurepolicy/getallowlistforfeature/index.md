@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`getAllowlistForFeature()`**

@@ -10,6 +10,7 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.inputs
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`inputs`** read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI input ports.

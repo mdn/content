@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HIDDevice.open
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that the operating system opens the HID device.

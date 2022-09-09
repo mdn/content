@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isInteger
 ---
+
 {{JSRef}}
 
 The **`Number.isInteger()`** method determines whether the

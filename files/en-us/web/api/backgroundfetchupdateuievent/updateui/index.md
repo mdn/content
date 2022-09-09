@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent.updateUI
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`updateUI()`** method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.

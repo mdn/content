@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int32Array.Int32Array
 ---
+
 {{JSRef}}
 
 The **`Int32Array()`** typed array constructor creates an array

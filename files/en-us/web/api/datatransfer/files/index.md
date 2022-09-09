@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.files
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`files`** property of [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) objects is a {{domxref("FileList","list of the files")}} in the drag operation. If the operation includes no files, the list is empty.

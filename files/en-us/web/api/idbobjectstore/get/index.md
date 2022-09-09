@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`get()`** method of the {{domxref("IDBObjectStore")}}

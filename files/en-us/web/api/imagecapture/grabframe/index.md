@@ -15,6 +15,7 @@ tags:
   - grabFrame
 browser-compat: api.ImageCapture.grabFrame
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`grabFrame()`** method of the

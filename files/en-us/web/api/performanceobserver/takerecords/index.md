@@ -12,6 +12,7 @@ tags:
   - takeRecords()
 browser-compat: api.PerformanceObserver.takeRecords
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`takeRecords()`** method of the

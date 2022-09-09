@@ -10,6 +10,7 @@ tags:
   - Web Components
 browser-compat: api.CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.

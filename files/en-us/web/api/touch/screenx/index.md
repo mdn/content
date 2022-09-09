@@ -10,6 +10,7 @@ tags:
   - touch
 browser-compat: api.Touch.screenX
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## Summary

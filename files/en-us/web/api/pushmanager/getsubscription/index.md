@@ -10,6 +10,7 @@ tags:
   - Service Workers
 browser-compat: api.PushManager.getSubscription
 ---
+
 {{ApiRef("Push API")}}
 
 The **`PushManager.getSubscription()`** method of the {{domxref("PushManager")}} interface retrieves an existing push subscription.

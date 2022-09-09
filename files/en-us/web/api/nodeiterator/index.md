@@ -7,6 +7,7 @@ tags:
   - DOM
 browser-compat: api.NodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator`** interface

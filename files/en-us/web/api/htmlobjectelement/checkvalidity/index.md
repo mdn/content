@@ -13,6 +13,7 @@ tags:
   - checkValidity()
 browser-compat: api.HTMLObjectElement.checkValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`checkValidity()`** method of the

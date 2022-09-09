@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: webextensions.api.storage.StorageArea.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes one or more items from the storage area.

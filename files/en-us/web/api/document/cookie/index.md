@@ -13,6 +13,7 @@ tags:
   - cookie
 browser-compat: api.Document.cookie
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} property `cookie` lets

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#OriginAttribute
 ---
+
 {{SVGRef}}
 
 The **`origin`** attribute specifies the origin of motion for an animation. It has no effect in SVG.

@@ -13,6 +13,7 @@ tags:
   - deleteUrl
 browser-compat: webextensions.api.history.deleteUrl
 ---
+
 {{AddonSidebar()}}
 
 Removes all visits to the given URL from the browser history.

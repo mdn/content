@@ -17,6 +17,7 @@ tags:
   - seizures
   - web animation
 ---
+
 This article introduces concepts behind making web content accessible for those with vestibular disorders, and how to measure and prevent content leading to seizures and/or other physical reactions.
 
 ## Overview

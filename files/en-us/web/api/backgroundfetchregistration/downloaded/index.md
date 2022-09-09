@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.downloaded
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`downloaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes that has been downloaded, initially `0`.

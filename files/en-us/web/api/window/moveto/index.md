@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.moveTo
 ---
+
 {{APIRef}}
 
 The **`moveTo()`** method of the {{domxref("Window")}}

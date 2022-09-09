@@ -9,6 +9,7 @@ tags:
   - Reference
   - SVG
 ---
+
 {{CSSRef}}
 
 Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when also scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.

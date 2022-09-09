@@ -11,6 +11,7 @@ tags:
   - Web API
 browser-compat: api.IDBObjectStore.getKey
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getKey()`** method of the

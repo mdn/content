@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.text
 ---
+
 {{APIRef("File API")}}
 
 The **`text()`** method in the

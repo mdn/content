@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.collapseToEnd
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.collapseToEnd()`** method collapses the

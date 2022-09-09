@@ -21,6 +21,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidatePairStats.availableOutgoingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

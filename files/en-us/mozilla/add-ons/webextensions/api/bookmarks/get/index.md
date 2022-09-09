@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.bookmarks.get
 ---
+
 {{AddonSidebar()}}
 
 Given the ID of a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} or an array of such IDs, the **`bookmarks.get()`** method retrieves the matching nodes.

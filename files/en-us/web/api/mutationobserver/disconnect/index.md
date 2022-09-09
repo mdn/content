@@ -21,6 +21,7 @@ tags:
   - stop
 browser-compat: api.MutationObserver.disconnect
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method

@@ -9,6 +9,7 @@ tags:
   - NodeIterator
 browser-compat: api.NodeIterator.previousNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.previousNode()`** method returns the

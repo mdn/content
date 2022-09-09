@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-right
 ---
+
 {{CSSRef}}
 
 The **`padding-right`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on the right of an element.

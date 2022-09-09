@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.window
 ---
+
 {{APIRef}}
 
 The **`window`** property of a {{domxref("Window")}} object points to the window object itself.

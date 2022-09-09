@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-inline
 ---
+
 {{CSSRef}}
 
 The **`overscroll-behavior-inline`** CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.

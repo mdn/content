@@ -13,6 +13,7 @@ tags:
   - parse()
 browser-compat: api.CSSStyleValue.parse
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the {{domxref("CSSStyleValue")}}

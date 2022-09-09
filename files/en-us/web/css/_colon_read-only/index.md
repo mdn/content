@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.read-only
 ---
+
 {{CSSRef}}
 
 The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is not editable by the user.

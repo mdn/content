@@ -12,6 +12,7 @@ tags:
   - abort
 browser-compat: api.FileReader.abort
 ---
+
 {{APIRef("File API")}}
 
 The **`abort`** method aborts the read operation. Upon return,

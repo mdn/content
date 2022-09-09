@@ -14,6 +14,7 @@ tags:
   - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.

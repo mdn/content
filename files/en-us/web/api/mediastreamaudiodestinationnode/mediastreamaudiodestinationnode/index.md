@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("MediaStreamAudioDestinationNode")}} object instance.

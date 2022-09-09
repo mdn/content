@@ -10,6 +10,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Tag
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Tag`** object defines a _type_ of a WebAssembly exception that can be thrown to/from WebAssembly code.

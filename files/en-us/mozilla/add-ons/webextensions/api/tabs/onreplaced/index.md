@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onReplaced
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is replaced with another tab due to prerendering or instant.

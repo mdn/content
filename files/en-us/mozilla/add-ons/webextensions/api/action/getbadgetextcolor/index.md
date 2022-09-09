@@ -12,6 +12,7 @@ tags:
   - getBadgeTextColor
 browser-compat: webextensions.api.action.getBadgeTextColor
 ---
+
 {{AddonSidebar()}}
 
 Gets the text color for the browser action's badge.

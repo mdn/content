@@ -13,6 +13,7 @@ spec-urls:
   - https://drafts.csswg.org/selectors/
   - https://drafts.csswg.org/css-ui/
 ---
+
 {{CSSRef}}
 
 A [CSS](/en-US/docs/Web/CSS) **_pseudo-class_** is a keyword added to a selector that specifies a special state of the selected element(s). For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.

@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.downloads.onChanged
 ---
+
 {{AddonSidebar()}}
 
 The **`onChanged()`** event of the {{WebExtAPIRef("downloads")}} API is fired when any of a {{WebExtAPIRef('downloads.DownloadItem')}}'s properties changes (except for `bytesReceived`).

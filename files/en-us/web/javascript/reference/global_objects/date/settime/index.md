@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setTime
 ---
+
 {{JSRef}}
 
 The **`setTime()`** method sets the {{jsxref("Date")}} object

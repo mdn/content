@@ -23,6 +23,7 @@ tags:
   - XR
   - augmented
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
 
 Assuming you're already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.

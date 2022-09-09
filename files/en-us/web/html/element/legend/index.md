@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.legend
 ---
+
 {{HTMLRef}}
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.

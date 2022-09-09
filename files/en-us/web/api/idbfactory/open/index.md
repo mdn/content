@@ -13,6 +13,7 @@ tags:
   - open
 browser-compat: api.IDBFactory.open
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`open()`** method of the {{domxref("IDBFactory")}} interface requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).

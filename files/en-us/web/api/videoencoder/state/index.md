@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoEncoder.state
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the {{domxref("VideoEncoder")}} interface returns the current state of the underlying codec.

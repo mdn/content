@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.childElementCount`** read-only property

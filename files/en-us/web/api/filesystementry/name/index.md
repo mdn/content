@@ -12,6 +12,7 @@ tags:
   - name
 browser-compat: api.FileSystemEntry.name
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`name`** property of

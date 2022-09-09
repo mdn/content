@@ -10,6 +10,7 @@ tags:
   - Responsive Design
   - Web
 ---
+
 {{CSSRef}}
 
 **Media queries** are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser {{glossary("viewport")}} width).

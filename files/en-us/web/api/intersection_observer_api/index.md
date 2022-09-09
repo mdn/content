@@ -14,6 +14,7 @@ tags:
   - Web
 browser-compat: api.IntersectionObserver
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.

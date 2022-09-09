@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-rule
 ---
+
 {{CSSRef}}
 
 The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between columns in a multi-column layout.

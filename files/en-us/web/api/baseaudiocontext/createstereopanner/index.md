@@ -13,6 +13,7 @@ tags:
   - createStereoPanner
 browser-compat: api.BaseAudioContext.createStereoPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createStereoPanner()` method of the {{ domxref("BaseAudioContext") }} interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply

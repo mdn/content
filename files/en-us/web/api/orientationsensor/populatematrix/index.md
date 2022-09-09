@@ -15,6 +15,7 @@ tags:
   - populateMatrix()
 browser-compat: api.OrientationSensor.populateMatrix
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`populateMatrix`** method of the

@@ -9,6 +9,7 @@ tags:
   - Layout
   - Web
 ---
+
 {{CSSRef}}
 
 The **CSS Multi-column Layout Module** extends the _block layout mode_ to allow the easy definition of multiple columns of text. People have trouble reading text if lines are too long; if it takes too long for the eyes to move from the end of the one line to the beginning of the next, they lose track of which line they were on. Therefore, to make maximum use of a large screen, authors should have limited-width columns of text placed side by side, just as newspapers do.

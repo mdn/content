@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.enable
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.enable()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) enables specific WebGL capabilities

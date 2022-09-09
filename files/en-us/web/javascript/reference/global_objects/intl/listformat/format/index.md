@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.format
 ---
+
 {{JSRef}}
 
 The **`format()`** method returns a string with a

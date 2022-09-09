@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - clear
 ---
+
 {{AddonSidebar}}
 
 Use `BrowserSetting.clear()` to clear any changes the extension has made to the browser setting. The browser setting will revert to its previous value.

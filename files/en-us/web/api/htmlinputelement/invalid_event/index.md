@@ -12,6 +12,7 @@ tags:
   - invalid
 browser-compat: api.HTMLInputElement.invalid_event
 ---
+
 {{APIRef}}
 
 The **`invalid`** event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.

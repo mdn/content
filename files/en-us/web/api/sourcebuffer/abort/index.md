@@ -14,6 +14,7 @@ tags:
   - abort
 browser-compat: api.SourceBuffer.abort
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`abort()`** method of the {{domxref("SourceBuffer")}}

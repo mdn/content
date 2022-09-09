@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.XRRay.XRRay
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRRay()`** constructor creates a new {{domxref("XRRay")}} object which is a geometric ray described by an origin point and a direction vector.

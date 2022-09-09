@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - set
 ---
+
 {{AddonSidebar()}}
 
 Use `BrowserSetting.set()` to change the browser setting to a new value.

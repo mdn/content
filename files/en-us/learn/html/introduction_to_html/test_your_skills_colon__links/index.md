@@ -8,6 +8,7 @@ tags:
   - Links
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to [implement hyperlinks in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).

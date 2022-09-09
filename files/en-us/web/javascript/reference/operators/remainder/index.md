@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 The remainder operator (`%`) returns the remainder left over when one

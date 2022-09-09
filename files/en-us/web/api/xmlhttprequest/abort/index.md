@@ -19,6 +19,7 @@ tags:
   - stop
 browser-compat: api.XMLHttpRequest.abort
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.abort()`** method aborts the request if

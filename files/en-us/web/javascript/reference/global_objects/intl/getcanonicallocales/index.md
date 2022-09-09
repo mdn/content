@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
 ---
+
 {{JSRef}}
 
 The **`Intl.getCanonicalLocales()`** method returns an array

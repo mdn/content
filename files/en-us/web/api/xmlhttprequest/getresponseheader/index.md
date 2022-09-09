@@ -17,6 +17,7 @@ tags:
   - getResponseHeader
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{DOMxRef("XMLHttpRequest")}} method

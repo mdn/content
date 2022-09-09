@@ -16,6 +16,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.outline-color
 ---
+
 {{CSSRef}}
 
 The **`outline-color`** CSS property sets the color of an element's outline.

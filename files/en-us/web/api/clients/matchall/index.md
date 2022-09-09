@@ -11,6 +11,7 @@ tags:
   - ServiceWorker
 browser-compat: api.Clients.matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`matchAll()`** method of the {{domxref("Clients")}}

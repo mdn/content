@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.classList
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.classList`** is a read-only property that

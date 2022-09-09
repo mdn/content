@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error.lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`lineNumber`** property contains the line number in the file that raised this error.

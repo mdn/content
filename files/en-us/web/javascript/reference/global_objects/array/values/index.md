@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new

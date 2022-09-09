@@ -6,6 +6,7 @@ tags:
   - writing-guide
 page-type: mdn-writing-guide
 ---
+
 {{MDNSidebar}}
 
 This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) before proceeding.

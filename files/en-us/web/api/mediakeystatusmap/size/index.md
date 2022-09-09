@@ -11,6 +11,7 @@ tags:
   - size
 browser-compat: api.MediaKeyStatusMap.size
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`size`** read-only property of

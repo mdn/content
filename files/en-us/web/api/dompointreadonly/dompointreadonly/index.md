@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly()`**

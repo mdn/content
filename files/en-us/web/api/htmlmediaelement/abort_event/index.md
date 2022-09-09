@@ -11,6 +11,7 @@ tags:
   - abort
 browser-compat: api.HTMLMediaElement.abort_event
 ---
+
 {{APIRef}}
 
 The **`abort`** event is fired when the resource was not fully loaded, but not as the result of an error.

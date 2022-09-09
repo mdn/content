@@ -13,6 +13,7 @@ tags:
   - getAllCookieStores
 browser-compat: webextensions.api.cookies.getAllCookieStores
 ---
+
 {{AddonSidebar()}}
 
 The **`getAllCookieStores()`** method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.

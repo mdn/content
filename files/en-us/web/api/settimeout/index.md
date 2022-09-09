@@ -14,6 +14,7 @@ tags:
   - Polyfill
 browser-compat: api.setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`setTimeout()`** method sets a timer which executes a function or specified

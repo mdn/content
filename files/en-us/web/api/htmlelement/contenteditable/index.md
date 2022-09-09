@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentEditable`** property of

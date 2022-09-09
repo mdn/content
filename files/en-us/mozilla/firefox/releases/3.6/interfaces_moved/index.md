@@ -8,6 +8,7 @@ tags:
   - Interfaces
   - XPCOM
 ---
+
 {{FirefoxSidebar}}
 
 These interfaces were moved to new locations in the tree in Gecko 1.9.2.

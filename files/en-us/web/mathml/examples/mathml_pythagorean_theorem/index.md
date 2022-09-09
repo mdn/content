@@ -10,6 +10,7 @@ tags:
   - MathML
   - NeedsBeginnerUpdate
 ---
+
 We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem):
 
 **Statement**: In a right triangle, the square of the hypotenuse is equal to

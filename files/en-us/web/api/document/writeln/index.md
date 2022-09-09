@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 > **Warning:** Use of the `document.writeln()` method is strongly discouraged.

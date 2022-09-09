@@ -10,6 +10,7 @@ tags:
   - white-space
 browser-compat: css.properties.white-space
 ---
+
 {{CSSRef}}
 
 The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.

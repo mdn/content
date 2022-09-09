@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.detach
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.detach()`** method does nothing. It used to

@@ -11,6 +11,7 @@ tags:
   - Reference
   - msZoomTo
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_header}}
 
 The **`msZoomTo`** method scrolls and/or zooms an element to its specified coordinate with animation.

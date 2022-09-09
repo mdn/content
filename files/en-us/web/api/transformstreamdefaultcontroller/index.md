@@ -9,6 +9,7 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`TransformStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.

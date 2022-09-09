@@ -20,6 +20,7 @@ tags:
   - state
 browser-compat: api.RTCIceCandidatePairStats.state
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`state`** property in a string that indicates the state of the check list of which the candidate pair is a member.

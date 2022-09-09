@@ -25,6 +25,7 @@ tags:
   - transform
 browser-compat: api.XRPose
 ---
+
 {{APIRef("WebXR Device API")}}{{securecontext_header}}
 
 `XRPose` is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface representing a position and orientation in the 3D space, relative to the {{domxref("XRSpace")}} within which it resides. The `XRSpace`—which is either an {{domxref("XRReferenceSpace")}} or an {{domxref("XRBoundedReferenceSpace")}}—defines the coordinate system used for the pose and, in the case of an {{domxref("XRViewerPose")}}, its underlying views.

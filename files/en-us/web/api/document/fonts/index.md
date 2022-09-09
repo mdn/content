@@ -13,6 +13,7 @@ tags:
   - Property
 browser-compat: api.Document.fonts
 ---
+
 {{APIRef("DOM")}}
 
 The **`fonts`** property of the

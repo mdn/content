@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.getEntriesByName
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntriesByName()`** method returns a list of

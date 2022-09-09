@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean.Boolean
 ---
+
 {{JSRef}}
 
 The **`Boolean()`** constructor can create {{jsxref("Boolean")}} objects or return primitive values of type boolean.

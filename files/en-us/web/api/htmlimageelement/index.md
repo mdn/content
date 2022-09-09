@@ -15,6 +15,7 @@ tags:
   - picture
 browser-compat: api.HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.

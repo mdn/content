@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData.numberOfFrames
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`numberOfFrames`** read-only property of the {{domxref("AudioData")}} interface returns the number of frames in the `AudioData` object.

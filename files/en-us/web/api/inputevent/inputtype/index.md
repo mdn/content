@@ -14,6 +14,7 @@ tags:
   - inputType
 browser-compat: api.InputEvent.inputType
 ---
+
 {{APIRef("UI Events")}}
 
 The **`inputType`** read-only property of the

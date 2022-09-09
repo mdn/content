@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
+
 {{JSRef}}
 
 The **`toExponential()`** method returns a string representing

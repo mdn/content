@@ -11,6 +11,7 @@ tags:
   - abort()
 browser-compat: api.AbortController.abort
 ---
+
 {{APIRef("DOM")}}
 
 The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request before it has completed.

@@ -11,6 +11,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.normalize
 ---
+
 {{JSRef}}
 
 The **`normalize()`** method returns the Unicode Normalization

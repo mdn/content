@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 The **`eventPhase`** read-only property of the

@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.hide
 ---
+
 {{AddonSidebar()}}
 
 Hides one or more tabs.

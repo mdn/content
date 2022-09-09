@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method creates a new typed array with the

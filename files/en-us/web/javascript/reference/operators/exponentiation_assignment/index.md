@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation assignment operator (`**=`) raises the value of a

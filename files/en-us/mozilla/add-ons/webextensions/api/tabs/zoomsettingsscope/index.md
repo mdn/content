@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.ZoomSettingsScope
 ---
+
 {{AddonSidebar()}}
 
 Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to `per-origin` when {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic", and is always `per-tab` otherwise.

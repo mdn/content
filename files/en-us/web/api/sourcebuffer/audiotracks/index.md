@@ -13,6 +13,7 @@ tags:
   - audiotracks
 browser-compat: api.SourceBuffer.audioTracks
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`audioTracks`** read-only property of the

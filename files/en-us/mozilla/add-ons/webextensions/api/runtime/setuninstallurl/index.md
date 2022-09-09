@@ -13,6 +13,7 @@ tags:
   - setUninstallURL
 browser-compat: webextensions.api.runtime.setUninstallURL
 ---
+
 {{AddonSidebar()}}
 
 Sets the URL to be visited when the extension is uninstalled. This may be used to clean up server-side data, do analytics, or implement surveys. The URL can be a maximum 255 characters.

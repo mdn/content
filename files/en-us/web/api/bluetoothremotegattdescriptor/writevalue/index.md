@@ -14,6 +14,7 @@ tags:
   - writeValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**

@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 MDN supports adding quicklinks to pages; these are boxes containing a potentially hierarchical list of links to other pages on MDN or to pages off-site.

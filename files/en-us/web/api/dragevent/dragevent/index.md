@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DragEvent.DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 This constructor is used to create a synthetic {{domxref("DragEvent")}} object.

@@ -11,6 +11,7 @@ tags:
   - mode
 browser-compat: api.Lock.mode
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`mode`** read-only property of the {{domxref("Lock")}} interface returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested.

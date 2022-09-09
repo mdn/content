@@ -10,6 +10,7 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replace
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`replace()`** method of the {{domxref("CSSStyleSheet")}} interface asynchronously replaces the content of the stylesheet with the content passed into it. The method returns a promise that resolves with the `CSSStyleSheet` object.

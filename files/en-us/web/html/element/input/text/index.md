@@ -14,6 +14,7 @@ tags:
   - text input
 browser-compat: html.elements.input.type_text
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.

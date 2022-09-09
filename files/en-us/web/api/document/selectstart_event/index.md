@@ -11,6 +11,7 @@ tags:
   - selectstart
 browser-compat: api.Document.selectstart_event
 ---
+
 {{APIRef}}
 
 The **`selectstart`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when a user starts a new selection.

@@ -10,6 +10,7 @@ tags:
   - Mobile
   - NeedsActiveLearning
 ---
+
 This article provides basic tips to help you design websites for any kind of user.
 
 <table class="standard-table">

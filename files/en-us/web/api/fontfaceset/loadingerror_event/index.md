@@ -10,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.loadingerror_event
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `loadingerror` event fires when fonts have finished loading, but some or all fonts have failed to load.

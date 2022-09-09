@@ -12,6 +12,7 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.getTabValue
 ---
+
 {{AddonSidebar()}}
 
 Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.

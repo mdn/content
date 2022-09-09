@@ -14,6 +14,7 @@ tags:
   - play
 browser-compat: api.HTMLMediaElement.play
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}}

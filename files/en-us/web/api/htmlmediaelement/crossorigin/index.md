@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.

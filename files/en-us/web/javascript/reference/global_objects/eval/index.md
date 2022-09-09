@@ -10,6 +10,7 @@ tags:
   - eval
 browser-compat: javascript.builtins.eval
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Warning:** Executing JavaScript from a string is an enormous security

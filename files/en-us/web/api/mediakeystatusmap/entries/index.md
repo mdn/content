@@ -11,6 +11,7 @@ tags:
   - entries()
 browser-compat: api.MediaKeyStatusMap.entries
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`entries()`** read-only property

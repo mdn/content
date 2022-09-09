@@ -11,6 +11,7 @@ tags:
   - ServiceWorker
 browser-compat: api.ExtendableEvent.ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableEvent()`** constructor creates a new {{domxref("ExtendableEvent")}} object.

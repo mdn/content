@@ -6,6 +6,7 @@ tags:
   - Glossary
   - NeedsContent
 ---
+
 _Mutable_ is a type of variable that can be changed. In {{glossary("JavaScript")}}, only {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable, not {{Glossary("primitive", "primitive values")}}.
 
 (You _can_ make a variable name point to a new value, but the previous value is still held in memory. Hence the need for garbage collection.)

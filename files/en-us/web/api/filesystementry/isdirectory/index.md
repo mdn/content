@@ -13,6 +13,7 @@ tags:
   - isDirectory
 browser-compat: api.FileSystemEntry.isDirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isDirectory`**

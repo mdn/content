@@ -16,6 +16,7 @@ tags:
   - sound
 browser-compat: html.elements.audio
 ---
+
 {{HTMLRef}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
@@ -38,6 +39,13 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("controls")}}
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
+
+- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
+
+  - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
+
+    The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
+
 - {{htmlattrdef("crossorigin")}}
 
   - : This enumerated attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:

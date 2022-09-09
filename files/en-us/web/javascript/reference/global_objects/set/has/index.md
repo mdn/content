@@ -9,6 +9,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an

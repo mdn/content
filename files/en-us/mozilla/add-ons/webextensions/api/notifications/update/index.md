@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a notification, given its ID.

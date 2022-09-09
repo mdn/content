@@ -11,6 +11,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.setSelectionRange
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setSelectionRange()`** method sets the

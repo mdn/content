@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaPosInSet
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPosInSet`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.

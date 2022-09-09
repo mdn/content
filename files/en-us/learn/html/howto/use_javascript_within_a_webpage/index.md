@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - OpenPractices
 ---
+
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 
 <table>

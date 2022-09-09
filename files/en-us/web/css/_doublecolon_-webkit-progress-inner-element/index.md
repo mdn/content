@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-progress-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the outermost container of the {{HTMLElement("progress")}} element. It is the parent of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.

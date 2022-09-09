@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 When an HTML document has been switched to

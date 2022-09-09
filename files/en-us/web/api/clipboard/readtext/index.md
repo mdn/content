@@ -19,6 +19,7 @@ tags:
   - readText
 browser-compat: api.Clipboard.readText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **{{domxref("Clipboard")}}** interface's

@@ -22,6 +22,7 @@ tags:
   - speed
 browser-compat: api.RTCIceCandidatePairStats.availableIncomingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

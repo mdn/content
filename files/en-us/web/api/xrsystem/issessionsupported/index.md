@@ -17,6 +17,7 @@ tags:
   - isSessionSupported
 browser-compat: api.XRSystem.isSessionSupported
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSystem")}} method

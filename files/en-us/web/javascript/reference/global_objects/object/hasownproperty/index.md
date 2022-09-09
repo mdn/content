@@ -9,6 +9,7 @@ tags:
   - hasOwnProperty
 browser-compat: javascript.builtins.Object.hasOwnProperty
 ---
+
 {{JSRef}}
 
 The **`hasOwnProperty()`** method returns a boolean indicating whether the

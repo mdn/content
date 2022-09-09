@@ -10,6 +10,7 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.scheduler
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The global read-only **`scheduler`** property is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).

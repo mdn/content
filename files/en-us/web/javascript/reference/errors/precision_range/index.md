@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "precision is out of range" occurs when a number that's

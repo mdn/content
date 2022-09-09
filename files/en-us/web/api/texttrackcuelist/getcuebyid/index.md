@@ -12,6 +12,7 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList.getCueById
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`getCueById()`** method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the `TextTrackCueList` object whose identifier matches the value of `id`.

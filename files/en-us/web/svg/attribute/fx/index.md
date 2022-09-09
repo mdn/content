@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.radialGradient.fx
 ---
+
 {{SVGRef}}
 
 The **`fx`** attribute defines the x-axis coordinate of the focal point for a radial gradient.

@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getFloat32
 ---
+
 {{JSRef}}
 
 The **`getFloat32()`** method gets a signed 32-bit float

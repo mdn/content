@@ -4,6 +4,7 @@ slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`allowsFeature()`** method of

@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.localeCompare
 ---
+
 {{JSRef}}
 
 The **`localeCompare()`** method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method simply calls `Intl.Collator`.

@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-gap
 ---
+
 {{CSSRef}}
 
 The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("Gutters","gutter")}}) between an element's columns.

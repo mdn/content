@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventRotationRate.gamma
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 This property indicates the rate of rotation around the Y axis, in degrees per second.

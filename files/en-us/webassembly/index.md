@@ -52,12 +52,24 @@ And what's even better is that it is being developed as a web standard via the [
   - : A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
   - : A `WebAssembly.Instance` object is a stateful, executable instance of a `Module`.  `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
-- {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
+- {{jsxref("WebAssembly.compile()")}}
+  - : The `WebAssembly.compile()` function compiles WebAssembly binary code into a `WebAssembly.Module` object.
+- {{jsxref("WebAssembly.compileStreaming()")}}
+  - : The `WebAssembly.compileStreaming()` function compiles a `WebAssembly.Module` directly from a streamed underlying source.
+- {{jsxref("WebAssembly.instantiate()")}}
+  - : The `WebAssembly.instantiate()` function allows you to compile and instantiate WebAssembly code.
+- {{jsxref("WebAssembly.instantiateStreaming()")}}
   - : The `WebAssembly.instantiateStreaming()` function is the primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
+- {{jsxref("WebAssembly.validate()")}}
+  - : The `WebAssembly.validate()` function validates a given typed array of WebAssembly binary code.
 - {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
   - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
   - : A `WebAssembly.Table` object is a resizable typed array of opaque values, like function references, that are accessed by an `Instance`.
+- {{jsxref("WebAssembly.Tag()")}}
+  - : The `WebAssembly.Tag` object defines a type of WebAssembly exception that can be thrown to/from WebAssembly code.
+- {{jsxref("WebAssembly.Exception()")}}
+  - : The `WebAssembly.Exception` object represents a runtime exception thrown from WebAssembly to JavaScript, or thrown from JavaScript to a WebAssembly exception handler.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : Creates a new WebAssembly `CompileError` object.
 - {{jsxref("WebAssembly.LinkError()")}}

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CustomEvent.CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}} object.

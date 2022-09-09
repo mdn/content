@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.InstallEvent.InstallEvent
 ---
+
 {{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.

@@ -13,6 +13,7 @@ browser-compat:
   - css.properties.width.fit-content_function
   - css.properties.grid-template-columns.fit-content
 ---
+
 {{CSSRef}}
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.

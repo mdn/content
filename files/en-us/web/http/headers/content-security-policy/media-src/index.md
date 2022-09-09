@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.media-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

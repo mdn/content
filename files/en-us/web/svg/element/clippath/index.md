@@ -7,6 +7,7 @@ tags:
   - SVG
 browser-compat: svg.elements.clipPath
 ---
+
 {{SVGRef}}
 
 The **`<clipPath>`** [SVG](/en-US/docs/Web/SVG) element defines a clipping path, to be used by the {{SVGAttr("clip-path")}} property.

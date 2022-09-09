@@ -20,6 +20,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.city
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`city`** read-only property of

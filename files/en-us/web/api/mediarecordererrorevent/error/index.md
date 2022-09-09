@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
+
 {{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only `error` property in the

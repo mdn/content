@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferTexture2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.framebufferTexture2D()`** method

@@ -15,6 +15,7 @@ tags:
   - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
+
 {{APIRef("CSS Painting API")}}
 
 The

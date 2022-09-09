@@ -12,6 +12,7 @@ tags:
   - useMap
 browser-compat: api.HTMLObjectElement.useMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`useMap`** property of the

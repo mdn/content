@@ -13,6 +13,7 @@ tags:
   - onerror
 browser-compat: api.SharedWorker.error_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`error`** event of the {{domxref("SharedWorker")}} interface fires when an error occurs in the worker.

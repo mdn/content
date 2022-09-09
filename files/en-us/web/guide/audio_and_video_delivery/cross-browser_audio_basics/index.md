@@ -9,6 +9,7 @@ tags:
   - Media
   - events
 ---
+
 This article provides:
 
 - a basic guide to creating a cross-browser HTML audio player with all the associated attributes, properties, and events explained

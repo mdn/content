@@ -11,6 +11,7 @@ tags:
   - remove
 browser-compat: webextensions.api.permissions.remove
 ---
+
 {{AddonSidebar()}}
 
 Ask to give up the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.

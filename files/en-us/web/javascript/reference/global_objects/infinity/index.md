@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 The global property **`Infinity`** is a numeric value representing infinity.

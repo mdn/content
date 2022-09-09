@@ -13,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.WorkerNavigator.permissions
 ---
+
 {{APIRef("Web Workers API")}}{{SeeCompatTable}}
 
 The **`WorkerNavigator.permissions`** read-only property

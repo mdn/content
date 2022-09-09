@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRProjectionLayer.textureHeight
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`textureHeight`** property of the {{domxref("XRProjectionLayer")}} interface indicates the height in pixels of the color textures of this layer.

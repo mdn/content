@@ -12,6 +12,7 @@ tags:
   - hasPointerCapture
 browser-compat: api.Element.hasPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasPointerCapture()`** method of the

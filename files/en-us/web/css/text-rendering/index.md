@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-rendering
 ---
+
 {{CSSRef}}
 
 The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.

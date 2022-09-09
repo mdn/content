@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.ImageDecoder.decode
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`decode()`** method of the {{domxref("ImageDecoder")}} interface enqueues a control message to decode the frame of an image.

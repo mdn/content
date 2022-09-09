@@ -11,6 +11,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaY
 ---
+
 {{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaY`** read-only property is a

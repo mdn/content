@@ -10,6 +10,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.fromCharCode
 ---
+
 {{JSRef}}
 
 The static **`String.fromCharCode()`** method returns a string

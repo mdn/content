@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.ctrlKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.ctrlKey`** read-only property returns a

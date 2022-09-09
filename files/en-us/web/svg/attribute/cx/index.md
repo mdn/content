@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CX
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCXAttribute
 ---
+
 {{SVGRef}}
 
 The **`cx`** attribute define the x-axis coordinate of a center point.

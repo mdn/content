@@ -10,6 +10,7 @@ tags:
   - Scroll
 browser-compat: api.Element.scroll_event
 ---
+
 {{APIRef}}
 
 The **`scroll`** event fires when an element has been scrolled.

@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaChecked
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaChecked`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.

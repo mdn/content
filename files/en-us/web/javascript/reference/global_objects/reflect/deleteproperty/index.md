@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
+
 {{JSRef}}
 
 The static

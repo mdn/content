@@ -18,6 +18,7 @@ tags:
   - trouble shoot
   - troubleshoot
 ---
+
 ## Problem
 
 You have a form where you ask your user a question, but the answer is mentioned in the question itself. A classic example we all know from our browser settings is the setting "Delete history after x days". "Delete history after" is to the left of the textbox, x is the number, for example 21, and the word "days" follows the textbox, forming a sentence that is easy to understand.

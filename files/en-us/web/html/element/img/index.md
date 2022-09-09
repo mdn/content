@@ -21,6 +21,7 @@ tags:
   - Web
 browser-compat: html.elements.img
 ---
+
 {{HTMLRef}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.

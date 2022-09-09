@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.History.back
 ---
+
 {{APIRef("History API")}}
 
 The **`History.back()`** method causes

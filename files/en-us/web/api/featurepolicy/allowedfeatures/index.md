@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`allowedFeatures()`** method of

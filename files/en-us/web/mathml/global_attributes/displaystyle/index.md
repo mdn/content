@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: mathml.global_attributes.displaystyle
 ---
+
 {{MathMLRef("Global_attributes")}}
 
 The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) of a MathML element.

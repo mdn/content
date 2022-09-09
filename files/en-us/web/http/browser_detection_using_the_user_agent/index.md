@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Web Development
 ---
+
 {{HTTPSidebar}}
 
 Serving different Web pages or services to different browsers is usually a bad idea. The Web is meant to be accessible to everyone, regardless of which browser or device they're using. There are ways to develop your website to progressively enhance itself based on the availability of features rather than by targeting specific browsers.

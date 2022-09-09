@@ -14,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardEvent.ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}},

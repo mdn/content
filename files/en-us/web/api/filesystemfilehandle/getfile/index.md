@@ -12,6 +12,7 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle.getFile
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getFile()`** method of the

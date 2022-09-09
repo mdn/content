@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.key
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`key()`** method of the {{domxref("Storage")}} interface,

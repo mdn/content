@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent`** constructor creates a new {{domxref("MediaKeyMessageEvent")}} object.

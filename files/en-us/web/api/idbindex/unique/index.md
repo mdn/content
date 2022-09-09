@@ -13,6 +13,7 @@ tags:
   - unique
 browser-compat: api.IDBIndex.unique
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`unique`** read-only property returns a boolean that

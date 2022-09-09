@@ -10,6 +10,7 @@ tags:
   - word-break
 browser-compat: css.properties.word-break
 ---
+
 {{CSSRef}}
 
 The **`word-break`** [CSS](/en-US/docs/Web/CSS) property sets whether line breaks appear wherever the text would otherwise overflow its content box.

@@ -8,6 +8,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/FileAPI/
 ---
+
 {{DefaultAPISidebar("File API")}}
 
 ## Concepts and Usage

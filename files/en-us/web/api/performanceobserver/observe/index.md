@@ -11,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`observe()`** method of the

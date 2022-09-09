@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

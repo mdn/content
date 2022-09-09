@@ -12,6 +12,7 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11.installModule
 ---
+
 {{AddonSidebar()}}
 
 Installs the named PKCS #11 module, making it available to Firefox.

@@ -12,6 +12,7 @@ tags:
   - registerProtocolHandler
 browser-compat: api.Navigator.registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 The **{{domxref("Navigator")}}** method **`registerProtocolHandler()`** lets websites register their ability to open or handle particular URL schemes (aka protocols).

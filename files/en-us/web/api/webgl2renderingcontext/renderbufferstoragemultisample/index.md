@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
+
 {{APIRef("WebGL")}}
 
 The

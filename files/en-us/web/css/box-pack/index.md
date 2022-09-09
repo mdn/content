@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.box-pack
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.

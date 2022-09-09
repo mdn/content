@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`Location.assign()`** method causes the window to load

@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-box-image
 ---
+
 {{ CSSRef() }} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` sets the mask image for an element's border box.

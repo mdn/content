@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
 ---
+
 {{JSRef}}
 
 The **`handler.isExtensible()`** method is a trap for

@@ -10,6 +10,7 @@ tags:
   - constants
 browser-compat: javascript.statements.const
 ---
+
 {{jsSidebar("Statements")}}
 
 Constants are block-scoped, much like variables declared using the

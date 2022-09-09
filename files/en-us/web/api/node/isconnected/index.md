@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.isConnected
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`isConnected`** property of the {{domxref("Node")}} interface

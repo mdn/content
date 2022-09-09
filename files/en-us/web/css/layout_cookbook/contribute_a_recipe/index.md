@@ -10,6 +10,7 @@ tags:
   - cookbook
   - recipes
 ---
+
 {{CSSRef}}
 
 If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.

@@ -6,6 +6,7 @@ tags:
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 In previous guides we've looked at placing items by the lines created by defining grid tracks and also how to place items using named template areas. In this guide we are going to look at how these two things work together when we use named lines. Line naming is incredibly useful, but some of the more baffling looking grid syntax comes from this combination of names and track sizes. Once you work through some examples it should become clearer and easier to work with.

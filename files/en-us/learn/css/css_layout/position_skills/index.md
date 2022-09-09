@@ -9,6 +9,7 @@ tags:
   - Layout
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [positioning in CSS](/en-US/docs/Learn/CSS/CSS_layout/Positioning) using the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.

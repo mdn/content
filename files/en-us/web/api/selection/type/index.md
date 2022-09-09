@@ -10,6 +10,7 @@ tags:
   - Type
 browser-compat: api.Selection.type
 ---
+
 {{APIRef("DOM")}}
 
 The **`type`** read-only property of the

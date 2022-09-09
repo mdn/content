@@ -7,6 +7,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Function.length
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's **`length`** property indicates the number of parameters expected by the function.
