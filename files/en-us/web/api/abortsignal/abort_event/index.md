@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.AbortSignal.abort_event
 ---
+
 {{APIRef("DOM")}}
 
 The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e. using {{domxref("AbortController.abort()")}}.

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.ContactsManager.select
 ---
+
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`select()`** method of the

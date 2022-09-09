@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.playbackRate
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`Animation.playbackRate`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets the playback rate of the animation.

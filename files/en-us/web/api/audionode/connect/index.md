@@ -13,6 +13,7 @@ tags:
   - connect
 browser-compat: api.AudioNode.connect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `connect()` method of the {{ domxref("AudioNode") }} interface lets

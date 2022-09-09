@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.Blob
 ---
+
 {{APIRef("File API")}}
 
 The **`Blob()`** constructor returns a

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchEvent.registration
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.

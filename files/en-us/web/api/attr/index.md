@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Attr
 ---
+
 {{APIRef("DOM")}}
 
 The **`Attr`** interface represents one of an element's attributes as an object. In most situations, you will directly retrieve the attribute value as a string (e.g., {{domxref("Element.getAttribute()")}}), but certain functions (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating return `Attr` instances.

@@ -13,6 +13,7 @@ tags:
   - isPrimary
 browser-compat: api.BluetoothRemoteGATTService.isPrimary
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.isPrimary`** read-only property

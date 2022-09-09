@@ -13,6 +13,7 @@ tags:
   - postMessage
 browser-compat: api.Client.postMessage
 ---
+
 {{APIRef("Service Worker API")}}
 
 The **`postMessage()`** method of the

@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelMergerNode.ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`ChannelMergerNode()`** constructor creates a new {{domxref("ChannelMergerNode")}} object instance.

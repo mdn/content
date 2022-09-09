@@ -10,6 +10,7 @@ tags:
   - CanvasRenderingContext2D
 browser-compat: api.CanvasRenderingContext2D.getContextAttributes
 ---
+
 {{APIRef("WebGL")}}
 
 The **`CanvasRenderingContext2D.getContextAttributes()`**

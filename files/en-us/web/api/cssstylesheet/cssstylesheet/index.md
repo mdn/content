@@ -9,6 +9,7 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).

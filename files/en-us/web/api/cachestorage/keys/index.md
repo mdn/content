@@ -13,6 +13,7 @@ tags:
   - keys
 browser-compat: api.CacheStorage.keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`keys()`** method of the {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the order they were created.

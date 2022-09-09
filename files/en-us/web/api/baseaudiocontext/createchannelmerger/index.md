@@ -13,6 +13,7 @@ tags:
   - createChannelMerger
 browser-compat: api.BaseAudioContext.createChannelMerger
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createChannelMerger()` method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ChannelMergerNode")}},

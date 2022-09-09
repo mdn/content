@@ -20,6 +20,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} interface's

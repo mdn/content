@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`CSSPrimitiveValue`** interface derives from the {{DOMxRef("CSSValue")}} interface and represents the current computed value of a CSS property.

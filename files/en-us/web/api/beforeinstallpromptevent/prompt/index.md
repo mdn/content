@@ -11,6 +11,7 @@ tags:
   - prompt
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
+
 {{SeeCompatTable}}
 
 The **`prompt()`** method of the

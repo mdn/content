@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `AudioDestinationNode` interface represents the end destination of an audio graph in a given context — usually the speakers of your device. It can also be the node that will "record" the audio data when used with an `OfflineAudioContext`.

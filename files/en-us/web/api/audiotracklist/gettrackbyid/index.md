@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("AudioTrackList")}}** method

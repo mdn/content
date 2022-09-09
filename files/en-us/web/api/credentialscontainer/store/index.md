@@ -12,6 +12,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.store
 ---
+
 {{APIRef("Credential Management API")}}
 
 The **`store()`** method of the

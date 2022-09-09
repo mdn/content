@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData.format
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`format`** read-only property of the {{domxref("AudioData")}} interface returns the sample format of the `AudioData` object.

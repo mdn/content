@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.getTransports
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`getTransports()`** is a method of the

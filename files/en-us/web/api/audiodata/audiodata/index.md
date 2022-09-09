@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData.AudioData
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`AudioData()`** constructor creates a new {{domxref("AudioData")}} object which represents an individual audio sample.

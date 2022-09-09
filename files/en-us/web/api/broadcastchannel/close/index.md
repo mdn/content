@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.close
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel.close()`** terminates the connection to

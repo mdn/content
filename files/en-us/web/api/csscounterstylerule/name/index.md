@@ -10,6 +10,7 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.name
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the {{CSSxRef("&lt;custom-ident&gt;")}} defined as the `name` for the associated rule.
