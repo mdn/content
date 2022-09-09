@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getRGBColorValue()`** method of the

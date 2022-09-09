@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSMediaRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} rule.

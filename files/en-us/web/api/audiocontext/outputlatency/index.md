@@ -12,6 +12,7 @@ tags:
   - outputLatency
 browser-compat: api.AudioContext.outputLatency
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`outputLatency`** read-only property of

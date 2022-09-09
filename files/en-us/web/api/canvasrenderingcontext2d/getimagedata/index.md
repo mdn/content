@@ -18,6 +18,7 @@ tags:
   - img
 browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method

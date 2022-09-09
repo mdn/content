@@ -14,6 +14,7 @@ tags:
   - authenticatedSignedWrites
 browser-compat: api.BluetoothCharacteristicProperties.authenticatedSignedWrites
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`authenticatedSignedWrites`** read-only

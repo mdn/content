@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValueList
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`CSSValueList`** interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.

@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.BroadcastChannel.messageerror_event
 ---
+
 {{APIRef}}
 
 The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object when a message that can't be deserialized arrives on the channel.

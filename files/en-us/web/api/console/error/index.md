@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.error
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.error()`** method outputs an error message to the Web console.

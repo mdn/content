@@ -9,6 +9,7 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`AnimationEvent`** interface represents events providing information related to [animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations).

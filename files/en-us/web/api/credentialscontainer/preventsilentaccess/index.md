@@ -12,6 +12,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.preventSilentAccess
 ---
+
 {{APIRef("Credential Management API")}}
 
 The **`preventSilentAccess()`** method

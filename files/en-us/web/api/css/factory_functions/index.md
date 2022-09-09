@@ -11,6 +11,7 @@ tags:
   - factory function
 browser-compat: api.CSS
 ---
+
 {{APIRef("CSSOM")}}
 {{SeeCompatTable}}
 

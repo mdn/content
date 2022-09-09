@@ -13,6 +13,7 @@ tags:
   - match
 browser-compat: api.Cache.match
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.

@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`registerProcessor`** method of the

@@ -12,6 +12,7 @@ tags:
   - has
 browser-compat: api.CacheStorage.has
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`has()`** method of the {{domxref("CacheStorage")}}

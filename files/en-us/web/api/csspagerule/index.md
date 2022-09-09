@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSPageRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSPageRule`** represents a single CSS {{cssxref("@page")}} rule.

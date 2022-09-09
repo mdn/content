@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.removeProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSStyleDeclaration.removeProperty()`** method interface

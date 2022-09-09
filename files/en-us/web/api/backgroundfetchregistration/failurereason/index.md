@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.failureReason
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.

@@ -16,6 +16,7 @@ tags:
   - paste
 browser-compat: api.ClipboardItem.types
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The read-only

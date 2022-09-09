@@ -12,6 +12,7 @@ tags:
   - createChannelSplitter
 browser-compat: api.BaseAudioContext.createChannelSplitter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createChannelSplitter()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("ChannelSplitterNode")}},

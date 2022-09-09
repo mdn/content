@@ -14,6 +14,7 @@ tags:
   - createPeriodicWave
 browser-compat: api.BaseAudioContext.createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPeriodicWave()` method of the {{ domxref("BaseAudioContext") }} Interface

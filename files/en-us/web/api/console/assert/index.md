@@ -12,6 +12,7 @@ tags:
   - web console
 browser-compat: api.console.assert
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.assert()`** method writes an error message to

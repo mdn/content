@@ -10,6 +10,7 @@ tags:
   - data
 browser-compat: api.CompositionEvent.data
 ---
+
 {{APIRef("UI Events")}}
 
 The **`data`** read-only property of the

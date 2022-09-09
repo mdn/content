@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.CookieStore.change_event
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 A `change` event is fired at a {{domxref("CookieStore")}} object when a change is made to any cookie.
