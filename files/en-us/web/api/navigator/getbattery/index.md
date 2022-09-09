@@ -12,6 +12,7 @@ tags:
   - getBattery
 browser-compat: api.Navigator.getBattery
 ---
+
 {{ ApiRef("Battery API") }}
 
 The **`getBattery()`** method provides information about the

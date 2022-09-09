@@ -11,6 +11,7 @@ tags:
   - abort
 browser-compat: api.PaymentRequest.abort
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}

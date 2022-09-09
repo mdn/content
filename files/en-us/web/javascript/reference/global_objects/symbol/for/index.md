@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.for
 ---
+
 {{JSRef}}
 
 The **`Symbol.for(key)`** method searches for existing symbols

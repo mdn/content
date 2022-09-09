@@ -13,6 +13,7 @@ tags:
   - scrolling
 browser-compat: api.Window.scrollByPages
 ---
+
 {{ ApiRef() }} {{Non-standard_header}}
 
 The **`Window.scrollByPages()`** method scrolls the current

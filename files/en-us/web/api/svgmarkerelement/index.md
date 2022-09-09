@@ -9,6 +9,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMarkerElement`** interface provides access to the properties of {{SVGElement("marker")}} elements, as well as methods to manipulate them. The {{SVGElement("marker")}} element defines the graphics used for drawing marks on a shape.

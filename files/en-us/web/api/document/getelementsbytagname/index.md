@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.getElementsByTagName
 ---
+
 {{APIRef("DOM")}}
 
 The **`getElementsByTagName`** method of

@@ -11,6 +11,7 @@ tags:
   - screen
 browser-compat: api.Screen.orientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 The **`orientation`** read-only property of the

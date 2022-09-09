@@ -13,6 +13,7 @@ tags:
   - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setCustomValidity()`** method sets a custom validity message for the element.

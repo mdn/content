@@ -12,6 +12,7 @@ tags:
   - matchAll
 browser-compat: api.Cache.matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`matchAll()`** method of the {{domxref("Cache")}}

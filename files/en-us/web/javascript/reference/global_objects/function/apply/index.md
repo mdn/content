@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Function.apply
 ---
+
 {{JSRef}}
 
 The **`apply()`** method calls the specified function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).

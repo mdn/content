@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.substringData
 ---
+
 {{APIRef("DOM")}}
 
 The **`substringData()`** method of the {{domxref("CharacterData")}} interface

@@ -16,6 +16,7 @@ tags:
   - toJSON
 browser-compat: api.RTCIceCandidate.toJSON
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidate")}} method **`toJSON()`** converts the `RTCIceCandidate` on which it's called into JSON.

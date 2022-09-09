@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`getClientExtensionResults()`** is a method of the

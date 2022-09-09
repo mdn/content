@@ -13,6 +13,7 @@ tags:
   - credential management
 browser-compat: api.FederatedCredential.protocol
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 The **`protocol`** property of the

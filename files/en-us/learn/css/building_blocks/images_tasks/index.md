@@ -9,6 +9,7 @@ tags:
   - Form
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements).

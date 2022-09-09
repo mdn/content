@@ -14,6 +14,7 @@ tags:
   - timestampOffset
 browser-compat: api.SourceBuffer.timestampOffset
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`timestampOffset`** property of the

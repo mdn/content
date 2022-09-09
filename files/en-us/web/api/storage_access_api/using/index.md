@@ -10,6 +10,7 @@ tags:
   - Storage
   - Storage Access API
 ---
+
 {{DefaultAPISidebar("Storage Access API")}}
 
 The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We'll briefly look at a common storage access scenario.

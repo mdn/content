@@ -10,6 +10,7 @@ tags:
   - for
 browser-compat: javascript.statements.for
 ---
+
 {{jsSidebar("Statements")}}
 
 The **for statement** creates a loop that consists of three optional

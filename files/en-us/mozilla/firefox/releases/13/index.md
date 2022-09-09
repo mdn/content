@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Gecko
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Firefox 13 that affect developers.

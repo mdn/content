@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 The **`forEach()`** method of the {{domxref("NodeList")}}

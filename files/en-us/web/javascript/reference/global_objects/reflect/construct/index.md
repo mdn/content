@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.construct
 ---
+
 {{JSRef}}
 
 The static **`Reflect.construct()`** method acts like the

@@ -13,6 +13,7 @@ tags:
   - onVisited
 browser-compat: webextensions.api.history.onVisited
 ---
+
 {{AddonSidebar()}}
 
 Fired each time the user visits a page. A {{WebExtAPIRef("history.HistoryItem")}} object is passed to the listener. This event fires before the page has loaded.

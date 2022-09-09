@@ -9,6 +9,7 @@ tags:
   - Learn
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types) article.

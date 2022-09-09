@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isFinite
 ---
+
 {{JSRef}}
 
 The **`Number.isFinite()`** method

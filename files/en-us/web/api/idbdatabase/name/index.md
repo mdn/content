@@ -13,6 +13,7 @@ tags:
   - name
 browser-compat: api.IDBDatabase.name
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`name`** read-only property of the

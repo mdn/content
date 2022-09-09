@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceWith()`** method replaces this

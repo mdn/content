@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.button
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.button`** read-only property indicates which button was pressed on the mouse to trigger the event.

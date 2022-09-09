@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.IDBIndex.getAllKeys
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAllKeys()`** method of the {{domxref("IDBIndex")}}

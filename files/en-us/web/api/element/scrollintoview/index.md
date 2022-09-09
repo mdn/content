@@ -14,6 +14,7 @@ tags:
   - scrolling
 browser-compat: api.Element.scrollIntoView
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} interface's

@@ -13,6 +13,7 @@ tags:
   - div()
 browser-compat: api.CSSNumericValue.div
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`div()`** method of the

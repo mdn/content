@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector
 ---
+
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.

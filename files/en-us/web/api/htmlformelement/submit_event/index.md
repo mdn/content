@@ -12,6 +12,7 @@ tags:
   - submit
 browser-compat: api.HTMLFormElement.submit_event
 ---
+
 {{APIRef}}
 
 The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.

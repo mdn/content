@@ -11,6 +11,7 @@ tags:
   - remove
 browser-compat: api.DOMTokenList.remove
 ---
+
 {{APIRef("DOM")}}
 
 The **`remove()`** method of the {{domxref("DOMTokenList")}} interface

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.USB.getDevices
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getDevices`** method of the {{DOMxRef("USB")}} interface

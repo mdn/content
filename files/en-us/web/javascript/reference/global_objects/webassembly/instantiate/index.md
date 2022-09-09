@@ -11,6 +11,7 @@ tags:
   - instantiate
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.instantiate()`** function allows you to

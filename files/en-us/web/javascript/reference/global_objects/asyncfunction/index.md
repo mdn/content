@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncFunction
 ---
+
 {{JSRef}}
 
 The **`AsyncFunction` constructor** creates a new

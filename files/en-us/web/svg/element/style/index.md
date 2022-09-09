@@ -7,6 +7,7 @@ tags:
   - SVG
 browser-compat: svg.elements.style
 ---
+
 {{SVGRef}}
 
 The SVG **`<style>`** element allows style sheets to be embedded directly within SVG content.

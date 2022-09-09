@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.deleteObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`deleteObjectStore()`** method of the

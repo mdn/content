@@ -27,6 +27,7 @@ tags:
   - rotation
   - transform
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: _WebXR does not have cameras_. There's no magic object provided by either the [WebGL](/en-US/docs/Web/API/WebGL_API) or the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) API that represents the viewer that you can rotate and move around to automatically change what's seen on the screen. In this guide we show how use [WebGL](/en-US/docs/Web/API/WebGL_API) to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.

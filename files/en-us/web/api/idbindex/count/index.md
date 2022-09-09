@@ -13,6 +13,7 @@ tags:
   - count
 browser-compat: api.IDBIndex.count
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBIndex")}}

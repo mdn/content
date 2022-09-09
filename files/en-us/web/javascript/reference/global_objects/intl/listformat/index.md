@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat`** object enables language-sensitive list formatting.

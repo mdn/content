@@ -12,6 +12,7 @@ tags:
   - createBufferSource
 browser-compat: api.BaseAudioContext.createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBufferSource()` method of the {{ domxref("BaseAudioContext") }}

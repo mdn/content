@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorResponse.clientDataJSON
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`clientDataJSON`** property of the

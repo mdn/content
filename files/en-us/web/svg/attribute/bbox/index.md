@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.bbox
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`bbox`** attribute defines the maximal bounding box of a font.

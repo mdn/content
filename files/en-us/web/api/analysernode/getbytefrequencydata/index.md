@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getByteFrequencyData()`** method of the {{ domxref("AnalyserNode") }} interface copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.

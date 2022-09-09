@@ -6,6 +6,7 @@ tags:
   - WebExtensions
   - google chrome
 ---
+
 {{AddonSidebar}}
 
 Extensions built with WebExtension APIs are designed to be compatible with Chrome and Opera extensions. As far as possible, extensions written for those browsers should run on Firefox with minimal changes.

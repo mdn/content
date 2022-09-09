@@ -13,6 +13,7 @@ tags:
   - onfocusout
 browser-compat: api.Element.focusout_event
 ---
+
 {{APIRef}}
 
 The **`focusout`** event fires when an element is about to lose focus. The main difference between this event and {{domxref("Element/blur_event", "blur")}} is that `focusout` [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) while `blur` does not.

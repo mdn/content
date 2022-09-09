@@ -13,6 +13,7 @@ tags:
   - stopNotifications
 browser-compat: api.BluetoothRemoteGATTCharacteristic.stopNotifications
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method

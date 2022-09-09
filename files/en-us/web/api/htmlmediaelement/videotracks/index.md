@@ -16,6 +16,7 @@ tags:
   - videoTracks
 browser-compat: api.HTMLMediaElement.videoTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`videoTracks`**

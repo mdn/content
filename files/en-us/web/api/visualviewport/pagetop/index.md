@@ -12,6 +12,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport.pageTop
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`pageTop`** read-only property of the

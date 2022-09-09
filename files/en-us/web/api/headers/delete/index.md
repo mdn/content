@@ -10,6 +10,7 @@ tags:
   - delete
 browser-compat: api.Headers.delete
 ---
+
 {{APIRef("Fetch")}}
 
 The **`delete()`** method of the {{domxref("Headers")}}

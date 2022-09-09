@@ -20,6 +20,7 @@ tags:
   - WebRTC
   - setCodecPreferences
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpCodecParameters")}} dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.

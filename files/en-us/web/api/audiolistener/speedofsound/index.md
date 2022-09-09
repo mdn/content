@@ -12,6 +12,7 @@ tags:
   - speedOfSound
 browser-compat: api.AudioListener.speedOfSound
 ---
+
 {{ APIRef("Web Audio API") }}{{deprecated_header}}
 
 The **`speedOfSound`** property of the {{

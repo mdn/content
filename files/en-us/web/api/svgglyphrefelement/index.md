@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGlyphRefElement
 ---
+
 {{APIRef("SVG")}}{{Deprecated_Header}}
 
 The **`SVGGlyphRefElement`** interface corresponds to the {{SVGElement("glyphRef")}} elements.

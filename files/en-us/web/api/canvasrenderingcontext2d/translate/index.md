@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.translate
 ---
+
 {{APIRef}}
 
 The

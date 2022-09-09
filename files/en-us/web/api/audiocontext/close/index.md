@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.AudioContext.close
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `close()` method of the {{ domxref("AudioContext") }} Interface closes the audio context, releasing any system audio resources that it uses.

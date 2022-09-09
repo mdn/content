@@ -12,6 +12,7 @@ tags:
   - getCapabilities
 browser-compat: api.MediaStreamTrack.getCapabilities
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of

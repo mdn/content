@@ -12,6 +12,7 @@ tags:
   - Service Workers
 browser-compat: api.PushEvent.PushEvent
 ---
+
 {{APIRef("Push API")}}
 
 The **`PushEvent()`** constructor creates a new

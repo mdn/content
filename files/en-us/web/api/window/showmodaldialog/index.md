@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.showModalDialog
 ---
+
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** This feature has been removed. Please fix your Web sites and applications.

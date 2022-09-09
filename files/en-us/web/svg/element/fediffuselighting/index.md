@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feDiffuseLighting
 ---
+
 {{SVGRef}}
 
 The **`<feDiffuseLighting>`** [SVG](/en-US/docs/Web/SVG) filter primitive lights an image using the alpha channel as a bump map. The resulting image, which is an RGBA opaque image, depends on the light color, light position and surface geometry of the input bump map.

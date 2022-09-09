@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
+
 {{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`appendBufferAsync()`** method

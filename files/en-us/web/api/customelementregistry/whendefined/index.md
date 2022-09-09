@@ -12,6 +12,7 @@ tags:
   - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`whenDefined()`** method of the

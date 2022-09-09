@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getProgramParameter()`** method of

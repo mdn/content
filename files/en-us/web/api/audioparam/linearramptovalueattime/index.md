@@ -12,6 +12,7 @@ tags:
   - linearRampToValueAtTime
 browser-compat: api.AudioParam.linearRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `linearRampToValueAtTime()` method of the {{ domxref("AudioParam") }}

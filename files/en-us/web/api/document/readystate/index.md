@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.readyState
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.readyState`** property describes the loading

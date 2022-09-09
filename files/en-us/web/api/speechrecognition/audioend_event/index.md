@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.audioend_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`audioend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has finished capturing audio for speech recognition.

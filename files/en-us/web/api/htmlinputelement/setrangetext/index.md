@@ -12,6 +12,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.setRangeText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setRangeText()`** method replaces a

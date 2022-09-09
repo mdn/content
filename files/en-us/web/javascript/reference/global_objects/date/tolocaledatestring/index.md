@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
+
 {{JSRef}}
 
 The **`toLocaleDateString()`** method returns a string with a language-sensitive representation of the date portion of the specified date in the user agent's timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.

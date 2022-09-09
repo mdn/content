@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCDate
 ---
+
 {{JSRef}}
 
 The **`setUTCDate()`** method changes the day of the month of a given {{jsxref("Date")}} instance, based on UTC time.

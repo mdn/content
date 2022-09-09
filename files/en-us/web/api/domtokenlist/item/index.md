@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.item
 ---
+
 {{APIRef("DOM")}}
 
 The **`item()`** method of the {{domxref("DOMTokenList")}} interface returns an item in the list,

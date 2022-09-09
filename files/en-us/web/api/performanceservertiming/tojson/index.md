@@ -11,6 +11,7 @@ tags:
   - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`toJSON()`** method of the

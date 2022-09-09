@@ -9,6 +9,7 @@ tags:
   - Images
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand [images and how to embed them in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).

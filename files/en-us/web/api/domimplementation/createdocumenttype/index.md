@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createDocumentType
 ---
+
 {{ ApiRef("DOM")}}
 
 The **`DOMImplementation.createDocumentType()`** method returns

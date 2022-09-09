@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.

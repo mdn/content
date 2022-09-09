@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontcolor()`** method creates a {{HTMLElement("font")}}

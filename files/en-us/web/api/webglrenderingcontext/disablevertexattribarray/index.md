@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.disableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.disableVertexAttribArray()`**

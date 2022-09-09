@@ -12,6 +12,7 @@ tags:
   - createAnalyser
 browser-compat: api.BaseAudioContext.createAnalyser
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createAnalyser()` method of the

@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.VisitItem
 ---
+
 {{AddonSidebar()}}
 
 An object describing a single visit to a page.

@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLSelectElement.disabled
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.disabled`** is a boolean value that reflects the

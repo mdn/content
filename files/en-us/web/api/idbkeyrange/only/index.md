@@ -13,6 +13,7 @@ tags:
   - only
 browser-compat: api.IDBKeyRange.only
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`only()`** method of the {{domxref("IDBKeyRange")}}

@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`iterateNext()`** method of the

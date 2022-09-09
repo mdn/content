@@ -11,6 +11,7 @@ tags:
   - startRendering
 browser-compat: api.OfflineAudioContext.startRendering
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `startRendering()` method of the {{ domxref("OfflineAudioContext") }}

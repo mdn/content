@@ -14,6 +14,7 @@ tags:
   - start
 browser-compat: api.AudioBufferSourceNode.start
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `start()` method of the {{ domxref("AudioBufferSourceNode") }}

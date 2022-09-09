@@ -8,6 +8,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid 'instanceof' operand" occurs when the right-hand side

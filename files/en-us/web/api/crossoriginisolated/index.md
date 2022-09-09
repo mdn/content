@@ -9,6 +9,7 @@ tags:
   - crossOriginIsolated
 browser-compat: api.crossOriginIsolated
 ---
+
 {{APIRef()}}
 
 The global **`crossOriginIsolated`** read-only property returns a boolean value that

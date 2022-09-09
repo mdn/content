@@ -14,6 +14,7 @@ tags:
   - appendWindowStart
 browser-compat: api.SourceBuffer.appendWindowStart
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`appendWindowStart`** property of the

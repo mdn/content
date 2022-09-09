@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue.entries
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.entries()`** method

@@ -12,6 +12,7 @@ tags:
   - keySystem
 browser-compat: api.MediaKeySystemAccess.keySystem
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.keySystem` read-only property returns a

@@ -11,6 +11,7 @@ tags:
   - playbackRate
 browser-compat: api.AudioBufferSourceNode.playbackRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`playbackRate`** property of

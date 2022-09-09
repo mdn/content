@@ -12,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionAlternative
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a single word that has been recognized by the speech recognition service.

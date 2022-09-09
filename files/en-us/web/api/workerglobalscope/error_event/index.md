@@ -12,6 +12,7 @@ tags:
   - error
 browser-compat: api.WorkerGlobalScope.error_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires when an error occurs in the worker.

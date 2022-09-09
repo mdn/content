@@ -14,6 +14,7 @@ tags:
   - dragleave
 browser-compat: api.HTMLElement.dragleave_event
 ---
+
 {{APIRef}}
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.

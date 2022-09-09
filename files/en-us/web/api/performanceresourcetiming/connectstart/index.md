@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.connectStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`connectStart`** read-only property returns the

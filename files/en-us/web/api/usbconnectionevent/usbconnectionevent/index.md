@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.USBConnectionEvent.USBConnectionEvent
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`USBConnectionEvent()`** constructor creates a new {{domxref("USBConnectionEvent")}} object.

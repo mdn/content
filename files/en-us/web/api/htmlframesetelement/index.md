@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLFrameSetElement
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLELEment("frameset")}} elements.

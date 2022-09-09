@@ -9,6 +9,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} objects.

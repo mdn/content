@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.menubar
 ---
+
 {{ APIRef() }}
 
 The **`Window.menubar`** property returns the

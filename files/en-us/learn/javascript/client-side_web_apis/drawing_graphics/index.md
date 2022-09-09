@@ -12,6 +12,7 @@ tags:
   - Learn
   - WebGL
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 The browser contains some very powerful graphics programming tools, from the Scalable Vector Graphics ([SVG](/en-US/docs/Web/SVG)) language, to APIs for drawing on HTML {{htmlelement("canvas")}} elements, (see [The Canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API)). This article provides an introduction to canvas, and further resources to allow you to learn more.

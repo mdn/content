@@ -11,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver.takeRecords
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`takeRecords()`** method of the

@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`type`** property of the {{ domxref("OscillatorNode")

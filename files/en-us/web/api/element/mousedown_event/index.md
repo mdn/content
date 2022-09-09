@@ -18,6 +18,7 @@ tags:
   - mousedown
 browser-compat: api.Element.mousedown_event
 ---
+
 {{APIRef}}
 
 The **`mousedown`** event is fired at an {{domxref("Element")}} when a pointing device button is pressed while the pointer is inside the element.

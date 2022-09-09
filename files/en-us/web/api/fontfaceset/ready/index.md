@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.ready
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `ready` read-only property of the {{domxref("FontFaceSet")}} interface

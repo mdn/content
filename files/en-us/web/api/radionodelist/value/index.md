@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.RadioNodeList.value
 ---
+
 {{ APIRef("HTML DOM") }}
 
 If the underlying element collection contains radio buttons, the

@@ -9,6 +9,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:

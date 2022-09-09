@@ -12,6 +12,7 @@ tags:
   - replaceChildren
 browser-compat: api.Element.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceChildren()`** method replaces the

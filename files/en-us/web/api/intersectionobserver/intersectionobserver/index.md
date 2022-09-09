@@ -12,6 +12,7 @@ tags:
   - Visible
 browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The **`IntersectionObserver()`** constructor creates and returns a new {{domxref("IntersectionObserver")}} object.

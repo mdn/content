@@ -6,6 +6,7 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.

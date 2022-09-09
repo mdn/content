@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGPreserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG preserveAspectRatio interface

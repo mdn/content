@@ -13,6 +13,7 @@ tags:
   - onImportBegan
 browser-compat: webextensions.api.bookmarks.onImportBegan
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has started importing a set of bookmarks.

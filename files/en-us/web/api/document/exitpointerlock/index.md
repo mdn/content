@@ -9,6 +9,7 @@ tags:
   - mouse lock
 browser-compat: api.Document.exitPointerLock
 ---
+
 {{APIRef("DOM")}}
 
 The **`exitPointerLock()`** method asynchronously releases a

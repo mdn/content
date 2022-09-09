@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: css.selectors.NameOfTheSelector
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_

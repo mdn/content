@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionAlternative.confidence
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`confidence`** read-only property of the

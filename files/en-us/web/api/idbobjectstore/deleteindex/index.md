@@ -13,6 +13,7 @@ tags:
   - deleteIndex
 browser-compat: api.IDBObjectStore.deleteIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`deleteIndex()`** method of the

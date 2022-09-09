@@ -14,6 +14,7 @@ tags:
   - Web
 browser-compat: api.Navigator.mediaDevices
 ---
+
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The **`Navigator.mediaDevices`** read-only property returns a

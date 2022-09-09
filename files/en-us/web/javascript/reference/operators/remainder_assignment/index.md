@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The remainder assignment operator (`%=`) divides a variable by the value of

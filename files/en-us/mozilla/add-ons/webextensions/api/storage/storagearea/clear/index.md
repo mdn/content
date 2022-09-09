@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: webextensions.api.storage.StorageArea.clear
 ---
+
 {{AddonSidebar()}}
 
 Removes all items from the storage area.

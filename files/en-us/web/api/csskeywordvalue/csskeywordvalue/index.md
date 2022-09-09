@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSKeywordValue()`** constructor

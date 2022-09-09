@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCIceTransport.state
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**

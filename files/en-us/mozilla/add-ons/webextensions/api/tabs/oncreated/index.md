@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onCreated
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is created.

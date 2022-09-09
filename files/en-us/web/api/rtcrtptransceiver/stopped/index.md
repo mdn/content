@@ -14,6 +14,7 @@ tags:
   - stopped
 browser-compat: api.RTCRtpTransceiver.stopped
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The read-only **`stopped`** property

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Strict Mode
 ---
+
 {{JsSidebar("More")}}
 
 ## Strict Mode Overview

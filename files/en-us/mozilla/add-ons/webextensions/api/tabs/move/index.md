@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.move
 ---
+
 {{AddonSidebar()}}
 
 Moves one or more tabs to a new position in the same window or to a different window.

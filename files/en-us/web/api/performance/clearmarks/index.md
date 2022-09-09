@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearMarks
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`clearMarks()`** method removes the _named mark_

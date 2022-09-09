@@ -10,6 +10,7 @@ tags:
   - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 The **`Navigator.vibrate()`** method pulses the vibration

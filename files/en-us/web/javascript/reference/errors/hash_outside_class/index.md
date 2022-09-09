@@ -7,6 +7,7 @@ tags:
   - Reference
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "Unexpected '#' used outside of class body" occurs when a hash

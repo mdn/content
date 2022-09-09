@@ -17,6 +17,7 @@ tags:
   - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
+
 {{APIRef("DOM Parsing")}}
 
 The {{domxref("XMLSerializer")}} method

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.URLPattern
 ---
+
 {{APIRef("URLPattern API")}}{{SeeCompatTable}}
 
 The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}}

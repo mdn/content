@@ -13,6 +13,7 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser is about to start a navigation event.

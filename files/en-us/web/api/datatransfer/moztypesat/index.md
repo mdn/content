@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozTypesAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozTypesAt()`** method returns a list of

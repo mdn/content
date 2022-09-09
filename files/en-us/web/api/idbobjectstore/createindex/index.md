@@ -13,6 +13,7 @@ tags:
   - createIndex
 browser-compat: api.IDBObjectStore.createIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`createIndex()`** method of the

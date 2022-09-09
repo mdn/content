@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode.MediaElementAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaElementAudioSourceNode()`** constructor creates a new {{domxref("MediaElementAudioSourceNode")}} object instance.

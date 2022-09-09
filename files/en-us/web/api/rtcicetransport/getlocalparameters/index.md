@@ -21,6 +21,7 @@ tags:
   - usernameFragment
 browser-compat: api.RTCIceTransport.getLocalParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceTransport")}}** method

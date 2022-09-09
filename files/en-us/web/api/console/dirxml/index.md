@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.dirxml
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.dirxml()`** method displays an interactive tree of the descendant elements of the specified XML/HTML

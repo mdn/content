@@ -11,6 +11,7 @@ tags:
   - port
 browser-compat: api.SharedWorker.port
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`port`** property of the {{domxref("SharedWorker")}}

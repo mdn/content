@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.GainNode.gain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `gain` property of the {{ domxref("GainNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply.

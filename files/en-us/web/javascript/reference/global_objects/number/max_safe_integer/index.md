@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 The **`Number.MAX_SAFE_INTEGER`** constant represents the maximum safe integer in JavaScript (2<sup>53</sup> – 1).

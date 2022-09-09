@@ -14,6 +14,7 @@ tags:
   - duration
 browser-compat: api.MediaSource.duration
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`duration`** property of the {{domxref("MediaSource")}}

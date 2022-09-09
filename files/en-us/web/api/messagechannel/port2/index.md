@@ -12,6 +12,7 @@ tags:
   - port2
 browser-compat: api.MessageChannel.port2
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`port2`** read-only property of the

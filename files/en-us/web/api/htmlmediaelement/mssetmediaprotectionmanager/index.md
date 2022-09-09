@@ -7,6 +7,7 @@ tags:
   - Non-standard
   - Method
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header}}

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum()`** constructor creates a

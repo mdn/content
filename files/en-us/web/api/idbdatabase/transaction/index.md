@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately

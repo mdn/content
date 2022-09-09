@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
+
 {{APIRef}}
 
 The

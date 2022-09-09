@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.paint-order
 ---
+
 {{SVGRef}}
 
 The **`paint-order`** attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted.

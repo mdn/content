@@ -11,6 +11,7 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.initUIEvent
 ---
+
 {{APIRef("UI Events")}} {{deprecated_header}}
 
 The **`UIEvent.initUIEvent()`** method initializes a UI event

@@ -7,6 +7,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 {{Non-standard_header()}}

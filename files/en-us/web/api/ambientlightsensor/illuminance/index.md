@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.AmbientLightSensor.illuminance
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`illuminance`** property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.

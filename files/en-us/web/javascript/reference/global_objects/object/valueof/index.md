@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of the

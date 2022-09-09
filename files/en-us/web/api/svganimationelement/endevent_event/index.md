@@ -11,6 +11,7 @@ tags:
   - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.

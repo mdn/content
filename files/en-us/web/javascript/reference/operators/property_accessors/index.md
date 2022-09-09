@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.property_accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 **Property accessors** provide access to an

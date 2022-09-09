@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.error
 ---
+
 {{APIRef("Fetch")}}
 
 The **`error()`** method of the {{domxref("Response")}} interface returns a new `Response` object associated with a network error.

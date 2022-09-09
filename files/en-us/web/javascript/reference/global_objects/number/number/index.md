@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.Number
 ---
+
 {{JSRef}}
 
 The **`Number()` constructor** creates a {{jsxref("Number")}} object. When called instead as a function, it performs type conversion to a {{Glossary("number", "primitive number")}}, which is usually more useful.

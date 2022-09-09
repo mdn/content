@@ -14,6 +14,7 @@ tags:
   - delete
 browser-compat: api.Cache.delete
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`delete()`** method of the {{domxref("Cache")}} interface finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the {{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to `true`.

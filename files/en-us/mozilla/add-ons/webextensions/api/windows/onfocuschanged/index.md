@@ -13,6 +13,7 @@ tags:
   - onFocusChanged
 browser-compat: webextensions.api.windows.onFocusChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when the currently focused window changes. Will be {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} if all browser windows have lost focus.

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderInfoLog
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.getShaderInfoLog** returns the information log

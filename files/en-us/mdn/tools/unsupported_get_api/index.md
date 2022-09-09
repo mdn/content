@@ -12,6 +12,7 @@ tags:
   - Page-level
   - Tools
 ---
+
 {{MDNSidebar}}
 
 MDN's platform, [Yari](https://github.com/mdn/yari), doesn't provide a supported GET API. However, Yari does currently provide an unsupported mechanism that exposes JSON resources which you can retrieve with HTTP `GET` requests and then consume programmatically.

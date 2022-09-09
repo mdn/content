@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.EyeDropper.EyeDropper
 ---
+
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} object.

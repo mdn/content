@@ -7,6 +7,7 @@ tags:
   - start_url
 browser-compat: html.manifest.start_url
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

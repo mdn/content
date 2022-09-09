@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.zoomAndPan
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`zoomAndPan`** attribute specifies whether the SVG document can be magnified and panned.

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compileShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.compileShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) compiles a GLSL shader into binary

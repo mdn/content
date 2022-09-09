@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**

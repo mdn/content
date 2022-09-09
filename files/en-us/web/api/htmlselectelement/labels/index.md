@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLSelectElement.labels`** read-only property returns a

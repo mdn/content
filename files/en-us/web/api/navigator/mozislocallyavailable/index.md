@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.mozIsLocallyAvailable
 ---
+
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 
 The **`Navigator.mozIsLocallyAvailable()`** method allows

@@ -8,6 +8,7 @@ tags:
   - TypeError
 browser-compat: javascript.builtins.TypeError.TypeError
 ---
+
 {{JSRef}}
 
 The **`TypeError()`** constructor creates a new error when an

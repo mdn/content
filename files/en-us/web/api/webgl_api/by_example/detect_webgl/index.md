@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
 
 This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.

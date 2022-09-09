@@ -10,6 +10,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.id
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`id`** read-only property of the {{domxref("MIDIPort")}} interface returns the unique ID of the port.

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupPrefix()`** method of the {{domxref("Node")}} interface

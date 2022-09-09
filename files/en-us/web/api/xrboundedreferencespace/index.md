@@ -19,6 +19,7 @@ tags:
   - Experimental
 browser-compat: api.XRBoundedReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRBoundedReferenceSpace`** interface describes a virtual world [reference space](/en-US/docs/Web/API/WebXR_Device_API/Geometry) which has preset boundaries. This extends {{domxref("XRReferenceSpace")}}, which describes an essentially unrestricted space around the viewer's position. These bounds are defined using an array of points, each of which defines a vertex in a polygon inside which the user is allowed to move.

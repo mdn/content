@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.lastChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.lastChild()`** method moves the current

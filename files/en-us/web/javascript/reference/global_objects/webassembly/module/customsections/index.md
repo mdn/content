@@ -12,6 +12,7 @@ tags:
   - customSections
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.customSections()`** function returns a copy

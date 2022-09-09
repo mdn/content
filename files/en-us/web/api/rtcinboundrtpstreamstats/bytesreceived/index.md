@@ -19,6 +19,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.bytesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCInboundRtpStreamStats")}} dictionary's

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetTop`** read-only property returns the

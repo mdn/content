@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector.IdleDetector
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`IdleDetector()`** constructor creates a new {{domxref("IdleDetector")}}

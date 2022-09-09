@@ -12,6 +12,7 @@ tags:
   - commands
 browser-compat: webextensions.api.commands.update
 ---
+
 {{AddonSidebar()}}
 
 Change the description or keyboard shortcut for the given command.

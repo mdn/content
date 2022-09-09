@@ -12,6 +12,7 @@ tags:
   - removeDownloads
 browser-compat: webextensions.api.browsingData.removeFormData
 ---
+
 {{AddonSidebar()}}
 
 Clears data that the browser has saved for autofilling forms.

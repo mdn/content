@@ -11,6 +11,7 @@ tags:
   - show
 browser-compat: api.HTMLDialogElement.show
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`show()`** method of the {{domxref("HTMLDialogElement")}}

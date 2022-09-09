@@ -11,6 +11,7 @@ tags:
   - status
 browser-compat: api.Response.status
 ---
+
 {{APIRef("Fetch")}}
 
 The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status codes](/en-US/docs/Web/HTTP/Status) of the response.

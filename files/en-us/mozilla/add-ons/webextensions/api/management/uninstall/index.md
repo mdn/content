@@ -11,6 +11,7 @@ tags:
   - uninstall
 browser-compat: webextensions.api.management.uninstall
 ---
+
 {{AddonSidebar()}}
 
 Uninstalls an add-on, given its ID.

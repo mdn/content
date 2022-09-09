@@ -12,6 +12,7 @@ tags:
   - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`StaticRange()`** constructor

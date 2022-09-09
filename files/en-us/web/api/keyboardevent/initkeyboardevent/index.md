@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes

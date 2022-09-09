@@ -11,6 +11,7 @@ tags:
   - uninstallSelf
 browser-compat: webextensions.api.management.uninstallSelf
 ---
+
 {{AddonSidebar()}}
 
 Uninstalls the calling add-on.

@@ -11,6 +11,7 @@ tags:
   - locked
 browser-compat: api.ReadableStream.locked
 ---
+
 {{APIRef("Streams")}}
 
 The **`locked`** read-only property of the {{domxref("ReadableStream")}} interface returns whether or not the readable stream is locked to a reader.

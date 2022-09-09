@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.IDBCursor.continuePrimaryKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`continuePrimaryKey()`** method of the

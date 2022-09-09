@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertBefore()`** method of the {{domxref("Node")}} interface

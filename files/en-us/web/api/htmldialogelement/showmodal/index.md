@@ -11,6 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the

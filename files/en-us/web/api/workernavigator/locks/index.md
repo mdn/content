@@ -10,6 +10,7 @@ tags:
   - Web Locks API
 browser-compat: api.WorkerNavigator.locks
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`locks`** read-only property of

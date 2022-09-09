@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feTurbulence.numOctaves
 ---
+
 {{SVGRef}}
 
 The **`numOctaves`** attribute defines the number of octaves for the noise function of the {{SVGElement("feTurbulence")}} primitive.

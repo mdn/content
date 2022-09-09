@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.validateProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.validateProgram()`** method of the

@@ -11,6 +11,7 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.register
 ---
+
 {{AddonSidebar}}
 
 This method enables user scripts to be registered from an extension's pages (such as the background page).

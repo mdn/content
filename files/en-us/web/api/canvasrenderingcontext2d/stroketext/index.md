@@ -17,6 +17,7 @@ tags:
   - strokeText
 browser-compat: api.CanvasRenderingContext2D.strokeText
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasRenderingContext2D")}} method

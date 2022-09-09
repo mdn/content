@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.

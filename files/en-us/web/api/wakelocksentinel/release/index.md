@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel.release
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`release()`** method of the

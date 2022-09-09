@@ -11,6 +11,7 @@ tags:
   - onProxyError
 browser-compat: webextensions.api.proxy.onError
 ---
+
 {{AddonSidebar()}}
 
 Fired when there is an error evaluating the PAC file or the `onRequest` listener.

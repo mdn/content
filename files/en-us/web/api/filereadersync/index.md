@@ -7,6 +7,7 @@ tags:
   - NeedsMarkupWork
 browser-compat: api.FileReaderSync
 ---
+
 {{APIRef("File API")}}
 
 The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.

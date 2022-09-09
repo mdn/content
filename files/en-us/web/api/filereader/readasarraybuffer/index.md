@@ -13,6 +13,7 @@ tags:
   - readAsArrayBuffer
 browser-compat: api.FileReader.readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} interface's

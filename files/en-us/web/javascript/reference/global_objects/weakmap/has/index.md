@@ -9,6 +9,7 @@ tags:
   - WeakMap
 browser-compat: javascript.builtins.WeakMap.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an

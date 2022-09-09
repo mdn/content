@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.

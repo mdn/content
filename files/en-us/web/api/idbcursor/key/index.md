@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBCursor.key
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`key`** read-only property of the

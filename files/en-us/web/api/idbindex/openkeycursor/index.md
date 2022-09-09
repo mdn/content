@@ -13,6 +13,7 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBIndex.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the

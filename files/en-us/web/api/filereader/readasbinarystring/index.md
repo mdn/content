@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsBinaryString
 ---
+
 {{APIRef("File API")}}
 
 The `readAsBinaryString` method is used to start reading the contents of the

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.text.lengthAdjust
 ---
+
 {{SVGRef}}
 
 The lengthAdjust attribute controls how the text is stretched into the length defined by the {{SVGAttr("textLength")}} attribute.

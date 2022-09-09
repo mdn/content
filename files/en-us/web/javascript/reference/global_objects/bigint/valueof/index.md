@@ -9,6 +9,7 @@ tags:
   - valueOf()
 browser-compat: javascript.builtins.BigInt.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the wrapped primitive value

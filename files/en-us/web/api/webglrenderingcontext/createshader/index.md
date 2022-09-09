@@ -11,6 +11,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLRenderingContext.createShader
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}}

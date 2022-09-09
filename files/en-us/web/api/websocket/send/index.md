@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.send
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.send()`** method enqueues the specified data

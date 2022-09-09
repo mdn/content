@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getSupportedExtensions()`** method

@@ -16,6 +16,7 @@ tags:
   - fromPoint
 browser-compat: api.DOMPointReadOnly.fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The static **{{domxref("DOMPointReadOnly")}}**

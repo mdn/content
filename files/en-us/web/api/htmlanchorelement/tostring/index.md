@@ -9,6 +9,7 @@ tags:
   - Stringifier
 browser-compat: api.HTMLAnchorElement.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`HTMLAnchorElement.toString()`** {{Glossary("stringifier")}}

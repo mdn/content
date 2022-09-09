@@ -12,6 +12,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compressedTexSubImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexSubImage2D()`**

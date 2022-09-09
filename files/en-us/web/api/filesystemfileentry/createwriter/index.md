@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
+
 {{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method

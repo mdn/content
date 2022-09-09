@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.Magnetometer.y
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`y`** read-only property of the

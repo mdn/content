@@ -13,6 +13,7 @@ tags:
   - onShown
 browser-compat: webextensions.api.notifications.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired immediately after a notification has been shown.

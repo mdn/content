@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.levelchange_event
 ---
+
 {{APIRef("Battery API")}}
 
 The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.level","level")}} property is updated.

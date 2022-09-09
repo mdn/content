@@ -10,6 +10,7 @@ tags:
   - lock
 browser-compat: api.Lock
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`Lock`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) provides the name and mode of a lock.

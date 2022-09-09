@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetHeight`** read-only property returns

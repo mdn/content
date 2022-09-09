@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaDescription
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.

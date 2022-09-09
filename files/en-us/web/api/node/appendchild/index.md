@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.appendChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`appendChild()`** method of the {{domxref("Node")}} interface adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, `appendChild()` moves it from its current position to the new position.

@@ -12,6 +12,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You can use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.

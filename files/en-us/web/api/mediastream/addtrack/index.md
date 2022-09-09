@@ -11,6 +11,7 @@ tags:
   - addTrack
 browser-compat: api.MediaStream.addTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream.addTrack()`** method adds a new track to the

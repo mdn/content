@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatRange()`** formats a

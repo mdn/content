@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.menus.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes a menu item.

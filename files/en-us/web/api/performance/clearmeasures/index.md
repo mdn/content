@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`clearMeasures()`** method removes the _named

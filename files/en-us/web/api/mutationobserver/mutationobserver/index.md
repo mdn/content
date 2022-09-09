@@ -16,6 +16,7 @@ tags:
   - Reference
 browser-compat: api.MutationObserver.MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The DOM **`MutationObserver()`**

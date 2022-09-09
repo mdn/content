@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.extractContents()`** method moves contents of the

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.supportedLocalesOf()`** method returns

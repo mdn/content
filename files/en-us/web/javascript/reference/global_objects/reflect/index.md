@@ -9,6 +9,7 @@ tags:
   - Reflect
 browser-compat: javascript.builtins.Reflect
 ---
+
 {{JSRef}}
 
 **`Reflect`** is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of [proxy handlers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). `Reflect` is not a function object, so it's not constructible.

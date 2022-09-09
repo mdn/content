@@ -13,6 +13,7 @@ tags:
   - caretRangeFromPoint
 browser-compat: api.Document.caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`caretRangeFromPoint()`** method of the

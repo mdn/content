@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState
 ---
+
 {{apiref()}}
 
 The Constraint Validation API enables checking values that users have entered into form controls, before submitting the values to the server.

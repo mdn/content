@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.sticky
 ---
+
 {{JSRef}}
 
 The **`sticky`** accessor property indicates whether or not the `y` flag is used with the regular expression.
