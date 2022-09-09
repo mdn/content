@@ -15,6 +15,7 @@ tags:
   - submit
 browser-compat: api.HTMLFormElement.requestSubmit
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLFormElement")}} method **`requestSubmit()`** requests

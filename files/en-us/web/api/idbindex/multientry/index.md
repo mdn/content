@@ -13,6 +13,7 @@ tags:
   - multiEntry
 browser-compat: api.IDBIndex.multiEntry
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`multiEntry`** read-only property of the

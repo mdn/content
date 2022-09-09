@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) context is lost.

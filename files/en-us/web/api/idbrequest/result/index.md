@@ -13,6 +13,7 @@ tags:
   - result
 browser-compat: api.IDBRequest.result
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`result`** read-only property of the

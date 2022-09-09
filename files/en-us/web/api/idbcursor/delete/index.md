@@ -13,6 +13,7 @@ tags:
   - delete
 browser-compat: api.IDBCursor.delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the {{domxref("IDBCursor")}}

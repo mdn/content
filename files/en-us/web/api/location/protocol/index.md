@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.protocol
 ---
+
 {{ApiRef("Location")}}
 
 The **`protocol`** property of the {{domxref("Location")}}

@@ -10,6 +10,7 @@ tags:
   - Stringifier
 browser-compat: api.Location.toString
 ---
+
 {{ApiRef("Location")}}
 
 The **`toString()`** {{Glossary("stringifier")}} method of the

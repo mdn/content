@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.acceptCharset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.acceptCharset`** property represents a

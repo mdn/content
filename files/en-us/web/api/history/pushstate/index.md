@@ -16,6 +16,7 @@ tags:
   - pushState
 browser-compat: api.History.pushState
 ---
+
 {{APIRef("History API")}}
 
 In an [HTML](/en-US/docs/Web/HTML) document, the

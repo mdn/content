@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement.media
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.media`** property specifies the

@@ -16,6 +16,7 @@ tags:
   - width
 browser-compat: api.HTMLImageElement.sizes
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property

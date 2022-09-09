@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBCursorWithValue
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBCursorWithValue`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) for traversing or iterating over multiple records in a database. It is the same as the {{domxref("IDBCursor")}}, except that it includes the `value` property.

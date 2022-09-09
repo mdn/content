@@ -17,6 +17,7 @@ tags:
   - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property

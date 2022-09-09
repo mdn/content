@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Headers.Headers
 ---
+
 {{APIRef("Fetch")}}
 
 The **`Headers()`** constructor creates a new

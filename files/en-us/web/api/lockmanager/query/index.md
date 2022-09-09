@@ -11,6 +11,7 @@ tags:
   - query()
 browser-compat: api.LockManager.query
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`query()`** method of the {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} that resolves with an object containing information about held and pending locks.

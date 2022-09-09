@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBIndex.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the {{domxref("IDBIndex")}}

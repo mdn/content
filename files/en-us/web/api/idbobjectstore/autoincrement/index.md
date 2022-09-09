@@ -13,6 +13,7 @@ tags:
   - autoIncrement
 browser-compat: api.IDBObjectStore.autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`autoIncrement`** read-only property of the

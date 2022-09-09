@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteTFoot()`** method removes the

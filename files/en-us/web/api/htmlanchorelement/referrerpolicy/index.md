@@ -10,6 +10,7 @@ tags:
   - Referrer Policy
 browser-compat: api.HTMLAnchorElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The

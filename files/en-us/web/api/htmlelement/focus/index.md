@@ -14,6 +14,7 @@ tags:
   - activate
 browser-compat: api.HTMLElement.focus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.focus()`** method sets focus on the specified element, if it can be focused.

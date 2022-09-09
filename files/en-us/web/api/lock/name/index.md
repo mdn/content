@@ -12,6 +12,7 @@ tags:
   - name
 browser-compat: api.Lock.name
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`name`** read-only property of

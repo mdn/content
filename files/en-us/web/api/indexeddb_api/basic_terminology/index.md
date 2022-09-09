@@ -7,6 +7,7 @@ tags:
   - IndexedDB
   - terminology
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 This article describes the key characteristics of IndexedDB, and introduces some essential terminology relevant to understanding the IndexedDB API.

@@ -16,6 +16,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.disablePictureInPicture
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}}
