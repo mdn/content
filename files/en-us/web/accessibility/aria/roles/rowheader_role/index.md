@@ -53,7 +53,7 @@ To create an ARIA row header, add `role="rowheader"` to the element. That row he
 #### Context roles
 
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : The only context in which you will find a row.  It encompasses a cell or group of cells row, of which only one should be of rowheader type. Similar to the native {{HTMLElement('tr')}} HTML element.
+  - : The only context in which you will find a row. It encompasses a cell or group of cells row, of which only one should be of rowheader type. Similar to the native {{HTMLElement('tr')}} HTML element.
 
 ### Keyboard interactions
 

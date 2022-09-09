@@ -69,7 +69,7 @@ promise-based syntax.
 In this example, the `getData()` function uses XHR to load an audio track,
 setting the `responseType` of the request to `arraybuffer` so that
 it returns an array buffer as its `response` that we then store in the
-`audioData` variable . We then pass this buffer into a
+`audioData` variable. We then pass this buffer into a
 `decodeAudioData()` function; the success callback takes the successfully
 decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using
 {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource()")}}, connects the source to the
