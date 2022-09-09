@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.firstChild
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`firstChild`** property of the {{domxref("Node")}} interface

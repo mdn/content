@@ -13,6 +13,7 @@ tags:
   - mouse
 browser-compat: api.MouseEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).

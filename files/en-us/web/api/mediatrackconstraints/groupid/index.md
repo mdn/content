@@ -16,6 +16,7 @@ tags:
   - groupId
 browser-compat: api.MediaTrackConstraints.groupId
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's

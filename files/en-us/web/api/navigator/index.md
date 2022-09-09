@@ -12,6 +12,7 @@ tags:
   - Web Performance
 browser-compat: api.Navigator
 ---
+
 {{APIRef("DOM")}}
 
 The **`Navigator`** interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.

@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`isUserVerifyingPlatformAuthenticatorAvailable()`** is a

@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.MediaKeySession.close
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.close()` method notifies that the current media session

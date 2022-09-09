@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`PromiseRejectionEvent()`**

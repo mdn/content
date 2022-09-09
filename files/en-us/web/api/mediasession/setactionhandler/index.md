@@ -15,6 +15,7 @@ tags:
   - setActionHandler
 browser-compat: api.MediaSession.setActionHandler
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`setActionHandler()`** method of the {{domxref("MediaSession")}} interface sets a handler for a media session action.

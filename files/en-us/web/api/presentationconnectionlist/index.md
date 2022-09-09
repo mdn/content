@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.PresentationConnectionList
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
 `PresentationConnectionList` is the collection of incoming presentation connections.

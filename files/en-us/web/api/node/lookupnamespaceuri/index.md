@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.lookupNamespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupNamespaceURI()`** method of the {{domxref("Node")}} interface

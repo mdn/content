@@ -15,6 +15,7 @@ tags:
   - width
 browser-compat: api.MediaTrackConstraints.width
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's

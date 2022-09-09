@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.registrations
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 The **`registrations`** method is used to ask the system about

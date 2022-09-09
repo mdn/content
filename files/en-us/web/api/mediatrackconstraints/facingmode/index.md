@@ -17,6 +17,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaTrackConstraints.facingMode
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's

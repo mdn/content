@@ -12,6 +12,7 @@ tags:
   - createSession
 browser-compat: api.MediaKeys.createSession
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeys.createSession()` method returns a new

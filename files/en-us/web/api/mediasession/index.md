@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.MediaSession
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`MediaSession`** interface of the [Media Session API](/en-US/docs/Web/API/Media_Session_API) allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.

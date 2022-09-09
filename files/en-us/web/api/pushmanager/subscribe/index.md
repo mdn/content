@@ -11,6 +11,7 @@ tags:
   - subscribe
 browser-compat: api.PushManager.subscribe
 ---
+
 {{ApiRef("Push API")}}
 
 The **`subscribe()`** method of the {{domxref("PushManager")}}

@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaStreamTrack.remote
 ---
+
 {{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`MediaStreamTrack.remote`** read-only property allows JavaScript to know whether a WebRTC MediaStreamTrack is from a remote source or a local one.

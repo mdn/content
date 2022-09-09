@@ -9,6 +9,7 @@ tags:
   - Landing
 browser-compat: api.Scheduler
 ---
+
 {{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{AvailableInWorkers}}
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.

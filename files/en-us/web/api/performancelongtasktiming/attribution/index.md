@@ -4,6 +4,7 @@ slug: Web/API/PerformanceLongTaskTiming/attribution
 page-type: web-api-instance-property
 browser-compat: api.PerformanceLongTaskTiming.attribution
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 The **`attribution`** readonly property of the

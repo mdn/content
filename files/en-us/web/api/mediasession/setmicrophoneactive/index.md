@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.MediaSession.setMicrophoneActive
 ---
+
 {{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The {{domxref("MediaSession")}} method **`setMicrophoneActive()`** is used to indicate to the user agent whether the user's microphone is considered to be currently muted.

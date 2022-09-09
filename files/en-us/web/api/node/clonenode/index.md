@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`cloneNode()`** method of the {{domxref("Node")}} interface

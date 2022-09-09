@@ -9,6 +9,7 @@ tags:
   - NodeIterator
 browser-compat: api.NodeIterator.nextNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.nextNode()`** method returns the next node
