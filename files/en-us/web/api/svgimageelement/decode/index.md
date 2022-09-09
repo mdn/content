@@ -15,6 +15,7 @@ tags:
   - asynchronous
 browser-compat: api.SVGImageElement.decode
 ---
+
 {{APIRef("SVG")}}
 
 The **`decode()`** method of the

@@ -10,6 +10,7 @@ tags:
   - request
 browser-compat: api.Request.Request
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Request()`** constructor creates a new

@@ -10,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.viewBox
 ---
+
 {{APIRef("SVG")}}
 
 The **`viewBox`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedRect")}} object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.

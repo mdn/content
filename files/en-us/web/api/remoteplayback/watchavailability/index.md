@@ -10,6 +10,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.watchAvailability
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The **`watchAvailability()`** method of the {{domxref("RemotePlayback")}} interface watches the list of available remote playback devices and returns a {{jsxref("Promise")}} that resolves with the `callbackId` of a remote playback device.

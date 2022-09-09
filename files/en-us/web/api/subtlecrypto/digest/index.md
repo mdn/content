@@ -11,6 +11,7 @@ tags:
   - digest
 browser-compat: api.SubtleCrypto.digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`digest()`** method of the {{domxref("SubtleCrypto")}}

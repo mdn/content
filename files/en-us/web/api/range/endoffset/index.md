@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.endOffset
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.endOffset`** read-only property returns a number

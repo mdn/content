@@ -17,6 +17,7 @@ tags:
   - sdpLineNumber
 browser-compat: api.RTCError.sdpLineNumber
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} interface's read-only property

@@ -16,6 +16,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCPeerConnection.peerIdentity
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only {{domxref("RTCPeerConnection")}} property

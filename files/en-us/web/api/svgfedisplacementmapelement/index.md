@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDisplacementMapElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement("feDisplacementMap")}} element.

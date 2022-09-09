@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedLengthList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated length list interface

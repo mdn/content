@@ -11,6 +11,7 @@ tags:
   - encrypt
 browser-compat: api.SubtleCrypto.encrypt
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`encrypt()`** method of the {{domxref("SubtleCrypto")}}

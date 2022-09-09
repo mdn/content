@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedNumber
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated number interface

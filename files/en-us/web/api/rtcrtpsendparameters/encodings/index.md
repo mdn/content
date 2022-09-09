@@ -20,6 +20,7 @@ tags:
   - sender
 browser-compat: api.RTCRtpSendParameters.encodings
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSendParameters")}} dictionary's

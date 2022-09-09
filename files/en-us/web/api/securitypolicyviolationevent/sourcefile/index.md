@@ -13,6 +13,7 @@ tags:
   - sourceFile
 browser-compat: api.SecurityPolicyViolationEvent.sourceFile
 ---
+
 {{HTTPSidebar}}
 
 The **`sourceFile`** read-only property of the

@@ -10,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.replaceItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces a {{domxref("SVGPoint","point")}} in the list.

@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.json
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`json()`** method of the {{DOMxRef("Response")}} interface takes

@@ -16,6 +16,7 @@ tags:
   - send
 browser-compat: api.RTCDataChannel.send
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`send()`** method of the

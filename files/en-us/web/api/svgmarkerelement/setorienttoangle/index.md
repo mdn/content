@@ -10,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.setOrientToAngle
 ---
+
 {{APIRef("SVG")}}
 
 The **`setOrientToAngle()`** method of the {{domxref("SVGMarkerElement")}} interface sets the value of the `orient` attribute to the value in the {{domxref("SVGAngle")}} passed in.

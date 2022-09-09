@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInStroke
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.isPointInStroke()`** method

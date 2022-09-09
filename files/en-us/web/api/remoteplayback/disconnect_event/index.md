@@ -10,6 +10,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.disconnect_event
 ---
+
 {{APIRef()}}
 
 The **`disconnect`** event of the {{domxref("RemotePlayback")}} interface fires when the user agent disconnects from the remote device.

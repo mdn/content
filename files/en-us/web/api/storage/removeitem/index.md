@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`removeItem()`** method of the {{domxref("Storage")}}

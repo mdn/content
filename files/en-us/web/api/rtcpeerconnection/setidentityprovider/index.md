@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.setIdentityProvider
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setIdentityProvider()`** method sets

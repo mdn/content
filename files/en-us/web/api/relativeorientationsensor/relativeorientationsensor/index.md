@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor()`**

@@ -12,6 +12,7 @@ tags:
   - URL
 browser-compat: api.Report.url
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Report")}}

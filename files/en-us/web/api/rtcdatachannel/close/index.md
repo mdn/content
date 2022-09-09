@@ -15,6 +15,7 @@ tags:
   - close
 browser-compat: api.RTCDataChannel.close
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannel.close()`** method closes the

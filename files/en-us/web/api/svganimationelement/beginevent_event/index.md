@@ -11,6 +11,7 @@ tags:
   - Event
 browser-compat: api.SVGAnimationElement.beginEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`beginEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when the element local timeline begins to play. It will be raised each time the element begins the active duration (i.e., when it restarts, but not when it repeats).

@@ -18,6 +18,7 @@ tags:
   - Event
 browser-compat: api.RTCDataChannel.close_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`close`** event is sent to the {{domxref("RTCDataChannel.close_event", "onclose")}} event handler on an {{domxref("RTCDataChannel")}} instance when the data transport for the data channel has closed. Before any further data can be transferred using `RTCDataChannel`, a new 'RTCDataChannel' instance must be created.
