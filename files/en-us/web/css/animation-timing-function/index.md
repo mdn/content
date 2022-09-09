@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-timing-function
 ---
+
 {{CSSRef}}
 
 The **`animation-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how an animation progresses through the duration of each cycle.

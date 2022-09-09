@@ -9,6 +9,7 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 The first part of this article, [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/position#types_of_positioning) element.

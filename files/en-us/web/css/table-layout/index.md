@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.table-layout
 ---
+
 {{CSSRef}}
 
 The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.

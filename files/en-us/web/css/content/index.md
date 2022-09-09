@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.

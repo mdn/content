@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.quotes
 ---
+
 {{CSSRef}}
 
 The **`quotes`** [CSS](/en-US/docs/Web/CSS) property sets how the browser should render quotation marks that are added using the `open-quotes` or `close-quotes` values of the CSS [`content`](/en-US/docs/Web/CSS/content) property.

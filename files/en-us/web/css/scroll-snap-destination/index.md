@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: css.properties.scroll-snap-destination
 ---
+
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-destination`** [CSS](/en-US/docs/Web/CSS) property defines the position in x and y coordinates within the scroll container's visual {{Glossary("viewport")}} which element snap points align with.

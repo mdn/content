@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.image.image-set
 ---
+
 {{CSSRef}}
 
 The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.

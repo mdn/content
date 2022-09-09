@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
+
 {{CSSRef}}
 
 The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.

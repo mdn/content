@@ -19,6 +19,7 @@ tags:
   - lwb
 browser-compat: css.types.color
 ---
+
 {{CSSRef}}
 
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.

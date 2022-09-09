@@ -17,6 +17,7 @@ tags:
   - width
 browser-compat: css.properties.box-sizing
 ---
+
 {{CSSRef}}
 
 The **`box-sizing`** [CSS](/en-US/docs/Web/CSS) property sets how the total width and height of an element is calculated.

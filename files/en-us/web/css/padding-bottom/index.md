@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-bottom
 ---
+
 {{CSSRef}}
 
 The **`padding-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on the bottom of an element.

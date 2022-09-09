@@ -11,6 +11,7 @@ tags:
   - value
 browser-compat: css.types.dimension
 ---
+
 {{CSSRef}}
 
 The **`<dimension>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example `10px`.

@@ -12,6 +12,7 @@ tags:
   - scrolling
 browser-compat: css.properties.scroll-margin
 ---
+
 {{CSSRef}}
 
 The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the [`margin`](/en-US/docs/Web/CSS/margin) property does for margins of an element.

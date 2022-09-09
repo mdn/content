@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-text-stroke-width
 ---
+
 {{CSSRef}}
 
 The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifies the width of the stroke for text.

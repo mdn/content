@@ -11,6 +11,7 @@ tags:
   - attr
 browser-compat: css.types.attr
 ---
+
 {{CSSRef}}
 
 > **Note:** The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.

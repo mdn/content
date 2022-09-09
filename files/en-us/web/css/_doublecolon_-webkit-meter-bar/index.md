@@ -11,6 +11,7 @@ tags:
   - WebKit
 browser-compat: css.selectors.-webkit-meter-bar
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Glossary/Pseudo-class) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) that represents the meter bar in a {{HTMLElement("meter")}} element.

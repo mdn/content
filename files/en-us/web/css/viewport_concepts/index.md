@@ -11,6 +11,7 @@ tags:
   - viewport
   - virtual viewport
 ---
+
 {{CSSRef}}
 
 This article explains the concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the visual viewport and the layout viewport.

@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.letter-spacing
 ---
+
 {{CSSRef}}
 
 The **`letter-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal spacing behavior between text characters. This value is added to the natural spacing between characters while rendering the text. Positive values of `letter-spacing` causes characters to spread farther apart, while negative values of `letter-spacing` bring characters closer together.

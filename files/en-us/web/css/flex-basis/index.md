@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
+
 {{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.

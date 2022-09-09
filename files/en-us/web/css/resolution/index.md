@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.resolution
 ---
+
 {{CSSRef}}
 
 The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the pixel density of an output device, i.e., its resolution.

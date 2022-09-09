@@ -14,6 +14,7 @@ tags:
   - Web
 browser-compat: css.selectors.where
 ---
+
 {{CSSRef}}
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.

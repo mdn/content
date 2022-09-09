@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.offset-rotate
 ---
+
 {{CSSRef}}
 
 The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.

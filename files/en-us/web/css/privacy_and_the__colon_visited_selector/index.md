@@ -9,6 +9,7 @@ tags:
   - Security
   - Selectors
 ---
+
 {{CSSRef}}
 
 Before about 2010, the [CSS](/en-US/docs/Web/CSS) {{ cssxref(":visited") }} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. This was done through {{domxref("window.getComputedStyle")}} and other techniques. This process was quick to execute, and made it possible not only to determine where the user had been on the web, but could also be used to guess a lot of information about the user's identity.

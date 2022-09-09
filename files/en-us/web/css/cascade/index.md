@@ -17,6 +17,7 @@ tags:
 spec-urls: https://drafts.csswg.org/css-cascade/
 
 ---
+
 {{CSSRef}}
 
 The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types) or [cascade layer](/en-US/docs/Web/CSS/@layer) set a value for a property on an element.

@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.

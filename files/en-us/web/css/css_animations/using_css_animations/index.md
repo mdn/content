@@ -8,6 +8,7 @@ tags:
   - Example
   - Guide
 ---
+
 {{CSSRef}}
 
 **CSS animations** make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.

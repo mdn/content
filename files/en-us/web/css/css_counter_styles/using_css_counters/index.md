@@ -11,6 +11,7 @@ tags:
   - Web
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
+
 {{CSSRef}}
 
 **CSS counters** let you adjust the appearance of content based on its location in a document.

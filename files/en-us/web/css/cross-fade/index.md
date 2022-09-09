@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.image.cross-fade
 ---
+
 {{CSSRef}}
 
 The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to blend two or more images at a defined transparency.

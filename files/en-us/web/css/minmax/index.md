@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.properties.grid-template-columns.minmax
 ---
+
 {{CSSRef}}
 
 The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout).

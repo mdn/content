@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.position
 ---
+
 {{CSSRef}}
 
 The **`<position>`** (or **`<bg-position>`**) [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}} and {{cssxref("offset-anchor")}} properties.

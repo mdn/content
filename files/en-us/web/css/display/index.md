@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.display
 ---
+
 {{CSSRef}}
 
 The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline element](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).

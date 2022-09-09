@@ -9,6 +9,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---
+
 {{CSSRef}}
 
 Styles in the **CSS Backgrounds and Borders** module allow filling backgrounds with color or an image (clipped or resized), or modifying them in other ways.
