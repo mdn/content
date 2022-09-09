@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.ctrlKey
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## Summary

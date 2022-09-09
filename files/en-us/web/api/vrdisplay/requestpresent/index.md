@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.requestPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface starts the `VRDisplay` presenting a scene.

@@ -10,6 +10,7 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.origin
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`origin`** property of a {{domxref("WorkerLocation")}} object returns the worker's {{domxref("URL.origin", "origin")}}.

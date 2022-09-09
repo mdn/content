@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.entries
 ---
+
 {{APIRef("URL API")}}
 
 The **`entries()`** method of the

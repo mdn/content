@@ -9,6 +9,7 @@ tags:
   - Window
 browser-compat: api.Window.languagechange_event
 ---
+
 {{APIRef}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.

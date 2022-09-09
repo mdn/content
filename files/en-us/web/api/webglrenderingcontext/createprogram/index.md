@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createProgram()`** method of the

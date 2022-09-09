@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: api.URL.toJSON
 ---
+
 {{APIRef("URL API")}}
 
 The **`toJSON()`** method of the {{domxref("URL")}} interface

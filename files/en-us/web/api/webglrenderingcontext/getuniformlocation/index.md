@@ -15,6 +15,7 @@ tags:
   - getUniformLocation
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
+
 {{APIRef("WebGL")}}
 
 Part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method

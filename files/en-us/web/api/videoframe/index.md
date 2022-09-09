@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.

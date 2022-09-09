@@ -10,6 +10,7 @@ tags:
   - revokeObjectURL
 browser-compat: api.URL.revokeObjectURL
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URL.revokeObjectURL()`** static

@@ -14,6 +14,7 @@ tags:
   - Reference
   - Window
 ---
+
 {{APIRef()}}{{deprecated_header}}
 
 > **Note:** This method was removed from Firefox 23 and onward.

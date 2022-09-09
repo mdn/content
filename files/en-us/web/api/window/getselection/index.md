@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.getSelection
 ---
+
 {{ ApiRef() }}
 
 The **`Window.getSelection()`** method returns a

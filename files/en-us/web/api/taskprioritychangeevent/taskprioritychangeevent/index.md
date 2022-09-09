@@ -10,6 +10,7 @@ tags:
   - Prioritized Task Scheduling API
 browser-compat: api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskPriorityChangeEvent()`** constructor creates a new {{domxref("TaskPriorityChangeEvent")}} object.

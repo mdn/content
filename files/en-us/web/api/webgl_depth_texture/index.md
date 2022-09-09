@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_depth_texture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_depth_texture`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and defines 2D depth and depth-stencil textures.

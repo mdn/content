@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.scrollbars
 ---
+
 {{APIRef()}}
 
 The **`Window.scrollbars`** property returns the

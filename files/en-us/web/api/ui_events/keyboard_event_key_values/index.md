@@ -21,6 +21,7 @@ tags:
   - keyboard
   - keys
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 The tables below list the standard values for the [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key) property, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.

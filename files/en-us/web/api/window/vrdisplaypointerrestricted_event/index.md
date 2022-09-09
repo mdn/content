@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.vrdisplaypointerrestricted_event
 ---
+
 {{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplaypointerrestricted`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when the VR display's pointer input is restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).

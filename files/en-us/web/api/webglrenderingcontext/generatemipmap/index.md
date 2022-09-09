@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.generateMipmap
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.generateMipmap()`** method of the

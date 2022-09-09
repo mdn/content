@@ -9,6 +9,7 @@ tags:
   - TaskController
 browser-compat: api.TaskController.TaskController
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskController()`** constructor creates a new {{domxref("TaskController")}} object, optionally setting the initial [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of its associated [`signal`](/en-US/docs/Web/API/TaskController#taskcontroller.signal).

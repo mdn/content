@@ -10,6 +10,7 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.activeCues
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`activeCues`** read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object listing the currently active cues.

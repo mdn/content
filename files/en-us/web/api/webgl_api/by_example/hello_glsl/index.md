@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
 This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.

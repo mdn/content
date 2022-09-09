@@ -9,6 +9,7 @@ tags:
   - WebGL
 browser-compat: api.WEBGL_draw_buffers.drawBuffersWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_draw_buffers.drawBuffersWEBGL()`** method is part

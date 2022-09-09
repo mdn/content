@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState.stepMismatch
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`stepMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's `step` attribute.

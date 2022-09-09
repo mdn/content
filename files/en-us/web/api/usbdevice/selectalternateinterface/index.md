@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`selectAlternateInterface()`** method of the

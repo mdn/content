@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.claimInterface
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`claimInterface()`** method of the

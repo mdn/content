@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.Window.cancelAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.cancelAnimationFrame()`** method cancels an

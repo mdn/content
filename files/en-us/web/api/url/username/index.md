@@ -11,6 +11,7 @@ tags:
   - username
 browser-compat: api.URL.username
 ---
+
 {{ApiRef("URL API")}}
 
 The **`username`** property of the {{domxref("URL")}} interface

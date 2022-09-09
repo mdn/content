@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteRenderbuffer()`** method of

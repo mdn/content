@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.Window.releaseEvents
 ---
+
 {{APIRef}}{{Deprecated_Header}}
 
 Releases the window from trapping events of a specific type.

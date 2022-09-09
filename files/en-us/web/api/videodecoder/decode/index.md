@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoDecoder.decode
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`decode()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to decode a given chunk of video.
