@@ -15,7 +15,7 @@ These guidelines are for ensuring language and style consistency across the webs
 
 > **Note:** The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
 
-After listing the general writing guidelines, this guide describes the recommended the writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
+After listing the general writing guidelines, this guide describes the recommended writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
 
 ## General writing guidelines
 
