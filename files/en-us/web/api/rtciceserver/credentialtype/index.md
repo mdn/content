@@ -14,10 +14,12 @@ tags:
   - credentialType
   - credentials
   - password
+  - Deprecated
+  - Non-standard
 browser-compat: api.RTCIceServer.credentialType
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The {{domxref("RTCIceServer")}} dictionary's
 **`credentialType`** property is a string value which
@@ -69,7 +71,7 @@ const myPeerConnection = new RTCPeerConnection({
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any current specification.
 
 ## Browser compatibility
 
