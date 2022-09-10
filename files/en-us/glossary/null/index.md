@@ -1,5 +1,5 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
 tags:
   - CodingScripting

@@ -23,12 +23,12 @@ A {{glossary("function")}} creates a scope, so that (for example) a variable def
 
 ```js example-bad
 function exampleFunction() {
-  const x = "declared inside function";  // x can only be used in exampleFunction
+  const x = "declared inside function"; // x can only be used in exampleFunction
   console.log("Inside function");
   console.log(x);
 }
 
-console.log(x);  // Causes error
+console.log(x); // Causes error
 ```
 
 However, the following code is valid due to the variable being declared outside the function, making it global:
@@ -65,4 +65,4 @@ console.log(x); // ReferenceError: x is not defined
 
 ## See also
 
-- [Scope (computer science)](https://en.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia
+- [Scope (computer science)](<https://en.wikipedia.org/wiki/Scope_(computer_science)>) on Wikipedia

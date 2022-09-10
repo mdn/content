@@ -30,7 +30,7 @@ for (statement 1; statement 2; statement 3) {
 
 ```js
 for (let i = 0; i < 10; i++) {
-  console.log(i)
+  console.log(i);
 }
 //This loop will print numbers 0-9, will stop when condition is met (i = 10)
 ```
@@ -57,7 +57,7 @@ while (condition) {
 
 ```js
 let i = 0;
-while (i < 5){ 
+while (i < 5) {
   console.log(i);
   i++;
 }

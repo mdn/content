@@ -14,4 +14,4 @@ In client-side JavaScript, the global scope is generally the web page inside whi
 ## See also
 
 - [Introduction to variable scope in JavaScript](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
-- [Scope](https://en.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia
+- [Scope](<https://en.wikipedia.org/wiki/Scope_(computer_science)>) on Wikipedia

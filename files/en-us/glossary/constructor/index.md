@@ -12,20 +12,17 @@ A **constructor** belongs to a particular class {{glossary("object")}} that is i
 
 ```js
 // This is a generic default constructor class Default
-function Default() {
-}
+function Default() {}
 
 // This is an overloaded constructor class Overloaded
 // with parameter arguments
-function Overloaded(arg1, arg2, /* …, */ argN){
-}
+function Overloaded(arg1, arg2, /* …, */ argN) {}
 ```
 
 To call the constructor of the class in JavaScript, use a `new` operator to assign a new {{glossary("object reference")}} to a {{glossary("variable")}}.
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // A new reference of a Default object assigned to a
 // local variable defaultReference
