@@ -63,7 +63,7 @@ Just as with the `AppComponent`, the `ItemComponent` is made up of the following
 
 You can see a reference to the HTML and CSS files in the `@Component()` decorator metadata in `item.component.ts`.
 
-```js
+```ts
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -155,7 +155,7 @@ The `saveItem()` method takes the value from the `#editedItem` `<input>` and cha
 In the next section, you will add code that relies on communication the `AppComponent` and the `ItemComponent`.
 Configure the AppComponent first by adding the following to `app.component.ts`:
 
-```js
+```ts
 remove(item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }
@@ -171,7 +171,7 @@ To use the `ItemComponent` UI, you must add logic to the component such as funct
 
 In `item.component.ts`, edit the JavaScript imports as follows:
 
-```js
+```ts
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from "../item";
 ```
@@ -181,7 +181,7 @@ By importing `Item`, `ItemComponent` can understand what an `item` is.
 
 Further down `item.component.ts`, replace the generated `ItemComponent` class with the following:
 
-```js
+```ts
 export class ItemComponent {
 
   editable = false;
@@ -230,7 +230,7 @@ To use the `ItemComponent` in `AppComponent`, put the `ItemComponent` selector i
 Angular specifies the selector of a component in the metadata of the `@Component()` decorator.
 In this example, the selector is `app-item`:
 
-```js
+```ts
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',

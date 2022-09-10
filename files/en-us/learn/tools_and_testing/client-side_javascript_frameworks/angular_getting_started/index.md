@@ -200,7 +200,7 @@ So, you could have files with names such as `header.component.ts`, `signup.compo
 You create a component with a `@Component()` decorator that has metadata that tells Angular where to find the HTML and CSS.
 A typical component is as follows:
 
-```js
+```ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -233,7 +233,7 @@ You can define this template either inline or by file path.
 
 To refer to an external HTML file, use the `templateUrl` property:
 
-```js
+```ts
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
@@ -245,7 +245,7 @@ export class AppComponent {
 
 To write inline HTML, use the `template` property and write your HTML within backticks:
 
-```js
+```ts
 @Component({
   selector: 'app-root',
   template: `<h1>Hi!</h1>`,
@@ -266,7 +266,7 @@ One use of this feature is inserting dynamic text, as shown in the following exa
 The double curly braces instruct Angular to interpolate the contents within them.
 The value for `title` comes from the component class:
 
-```js
+```ts
 import { Component } from '@angular/core';
 
 @Component ({
@@ -293,7 +293,7 @@ You can write component-specific styles directly in the `@Component()` decorator
 
 To include the styles directly in the component decorator, use the `styles` property:
 
-```js
+```ts
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -303,7 +303,7 @@ To include the styles directly in the component decorator, use the `styles` prop
 
 Typically, a component uses styles in a separate file using the `styleUrls` property:
 
-```js
+```ts
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
