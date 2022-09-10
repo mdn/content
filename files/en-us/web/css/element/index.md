@@ -106,7 +106,6 @@ Firefox does not support -webkit-box-reflect. You can emulate it -to some extent
 }
 ```
 
-
 #### HTML for Firefox
 
 ```html
