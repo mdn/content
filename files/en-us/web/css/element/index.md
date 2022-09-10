@@ -95,7 +95,7 @@ Firefox does not support -webkit-box-reflect. You can emulate it -to some extent
 
 ```html
 <img id="pictureWReflection"
-     src="/media/cc0-images/grapefruit-slice-332-332.jpg">
+     src="pictureToReflect.jpg">
 ```
 
 #### CSS for webkit
