@@ -90,7 +90,7 @@ header("X-XSS-Protection: 1; mode=block");
 
 Apache (.htaccess)
 
-```html
+```
 <IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
