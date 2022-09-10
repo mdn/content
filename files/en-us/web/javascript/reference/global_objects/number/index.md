@@ -44,17 +44,17 @@ The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 75
 
 - 1 bit for the _sign_ (positive or negative)
 - 11 bits for the _exponent_ (-1022 to 1023)
-- 52 bits for the _significand_ (representing a number between 1 and 2)
+- 52 bits for the _mantissa_ (representing a number between 0 and 1)
 
-The significand (also called _mantissa_) is the part of the number representing the actual value (significant digits). The exponent is the power of 2 that the significand should be multiplied by. Thinking about it as scientific notation:
+The mantissa (also called _significand_) is the part of the number representing the actual value (significant digits). The exponent is the power of 2 that the mantissa should be multiplied by. Thinking about it as scientific notation:
 
-<math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mtext>significand</mtext><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot \text{significand} \cdot 2^{\text{exponent}}</annotation></semantics></math>
+<math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
 
-The significand is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the significand's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 decimal places; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
+The mantissa is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the mantissa's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 decimal places; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
 
-The largest value a number can hold is 2<sup>1024</sup> - 1 (with the exponent being 1023 and the significand being 1.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
+The largest value a number can hold is 2<sup>1024</sup> - 1 (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
 
-Integers can only be represented without loss of precision in the range -2<sup>53</sup> + 1 to 2<sup>53</sup> - 1, inclusive (obtainable via {{jsxref("Number.MIN_SAFE_INTEGER")}} and {{jsxref("Number.MAX_SAFE_INTEGER")}}), because the significand can only hold 53 bits (including the leading 1).
+Integers can only be represented without loss of precision in the range -2<sup>53</sup> + 1 to 2<sup>53</sup> - 1, inclusive (obtainable via {{jsxref("Number.MIN_SAFE_INTEGER")}} and {{jsxref("Number.MAX_SAFE_INTEGER")}}), because the mantissa can only hold 53 bits (including the leading 1).
 
 More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type).
 
