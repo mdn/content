@@ -43,7 +43,7 @@ Up to now you've been working in a development environment, using the Django dev
 - Choose an environment for hosting any static files.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Django app ready for production, and a worked example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Django app ready for production, and a working example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
 
 ## What is a production environment?
 
