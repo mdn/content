@@ -26,7 +26,7 @@ is the most efficient, optimized way to load wasm code.
 ## Syntax
 
 ```js
-WebAssembly.instantiateStreaming(source, importObject);
+WebAssembly.instantiateStreaming(source, importObject)
 ```
 
 ### Parameters
