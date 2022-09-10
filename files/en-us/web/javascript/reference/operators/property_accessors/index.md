@@ -19,8 +19,8 @@ object's properties by using the dot notation or the bracket notation.
 ## Syntax
 
 ```js
-object.property
-object['property']
+object.propertyName
+object[expression]
 ```
 
 ## Description
@@ -39,7 +39,7 @@ notation_.
 
 ### Dot notation
 
-In the `object.property` syntax, the `property` must be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the ECMAScript standard, the names of properties are technically "IdentifierNames", not "Identifiers", so reserved words can be used but are not recommended). For example, `object.$1` is valid, while `object.1` is not.
+In the `object.propertyName` syntax, the `propertyName` must be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the ECMAScript standard, the names of properties are technically "IdentifierNames", not "Identifiers", so reserved words can be used but are not recommended). For example, `object.$1` is valid, while `object.1` is not.
 
 ```js
 const variable = object.propertyName;
@@ -75,7 +75,7 @@ method call, so that the dot is not interpreted as a decimal point.
 77
 .toExponential()
 // or
-;(77).toExponential()
+(77).toExponential()
 // or
 77..toExponential()
 // or
@@ -85,7 +85,7 @@ method call, so that the dot is not interpreted as a decimal point.
 
 ### Bracket notation
 
-In the `object[propertyName]` syntax, the `propertyName` is just a string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). So, it can be any string, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
+In the `object[expression]` syntax, the `expression` is just a string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that represents the propertyName, or any other expressions that evaluate to the propertyName. So, it can be any string, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
 
 ```js
 const variable = object[propertyName];
@@ -102,6 +102,17 @@ A space before bracket notation is allowed.
 
 ```js
 document ['createElement']('pre')
+```
+Passing expressions that evaluate to propertyName will do the same thing as directly passing the propertyName
+
+```js
+let key ="name"
+let getKey = ()=>"name"
+let Obj = {name:"John"}
+
+Obj["name"];   //returns "John" 
+Obj[key];      //evaluates to Obj["name"], and returns "John"
+Obj[getKey()]; // evaluates to Obj["name"], and returns "John"
 ```
 
 ### Property names
