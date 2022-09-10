@@ -48,7 +48,7 @@ We want to set really clear expectations here: You won't be expected to learn Ja
 
 One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.
 
-This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in five minutes, but we will give you plenty of opportunity to practice thinking like a programmer throughout the course.
+This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in five minutes, but we will give you plenty of opportunities to practice thinking like a programmer throughout the course.
 
 With that in mind, let's look at the example we'll be building up in this article, and review the general process of dissecting it into tangible tasks.
 
@@ -62,7 +62,7 @@ Have a go at playing it — familiarize yourself with the game before you move o
 
 Let's imagine your boss has given you the following brief for creating this game:
 
-> I want you to create a simple guess the number type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again.
+> I want you to create a simple guess the number type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again.
 
 Upon looking at this brief, the first thing we can do is to start breaking it down into simple actionable tasks, in as much of a programmer mindset as possible:
 
@@ -129,7 +129,7 @@ This section of the code sets up the variables and constants we need to store th
 
 Variables are basically names for values (such as numbers, or strings of text). You create a variable with the keyword `let` followed by a name for your variable.
 
-Constants are also used to name values, but unlike variables, you can't change the value once set. In this case we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a constant with the keyword `const` followed by a name for the constant.
+Constants are also used to name values, but unlike variables, you can't change the value once set. In this case, we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a constant with the keyword `const` followed by a name for the constant.
 
 You can assign a value to your variable or constant with an equals sign (`=`) followed by the value you want to give it.
 
@@ -168,7 +168,7 @@ function checkGuess() {
 }
 ```
 
-Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword `function`, followed by a name, with parentheses put after it. After that we put two curly braces (`{ }`). Inside the curly braces goes all the code that we want to run whenever we call the function.
+Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword `function`, followed by a name, with parentheses put after it. After that, we put two curly braces (`{ }`). Inside the curly braces goes all the code that we want to run whenever we call the function.
 
 When we want to run the code, we type the name of the function followed by the parentheses.
 
@@ -322,7 +322,7 @@ function checkGuess() {
 This is a lot of code — phew! Let's go through each section and explain what it does.
 
 - The first line declares a variable called `userGuess` and sets its value to the current value entered inside the text field. We also run this value through the built-in `Number()` constructor, just to make sure the value is definitely a number. Since we're not changing this variable, we'll declare it using `const`.
-- Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword `if`, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns `true`, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the `guessCount` variable is equal to `1` (i.e. whether this is the player's first go or not):
+- Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword `if`, then some parentheses, then some curly braces. Inside the parentheses, we include a test. If the test returns `true`, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case, the test is testing whether the `guessCount` variable is equal to `1` (i.e. whether this is the player's first go or not):
 
   ```js
   guessCount === 1
@@ -405,7 +405,7 @@ This rather long block of code completely resets everything to how it was at the
 - Removes the background color from the `lastResult` paragraph.
 - Generates a new random number so that you are not just guessing the same number again!
 
-**At this point you should have a fully working (simple) game — congratulations!**
+**At this point, you should have a fully working (simple) game — congratulations!**
 
 All we have left to do now in this article is to talk about a few other important code features that you've already seen, although you may have not realized it.
 
@@ -432,7 +432,7 @@ A `for...of` loop gives you a way to get each item in the array and run some Jav
 2. Set the `fruit` variable to that item, then run the code between the `{}` brackets.
 3. Get the next item in `fruits`, and repeat 2, until you reach the end of `fruits`.
 
-In this case the code inside the brackets is writing out `fruit` to the console.
+In this case, the code inside the brackets is writing out `fruit` to the console.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
