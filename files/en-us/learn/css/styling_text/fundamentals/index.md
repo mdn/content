@@ -522,7 +522,7 @@ p {
 
 ## Text layout
 
-With basic font properties out the way, let's have a look at properties we can use to affect text layout.
+With basic font properties out of the way, let's have a look at properties we can use to affect text layout.
 
 ### Text alignment
 
