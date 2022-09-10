@@ -24,7 +24,7 @@ A signature can include:
 {{Glossary("JavaScript")}} is a _loosely typed_ or a _dynamic_ language. That means you don't have to declare the type of a variable ahead of time. The type will get determined automatically while the program is being processed. A signature in JavaScript can still give you some information about the method:
 
 ```js
-MyObject.prototype.myFunction(value)
+MyObject.prototype.myFunction(value);
 ```
 
 - The method is installed on an {{Glossary("object")}} called `MyObject`.

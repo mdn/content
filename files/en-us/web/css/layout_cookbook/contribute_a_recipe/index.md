@@ -57,7 +57,7 @@ You need to add the HTML for your component twice. First inside the section with
 
 Your editable CSS, from the second block in the head, also needs to be copied into the `playable-css` section.
 
-A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.
 

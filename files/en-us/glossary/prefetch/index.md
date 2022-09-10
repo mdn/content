@@ -15,7 +15,7 @@ Prefetching is when content is downloaded in the background, this is based on th
 Domain lookups can be slow, especially with network latency on mobile phones. They are most relevant when there are a plethora of links to external websites that may be clicked on, like search engine results, DNS prefetching resolves domain names in advance thereby speeding up load times by reducing the time associated with domain lookup at request time.
 
 ```html
-<link rel="dns-prefetch" href="https://example.com/">
+<link rel="dns-prefetch" href="https://example.com/" />
 ```
 
 ### Link prefetching

@@ -16,4 +16,4 @@ Programs are {{glossary("Compile", "compiled")}} only once ahead of time into a 
 
 ## See also
 
-- [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) on Wikipedia
+- [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) on Wikipedia

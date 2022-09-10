@@ -18,8 +18,8 @@ tags:
 
 The values of '`slow-2g`', '`2g`', '`3g`', and '`4g`' are determined using observed round-trip times and downlink values.
 
-| ECT         | Minimum [RTT](</en-US/docs/Glossary/Round_Trip_Time_(RTT)>) | Maximum downlink | Explanation                                                                                              |
-| ----------- | ----------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
+| ECT       | Minimum [RTT](</en-US/docs/Glossary/Round_Trip_Time_(RTT)>) | Maximum downlink | Explanation                                                                                              |
+| --------- | ----------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
 | `slow-2g` | 2000ms                                                      | 50 Kbps          | The network is suited for small transfers only such as text-only pages.                                  |
 | `2g`      | 1400ms                                                      | 70 Kbps          | The network is suited for transfers of small images.                                                     |
 | `3g`      | 270ms                                                       | 700 Kbps         | The network is suited for transfers of large assets such as high resolution images, audio, and SD video. |

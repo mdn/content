@@ -106,7 +106,7 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 ### Find out more
 
-Find more out about the Inspector in different browsers:
+Find out more about the Inspector in different browsers:
 
 - [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [IE DOM Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
@@ -163,7 +163,7 @@ The final section, **Scopes**, shows what values are visible from various points
 
 ### Find out more
 
-Find more out about the JavaScript debugger in different browsers:
+Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
 - [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)

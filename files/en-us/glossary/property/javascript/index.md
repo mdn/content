@@ -19,5 +19,5 @@ A property has a name (a {{glossary("string")}}, or {{glossary("symbol")}}) and 
 
 ## See also
 
-- [Property (programming)](https://en.wikipedia.org/wiki/Property_(programming)) on Wikipedia
+- [Property (programming)](<https://en.wikipedia.org/wiki/Property_(programming)>) on Wikipedia
 - [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
