@@ -122,7 +122,7 @@ const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
 circle2.bind("EnterFrame", function () {
   const dx = circle1.x - circle2.x;
   const dy = circle1.y - circle2.y;
-  const distance = Math.sqrt(dx * dx + dy * dy);
+  const distance = Math.sqrt(dx * dx) + Math.sqrt(dy * dy);
 
   const colliding = distance < circle1.radius + circle2.radius;
   this.color = colliding ? "green" : "blue";
