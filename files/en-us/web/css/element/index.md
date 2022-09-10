@@ -91,7 +91,7 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 Firefox does not support -webkit-box-reflect. You can emulate it -to some extent- using element. 
 
-#### HTML for webkit
+#### HTML for WebKit
 
 ```html
 <img id="pictureWReflection"
