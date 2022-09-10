@@ -199,7 +199,7 @@ function gameLoop() {
 This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a [working demo](https://luser.github.io/gamepadtest/) and look at the [full source code](https://github.com/luser/gamepadtest) on GitHub.
 
 ```js
-const haveEvents = 'ongamepadconnected' in window;
+const haveEvents = "ongamepadconnected" in window;
 const controllers = {};
 
 function connecthandler(e) {
@@ -216,12 +216,12 @@ function addgamepad(gamepad) {
   t.textContent = `gamepad: ${gamepad.id}`;
   d.appendChild(t);
 
-  const b = document.createElement("div");
+  const b = document.createElement("ul");
   b.className = "buttons";
   gamepad.buttons.forEach((button, i) => {
-    const e = document.createElement("span");
+    const e = document.createElement("li");
     e.className = "button";
-    e.textContent = i;
+    e.textContent = "Button " + i;
     b.appendChild(e);
   });
 
@@ -266,7 +266,8 @@ function updateStatus() {
     scangamepads();
   }
 
-  controllers.forEach((controller, i) => {
+  for (const i in controllers) {
+    const controller = controllers[i];
     const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
@@ -282,24 +283,31 @@ function updateStatus() {
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
+      b.textContent = pressed ? `Button ${i} [PRESSED]` : `Button ${i}`;
+      b.style.color = pressed ? "#42f593" : "#2e2d33";
       b.className = pressed ? "button pressed" : "button";
     });
 
     const axes = d.getElementsByClassName("axis");
     controller.axes.forEach((axis, i) => {
       const a = axes[i];
-      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
-      a.setAttribute("value", controller.axis + 1);
+      a.textContent = `${i}: ${axis.toFixed(4)}`;
+      a.setAttribute("value", axis + 1);
     });
-  });
+  }
 
   requestAnimationFrame(updateStatus);
 }
 
 function scangamepads() {
   const gamepads = navigator.getGamepads();
+  document.querySelector("#noDevices").style.display = gamepads.filter(Boolean)
+    .length
+    ? "none"
+    : "block";
   for (const gamepad of gamepads) {
-    if (gamepad) { // Can be null if disconnected during the session
+    if (gamepad) {
+      // Can be null if disconnected during the session
       if (gamepad.index in controllers) {
         controllers[gamepad.index] = gamepad;
       } else {
@@ -313,7 +321,8 @@ window.addEventListener("gamepadconnected", connecthandler);
 window.addEventListener("gamepaddisconnected", disconnecthandler);
 
 if (!haveEvents) {
- setInterval(scangamepads, 500);
+  document.querySelector("#noDevices").style.display = "block";
+  setInterval(scangamepads, 500);
 }
 ```
 
