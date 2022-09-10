@@ -165,7 +165,6 @@ button.switch span {
 label.switch {
   font: 16px "Open Sans", "Arial", sans-serif;
   line-height: 20px;
-  user-select: none;
   vertical-align: middle;
   user-select: none;
 }
