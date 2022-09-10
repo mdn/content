@@ -117,7 +117,7 @@ We've prepared a version with longer text for you to try out with a screen reade
 3. You can jump to the next/previous heading in many screen readers.
 4. You can also bring up a list of all headings in many screen readers, allowing you to use them as a handy table of contents to find specific content.
 
-People sometimes write headings, paragraphs, etc. using presentational HTML and line breaks, something like the following:
+People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:
 
 ```html example-bad
 <span style="font-size: 3em">My heading</span>
