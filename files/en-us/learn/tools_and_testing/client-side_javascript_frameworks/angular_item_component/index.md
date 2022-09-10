@@ -83,13 +83,13 @@ Add markup for managing items by replacing the placeholder content in `item.comp
   <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
-  <div class="btn-wrapper" *ngIf="!editable">
+  <div class="btn-wrapper" *ngIf="editable">
     <button class="btn" (click)="editable = !editable">Edit</button>
     <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
   </div>
 
   <!-- This section shows only if user clicks Edit button -->
-  <div *ngIf="editable">
+  <div *ngIf="!editable">
     <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
 
     <div class="btn-wrapper">
@@ -102,31 +102,31 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 ```
 
 The first input is a checkbox so users can check off items when an item is complete.
-The double curly braces, `\{{}}`, in the `<input>` and `<label>` for the checkbox signifies Angular's interpolation.
+The double curly braces, `\{{}}`, in the `<label>` for the checkbox signifies Angular's interpolation.
 Angular uses `\{{item.description}}` to retrieve the description of the current `item` from the `items` array.
 The next section explains how components share data in detail.
 
 The next two buttons for editing and deleting the current item are within a `<div>`.
 On this `<div>` is an `*ngIf`, a built-in Angular directive that you can use to dynamically change the structure of the DOM.
 
-This `*ngIf` means that if `editable` is `false`, this `<div>` is in the DOM. If `editable` is `true`, Angular removes this `<div>` from the DOM.
+This `*ngIf` means that if `editable` is `true`, this `<div>` is in the DOM. If `editable` is `false`, Angular removes this `<div>` from the DOM.
 
 ```html
-<div class="btn-wrapper" *ngIf="!editable">
+<div class="btn-wrapper" *ngIf="editable">
   <button class="btn" (click)="editable = !editable">Edit</button>
   <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
 </div>
 ```
 
-When a user clicks the **Edit** button, `editable` becomes true, which removes this `<div>` and its children from the DOM.
+When a user clicks the **Edit** button, `editable` becomes false, which removes this `<div>` and its children from the DOM.
 If, instead of clicking **Edit**, a user clicks **Delete**, the `ItemComponent` raises an event that notifies the `AppComponent` of the deletion.
 
-An `*ngIf` is also on the next `<div>`, but is set to an `editable` value of `true`.
-In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<input>` and `<button>` elements in the DOM.
+An `*ngIf` is also on the next `<div>`, but is set to an `editable` value of `false`.
+In this case, if `editable` is `false`, Angular puts the `<div>` and its child `<input>` and `<button>` elements in the DOM.
 
 ```html
 <!-- This section shows only if user clicks Edit button -->
-<div *ngIf="editable">
+<div *ngIf="!editable">
   <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
 
   <div class="btn-wrapper">
@@ -144,19 +144,19 @@ This way, when the user edits the item, the value of the `<input>` is already `e
 The template variable, `#editedItem`, on the `<input>` means that Angular stores whatever a user types in this `<input>` in a variable called `editedItem`.
 The `keyup` event calls the `saveItem()` method and passes in the `editedItem` value if the user chooses to press enter instead of click **Save**.
 
-When a user clicks the **Cancel** button, `editable` toggles to `false`, which removes the input and buttons for editing from the DOM.
-When `editable` is `false`, Angular puts `<div>` with the **Edit** and **Delete** buttons back in the DOM.
+When a user clicks the **Cancel** button, `editable` toggles to `true`, which removes the input and buttons for editing from the DOM.
+When `editable` is `true`, Angular puts `<div>` with the **Edit** and **Delete** buttons back in the DOM.
 
 Clicking the **Save** button calls the `saveItem()` method.
 The `saveItem()` method takes the value from the `#editedItem` `<input>` and changes the item's `description` to `editedItem.value` string.
 
 ## Prepare the AppComponent
 
-In the next section, you will add code that relies on communication the `AppComponent` and the `ItemComponent`.
+In the next section, you will add code that relies on communication between the `AppComponent` and the `ItemComponent`.
 Configure the AppComponent first by adding the following to `app.component.ts`:
 
 ```js
-remove(item) {
+remove(item: Item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }
 ```
@@ -184,15 +184,15 @@ Further down `item.component.ts`, replace the generated `ItemComponent` class wi
 ```js
 export class ItemComponent {
 
-  editable = false;
+  editable = true;
 
-  @Input() item: Item;
-  @Input() newItem: string;
+  @Input() item!: Item;
+  @Input() newItem!: string;
   @Output() remove = new EventEmitter<Item>();
 
-  saveItem(description) {
+  saveItem(description: string) {
     if (!description) return;
-    this.editable = false;
+    this.editable = true;
     this.item.description = description;
   }
 }
@@ -206,17 +206,19 @@ When you use a property in the template, you must also declare it in the class.
 An `@Input()` serves as a doorway for data to come into the component, and an `@Output()` acts as a doorway for data to go out of the component.
 An `@Output()` has to be of type `EventEmitter`, so that a component can raise an event when there's data ready to share with another component.
 
+> **Note**: The `!` in the class is called the non-null assertion operator. This operator tells Typescript that the `item` and `newItem` Inputs are never `null` or `undefined`. If this operator is not included in your code, the app will fail to compile.
+
 Use `@Input()` to specify that the value of a property can come from outside of the component.
 Use `@Output()` in conjunction with `EventEmitter` to specify that the value of a property can leave the component so that another component can receive that data.
 
-The `saveItem()` method takes as an argument a `description`.
+The `saveItem()` method takes as an argument a `description` of type `string`.
 The `description` is the text that the user enters into the HTML `<input>` when editing an item in the list.
 This `description` is the same string from the `<input>` with the `#editedItem` template variable.
 
 If the user doesn't enter a value but clicks **Save**, `saveItem()` returns nothing and does not update the `description`.
 If you didn't have this `if` statement, the user could click **Save** with nothing in the HTML `<input>`, and the `description` would become an empty string.
 
-If a user enters text and clicks save, `saveItem()` sets `editable` to false, which causes the `*ngIf` in the template to remove the edit feature and render the **Edit** and **Delete** buttons again.
+If a user enters text and clicks save, `saveItem()` sets `editable` to true, which causes the `*ngIf` in the template to remove the edit feature and render the **Edit** and **Delete** buttons again.
 
 Though the application should compile at this point, you need to use the `ItemComponent` in `AppComponent` so you can see the new features in the browser.
 
@@ -246,8 +248,8 @@ Replace the current unordered list in `app.component.html` with the following up
 <ng-template #elseBlock>items</ng-template></h2>
 
 <ul>
-  <li *ngFor="let item of items">
-    <app-item (remove)="remove(item)" [item]="item"></app-item>
+  <li *ngFor="let i of items">
+    <app-item (remove)="remove(i)" [item]="i"></app-item>
   </li>
 </ul>
 ```
@@ -269,7 +271,7 @@ For any number of items in the array, Angular would create that many `<li>` elem
 You can use an `*ngFor` on other elements, too, such as `<div>`, `<span>`, or `<p>`, to name a few.
 
 The `AppComponent` has a `remove()` method for removing the item, which is bound to the `remove` property in the `ItemComponent`.
-The `item` property in the square brackets, `[]`, binds the value of `item` between the `AppComponent` and the `ItemComponent`.
+The `item` property in the square brackets, `[]`, binds the value of `i` between the `AppComponent` and the `ItemComponent`.
 
 Now you should be able to edit and delete items from the list.
 When you add or delete items, the count of the items should also change.
