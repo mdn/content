@@ -563,7 +563,7 @@ body {
 
 {{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
 
-> **Note:** To find more out about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
+> **Note:** To find out more about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
 
 ## Table layout
 
