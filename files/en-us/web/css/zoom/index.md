@@ -68,28 +68,34 @@ zoom =
 #### HTML
 
 ```html
-<p class="small">Small</p>
-<p class="normal">Normal</p>
-<p class="big">Big</p>
+<div class="small">Small</div>
+<div class="normal">Normal</div>
+<div class="big">Big</div>
 ```
 
 #### CSS
 
+```css hidden
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+```
+
 ```css
-p.small {
+.small {
   zoom: 75%;
 }
-p.normal {
+.normal {
   zoom: normal;
 }
-p.big {
+.big {
   zoom: 2.5;
 }
-p {
-  display: inline-block;
-}
-p:hover {
-  zoom: reset;
+div:hover {
+  zoom: unset;
 }
 ```
 
