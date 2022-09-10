@@ -160,8 +160,9 @@ console.log({ numCallbackRuns });
 // { element: 3 }
 // { element: 7 }
 // { numCallbackRuns: 3 }
-// comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
 ```
+
+As you can seem the missing value between 3 and 7 didn't invoke callback function.
 
 ### Converting a for loop to forEach
 
@@ -192,7 +193,7 @@ items.forEach((item) => {
 The following code logs a line for each element in an array:
 
 ```js
-const logArrayElements = (element, index) => {
+const logArrayElements = (element, index /*, array */) => {
   console.log(`a[${index}] = ${element}`);
 };
 
