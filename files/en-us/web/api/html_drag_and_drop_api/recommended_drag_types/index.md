@@ -100,7 +100,7 @@ Multiple files will be received during a drop as multiple items in the data tran
 
 The following example shows how to create an area for receiving dropped files:
 
-```xml
+```html
 <listbox ondragenter="return checkDrag(event)"
          ondragover="return checkDrag(event)"
          ondrop="doDrop(event)"/>
