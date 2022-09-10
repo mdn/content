@@ -338,7 +338,6 @@ However, it is again the case that people sometimes do strange things with HTML.
 
 But using such code is not advised — you immediately lose the native keyboard accessibility you would have had if you'd just used {{htmlelement("button")}} elements, plus you don't get any of the default CSS styling that buttons get. In the rare to non-existant case when you need to use a non-button element for a button, use the [`button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) and implement all the default button behaviors, including keyboard and mouse button support.
 
-
 #### Building keyboard accessibility back in
 
 Adding such advantages back in takes a bit of work (you can see an example in our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example — also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"`. We also include `role="button"` so screen reader users know they can focus on and interact with the element:
