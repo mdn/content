@@ -156,10 +156,10 @@ arraySparse.forEach((element) => {
 
 console.log({ numCallbackRuns });
 
-// 1
-// 3
-// 7
-// numCallbackRuns: 3
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { numCallbackRuns: 3 }
 // comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
 ```
 
@@ -192,7 +192,7 @@ items.forEach((item) => {
 The following code logs a line for each element in an array:
 
 ```js
-const logArrayElements = (element, index, array) => {
+const logArrayElements = (element, index) => {
   console.log(`a[${index}] = ${element}`);
 };
 
@@ -295,11 +295,11 @@ array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
 ```js
 const flatten = (arr) => {
   const result = [];
-  arr.forEach((i) => {
-    if (Array.isArray(i)) {
-      result.push(...flatten(i));
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      result.push(...flatten(item));
     } else {
-      result.push(i);
+      result.push(item);
     }
   });
   return result;
