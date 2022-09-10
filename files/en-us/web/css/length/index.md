@@ -98,12 +98,12 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svw`, `lvw`, and `dvw`.
     `vw` represents the viewport-percentage length unit based on the browser default viewport size.
 - `vmax`
-  - : Represents in percentage the larger of `vw` and `vh`.
+  - : Represents in percentage the largest of `vw` and `vh`.
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmax`, `lvmax`, and `dvmax`.
     `vmax` represents the viewport-percentage length unit based on the browser default viewport size.
 - `vmin`
-  - : Represents in percentage the smaller of `vw` and `vh`.
+  - : Represents in percentage the smallest of `vw` and `vh`.
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmin`, `lvmin`, and `dvmin`.
     `vmin` represents the viewport-percentage length unit based on the browser default viewport size.
@@ -196,7 +196,6 @@ html {
 
 .result {
   height: 20px;
-  background-color: #999;
   box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
               inset -3px -3px 5px rgba(0,0,0,0.5);
   background-color: orange;
