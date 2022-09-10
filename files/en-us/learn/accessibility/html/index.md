@@ -483,7 +483,7 @@ The first image, when viewed by a screen reader, doesn't really offer the user m
 
 When a screen reader encounters the second image, it reads out the full alt attribute — "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.".
 
-This highlights the importance of not only using meaningful file names in case so-called **alt text** is not available, but also making sure that alt text is provided in `alt` attributes wherever possible. 
+This highlights the importance of not only using meaningful file names in case so-called **alt text** is not available, but also making sure that alt text is provided in `alt` attributes wherever possible.
 
 Note that the contents of the `alt` attribute should always provide a direct representation of the image and what it conveys visually. The alt should be brief and concise, but should include all the information conveyed in the image that is not duplicated in the surrounding text. 
 
