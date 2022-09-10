@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
 ---
+
 {{JSRef}}
 
 The **`BigInt64Array()`** typed array constructor creates a new

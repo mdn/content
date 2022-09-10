@@ -6,6 +6,7 @@ tags:
   - CodingScripting
   - Glossary
 ---
+
 In a computer programming language, a **statement** is a line of code commanding a task. Every program consists of a sequence of statements.
 
 ## See also

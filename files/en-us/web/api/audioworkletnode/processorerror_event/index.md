@@ -13,6 +13,7 @@ tags:
   - onprocessorerror
 browser-compat: api.AudioWorkletNode.processorerror_event
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `processorerror` event fires when the underlying {{domxref("AudioWorkletProcessor")}} behind the node throws an exception in its constructor, the {{domxref("AudioWorkletProcessor.process", "process")}} method, or any user-defined class method.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.size
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's **`size`** property returns

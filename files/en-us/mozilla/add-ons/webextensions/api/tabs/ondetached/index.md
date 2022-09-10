@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onDetached
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is detached from a window, for example because it is being moved between windows.

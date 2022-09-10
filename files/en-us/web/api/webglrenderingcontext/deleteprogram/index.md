@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteProgram()`** method of the

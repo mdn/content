@@ -10,6 +10,7 @@ tags:
   - forEach
 browser-compat: api.URLSearchParams.forEach
 ---
+
 {{APIRef("URL API")}}
 
 The **`forEach()`** method of the

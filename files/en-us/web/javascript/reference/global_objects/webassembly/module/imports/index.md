@@ -12,6 +12,7 @@ tags:
   - imports
 browser-compat: javascript.builtins.WebAssembly.Module.imports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.imports()`** function returns an array

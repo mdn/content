@@ -11,6 +11,7 @@ tags:
   - setConfiguration
 browser-compat: api.RTCPeerConnection.setConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setConfiguration()`** method sets the

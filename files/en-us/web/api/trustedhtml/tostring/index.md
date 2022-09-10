@@ -10,6 +10,7 @@ tags:
   - TrustedHTML
 browser-compat: api.TrustedHTML.toString
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toString()`** method of the {{domxref("TrustedHTML")}} interface returns a string which may safely inserted into an injection sink.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.DeviceOrientationEvent
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`DeviceOrientationEvent()`** constructor creates a new {{domxref("DeviceOrientationEvent")}} object.

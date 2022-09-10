@@ -13,6 +13,7 @@ tags:
   - queryState
 browser-compat: webextensions.api.idle.queryState
 ---
+
 {{AddonSidebar()}}
 
 Returns `"locked"` if the system is locked, `"idle"` if the user has not generated any input for a specified number of seconds, or `"active"` otherwise.

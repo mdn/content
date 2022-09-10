@@ -8,6 +8,7 @@ tags:
   - SyntaxError
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
+
 {{JSRef}}
 
 The **`SyntaxError`** constructor creates a new error object

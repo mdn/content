@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.

@@ -18,6 +18,7 @@ tags:
   - Experimental
 browser-compat: api.XRFrame.getPose
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRFrame")}} method **`getPose()`** returns the relative position and

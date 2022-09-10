@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.ImageTrackList
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ImageTrackList`** interface of the {{domxref('WebCodecs API','','','true')}} represents a list of image tracks.

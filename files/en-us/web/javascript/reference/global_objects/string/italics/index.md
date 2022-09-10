@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`italics()`** method creates an {{HTMLElement("i")}} HTML

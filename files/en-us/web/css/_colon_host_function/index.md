@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.hostfunction
 ---
+
 {{CSSRef}}
 
 The **`:host()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.

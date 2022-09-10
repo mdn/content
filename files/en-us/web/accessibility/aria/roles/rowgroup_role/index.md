@@ -13,6 +13,7 @@ tags:
   - reference
 spec-urls: https://w3c.github.io/aria/#rowgroup
 ---
+
 An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure. A `rowgroup` contains one or more rows of [cells](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role),  [grid cells](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [column headers](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [row headers](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ```html
@@ -50,7 +51,7 @@ To create an ARIA table header, table footer or table body, add `role="rowgroup"
 #### Context roles
 
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
-  - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row.  It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
+  - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
   - : One of the three possible contexts (along with table and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 - [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)

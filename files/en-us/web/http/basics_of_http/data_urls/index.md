@@ -9,6 +9,7 @@ tags:
   - URL
 browser-compat: http.data-url
 ---
+
 {{HTTPSidebar}}
 
 **Data URLs**, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents. They were formerly known as "data URIs" until that name was retired by the WHATWG.

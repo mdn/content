@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once

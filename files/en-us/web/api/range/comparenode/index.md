@@ -14,6 +14,7 @@ tags:
   - compareNode
 browser-compat: api.Range.compareNode
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
 The **`Range.compareNode()`** returns a constant indicating the

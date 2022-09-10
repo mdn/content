@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.UserProximityEvent
 ---
+
 {{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** `UserProximityEvent` is not supported by any current major browser, and should not be used.

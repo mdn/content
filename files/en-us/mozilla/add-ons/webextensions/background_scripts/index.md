@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Background_scripts
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Background scripts or a background page enable you to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab.

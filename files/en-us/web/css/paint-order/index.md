@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.paint-order
 ---
+
 {{CSSRef}}
 
 The **`paint-order`** [CSS](/en-US/docs/Web/CSS) property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.

@@ -28,6 +28,7 @@ tags:
   - target
 browser-compat: api.XRInputSource.targetRaySpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}} property

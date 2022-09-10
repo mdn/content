@@ -8,6 +8,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.g
 ---
+
 {{SVGRef}}
 
 The **`<g>`** [SVG](/en-US/docs/Web/SVG) element is a container used to group other SVG elements.

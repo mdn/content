@@ -12,6 +12,7 @@ tags:
   - tangentialPressure
 browser-compat: api.PointerEvent.tangentialPressure
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`tangentialPressure`** read-only property of the

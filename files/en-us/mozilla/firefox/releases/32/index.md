@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/32
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

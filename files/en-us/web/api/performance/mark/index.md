@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.mark
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`mark()`** method creates a

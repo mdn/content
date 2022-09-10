@@ -12,6 +12,7 @@ tags:
   - onHidden
 browser-compat: webextensions.api.menus.onHidden
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser stops displaying a menu: for example because the user clicked outside it or selected an item.

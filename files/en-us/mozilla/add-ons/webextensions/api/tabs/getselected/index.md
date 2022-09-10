@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getSelected
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} instead.

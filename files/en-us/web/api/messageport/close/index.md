@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.MessagePort.close
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`close()`** method of the {{domxref("MessagePort")}}

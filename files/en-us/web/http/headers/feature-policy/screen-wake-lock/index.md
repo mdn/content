@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.screen-wake-lock
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header **`screen-wake-lock`** directive controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not dim or turn off the screen.

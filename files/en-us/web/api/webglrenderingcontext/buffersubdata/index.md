@@ -11,6 +11,7 @@ tags:
   - bufferSubData
 browser-compat: api.WebGLRenderingContext.bufferSubData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bufferSubData()`** method of the

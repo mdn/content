@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletNode()`**

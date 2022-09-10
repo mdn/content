@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand.  The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.

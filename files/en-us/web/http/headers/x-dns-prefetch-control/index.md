@@ -9,6 +9,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control
 ---
+
 {{HTTPSidebar}}{{Non-standard_header}}
 
 The **`X-DNS-Prefetch-Control`** HTTP response header controls

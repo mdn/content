@@ -9,6 +9,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx
   - https://svgwg.org/svg2-draft/text.html#TextElementDXAttribute
 ---
+
 {{SVGRef}}
 
 The **`dx`** attribute indicates a shift along the x-axis on the position of an element or its content.

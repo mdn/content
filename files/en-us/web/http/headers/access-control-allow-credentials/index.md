@@ -10,6 +10,7 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Credentials`** response header

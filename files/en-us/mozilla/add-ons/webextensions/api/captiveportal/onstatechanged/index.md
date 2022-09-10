@@ -11,6 +11,7 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.onStateChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when the captive portal state changes.

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.link.rel.alternate_stylesheet
 ---
+
 {{CSSRef}}
 
 Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.

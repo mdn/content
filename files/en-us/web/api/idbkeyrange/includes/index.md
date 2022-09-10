@@ -13,6 +13,7 @@ tags:
   - includes
 browser-compat: api.IDBKeyRange.includes
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `includes()` method of the {{domxref("IDBKeyRange")}}

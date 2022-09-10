@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getUniformIndices
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getUniformIndices()`** method of

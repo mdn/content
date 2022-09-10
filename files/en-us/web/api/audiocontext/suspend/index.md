@@ -12,6 +12,7 @@ tags:
   - suspend
 browser-compat: api.AudioContext.suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `suspend()` method of the {{ domxref("AudioContext") }} Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.

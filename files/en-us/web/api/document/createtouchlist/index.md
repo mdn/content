@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.createTouchList
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef("TouchList")}} object.

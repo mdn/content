@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive

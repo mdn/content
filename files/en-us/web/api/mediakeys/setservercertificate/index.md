@@ -12,6 +12,7 @@ tags:
   - setServerCertificate
 browser-compat: api.MediaKeys.setServerCertificate
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeys.setServerCertificate()`** method provides a

@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.data
 ---
+
 {{APIRef("UI Events")}}
 
 The **`data`** read-only property of the

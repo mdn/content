@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Range.getBoundingClientRect
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.getBoundingClientRect()`** method returns a {{

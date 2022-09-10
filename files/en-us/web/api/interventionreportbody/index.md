@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.InterventionReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.

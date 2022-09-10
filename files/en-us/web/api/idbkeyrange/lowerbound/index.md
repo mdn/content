@@ -13,6 +13,7 @@ tags:
   - lowerBound
 browser-compat: api.IDBKeyRange.lowerBound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`lowerBound()`** method of the

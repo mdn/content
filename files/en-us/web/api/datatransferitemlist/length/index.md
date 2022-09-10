@@ -17,6 +17,7 @@ tags:
   - length
 browser-compat: api.DataTransferItemList.length
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only **`length`** property of the

@@ -11,6 +11,7 @@ tags:
   - createElement
 browser-compat: api.Document.createElement
 ---
+
 {{APIRef("DOM")}}
 
 In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by _tagName_, or an {{domxref("HTMLUnknownElement")}} if _tagName_ isn't recognized.

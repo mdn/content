@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.DataTransfer.mozCursor
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozCursor`** property returns or sets the

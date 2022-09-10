@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.ratio
 ---
+
 {{CSSRef}}
 
 The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [aspect ratios](/en-US/docs/Web/CSS/@media/aspect-ratio) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the proportion between two unitless values.

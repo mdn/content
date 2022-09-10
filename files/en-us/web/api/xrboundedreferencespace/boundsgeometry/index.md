@@ -25,6 +25,7 @@ tags:
   - Experimental
 browser-compat: api.XRBoundedReferenceSpace.boundsGeometry
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRBoundedReferenceSpace")}}

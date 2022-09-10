@@ -13,6 +13,7 @@ tags:
   - Window
   - forward
 ---
+
 {{APIRef}}{{Non-standard_header}} {{deprecated_header}}
 
 Moves the window one document forward in history. This was a Firefox-specific method and was removed in Firefox 31.

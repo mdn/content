@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.first-of-type
 ---
+
 {{CSSRef}}
 
 The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type among a group of sibling elements.

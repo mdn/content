@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientTop
 ---
+
 {{ APIRef("DOM") }}
 
 The width of the top border of an element in pixels. It is a read-only, integer

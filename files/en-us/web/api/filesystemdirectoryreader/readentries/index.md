@@ -13,6 +13,7 @@ tags:
   - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries

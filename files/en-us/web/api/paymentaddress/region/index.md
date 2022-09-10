@@ -22,6 +22,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.region
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`region`** property of the

@@ -13,6 +13,7 @@ tags:
   - Update
 browser-compat: api.IDBCursor.update
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`update()`** method of the {{domxref("IDBCursor")}}

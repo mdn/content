@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Document.forms
 ---
+
 {{APIRef("DOM")}}
 
 The **`forms`** read-only property of

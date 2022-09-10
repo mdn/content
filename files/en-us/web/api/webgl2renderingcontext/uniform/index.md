@@ -11,6 +11,7 @@ tags:
   - WebGL2RenderingContext
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.uniform[1234][uif][v]()`**

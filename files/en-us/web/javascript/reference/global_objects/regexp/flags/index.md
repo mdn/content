@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.flags
 ---
+
 {{JSRef}}
 
 The **`flags`** accessor property represents the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) of the current regular expression object.

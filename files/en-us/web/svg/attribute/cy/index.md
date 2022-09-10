@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CY
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute
 ---
+
 {{SVGRef}}
 
 The **`cy`** attribute define the y-axis coordinate of a center point.

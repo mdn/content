@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.OTPCredential.code
 ---
+
 {{SecureContext_Header}}{{APIRef("WebOTP API")}}{{SeeCompatTable}}
 
 The **`code`** property of the {{domxref("OTPCredential")}} interface returns the one-time password.

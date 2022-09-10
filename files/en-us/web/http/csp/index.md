@@ -10,6 +10,7 @@ tags:
   - access
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks,

@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.theme.onUpdated
 ---
+
 {{AddonSidebar()}}
 
 Fires when a theme supplied as a browser extension is applied or removed. Specifically:

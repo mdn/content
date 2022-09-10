@@ -11,6 +11,7 @@ tags:
   - find
 browser-compat: webextensions.api.find.find
 ---
+
 {{AddonSidebar()}}
 
 Searches for text in a tab.

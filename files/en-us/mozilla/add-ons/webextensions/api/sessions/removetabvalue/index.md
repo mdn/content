@@ -12,6 +12,7 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.removeTabValue
 ---
+
 {{AddonSidebar()}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.

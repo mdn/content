@@ -11,6 +11,7 @@ tags:
   - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a "pull request" for data from an underlying source that will made as a zero-copy transfer to a consumer (bypassing the stream's internal queues).

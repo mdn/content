@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.EventTarget.addEventListener
 ---
+
 {{APIRef("DOM")}}
 
 The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface

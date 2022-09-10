@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
+
 {{JSRef}}
 
 The `register()` method registers an object with a

@@ -9,6 +9,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-content/
 ---
+
 {{CSSRef}}
 
 **CSS Generated Content** is a module of CSS that defines how to add content to an element. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.

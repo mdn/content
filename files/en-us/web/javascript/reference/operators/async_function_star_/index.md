@@ -10,6 +10,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_generator_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`async function*`** keywords can be used to define an asynchronous generator function inside an expression.

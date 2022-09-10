@@ -19,6 +19,7 @@ tags:
   - events
 browser-compat: api.XRSessionEvent.XRSessionEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The WebXR Device API's

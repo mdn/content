@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
+
 {{JSRef}}
 
 The **`Array.of()`** method creates a new `Array`

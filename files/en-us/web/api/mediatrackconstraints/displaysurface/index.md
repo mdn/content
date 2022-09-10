@@ -21,6 +21,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackConstraints.displaySurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.displaySurface","displaySurface")}} constrainable property.

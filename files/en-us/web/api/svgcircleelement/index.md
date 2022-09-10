@@ -11,6 +11,7 @@ tags:
   - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGCircleElement`** interface is an interface for the {{SVGElement("circle")}} element.

@@ -13,6 +13,7 @@ tags:
   - default
 browser-compat: css.selectors.default
 ---
+
 {{CSSRef}}
 
 The **`:default`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects form elements that are the default in a group of related elements.

@@ -11,6 +11,7 @@ tags:
   - Authentication
 browser-compat: http.headers.WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.

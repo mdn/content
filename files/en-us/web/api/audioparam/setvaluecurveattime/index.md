@@ -14,6 +14,7 @@ tags:
   - setValueCurveAtTime
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The

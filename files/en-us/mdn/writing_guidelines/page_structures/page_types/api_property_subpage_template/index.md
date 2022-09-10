@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheProperty
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_

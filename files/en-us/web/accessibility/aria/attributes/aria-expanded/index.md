@@ -9,6 +9,7 @@ tags:
   - aria-expanded
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
+
 The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
 
 ## Description

@@ -14,6 +14,7 @@ tags:
   - move
 browser-compat: api.Element.mouseleave_event
 ---
+
 {{APIRef}}
 
 The **`mouseleave`** event is fired at an {{domxref("Element")}} when the cursor of a pointing device (usually a mouse) is moved out of it.

@@ -6,6 +6,7 @@ tags:
   - HTTP
   - WebMechanics
 ---
+
 {{HTTPSidebar}}
 
 HTTP messages are how data is exchanged between a server and a client. There are two types of messages: _requests_ sent by the client to trigger an action on the server, and _responses_, the answer from the server.

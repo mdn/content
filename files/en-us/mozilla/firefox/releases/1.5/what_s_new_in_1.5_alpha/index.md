@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - SVG
 ---
+
 {{FirefoxSidebar}}
 
 This page is based largely on [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (thanks Jesse).

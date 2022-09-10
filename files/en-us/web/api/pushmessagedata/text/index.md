@@ -13,6 +13,7 @@ tags:
   - Text
 browser-compat: api.PushMessageData.text
 ---
+
 {{APIRef("Push API")}}
 
 The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a plain text string.

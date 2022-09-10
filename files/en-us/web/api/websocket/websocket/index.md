@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket()`** constructor returns a new

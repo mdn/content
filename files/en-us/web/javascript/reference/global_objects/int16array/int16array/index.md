@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
+
 {{JSRef}}
 
 The **`Int16Array()`** typed array constructor creates an array

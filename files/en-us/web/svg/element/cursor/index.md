@@ -9,6 +9,7 @@ tags:
   - SVG
 browser-compat: svg.elements.cursor
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 > **Note:** The CSS {{cssxref("cursor")}} property should be used instead of this element.

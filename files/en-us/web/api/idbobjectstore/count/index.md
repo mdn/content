@@ -13,6 +13,7 @@ tags:
   - data
 browser-compat: api.IDBObjectStore.count
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBObjectStore")}}

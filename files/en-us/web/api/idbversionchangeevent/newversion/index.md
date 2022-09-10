@@ -13,6 +13,7 @@ tags:
   - newVersion
 browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`newVersion`** read-only property of the

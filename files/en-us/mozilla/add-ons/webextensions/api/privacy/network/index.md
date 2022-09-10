@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy.network
 ---
+
 {{AddonSidebar}}
 
 The {{WebExtAPIRef("privacy.network")}} property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.

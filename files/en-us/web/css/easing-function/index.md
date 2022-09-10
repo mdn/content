@@ -13,6 +13,7 @@ tags:
   - easing-function
 browser-compat: css.types.easing-function
 ---
+
 {{CSSRef}}
 
 The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes the rate at which a numerical value changes.

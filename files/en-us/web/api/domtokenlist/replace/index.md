@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.replace
 ---
+
 {{APIRef("DOM")}}
 
 The **`replace()`** method of the {{domxref("DOMTokenList")}} interface

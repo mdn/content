@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Resource-Policy`** response header

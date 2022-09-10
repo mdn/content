@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValue
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`CSSValue`** interface represents the current computed value of a CSS property.

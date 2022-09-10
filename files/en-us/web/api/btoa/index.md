@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`btoa()`** method creates a

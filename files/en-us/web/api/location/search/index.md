@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: api.Location.search
 ---
+
 {{ApiRef("Location")}}
 
 The **`search`** property of the {{domxref("Location")}}

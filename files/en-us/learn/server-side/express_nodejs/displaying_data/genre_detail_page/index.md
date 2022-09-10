@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier. The page should display the genre name and a list of all books in the genre with links to each book's details page.
 
 ## Controller

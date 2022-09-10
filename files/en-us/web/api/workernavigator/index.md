@@ -12,6 +12,7 @@ tags:
   - Workers
 browser-compat: api.WorkerNavigator
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.

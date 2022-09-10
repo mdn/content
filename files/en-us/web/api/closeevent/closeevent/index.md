@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CloseEvent.CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 The **`CloseEvent()`** constructor creates a new {{domxref("CloseEvent")}} object.

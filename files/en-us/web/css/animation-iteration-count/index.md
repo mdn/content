@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-iteration-count
 ---
+
 {{CSSRef}}
 
 The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.

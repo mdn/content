@@ -12,6 +12,7 @@ tags:
   - define
 browser-compat: api.CustomElementRegistry.define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`define()`** method of the

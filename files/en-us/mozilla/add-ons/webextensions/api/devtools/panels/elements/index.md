@@ -12,6 +12,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.elements
 ---
+
 {{AddonSidebar()}}
 
 An [`ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) object, which represents the browser's HTML/CSS inspector.

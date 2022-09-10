@@ -12,6 +12,7 @@ tags:
   - Database
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`IDBVersionChangeEvent()`** constructor

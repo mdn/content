@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.elements
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLFormElement")}} property

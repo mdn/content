@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.HTMLContentElement.select
 ---
+
 {{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLContentElement.select`** property reflects the

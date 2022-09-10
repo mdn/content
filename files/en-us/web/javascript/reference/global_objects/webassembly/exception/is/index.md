@@ -11,6 +11,7 @@ tags:
   - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
+
 {{JSRef}}
 
 The **`is()`** prototype method of the [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) object can be used to test if the `Exception` matches a given tag.

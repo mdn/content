@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRCPUDepthInformation
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRCPUDepthInformation`** interface contains depth information from the CPU (returned by {{domxref("XRFrame.getDepthInformation()")}}).

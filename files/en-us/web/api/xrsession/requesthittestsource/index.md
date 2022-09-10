@@ -17,6 +17,7 @@ tags:
   - XRSession
 browser-compat: api.XRSession.requestHitTestSource
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestHitTestSource()`** method of the

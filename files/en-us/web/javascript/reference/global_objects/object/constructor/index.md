@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.constructor
 ---
+
 {{JSRef}}
 
 The **`constructor`** property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.

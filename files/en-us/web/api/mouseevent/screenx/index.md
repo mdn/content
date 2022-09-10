@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.screenX
 ---
+
 {{APIRef("UI Events")}}
 
 The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.replace
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`replace()`** method of the {{DOMXref("Location")}}

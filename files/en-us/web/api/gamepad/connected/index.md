@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.connected
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.connected`** property of the

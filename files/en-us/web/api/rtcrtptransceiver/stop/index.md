@@ -14,6 +14,7 @@ tags:
   - stop
 browser-compat: api.RTCRtpTransceiver.stop
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`stop()`** method in the

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet.has
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.

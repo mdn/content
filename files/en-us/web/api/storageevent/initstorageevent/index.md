@@ -11,6 +11,7 @@ tags:
   - Web Storage API
 browser-compat: api.StorageEvent.initStorageEvent
 ---
+
 {{ ApiRef("Web Storage API") }}{{deprecated_header}}
 
 The **`StorageEvent.initStorageEvent()`** method is used to initialize the

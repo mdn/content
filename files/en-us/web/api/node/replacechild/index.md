@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`replaceChild()`** method of the {{domxref("Node")}} element

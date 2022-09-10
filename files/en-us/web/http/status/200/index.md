@@ -7,6 +7,7 @@ tags:
   - Success
 browser-compat: http.status.200
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`200 OK`** success status response code indicates that the request has succeeded. A 200 response is cacheable by default.

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new **Array

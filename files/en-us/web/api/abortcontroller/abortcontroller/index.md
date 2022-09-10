@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.AbortController.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortController()`** constructor creates a new {{domxref("AbortController")}} object instance.

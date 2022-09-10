@@ -11,6 +11,7 @@ tags:
   - reduction
 browser-compat: api.DynamicsCompressorNode.reduction
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`reduction`** read-only property of the {{ domxref("DynamicsCompressorNode") }} interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint8Array.Uint8Array
 ---
+
 {{JSRef}}
 
 The **`Uint8Array()`** constructor creates a typed array of

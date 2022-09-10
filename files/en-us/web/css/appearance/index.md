@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.appearance
 ---
+
 {{CSSRef}}
 
 The **`appearance`** CSS property is used to control native appearance of UI controls, that are based on operating system's theme.

@@ -11,6 +11,7 @@ tags:
   - Introduction
 browser-compat: api.FileSystem
 ---
+
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
 The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) simulates a local file system that web apps can navigate around. You can develop apps that can read, write, and create files and directories in a sandboxed, virtual file system.

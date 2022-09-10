@@ -15,6 +15,7 @@ tags:
   - Security
 browser-compat: api.crypto
 ---
+
 {{APIRef}}
 
 The global read-only **`crypto`** property returns the {{domxref("Crypto")}} object associated to the global object. This object allows web pages access to certain cryptographic related services.

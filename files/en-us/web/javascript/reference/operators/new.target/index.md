@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.new_target
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`new.target`** pseudo-property lets you detect whether a

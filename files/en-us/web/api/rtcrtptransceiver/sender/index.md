@@ -14,6 +14,7 @@ tags:
   - sender
 browser-compat: api.RTCRtpTransceiver.sender
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only  **`sender`** property

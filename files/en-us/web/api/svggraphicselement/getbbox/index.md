@@ -11,6 +11,7 @@ tags:
   - SVGGraphicsElement
 browser-compat: api.SVGGraphicsElement.getBBox
 ---
+
 {{APIRef}}
 
 The **`SVGGraphicsElement.getBBox()`** method allows us to determine

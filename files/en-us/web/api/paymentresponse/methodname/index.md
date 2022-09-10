@@ -14,6 +14,7 @@ tags:
   - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`methodName`** read-only

@@ -12,6 +12,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to interact with the browser's download manager. You can use this API module to download files, cancel, pause, resume downloads, and show downloaded files in the file manager.

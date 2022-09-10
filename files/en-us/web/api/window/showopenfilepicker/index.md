@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
+
 {{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showOpenFilePicker()`** method of the

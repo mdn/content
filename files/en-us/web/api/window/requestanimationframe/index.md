@@ -20,6 +20,7 @@ tags:
   - Polyfill
 browser-compat: api.Window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the

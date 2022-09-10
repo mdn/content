@@ -13,6 +13,7 @@ tags:
   - disconnect()
 browser-compat: api.BluetoothRemoteGATTServer.disconnect
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.disconnect()`** method causes

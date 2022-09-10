@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement`** interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.

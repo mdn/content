@@ -12,6 +12,7 @@ tags:
   - WebGL
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas()`** constructor returns a newly

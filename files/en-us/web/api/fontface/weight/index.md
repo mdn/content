@@ -13,6 +13,7 @@ tags:
   - weight
 browser-compat: api.FontFace.weight
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`weight`** property of the

@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.toJSON
 ---
+
 {{APIRef("Navigation Timing")}}
 
 The **`toJSON()`** method is a _serializer_ - it returns

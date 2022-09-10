@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.load
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `load()` method of the {{domxref("FontFaceSet")}} forces all the fonts

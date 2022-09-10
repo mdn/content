@@ -5,6 +5,7 @@ tags:
   - CodingScripting
   - Glossary
 ---
+
 An immutable {{glossary("object")}} is one whose content cannot be changed.
 An object can be immutable for various reasons, for example:
 

@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.bookmarks.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when there is a change to:

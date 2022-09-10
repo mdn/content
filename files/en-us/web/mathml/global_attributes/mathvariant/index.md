@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: mathml.global_attributes.mathvariant
 ---
+
 {{MathMLRef("Global_attributes")}}
 
 The **`mathvariant`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)  attribute sets a logical class for textual elements, which is visually

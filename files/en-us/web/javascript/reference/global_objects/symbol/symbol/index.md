@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
+
 {{JSRef}}
 
 The `Symbol()` constructor returns a value of type **symbol**,

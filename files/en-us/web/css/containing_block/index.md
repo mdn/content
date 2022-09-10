@@ -13,6 +13,7 @@ tags:
   - containing block
   - size
 ---
+
 {{CSSRef}}
 
 The size and position of an element are often impacted by its **containing block**. Most often, the containing block is the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area) of an element's nearest [block-level](/en-US/docs/Web/HTML/Block-level_elements) ancestor, but this is not always the case. In this article, we examine the factors that determine an element's containing block.

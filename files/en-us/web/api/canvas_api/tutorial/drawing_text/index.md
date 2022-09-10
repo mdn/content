@@ -8,6 +8,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 After having seen how to [apply styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the previous chapter, we will now have a look at how to draw text onto the canvas.

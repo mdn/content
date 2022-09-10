@@ -12,6 +12,7 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient.focus
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`focus()`** method of the {{domxref("WindowClient")}}

@@ -12,6 +12,7 @@ tags:
   - abort
 browser-compat: api.FileReader.abort_event
 ---
+
 {{APIRef}}
 
 The `abort` event is fired when a read has been aborted: for instance because the program called {{domxref("FileReader.abort()")}}.

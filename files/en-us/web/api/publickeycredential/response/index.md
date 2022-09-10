@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.response
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`response`** read-only property of the

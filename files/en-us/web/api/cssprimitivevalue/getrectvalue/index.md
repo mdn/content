@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getRectValue()`** method of the

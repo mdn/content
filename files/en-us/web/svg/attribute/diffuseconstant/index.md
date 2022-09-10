@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDiffuseLighting.diffuseConstant
 ---
+
 {{SVGRef}}
 
 The **`diffuseConstant`** attribute represents the k<sub>d</sub> value in the [Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). In SVG, this can be any non-negative number.

@@ -4,6 +4,7 @@ slug: Web/HTTP/Session
 tags:
   - HTTP
 ---
+
 {{HTTPSidebar}}
 
 In client-server protocols, like HTTP, sessions consist of three phases:

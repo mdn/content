@@ -12,6 +12,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.font-face
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<font-face>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the CSS {{cssxref("@font-face")}} rule. It defines a font's outer properties.

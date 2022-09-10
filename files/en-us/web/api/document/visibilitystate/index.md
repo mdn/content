@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.Document.visibilityState
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Document.visibilityState`**

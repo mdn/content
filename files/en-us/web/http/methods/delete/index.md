@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.DELETE
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `DELETE` request method** deletes the specified

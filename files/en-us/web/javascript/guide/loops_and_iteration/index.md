@@ -8,6 +8,7 @@ tags:
   - Syntax
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
   "Web/JavaScript/Guide/Functions")}}

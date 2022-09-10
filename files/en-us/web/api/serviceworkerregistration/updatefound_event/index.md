@@ -10,6 +10,7 @@ tags:
   - ServiceWorkerRegistration
 browser-compat: api.ServiceWorkerRegistration.updatefound_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`updatefound`** event of the

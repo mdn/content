@@ -13,6 +13,7 @@ tags:
   - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
+
 {{APIRef("WebGL")}}
 
 The

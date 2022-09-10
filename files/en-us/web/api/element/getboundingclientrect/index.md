@@ -25,6 +25,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getBoundingClientRect()`** method returns a

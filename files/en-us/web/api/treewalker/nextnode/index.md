@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.nextNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.nextNode()`** method moves the current

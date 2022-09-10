@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLStyleElement.type
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLStyleElement.type`** property returns the type of the current style.

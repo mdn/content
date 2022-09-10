@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCFullYear
 ---
+
 {{JSRef}}
 
 The **`getUTCFullYear()`** method returns the year in the

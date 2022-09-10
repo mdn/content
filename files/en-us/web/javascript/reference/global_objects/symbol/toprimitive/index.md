@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.toPrimitive
 ---
+
 {{JSRef}}
 
 The **`Symbol.toPrimitive`** is a symbol that specifies a function valued property that is called to convert an object to a corresponding primitive value.

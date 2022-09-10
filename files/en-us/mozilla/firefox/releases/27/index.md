@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/27
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 27 was released on February 4, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.

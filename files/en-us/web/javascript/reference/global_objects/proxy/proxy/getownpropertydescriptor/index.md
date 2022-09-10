@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Object.getOwnPropertyDescriptor()")}}.

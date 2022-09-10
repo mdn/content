@@ -11,6 +11,7 @@ tags:
   - write
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
+
 {{APIRef("Streams")}}
 
 The **`write()`** method of the

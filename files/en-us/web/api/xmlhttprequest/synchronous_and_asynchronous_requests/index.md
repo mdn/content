@@ -12,6 +12,7 @@ tags:
   - XMLHttpRequest
   - asynchronous
 ---
+
 {{domxref('XMLHttpRequest')}} supports both synchronous and asynchronous communications. In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
 
 Synchronous requests block the execution of code which causes "freezing" on the screen and an unresponsive user experience.

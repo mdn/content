@@ -13,6 +13,7 @@ tags:
   - Event
 browser-compat: api.TextTrackList.addtrack_event
 ---
+
 {{APIRef}}
 
 The **`addtrack`** event is fired when a track is added to a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).

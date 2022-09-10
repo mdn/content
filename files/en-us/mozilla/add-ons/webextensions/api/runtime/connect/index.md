@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.connect
 ---
+
 {{AddonSidebar()}}
 
 Make a connection between different contexts inside the extension.

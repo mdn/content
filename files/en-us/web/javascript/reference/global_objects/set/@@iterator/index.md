@@ -11,6 +11,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.@@iterator
 ---
+
 {{JSRef}}
 
 The initial value of the **`@@iterator`** property is the same

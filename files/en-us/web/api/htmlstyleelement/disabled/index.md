@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement.disabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).

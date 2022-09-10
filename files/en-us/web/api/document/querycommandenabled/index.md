@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.queryCommandEnabled
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.queryCommandEnabled()`** method reports whether

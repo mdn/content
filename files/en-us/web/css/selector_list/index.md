@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.list
 ---
+
 {{CSSRef}}
 
 The CSS **selector list** (`,`) selects all the matching nodes.

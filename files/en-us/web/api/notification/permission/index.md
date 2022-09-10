@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.permission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `permission` read-only property of the {{domxref("Notification")}}

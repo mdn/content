@@ -12,6 +12,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction
 ---
+
 {{AddonSidebar}}
 
 A [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) is a clickable icon inside the browser's address bar.

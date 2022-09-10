@@ -14,6 +14,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the mouse cursor, if any, to show when the mouse pointer is over an element.

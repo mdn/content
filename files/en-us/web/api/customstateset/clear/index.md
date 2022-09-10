@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet.clear
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes all elements from the `CustomStateSet` object.

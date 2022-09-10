@@ -9,6 +9,7 @@ tags:
   - basic controls
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls) article.

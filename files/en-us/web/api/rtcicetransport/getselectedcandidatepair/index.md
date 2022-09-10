@@ -18,6 +18,7 @@ tags:
   - getSelectedCandidatePair
 browser-compat: api.RTCIceTransport.getSelectedCandidatePair
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceTransport")}} method

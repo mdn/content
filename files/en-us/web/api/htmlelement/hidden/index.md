@@ -13,6 +13,7 @@ tags:
   - hidden
 browser-compat: api.HTMLElement.hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The {{domxref("HTMLElement")}} property

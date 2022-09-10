@@ -13,6 +13,7 @@ tags:
   - open
 browser-compat: webextensions.api.downloads.open
 ---
+
 {{AddonSidebar()}}
 
 The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event will fire when the item is opened for the first time.

@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) holds the options passed to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} in order to fetch a given {{domxref("PublicKeyCredential")}}.

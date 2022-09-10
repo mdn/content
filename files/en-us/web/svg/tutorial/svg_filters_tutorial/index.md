@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
 tags:
   - SVG filters primitives
 ---
+
 ## Filters
 
 SVG allows us to use similar tools as the bitmap description language such as the use of shadow, blur effects or even merging the results of different filters. With the filter element <`filter`> it is possible to add these effects and later on attach them to an object.

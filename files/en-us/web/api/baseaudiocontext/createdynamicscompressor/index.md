@@ -12,6 +12,7 @@ tags:
   - createDynamicsCompressor
 browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createDynamicsCompressor()` method of the {{

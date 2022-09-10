@@ -10,6 +10,7 @@ tags:
   - Web Workers
 browser-compat: api.Performance.measure
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`measure()`** method creates a named {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry buffer_ between marks, the navigation start time, or the current time.

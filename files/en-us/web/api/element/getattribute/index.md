@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttribute()`** method of the

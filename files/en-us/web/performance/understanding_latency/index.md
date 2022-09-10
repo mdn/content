@@ -7,6 +7,7 @@ tags:
   - Web Performance
   - latency
 ---
+
 **Latency** is the time it takes for a packet of data to travel from source to a destination. In terms of performance optimization, it's important to optimize to reduce causes of latency and to test site performance emulating high latency to optimize for users with lousy connections. This article explains what latency is, how it impacts performance, how to measure latency, and how to reduce it.
 
 ## What is Latency?

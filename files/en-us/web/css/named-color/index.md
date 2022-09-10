@@ -7,6 +7,7 @@ tags:
   - color
 browser-compat: css.types.color.color_keywords
 ---
+
 {{CSSRef}}
 
 The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#MinAttribute
 ---
+
 {{SVGRef}}
 
 The **`min`** attribute specifies the minimum value of the active animation duration.

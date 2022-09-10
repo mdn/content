@@ -9,6 +9,7 @@ tags:
   - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`415 Unsupported Media Type`** client error response

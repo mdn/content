@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
+
 {{JSRef}}
 
 The **`setUTCMinutes()`** method sets the minutes for a

@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.commonAncestorContainer`** read-only property

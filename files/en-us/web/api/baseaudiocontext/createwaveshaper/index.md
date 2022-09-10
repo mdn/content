@@ -12,6 +12,7 @@ tags:
   - createWaveShaper
 browser-compat: api.BaseAudioContext.createWaveShaper
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createWaveShaper()` method of the {{ domxref("BaseAudioContext") }}

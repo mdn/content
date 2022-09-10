@@ -4,6 +4,7 @@ slug: Web/SVG/Compatibility_sources
 tags:
   - SVG
 ---
+
 The following sources are used for the compatibility tables on SVG elements and attributes:
 
 - [https://developer.mozilla.org/en-US/docs/Web/SVG/SVG\_1.1\_Support_in_Firefox](/en-US/docs/Web/SVG/SVG\_1.1\_Support_in_Firefox) together with its revision history for Firefox

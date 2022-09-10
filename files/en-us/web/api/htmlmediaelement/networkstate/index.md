@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.networkState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

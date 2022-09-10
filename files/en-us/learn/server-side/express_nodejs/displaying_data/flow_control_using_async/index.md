@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 The controller code for some of our _LocalLibrary_ pages will depend on the results of multiple asynchronous requests, which may be required to run either in some particular order or in parallel. In order to manage flow control, and render pages when we have all the required information available, we'll use the popular node [async](https://www.npmjs.com/package/async) module.
 
 > **Note:** There are a number of other ways to manage asynchronous behavior and flow control in JavaScript, including relatively recent JavaScript language features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).

@@ -12,6 +12,7 @@ browser-compat:
   - api.NetworkInformation
   - api.Navigator.connection
 ---
+
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).

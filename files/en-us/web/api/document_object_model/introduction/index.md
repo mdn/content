@@ -12,6 +12,7 @@ tags:
   - Tutorial
 spec-urls: https://dom.spec.whatwg.org/
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **Document Object Model** (_DOM_) is the data representation of the objects

@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.mediaType
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`mediaType`**

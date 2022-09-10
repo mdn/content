@@ -12,6 +12,7 @@ browser-compat:
   - css.properties.display.table_values
   - css.properties.display.ruby_values
 ---
+
 {{CSSRef}}
 
 Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.

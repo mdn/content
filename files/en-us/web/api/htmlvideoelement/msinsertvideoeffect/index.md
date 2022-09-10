@@ -10,6 +10,7 @@ tags:
   - Reference
   - msInsertVideoEffect
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 The **`HTMLMediaElement.msInsertVideoEffect()`** method inserts

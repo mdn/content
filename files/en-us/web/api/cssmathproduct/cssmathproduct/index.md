@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathProduct()`** constructor creates

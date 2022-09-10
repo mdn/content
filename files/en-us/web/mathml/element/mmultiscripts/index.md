@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.mmultiscripts
 ---
+
 {{MathMLRef}}
 
 The MathML `<mmultiscripts>` element is used to attach an arbitrary number of subscripts and superscripts to an expression at once, generalizing the {{ MathMLElement("msubsup") }} element. Scripts can be either prescripts (placed before the expression) or postscripts (placed after it).

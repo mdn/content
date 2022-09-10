@@ -12,6 +12,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.blockedURI
 ---
+
 {{HTTPSidebar}}
 
 The **`blockedURI`** read-only property of the

@@ -16,6 +16,7 @@ tags:
   - toJSON
 browser-compat: api.DOMPointReadOnly.toJSON
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("DOMPointReadOnly")}} method

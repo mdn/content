@@ -13,6 +13,7 @@ tags:
   - loaded
 browser-compat: api.FontFace.loaded
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`loaded`** read-only property of the

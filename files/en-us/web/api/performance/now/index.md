@@ -10,6 +10,7 @@ tags:
   - Web Performance API
 browser-compat: api.Performance.now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 The **`performance.now()`** method

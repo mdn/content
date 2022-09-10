@@ -8,6 +8,7 @@ tags:
   - governance
   - mdn-content
 ---
+
 {{MDNSidebar}}
 
 ## Overall process

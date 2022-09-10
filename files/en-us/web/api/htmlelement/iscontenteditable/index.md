@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.isContentEditable`** read-only property

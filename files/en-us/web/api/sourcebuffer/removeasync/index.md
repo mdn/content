@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.SourceBuffer.removeAsync
 ---
+
 {{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`removeAsync()`** method of the

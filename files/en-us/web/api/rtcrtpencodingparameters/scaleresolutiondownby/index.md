@@ -22,6 +22,7 @@ tags:
   - size
 browser-compat: api.RTCRtpEncodingParameters.scaleResolutionDownBy
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpEncodingParameters")}} dictionary's

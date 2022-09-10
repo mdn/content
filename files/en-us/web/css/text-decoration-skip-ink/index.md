@@ -12,6 +12,7 @@ tags:
   - text-decoration-skip-ink
 browser-compat: css.properties.text-decoration-skip-ink
 ---
+
 {{CSSRef}}
 
 The **`text-decoration-skip-ink`** [CSS](/en-US/docs/Web/CSS) property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.

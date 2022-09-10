@@ -18,6 +18,7 @@ tags:
   - requestSession
 browser-compat: api.XRSystem.requestSession
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **{{domxref("XRSystem")}}** interface's

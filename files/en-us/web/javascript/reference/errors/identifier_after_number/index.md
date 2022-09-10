@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{JSSidebar("Errors")}}
 
 The JavaScript exception "identifier starts immediately after numeric literal" occurs

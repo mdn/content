@@ -10,6 +10,7 @@ browser-compat:
   - css.properties.scrollbar-width
   - css.properties.scrollbar-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Scrollbars** standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.

@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents an audio processing code behind a custom {{domxref("AudioWorkletNode")}}. It lives in the {{domxref("AudioWorkletGlobalScope")}} and runs on the Web Audio rendering thread. In turn, an {{domxref("AudioWorkletNode")}} based on it runs on the main thread.

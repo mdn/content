@@ -6,6 +6,7 @@ tags:
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 In the [article covering the basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), we started to look at how to position items on a grid using line numbers. In this article we will fully explore how this fundamental feature of the specification works.

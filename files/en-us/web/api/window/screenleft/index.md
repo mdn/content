@@ -12,6 +12,7 @@ tags:
   - screenLeft
 browser-compat: api.Window.screenLeft
 ---
+
 {{APIRef}}
 
 The **`Window.screenLeft`** read-only property returns the

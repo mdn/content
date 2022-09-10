@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "radix must be an integer at least 2 and no greater than 36"

@@ -14,6 +14,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCStatsReport
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCStatsReport`** interface provides a statistics report obtained by calling one of the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}} methods.

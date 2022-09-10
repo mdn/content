@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.continuous
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`continuous`** property of the

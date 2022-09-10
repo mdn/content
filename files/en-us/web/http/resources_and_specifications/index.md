@@ -5,6 +5,7 @@ tags:
   - Guide
   - HTTP
 ---
+
 {{HTTPSidebar}}
 
 HTTP was first specified in the early 1990s. Designed with extensibility in mind, it has seen numerous additions over the years; this lead to its specification being scattered through numerous specification documents (in the midst of experimental abandoned extensions). This page lists relevant resources about HTTP.

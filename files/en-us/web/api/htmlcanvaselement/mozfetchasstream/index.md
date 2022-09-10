@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.HTMLCanvasElement.mozFetchAsStream
 ---
+
 {{APIRef("Canvas API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLCanvasElement.mozFetchAsStream()`** internal method

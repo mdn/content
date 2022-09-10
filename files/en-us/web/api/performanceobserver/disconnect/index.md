@@ -13,6 +13,7 @@ tags:
   - observers
 browser-compat: api.PerformanceObserver.disconnect
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`disconnect()`** method of the

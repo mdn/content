@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBKeyRange
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a continuous interval over some data type that is used for keys. Records can be retrieved from {{domxref("IDBObjectStore")}} and {{domxref("IDBIndex")}} objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A–Z.

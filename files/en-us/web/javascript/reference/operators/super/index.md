@@ -10,6 +10,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.super
 ---
+
 {{jsSidebar("Operators")}}
 
 The **super** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.

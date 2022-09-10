@@ -17,6 +17,7 @@ tags:
   - requestMediaKeySystemAccess
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
+
 {{DefaultAPISidebar("Encrypted Media Extensions")}}
 
 The **`Navigator.requestMediaKeySystemAccess()`** method

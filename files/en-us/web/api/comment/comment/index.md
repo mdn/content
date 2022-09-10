@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Comment.Comment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Comment()`** constructor returns a newly created

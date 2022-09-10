@@ -9,6 +9,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLActiveInfo.name
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLActiveInfo.name`** property represents the name of the requested data returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()", "getActiveAttrib()")}} or {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform()")}} methods.

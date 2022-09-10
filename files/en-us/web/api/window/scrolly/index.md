@@ -12,6 +12,7 @@ tags:
   - scrollY
 browser-compat: api.Window.scrollY
 ---
+
 {{APIRef("CSSOM View")}}
 
 The read-only **`scrollY`** property

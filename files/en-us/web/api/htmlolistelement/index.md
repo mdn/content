@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOListElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLOListElement`** interface provides special properties (beyond those defined on the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating ordered list elements.

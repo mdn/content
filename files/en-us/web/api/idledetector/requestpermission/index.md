@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the {{domxref("IdleDetector")}}

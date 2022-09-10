@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
+
 {{APIRef("Streams")}}
 
 The **`close()`** method of the

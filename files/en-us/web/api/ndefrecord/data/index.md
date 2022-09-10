@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.data
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`data`**

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule.insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`insertRule()`** method of the

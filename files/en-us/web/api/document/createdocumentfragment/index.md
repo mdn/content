@@ -11,6 +11,7 @@ tags:
   - createDocumentFragment
 browser-compat: api.Document.createDocumentFragment
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 Creates a new empty {{domxref("DocumentFragment")}} into which

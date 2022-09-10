@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.Bluetooth.getDevices
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
 The **`getDevices()`** method of

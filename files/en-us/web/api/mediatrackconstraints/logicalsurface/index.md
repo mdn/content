@@ -21,6 +21,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackConstraints.logicalSurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`logicalSurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.logicalSurface","logicalSurface")}} constrainable property.

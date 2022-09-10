@@ -9,6 +9,7 @@ tags:
   - Static
   - Static Method
 ---
+
 A static method (or _static function_) is a {{Glossary("method")}} defined as a member of an {{Glossary("object")}} but is accessible directly from an API object's constructor, rather than from an object instance created via the constructor.
 
 In a [Web API](/en-US/docs/Web/API), a static method is one which is defined by an interface but can be called without instantiating an object of that type first.

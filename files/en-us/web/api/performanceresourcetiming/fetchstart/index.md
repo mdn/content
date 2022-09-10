@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.fetchStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`fetchStart`** read-only property represents a

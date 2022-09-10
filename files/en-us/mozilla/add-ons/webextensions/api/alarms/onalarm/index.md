@@ -13,6 +13,7 @@ tags:
   - onAlarm
 browser-compat: webextensions.api.alarms.onAlarm
 ---
+
 {{AddonSidebar()}}
 
 Fired when any alarm set by the extension goes off.

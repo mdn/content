@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.head
 ---
+
 {{APIRef("DOM")}}
 
 The **`head`** read-only property of

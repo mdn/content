@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.disable
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.disable()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) disables specific WebGL

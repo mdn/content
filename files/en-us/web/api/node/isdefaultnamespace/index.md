@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.isDefaultNamespace
 ---
+
 {{APIRef("DOM")}}
 
 The **`isDefaultNamespace()`** method of the {{domxref("Node")}} interface

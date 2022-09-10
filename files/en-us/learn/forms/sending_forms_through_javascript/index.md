@@ -15,6 +15,7 @@ tags:
   - Web
   - Web Forms
 ---
+
 {{LearnSidebar}}
 
 HTML forms can send an [HTTP](/en-US/docs/Web/HTTP) request declaratively. But forms can also prepare an HTTP request to send via JavaScript, for example via `XMLHttpRequest`. This article explores such approaches.

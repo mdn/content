@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.list-style-type
 ---
+
 {{CSSRef}}
 
 The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.

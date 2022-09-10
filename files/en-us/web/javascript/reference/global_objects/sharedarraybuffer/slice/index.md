@@ -10,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer.slice
 ---
+
 {{JSRef}}
 
 The **`SharedArrayBuffer.prototype.slice()`** method returns a

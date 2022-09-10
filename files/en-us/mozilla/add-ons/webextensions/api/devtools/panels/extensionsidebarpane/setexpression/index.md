@@ -13,6 +13,7 @@ tags:
   - setExpression
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
+
 {{AddonSidebar()}}
 
 Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.

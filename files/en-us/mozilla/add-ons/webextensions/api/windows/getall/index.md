@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.windows.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets information about all open windows, passing them into a callback.

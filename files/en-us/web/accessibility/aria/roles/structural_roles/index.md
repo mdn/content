@@ -33,7 +33,7 @@ The structure roles with HTML equivalents are listed below:
 | **`associationlistitemkey`** <br/> Must be contained in an `associationlist`. | {{HTMLElement('dt')}} |
 | **`associationlistitemvalue`** <br/> Always a sibling following an `associationlistitemkey`. | {{HTMLElement('dd')}} |
 | **`blockquote`** <br/> A section of content that is quoted from another source.| {{HTMLElement('blockquote')}} |
-| **`caption`** <br>Visible content that names, and may also describe, a `figure`, `table`, `grid`, or `treegrid`.<br/> Only found in those 4 roles. A caption's `id` is generally referenced by a `figure`, `grid`, `table`, or `treegrid`'s `aria-labelledby` attribute.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`.   | {{HTMLElement('caption')}} <br/> {{HTMLElement('figcaption')}} |
+| **`caption`** <br>Visible content that names, and may also describe, a `figure`, `table`, `grid`, or `treegrid`.<br/> Only found in those 4 roles. A caption's `id` is generally referenced by a `figure`, `grid`, `table`, or `treegrid`'s `aria-labelledby` attribute.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('caption')}} <br/> {{HTMLElement('figcaption')}} |
 | **`code`** <br/> A section representing a fragment of computer code. <br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('code')}} |
 | **`deletion`** <br/>Content that is marked as removed or suggested for removal.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('del')}} |
 | **`emphasis`** <br/> Used to stress or emphasize content, but not to suggest importance.<br/>Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('em')}} |

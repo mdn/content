@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.uniform[1234][fi][v]()`** methods

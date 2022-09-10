@@ -11,6 +11,7 @@ tags:
   - getReader
 browser-compat: api.ReadableStream.getReader
 ---
+
 {{APIRef("Streams")}}
 
 The **`getReader()`** method of the {{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.

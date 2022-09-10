@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLBinding.getDepthInformation
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getDepthInformation()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRWebGLDepthInformation")}} object containing WebGL depth information.

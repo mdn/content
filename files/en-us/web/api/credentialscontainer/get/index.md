@@ -12,6 +12,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.get
 ---
+
 {{APIRef("Credential Management API")}}
 
 The **`get()`** method of the

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.style.media
 ---
+
 {{SVGRef}}
 
 The **`media`** attribute specifies a {{Glossary("media query")}} that must be matched for a style sheet to apply.

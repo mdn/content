@@ -10,6 +10,7 @@ tags:
   - sort
 browser-compat: api.URLSearchParams.sort
 ---
+
 {{APIRef("URL API")}}
 
 The **`URLSearchParams.sort()`** method sorts all key/value

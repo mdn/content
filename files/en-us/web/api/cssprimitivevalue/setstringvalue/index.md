@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`setStringValue()`** method of the

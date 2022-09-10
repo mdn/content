@@ -8,6 +8,7 @@ tags:
   - MathML:Token Elements
 browser-compat: mathml.elements.mi
 ---
+
 {{MathMLRef}}
 
 The MathML `<mi>` element indicates that the content should be rendered as an **identifier** such as function names, variables or symbolic constants. You can also have arbitrary text in it to mark up terms.

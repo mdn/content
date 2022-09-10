@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`MediaQueryListEvent()`** constructor creates a new {{domxref("MediaQueryListEvent")}} object.

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.Navigator.share
 ---
+
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
 The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.

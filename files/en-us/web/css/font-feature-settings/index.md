@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-feature-settings
 ---
+
 {{CSSRef}}
 
 The **`font-feature-settings`** CSS property controls advanced typographic features in OpenType fonts.

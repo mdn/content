@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.getAllKeys
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `getAllKeys()` method of the {{domxref("IDBObjectStore")}}

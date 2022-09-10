@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createTexture()`** method of the

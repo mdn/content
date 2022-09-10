@@ -11,6 +11,7 @@ tags:
   - onUninstalled
 browser-compat: webextensions.api.management.onUninstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when an add-on is uninstalled.

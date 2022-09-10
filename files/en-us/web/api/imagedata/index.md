@@ -9,6 +9,7 @@ tags:
   - Images
 browser-compat: api.ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageData`** interface represents the underlying pixel data of an area of a {{HTMLElement("canvas")}} element.

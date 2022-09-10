@@ -12,6 +12,7 @@ tags:
   - remove
 browser-compat: webextensions.api.browsingData.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes the specified browsing data.

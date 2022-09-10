@@ -9,6 +9,7 @@ tags:
   - TypeError
 browser-compat: javascript.builtins.TypeError
 ---
+
 {{JSRef}}
 
 The **`TypeError`** object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.

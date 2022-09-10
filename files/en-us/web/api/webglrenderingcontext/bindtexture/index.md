@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindTexture()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given

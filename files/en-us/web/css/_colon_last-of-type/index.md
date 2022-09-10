@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.last-of-type
 ---
+
 {{CSSRef}}
 
 The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type among a group of sibling elements.

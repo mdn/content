@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.text
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`text`** property of the {{domxref("VTTCue")}} interface represents the text contents of the cue.

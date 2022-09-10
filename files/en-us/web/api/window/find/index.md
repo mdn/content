@@ -14,6 +14,7 @@ tags:
   - find
 browser-compat: api.Window.find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
 > **Note:** Support for `Window.find()` might change in future

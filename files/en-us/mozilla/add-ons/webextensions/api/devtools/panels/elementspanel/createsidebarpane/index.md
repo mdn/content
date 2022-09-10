@@ -14,6 +14,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
+
 {{AddonSidebar()}}
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.

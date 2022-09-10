@@ -10,6 +10,7 @@ tags:
   - keyup
 browser-compat: api.Element.keyup_event
 ---
+
 {{APIRef}}
 
 The **`keyup`** event is fired when a key is released.

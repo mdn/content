@@ -17,6 +17,7 @@ browser-compat:
   - api.DOMRect
   - api.DOMRectReadOnly
 ---
+
 {{DefaultAPISidebar("Geometry Interfaces")}}
 
 **Geometry interfaces** is a CSS module that provides interfaces for working with 3D and 2D graphics — in particular, for working with points, rectangles, quadrilaterals and [transformation matrices](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#transformation_matrices) (for operations that translate/move, scale, rotate, skew/shear/slant, and flip graphics, as well as for multiplying/chaining and inverting/undoing those operations).

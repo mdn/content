@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: css.properties.animation-timeline
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@scroll-timeline")}} at-rules describing the scroll animations to apply to the element.

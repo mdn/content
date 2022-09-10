@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.checkValidity()`** method checks

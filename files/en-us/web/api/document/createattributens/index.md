@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createAttributeNS
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttributeNS()`** method creates a new attribute node

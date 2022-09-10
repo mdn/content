@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#PolygonElementPointsAttribute
   - https://svgwg.org/svg2-draft/shapes.html#PolylineElementPointsAttribute
 ---
+
 {{SVGRef}}
 
 The **`points`** attribute defines a list of points. Each point is defined by a pair of number representing a X and a Y coordinate in the user coordinate system. If the attribute contains an odd number of coordinates, the last one will be ignored.

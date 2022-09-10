@@ -14,6 +14,7 @@ tags:
   - mode
 browser-compat: api.SourceBuffer.mode
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`mode`** property of the {{domxref("SourceBuffer")}}

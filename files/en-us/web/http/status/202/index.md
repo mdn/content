@@ -8,6 +8,7 @@ tags:
   - Success response
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`202 Accepted`**

@@ -9,6 +9,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Module()`** constructor creates a new Module

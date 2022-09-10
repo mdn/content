@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`::spelling-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as incorrectly spelled.

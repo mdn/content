@@ -10,6 +10,7 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.enter_event
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`enter`** event fires when a cue becomes active. In the case of subtitles or a caption this is when it displays over the media.

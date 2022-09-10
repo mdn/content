@@ -10,6 +10,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`function*`** declaration (`function` keyword

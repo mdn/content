@@ -9,6 +9,7 @@ tags:
   - Reference
   - x-ms-acceleratorkey
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 The **`x-ms-acceleratorkey`** attribute accessibly declares that an [accelerator key](https://docs.microsoft.com/windows/apps/design/input/keyboard-accelerators) has been assigned to an element: the element is activated via JavaScript when the key(s) are pressed on a keyboard.

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.supportedLocalesOf()`** method returns an

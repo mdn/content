@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-optical-sizing
 ---
+
 {{CSSRef}}
 
 The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.

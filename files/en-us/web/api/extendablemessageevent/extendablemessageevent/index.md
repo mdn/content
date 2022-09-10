@@ -10,6 +10,7 @@ tags:
   - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("ExtendableMessageEvent")}} object.

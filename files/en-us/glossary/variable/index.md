@@ -6,6 +6,7 @@ tags:
   - Glossary
   - JavaScript
 ---
+
 A variable is a named reference to a {{Glossary("Value", "value")}}. That way an unpredictable value can be accessed through a predetermined name.
 
 ## See also

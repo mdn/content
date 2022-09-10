@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableByteStreamController
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller for a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).

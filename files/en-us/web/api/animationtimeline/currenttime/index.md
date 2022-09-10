@@ -15,6 +15,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationTimeline.currentTime
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`currentTime`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("AnimationTimeline")}} interface returns the timeline's current time in milliseconds, or `null` if the timeline is inactive.

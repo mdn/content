@@ -13,6 +13,7 @@ tags:
   - getAsString
 browser-compat: api.DataTransferItem.getAsString
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItem.getAsString()`** method invokes the

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.

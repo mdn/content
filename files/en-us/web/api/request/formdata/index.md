@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Request.formData
 ---
+
 {{APIRef("Fetch")}}
 
 The **`formData()`** method of the {{domxref("Request")}} interface
