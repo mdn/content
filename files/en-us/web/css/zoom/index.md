@@ -14,7 +14,7 @@ browser-compat: css.properties.zoom
 
 The non-standard **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
 
-## Syntax
+## Syntax  
 
 ```css
 /* Keyword values */
@@ -42,9 +42,7 @@ zoom: unset;
 - `normal`
   - : Render this element at its normal size.
 - `reset` {{non-standard_inline}}
-
-  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. Only supported by WebKit (and possibly Blink).
-
+  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. **Do not use** this value, _use the standard `unset` value instead_.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
 - {{cssxref("&lt;number&gt;")}}
@@ -75,21 +73,27 @@ zoom =
 
 #### CSS
 
+```css hidden
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+```
+
 ```css
-p.small {
+.small {
   zoom: 75%;
 }
-p.normal {
+.normal {
   zoom: normal;
 }
-p.big {
+.big {
   zoom: 2.5;
 }
-p {
-  display: inline-block;
-}
 p:hover {
-  zoom: reset;
+  zoom: unset;
 }
 ```
 

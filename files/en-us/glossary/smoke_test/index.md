@@ -21,4 +21,4 @@ If this basic functionality fails, there is no point investing time in more deta
 
 ## See also
 
-- [Smoke testing (software)](https://en.wikipedia.org/wiki/Smoke_testing_(software)) on Wikipedia
+- [Smoke testing (software)](<https://en.wikipedia.org/wiki/Smoke_testing_(software)>) on Wikipedia

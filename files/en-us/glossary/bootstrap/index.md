@@ -15,6 +15,6 @@ Initially, Bootstrap was called Twitter Blueprint and was developed by a team wo
 
 ## See also
 
-- [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) on Wikipedia
+- [Bootstrap](<https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)>) on Wikipedia
 - [Download Bootstrap](https://getbootstrap.com/)
 - [Get started with the latest version](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)

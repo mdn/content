@@ -4,7 +4,7 @@ slug: Glossary/Nullish
 tags:
   - Glossary
   - JavaScript
-  - 'Null'
+  - "Null"
   - Primitive
   - undefined
 ---

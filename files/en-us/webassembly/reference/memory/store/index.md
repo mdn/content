@@ -7,6 +7,7 @@ tags:
   - Reference
   - Memory
 ---
+
 {{WebAssemblySidebar}}
 
 The **`store`** instructions, are used to store a number in memory.

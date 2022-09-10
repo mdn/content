@@ -109,14 +109,13 @@ body {
 }
 ```
 
-The CSS in `src/styles.css` apply to the entire application, however, these styles don't effect everything on the page.
+The CSS in `src/styles.css` apply to the entire application, however, these styles don't affect everything on the page.
 The next step is to add styles that apply specifically to the `AppComponent`.
 
 In `app.component.css`, add the following styles:
 
 ```css
 body {
-  color: #4d4d4d;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }

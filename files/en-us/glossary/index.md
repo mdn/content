@@ -1,5 +1,5 @@
 ---
-title: 'MDN Web Docs Glossary: Definitions of Web-related terms'
+title: "MDN Web Docs Glossary: Definitions of Web-related terms"
 slug: Glossary
 tags:
   - Beginner

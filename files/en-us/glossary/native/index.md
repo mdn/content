@@ -14,4 +14,4 @@ On the other hand, a Web App that runs inside a browser is not native — it is 
 
 ## See also
 
-- [Native (computing)](https://en.wikipedia.org/wiki/Native_(computing)) on Wikipedia
+- [Native (computing)](<https://en.wikipedia.org/wiki/Native_(computing)>) on Wikipedia
