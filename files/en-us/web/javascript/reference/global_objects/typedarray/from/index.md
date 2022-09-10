@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
+
 {{JSRef}}
 
 The **`TypedArray.from()`** method creates a new

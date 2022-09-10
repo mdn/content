@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.class
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their {{htmlattrxref("class")}} attribute.

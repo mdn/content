@@ -8,6 +8,7 @@ tags:
   - Learn
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function), and [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values) articles.

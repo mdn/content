@@ -14,6 +14,7 @@ tags:
   - sendRequest
 browser-compat: webextensions.api.extension.sendRequest
 ---
+
 {{AddonSidebar}}{{Deprecated_Header}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("runtime.sendMessage")}} instead.

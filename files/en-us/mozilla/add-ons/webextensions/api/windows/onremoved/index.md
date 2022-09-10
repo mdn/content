@@ -13,6 +13,7 @@ tags:
   - onRemoved
 browser-compat: webextensions.api.windows.onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a window is closed.

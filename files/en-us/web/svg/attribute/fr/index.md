@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.radialGradient.fr
 ---
+
 {{SVGRef}}
 
 The **`fr`** attribute defines the radius of the focal point for the radial gradient.

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern
 ---
+
 {{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}}
 
 The URL Pattern API defines a syntax that is used to create URL pattern

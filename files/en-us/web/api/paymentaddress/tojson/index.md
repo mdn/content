@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.toJSON
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`toJSON()`** property of the

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLBinding.createQuadLayer
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createQuadLayer()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRQuadLayer")}} object which is a layer that takes up a flat rectangular space in the virtual environment.

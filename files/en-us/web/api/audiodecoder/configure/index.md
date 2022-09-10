@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioDecoder.configure
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.

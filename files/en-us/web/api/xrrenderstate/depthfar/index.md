@@ -17,6 +17,7 @@ tags:
   - depthFar
 browser-compat: api.XRRenderState.depthFar
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`depthFar`** read-only property of the

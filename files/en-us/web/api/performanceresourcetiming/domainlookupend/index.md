@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.domainLookupEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`domainLookupEnd`** read-only property returns the

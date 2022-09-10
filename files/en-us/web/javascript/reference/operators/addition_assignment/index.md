@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The addition assignment operator (`+=`) adds the value of the right operand

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.rel`** property reflects the

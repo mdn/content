@@ -11,6 +11,7 @@ tags:
   - loadstart
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
+
 {{APIRef}}
 
 The **`loadstart`** event is fired when the browser has started to load a resource.

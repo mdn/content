@@ -8,6 +8,7 @@ tags:
   - Reference
   - media feature
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.

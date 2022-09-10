@@ -10,6 +10,7 @@ tags:
   - flexbox
 browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 A navigation pattern where one or more elements are separated from the rest of the navigation items.

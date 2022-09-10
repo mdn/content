@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaStreamEvent.stream
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}{{Non-standard_header}}
 
 The read-only property **`MediaStreamEvent.stream`** returns

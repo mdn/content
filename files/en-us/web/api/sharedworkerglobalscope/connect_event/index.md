@@ -11,6 +11,7 @@ tags:
   - events
 browser-compat: api.SharedWorkerGlobalScope.connect_event
 ---
+
 {{APIRef}}
 
 The **`connect`** event is fired in shared workers at their {{domxref("SharedWorkerGlobalScope")}} when a new client connects.

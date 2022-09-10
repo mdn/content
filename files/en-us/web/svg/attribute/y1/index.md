@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementY1Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY1Attribute
 ---
+
 {{SVGRef}}
 
 The **`y1`** attribute is used to specify the first y-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("y")}} attribute instead.

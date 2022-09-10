@@ -7,6 +7,7 @@ tags:
   - Firefox 25
   - Guide
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

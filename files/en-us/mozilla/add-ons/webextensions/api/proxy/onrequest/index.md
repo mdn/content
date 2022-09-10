@@ -12,6 +12,7 @@ tags:
   - onRequest
 browser-compat: webextensions.api.proxy.onRequest
 ---
+
 {{AddonSidebar()}}
 
 Fired when a web request is about to be made, to give the extension an opportunity to proxy it.

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 The **`forEach()`** method of the {{domxref("DOMTokenList")}} interface

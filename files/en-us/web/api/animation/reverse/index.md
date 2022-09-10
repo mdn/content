@@ -14,6 +14,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.reverse
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`Animation.reverse()`** method of the {{ domxref("Animation") }} Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse.

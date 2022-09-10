@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.postMessage
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel.postMessage()`** sends a message,

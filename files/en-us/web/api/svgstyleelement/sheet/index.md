@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.sheet
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.sheet`** read-only property returns the {{domxref("CSSStyleSheet")}} corresponding to the given SVG style element, or `null` if there is none.

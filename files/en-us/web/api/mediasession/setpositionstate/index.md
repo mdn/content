@@ -19,6 +19,7 @@ tags:
   - speed
 browser-compat: api.MediaSession.setPositionState
 ---
+
 {{APIRef("Media Session API")}}
 
 The {{domxref("MediaSession")}} method

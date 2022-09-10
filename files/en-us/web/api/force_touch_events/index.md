@@ -12,6 +12,7 @@ tags:
   - NeedsMobileBrowserCompatibility
   - Reference
 ---
+
 {{DefaultAPISidebar("Force Touch events")}}
 
 {{Non-standard_header()}}

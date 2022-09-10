@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Promise.then
 ---
+
 {{JSRef}}
 
 The **`then()`** method returns a {{jsxref("Promise")}}. It

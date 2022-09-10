@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns the index of the first element in an array that satisfies the provided testing function.

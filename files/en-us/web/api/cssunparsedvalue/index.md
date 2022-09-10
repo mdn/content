@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnparsedValue
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents property values that reference [custom properties](/en-US/docs/Web/CSS/CSS_Variables). It consists of a list of string fragments and variable references.

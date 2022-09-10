@@ -11,6 +11,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.permissions.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieve a {{WebExtAPIRef("permissions.Permissions")}} object containing all the permissions currently granted to the extension.

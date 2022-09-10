@@ -5,6 +5,7 @@ tags:
   - MathML
   - MathML Reference
 ---
+
 {{MathMLRef}}
 
 This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
@@ -20,6 +21,8 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 ### A
 
 - {{MathMLElement("maction")}} (Bound actions to sub-expressions)
+- {{MathMLElement("annotation")}} (Data annotations)
+- {{MathMLElement("annotation-xml")}} (XML annotations)
 
 ### E
 
@@ -42,6 +45,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 ### N
 
 - {{MathMLElement("mn")}} (Number)
+- {{MathMLElement("none")}} (empty scripts)
 
 ### O
 
@@ -52,6 +56,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 - {{MathMLElement("mpadded")}} (Space around content)
 - {{MathMLElement("mphantom")}} (Invisible content with reserved space)
+- {{MathMLElement("mprescripts")}} (delimiter for prescripts)
 
 ### R
 
@@ -61,6 +66,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 ### S
 
 - {{MathMLElement("ms")}} (String literal)
+- {{MathMLElement("semantics")}} (Container for semantic annotations)
 - {{MathMLElement("mspace")}} (Space)
 - {{MathMLElement("msqrt")}} (Square root without an index)
 - {{MathMLElement("mstyle")}} (Style change)
@@ -79,12 +85,6 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 - {{MathMLElement("munder")}} (Underscript)
 - {{MathMLElement("munderover")}} (Underscript-overscript pair)
-
-### Other elements
-
-- {{MathMLElement("semantics")}} (Container for semantic annotations)
-- [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation) (Data annotations)
-- [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml) (XML annotations)
 
 ## MathML elements by category
 
@@ -138,8 +138,8 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ## Semantic annotations
 
-- [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation)
-- [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml)
+- {{MathMLElement("annotation")}}
+- {{MathMLElement("annotation-xml")}}
 - {{MathMLElement("semantics")}}
 
 ## See also

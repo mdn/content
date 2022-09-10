@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.TE
 ---
+
 {{HTTPSidebar}}
 
 The **`TE`** request header specifies the transfer encodings

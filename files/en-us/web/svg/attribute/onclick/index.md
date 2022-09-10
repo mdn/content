@@ -7,6 +7,7 @@ tags:
   - events
 browser-compat: svg.attributes.events.global.onclick
 ---
+
 {{SVGRef}}
 
 The **`onclick`** attribute specifies some script to run when the element is clicked.

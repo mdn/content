@@ -13,6 +13,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.getTitle
 ---
+
 {{AddonSidebar()}}
 
 Gets the title of the page action.

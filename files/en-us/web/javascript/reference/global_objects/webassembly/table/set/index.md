@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.set
 ---
+
 {{JSRef}}
 
 The **`set()`** prototype method of

@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheProperty
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -45,7 +46,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 > - **page-type**
 >   - : The `page-type` key for Web/API properties is either `web-api-instance-property` (for instance properties) or `web-api-static-property` (for static properties).
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Property**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the property (e.g. **capabilities**).
+>   - : Always include the following tags: **API**, **Reference**, **Property**, the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the property (e.g. **capabilities**).
 >
 >     Include the following tags as appropriate:
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.

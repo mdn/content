@@ -11,6 +11,7 @@ tags:
   - sign
 browser-compat: api.SubtleCrypto.sign
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`sign()`** method of the {{domxref("SubtleCrypto")}}

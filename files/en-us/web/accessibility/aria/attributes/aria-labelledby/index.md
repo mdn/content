@@ -61,11 +61,11 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
    In this example, that accessible name is "Yellow".
 
-2. The `aria-labelledby` property takes as value an id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
+2. The `aria-labelledby` property takes as value a space-separated id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
 
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
-   <p>There are over 50 ARIA states and properties, but 13 of them stand out &helip;
+   <p>There are over 50 ARIA states and properties, but 13 of them stand out…
      <a href="13.html" id="rm13" aria-labelledby="rm13 attr">read more</a>
    </p>
    ```

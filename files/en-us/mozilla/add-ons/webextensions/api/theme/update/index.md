@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.theme.update
 ---
+
 {{AddonSidebar()}}
 
 Updates the browser theme according to the content of given {{WebExtAPIRef("theme.Theme", "Theme")}} object.

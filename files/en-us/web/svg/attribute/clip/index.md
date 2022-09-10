@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: svg.attributes.presentation.clip
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`clip`** attribute is a presentation attribute defining the visible region of an element.

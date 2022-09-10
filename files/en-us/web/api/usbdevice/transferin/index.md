@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.transferIn
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`transferIn()`** method of the {{domxref("USBDevice")}}

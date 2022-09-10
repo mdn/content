@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the sidebar.

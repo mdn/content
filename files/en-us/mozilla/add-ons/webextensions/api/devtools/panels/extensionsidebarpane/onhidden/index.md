@@ -14,6 +14,7 @@ tags:
   - onHidden
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
 ---
+
 {{AddonSidebar()}}
 
 Called when the sidebar pane becomes hidden, as a result of the user switching away from it.

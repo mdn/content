@@ -9,6 +9,7 @@ tags:
   - BluetoothUUID
 browser-compat: api.BluetoothUUID
 ---
+
 {{APIRef("Bluetooth API")}}
 
 The **`BluetoothUUID`** interface of the {{domxref('Web Bluetooth API')}} provides a way to look up Universally Unique Identifier (UUID) values by name in the

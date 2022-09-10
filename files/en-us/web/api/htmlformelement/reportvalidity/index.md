@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reportValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.reportValidity()`** method returns

@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.InputEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`InputEvent()`** constructor creates a new {{domxref("InputEvent")}} object.

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.equality
 ---
+
 {{jsSidebar("Operators")}}
 
 The equality operator (`==`) checks whether its two operands are equal,

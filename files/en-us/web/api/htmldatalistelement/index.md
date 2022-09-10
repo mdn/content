@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLDataListElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLDataListElement`** interface provides special properties (beyond the {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) to manipulate {{ HTMLElement("datalist") }} elements and their content.
@@ -17,7 +18,7 @@ The **`HTMLDataListElement`** interface provides special properties (beyond the 
 
 ## Properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}_
+_Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
 - {{domxref("HTMLDataListElement.options")}} {{ReadOnlyInline}}
   - : A {{domxref("HTMLCollection")}} representing a collection of the contained option elements.

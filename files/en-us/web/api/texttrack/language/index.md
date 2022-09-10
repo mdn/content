@@ -10,6 +10,7 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.language
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`language`** read-only property of the {{domxref("TextTrack")}} interface returns the language of the text track.

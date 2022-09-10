@@ -5,6 +5,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 You are able to include a custom sidebar on API reference pages it so that it displays links to related Interfaces, tutorials, and other resources relevant just to that API.
@@ -100,7 +101,7 @@ These are all technically optional, but it is strongly encouraged that instead o
     "title": "Detecting device orientation" }
     ```
 
-    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/Events/Detecting_device_orientation](/en-US/docs/Web/Events/Detecting_device_orientation).
+    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
 
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.

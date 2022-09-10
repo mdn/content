@@ -13,6 +13,7 @@ tags:
   - connect()
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The

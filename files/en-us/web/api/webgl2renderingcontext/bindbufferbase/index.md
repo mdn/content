@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindBufferBase
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.bindBufferBase()`** method of the

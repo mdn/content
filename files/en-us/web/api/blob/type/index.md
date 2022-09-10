@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.type
 ---
+
 {{APIRef("File API")}}
 
 The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.

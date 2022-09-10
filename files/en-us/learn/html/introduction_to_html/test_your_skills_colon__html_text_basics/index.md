@@ -8,6 +8,7 @@ tags:
   - Text
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to [mark up text in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) to give it structure and meaning.

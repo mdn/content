@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.putImageData()`**

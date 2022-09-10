@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#menuitemcheckbox
   - https://w3c.github.io/aria-practices/#menu
 ---
+
 A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible values are `true`, `false`, or `mixed`.
 
 ## Description
@@ -78,9 +79,9 @@ If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a
 - <kbd>Escape</kbd>
   - : Closes menu. In menubar, moves focus to parent menubar item.
 - <kbd>Right Arrow</kbd>
-  - : Closes submenu.  In menubar, moves focus to next item in the menubar, opening any submenu if there is one.
+  - : Closes submenu. In menubar, moves focus to next item in the menubar, opening any submenu if there is one.
 - <kbd>Left Arrow</kbd>
-  - : Closes menu.  In menubar, moves focus to previous item in the menubar, opening any submenu if there is one.
+  - : Closes menu. In menubar, moves focus to previous item in the menubar, opening any submenu if there is one.
 - <kbd>Down Arrow</kbd>
   - : Moves focus to the next item in the menu. If focus is on the last item, moves focus to the first item.
 - <kbd>Up Arrow</kbd>

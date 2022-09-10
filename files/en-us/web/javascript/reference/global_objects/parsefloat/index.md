@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseFloat()`** function parses

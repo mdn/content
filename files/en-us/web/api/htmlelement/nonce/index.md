@@ -12,6 +12,7 @@ tags:
   - nonce
 browser-compat: api.HTMLElement.nonce
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`nonce`** property of the {{DOMxRef("HTMLElement")}} interface returns the cryptographic number used once that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.

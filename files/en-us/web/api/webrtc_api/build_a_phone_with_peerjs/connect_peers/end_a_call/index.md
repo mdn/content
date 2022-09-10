@@ -3,6 +3,7 @@ title: Ending a call
 slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call
 page-type: guide
 ---
+
 {{WebRTCSidebar}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}

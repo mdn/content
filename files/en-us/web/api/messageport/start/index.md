@@ -11,6 +11,7 @@ tags:
   - start
 browser-compat: api.MessagePort.start
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`start()`** method of the {{domxref("MessagePort")}}

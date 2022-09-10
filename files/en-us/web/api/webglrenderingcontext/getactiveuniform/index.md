@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveUniform
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getActiveUniform()`** method of

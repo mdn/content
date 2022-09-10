@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overflow-inline
 ---
+
 {{CSSRef}}
 
 The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows the inline start and end edges of a box. This may be nothing, a scroll bar, or the overflow content.

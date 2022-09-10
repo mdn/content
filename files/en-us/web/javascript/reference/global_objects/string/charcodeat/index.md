@@ -9,6 +9,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.charCodeAt
 ---
+
 {{JSRef}}
 
 The **`charCodeAt()`** method returns

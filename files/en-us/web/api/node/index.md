@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node
 ---
+
 {{APIRef("DOM")}}
 
 The {{Glossary("DOM")}} **`Node`** interface is an abstract base

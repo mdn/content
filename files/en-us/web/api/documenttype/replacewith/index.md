@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentType.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.replaceWith()`** method replaces the document type with a set of given nodes.

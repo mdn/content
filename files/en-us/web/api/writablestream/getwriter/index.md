@@ -11,6 +11,7 @@ tags:
   - getWriter
 browser-compat: api.WritableStream.getWriter
 ---
+
 {{APIRef("Streams")}}
 
 The **`getWriter()`** method of the {{domxref("WritableStream")}} interface returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance.

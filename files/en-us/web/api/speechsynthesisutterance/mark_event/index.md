@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.mark_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`mark`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when the spoken utterance reaches a named SSML "mark" tag.

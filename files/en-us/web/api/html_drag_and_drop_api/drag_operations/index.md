@@ -8,6 +8,7 @@ tags:
   - HTML
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The following describes the steps that occur during a drag and drop operation.

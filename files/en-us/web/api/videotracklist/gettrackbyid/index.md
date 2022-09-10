@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.VideoTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("VideoTrackList")}}** method

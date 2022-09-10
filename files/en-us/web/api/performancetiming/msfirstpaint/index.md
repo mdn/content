@@ -7,6 +7,7 @@ tags:
   - Property
   - Non-standard
 ---
+
 {{APIRef("Navigation timing API")}}
 
 {{Non-standard_header()}}

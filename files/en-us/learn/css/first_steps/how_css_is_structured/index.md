@@ -14,6 +14,7 @@ tags:
   - values
   - whitespace
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Now that you are beginning to understand the purpose and use of CSS, let's examine the structure of CSS.

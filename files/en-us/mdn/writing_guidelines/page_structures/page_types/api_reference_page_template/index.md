@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheInterface
 ---
+
 {{MDNSidebar}}
 
 ## Page front matter

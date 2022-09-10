@@ -12,6 +12,7 @@ tags:
   - createDataChannel
 browser-compat: api.RTCPeerConnection.createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createDataChannel()`** method

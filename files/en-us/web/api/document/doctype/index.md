@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Returns the Document Type Declaration (DTD) associated with current document. The

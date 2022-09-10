@@ -9,6 +9,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 An async function is a function declared with the `async` keyword, and the `await` keyword is permitted within it. The `async` and `await` keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.

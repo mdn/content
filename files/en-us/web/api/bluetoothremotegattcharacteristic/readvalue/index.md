@@ -13,6 +13,7 @@ tags:
   - readValue
 browser-compat: api.BluetoothRemoteGATTCharacteristic.readValue
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.readValue()`** method

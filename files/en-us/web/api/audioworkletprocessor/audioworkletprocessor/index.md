@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletProcessor()`**

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNS` adds a new attribute or changes the value of an attribute

@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaColIndexText
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaColIndexText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.

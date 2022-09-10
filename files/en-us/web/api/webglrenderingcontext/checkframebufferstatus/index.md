@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.checkFramebufferStatus
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.checkFramebufferStatus()`** method

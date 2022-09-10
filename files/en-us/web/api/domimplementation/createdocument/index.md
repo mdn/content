@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DOMImplementation.createDocument()`** method creates and

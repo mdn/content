@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.taintEnabled
 ---
+
 {{APIRef("HTML DOM")}} {{deprecated_header}}
 
 The **`Navigator.taintEnabled()`** method always returns

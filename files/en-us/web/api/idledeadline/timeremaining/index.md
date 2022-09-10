@@ -11,6 +11,7 @@ tags:
   - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
+
 {{APIRef("Background Tasks")}}
 
 The **`timeRemaining()`** method

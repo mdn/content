@@ -7,6 +7,7 @@ tags:
   - Reference
   - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`global.set`** instruction sets the values of a global variable.

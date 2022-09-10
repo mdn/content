@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.setPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`setPointerCapture()`** method of the

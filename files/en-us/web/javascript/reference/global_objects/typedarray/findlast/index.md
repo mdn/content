@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.findLast
 ---
+
 {{JSRef}}
 
 The **`findLast()`** method returns the value of the last element in a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) that satisfies the provided testing function.

@@ -16,6 +16,7 @@ tags:
   - toneBuffer
 browser-compat: api.RTCDTMFSender.toneBuffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCDTMFSender")}} interface's toneBuffer property returns a string

@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.dataTransfer
 ---
+
 {{APIRef("UI Events")}}
 
 The **`dataTransfer`** read-only property of the

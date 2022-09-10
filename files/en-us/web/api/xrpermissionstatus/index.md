@@ -20,6 +20,7 @@ tags:
   - augmented
 browser-compat: api.XRPermissionStatus
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRPermissionStatus`** interface defines the object returned by calling {{domxref("Permissions.query", "navigator.permissions.query()")}} for the `xr` permission name; it indicates whether or not the app or site has permission to use WebXR, and may be monitored over time for changes to that permissions tate.

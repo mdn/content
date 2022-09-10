@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Timing-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Timing-Allow-Origin`** response header specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API), which would otherwise be reported as zero due to cross-origin restrictions.

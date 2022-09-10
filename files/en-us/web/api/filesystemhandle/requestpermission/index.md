@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemHandle.requestPermission
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the

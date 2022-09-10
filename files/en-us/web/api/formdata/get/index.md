@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`get()`** method of the {{domxref("FormData")}} interface

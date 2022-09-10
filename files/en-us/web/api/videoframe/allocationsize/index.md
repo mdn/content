@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame.allocationSize
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface returns the number of bytes required to hold the video as filtered by options passed into the method.

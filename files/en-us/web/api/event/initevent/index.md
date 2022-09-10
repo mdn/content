@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.initEvent
 ---
+
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
 The **`Event.initEvent()`** method is used to initialize the

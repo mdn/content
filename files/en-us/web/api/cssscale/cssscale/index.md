@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSScale.CSSScale
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSScale()`** constructor creates a new

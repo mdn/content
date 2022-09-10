@@ -11,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.TextEncoderStream.readable
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}}.

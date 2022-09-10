@@ -21,6 +21,7 @@ tags:
   - Web
 browser-compat: html.elements.img
 ---
+
 {{HTMLRef}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
@@ -51,7 +52,7 @@ The image file formats that are most commonly used on the web are:
 - [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance.
 - [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) — Good choice for _simple_ images and animations.
 - [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — Good choice for lossy compression of still images (slightly better quality than JPEG).
+- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — Good choice for lossless compression of still images (slightly better quality than JPEG).
 - [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
 - [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
 

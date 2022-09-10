@@ -23,6 +23,7 @@ tags:
   - Experimental
 browser-compat: api.XRInputSourceArray.forEach
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}}

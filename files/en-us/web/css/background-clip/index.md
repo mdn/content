@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-clip
 ---
+
 {{CSSRef}}
 
 The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an element's background extends underneath its border box, padding box, or content box.

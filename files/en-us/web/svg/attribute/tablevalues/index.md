@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-tablevalues
 ---
+
 {{SVGRef}}
 
 The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a color component transfer function.

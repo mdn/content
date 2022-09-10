@@ -12,6 +12,7 @@ tags:
   - exports
 browser-compat: javascript.builtins.WebAssembly.Module.exports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Module.exports()`** function returns an

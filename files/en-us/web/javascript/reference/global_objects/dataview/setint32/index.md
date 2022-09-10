@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setInt32
 ---
+
 {{JSRef}}
 
 The **`setInt32()`** method stores a signed 32-bit integer

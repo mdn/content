@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-image
 ---
+
 {{CSSRef}}
 
 The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images on an element.

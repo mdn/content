@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedBoolean
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated boolean interface

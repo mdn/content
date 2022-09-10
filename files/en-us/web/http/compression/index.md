@@ -6,6 +6,7 @@ tags:
   - HTTP
   - compression
 ---
+
 {{HTTPSidebar}}
 
 **Compression** is an important way to increase the performance of a Web site. For some documents, size reduction of up to 70% lowers the bandwidth capacity needs. Over the years, algorithms also got more efficient, and new ones are supported by clients and servers.

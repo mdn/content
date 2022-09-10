@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setSeconds
 ---
+
 {{JSRef}}
 
 The **`setSeconds()`** method sets the seconds for a specified

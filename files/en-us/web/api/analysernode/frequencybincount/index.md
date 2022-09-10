@@ -11,6 +11,7 @@ tags:
   - frequencyBinCount
 browser-compat: api.AnalyserNode.frequencyBinCount
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface is an unsigned integer half that of the {{domxref("AnalyserNode.fftSize")}}. This generally equates to the number of data values you will have to play with for the visualization.

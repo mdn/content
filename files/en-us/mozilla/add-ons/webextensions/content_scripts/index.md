@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the website itself, such as those loaded using the {{HTMLElement("script")}} element).
@@ -400,15 +401,12 @@ The choice between one-off and connection-based messaging depends on how your ex
 
 The recommended best practices are:
 
-**Use one-off messages when…**
-
-- Only one response is expected to a message.
-- A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
-
-**Use connection-based messaging when…**
-
-- Scripts engage in sessions where multiple messages are exchanged.
-- The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
+- **Use one-off messages when…**
+  - Only one response is expected to a message.
+  - A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
+- **Use connection-based messaging when…**
+  - Scripts engage in sessions where multiple messages are exchanged.
+  - The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
 
 ## Communicating with the web page
 

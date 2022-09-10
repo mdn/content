@@ -8,6 +8,7 @@ tags:
   - events
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) article.

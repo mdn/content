@@ -9,6 +9,7 @@ tags:
   - Web
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
+
 {{CSSRef}}
 
 **Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.

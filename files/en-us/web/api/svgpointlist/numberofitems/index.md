@@ -10,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.numberOfItems
 ---
+
 {{APIRef("SVG")}}
 
 The **`numberOfItems`** read-only property of the {{domxref("SVGPointList")}} interface returns the number of items in the list.

@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readystatechange_event
 ---
+
 {{APIRef}}
 
 The `readystatechange` event is fired whenever the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.

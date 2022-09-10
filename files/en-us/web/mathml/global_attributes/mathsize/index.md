@@ -8,6 +8,7 @@ tags:
   - Deprecated
 browser-compat: mathml.global_attributes.mathsize
 ---
+
 {{MathMLRef("Global_attributes")}}{{Deprecated_Header}}
 
 The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/font-size) of a MathML element.

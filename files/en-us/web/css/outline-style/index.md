@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.outline-style
 ---
+
 {{CSSRef}}
 
 The **`outline-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.

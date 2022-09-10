@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnectionIceEvent()`** constructor creates a new

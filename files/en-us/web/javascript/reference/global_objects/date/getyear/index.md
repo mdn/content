@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.getYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`getYear()`** method returns the year in the specified

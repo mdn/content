@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.font-family
 ---
+
 {{CSSRef}}
 
 The **`font-family`** CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.

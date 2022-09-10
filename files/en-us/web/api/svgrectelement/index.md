@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRectElement
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGRectElement` interface provides access to the properties of {{SVGElement("rect")}} elements, as well as methods to manipulate them.

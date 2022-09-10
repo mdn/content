@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
 ---
+
 {{JSRef}}
 
 The **`handler.defineProperty()`** method is a trap for

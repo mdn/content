@@ -13,6 +13,7 @@ tags:
   - delete
 browser-compat: javascript.operators.delete
 ---
+
 {{jsSidebar("Operators")}}
 
 The JavaScript **`delete` operator**

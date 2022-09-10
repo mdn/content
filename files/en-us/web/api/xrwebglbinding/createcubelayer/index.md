@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLBinding.createCubeLayer
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createCubeLayer()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRCubeLayer")}} object, which is a layer that renders directly from a [cubemap](https://en.wikipedia.org/wiki/Cube_mapping), and projects it onto the inside faces of a cube.

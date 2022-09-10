@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.NodeIterator.detach
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 The **`NodeIterator.detach()`** method is a no-op, kept for

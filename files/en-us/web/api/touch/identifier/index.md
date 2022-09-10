@@ -12,6 +12,7 @@ tags:
   - touch
 browser-compat: api.Touch.identifier
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.identifier`** returns a value uniquely identifying

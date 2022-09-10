@@ -13,6 +13,7 @@ tags:
   - delegation
   - header
 ---
+
 {{HTTPSidebar}}
 
 [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins.

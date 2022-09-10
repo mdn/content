@@ -13,6 +13,7 @@ tags:
   - encodingInfo
 browser-compat: api.MediaCapabilities.encodingInfo
 ---
+
 {{APIRef("MediaCapabilities")}}
 
 The **`MediaCapabilities.encodingInfo()`** method, part of the {{domxref("MediaCapabilities")}} interface of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities information.

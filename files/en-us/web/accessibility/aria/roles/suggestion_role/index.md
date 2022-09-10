@@ -8,7 +8,8 @@ tags:
   - annotations
   - suggestion
 ---
-The `suggestion` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
+
+The `suggestion` role semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
 
 ## Examples
 
@@ -37,10 +38,6 @@ We could even provide an information box saying who made the suggestion and when
 ```
 
 Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use
-
-## Accessibility concerns
-
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ## Best practices
 

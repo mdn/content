@@ -12,6 +12,7 @@ tags:
   - onThemeChanged
 browser-compat: webextensions.api.devtools.panels.onThemeChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when the devtools theme changes.

@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - OOP
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not have static types.

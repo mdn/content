@@ -15,6 +15,7 @@ tags:
   - setLiveSeekableRange()
 browser-compat: api.MediaSource.setLiveSeekableRange
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`setLiveSeekableRange()`** method of the

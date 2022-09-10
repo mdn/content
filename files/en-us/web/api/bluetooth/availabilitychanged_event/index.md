@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Bluetooth.availabilitychanged_event
 ---
+
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The `availabilitychanged` event fires when the Bluetooth system as a whole becomes available or unavailable to the {{Glossary("User Agent")}}.

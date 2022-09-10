@@ -17,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.label
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**

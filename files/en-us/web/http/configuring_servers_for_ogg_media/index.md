@@ -8,6 +8,7 @@ tags:
   - Ogg
   - Video
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.

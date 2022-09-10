@@ -9,6 +9,7 @@ tags:
   - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object

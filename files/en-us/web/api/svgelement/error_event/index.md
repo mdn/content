@@ -10,6 +10,7 @@ tags:
   - events
 browser-compat: api.SVGElement.error_event
 ---
+
 {{APIRef("SVG")}}
 
 The `error` event is fired when an SVG element does not load properly or when an error occurs during script execution.

@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.dir
 ---
+
 {{CSSRef}}
 
 The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the directionality of the text contained in them.

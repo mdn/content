@@ -12,6 +12,7 @@ tags:
   - query
 browser-compat: webextensions.api.contextualIdentities.query
 ---
+
 {{AddonSidebar()}}
 
 Gets information about all contextual identities, or about those contextual identities that match a given filter argument.

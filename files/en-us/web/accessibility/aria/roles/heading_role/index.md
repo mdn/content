@@ -11,6 +11,7 @@ spec-urls:
   - https://w3c.github.io/aria/#heading
   - https://w3c.github.io/aria-practices/#heading
 ---
+
 The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.
 
 ## Description

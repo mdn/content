@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.warn
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.warn()`** method outputs a warning message to the Web

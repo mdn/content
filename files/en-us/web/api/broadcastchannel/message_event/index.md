@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.

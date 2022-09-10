@@ -11,6 +11,7 @@ tags:
   - createMediaStreamDestination
 browser-compat: api.AudioContext.createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaStreamDestination()` method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.

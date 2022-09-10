@@ -13,6 +13,7 @@ tags:
   - receiver
 browser-compat: api.RTCRtpTransceiver.receiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only  **`receiver`** property

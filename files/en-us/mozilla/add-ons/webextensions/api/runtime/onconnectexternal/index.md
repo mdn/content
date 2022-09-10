@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onConnectExternal
 ---
+
 {{AddonSidebar()}}
 
 Fired when an extension receives a connection request from a different extension.

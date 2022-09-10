@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.CustomEvent.initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 The **`CustomEvent.initCustomEvent()`** method initializes a {{domxref("CustomEvent")}} object.

@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.Touch.clientX
 ---
+
 {{ APIRef("Touch Events") }}
 
 The `Touch.clientX` read-only property returns the X coordinate of the touch

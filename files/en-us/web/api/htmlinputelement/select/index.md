@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.select()`** method selects all the text

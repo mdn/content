@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the

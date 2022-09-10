@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface

@@ -9,6 +9,7 @@ tags:
   - Streams API
 browser-compat: api.TransformStream
 ---
+
 {{APIRef("Streams")}}
 
 The **`TransformStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) _transform stream_ concept.

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.filter
 ---
+
 {{JSRef}}
 
 The **`filter()`** method creates a new typed array with all

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.fill
 ---
+
 {{JSRef}}
 
 The **`fill()`** method fills all the elements of a typed array

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.hanging-punctuation
 ---
+
 {{CSSRef}}
 
 The **`hanging-punctuation`** [CSS](/en-US/docs/Web/CSS) property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.

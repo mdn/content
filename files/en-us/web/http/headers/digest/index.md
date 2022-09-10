@@ -7,6 +7,7 @@ tags:
   - Digest
 browser-compat: http.headers.Digest
 ---
+
 {{HTTPSidebar}}
 
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.

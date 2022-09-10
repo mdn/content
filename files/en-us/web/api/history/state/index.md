@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.state
 ---
+
 {{APIRef("History API")}}
 
 The **`History.state`** property

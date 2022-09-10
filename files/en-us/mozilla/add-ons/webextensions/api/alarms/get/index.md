@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.alarms.get
 ---
+
 {{AddonSidebar()}}
 
 Gets an alarm, given its name.

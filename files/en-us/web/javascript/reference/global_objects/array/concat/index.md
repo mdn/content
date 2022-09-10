@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.concat
 ---
+
 {{JSRef}}
 
 The **`concat()`** method is used to merge two or more arrays.

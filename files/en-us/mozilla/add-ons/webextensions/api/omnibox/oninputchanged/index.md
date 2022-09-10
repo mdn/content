@@ -12,6 +12,7 @@ tags:
   - onInputChanged
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.

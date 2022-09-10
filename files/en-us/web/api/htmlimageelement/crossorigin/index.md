@@ -16,6 +16,7 @@ tags:
   - origin
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}

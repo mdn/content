@@ -10,6 +10,7 @@ tags:
   - MIDIConnectionEvent
 browser-compat: api.MIDIConnectionEvent.port
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`port`** read-only property of the {{domxref("MIDIConnectionEvent")}} interface returns the port that has been disconnected or connected.

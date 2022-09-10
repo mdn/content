@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.speechSynthesis
 ---
+
 {{APIRef()}}
 
 The `speechSynthesis` read-only property of the Window object returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.

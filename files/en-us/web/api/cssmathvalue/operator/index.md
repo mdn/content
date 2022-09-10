@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue.operator
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathValue.operator`** read-only

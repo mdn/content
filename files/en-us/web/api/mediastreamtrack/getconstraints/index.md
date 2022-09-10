@@ -12,6 +12,7 @@ tags:
   - getConstraints
 browser-compat: api.MediaStreamTrack.getConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getConstraints()`** method of

@@ -8,6 +8,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.callee
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`arguments.callee`** property contains the currently executing function.

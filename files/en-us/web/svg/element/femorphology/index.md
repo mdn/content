@@ -10,6 +10,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feMorphology
 ---
+
 {{SVGRef}}
 
 The **`<feMorphology>`** [SVG](/en-US/docs/Web/SVG) filter primitive is used to erode or dilate the input image. Its usefulness lies especially in fattening or thinning effects.

@@ -14,6 +14,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.changedTouches
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`changedTouches`** read-only property is a {{ domxref("TouchList") }} whose touch points ({{domxref("Touch")}} objects) varies depending on the event type, as follows:

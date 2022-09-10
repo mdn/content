@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{DefaultAPISidebar("Encoding API")}}
 
 The constructors for {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label`, representing the encoding to be used. The default is `UTF-8`.

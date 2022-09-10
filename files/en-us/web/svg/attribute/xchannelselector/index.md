@@ -8,6 +8,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDisplacementMap.xChannelSelector
 ---
+
 {{SVGRef}}
 
 The **`xChannelSelector`** attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the x-axis.

@@ -9,6 +9,7 @@ tags:
   - Reference
 spec-urls: https://wicg.github.io/web-otp/
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
 The **WebOTP API** provides a method for verifying that a phone number belongs to the user, by generating a one-time password on receipt of a specially formatted SMS message.

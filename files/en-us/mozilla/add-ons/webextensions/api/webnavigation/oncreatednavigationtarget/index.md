@@ -13,6 +13,7 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
+
 {{AddonSidebar()}}
 
 Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:

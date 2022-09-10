@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Feature-Policy.geolocation
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header

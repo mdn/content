@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 The **`eventPhase`** read-only property of the
@@ -142,9 +143,9 @@ function onDivClick(e) {
 }
 
 function clearDivs() {
-  divs.forEach((div, i) => {
-    if (div.id !== 'divInfo') {
-      div.style.backgroundColor = i % 2 !== 0 ? '#f6eedb' : '#cceeff';
+  for (let i = 0; i < divs.length; i++) {
+    if (divs[i].id !== 'divInfo') {
+      divs[i].style.backgroundColor = i % 2 !== 0 ? '#f6eedb' : '#cceeff';
     }
   }
   divInfo.textContent = '';

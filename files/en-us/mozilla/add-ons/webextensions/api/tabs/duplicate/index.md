@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.duplicate
 ---
+
 {{AddonSidebar()}}
 
 Duplicates a tab, given its ID.

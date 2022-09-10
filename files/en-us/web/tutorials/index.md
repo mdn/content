@@ -16,6 +16,7 @@ tags:
   - Web Article
   - Web Development
 ---
+
 The links on this page lead to a variety of tutorials and training materials. Whether you are just starting out, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
 
 These resources are created by forward-thinking companies and web developers who have embraced open standards and best practices for web development and that provide or allow translations, through an open content license such as Creative Commons.

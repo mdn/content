@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onMessage
 ---
+
 {{AddonSidebar()}}
 
 Use this event to listen for messages from another part of your extension.

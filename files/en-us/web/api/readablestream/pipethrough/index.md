@@ -11,6 +11,7 @@ tags:
   - pipeThrough
 browser-compat: api.ReadableStream.pipeThrough
 ---
+
 {{APIRef("Streams")}}
 
 The **`pipeThrough()`** method of the {{domxref("ReadableStream")}} interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.

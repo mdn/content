@@ -14,6 +14,7 @@ browser-compat:
   - api.WebGLRenderingContext.compressedTexImage2D
   - api.WebGL2RenderingContext.compressedTexImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexImage2D()`**

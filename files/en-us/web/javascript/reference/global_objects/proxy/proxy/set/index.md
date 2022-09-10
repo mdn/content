@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.set
 ---
+
 {{JSRef}}
 
 The **`handler.set()`** method is a trap for setting a property

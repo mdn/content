@@ -15,6 +15,7 @@ tags:
   - XRSpace
 browser-compat: api.XRSpace
 ---
+
 {{SecureContext_Header}}{{APIRef("WebXR Device API")}}
 
 The **`XRSpace`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is an abstract interface providing a common basis for every class which represents a virtual coordinate system within the virtual world, in which its origin corresponds to a physical location. Spatial data in WebXR is always expressed relative to an object based upon one of the descendant interfaces of `XRSpace`, at the time at which a given {{domxref("XRFrame")}} takes place.

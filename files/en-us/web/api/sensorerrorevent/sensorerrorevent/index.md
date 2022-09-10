@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.SensorErrorEvent.SensorErrorEvent
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`SensorErrorEvent`** constructor

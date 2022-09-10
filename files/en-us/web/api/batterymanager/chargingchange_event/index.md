@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.chargingchange_event
 ---
+
 {{APIRef("Battery API")}}
 
 The **`chargingchange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.charging","charging")}} property is updated.

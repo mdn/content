@@ -9,10 +9,10 @@ tags:
   - Reference
   - WindowControlsOverlay
   - Progressive Web Apps
-  - Experimental
 browser-compat: api.WindowControlsOverlay.visible
 ---
-{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
+
+{{APIRef("Window Controls Overlay API")}}
 
 The **`visible`** property of a {{domxref("WindowControlsOverlay")}} object returns a {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 

@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.

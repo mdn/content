@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePairStats.consentRequestsSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

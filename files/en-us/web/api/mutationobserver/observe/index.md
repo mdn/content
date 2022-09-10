@@ -19,6 +19,7 @@ tags:
   - observe
 browser-compat: api.MutationObserver.observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method **`observe()`** configures the `MutationObserver`

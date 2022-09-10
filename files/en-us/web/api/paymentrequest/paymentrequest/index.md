@@ -13,6 +13,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentRequest()`** constructor

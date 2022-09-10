@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheEvent_event
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -44,7 +45,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - **page-type**
 >   - : The `page-type` key for Web/API events is always `web-api-event`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Event**,  the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
+>   - : Always include the following tags: **API**, **Reference**, **Event**, the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
 >
 >     Include the following tags as appropriate:
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
+
 {{JSRef}}
 
 The **`reduce()`** method applies a function against an

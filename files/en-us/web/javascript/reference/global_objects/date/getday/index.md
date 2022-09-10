@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getDay
 ---
+
 {{JSRef}}
 
 The **`getDay()`** method returns the

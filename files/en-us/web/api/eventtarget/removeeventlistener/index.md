@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.EventTarget.removeEventListener
 ---
+
 {{APIRef("DOM")}}
 
 The **`removeEventListener()`** method of the {{domxref("EventTarget")}} interface

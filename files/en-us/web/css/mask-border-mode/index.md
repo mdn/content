@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-border-mode
 ---
+
 {{CSSRef}}
 
 The **`mask-border-mode`** [CSS](/en-US/docs/Web/CSS) property specifies the blending mode used in a [mask border](/en-US/docs/Web/CSS/mask-border).

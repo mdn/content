@@ -11,6 +11,7 @@ tags:
   - ValidityState
 browser-compat: api.ValidityState.badInput
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`badInput`** property of a [ValidityState](/en-US/docs/Web/API/ValidityState) object indicates if the user has provided input that the browser is unable to convert. For example, if you have a number input element whose content is a string.

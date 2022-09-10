@@ -11,6 +11,7 @@ tags:
   - Property
 browser-compat: api.CSSStyleRule.styleMap
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`styleMap`** read-only property of the

@@ -16,6 +16,7 @@ tags:
   - sampleSize
 browser-compat: api.MediaTrackSettings.sampleSize
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's

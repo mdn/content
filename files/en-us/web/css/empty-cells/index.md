@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.empty-cells
 ---
+
 {{CSSRef}}
 
 The **`empty-cells`** CSS property sets whether borders and backgrounds appear around {{htmlelement("table")}} cells that have no visible content.

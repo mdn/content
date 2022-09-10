@@ -17,6 +17,7 @@ tags:
   - sound
 browser-compat: api.AudioWorkletGlobalScope
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletGlobalScope`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents a global execution context for user-supplied code, which defines custom {{domxref("AudioWorkletProcessor")}}-derived classes.

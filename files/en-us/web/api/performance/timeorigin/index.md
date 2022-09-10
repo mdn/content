@@ -11,6 +11,7 @@ tags:
   - timeOrigin
 browser-compat: api.Performance.timeOrigin
 ---
+
 {{APIRef("High Resolution Time")}}
 
 The **`timeOrigin`** read-only property of the

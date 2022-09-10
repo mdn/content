@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.BigInt.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.

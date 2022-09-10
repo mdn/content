@@ -9,6 +9,7 @@ tags:
   - Guide
   - Permissions
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.

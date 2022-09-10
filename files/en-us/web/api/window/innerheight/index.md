@@ -16,6 +16,7 @@ tags:
   - innerHeight
 browser-compat: api.Window.innerHeight
 ---
+
 {{APIRef}}
 
 The read-only **`innerHeight`** property of the

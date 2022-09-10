@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function
 ---
+
 {{CSSRef}}
 
 The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.

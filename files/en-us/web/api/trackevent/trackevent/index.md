@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.TrackEvent.TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TrackEvent()`** constructor

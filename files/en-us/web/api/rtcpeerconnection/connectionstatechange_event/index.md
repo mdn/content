@@ -10,6 +10,7 @@ tags:
   - connectionstatechange
 browser-compat: api.RTCPeerConnection.connectionstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`connectionstatechange`** event is sent to the `onconnectionstatechange` event handler on an {{domxref("RTCPeerConnection")}} object after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.

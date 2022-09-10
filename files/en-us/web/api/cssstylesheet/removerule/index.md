@@ -21,6 +21,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} method

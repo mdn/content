@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimateTransformElement
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGAnimateTransformElement` interface corresponds to the {{SVGElement("animateTransform")}} element.

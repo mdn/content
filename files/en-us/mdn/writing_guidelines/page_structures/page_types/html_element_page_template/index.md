@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -43,7 +44,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **tags**
->   - : Always include the following tags: **HTML**, **Element**, **Reference**,  the _NameOfTheElement_ (e.g. **video**).
+>   - : Always include the following tags: **HTML**, **Element**, **Reference**, the _NameOfTheElement_ (e.g. **video**).
 >
 >     Include the following tags as appropriate:
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).

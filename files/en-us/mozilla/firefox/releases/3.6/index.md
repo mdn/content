@@ -11,6 +11,7 @@ tags:
   - Namoroka
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox 3.6](https://www.mozilla.org/firefox/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
@@ -70,7 +71,7 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
   - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
 - Checking to see if an element matches a specified CSS selector
   - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See {{bug(518003)}}.
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Detecting document width and height changes](/en-US/docs/DOM/Detecting_document_width_and_height_changes)
   - : The new `MozScrollAreaChanged` event is dispatched whenever the document's `scrollWidth` and/or `scrollHeight` properties change.
@@ -99,7 +100,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### New features
 
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Monitoring HTTP activity](/en-US/docs/Monitoring_HTTP_activity)
   - : You can now monitor HTTP transactions to observe requests and responses in real time.

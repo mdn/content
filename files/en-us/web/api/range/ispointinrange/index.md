@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Range.isPointInRange
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.isPointInRange()`** method returns a boolean

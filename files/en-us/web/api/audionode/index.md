@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioNode`** interface is a generic interface for representing an audio processing module.

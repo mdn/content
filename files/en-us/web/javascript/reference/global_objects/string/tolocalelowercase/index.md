@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLocaleLowerCase()`** method returns the calling string

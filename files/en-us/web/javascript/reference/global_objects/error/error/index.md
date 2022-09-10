@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Error.Error
 ---
+
 {{JSRef}}
 
 The **`Error()`** constructor creates an error object.

@@ -12,6 +12,7 @@ tags:
   - VR
 browser-compat: api.XRJointSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the position and orientation of an {{domxref("XRHand")}} joint.

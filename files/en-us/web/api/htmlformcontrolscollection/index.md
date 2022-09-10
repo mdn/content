@@ -16,6 +16,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormControlsCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormControlsCollection`** interface represents a _collection_ of HTML _form control elements_, returned by the {{domxref("HTMLFormElement")}} interface's {{domxref("HTMLFormElement.elements", "elements")}} property.

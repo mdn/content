@@ -9,6 +9,7 @@ tags:
   - API
 browser-compat: api.Scheduler.postTask
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`postTask()`** method of the {{domxref("Scheduler")}} interface is used for adding tasks to be [scheduled](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) according to their [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).

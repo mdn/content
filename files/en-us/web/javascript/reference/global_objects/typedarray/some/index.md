@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether some element in the typed

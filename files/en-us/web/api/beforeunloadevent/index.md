@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 **`BeforeUnloadEvent`** is an interface for the {{domxref("Window/beforeunload_event", "beforeunload")}} event.

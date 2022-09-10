@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCSeconds
 ---
+
 {{JSRef}}
 
 The **`getUTCSeconds()`** method returns the seconds in the

@@ -13,6 +13,7 @@ tags:
   - setEnd
 browser-compat: api.Range.setEnd
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setEnd()`** method sets the end position of a {{

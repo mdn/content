@@ -13,6 +13,7 @@ tags:
   - payment
 browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentMethodChangeEvent()`**

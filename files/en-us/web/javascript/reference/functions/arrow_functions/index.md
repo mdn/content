@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional

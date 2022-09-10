@@ -16,6 +16,7 @@ tags:
   - addIceCandidate
 browser-compat: api.RTCPeerConnection.addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 When a web site or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.

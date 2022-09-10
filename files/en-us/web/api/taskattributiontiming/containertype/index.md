@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.TaskAttributionTiming.containerType
 ---
+
 {{APIRef("Long Tasks")}}{{SeeCompatTable}}
 
 The **`containerType`** readonly property of the

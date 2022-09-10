@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_or
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise OR operator (`|`) returns a `1` in each bit position

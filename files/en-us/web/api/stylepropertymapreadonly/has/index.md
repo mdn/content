@@ -13,6 +13,7 @@ tags:
   - has()
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`has()`** method of the

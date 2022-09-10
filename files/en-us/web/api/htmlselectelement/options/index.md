@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLSelectElement.options
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLSelectElement.options`** read-only property returns

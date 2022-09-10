@@ -12,6 +12,7 @@ tags:
   - touch
 browser-compat: api.Touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.

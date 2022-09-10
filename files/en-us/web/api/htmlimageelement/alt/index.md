@@ -17,6 +17,7 @@ tags:
   - fallback
 browser-compat: api.HTMLImageElement.alt
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property **`alt`** provides fallback (alternate) text to display when the image specified by the {{HTMLElement("img")}} element is not loaded.

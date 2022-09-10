@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#aria-describedby
   - https://w3c.github.io/aria-practices/#describing_with_aria-describedby
 ---
+
 The global `aria-describedby` attribute identifies the element (or elements) that describes the element on which the attribute is set.
 
 ## Description
@@ -41,7 +42,7 @@ The `aria-describedby` property is appropriate when the associated content conta
 ## Values
 
 - ID reference list
-  - : The `id` or space-separated list of elements IDs that describe the current element.
+  - : The `id` or space-separated list of element IDs that describe the current element.
 
 ## Associated roles
 

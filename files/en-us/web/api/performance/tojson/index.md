@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Performance.toJSON
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 The **`toJSON()`** method of the {{domxref("Performance")}}

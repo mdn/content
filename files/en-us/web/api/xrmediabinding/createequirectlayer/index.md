@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRMediaBinding.createEquirectLayer
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createEquirectLayer()`** method of the {{domxref("XRMediaBinding")}} interface returns an {{domxref("XREquirectLayer")}} object which is a layer that maps an equirectangular coded data onto the inside of a sphere.

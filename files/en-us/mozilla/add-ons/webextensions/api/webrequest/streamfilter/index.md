@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter
 ---
+
 {{AddonSidebar()}}
 
 A `StreamFilter` is an object you use to monitor and modify HTTP responses.

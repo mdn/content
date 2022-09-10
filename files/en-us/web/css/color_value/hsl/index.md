@@ -11,6 +11,7 @@ tags:
   - hsl
 browser-compat: css.types.color.hsl
 ---
+
 {{CSSRef}}
 
 The **`hsl()`** functional notation expresses an {{glossary("RGB", "sRGB")}} color according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.

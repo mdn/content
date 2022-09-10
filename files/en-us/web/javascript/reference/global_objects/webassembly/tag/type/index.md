@@ -11,6 +11,7 @@ tags:
   - Exception
 browser-compat: javascript.builtins.WebAssembly.Tag.type
 ---
+
 {{JSRef}}
 
 The **`type()`** prototype method of the [`Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) object can be used to get the sequence of data types associated with the tag.

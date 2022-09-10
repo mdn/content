@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.sampleCoverage
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.sampleCoverage()`** method of the

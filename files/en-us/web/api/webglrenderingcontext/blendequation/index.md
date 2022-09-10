@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendEquation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendEquation()`** method of the

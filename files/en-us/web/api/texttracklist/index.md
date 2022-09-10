@@ -15,6 +15,7 @@ tags:
   - list
 browser-compat: api.TextTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TextTrackList`** interface is used to represent a list of the text tracks defined by the {{HTMLElement("track")}} element, with each track represented by a separate {{domxref("textTrack")}} object in the list.

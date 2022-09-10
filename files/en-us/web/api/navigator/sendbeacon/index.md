@@ -14,6 +14,7 @@ tags:
   - sendBeacon
 browser-compat: api.Navigator.sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`navigator.sendBeacon()`**

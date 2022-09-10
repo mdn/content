@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feGaussianBlur.stdDeviation
 ---
+
 {{SVGRef}}
 
 The **`stdDeviation`** attribute defines the standard deviation for the blur operation.

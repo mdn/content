@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new _array iterator_ object

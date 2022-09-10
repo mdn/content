@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a

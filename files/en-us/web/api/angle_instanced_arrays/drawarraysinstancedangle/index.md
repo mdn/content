@@ -11,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method. In addition, it can execute multiple instances of the range of elements.

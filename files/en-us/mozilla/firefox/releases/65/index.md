@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
@@ -45,9 +46,9 @@ This article provides information about the changes in Firefox 65 that will affe
 - The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](</en-US/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) — have been implemented ({{bug(1496619)}}). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
 - Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
 
-  - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. the existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
-  - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. the existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
-  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. the existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
+  - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
+  - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. The existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
+  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. The existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
 
 - The behavior of {{cssxref("user-select")}} has been changed to make it align more with other browsers ({{bug(1506547)}}). Specifically:
 

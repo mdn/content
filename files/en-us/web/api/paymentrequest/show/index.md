@@ -15,6 +15,7 @@ tags:
   - show
 browser-compat: api.PaymentRequest.show
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **{{domxref('PaymentRequest')}}** interface's

@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioContext.getOutputTimestamp
 ---
+
 {{APIRef("Web Audio API")}}
 
 The

@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.

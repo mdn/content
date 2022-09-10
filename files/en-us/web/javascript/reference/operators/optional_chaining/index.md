@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 The **optional chaining** operator (**`?.`**)

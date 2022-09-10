@@ -12,6 +12,7 @@ tags:
   - Styling HTML
   - color
 ---
+
 {{CSSRef}}
 
 This article is a primer introducing each of the ways CSS color can be used in HTML.

@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.PlatformOs
 ---
+
 {{AddonSidebar()}}
 
 The operating system the browser is running on.

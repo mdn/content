@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`big()`** method creates a {{HTMLElement("big")}} HTML

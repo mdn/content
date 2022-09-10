@@ -16,6 +16,7 @@ tags:
   - createBuffer
 browser-compat: api.BaseAudioContext.createBuffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBuffer()` method of the {{ domxref("BaseAudioContext") }}

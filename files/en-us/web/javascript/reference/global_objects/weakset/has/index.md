@@ -9,6 +9,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an

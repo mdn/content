@@ -10,6 +10,7 @@ tags:
   - web console
 browser-compat: api.console
 ---
+
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's

@@ -11,6 +11,7 @@ tags:
   - values()
 browser-compat: api.MediaKeyStatusMap.values
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`values`** property of the

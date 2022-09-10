@@ -18,6 +18,7 @@ tags:
   - setRequestHeader
 browser-compat: api.XMLHttpRequest.setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method

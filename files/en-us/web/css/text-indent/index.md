@@ -12,6 +12,7 @@ tags:
   - text-indent
 browser-compat: css.properties.text-indent
 ---
+
 {{CSSRef}}
 
 The **`text-indent`** CSS property sets the length of empty space (indentation) that is put before lines of text in a block.

@@ -10,6 +10,7 @@ tags:
   - Scroll
 browser-compat: api.Element.scroll
 ---
+
 {{APIRef}}
 
 The **`scroll()`** method of the {{domxref("Element")}}

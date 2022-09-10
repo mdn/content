@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isSafeInteger
 ---
+
 {{JSRef}}
 
 The **`Number.isSafeInteger()`** method determines whether the

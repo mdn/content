@@ -6,6 +6,7 @@ tags:
   - DOM
   - NeedsUpdate
 ---
+
 ### Overview
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
@@ -63,8 +64,6 @@ Authors can also make a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} ke
 For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendent choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendent elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
-
-_Example 2: A menu control using tabindex to control keyboard access_
 
 ```html
 <ul id="mb1" tabindex="0">

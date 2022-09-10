@@ -12,6 +12,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformancePaintTiming
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformancePaintTiming`** interface of the [Paint Timing API](/en-US/docs/Web/API/Paint_Timing_API) provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.

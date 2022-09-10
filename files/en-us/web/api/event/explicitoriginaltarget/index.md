@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Event.explicitOriginalTarget
 ---
+
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 The read-only **`explicitOriginalTarget`** property of the {{domxref("Event")}} interface returns the non-anonymous original target of the event.

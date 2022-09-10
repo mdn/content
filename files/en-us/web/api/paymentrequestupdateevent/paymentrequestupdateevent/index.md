@@ -12,6 +12,7 @@ tags:
   - Secure context
 browser-compat: api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
 ---
+
 {{APIRef("Payment Request API")}}{{securecontext_header}}
 
 The **`PaymentRequestUpdateEvent()`** constructor creates a new

@@ -11,6 +11,7 @@ tags:
   - initCompositionEvent
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
+
 {{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**

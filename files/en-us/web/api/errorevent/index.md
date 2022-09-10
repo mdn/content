@@ -8,6 +8,7 @@ tags:
   - Worker API
 browser-compat: api.ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`ErrorEvent`** interface represents events providing information related to errors in scripts or in files.

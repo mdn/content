@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.Element.setHTML
 ---
+
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface is used to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.

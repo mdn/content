@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.create
 ---
+
 {{JSRef}}
 
 The **`Object.create()`** method creates a new object, using an

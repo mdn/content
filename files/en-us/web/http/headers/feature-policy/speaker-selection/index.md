@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.speaker-selection
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `speaker-selection` directive controls whether the current document is allowed to enumerate and select audio output devices (speakers, headphones, etc.).

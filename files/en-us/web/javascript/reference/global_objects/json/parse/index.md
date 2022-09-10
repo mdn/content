@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
+
 {{JSRef}}
 
 The **`JSON.parse()`** method parses a

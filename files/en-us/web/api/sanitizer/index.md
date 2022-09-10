@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.Sanitizer
 ---
+
 {{APIRef("Sanitizer")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} provides methods to sanitize untrusted strings of HTML, {{domxref("Document")}} and {{domxref("DocumentFragment")}} objects.

@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.xmlEncoding
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 Returns the encoding as determined by the XML declaration. Should be `null` if unspecified or unknown.

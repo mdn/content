@@ -10,6 +10,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Security-Policy-Report-Only
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy-Report-Only`** response header allows web developers to experiment with policies by monitoring (but not enforcing) their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.

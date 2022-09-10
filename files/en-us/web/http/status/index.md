@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: http.status
 ---
+
 {{HTTPSidebar}}
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.

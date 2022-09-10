@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Promise.catch
 ---
+
 {{JSRef}}
 
 The **`catch()`** method returns a {{jsxref("Promise")}} and

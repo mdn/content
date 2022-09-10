@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaMultiLine
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaMultiLine`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.

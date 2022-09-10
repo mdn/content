@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.DataView
 ---
+
 {{JSRef}}
 
 The **`DataView`** view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's [endianness](/en-US/docs/Glossary/Endianness).

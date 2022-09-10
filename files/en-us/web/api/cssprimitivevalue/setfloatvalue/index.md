@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`setFloatValue()`** method of the

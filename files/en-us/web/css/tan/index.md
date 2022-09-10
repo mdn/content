@@ -9,12 +9,14 @@ tags:
   - Reference
   - Web
   - tan
+  - Experimental
 browser-compat: css.types.tan
 spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
-{{CSSRef}}
 
-The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. 
+{{CSSRef}}{{SeeCompatTable}}
+
+The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians.
 
 ## Syntax
 
@@ -67,21 +69,21 @@ body {
   --h: 200;
   position: relative;
   width: calc(1px * var(--w));
-  height: calc(1px * var(--h));;
+  height: calc(1px * var(--h));
 }
 .parallelogram::before {
-  --angle: calc( sin( var(--h) / var(--w) ) );
-  content: '';
+  --angle: calc(sin(var(--h) / var(--w)));
+  content: "";
   position: absolute;
-  width: calc( 100% - 100% * var(--h) / var(--w) * tan( var(--angle) ) );
+  width: calc(100% - 100% * var(--h) / var(--w) * tan(var(--angle)));
   height: 100%;
   transform-origin: 0 100%;
-  transform: skew( calc( 0 - var(--angle) ) );
+  transform: skew(calc(0 - var(--angle)));
   background-color: red;
 }
 ```
 
- {{EmbedLiveSample('example', '100%', '250px')}}
+{{EmbedLiveSample('example', '100%', '250px')}}
 
 ## Specifications
 

@@ -11,6 +11,7 @@ tags:
   - generateKey
 browser-compat: api.SubtleCrypto.generateKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 Use the **`generateKey()`** method of the

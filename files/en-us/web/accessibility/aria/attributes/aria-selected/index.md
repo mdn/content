@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
+
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 
 ## Description

@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX2Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX2Attribute
 ---
+
 {{SVGRef}}
 
 The **`x2`** attribute is used to specify the second x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.

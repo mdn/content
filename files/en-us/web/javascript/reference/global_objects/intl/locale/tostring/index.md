@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.toString
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.toString()`** method returns the Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).

@@ -17,6 +17,7 @@ tags:
   - z
 browser-compat: api.DOMPoint.z
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

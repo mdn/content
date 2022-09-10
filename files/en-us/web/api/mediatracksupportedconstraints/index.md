@@ -17,6 +17,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaTrackSupportedConstraints`** dictionary establishes the list of constrainable properties recognized by the {{Glossary("user agent")}} or browser in its implementation of the {{domxref("MediaStreamTrack")}} object. An object conforming to `MediaTrackSupportedConstraints` is returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.

@@ -13,6 +13,7 @@ tags:
   - columnNumber
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
+
 {{HTTPSidebar}}
 
 The **`columnNumber`** read-only property of the

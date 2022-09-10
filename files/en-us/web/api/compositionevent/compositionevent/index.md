@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CompositionEvent.CompositionEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`CompositionEvent()`** constructor creates a new {{domxref("CompositionEvent")}} object.

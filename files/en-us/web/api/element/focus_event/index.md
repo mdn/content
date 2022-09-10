@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Element.focus_event
 ---
+
 {{APIRef}}
 
 The **`focus`** event fires when an element has received focus. The main difference between this event and {{domxref("Element/focusin_event", "focusin")}} is that `focusin` bubbles while `focus` does not.

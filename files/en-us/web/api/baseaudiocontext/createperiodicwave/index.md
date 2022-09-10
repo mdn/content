@@ -14,6 +14,7 @@ tags:
   - createPeriodicWave
 browser-compat: api.BaseAudioContext.createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPeriodicWave()` method of the {{ domxref("BaseAudioContext") }} Interface
@@ -125,7 +126,7 @@ The coefficients of the Fourier transform should be given in _ascending_ order
 <mi>i</mi>
 </mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} ,
 \left(f+gi\right)e^{3i}   </annotation>
-</semantics></math>etc.) and can be positive or negative.  A simple way of manually obtaining such
+</semantics></math>etc.) and can be positive or negative. A simple way of manually obtaining such
 coefficients (though not the best) is to use a graphing calculator.
 
 ## Specifications
