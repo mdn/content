@@ -204,7 +204,7 @@ The third and last variant of the `drawImage()` method has eight parameters in a
 
 To really understand what this does, it may help to look at this image:
 
-![](canvas_drawimage.jpg)
+![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, maintaining its aspect ratio, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
 
 The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
 
