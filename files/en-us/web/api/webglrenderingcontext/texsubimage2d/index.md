@@ -78,13 +78,13 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha
       is 1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
-    When using the {{domxref("EXT_sRGB")}} extension:
+      When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.RED`
     - `gl.RG`
@@ -103,7 +103,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
-    When using the {{domxref("OES_texture_float")}} extension:
+      When using the {{domxref("OES_texture_float")}} extension:
 
       - `gl.FLOAT`
 
@@ -112,7 +112,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.HALF_FLOAT_OES`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.BYTE`
     - `gl.UNSIGNED_SHORT`
@@ -126,7 +126,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-        [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
 

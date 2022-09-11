@@ -93,8 +93,8 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey)
-  object.
+that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey)
+object.
 
 ### Exceptions
 

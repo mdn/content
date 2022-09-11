@@ -43,6 +43,7 @@ getVertexAttrib(index, pname)
         indicating the number of bytes between successive elements in the array. 0 means
         that the elements are sequential.
     - `gl.VERTEX_ATTRIB_ARRAY_TYPE`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}}
         representing the array type. One of
 
@@ -57,11 +58,12 @@ getVertexAttrib(index, pname)
         {{domxref("WebGL_API/Types", "GLboolean")}} that is true if fixed-point data types are normalized for
         the vertex attribute array at the given `index`.
     - `gl.CURRENT_VERTEX_ATTRIB`
+
       - : Returns a {{jsxref("Float32Array")}}
         (with 4 elements) representing the current value of the vertex attribute at the
         given `index`.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+        the following values are available additionally:
 
       - `gl.VERTEX_ATTRIB_ARRAY_INTEGER`
         - : Returns a
@@ -75,8 +77,8 @@ getVertexAttrib(index, pname)
 
     - `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
       - : Returns a
-          {{domxref("WebGL_API/Types", "GLint")}} describing the frequency divisor used for instanced
-          rendering.
+        {{domxref("WebGL_API/Types", "GLint")}} describing the frequency divisor used for instanced
+        rendering.
 
 ### Return value
 

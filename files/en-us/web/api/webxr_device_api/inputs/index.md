@@ -511,7 +511,7 @@ Because this use of the `Gamepad` interface is a convenience rather than a true 
 
 ## Incorporating input from non-WebXR sources
 
-Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR.  Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
+Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR. Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
 
 Assuming inputs are used to control an avatar within the simulation, which is the most common use case, WebXR inputs are used to affect the avatar in the following ways, using data collected from the non-XR input device:
 

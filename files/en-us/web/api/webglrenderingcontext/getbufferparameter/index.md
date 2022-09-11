@@ -33,9 +33,10 @@ getBufferParameter(target, pname)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
+
       - : Buffer used for element indices.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+        the following values are available additionally:
 
       - `gl.COPY_READ_BUFFER`
         - : Buffer for copying from one buffer object to another.
@@ -63,8 +64,8 @@ getBufferParameter(target, pname)
         - `gl.STATIC_DRAW`
         - `gl.DYNAMIC_DRAW`
         - `gl.STREAM_DRAW`
-        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-              1)}}, the following values are available additionally:
+          When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
+                1)}}, the following values are available additionally:
         - `gl.STATIC_READ`
         - `gl.DYNAMIC_READ`
         - `gl.STREAM_READ`

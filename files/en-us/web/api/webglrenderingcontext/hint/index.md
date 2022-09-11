@@ -29,9 +29,10 @@ hint(target, mode)
   - : Sets which behavior to be controlled. Possible values:
 
     - `gl.GENERATE_MIPMAP_HINT`
+
       - : Quality of filtering when generating
         mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
-    When using the {{domxref("OES_standard_derivatives")}} extension:
+        When using the {{domxref("OES_standard_derivatives")}} extension:
 
       - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
         - : Accuracy of the
@@ -39,7 +40,7 @@ hint(target, mode)
           `dFdy`, and `fwidth`.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`
       - : Same as `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`

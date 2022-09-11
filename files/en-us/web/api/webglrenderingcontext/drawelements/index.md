@@ -53,7 +53,7 @@ drawElements(mode, count, type, offset)
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
-    When using the {{domxref("OES_element_index_uint")}} extension:
+      When using the {{domxref("OES_element_index_uint")}} extension:
 
       - `gl.UNSIGNED_INT`
 

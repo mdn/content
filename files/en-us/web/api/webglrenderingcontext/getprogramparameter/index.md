@@ -48,10 +48,11 @@ getProgramParameter(program, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
         number of active attribute variables to a program.
     - `gl.ACTIVE_UNIFORMS`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
         number of active uniform variables to a program.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+        the following values are available additionally:
 
       - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`
         - : Returns a
