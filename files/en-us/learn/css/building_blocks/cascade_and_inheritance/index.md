@@ -193,13 +193,13 @@ The negation ([`:not()`](/en-US/docs/Web/CSS/:not)) and the matches-any ([`:is()
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 
-| Selector                                                                                | Identifiers | Classes | Elements | Total specificity |
-| --------------------------------------------------------------------------------------- | -------- | ---- | ---- | ----------------- |
-| `h1`                                                                                    | 0        | 0    | 1    | 0-0-1              |
-| `h1 + p::first-letter`                                                                  |  0        | 0    | 3    | 0-0-3              |
-| `li > a[href*="en-US"] > .inline-warning`                                               |  0        | 2    | 2    | 0-2-2              |
-| `#identifier`                                                                           | 1        | 0    | 0    | 1-0-0              |
-| `button:not(#mainBtn, .cta`)                                                                           | 1        | 0    | 1    | 1-0-1              |
+| Selector                                  | Identifiers | Classes | Elements | Total specificity |
+| ----------------------------------------- | ----------- | ------- | -------- | ----------------- |
+| `h1`                                      | 0           | 0       | 1        | 0-0-1             |
+| `h1 + p::first-letter`                    | 0           | 0       | 3        | 0-0-3             |
+| `li > a[href*="en-US"] > .inline-warning` | 0           | 2       | 2        | 0-2-2             |
+| `#identifier`                             | 1           | 0       | 0        | 1-0-0             |
+| `button:not(#mainBtn, .cta`)              | 1           | 0       | 1        | 1-0-1             |
 
 Before we move on, let's look at an example in action.
 
@@ -223,7 +223,7 @@ Inline styles, that is, the style declaration inside a {{htmlattrxref("style")}}
 
 There is a special piece of CSS that you can use to overrule all of the above calculations, even inline styles - the `!important` flag. However, you should be very careful while using it. This flag is used to make an individual property and value pair the most specific rule, thereby overriding the normal rules of the cascade, including normal inline styles.
 
-> **Note:** It is useful to know that the `!important` flag exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.**  The `!important` flag changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
+> **Note:** It is useful to know that the `!important` flag exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.** The `!important` flag changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
 
 Take a look at this example where we have two paragraphs, one of which has an ID.
 

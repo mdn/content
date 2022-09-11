@@ -106,43 +106,43 @@ To explore various features of Vue, we will be building up a sample todo list ap
 1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
 2. Use the arrow keys and
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    to select the "Manually select features" option.
+   to select the "Manually select features" option.
 
 3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    to proceed.
+   to proceed.
 
 4. Next, you'll select a config for the linter / formatter. Navigate to "ESLint with error prevention only" and hit
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    again. This will help us catch common errors, but not be overly opinionated.
+   again. This will help us catch common errors, but not be overly opinionated.
 
 5. Next, you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    to continue.
+   to continue.
 
 6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    .
+   .
 
 7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type
 
-    <kbd>y</kbd>
+   <kbd>y</kbd>
 
-    , otherwise type
+   , otherwise type
 
-    <kbd>n</kbd>
+   <kbd>n</kbd>
 
-    .
+   .
 
 The CLI will now begin scaffolding out your project, and installing all of your dependencies.
 

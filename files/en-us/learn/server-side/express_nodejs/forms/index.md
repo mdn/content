@@ -85,7 +85,7 @@ As shown in the diagram above, the main things that form handling code needs to 
 
 1. Display the default form the first time it is requested by the user.
 
-    - The form may contain blank fields (e.g. if you're creating a new record), or it may be pre-populated with initial values (e.g. if you are changing a record, or have useful default initial values).
+   - The form may contain blank fields (e.g. if you're creating a new record), or it may be pre-populated with initial values (e.g. if you are changing a record, or have useful default initial values).
 
 2. Receive data submitted by the user, usually in an HTTP `POST` request.
 3. Validate and sanitize the data.

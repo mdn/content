@@ -296,7 +296,7 @@ def junior(request):
     return render(request, 'best/index.html', context)
 ```
 
-After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The  `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
+After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
 
 Obviously web frameworks can help you with a lot of other tasks. We discuss a lot more benefits and some popular web framework choices in the next article.
 
