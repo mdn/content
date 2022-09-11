@@ -55,11 +55,12 @@ new MouseEvent(type, options)
     - `button` {{optional_inline}}
 
       - : A number, defaulting to `0`, that describes which button is pressed during events related to the press or release of a button:
-        | Value | Meaning |
+
+        | Value | Meaning                                                         |
         | ----- | --------------------------------------------------------------- |
-        | `0` | Main button pressed (usually the left button) or un-initialized |
-        | `1` | Auxiliary button pressed (usually the middle button) |
-        | `2` | Secondary button pressed (usually the right button) |
+        | `0`   | Main button pressed (usually the left button) or un-initialized |
+        | `1`   | Auxiliary button pressed (usually the middle button)            |
+        | `2`   | Secondary button pressed (usually the right button)             |
 
     - `buttons` {{optional_inline}}
 
