@@ -12,6 +12,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.delegatesFocus
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`delegatesFocus`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root delegates focus, and `false` otherwise.

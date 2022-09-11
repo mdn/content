@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.transferControlToOffscreen
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The

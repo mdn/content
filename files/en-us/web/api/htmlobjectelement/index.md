@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLObjectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLObjectElement`** interface provides special properties and methods (beyond those on the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("object")}} element, representing external resources.

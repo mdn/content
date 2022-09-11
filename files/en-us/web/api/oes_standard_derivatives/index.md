@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_standard_derivatives
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_standard_derivatives`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the GLSL derivative functions `dFdx`, `dFdy`, and `fwidth`.

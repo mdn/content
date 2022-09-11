@@ -3,6 +3,7 @@ title: ':nth-last-col'
 slug: Web/CSS/:nth-last-col
 browser-compat: css.selectors.nth-last-col
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`:nth-last-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is designed for tables and grids. It accepts the An+B notation such as used with the {{Cssxref(":nth-child")}} selector, using this to target every nth column before it, therefore counting back from the end of the set of columns. The values odd and even are also valid.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
+
 {{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**

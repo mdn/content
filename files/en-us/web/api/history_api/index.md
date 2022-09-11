@@ -10,6 +10,7 @@ tags:
   - History API
 browser-compat: api.History
 ---
+
 {{DefaultAPISidebar("History API")}}
 
 The DOM {{DOMxRef("Window")}} object provides access to the browser's session history (not to be confused for [WebExtensions history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history)) through the {{DOMxRef("Window.history","history")}} object. It exposes useful methods and properties that let you navigate back and forth through the user's history, and manipulate the contents of the history stack.

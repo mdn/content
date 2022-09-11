@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.WebSocket.close_event
 ---
+
 {{APIRef}}
 
 The `close` event is fired when a connection with a `WebSocket` is closed.

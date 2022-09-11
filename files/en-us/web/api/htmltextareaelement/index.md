@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTextAreaElement`** interface provides special properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.

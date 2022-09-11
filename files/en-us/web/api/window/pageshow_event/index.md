@@ -16,6 +16,7 @@ tags:
   - show
 browser-compat: api.Window.pageshow_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.

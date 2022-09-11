@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.position
 ---
+
 {{CSSRef}}
 
 The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties determine the final location of positioned elements.

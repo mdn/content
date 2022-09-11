@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.EventSource.close
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`close()`** method of the {{domxref("EventSource")}}

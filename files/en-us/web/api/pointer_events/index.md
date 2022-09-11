@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.PointerEvent
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. _[Pointer events](#pointer_event)_ address that need.

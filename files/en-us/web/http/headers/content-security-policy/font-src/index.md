@@ -12,6 +12,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.font-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

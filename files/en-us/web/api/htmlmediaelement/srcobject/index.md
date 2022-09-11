@@ -13,6 +13,7 @@ tags:
   - srcObject
 browser-compat: api.HTMLMediaElement.srcObject
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`srcObject`** property of the

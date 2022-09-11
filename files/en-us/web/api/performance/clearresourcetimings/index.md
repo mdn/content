@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearResourceTimings
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`clearResourceTimings()`** method removes all

@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.resultType
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`resultType`** property of the

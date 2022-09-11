@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loopEnd
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `loopEnd` property of the {{ domxref("AudioBufferSourceNode") }}

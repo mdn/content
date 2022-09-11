@@ -12,6 +12,7 @@ tags:
   - color
 browser-compat: css.types.blend-mode
 ---
+
 {{CSSRef}}
 
 The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.

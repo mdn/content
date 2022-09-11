@@ -9,6 +9,7 @@ tags:
   - Remote Playback API
 browser-compat: api.RemotePlayback
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The Remote Playback API extends the {{domxref("HTMLMediaElement")}} to enable the control of remote playback of media from a webpage.

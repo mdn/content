@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.

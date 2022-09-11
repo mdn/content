@@ -17,6 +17,7 @@ tags:
   - foundation
 browser-compat: api.RTCIceCandidate.foundation
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}**

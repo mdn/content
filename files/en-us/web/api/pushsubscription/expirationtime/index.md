@@ -12,6 +12,7 @@ tags:
   - Service Worker
 browser-compat: api.PushSubscription.expirationTime
 ---
+
 {{APIRef("Push API")}}
 
 The **`expirationTime`** read-only property of the

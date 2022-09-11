@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement.rowIndex
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableRowElement.rowIndex`** read-only property

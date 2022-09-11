@@ -15,6 +15,7 @@ tags:
   - Web
   - l10n:priority
 ---
+
 {{SVGRef}}
 
 ## Getting Started with SVG

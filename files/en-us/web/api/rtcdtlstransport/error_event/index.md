@@ -18,6 +18,7 @@ tags:
   - Event
 browser-compat: api.RTCDtlsTransport.error_event
 ---
+
 {{APIRef("WebRTC")}}
 
 An {{domxref("RTCDtlsTransport")}} receives an `error` event when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.

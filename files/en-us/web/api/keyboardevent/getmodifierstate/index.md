@@ -11,6 +11,7 @@ tags:
   - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.getModifierState()`** method returns the

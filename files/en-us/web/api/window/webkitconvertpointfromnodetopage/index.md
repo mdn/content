@@ -14,6 +14,7 @@ tags:
   - Window
 browser-compat: api.Window.convertPointFromNodeToPage
 ---
+
 {{APIRef}}
 
 {{Non-standard_header}}

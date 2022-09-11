@@ -12,6 +12,7 @@ tags:
   - resolve
 browser-compat: webextensions.api.dns.resolve
 ---
+
 {{AddonSidebar()}}
 
 Resolves the given hostname to a DNS record.

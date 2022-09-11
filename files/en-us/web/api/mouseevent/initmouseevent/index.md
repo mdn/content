@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.initMouseEvent
 ---
+
 {{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the

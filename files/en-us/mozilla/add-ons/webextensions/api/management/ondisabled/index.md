@@ -11,6 +11,7 @@ tags:
   - onDisabled
 browser-compat: webextensions.api.management.onDisabled
 ---
+
 {{AddonSidebar()}}
 
 Fired when an add-on is disabled.

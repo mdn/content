@@ -11,6 +11,7 @@ tags:
   - closed
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
+
 {{APIRef("Streams")}}
 
 The **`closed`** read-only property of the

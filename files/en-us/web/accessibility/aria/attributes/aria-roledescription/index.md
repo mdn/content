@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
+
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
 
 ## Description

@@ -11,6 +11,7 @@ tags:
   - heroku
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
@@ -42,7 +43,7 @@ Up to now, you've been working in a [development environment](/en-US/docs/Learn/
 - Make a few changes to your project settings.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a worked example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a working example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
 
 ## What is a production environment?
 

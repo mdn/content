@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
+
 {{JSRef}}
 
 The `unregister()` method unregisters a target object from a

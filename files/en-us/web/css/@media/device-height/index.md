@@ -10,6 +10,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.device-height
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 > **Note:** To query for the height of the viewport, developers should use the [`height`](/en-US/docs/Web/CSS/@media/height) media feature instead.

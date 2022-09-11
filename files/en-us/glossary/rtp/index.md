@@ -7,6 +7,7 @@ tags:
   - Protocol
   - RTP
 ---
+
 The **Real-time Transport Protocol** (**RTP**) is a network protocol which described how to transmit various media (audio, video) from one endpoint to another in a real-time fashion. RTP is suitable for video-streaming application, telephony over {{glossary("IP")}} like Skype and conference technologies.
 
 The secure version of RTP, **SRTP**, is used by [WebRTC](/en-US/docs/Web/API/WebRTC_API), and uses encryption and authentication to minimize the risk of denial-of-service attacks and security breaches.

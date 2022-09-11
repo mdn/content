@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndex.add
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`add()`** method of the

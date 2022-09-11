@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.search
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.

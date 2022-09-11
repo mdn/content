@@ -27,6 +27,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The static method

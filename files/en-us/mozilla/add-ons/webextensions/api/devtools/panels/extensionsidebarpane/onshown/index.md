@@ -13,6 +13,7 @@ tags:
   - onShown
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the sidebar pane becomes visible as a result of the user switching to it.

@@ -15,6 +15,7 @@ tags:
   - sound
 browser-compat: api.AudioBuffer.AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBuffer`** constructor of

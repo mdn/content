@@ -6,6 +6,7 @@ tags:
   - HTTP
   - redirects
 ---
+
 {{HTTPSidebar}}
 
 **URL redirection**, also known as _URL forwarding_, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a **_HTTP redirect_**, for this operation.

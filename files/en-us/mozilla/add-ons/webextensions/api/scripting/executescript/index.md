@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injects a script into a target context. The script is run at `document_idle` by default.

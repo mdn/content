@@ -13,6 +13,7 @@ tags:
   - inIncognitoContext
 browser-compat: webextensions.api.extension.inIncognitoContext
 ---
+
 {{AddonSidebar()}}
 
 Boolean value, `true` for content scripts running inside private browsing tabs and for extension pages running inside a private browsing process.

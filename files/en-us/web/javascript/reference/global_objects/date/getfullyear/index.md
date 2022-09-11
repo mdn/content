@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getFullYear
 ---
+
 {{JSRef}}
 
 The **`getFullYear()`** method returns the year of the

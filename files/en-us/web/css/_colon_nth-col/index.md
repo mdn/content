@@ -3,6 +3,7 @@ title: ':nth-col'
 slug: Web/CSS/:nth-col
 browser-compat: css.selectors.nth-col
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`:nth-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is designed for tables and grids. It accepts the An+B notation such as used with the {{Cssxref(":nth-child")}} selector, using this to target every nth column. The values odd and even are also valid.

@@ -16,6 +16,7 @@ tags:
   - outerHTML
 browser-compat: api.Element.outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerHTML`** attribute of the {{ domxref("Element") }}

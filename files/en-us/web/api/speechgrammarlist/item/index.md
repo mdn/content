@@ -15,6 +15,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.item
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`item`** getter of the {{domxref("SpeechGrammarList")}}

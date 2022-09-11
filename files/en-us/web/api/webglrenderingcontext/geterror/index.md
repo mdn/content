@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getError
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getError()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns error information.

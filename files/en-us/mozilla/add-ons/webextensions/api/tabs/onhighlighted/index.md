@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onHighlighted
 ---
+
 {{AddonSidebar()}}
 
 Fired when the set of highlighted tabs in a window changes.

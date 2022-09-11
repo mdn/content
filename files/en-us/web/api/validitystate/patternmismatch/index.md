@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState.patternMismatch
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`patternMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.

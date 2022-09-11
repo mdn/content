@@ -8,6 +8,7 @@ tags:
   - Selector
 browser-compat: css.selectors.file-selector-button
 ---
+
 {{CSSRef}}
 
 The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).

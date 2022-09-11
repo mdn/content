@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.prepend()`** method

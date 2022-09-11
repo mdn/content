@@ -13,6 +13,7 @@ tags:
   - getFrequencyResponse
 browser-compat: api.IIRFilterNode.getFrequencyResponse
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `getFrequencyResponse()` method of the {{ domxref("IIRFilterNode") }}

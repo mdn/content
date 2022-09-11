@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.getRangeAt
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.getRangeAt()`** method returns a range object

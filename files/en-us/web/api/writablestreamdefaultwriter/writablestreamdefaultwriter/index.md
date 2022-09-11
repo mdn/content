@@ -10,6 +10,7 @@ tags:
   - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter()`**

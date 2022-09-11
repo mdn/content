@@ -15,6 +15,7 @@ tags:
   - WebAudio API
   - sound
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article explains how to create an audio worklet processor and use it in a Web Audio application.

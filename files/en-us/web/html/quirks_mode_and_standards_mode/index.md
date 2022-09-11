@@ -10,6 +10,7 @@ tags:
   - Web Standards
   - XHTML
 ---
+
 {{HTMLRef}}
 
 In the old days of the web, pages were typically written in two versions: One for Netscape Navigator, and one for Microsoft Internet Explorer. When the web standards were made at W3C, browsers could not just start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites.

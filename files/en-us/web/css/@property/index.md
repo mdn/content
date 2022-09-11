@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: css.at-rules.property
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs, it allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, setting default values, and define whether a property can inherit values or not.

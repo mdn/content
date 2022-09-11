@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getRenderbufferParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getRenderbufferParameter()`**

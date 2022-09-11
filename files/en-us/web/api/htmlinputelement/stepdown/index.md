@@ -11,6 +11,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepDown
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

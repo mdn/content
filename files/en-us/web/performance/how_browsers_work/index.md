@@ -14,6 +14,7 @@ tags:
   - Web Performance
   - render
 ---
+
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
 To understand how to improve performance and perceived performance, it helps to understand how the browser works.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.ownerNode
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`ownerNode`** property of the

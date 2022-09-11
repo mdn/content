@@ -12,6 +12,7 @@ tags:
   - postMessage
 browser-compat: api.Window.postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`window.postMessage()`** method safely enables

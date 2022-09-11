@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: api.IDBObjectStore.clear
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`clear()`** method of the {{domxref("IDBObjectStore")}}

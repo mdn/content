@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.isOpen
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the extension's sidebar is open in a given window.

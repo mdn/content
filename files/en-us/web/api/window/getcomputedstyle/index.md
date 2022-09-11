@@ -11,6 +11,7 @@ tags:
   - getComputedStyle
 browser-compat: api.Window.getComputedStyle
 ---
+
 {{APIRef("CSSOM")}}
 
 The

@@ -14,6 +14,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{APIRef("WebRTC")}}
 
 In order to more fully support audio/video conferencing, [WebRTC](/en-US/docs/Web/API/WebRTC_API) supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an `RTCPeerConnection`. The DTMF system is often referred to as "touch tone," after an old trade name for the system.

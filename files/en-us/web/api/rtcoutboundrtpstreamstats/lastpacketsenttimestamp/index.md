@@ -18,6 +18,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`lastPacketSentTimestamp`**

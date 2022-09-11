@@ -7,6 +7,7 @@ tags:
   - PointerEvent
   - touch
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 Adding _gestures_ to an application can significantly improve the user experience. There are many types of gestures, from the simple single-touch _swipe_ gesture to the more complex multi-touch _twist_ gesture, where the touch points (aka _pointers_) move in different directions.

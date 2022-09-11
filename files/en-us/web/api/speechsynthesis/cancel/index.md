@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.cancel
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`cancel()`** method of the {{domxref("SpeechSynthesis")}}

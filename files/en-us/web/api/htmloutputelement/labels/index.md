@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOutputElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLOutputElement.labels`** read-only property returns a

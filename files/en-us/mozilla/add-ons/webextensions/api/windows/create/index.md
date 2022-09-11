@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new window.

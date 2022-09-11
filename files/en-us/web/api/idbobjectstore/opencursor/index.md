@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBObjectStore.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the

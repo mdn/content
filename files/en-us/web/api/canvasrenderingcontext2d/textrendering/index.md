@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CanvasRenderingContext2D.textRendering
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.textRendering`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) provides information to the rendering engine about what to optimize for when rendering text.

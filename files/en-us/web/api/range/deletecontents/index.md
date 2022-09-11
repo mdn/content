@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.deleteContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.deleteContents()`** method removes the contents of

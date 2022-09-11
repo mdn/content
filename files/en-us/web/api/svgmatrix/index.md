@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMatrix
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 Many of SVG's graphics operations utilize 2x3 matrices of the form:

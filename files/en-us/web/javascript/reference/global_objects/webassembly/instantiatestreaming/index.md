@@ -13,6 +13,7 @@ tags:
   - streaming
 browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.instantiateStreaming()`** function compiles

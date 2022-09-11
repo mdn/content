@@ -8,6 +8,7 @@ tags:
   - History API
   - History API Tutorial
 ---
+
 {{DefaultAPISidebar("History API")}}
 The {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods add and modify history entries, respectively. These methods work in conjunction with the {{domxref("Window/popstate_event", "popstate")}} event.
 

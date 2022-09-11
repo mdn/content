@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTHead()`** method of

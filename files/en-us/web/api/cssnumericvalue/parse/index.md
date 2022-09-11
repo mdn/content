@@ -13,6 +13,7 @@ tags:
   - parse()
 browser-compat: api.CSSNumericValue.parse
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the

@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Content-Security-Policy.require-trusted-types-for
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.

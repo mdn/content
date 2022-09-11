@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.WINDOW_ID_NONE
 ---
+
 {{AddonSidebar()}}
 
 The `windowId` value that represents the absence of a browser window.

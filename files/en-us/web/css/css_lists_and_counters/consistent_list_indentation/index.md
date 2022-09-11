@@ -6,6 +6,7 @@ tags:
   - Guide
   - NeedsUpdate
 ---
+
 {{CSSRef}}
 
 One of the most common style changes made to lists is a change in the indentation distance—that is, how far the list items are pushed over to the right. This often leads to frustration, because what works in one browser often doesn't have the same effect in another. For example, if you declare that lists have no left margin, they move over in Internet Explorer, but sit stubbornly in place in Gecko-based browsers. This article will help you understand the problems that can occur and how to avoid them.

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feTurbulence.stitchTiles
 ---
+
 {{SVGRef}}
 
 The **`stitchTiles`** attribute defines how the Perlin Noise tiles behave at the border.

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.nth-of-type
 ---
+
 {{CSSRef}}
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).

@@ -12,6 +12,7 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`createWritable()`** method of the

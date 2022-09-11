@@ -7,6 +7,7 @@ tags:
   - box alignment
   - grid
 ---
+
 {{CSSRef}}
 
 The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) specification details how alignment works in various layout methods. On this page we explore how box alignment works in the context of [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).

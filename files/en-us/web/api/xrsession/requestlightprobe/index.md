@@ -17,6 +17,7 @@ tags:
   - XRSession
 browser-compat: api.XRSession.requestLightProbe
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestLightProbe()`** method of the

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 The `CSSStyleDeclaration.item()`

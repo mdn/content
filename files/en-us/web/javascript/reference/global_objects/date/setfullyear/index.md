@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setFullYear
 ---
+
 {{JSRef}}
 
 The **`setFullYear()`** method sets the full year for a

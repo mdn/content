@@ -12,6 +12,7 @@ tags:
   - resume
 browser-compat: api.OfflineAudioContext.resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`resume()`** method of the

@@ -13,6 +13,7 @@ tags:
   - session
 browser-compat: webextensions.api.storage.session
 ---
+
 {{AddonSidebar()}}
 
 Represents the `session` storage area. Items in `session` storage are stored in memory and are not persisted to disk.

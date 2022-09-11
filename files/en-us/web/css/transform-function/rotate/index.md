@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.rotate
 ---
+
 {{CSSRef}}
 
 The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a

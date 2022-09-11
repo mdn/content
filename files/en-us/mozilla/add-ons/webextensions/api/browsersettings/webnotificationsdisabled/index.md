@@ -12,6 +12,7 @@ tags:
   - webNotificationsDisabled
 browser-compat: webextensions.api.browserSettings.webNotificationsDisabled
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to prevent websites from showing notifications using the [`Notifications`](/en-US/docs/Web/API/Notifications_API) Web API.

@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBufferSourceNode`** interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}.

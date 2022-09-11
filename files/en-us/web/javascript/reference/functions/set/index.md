@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.set
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`set`** syntax binds an object

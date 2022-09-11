@@ -12,6 +12,7 @@ tags:
   - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemEntry")}} interface's method

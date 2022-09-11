@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.uploaded
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`uploaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes successfully sent, initially `0`.

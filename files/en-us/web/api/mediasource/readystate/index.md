@@ -14,6 +14,7 @@ tags:
   - readyState
 browser-compat: api.MediaSource.readyState
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`readyState`** read-only property of the

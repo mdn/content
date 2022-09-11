@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
 The subtraction operator (`-`) subtracts the two operands, producing their

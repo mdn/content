@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Forwarded
 ---
+
 {{HTTPSidebar}}
 
 The **`Forwarded`** request header contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.

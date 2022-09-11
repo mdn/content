@@ -11,6 +11,7 @@ tags:
   - matrix
 browser-compat: api.DOMMatrix.DOMMatrix
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMMatrix`** constructor creates a new

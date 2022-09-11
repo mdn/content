@@ -13,6 +13,7 @@ tags:
   - entries()
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`StylePropertyMapReadOnly.entries()`** method returns an

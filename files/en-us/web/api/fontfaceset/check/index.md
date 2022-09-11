@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.check
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `check()` method of the {{domxref("FontFaceSet")}} returns whether all

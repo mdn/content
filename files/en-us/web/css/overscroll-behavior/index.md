@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overscroll-behavior
 ---
+
 {{CSSRef}}
 
 The **`overscroll-behavior`** CSS property sets what a browser does when reaching the boundary of a scrolling area. It's a shorthand for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}}.

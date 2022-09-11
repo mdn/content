@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Headers
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
@@ -25,7 +26,7 @@ You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {
 
 An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
-> **Note:** you can find more out about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
+> **Note:** you can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
 
 ## Constructor
 

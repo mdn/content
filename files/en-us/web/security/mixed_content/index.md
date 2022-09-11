@@ -8,6 +8,7 @@ tags:
   - Web
   - console
 ---
+
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
 ## Types of mixed content

@@ -11,6 +11,7 @@ tags:
   - TimeRanges
 browser-compat: api.TimeRanges.start
 ---
+
 {{APIRef("DOM")}}
 
 The **`start()`** method of the {{domxref("TimeRanges")}} interface returns the time offset at which a specified time range begins.

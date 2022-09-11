@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.entries
 ---
+
 {{APIRef}}
 
 The **`Headers.entries()`** method returns an

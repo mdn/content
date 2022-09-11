@@ -10,6 +10,7 @@ tags:
   - getAll
 browser-compat: api.URLSearchParams.getAll
 ---
+
 {{ApiRef("URL API")}}
 
 The **`getAll()`** method of the {{domxref("URLSearchParams")}}

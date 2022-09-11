@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.sdp
 ---
+
 {{APIRef("WebRTC")}}
 
 The property **`RTCSessionDescription.sdp`** is a read-only

@@ -14,6 +14,7 @@ browser-compat:
   - api.Keyboard
   - api.KeyboardLayoutMap
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The Keyboard API provides methods for working with a physical keyboard that is attached to a device running a browser.

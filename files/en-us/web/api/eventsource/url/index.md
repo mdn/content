@@ -11,6 +11,7 @@ tags:
   - URL
 browser-compat: api.EventSource.url
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`url`** read-only property of the

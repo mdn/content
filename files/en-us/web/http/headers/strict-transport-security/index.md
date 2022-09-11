@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.

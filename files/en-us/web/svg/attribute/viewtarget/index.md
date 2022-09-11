@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: svg.elements.view.viewTarget
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`viewTarget`** attribute indicates the target object associated with the view.

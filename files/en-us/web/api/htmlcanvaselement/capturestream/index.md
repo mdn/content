@@ -15,6 +15,7 @@ tags:
   - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("HTMLCanvasElement")}} **`captureStream()`** method returns a {{domxref("MediaStream")}}

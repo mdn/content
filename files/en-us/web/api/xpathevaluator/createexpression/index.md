@@ -12,6 +12,7 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator.createExpression
 ---
+
 {{APIRef("DOM XPath")}}
 
 This method compiles an {{domxref("XPathExpression")}} which can then be used for

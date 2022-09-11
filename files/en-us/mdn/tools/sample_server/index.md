@@ -9,6 +9,7 @@ tags:
   - Site-wide
   - Tools
 ---
+
 {{MDNSidebar}}
 
 While MDN provides a built-in [live sample system](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for presenting simple (and even not-so-simple) code samples with the code's output displayed in-context, there are samples that require a server to talk to. For those things, we have the MDN sample server, which solves these and other problems. This article is a guide to the use of the sample server.

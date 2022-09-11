@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.progress_event
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`progress`** event of the {{domxref("BackgroundFetchRegistration")}} interface thrown when the associated background fetch progresses.

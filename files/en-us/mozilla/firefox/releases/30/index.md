@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox for Developers
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

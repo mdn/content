@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`ContentIndexEvent()`** constructor creates a new {{domxref("ContentIndexEvent")}} object

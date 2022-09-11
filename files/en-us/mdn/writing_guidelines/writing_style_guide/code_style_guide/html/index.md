@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 The following guidelines cover how to write HTML example code for MDN Web Docs.

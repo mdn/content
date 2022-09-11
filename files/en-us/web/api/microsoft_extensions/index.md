@@ -9,6 +9,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{DefaultAPISidebar("Microsoft Extensions")}}
 
 Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) support a number of special Microsoft extensions to the otherwise standard [DOM APIs](/en-US/docs/Web/API). These extensions are prefixed with `MS` or `ms`.

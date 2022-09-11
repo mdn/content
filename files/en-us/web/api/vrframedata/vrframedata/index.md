@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.VRFrameData.VRFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRFrameData()`** constructor creates a {{domxref("VRFrameData")}} object instance.

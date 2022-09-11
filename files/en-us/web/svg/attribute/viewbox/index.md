@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
 ---
+
 {{SVGRef}}
 
 The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport.

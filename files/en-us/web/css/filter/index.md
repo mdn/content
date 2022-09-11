@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.filter
 ---
+
 {{CSSRef}}
 
 The **`filter`** [CSS](/en-US/docs/Web/CSS) property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.

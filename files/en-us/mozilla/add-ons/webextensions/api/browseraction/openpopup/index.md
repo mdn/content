@@ -13,6 +13,7 @@ tags:
   - openPopup
 browser-compat: webextensions.api.browserAction.openPopup
 ---
+
 {{AddonSidebar()}}
 
 Open the browser action's popup.

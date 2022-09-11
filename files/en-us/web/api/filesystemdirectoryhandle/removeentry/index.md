@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`removeEntry()`** method of the

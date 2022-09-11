@@ -18,6 +18,7 @@ tags:
   - asynchronous
   - queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/EventLoop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.

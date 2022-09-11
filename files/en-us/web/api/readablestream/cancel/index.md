@@ -11,6 +11,7 @@ tags:
   - cancel
 browser-compat: api.ReadableStream.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the

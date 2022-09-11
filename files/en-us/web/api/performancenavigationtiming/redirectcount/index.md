@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.redirectCount
 ---
+
 {{APIRef("Navigation Timing")}}
 
 The **`redirectCount`** property returns a

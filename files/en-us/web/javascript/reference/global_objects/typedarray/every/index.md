@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether all elements in the

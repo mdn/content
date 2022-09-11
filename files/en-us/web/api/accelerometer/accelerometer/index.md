@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.Accelerometer.Accelerometer
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Accelerometer()`** constructor creates a new {{domxref("Accelerometer")}} object which returns the acceleration of the device along all three axes at the time it is read.

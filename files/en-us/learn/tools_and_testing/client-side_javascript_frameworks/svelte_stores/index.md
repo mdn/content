@@ -10,6 +10,7 @@ tags:
   - Svelte
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -44,7 +45,7 @@ In the last article we completed the development of our app, finished organizing
   </tbody>
 </table>
 
-Using stores we will create an `Alert` component that shows notifications on screen, which can receive messages from any component. In this case, the `Alert` component is independent from the rest — it is not a parent or child of any other — so the messages don't fit into the component hierarchy.
+Using stores we will create an `Alert` component that shows notifications on screen, which can receive messages from any component. In this case, the `Alert` component is independent of the rest — it is not a parent or child of any other — so the messages don't fit into the component hierarchy.
 
 We will also see how to develop our own custom store to persist the todo information to [web storage](/en-US/docs/Web/API/Web_Storage_API), allowing our to-dos to persist over page reloads.
 
@@ -82,7 +83,7 @@ To code along with us using the REPL, start at
 
 We have already seen how our components can communicate with each other using props, two-way data binding, and events. In all these cases we were dealing with communication between parent and child components.
 
-But not all application state belongs inside your application's component hierarchy. For example, information about the logged in user, or whether the dark theme is selected or not.
+But not all application state belongs inside your application's component hierarchy. For example, information about the logged-in user, or whether the dark theme is selected or not.
 
 Sometimes, your app state will need to be accessed by multiple components that are not hierarchically related, or by a regular JavaScript module.
 
@@ -98,7 +99,7 @@ Svelte also provides a very intuitive way to integrate stores into its reactivit
 
 To show how to work with stores, we will create an `Alert` component. These kinds of widgets might also be known as popup notifications, toast, or notification bubbles.
 
-Our `Alert` component will displayed by the `App` component, but any component can send notifications to it. Whenever a notification arrives, the `Alert` component will be in charge of displaying it on screen.
+Our `Alert` component will be displayed by the `App` component, but any component can send notifications to it. Whenever a notification arrives, the `Alert` component will be in charge of displaying it on screen.
 
 ### Creating a store
 
@@ -113,7 +114,7 @@ Let's start by creating a writable store. Any component will be able to write to
     export const alert = writable('Welcome to the to-do list app!')
     ```
 
-> **Note:** Stores can be defined and used outside of Svelte components, so you can organize them in any way you please.
+> **Note:** Stores can be defined and used outside Svelte components, so you can organize them in any way you please.
 
 In the above code we import the `writable()` function from `svelte/store` and use it to create a new store called `alert` with an initial value of "Welcome to the to-do list app!". We then `export` the store.
 
@@ -155,7 +156,6 @@ Let's now create our `Alert` component and see how we can read values from the s
       border-radius: 0.2rem;
       background-color: #565656;
       color: #fff;
-      font-size: 0.875rem;
       font-weight: 700;
       padding: 0.5rem 1.4rem;
       font-size: 1.5rem;
@@ -258,7 +258,7 @@ Behind the scenes Svelte has generated the code to declare the local variable `$
 
 The end result of this nifty trick is that you can access global stores just as easily as using reactive local variables.
 
-This is a perfect example of how Svelte puts the compiler in charge of better developer ergonomics, not only saving us from typing boiler plate, but also generating less error-prone code.
+This is a perfect example of how Svelte puts the compiler in charge of better developer ergonomics, not only saving us from typing boilerplate, but also generating less error-prone code.
 
 ## Writing to our store
 
@@ -333,13 +333,13 @@ As soon as we execute `$alert = …`, Svelte will run `alert.set()`. Our `Alert`
 
 We could do the same within any component or `.js` file.
 
-> **Note:** Outside of Svelte components you cannot use the `$store` syntax. That's because the Svelte compiler won't touch anything outside of Svelte components. In that case you'll have to rely on the `store.subscribe()` and `store.set()` methods.
+> **Note:** Outside Svelte components you cannot use the `$store` syntax. That's because the Svelte compiler won't touch anything outside Svelte components. In that case you'll have to rely on the `store.subscribe()` and `store.set()` methods.
 
 ## Improving our Alert component
 
 It's a bit annoying having to click on the alert to get rid of it. It would be better if the notification just disappeared after a couple of seconds.
 
-Lets see how to do that. We'll specify a prop with the milliseconds to wait before clearing the notification, and we'll define a timeout to remove the alert. We'll also take care of clearing the timeout when the `Alert` component is unmounted to prevent memory leaks.
+Let's see how to do that. We'll specify a prop with the milliseconds to wait before clearing the notification, and we'll define a timeout to remove the alert. We'll also take care of clearing the timeout when the `Alert` component is unmounted to prevent memory leaks.
 
 1. Update the `<script>` section of your `Alert.svelte` component like so:
 

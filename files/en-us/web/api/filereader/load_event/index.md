@@ -10,6 +10,7 @@ tags:
   - load
 browser-compat: api.FileReader.load_event
 ---
+
 {{APIRef}}
 
 The `load` event is fired when a file has been read successfully.

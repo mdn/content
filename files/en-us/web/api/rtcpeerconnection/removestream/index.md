@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.RTCPeerConnection.removeStream
 ---
+
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The

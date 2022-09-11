@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.GeneratorFunction
 ---
+
 {{JSRef}}
 
 In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name `GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-synthesis
 ---
+
 {{CSSRef}}
 
 The **`font-synthesis`** [CSS](/en-US/docs/Web/CSS) property controls which missing typefaces, bold, italic, or small-caps, may be synthesized by the browser.

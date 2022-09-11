@@ -8,6 +8,7 @@ tags:
   - SVG
 browser-compat: svg.attributes.core
 ---
+
 The SVG core attributes are all the common attributes that can be specified on any SVG element.
 
 - [`id`](#attr-id)

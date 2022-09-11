@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGPolylineElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGPolylineElement`** interface provides access to the properties of {{SVGElement("polyline")}} elements, as well as methods to manipulate them.

@@ -10,6 +10,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.orientation
 ---
+
 {{CSSRef}}
 
 The **`orientation`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the orientation of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/Paged_Media)).

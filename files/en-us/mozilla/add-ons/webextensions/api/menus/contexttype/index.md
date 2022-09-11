@@ -14,6 +14,7 @@ tags:
   - menus
 browser-compat: webextensions.api.menus.ContextType
 ---
+
 {{AddonSidebar()}}
 
 The different contexts a menu item can appear in.

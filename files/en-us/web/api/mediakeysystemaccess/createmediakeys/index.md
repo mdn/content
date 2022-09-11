@@ -15,6 +15,7 @@ tags:
   - createMediaKeys
 browser-compat: api.MediaKeySystemAccess.createMediaKeys
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.createMediaKeys()` method returns a

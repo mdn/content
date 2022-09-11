@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: css.selectors.not
 ---
+
 {{CSSRef}}
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.

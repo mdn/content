@@ -11,6 +11,7 @@ tags:
   - permissionState
 browser-compat: api.PushManager.permissionState
 ---
+
 {{ApiRef("Push API")}}
 
 The **`permissionState()`** method of the

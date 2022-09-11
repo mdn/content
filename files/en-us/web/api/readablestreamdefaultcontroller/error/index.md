@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the

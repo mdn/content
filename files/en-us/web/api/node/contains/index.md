@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("Node")}} interface

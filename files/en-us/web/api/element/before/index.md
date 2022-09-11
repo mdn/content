@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.before
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.before()`** method inserts a set of

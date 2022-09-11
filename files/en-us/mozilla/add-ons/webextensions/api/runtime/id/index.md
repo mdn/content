@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.id
 ---
+
 {{AddonSidebar()}}
 
 The ID of the extension.

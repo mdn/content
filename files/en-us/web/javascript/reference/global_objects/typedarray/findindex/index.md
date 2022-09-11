@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns an **index**

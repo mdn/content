@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator()`** constructor creates

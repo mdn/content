@@ -15,6 +15,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 The **`getClientRects()`** method of the {{domxref("Element")}}

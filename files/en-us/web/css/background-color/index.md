@@ -16,6 +16,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-color
 ---
+
 {{CSSRef}}
 
 The **`background-color`** [CSS](/en-US/docs/Web/CSS) property sets the background color of an element.

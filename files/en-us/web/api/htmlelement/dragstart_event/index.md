@@ -9,6 +9,7 @@ tags:
   - drag and drop
 browser-compat: api.HTMLElement.dragstart_event
 ---
+
 {{APIRef}}
 
 The `dragstart` event is fired when the user starts dragging an element or text selection.

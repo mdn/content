@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.active
 ---
+
 {{CSSRef}}
 
 The **`:active`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.

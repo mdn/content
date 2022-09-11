@@ -11,6 +11,7 @@ tags:
   - exponentialRampToValueAtTime
 browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`exponentialRampToValueAtTime()`** method of the {{

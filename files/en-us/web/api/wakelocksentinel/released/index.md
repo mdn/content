@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel.released
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}
 
 The read-only **`released`** property of the

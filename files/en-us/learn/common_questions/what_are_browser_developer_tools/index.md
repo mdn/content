@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
 > **Note:** Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) article series. You should have this open as you follow the steps below.
@@ -105,7 +106,7 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 ### Find out more
 
-Find more out about the Inspector in different browsers:
+Find out more about the Inspector in different browsers:
 
 - [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [IE DOM Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
@@ -162,7 +163,7 @@ The final section, **Scopes**, shows what values are visible from various points
 
 ### Find out more
 
-Find more out about the JavaScript debugger in different browsers:
+Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
 - [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)

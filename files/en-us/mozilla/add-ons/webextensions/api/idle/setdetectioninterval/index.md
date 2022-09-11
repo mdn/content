@@ -13,6 +13,7 @@ tags:
   - setDetectionInterval
 browser-compat: webextensions.api.idle.setDetectionInterval
 ---
+
 {{AddonSidebar()}}
 
 Sets the interval, in seconds, used to determine when the system is in an idle state for {{WebExtAPIRef("idle.onStateChanged")}} events. The default interval is 60 seconds.

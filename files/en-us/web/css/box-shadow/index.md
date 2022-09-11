@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.box-shadow
 ---
+
 {{CSSRef}}
 
 The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.

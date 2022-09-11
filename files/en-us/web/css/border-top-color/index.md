@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-top-color
 ---
+
 {{CSSRef}}
 
 The **`border-top-color`** CSS property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.

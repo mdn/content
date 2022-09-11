@@ -8,6 +8,7 @@ tags:
   - Links
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to [implement hyperlinks in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
@@ -25,7 +26,7 @@ In this task, we want you to help fill in the links on our Whales information pa
 - The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
 - You'll get a bonus point if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
 
-> **Note:** The first link in the example has the `target="_blank"` attribute set on it, so that when you click on it, it opens the linked page in a new tab. This is not strictly best practice, but we've done it here so that the page doesn't open in the embedded `<iframe>`, getting rid of your example code in the process!
+> **Note:** The two links in the example have the `target="_blank"` attribute set on them. This is not strictly best practice, but we've done it here so that the links don't open in the embedded `<iframe>`, getting rid of your example code in the process!
 
 Try updating the live code below to recreate the finished example:
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.BroadcastChannel
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel()`** constructor creates a new

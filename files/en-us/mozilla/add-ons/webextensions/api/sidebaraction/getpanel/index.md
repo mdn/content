@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
+
 {{AddonSidebar()}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.

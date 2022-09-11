@@ -8,6 +8,7 @@ tags:
   - RangeError
   - JavaScript
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "too much recursion" or "Maximum call stack size exceeded"

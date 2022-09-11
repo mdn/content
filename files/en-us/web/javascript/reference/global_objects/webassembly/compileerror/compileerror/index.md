@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.CompileError()`** constructor creates a new

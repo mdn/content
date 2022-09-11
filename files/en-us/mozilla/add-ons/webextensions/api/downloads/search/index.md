@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.search
 ---
+
 {{AddonSidebar()}}
 
 The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.

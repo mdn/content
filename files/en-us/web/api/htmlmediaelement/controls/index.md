@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.controls
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.controls`** property reflects the

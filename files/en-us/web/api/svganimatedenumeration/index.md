@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedEnumeration
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated enumeration interface

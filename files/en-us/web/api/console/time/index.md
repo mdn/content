@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.time
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.time()`** method starts a timer you can use to track

@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.store
 ---
+
 {{JSRef}}
 
 The static **`Atomics.store()`**

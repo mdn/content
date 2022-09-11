@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-top-right-radius
 ---
+
 {{CSSRef}}
 
 The **`border-top-right-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the top-right corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.

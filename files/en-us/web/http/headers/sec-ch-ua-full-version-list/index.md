@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full version information.

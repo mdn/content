@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 The **labeled statement** can be used with {{jsxref("Statements/break", "break")}}

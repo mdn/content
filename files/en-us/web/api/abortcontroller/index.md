@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortController`** interface represents a controller object that allows you to abort one or more Web requests as and when desired.

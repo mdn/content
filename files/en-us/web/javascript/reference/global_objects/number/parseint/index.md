@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.parseInt
 ---
+
 {{JSRef}}
 
 The **`Number.parseInt()`** method parses a string argument and

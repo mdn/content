@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isExtensible
 ---
+
 {{JSRef}}
 
 The **`Object.isExtensible()`** method determines if an object

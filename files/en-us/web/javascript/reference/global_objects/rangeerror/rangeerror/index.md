@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
+
 {{JSRef}}
 
 The **`RangeError()`** constructor creates an error

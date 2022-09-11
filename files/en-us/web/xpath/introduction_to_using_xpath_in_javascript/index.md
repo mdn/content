@@ -12,6 +12,7 @@ tags:
   - XPath
   - XSLT
 ---
+
 This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
 
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.

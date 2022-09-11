@@ -8,6 +8,7 @@ tags:
   - Math
   - test your skills
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math) article.

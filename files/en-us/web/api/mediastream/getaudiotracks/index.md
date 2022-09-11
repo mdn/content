@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getAudioTracks()`** method of the

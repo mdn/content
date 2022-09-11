@@ -14,6 +14,7 @@ tags:
   - seconds
 browser-compat: api.HTMLMediaElement.duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 The _read-only_ {{domxref("HTMLMediaElement")}}

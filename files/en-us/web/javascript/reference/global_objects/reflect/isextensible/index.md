@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.isExtensible
 ---
+
 {{JSRef}}
 
 The static **`Reflect.isExtensible()`** method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with [some differences](#difference_with_object.isextensible).

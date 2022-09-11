@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.pause
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.pause()`** method will pause playback

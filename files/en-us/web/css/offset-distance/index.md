@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.offset-distance
 ---
+
 {{CSSRef}}
 
 The **`offset-distance`** CSS property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.

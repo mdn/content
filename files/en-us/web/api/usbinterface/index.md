@@ -13,6 +13,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBInterface
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about an interface provided by the USB device. An interface represents a feature of the device which implements a particular protocol and may contain endpoints for bidirectional communication.

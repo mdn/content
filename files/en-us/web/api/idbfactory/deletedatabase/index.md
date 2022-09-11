@@ -13,6 +13,7 @@ tags:
   - deleteDatabase
 browser-compat: api.IDBFactory.deleteDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`deleteDatabase()`** method of the

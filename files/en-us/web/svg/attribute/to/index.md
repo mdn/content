@@ -9,6 +9,7 @@ spec-urls:
   - https://svgwg.org/specs/animations/#SetElementToAttribute
   - https://svgwg.org/specs/animations/#ToAttribute
 ---
+
 {{SVGRef}}
 
 The **`to`** attribute indicates the final value of the attribute that will be modified during the animation.

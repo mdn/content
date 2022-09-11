@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.push
 ---
+
 {{JSRef}}
 
 The **`push()`** method adds one or more elements to the end of

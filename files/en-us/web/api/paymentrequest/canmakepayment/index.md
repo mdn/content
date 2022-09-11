@@ -13,6 +13,7 @@ tags:
   - canMakePayment
 browser-compat: api.PaymentRequest.canMakePayment
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method

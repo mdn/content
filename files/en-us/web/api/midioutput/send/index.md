@@ -10,6 +10,7 @@ tags:
   - MIDIOutput
 browser-compat: api.MIDIOutput.send
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`send()`** method of the {{domxref("MIDIOutput")}} interface queues messages for the corresponding MIDI port. The message can be sent immediately, or with an optional timestamp to delay sending.

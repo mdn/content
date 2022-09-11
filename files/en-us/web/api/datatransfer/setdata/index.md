@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.setData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.setData()`** method sets the drag

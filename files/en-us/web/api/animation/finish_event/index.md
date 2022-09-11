@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Animation.finish_event
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`finish`** event of the {{domxref("Animation")}} interface is fired when the animation finishes playing, either when the animation completes naturally, or

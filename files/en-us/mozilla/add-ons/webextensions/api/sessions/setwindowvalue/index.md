@@ -12,6 +12,7 @@ tags:
   - setWindowValue
 browser-compat: webextensions.api.sessions.setWindowValue
 ---
+
 {{AddonSidebar()}}
 
 Stores a key/value pair to associate with a given window. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getWindowValue")}}.

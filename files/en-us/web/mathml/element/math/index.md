@@ -7,6 +7,7 @@ tags:
   - MathML:Element
 browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 The `<math>` element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) is permitted.

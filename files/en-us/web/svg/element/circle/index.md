@@ -9,6 +9,7 @@ tags:
   - SVG
 browser-compat: svg.elements.circle
 ---
+
 {{SVGRef}}
 
 The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes), used to draw circles based on a center point and a radius.

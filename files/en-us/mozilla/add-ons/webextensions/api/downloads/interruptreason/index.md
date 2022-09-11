@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.InterruptReason
 ---
+
 {{AddonSidebar()}}
 
 The `InterruptReason` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons why a download was interrupted.

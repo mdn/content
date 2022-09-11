@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-composite
 ---
+
 {{CSSRef}}
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.

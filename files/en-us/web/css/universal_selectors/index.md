@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.universal
 ---
+
 {{CSSRef}}
 
 The CSS **universal selector** (`*`) matches elements of any type.

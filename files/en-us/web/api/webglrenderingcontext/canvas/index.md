@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.canvas
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.canvas`** property is a read-only

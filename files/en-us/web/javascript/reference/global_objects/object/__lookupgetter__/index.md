@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`__lookupGetter__`** method returns the function bound as

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
+
 {{JSRef}}
 
 The **`Object.values()`** method

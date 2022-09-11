@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.ElementInternals.ariaRelevant
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`ariaRelevant`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.

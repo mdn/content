@@ -8,6 +8,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.String
 ---
+
 {{JSRef}}
 
 The **`String`** constructor is used to create a new

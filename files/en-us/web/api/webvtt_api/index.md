@@ -20,6 +20,7 @@ browser-compat:
   - api.TextTrack
   - api.VTTRegion
 ---
+
 {{DefaultAPISidebar("WebVTT")}}
 
 **Web Video Text Tracks Format** (**WebVTT**) is a format for displaying timed text tracks (such as subtitles or captions) using the {{HTMLElement("track")}} element. The primary purpose of WebVTT files is to add text overlays to a {{HTMLElement("video")}}. WebVTT is a text based format, which must be encoded using {{Glossary("UTF-8")}}. Where you can use spaces you can also use tabs. There is also a small API available to represent and manage these tracks and the data needed to perform the playback of the text at the correct times.

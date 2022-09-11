@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
+
 {{JSRef}}
 
 The **`AggregateError()`** constructor creates an error for several errors that need to be wrapped in a single error.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Type
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Type`** representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).

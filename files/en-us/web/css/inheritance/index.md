@@ -8,6 +8,7 @@ tags:
   - Layout
   - Web
 ---
+
 {{CSSRef}}
 
 In CSS, **inheritance** controls what happens when no value is specified for a property on an element.

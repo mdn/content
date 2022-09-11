@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.readyState`** property indicates the

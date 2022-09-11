@@ -11,6 +11,7 @@ tags:
   - Web Crypto API
 browser-compat: api.SubtleCrypto.decrypt
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`decrypt()`** method of the {{domxref("SubtleCrypto")}}

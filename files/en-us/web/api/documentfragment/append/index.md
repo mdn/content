@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.append
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.append()`** method

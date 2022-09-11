@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isNaN
 ---
+
 {{JSRef}}
 
 The **`Number.isNaN()`** method determines whether the passed

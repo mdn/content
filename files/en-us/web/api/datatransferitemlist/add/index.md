@@ -13,6 +13,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList.add
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList.add()`** method creates a new

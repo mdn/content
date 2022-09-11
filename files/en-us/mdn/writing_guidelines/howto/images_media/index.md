@@ -6,6 +6,7 @@ tags:
   - writing-guide
 page-type: mdn-writing-guide
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs is not a very video-heavy site, but there are certain places where video content makes sense to use as part of an article.

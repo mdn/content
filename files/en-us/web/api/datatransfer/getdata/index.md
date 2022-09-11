@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`DataTransfer.getData()`**

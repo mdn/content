@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.createSampler
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.createSampler()`** method of the

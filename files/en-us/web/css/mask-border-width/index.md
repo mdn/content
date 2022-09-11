@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-border-width
 ---
+
 {{CSSRef}}
 
 The **`mask-border-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [mask border](/en-US/docs/Web/CSS/mask-border).

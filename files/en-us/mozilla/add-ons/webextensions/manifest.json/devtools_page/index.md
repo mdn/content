@@ -11,6 +11,7 @@ tags:
   - devtools_page
 browser-compat: webextensions.manifest.devtools_page
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
 ---
+
 {{AddonSidebar()}}
 
 Returns a `DirectoryEntry` object representing the package directory.

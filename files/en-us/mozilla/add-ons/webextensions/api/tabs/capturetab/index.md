@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.captureTab
 ---
+
 {{AddonSidebar()}}
 
 Creates a data URL encoding the image of an area of the given tab. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method.

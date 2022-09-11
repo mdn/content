@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.scrollTo
 ---
+
 {{APIRef}}
 
 **`Window.scrollTo()`** scrolls to a particular set of

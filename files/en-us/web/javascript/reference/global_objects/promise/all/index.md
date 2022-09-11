@@ -8,6 +8,7 @@ tags:
   - Promise
 browser-compat: javascript.builtins.Promise.all
 ---
+
 {{JSRef}}
 
 The **`Promise.all()`** method takes an iterable of promises as

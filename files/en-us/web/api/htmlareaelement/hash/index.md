@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.hash
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The

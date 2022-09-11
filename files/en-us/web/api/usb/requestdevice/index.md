@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.USB.requestDevice
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`requestDevice()`** method of the {{domxref("USB")}}

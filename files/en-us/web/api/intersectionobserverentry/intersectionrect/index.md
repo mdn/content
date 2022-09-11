@@ -12,6 +12,7 @@ tags:
   - intersectionRect
 browser-compat: api.IntersectionObserverEntry.intersectionRect
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

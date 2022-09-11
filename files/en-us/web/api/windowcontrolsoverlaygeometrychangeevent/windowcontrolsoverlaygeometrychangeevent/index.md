@@ -9,6 +9,7 @@ tags:
   - WindowControlsOverlayGeometryChangeEvent
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
+
 {{APIRef("Window Controls Overlay API")}}
 
 The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly created

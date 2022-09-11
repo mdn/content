@@ -10,6 +10,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.device-width
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 > **Note:** To query for the width of the viewport, developers should use the [`width`](/en-US/docs/Web/CSS/@media/width) media feature instead.

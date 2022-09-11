@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel.release_event
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`release`** event of the {{domxref("WakeLockSentinel")}} interface is fired when the sentinel object's handle has been released.

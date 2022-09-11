@@ -18,6 +18,7 @@ tags:
   - l10n:priority
   - what
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Welcome to the MDN beginner's JavaScript course!

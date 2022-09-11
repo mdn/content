@@ -14,6 +14,7 @@ tags:
   - loadstart
 browser-compat: api.XMLHttpRequest.loadstart_event
 ---
+
 {{APIRef}}
 
 The **`loadstart`** event is fired when a request has started to load data.

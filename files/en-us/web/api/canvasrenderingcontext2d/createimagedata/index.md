@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.createImageData()`** method of

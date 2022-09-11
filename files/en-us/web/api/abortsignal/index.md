@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.AbortSignal
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.

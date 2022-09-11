@@ -13,6 +13,7 @@ browser-compat:
   - api.ReadableStream
   - api.WritableStream
 ---
+
 {{DefaultAPISidebar("Streams")}}
 
 The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.

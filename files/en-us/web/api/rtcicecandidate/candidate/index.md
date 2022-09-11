@@ -18,6 +18,7 @@ tags:
   - a-line
 browser-compat: api.RTCIceCandidate.candidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`candidate`** on the {{domxref("RTCIceCandidate")}} interface returns a string describing the candidate in detail.

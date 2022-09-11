@@ -13,6 +13,7 @@ tags:
   - direction
 browser-compat: api.IDBCursor.direction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`direction`** read-only property of the

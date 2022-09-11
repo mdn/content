@@ -7,6 +7,7 @@ tags:
   - Reference
   - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`global`** instruction declares a new global variable.

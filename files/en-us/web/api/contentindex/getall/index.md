@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndex.getAll
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the

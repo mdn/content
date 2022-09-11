@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.sup
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`sup()`** method creates a {{HTMLElement("sup")}} HTML

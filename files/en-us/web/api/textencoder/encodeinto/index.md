@@ -10,6 +10,7 @@ tags:
   - encodeInto
 browser-compat: api.TextEncoder.encodeInto
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder.encodeInto()`** method takes a

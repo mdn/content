@@ -10,6 +10,7 @@ tags:
   - exported wasm functions
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.
@@ -23,7 +24,7 @@ You can retrieve exported WebAssembly functions in two ways:
 - By calling [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) on an existing table.
 - By accessing a function exported from a wasm module instance via [`Instance.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports).
 
-Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
+Either way, you get the same kind of wrapper for the underlying function. From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
 
 ## An example
 
@@ -32,16 +33,15 @@ Let's look at an example to clear things up (you can find this on GitHub as [tab
 ```js
 const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-  .then((obj) => {
-    const tbl = obj.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
-    otherTable.set(0,tbl.get(0));
-    otherTable.set(1,tbl.get(1));
-    console.log(otherTable.get(0)());
-    console.log(otherTable.get(1)());
-  });
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
+  const tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+  otherTable.set(0, tbl.get(0));
+  otherTable.set(1, tbl.get(1));
+  console.log(otherTable.get(0)());
+  console.log(otherTable.get(1)());
+});
 ```
 
 Here we create a table (`otherTable`) from JavaScript using the {{jsxref("WebAssembly.Table")}} constructor, then we load `table.wasm` into our page using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.

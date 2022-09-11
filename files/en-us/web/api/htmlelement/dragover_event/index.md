@@ -13,6 +13,7 @@ tags:
   - drag and drop
 browser-compat: api.HTMLElement.dragover_event
 ---
+
 {{APIRef}}
 
 The `dragover` event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).

@@ -11,6 +11,7 @@ tags:
   - Interface
 browser-compat: api.XSLTProcessor
 ---
+
 {{APIRef("XSLT")}}
 
 An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XSLT) stylesheet transformation to an XML document to

@@ -7,6 +7,7 @@ tags:
   - blocking
   - tracking
 ---
+
 ## What is tracking protection?
 
 Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.

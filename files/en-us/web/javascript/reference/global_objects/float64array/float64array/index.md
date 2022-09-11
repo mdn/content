@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
+
 {{JSRef}}
 
 The **`Float64Array()`** typed array constructor creates a new

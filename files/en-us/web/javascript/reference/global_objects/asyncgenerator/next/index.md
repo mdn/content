@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncGenerator.next
 ---
+
 {{JSRef}}
 
 The **`next()`** method returns the next value in the sequence.

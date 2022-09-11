@@ -13,6 +13,7 @@ tags:
   - periodic sync
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`PeriodicSyncEvent()`** constructor

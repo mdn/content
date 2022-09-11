@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animateMotion.keyPoints
 ---
+
 {{SVGRef}}
 
 The **`keyPoints`** attribute indicates the simple duration of an animation.

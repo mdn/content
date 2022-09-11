@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.renderbufferStorage
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.renderbufferStorage()`** method of

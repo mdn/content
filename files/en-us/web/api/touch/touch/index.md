@@ -9,6 +9,7 @@ tags:
   - touch
 browser-compat: api.Touch.Touch
 ---
+
 {{APIRef("Touch Events")}}
 
 The **`Touch()`** constructor creates a new {{domxref("Touch")}} object.

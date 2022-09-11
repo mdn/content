@@ -9,6 +9,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.

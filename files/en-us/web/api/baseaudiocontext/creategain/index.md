@@ -15,6 +15,7 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext.createGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createGain()` method of the {{ domxref("BaseAudioContext") }}

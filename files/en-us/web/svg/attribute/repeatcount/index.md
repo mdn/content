@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animate.repeatCount
 ---
+
 {{SVGRef}}
 
 The **`repeatCount`** attribute indicates the number of times an animation will take place.

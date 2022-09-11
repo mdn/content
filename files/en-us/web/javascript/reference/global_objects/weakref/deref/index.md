@@ -9,6 +9,7 @@ tags:
   - WeakRef
 browser-compat: javascript.builtins.WeakRef.deref
 ---
+
 {{JSRef}}
 
 The `deref` method returns the {{jsxref("WeakRef")}} instance's target

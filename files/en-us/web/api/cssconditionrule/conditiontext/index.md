@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSConditionRule.conditionText
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`conditionText`** property of

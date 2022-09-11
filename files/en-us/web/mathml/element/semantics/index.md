@@ -7,6 +7,7 @@ tags:
   - MathML:Element
 browser-compat: mathml.elements.semantics
 ---
+
 {{MathMLRef}}
 
 The `<semantics>` element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:

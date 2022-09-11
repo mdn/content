@@ -10,6 +10,7 @@ tags:
   - has
 browser-compat: api.URLSearchParams.has
 ---
+
 {{ApiRef("URL API")}}
 
 The **`has()`** method of the {{domxref("URLSearchParams")}}

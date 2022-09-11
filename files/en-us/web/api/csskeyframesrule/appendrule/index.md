@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.appendRule
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`appendRule()`** method of the {{domxref("CSSKeyframeRule")}} interface appends a {{domxref("CSSKeyFrameRule")}} to the end of the rules.

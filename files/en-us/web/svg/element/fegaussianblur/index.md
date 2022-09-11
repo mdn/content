@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feGaussianBlur
 ---
+
 {{SVGRef}}
 
 The **`<feGaussianBlur>`** [SVG](/en-US/docs/Web/SVG) filter primitive blurs the input image by the amount specified in {{SVGAttr("stdDeviation")}}, which defines the bell-curve.

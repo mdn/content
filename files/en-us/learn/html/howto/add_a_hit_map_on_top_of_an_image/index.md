@@ -8,6 +8,7 @@ tags:
   - Intermediate
   - Navigation
 ---
+
 Here we go over how to set up an image map, and some downsides to consider first.
 
 <table>

@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw`** extension is part of the

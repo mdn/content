@@ -13,6 +13,7 @@ tags:
   - deleted
 browser-compat: api.RTCIceCandidateStats.deleted
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

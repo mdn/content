@@ -7,6 +7,7 @@ tags:
   - Privacy
   - Security
 ---
+
 **Cryptography**, or cryptology, is the science that studies how to encode and transmit messages securely. Cryptography designs and studies algorithms used to encode and decode messages in an insecure environment, and their applications.
 
 More than just **data confidentiality**, cryptography also tackles **identification**, **authentication**, **non-repudiation**, and **data integrity**. Therefore it also studies usage of cryptographic methods in context, **cryptosystems**.

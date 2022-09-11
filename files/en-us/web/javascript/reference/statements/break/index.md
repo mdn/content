@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.break
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`break` statement** terminates the current loop,

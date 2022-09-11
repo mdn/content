@@ -13,6 +13,7 @@ tags:
   - respondWith
 browser-compat: api.FetchEvent.respondWith
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`respondWith()`** method of

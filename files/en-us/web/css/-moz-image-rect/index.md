@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: css.types.-moz-image-rect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.

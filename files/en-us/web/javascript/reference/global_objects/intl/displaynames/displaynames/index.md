@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames()`** constructor creates

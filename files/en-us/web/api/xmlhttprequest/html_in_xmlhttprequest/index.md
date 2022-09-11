@@ -13,6 +13,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The W3C {{domxref("XMLHttpRequest")}} specification adds [HTML](/en-US/docs/Web/HTML) parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using `XMLHttpRequest`.

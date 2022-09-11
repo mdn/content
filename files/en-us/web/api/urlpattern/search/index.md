@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.search
 ---
+
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`search`** property of the {{domxref("URLPattern")}} interface is a

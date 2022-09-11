@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.cloneRange
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range.cloneRange()`** method returns a

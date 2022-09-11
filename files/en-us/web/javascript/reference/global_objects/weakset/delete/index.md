@@ -9,6 +9,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a

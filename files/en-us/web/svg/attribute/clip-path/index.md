@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.clip-path
 ---
+
 {{SVGRef}}
 
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.

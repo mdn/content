@@ -10,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.add
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new font to the set.

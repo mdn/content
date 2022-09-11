@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.match_patterns.scheme
 ---
+
 {{AddonSidebar}}
 
 Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are used in WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) listeners to.

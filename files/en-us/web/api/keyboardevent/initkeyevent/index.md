@@ -11,6 +11,7 @@ tags:
   - Reference
   - Non Standard
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!

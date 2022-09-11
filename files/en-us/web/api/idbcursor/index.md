@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 > **Note:** Not to be confused with {{domxref("IDBCursorWithValue")}} which is just an **`IDBCursor`** interface with an additional **`value`** property.

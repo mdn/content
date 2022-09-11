@@ -10,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.validationMessage
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`validationMessage`** read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.

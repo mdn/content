@@ -11,6 +11,7 @@ tags:
   - decoding
 browser-compat: api.HTMLImageElement.decoding
 ---
+
 {{APIRef}}
 
 The **`decoding`** property of the

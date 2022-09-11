@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Number.toPrecision
 ---
+
 {{JSRef}}
 
 The **`toPrecision()`** method returns a string representing

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-width
 ---
+
 {{SVGRef}}
 
 The **`stroke-width`** attribute is a presentation attribute defining the width of the stroke to be applied to the shape.

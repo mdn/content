@@ -11,6 +11,7 @@ tags:
   - mediaText
 browser-compat: api.MediaList.mediaText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`mediaText`** property of the {{domxref("MediaList")}}

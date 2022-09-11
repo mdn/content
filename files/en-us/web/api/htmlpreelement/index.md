@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLPreElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLPreElement`** interface exposes specific properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating a block of preformatted text ({{HtmlElement("pre")}}).

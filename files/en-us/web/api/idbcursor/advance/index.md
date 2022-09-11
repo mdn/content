@@ -13,6 +13,7 @@ tags:
   - advance
 browser-compat: api.IDBCursor.advance
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`advance()`** method of the {{domxref("IDBCursor")}}

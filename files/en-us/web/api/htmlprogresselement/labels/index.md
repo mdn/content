@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLProgressElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLProgressElement.labels`** read-only property returns

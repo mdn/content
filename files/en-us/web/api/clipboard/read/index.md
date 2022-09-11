@@ -18,6 +18,7 @@ tags:
   - read
 browser-compat: api.Clipboard.read
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`read()`** method of the

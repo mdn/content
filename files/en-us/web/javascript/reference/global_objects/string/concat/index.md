@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.concat
 ---
+
 {{JSRef}}
 
 The **`concat()`** method concatenates

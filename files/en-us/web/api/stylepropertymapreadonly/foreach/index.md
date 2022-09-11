@@ -13,6 +13,7 @@ tags:
   - forEach()
 browser-compat: api.StylePropertyMapReadOnly.forEach
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`StylePropertyMapReadOnly.forEach()`** method executes a

@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.

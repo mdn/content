@@ -17,6 +17,7 @@ tags:
   - resources
 spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
+
 {{HTTPSidebar}}
 
 The target of an HTTP request is called a "resource", whose nature isn't defined further; it can be a document, a photo, or anything else. Each resource is identified by a Uniform Resource Identifier ({{Glossary("URI")}}) used throughout HTTP for identifying resources.

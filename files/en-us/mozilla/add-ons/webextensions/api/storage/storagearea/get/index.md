@@ -16,6 +16,7 @@ tags:
   - get
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
+
 {{AddonSidebar()}}
 
 Retrieves one or more items from the storage area.

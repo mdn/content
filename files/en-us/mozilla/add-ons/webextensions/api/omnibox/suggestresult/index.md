@@ -12,6 +12,7 @@ tags:
   - omnibox
 browser-compat: webextensions.api.omnibox.SuggestResult
 ---
+
 {{AddonSidebar()}}
 
 The **`omnibox.SuggestResult`** type defines a single suggestion that the extension can add to the address bar's drop-down list.

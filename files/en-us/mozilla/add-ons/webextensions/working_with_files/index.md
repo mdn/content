@@ -5,6 +5,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 Your browser extension may need to work with files to deliver its full functionality. This article looks at the five mechanisms you have for handling files:

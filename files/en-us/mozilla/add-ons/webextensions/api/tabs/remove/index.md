@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.remove
 ---
+
 {{AddonSidebar()}}
 
 Closes one or more tabs.

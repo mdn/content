@@ -11,6 +11,7 @@ tags:
 spec-urls: https://webaudio.github.io/web-midi-api/
 browser-compat: api.Navigator.requestMIDIAccess
 ---
+
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
 The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.

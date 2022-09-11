@@ -10,6 +10,7 @@ tags:
   - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`EventSource()`**

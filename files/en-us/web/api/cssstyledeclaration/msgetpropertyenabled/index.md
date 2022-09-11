@@ -7,6 +7,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{APIRef("CSSOM")}}
 
 {{Non-standard_header()}}

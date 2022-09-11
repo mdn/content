@@ -20,6 +20,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.organization
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`organization`** read-only

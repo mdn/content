@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.

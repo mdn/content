@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
+
 {{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`FederatedCredential()`**

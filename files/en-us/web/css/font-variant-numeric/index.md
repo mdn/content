@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-numeric
 ---
+
 {{CSSRef}}
 
 The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.

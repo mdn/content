@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormControlsCollection.namedItem
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormControlsCollection.namedItem()`** method returns

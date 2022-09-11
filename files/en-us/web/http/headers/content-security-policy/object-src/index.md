@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.object-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}}

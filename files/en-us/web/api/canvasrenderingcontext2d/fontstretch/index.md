@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CanvasRenderingContext2D.fontStretch
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.fontStretch`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies how the font may be expanded or condensed when drawing text.

@@ -6,6 +6,7 @@ tags:
   - XPath
   - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `choose` function returns one of the specified objects based on a boolean parameter.

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontsize()`** method creates a {{HTMLElement("font")}}

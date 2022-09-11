@@ -12,6 +12,7 @@ tags:
   - screen
 browser-compat: api.Screen.lockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 The **`lockOrientation()`** method of the {{DOMxRef("Screen")}}

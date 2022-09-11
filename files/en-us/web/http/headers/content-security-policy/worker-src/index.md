@@ -10,6 +10,7 @@ tags:
   - Security
 browser-compat: http.headers.Content-Security-Policy.worker-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

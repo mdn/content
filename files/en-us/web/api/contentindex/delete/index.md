@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndex.delete
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the

@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.CreateType
 ---
+
 {{AddonSidebar()}}
 
 Specifies the type of browser window to create.

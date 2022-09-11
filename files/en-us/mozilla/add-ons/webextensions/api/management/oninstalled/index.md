@@ -11,6 +11,7 @@ tags:
   - onInstalled
 browser-compat: webextensions.api.management.onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when an add-on is installed.

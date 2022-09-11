@@ -12,6 +12,7 @@ tags:
   - cacheEnabled
 browser-compat: webextensions.api.browserSettings.cacheEnabled
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to globally enable or disable the browser cache.

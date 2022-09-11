@@ -13,6 +13,7 @@ browser-compat:
   - api.WebGLRenderingContext.texParameterf
   - api.WebGLRenderingContext.texParameteri
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texParameter[fi]()`** methods of

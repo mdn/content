@@ -15,6 +15,7 @@ tags:
   - onslotchange
 browser-compat: api.ShadowRoot.onslotchange
 ---
+
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 
 The **`onslotchange`** property of the {{domxref("ShadowRoot")}} is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} events.

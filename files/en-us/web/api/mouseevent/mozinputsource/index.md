@@ -9,6 +9,7 @@ tags:
   - Property
   - Read-only
 ---
+
 {{APIRef("UI Events")}} {{ Non-standard_header() }}
 
 The **`MouseEvent.mozInputSource`** read-only property on {{domxref("MouseEvent")}} provides information indicating the type of device that generated the event.

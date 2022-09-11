@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexSubImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.copyTexSubImage2D()`** method of

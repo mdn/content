@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.clearData()`** method removes the drag

@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Web Development
 ---
+
 This page explains how to write websites that do not break when new browser versions are released.
 
 This is especially important for intranets and other non-public websites; if we can't see your code, we can't see that it broke. It's not always possible to follow all of these, but following as many of them as possible will help future-proof your website.

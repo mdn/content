@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 tags:
   - Firefox 3
 ---
+
 {{FirefoxSidebar}}
 
 This article offers a list of important bug fixes offered by Firefox 3 that are not necessarily obvious in the documentation.

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.pointerType
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`pointerType`** read-only property of the

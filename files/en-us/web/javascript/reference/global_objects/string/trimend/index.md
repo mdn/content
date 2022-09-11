@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
 ---
+
 {{JSRef}}
 
 The **`trimEnd()`** method removes whitespace from the end of a

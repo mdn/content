@@ -11,6 +11,7 @@ tags:
   - forEach()
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`forEach`** property of the
