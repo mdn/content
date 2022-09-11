@@ -70,14 +70,14 @@ containing a parsed XML document. This could prove difficult to manipulate and a
 There are four primary ways of analyzing this XML document:
 
 1. Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of
-    it.
+   it.
 2. Manually [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) to strings or objects.
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to
-    files**.
+   files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document
-    beforehand. You might want to remove line breaks, if you use `RegExp` to
-    scan with regard to line breaks. However, this method is a "last resort" since if the
-    XML code changes slightly, the method will likely fail.
+   beforehand. You might want to remove line breaks, if you use `RegExp` to
+   scan with regard to line breaks. However, this method is a "last resort" since if the
+   XML code changes slightly, the method will likely fail.
 
 > **Note:** `XMLHttpRequest` can now interpret HTML for you
 > using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
@@ -91,13 +91,13 @@ containing the raw HTML. This could prove difficult to manipulate and analyze. T
 three primary ways to analyze and parse this raw HTML string:
 
 1. Use the `XMLHttpRequest.responseXML` property as covered in the article
-    [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+   [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 2. Inject the content into the body of a [document fragment](/en-US/docs/Web/API/DocumentFragment) via
-    `fragment.body.innerHTML` and traverse the DOM of the fragment.
+   `fragment.body.innerHTML` and traverse the DOM of the fragment.
 3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
-    `responseText` beforehand. You might want to remove line breaks, if you use
-    `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
-    since if the HTML code changes slightly, the method will likely fail.
+   `responseText` beforehand. You might want to remove line breaks, if you use
+   `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
+   since if the HTML code changes slightly, the method will likely fail.
 
 ## Handling binary data
 
@@ -336,21 +336,21 @@ ways to _submit_, and to **upload files**:
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Sending forms with pure AJAX &ndash; MDN</title>
     <script>
       "use strict";
 
       // :: XHR Form Submit Framework ::
-      // 
+      //
       // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
-      // 
+      //
       // This framework is released under the GNU Public License, version 3 or later.
       // https://www.gnu.org/licenses/gpl-3.0-standalone.html
-      // 
+      //
       // Syntax:
-      // 
+      //
       // XHRSubmit(HTMLFormElement);
       const XHRSubmit = (function () {
         function xhrSuccess() {
@@ -620,8 +620,8 @@ XHRSubmit(myForm);
 > {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
 > `FileReader` API. But, since the aim of this script is to work with a [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > raw data, we used the {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
-> method in conjunction with the {{domxref("FileReader.readAsBinaryString()",
-  "readAsBinaryString()")}} method of the `FileReader` API. As such, the above
+> method in conjunction with the {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}}
+> method of the `FileReader` API. As such, the above
 > script makes sense only when you are dealing with small files. If you do not intend to
 > upload binary content, consider instead using the `FormData` API.
 
@@ -758,7 +758,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
         </p>
       </fieldset>
     </form>
-  </body> 
+  </body>
 </html>
 ```
 
