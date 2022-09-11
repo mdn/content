@@ -229,9 +229,9 @@ const people = [
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
-    acc[key] ??= [];
-    acc[key].push(obj);
-    return acc;
+    const group = acc[key] ?? [];
+    
+    return ({...acc, [key]: [...group, obj]})
   }, {});
 }
 
