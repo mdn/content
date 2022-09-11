@@ -46,8 +46,6 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies whether to pause or play an animation sequence.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
-- {{cssxref("animation-timeline")}}
-  - : Specifies the names of one or more {{cssxref("@scroll-timeline")}} at-rules describing the scroll animations.
 
 ## Defining animation sequence using keyframes
 
