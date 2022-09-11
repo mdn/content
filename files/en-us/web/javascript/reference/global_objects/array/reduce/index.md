@@ -205,11 +205,13 @@ const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
 
 const countedNames = names.reduce((allNames, name) => {
-  allNames[name] ??= 0;
-  allNames[name]++;
+  const currCount = allNames[name] ?? 0;
   // Remember to return the object, or the next iteration
   // will receive undefined
-  return allNames;
+  return ({
+    ...allNames, 
+    [name]: currCount + 1  
+  });
 }, {});
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
