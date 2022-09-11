@@ -137,7 +137,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `nofollow` keyword tells search engine spiders to ignore the link relationship. The nofollow relationship may indicate the current document's owner does not endorse the referenced document. It is often included by Search Engine Optimizers pretending their link farms are not spam pages.
 - {{htmlattrdef("noopener")}}
 
-  - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate`target`attribute value). In other words, it makes the link behave as if [`window.opener`](/en-US/docs/Web/API/Window/opener) were null and `target="_parent"` were set.
+  - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate `target` attribute value). In other words, it makes the link behave as if [`window.opener`](/en-US/docs/Web/API/Window/opener) were null and `target="_parent"` were set.
 
     This is the opposite of [opener](#opener).
 
