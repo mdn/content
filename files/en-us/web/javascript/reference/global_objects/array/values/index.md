@@ -60,12 +60,12 @@ Because the return value is also an iterator, you can directly call its `next()`
 ```js
 const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
-console.log(iterator.next()); // { value: "a", done: false }
-console.log(iterator.next().value); // "b"
-console.log(iterator.next()["value"]); // "c"
-console.log(iterator.next()); // { value: "d", done: false }
-console.log(iterator.next()); // { value: "e", done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+iterator.next(); // { value: "a", done: false }
+iterator.next(); // { value: "b", done: false }
+iterator.next(); // { value: "c", done: false }
+iterator.next(); // { value: "d", done: false }
+iterator.next(); // { value: "e", done: false }
+iterator.next(); // { value: undefined, done: true }
 console.log(iterator.next().value); // undefined
 ```
 
