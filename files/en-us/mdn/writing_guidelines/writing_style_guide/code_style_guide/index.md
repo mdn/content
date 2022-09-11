@@ -70,11 +70,11 @@ function myFunc() {
 
 Add a space between a control statement or loop keyword and its opening parenthesis.
 
- ```js example-good
+```js example-good
 if (condition) {
-  /* handle the condition */
+ /* handle the condition */
 } else {
-  /* handle the "else" case */
+ /* handle the "else" case */
 }
 ```
 

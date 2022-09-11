@@ -63,7 +63,7 @@ As you can see, we've used "Fetch API" for the name, and inside the object value
 
 This section lists all the sub-members you could include in a `GroupData` entry.
 
-Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link.
+Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page — `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link.
 So for example, "Response" will result in a link being created like so:
 
 ```html
@@ -96,12 +96,12 @@ These are all technically optional, but it is strongly encouraged that instead o
    Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link.
    As an example, the following object:
 
-    ```json
-    { "url":   "/docs/Web/API/Detecting_device_orientation",
-    "title": "Detecting device orientation" }
-    ```
+   ```json
+   { "url":   "/docs/Web/API/Detecting_device_orientation",
+   "title": "Detecting device orientation" }
+   ```
 
-    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
+   Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
 
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.
