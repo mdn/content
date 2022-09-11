@@ -368,7 +368,7 @@ function is_ignorable(nod) {
 
 /**
  * Version of |previousSibling| that skips nodes that are entirely
- * whitespace or comments.  (Normally |previousSibling| is a property
+ * whitespace or comments. (Normally |previousSibling| is a property
  * of all DOM nodes that gives the sibling node, the node that is
  * a child of the same parent, that occurs immediately before the
  * reference node.)
@@ -409,7 +409,7 @@ function node_after(sib) {
 
 /**
  * Version of |lastChild| that skips nodes that are entirely
- * whitespace or comments.  (Normally |lastChild| is a property
+ * whitespace or comments. (Normally |lastChild| is a property
  * of all DOM nodes that gives the last of the nodes contained
  * directly in the reference node.)
  *
@@ -453,7 +453,7 @@ function first_child(par) {
 
 /**
  * Version of |data| that doesn't include whitespace at the beginning
- * and end and normalizes all whitespace to a single space.  (Normally
+ * and end and normalizes all whitespace to a single space. (Normally
  * |data| is a property of text nodes that gives the text of the node.)
  *
  * @param txt  The text node whose data should be returned

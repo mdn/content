@@ -439,7 +439,7 @@ objectStore.openCursor().onsuccess = (event) => {
 };
 ```
 
-> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`) . The following code does precisely the same thing as above:
+> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`). The following code does precisely the same thing as above:
 >
 > ```js
 > objectStore.getAll().onsuccess = (event) => {

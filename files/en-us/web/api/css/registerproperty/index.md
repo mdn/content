@@ -76,7 +76,7 @@ window.CSS.registerProperty({
 ```
 
 In this example, the custom property `--my-color` has been registered using
-the syntax `<color>` . We can now use that property to transition a
+the syntax `<color>`. We can now use that property to transition a
 gradient on hover or focus. Notice that with the registered property the transition
 works, but that it doesn't with the unregistered property!
 
