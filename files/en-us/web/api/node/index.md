@@ -64,20 +64,21 @@ parent, {{DOMxRef("EventTarget")}}_.
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
+
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
-    | Name                                                 | Value |
-    | ---------------------------------------------------- | ----- |
-    | `ELEMENT_NODE`                                       | `1`   |
-    | `ATTRIBUTE_NODE`                                     | `2`   |
-    | `TEXT_NODE`                                          | `3`   |
-    | `CDATA_SECTION_NODE`                                 | `4`   |
-    | `PROCESSING_INSTRUCTION_NODE`                        | `7`   |
-    | `COMMENT_NODE`                                       | `8`   |
-    | `DOCUMENT_NODE`                                      | `9`   |
-    | `DOCUMENT_TYPE_NODE`                                 | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`                             | `11`  |
+    | Name                          | Value |
+    | ----------------------------- | ----- |
+    | `ELEMENT_NODE`                | `1`   |
+    | `ATTRIBUTE_NODE`              | `2`   |
+    | `TEXT_NODE`                   | `3`   |
+    | `CDATA_SECTION_NODE`          | `4`   |
+    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
+    | `COMMENT_NODE`                | `8`   |
+    | `DOCUMENT_NODE`               | `9`   |
+    | `DOCUMENT_TYPE_NODE`          | `10`  |
+    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
 
 - {{DOMxRef("Node.nodeValue")}}
   - : Returns / Sets the value of the current node.
