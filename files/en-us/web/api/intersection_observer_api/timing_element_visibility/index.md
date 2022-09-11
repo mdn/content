@@ -463,7 +463,7 @@ First, the `<article>` element is created and its ID is set to the unique value 
 
 #### Creating an ad
 
-The `loadRandomAd()` function simulates loading an ad and adding it to the page. If you don't pass a value for `replaceBox`, a new element is created to contain the ad; the ad is then appended to the page. if you specify a `replaceBox`, that box is treated as an existing ad element; instead of creating a new one, the existing element is changed to contain the new ad's style, content, and other data. This avoids the risk of lengthy layout work being done when you update the ad, which could happen if you first delete the old element then insert a new one.
+The `loadRandomAd()` function simulates loading an ad and adding it to the page. If you don't pass a value for `replaceBox`, a new element is created to contain the ad; the ad is then appended to the page. If you specify a `replaceBox`, that box is treated as an existing ad element; instead of creating a new one, the existing element is changed to contain the new ad's style, content, and other data. This avoids the risk of lengthy layout work being done when you update the ad, which could happen if you first delete the old element then insert a new one.
 
 ```js
 function loadRandomAd(replaceBox) {
