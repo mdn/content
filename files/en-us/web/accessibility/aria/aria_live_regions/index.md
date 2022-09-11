@@ -161,7 +161,7 @@ The Paciello Group has some [information about the state of the support of Live 
 1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
 2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 
-    : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
+   : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 
 ### Basic examples: `aria-atomic`
 

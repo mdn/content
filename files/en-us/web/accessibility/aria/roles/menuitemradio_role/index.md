@@ -35,7 +35,7 @@ If your want more than one item in a group to be checked, or if you want to enab
 
 If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
 
-An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using  `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
+An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
@@ -158,6 +158,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

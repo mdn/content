@@ -42,6 +42,7 @@ In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+
   - : Include with a value of `true` or `false` if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default `undefined` which means the document is not collapsible.
 
 - tabindex="0"
@@ -80,6 +81,6 @@ The document role is an easy way to indirectly control assistive technology beha
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

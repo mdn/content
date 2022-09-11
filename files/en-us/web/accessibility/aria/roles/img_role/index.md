@@ -75,7 +75,7 @@ For example, if you use emojis in your text, the meaning might be obvious to a s
 </div>
 ```
 
-`&#x1F408; &#x1F602;`, 🐈 and 😂,  are entity references for emojis read out as "Cat" and "Face with tears of joy", but this doesn't necessarily make sense — the implied meaning is possibly more like "That cat is so cute", so we include that in an `aria-label` along with `role="img"`.
+`&#x1F408; &#x1F602;`, 🐈 and 😂, are entity references for emojis read out as "Cat" and "Face with tears of joy", but this doesn't necessarily make sense — the implied meaning is possibly more like "That cat is so cute", so we include that in an `aria-label` along with `role="img"`.
 
 This seems to work OK across some browser/screen reader combinations, but some of them end up reading the label out twice. Use with caution and test thoroughly.
 
@@ -149,6 +149,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

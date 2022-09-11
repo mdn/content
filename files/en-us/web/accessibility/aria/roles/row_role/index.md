@@ -15,7 +15,7 @@ spec-urls:
   - https://w3c.github.io/aria-practices/#row
 ---
 
-An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
+An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 
 ```html
 <div role="table" aria-label="Populations" aria-describedby="country_population_desc">
@@ -218,6 +218,6 @@ none
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

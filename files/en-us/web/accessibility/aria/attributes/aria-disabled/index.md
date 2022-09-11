@@ -27,7 +27,7 @@ When needing to disable native HTML form controls, developers will need to speci
 
 In each of these cases, one may want users to find these elements through standard keyboard navigation, though the functionality of that control is removed or "disabled". Developers will still need to use JavaScript to fully disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
-> **Note:**  The state of being disabled applies to the element with `aria-disabled="true"` and all of its focusable descendants. Take care when using this attribute on container elements. Particularly in the case where a container may have both form controls and links - where the intent may be to expose the form controls as being in the disabled state, but <strong>not</strong> to communicate the links as being "disabled".
+> **Note:** The state of being disabled applies to the element with `aria-disabled="true"` and all of its focusable descendants. Take care when using this attribute on container elements. Particularly in the case where a container may have both form controls and links - where the intent may be to expose the form controls as being in the disabled state, but <strong>not</strong> to communicate the links as being "disabled".
 
 Another reason to need use the `aria-disabled` attribute over the HTML `disabled` attribute is if you have created custom controls which need to be marked as disabled, but are not using an element that allows for the `disabled` attribute. For instance, in the following snippet a `<div>` was used to create a custom button which needs to be marked as disabled. However, the `<div>` element does not expect, nor respect the `disabled` attribute - even if it were to be given a `role="button"` to change its exposed ARIA role. The `aria-disabled` attribute is required to disable such custom controls.
 
@@ -93,6 +93,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Values
 
 - `true`
+
   - : The element is disabled
 
 - `false`
