@@ -45,7 +45,7 @@ input[type=range]::-moz-range-thumb {
 
 A progress bar using this style might look something like this:
 
-![The thumb of the <input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
+![The thumb of the \<input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Specifications
 
