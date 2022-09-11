@@ -33,7 +33,7 @@ The IE version has additional properties not required in the new specification o
 
 ### Autoprefixer grid layout support
 
-If you are still supporting Internet Explorer, the popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ [online version](https://goonlinetools.com/autoprefixer/) has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
+If you are still supporting Internet Explorer, the popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ ([online version](https://goonlinetools.com/autoprefixer/)) has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
 
 ```js
 autoprefixer({ grid: 'autoplace' })
