@@ -18,22 +18,22 @@ the sum of the squares of the other two sides.
 
 i.e., If a and b are the legs and c is the hypotenuse then
 <math>
-  <mrow>
-    <msup>
-      <mi>a</mi>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <msup>
-      <mi>b</mi>
-      <mn>2</mn>
-    </msup>
-    <mo>=</mo>
-    <msup>
-      <mi>c</mi>
-      <mn>2</mn>
-    </msup>
-  </mrow>
+<mrow>
+<msup>
+<mi>a</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>b</mi>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mrow>
 </math>.
 
 **Proof:** We can prove the theorem algebraically by showing that on

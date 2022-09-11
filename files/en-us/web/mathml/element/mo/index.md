@@ -24,6 +24,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   - : There is no visual effect for this attribute, but it specifies whether the operator is a fence (such as parentheses).
     Allowed values are `true` or `false`.
 - `lspace`
+
   - : The amount of space before the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
 
 - `maxsize`

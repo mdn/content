@@ -114,7 +114,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: [\<FuncIRI>](/en-US/docs/Web/SVG/Content_type#funciri)|[\<keywords>](/en-US/docs/Web/CSS/cursor#values)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('d')}}
   - : It defines a path to be drawn.
-    _Value_: [path()](/en-US/docs/Web/CSS/path\(\))|`none`
+    _Value_: [path()](</en-US/docs/Web/CSS/path()>)|`none`
 - {{SVGAttr('direction')}}
   - : It specifies the base writing direction of text.
     _Value_: **`ltr`**|`rtl`|`inherit`; _Animatable_: **Yes**

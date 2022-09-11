@@ -1980,9 +1980,9 @@ First, let's look at the best options for videos presented on a typical web site
 
 1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
@@ -2001,9 +2001,9 @@ If your mission is to present video at the highest possible quality, you will pr
 
 1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
@@ -2050,7 +2050,7 @@ This example creates a `MediaRecorder` configured to record [AV1](#av1) video us
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
-| Value  | Description                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                              |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
@@ -2060,7 +2060,7 @@ Breaking down the value of the `codecs` parameter into its dot-delineated proper
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                       |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 The documentation for your codec choices will probably offer information you'll use when constructing your `codecs` parameter.
