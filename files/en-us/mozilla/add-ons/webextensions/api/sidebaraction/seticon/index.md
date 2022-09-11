@@ -27,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 Your extension should specify an icon for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
 
-If you don't specify an icon in the sidebar*action key, you get the browser's default icon. This is called the *"default icon"\_.
+If you don't specify an icon in the `sidebar_action` key, you get the browser's default icon. This is called the _"default icon"_.
 
 If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
 
