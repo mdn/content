@@ -182,7 +182,7 @@ However, stopEvent also calls an event object method, {{domxref("event.stopPropa
 <script>
 function stopEvent(event) {
   const c2 = document.getElementById("c2");
-  c2.innerHTML = "hello";
+  c2.textContent = "hello";
 
   // this ought to keep t-daddy from getting the click.
   event.stopPropagation();
