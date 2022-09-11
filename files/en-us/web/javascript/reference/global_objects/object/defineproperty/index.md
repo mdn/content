@@ -62,7 +62,9 @@ properties using `Object.defineProperty()`):
     - the type of this property cannot be changed between data property and accessor property, and
     - the property may not be deleted, and
     - other attributes of its descriptor cannot be changed (however, if it's a data descriptor with `writable: true`, the `value` can be changed, and `writable` can be changed to `false`).
-      **Defaults to `false`.**
+
+    **Defaults to `false`.**
+  
 - `enumerable`
   - : `true` if and only if this property shows up during enumeration of the
     properties on the corresponding object.

@@ -43,7 +43,7 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 - {{htmlattrdef("scrolldelay")}} {{Deprecated_Inline}}
   - : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead unless `truespeed` is specified.
 - {{htmlattrdef("truespeed")}} {{Deprecated_Inline}}
-  - : By default, `scrolldelay` values lower than 60 are ignored. If`truespeed`is present, those values are not ignored.
+  - : By default, `scrolldelay` values lower than 60 are ignored. If `truespeed` is present, those values are not ignored.
 - {{htmlattrdef("vspace")}} {{Deprecated_Inline}}
   - : Sets the vertical margin in pixels or percentage value.
 - {{htmlattrdef("width")}} {{Deprecated_Inline}}
