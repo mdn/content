@@ -143,6 +143,7 @@ Events have three functions:
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
 
     **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these codes:
+
     - `NS_ERROR_MALWARE_URI` indicating a malware URI.
     - `NS_ERROR_PHISHING_URI` indicating a phishing URI.
     - `NS_ERROR_TRACKING_URI` indicating a tracking URI.
