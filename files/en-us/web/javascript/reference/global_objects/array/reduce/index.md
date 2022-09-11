@@ -89,7 +89,7 @@ If an initial value is provided, `reduce()` calls the "reducer" callback functio
 
 `reduce()` returns the value that is returned from the callback function on the final iteration of the array.
 
-`reduce()` is a central concept in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), where it's not possible to mutate an accumulator on every iteration, so in order to accumulate all values in an array, one must return a new accumulator value on every iteration. This convention propagates to JavaScript's `reduce()`: you should use [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or other copying methods where possible to create new arrays and objects as the accumulator, rather than mutating the existing one.
+`reduce()` is a central concept in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), where it's not possible to mutate any value, so in order to accumulate all values in an array, one must return a new accumulator value on every iteration. This convention propagates to JavaScript's `reduce()`: you should use [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or other copying methods where possible to create new arrays and objects as the accumulator, rather than mutating the existing one. If you decided to mutate the accumulator instead of copying it, remember to still return the modified object in the callback, or the next iteration will receive undefined.
 
 ### When to not use reduce()
 
@@ -218,8 +218,6 @@ const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 
 const countedNames = names.reduce((allNames, name) => {
   const currCount = allNames[name] ?? 0;
-  // Remember to return the object, or the next iteration
-  // will receive undefined
   return {
     ...allNames,
     [name]: currCount + 1,
@@ -302,7 +300,7 @@ const allbooks = friends.reduce(
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
 const myArrayWithNoDuplicates = myArray.reduce(
   (previousValue, currentValue) => {
-    if (previousValue.indexOf(currentValue) === -1) {
+    if (!previousValue.includes(currentValue)) {
       return [...previousValue, currentValue];
     }
     return previousValue;
