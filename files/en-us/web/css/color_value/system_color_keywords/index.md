@@ -136,7 +136,7 @@ Firefox also supports some non-standard extensions to the system color keyword s
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
 - `-moz-MenuBarText` {{non-standard_inline}}
   - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
-- `-moz-MenuBarHoverText`  {{non-standard_inline}}
+- `-moz-MenuBarHoverText` {{non-standard_inline}}
   - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
 - `-moz-nativehyperlinktext` {{non-standard_inline}}
   - : Default platform hyperlink color.

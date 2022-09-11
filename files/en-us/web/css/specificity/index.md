@@ -280,16 +280,16 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 
 2. Each time you need to override an important declaration, declare it within the named layer. Only declare important rules within the layer.
 
-    ```css
-    [id="myElement"] p {
-      /* normal styles here */
-    }
-    @layer importantOverrides {
-      [id="myElement"] p {
-        /* important style here */;
-      }
-    }
-    ```
+   ```css
+   [id="myElement"] p {
+     /* normal styles here */
+   }
+   @layer importantOverrides {
+     [id="myElement"] p {
+       /* important style here */;
+     }
+   }
+   ```
 
 The specificity of the selector of the important style within the layer can be low, as long as it matches the element you are trying to override. Normal layers should be declared outside the layer because layered styles have lower precedence than unlayered styles.
 

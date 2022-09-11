@@ -107,7 +107,7 @@ p {
   background-attachment: scroll !important;
   background-color: blue !important;
 }
- ```
+```
 
 This example shows one of the several reasons avoiding the important flag is generally recommended.
 

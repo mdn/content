@@ -67,7 +67,7 @@ This example has an annoying low contrast by default.
 
 ## See also
 
-- Microsoft [-ms-high-contrast](https://docs.microsoft.com/previous-versions/hh771830(v=vs.85)) media feature
+- Microsoft [-ms-high-contrast](<https://docs.microsoft.com/previous-versions/hh771830(v=vs.85)>) media feature
 - CSS [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
