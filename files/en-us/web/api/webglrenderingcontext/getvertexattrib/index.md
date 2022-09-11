@@ -66,12 +66,12 @@ getVertexAttrib(index, pname)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
 
-      - `gl.VERTEX_ATTRIB_ARRAY_INTEGER`
-        - : Returns a
+    - `gl.VERTEX_ATTRIB_ARRAY_INTEGER`
+      - : Returns a
           {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether an integer data type is in
           the vertex attribute array at the given `index`.
-      - `gl.VERTEX_ATTRIB_ARRAY_DIVISOR`
-        - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
+    - `gl.VERTEX_ATTRIB_ARRAY_DIVISOR`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
           describing the frequency divisor used for instanced rendering.
 
     When using the {{domxref("ANGLE_instanced_arrays")}} extension:

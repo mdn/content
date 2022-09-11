@@ -718,8 +718,8 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `gl.DEPTH_COMPONENT`
-      - `gl.DEPTH_STENCIL`
+    - `gl.DEPTH_COMPONENT`
+    - `gl.DEPTH_STENCIL`
 
     When using the {{domxref("EXT_sRGB")}} extension:
 
@@ -779,9 +779,9 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `gl.UNSIGNED_SHORT`
-      - `gl.UNSIGNED_INT`
-      - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
+    - `gl.UNSIGNED_SHORT`
+    - `gl.UNSIGNED_INT`
+    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
         extension)
 
     - When using the {{domxref("OES_texture_float")}} extension:

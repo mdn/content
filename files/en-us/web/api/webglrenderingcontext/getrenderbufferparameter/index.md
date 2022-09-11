@@ -78,8 +78,8 @@ getRenderbufferParameter(target, pname)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following value is available additionally:
 
-      - `gl.RENDERBUFFER_SAMPLES`
-        - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
+    - `gl.RENDERBUFFER_SAMPLES`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
           indicating the number of samples of the image of the currently bound
           renderbuffer.
 

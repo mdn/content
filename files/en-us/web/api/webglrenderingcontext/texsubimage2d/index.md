@@ -81,8 +81,8 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
 
     When using the {{domxref("EXT_sRGB")}} extension:
 
-      - `ext.SRGB_EXT`
-      - `ext.SRGB_ALPHA_EXT`
+    - `ext.SRGB_EXT`
+    - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
@@ -107,7 +107,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
 
     When using the {{domxref("OES_texture_float")}} extension:
 
-      - `gl.FLOAT`
+    - `gl.FLOAT`
 
     When using the {{domxref("OES_texture_half_float")}} extension:
 

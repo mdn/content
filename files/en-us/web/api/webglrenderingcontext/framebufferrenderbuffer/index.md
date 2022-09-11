@@ -38,12 +38,12 @@ framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
 
-      - `gl.DRAW_FRAMEBUFFER`
-        - : Equivalent to `gl.FRAMEBUFFER`.
+    - `gl.DRAW_FRAMEBUFFER`
+      - : Equivalent to `gl.FRAMEBUFFER`.
           Used as a destination for drawing, rendering, clearing, and writing
           operations.
-      - `gl.READ_FRAMEBUFFER`
-        - : Used as a source for reading operations.
+    - `gl.READ_FRAMEBUFFER`
+      - : Used as a source for reading operations.
 
 - `attachment`
 
@@ -58,7 +58,7 @@ framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
 
-      - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
+    - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
 
     When using the {{domxref("WEBGL_draw_buffers")}} extension:
 

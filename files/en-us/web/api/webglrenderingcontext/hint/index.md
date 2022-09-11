@@ -35,8 +35,8 @@ hint(target, mode)
 
     When using the {{domxref("OES_standard_derivatives")}} extension:
 
-      - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
-        - : Accuracy of the
+    - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+      - : Accuracy of the
           derivative calculation for the GLSL built-in functions: `dFdx`,
           `dFdy`, and `fwidth`.
 

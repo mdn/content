@@ -35,7 +35,7 @@ texParameteri(target, pname, param)
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-    
+
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 

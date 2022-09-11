@@ -48,7 +48,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
+    - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
 
 - `normalized`
 
