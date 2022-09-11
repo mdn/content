@@ -105,7 +105,7 @@ Before this point the document did not have an associated style, and so the valu
 
 ```js
 //Disable the style
-style.disabled=true; 
+style.disabled=true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).

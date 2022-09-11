@@ -117,7 +117,7 @@ stepDown(stepDecrement)
 
 - `stepDecrement` {{optional_inline}}
 
-  - : A numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
+  - : A numeric value. If no parameter is passed, _stepDecrement_ defaults to 1.
 
     If the value is a float, the value will decrement as if
     [`Math.floor(stepDecrement)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
