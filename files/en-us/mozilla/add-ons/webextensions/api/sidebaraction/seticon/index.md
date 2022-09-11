@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Types of icon
 
-Your extension should specify an icon for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
+Your extension should specify an icon for the sidebar in the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
 
 If you don't specify an icon in the `sidebar_action` key, you get the browser's default icon. This is called the _"default icon"_.
 
