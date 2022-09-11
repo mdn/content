@@ -102,6 +102,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
 - {{htmlattrdef("csp")}} {{experimental_inline}}
+
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
 - {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}

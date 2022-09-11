@@ -28,7 +28,7 @@ URIError: String contained an illegal UTF-16 sequence. (Safari)
 ## What went wrong?
 
 URI encoding or decoding wasn't successful. An argument given to either the
-{{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}},  or
+{{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}}, or
 {{jsxref("decodeURIComponent")}} function was not valid, so that the function was unable
 encode or decode properly.
 

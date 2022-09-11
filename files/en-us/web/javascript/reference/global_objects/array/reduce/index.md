@@ -147,7 +147,7 @@ array.reduce(reducer);
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
 |             | `previousValue` | `currentValue` | `index` | Return value |
-| ------------|-----------------|----------------|---------|--------------|
+| ----------- | --------------- | -------------- | ------- | ------------ |
 | First call  | `15`            | `16`           | `1`     | `31`         |
 | Second call | `31`            | `17`           | `2`     | `48`         |
 | Third call  | `48`            | `18`           | `3`     | `66`         |
@@ -166,7 +166,7 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
 |             | `previousValue` | `currentValue` | `index` | Return value |
-| ------------|-----------------|----------------|---------|--------------|
+| ----------- | --------------- | -------------- | ------- | ------------ |
 | First call  | `10`            | `15`           | `0`     | `25`         |
 | Second call | `25`            | `16`           | `1`     | `41`         |
 | Third call  | `41`            | `17`           | `2`     | `58`         |

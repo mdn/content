@@ -27,6 +27,7 @@ foo     = true;  // foo is now a boolean
 The set of types in the JavaScript language consists of [_primitive values_](#primitive_values) and [_objects_](#objects).
 
 - [Primitive values](#primitive_values) (immutable datum represented directly at the lowest level of the language)
+
   - [Boolean type](#boolean_type)
   - [Null type](#null_type)
   - [Undefined type](#undefined_type)

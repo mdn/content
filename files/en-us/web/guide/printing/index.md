@@ -44,7 +44,7 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 <!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"> 
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>JavaScript Window Close Example </title>
   <script>
@@ -76,7 +76,7 @@ If you want to be able to print an external page without opening it, you can uti
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>MDN Example</title>
     <script>

@@ -86,9 +86,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
-   Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
+  Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
 
-    This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
+  This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
 - {{htmlattrdef("crossorigin")}}
 
@@ -179,8 +179,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     1. A {{glossary("URL")}} to an image
     2. Optionally, whitespace followed by one of:
 
-        - A width descriptor (a positive integer directly followed by `w`). The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density.
-        - A pixel density descriptor (a positive floating point number directly followed by `x`).
+       - A width descriptor (a positive integer directly followed by `w`). The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density.
+       - A pixel density descriptor (a positive floating point number directly followed by `x`).
 
     If no descriptor is specified, the source is assigned the default descriptor of `1x`.
 

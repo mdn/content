@@ -40,7 +40,7 @@ InternalError(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{Optional_Inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{Optional_Inline}} {{Non-standard_Inline}}
   - : The name of the file containing the code that caused the exception
 - `lineNumber` {{Optional_Inline}} {{Non-standard_Inline}}

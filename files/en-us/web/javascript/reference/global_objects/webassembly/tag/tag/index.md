@@ -32,6 +32,7 @@ new WebAssembly.Tag(type)
 ### Exceptions
 
 - {{jsxref("TypeError")}}:
+
   - : Thrown if at least one of these conditions are met:
     - The `type` parameter is not an object.
     - The `type.parameters` property is not supplied.

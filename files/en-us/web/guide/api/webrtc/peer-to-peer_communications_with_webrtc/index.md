@@ -26,7 +26,7 @@ A high-level description of what happens in an `RTCPeerConnection` was shown in 
 
 ## Resources
 
-- A good tutorial on basic features in WebRTC is at [web.dev](https://web.dev/webrtc-basics/).   A collection of basic test pages to support development are at [webrtc-landing](https://mozilla.github.io/webrtc-landing/).
+- A good tutorial on basic features in WebRTC is at [web.dev](https://web.dev/webrtc-basics/). A collection of basic test pages to support development are at [webrtc-landing](https://mozilla.github.io/webrtc-landing/).
 - You can make simple person-to-person calls using [apprtc](https://github.com/webrtc/apprtc).
 - A high-level description of what happens in an `RTCPeerConnection` was shown in the [Mozilla Hacks](https://hacks.mozilla.org/category/webrtc/) blog article [Embedding WebRTC video chat](https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/).
 
