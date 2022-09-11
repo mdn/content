@@ -65,12 +65,13 @@ new MouseEvent(type, options)
     - `buttons` {{optional_inline}}
 
       - : A number, defaulting to `0`, that describes which buttons are pressed when the event is launched:
-        | Bit-field value | Meaning |
+
+        | Bit-field value | Meaning                                              |
         | --------------- | ---------------------------------------------------- |
-        | `0` | No button pressed |
-        | `1` | Main button pressed (usually the left button) |
-        | `2` | Secondary button pressed (usually the right button) |
-        | `4` | Auxiliary button pressed (usually the middle button) |
+        | `0`             | No button pressed                                    |
+        | `1`             | Main button pressed (usually the left button)        |
+        | `2`             | Secondary button pressed (usually the right button)  |
+        | `4`             | Auxiliary button pressed (usually the middle button) |
 
     - `relatedTarget` {{optional_inline}}
       - : An {{domxref("EventTarget")}}, defaulting to `null` that is the element just left
