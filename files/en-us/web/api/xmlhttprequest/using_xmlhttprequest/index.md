@@ -620,8 +620,8 @@ XHRSubmit(myForm);
 > {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
 > `FileReader` API. But, since the aim of this script is to work with a [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > raw data, we used the {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
-> method in conjunction with the {{domxref("FileReader.readAsBinaryString()",
-> "readAsBinaryString()")}} method of the `FileReader` API. As such, the above
+> method in conjunction with the {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}}
+> method of the `FileReader` API. As such, the above
 > script makes sense only when you are dealing with small files. If you do not intend to
 > upload binary content, consider instead using the `FormData` API.
 
