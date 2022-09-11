@@ -263,7 +263,7 @@ This would output the following:
 
 Elements can also have attributes. Attributes look like this:
 
-![&amp;amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;amp;lt;/p>](grumpy-cat-attribute-small.png)
+![paragraph tag with 'class="editor-note"' attribute emphasized](grumpy-cat-attribute-small.png)
 
 Attributes contain extra information about the element that won't appear in the content. In this example, the **`class`** attribute is an identifying name used to target the element with style information.
 
