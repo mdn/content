@@ -715,7 +715,8 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha is
       1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
-      When using the {{domxref("WEBGL_depth_texture")}} extension:
+
+    When using the {{domxref("WEBGL_depth_texture")}} extension:
 
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`
@@ -775,7 +776,8 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
-      When using the {{domxref("WEBGL_depth_texture")}} extension:
+
+    When using the {{domxref("WEBGL_depth_texture")}} extension:
 
       - `gl.UNSIGNED_SHORT`
       - `gl.UNSIGNED_INT`

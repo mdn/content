@@ -78,7 +78,8 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha
       is 1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
-      When using the {{domxref("EXT_sRGB")}} extension:
+
+    When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
@@ -103,7 +104,8 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
-      When using the {{domxref("OES_texture_float")}} extension:
+
+    When using the {{domxref("OES_texture_float")}} extension:
 
       - `gl.FLOAT`
 

@@ -28,14 +28,14 @@ window.window.window.window
 
 In web pages, the window object is also a _global object_. This means:
 
-1. global variables of your script are in fact properties of `window`:
+1. Global variables of your script are, in fact, properties of `window`:
 
    ```js
    const global = { data: 0 };
    alert(global === window.global); // displays "true"
    ```
 
-2. you can access built-in properties of the window object without having to type `window.` prefix:
+2. You can access the built-in properties of the window object without having to prefix them with `window.`:
 
    ```js
    setTimeout("alert('Hi!')", 50); // equivalent to using window.setTimeout().

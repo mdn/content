@@ -32,7 +32,8 @@ hint(target, mode)
 
       - : Quality of filtering when generating
         mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
-        When using the {{domxref("OES_standard_derivatives")}} extension:
+
+    When using the {{domxref("OES_standard_derivatives")}} extension:
 
       - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
         - : Accuracy of the

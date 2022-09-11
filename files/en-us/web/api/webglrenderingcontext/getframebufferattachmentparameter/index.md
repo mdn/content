@@ -34,8 +34,9 @@ getFramebufferAttachmentParameter(target, attachment, pname)
 
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
-        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
 
       - `gl.DRAW_FRAMEBUFFER`
         - : Equivalent to `gl.FRAMEBUFFER`.
@@ -57,8 +58,9 @@ getFramebufferAttachmentParameter(target, attachment, pname)
       stencil buffer.
     - `gl.DEPTH_STENCIL_ATTACHMENT`: Texture attachment for both, the depth
       and stencil buffer.
-      When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
 
       - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
 
@@ -81,7 +83,8 @@ getFramebufferAttachmentParameter(target, attachment, pname)
       value: 0.
     - `gl.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE`: The name of
       cube-map face of the texture.
-      When using the {{domxref("EXT_sRGB")}} extension:
+
+    When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT`: The framebuffer
         color encoding.

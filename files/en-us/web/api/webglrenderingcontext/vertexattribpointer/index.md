@@ -44,7 +44,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_SHORT`: unsigned 16-bit integer, with values in \[0,
       65535]
     - `gl.FLOAT`: 32-bit IEEE floating point number
-      When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
