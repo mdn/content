@@ -52,7 +52,7 @@ Telling the user to use a different browser that supports canvas does not help u
 
 As a consequence of the way fallback is provided, unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`). If this tag is not present, the rest of the document would be considered the fallback content and wouldn't be displayed.
 
-If fallback content is not needed, a simple `<canvas id="foo" …></canvas>` is fully compatible with all browsers that support canvas at all.
+If fallback content is not needed, a simple `<canvas id="foo" …>` is fully compatible with all browsers that support canvas at all.
 
 ## The rendering context
 
