@@ -180,17 +180,17 @@ However, stopEvent also calls an event object method, {{domxref("event.stopPropa
 </style>
 
 <script>
-function stopEvent(ev) {
-  c2 = document.getElementById("c2");
-  c2.innerHTML = "hello";
+function stopEvent(event) {
+  const c2 = document.getElementById("c2");
+  c2.textContent = "hello";
 
   // this ought to keep t-daddy from getting the click.
-  ev.stopPropagation();
+  event.stopPropagation();
   alert("event propagation halted.");
 }
 
 function load() {
-  elem = document.getElementById("tbl1");
+  const elem = document.getElementById("tbl1");
   elem.addEventListener("click", stopEvent, false);
 }
 </script>
