@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Array.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the values for each index in the array.
+The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the value of each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -73,7 +73,7 @@ console.log(iterator.next().value); // undefined
 
 > **Warning:** The array iterator object should be a one-time use object. Do not reuse it.
 
-The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for..of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
+The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for...of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
 
 ```js
 const arr = ["a", "b", "c", "d", "e"];
