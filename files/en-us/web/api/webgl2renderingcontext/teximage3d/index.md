@@ -112,6 +112,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
       [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `source`
+
   - : One of the following objects can be used as a pixel source for the texture:
 
     - {{domxref("ImageBitmap")}},
@@ -121,6 +122,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
+
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 - `offset`

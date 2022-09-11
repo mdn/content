@@ -24,7 +24,7 @@ Shader programs have access to three kinds of data storage, each of which has a 
 
 ## GLSL data types
 
-See [Data Types](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)) in the GLSL documentation.
+See [Data Types](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) in the GLSL documentation.
 
 ## GLSL variables
 
@@ -72,7 +72,7 @@ void main()
 
 ### Varyings
 
-**Varyings** are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](https://en.wikipedia.org/wiki/Normal_(geometry)) after it has been computed by the vertex shader.
+**Varyings** are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](<https://en.wikipedia.org/wiki/Normal_(geometry)>) after it has been computed by the vertex shader.
 
 <\<how to use>>
 

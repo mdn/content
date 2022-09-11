@@ -21,8 +21,7 @@ with {{domxref("WebGL2RenderingContext.drawArraysInstanced()",
 {{domxref("WebGL2RenderingContext.drawElementsInstanced()",
   "gl.drawElementsInstanced()")}}.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
-    1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax
