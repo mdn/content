@@ -318,10 +318,10 @@ const doc = html`<!DOCTYPE html>
 
 In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
 
-- `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit, for example `\9` and `\07` (which is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences))
-- `\x` followed by fewer than two hex digits (including none), for example `\xz`
-- `\u` not followed by `{` and followed by fewer than four hex digits (including none), for example `\uz`
-- `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`, for example `\u{110000}` and `\u{z}`
+- `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07` (which is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences))
+- `\x` followed by fewer than two hex digits (including none); for example `\xz`
+- `\u` not followed by `{` and followed by fewer than four hex digits (including none); for example `\uz`
+- `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`; for example `\u{110000}` and `\u{z}`
 
 > **Note:** `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
 
