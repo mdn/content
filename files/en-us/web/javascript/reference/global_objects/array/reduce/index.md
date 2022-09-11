@@ -89,6 +89,8 @@ If an initial value is provided, `reduce()` calls the "reducer" callback functio
 
 `reduce()` returns the value that is returned from the callback function on the final iteration of the array.
 
+`reduce()` is a central concept in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), where it's not possible to mutate an accumulator on every iteration, so in order to accumulate all values in an array, one must return a new accumulator value on every iteration. This convention propagates to JavaScript's `reduce()`: you should use [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or other copying methods where possible to create new arrays and objects as the accumulator, rather than mutating the existing one.
+
 ### When to not use reduce()
 
 Recursive functions like `reduce()` can be powerful but sometimes difficult to understand, especially for less experienced JavaScript developers. If code becomes clearer when using other array methods, developers must weigh the readability tradeoff against the other benefits of using `reduce()`. In cases where `reduce()` is the best choice, documentation and semantic variable naming can help mitigate readability drawbacks.
@@ -114,16 +116,16 @@ const getMax = (a, b) => Math.max(a, b);
 
 // callback is invoked for each element in the array starting at index 0
 [1, 100].reduce(getMax, 50); // 100
-[    50].reduce(getMax, 10); // 50
+[50].reduce(getMax, 10); // 50
 
 // callback is invoked once for element at index 1
-[1, 100].reduce(getMax);     // 100
+[1, 100].reduce(getMax); // 100
 
 // callback is not invoked
-[    50].reduce(getMax);     // 50
-[      ].reduce(getMax, 1);  // 1
+[50].reduce(getMax); // 50
+[].reduce(getMax, 1); // 1
 
-[      ].reduce(getMax);     // TypeError
+[].reduce(getMax); // TypeError
 ```
 
 ## Examples
@@ -137,7 +139,9 @@ const array = [15, 16, 17, 18, 19];
 
 function reducer(previousValue, currentValue, index) {
   const returns = previousValue + currentValue;
-  console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`);
+  console.log(
+    `previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+  );
   return returns;
 }
 
@@ -147,7 +151,7 @@ array.reduce(reducer);
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
 |             | `previousValue` | `currentValue` | `index` | Return value |
-| ------------|-----------------|----------------|---------|--------------|
+| ----------- | --------------- | -------------- | ------- | ------------ |
 | First call  | `15`            | `16`           | `1`     | `31`         |
 | Second call | `31`            | `17`           | `2`     | `48`         |
 | Third call  | `48`            | `18`           | `3`     | `66`         |
@@ -160,13 +164,16 @@ The `array` parameter never changes through the process — it's always `[15, 16
 Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed the second argument to `reduce()`:
 
 ```js
-[15, 16, 17, 18, 19].reduce((previousValue, currentValue) => previousValue + currentValue, 10)
+[15, 16, 17, 18, 19].reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  10,
+);
 ```
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
 |             | `previousValue` | `currentValue` | `index` | Return value |
-| ------------|-----------------|----------------|---------|--------------|
+| ----------- | --------------- | -------------- | ------- | ------------ |
 | First call  | `10`            | `15`           | `0`     | `25`         |
 | Second call | `25`            | `16`           | `1`     | `41`         |
 | Third call  | `41`            | `17`           | `2`     | `58`         |
@@ -193,7 +200,11 @@ console.log(sum); // logs 6
 ### Flatten an array of arrays
 
 ```js
-const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+const flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce(
   (previousValue, currentValue) => previousValue.concat(currentValue),
   [],
 );
@@ -203,16 +214,16 @@ const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 ### Counting instances of values in an object
 
 ```js
-const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 
 const countedNames = names.reduce((allNames, name) => {
   const currCount = allNames[name] ?? 0;
   // Remember to return the object, or the next iteration
   // will receive undefined
-  return ({
-    ...allNames, 
-    [name]: currCount + 1  
-  });
+  return {
+    ...allNames,
+    [name]: currCount + 1,
+  };
 }, {});
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
@@ -222,21 +233,20 @@ const countedNames = names.reduce((allNames, name) => {
 
 ```js
 const people = [
-  { name: 'Alice', age: 21 },
-  { name: 'Max', age: 20 },
-  { name: 'Jane', age: 20 },
+  { name: "Alice", age: 21 },
+  { name: "Max", age: 20 },
+  { name: "Jane", age: 20 },
 ];
 
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
-    const group = acc[key] ?? [];
-    
-    return ({...acc, [key]: [...group, obj]})
+
+    return { ...acc, [key]: [...acc[key], obj] };
   }, {});
 }
 
-const groupedPeople = groupBy(people, 'age')
+const groupedPeople = groupBy(people, "age");
 // groupedPeople is:
 // {
 //   20: [
@@ -254,18 +264,18 @@ const groupedPeople = groupBy(people, 'age')
 // where object field "books" is a list of favorite books
 const friends = [
   {
-    name: 'Anna',
-    books: ['Bible', 'Harry Potter'],
+    name: "Anna",
+    books: ["Bible", "Harry Potter"],
     age: 21,
   },
   {
-    name: 'Bob',
-    books: ['War and peace', 'Romeo and Juliet'],
+    name: "Bob",
+    books: ["War and peace", "Romeo and Juliet"],
     age: 26,
   },
   {
-    name: 'Alice',
-    books: ['The Lord of the Rings', 'The Shining'],
+    name: "Alice",
+    books: ["The Lord of the Rings", "The Shining"],
     age: 18,
   },
 ];
@@ -274,7 +284,7 @@ const friends = [
 // additional list contained in initialValue
 const allbooks = friends.reduce(
   (previousValue, currentValue) => [...previousValue, ...currentValue.books],
-  ['Alphabet'],
+  ["Alphabet"],
 );
 
 // allbooks = [
@@ -289,13 +299,16 @@ const allbooks = friends.reduce(
 > **Note:** The same effect can be achieved with {{jsxref("Set")}} and {{jsxref("Array.from()")}} as `const arrayWithNoDuplicates = Array.from(new Set(myArray))` with better performance.
 
 ```js
-const myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd'];
-const myArrayWithNoDuplicates = myArray.reduce((previousValue, currentValue) => {
-  if (previousValue.indexOf(currentValue) === -1) {
-    return [...previousValue, currentValue]
-  }
-  return previousValue;
-}, []);
+const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
+const myArrayWithNoDuplicates = myArray.reduce(
+  (previousValue, currentValue) => {
+    if (previousValue.indexOf(currentValue) === -1) {
+      return [...previousValue, currentValue];
+    }
+    return previousValue;
+  },
+  [],
+);
 
 console.log(myArrayWithNoDuplicates);
 ```
@@ -355,7 +368,7 @@ function p2(a) {
 
 // function 3  - will be wrapped in a resolved promise by .then()
 function f3(a) {
- return a * 3;
+  return a * 3;
 }
 
 // promise function 4
@@ -365,7 +378,7 @@ function p4(a) {
   });
 }
 
-const promiseArr = [p1, p2, f3, p4]
+const promiseArr = [p1, p2, f3, p4];
 runPromiseInSequence(promiseArr, 10).then(console.log); // 1200
 ```
 
@@ -378,10 +391,10 @@ const triple = (x) => 3 * x;
 const quadruple = (x) => 4 * x;
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) => (initialValue) => functions.reduce(
-  (acc, fn) => fn(acc),
-  initialValue,
-);
+const pipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce((acc, fn) => fn(acc), initialValue);
 
 // Composed functions for multiplication of specific values
 const multiply6 = pipe(double, triple);
@@ -390,8 +403,8 @@ const multiply16 = pipe(quadruple, quadruple);
 const multiply24 = pipe(double, triple, quadruple);
 
 // Usage
-multiply6(6);   // 36
-multiply9(9);   // 81
+multiply6(6); // 36
+multiply9(9); // 81
 multiply16(16); // 256
 multiply24(10); // 240
 ```
