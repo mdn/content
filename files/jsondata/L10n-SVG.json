@@ -311,8 +311,8 @@
     "en-US": "ARIA attributes",
     "ja": "ARIA 属性"
   },
-  "conditionalProccessingAttributes": {
-    "en-US": "Conditional proccessing attributes",
+  "conditionalProcessingAttributes": {
+    "en-US": "Conditional processing attributes",
     "fr": "Attributs de traitement conditionnel",
     "ja": "条件処理属性",
     "pt-BR": "Atributos de processamento condicional",
