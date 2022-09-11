@@ -82,13 +82,13 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 2. Now open the file in your browser. You should see something like this:
 
-   ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](title-example.png)It should now be completely obvious where the `<h1>` content appears, and where the `<title>` content appears!
+   ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)It should now be completely obvious where the `<h1>` content appears, and where the `<title>` content appears!
 
 3. You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.
 
 The `<title>` element contents are also used in other ways. For example, if you try bookmarking the page (_Bookmarks > Bookmark This Page_ or the star icon in the URL bar in Firefox), you will see the `<title>` contents filled in as the suggested bookmark name.
 
-![A webpage being bookmarked in Firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](bookmark-example.png)
+![A webpage being bookmarked in Firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
 
 The `<title>` contents are also used in search results, as you'll see below.
 
