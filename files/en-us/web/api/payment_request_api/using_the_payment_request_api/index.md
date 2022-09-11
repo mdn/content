@@ -188,7 +188,7 @@ const supportedPaymentMethods = [ /* supported methods */ ];
 
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
-new PaymentRequest(supportedPaymentMethods, { 
+new PaymentRequest(supportedPaymentMethods, {
   total: { label: 'Stub', amount: { currency: 'USD', value: '0.01' } }
 })
   .canMakePayment()

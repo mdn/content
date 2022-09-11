@@ -59,7 +59,7 @@ one:
 let isLogicalSurface = displayStream.getVideoTracks()[0].getSettings().logicalSurface;
 ```
 
-Following this code, `isLogicalSurface`  is `true` if the display
+Following this code, `isLogicalSurface` is `true` if the display
 surface contained in the stream is a logical surface; that is, one which may not be
 entirely onscreen, or may even be entirely offscreen.
 
