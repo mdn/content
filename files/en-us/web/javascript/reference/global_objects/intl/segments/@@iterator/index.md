@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Intl.Segments.@@iterator
 
 {{JSRef}}
 
-The **`@@iterator`** method of an `Segments` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Intl.Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields data about each segment.
+The **`@@iterator`** method of a `Segments` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Intl.Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields data about each segment.
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html")}}
 
