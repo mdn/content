@@ -43,8 +43,9 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) roles
   - : Roles of items contained in a containing `menu` or `menubar`, known collectively as "menu items". These must be able to receive focus.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-  - :  Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+  - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role
+
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
 - {{HTMLAttrXref('tabindex')}} attribute
@@ -186,6 +187,6 @@ The navigation example has a static button. In submenu example has a button that
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

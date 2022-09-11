@@ -42,14 +42,14 @@ Each element with `role="cell"` MUST be nested in a container element with [`rol
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan).
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}},  and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
+> **Note:** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}}, and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 #### Context roles
 
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
+  - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 - [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
   - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Element/thead), [`tfoot`](/en-US/docs/Web/HTML/Element/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Element/tbody) elements in an [HTML `table`](/en-US/docs/Learn/HTML/Tables/Basics) element.
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
@@ -117,7 +117,7 @@ The first rule of ARIA use is if you can use a native feature with the semantics
         </div>
       </div>
     </div>
-  ```
+```
 
 The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the `aria-rowindex` could have been placed on the row rather than the row's individual cells.
 
@@ -178,6 +178,6 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -66,7 +66,7 @@ If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Ro
 
 ### Read-only treegrids
 
-By default, treegrids are assumed to be editable. If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role, propagates down to all  `columnheader`, `rowheader`, and `gridcell` elements. That global value can be overridden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
+By default, treegrids are assumed to be editable. If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role, propagates down to all `columnheader`, `rowheader`, and `gridcell` elements. That global value can be overridden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
 
 Like all ARIA attributes, adding `aria-readonly` only informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global {{HTMLattrxref('contenteditable')}} attribute or with JavaScript.
 
@@ -165,6 +165,6 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

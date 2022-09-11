@@ -163,7 +163,7 @@ Inherits into roles:
 
 ## See Also
 
-- The {{HTMLElement('th')}} and {{HTMLElement('td')}}  [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
+- The {{HTMLElement('th')}} and {{HTMLElement('td')}} [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) property
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role

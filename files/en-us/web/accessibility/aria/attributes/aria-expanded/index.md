@@ -68,9 +68,11 @@ A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid
 ## Values
 
 - `false`
+
   - : The grouping element this element owns or controls is collapsed.
 
 - `true`
+
   - : The grouping element this element owns or controls is expanded.
 
 - `undefined` (default)
