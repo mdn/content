@@ -31,7 +31,7 @@ This interface requires a secure context.
 
   - : Returns a string indicating whether the users has interacted with either the screen or the device since the call to `start()`.
 
-  \_ : Returns either `"active"` to indicate that the user has interacted with the
+  - : Returns either `"active"` to indicate that the user has interacted with the
   device within the threshold provided to `start()` or `"idle"` if they have not.
   This attribute returns `null` before `start()` is called.
 
