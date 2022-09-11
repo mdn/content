@@ -29,6 +29,7 @@ new AnalyserNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
 - `options` {{optional_inline}}
+
   - : An object with the following properties, all optional:
 
     - `fftSize`

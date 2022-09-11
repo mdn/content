@@ -34,7 +34,7 @@ match(request, options)
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.
-     The available options are:
+    The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to

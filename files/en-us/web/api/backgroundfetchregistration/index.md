@@ -68,7 +68,7 @@ The following properties are available synchronously, as convenience properties 
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event)  {{Experimental_Inline}}
+- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
 
   - : Fired when there is a change to any of the following properties:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},

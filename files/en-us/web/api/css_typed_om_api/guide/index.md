@@ -206,16 +206,16 @@ for (const value of ofInterest) {
 
 For those of you using a non-supporting browser, the above output should look something like this:
 
-| Property                                             | Value | Unit        |
-| ---------------------------------------------------- | ----- | ----------- |
-| {{cssxref("padding-top")}}                 | 0     | `px`        |
-| {{cssxref("margin-bottom")}}                 | 16    | `px`        |
-| {{cssxref("font-size")}}                     | 16    | `px`        |
-| {{cssxref("font-stretch")}}                 | 100   | `%`         |
-| {{cssxref("animation-duration")}}         | 0     | `px`        |
+| Property                                 | Value | Unit        |
+| ---------------------------------------- | ----- | ----------- |
+| {{cssxref("padding-top")}}               | 0     | `px`        |
+| {{cssxref("margin-bottom")}}             | 16    | `px`        |
+| {{cssxref("font-size")}}                 | 16    | `px`        |
+| {{cssxref("font-stretch")}}              | 100   | `%`         |
+| {{cssxref("animation-duration")}}        | 0     | `px`        |
 | {{cssxref("animation-iteration-count")}} | 1     | _number_    |
-| {{cssxref("width")}}                         | auto  | _undefined_ |
-| {{cssxref("height")}}                         | auto  | _undefined_ |
+| {{cssxref("width")}}                     | auto  | _undefined_ |
+| {{cssxref("height")}}                    | auto  | _undefined_ |
 
 You'll note the {{cssxref('&lt;length&gt;')}} unit returned is `px`, the {{cssxref('&lt;percentage&gt;')}} unit returned is `percent`, the {{cssxref('&lt;time&gt;')}} unit is `s` for 'seconds', and the unitless {{cssxref('&lt;number&gt;')}} unit is `number`.
 
