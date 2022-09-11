@@ -51,9 +51,9 @@ No notable changes.
 
 #### Marionette
 
-- Allow marionette to connect to a windowless instance of Firefox  ({{bug(1726465)}}).
-- Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started  ({{bug(1754132)}}).
-- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab  ({{bug(1749666)}}).
+- Allow marionette to connect to a windowless instance of Firefox ({{bug(1726465)}}).
+- Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started ({{bug(1754132)}}).
+- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab ({{bug(1749666)}}).
 
 ## Changes for add-on developers
 
