@@ -27,7 +27,7 @@ createHTMLDocument(title)
 
 ### Parameters
 
-- `title`  {{optional_inline}} (except in IE)
+- `title` {{optional_inline}} (except in IE)
   - : A string containing the title to give the new HTML document.
 
 ### Return value

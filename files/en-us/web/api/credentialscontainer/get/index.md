@@ -55,6 +55,7 @@ get(options)
         {{domxref("Credential")}} instances should include user (as opposed to federated)
         credentials.
     - `federated`
+
       - : An object containing requirements for returned federated credentials. The available
         options are:
 

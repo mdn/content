@@ -77,7 +77,7 @@ _Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}
 _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and overrides the following method:_.
 
 - {{domxref("AudioBufferSourceNode.start", "start()")}}
-  - :  Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
+  - : Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
 
 ## Examples
 

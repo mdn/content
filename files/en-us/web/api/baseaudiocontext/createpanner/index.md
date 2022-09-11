@@ -45,7 +45,7 @@ A {{domxref("PannerNode")}}.
 ## Examples
 
 In the following example, you can see an example of how the `createPanner()`
-method, {{domxref("AudioListener")}}  and {{domxref("PannerNode")}} would be used to
+method, {{domxref("AudioListener")}} and {{domxref("PannerNode")}} would be used to
 control audio spatialization. Generally you will define the position in 3D space that
 your audio listener and panner (source) occupy initially, and then update the position
 of one or both of these as the application is used. You might be moving a character
