@@ -64,7 +64,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.supports()")}}
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
-     This method provides a simple and unified method for script-related feature detection.
+    This method provides a simple and unified method for script-related feature detection.
 
 ## Methods
 

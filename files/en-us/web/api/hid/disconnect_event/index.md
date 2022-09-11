@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.HID.disconnect_event
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`disconnect`** event of the {{domxref("HID")}} interface fires when the user agent disconnects a HID device.

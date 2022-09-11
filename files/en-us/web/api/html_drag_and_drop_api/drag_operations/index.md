@@ -184,7 +184,7 @@ In this example, copy is the effect that is performed.
 
 You can use the value `none` to indicate that no drop is allowed at this location, although it is preferred not to cancel the event in this case.
 
-Within the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events, you can check the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which effect was ultimately chosen.  If the chosen effect were "`move`", then the original data should be removed from the source of the drag within the {{domxref("HTMLElement/dragend_event", "dragend")}} event.
+Within the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events, you can check the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which effect was ultimately chosen. If the chosen effect were "`move`", then the original data should be removed from the source of the drag within the {{domxref("HTMLElement/dragend_event", "dragend")}} event.
 
 ## Specifying Drop Targets
 

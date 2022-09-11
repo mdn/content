@@ -32,11 +32,11 @@ flow. Possible values are:
     called are triggered during this phase.
 - `Event.AT_TARGET (2)`
   - : The event has arrived at
-        {{domxref("EventTarget", "the event's target", "",
+    {{domxref("EventTarget", "the event's target", "",
         1)}}.
-        Event listeners registered for this phase are called at this time. If
-        {{domxref("Event.bubbles")}} is `false`, processing
-        the event is finished after this phase is complete.
+    Event listeners registered for this phase are called at this time. If
+    {{domxref("Event.bubbles")}} is `false`, processing
+    the event is finished after this phase is complete.
 - `Event.BUBBLING_PHASE (3)`
   - : The event is propagating back up through the target's ancestors in reverse order,
     starting with the parent, and eventually reaching the containing {{domxref("Window")}}.

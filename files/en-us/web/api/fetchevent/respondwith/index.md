@@ -81,7 +81,7 @@ respondWith(response)
 
 - `response`
   - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
-`Response`. Otherwise, a network error is returned to Fetch.
+    `Response`. Otherwise, a network error is returned to Fetch.
 
 ### Return value
 

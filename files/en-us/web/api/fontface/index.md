@@ -39,7 +39,7 @@ The **`FontFace`** interface represents a single usable font face. It allows con
 - {{domxref("FontFace.loaded")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves with the current `FontFace` object when the font specified in the object's constructor is done loading or rejects with a `SyntaxError` {{domxref("DOMException")}}.
 - {{domxref("FontFace.status")}} {{ReadOnlyInline}}
-  - : Returns an enumerated value indicating the status of the font, one of  `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
+  - : Returns an enumerated value indicating the status of the font, one of `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 - {{domxref("FontFace.stretch")}}
   - : A string that retrieves or sets how the font _stretches_. It is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
 - {{domxref("FontFace.style")}}
