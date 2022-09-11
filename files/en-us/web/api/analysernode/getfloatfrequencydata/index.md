@@ -79,8 +79,8 @@ analyserNode.connect(audioCtx.destination);
 //Create 2D canvas
 const canvas = document.createElement('canvas');
 canvas.style.position = 'absolute';
-canvas.style.top = "0px";
-canvas.style.left = "0px";
+canvas.style.top = '0px';
+canvas.style.left = '0px';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
