@@ -32,7 +32,7 @@ synchronously compile given WebAssembly binary code. However, the primary way to
 > {{jsxref("WebAssembly.compileStreaming()")}} method should be used at all other times.
 
 ```js
-new WebAssembly.Module(bufferSource);
+new WebAssembly.Module(bufferSource)
 ```
 
 ### Parameters

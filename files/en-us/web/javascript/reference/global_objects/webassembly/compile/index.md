@@ -23,7 +23,7 @@ This function is useful if it is necessary to a compile a module before it can b
 ## Syntax
 
 ```js
-WebAssembly.compile(bufferSource);
+WebAssembly.compile(bufferSource)
 ```
 
 ### Parameters
