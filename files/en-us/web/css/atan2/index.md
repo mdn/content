@@ -31,7 +31,8 @@ transform: rotate(atan2(e, 30));
 
 ### Parameter
 
-The `atan2(y, x)` function accepts two comma-separated value as its parameters.
+The `atan2(y, x)` function accepts two comma-separated values as its parameters.
+The values can be a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage>&gt;")}}, but both must be the same type.
 
 - `y`
   - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage>&gt;")}}.
