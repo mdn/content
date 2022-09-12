@@ -59,9 +59,9 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
 
 ```html
 <label for="emails">Who do you want to email?</label>
-<input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64">
+<input type="email" multiple name="emails" id="emails" list="dwarf-emails" required size="64">
 
-<datalist id="drawfemails">
+<datalist id="dwarf-emails">
   <option value="grumpy@woodworkers.com">Grumpy</option>
   <option value="happy@woodworkers.com">Happy</option>
   <option value="sleepy@woodworkers.com">Sleepy</option>
