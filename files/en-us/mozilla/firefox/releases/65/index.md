@@ -178,7 +178,7 @@ _No changes._
   - The {{WebExtAPIRef("tabs.Tab")}} type now has a `successorId` property, which can be used to store/retrieve the ID of the tab's successor.
   - The {{WebExtAPIRef("tabs.onActivated")}} event listener's callback has a new parameter available, `previousTabId`, which contains the ID of the previous activated tab, if it is still open.
   - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
-  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}}  and {{WebExtAPIRef("tabs.query()")}}.
+  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}} and {{WebExtAPIRef("tabs.query()")}}.
   - The new function `tabs.moveInSuccession()` allows manipulation of tab successors in bulk.
 
 ### Manifest changes

@@ -675,6 +675,7 @@ HTML also provides the {{htmlelement("time")}} element for marking up times and 
 Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
 
 <!-- markdownlint-disable MD033 -->
+
 - 20 January 2016
 - 20th January 2016
 - Jan 20 2016

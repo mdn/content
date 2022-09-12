@@ -91,19 +91,23 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) (default is horizontal for separator)
+
   - : By default, the divider for `separator` roles is assumed to be horizontal. The value can be included and set to horizontal, undefined (the default for other roles unless otherwise specified), or vertical.
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
+
   - : If the separator is focusable and has a known value, the `aria-valuenow` defines the current value. If not focusable or the value is unknown, do not include this attribute.
 
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) (default is 0)
+
   - : If the separator is focusable, and the minimum value is not 0, include the minimum value with `aria-valuemin`. If the
 
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) (default is 100)
+
   - : If the separator is focusable, and the maximum value is not 100, include `aria-valuemax` with a value equal to or larger than `aria-valuemin`.
 
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
-  - : If the separator is focusable, and the `aria-valuenow` is not optimal in providing the user with usable information, included  `aria-valuetext` content will be read instead of the `aria-valuenow` value.
+  - : If the separator is focusable, and the `aria-valuenow` is not optimal in providing the user with usable information, included `aria-valuetext` content will be read instead of the `aria-valuenow` value.
 
 <!--
 ### Keyboard interactions
@@ -131,6 +135,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

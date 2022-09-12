@@ -37,7 +37,7 @@ Using only the accessible name, e.g., from content or via `aria-label` is almost
 </button>
 ```
 
-A braille display may display "btn \**\*" in Braille rather than the more verbose "btn gra 3 out of 5 stars".
+A braille display may display "btn \*\*\*" in Braille rather than the more verbose "btn gra 3 out of 5 stars".
 
 ## Values
 
@@ -61,6 +61,6 @@ Used in **ALL** roles.
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

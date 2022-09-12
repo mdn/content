@@ -97,9 +97,9 @@ Let's work through styling our table example together.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
-    ```html
-    <link href="style.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet">
+   ```
 
 ### Spacing and layout
 

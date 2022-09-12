@@ -19,21 +19,25 @@ spec-urls: https://drafts.csswg.org/selectors/
 ## Basic selectors
 
 - [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+
   - : Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.
     **Syntax:** `*` `ns|*` `*|*`
     **Example:** `*` will match all the elements of the document.
 
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
+
   - : Selects all elements that have the given node name.
     **Syntax:** `elementname`
     **Example:** `input` will match any {{HTMLElement("input")}} element.
 
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
+
   - : Selects all elements that have the given `class` attribute.
     **Syntax:** `.classname`
     **Example:** `.index` will match any element that has a class of "index".
 
 - [ID selector](/en-US/docs/Web/CSS/ID_selectors)
+
   - : Selects an element based on the value of its `id` attribute. There should be only one element with a given ID in a document.
     **Syntax:** `#idname`
     **Example:** `#toc` will match the element that has the ID "toc".
@@ -53,21 +57,25 @@ spec-urls: https://drafts.csswg.org/selectors/
 ## Combinators
 
 - [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator)
+
   - : The " " (space) combinator selects nodes that are descendants of the first element.
     **Syntax:** `A B`
     **Example:** `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
 
 - [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+
   - : The `>` combinator selects nodes that are direct children of the first element.
     **Syntax:** `A > B`
     **Example:** `ul > li` will match all {{HTMLElement("li")}} elements that are nested directly inside a {{HTMLElement("ul")}} element.
 
 - [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator)
+
   - : The `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
     **Syntax:** `A ~ B`
     **Example:** `p ~ span` will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.
 
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
+
   - : The `+` combinator matches the second element only if it _immediately_ follows the first element.
     **Syntax:** `A + B`
     **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follow an {{HTMLElement("h2")}} element.
@@ -80,6 +88,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 ## Pseudo-classes and pseudo-elements
 
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+
   - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.
     **Example:** `a:visited` will match all {{HTMLElement("a")}} elements that have been visited by the user.
 

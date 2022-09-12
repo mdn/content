@@ -28,6 +28,7 @@ playEffect(type, params)
 ### Parameters
 
 - `type`
+
   - : A string representing the desired effect. This can vary depending on the hardware type. Possible values are "dual-rumble" or "vibration".
 
 - `params`

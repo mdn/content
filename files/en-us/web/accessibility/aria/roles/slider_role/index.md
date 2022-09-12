@@ -173,14 +173,14 @@ There are a few ways to make a range input vertical. In this example, we used [C
 
 ## Keyboard interactions
 
-| Key(s) | Action |
-| ---- | ---- |
-| Right and Up arrows | Increase the selected value by one step |
-| Left and Down arrows | Decrease the selected value by one step|
-| Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Down | (Optional) decrease the value by a set amount greater than one step |
-| Home | Set the slider to the minimum value. |
-| End | Set the slider to the maximum value. |
+| Key(s)               | Action                                                              |
+| -------------------- | ------------------------------------------------------------------- |
+| Right and Up arrows  | Increase the selected value by one step                             |
+| Left and Down arrows | Decrease the selected value by one step                             |
+| Page Up              | (Optional) increase the value by a set amount greater than one step |
+| Page Down            | (Optional) decrease the value by a set amount greater than one step |
+| Home                 | Set the slider to the minimum value.                                |
+| End                  | Set the slider to the maximum value.                                |
 
 For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in slider value should be by an amount larger than the step changes made by up and down arrows.
 
@@ -218,6 +218,6 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

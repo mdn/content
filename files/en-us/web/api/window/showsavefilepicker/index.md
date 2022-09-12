@@ -39,6 +39,7 @@ showSaveFilePicker()
     - `suggestedName`
       - : A {{jsxref('String')}}. The suggested file name.
     - `types`
+
       - : An {{jsxref('Array')}} of allowed file types to save. Each
         item is an object with the following options:
 

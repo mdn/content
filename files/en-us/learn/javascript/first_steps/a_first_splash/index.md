@@ -73,21 +73,21 @@ Upon looking at this brief, the first thing we can do is to start breaking it do
 5. Next, check whether it is the correct number.
 6. If it is correct:
 
-    1. Display congratulations message.
-    2. Stop the player from being able to enter more guesses (this would mess the game up).
-    3. Display control allowing the player to restart the game.
+   1. Display congratulations message.
+   2. Stop the player from being able to enter more guesses (this would mess the game up).
+   3. Display control allowing the player to restart the game.
 
 7. If it is wrong and the player has turns left:
 
-    1. Tell the player they are wrong and whether their guess was too high or too low.
-    2. Allow them to enter another guess.
-    3. Increment the turn number by 1.
+   1. Tell the player they are wrong and whether their guess was too high or too low.
+   2. Allow them to enter another guess.
+   3. Increment the turn number by 1.
 
 8. If it is wrong and the player has no turns left:
 
-    1. Tell the player it is game over.
-    2. Stop the player from being able to enter more guesses (this would mess the game up).
-    3. Display control allowing the player to restart the game.
+   1. Tell the player it is game over.
+   2. Stop the player from being able to enter more guesses (this would mess the game up).
+   3. Display control allowing the player to restart the game.
 
 9. Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
 
@@ -484,37 +484,37 @@ Let's play with some browser objects a bit.
 3. Type `guessField` into the console and the console shows you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
 4. Now type in the following:
 
-    ```js
-    guessField.value = 2;
-    ```
+   ```js
+   guessField.value = 2;
+   ```
 
-    The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
+   The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
 5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
 6. Now try entering the following line:
 
-    ```js
-    guesses.value
-    ```
+   ```js
+   guesses.value
+   ```
 
-    The browser returns `undefined`, because paragraphs don't have the `value` property.
+   The browser returns `undefined`, because paragraphs don't have the `value` property.
 
 7. To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
 
-    ```js
-    guesses.textContent = 'Where is my paragraph?';
-    ```
+   ```js
+   guesses.textContent = 'Where is my paragraph?';
+   ```
 
 8. Now for some fun stuff. Try entering the below lines, one by one:
 
-    ```js
-    guesses.style.backgroundColor = 'yellow';
-    guesses.style.fontSize = '200%';
-    guesses.style.padding = '10px';
-    guesses.style.boxShadow = '3px 3px 6px black';
-    ```
+   ```js
+   guesses.style.backgroundColor = 'yellow';
+   guesses.style.fontSize = '200%';
+   guesses.style.padding = '10px';
+   guesses.style.boxShadow = '3px 3px 6px black';
+   ```
 
-    Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
+   Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
 
 ## Finished for now…
 

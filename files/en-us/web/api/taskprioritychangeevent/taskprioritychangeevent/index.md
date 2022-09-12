@@ -26,6 +26,7 @@ new TaskPriorityChangeEvent(type, options)
 ### Parameters
 
 - `type`
+
   - : A string with the case-sensitive name of the associated event.
     User agents set it to `"prioritychange"`.
 

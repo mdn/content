@@ -28,9 +28,11 @@ encodingInfo(configuration)
 ### Parameters
 
 - `configuration`
+
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaEncodingConfiguration in the spec -->
 
     - `type`
+
       - : The type of media being tested. This takes one of two values:
 
         - `record`
@@ -39,6 +41,7 @@ encodingInfo(configuration)
           - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
 
     - `video`
+
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 

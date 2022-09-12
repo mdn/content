@@ -255,14 +255,14 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-    - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
-    - Choose **Node** in the _Add .gitignore_ selection list.
-    - Choose your preferred license in the _Add license_ selection list.
-    - Check **Initialize this repository with a README**.
+   - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
+   - Choose **Node** in the _Add .gitignore_ selection list.
+   - Choose your preferred license in the _Add license_ selection list.
+   - Check **Initialize this repository with a README**.
 
-    > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
-    >
-    > Otherwise, select the "Private" option to allow only selected people to see the source code.
+   > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
+   >
+   > Otherwise, select the "Private" option to allow only selected people to see the source code.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
@@ -273,50 +273,50 @@ Now that the repository ("repo") is created we are going to want to clone it on 
 1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
+   ```
 
-    This will create the repository below the current point.
+   This will create the repository below the current point.
 
 3. Navigate into the new repo.
 
-    ```bash
-    cd express-locallibrary-tutorial
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   ```
 
 The final step is to copy in your application and then add the files to your repo using git:
 
 1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from npm as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 3. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-    ```bash
-    > git status
-    On branch main
-    Your branch is up-to-date with 'origin/main'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```bash
+   > git status
+   On branch main
+   Your branch is up-to-date with 'origin/main'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            new file:   ...
-    ```
+           new file:   ...
+   ```
 
 4. When you're satisfied, commit the files to your local repository:
 
-    ```bash
-    git commit -m "First version of application moved into GitHub"
-    ```
+   ```bash
+   git commit -m "First version of application moved into GitHub"
+   ```
 
 5. Then synchronize your local repository to the GitHub website, using the following:
 
-    ```bash
-    git push origin main
-    ```
+   ```bash
+   git push origin main
+   ```
 
 > **Warning:** In 2020 GitHub changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call `git push origin master` instead.
 

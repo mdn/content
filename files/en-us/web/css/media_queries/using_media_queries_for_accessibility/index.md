@@ -48,7 +48,7 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 }
 ```
 
-The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with  `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
+The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
 
 ## High Contrast Mode
 

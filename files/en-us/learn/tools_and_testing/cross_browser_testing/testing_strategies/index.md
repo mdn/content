@@ -237,11 +237,11 @@ To use a Virtual Box, you need to:
 4. To create a new virtual machine, press the _New_ button in the top left-hand corner.
 5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
-    1. Provide a name for the new virtual machine
-    2. Choose which operating system and version you are installing on it
-    3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
-    4. Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
-    5. Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
+   1. Provide a name for the new virtual machine
+   2. Choose which operating system and version you are installing on it
+   3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
+   4. Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
+   5. Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
 
 Now the new virtual box should appear in the left-hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 

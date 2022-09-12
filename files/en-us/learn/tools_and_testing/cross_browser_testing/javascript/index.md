@@ -327,27 +327,27 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 2. Next, save a copy of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) in the same directory as the HTML.
 3. Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch (we are also loading a Promise polyfill from a CDN, as IE11 does support promises, which fetch requires):
 
-    ```html
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-    <script src="fetch.js"></script>
-    ```
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+   <script src="fetch.js"></script>
+   ```
 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
 5. ```js
-    const myImage = document.querySelector('.my-image');
+   const myImage = document.querySelector('.my-image');
 
-    fetch('flowers.jpg').then((response) => {
-      response.blob().then((myBlob) => {
-        const objectURL = URL.createObjectURL(myBlob);
-        myImage.src = objectURL;
-      });
-    });
-    ```
+   fetch('flowers.jpg').then((response) => {
+     response.blob().then((myBlob) => {
+       const objectURL = URL.createObjectURL(myBlob);
+       myImage.src = objectURL;
+     });
+   });
+   ```
 
 6. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
-    ![heading reading fetch basic example with a photo of purple flowers](fetch-image.jpg)
+   ![heading reading fetch basic example with a photo of purple flowers](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 

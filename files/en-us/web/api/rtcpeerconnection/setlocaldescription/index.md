@@ -61,8 +61,7 @@ receives no input parameters.
 > **Note:** The process of changing descriptions actually involves intermediary steps handled by
 > the WebRTC layer to ensure that an active connection can be changed without losing the
 > connection if the change does not succeed. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-    descriptions")}} for more details on this process.
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for more details on this process.
 
 #### Implicit description
 

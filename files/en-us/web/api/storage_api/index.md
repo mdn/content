@@ -38,7 +38,7 @@ The site storage system described by the Storage Standard and interacted with us
 - Origin 2 has no data stored in it yet; it's just an empty box waiting for content. This origin, however, has a lower quota than the other two do. It may be a less-visited site, or one known to have lower data storage requirements.
 - Origin 3's storage unit is completely full; it's reached its quota and can't store any more data without some existing material being removed.
 
-{{Glossary("User agent", "User agents")}} are likely to use various techniques to determine the quota for various origins. One of the most likely methods—one which the specification specifically encourages, in fact—would be to consider the popularity and/or usage levels of individual sites to determine what their quotas should be.  It's also conceivable that the browser might offer a user interface to customize these quotas.
+{{Glossary("User agent", "User agents")}} are likely to use various techniques to determine the quota for various origins. One of the most likely methods—one which the specification specifically encourages, in fact—would be to consider the popularity and/or usage levels of individual sites to determine what their quotas should be. It's also conceivable that the browser might offer a user interface to customize these quotas.
 
 ## Box modes
 

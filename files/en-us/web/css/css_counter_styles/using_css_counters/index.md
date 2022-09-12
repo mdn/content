@@ -106,7 +106,7 @@ For example, you might use this to lay out sections as shown:
 The {{cssxref("counter", "counter()")}} function has two forms: `counter(<counter-name>)` and `counter(<counter-name>, <counter-style>)`.
 The generated text is the value of the innermost counter of the given name in scope at the pseudo-element.
 
-The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and  `counters(<counter-name>, <separator>, <counter-style>)`.
+The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and `counters(<counter-name>, <separator>, <counter-style>)`.
 The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string (`<separator>`).
 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).

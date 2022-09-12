@@ -14,7 +14,7 @@ browser-compat: api.HIDInputReportEvent.device
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-The **`device`**  property of the {{domxref("HIDInputReportEvent")}} interface returns the {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
+The **`device`** property of the {{domxref("HIDInputReportEvent")}} interface returns the {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
 
 ## Value
 

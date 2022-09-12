@@ -439,7 +439,7 @@ objectStore.openCursor().onsuccess = (event) => {
 };
 ```
 
-> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`) . The following code does precisely the same thing as above:
+> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`). The following code does precisely the same thing as above:
 >
 > ```js
 > objectStore.getAll().onsuccess = (event) => {
@@ -665,7 +665,7 @@ Further reading for you to find out more information if desired.
 ### Tutorials and guides
 
 - [Databinding UI Elements with IndexedDB (2012)](https://web.dev/indexeddb-uidatabinding/)
-- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10))
+- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### Libraries
 

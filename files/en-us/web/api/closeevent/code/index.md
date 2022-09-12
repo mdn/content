@@ -180,7 +180,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
       <td><code>4000</code>–<code>4999</code></td>
       <td></td>
       <td>
-         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications.  The interpretation of these codes is undefined by the WebSocket protocol.
+         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications. The interpretation of these codes is undefined by the WebSocket protocol.
       </td>
     </tr>
   </tbody>

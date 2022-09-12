@@ -35,12 +35,15 @@ hsl(hue, saturation, lightness, alpha)
 ### Values
 
 - `hue`
+
   - : An {{cssxref("&lt;angle&gt;")}} of the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` = `240deg`, `480deg` = `120deg`, `-1turn` = `1turn`, and so on. This color wheel helps finding the angle associated with a color: ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 
 - `saturation`
+
   - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
 
 - `lightness`
+
   - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is white, `0%` is black, and `50%` is "normal".
 
 - `alpha` {{optional_inline}}

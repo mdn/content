@@ -263,7 +263,7 @@ This would output the following:
 
 Elements can also have attributes. Attributes look like this:
 
-![&amp;amp;amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;amp;amp;lt;/p>](grumpy-cat-attribute-small.png)
+![paragraph tag with 'class="editor-note"' attribute emphasized](grumpy-cat-attribute-small.png)
 
 Attributes contain extra information about the element that won't appear in the content. In this example, the **`class`** attribute is an identifying name used to target the element with style information.
 
@@ -514,12 +514,12 @@ Here we have:
 
 1. `<!DOCTYPE html>`: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
 
-    ```html
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    ```
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    More recently, the doctype is a historical artifact that needs to be included for everything else to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype. That is all you need to know!
+   More recently, the doctype is a historical artifact that needs to be included for everything else to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype. That is all you need to know!
 
 2. `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
 3. `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for everything you want to include on the HTML page, **that isn't the content** the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.
@@ -701,13 +701,13 @@ In HTML, the characters `<`, `>`,`"`,`'` and `&` are special characters. They ar
 
 You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
 
-| Literal character |  Character reference equivalent  |
-| ----------------- | -------------------------------- |
-| <                 | `&lt;`                           |
-| >                 | `&gt;`                           |
-| "                 | `&quot;`                         |
-| '                 | `&apos;`                         |
-| &                 | `&amp;`                          |
+| Literal character | Character reference equivalent |
+| ----------------- | ------------------------------ |
+| <                 | `&lt;`                         |
+| >                 | `&gt;`                         |
+| "                 | `&quot;`                       |
+| '                 | `&apos;`                       |
+| &                 | `&amp;`                        |
 
 The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;', quotation for ' \&quot; ' and similarly for others. To find more about entity reference, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 

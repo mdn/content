@@ -17,7 +17,7 @@ The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return 
 
 ## Syntax
 
-```js
+```js-nolint
 new Date()
 new Date(value)
 new Date(dateString)

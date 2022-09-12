@@ -43,7 +43,7 @@ There are a number of different ways in which you can associate UI features with
 - `aria-label=""` can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a [search input](/en-US/docs/Web/HTML/Element/input/search) in a horizontal nav bar.
 - `aria-labelledby=""` can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element's label is available in the UI, but for some reason a conventional {{HTMLElement('label')}} won't work.
 - `aria-description=""` is similar to `aria-label=""` in that it accepts a string of text, but is used when you want to give an element a description, in addition to its short label.
-- `aria-describedby=""` is analogous to  `aria-labelledby=""` in that it accepts an ID reference, but is used when you want to associate the element with a more detailed description, in addition to its short label.
+- `aria-describedby=""` is analogous to `aria-labelledby=""` in that it accepts an ID reference, but is used when you want to associate the element with a more detailed description, in addition to its short label.
 - `aria-details=""` references a more complex sets of details, distinct from simple text descriptions. You can learn more about this in the next section.
 
 ### aria-details versus aria-describedby

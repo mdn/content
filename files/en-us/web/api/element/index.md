@@ -309,6 +309,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}} {{Deprecated_Inline}}
+
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 
 - {{domxref("Element/select_event", "select")}}
@@ -361,7 +362,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
-- {{domxref("Element/keypress_event", "keypress")}}  {{Deprecated_Inline}}
+- {{domxref("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
   - : Fired when a key that produces a character value is pressed down.
 - {{domxref("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.

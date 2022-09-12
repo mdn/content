@@ -56,7 +56,7 @@ Here are some guidelines to help you decide what to do when something is removed
 If the item was _never_ implemented in a release version of _any_ browser, not even behind a preference or a flag, delete any references to the item from the documentation.
 
 - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), delete that page.
-    If the removed item is an interface, this means removing any subpages describing the properties and methods on that interface as well.
+  If the removed item is an interface, this means removing any subpages describing the properties and methods on that interface as well.
 - Remove the item from any lists of properties, attributes, methods, and so forth. For methods of an interface, for example, this means removing it from the "Methods" section on the interface's overview page.
 - Search the text of the overview page for that interface, element, etc., for any references to the removed item. Remove those references, being sure not to leave weird grammar issues or other problems with the text. This may mean not just deleting words but rewriting a sentence or paragraph to make more sense. It may also mean removing entire sections of content if the description of the item's use is lengthy.
 - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Remove those references, being sure not to leave weird grammar issues or other problems with the text. This may mean not just deleting words but rewriting a sentence or paragraph to make more sense. It may also mean removing entire sections of content if the description of the item's use is lengthy.

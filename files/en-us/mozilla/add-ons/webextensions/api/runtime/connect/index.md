@@ -49,7 +49,7 @@ let port = browser.runtime.connect(
 
 ### Return value
 
-{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's  `onDisconnect` event is fired if the extension does not exist.
+{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's `onDisconnect` event is fired if the extension does not exist.
 
 ## Browser compatibility
 

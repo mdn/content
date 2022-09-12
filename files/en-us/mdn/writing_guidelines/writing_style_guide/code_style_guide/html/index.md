@@ -144,7 +144,7 @@ There are some rules for writing about HTML elements on MDN Web Docs. Adhering t
 - **Element names**: Use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) macro, which creates a link to the MDN Web Docs page for that element. For example, writing `\{{HTMLElement("title")}}` produces "{{HTMLElement("title")}}".
   If you don't want to create a link, **enclose the name in angle brackets** and use the "Inline Code" style (e.g., `<title>`).
 - **Attribute names**: Use "Inline Code" style to put attribute names in `code font`.
-    Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does or when it is used for the first time on the page.
+  Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does or when it is used for the first time on the page.
 - **Attribute definitions**: Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term. This allows the term definition to be linked from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`).
 - **Attribute values**: Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. For example, "When the `type` attribute of an `<input>` element is set to `email` or `tel` ...".
 
