@@ -32,7 +32,7 @@ controlTransferOut(setup, data)
 
 - `setup`
 
-  - : An object that sets options for . The available options are:
+  - : An object that sets options for. The available options are:
 
     - `requestType`
       - : Must be one of three values specifying whether the
