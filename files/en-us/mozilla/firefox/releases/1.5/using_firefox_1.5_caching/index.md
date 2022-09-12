@@ -93,7 +93,7 @@ In this example:
 <HTML>
 <head>
 <title>Order query Firefox 1.5 Example</title>
-<style>
+<style type="text/css">
 body, p {
   font-family: Verdana, sans-serif;
   font-size: 12px;
