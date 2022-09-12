@@ -10,6 +10,7 @@ tags:
   - Mobile
   - NeedsActiveLearning
 ---
+
 This article provides basic tips to help you design websites for any kind of user.
 
 <table class="standard-table">
@@ -40,7 +41,7 @@ When you're building a website, one top issue to consider is [Universal Design](
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 

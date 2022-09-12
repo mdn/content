@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementY1Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY1Attribute
 ---
+
 {{SVGRef}}
 
 The **`y1`** attribute is used to specify the first y-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("y")}} attribute instead.
@@ -88,7 +89,7 @@ html,body,svg { height:100% }
 
 ## linearGradient
 
-For {{SVGElement('linearGradient')}}, `y1` defines the y coordinate of the starting point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
+For {{SVGElement('linearGradient')}}, `y1` defines the y coordinate of the starting point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
 <table class="properties">
   <tbody>

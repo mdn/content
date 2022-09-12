@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 The **`documentURI`** read-only property of the

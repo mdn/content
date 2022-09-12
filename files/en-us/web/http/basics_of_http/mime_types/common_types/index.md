@@ -14,6 +14,7 @@ tags:
   - Types
   - Video
 ---
+
 {{HTTPSidebar}}
 
 This topic lists most common MIME types, with corresponding document types, ordered by their common extensions.
@@ -78,7 +79,6 @@ IANA is the official registry of MIME media types and maintains a [list of all t
 | `.rtf`         | Rich Text Format (RTF)                                                                                 | `application/rtf`                                                                                                                                                                                                                                                                    |
 | `.sh`          | Bourne shell script                                                                                    | `application/x-sh`                                                                                                                                                                                                                                                                   |
 | `.svg`         | Scalable Vector Graphics (SVG)                                                                         | `image/svg+xml`                                                                                                                                                                                                                                                                      |
-| `.swf`         | [Small web format](https://en.wikipedia.org/wiki/SWF) (SWF) or Adobe Flash document                    | `application/x-shockwave-flash`                                                                                                                                                                                                                                                      |
 | `.tar`         | Tape Archive (TAR)                                                                                     | `application/x-tar`                                                                                                                                                                                                                                                                  |
 | `.tif .tiff`   | Tagged Image File Format (TIFF)                                                                        | `image/tiff`                                                                                                                                                                                                                                                                         |
 | `.ts`          | MPEG transport stream                                                                                  | `video/mp2t`                                                                                                                                                                                                                                                                         |

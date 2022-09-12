@@ -9,6 +9,7 @@ tags:
   - aria-brailleroledescription
 spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription
 ---
+
 The global `aria-brailleroledescription` attribute defines a human-readable, author-localized abbreviated description for the role of an element intended to be converted into Braille.
 
 ## Description
@@ -74,5 +75,6 @@ Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Rol
 <section id="Quick_links">
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
 </section>

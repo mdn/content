@@ -14,6 +14,7 @@ tags:
   - orm
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 This article briefly introduces databases, and how to use them with Node/Express apps. It then goes on to show how we can use [Mongoose](https://mongoosejs.com/) to provide database access for the [LocalLibrary](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways in which you can access model data.
@@ -23,9 +24,7 @@ This article briefly introduces databases, and how to use them with Node/Express
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
-          >Express Tutorial Part 2: Creating a skeleton website</a
-        >
+        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a>
       </td>
     </tr>
     <tr>
@@ -64,7 +63,7 @@ The benefit of using an ORM is that programmers can continue to think in terms o
 
 ### What ORM/ODM should I use?
 
-There are many ODM/ORM solutions available on the NPM package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
+There are many ODM/ORM solutions available on the npm package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
 
 A few solutions that were popular at the time of writing are:
 
@@ -118,7 +117,7 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using NPM. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
 
 ```bash
 npm install mongoose
@@ -126,7 +125,7 @@ npm install mongoose
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
-> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based *database as a service* free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
+> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based _database as a service_ free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
 
 ### Connecting to MongoDB
 
@@ -134,14 +133,14 @@ _Mongoose_ requires a connection to a MongoDB database. You can `require()` and 
 
 ```js
 //Import the mongoose module
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/my_database';
+const mongoDB = 'mongodb://127.0.0.1/my_database';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Get the default connection
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 //Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -149,7 +148,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
 
-> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
+> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
 
 ### Defining and creating models
 
@@ -165,12 +164,12 @@ The code fragment below shows how you might define a simple schema. First you `r
 
 ```js
 //Require Mongoose
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //Define a schema
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var SomeModelSchema = new Schema({
+const SomeModelSchema = new Schema({
   a_string: String,
   a_date: Date
 });
@@ -184,15 +183,15 @@ Models are created from schemas using the `mongoose.model()` method:
 
 ```js
 // Define schema
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var SomeModelSchema = new Schema({
+const SomeModelSchema = new Schema({
   a_string: String,
   a_date: Date
 });
 
 // Compile model from schema
-var SomeModel = mongoose.model('SomeModel', SomeModelSchema);
+const SomeModel = mongoose.model('SomeModel', SomeModelSchema);
 ```
 
 The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
@@ -205,7 +204,7 @@ A schema can have an arbitrary number of fields — each one represents a field 
 An example schema showing many of the common field types and how they are declared is shown below.
 
 ```js
-var schema = new Schema(
+const schema = new Schema(
 {
   name: String,
   binary: Buffer,
@@ -255,7 +254,7 @@ The built-in validators include:
 The example below (slightly modified from the Mongoose documents) shows how you can specify some of the validator types and error messages:
 
 ```js
-var breakfastSchema = new Schema({
+const breakfastSchema = new Schema({
   eggs: {
     type: Number,
     min: [6, 'Too few eggs'],
@@ -295,10 +294,10 @@ To create a record you can define an instance of the model and then call `save()
 
 ```js
 // Create an instance of model SomeModel
-var awesome_instance = new SomeModel({ name: 'awesome' });
+const awesome_instance = new SomeModel({ name: 'awesome' });
 
 // Save the new model instance, passing a callback
-awesome_instance.save(function (err) {
+awesome_instance.save((err) => {
   if (err) return handleError(err);
   // saved!
 });
@@ -325,7 +324,7 @@ console.log(awesome_instance.name); //should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
 awesome_instance.name="New cool name";
-awesome_instance.save(function (err) {
+awesome_instance.save((err) => {
   if (err) return handleError(err); // saved!
 });
 ```
@@ -335,10 +334,10 @@ awesome_instance.save(function (err) {
 You can search for records using query methods, specifying the query conditions as a JSON document. The code fragment below shows how you might find all athletes in a database that play tennis, returning just the fields for athlete _name_ and _age_. Here we just specify one matching field (sport) but you can add more criteria, specify regular expression criteria, or remove the conditions altogether to return all athletes.
 
 ```js
-var Athlete = mongoose.model('Athlete', yourSchema);
+const Athlete = mongoose.model('Athlete', yourSchema);
 
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
-Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
+Athlete.find({ 'sport': 'Tennis' }, 'name age', (err, athletes) => {
   if (err) return handleError(err);
   // 'athletes' contains the list of athletes that match the criteria.
 })
@@ -348,13 +347,13 @@ If you specify a callback, as shown above, the query will execute immediately. T
 
 > **Note:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
 
-> **Note:** It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
+> **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
 
 If you don't specify a callback then the API will return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
 
 ```js
 // find all athletes that play tennis
-var query = Athlete.find({ 'sport': 'Tennis' });
+const query = Athlete.find({ 'sport': 'Tennis' });
 
 // selecting the 'name' and 'age' fields
 query.select('name age');
@@ -366,7 +365,7 @@ query.limit(5);
 query.sort({ age: -1 });
 
 // execute the query at a later time
-query.exec(function (err, athletes) {
+query.exec((err, athletes) => {
   if (err) return handleError(err);
   // athletes contains an ordered list of 5 athletes who play Tennis
 })
@@ -378,7 +377,7 @@ Above we've defined the query conditions in the `find()` method. We can also do 
 Athlete.
   find().
   where('sport').equals('Tennis').
-  where('age').gt(17).lt(50).  //Additional where query
+  where('age').gt(17).lt(50). // Additional where query
   limit(5).
   sort({ age: -1 }).
   select('name age').
@@ -405,40 +404,40 @@ Each story can have a single author.
 The `ref` property tells the schema which model can be assigned to this field.
 
 ```js
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var authorSchema = Schema({
+const authorSchema = Schema({
   name    : String,
   stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
 });
 
-var storySchema = Schema({
+const storySchema = Schema({
   author : { type: Schema.Types.ObjectId, ref: 'Author' },
   title    : String
 });
 
-var Story  = mongoose.model('Story', storySchema);
-var Author = mongoose.model('Author', authorSchema);
+const Story  = mongoose.model('Story', storySchema);
+const Author = mongoose.model('Author', authorSchema);
 ```
 
 We can save our references to the related document by assigning the `_id` value.
 Below we create an author, then a story, and assign the author id to our story's author field.
 
 ```js
-var bob = new Author({ name: 'Bob Smith' });
+const bob = new Author({ name: 'Bob Smith' });
 
-bob.save(function (err) {
+bob.save((err) => {
   if (err) return handleError(err);
 
   //Bob now exists, so lets create a story
-  var story = new Story({
+  const story = new Story({
     title: "Bob goes sledding",
     author: bob._id    // assign the _id from our author Bob. This ID is created by default!
   });
 
-  story.save(function (err) {
+  story.save((err) => {
     if (err) return handleError(err);
     // Bob now has his story
   });
@@ -449,13 +448,13 @@ Our story document now has an author referenced by the author document's ID. In 
 
 ```js
 Story
-.findOne({ title: 'Bob goes sledding' })
-.populate('author') //This populates the author id with actual author information!
-.exec(function (err, story) {
-  if (err) return handleError(err);
-  console.log('The author is %s', story.author.name);
-  // prints "The author is Bob Smith"
-});
+  .findOne({ title: 'Bob goes sledding' })
+  .populate('author') //This populates the author id with actual author information!
+  .exec((err, story) => {
+    if (err) return handleError(err);
+    console.log('The author is %s', story.author.name);
+    // prints "The author is Bob Smith"
+  });
 ```
 
 > **Note:** Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's `stories` array. How then can we get all stories by a particular author? One way would be to add our story to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.
@@ -464,11 +463,11 @@ Story
 >
 > ```js
 > Story
-> .find({ author : bob._id })
-> .exec(function (err, stories) {
->   if (err) return handleError(err);
->   // returns all stories that have Bob's id as their author.
-> });
+>   .find({ author : bob._id })
+>   .exec((err, stories) => {
+>    if (err) return handleError(err);
+>     // returns all stories that have Bob's id as their author.
+>   });
 > ```
 
 This is almost everything you need to know about working with related items _for this tutorial_. For more detailed information see [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs).
@@ -481,26 +480,26 @@ This is shown below:
 ```js
 // File: ./models/somemodel.js
 
-//Require Mongoose
-var mongoose = require('mongoose');
+// Require Mongoose
+const mongoose = require('mongoose');
 
-//Define a schema
-var Schema = mongoose.Schema;
+// Define a schema
+const Schema = mongoose.Schema;
 
-var SomeModelSchema = new Schema({
+const SomeModelSchema = new Schema({
   a_string: String,
   a_date: Date,
 });
 
-//Export function to create "SomeModel" model class
+// Export function to create "SomeModel" model class
 module.exports = mongoose.model('SomeModel', SomeModelSchema);
 ```
 
 You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
 
 ```js
-//Create a SomeModel model just by requiring the module
-var SomeModel = require('../models/somemodel')
+// Create a SomeModel model just by requiring the module
+const SomeModel = require('../models/somemodel')
 
 // Use the SomeModel object (model) to find all SomeModel records
 SomeModel.find(callback_function);
@@ -519,52 +518,52 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
 1. Click the **Build a Database** button in the _Database Deployments_ section.
-    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
+   ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
 
 2. This will open the _Deploy a cloud database_ screen. Click on the **Create** button under the _Shared_ deployment option.
-    ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
+   ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
 
 3. This will open the _Create a Shared Cluster_ screen.
-    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
+   ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
 
-    - Select any provider from the _Cloud Provider & Region_ section. Different regions offer different providers.
-    - _Cluster Tier_ and _Additional Settings_ don't need to be changed. You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
-    - Click the **Create Cluster** button (creation of the cluster will take some minutes).
+   - Select any provider from the _Cloud Provider & Region_ section. Different regions offer different providers.
+   - _Cluster Tier_ and _Additional Settings_ don't need to be changed. You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
+   - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
 4. This will open the _Security Quickstart_ section.
-    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
+   ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
 
-    - Enter a username and password. Remember to copy and store the credentials safely as we will need them later on. Click the **Create User** button.
+   - Enter a username and password. Remember to copy and store the credentials safely as we will need them later on. Click the **Create User** button.
 
-      > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
+     > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
 
-    - Enter `0.0.0.0/0` in the IP Address field. This tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
+   - Enter `0.0.0.0/0` in the IP Address field. This tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
 
-      > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
+     > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
 
-    - Click the **Finish and Close** button.
+   - Click the **Finish and Close** button.
 
 5. This will open the following screen. Click on the **Go to Databases** button.
-    ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
+   ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
 6. You will return to the _Database Deployments_ screen. Click the **Browse Collections** button.
-    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
+   ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
 7. This will open the _Collections_ section. Click the **Add My Own Data** button.
-    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
+   ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
 
 8. This will open the _Create Database_ screen.
 
    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
-    - Enter the name for the new database as `local_library`.
-    - Enter the name of the collection as `Collection0`.
-    - Click the **Create** button to create the database.
+   - Enter the name for the new database as `local_library`.
+   - Enter the name of the collection as `Collection0`.
+   - Click the **Create** button to create the database.
 
 9. You will return to the _Collections_ screen with your database created.
-    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
+   ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
 
-    - Click the _Overview_ tab to return to the cluster overview.
+   - Click the _Overview_ tab to return to the cluster overview.
 
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
@@ -593,14 +592,14 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
 
 ```js
-//Set up mongoose connection
-var mongoose = require('mongoose');
-var mongoDB = 'insert_your_database_url_here';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
-var db = mongoose.connection;
+// Set up mongoose connection
+const mongoose = require('mongoose');
+const mongoDB = 'insert_your_database_url_here';
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```
 
@@ -626,11 +625,11 @@ Copy the `Author` schema code shown below and paste it into your **./models/auth
 The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
 
 ```js
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var AuthorSchema = new Schema(
+const AuthorSchema = new Schema(
   {
     first_name: {type: String, required: true, maxLength: 100},
     family_name: {type: String, required: true, maxLength: 100},
@@ -641,39 +640,26 @@ var AuthorSchema = new Schema(
 
 // Virtual for author's full name
 AuthorSchema
-.virtual('name')
-.get(function () {
-// To avoid errors in cases where an author does not have either a family name or first name
-// We want to make sure we handle the exception by returning an empty string for that case
-  var fullname = '';
-  if (this.first_name && this.family_name) {
-    fullname = this.family_name + ', ' + this.first_name
-  }
-  if (!this.first_name || !this.family_name) {
-    fullname = '';
-  }
-  return fullname;
-});
-
-// Virtual for author's lifespan
-AuthorSchema.virtual('lifespan').get(function() {
-  var lifetime_string = '';
-  if (this.date_of_birth) {
-    lifetime_string = this.date_of_birth.getYear().toString();
-  }
-  lifetime_string += ' - ';
-  if (this.date_of_death) {
-    lifetime_string += this.date_of_death.getYear()
-  }
-  return lifetime_string;
-});
+  .virtual('name')
+  .get(function () {
+  // To avoid errors in cases where an author does not have either a family name or first name
+  // We want to make sure we handle the exception by returning an empty string for that case
+    let fullname = '';
+    if (this.first_name && this.family_name) {
+      fullname = `${this.family_name}, ${this.first_name}`;
+    }
+    if (!this.first_name || !this.family_name) {
+      fullname = '';
+    }
+    return fullname;
+  });
 
 // Virtual for author's URL
 AuthorSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/author/' + this._id;
-});
+  .virtual('url')
+  .get(function() { // We don't use an arrow function as we'll need the this object
+    return `/catalog/author/${this._id}`;
+  });
 
 //Export model
 module.exports = mongoose.model('Author', AuthorSchema);
@@ -693,26 +679,26 @@ Copy the `Book` schema code shown below and paste it into your **./models/book.j
 Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
 
 ```js
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var BookSchema = new Schema(
+const BookSchema = new Schema(
   {
-    title: {type: String, required: true},
-    author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},
-    summary: {type: String, required: true},
-    isbn: {type: String, required: true},
-    genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]
+    title: { type: String, required: true },
+    author: { type: Schema.Types.ObjectId, ref: 'Author', required: true },
+    summary: { type: String, required: true },
+    isbn: { type: String, required: true },
+    genre: [{ type: Schema.Types.ObjectId, ref: 'Genre' }]
   }
 );
 
 // Virtual for book's URL
 BookSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/book/' + this._id;
-});
+  .virtual('url')
+  .get(function() { // We don't use an arrow function as we'll need the this object
+    return '/catalog/book/' + this._id;
+  });
 
 //Export model
 module.exports = mongoose.model('Book', BookSchema);
@@ -729,25 +715,25 @@ Finally, copy the `BookInstance` schema code shown below and paste it into your 
 The `BookInstance` represents a specific copy of a book that someone might borrow and includes information about whether the copy is available, on what date it is expected back, and "imprint" (or version) details.
 
 ```js
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var BookInstanceSchema = new Schema(
+const BookInstanceSchema = new Schema(
   {
     book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, //reference to the associated book
-    imprint: {type: String, required: true},
-    status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
-    due_back: {type: Date, default: Date.now}
+    imprint: { type: String, required: true },
+    status: { type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance' },
+    due_back: { type: Date, default: Date.now }
   }
 );
 
 // Virtual for bookinstance's URL
 BookInstanceSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/bookinstance/' + this._id;
-});
+  .virtual('url')
+  .get(function() { // We don't use an arrow function as we'll need the this object
+    return `/catalog/bookinstance/${this._id}`;
+  });
 
 //Export model
 module.exports = mongoose.model('BookInstance', BookInstanceSchema);
@@ -762,7 +748,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge!
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 
@@ -779,21 +765,21 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-    > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
+   > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2. Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials).
+2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials).
 
-    ```bash
-    npm install async
-    ```
+   ```bash
+   npm install async
+   ```
 
 3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
-    ```bash
-    node populatedb <your mongodb url>
-    ```
+   ```bash
+   node populatedb <your mongodb url>
+   ```
 
-    > **Note:** On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.
+   > **Note:** On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 

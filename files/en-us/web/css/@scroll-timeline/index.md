@@ -31,7 +31,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
   - : A name identifying the scroll timeline. This name is used when specifying the scroll timeline with the [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property.
 
-- `source`
+- `source` {{Experimental_Inline}}
 
   - : The scrollable element whose scrolling position drives the progress of the timeline. Can be:
 
@@ -46,7 +46,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
     - `none`
       - : No scroll container specified.
 
-- `orientation`
+- `orientation` {{Experimental_Inline}}
 
   - : The scroll timeline's orientation:
 
@@ -69,7 +69,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
     - `vertical`
       - : Uses the vertical scroll position, regardless of writing mode or directionality.
 
-- `scroll-offsets`
+- `scroll-offsets` {{Experimental_Inline}}
 
   - : Determines the scroll timeline's scroll offsets:
 

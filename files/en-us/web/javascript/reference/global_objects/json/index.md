@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON
 ---
+
 {{JSRef}}
 
 The **`JSON`** object contains methods
@@ -38,9 +39,9 @@ Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON
 {{jsxref("Global_Objects/eval", "eval")}} executes the string as JavaScript:
 
 ```js
-let code = '"\u2028\u2029"'
-JSON.parse(code)  // evaluates to "\u2028\u2029" in all engines
-eval(code)        // throws a SyntaxError in old engines
+const code = '"\u2028\u2029"';
+JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
+eval(code); // throws a SyntaxError in old engines
 ```
 
 Other differences include allowing only double-quoted strings and having no provisions
@@ -113,15 +114,14 @@ whitespace characters.
 
 ## Static methods
 
-- {{jsxref("JSON.parse()", "JSON.parse(<var>text</var>[, <var>reviver</var>])")}}
+- {{jsxref("JSON.parse()")}}
   - : Parse the string `text` as JSON, optionally transform the
     produced value and its properties, and return the value. Any violations of the JSON
     syntax, including those pertaining to the differences between JavaScript and JSON,
     cause a {{jsxref("SyntaxError")}} to be thrown. The `reviver`
     option allows for interpreting what the `replacer` has used to
     stand in for other datatypes.
-- {{jsxref("JSON.stringify()", "JSON.stringify(<var>value</var>[,
-    <var>replacer</var>[, <var>space</var>]])")}}
+- {{jsxref("JSON.stringify()")}}
   - : Return a JSON string corresponding to the specified value, optionally including only
     certain properties or replacing property values in a user-defined manner. By default,
     all instances of {{jsxref("undefined")}} are replaced with [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and

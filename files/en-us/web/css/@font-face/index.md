@@ -12,6 +12,7 @@ tags:
   - typography
 browser-compat: css.at-rules.font-face
 ---
+
 {{CSSRef}}
 
 The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
@@ -50,7 +51,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
   - : Defines the line gap metric for the font.
-- {{cssxref("@font-face/size-adjust", "size-adjust")}} {{experimental_inline}}
+- {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
 
@@ -119,10 +120,13 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 This example specifies a downloadable font to use, applying it to the entire body of the document:
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
+  <style media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
       src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");

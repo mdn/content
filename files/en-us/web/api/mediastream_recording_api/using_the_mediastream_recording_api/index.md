@@ -25,7 +25,7 @@ Both audio and video may be recorded, separately or together. This article aims 
 
 To demonstrate basic usage of the MediaRecorder API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.
 
-You can see this [demo running live](https://mdn.github.io/dom-examples/media/web-dictaphone/), or [grab the source code](https://github.com/mdn/dom-examples/tree/master/media/web-dictaphone) on GitHub.
+You can see this [demo running live](https://mdn.github.io/dom-examples/media/web-dictaphone/), or [grab the source code](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone) on GitHub.
 
 ## CSS goodies
 
@@ -141,10 +141,10 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     )
 
     // Success callback
-    .then(function (stream) {})
+    .then((stream) => {})
 
     // Error callback
-    .catch(function (err) {
+    .catch((err) => {
       console.error(`The following getUserMedia error occurred: ${err}`);
     });
 } else {
@@ -171,7 +171,7 @@ const mediaRecorder = new MediaRecorder(stream);
 There are a series of methods available in the {{domxref("MediaRecorder")}} interface that allow you to control recording of the media stream; in Web Dictaphone we just make use of two, and listen to some events. First of all, {{domxref("MediaRecorder.start()")}} is used to start recording the stream once the record button is pressed:
 
 ```js
-record.onclick = function () {
+record.onclick = () => {
   mediaRecorder.start();
   console.log(mediaRecorder.state);
   console.log("recorder started");
@@ -187,7 +187,7 @@ As recording progresses, we need to collect the audio data. We register an event
 ```js
 let chunks = [];
 
-mediaRecorder.ondataavailable = function (e) {
+mediaRecorder.ondataavailable = (e) => {
   chunks.push(e.data);
 };
 ```
@@ -197,7 +197,7 @@ mediaRecorder.ondataavailable = function (e) {
 Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.
 
 ```js
-stop.onclick = function () {
+stop.onclick = () => {
   mediaRecorder.stop();
   console.log(mediaRecorder.state);
   console.log("recorder stopped");
@@ -213,7 +213,7 @@ Note that the recording may also stop naturally if the media stream ends (e.g. i
 When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.stop_event", "onstop")}}, and finalize our blob there from all the chunks we have received:
 
 ```js
-mediaRecorder.onstop = function (e) {
+mediaRecorder.onstop = (e) => {
   console.log("recorder stopped");
 
   const clipName = prompt("Enter a name for your sound clip");
@@ -238,7 +238,7 @@ mediaRecorder.onstop = function (e) {
   const audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
 
-  deleteButton.onclick = function (e) {
+  deleteButton.onclick = (e) => {
     let evtTgt = e.target;
     evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
   };

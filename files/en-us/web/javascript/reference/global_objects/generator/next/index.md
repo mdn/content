@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.next
 ---
+
 {{JSRef}}
 
 The **`next()`** method returns an
@@ -73,7 +74,7 @@ In this example, `getPage` takes a list and "paginates" it into chunks of size `
 ```js
 function* getPage(list, pageSize = 1) {
   for (let index = 0; index < list.length; index += pageSize) {
-    yield list.slice(index, pageSize);
+    yield list.slice(index, index + pageSize);
   }
 }
 

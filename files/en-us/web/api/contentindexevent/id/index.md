@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndexEvent.id
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The read-only **`id`** property of the

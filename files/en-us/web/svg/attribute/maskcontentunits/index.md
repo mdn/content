@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.mask.maskContentUnits
 ---
+
 {{SVGRef}}
 
 The **`maskContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("mask") }} element.
@@ -74,7 +75,7 @@ For {{SVGElement("mask")}}, `maskContentUnits` defines the coordinate system in 
 - `userSpaceOnUse`
   - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
+  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 

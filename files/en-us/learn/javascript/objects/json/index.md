@@ -17,6 +17,7 @@ tags:
   - Tutorial
   - l10n:priority
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
@@ -195,7 +196,7 @@ We have made our JSON data available on our GitHub, at <https://mdn.github.io/le
 
 We are going to load the JSON into our script, and use some nifty DOM manipulation to display it, like this:
 
-![](json-superheroes.png)
+![Image of a document titled "Super hero squad" (in a fancy font) and subtitled "Hometown: Metro City // Formed: 2016". Three columns below the heading are titled "Molecule Man", "Madame Uppercut", and "Eternal Flame", respectively. Each column lists the hero's secret identity name, age, and superpowers.](json-superheroes.png)
 
 ### Top-level function
 
@@ -254,7 +255,6 @@ Here we first create an {{HTMLElement("h1")}} element with [`createElement()`](/
 Next, add the following function at the bottom of the code, which creates and displays the superhero cards:
 
 ```js
-
 function populateHeroes(obj) {
   const section = document.querySelector('section');
   const heroes = obj.members;

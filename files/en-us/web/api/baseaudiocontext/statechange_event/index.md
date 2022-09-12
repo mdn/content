@@ -13,6 +13,7 @@ tags:
   - statechange
 browser-compat: api.BaseAudioContext.statechange_event
 ---
+
 {{APIRef("Web Audio API")}}
 
 A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when its {{domxref("BaseAudioContext.state", "state")}} member changes.
@@ -37,7 +38,7 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 {{domxref("BaseAudioContext.state", "state")}} to the console every time it changes.
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = () => {
   console.log(audioCtx.state);
 }
 ```

@@ -7,9 +7,11 @@ tags:
   - DOM
   - Method
   - Reference
+  - Non-standard
 browser-compat: api.Document.releaseCapture
 ---
-{{ApiRef("DOM")}}
+
+{{ApiRef("DOM")}}{{Non-standard_header}}
 
 The **`releaseCapture()`** method releases mouse capture if
 it's currently enabled on an element within this document.

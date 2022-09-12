@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/returnValue
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Property
@@ -12,9 +11,8 @@ tags:
   - returnValue
 browser-compat: api.HTMLDialogElement.returnValue
 ---
-{{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`returnValue`** property of the
 {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the
@@ -55,7 +53,7 @@ dialog.
   </menu>
 
   <script>
-    (function() {
+    (() => {
       const updateButton = document.getElementById('updateDetails');
       const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
@@ -77,7 +75,7 @@ dialog.
       }
 
       // "Update details" button opens the <dialog> modally
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
         handleUserInput(dialog.returnValue);
@@ -86,7 +84,7 @@ dialog.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
 > ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications

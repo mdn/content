@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: api.DataTransferItemList.remove
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList.remove()`** method removes the
@@ -100,19 +101,19 @@ function drop_handler(ev) {
     if ((item.kind === 'string') &&
         (item.type.match('^text/plain'))) {
       // This item is the target node
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
     } else if ((item.kind === 'string') &&
                (item.type.match('^text/html'))) {
       // Drag data item is HTML
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
     } else if ((item.kind === 'string') &&
                (item.type.match('^text/uri-list'))) {
       // Drag data item is URI
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
     }

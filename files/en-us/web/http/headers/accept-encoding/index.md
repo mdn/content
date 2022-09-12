@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand.  The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
@@ -40,7 +41,7 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
 
 ## Syntax
 
-```
+```http
 Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate
@@ -71,7 +72,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Examples
 
-```
+```http
 Accept-Encoding: gzip
 
 Accept-Encoding: gzip, compress, br

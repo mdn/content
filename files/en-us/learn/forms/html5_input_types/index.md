@@ -11,6 +11,7 @@ tags:
   - Web
   - Widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we looked at the {{htmlelement("input")}} element, covering the original values of the `type` attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.
@@ -184,7 +185,7 @@ const output = document.querySelector('.price-output');
 
 output.textContent = price.value;
 
-price.addEventListener('input', function() {
+price.addEventListener('input', () => {
   output.textContent = price.value;
 });
 ```

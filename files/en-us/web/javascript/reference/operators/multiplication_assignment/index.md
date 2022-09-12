@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.multiplication_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The multiplication assignment operator (`*=`) multiplies a variable by the

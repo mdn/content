@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.before
 ---
+
 {{CSSRef}}
 
 In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the first child of the selected element. It is often used to add cosmetic content to an element with the {{cssxref("content")}} property. It is inline by default.
@@ -24,7 +25,7 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 ::before
 ```
 
-> **Note:** CSS3 introduced the `::before` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:before`, introduced in CSS2.
+> **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introduced the double-colon notation `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation`:before`, introduced in CSS2.
 
 ## Examples
 
@@ -136,8 +137,8 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
+const list = document.querySelector('ul');
+list.addEventListener('click', (ev) => {
   if (ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
   }

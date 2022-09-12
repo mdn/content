@@ -13,6 +13,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.enterpictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 The `enterpictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} enters picture-in-picture mode successfully.
@@ -31,7 +32,7 @@ onenterpictureinpicture = (event) => { };
 
 ## Event type
 
-An {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 

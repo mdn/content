@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.screenY
 ---
+
 {{APIRef}}
 
 The **`Window.screenY`** read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.
@@ -56,7 +57,7 @@ These work in exactly the same way as `screenX`/`screenY`.
 Also in the code we include a snippet that detects whether `screenLeft` is supported, and if not, polyfills in `screenLeft`/`screenTop` using `screenX`/`screenY`.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

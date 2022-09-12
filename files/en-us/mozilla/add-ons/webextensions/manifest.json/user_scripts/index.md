@@ -9,6 +9,7 @@ tags:
   - user_scripts key
 browser-compat: webextensions.manifest.user_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

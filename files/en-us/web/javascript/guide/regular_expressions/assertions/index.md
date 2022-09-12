@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
@@ -212,19 +213,19 @@ console.log(4, fixedMultiline); // fix  'greon' but do not touch 'on'.
 Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [filter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
 
 ```js
-let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Select fruits started with 'A' by /^A/ Regex.
 // Here '^' control symbol used only in one role: Matching beginning of an input.
 
-let fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
+const fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
 In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes).
 
 ```js
-let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Selecting fruits that do not start by 'A' with a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
@@ -232,7 +233,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 // 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 
-let fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
+const fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
@@ -240,10 +241,10 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ### Matching a word boundary
 
 ```js
-let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
+const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-let enEdSelection = fruitsWithDescription.filter((descr) => /(en|ed)\b/.test(descr));
+const enEdSelection = fruitsWithDescription.filter((descr) => /(en|ed)\b/.test(descr));
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
@@ -253,7 +254,7 @@ console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```js
 // JS Lookahead assertion x(?=y)
 
-let regex = /First(?= test)/g;
+const regex = /First(?= test)/g;
 
 console.log('First test'.match(regex)); // [ 'First' ]
 console.log('First peach'.match(regex)); // null
@@ -274,23 +275,23 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 The `?!` combination has different meanings in assertions like `/x(?!y)/` and [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) like `[^?!]`.
 
 ```js
-let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+const orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
 // Different meaning of '?!' combination usage in Assertions /x(?!y)/ and Ranges /[^?!]/
-let selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
+const selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
 console.log(orangeNotLemon.match(selectNotLemonRegex)); // [ 'Do you want to have an orange?' ]
 
-let selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
+const selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
 ### Lookbehind assertion
 
 ```js
-let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
+const oranges = ['ripe orange A ', 'green orange B', 'ripe orange C'];
 
-let ripe_oranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
-console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
+const ripeOranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
+console.log(ripeOranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
 ## See also

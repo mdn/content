@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection()`**
@@ -26,6 +27,7 @@ new RTCPeerConnection(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
+
   - : An object providing options to configure the new connection:
 
     - `bundlePolicy` {{optional_inline}}
@@ -157,8 +159,6 @@ If you don't provide certificates, new ones are generated automatically. One obv
 benefit to providing your own is identity key continuity—if you use the same certificate
 for subsequent calls, the remote peer can tell you're the same caller. This also avoids
 the cost of generating new keys.
-
-**<<<--- add link to information about identity --->>>**
 
 ## Specifications
 

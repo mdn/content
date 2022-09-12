@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.PannerNode.PannerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`PannerNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("PannerNode")}} object instance.

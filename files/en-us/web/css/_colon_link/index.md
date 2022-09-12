@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.link
 ---
+
 {{ CSSRef }}
 
 The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute.

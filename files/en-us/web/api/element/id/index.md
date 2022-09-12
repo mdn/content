@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.id
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`id`** property of the {{domxref("Element")}} interface

@@ -15,6 +15,7 @@ tags:
   - Numeric
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 This chapter introduces the concepts, objects and functions used to work with and perform calculations using numbers and dates in JavaScript. This includes using numbers written in various bases including decimal, binary, and hexadecimal, as well as the use of the global {{jsxref("Math")}} object to perform a wide variety of mathematical operations on numbers.
@@ -55,18 +56,20 @@ const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 
 ### Octal numbers
 
-Octal number syntax uses a leading zero. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
+The standard syntax for octal numbers is to prefix them with `0o`. For example:
+
+```js
+const a = 0o10; // 8
+```
+
+There's also a legacy syntax for octal numbers — by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
 
 ```js
 const n = 0755; // 493
 const m = 0644; // 420
 ```
 
-Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. In ECMAScript 2015, octal numbers are supported if they are prefixed with `0o`, e.g.:
-
-```js
-const a = 0o10; // ES2015: 8
-```
+[Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) forbids this octal syntax.
 
 ### Hexadecimal numbers
 
@@ -126,9 +129,9 @@ The `Number` prototype provides methods for retrieving information from `Number`
 
 | Method                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| {{jsxref("Number.toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
+| {{jsxref("Number/toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
+| {{jsxref("Number/toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
+| {{jsxref("Number/toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
 
 ## Math object
 
@@ -380,11 +383,11 @@ daysLeft = Math.round(daysLeft); //returns days left in the year
 
 This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
 
-The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `IPOdate` object:
+The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `ipoDate` object:
 
 ```js
-const IPOdate = new Date();
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+const ipoDate = new Date();
+ipoDate.setTime(Date.parse('Aug 9, 1995'));
 ```
 
 ### Example
@@ -397,7 +400,7 @@ function JSClock() {
   const hour = time.getHours();
   const minute = time.getMinutes();
   const second = time.getSeconds();
-  let temp = '' + ((hour > 12) ? hour - 12 : hour);
+  let temp = String(hour % 12);
   if (hour === 0)
     temp = '12';
   temp += ((minute < 10) ? ':0' : ':') + minute;

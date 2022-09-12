@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.active
 ---
+
 {{CSSRef}}
 
 The **`:active`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
@@ -20,7 +21,7 @@ The `:active` pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLEl
 
 Styles defined by the `:active` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:active` rule after all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
-> **Note:** On systems with multi-button mice, CSS3 specifies that the `:active` pseudo-class must only apply to the primary button; on right-handed mice, this is typically the leftmost button.
+> **Note:** On systems with multi-button mice, CSS specifies that the `:active` pseudo-class must only apply to the primary button; on right-handed mice, this is typically the leftmost button.
 
 ## Syntax
 

@@ -15,6 +15,7 @@ tags:
   - ended
 browser-compat: api.AudioScheduledSourceNode.ended_event
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 The `ended` event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.
@@ -50,7 +51,7 @@ node.addEventListener('ended', () => {
 You can also set up the event handler using the `onended` property:
 
 ```js
-node.onended = function() {
+node.onended = () => {
   document.getElementById("startButton").disabled = false;
 }
 ```

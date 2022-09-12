@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.connected
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.connected`** property of the
@@ -31,10 +32,6 @@ A boolean.
 const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
-
-## Value
-
-A boolean value.
 
 ## Specifications
 

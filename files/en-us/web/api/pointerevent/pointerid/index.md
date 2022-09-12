@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.pointerId
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`pointerId`** read-only property of the
@@ -31,7 +32,7 @@ one of the {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event tha
 ```js
 let id; // Let's assume that this is a previously saved pointerId
 
-target.addEventListener('pointerdown', function(event) {
+target.addEventListener('pointerdown', (event) => {
   // Compare previous event's ID that was cached
   // to current event's ID and handle accordingly
   if (id === event.pointerId) process_event(event);

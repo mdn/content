@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.PeriodicWave.PeriodicWave
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -75,13 +76,11 @@ imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-const options = {
-  real : real,
-  imag : imag,
-  disableNormalization : false
-}
-
-const wave = new PeriodicWave(ac, options);
+const wave = new PeriodicWave(ac, {
+  real,
+  imag,
+  disableNormalization: false,
+});
 ```
 
 ## Specifications

@@ -8,6 +8,7 @@ tags:
   - Non-standard
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 > **Warning:** All of the methods and properties with a **moz** prefix (such as **mozSetDataAt()** are Gecko specific interfaces. These interfaces will **only** work with Gecko based browsers.
@@ -74,8 +75,7 @@ To just take the first item being dropped, use the {{domxref("DataTransfer.getDa
 However, use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method to retrieve a specific item from the data transfer. The following example retrieves a set of files being dragged and adds them to an array.
 
 ```js
-function onDrop(event)
-{
+function onDrop(event) {
   const files = [];
   const dt = event.dataTransfer;
   for (let i = 0; i < dt.mozItemCount; i++)
@@ -106,65 +106,58 @@ Similarly, you will need to retrieve the file object or objects using the {{domx
 The following example provides a box where the lists of items and formats dropped on it are displayed.
 
 ```html
-<html>
-<head>
-<script>
+<html lang="en">
+  <head>
+    <script>
+      function doDrop(event) {
+        const dt = event.dataTransfer;
+        const count = dt.mozItemCount;
+        output(`Items: ${count}\n`);
 
-function dodrop(event)
-{
-  const dt = event.dataTransfer;
-  const count = dt.mozItemCount;
-  output("Items: " + count + "\n");
-
-  for (let i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
-    const types = dt.mozTypesAt(i);
-    for (let t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
-      try {
-        const data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
-      } catch (ex) {
-        output("<<error>>\n");
-        dump(ex);
+        for (let i = 0; i < count; i++) {
+          output(` Item ${i}:\n`);
+          const types = dt.mozTypesAt(i);
+          for (let t = 0; t < types.length; t++) {
+            output(`  ${types[t]}: `);
+            try {
+              const data = dt.mozGetDataAt(types[t], i);
+              output(`(${typeof data}) : <${data} >\n`);
+            } catch (ex) {
+              output("<<error>>\n");
+              dump(ex);
+            }
+          }
+        }
       }
-    }
-  }
-}
 
-function output(text)
-{
-  document.getElementById("output").textContent += text;
-  dump(text);
-}
-
-</script>
-</head>
-<body>
-
-<div id="output" style="min-height: 100px; white-space: pre; border: 1px solid black;"
+      function output(text) {
+        document.getElementById("output").textContent += text;
+        dump(text);
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      id="output"
+      style="min-height: 100px; white-space: pre; border: 1px solid black;"
       ondragenter="document.getElementById('output').textContent = ''; event.stopPropagation(); event.preventDefault();"
       ondragover="event.stopPropagation(); event.preventDefault();"
-      ondrop="event.stopPropagation(); event.preventDefault(); dodrop(event);">
-
-<div>
-
-  Fix</div>
-</div>
-
-</body>
+      ondrop="event.stopPropagation(); event.preventDefault(); doDrop(event);">
+      <div>Fix</div>
+    </div>
+  </body>
 </html>
 ```
 
 This example cancels both the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and `{{domxref("HTMLElement/dragover_event", "dragover")}}` events by calling the {{domxref("Event.preventDefault","preventDefault()")}}. method. This allows a drop to occur on that element.
 
-The `dodrop` event handler is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.
+The `doDrop` event handler is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.
 
 This processing is useful if you wish to examine the data that a drag is holding. Drop an item on the drop target in the example to see what items, formats and data was being dragged.
 
 ## See also
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/en-US/docs/Web/Guide/HTML/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

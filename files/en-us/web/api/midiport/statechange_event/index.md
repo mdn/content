@@ -11,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.MIDIPort.statechange_event
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`statechange`** event of the {{domxref("MIDIPort")}} interface is fired when a port changes from open to closed, or closed to open.
@@ -33,7 +34,7 @@ A {{domxref("MIDIConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("MIDIConnectionEvent.port")}} {{readonlyinline}}
+- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
 
 ## Example

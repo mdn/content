@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.revocable
 ---
+
 {{JSRef}}
 
 The **`Proxy.revocable()`** method is used to create a
@@ -54,7 +55,7 @@ effect.
 ```js
 const revocable = Proxy.revocable({}, {
   get(target, name) {
-    return "[[" + name + "]]";
+    return `[[${name}]]`;
   }
 });
 const proxy = revocable.proxy;

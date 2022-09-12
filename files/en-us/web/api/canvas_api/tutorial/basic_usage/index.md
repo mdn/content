@@ -9,6 +9,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary("HTML")}} element itself. At the end of this page, you will know how to set up a canvas 2D context and have drawn a first example in your browser.
@@ -89,7 +90,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>Canvas tutorial</title>
@@ -123,9 +124,10 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Canvas experiment</title>
   <script type="application/javascript">
     function draw() {
       const canvas = document.getElementById('canvas');

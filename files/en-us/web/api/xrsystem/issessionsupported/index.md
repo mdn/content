@@ -17,7 +17,8 @@ tags:
   - isSessionSupported
 browser-compat: api.XRSystem.isSessionSupported
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSystem")}} method
 **`isSessionSupported()`** returns a promise which resolves to
@@ -41,7 +42,7 @@ isSessionSupported(mode)
   - : A {{jsxref("String")}} specifying the WebXR session mode for which support is to
     be checked. Possible modes to check for:
 
-    - `immersive-ar` {{experimental_inline}}
+    - `immersive-ar` {{Experimental_Inline}}
     - `immersive-vr`
     - `inline`
 

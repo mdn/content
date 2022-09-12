@@ -11,7 +11,9 @@ spec-urls:
   - https://w3c.github.io/aria/#aria-checked
   - https://w3c.github.io/aria-practices/#checkbox
 ---
-The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
+
+The `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
+
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
 
 ## Description
@@ -88,6 +90,6 @@ myHTMLElement.ariaChecked = true;
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

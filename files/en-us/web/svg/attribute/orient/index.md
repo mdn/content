@@ -6,6 +6,7 @@ tags:
   - SVG Attr
 browser-compat: svg.elements.marker.orient
 ---
+
 {{SVGRef}}
 
 The **`orient`** attribute indicates how a marker is rotated when it is placed at its position on the shape.
@@ -74,7 +75,7 @@ html, body, svg {
 - `auto`
   - : This value indicates that the marker is oriented such that its positive x-axis is pointing in a direction relative to the path at the position the marker is placed.
 - `auto-start-reverse`
-  - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` where specified. For all other markers, `auto-start-reverse` means the same as `auto`.
+  - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` were specified. For all other markers, `auto-start-reverse` means the same as `auto`.
 
     > **Note:** This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.
 - `<angle>`

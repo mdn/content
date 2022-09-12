@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.redirect
 ---
+
 {{APIRef("Fetch")}}
 
 The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.

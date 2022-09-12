@@ -15,6 +15,7 @@ tags:
   - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **read-only** {{domxref("HTMLSelectElement")}} property
@@ -81,11 +82,11 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", function() {
+orderButton.addEventListener("click", () => {
   let collection = itemList.selectedOptions;
   let output = "";
 
-  for (let i=0; i<collection.length; i++) {
+  for (let i = 0; i < collection.length; i++) {
     if (output === "") {
       output = "Your order for the following items has been placed: ";
     }

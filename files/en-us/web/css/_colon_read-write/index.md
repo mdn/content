@@ -11,6 +11,7 @@ tags:
   - read-write
 browser-compat: css.selectors.read-write
 ---
+
 {{CSSRef}}
 
 The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is editable by the user.

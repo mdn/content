@@ -9,6 +9,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a
@@ -60,4 +61,5 @@ ws.has(window);    // Returns false. The window is no longer present in the Weak
 ## See also
 
 - {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

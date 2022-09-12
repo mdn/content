@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 When an HTML document has been switched to
@@ -37,6 +38,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### Parameters
 
 - `aCommandName`
+
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument. Note that Internet Explorer uses this to set the text background color.

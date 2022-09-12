@@ -11,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.rangeCount
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.rangeCount`** read-only property returns the
@@ -49,7 +50,7 @@ in the browser to see it change.
 ### JavaScript
 
 ```js
-window.setInterval(function () {
+setInterval(() => {
   console.log(window.getSelection().rangeCount);
 }, 1000);
 ```

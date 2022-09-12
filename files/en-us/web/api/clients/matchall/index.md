@@ -5,13 +5,13 @@ page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
   - ServiceWorker
 browser-compat: api.Clients.matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`matchAll()`** method of the {{domxref("Clients")}}

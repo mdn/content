@@ -6,7 +6,8 @@ tags:
   - Event
 browser-compat: api.MediaStream.addtrack_event
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The `addtrack` event is fired when a new [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) object has been added to a [`MediaStream`](/en-US/docs/Web/API/MediaStream).
 
@@ -24,7 +25,7 @@ onaddtrack = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamTrackEvent")}}
 

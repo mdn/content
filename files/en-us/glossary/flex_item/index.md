@@ -7,6 +7,7 @@ tags:
   - flex item
   - flexbox
 ---
+
 The direct children of a {{glossary("Flex Container")}} (elements with `display: flex` or `display: inline-flex` set on them) become **flex items**.
 
 Continuous runs of text inside flex containers will also become flex items.

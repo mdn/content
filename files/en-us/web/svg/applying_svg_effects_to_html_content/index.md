@@ -7,6 +7,7 @@ tags:
   - HTML
   - SVG
 ---
+
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
@@ -115,7 +116,7 @@ You can make changes to the SVG in real time and see them immediately affect the
 
 ```js
 function toggleRadius() {
-  var circle = document.getElementById("circle");
+  const circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
 ```

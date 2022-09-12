@@ -11,6 +11,7 @@ tags:
   - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
+
 {{APIRef("Streams")}}
 
 The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is copied into the stream's internal queues).

@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on [May 5, 2020](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
@@ -43,7 +44,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### CSS
 
-- Firefox now supports [CSS4 system colors](/en-US/docs/Web/CSS/color_value#system_colors) ({{bug(1590894)}}).
+- Firefox now supports [CSS colors level 4 system colors](https://www.w3.org/TR/css-color-4/#typedef-system-color) ({{bug(1590894)}}).
 
 ### SVG
 

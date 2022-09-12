@@ -15,6 +15,7 @@ browser-compat:
   - webextensions.manifest.sidebar_action
   - webextensions.manifest.options_ui
 ---
+
 {{AddonSidebar}}
 
 Certain user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - are specified by your extension in essentially the same way:
@@ -105,6 +106,7 @@ Most styles are automatically applied, but some elements require you to add the 
 &#x3C;label for="op2">Option 2&#x3C;/label>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
@@ -236,6 +238,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
 &#x3C;/div>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
@@ -322,8 +325,6 @@ button.panel-section-tabs-button {
   background-color: unset;
   font: inherit;
   text-shadow: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border: none;
 }

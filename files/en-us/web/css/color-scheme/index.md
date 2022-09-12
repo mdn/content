@@ -16,6 +16,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.color-scheme
 ---
+
 {{CSSRef}}
 
 The **`color-scheme`** CSS property allows an element to indicate which color schemes it can comfortably be rendered in.

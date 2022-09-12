@@ -13,6 +13,7 @@ tags:
   - scrolling
 browser-compat: css.properties.overflow
 ---
+
 {{CSSRef}}
 
 The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) — in both directions.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 The `Screen` interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.
@@ -39,7 +40,7 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
   - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
 - {{DOMxRef("Screen.pixelDepth")}}
   - : Gets the bit depth of the screen.
-- {{DOMxRef("Screen.top")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- {{DOMxRef("Screen.top")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the distance in pixels from the top side of the current screen.
 - {{DOMxRef("Screen.width")}}
   - : Returns the width of the screen.
@@ -52,14 +53,14 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
 _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 
-- {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.lockOrientation")}} {{Deprecated_Inline}}
   - : Lock the screen orientation (only works in fullscreen or for installed apps)
-- {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.unlockOrientation")}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
 ## Events
 
-- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fires when the screen orientation changes.
 
 ## Example

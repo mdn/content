@@ -12,6 +12,7 @@ tags:
   - client-side
   - state
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -104,41 +105,41 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
 1. Create a new folder — `src/components`.
 
-    > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
+   > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
 
 2. Create a file named `src/components/Todos.svelte` with the following content:
 
-    ```html
-    <h1>Svelte to-do list</h1>
-    ```
+   ```html
+   <h1>Svelte to-do list</h1>
+   ```
 
 3. Change the `title` element in `public/index.html` to contain the text _Svelte to-do list_:
 
-    ```html
-    <title>Svelte to-do list</title>
-    ```
+   ```html
+   <title>Svelte to-do list</title>
+   ```
 
 4. Open `src/App.svelte` and replace its contents with the following:
 
-    ```html
-    <script>
-      import Todos from './components/Todos.svelte'
-    </script>
+   ```html
+   <script>
+     import Todos from './components/Todos.svelte'
+   </script>
 
-    <Todos />
-    ```
+   <Todos />
+   ```
 
 5. In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
 
-    ```js
-    import App from './App.svelte'
+   ```js
+   import App from './App.svelte'
 
-    const app = new App({
-      target: document.body
-    })
+   const app = new App({
+     target: document.body
+   })
 
-    export default app
-    ```
+   export default app
+   ```
 
 Now if you check your testing server URL you'll see our `Todos.svelte` component being rendered:
 
@@ -301,7 +302,7 @@ You may notice some unusual attributes here. For example:
 
 Here, `aria-pressed` tells assistive technology (like screen readers) that the button can be in one of two states: `pressed` or `unpressed`. Think of these as analogs for on and off. Setting a value of `true` means that the button is pressed by default.
 
-The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.
+The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screen reader users that do not have the extra visual context to help them.
 
 Further down, you can find the following `<ul>` element:
 
@@ -425,7 +426,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
 }
 button::-moz-focus-inner {
   border: 0;

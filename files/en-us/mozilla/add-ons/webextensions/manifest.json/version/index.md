@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.version
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -45,7 +46,7 @@ console.log(browser.runtime.getManifest().version);
 
 If the manifest contains:
 
-```js
+```json
 "version": "0.1"
 ```
 

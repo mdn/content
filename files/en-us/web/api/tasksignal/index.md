@@ -7,10 +7,10 @@ tags:
   - Interface
   - Reference
   - TaskSignal
-  - Experimental
 browser-compat: api.TaskSignal
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskSignal`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a signal object that allows you to communicate with a prioritized task, and abort it or change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) (if required) via a {{domxref('TaskController')}} object.
 
@@ -28,7 +28,7 @@ Abortable tasks that do not need the priority to change may instead specify an {
 
 _The `TaskSignal` interface also inherits properties from its parent interface, {{domxref("AbortSignal")}}._
 
-- {{domxref('TaskSignal.priority')}}  {{readonlyInline}}
+- {{domxref('TaskSignal.priority')}} {{ReadOnlyInline}}
   - : Returns the priority of the signal.
 
 ## Methods

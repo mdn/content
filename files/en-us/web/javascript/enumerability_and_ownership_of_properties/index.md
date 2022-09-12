@@ -5,6 +5,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{JsSidebar("More")}}
 
 Every property in JavaScript objects can be classified by three factors:
@@ -51,14 +52,14 @@ Methods that only visit string properties or only symbol properties will have an
 
 Note that this is not the most efficient algorithm for all cases, but useful for a quick demonstration.
 
-- Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
-- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
+- Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).includes(prop)`
+- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach((value, prop) => {});` (or use `filter()`, `map()`, etc.)
 
 ```js
 const SimplePropertyRetriever = {
   getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-      // Or could use for..in filtered with Object.hasOwn or just this: return Object.keys(obj);
+      // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
   getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
@@ -78,7 +79,7 @@ const SimplePropertyRetriever = {
   },
   getOwnAndPrototypeEnumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
-    // Or could use unfiltered for..in
+    // Or could use unfiltered for...in
   },
   getOwnAndPrototypeNonenumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
@@ -101,7 +102,7 @@ const SimplePropertyRetriever = {
     const props = [];
     do {
       if (iterateSelf) {
-        Object.getOwnPropertyNames(obj).forEach(function(prop) {
+        Object.getOwnPropertyNames(obj).forEach((prop) => {
           if (props.indexOf(prop) === -1 && shouldInclude(obj, prop)) {
             props.push(prop);
           }

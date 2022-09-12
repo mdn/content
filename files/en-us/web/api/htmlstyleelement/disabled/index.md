@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement.disabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
@@ -33,7 +34,7 @@ Note that you can also access any/all stylesheets in the document using [`Docume
 
 #### HTML
 
-The HTML contains an [HTML `<style>` element](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
+The HTML contains an HTML [`<style>`](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
 
 ```html
 <button>Enable</button>
@@ -50,7 +51,7 @@ As the style already exists, as it is defined in the SVG, this should succeed.
 
 ```js
 const style = document.getElementById("InlineStyle")
-style.disabled = true;  
+style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the `disabled` value and button text.
@@ -104,7 +105,7 @@ Before this point the document did not have an associated style, and so the valu
 
 ```js
 //Disable the style
-style.disabled=true; 
+style.disabled=true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).

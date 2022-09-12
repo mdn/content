@@ -10,6 +10,7 @@ tags:
   - Routing
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -33,7 +34,7 @@ In this article we learn about **routing**, or URL-based filtering as it is some
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -82,7 +83,7 @@ Router.map(function() {
 
 The highlighted lines were added when the 2nd and 3rd commands above were run.
 
-`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured.  It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
+`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured. It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
 
 Creating the "Index" route did not add a route definition line to `router.js`, because like with URL navigation and JavaScript module loading, "Index" is a special word that indicates the default route to render, load, etc.
 
@@ -90,13 +91,13 @@ To adjust our old way of rendering the TodoList app, we'll first need to replace
 
 Go to the `todomvc/app/templates/application.hbs` file and replace
 
-```html
+```hbs
 <TodoList />
 ```
 
 With
 
-```js
+```hbs
 \{{outlet}}
 ```
 
@@ -104,13 +105,13 @@ Next, in our `index.hbs`, `completed.hbs`, and `active.hbs` templates (also foun
 
 In each case, replace
 
-```js
+```hbs
 \{{outlet}}
 ```
 
 with
 
-```html
+```hbs
 <TodoList />
 ```
 
@@ -161,13 +162,13 @@ We can now update the `todomvc/app/templates/index.hbs` file so that when it inc
 
 In this file, change
 
-```html
+```hbs
 <TodoList />
 ```
 
 To
 
-```html
+```hbs
 <TodoList @todos=\{{ @model.allTodos }}/>
 ```
 
@@ -198,13 +199,13 @@ We can now update the `todomvc/app/templates/completed.hbs` file so that when it
 
 In this file, change
 
-```html
+```hbs
 <TodoList />
 ```
 
 To
 
-```html
+```hbs
 <TodoList @todos=\{{ @model.completedTodos }}/>
 ```
 
@@ -273,13 +274,13 @@ Update it to
 
 One small final thing that we need to fix is that previously, inside `todomvc/app/components/todo-list.hbs`, we were accessing the todo-data service directly and looping over all todos, as shown here:
 
-```js
+```hbs
 \{{#each this.todos.all as |todo| }}
 ```
 
 Since we now want to have our TodoList component show a filtered list, we'll want to pass an argument to the TodoList component representing the "current list of todos", as shown here:
 
-```js
+```hbs
 \{{#each @todos as |todo| }}
 ```
 

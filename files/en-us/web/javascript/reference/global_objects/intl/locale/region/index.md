@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.region
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.region`** property is an accessor property that returns the region of the world (usually a country) associated with the locale.
@@ -27,7 +28,7 @@ The region is an essential part of the locale identifier, as it places the local
 The region is the third part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The region is a mandatory part of a
 
 ```js
-let locale = new Intl.Locale("en-Latn-US");
+const locale = new Intl.Locale("en-Latn-US");
 console.log(locale.region); // Prints "US"
 ```
 
@@ -36,7 +37,7 @@ console.log(locale.region); // Prints "US"
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a configuration object, which can be used to set the region subtag and property.
 
 ```js
-let locale = new Intl.Locale("fr-Latn", { region: "FR" });
+const locale = new Intl.Locale("fr-Latn", { region: "FR" });
 console.log(locale.region); // Prints "FR"
 ```
 

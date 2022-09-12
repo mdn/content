@@ -7,6 +7,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 When SVG was specified, support for web fonts was not widespread in browsers. Since accessing the correct font file is however crucial for rendering text correctly, a font description technology was added to SVG to provide this ability. It was not meant for compatibility with other formats like PostScript or OTF, but rather as a simple means of embedding glyph information into SVG when rendered.

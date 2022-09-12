@@ -12,10 +12,10 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrack.readyState
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.readyState`** read-only property
-returns an enumerated value giving the status of the track.
+{{APIRef("Media Capture and Streams")}}
+
+The **`MediaStreamTrack.readyState`** read-only property returns an enumerated value giving the status of the track.
 
 ## Value
 

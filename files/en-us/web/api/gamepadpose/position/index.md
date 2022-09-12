@@ -14,6 +14,7 @@ tags:
   - WebVR
 browser-compat: api.GamepadPose.position
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`position`** read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.

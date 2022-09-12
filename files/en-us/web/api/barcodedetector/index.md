@@ -11,18 +11,19 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
 
 ## Constructors
 
-- {{domxref('BarcodeDetector.BarcodeDetector', 'BarcodeDetector.BarcodeDetector()')}}
+- {{domxref('BarcodeDetector.BarcodeDetector', 'BarcodeDetector.BarcodeDetector()')}} {{Experimental_Inline}}
   - : Creates and returns a `BarcodeDetector` object, with optional `barcodeDetectorOptions`
 
 ## Methods
 
-- {{domxref('BarcodeDetector.detect', 'detect()')}}
+- {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
 
   - : Returns a {{jsxref('Promise')}} which fulfills with an array of `detectedBarcode` objects with the following properties:
 
@@ -31,7 +32,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
     - `format`: The detected barcode format. (For a full list of formats see the \[landing page])
     - `rawValue`: A string decoded from the barcode data.
 
-- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}}
+- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ## Examples
@@ -69,14 +70,13 @@ BarcodeDetector.getSupportedFormats()
 This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then((barcodes) => {
-      barcodes.forEach((barcode) => console.log(barcode.rawData));
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-
+barcodeDetector.detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawData));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## Specifications

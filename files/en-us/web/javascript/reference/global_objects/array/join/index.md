@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.join
 ---
+
 {{JSRef}}
 
 The **`join()`** method creates and

@@ -18,6 +18,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceTransport")}}** method
@@ -60,7 +61,7 @@ the list.
 ```js
 const remoteCandidates = pc.getSenders()[0].transport.transport.getRemoteCandidates();
 
-remoteCandidates.forEach(function(candidate, index) {
+remoteCandidates.forEach((candidate, index) => {
   console.log(`Candidate ${index}: ${candidate.candidate}`);
 });
 ```

@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-overflow
 ---
+
 {{CSSRef}}
 
 The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('`…`'), or display a custom string.
@@ -77,7 +78,6 @@ This example shows different values for `text-overflow` applied to a paragraph, 
 #### HTML
 
 ```html
-
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
@@ -196,7 +196,7 @@ p {
 // Scroll each paragraph so the start is also hidden
 const paras = document.querySelectorAll("p");
 
-for (let para of paras) {
+for (const para of paras) {
   para.scroll(100, 0);
 }
 ```

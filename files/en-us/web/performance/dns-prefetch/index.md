@@ -5,6 +5,7 @@ tags:
   - Web Performance
   - dns-prefetch
 ---
+
 **`DNS-prefetch`** is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.
 
 ## Why use dns-prefetch?
@@ -22,7 +23,7 @@ When a browser requests a resource from a (third party) server, that [cross-orig
 ## Examples
 
 ```html
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -45,7 +46,7 @@ There are 3 main things to keep in mind:
 
 **Second**, it's also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
 
-```plain
+```http
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 

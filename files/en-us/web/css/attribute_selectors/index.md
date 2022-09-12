@@ -9,6 +9,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.attribute
 ---
+
 {{CSSRef}}
 
 The CSS **attribute selector** matches elements based on the presence or value of a given attribute.

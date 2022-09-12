@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
 This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.
@@ -30,7 +31,7 @@ A very simple first shader program.
 
 ```html hidden
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css hidden
@@ -73,23 +74,24 @@ void main() {
 ```
 
 ```js hidden
-;(function(){
+;(() => {
+  "use strict";
 ```
 
 ```js
-"use strict"
 window.addEventListener("load", setupWebGL, false);
-let gl,
-  program;
+let gl;
+let program;
+
 function setupWebGL (evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext()))
-    return;
+  if (!(gl = getRenderingContext())) return;
 
   let source = document.querySelector("#vertex-shader").innerHTML;
   const vertexShader = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vertexShader,source);
   gl.compileShader(vertexShader);
+
   source = document.querySelector("#fragment-shader").innerHTML;
   const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fragmentShader,source);
@@ -105,8 +107,7 @@ function setupWebGL (evt) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
-    document.querySelector("p").innerHTML =
-      `Shader program did not link successfully. Error log: ${linkErrLog}`;
+    document.querySelector("p").textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
 
@@ -127,11 +128,13 @@ function initializeAttributes() {
 }
 
 function cleanup() {
-gl.useProgram(null);
-if (buffer)
-  gl.deleteBuffer(buffer);
-if (program)
-  gl.deleteProgram(program);
+  gl.useProgram(null);
+  if (buffer) {
+    gl.deleteBuffer(buffer);
+  }
+  if (program) {
+    gl.deleteProgram(program);
+  }
 }
 ```
 
@@ -140,16 +143,13 @@ function getRenderingContext() {
   const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     const paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Failed to get WebGL context."
-      + "Your browser or device may not support WebGL.";
+    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
     return null;
   }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;

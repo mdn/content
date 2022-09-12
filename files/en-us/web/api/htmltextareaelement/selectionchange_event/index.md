@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.

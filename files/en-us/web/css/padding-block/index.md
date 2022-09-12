@@ -3,10 +3,12 @@ title: padding-block
 slug: Web/CSS/padding-block
 tags:
   - CSS
+  - CSS Property
   - padding-block
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding-block
 ---
+
 {{CSSRef}}
 
 The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.

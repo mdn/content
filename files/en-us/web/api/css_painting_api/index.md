@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PaintWorkletGlobalScope
 ---
+
 {{DefaultAPISidebar("CSS Painting API")}}
 
 The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
@@ -49,7 +50,7 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 
 The following example creates a list of items with a background image that rotates between three different colors and three widths. In a supporting browser you will see something like the image below.
 
-![The width and color of the background image changes based on the custom properties](Guide/boxbg.png)
+![The width and color of the background image changes based on the custom properties](guide/boxbg.png)
 
 To achieve this we'll define two custom CSS properties, `--boxColor` and `--widthSubtractor`.
 

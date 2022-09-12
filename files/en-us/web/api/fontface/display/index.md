@@ -13,6 +13,7 @@ tags:
   - display
 browser-compat: api.FontFace.display
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`display`** property of the {{domxref("FontFace")}}

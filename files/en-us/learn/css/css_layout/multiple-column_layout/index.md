@@ -11,6 +11,7 @@ tags:
   - Multi-col
   - Multiple columns
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
 The multiple-column layout specification provides you with a method for laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.
@@ -62,7 +63,6 @@ body {
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
-
 ```
 
 ```html hidden

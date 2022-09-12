@@ -6,10 +6,11 @@ tags:
   - API
   - Element Lists
   - HTMLCollection
-  - Interface
+  - Method
   - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`namedItem()`** method of the {{domxref("HTMLCollection")}} interface returns

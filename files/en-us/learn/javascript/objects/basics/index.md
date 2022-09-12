@@ -2,6 +2,7 @@
 title: JavaScript object basics
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.
@@ -42,7 +43,7 @@ const person = {};
 
 Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
 
-```js
+```
 [object Object]
 Object { }
 { }
@@ -122,16 +123,21 @@ person.bio()
 An object property can itself be an object. For example, try changing the `name` member from
 
 ```js
-name: ['Bob', 'Smith'],
+const person = {
+  name: ['Bob', 'Smith'],
+};
 ```
 
 to
 
 ```js
-name : {
-  first: 'Bob',
-  last: 'Smith'
-},
+const person = {
+  name: {
+    first: 'Bob',
+    last: 'Smith',
+  },
+  // …
+};
 ```
 
 To access these items you just need to chain the extra step onto the end with another dot. Try these in the JS console:

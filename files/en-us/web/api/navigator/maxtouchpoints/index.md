@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.maxTouchPoints
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`maxTouchPoints`** read-only property of the

@@ -7,8 +7,10 @@ tags:
   - Web
   - Property
   - Houdini
+  - Experimental
 browser-compat: css.at-rules.property.initial-value
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`initial-value`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) unless the syntax accepts any valid token stream. It sets the initial-value for the property.

@@ -13,6 +13,7 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("ChannelSplitterNode")}} object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.
@@ -20,8 +21,8 @@ The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/W
 ## Syntax
 
 ```js
-new ChannelSpitterNode(context)
-new ChannelSpitterNode(context, options)
+new ChannelSplitterNode(context)
+new ChannelSplitterNode(context, options)
 ```
 
 ### Parameters

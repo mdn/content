@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-weight
 ---
+
 {{CSSRef}}
 
 The **`font-weight`** [CSS](/en-US/docs/Web/CSS) property sets the weight (or boldness) of the font. The weights available depend on the {{cssxref("font-family")}} that is currently set.
@@ -30,10 +31,10 @@ font-weight: bolder;
 font-weight: 100;
 font-weight: 200;
 font-weight: 300;
-font-weight: 400;// normal
+font-weight: 400; /* normal */
 font-weight: 500;
 font-weight: 600;
-font-weight: 700;// bold
+font-weight: 700; /* bold */
 font-weight: 800;
 font-weight: 900;
 
@@ -142,20 +143,20 @@ Note that when using relative weights, only four font weights are considered —
 
 ### Common weight name mapping
 
-The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)):
+The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass)):
 
-| Value | Common weight name                                                                                                                |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 100   | Thin (Hairline)                                                                                                                   |
-| 200   | Extra Light (Ultra Light)                                                                                                         |
-| 300   | Light                                                                                                                             |
-| 400   | Normal (Regular)                                                                                                                  |
-| 500   | Medium                                                                                                                            |
-| 600   | Semi Bold (Demi Bold)                                                                                                             |
-| 700   | Bold                                                                                                                              |
-| 800   | Extra Bold (Ultra Bold)                                                                                                           |
-| 900   | Black (Heavy)                                                                                                                     |
-| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| Value | Common weight name                                                                                                          |
+| ----- | --------------------------------------------------------------------------------------------------------------------------- |
+| 100   | Thin (Hairline)                                                                                                             |
+| 200   | Extra Light (Ultra Light)                                                                                                   |
+| 300   | Light                                                                                                                       |
+| 400   | Normal (Regular)                                                                                                            |
+| 500   | Medium                                                                                                                      |
+| 600   | Semi Bold (Demi Bold)                                                                                                       |
+| 700   | Bold                                                                                                                        |
+| 800   | Extra Bold (Ultra Bold)                                                                                                     |
+| 900   | Black (Heavy)                                                                                                               |
+| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### Variable fonts
 
@@ -213,7 +214,7 @@ p {
 /* Set div text to two steps heavier than
    normal but less than a standard bold. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Set span text to be one step lighter

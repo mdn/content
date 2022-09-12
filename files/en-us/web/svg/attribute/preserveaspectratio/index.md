@@ -8,11 +8,12 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
   - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
 ---
+
 {{SVGRef}}
 
 The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given aspect ratio must fit into a viewport with a different aspect ratio.
 
-Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the `preserveAspectRatio` attribute has no effect (*with one exception, the {{SVGElement('image')}} element, as described below*).
+Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the `preserveAspectRatio` attribute has no effect (_with one exception, the {{SVGElement('image')}} element, as described below_).
 
 ## Example
 
@@ -166,7 +167,7 @@ Its value is made of one or two keywords: A required alignment value and an opti
   - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
 
     - **none**
-      Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. *Note that if* `<align>` *is* `none`*, then the optional* `<meetOrSlice>` *value is ignored*.
+      Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. _Note that if_ `<align>` _is_ `none`_, then the optional_ `<meetOrSlice>` _value is ignored_.
     - **xMinYMin** - Force uniform scaling.
       Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
       Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
@@ -197,7 +198,7 @@ Its value is made of one or two keywords: A required alignment value and an opti
 - Meet or slice reference
   - : The meet or slice reference is optional and, if provided, must be one of the following keywords:
 
-    - **meet** (*the default*) - Scale the graphic such that:
+    - **meet** (_the default_) - Scale the graphic such that:
 
       - aspect ratio is preserved
       - the entire {{ SVGAttr("viewBox") }} is visible within the viewport

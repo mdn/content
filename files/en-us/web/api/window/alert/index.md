@@ -11,6 +11,7 @@ tags:
   - alert
 browser-compat: api.Window.alert
 ---
+
 {{ APIRef }}
 
 `window.alert()` instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.
@@ -43,7 +44,7 @@ alert("Hello world!");
 
 Both produce:
 
-![](alerthelloworld.png)
+![Black alert dialog box. At the top left small circle icon follow by white open and close brackets containing this white text: JavaScript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
 
 ## Notes
 

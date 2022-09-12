@@ -14,7 +14,8 @@ tags:
   - noiseSuppression
 browser-compat: api.MediaTrackSettings.noiseSuppression
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`noiseSuppression`** property is a Boolean value whose value

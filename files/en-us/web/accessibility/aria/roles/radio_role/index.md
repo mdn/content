@@ -8,6 +8,7 @@ tags:
   - ARIA widget
   - Reference
 ---
+
 The `radio` role is one of a group of checkable radio buttons, in a `radiogroup`, where no more than a single radio button can be checked at a time.
 
 ## Description
@@ -91,6 +92,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ## Associated WAI-ARIA Roles, States, and Properties
 
 - ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
+
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
@@ -107,12 +109,15 @@ From the assistive technology user's perspective, the heading does not exist sin
 ## Keyboard interactions
 
 - <kbd>Tab</kbd> + <kbd>Shift</kbd>
+
   - : Move focus into and out of the radio group. When focus moves into a radio group, and a radio button is already checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
 - <kbd>Space</kbd>
+
   - : Checks the radio if not already checked. Unchecks a previously checked radio button in the radio group.
 
 - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
+
   - : Move focus to and checks the next radio button in the group, unchecking the previously focused radio button. If focus is on the last radio button, focus moves to the first radio button.
 
 - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
@@ -236,7 +241,6 @@ setChecked  = function () {
     // thisRadio.focus();
     // set the value of the radioGroup to the value of the currently selected radio
 };
-
 ```
 
 <!-- {{EmbedLiveSample("Examples", 230, 250)}} -->
@@ -276,6 +280,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

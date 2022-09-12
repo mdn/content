@@ -5,13 +5,13 @@ page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
-  - Experimental
   - Method
   - Range
   - Reference
 browser-compat: api.Range.getBoundingClientRect
 ---
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+
+{{ApiRef("DOM")}}
 
 The **`Range.getBoundingClientRect()`** method returns a {{
   domxref("DOMRect") }} object that bounds the contents of the range; this is a rectangle

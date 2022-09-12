@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBuffer.getChannelData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).
@@ -49,7 +50,7 @@ const frameCount = audioCtx.sampleRate * 2.0;
 
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {

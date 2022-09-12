@@ -1,5 +1,5 @@
 ---
-title: CSS Grid Layout and Accessibility
+title: Grid layout and accessibility
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 tags:
   - Accessibility
@@ -7,6 +7,7 @@ tags:
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 Those of us who have been doing web development for more years than we care to remember might consider that CSS Grid is a little bit like using "tables for layout". Back in the early days of web design, the way we constructed page layout was to use HTML tables, then fragment our design into the cells of those tables in order to create a layout. This had some advantages over the "CSS Positioning" that came afterwards, in that we could take advantage of the alignment and full height columns offered by table display. The biggest downside however was that it tied our design to the mark-up, often creating accessibility issues as it did so. In order to lay the design out in the table we often broke up the content in ways that made no sense at all when read out by a screen reader for example.

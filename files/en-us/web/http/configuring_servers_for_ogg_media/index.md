@@ -8,6 +8,7 @@ tags:
   - Ogg
   - Video
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.
@@ -24,7 +25,7 @@ Most servers don't by default serve Ogg media with the correct MIME types, so yo
 
 For Apache, you can add the following to your configuration:
 
-```
+```plain
 AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
@@ -66,7 +67,7 @@ There are two ways Gecko can do this. The best way is to offer an `X-Content-Dur
 
 For example, if the video is 1 minute and 32.6 seconds long, this header would be:
 
-```
+```http
 X-Content-Duration: 92.6
 ```
 

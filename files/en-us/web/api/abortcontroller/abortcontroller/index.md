@@ -6,11 +6,11 @@ tags:
   - API
   - AbortController
   - Constructor
-  - Experimental
   - Fetch
   - Reference
 browser-compat: api.AbortController.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortController()`** constructor creates a new {{domxref("AbortController")}} object instance.
@@ -61,7 +61,7 @@ function fetchVideo() {
 
 > **Note:** When `abort()` is called, the `fetch()` promise rejects with an `AbortError`.
 
-You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
 ## Specifications
 

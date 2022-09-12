@@ -9,6 +9,7 @@ tags:
   - toString()
 browser-compat: javascript.builtins.BigInt.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

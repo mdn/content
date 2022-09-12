@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBufferSourceNode()`**
@@ -28,6 +29,7 @@ new AudioBufferSourceNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
+
   - : Options are as follows:
 
     - `buffer`

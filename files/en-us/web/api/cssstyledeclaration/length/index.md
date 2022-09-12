@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.length
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only property returns an integer that represents the

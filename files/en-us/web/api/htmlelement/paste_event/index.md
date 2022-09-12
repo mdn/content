@@ -12,6 +12,7 @@ tags:
   - paste
 browser-compat: api.Element.paste_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
@@ -36,7 +37,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example

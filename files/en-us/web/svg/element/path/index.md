@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.path
 ---
+
 {{SVGRef}}
 
 The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to define a shape. All the basic shapes can be created with a path element.
@@ -34,10 +35,10 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("d")}}
   - : This attribute defines the shape of the path.
-    *Value type*: **\<string>** ; *Default value*: `''`; *Animatable*: **yes**
+    _Value type_: **\<string>** ; _Default value_: `''`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : This attribute lets authors specify the total length for the path, in user units.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 

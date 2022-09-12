@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flat
 ---
+
 {{JSRef}}
 
 The **`flat()`** method creates a new array with all sub-array
@@ -59,9 +60,13 @@ const arr = [1, 2, [3, 4, [5, 6]]];
 
 // to enable deep level flatten use recursion with reduce and concat
 function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
+  if (!Array.isArray(arr)) {
+    return arr;
+  }
+  return d > 0
+    ? arr.reduce((acc, val) => acc.concat(flatDeep(val, d - 1)), [])
+    : arr.slice();
+}
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]

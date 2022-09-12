@@ -12,6 +12,7 @@ tags:
   - activeElement
 browser-compat: api.Document.activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`activeElement`** read-only property
@@ -87,3 +88,7 @@ textarea2.addEventListener('mouseup', onMouseUp, false);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.hasFocus")}}

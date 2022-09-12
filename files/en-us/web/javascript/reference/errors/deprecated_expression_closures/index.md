@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "expression closures are deprecated" occurs when the
@@ -37,10 +38,10 @@ Expression closures omit curly braces or return statements from function declara
 or from method definitions in objects.
 
 ```js example-bad
-var x = function() 1;
+var x = function () 1;
 
 var obj = {
-  count: function() 1
+  count: function () 1
 };
 ```
 
@@ -50,7 +51,7 @@ To convert the non-standard expression closures syntax to standard ECMAScript sy
 you can add curly braces and return statements.
 
 ```js example-good
-const x = function() { return 1; }
+const x = function () { return 1; }
 
 const obj = {
   count() { return 1; }
@@ -76,7 +77,7 @@ var obj = {
 };
 ```
 
-With ES2015 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
+With [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
 
 ```js example-good
 const obj = {

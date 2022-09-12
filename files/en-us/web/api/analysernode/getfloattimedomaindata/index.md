@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
@@ -64,7 +65,7 @@ function draw() {
     const v = dataArray[i] * 200.0;
     const y = HEIGHT/2 + v;
 
-    if(i === 0) {
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
     } else {
       canvasCtx.lineTo(x, y);

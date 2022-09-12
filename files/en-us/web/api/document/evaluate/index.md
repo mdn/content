@@ -10,6 +10,7 @@ tags:
   - XPath
 browser-compat: api.Document.evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XPath)
@@ -37,6 +38,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
     so that they can be matched with the document.
     The value `null` is common for HTML documents or when no namespace prefixes are used.
 - `resultType`
+
   - : An integer that corresponds to the type of result `XPathResult` to return.
     The following values are possible:
     - `ANY_TYPE` (`0`)

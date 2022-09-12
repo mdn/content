@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msubsup
 ---
+
 {{MathMLRef}}
 
 The MathML `<msubsup>` element is used to attach both a subscript and a superscript, together, to an expression.
@@ -17,13 +18,6 @@ It uses the following syntax: `<msubsup> base subscript superscript </msubsup>`.
 ## Attributes
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
-
-- `subscriptshift` {{deprecated_inline}}
-  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value.](/en-US/docs/Web/MathML/Attribute/Values#lengths)
-    This attribute is deprecated and will be removed in the future.
-- `superscriptshift` {{deprecated_inline}}
-  - : The minimum space by which to shift the superscript above the baseline of the expression, as a [length value.](/en-US/docs/Web/MathML/Attribute/Values#lengths)
-    This attribute is deprecated and will be removed in the future.
 
 ## Examples
 

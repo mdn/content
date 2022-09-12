@@ -18,6 +18,7 @@ tags:
   - requestsSent
 browser-compat: api.RTCIceCandidatePairStats.requestsSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's

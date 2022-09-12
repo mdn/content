@@ -19,6 +19,7 @@ browser-compat:
   - css.selectors.-webkit-scrollbar-corner
   - css.selectors.-webkit-resizer
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has `overflow:scroll;` set.

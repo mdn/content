@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.Blob
 ---
+
 {{APIRef("File API")}}
 
 The **`Blob()`** constructor returns a
@@ -26,6 +27,7 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
+
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
@@ -61,7 +63,3 @@ const blob = new Blob(array, {type : 'text/html'}); // the blob
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The deprecated {{domxref("BlobBuilder")}} interface which this constructor replaces.

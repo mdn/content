@@ -8,9 +8,11 @@ tags:
   - Reference
   - requestPermission
   - IdleDetector
+  - Experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the {{domxref("IdleDetector")}}
 interface returns a {{jsxref('Promise')}} that resolves with a string when the user has chosen

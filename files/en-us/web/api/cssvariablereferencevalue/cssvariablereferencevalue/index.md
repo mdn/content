@@ -10,8 +10,10 @@ tags:
   - Houdini
   - NeedsExample
   - Reference
+  - Experimental
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 Creates a new {{domxref('CSSVariableReferenceValue')}}.

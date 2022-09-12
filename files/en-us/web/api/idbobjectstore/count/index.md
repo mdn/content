@@ -13,6 +13,7 @@ tags:
   - data
 browser-compat: api.IDBObjectStore.count
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBObjectStore")}}
@@ -63,7 +64,7 @@ const transaction = db.transaction(['fThings'], 'readonly');
 const objectStore = transaction.objectStore('fThings');
 
 const countRequest = objectStore.count();
-countRequest.onsuccess = function() {
+countRequest.onsuccess = () => {
   console.log(countRequest.result);
 }
 ```

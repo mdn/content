@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStringList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG string list interface

@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioContext.getOutputTimestamp
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -63,7 +64,7 @@ You can see full code of this [example at output-timestamp](https://github.com/m
 
 ```js
 play.addEventListener('click', () => {
-  if(!audioCtx) {
+  if (!audioCtx) {
     audioCtx = new window.AudioContext();
   }
 

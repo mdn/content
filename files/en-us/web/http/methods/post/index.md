@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.POST
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `POST` method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
@@ -60,7 +61,7 @@ When the `POST` request is sent via a method other than an HTML form — like vi
 
 ## Syntax
 
-```
+```http
 POST /test
 ```
 
@@ -68,7 +69,7 @@ POST /test
 
 A simple form using the default `application/x-www-form-urlencoded` content type:
 
-```
+```http
 POST /test HTTP/1.1
 Host: foo.example
 Content-Type: application/x-www-form-urlencoded
@@ -79,7 +80,7 @@ field1=value1&field2=value2
 
 A form using the `multipart/form-data` content type:
 
-```
+```http
 POST /test HTTP/1.1
 Host: foo.example
 Content-Type: multipart/form-data;boundary="boundary"

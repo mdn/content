@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`GravitySensor()`**

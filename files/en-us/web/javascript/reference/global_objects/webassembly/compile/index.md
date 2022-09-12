@@ -11,6 +11,7 @@ tags:
   - compile
 browser-compat: javascript.builtins.WebAssembly.compile
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.compile()`** function compiles WebAssembly
@@ -37,7 +38,7 @@ representing the compiled module.
 
 ### Exceptions
 
-- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("WebAssembly.Module")}},
+- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("ArrayBuffer")}},
   the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}.

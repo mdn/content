@@ -9,6 +9,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}
 
 This example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.
@@ -29,7 +30,7 @@ Finally, all JavaScript code will run within an immediate function, which is a c
 <p>[ Some descriptive text about the example. ]</p>
 <button>[ Optional button element. ]</button>
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ### CSS

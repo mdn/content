@@ -1,5 +1,5 @@
 ---
-title: column-gap (grid-column-gap)
+title: column-gap
 slug: Web/CSS/column-gap
 tags:
   - CSS
@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-gap
 ---
+
 {{CSSRef}}
 
 The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("Gutters","gutter")}}) between an element's columns.
@@ -19,6 +20,8 @@ The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the ga
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
 Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_Columns), the definition of `column-gap` has been broadened to include multiple layout methods. Now specified in [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment), it may be used in Multi-column, Flexible Box, and Grid layouts.
+
+Note that `grid-column-gap` is an alias for this property.
 
 ## Syntax
 

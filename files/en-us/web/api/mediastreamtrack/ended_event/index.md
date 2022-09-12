@@ -15,7 +15,8 @@ tags:
   - ended
 browser-compat: api.MediaStreamTrack.ended_event
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`ended`** event of the {{domxref("MediaStreamTrack")}} interface is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.
 
@@ -58,7 +59,7 @@ track.addEventListener('ended', () => {
 You can also set up the event handler using the `onended` property:
 
 ```js
-track.onended = function() {
+track.onended = () => {
   let statusElem = document.getElementById("status-icon");
 
   statusElem.src = "/images/stopped-icon.png";

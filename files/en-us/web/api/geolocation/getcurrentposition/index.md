@@ -12,6 +12,7 @@ tags:
   - getCurrentPosition
 browser-compat: api.Geolocation.getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 
 The

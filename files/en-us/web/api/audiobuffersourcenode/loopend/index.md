@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loopEnd
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `loopEnd` property of the {{ domxref("AudioBufferSourceNode") }}
@@ -59,10 +60,10 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         myBuffer = buffer;
         songLength = buffer.duration;
         source.buffer = myBuffer;
@@ -74,7 +75,7 @@ function getData() {
         loopendControl.setAttribute('max', Math.floor(songLength));
       },
 
-      function(e){`Error with decoding audio data: ${e.err}`});
+      (e) => console.error(`Error with decoding audio data: ${e.err}`));
 
   }
 
@@ -83,12 +84,12 @@ function getData() {
 
 // …
 
-loopstartControl.oninput = function() {
+loopstartControl.oninput = () => {
   source.loopStart = loopstartControl.value;
   loopstartValue.innerHTML = loopstartControl.value;
 }
 
-loopendControl.oninput = function() {
+loopendControl.oninput = () => {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
 }

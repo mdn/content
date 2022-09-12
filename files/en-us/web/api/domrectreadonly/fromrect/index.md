@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the

@@ -11,6 +11,7 @@ tags:
   - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
@@ -31,7 +32,7 @@ onend = (event) => { };
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
@@ -95,7 +96,7 @@ animateElem.addEventListener('endEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
+  if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;

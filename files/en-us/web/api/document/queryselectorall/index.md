@@ -17,6 +17,7 @@ tags:
   - querySelectorAll
 browser-compat: api.Document.querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelectorAll()`**
@@ -111,7 +112,7 @@ can use any common looping statement, such as:
 ```js
 const highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach((userItem) => {
   deleteUser(userItem);
 });
 ```

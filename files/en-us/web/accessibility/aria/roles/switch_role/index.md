@@ -14,6 +14,7 @@ spec-urls:
   - https://w3c.github.io/aria/#switch
   - https://w3c.github.io/html-aria/#index-aria-switch
 ---
+
 The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except that instead of representing "checked" and "unchecked" states, which are fairly generic in meaning, the `switch` role represents the states "on" and "off."
 
 This example creates a widget and assigns the ARIA `switch` role to it.
@@ -164,12 +165,8 @@ button.switch span {
 label.switch {
   font: 16px "Open Sans", "Arial", sans-serif;
   line-height: 20px;
-  user-select: none;
   vertical-align: middle;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
+  user-select: none;
 }
 ```
 
@@ -195,6 +192,6 @@ The result looks like this:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method **creates
@@ -21,7 +22,7 @@ every element in the calling array.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 map((element) => { /* … */ })
 map((element, index) => { /* … */ })
@@ -133,9 +134,11 @@ The following code takes an array of objects and creates a new array containing 
 newly reformatted objects.
 
 ```js
-const kvArray = [{ key: 1, value: 10 },
-                 { key: 2, value: 20 },
-                 { key: 3, value: 30 }];
+const kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
 const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
 
@@ -163,8 +166,7 @@ const doubles = numbers.map((num) => num * 2);
 
 ### Using map generically
 
-This example shows how to use map on a {{jsxref("String")}} to get an array of bytes in
-the ASCII encoding representing the character values:
+This example shows how to use map on a {{jsxref("String")}} to get an array of numbers representing the string's characters in UTF-16 code units:
 
 ```js
 const map = Array.prototype.map;

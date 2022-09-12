@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.DOMParser.parseFromString
 ---
+
 {{APIRef("DOMParser")}}
 
 The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface parses a string containing either HTML or XML, returning an {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}.

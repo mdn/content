@@ -13,6 +13,7 @@ tags:
   - Property
 browser-compat: api.Document.fonts
 ---
+
 {{APIRef("DOM")}}
 
 The **`fonts`** property of the
@@ -30,7 +31,7 @@ of previously loaded fonts etc.
 ### Doing operation after all fonts are loaded
 
 ```js
-document.fonts.ready.then(function() {
+document.fonts.ready.then(() => {
   // Any operation that needs to be done only after all the fonts
   // have finished loading can go here.
 });

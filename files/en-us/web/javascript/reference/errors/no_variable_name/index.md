@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing variable name" is a common error.
@@ -62,7 +63,7 @@ Did you remember to assign values for all your `const` variables?
 
 ```js example-bad
 let x, y = "foo",
-const x, = "foo"
+const z, = "foo"
 
 const first = document.getElementById('one'),
 const second = document.getElementById('two'),
@@ -74,7 +75,7 @@ The fixed version:
 
 ```js example-good
 let x, y = "foo";
-const x = "foo";
+const z = "foo";
 
 const first = document.getElementById('one');
 const second = document.getElementById('two');

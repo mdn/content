@@ -11,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozGetDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozGetDataAt()`** method is used to
 retrieve an item in the drag event's {{domxref("DataTransfer","data transfer")}} object,

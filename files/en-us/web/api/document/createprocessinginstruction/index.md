@@ -11,6 +11,7 @@ tags:
   - createProcessInstruction
 browser-compat: api.Document.createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` generates a new [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) node and returns it.
@@ -46,7 +47,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css"');
 
 doc.insertBefore(pi, doc.firstChild);
 

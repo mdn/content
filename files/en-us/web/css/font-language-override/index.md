@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-language-override
 ---
+
 {{CSSRef}}
 
 The **`font-language-override`** CSS property controls the use of language-specific glyphs in a typeface.
@@ -44,7 +45,7 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.
 - {{cssxref("string")}}
-  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://docs.microsoft.com/en-us/typography/opentype/spec/languagetags). For example, "ENG" is English, and "KOR" is Korean.
+  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://docs.microsoft.com/typography/opentype/spec/languagetags). For example, "ENG" is English, and "KOR" is Korean.
 
 ## Formal definition
 

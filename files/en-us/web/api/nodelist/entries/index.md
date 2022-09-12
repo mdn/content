@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.entries()`** method returns an
@@ -40,7 +41,7 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-// Using for..of
+// Using for...of
 for (const entry of list.entries()) {
   console.log(entry);
 }

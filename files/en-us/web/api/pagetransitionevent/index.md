@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.PageTransitionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`PageTransitionEvent`** event object is available inside handler functions for the [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) and [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events, fired when a document is being loaded or unloaded.
@@ -19,7 +20,7 @@ The **`PageTransitionEvent`** event object is available inside handler functions
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
 ## Example
@@ -28,7 +29,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <body>
 </body>
 </html>
@@ -37,15 +38,13 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### JavaScript
 
 ```js
-window.addEventListener('pageshow', myFunction);
-
-function myFunction(event) {
+window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
     alert("The page was cached by the browser");
   } else {
     alert("The page was NOT cached by the browser");
   }
-}
+});
 ```
 
 ## Specifications

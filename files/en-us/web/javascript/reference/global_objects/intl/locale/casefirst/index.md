@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.caseFirst
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.caseFirst`** property is an accessor property that returns whether case is taken into account for the locale's collation rules.
@@ -37,7 +38,7 @@ There are 3 values that the `caseFirst` property can have, outlined in the table
 In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the values that `caseFirst` represents correspond to the key `kf`. `kf` is treated as a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension key. Thus, the `caseFirst` value can be added to the initial locale identifier string that is passed into the `Locale` constructor. To add the `caseFirst` value, first add the `-u` extension key to the string. Next, add the `-kf` extension key to indicate that you are adding a value for `caseFirst`. Finally, add the `caseFirst` value to the string.
 
 ```js
-let locale = new Intl.Locale("fr-Latn-FR-u-kf-upper");
+const locale = new Intl.Locale("fr-Latn-FR-u-kf-upper");
 console.log(locale.caseFirst); // Prints "upper"
 ```
 
@@ -46,7 +47,7 @@ console.log(locale.caseFirst); // Prints "upper"
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the `caseFirst` property of the configuration object to your desired `caseFirst` value, and then pass it into the constructor.
 
 ```js
-let locale = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
+const locale = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
 console.log(locale.caseFirst); // Prints "lower"
 ```
 

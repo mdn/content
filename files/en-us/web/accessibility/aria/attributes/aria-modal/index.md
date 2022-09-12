@@ -40,7 +40,6 @@ If a dialog is not modal — there is no inert background and focus isn't confin
 ## Example
 
 ```html
-
 <div id="backdrop" class="no-scroll">
   <div role="alertdialog"
        aria-modal="true"
@@ -82,9 +81,9 @@ The `aria-modal` attribute exposes the existence of the modal to assistive techn
 ## ARIAMixin API
 
 - {{domxref("Element.ariaModal")}}
-  - : The  [`ariaModal`](/en-US/docs/Web/API/Element/ariaModal) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-modal` attribute.
+  - : The [`ariaModal`](/en-US/docs/Web/API/Element/ariaModal) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-modal` attribute.
 - {{domxref("ElementInternals.ariaModal")}}
-  - : The  [`ariaModal`](/en-US/docs/Web/API/ElementInternals/ariaModal) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-modal` attribute.
+  - : The [`ariaModal`](/en-US/docs/Web/API/ElementInternals/ariaModal) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-modal` attribute.
 
 ## Associated roles
 

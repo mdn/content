@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.segment
 ---
+
 {{JSRef}}
 
 The **`Intl.Segmenter.prototype.segment()`** method segments a string according to the locale and granularity of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
@@ -24,7 +25,7 @@ segment(input)
 ### Parameters
 
 - `input`
-  - : The text to be segmented as a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+  - : The text to be segmented as a string.
 
 ### Return value
 

@@ -25,7 +25,6 @@ tags:
   - photic seizure
   - seizure disorders
 ---
-## Introduction to Color and Accessibility
 
 When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:
 
@@ -36,7 +35,7 @@ When designing visual and readable content with the aim of accessibility for all
 
 While understanding these concepts are important for design and readability for all sighted users, they are especially important for those with reduced vision and color deficient vision, and also for those with certain neurological, cognitive, and other impairments.
 
-### Standards and Guidelines
+## Standards and Guidelines
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
@@ -102,7 +101,7 @@ In a typical eye exam for acuity (ability to focus), legibility at a particular 
 
 This is the minimum for "just making out" letters at \~70% accuracy. That is legibility, not readability. For readability, the lower case [x-height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/) needs to be a minimum of twice that [cap height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/). This is called the critical font size for readability.
 
-This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for *read*ability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the [WCAG standard requires](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) that users have the ability to zoom text larger.
+This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for readability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the [WCAG standard requires](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) that users have the ability to zoom text larger.
 
 While text that is too small is hard to read, so is text that is too big. Above approximately 96px, reading speed decreases. Also, very large fonts make it difficult for a user to enlarge the smaller text on the page, as most browsers presently zoom all text regardless.
 
@@ -378,7 +377,7 @@ function sRGBtoLin(colorChannel) {
 }
 ```
 
-> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to  0.04045 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
+> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to 0.04045 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
 
 #### Step three: Spectrally Weighted Luminance
 
@@ -418,7 +417,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 
 ## Additional Resources
 
-#### MDN
+### MDN
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn/Accessibility)
@@ -426,7 +425,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [`<color>`](/en-US/docs/Web/CSS/color_value)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 
-#### W3C Issues and Discussions
+### W3C Issues and Discussions
 
 - [The Visual Contrast Research Group](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup) for WCAG 3.
 - [Light and dark text](https://github.com/w3c/silver/issues/261) & WCAG 3.0 contrast (Silver thread #261)
@@ -434,7 +433,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [Luminance / Luma confusion](https://github.com/w3c/wcag/issues/236) thread #236
 - [Non-sRGB color spaces](https://github.com/w3c/wcag/issues/360), outdated sRGB threshold thread #360
 
-#### W3C Standards and Guidelines
+### W3C Standards and Guidelines
 
 - [The latest draft of the new WCAG 3 standards](https://www.w3.org/TR/wcag-3.0/)
 - [Ensuring that a contrast ratio of 3:1 is provided for icons](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)
@@ -442,6 +441,6 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
 - [CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/)
 
-### Page Source
+## Page Source
 
 This page is based largely on the white paper on color and contrast by Andrew Somers, which is being developed for the W3 and Accessibility Guidelines Working Group, used herein by permission. Andrew Somers is an invited expert of the W3 and the AGWG, the author of the WCAG 3 Visual Contrast specifications, and the inventor of the APCA.

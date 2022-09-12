@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.format()`** method formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this {{jsxref("Intl.NumberFormat")}} object.
@@ -119,7 +120,7 @@ console.log(numberFormat.format(bigNum));
 // → "1,000,000,000,000,000,110,000"
 
 // Format as a string using the `E` syntax:
-console.log(numberFormat.format(bigNum + "E-6"));
+console.log(numberFormat.format(`${bigNum}E-6`));
 // → "1,000,000,000,000,000.11"
 ```
 

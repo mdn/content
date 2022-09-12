@@ -17,6 +17,7 @@ tags:
   - Property
 browser-compat: api.HTMLImageElement.src
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property

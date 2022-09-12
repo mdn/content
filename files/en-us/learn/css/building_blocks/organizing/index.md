@@ -14,6 +14,7 @@ tags:
   - pre-processor
   - styleguide
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
@@ -57,7 +58,7 @@ Here are some general suggestions for ways to keep your stylesheets organized an
 
 If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.
 
-For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS).
+For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS).
 
 ### Keep it consistent
 
@@ -282,7 +283,7 @@ In your HTML, the comment would need both the `media` and `comment` classes appl
 
 ```html
 <div class="media comment">
-  <img />
+  <img src="" alt="" />
   <div class="content"></div>
 </div>
 ```
@@ -292,7 +293,7 @@ The list-item would have `media` and `list-item` applied:
 ```html
 <ul>
   <li class="media list-item">
-    <img />
+    <img src="" alt="" />
     <div class="content"></div>
   </li>
 </ul>
@@ -306,10 +307,12 @@ BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity su
 
 ```html
 <form class="form form--theme-xmas form--simple">
-  <input class="form__input" type="text" />
+  <label class="label form__label" for="inputId"></label>
+    <input class="form__input" type="text" id="inputId" />
+
   <input
     class="form__submit form__submit--disabled"
-    type="submit" />
+    type="submit" value="Submit" />
 </form>
 ```
 

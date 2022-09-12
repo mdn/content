@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 An Options page enables you to define preferences for your extension that your users can change. Users can access the options page for an extension from the browser's add-ons manager:
@@ -23,7 +24,7 @@ To create an options page, write an HTML file defining the page. This page can i
 ```html
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8"/>
   </head>

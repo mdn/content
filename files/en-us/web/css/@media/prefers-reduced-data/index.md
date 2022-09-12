@@ -7,8 +7,10 @@ tags:
   - Media Queries
   - Reference
   - media feature
+  - Experimental
 browser-compat: css.at-rules.media.prefers-reduced-data
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Note:** This feature is not supported by any user agent and its specifics are subject to change.

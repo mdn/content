@@ -10,6 +10,7 @@ tags:
   - isPrototype
 browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`isPrototypeOf()`** method checks if an object exists in
@@ -19,7 +20,7 @@ another object's prototype chain.
 
 > **Note:** `isPrototypeOf()` differs from the {{jsxref("Operators/instanceof",
     "instanceof")}} operator. In the expression
-> "`object instanceof AFunction`", the `object` prototype chain is
+> `object instanceof AFunction`, the `object` prototype chain is
 > checked against `AFunction.prototype`, not against `AFunction`
 > itself.
 
@@ -107,4 +108,4 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object/proto")}}
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

@@ -9,6 +9,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.size
 ---
+
 {{JSRef}}
 
 The **`size`** accessor property returns the number of (unique) elements in a {{jsxref("Set")}} object.
@@ -27,9 +28,9 @@ The value of `size` is an integer representing how many entries the `Set` object
 const mySet = new Set();
 mySet.add(1);
 mySet.add(5);
-mySet.add('some text')
+mySet.add("some text");
 
-mySet.size; // 3
+console.log(mySet.size); // 3
 ```
 
 ## Specifications

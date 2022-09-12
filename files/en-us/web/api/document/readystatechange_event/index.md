@@ -9,6 +9,7 @@ tags:
   - interactive
 browser-compat: api.Document.readystatechange_event
 ---
+
 {{APIRef}}
 
 The **`readystatechange`** event is fired when the {{domxref("Document.readyState", "readyState")}} attribute of a document has changed.
@@ -78,7 +79,7 @@ label, button {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const log = document.querySelector('.event-log-contents');
@@ -86,7 +87,7 @@ const reload = document.querySelector('#reload');
 
 reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() => {
+  setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });

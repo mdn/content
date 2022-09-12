@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of \[0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -24,7 +25,7 @@ The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned in
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of an `Uint8ClampedArray`.
 - {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: "`Uint8ClampedArray`".
+  - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: `"Uint8ClampedArray"`.
 
 ## Static methods
 

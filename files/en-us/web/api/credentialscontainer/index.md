@@ -6,14 +6,14 @@ tags:
   - API
   - Credential Management API
   - CredentialsContainer
-  - Experimental
   - Interface
   - NeedsExample
   - Reference
   - credential management
 browser-compat: api.CredentialsContainer
 ---
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
+
+{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 The **`CredentialsContainer`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}.
 

@@ -8,9 +8,11 @@ tags:
   - Reference
   - platform
   - NavigatorUAData
+  - Experimental
 browser-compat: api.NavigatorUAData.platform
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} interface returns the platform brand information.
 

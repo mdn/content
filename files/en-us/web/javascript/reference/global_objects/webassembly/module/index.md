@@ -9,6 +9,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
@@ -53,11 +54,11 @@ const importObject = {
   }
 };
 
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('module received from main thread');
   const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 };

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.
@@ -67,7 +68,7 @@ The new {{DOMxRef("Element")}}.
 
 ## Examples
 
-This creates a new \<div> element in the {{Glossary("XHTML")}} namespace and
+This creates a new `<div>` element in the {{Glossary("XHTML")}} namespace and
 appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of
 elements from two different namespaces within a single document:
 

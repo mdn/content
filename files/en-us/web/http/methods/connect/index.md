@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.CONNECT
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `CONNECT` method** starts two-way communications
@@ -55,7 +56,7 @@ from the client.
 
 ## Syntax
 
-```
+```http
 CONNECT www.example.com:443 HTTP/1.1
 ```
 
@@ -64,7 +65,7 @@ CONNECT www.example.com:443 HTTP/1.1
 Some proxy servers might need authority to create a tunnel. See also the
 {{HTTPHeader("Proxy-Authorization")}} header.
 
-```
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=

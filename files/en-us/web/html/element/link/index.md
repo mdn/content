@@ -176,7 +176,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
     See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- {{HTMLAttrDef("disabled")}}
+- {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether or not the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
@@ -184,7 +184,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
-- {{htmlattrdef("fetchpriority")}}
+- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
 
   - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
 
@@ -206,7 +206,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute is [a sizes attribute](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - {{HTMLAttrDef("imagesrcset")}}
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute is [a sourceset attribute](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
-- {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
+- {{HTMLAttrDef("integrity")}}
   - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
     The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation.
     See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
@@ -219,12 +219,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > - In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/en-US/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`.
     >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/Media_Queries), which are a superset of the allowed values of HTML 4.
-    > - Browsers not supporting [CSS3 Media Queries](/en-US/docs/Web/CSS/Media_Queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
+    > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/Media_Queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
 - {{HTMLAttrDef("prefetch")}} {{secureContext_inline}} {{experimental_inline}}
   - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
     This allows the user agent to respond faster when the resource is requested in the future.
-- {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
+- {{HTMLAttrDef("referrerpolicy")}}
 
   - : A string indicating which referrer to use when fetching the resource:
 
@@ -238,7 +238,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{HTMLAttrDef("rel")}}
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Link_types).
-- {{HTMLAttrDef("sizes")}}
+- {{HTMLAttrDef("sizes")}} {{Experimental_Inline}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the {{HTMLAttrxRef("rel", "link")}} contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
@@ -261,13 +261,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Non-standard attributes
 
-- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}}
+- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : The value of this attribute provides information about the functions that might be performed on an object.
     The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link.
     For example, the browser might choose a different rendering of a link as a function of the methods specified;
     something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site.
     This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
-- {{HTMLAttrDef("target")}} {{Non-standard_Inline}}
+- {{HTMLAttrDef("target")}} {{Deprecated_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
 ### Obsolete attributes
@@ -347,15 +347,15 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ```html
 <script>
-var myStylesheet = document.querySelector('#my-stylesheet');
+  const stylesheet = document.querySelector('#my-stylesheet');
 
-myStylesheet.onload = function() {
-  // Do something interesting; the sheet has been loaded
-}
+  stylesheet.onload = () => {
+    // Do something interesting; the sheet has been loaded
+  }
 
-myStylesheet.onerror = function() {
-  console.log("An error occurred loading the stylesheet!");
-}
+  stylesheet.onerror = () => {
+    console.log("An error occurred loading the stylesheet!");
+  }
 </script>
 
 <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">

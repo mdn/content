@@ -7,8 +7,10 @@ tags:
   - Bluetooth
   - Reference
   - Web Bluetooth API
+  - Experimental
 browser-compat: api.Bluetooth.getAvailability
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
 The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface returns `true` if the device has a Bluetooth adapter, and false otherwise (unless the user has configured the browser to not expose a real value).
@@ -43,10 +45,11 @@ Bluetooth is supported:
 
 ```js
 navigator.bluetooth.getAvailability().then((available) => {
-  if (available)
-      console.log("This device supports Bluetooth!");
-  else
-      console.log("Doh! Bluetooth is not supported");
+  if (available) {
+    console.log("This device supports Bluetooth!");
+  } else {
+    console.log("Doh! Bluetooth is not supported");
+  }
 });
 ```
 

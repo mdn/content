@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.getTransports
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`getTransports()`** is a method of the
@@ -73,12 +74,11 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const transports = newCredentialInfo.response.getTransports();
     console.table(transports); // may be something like ["internal", "nfc", "usb"]
-  }).catch(function (err) {
-     console.error(err);
-  });
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

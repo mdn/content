@@ -10,6 +10,7 @@ tags:
   - Security
 browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -41,7 +42,7 @@ preventing the execution of plugins and scripts, and enforcing a same-origin pol
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: sandbox;
 Content-Security-Policy: sandbox <value>;
 ```
@@ -91,7 +92,7 @@ where `<value>` can optionally be one of the following values:
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: sandbox allow-scripts;
 ```
 

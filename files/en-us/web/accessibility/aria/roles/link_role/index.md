@@ -57,7 +57,7 @@ span[role="link"]:focus {
 
 ### JavaScript
 
-```JavaScript
+```js
 const fakeLinks = document.querySelectorAll('[role="link"]');
 
 for (let i = 0; i < fakeLinks.length; i++) {
@@ -107,6 +107,6 @@ Using the {{HTMLElement('a')}} instead.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

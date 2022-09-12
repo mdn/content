@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Date
 ---
+
 {{HTTPSidebar}}
 
 The **`Date`** general HTTP header contains the date and time
@@ -44,7 +45,7 @@ at which the message originated.
 
 ## Syntax
 
-```
+```http
 Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -71,7 +72,7 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-```
+```http
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

@@ -15,6 +15,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
@@ -234,12 +235,12 @@ function addClientRectsOverlay(elt) {
   }
 }
 
-(function() {
+(() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  const elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (let i = 0; i < elt.length; i++) {
-    addClientRectsOverlay(elt[i]);
+  const elts = document.getElementsByClassName('withClientRectsOverlay');
+  for (const elt of elts) {
+    addClientRectsOverlay(elt);
   }
 })();
 ```

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.disabled
 ---
+
 {{CSSRef}}
 
 The **`:disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
@@ -66,19 +67,19 @@ input[type="text"]:disabled {
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').onchange = toggleBilling;
 }, false);
 
 function toggleBilling() {
   // Select the billing text fields
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
-  }
+  billingItems.forEach((item) => {
+    item.disabled = !item.disabled;
+  });
 }
 ```
 

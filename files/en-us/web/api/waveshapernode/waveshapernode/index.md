@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.WaveShaperNode.WaveShaperNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`WaveShaperNode()`** constructor

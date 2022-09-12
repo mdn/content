@@ -11,6 +11,7 @@ tags:
   - onRemoved
 browser-compat: webextensions.api.permissions.onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when some permissions are removed from the extension.

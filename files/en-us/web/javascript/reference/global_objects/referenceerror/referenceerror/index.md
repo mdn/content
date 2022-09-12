@@ -8,6 +8,7 @@ tags:
   - ReferenceError
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
+
 {{JSRef}}
 
 The **`ReferenceError`** object represents an error when a
@@ -21,7 +22,15 @@ new ReferenceError(message)
 new ReferenceError(message, options)
 new ReferenceError(message, fileName)
 new ReferenceError(message, fileName, lineNumber)
+
+ReferenceError()
+ReferenceError(message)
+ReferenceError(message, options)
+ReferenceError(message, fileName)
+ReferenceError(message, fileName, lineNumber)
 ```
+
+> **Note:** `ReferenceError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `ReferenceError` instance.
 
 ### Parameters
 

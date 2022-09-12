@@ -7,6 +7,7 @@ tags:
   - MathML:Element
 browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 The `<math>` element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) is permitted.
@@ -15,7 +16,7 @@ The `<math>` element is the top-level MathML element, used to write a single mat
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attribute:
 
 - `display`
 
@@ -25,10 +26,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     - `inline`, which means that this element will be displayed inside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `compact`.
 
     If not present, its default value is `inline`.
-
-- `mode` {{deprecated_inline}}
-  - : Deprecated in favor of the [display attribute](#attr-display).
-    Possible values are: `display` (which has the same effect as `display="block"`) and `inline`.
 
 ## Examples
 

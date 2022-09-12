@@ -11,6 +11,7 @@ tags:
   - setPeriodicWave
 browser-compat: api.OscillatorNode.setPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`setPeriodicWave()`** method of the {{

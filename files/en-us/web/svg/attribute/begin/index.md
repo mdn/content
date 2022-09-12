@@ -9,6 +9,7 @@ spec-urls:
   - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
   - https://svgwg.org/specs/animations/#BeginAttribute
 ---
+
 {{SVGRef}}
 
 The **`begin`** attribute defines when an animation should begin or when an element should be discarded.
@@ -50,7 +51,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 - `<offset-value>`
   - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("Window/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
-  - : This value defines a *syncbase* and an optional offset from that *syncbase*. The element's animation start time is defined relative to the begin or active end of another animation.
+  - : This value defines a _syncbase_ and an optional offset from that _syncbase_. The element's animation start time is defined relative to the begin or active end of another animation.
 
     A valid syncbase-value consists of an ID reference to another animation element followed by a dot and either `begin` or `end` to identify whether to synchronize with the beginning or active end of the referenced animation element. An optional offset value as defined in `<offset-value>` can be appended.
 - `<event-value>`
@@ -319,7 +320,7 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 
 {{EmbedLiveSample('Accesskey_example', '100%', 130)}}
 
-*This example is embed in an iFrame. If you want to activate the key events, you have to click on it first.*
+_This example is embedded in an iFrame. If you want to activate the key events, you have to click on it first._
 
 [begin-5-accesskey.svg](begin-5-accesskey.svg)
 

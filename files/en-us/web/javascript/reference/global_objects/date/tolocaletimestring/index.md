@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
+
 {{JSRef}}
 
 The **`toLocaleTimeString()`** method returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
@@ -49,10 +50,7 @@ In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.D
 
 ## Performance
 
-When formatting large numbers of dates, it is better to create an
-{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
-function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
-property.
+When formatting large numbers of dates, it is better to create an [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object and use its [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) method.
 
 ## Examples
 
@@ -137,7 +135,7 @@ console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
 
 ## See also
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

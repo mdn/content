@@ -6,6 +6,7 @@ tags:
   - WebGL
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
 ---
+
 {{APIRef}}
 
 The **`webglcontextrestored`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent restores the drawing buffer for a {{domxref("WebGLRenderingContext")}} object.
@@ -45,7 +46,7 @@ With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simula
 const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextrestored', function(e) {
+canvas.addEventListener('webglcontextrestored', (e) => {
   console.log(e);
 }, false);
 

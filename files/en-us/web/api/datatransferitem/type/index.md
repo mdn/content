@@ -13,6 +13,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItem.type
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only **`DataTransferItem.type`** property returns the
@@ -39,7 +40,7 @@ function drop_handler(ev) {
    if ((data[i].kind === 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
-     data[i].getAsString(function (s){
+     data[i].getAsString((s) => {
        ev.target.appendChild(document.getElementById(s));
      });
    } else if ((data[i].kind === 'string') &&

@@ -6,9 +6,9 @@ tags:
   - Example
   - Guide
   - HTML
-  - HTML5
   - Web
 ---
+
 {{LearnSidebar}}
 
 [HTML5](/en-US/docs/Glossary/HTML5) is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
@@ -80,10 +80,10 @@ The main issues to consider are Internet Explorer support and performance. Inter
 
 That said, though, for custom element-associated metadata, they are a great solution.
 
-In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that exceed 1022 characters will not be read by Javascript (EcmaScript 4).
+In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that exceed 1022 characters will not be read by JavaScript (ECMAScript 4).
 
 ## See also
 
 - This article is adapted from [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - Custom attributes are also supported in SVG 2; see {{domxref("SVGElement.dataset")}} and {{SVGAttr("data-*")}} for more information.
-- [How to use HTML5 data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- [How to use HTML data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

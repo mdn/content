@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - Method
   - NeedsExample
@@ -13,6 +12,7 @@ tags:
   - load
 browser-compat: api.MediaKeySession.load
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.load()` method returns a {{jsxref('Promise')}} that

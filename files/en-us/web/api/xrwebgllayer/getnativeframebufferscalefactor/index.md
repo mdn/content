@@ -24,9 +24,11 @@ tags:
   - getNativeFramebufferScaleFactor
   - native
   - resolution
+  - Experimental
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The static method
 **`XRWebGLLayer.getNativeFramebufferScaleFactor()`** returns a

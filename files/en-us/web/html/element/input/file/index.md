@@ -352,7 +352,7 @@ function updateImageDisplay() {
   }
 
   const curFiles = input.files;
-  if(curFiles.length === 0) {
+  if (curFiles.length === 0) {
     const para = document.createElement('p');
     para.textContent = 'No files currently selected for upload';
     preview.appendChild(para);
@@ -363,7 +363,7 @@ function updateImageDisplay() {
     for (const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
-      if(validFileType(file)) {
+      if (validFileType(file)) {
         para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
         const image = document.createElement('img');
         image.src = URL.createObjectURL(file);
@@ -407,12 +407,12 @@ The `returnFileSize()` function takes a number (of bytes, taken from the current
 
 ```js
 function returnFileSize(number) {
-  if(number < 1024) {
-    return number + 'bytes';
-  } else if(number >= 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + 'KB';
-  } else if(number >= 1048576) {
-    return (number/1048576).toFixed(1) + 'MB';
+  if (number < 1024) {
+    return `${number} bytes`;
+  } else if (number >= 1024 && number < 1048576) {
+    return `${(number / 1024).toFixed(1)} KB`;
+  } else if (number >= 1048576) {
+    return `${(number / 1048576).toFixed(1)} MB`;
   }
 }
 ```

@@ -6,8 +6,10 @@ tags:
   - API
   - Reference
   - Screen Wake Lock API
+  - Experimental
 browser-compat: api.Navigator.wakeLock
 ---
+
 {{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`wakeLock`** read-only property

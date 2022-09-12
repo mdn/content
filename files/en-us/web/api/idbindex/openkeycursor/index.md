@@ -13,6 +13,7 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBIndex.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
@@ -87,9 +88,9 @@ function displayDataByIndex() {
 
   const myIndex = objectStore.index('lName');
 
-  myIndex.openKeyCursor().onsuccess = function(event) {
+  myIndex.openKeyCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML = `<td>${cursor.key}</td>`
                          + `<td>${cursor.primaryKey}</td>`;

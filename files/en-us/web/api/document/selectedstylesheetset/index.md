@@ -10,9 +10,11 @@ tags:
   - Reference
   - Stylesheets
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.selectedStyleSheetSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`selectedStyleSheetSet`** property indicates the name of the style sheet set that's currently in use.
 

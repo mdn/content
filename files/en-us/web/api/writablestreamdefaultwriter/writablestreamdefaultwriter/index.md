@@ -5,13 +5,13 @@ page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - Reference
   - Streams
   - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter()`**
 constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object instance.

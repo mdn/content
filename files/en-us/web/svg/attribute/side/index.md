@@ -4,9 +4,11 @@ slug: Web/SVG/Attribute/side
 tags:
   - SVG
   - SVG Attribute
+  - Experimental
 browser-compat: svg.elements.textPath.side
 ---
-{{SVGRef}}
+
+{{SVGRef}}{{SeeCompatTable}}
 
 The **`side`** attribute determines the side of a path the text is placed on (relative to the path direction).
 

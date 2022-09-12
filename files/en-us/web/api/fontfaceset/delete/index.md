@@ -10,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.delete
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a font from the set.

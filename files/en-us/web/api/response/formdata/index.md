@@ -13,6 +13,7 @@ tags:
   - Response
 browser-compat: api.Response.formData
 ---
+
 {{APIRef("Fetch")}}
 
 The **`formData()`** method of the {{domxref("Response")}} interface

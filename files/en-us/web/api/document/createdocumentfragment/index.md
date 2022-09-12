@@ -11,6 +11,7 @@ tags:
   - createDocumentFragment
 browser-compat: api.Document.createDocumentFragment
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 Creates a new empty {{domxref("DocumentFragment")}} into which
@@ -70,7 +71,7 @@ const fragment = document.createDocumentFragment();
 const browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
 
-browsers.forEach(function(browser) {
+browsers.forEach((browser) => {
     const li = document.createElement('li');
     li.textContent = browser;
     fragment.appendChild(li);

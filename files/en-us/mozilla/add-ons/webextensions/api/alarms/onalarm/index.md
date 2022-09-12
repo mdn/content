@@ -13,6 +13,7 @@ tags:
   - onAlarm
 browser-compat: webextensions.api.alarms.onAlarm
 ---
+
 {{AddonSidebar()}}
 
 Fired when any alarm set by the extension goes off.
@@ -51,7 +52,7 @@ Handle an alarm going off:
 
 ```js
 function handleAlarm(alarmInfo) {
-  console.log("on alarm: " + alarmInfo.name);
+  console.log(`on alarm: ${alarmInfo.name}`);
 }
 
 browser.alarms.onAlarm.addListener(handleAlarm);

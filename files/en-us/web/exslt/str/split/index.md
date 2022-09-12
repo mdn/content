@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:split()` splits a string using a pattern string to determine where the splits should occur, returning a node-set containing the resulting strings.
 
 ## Syntax
 
-```js
+```plain
 str:split(string, pattern)
 ```
 
@@ -29,7 +30,7 @@ A node-set of `token` elements, each containing one token from the `string`.
 
 ## Example
 
-```js
+```plain
 str:split('book, phone, computer, chair', ', ')
 ```
 

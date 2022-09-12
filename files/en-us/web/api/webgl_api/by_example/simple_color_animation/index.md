@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
 A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.
@@ -27,7 +28,7 @@ This time we put the {{Glossary("WebGL")}} function calls within a timer event h
 <p>You can click the button below to toggle the
     color animation on or off.</p>
 <canvas id="canvas-view">Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 <button id="animation-onoff">
   Press here to
 <strong>[verb goes here]</strong>

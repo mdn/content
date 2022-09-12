@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a constructor" occurs when there was an attempt to use
@@ -80,27 +81,36 @@ const mycar = new Car('Eagle', 'Talon TSi', 1993);
 
 ### In Promises
 
-When returning an immediately-resolved or immediately-rejected Promise, you do not need
-to create a _new Promise(...)_ and act on it.
+When returning an immediately-resolved or immediately-rejected Promise, you do not need to create a `new Promise(...)` and act on it. Instead, use the [`Promise.resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) or [`Promise.reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) [static methods](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>).
 
-This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a
-`TypeError: this is not a constructor` exception:
+This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a `TypeError: this is not a constructor` exception:
 
 ```js example-bad
-return new Promise.resolve(true);
+const fn = () => {
+  return new Promise.resolve(true);
+}
 ```
 
-Instead, use the [`Promise.resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) or
-[`Promise.reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject)
-[static methods](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>):
+This is legal, but unnecessarily long:
 
 ```js
-// This is legal, but unnecessarily long:
-return new Promise((resolve, reject) => { resolve(true); })
+const fn = () => {
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  });
+}
+```
 
-// Instead, return the static method:
-return Promise.resolve(true);
-return Promise.reject(false);
+Instead, return the static method:
+
+```js example-good
+const resolveAlways = () => {
+  return Promise.resolve(true);
+}
+
+const rejectAlways = () => {
+  return Promise.reject(false);
+}
 ```
 
 ## See also

@@ -8,9 +8,11 @@ tags:
   - Reference
   - configure
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the video encoder for encoding chunks.
 

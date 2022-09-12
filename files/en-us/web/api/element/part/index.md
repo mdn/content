@@ -10,6 +10,7 @@ tags:
   - part
 browser-compat: api.Element.part
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`part`** property of the {{domxref("Element")}} interface
@@ -29,11 +30,11 @@ example. Here the `part` attribute is used to find the shadow parts, and the
 the correct styling is applied to the active tab when tabs are clicked.
 
 ```js
-let tabs = [];
-let children = this.shadowRoot.children;
+const tabs = [];
+const children = this.shadowRoot.children;
 
-for (let elem of children) {
-  if(elem.getAttribute('part')) {
+for (const elem of children) {
+  if (elem.getAttribute('part')) {
     tabs.push(elem);
   }
 }

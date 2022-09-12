@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Security
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "Permission denied to access property" occurs when there was
@@ -36,7 +37,7 @@ violated the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
     <script>

@@ -16,7 +16,8 @@ tags:
   - frameRate
 browser-compat: api.MediaTrackSettings.frameRate
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`frameRate`** property is a double-precision floating-point

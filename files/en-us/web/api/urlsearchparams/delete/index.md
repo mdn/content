@@ -10,6 +10,7 @@ tags:
   - delete
 browser-compat: api.URLSearchParams.delete
 ---
+
 {{ApiRef("URL API")}}
 
 The **`delete()`** method of the {{domxref("URLSearchParams")}}

@@ -7,6 +7,7 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 > **Note:** This feature is available since Firefox 54.

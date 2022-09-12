@@ -11,7 +11,8 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.id
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.id`** read-only property returns a
 string containing a unique identifier (GUID) for the track, which is

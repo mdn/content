@@ -10,6 +10,7 @@ tags:
   - Angular
   - Filtering
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
@@ -40,7 +41,7 @@ Now let's move on to adding functionality to allow users to filter their to-do i
 
 Filtering items builds on the `filter` property, which you previously added to `app.component.ts`:
 
-```js
+```ts
 filter: 'all' | 'active' | 'done' = 'all';
 ```
 

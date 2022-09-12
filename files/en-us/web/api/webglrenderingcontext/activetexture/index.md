@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.activeTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.activeTexture()`** method of the

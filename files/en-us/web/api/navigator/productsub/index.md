@@ -11,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.Navigator.productSub
 ---
+
 {{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
 The **`Navigator.productSub`** read-only property returns the

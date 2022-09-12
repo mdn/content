@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DragEvent.DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 This constructor is used to create a synthetic {{domxref("DragEvent")}} object.
@@ -32,6 +33,7 @@ new DragEvent(type, dragEventInit)
 ### Parameters
 
 - `type`
+
   - : A string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 
 - `dragEventInit` {{optional_inline}}

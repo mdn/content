@@ -12,6 +12,7 @@ tags:
   - willValidate
 browser-compat: api.HTMLObjectElement.willValidate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`willValidate`** read-only property of

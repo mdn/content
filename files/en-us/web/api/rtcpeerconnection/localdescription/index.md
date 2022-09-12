@@ -11,6 +11,7 @@ tags:
   - localDescription
 browser-compat: api.RTCPeerConnection.localDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.localDescription`** returns an {{domxref("RTCSessionDescription")}} describing the session for the local end of the connection.

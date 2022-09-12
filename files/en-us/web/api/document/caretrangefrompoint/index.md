@@ -13,6 +13,7 @@ tags:
   - caretRangeFromPoint
 browser-compat: api.Document.caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`caretRangeFromPoint()`** method of the
@@ -81,8 +82,8 @@ function insertBreakAtPoint(e) {
 }
 
 let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+for (const paragraph of paragraphs) {
+  paragraph.addEventListener('click', insertBreakAtPoint, false);
 }
 ```
 

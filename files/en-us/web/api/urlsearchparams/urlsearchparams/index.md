@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URLSearchParams()`** constructor creates and returns a
@@ -92,7 +93,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ]).toString()}`
+    ])}`
   );
 ```
 

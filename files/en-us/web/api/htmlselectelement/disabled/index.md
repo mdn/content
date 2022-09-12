@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLSelectElement.disabled
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.disabled`** is a boolean value that reflects the
@@ -45,12 +46,8 @@ A boolean value.
 const allowDrinksCheckbox = document.getElementById("allow-drinks");
 const drinkSelect = document.getElementById("drink-select");
 
-allowDrinksCheckbox.addEventListener("change", function(event) {
-  if (event.target.checked) {
-    drinkSelect.disabled = false;
-  } else {
-    drinkSelect.disabled = true;
-  }
+allowDrinksCheckbox.addEventListener("change", (event) => {
+  drinkSelect.disabled = !event.target.checked;
 }, false);
 ```
 

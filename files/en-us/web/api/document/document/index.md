@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.Document
 ---
+
 {{APIRef}}
 
 The **`Document`** constructor creates a new

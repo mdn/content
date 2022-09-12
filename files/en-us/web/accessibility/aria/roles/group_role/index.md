@@ -10,6 +10,7 @@ tags:
   - document structure role
 spec-urls: https://w3c.github.io/aria/#group
 ---
+
 The `group` role identifies a set of user interface objects that is not intended to be included in a page summary or table of contents by assistive technologies.
 
 ## Description
@@ -96,6 +97,6 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

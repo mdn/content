@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.504
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** server error response code indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request.

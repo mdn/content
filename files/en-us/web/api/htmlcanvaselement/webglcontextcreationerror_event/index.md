@@ -6,6 +6,7 @@ tags:
   - WebGL
 browser-compat: api.HTMLCanvasElement.webglcontextcreationerror_event
 ---
+
 {{APIRef}}
 
 The **`webglcontextcreationerror`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent is unable to create a {{domxref("WebGLRenderingContext")}} context.
@@ -42,7 +43,7 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 ```js
 const canvas = document.getElementById('canvas');
 
-canvas.addEventListener('webglcontextcreationerror', function(e) {
+canvas.addEventListener('webglcontextcreationerror', (e) => {
   console.log(e.statusMessage || 'Unknown error');
 }, false);
 

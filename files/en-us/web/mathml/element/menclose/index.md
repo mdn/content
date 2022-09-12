@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.menclose
 ---
+
 {{MathMLRef}}
 
 The MathML `<menclose>` element renders its content inside an enclosing notation specified by the `notation` attribute.

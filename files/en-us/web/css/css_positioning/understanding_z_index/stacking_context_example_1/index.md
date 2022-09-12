@@ -7,6 +7,7 @@ tags:
   - Guide
   - Understanding_CSS_z-index
 ---
+
 {{CSSRef}}
 
 « [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
@@ -72,8 +73,9 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ```css
 .bold {
+    font-family: Arial;
+    font-size: 12px;
     font-weight: bold;
-    font: 12px Arial;
 }
 #div1,
 #div3 {

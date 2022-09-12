@@ -13,6 +13,7 @@ tags:
   - request
 browser-compat: api.IDBCursor.request
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`request`** read-only property of the {{domxref("IDBCursor")}} interface returns the {{domxref("IDBRequest")}} used to obtain the cursor.
@@ -35,9 +36,9 @@ function displayData() {
 
   const request = objectStore.openCursor();
 
-  request.onsuccess = function(event) {
+  request.onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
         listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);

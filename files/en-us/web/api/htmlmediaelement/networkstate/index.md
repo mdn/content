@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.networkState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The
@@ -41,7 +42,7 @@ still loading data.
 ```js
 const obj = document.getElementById('example');
 
-obj.addEventListener('playing', function() {
+obj.addEventListener('playing', () => {
 
   if (obj.networkState === 2) {
     // Still loading…

@@ -10,9 +10,11 @@ tags:
   - NeedsExample
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
-{{APIRef("Credential Management API")}}{{Non-standard_header}}
+
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`FederatedCredential()`**
 constructor creates a new {{domxref("FederatedCredential")}} object. In

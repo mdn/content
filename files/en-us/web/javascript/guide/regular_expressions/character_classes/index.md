@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - character classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
@@ -105,7 +106,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           including newlines.
         </p>
         <p>
-          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
+          The <code>s</code> "dotAll" flag allows the dot to
           also match line terminators.
         </p>
       </td>

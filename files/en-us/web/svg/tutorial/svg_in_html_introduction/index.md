@@ -5,6 +5,7 @@ tags:
   - Beginner
   - SVG
 ---
+
 ## Overview
 
 This article and its associated example shows how to use inline [SVG](/en-US/docs/Web/SVG).
@@ -15,7 +16,7 @@ To include an inline SVG in an HTML file, paste the entire SVG file into the HTM
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <title>SVG Demo</title>

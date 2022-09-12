@@ -8,6 +8,7 @@ tags:
   - Web
   - console
 ---
+
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
 ## Types of mixed content
@@ -52,7 +53,7 @@ Other resource types like web fonts and workers may be considered active mixed c
 
 ## Loading mixed-content resources
 
-Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
+Most browsers prevent _mixed active content_ from loading, and some also block _mixed display content_.
 
 ### Loading locally delivered mixed-resources
 

@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.clearData()`** method removes the drag
@@ -86,7 +87,7 @@ span.tweaked {
 ### JavaScript
 
 ```js
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', () => {
   // Select HTML elements
   const draggable = document.getElementById('source');
   const droppable = document.getElementById('target');

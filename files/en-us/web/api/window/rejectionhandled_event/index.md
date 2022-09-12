@@ -18,6 +18,7 @@ tags:
   - rejectionhandled
 browser-compat: api.Window.rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a JavaScript {{jsxref("Promise")}} is rejected but after the promise rejection has been handled.
@@ -41,9 +42,9 @@ A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
   - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Event handler aliases

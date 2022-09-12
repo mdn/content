@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Background
-  - Experimental
   - Houdini
   - Method
   - Multiprocessor
@@ -16,7 +15,8 @@ tags:
   - addModule
 browser-compat: api.Worklet.addModule
 ---
-{{APIRef("Worklets")}}{{SeeCompatTable}}
+
+{{APIRef("Worklets")}}
 
 The **`addModule()`** method of the
 {{domxref("Worklet")}} interface loads the module in the given JavaScript file and

@@ -19,16 +19,12 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-**`logicalSurface`** property indicates whether or not the
-{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is
-supported by the user agent and the device on which the content is being used.
+{{APIRef("Media Capture and Streams")}}
 
-The supported constraints list is obtained by calling
-{{domxref("MediaDevices.getSupportedConstraints",
-  "navigator.mediaDevices.getSupportedConstraints()")}}.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`logicalSurface`** property indicates whether or not the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the user agent and the device on which the content is being used.
+
+The supported constraints list is obtained by calling {{domxref("MediaDevices.getSupportedConstraints","navigator.mediaDevices.getSupportedConstraints()")}}.
 
 ## Syntax
 
@@ -38,9 +34,7 @@ isLogicalSurfaceSupported = supportedConstraints.logicalSurface;
 
 ### Value
 
-A Boolean value which is `true` if the
-{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is
-supported by the device and user agent.
+A boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the device and user agent.
 
 ## Example
 
@@ -66,7 +60,7 @@ async function capture() {
 
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

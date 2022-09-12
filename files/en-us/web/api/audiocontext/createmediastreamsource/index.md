@@ -18,6 +18,7 @@ tags:
   - createMediastreamSource
 browser-compat: api.AudioContext.createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaStreamSource()` method of the {{ domxref("AudioContext") }}
@@ -73,9 +74,9 @@ const range = document.querySelector('input');
 if (navigator.mediaDevices) {
     console.log('getUserMedia supported.');
     navigator.mediaDevices.getUserMedia ({audio: true, video: true})
-    .then(function(stream) {
+    .then((stream) => {
         video.srcObject = stream;
-        video.onloadedmetadata = function(e) {
+        video.onloadedmetadata = (e) => {
             video.play();
             video.muted = true;
         };
@@ -100,11 +101,11 @@ if (navigator.mediaDevices) {
         // Get new mouse pointer coordinates when mouse is moved
         // then set new gain value
 
-        range.oninput = function() {
+        range.oninput = () => {
             biquadFilter.gain.value = range.value;
         }
     })
-    .catch(function(err) {
+    .catch((err) => {
         console.log(`The following gUM error occurred: ${err}`);
     });
 } else {

@@ -8,9 +8,11 @@ tags:
   - Reference
   - forEach
   - CustomStateSet
+  - Experimental
 browser-compat: api.CustomStateSet.forEach
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface executes a provided function for each value in the `CustomStateSet` object.
 

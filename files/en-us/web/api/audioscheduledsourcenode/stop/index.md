@@ -14,6 +14,7 @@ tags:
   - stop
 browser-compat: api.AudioScheduledSourceNode.stop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `stop()` method on {{domxref("AudioScheduledSourceNode")}} schedules a

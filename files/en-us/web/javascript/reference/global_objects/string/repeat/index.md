@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.repeat
 ---
+
 {{JSRef}}
 
 The **`repeat()`** method constructs and returns a new string

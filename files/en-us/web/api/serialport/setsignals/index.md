@@ -8,9 +8,11 @@ tags:
   - Reference
   - setSignals
   - SerialPort
+  - Experimental
 browser-compat: api.SerialPort.setSignals
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
 
@@ -23,7 +25,7 @@ setSignals(options)
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object with any of the following values:
 

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
+
 {{JSRef}}
 
 The **`Array.of()`** method creates a new `Array`
@@ -46,16 +47,6 @@ Array.of(element0, element1, /* … ,*/ elementN)
 
 A new {{jsxref("Array")}} instance.
 
-## Description
-
-This function is part of the ECMAScript 2015 standard.
-
-For more information, see:
-
-- [`Array.of()`](https://gist.github.com/rwaldron/1074126)
-- [`Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
-
 ## Examples
 
 ### Using Array.of
@@ -81,3 +72,5 @@ Array.of(undefined); // [undefined]
 - {{jsxref("Array")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
+- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
+- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)

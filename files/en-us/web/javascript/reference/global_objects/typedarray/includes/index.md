@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether a typed array

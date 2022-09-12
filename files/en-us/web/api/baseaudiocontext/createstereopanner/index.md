@@ -13,6 +13,7 @@ tags:
   - createStereoPanner
 browser-compat: api.BaseAudioContext.createStereoPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createStereoPanner()` method of the {{ domxref("BaseAudioContext") }} interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
@@ -67,7 +68,7 @@ const panNode = audioCtx.createStereoPanner();
 // Event handler function to increase panning to the right and left
 // when the slider is moved
 
-panControl.oninput = function() {
+panControl.oninput = () => {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
   panValue.innerHTML = panControl.value;
 }

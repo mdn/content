@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.pattern.patternUnits
 ---
+
 {{SVGRef}}
 
 The **`patternUnits`** attribute indicates which coordinate system to use for the geometry properties of the {{ SVGElement("pattern") }} element.
@@ -70,7 +71,7 @@ For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in u
 - `userSpaceOnUse`
   - : This value indicates that all coordinates for the geometry properties refer to the user coordinate system as defined when the pattern was applied.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
+  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 

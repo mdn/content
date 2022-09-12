@@ -11,6 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getDirectoryHandle()`** method of the

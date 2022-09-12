@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.forward
 ---
+
 {{APIRef("History API")}}
 
 The **`History.forward()`** method causes the browser to move

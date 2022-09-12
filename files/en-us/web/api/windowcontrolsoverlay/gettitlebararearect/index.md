@@ -10,7 +10,8 @@ tags:
   - Progressive Web Apps
 browser-compat: api.WindowControlsOverlay.getTitlebarAreaRect
 ---
-{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
+
+{{APIRef("Window Controls Overlay API")}}
 
 The **`getTitlebarAreaRect()`** method of the {{domxref('WindowControlsOverlay')}} interface queries the current geometry of the title bar area of the Progressive Web App window.
 

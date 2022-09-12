@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.EventTarget.addEventListener
 ---
+
 {{APIRef("DOM")}}
 
 The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
@@ -43,7 +44,7 @@ such as during the bubbling phase.
 
 ## Syntax
 
-```js
+```js-nolint
 addEventListener(type, listener);
 addEventListener(type, listener, options);
 addEventListener(type, listener, useCapture);
@@ -163,7 +164,7 @@ try {
 
   window.addEventListener("test", null, options);
   window.removeEventListener("test", null, options);
-} catch(err) {
+} catch (err) {
   passiveSupported = false;
 }
 ```
@@ -229,11 +230,8 @@ clicks on an element.
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue === "three") {
-    t2.firstChild.nodeValue = "two";
-  } else {
-    t2.firstChild.nodeValue = "three";
-  }
+  const isNodeThree = t2.firstChild.nodeValue === "three";
+  t2.firstChild.nodeValue = isNodeThree ? "two" : "three";
 }
 
 // Add event listener to table
@@ -313,7 +311,7 @@ function modifyText(new_text) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", function(){modifyText("four")}, false);
+el.addEventListener("click", function () { modifyText("four"); }, false);
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -606,14 +604,14 @@ a reference to the listener around so you can remove it later.
 This is an example with and without `bind()`:
 
 ```js
-const Something = function(element) {
+const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.onclick1 = function(event) {
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, as |this| is the element
   };
 
-  this.onclick2 = function(event) {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
 
@@ -630,10 +628,10 @@ Another solution is using a special function called `handleEvent()` to catch
 any events:
 
 ```js
-const Something = function(element) {
+const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.handleEvent = function(event) {
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch(event.type) {
       case 'click':
@@ -669,7 +667,7 @@ class SomeClass {
 
   register() {
     const that = this;
-    window.addEventListener('keydown', function(e) { that.someMethod(e); });
+    window.addEventListener('keydown', (e) => { that.someMethod(e); });
   }
 
   someMethod(e) {
@@ -734,7 +732,7 @@ event listener is declared.
 const myButton = document.getElementById('my-button-id');
 let someString = 'Data';
 
-myButton.addEventListener('click', function() {
+myButton.addEventListener('click', () => {
   console.log(someString);  // Expected Value: 'Data'
 
   someString = 'Data Again';
@@ -769,13 +767,13 @@ Consider this example.
 const myButton = document.getElementById('my-button-id');
 const someObject = {aProperty: 'Data'};
 
-myButton.addEventListener('click', function() {
+myButton.addEventListener('click', () => {
   console.log(someObject.aProperty);  // Expected Value: 'Data'
 
   someObject.aProperty = 'Data Again';  // Change the value
 });
 
-window.setInterval(function() {
+setInterval(() => {
   if (someObject.aProperty === 'Data Again') {
     console.log('Data Again: True');
     someObject.aProperty = 'Data';  // Reset value to wait for next event execution
@@ -804,20 +802,22 @@ can respond to the change).
 ### Memory issues
 
 ```js
-const els = document.getElementsByTagName('*');
+const elts = document.getElementsByTagName('*');
 
 // Case 1
-for (let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", function(e){/*do something*/}, false);
+for (const elt of elts) {
+  elt.addEventListener("click", (e) => {
+    // Do something
+  }, false);
 }
 
 // Case 2
-function processEvent(e){
-  /* do something */
+function processEvent(e) {
+  // Do something
 }
 
-for (let i = 0 ; i < els.length; i++){
-  els[i].addEventListener("click", processEvent, false);
+for (const elt of elts) {
+  elt.addEventListener("click", processEvent, false);
 }
 ```
 
@@ -832,38 +832,7 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a *static* function reference. In both
-problem-cases below, a function reference is kept, but it is redefined on each
-iteration. In the third case, the reference to the anonymous function
-is being reassigned with each iteration. In the fourth case, the entire function
-definition is unchanging, but it is still being repeatedly defined as if new. So neither is static. Therefore, though appearing to
-be multiple identical event listeners, in both cases each iteration will instead
-create a new listener with its own unique reference to the handler function.
-
-```js
-const els = document.getElementsByTagName('*');
-
-function processEvent(e){
-  /* do something */
-}
-
-// For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
-
-// Case 3
-for (let i = 0, j = 0 ; i < els.length ; i++){
-  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
-}
-
-// Case 4
-for (let i = 0, j = 0 ; i < els.length ; i++){
-  function processEvent(e){/* do something */};
-  els[j].addEventListener("click", processEvent, false);
-}
-```
-
-Also in both case 3 and case 4, because the function reference was kept but repeatedly redefined
-with each `addEventListener()`, `removeEventListener("click", processEvent, false)` can still remove a listener, but now only
-the last one added.
+the real issue; rather it is the lack of keeping a _static_ function reference.
 
 ### Improving scrolling performance with passive listeners
 
@@ -883,9 +852,9 @@ try {
       }
     )
   );
-} catch(err) {}
+} catch (err) {}
 
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', (event) => {
   /* do something */
   // can't use event.preventDefault();
 }, passiveIfSupported );

@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 In the last article we discussed how to use APIs that return promises. In this article we'll look at the other side — how to _implement_ APIs that return promises. This is a much less common task than using promise-based APIs, but it's still worth knowing about.
@@ -53,7 +54,7 @@ const output = document.querySelector('#output');
 const button = document.querySelector('#set-alarm');
 
 function setAlarm() {
-  window.setTimeout(() => {
+  setTimeout(() => {
     output.textContent = 'Wake up!';
   }, 1000);
 }
@@ -79,7 +80,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -90,7 +91,7 @@ This function creates and returns a new `Promise`. Inside the executor for the p
 
 - check that `delay` is not negative, and throw an error if it is.
 
-- call `window.setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
+- call `setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
 
 ## Using the alarm() API
 
@@ -132,7 +133,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -189,7 +190,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });

@@ -9,25 +9,28 @@ tags:
   - Reference
 browser-compat: javascript.operators.new
 ---
+
 {{jsSidebar("Operators")}}
 
-The **`new` operator** lets developers
-create an instance of a user-defined object type or of one of the built-in object
-types that has a constructor function.
+The **`new` operator** lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
 
 {{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 
 ## Syntax
 
 ```js
-new constructor[([arguments])]
+new constructor
+new constructor()
+new constructor(arg1)
+new constructor(arg1, arg2)
+new constructor(arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
 
 - `constructor`
   - : A class or function that specifies the type of the object instance.
-- `arguments`
+- `arg1`, `arg2`, …, `argN`
   - : A list of values that the `constructor` will be called with. `new Foo` is equivalent to `new Foo()`, i.e. if no argument list is specified, `Foo` is called without arguments.
 
 ## Description
@@ -35,7 +38,7 @@ new constructor[([arguments])]
 When a function is called with the **`new`** keyword, the function will be used as a constructor. `new` will do the following things:
 
 1. Creates a blank, plain JavaScript object. For convenience, let's call it `newInstance`.
-2. Points `newInstance`'s [[Prototype]] to the constructor function's `prototype` property.
+2. Points `newInstance`'s [[Prototype]] to the constructor function's `prototype` property, if the `prototype` is an {{jsxref("Object")}}. Otherwise, `newInstance` stays as a plain object with `Object.prototype` as its [[Prototype]].
 
     > **Note:** Properties/objects added to the constructor function's `prototype` property are therefore accessible to all instances created from the constructor function.
 

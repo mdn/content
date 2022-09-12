@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMilliseconds
 ---
+
 {{JSRef}}
 
 The **`getMilliseconds()`** method returns the milliseconds in

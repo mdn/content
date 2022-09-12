@@ -8,9 +8,11 @@ tags:
   - Reference
   - keys
   - CustomStateSet
+  - Experimental
 browser-compat: api.CustomStateSet.keys
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`keys()`** method of the {{domxref("CustomStateSet")}} interface is an alias for {{domxref("CustomStateSet.values")}}.
 

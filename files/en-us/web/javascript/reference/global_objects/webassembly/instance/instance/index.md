@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Instance()`** constructor creates a new
@@ -64,8 +65,8 @@ const importObject = {
 fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
 ).then((bytes) => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
+  const mod = new WebAssembly.Module(bytes);
+  const instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
 })
 ```

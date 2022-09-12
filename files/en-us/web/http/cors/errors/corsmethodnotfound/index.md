@@ -14,6 +14,7 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
@@ -33,7 +34,7 @@ occurs.
 
 For example, if the response includes:
 
-```
+```http
 Access-Control-Allow-Methods: GET,HEAD,POST
 ```
 

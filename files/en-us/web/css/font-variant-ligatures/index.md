@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 The **`font-variant-ligatures`** CSS property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.

@@ -11,6 +11,7 @@ tags:
   - validate
 browser-compat: javascript.builtins.WebAssembly.validate
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of WebAssembly binary
@@ -53,8 +54,7 @@ fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
 ).then(function(bytes) {
   const valid = WebAssembly.validate(bytes);
-  console.log("The given bytes are "
-    + (valid ? "" : "not ") + "a valid wasm module");
+  console.log(`The given bytes are ${valid ? "" : "not "}a valid wasm module`);
 });
 ```
 

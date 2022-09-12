@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Returns the online status of the browser. The property returns a boolean value, with
@@ -68,9 +69,9 @@ listen for the events on `window.online` and `window.offline`, as
 in the following example:
 
 ```js
-window.addEventListener('offline', function(e) { console.log('offline'); });
+window.addEventListener('offline', (e) => { console.log('offline'); });
 
-window.addEventListener('online', function(e) { console.log('online'); });
+window.addEventListener('online', (e) => { console.log('online'); });
 ```
 
 ## Specifications

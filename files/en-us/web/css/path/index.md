@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.path
 ---
+
 {{CSSRef}}
 
 The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes) and CSS Motion Path to enable a shape to be drawn.
@@ -32,9 +33,9 @@ path([<'fill-rule'>,]?<string>)
 
 - `<'fill-rule'>`
   - : The filling rule for the interior of the path.
-      Possible values are `nonzero` or `evenodd`.
-      The default value is `nonzero`.
-      See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
+    Possible values are `nonzero` or `evenodd`.
+    The default value is `nonzero`.
+    See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
 - `<string>`
   - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path).
 

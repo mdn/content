@@ -6,6 +6,7 @@ tags:
   - HTTP
   - redirects
 ---
+
 {{HTTPSidebar}}
 
 **URL redirection**, also known as _URL forwarding_, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a **_HTTP redirect_**, for this operation.
@@ -195,7 +196,7 @@ rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 
 ### IIS
 
-In IIS, you use the [`<httpRedirect>`](https://docs.microsoft.com/en-us/iis/configuration/system.webServer/httpRedirect/) element to configure redirections.
+In IIS, you use the [`<httpRedirect>`](https://docs.microsoft.com/iis/configuration/system.webServer/httpRedirect/) element to configure redirections.
 
 ## Redirection loops
 

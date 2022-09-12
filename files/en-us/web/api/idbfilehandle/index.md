@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -21,11 +22,11 @@ The **`IDBFileHandle`** interface provides tools to deal with a given file with 
 
 ## Properties
 
-- {{domxref("IDBFileHandle.fileHandle")}} {{readonlyinline}}
+- {{domxref("IDBFileHandle.fileHandle")}} {{ReadOnlyInline}}
   - : The {{domxref("IDBMutableFile")}} object from which the lock was opened.
-- {{domxref("IDBFileHandle.mode")}} {{readonlyinline}}
+- {{domxref("IDBFileHandle.mode")}} {{ReadOnlyInline}}
   - : The mode for accessing the file; can be `readonly` or `readwrite`.
-- {{domxref("IDBFileHandle.active")}} {{readonlyinline}}
+- {{domxref("IDBFileHandle.active")}} {{ReadOnlyInline}}
   - : A flag indicating if the file can be accessed (`true`) or not (`false`).
 - {{domxref("IDBFileHandle.location")}}
   - : The position of the reading/writing pointer within the file.

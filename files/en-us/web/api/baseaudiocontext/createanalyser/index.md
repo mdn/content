@@ -12,6 +12,7 @@ tags:
   - createAnalyser
 browser-compat: api.BaseAudioContext.createAnalyser
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createAnalyser()` method of the
@@ -82,7 +83,7 @@ function draw() {
         const v = dataArray[i] / 128.0;
         const y = v * HEIGHT/2;
 
-        if(i === 0) {
+        if (i === 0) {
           canvasCtx.moveTo(x, y);
         } else {
           canvasCtx.lineTo(x, y);

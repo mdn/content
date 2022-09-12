@@ -25,6 +25,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getBoundingClientRect()`** method returns a
@@ -108,7 +109,7 @@ div {
 let elem = document.querySelector('div');
 let rect = elem.getBoundingClientRect();
 for (const key in rect) {
-  if(typeof rect[key] !== 'function') {
+  if (typeof rect[key] !== 'function') {
     let para = document.createElement('p');
     para.textContent  = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
@@ -156,7 +157,7 @@ function update() {
 
   container.innerHTML = '';
   for (const key in rect) {
-    if(typeof rect[key] !== 'function') {
+    if (typeof rect[key] !== 'function') {
       let para = document.createElement('p');
       para.textContent  = `${key} : ${rect[key]}`;
       container.appendChild(para);

@@ -13,6 +13,7 @@ tags:
   - multiEntry
 browser-compat: api.IDBIndex.multiEntry
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`multiEntry`** read-only property of the
@@ -47,7 +48,7 @@ The multi-entry status of the index is logged to the console: it should be retur
 as `false`.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {
@@ -58,9 +59,9 @@ function displayDataByIndex() {
   const myIndex = objectStore.index('lName');
   console.log(myIndex.multiEntry);
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML = `<td>${cursor.value.id}</td>`
                          + `<td>${cursor.value.lName}</td>`

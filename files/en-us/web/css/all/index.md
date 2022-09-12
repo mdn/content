@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.all
 ---
+
 {{CSSRef}}
 
 The **`all`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
@@ -56,7 +57,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 
 In this example, the CSS file contains styling for the {{HTMLElement("blockquote")}} element in addition to some styling for the parent `<body>` element. Various outputs in the Results subsection demonstrate how the styling of the `<blockquote>` element is affected when different values are applied to the `all` property inside the `blockquote` rule.
 
-#### HTML
+### HTML
 
 ```html
 <blockquote id="quote">
@@ -65,7 +66,7 @@ In this example, the CSS file contains styling for the {{HTMLElement("blockquote
 Phasellus eget velit sagittis.
 ```
 
-#### CSS
+### CSS
 
 ```css
 body {
@@ -82,7 +83,7 @@ blockquote {
 }
 ```
 
-#### Results
+### Results
 
 #### A. No `all` property
 

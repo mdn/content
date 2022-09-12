@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.DynamicsCompressorNode.DynamicsCompressorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`DynamicsCompressorNode()`**

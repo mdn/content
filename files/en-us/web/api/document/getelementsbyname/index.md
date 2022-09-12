@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 The **`getElementsByName()`** method

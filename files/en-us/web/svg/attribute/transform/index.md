@@ -9,6 +9,7 @@ spec-urls:
   - https://drafts.csswg.org/css-transforms/#svg-transform
   - https://svgwg.org/svg2-draft/coords.html#TransformProperty
 ---
+
 {{SVGRef}}
 
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
@@ -68,7 +69,7 @@ Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElemen
 
 ## Transform functions
 
-The following transform functions can be used by the `transform` attribute *`<transform-list>`*
+The following transform functions can be used by the `transform` attribute `<transform-list>`
 
 > **Warning:** As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
 

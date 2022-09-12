@@ -14,6 +14,7 @@ spec-urls:
   - https://w3c.github.io/aria/#alert
   - https://w3c.github.io/aria-practices/#log
 ---
+
 The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
 
 ## Description
@@ -56,7 +57,7 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', triggerAlert);
 
 function triggerAlert() {
-  var alertEl = document.querySelector('.alert');
+  const alertEl = document.querySelector('.alert');
   alertEl.setAttribute("role", "alert");
 }
 ```
@@ -142,6 +143,6 @@ document.getElementById("expirationWarning").classList.remove('hidden');
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

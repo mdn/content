@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontcolor()`** method creates a {{HTMLElement("font")}}
@@ -40,7 +41,7 @@ A string containing a {{HTMLElement("font")}} HTML element.
 
 If you express color as a hexadecimal RGB triplet, you must use the format
 `rrggbb`. For example, the hexadecimal RGB values for salmon are red=FA,
-green=80, and blue=72, so the RGB triplet for salmon is "`FA8072`".
+green=80, and blue=72, so the RGB triplet for salmon is `"FA8072"`.
 
 ## Examples
 
@@ -52,10 +53,10 @@ string by producing a string with the HTML `<font>` element.
 ```js
 const worldString = 'Hello, world';
 
-console.log(worldString.fontcolor('red') +  ' is red in this line');
+console.log(`${worldString.fontcolor('red')} is red in this line`);
 // '<font color="red">Hello, world</font> is red in this line'
 
-console.log(worldString.fontcolor('FF00') + ' is red in hexadecimal in this line');
+console.log(`${worldString.fontcolor('FF00')} is red in hexadecimal in this line`);
 // '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
 ```
 

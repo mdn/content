@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.addRange
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.addRange()`** method adds a
@@ -48,17 +49,17 @@ None ({{jsxref("undefined")}}).
 ```js
 let button = document.querySelector('button');
 
-button.addEventListener('click', function () {
-  let selection = window.getSelection();
-  let strongs = document.getElementsByTagName('strong');
+button.addEventListener('click', () => {
+  const selection = window.getSelection();
+  const strongs = document.getElementsByTagName('strong');
 
   if (selection.rangeCount > 0) {
     selection.removeAllRanges();
   }
 
-  for (let i = 0; i < strongs.length; i++) {
-    let range = document.createRange();
-    range.selectNode(strongs[i]);
+  for (const node of strongs) {
+    const range = document.createRange();
+    range.selectNode(node);
     selection.addRange(range);
   }
 });

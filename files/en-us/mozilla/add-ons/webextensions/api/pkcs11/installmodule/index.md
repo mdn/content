@@ -12,6 +12,7 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11.installModule
 ---
+
 {{AddonSidebar()}}
 
 Installs the named PKCS #11 module, making it available to Firefox.
@@ -54,19 +55,17 @@ function onInstalled() {
 }
 
 function onGotSlots(slots) {
-  for (slot of slots) {
+  for (const slot of slots) {
     console.log(`Slot: ${slot.name}`);
     if (slot.token) {
       console.log(`Contains token: ${slot.token.name}`);
     } else {
-      console.log('Is empty');
+      console.log("Is empty");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module")
-.then(onInstalled)
-.then(onGotSlots);
+browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reportValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.reportValidity()`** method returns
@@ -30,7 +31,7 @@ HTMLFormElement.reportValidity()
 ## Example
 
 ```js
-document.forms['myform'].addEventListener('submit', function() {
+document.forms['myform'].addEventListener('submit', () => {
   document.forms['myform'].reportValidity();
 }, false);
 ```

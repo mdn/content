@@ -5,14 +5,14 @@ page-type: web-api-instance-method
 tags:
   - API
   - CountQueuingStrategy
-  - Experimental
   - Method
   - Reference
   - Streams
   - size
 browser-compat: api.CountQueuingStrategy.size
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`size()`** method of the
 {{domxref("CountQueuingStrategy")}} interface always returns `1`, so that the

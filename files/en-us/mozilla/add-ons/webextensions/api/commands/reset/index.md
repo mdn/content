@@ -12,6 +12,7 @@ tags:
   - reset
 browser-compat: webextensions.api.commands.reset
 ---
+
 {{AddonSidebar()}}
 
 Resets the given command's description and keyboard shortcut to the values given in the extension's [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).

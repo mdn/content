@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.permissions.contains
 ---
+
 {{AddonSidebar()}}
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.

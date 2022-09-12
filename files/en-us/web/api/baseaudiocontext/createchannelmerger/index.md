@@ -13,6 +13,7 @@ tags:
   - createChannelMerger
 browser-compat: api.BaseAudioContext.createChannelMerger
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createChannelMerger()` method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ChannelMergerNode")}},
@@ -48,7 +49,7 @@ index of the channel to connect to.
 
 ```js
 const ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, function(data) {
+ac.decodeAudioData(someStereoBuffer, (data) => {
  const source = ac.createBufferSource();
  source.buffer = data;
  const splitter = ac.createChannelSplitter(2);

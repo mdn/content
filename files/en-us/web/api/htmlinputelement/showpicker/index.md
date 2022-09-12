@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.showPicker()`** method displays the browser picker for an `input` element.
@@ -87,7 +88,7 @@ document.querySelectorAll("button").forEach((button) => {
     const input = event.srcElement.previousElementSibling;
     try {
       input.showPicker();
-    } catch(error) {
+    } catch (error) {
       window.alert(error);
     }
   });

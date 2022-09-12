@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MSGestureEvent
 ---
+
 {{APIRef("UI Events")}}
 
 {{Non-standard_header()}}
@@ -27,25 +28,25 @@ The **`MSGestureEvent`** is a proprietary interface specific to Internet Explore
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-- {{domxref("MSGestureEvent.expansion")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.expansion")}} {{ReadOnlyInline}}
   - : The diameter of the gesture area. For example, the distance between fingers.
-- {{domxref("MSGestureEvent.gestureObject")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.gestureObject")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("MSGesture")}} object for this gesture event.
-- {{domxref("MSGestureEvent.rotation")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.rotation")}} {{ReadOnlyInline}}
   - : Amount of rotation (in radians) since the previous {{domxref("MSGestureEvent")}} of the current gesture. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation.
-- {{domxref("MSGestureEvent.scale")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.scale")}} {{ReadOnlyInline}}
   - : The difference in scale (for zoom gestures) from the previous {{domxref("MSGestureEvent")}} of the current gesture.
-- {{domxref("MSGestureEvent.translationX")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.translationX")}} {{ReadOnlyInline}}
   - : Distance traversed along the X-axis since the previous {{domxref("MSGestureEvent")}} of the current gesture
-- {{domxref("MSGestureEvent.translationY")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.translationY")}} {{ReadOnlyInline}}
   - : Distance traversed along the Y-axis since the previous {{domxref("MSGestureEvent")}} of the current gesture
-- {{domxref("MSGestureEvent.velocityAngular")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.velocityAngular")}} {{ReadOnlyInline}}
   - : Angular velocity. Expressed in radians.
-- {{domxref("MSGestureEvent.velocityExpansion")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.velocityExpansion")}} {{ReadOnlyInline}}
   - : The velocity of the expansion of the gesture area.
-- {{domxref("MSGestureEvent.velocityX")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.velocityX")}} {{ReadOnlyInline}}
   - : Velocity along the direction of the X-axis.
-- {{domxref("MSGestureEvent.velocityY")}} {{readonlyinline}}
+- {{domxref("MSGestureEvent.velocityY")}} {{ReadOnlyInline}}
   - : Velocity along the direction of the Y-axis.
 
 ## Methods

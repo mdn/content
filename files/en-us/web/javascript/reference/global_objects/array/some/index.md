@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether
@@ -129,9 +130,7 @@ function returns `true` if the element exists in the array:
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
-    return val === arrVal;
-  });
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
@@ -157,15 +156,11 @@ checkAvailability(fruits, 'banana'); // true
 const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
-  'use strict';
-
   if (typeof value === 'string') {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
-    return t === value;
-  });
+  return TRUTHY_VALUES.some((t) => t === value);
 }
 
 getBoolean(false);   // false

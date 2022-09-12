@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
+
 {{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
@@ -117,7 +118,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   position: relative;
 }
 
-.flex:after {
+.flex::after {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -132,7 +133,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: auto;
 }
 
-.flex1:after {
+.flex1::after {
   content: 'auto';
 }
 
@@ -140,7 +141,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: max-content;
 }
 
-.flex2:after {
+.flex2::after {
   content: 'max-content';
 }
 
@@ -148,7 +149,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: min-content;
 }
 
-.flex3:after {
+.flex3::after {
   content: 'min-content';
 }
 
@@ -156,7 +157,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: fit-content;
 }
 
-.flex4:after {
+.flex4::after {
   content: 'fit-content';
 }
 
@@ -164,7 +165,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
    flex-basis: content;
 }
 
-.flex5:after {
+.flex5::after {
   content: 'content';
 }
 ```

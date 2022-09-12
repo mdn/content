@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 Class fields are {{ jsxref('Classes/Public_class_fields','public') }} by default, but private class members can be created
@@ -147,8 +148,10 @@ class SubClass extends BaseClassWithPrivateStaticField { };
 let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e};
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
 console.log(error instanceof TypeError);
 // true

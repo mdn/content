@@ -16,9 +16,8 @@ tags:
   - onactivate
 browser-compat: api.Element.DOMActivate_event
 ---
-{{APIRef}}
 
-{{Deprecated_Header}}
+{{APIRef}}{{Deprecated_Header}}
 
 The **`DOMActivate`** event is fired at an element when it becomes active, such as when it is clicked on using the mouse or a keypress is used to navigate to it.
 
@@ -56,10 +55,11 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
     function change(evt) {
       const circle = evt.target;
       const currentRadius = circle.getFloatTrait("r");
-      if (currentRadius === 100)
+      if (currentRadius === 100) {
         circle.setFloatTrait("r", currentRadius * 2);
-      else
+      } else {
         circle.setFloatTrait("r", currentRadius * 0.5);
+      }
     }
   ]]></script>
 

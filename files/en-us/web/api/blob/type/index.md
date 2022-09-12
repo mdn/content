@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.type
 ---
+
 {{APIRef("File API")}}
 
 The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
@@ -41,7 +42,7 @@ output {
 ### JavaScript
 
 ```js
-// our application only allows GIF, PNG, and JPEG images
+// Our application only allows GIF, PNG, and JPEG images
 const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
 const input = document.getElementById('input');
@@ -55,11 +56,8 @@ input.addEventListener('change', (event) => {
     return;
   }
 
-  if (Array.from(files).every((file) => allowedFileTypes.includes(file.type))) {
-    output.innerText = 'All files clear!';
-  } else {
-    output.innerText = 'Please choose image files only.';
-  }
+  const allAllowed = Array.from(files).every((file) => allowedFileTypes.includes(file.type));
+  output.innerText = allAllowed ? 'All files clear!' : 'Please choose image files only.';
 });
 ```
 

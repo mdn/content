@@ -11,9 +11,10 @@ tags:
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getService
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`getService()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
+The **`getService()`** method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 

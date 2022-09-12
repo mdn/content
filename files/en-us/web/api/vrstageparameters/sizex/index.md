@@ -4,6 +4,8 @@ slug: Web/API/VRStageParameters/sizeX
 page-type: web-api-instance-property
 tags:
   - API
+  - Deprecated
+  - Non-standard
 
   - Deprecated
   - Property
@@ -15,7 +17,8 @@ tags:
   - sizeX
 browser-compat: api.VRStageParameters.sizeX
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`sizeX`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the width_ of the play-area bounds in meters.
 

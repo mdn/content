@@ -14,11 +14,12 @@ tags:
   - WebGL
   - WebGL API
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw an untextured square plane, so let's start there.
 
-The complete source code for this project is [available on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample2).
+The complete source code for this project is [available on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2).
 
 > **Note:** This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
@@ -302,7 +303,7 @@ Then we establish the position of the square plane by loading the identity posit
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Matrix utility operations
 

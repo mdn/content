@@ -11,9 +11,11 @@ tags:
   - XUL command nodes
   - sCommandName
   - updateCommands
+  - Non-standard
 browser-compat: api.Window.updateCommands
 ---
-{{ ApiRef() }}{{Non-standard_header}}
+
+{{ApiRef}}{{Non-standard_Header}}
 
 ## Summary
 

@@ -10,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientType
 ---
+
 {{APIRef("SVG")}}
 
 The **`orientType`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object indicating whether the {{SVGattr("orient")}} attribute is `auto`, an angle value, or something else.

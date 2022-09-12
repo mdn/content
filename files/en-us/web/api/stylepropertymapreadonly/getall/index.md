@@ -13,6 +13,7 @@ tags:
   - getAll()
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the

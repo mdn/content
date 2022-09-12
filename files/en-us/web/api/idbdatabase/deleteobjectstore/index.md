@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.deleteObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`deleteObjectStore()`** method of the
@@ -34,7 +35,7 @@ deleteObjectStore(name)
 
 - `name`
   - : The name of the object store you want to delete. Names are
-        case sensitive.
+    case sensitive.
 
 ### Return value
 

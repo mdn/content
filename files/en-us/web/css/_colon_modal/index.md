@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.modal
 ---
+
 {{CSSRef}}
 
 The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed. Multiple elements can be selected by the `:modal` pseudo-class at the same time, but only one of them will be active and able to receive input.
@@ -96,7 +97,7 @@ selectEl.addEventListener('change', (e) => {
 });
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
 favDialog.addEventListener('close', () => {
-  outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
+  outputBox.value = `${favDialog.returnValue} button clicked - ${(new Date()).toString()}`;
 });
 ```
 

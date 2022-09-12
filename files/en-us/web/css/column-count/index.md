@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-count
 ---
+
 {{CSSRef}}
 
 The **`column-count`** [CSS](/en-US/docs/Web/CSS) property breaks an element's content into the specified number of columns.

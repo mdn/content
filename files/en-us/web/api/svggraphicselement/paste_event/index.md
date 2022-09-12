@@ -10,6 +10,7 @@ tags:
   - SVG OM
 browser-compat: api.Element.paste_event
 ---
+
 {{APIRef}}
 
 The **`paste`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "paste" action through the browser's user interface.
@@ -89,5 +90,5 @@ document.getElementById("element-to-paste-text").addEventListener("paste", (evt)
 
 - Related events: [`cut`](/en-US/docs/Web/API/SVGGraphicsElement/cut_event), [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
 - This event on HTML {{domxref("Element")}} targets: [`paste`](/en-US/docs/Web/API/Element/paste_event)
-- This event on {{domxref("Document")}} targets: [`paste`](Web/API/Document/paste_event)
-- This event on {{domxref("Window")}} targets: [`paste`](Web/API/Window/paste_event)
+- This event on {{domxref("Document")}} targets: [`paste`](/en-US/docs/Web/API/Document/paste_event)
+- This event on {{domxref("Window")}} targets: [`paste`](/en-US/docs/Web/API/Window/paste_event)

@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
@@ -35,7 +36,7 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ### Playing music
 
-In our [fetch array buffer live](https://mdn.github.io/fetch-examples/fetch-array-buffer/), we have a Play button. When pressed, the `getData()`
+In our [fetch array buffer live](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-array-buffer), we have a Play button. When pressed, the `getData()`
 function is run. Note that before playing full audio file will be downloaded. If you
 need to play ogg during downloading (stream it) - consider
 {{domxref("HTMLAudioElement")}}:

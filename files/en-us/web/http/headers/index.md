@@ -9,6 +9,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
@@ -168,7 +169,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("Expect")}}
   - : Indicates expectations that need to be fulfilled by the server to properly handle the request.
 - {{HTTPHeader("Max-Forwards")}}
-  - : TBD
+  - : When using [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE), indicates the maximum number of hops the request can do before being reflected to the sender.
 
 ## Cookies
 
@@ -179,7 +180,7 @@ Network client hints allow a server to choose what information is sent based on 
 
 ## CORS
 
-_Learn more about CORS [here](CORS)._
+_Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.
@@ -402,7 +403,7 @@ _Learn more about CORS [here](CORS)._
 
 ## Contributing
 
-You can help by [writing new entries](/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header) or improving the existing ones.
+You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving the existing ones.
 
 ## See also
 

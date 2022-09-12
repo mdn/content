@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`buffer`** property of the {{
@@ -35,7 +36,7 @@ node will play.
 ```js
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {

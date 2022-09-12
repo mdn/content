@@ -8,13 +8,13 @@ tags:
   - CSS Descriptor
   - CSS Fonts
   - CSS Property
-  - Experimental
   - Fonts
   - Reference
   - font-display
   - web fonts
 browser-compat: css.at-rules.font-face.font-display
 ---
+
 {{CSSRef}}
 
 The **`font-display`** descriptor determines how a font face is displayed based on whether and when it is downloaded and ready to use.

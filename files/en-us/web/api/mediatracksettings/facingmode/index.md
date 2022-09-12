@@ -16,7 +16,8 @@ tags:
   - facingMode
 browser-compat: api.MediaTrackSettings.facingMode
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`facingMode`** property is a string

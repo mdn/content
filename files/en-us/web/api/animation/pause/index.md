@@ -12,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.pause
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface suspends playback of the animation.
@@ -59,7 +60,7 @@ Additionally, when resetting :
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
-const stopPlayingAlice = function() {
+const stopPlayingAlice = () => {
   aliceChange.pause();
   nommingCake.pause();
   drinking.pause();

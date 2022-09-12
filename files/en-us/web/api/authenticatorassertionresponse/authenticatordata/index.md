@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 The **`authenticatorData`** property of the {{domxref("AuthenticatorAssertionResponse")}} interface returns an {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator.
@@ -46,16 +47,15 @@ const options = {
 };
 
 navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
+  .then((assertionPKCred) => {
     const authenticatorData = assertionPKCred.response.authenticatorData;
     // Maybe try to convert the authenticatorData to see what's inside
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
 
-}).catch(function (err) {
-   console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

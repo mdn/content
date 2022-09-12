@@ -6,11 +6,11 @@ tags:
   - API
   - AbortSignal
   - DOM
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.AbortSignal
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
@@ -21,9 +21,9 @@ The **`AbortSignal`** interface represents a signal object that allows you to co
 
 _The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
+- {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
-- {{domxref("AbortSignal.reason")}} {{readonlyInline}}
+- {{domxref("AbortSignal.reason")}} {{ReadOnlyInline}}
   - : A JavaScript value providing the abort reason, once the signal has aborted.
 
 ## Methods
@@ -69,7 +69,7 @@ const abortBtn = document.querySelector('.abort');
 
 downloadBtn.addEventListener('click', fetchVideo);
 
-abortBtn.addEventListener('click', function() {
+abortBtn.addEventListener('click', () => {
   controller.abort();
   console.log('Download aborted');
 });
@@ -87,7 +87,7 @@ function fetchVideo() {
 
 > **Note:** When `abort()` is called, the `fetch()` promise rejects with an "`AbortError`" `DOMException`.
 
-You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
 ### Aborting a fetch operation with a timeout
 

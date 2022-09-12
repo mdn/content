@@ -14,9 +14,12 @@ tags:
   - MediaStream Recording API
   - Recording
   - Video
+  - Deprecated
+  - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
-{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The
 **`MediaRecorderErrorEvent()`** constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object

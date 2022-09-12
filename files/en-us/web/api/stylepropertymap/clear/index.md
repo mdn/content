@@ -10,8 +10,10 @@ tags:
   - Reference
   - StylePropertyMap
   - clear()
+  - Experimental
 browser-compat: api.StylePropertyMap.clear
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("StylePropertyMap")}}

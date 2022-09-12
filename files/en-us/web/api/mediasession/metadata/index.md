@@ -13,7 +13,8 @@ tags:
   - metadata
 browser-compat: api.MediaSession.metadata
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`metadata`** property of the {{domxref("MediaSession")}}
 interface contains a {{domxref("MediaMetadata")}} object providing descriptive

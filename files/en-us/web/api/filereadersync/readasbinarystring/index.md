@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: api.FileReaderSync.readAsBinaryString
 ---
+
 {{APIRef("File API")}}{{deprecated_header}}
 
 > **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
@@ -57,4 +58,4 @@ A string representing the input data.
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

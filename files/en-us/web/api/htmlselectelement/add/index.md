@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.add
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement.add()`** method adds an element to the

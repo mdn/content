@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`entries()`** method of the {{domxref("DOMTokenList")}} interface
@@ -46,7 +47,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.entries();
 
-for (let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value})`;
 }
 ```

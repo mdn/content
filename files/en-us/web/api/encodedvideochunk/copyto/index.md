@@ -8,9 +8,11 @@ tags:
   - Reference
   - copyTo
   - EncodedVideoChunk
+  - Experimental
 browser-compat: api.EncodedVideoChunk.copyTo
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`copyTo()`** method of the {{domxref("EncodedVideoChunk")}} interface copies the encoded chunk of video data.
 

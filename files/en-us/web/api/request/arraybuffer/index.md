@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Request")}} interface
@@ -40,7 +41,7 @@ const request = new Request('/myEndpoint', {
   body: myArray
 });
 
-request.arrayBuffer().then(function(buffer) {
+request.arrayBuffer().then((buffer) => {
   // do something with the buffer sent in the request
 });
 ```

@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Instance`** object is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
@@ -40,8 +41,8 @@ const importObject = {
 fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
 ).then((bytes) => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
+  const mod = new WebAssembly.Module(bytes);
+  const instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
 })
 ```

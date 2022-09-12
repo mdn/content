@@ -11,6 +11,7 @@ tags:
   - setTargetAtTime
 browser-compat: api.AudioParam.setTargetAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setTargetAtTime()` method of the
@@ -130,12 +131,12 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-atTimePlus.onclick = function() {
+atTimePlus.onclick = () => {
   currGain = 1.0;
   gainNode.gain.setTargetAtTime(1.0, audioCtx.currentTime + 1, 0.5);
 }
 
-atTimeMinus.onclick = function() {
+atTimeMinus.onclick = () => {
   currGain = 0;
   gainNode.gain.setTargetAtTime(0, audioCtx.currentTime + 1, 0.5);
 }

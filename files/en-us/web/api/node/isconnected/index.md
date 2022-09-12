@@ -8,10 +8,11 @@ tags:
   - Read-only
 browser-compat: api.Node.isConnected
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`isConnected`** property of the {{domxref("Node")}} interface
- returns a boolean indicating whether the node is connected
+returns a boolean indicating whether the node is connected
 (directly or indirectly) to the context object,
 for example the {{domxref("Document")}} object in the case of the normal DOM,
 or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.

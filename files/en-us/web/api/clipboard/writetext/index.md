@@ -17,6 +17,7 @@ tags:
   - writeText
 browser-compat: api.Clipboard.writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} interface's **`writeText()`**
@@ -49,9 +50,9 @@ clipboard.
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(function() {
+navigator.clipboard.writeText("<empty clipboard>").then(() => {
   /* clipboard successfully set */
-}, function() {
+}, () => {
   /* clipboard write failed */
 });
 ```

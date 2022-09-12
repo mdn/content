@@ -10,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.clear
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`clear()`** method of the {{domxref("FontFaceSet")}} interface removes all fonts added via this interface. Fonts added with the {{cssxref("@font-face")}} rule are not removed.

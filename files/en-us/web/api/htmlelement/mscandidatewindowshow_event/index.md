@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -49,7 +50,7 @@ function candidateWindowShowHandler(e) {
 }
 ```
 
-When the IME candidate window changes position or closes, it fires  {{domxref("HTMLElement/mscandidatewindowupdate_event", "mscandidatewindowupdate")}} or {{domxref("HTMLElement/mscandidatewindowhide_event", "mscandidatewindowhide")}} events. Developers could listen to them and shift the suggestion UI accordingly.
+When the IME candidate window changes position or closes, it fires {{domxref("HTMLElement/mscandidatewindowupdate_event", "mscandidatewindowupdate")}} or {{domxref("HTMLElement/mscandidatewindowhide_event", "mscandidatewindowhide")}} events. Developers could listen to them and shift the suggestion UI accordingly.
 
 ## See also
 

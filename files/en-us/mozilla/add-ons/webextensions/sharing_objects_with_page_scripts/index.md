@@ -13,6 +13,7 @@ tags:
   - XPCOM
   - page scripts
 ---
+
 {{AddonSidebar}}
 
 > **Note:** The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
@@ -36,7 +37,7 @@ In Firefox, part of the isolation between content scripts and page scripts is im
 
 The purpose of this feature is to make it harder for the less-privileged script to confuse the more-privileged script by redefining the native properties of objects.
 
-So for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
+So, for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
 
 ## Accessing page script objects from content scripts
 
@@ -46,12 +47,12 @@ Let's take a simple example. Suppose a web page loads a script:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 ```
@@ -146,10 +147,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: "Function call: " + message});
+  browser.runtime.sendMessage({ content: `Function call: ${message}` });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 This defines a function `notify()`, which just sends its argument to the background script. It then exports the function to the page script's scope. Now the page script can call this function:
@@ -177,7 +178,7 @@ the `cloneFunctions` option.
 let messenger = {
   notify(message) {
     browser.runtime.sendMessage({
-      content: "Object method call: " + message
+      content: `Object method call: ${message}`
     });
   }
 };
@@ -188,7 +189,7 @@ window.wrappedJSObject.messenger = cloneInto(
   {cloneFunctions: true});
 ```
 
-Now page scripts will see a new property on the window, `messenger`, which has a function `notify()`:
+Now page scripts see a new property on the window, `messenger`, which has a function `notify()`:
 
 ```js
 window.messenger.notify("Message from the page script!");
@@ -247,7 +248,7 @@ ev.propB = "wrapper";                             // define property on xray wra
 ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
 Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
   'propC', {
-     get: exportFunction(function() {             // getters must be exported like regular functions
+     get: exportFunction(() => {                  // getters must be exported like regular functions
        return 'propC';
      })
   }
@@ -260,4 +261,20 @@ window.eval(`
 `);
 
 document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"
+```
+
+### Promise cloning
+
+A Promise cannot be cloned directly using `cloneInto`, as Promise is not supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). However, the desired result can be achieved using `window.Promise` instead of `Promise`, and then cloning the resolution value like this:
+
+```js
+const promise = new window.Promise((resolve) => {
+  // if just a primitive, then cloneInto is not needed:
+  // resolve("string is a primitive");
+
+  // if not a primitive, such as an object, then the value must be cloned
+  const result = { exampleKey: "exampleValue" };
+  resolve(cloneInto(result, window));
+});
+// now the promise can be passed to the web page
 ```

@@ -10,6 +10,7 @@ tags:
   - length
 browser-compat: javascript.builtins.String.length
 ---
+
 {{JSRef}}
 
 The **`length`** property of a {{jsxref("String")}} object contains the length of the string, in UTF-16 code units. `length` is a read-only data property of string instances.
@@ -46,10 +47,10 @@ console.log(getCharacterLength('A\uD87E\uDC04Z')); // 3
 const x = 'Mozilla';
 const empty = '';
 
-console.log(x + ' is ' + x.length + ' code units long');
+console.log(`${x} is ${x.length} code units long`);
 /* "Mozilla is 7 code units long" */
 
-console.log('The empty string has a length of ' + empty.length);
+console.log(`The empty string has a length of ${empty.length}`);
 // expected output: "The empty string has a length of 0"
 ```
 

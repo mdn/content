@@ -7,9 +7,11 @@ tags:
   - Reference
   - Web NFC
   - Constructor
+  - Experimental
 browser-compat: api.NDEFReader.NDEFReader
 ---
-{{securecontext_header}}{{APIRef()}}
+
+{{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`NDEFReader()`**
 constructor of the {{domxref("NDEFReader")}} interface returns a

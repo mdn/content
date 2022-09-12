@@ -10,6 +10,7 @@ tags:
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
@@ -104,7 +105,7 @@ const output = document.querySelector('.output');
 
 let selection;
 
-button.onclick = function() {
+button.onclick = () => {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);

@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`LinearAccelerationSensor()`**

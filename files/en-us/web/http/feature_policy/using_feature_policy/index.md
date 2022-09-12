@@ -13,6 +13,7 @@ tags:
   - delegation
   - header
 ---
+
 {{HTTPSidebar}}
 
 [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins.
@@ -36,7 +37,7 @@ An `allowlist` is a list of origins that takes one or more of the following valu
   > **Note:** The `'src'` origin is used in the iframe `allow` attribute only, and is the _default_ `allowlist` value.
 
 - `'none'`: The feature is disabled in top-level and nested browsing contexts.
-- \<origin(s)>: The feature is allowed for specific origins (for example, https\://example.com). Origins should be separated by a space.
+- \<origin(s)>: The feature is allowed for specific origins (for example, `https://example.com`). Origins should be separated by a space.
 
 The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
 

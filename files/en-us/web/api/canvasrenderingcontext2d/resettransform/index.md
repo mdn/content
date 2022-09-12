@@ -5,11 +5,11 @@ page-type: web-api-instance-method
 tags:
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
   - Method
   - Reference
 browser-compat: api.CanvasRenderingContext2D.resetTransform
 ---
+
 {{APIRef}}
 
 The

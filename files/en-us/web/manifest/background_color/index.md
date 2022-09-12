@@ -5,9 +5,11 @@ tags:
   - Manifest
   - Web
   - background_color
+  - Experimental
 browser-compat: html.manifest.background_color
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

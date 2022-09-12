@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-attachment
 ---
+
 {{CSSRef}}
 
 The **`background-attachment`** [CSS](/en-US/docs/Web/CSS) property sets whether a background image's position is fixed within the {{glossary("viewport")}}, or scrolls with its containing block.

@@ -7,9 +7,11 @@ tags:
   - Constructor
   - Reference
   - VideoColorSpace
+  - Experimental
 browser-compat: api.VideoColorSpace.VideoColorSpace
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace")}} object which represents a video color space.
 

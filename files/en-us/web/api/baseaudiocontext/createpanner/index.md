@@ -12,6 +12,7 @@ tags:
   - createPanner
 browser-compat: api.BaseAudioContext.createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPanner()` method of the {{ domxref("BaseAudioContext") }}
@@ -44,7 +45,7 @@ A {{domxref("PannerNode")}}.
 ## Examples
 
 In the following example, you can see an example of how the `createPanner()`
-method, {{domxref("AudioListener")}}  and {{domxref("PannerNode")}} would be used to
+method, {{domxref("AudioListener")}} and {{domxref("PannerNode")}} would be used to
 control audio spatialization. Generally you will define the position in 3D space that
 your audio listener and panner (source) occupy initially, and then update the position
 of one or both of these as the application is used. You might be moving a character
@@ -88,7 +89,7 @@ panner.coneInnerAngle = 360;
 panner.coneOuterAngle = 0;
 panner.coneOuterGain = 0;
 
-if(panner.orientationX) {
+if (panner.orientationX) {
   panner.orientationX.setValueAtTime(1, audioCtx.currentTime);
   panner.orientationY.setValueAtTime(0, audioCtx.currentTime);
   panner.orientationZ.setValueAtTime(0, audioCtx.currentTime);
@@ -126,7 +127,7 @@ xIterator = WIDTH/150;
 
 // listener will always be in the same place for this demo
 
-if(listener.positionX) {
+if (listener.positionX) {
   listener.positionX.setValueAtTime(xPos, audioCtx.currentTime);
   listener.positionY.setValueAtTime(yPos, audioCtx.currentTime);
   listener.positionZ.setValueAtTime(300, audioCtx.currentTime);
@@ -138,7 +139,7 @@ listenerData.textContent = `Listener data: X ${xPos} Y ${yPos} Z 300`;
 
 // panner will move as the boombox graphic moves around on the screen
 function positionPanner() {
-  if(panner.positionX) {
+  if (panner.positionX) {
     panner.positionX.setValueAtTime(xPos, audioCtx.currentTime);
     panner.positionY.setValueAtTime(yPos, audioCtx.currentTime);
     panner.positionZ.setValueAtTime(zPos, audioCtx.currentTime);

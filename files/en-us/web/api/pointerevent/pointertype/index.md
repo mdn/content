@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.pointerType
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`pointerType`** read-only property of the
@@ -39,7 +40,7 @@ This example illustrates using the value of the `pointerType` property to
 call the appropriate pointer type processing function.
 
 ```js
-targetElement.addEventListener('pointerdown', function(event) {
+targetElement.addEventListener('pointerdown', (event) => {
   // Call the appropriate pointer type handler
   switch (event.pointerType) {
     case 'mouse':

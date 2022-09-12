@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: webextensions.api.permissions.request
 ---
+
 {{AddonSidebar()}}
 
 Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.

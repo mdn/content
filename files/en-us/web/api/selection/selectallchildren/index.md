@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.selectAllChildren
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.selectAllChildren()`** method adds all the

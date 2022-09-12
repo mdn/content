@@ -12,6 +12,7 @@ tags:
   - NeedsMobileBrowserCompatibility
   - Reference
 ---
+
 {{DefaultAPISidebar("Force Touch events")}}
 
 {{Non-standard_header()}}
@@ -33,17 +34,17 @@ tags:
 
 The following property is known to be available on the {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}, {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}, {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}, {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}, {{domxref("Element/mousemove_event", "mousemove")}}, and {{domxref("Element/mouseup_event", "mouseup")}} event objects:
 
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : The amount of pressure currently being applied to the trackpad/touchscreen
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : The amount of pressure currently being applied to the trackpad/touchscreen.
 
 ## Constants
 
 These constants are useful for determining the relative intensity of the pressure indicated by {{domxref("MouseEvent.webkitForce")}}:
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Minimum force necessary for a normal click
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Minimum force necessary for a force click
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Minimum force necessary for a normal click.
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Minimum force necessary for a force click.
 
 ## Specifications
 

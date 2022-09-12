@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`resolve()`** method of the

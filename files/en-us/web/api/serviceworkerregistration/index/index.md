@@ -12,9 +12,11 @@ tags:
   - ServiceWorkerRegistration
   - content index
   - content indexing
+  - Experimental
 browser-compat: api.ServiceWorkerRegistration.index
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the

@@ -4,6 +4,7 @@ slug: Web/API/RTCIceCandidatePairStats/selected
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.selected
 ---
+
 {{APIRef("WebRTC")}}{{non-standard_header}}
 
 The _non-standard_, Firefox-specific {{domxref("RTCIceCandidatePairStats")}} property **`selected`** indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.

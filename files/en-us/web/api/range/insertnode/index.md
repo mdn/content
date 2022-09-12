@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.insertNode
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.insertNode()`** method inserts a node at the start

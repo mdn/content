@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Range.createContextualFragment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.createContextualFragment()`** method returns a

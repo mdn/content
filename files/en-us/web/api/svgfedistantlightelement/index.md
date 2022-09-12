@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDistantLightElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDistantLightElement`** interface corresponds to the {{SVGElement("feDistantLight")}} element.

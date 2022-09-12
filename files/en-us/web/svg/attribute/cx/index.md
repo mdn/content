@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CX
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCXAttribute
 ---
+
 {{SVGRef}}
 
 The **`cx`** attribute define the x-axis coordinate of a center point.
@@ -60,7 +61,7 @@ For {{SVGElement('circle')}}, `cx` defines the x-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2 `cx`, is a *Geometry Property*, meaning this attribute can also be used as CSS property for circles.
+> **Note:** Starting with SVG2 `cx`, is a _Geometry Property_, meaning this attribute can also be used as CSS property for circles.
 
 ## ellipse
 
@@ -83,7 +84,7 @@ For {{SVGElement('ellipse')}}, `cx` defines the x-axis coordinate of the center 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2 `cx`, is a *Geometry Property*, meaning this attribute can also be used as CSS property for ellipses.
+> **Note:** Starting with SVG2 `cx`, is a _Geometry Property_, meaning this attribute can also be used as CSS property for ellipses.
 
 ## radialGradient
 
@@ -106,7 +107,7 @@ For {{SVGElement('radialGradient')}}, `cx` defines the x-axis coordinate of the 
   </tbody>
 </table>
 
-#### Example
+### Example
 
 ```css hidden
 html,body,svg { height:100% }

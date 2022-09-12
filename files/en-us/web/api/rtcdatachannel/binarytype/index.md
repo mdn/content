@@ -10,6 +10,7 @@ tags:
   - binaryType
 browser-compat: api.RTCDataChannel.binaryType
 ---
+
 {{APIRef("WebRTC")}}
 
 The property **`binaryType`** on the
@@ -46,11 +47,11 @@ byte values.
 const dc = peerConnection.createDataChannel("Binary");
 dc.binaryType = "arraybuffer";
 
-dc.onmessage = function(event) {
+dc.onmessage = (event) => {
   const byteArray = new Uint8Array(event.data);
   let hexString = "";
 
-  byteArray.forEach(function(byte) {
+  byteArray.forEach((byte) => {
     hexString += `${byte.toString(16)} `;
   });
 };

@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/open
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Property
@@ -12,9 +11,8 @@ tags:
   - open
 browser-compat: api.HTMLDialogElement.open
 ---
-{{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`open`** property of the
 {{domxref("HTMLDialogElement")}} interface is a boolean value reflecting the
@@ -63,14 +61,14 @@ button.
   </menu>
 
   <script>
-    (function() {
+    (() => {
       const updateButton = document.getElementById('updateDetails');
       const cancelButton = document.getElementById('cancel');
       const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -78,13 +76,13 @@ button.
       }
 
       // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
       });
 
       // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
+      cancelButton.addEventListener('click', () => {
         dialog.close('animalNotChosen');
         openCheck(dialog);
       });
@@ -93,7 +91,7 @@ button.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
 > ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications

@@ -14,6 +14,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-rule-color
 ---
+
 {{CSSRef}}
 
 The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the line drawn between columns in a multi-column layout.

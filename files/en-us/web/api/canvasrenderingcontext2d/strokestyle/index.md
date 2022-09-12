@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the
@@ -20,7 +21,7 @@ Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `color`
   - : A string parsed as [CSS](/en-US/docs/Web/CSS)

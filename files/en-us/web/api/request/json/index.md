@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.json
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`json()`** method of the {{domxref("Request")}} interface
@@ -43,7 +44,7 @@ const request = new Request('/myEndpoint', {
   body: JSON.stringify(obj)
  });
 
-request.json().then(function(data) {
+request.json().then((data) => {
   // do something with the data sent in the request
 });
 ```

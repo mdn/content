@@ -12,6 +12,9 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsDataURL
 ---
+
+{{APIRef("File API")}}
+
 The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
@@ -126,5 +129,3 @@ function previewFiles() {
 
 - {{domxref("FileReader")}}
 - {{domxref("URL.createObjectURL()")}}
-
-{{APIRef("File API")}}

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.@@iterator
 ---
+
 {{JSRef}}
 
 The initial value of the `@@iterator` property is the same function object
@@ -35,8 +36,6 @@ The array **iterator** function, which is the
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
-// your browser must support for..of loop
-// and let-scoped variables in for loops
 for (const n of arr) {
   console.log(n);
 }
@@ -46,12 +45,12 @@ for (const n of arr) {
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // 10
-console.log(eArr.next().value); // 20
-console.log(eArr.next().value); // 30
-console.log(eArr.next().value); // 40
-console.log(eArr.next().value); // 50
+const arrIter = arr[Symbol.iterator]();
+console.log(arrIter.next().value); // 10
+console.log(arrIter.next().value); // 20
+console.log(arrIter.next().value); // 30
+console.log(arrIter.next().value); // 40
+console.log(arrIter.next().value); // 50
 ```
 
 ## Specifications

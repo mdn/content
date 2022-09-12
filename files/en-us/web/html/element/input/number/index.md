@@ -274,13 +274,13 @@ div {
   margin-bottom: 10px;
 }
 
-input:invalid+span:after {
-  content: '✖';
+input:invalid + span::after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -356,15 +356,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -372,15 +372,15 @@ input:valid+span:after {
 And finally, the JavaScript:
 
 ```js
-let metersInputGroup = document.querySelector('.metersInputGroup');
-let feetInputGroup = document.querySelector('.feetInputGroup');
-let metersInput = document.querySelector('#meters');
-let feetInput = document.querySelector('#feet');
-let inchesInput = document.querySelector('#inches');
-let switchBtn = document.querySelector('input[type="button"]');
+const metersInputGroup = document.querySelector('.metersInputGroup');
+const feetInputGroup = document.querySelector('.feetInputGroup');
+const metersInput = document.querySelector('#meters');
+const feetInput = document.querySelector('#feet');
+const inchesInput = document.querySelector('#inches');
+const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', function() {
-  if(switchBtn.getAttribute('class') === 'meters') {
+switchBtn.addEventListener('click', () => {
+  if (switchBtn.getAttribute('class') === 'meters') {
     switchBtn.setAttribute('class', 'feet');
     switchBtn.value = 'Enter height in meters';
 
@@ -419,7 +419,7 @@ After declaring a few variables, an event listener is added to the `button` to c
 
 ## Accessibility
 
-The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider *not* using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
+The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
 
 Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to help users complete forms more quickly and with fewer chances of errors. For example, to enable autofill on a zip code field, set `autocomplete="postal-code"`.
 

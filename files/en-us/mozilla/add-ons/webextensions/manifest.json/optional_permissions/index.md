@@ -8,6 +8,7 @@ tags:
   - optional_permissions
 browser-compat: webextensions.manifest.optional_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

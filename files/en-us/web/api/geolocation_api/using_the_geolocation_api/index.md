@@ -7,6 +7,7 @@ tags:
   - Guide
   - Tutorial
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 The Geolocation API is used to retrieve the user's location, so that it can for example be used to display their position using a mapping API. This article explains the basics of how to use it.
@@ -18,7 +19,7 @@ The [Geolocation API](/en-US/docs/Web/API/Geolocation) is available through the 
 If the object exists, geolocation services are available. You can test for the presence of geolocation thusly:
 
 ```js
-if('geolocation' in navigator) {
+if ('geolocation' in navigator) {
   /* geolocation is available */
 } else {
   /* geolocation IS NOT available */
@@ -161,7 +162,7 @@ function geoFindMe() {
     status.textContent = 'Unable to retrieve your location';
   }
 
-  if(!navigator.geolocation) {
+  if (!navigator.geolocation) {
     status.textContent = 'Geolocation is not supported by your browser';
   } else {
     status.textContent = 'Locating…';

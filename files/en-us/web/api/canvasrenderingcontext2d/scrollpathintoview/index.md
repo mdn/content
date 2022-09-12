@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.scrollPathIntoView
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 The
@@ -73,7 +74,7 @@ Edit the code below to see your changes update live in the canvas:
 ctx.beginPath();
 ctx.rect(10, 10, 30, 30);
 ctx.fill();
-if(ctx.scrollPathIntoView) {
+if (ctx.scrollPathIntoView) {
   ctx.scrollPathIntoView();
 } else {
   ctx.fillText("Your browser does not support 'scrollPathIntoView()'.", 0, 150);
@@ -94,12 +95,12 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", () => {
   textarea.focus();
 })
 

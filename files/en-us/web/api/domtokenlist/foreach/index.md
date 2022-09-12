@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 The **`forEach()`** method of the {{domxref("DOMTokenList")}} interface
@@ -62,7 +63,7 @@ const classes = pre.classList;
 const iterator = classes.values();
 
 classes.forEach(
-  function(value, key, listObj) {
+  function (value, key, listObj) {
     pre.textContent += `(${value} ${key})/${this}\n`;
   },
   "arg"

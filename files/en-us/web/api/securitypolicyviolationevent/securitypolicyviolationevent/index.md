@@ -12,6 +12,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
+
 {{HTTPSidebar}}
 
 The **`SecurityPolicyViolationEvent()`** constructor creates a new {{domxref("SecurityPolicyViolationEvent")}} object.
@@ -31,7 +32,7 @@ new SecurityPolicyViolationEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `blockedURI` {{optional_inline}}
-      - : The {{domxref("SecurityPolicyViolationEvent.blockedURI","blockedURI")}} of the  `SecurityPolicyViolationEvent`.
+      - : The {{domxref("SecurityPolicyViolationEvent.blockedURI","blockedURI")}} of the `SecurityPolicyViolationEvent`.
         If not included, the default value is `""`.
     - `columnNumber` {{optional_inline}}
       - : The {{domxref("SecurityPolicyViolationEvent.columnNumber","columnNumber")}} of the `SecurityPolicyViolationEvent`.

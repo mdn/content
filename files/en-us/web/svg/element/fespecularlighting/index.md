@@ -9,6 +9,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feSpecularLighting
 ---
+
 {{SVGRef}}
 
 The **`<feSpecularLighting>`** [SVG](/en-US/docs/Web/SVG) filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of [the Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). The resulting image depends on the light color, light position and surface geometry of the input bump map. The result of the lighting calculation is added. The filter primitive assumes that the viewer is at infinity in the z direction.

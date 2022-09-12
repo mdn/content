@@ -12,6 +12,7 @@ tags:
   - touch
 browser-compat: api.Touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.
@@ -249,7 +250,7 @@ function ongoingTouchIndexById(idToFind) {
   for (let i = 0; i < ongoingTouches.length; i++) {
     const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
@@ -264,8 +265,6 @@ function log(msg) {
   const container = document.getElementById('log');
   container.textContent = `${msg} \n${container.textContent}`;
 }
-
-
 ```
 
 ### Result

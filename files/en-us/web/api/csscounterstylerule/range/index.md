@@ -10,6 +10,7 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.range
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`range`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/range","range")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.

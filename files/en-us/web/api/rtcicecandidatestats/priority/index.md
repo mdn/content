@@ -4,6 +4,7 @@ slug: Web/API/RTCIceCandidateStats/priority
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.priority
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

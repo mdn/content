@@ -10,11 +10,16 @@ tags:
   - load
 browser-compat: api.Window.load_event
 ---
+
 {{APIRef}}
 
 The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
 
 This event is not cancelable and does not bubble.
+
+> **Note:** _All events named `load` will not propagate to `Window`_, even with `bubbles` initialized to `true`. To catch `load` events on the `window`, that `load` event must be dispatched directly to the `window`.
+
+> **Note:** The `load` event that is dispatched when the main document has loaded _is_ dispatched on the `window`, but has two mutated properties: `target` is `document`, and `path` is `undefined`. These two properties are mutated due to legacy conformance.
 
 ## Syntax
 
@@ -93,7 +98,7 @@ label, button {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const log = document.querySelector('.event-log-contents');
@@ -101,7 +106,7 @@ const reload = document.querySelector('#reload');
 
 reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() => {
+  setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });

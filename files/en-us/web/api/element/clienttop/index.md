@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientTop
 ---
+
 {{ APIRef("DOM") }}
 
 The width of the top border of an element in pixels. It is a read-only, integer
@@ -51,7 +52,6 @@ In the following example, the client area has a white background and a 24px blac
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);

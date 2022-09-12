@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.outerText
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerText`** property of the {{domxref("HTMLElement")}} interface returns the same value as {{domxref("HTMLElement.innerText")}}.

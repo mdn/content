@@ -16,6 +16,7 @@ tags:
   - longitude
 browser-compat: api.GeolocationCoordinates.longitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The {{domxref("GeolocationCoordinates")}} interface's read-only
@@ -53,8 +54,8 @@ let button = document.getElementById("get-location");
 let latText = document.getElementById("latitude");
 let longText = document.getElementById("longitude");
 
-button.addEventListener("click", function() {
-  navigator.geolocation.getCurrentPosition(function(position) {
+button.addEventListener("click", () => {
+  navigator.geolocation.getCurrentPosition((position) => {
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
 

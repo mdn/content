@@ -15,7 +15,8 @@ tags:
   - echoCancellation
 browser-compat: api.MediaTrackSettings.echoCancellation
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`echoCancellation`** property is a Boolean value whose value
@@ -48,8 +49,7 @@ functionality enabled or `false` if echo cancellation is disabled.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Document.adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.adoptNode()`** transfers a {{Glossary("node/dom",
@@ -50,7 +51,7 @@ const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

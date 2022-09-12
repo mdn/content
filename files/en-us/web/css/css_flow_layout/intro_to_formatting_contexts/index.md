@@ -11,6 +11,7 @@ tags:
   - Layout
   - flow
 ---
+
 {{CSSRef}}
 
 This article introduces the concept of formatting contexts, of which there are several types, including block formatting contexts, inline formatting contexts, and flex formatting contexts. The basics of how they behave and how you can make use of these behaviors are also introduced.

@@ -19,6 +19,7 @@ tags:
   - Property
 browser-compat: api.HTMLImageElement.x
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property

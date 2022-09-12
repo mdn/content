@@ -5,12 +5,12 @@ page-type: web-api-instance-property
 tags:
   - API
   - AbortSignal
-  - Experimental
   - Property
   - Reference
   - aborted
 browser-compat: api.AbortSignal.aborted
 ---
+
 {{APIRef("DOM")}}
 
 The **`aborted`** read-only property returns a value that indicates whether the DOM requests the signal is communicating with are aborted (`true`) or not (`false`).

@@ -8,9 +8,11 @@ tags:
   - Reference
   - toJSON()
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.toJSON
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interface is a standard serializer. It returns a JSON representation of the object's properties.
 
@@ -39,7 +41,7 @@ In this example calling `entry.toJSON()` returns a JSON representation of the `P
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.toJSON());
     }

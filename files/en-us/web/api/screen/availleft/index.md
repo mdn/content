@@ -11,6 +11,7 @@ tags:
   - Property
 browser-compat: api.Screen.availLeft
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 Returns the first available pixel from the left side of the screen.

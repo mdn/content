@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.implementation`** property returns a
@@ -51,9 +52,3 @@ documents managed by the implementation.
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 19.0 {{geckoRelease("19.0")}} the
-  {{domxref("DOMImplementation.hasFeature","hasFeature")}} method will always return
-  true.

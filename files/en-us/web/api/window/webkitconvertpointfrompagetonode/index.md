@@ -14,6 +14,7 @@ tags:
   - convertPointFromPageToNode
 browser-compat: api.Window.convertPointFromPageToNode
 ---
+
 {{APIRef}}
 
 {{Non-standard_header}}

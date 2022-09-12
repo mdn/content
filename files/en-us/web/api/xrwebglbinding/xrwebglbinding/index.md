@@ -8,9 +8,11 @@ tags:
   - Reference
   - WebXR
   - XR
+  - Experimental
 browser-compat: api.XRWebGLBinding.XRWebGLBinding
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRWebGLBinding()`** constructor creates and
 returns a new {{domxref("XRWebGLBinding")}} object.

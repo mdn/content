@@ -7,11 +7,12 @@ tags:
   - Location
   - Property
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: api.Location.username
 ---
-{{APIRef("HTML DOM")}}
 
-{{deprecated_header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`username`** property of the {{domxref("Location")}}
 interface is a string containing the username specified before the

@@ -8,9 +8,11 @@ tags:
   - Reference
   - getSignals()
   - SerialPort
+  - Experimental
 browser-compat: api.SerialPort.getSignals
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
 

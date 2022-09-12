@@ -11,6 +11,7 @@ tags:
   - progress
 browser-compat: api.HTMLMediaElement.progress_event
 ---
+
 {{APIRef}}
 
 The **`progress`** event is fired periodically as the browser loads a resource.

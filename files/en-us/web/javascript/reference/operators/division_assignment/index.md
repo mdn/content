@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.division_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The division assignment operator (`/=`) divides a variable by the value of

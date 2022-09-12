@@ -14,6 +14,7 @@ tags:
   - setValueCurveAtTime
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -114,7 +115,7 @@ waveArray[6] = 0.5;
 waveArray[7] = 0;
 waveArray[8] = 0.5;
 
-valueCurve.onclick = function() {
+valueCurve.onclick = () => {
   gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2);
 }
 ```

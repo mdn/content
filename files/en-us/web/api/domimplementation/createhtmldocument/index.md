@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The
@@ -26,7 +27,7 @@ createHTMLDocument(title)
 
 ### Parameters
 
-- `title`  {{optional_inline}} (except in IE)
+- `title` {{optional_inline}}
   - : A string containing the title to give the new HTML document.
 
 ### Return value
@@ -59,7 +60,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -89,9 +90,10 @@ replaces the contents of the frame with the new document's contents.
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+<meta charset="UTF-8">
 <title>title</title>
 </head>
 <body>

@@ -13,11 +13,12 @@ tags:
   - load
 browser-compat: api.FontFace.load
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`load()`** method of the {{domxref("FontFace")}} interface requests and loads a font whose `source` was specified as a URL. It returns a {{jsxref('Promise')}} that resolves with the current `FontFace` object.
 
-If the `source` for the font face was specified  as binary data, or the font {{domxref("FontFace/status", "status")}} property of the font face is anything other than `unloaded`, then this method does nothing.
+If the `source` for the font face was specified as binary data, or the font {{domxref("FontFace/status", "status")}} property of the font face is anything other than `unloaded`, then this method does nothing.
 
 ## Syntax
 
@@ -36,7 +37,7 @@ loading process fails.
 
 ### Exceptions
 
-- `NetworkError`  {{domxref("DOMException")}}
+- `NetworkError` {{domxref("DOMException")}}
   - : Indicates that the attempt to load the font failed.
 
 ## Examples

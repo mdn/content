@@ -8,7 +8,7 @@ The following is a set of guidelines for contributing to the
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 > **Note:** Just want to find a task and jump in?
-  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started)
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
 
@@ -64,9 +64,9 @@ Here are some options:
 [GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files).
 This is the easiest approach if you just want to make a simple change to
 a single file, like fixing a typo.
-1. Install and use the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop)
-1. Install and use the [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
-1. [Install `git`](https://git-scm.com/downloads) and use it from the
+2. Install and use the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop)
+3. Install and use the [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
+4. [Install `git`](https://git-scm.com/downloads) and use it from the
 command line. You might find these resources helpful:
     - [Using Git](https://docs.github.com/en/get-started)
     - [`git` cheatsheet](https://training.github.com/)
@@ -105,7 +105,7 @@ document takes precedence and the redirect is ignored.
 - **A document's `index.html` or `index.md` starts with "front-matter"** — Each
 document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
 called front-matter that defines some important information about the
-document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
+document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag)
 (if any). Here's an example that shows the front-matter from the
 [JavaScript landing page](files/en-us/web/javascript/index.md):
 
@@ -152,7 +152,7 @@ You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
 [file an issue](https://github.com/mdn/content/issues).
 
 You may be asked to further edit files in your pull request.
-To open a file for editing, select the *Files changed* tab on the PR,
+To open a file for editing, select the _Files changed_ tab on the PR,
 scroll down to the section for the file you want to edit, and then select
 the "three dots" icon (at the top right of the section).
 Choose **Edit file** from the popup menu to start editing the file.
@@ -176,7 +176,7 @@ Let's assume your GitHub username is `octocat`. Your fork would be a copy
 of this repository but in your own account, so
 `https://github.com/octocat/content`.
 
-1. Once you've created your fork on GitHub, you'll want to clone it locally.
+2. Once you've created your fork on GitHub, you'll want to clone it locally.
 For example, assuming again that your GitHub username is `octocat`, you
 would do something like the following:
 
@@ -185,7 +185,7 @@ would do something like the following:
     git clone git@github.com:octocat/content.git mdn/content
     ```
 
-1. You'll also want to create a
+3. You'll also want to create a
 [`remote`](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
 to the main repository
 ([https://github.com/mdn/content](https://github.com/mdn/content)),
@@ -200,11 +200,11 @@ it `mdn`, but you can name it anything you'd like.
     git remote -v
     ```
 
-1. When you run the `git remote -v` command above, you'll see that you have
+4. When you run the `git remote -v` command above, you'll see that you have
 two remotes: `mdn` and `origin`. The `origin` remote is the default name
 that `git` has assigned to your fork (`https://github.com/octocat/content`).
 
-1. Once you've created your local clone, there's no need to do that
+5. Once you've created your local clone, there's no need to do that
 again next time you want to make a contribution. However, each time before
 you start a new chunk of work make sure you update your local clone.
 The following checks-out your local clone's `main` branch, fetches the
@@ -221,7 +221,7 @@ and use it to make a pull request.
     git checkout -b my-work
     ```
 
-1. Next, you'll want to start the local preview service, so you can see
+6. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
 this local preview service is available at `http://localhost:5042/`
 within your browser.
@@ -233,7 +233,7 @@ within your browser.
     yarn start
     ```
 
-1. When browsing a page locally, you can press the **Open in your editor**
+7. When browsing a page locally, you can press the **Open in your editor**
    button to edit the associated `index.html` or `index.md` file.
 
    To specify VS Code as your preferred editor, create a file named `.env` in
@@ -250,7 +250,7 @@ within your browser.
    using the normal mechanism for your operating system/shell (i.e. you don't
    have to use the `.env` file or VS Code).
 
-1. Make your desired changes to one or more `index.html` or `index.md` files
+8. Make your desired changes to one or more `index.html` or `index.md` files
 using your preferred code editor. **When thinking about your desired changes,
 it's important to keep the following in mind:**
     - **Make sure you've read the
@@ -258,17 +258,17 @@ it's important to keep the following in mind:**
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
     - **If you're editing a Markdown file, see the
-    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
+    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN).**
     - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
 
-1. Once you've made and saved your changes, open a browser, and navigate
+9. Once you've made and saved your changes, open a browser, and navigate
 to the page(s) you've changed. For example, if you changed
 `files/en-us/web/javascript/index.md`, open
 `http://localhost:5042/en-us/docs/web/javascript` in your browser.
 
-1. You might have noticed that at the top of each page that you preview,
+10. You might have noticed that at the top of each page that you preview,
 for example the `http://localhost:5042/en-us/docs/web/javascript` page,
 there is a `Show flaws` button. Click on that button to see if your
 changes have introduced flaws on the page. You can also fix flaws on a
@@ -278,7 +278,7 @@ particular page by running the command:
     yarn content flaws <slug>
     ```
 
-1. Once you're happy with your changes, add and commit them to your branch,
+11. Once you're happy with your changes, add and commit them to your branch,
 and then push the branch to your fork. Remember, the default name that
 `git` assigned to the remote that represents your fork is `origin`.
 
@@ -289,10 +289,10 @@ and then push the branch to your fork. Remember, the default name that
     git push -u origin my-work
     ```
 
-1. You're now ready to create a
+12. You're now ready to create a
 [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-1. Once you've created your pull request, sit back, relax, and wait for
+13. Once you've created your pull request, sit back, relax, and wait for
 a review.
 **You do not need to request a review. One or more reviewers will be selected for**
 **you automatically.**
@@ -317,18 +317,18 @@ resolve the underlying issue(s). If you don't know how to resolve the
 underlying issue(s), you can ask for help. Your pull request will not be
 approved and merged if these tests are failing.
 
-1. If your pull request has merge conflicts with the `main` branch (GitHub
+2. If your pull request has merge conflicts with the `main` branch (GitHub
 checks for this automatically and notifies you), you are responsible for
 resolving them. You can do this by merging the `main` branch into your
 branch (`git pull mdn main`), and then pushing the updated branch to
 your fork (`git push`).
 
-1. An alternative strategy is `git rebase` of `main` on your branch.
+3. An alternative strategy is `git rebase` of `main` on your branch.
 This will rewrite the git history and might confuse reviewers as notifications
 from GitHub lead to nowhere. Your changes are replayed on top of the current
 main branch at that point in time.
 
-1. Each pull request should contain a single logical change, or related set
+4. Each pull request should contain a single logical change, or related set
 of changes that make sense to submit together. If a pull request becomes
 too large or contains too many unrelated changes, it becomes too difficult
 to review, and may begin to look suspicious (it is easier to hide malicious
@@ -336,7 +336,7 @@ changes in a large pull request). In such cases, the reviewer has the right
 to close your pull request, and ask that you submit a separate pull request
 for each logical set of changes that belong together.
 
-1. If your pull request contains any kind of significant complexity
+5. If your pull request contains any kind of significant complexity
 (it contains technical changes, and isn't just a typo fix, grammatical
 improvement, or formatting/structural change), please describe why you're
 making the change and anything else we need to know about it.
@@ -356,7 +356,7 @@ making the change and anything else we need to know about it.
    technical documentation; you should not report merely basic improvements
    in the grammar but only cases where the grammar is incorrect.
 
-1. Do not re-open a pull request that a reviewer has closed.
+6. Do not re-open a pull request that a reviewer has closed.
 
 ### Adding a new document
 
@@ -374,7 +374,7 @@ There are only a few things to keep in mind:
   `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.md` file.
 - Remember that a document's `index.html` or `index.md` file must start with
   front-matter that defines the `title`, `slug`, and
-  [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
+  [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag)
   (if any) for the document. You might find it helpful to refer
   to the front-matter within a similar document's `index.html` or `index.md`.
 
@@ -392,9 +392,9 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.md` file.
+2. Create one or more new document folders, each with their own `index.md` file.
 
-1. Add and commit your new files, as well as push your new branch to your fork:
+3. Add and commit your new files, as well as push your new branch to your fork:
 
     ```sh
     git add files/en-us/folder/you/created
@@ -402,7 +402,7 @@ As we outlined above, the step-by-step process in general would be:
     git push -u origin my-add
     ```
 
-1. And finally create your
+4. And finally create your
 [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
@@ -435,14 +435,14 @@ the entire tree. For example, let's say you want to move the entire
     git checkout -b my-move
     ```
 
-1. Perform the move (which will delete and modify existing files, as well
+2. Perform the move (which will delete and modify existing files, as well
 as create new files):
 
     ```sh
     yarn content move Learn/Accessibility Learn/A11y
     ```
 
-1. Add and commit all of the deleted, created, and modified files, as well as
+3. Add and commit all of the deleted, created, and modified files, as well as
 push your branch to your fork:
 
     ```sh
@@ -450,7 +450,7 @@ push your branch to your fork:
     git push -u origin my-move
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+4. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 **Important: `yarn content move` automatically adds the necessary redirect
 information to the `_redirects.txt` file so that the old location will redirect
@@ -494,14 +494,14 @@ entire `/en-US/Learn/Accessibility` tree:
     git checkout -b my-delete
     ```
 
-1. Perform the delete:
+2. Perform the delete:
 
     ```sh
     yarn content delete Learn/Accessibility --recursive
     ```
 
-1. [Add a redirect](#redirecting-a-document) (if needed).
-1. Add and commit all of the deleted files, as well as
+3. [Add a redirect](#redirecting-a-document) (if needed).
+4. Add and commit all of the deleted files, as well as
 push your branch to your fork:
 
     ```sh
@@ -509,7 +509,7 @@ push your branch to your fork:
     git push -u origin my-delete
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+5. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 > **Note:** If the slug of the page you wish to delete contain special
   characters, include it in quotes:
@@ -538,7 +538,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
     git checkout -b my-delete
     ```
 
-1. Perform the redirect:
+2. Perform the redirect:
 
     ```sh
     yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
@@ -546,7 +546,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
 
     Note that the target page can be an external URL or another page.
 
-1. Commit all of the changed files, as well as
+3. Commit all of the changed files, as well as
 pushing your branch to your fork:
 
     ```sh

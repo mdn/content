@@ -12,6 +12,7 @@ tags:
   - color
 browser-compat: css.types.blend-mode
 ---
+
 {{CSSRef}}
 
 The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
@@ -79,6 +80,10 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 For each pixel among the layers to which it is applied, a blend mode takes the colors of the foreground and the background, performs a calculation on them, and returns a new color value.
 
 Changes between blend modes are not interpolated. Any change occurs immediately.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

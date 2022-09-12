@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeywordValue
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSKeywordValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) creates an object to represent CSS keywords and other identifiers.
@@ -22,12 +23,12 @@ The interface instance name is a {{Glossary("stringifier")}} meaning that when u
 
 ## Constructor
 
-- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}}
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSKeywordValue` object.
 
 ## Properties
 
-- {{domxref('CSSKeywordValue.value')}}
+- {{domxref('CSSKeywordValue.value')}} {{Experimental_Inline}}
   - : Returns or sets the value of the `CSSKeywordValue`.
 
 ## Methods

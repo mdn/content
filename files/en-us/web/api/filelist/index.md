@@ -8,6 +8,7 @@ tags:
   - Files
 browser-compat: api.FileList
 ---
+
 {{APIRef("File API")}}
 
 An object of this type is returned by the `files` property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the `<input type="file">` element. It's also used for a list of files dropped into web content when using the drag and drop API; see the [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object for details on this usage.
@@ -43,10 +44,8 @@ In this example, we log the names of all the files selected by the user.
 #### HTML
 
 ```html
-
-<!--'multiple' is set to allow multiple files to be selected-->
 <input id="myfiles" multiple type="file">
-<div class="output"></div>
+<pre class="output">Selected files:</pre>
 ```
 
 #### CSS
@@ -63,18 +62,13 @@ In this example, we log the names of all the files selected by the user.
 
 ```js
 const output = document.querySelector('.output');
-const myFiles = document.querySelector("#myfiles");
+const fileInput = document.querySelector("#myfiles");
 
-function logFilenames(){
-  const fileInput = document.querySelector("#myfiles");
-  const files = fileInput.files;
-  const fileListLength = files.length;
-  for (let i = 0; i < fileListLength; i++) {
-    output.innerText = `${output.innerText}\n${files.item(i).name}`;
+fileInput.addEventListener("change", () => {
+  for (const file of fileInput.files) {
+    output.innerText += `\n${file.name}`;
   }
-}
-
-myFiles.addEventListener("change", logFilenames);
+});
 ```
 
 #### Result

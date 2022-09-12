@@ -4,13 +4,13 @@ slug: Web/API/Document/exitPointerLock
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - mouse lock
 browser-compat: api.Document.exitPointerLock
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
+
+{{APIRef("DOM")}}
 
 The **`exitPointerLock()`** method asynchronously releases a
 pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.

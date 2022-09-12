@@ -11,6 +11,7 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.RegisteredUserScript.unregister
 ---
+
 {{AddonSidebar}}
 
 The `unregister()` method of the {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object unregisters the user scripts represented by the object, user scripts that were registered using {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
@@ -23,7 +24,7 @@ The `unregister()` method of the {{WebExtAPIRef("userScripts.RegisteredUserScrip
 const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
-…
+// …
 await registeredUserScript.unregister()
 ```
 

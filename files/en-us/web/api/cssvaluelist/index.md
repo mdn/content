@@ -11,7 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.CSSValueList
 ---
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+
+{{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`CSSValueList`** interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.
 
@@ -33,12 +34,12 @@ The items in the `CSSValueList` are accessible via an integral index, starting f
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}}
+- {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : An `unsigned long` representing the number of `CSSValues` in the list.
 
 ## Methods
 
-- {{DOMxRef("CSSValueList.item()")}}
+- {{DOMxRef("CSSValueList.item()")}} {{Deprecated_Inline}}
   - : This method is used to retrieve a {{DOMxRef("CSSValue")}} by ordinal index. The order in this collection represents the order of the values in the CSS style property. If index is greater than or equal to the number of values in the list, this returns `null`.
 
 ## Specifications

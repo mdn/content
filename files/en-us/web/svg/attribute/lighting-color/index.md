@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.attributes.presentation.lighting-color
 ---
+
 {{SVGRef}}
 
 The **`lighting-color`** attribute defines the color of the light source for lighting filter primitives.

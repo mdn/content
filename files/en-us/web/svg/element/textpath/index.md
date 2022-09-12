@@ -8,6 +8,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.textPath
 ---
+
 {{SVGRef}}
 
 To render text along the shape of a {{SVGElement("path")}}, enclose the text in a **`<textPath>`** element that has an {{SVGAttr("href")}} attribute with a reference to the {{SVGElement("path")}} element.
@@ -42,28 +43,28 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("href")}}
   - : The URL to the path or basic shape on which to render the text. If the `path` attribute is set, `href` has no effect.
-    *Value type*: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url) ; *Default value*: none; *Animatable*: **yes**
+    _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("lengthAdjust")}}
   - : Where length adjustment should be applied to the text: the space between glyphs, or both the space and the glyphs themselves.
-    *Value type*: `spacing`|`spacingAndGlyphs`; *Default value*: `spacing`; *Animatable*: **yes**
+    _Value type_: `spacing`|`spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
 - {{SVGAttr("method")}}
   - : Which method to render individual glyphs along the path.
-    *Value type*: `align`|`stretch` ; *Default value*: `align`; *Animatable*: **yes**
-- {{SVGAttr("path")}}
+    _Value type_: `align`|`stretch` ; _Default value_: `align`; _Animatable_: **yes**
+- {{SVGAttr("path")}} {{Experimental_Inline}}
   - : The path on which the text should be rendered.
-    *Value type*: [**\<path_data>**](/en-US/docs/Web/SVG/Content_type#path_data) ; *Default value*: none; *Animatable*: **yes**
-- {{SVGAttr("side")}}
+    _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Content_type#path_data) ; _Default value_: none; _Animatable_: **yes**
+- {{SVGAttr("side")}} {{Experimental_Inline}}
   - : Which side of the path the text should be rendered.
-    *Value type*: `left`|`right` ; *Default value*: `left`; *Animatable*: **yes**
+    _Value type_: `left`|`right` ; _Default value_: `left`; _Animatable_: **yes**
 - {{SVGAttr("spacing")}}
   - : How space between glyphs should be handled.
-    *Value type*: `auto`|`exact` ; *Default value*: `exact`; *Animatable*: **yes**
+    _Value type_: `auto`|`exact` ; _Default value_: `exact`; _Animatable_: **yes**
 - {{SVGAttr("startOffset")}}
   - : How far the beginning of the text should be offset from the beginning of the path.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("textLength")}}
   - : The width of the space into which the text will render.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: *auto*; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _auto_; _Animatable_: **yes**
 
 ### Global attributes
 

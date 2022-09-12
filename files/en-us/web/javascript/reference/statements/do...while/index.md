@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.do_while
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`do...while` statement** creates a loop that executes a
@@ -20,7 +21,7 @@ at least once.
 
 ```js
 do
-   statement
+  statement
 while (condition);
 ```
 
@@ -51,7 +52,7 @@ let result = '';
 let i = 0;
 do {
   i += 1;
-  result += i + ' ';
+  result += `${i} `;
 }
 while (i > 0 && i < 5);
 // Despite i === 0 this will still loop as it starts off without the test

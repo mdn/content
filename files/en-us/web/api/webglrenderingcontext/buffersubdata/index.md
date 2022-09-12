@@ -11,6 +11,7 @@ tags:
   - bufferSubData
 browser-compat: api.WebGLRenderingContext.bufferSubData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bufferSubData()`** method of the
@@ -40,26 +41,28 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-      - : Buffer used for element indices.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.COPY_READ_BUFFER`
-        - : Buffer for copying from one buffer object
+      - : Buffer used for element indices.
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.COPY_READ_BUFFER`
+      - : Buffer for copying from one buffer object
           to another.
-      - `gl.COPY_WRITE_BUFFER`
-        - : Buffer for copying from one buffer object
+    - `gl.COPY_WRITE_BUFFER`
+      - : Buffer for copying from one buffer object
           to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`
-        - : Buffer for transform feedback
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+      - : Buffer for transform feedback
           operations.
-      - `gl.UNIFORM_BUFFER`
-        - : Buffer used for storing uniform blocks.
-      - `gl.PIXEL_PACK_BUFFER`
-        - : Buffer used for pixel transfer
+    - `gl.UNIFORM_BUFFER`
+      - : Buffer used for storing uniform blocks.
+    - `gl.PIXEL_PACK_BUFFER`
+      - : Buffer used for pixel transfer
           operations.
-      - `gl.PIXEL_UNPACK_BUFFER`
-        - : Buffer used for pixel transfer
+    - `gl.PIXEL_UNPACK_BUFFER`
+      - : Buffer used for pixel transfer
           operations.
 
 - `dstByteOffset`

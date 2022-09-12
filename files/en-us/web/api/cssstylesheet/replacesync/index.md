@@ -10,6 +10,7 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replaceSync
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`replaceSync()`** method of the {{domxref("CSSStyleSheet")}} interface synchronously replaces the content of the stylesheet with the content passed into it.
@@ -25,6 +26,7 @@ replaceSync(text)
 ### Parameters
 
 - `text`
+
   - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
     > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.

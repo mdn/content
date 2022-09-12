@@ -8,9 +8,11 @@ tags:
   - Reference
   - length
   - ImageTrackList
+  - Experimental
 browser-compat: api.ImageTrackList.length
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`length`** property of the {{domxref("ImageTrackList")}} interface returns the length of the `ImageTrackList`.
 

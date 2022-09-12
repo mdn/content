@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 The **`compareDocumentPosition()`** method of the {{domxref("Node")}} interface

@@ -5,10 +5,10 @@ tags:
   - Advanced
   - CSS
   - CSS Transitions
-  - CSS3 Transitions
   - Guide
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
+
 {{CSSRef}}
 
 **CSS transitions** provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
@@ -191,7 +191,7 @@ This CSS establishes the look of the menu, with the background and text colors b
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
 >
-> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `window.setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
+> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
 
 ### Using transitions to make JavaScript functionality smooth
 
@@ -205,11 +205,11 @@ Transitions are a great tool to make things look much smoother without having to
 Using JavaScript you can make the effect of moving the ball to a certain position happen:
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+const f = document.getElementById('foo');
+document.addEventListener('click', (ev) => {
+  f.style.transform = `translateY(${ev.clientY - 25}px)`;
+  f.style.transform += `translateX(${ev.clientX - 25}px)`;
+}, false);
 ```
 
 With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:

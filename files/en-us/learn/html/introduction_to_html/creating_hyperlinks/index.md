@@ -16,6 +16,7 @@ tags:
   - relative
   - urls
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 Hyperlinks are really important — they are what makes the Web _a web_.
@@ -109,7 +110,7 @@ If you have an image you want to make into a link, use the {{htmlelement("a")}} 
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="mozilla logo that links to the Mozilla homepage">
+  <img src="mozilla-image.png" alt="Mozilla homepage">
 </a>
 ```
 

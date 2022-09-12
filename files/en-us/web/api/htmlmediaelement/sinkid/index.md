@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMediaElement.sinkId
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.sinkId`** read-only property returns a

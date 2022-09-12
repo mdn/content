@@ -64,7 +64,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated ARIA roles, states, and properties
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-  - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.
+  - : The `aria-pressed` attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed. If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
@@ -162,7 +162,7 @@ function handleCommand(event) {
     newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
     // Don't add blank entries to the list.
-    if(name.length > 0) {
+    if (name.length > 0) {
         listItem = document.createElement('li');
         listItem.appendChild(document.createTextNode(name));
 
@@ -230,13 +230,16 @@ function handleBtnKeyDown(event) {
 }
 
 function toggleButton(element) {
-  var audio = document.getElementById('audio');
+  const audio = document.getElementById('audio');
+
   // Check to see if the button is pressed
-  var pressed = (element.getAttribute("aria-pressed") === "true");
+  const pressed = element.getAttribute("aria-pressed") === "true";
+
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
-  // toggle the play state of the audio file
-  if(pressed) {
+
+  // Toggle the play state of the audio file
+  if (pressed) {
      audio.pause();
   } else {
      audio.play();
@@ -282,6 +285,6 @@ If a link performs the action of a button, giving the element `role="button"` he
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

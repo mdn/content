@@ -18,9 +18,11 @@ tags:
   - XR
   - XRView
   - augmented
+  - Experimental
 browser-compat: api.XRView.eye
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRView")}} interface's read-only **`eye`**
 property is a string indicating which eye's viewpoint the `XRView` represents: `left` or

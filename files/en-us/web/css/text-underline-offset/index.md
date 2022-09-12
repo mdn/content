@@ -4,13 +4,14 @@ slug: Web/CSS/text-underline-offset
 tags:
   - CSS
   - CSS Text Decoration
-  - Property
+  - CSS Property
   - Reference
   - recipe:css-property
   - text-decoration
   - text-underline-offset
 browser-compat: css.properties.text-underline-offset
 ---
+
 {{CSSRef}}
 
 The **`text-underline-offset`** [CSS](/en-US/docs/Web/CSS) property sets the offset distance of an underline text decoration line (applied using {{cssxref("text-decoration")}}) from its original position.

@@ -8,6 +8,7 @@ tags:
   - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
+
 {{JSRef}}
 
 The **`URIError()`** constructor creates an error when a global
@@ -21,7 +22,15 @@ new URIError(message)
 new URIError(message, options)
 new URIError(message, fileName)
 new URIError(message, fileName, lineNumber)
+
+URIError()
+URIError(message)
+URIError(message, options)
+URIError(message, fileName)
+URIError(message, fileName, lineNumber)
 ```
+
+> **Note:** `URIError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `URIError` instance.
 
 ### Parameters
 

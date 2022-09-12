@@ -14,6 +14,7 @@ tags:
   - values
   - whitespace
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Now that you are beginning to understand the purpose and use of CSS, let's examine the structure of CSS.
@@ -59,7 +60,7 @@ You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -107,7 +108,7 @@ The HTML for an internal stylesheet might look like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -140,7 +141,7 @@ Inline styles are CSS declarations that affect a single HTML element, contained 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>

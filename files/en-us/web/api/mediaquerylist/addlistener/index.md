@@ -10,8 +10,10 @@ tags:
   - Method
   - Reference
   - addListener
+  - Deprecated
 browser-compat: api.MediaQueryList.addListener
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The deprecated **`addListener()`** method of the

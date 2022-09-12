@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.levelchange_event
 ---
+
 {{APIRef("Battery API")}}
 
 The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.level","level")}} property is updated.
@@ -42,13 +43,12 @@ navigator.getBattery().then((battery) => {
   battery.onlevelchange = () => {
     document.querySelector('#level').textContent = battery.level;
 
-    if(battery.charging) {
+    if (battery.charging) {
       document.querySelector('#stateBattery').textContent =
-          `Charging time: ${battery.chargingTime / 60}`;
-    }
-    else {
+        `Charging time: ${battery.chargingTime / 60}`;
+    } else {
       document.querySelector('#stateBattery').textContent =
-          `Discharging time: ${battery.dischargingTime / 60}`;
+        `Discharging time: ${battery.dischargingTime / 60}`;
     }
   };
 });

@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 22
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

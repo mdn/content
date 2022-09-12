@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.IDBTransaction.error_event
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `error` event is fired on `IDBTransaction` when a request returns an error and the event bubbles up to the transaction object.

@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.img-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive specifies valid sources of images and favicons.

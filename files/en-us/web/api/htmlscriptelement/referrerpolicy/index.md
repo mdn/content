@@ -10,6 +10,7 @@ tags:
   - referrerPolicy
 browser-compat: api.HTMLScriptElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The **`referrerPolicy`** property of the

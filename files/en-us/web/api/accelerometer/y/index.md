@@ -12,9 +12,11 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
   - 'y'
 browser-compat: api.Accelerometer.y
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along its y axis.

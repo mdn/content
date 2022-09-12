@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageData()`** constructor returns a newly instantiated
@@ -86,9 +87,9 @@ specifies a `width` of `200` for the new object, so its
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const arr = new Uint8ClampedArray(40000);
+const arr = new Uint8ClampedArray(40_000);
 
-// Iterate through every pixel
+// Fill the array with the same RGBA values
 for (let i = 0; i < arr.length; i += 4) {
   arr[i + 0] = 0;    // R value
   arr[i + 1] = 190;  // G value

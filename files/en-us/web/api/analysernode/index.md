@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information. It is an {{domxref("AudioNode")}} that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.
@@ -56,7 +57,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
   - : An unsigned long value representing the size of the FFT ([Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform)) to be used to determine the frequency domain.
-- {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
+- {{domxref("AnalyserNode.frequencyBinCount")}} {{ReadOnlyInline}}
   - : An unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.
 - {{domxref("AnalyserNode.minDecibels")}}
   - : A double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using `getByteFrequencyData()`.

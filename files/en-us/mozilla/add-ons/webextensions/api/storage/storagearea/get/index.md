@@ -16,6 +16,7 @@ tags:
   - get
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
+
 {{AddonSidebar()}}
 
 Retrieves one or more items from the storage area.
@@ -137,7 +138,7 @@ let gettingItem = browser.storage.local.get({
 ### Chrome examples
 
 ```js
-chrome.storage.local.get("kitten", function(items){
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
 });
 ```

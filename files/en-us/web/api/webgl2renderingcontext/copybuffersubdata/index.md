@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.copyBufferSubData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.copyBufferSubData()`** method of

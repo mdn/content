@@ -19,6 +19,7 @@ tags:
   - muted
   - play
 ---
+
 Automatically starting the playback of audio (or videos with audio tracks) immediately upon page load can be an unwelcome surprise to users. While autoplay of media serves a useful purpose, it should be used carefully and only when needed. In order to give users control over this, browsers often provide various forms of autoplay blocking. In this guide, we'll cover autoplay functionality in the various media and Web Audio APIs, including a brief overview of how to use autoplay and how to work with browsers to handle autoplay blocking gracefully.
 
 Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.
@@ -104,10 +105,10 @@ Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay",
 ```js
 let hasPlayed = false;
 function handleFirstPlay(event) {
-  if(hasPlayed === false) {
+  if (!hasPlayed) {
     hasPlayed = true;
 
-    let vid = event.target;
+    const vid = event.target;
 
     vid.onplay = null;
 
@@ -199,7 +200,7 @@ When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to
 
 To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
 
-```plain
+```http
 Feature-Policy: autoplay 'self'
 ```
 
@@ -215,7 +216,7 @@ To do the same for an {{HTMLElement("iframe")}}:
 
 Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Feature-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
 
-```plain
+```http
 Feature-Policy: autoplay 'self'; fullscreen
 ```
 
@@ -231,7 +232,7 @@ The same permissions, grated using the `<iframe>` element's `allow` property, lo
 
 The `Feature-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
 
-```plain
+```http
 Feature-Policy: autoplay 'self' https://example.media
 ```
 
@@ -248,7 +249,7 @@ An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy
 
 Setting the `autoplay` feature policy to `'none'` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
 
-```plain
+```http
 Feature-Policy: autoplay 'none'
 ```
 

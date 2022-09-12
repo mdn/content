@@ -21,6 +21,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform.matrix
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property

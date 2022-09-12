@@ -7,6 +7,7 @@ tags:
   - SVG
 spec-urls: https://drafts.csswg.org/css-backgrounds/#the-background-image
 ---
+
 SVG images can be used as an image format, in a number of contexts. Browsers support SVG images in:
 
 - HTML {{HTMLElement("img")}} or {{SVGElement("svg")}} elements

@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.getIdentityAssertion
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getIdentityAssertion()`** method

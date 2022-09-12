@@ -14,6 +14,7 @@ tags:
   - weight
 browser-compat: api.SpeechGrammar.weight
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The optional **`weight`** property of the

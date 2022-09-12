@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/33
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.

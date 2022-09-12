@@ -12,6 +12,7 @@ tags:
   - onShown
 browser-compat: webextensions.api.menus.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has shown a menu.
@@ -32,7 +33,7 @@ If the `onShown` handler calls any asynchronous APIs, then it's possible that th
 let lastMenuInstanceId = 0;
 let nextMenuInstanceId = 1;
 
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
@@ -46,7 +47,7 @@ browser.menus.onShown.addListener(async function(info, tab) {
   // Now use menus.create/update + menus.refresh.
 });
 
-browser.menus.onHidden.addListener(function() {
+browser.menus.onHidden.addListener(() => {
   lastMenuInstanceId = 0;
 });
 ```
@@ -54,7 +55,7 @@ browser.menus.onHidden.addListener(function() {
 Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   browser.menus.update(menuId /*, …*/);
    // Note: Not waiting for returned promise.
   browser.menus.refresh();
@@ -64,7 +65,7 @@ browser.menus.onShown.addListener(async function(info, tab) {
 However, if you call these APIs asynchronously, then you do have to perform the check:
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
@@ -114,8 +115,6 @@ Events have three functions:
         Compared with `menus.OnClickData`, the `info` object also omits the `menuItemId` and `modifiers` properties, because of course these are not available until a menu item has been selected.
 
         The `contexts`, `menuIds`, `frameId`, and `editable` properties are always provided. All the other properties in `info` are only provided if the extension has the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the page.
-
-    <!---->
 
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.

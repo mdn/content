@@ -8,9 +8,11 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+  - Deprecated
 browser-compat: api.SVGCursorElement
 ---
-{{deprecated_header}}{{APIRef("SVG")}}
+
+{{APIRef("SVG")}}{{Deprecated_Header}}
 
 The **`SVGCursorElement`** interface provides access to the properties of {{ SVGElement("cursor") }} elements, as well as methods to manipulate them.
 

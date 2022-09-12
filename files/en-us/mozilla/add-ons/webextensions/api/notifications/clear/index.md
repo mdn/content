@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: webextensions.api.notifications.clear
 ---
+
 {{AddonSidebar()}}
 
 Clears a notification, given its ID.

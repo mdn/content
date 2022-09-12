@@ -5,13 +5,14 @@ page-type: web-api-constructor
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Constructor
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.TransitionEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`TransitionEvent()`** constructor returns a new {{domxref("TransitionEvent")}} object, representing an event in relation with a transition.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.font
 ---
+
 {{APIRef}}
 
 The
@@ -57,7 +58,7 @@ using them in a canvas.
 ```js
 let f = new FontFace('test', 'url(x)');
 
-f.load().then(function() {
+f.load().then(() => {
   // Ready to use the font in a canvas context
 });
 ```

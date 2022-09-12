@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Client
-  - Experimental
   - Method
   - Navigate
   - Reference
@@ -13,6 +12,7 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient.navigate
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`navigate()`** method of the {{domxref("WindowClient")}}

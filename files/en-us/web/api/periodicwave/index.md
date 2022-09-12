@@ -14,6 +14,7 @@ tags:
   - waveform
 browser-compat: api.PeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`PeriodicWave`** interface defines a periodic waveform that can be used to shape the output of an {{domxref("OscillatorNode")}}.

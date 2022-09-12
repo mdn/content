@@ -10,6 +10,7 @@ tags:
   - if
 browser-compat: javascript.statements.if_else
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`if`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
@@ -127,11 +128,11 @@ if (b) // this condition is truthy
 ### Using if...else
 
 ```js
-if (cipher_char === from_char) {
-  result = result + to_char;
+if (cipherChar === fromChar) {
+  result += toChar;
   x++;
 } else {
-  result = result + clear_char;
+  result += clearChar;
 }
 ```
 
@@ -151,7 +152,7 @@ if (x > 50) {
 
 ### Using an assignment as a condition
 
-You should almost never have an `if...else` with an assignment like "`x = y`" as a condition:
+You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
 ```js example-bad
 if (x = y) {

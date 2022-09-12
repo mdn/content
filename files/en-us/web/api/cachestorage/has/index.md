@@ -12,6 +12,7 @@ tags:
   - has
 browser-compat: api.CacheStorage.has
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`has()`** method of the {{domxref("CacheStorage")}}
@@ -42,15 +43,13 @@ The following example first checks whether a cache called 'v1' exists. If so, we
 list of assets to it. If not then we run some kind of cache set-up function.
 
 ```js
-caches.has('v1').then(function(hasCache) {
+caches.has('v1').then((hasCache) => {
   if (!hasCache) {
     someCacheSetupFunction();
   } else {
-    caches.open('v1').then(function(cache) {
-      return cache.addAll(myAssets);
-    });
+    caches.open('v1').then((cache) => cache.addAll(myAssets));
   }
-}).catch(function() {
+}).catch(() => {
   // Handle exception here.
 });
 ```

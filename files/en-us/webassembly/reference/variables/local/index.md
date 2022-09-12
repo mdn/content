@@ -7,6 +7,7 @@ tags:
   - Reference
   - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`local`** instruction declares a new local variable.

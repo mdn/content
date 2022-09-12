@@ -8,6 +8,7 @@ tags:
   - WebGL
 browser-compat: api.HTMLCanvasElement.webglcontextlost_event
 ---
+
 {{APIRef}}
 
 The **`webglcontextlost`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent detects that the drawing buffer associated with a {{domxref("WebGLRenderingContext")}} object has been lost.

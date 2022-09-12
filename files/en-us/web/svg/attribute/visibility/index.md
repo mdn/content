@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.visibility
 ---
+
 {{SVGRef}}
 
 The **`visibility`** attribute lets you control the visibility of graphical elements. With a value of `hidden` or `collapse` the current graphics element is invisible.
@@ -100,9 +101,10 @@ button {
 #### JavaScript
 
 ```js
-document.querySelector("button").addEventListener("click", function (evt) {
-  this.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
-  this.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
+const button = document.querySelector("button");
+button.addEventListener("click", (evt) => {
+  button.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
+  button.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
 });
 ```
 

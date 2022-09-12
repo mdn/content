@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
+
 {{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method
@@ -49,11 +50,11 @@ text string to the file corresponding to the passed-in directory entry.
 
 ```js
 function writeToFileEntry(entry, text) {
-  entry.createWriter(function(fileWriter) {
+  entry.createWriter((fileWriter) => {
     let data = Blob([text], { type: "text/plain" });
 
     fileWriter.write(data);
-  }, function(fileError) {
+  }, (fileError) => {
     /* do whatever to handle the error */
   });
 }

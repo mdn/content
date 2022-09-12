@@ -17,6 +17,7 @@ tags:
   - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
@@ -71,7 +72,7 @@ You may mix and match the two types of descriptor. You must not, however, provid
 multiple image candidate strings that specify the same descriptor. All of the following
 are valid image candidate strings:
 
-```html
+```plain
 "images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
 ```
 
@@ -79,7 +80,7 @@ This string provides versions of an image to be used at the standard pixel densi
 (`1x`) as well as double that pixel density (`2x`). Also available
 is a version of the image for use at a width of 2048 pixels (`2048w`).
 
-```html
+```plain
 "header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"
 ```
 
@@ -88,7 +89,7 @@ This string provides versions of a header image to use when the {{Glossary("user
 additional, fallback image candidate is provided without any condition at all, to be
 used for any other width.
 
-```html
+```plain
 "icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x, icon-ultra.png 3x, icon.svg"
 ```
 
@@ -140,7 +141,7 @@ the wrap must occur.
 ### JavaScript
 
 The following code is run within a handler for the {{domxref("Window", "window")}}'s
-{{domxref("Window.load_event", "load")}} event.  It uses the image's
+{{domxref("Window.load_event", "load")}} event. It uses the image's
 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
 the URL selected by the browser from the `srcset`.
 

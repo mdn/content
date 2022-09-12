@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Proxy.Proxy
 ---
+
 {{JSRef}}
 
 The **`Proxy()`** constructor is used to create
@@ -18,6 +19,8 @@ The **`Proxy()`** constructor is used to create
 ```js
 new Proxy(target, handler)
 ```
+
+> **Note:** `Proxy()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -8,6 +8,7 @@ tags:
   - SyntaxError
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
+
 {{JSRef}}
 
 The **`SyntaxError`** constructor creates a new error object
@@ -21,7 +22,15 @@ new SyntaxError(message)
 new SyntaxError(message, options)
 new SyntaxError(message, fileName)
 new SyntaxError(message, fileName, lineNumber)
+
+SyntaxError()
+SyntaxError(message)
+SyntaxError(message, options)
+SyntaxError(message, fileName)
+SyntaxError(message, fileName, lineNumber)
 ```
+
+> **Note:** `SyntaxError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `SyntaxError` instance.
 
 ### Parameters
 

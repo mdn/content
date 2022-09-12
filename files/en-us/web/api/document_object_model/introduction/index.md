@@ -12,6 +12,7 @@ tags:
   - Tutorial
 spec-urls: https://dom.spec.whatwg.org/
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **Document Object Model** (_DOM_) is the data representation of the objects
@@ -92,22 +93,20 @@ adds text to that element,
 and then adds it to the tree for the document:
 
 ```html
-<html>
+<html lang="en">
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         const heading = document.createElement("h1");
-         const heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = () => {
+        // create a couple of elements in an otherwise empty HTML page
+        const heading = document.createElement("h1");
+        const headingText = document.createTextNode("Big Head!");
+        heading.appendChild(headingText);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -134,9 +133,7 @@ The following table briefly describes these data types.
         <code>ownerDocument</code> property of an element returns the
         <code>document</code> to which it belongs), this object is the root
         <code>document</code> object itself. The
-        <a href="/en-US/docs/Web/API/Document"
-          >DOM <code>document</code> Reference</a
-        >
+        <a href="/en-US/docs/Web/API/Document">DOM <code>document</code> Reference</a>
         chapter describes the <code>document</code> object.
       </td>
     </tr>
@@ -226,8 +223,9 @@ const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element interface
 for (let i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if (tableAttrs[i].nodeName.toLowerCase() === "border")
+  if (tableAttrs[i].nodeName.toLowerCase() === "border") {
     table.border = "1";
+  }
 }
 // HTMLTableElement interface: summary attribute
 table.summary = "note: increased border";
@@ -251,7 +249,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 - `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
 - `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
 - `{{domxref("window.content", "", "", "1")}}`
-- `{{domxref("GlobalEventHandlers/onload", "", "", "1")}}`
+- `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
 - `{{domxref("window.scrollTo", "", "", "1")}}()`
 
 ## Example
@@ -263,13 +261,16 @@ The following simple example illustrates using the DOM {{domxref("Document")}} A
 - the documents's link color (that is, the color of any hypertext links anywhere in the document)
 
 ```html
-<html>
+<html lang="en">
 <head>
   <title>Simple Document API example</title>
   <script>
     function setBodyAttr(attr, value) {
-      if (document.body) document.body[attr] = value;
-      else throw new Error("no support");
+      if (document.body) {
+        document.body[attr] = value;
+      } else {
+        throw new Error("no support");
+      }
     }
   </script>
 </head>

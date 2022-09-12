@@ -14,6 +14,7 @@ tags:
   - l10n:priority
   - programming
 ---
+
 {{JsSidebar}}
 
 This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more [about this reference](/en-US/docs/Web/JavaScript/Reference/About).
@@ -215,7 +216,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 ### Left-hand-side expressions
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
+- [`?.` (Optional chaining)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Operators/import%2Emeta", "import.meta")}}
@@ -304,8 +305,8 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
+- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
 
 ### Comma operators
 

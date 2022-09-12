@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Web Development
 ---
+
 This page explains how to write websites that do not break when new browser versions are released.
 
 This is especially important for intranets and other non-public websites; if we can't see your code, we can't see that it broke. It's not always possible to follow all of these, but following as many of them as possible will help future-proof your website.
@@ -23,9 +24,9 @@ When an event handler content attribute (`onclick`, `onmouseover`, and so forth)
 <div onclick="alert(ownerDocument)">Click me</div>
 ```
 
-then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is a `var ownerDocument` declared in global scope.
+then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is an `ownerDocument` variable declared in the global scope.
 
-What this means is that any time you access a global variable in an event handler content attribute, including calling any function declared globally, you can end up with a name collision if a specification adds a new DOM property to elements or documents which has the same name as your function or variable, and a browser implements it. If that happens, then suddenly your function stops being called. This has happened multiple times to various sites already during the evolution of HTML5.
+What this means is that any time you access a global variable in an event handler content attribute, including calling any function declared globally, you can end up with a name collision if a specification adds a new DOM property to elements or documents which has the same name as your function or variable, and a browser implements it. If that happens, then suddenly your function stops being called. This has happened multiple times to various sites already during the evolution of HTML.
 
 To avoid this, fully qualify global variable access using "window.", like so:
 

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.scroll-snap-type
 ---
+
 {{CSSRef}}
 
 The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property sets how strictly snap points are enforced on the scroll container in case there is one.
@@ -31,7 +32,7 @@ scroll-snap-type: x mandatory;
 scroll-snap-type: y proximity;
 scroll-snap-type: both mandatory;
 
-/* etc */
+/* … */
 
 /* Global values */
 scroll-snap-type: inherit;

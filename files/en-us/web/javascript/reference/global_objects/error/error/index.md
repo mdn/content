@@ -8,9 +8,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Error.Error
 ---
+
 {{JSRef}}
 
-The **`Error`** constructor creates an error object.
+The **`Error()`** constructor creates an error object.
 
 ## Syntax
 
@@ -20,7 +21,15 @@ new Error(message)
 new Error(message, options)
 new Error(message, fileName)
 new Error(message, fileName, lineNumber)
+
+Error()
+Error(message)
+Error(message, options)
+Error(message, fileName)
+Error(message, fileName, lineNumber)
 ```
+
+> **Note:** `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
 
 ### Parameters
 

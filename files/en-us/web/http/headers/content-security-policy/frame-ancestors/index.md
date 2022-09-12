@@ -12,6 +12,7 @@ tags:
   - frame-ancestors
 browser-compat: http.headers.Content-Security-Policy.frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
@@ -45,7 +46,7 @@ Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")
 
 One or more sources can be set for the `frame-ancestors` policy:
 
-```
+```http
 Content-Security-Policy: frame-ancestors <source>;
 Content-Security-Policy: frame-ancestors <source> <source>;
 ```
@@ -83,7 +84,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;

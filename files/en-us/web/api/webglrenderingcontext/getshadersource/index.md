@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getShaderSource()`** method of the

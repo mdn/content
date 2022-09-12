@@ -11,6 +11,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.class
 ---
+
 {{jsSidebar("Statements")}}
 
 The **class declaration** creates a new class

@@ -13,6 +13,7 @@ tags:
   - checkValidity()
 browser-compat: api.HTMLObjectElement.checkValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.checkValidity()`** method returns a boolean value which indicates validity of the value of the element. If the value is invalid, this method also fires the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event on the element.

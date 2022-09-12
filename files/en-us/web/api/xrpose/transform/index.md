@@ -19,6 +19,7 @@ tags:
   - transform
 browser-compat: api.XRPose.transform
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
 The `transform` read-only attribute of the
@@ -54,7 +55,7 @@ xrSession.addEventListener("select", (event) => {
   let targetObject = findTargetUsingRay(targetRay.transform.matrix);
 
   if (source.targetRayMode === "tracked-pointer") {
-    if (source.handedness == user.handedness) {
+    if (source.handedness === user.handedness) {
       targetObject.primaryAction();
     } else {
       targetObject.offHandAction();

@@ -11,6 +11,7 @@ tags:
   - insertAdjacentHTML
 browser-compat: api.Element.insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentHTML()`** method of the
@@ -98,7 +99,6 @@ content as HTML, but instead inserts it as raw text.
 <button id="reset">Reset</button>
 
 <p>Some text, with a <code id="subject">code-formatted element</code> inside it.</p>
-
 ```
 
 #### CSS

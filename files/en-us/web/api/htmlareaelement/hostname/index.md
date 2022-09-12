@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.hostname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.hostname`** property is a string containing the domain of the URL.

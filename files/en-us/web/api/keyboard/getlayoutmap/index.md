@@ -11,8 +11,10 @@ tags:
   - Reference
   - getLayoutMap()
   - keyboard
+  - Experimental
 browser-compat: api.Keyboard.getLayoutMap
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getLayoutMap()`** method of the

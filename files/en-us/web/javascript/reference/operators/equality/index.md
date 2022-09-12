@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.equality
 ---
+
 {{jsSidebar("Operators")}}
 
 The equality operator (`==`) checks whether its two operands are equal,
@@ -25,7 +26,7 @@ x == y
 
 ## Description
 
-The equality operators (`==` and `!=`) use the [`IsLooselyEqual` Abstract Operation](https://tc39.es/ecma262/#sec-islooselyequal) to compare two operands. This can be roughly summarized as follows:
+The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using) semantic. This can be roughly summarized as follows:
 
 1. If the operands have the same type, they are compared as follows:
     - Object: return `true` only if both operands reference the same object.

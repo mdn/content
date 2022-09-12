@@ -7,9 +7,11 @@ tags:
   - Constructor
   - Reference
   - EncodedVideoChunk
+  - Experimental
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 

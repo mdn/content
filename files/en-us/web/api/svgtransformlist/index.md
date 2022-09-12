@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTransformList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG transform list interface
@@ -17,7 +18,7 @@ The `SVGTransformList` defines a list of {{ domxref("SVGTransform") }} objects.
 
 An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{Gecko("9.0") }},the `SVGTransformList` DOM interface is now indexable and can be accessed like Arrays
+An `SVGTransformList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
@@ -107,9 +108,9 @@ An `SVGTransformList` object can be designated as read only, which means that at
 
 ## Properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
 ## Methods

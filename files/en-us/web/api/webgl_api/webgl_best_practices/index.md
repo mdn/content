@@ -14,6 +14,7 @@ tags:
   - OpenGL
   - WebGL
 ---
+
 {{WebGLSidebar}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
@@ -347,7 +348,7 @@ precision mediump float;
 | `mediump` | int11 | (-2^10, 2^10) |
 | `lowp`    | int9  | (-2^8, 2^8)   |
 
-_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa_
+_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 
 ### ESSL300 minimum requirements (WebGL 2)
 
@@ -537,11 +538,11 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
@@ -594,7 +595,7 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
+window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
    await new Promise((fn_resolve) => {
       const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
@@ -611,7 +612,7 @@ window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
-};
+});
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

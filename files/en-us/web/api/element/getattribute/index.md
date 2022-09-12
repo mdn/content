@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttribute()`** method of the
@@ -75,7 +76,7 @@ does not exist on the specified element.
 ### Retrieving nonce values
 
 For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
-sources, such as CSS selectors, and  `.getAttribute("nonce")` calls are
+sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad

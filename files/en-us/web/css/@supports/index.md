@@ -10,6 +10,7 @@ tags:
   - supports
 browser-compat: css.at-rules.supports
 ---
+
 {{CSSRef}}
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a _feature query_. The rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
@@ -99,11 +100,9 @@ The `or` operator creates a new expression from the disjunction of two shorter e
 Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
-          (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or
-          ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
 ```
 
 > **Note:** When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
@@ -122,9 +121,9 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ```css
 @supports (animation-name: test) {
-  … /* CSS applied when animations are supported without a prefix */
-  @keyframes { /* Other at-rules can be nested inside */
-    …
+  /* CSS applied when animations are supported without a prefix */
+  @keyframes {
+    /* Other at-rules can be nested inside */
   }
 }
 ```
@@ -132,9 +131,8 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 ### Testing for the support of a given CSS property or a prefixed version
 
 ```css
-@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
-         (-ms-perspective: 10px) or (-o-perspective: 10px)) {
-  … /* CSS applied when 3D transforms, prefixed or not, are supported */
+@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) {
+  /* CSS applied when 3D transforms, prefixed or not, are supported */
 }
 ```
 
@@ -142,7 +140,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ```css
 @supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
-  … /* CSS to provide fallback alternative for text-align-last: justify */
+  /* CSS to provide fallback alternative for text-align-last: justify */
 }
 ```
 
@@ -163,14 +161,14 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
 ```css
 /* This rule won't be applied in browsers which don't support :is() */
 :is(ul, ol) > li {
-  … /* CSS applied when the :is(…) selector is supported */
+  /* CSS applied when the :is(…) selector is supported */
 }
 
 @supports not selector(:is(a, b)) {
   /* Fallback for when :is() is unsupported */
   ul > li,
   ol > li {
-    … /* The above expanded for browsers which don't support :is(…) */
+    /* The above expanded for browsers which don't support :is(…) */
   }
 }
 
@@ -179,12 +177,9 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
   /* This rule needs to be inside the @supports block, otherwise
      it will be partially applied in browsers which don't support
      the `of` argument of :nth-child(…) */
-  :is(
-      :nth-child(1n of ul, ol) a,
-      details > summary
-  ) {
-    … /* CSS applied when the :is(…) selector and
-         the `of` argument of :nth-child(…) are both supported */
+  :is(:nth-child(1n of ul, ol) a, details > summary) {
+    /* CSS applied when the :is(…) selector and
+       the `of` argument of :nth-child(…) are both supported */
   }
 }
 ```

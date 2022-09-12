@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`replaceWith()`** method of the {{domxref("CharacterData")}} interface

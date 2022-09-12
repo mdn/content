@@ -6,8 +6,10 @@ tags:
   - Reference
   - SVG
   - SVG Text Content
+  - Deprecated
 browser-compat: svg.elements.glyph
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 A **`<glyph>`** defines a single glyph in an SVG font.
@@ -27,16 +29,16 @@ A **`<glyph>`** defines a single glyph in an SVG font.
 
 ### Specific attributes
 
-- {{SVGAttr("d")}}
-- {{SVGAttr("horiz-adv-x")}}
-- {{SVGAttr("vert-origin-x")}}
-- {{SVGAttr("vert-origin-y")}}
-- {{SVGAttr("vert-adv-y")}}
-- {{SVGAttr("unicode")}}
-- {{SVGAttr("glyph-name")}}
-- {{SVGAttr("orientation")}}
-- {{SVGAttr("arabic-form")}}
-- {{SVGAttr("lang")}}
+- {{SVGAttr("d")}} {{Deprecated_Inline}}
+- {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-y")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-adv-y")}} {{Deprecated_Inline}}
+- {{SVGAttr("unicode")}} {{Deprecated_Inline}}
+- {{SVGAttr("glyph-name")}} {{Deprecated_Inline}}
+- {{SVGAttr("orientation")}} {{Deprecated_Inline}}
+- {{SVGAttr("arabic-form")}} {{Deprecated_Inline}}
+- {{SVGAttr("lang")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

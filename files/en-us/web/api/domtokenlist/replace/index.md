@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.replace
 ---
+
 {{APIRef("DOM")}}
 
 The **`replace()`** method of the {{domxref("DOMTokenList")}} interface
@@ -56,11 +57,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-if (result) {
-  span.textContent = classes;
-} else {
-  span.textContent = 'token not replaced successfully';
-}
+span.textContent = result ? classes : 'token not replaced successfully';
 ```
 
 The output looks like this:

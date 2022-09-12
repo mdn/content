@@ -12,6 +12,7 @@ tags:
   - lock
 browser-compat: api.ScreenOrientation.lock
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`lock()`** property of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
@@ -28,6 +29,7 @@ lock(orientation)
 ### Parameters
 
 - `orientation`
+
   - : An orientation lock type. One of the following:
 
     - `"any"`
@@ -66,9 +68,11 @@ A {{jsxref("Promise")}} that resolves after locking succeeds.
 The promise may be rejected with the following exceptions:
 
 - `NotSupportedError` {{domxref("DOMException")}}
+
   - : The user agent does not support locking the screen orientation.
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : The user-agent's pre-lock conditions are not met.
     For example, a browser may require that the top-level browsing context's `Document` is full screen.
     The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.

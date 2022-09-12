@@ -10,6 +10,7 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.enqueue
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`enqueue()`** method of the {{domxref("TransformStreamDefaultController")}} interface enqueues the given chunk in the readable side of the stream.

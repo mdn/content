@@ -8,6 +8,7 @@ tags:
   - Event
 browser-compat: api.Animation.remove_event
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`remove`** event of the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into an `active` replace state).
@@ -31,9 +32,9 @@ An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
+- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
   - : The current time of the animation that generated the event.
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{readonlyinline}}
+- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
   - : The time value of the timeline of the animation that generated the event.
 
 ## Examples
@@ -59,7 +60,7 @@ document.body.addEventListener('mousemove', (evt) => {
 });
 ```
 
-Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the \<div> element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
+Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the `<div>` element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
 
 A console message is logged each time an animation it removed, invoked when the `remove` event is fired.
 

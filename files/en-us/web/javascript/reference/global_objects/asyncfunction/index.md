@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncFunction
 ---
+
 {{JSRef}}
 
 The **`AsyncFunction` constructor** creates a new
@@ -27,7 +28,14 @@ new AsyncFunction(functionBody)
 new AsyncFunction(arg0, functionBody)
 new AsyncFunction(arg0, arg1, functionBody)
 new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+
+AsyncFunction(functionBody)
+AsyncFunction(arg0, functionBody)
+AsyncFunction(arg0, arg1, functionBody)
+AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
 
 ### Parameters
 
@@ -42,10 +50,10 @@ new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 
 ## Description
 
-{{jsxref("Statements/async_function", "async function")}} objects created with the
+[Async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) objects created with the
 `AsyncFunction` constructor are parsed when the function is created. This is
 less efficient than declaring an async function with an
-{{jsxref("Statements/async_function", "async function expression")}} and calling it
+[`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) and calling it
 within your code, because such functions are parsed with the rest of the code.
 
 All arguments passed to the function, except the last, are treated as the names of the identifiers of the

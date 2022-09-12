@@ -8,49 +8,51 @@ tags:
   - part 5
   - server-side
 ---
+
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier. The page should display the genre name and a list of all books in the genre with links to each book's details page.
 
 ## Controller
 
-Open **/controllers/genreController.js** and import the _async_ and _Book_ modules at the top of the file.
+Open **/controllers/genreController.js** and import the `async` and `Book` modules at the top of the file.
 
 ```js
-var Book = require('../models/book');
-var async = require('async');
+const Book = require("../models/book");
+const async = require("async");
 ```
 
 Find the exported `genre_detail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Genre.
-exports.genre_detail = function(req, res, next) {
+exports.genre_detail = (req, res, next) => {
+  async.parallel(
+    {
+      genre(callback) {
+        Genre.findById(req.params.id).exec(callback);
+      },
 
-    async.parallel({
-        genre(callback) {
-            Genre.findById(req.params.id)
-              .exec(callback);
-        },
-
-        genre_books(callback) {
-            Book.find({ 'genre': req.params.id })
-              .exec(callback);
-        },
-
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.genre==null) { // No results.
-            var err = new Error('Genre not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render
-        res.render('genre_detail', {
-          title: 'Genre Detail',
-          genre: results.genre,
-          genre_books: results.genre_books,
-        });
-    });
-
+      genre_books(callback) {
+        Book.find({ genre: req.params.id }).exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        return next(err);
+      }
+      if (results.genre == null) {
+        // No results.
+        const err = new Error("Genre not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render
+      res.render("genre_detail", {
+        title: "Genre Detail",
+        genre: results.genre,
+        genre_books: results.genre_books,
+      });
+    }
+  );
 };
 ```
 
@@ -61,13 +63,14 @@ The ID is accessed within the controller via the request parameters: `req.params
 It is used in `Genre.findById()` to get the current genre.
 It is also used to get all `Book` objects that have the genre ID in their `genre` field: `Book.find({ 'genre': req.params.id })`.
 
-> **Note:** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()`  will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
+> **Note:** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 >
 > ```js
-> if (results.genre==null) { // No results.
->     var err = new Error('Genre not found');
->     err.status = 404;
->     return next(err);
+> if (results.genre == null) {
+>   // No results.
+>   const err = new Error("Genre not found");
+>   err.status = 404;
+>   return next(err);
 > }
 > ```
 >
@@ -79,7 +82,7 @@ The rendered view is **genre_detail** and it is passed variables for the `title`
 
 Create **/views/genre_detail.pug** and fill it with the text below:
 
-```js
+```pug
 extends layout
 
 block content
@@ -110,22 +113,23 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 > **Note:** You might get an error similar to this:
 >
-> ```bash
+> ```
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 > ```
 >
-> This is a mongoose error coming from the **req.params.id**. To solve this problem, first you need to require mongoose on the **genreController.js** page like this:
+> This is a mongoose error coming from the `req.params.id`. To solve this problem, first you need to require mongoose on the `genreController.js` page like this:
 >
 > ```js
->  var mongoose = require('mongoose');
+> const mongoose = require("mongoose");
 > ```
 >
-> Then use **mongoose.Types.ObjectId()** to convert the id to a type that can be used. For example:
+> Then use `mongoose.Types.ObjectId()` to convert the id to a type that can be used. For example:
 >
 > ```js
-> exports.genre_detail = function(req, res, next) {
->     var id = mongoose.Types.ObjectId(req.params.id);
->     // …
+> exports.genre_detail = (req, res, next) => {
+>   const id = mongoose.Types.ObjectId(req.params.id);
+>   // …
+> };
 > ```
 
 ## Next steps

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.grid-template-areas
 ---
+
 {{CSSRef}}
 
 The **`grid-template-areas`** CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.

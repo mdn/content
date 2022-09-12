@@ -8,6 +8,7 @@ tags:
   - Web Performance
   - performance APIs
 ---
+
 **Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
 
 The general performance timings below have been deprecated in favor of the Performance Entry API, which provides for marking and measuring times along the navigation and resource loading process. While deprecated, they are supported in all browsers.
@@ -298,9 +299,9 @@ The order is:
 We can use these values to measure specific timings of interest:
 
 ```js
-const dns  = time.domainLookupEnd - time.domainLookupStart;
-const tcp  = time.connectEnd - time.connectStart;
-const ssl !== time.secureConnectionStart;
+const dns = time.domainLookupEnd - time.domainLookupStart;
+const tcp = time.connectEnd - time.connectStart;
+const ssl = time.requestStart - time.secureConnectionStart;
 ```
 
 ### Time to first byte

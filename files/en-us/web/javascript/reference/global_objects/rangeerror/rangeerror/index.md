@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
+
 {{JSRef}}
 
 The **`RangeError()`** constructor creates an error
@@ -20,7 +21,15 @@ new RangeError(message)
 new RangeError(message, options)
 new RangeError(message, fileName)
 new RangeError(message, fileName, lineNumber)
+
+RangeError()
+RangeError(message)
+RangeError(message, options)
+RangeError(message, fileName)
+RangeError(message, fileName, lineNumber)
 ```
+
+> **Note:** `RangeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RangeError` instance.
 
 ### Parameters
 
@@ -60,7 +69,7 @@ try {
 
 ```js
 function check(value) {
-  if(!["apple", "banana", "carrot"].includes(value)) {
+  if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError('The argument must be an "apple", "banana", or "carrot".');
   }
 }
@@ -86,7 +95,7 @@ try {
 
 - {{jsxref("Error")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("String.prototype.normalize()")}}

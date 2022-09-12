@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyDescriptor()`** method returns an

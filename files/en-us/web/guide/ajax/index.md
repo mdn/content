@@ -9,6 +9,7 @@ tags:
   - References
   - XMLHttpRequest
 ---
+
 ## Getting Started
 
 **Asynchronous JavaScript and XML**, while not a technology in itself, is a term coined in 2005 by Jesse James Garrett, that describes a "new" approach to using a number of existing technologies together, including [HTML](/en-US/docs/Web/HTML) or [XHTML](/en-US/docs/Glossary/XHTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [DOM](/en-US/docs/Web/API/Document_Object_Model), [XML](/en-US/docs/Web/XML), [XSLT](/en-US/docs/Web/XSLT), and most importantly the {{domxref("XMLHttpRequest")}} object.
@@ -40,7 +41,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred over XML no
 - [XML](/en-US/docs/Web/XML)
   - : The **Extensible Markup Language (XML)** is a W3C-recommended general-purpose markup language for creating special-purpose markup languages. It is a simplified subset of SGML, capable of describing many different kinds of data. Its primary purpose is to facilitate the sharing of data across different systems, particularly systems connected via the Internet.
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
-  - : How to parse an XML document from a string, a file or via JavaScript and how to serialize XML documents to strings, Javascript Object trees (JXON) or files.
+  - : How to parse an XML document from a string, a file or via JavaScript and how to serialize XML documents to strings, JavaScript Object trees (JXON) or files.
 - [XPath](/en-US/docs/Web/XPath)
   - : XPath stands for **X**ML **Path** Language, it uses a non-XML syntax that provides a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML) document. As well as this, it can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 - {{domxref("FileReader")}} API

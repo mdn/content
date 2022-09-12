@@ -12,6 +12,7 @@ tags:
   - pip
 browser-compat: css.selectors.picture-in-picture
 ---
+
 {{CSSRef}}
 
 The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the element which is currently in picture-in-picture mode.

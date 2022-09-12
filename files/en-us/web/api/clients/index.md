@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Clients
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -14,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.Clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
@@ -35,7 +35,7 @@ The following example shows an existing chat window or creates a new one when th
 
 ```js
 addEventListener('notificationclick', (event) => {
-  event.waitUntil(async function() {
+  event.waitUntil((async () => {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
     });
@@ -62,7 +62,7 @@ addEventListener('notificationclick', (event) => {
 
     // Message the client:
     chatClient.postMessage("New chat messages!");
-  }());
+  })());
 });
 ```
 

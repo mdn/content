@@ -12,9 +12,11 @@ tags:
   - Reference
   - metadata
   - size
+  - Experimental
 browser-compat: api.Metadata.size
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`size`** property of
 the {{domxref("Metadata")}} interface specifies the size, in bytes, of the referenced
@@ -30,10 +32,10 @@ This example checks the size of a log file and removes it if it's larger than a
 megabyte.
 
 ```js
-workingDirectory.getFile("log/important.log", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
+workingDirectory.getFile("log/important.log", {}, (fileEntry) => {
+  fileEntry.getMetadata((metadata) => {
     if (metadata.size > 1048576) {
-      fileEntry.remove(function() {
+      fileEntry.remove(() => {
         /* log file removed; do something clever here */
       });
     }

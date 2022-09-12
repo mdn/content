@@ -15,7 +15,8 @@ tags:
   - facingMode
 browser-compat: api.MediaTrackSupportedConstraints.facingMode
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`facingMode`** property is a read-only Boolean value which is
@@ -49,13 +50,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().facingMode) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().facingMode;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result

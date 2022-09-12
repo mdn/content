@@ -9,6 +9,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
 
 The **`Window.captureEvents()`** method registers the window to

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getAttribLocation()`** method of

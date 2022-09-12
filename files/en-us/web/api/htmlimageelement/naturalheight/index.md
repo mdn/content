@@ -13,6 +13,7 @@ tags:
   - size
 browser-compat: api.HTMLImageElement.naturalHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} interface's
@@ -51,7 +52,7 @@ its rendered size as altered by the page's CSS and other factors.
 
 ```html
 <div class="box">
-  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
+  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image" alt="A round wall clock with a white dial and black numbers">
 </div>
 <div class="output">
 </div>

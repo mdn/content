@@ -7,6 +7,7 @@ tags:
   - SVG
 browser-compat: svg.elements.filter
 ---
+
 {{SVGRef}}
 
 The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter effect by grouping atomic filter primitives. It is never rendered itself, but must be used by the {{SVGAttr("filter")}} attribute on SVG elements, or the {{cssxref("filter")}} {{Glossary("CSS")}} property for SVG/HTML elements.
@@ -31,7 +32,7 @@ The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter ef
 - {{SVGAttr("y")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("height")}}
-- {{SVGAttr("filterRes")}}
+- {{SVGAttr("filterRes")}} {{Deprecated_Inline}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("primitiveUnits")}}
 - {{SVGAttr("xlink:href")}}
@@ -42,7 +43,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 
 ## Example
 
-#### SVG
+### SVG
 
 ```html
 <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +57,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 </svg>
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Example",235,150)}}
 

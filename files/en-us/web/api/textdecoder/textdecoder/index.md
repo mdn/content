@@ -6,11 +6,11 @@ tags:
   - API
   - Constructor
   - Encoding
-  - Experimental
   - Reference
   - TextDecoder
 browser-compat: api.TextDecoder.TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecoder()`** constructor returns a newly created

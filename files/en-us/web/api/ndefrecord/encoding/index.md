@@ -7,9 +7,11 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.encoding
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`encoding`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int32Array
 ---
+
 {{JSRef}}
 
 The **`Int32Array`** typed array represents an array of twos-complement 32-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -24,7 +25,7 @@ The **`Int32Array`** typed array represents an array of twos-complement 32-bit s
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of an `Int32Array`.
 - {{jsxref("TypedArray.name", "Int32Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int32Array` type: "`Int32Array`".
+  - : Returns the string value of the constructor name. In the case of the `Int32Array` type: `"Int32Array"`.
 
 ## Static methods
 

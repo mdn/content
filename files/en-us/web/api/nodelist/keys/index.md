@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.keys
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.keys()`** method returns an
@@ -42,7 +43,7 @@ node.appendChild(kid3);
 
 let list = node.childNodes;
 
-// Using for..of
+// Using for...of
 for (const key of list.keys()) {
    console.log(key);
 }

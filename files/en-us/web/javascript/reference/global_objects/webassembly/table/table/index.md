@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Table()`** constructor creates a new
@@ -73,9 +74,7 @@ Next, we create an import object that contains the `WebAssembly.Table`:
 
 ```js
 const importObject = {
-  js: {
-    tbl: tbl
-  }
+  js: { tbl },
 };
 ```
 

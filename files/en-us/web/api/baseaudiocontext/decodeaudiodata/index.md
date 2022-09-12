@@ -13,6 +13,7 @@ tags:
   - decodeAudioData
 browser-compat: api.BaseAudioContext.decodeAudioData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `decodeAudioData()` method of the {{ domxref("BaseAudioContext") }}
@@ -68,7 +69,7 @@ promise-based syntax.
 In this example, the `getData()` function uses XHR to load an audio track,
 setting the `responseType` of the request to `arraybuffer` so that
 it returns an array buffer as its `response` that we then store in the
-`audioData` variable . We then pass this buffer into a
+`audioData` variable. We then pass this buffer into a
 `decodeAudioData()` function; the success callback takes the successfully
 decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using
 {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource()")}}, connects the source to the
@@ -103,17 +104,17 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      function(e){ console.log(`Error with decoding audio data: ${e.err}`); });
+      (err) => console.error(`Error with decoding audio data: ${err.err}`));
 
   }
 
@@ -122,13 +123,13 @@ function getData() {
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
 }
 
-stop.onclick = function() {
+stop.onclick = () => {
   source.stop(0);
   play.removeAttribute('disabled');
 }
@@ -141,7 +142,7 @@ pre.innerHTML = myScript.innerHTML;
 ### New promise-based syntax
 
 ```js
-ctx.decodeAudioData(audioData).then(function(decodedData) {
+ctx.decodeAudioData(audioData).then((decodedData) => {
  // use the decoded data here
 });
 ```

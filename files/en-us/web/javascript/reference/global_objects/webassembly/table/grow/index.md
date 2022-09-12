@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.grow
 ---
+
 {{JSRef}}
 
 The **`grow()`** prototype method of

@@ -11,6 +11,7 @@ tags:
   - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setValueAtTime()` method of the
@@ -76,12 +77,12 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-targetAtTimePlus.onclick = function() {
+targetAtTimePlus.onclick = () => {
   currGain += 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
 }
 
-targetAtTimeMinus.onclick = function() {
+targetAtTimeMinus.onclick = () => {
   currGain -= 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
 }

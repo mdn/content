@@ -10,9 +10,11 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRHitTestSource
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`XRHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) handles hit test subscriptions. You can get an `XRHitTestSource` object by using the {{domxref("XRSession.requestHitTestSource()")}} method.
 
@@ -24,7 +26,7 @@ None.
 
 ## Methods
 
-- {{domxref("XRHitTestSource.cancel()")}}
+- {{domxref("XRHitTestSource.cancel()")}} {{Experimental_Inline}}
   - : Unsubscribes from the hit test.
 
 ## Examples

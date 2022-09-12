@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement.relList
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLinkElement.relList`** read-only property reflects
@@ -25,20 +26,19 @@ changed.
 
 ## Value
 
-A live {{domxref("DOMTokenList")}}.
+A live {{domxref("DOMTokenList")}} of strings.
 
 ## Examples
 
 ```js
 const links = document.getElementsByTagName("link");
 const length = links.length;
-for (let i = 0; i < length; i++) {
-  const list = links[i].relList;
+for (const link of links) {
   const listLength = list.length;
   console.log("New link found.");
-  for (let j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  relList.forEach((relEntry) => {
+    console.log(relEntry);
+  });
 }
 ```
 

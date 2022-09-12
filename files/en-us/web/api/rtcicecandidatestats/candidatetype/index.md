@@ -17,6 +17,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidateStats.candidateType
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} interface's

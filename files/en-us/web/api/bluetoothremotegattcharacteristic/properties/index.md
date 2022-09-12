@@ -13,6 +13,7 @@ tags:
   - properties
 browser-compat: api.BluetoothRemoteGATTCharacteristic.properties
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.properties`**

@@ -13,9 +13,12 @@ tags:
   - Reference
   - Volume
   - WebRTC
+  - Deprecated
+  - Non-standard
 browser-compat: api.MediaTrackSupportedConstraints.volume
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
+
+{{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`volume`** property is a read-only Boolean value which is
@@ -49,18 +52,14 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().volume) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().volume;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Examples', 600, 80) }}
+{{EmbedLiveSample('Examples', 600, 80)}}
 
 ## Browser compatibility
 

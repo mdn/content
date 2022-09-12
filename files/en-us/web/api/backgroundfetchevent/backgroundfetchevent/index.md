@@ -7,9 +7,11 @@ tags:
   - Constructor
   - Reference
   - BackgroundFetchEvent
+  - Experimental
 browser-compat: api.BackgroundFetchEvent.BackgroundFetchEvent
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`BackgroundFetchEvent()`** constructor creates a new {{domxref("BackgroundFetchEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.
 
