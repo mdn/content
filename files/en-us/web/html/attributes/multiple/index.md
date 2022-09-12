@@ -117,7 +117,7 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 ```html
 <form method="get" action="#">
 <p>
- <label for="dwarfs">Select the Dwarf Woodsman you like:</label>
+ <label for="dwarfs">Select the dwarf woodsman you like:</label>
   <select multiple name="dwarfs" id="dwarfs">
     <option>grumpy@woodworkers.com</option>
     <option>happy@woodworkers.com</option>
