@@ -79,8 +79,7 @@ The `findLast()` method executes the `callbackFn` function once for each element
 `findLast()` then returns the value of that element and stops iterating through the array.
 If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 If a `thisArg` parameter is provided to `findLast()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
@@ -159,9 +158,9 @@ console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
-### Nonexistent and deleted elements are visited
+### Using findLast() on sparse arrays
 
-The following examples show that nonexistent and deleted elements _are_ visited, and that the value passed to the callback is their value when visited:
+Empty slots in sparse arrays _are_ visited, and are treated the same as `undefined`.
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4

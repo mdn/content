@@ -97,7 +97,7 @@ its flexibility and readability are desired.
 
 ## Examples
 
-### `map()` and `flatMap()`
+### map() and flatMap()
 
 ```js
 const arr1 = [1, 2, 3, 4];
@@ -114,7 +114,7 @@ arr1.flatMap((x) => [[x * 2]]);
 ```
 
 While the above could have been achieved by using map itself, here is an example that
-better showcases the use of `flatMap`.
+better showcases the use of `flatMap()`.
 
 Let's generate a list of words from a list of sentences.
 
@@ -130,7 +130,7 @@ arr1.flatMap((x) => x.split(" "));
 
 Notice, the output list length can be different from the input list length.
 
-### For adding and removing items during a `map()`
+### For adding and removing items during a map()
 
 `flatMap` can be used as a way to add and remove items (modify the number of
 items) during a `map`. In other words, it allows you to map _many items to
@@ -153,6 +153,15 @@ const result = a.flatMap((n) => {
   return n % 2 === 0 ? [n] : [n - 1, 1];
 });
 // expected output: [4, 1, 4, 20, 16, 1, 18]
+```
+
+### Using flatMap() on sparse arrays
+
+The `callbackFn` won't be called for empty slots in the source array because `map()` doesn't, while `flat()` ignores empty slots in the returned arrays.
+
+```js
+console.log([1, 2, , 4, 5].flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
+console.log([1, 2, 3, 4].flatMap(x => [, x * 2])); // [2, 4, 6, 8]
 ```
 
 ## Specifications

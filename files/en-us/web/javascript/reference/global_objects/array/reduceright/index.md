@@ -76,6 +76,8 @@ in the array, excluding holes in the array, receiving four arguments: the initia
 (or value from the previous callback call), the value of the current element, the
 current index, and the array over which iteration is occurring.
 
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
 The call to the reduceRight `callbackFn` would look something like
 this:
 
@@ -244,6 +246,15 @@ console.log(compose(double, inc)(2)); // 6
 
 // using composition function
 console.log(compose(inc, double)(2)); // 5
+```
+
+### Using reduceRight() with sparse arrays
+
+`reduceRight()` skips missing elements in sparse arrays, but it does not skip `undefined` values.
+
+```js
+console.log([1, 2, , 4].reduceRight((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
 ```
 
 ## Specifications

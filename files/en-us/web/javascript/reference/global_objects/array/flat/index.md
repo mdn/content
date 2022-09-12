@@ -36,6 +36,12 @@ flat(depth)
 
 A new array with the sub-array elements concatenated into it.
 
+## Description
+
+The `flat()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains the same elements as the ones from the original array.
+
+The `flat()` method ignores empty slots if the array being flattened [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). For example, if the `depth` is 1, both empty slots in the root array and in the first level of nested arrays are ignored, but empty slots in further nested arrays are preserved with the arrays themselves.
+
 ## Alternatives
 
 ### reduce and concat
@@ -144,9 +150,9 @@ arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Flattening and array holes
+### Using flat() on sparse arrays
 
-The flat method removes empty slots in arrays:
+The `flat()` method removes empty slots in arrays:
 
 ```js
 const arr5 = [1, 2, , 4, 5];
