@@ -7,9 +7,11 @@ title: "Content suggestion: <TITLE OF SUGGESTION>"
 ---
 
 ## What is the new suggestion?
+
 <!-- include a short description of the content work suggestion  -->
 
 ## Why is it important or useful?
+
 <!-- Tell us why the idea is important or useful. Include any information you
 can think of that would be useful, for example:
 

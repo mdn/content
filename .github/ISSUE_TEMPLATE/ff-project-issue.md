@@ -2,7 +2,7 @@
 name: Firefox Release Issue
 about: "Use this template to create an issue for a Firefox Release Project"
 labels: ""
-assignees: 
+assignees:
 title: ""
 ---
 
@@ -17,7 +17,6 @@ title: ""
 
 - [ ] Set bugs to `dev-doc-complete`
 - [ ] Add entry to Firefox release notes if feature is enabled in release
-or
 - [ ] Add entry to Firefox experimental features page if feature is not yet enabled in release
 
 ## Features to document
