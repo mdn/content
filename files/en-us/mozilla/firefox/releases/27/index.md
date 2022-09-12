@@ -59,7 +59,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - Support for the two `setRange()` methods on the {{domxref("HTMLTextAreaElement")}} interface has been added ({{bug(918940)}}).
 - The methods `getAllKeys()` and `openKeyCursor()` have been added to {{domxref("IDBObjectStore")}} ({{bug(920633)}} and {{bug(920800)}}).
 - The {{domxref("HTMLFormControlsCollection")}} interface has been implemented ({{bug(913920)}}).
-- The {{domxref("CanvasRenderingContext2D")}} interface now supports the two methods {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} and the {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} property  ({{bug(768067)}}).
+- The {{domxref("CanvasRenderingContext2D")}} interface now supports the two methods {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} and the {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} property ({{bug(768067)}}).
 - The `typeMustMatch` attribute has been implemented on the {{domxref("HTMLObjectElement")}} interface ({{bug(827160)}}).
 - The `copyFromChannel()` and `copyToChannel()` methods have been added to {{domxref("AudioBuffer")}} ({{bug(915524)}}).
 - `Event.isTrusted()` is now unforgeable ({{bug(637248)}}).

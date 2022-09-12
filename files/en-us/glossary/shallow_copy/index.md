@@ -23,7 +23,7 @@ In JavaScript, all standard built-in object-copy operations ([spread syntax](/en
 Consider the following example, in which an `ingredients_list` array object is created, and then an `ingredients_list_copy` object is created by copying that `ingredients_list` object.
 
 ```js
-let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
+let ingredients_list = ["noodles", { list: ["eggs", "flour", "water"] }];
 
 let ingredients_list_copy = Array.from(ingredients_list);
 console.log(JSON.stringify(ingredients_list_copy));
@@ -33,7 +33,7 @@ console.log(JSON.stringify(ingredients_list_copy));
 Changing the value of the `list` property in `ingredients_list_copy` will also cause the `list` property to change in the `ingredients_list` source object.
 
 ```js
-ingredients_list_copy[1].list = ["rice flour","water"]
+ingredients_list_copy[1].list = ["rice flour", "water"];
 console.log(ingredients_list[1].list);
 // Array [ "rice flour", "water" ]
 console.log(JSON.stringify(ingredients_list));
@@ -43,8 +43,8 @@ console.log(JSON.stringify(ingredients_list));
 Assigning a completely new value to the first element in `ingredients_list_copy` will not cause any change to the first element in the `ingredients_list` source object.
 
 ```js
-ingredients_list_copy[0] = "rice noodles"
-console.log(ingredients_list[0])
+ingredients_list_copy[0] = "rice noodles";
+console.log(ingredients_list[0]);
 // noodles
 console.log(JSON.stringify(ingredients_list_copy));
 // ["rice noodles",{"list":["rice flour","water"]}]

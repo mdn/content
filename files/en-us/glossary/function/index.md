@@ -32,7 +32,7 @@ A **named function** is a function with a function name:
 
 ```js
 // Function declaration
-function foo() {};
+function foo() {}
 
 // Named function expression
 (function bar() {});
@@ -62,15 +62,13 @@ A **recursive function** is a function that calls itself. See {{Glossary("Recurs
 
 ```js
 function loop(x) {
-  if (x >= 10)
-    return;
+  if (x >= 10) return;
   loop(x + 1);
 }
 
 // Arrow function
 const loop2 = (x) => {
-  if (x >= 10)
-    return;
+  if (x >= 10) return;
   loop(x + 1);
 };
 ```
@@ -82,13 +80,13 @@ Function expressions, named or anonymous, can be called immediately.
 ```js
 (function foo() {
   console.log("Hello Foo");
-}());
+})();
 
 (function food() {
   console.log("Hello Food");
 })();
 
-(() => console.log('hello world'))();
+(() => console.log("hello world"))();
 ```
 
 Declared functions can't be called immediately this way, because IIFEs must be function _expressions_.

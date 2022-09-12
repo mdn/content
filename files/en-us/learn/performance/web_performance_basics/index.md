@@ -6,7 +6,6 @@ tags:
   - Website performance
 ---
 
-
 There are many [reasons](https://web.dev/why-speed-matters/) why your website should perform as well as possible.
 Below is a quick review of best practices, tools, APIs with links to provide more information about each topic.
 

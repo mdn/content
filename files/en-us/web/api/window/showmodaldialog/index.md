@@ -100,7 +100,7 @@ showModalDialog(uri, arguments, options)
 
 ### Return value
 
- Holds the `returnValue` property as set by the document specified by `uri`.
+Holds the `returnValue` property as set by the document specified by `uri`.
 
 ## Specifications
 

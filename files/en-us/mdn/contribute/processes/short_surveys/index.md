@@ -46,24 +46,24 @@ To be suitable, the survey proposal needs to be:
 
 1. Submitter submits a proposal through the submissions form, outlining:
 
-    - Topic.
-    - Category, e.g. CSS, JavaScript, Accessibility, documentation…
-    - Objective for the survey.
-    - Date (range) when the survey ideally should be run.
-    - Actions which will be taken based on the results.
-    - Questions and answer options
+   - Topic.
+   - Category, e.g. CSS, JavaScript, Accessibility, documentation…
+   - Objective for the survey.
+   - Date (range) when the survey ideally should be run.
+   - Actions which will be taken based on the results.
+   - Questions and answer options
 
-      > **Note:** Certain types of data will need a legal review, along with intention, e.g. is the data intended to be published, or shared with other organizations? See [Legal requirements](#legal_requirements) below for more information.
+     > **Note:** Certain types of data will need a legal review, along with intention, e.g. is the data intended to be published, or shared with other organizations? See [Legal requirements](#legal_requirements) below for more information.
 
-    - Suggested percentage of the MDN to be exposed to the survey, e.g. 3%. The Default percentage is 5%; if you want a higher percentage, a clear justification is needed. For example, if your survey aims to collect data to help inform solutions for a well-documented critical web platform bug that is affecting a large number of developers right now, then that is probably good justification, as long as you can provide some clear evidence. Typical criteria to base this justification on can be found at [OWD prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md) — these criteria were written to inform prioritization of MDN content, but they are still relevant here.
-    - Suggested parts of MDN to show it on (e.g. CSS pages).
+   - Suggested percentage of the MDN to be exposed to the survey, e.g. 3%. The Default percentage is 5%; if you want a higher percentage, a clear justification is needed. For example, if your survey aims to collect data to help inform solutions for a well-documented critical web platform bug that is affecting a large number of developers right now, then that is probably good justification, as long as you can provide some clear evidence. Typical criteria to base this justification on can be found at [OWD prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md) — these criteria were written to inform prioritization of MDN content, but they are still relevant here.
+   - Suggested parts of MDN to show it on (e.g. CSS pages).
 
 2. The review team reviews submissions within a week, and:
 
-    - Asks for more information if needed.
-    - Approves/denies the proposal. The MDN content team holds final veto power for which surveys will be run and how.
-    - Applies a priority level to the proposal, e.g. P0, P1. This is a rough guide used to stack rank the proposals.
-    - The review team will consist of 3 members of the [MDN Product Advisory Board](/en-US/docs/MDN/MDN_Product_Advisory_Board), chosen on a case-by-case basis.
+   - Asks for more information if needed.
+   - Approves/denies the proposal. The MDN content team holds final veto power for which surveys will be run and how.
+   - Applies a priority level to the proposal, e.g. P0, P1. This is a rough guide used to stack rank the proposals.
+   - The review team will consist of 3 members of the [MDN Product Advisory Board](/en-US/docs/MDN/MDN_Product_Advisory_Board), chosen on a case-by-case basis.
 
 3. The review team creates and agrees a final survey in partnership with the submitter, based on their initial questions.
 4. The survey team tests the survey thoroughly on desktop, Android, and iOS to make sure that it does not contain any layout/rendering errors that would lead to frustration with filling it out.

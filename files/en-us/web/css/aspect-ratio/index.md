@@ -13,7 +13,7 @@ browser-compat: css.properties.aspect-ratio
 
 {{CSSRef}}
 
-The **`aspect-ratio`**  [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
 
 {{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
 

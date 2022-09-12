@@ -65,7 +65,7 @@ While generally moving off an a focused element brings you to the next focusable
 
 ### Required CSS features
 
-Use the  `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to style the checked state of checked radio buttons.
+Use the `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to style the checked state of checked radio buttons.
 
 Use CSS {{CSSXRef(':hover')}} and {{CSSXRef(':focus')}} pseudo-classes for styling visual keyboard focus and hover. The focus and hover effect should encompass both the radio button and label to make it easier to perceive which option is being chosen and to indicate that clicking either the label or button will activate the radio button.
 
@@ -146,6 +146,6 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -3584,9 +3584,10 @@
 /en-US/docs/Glossary/404	/en-US/docs/Web/HTTP/Status/404
 /en-US/docs/Glossary/502	/en-US/docs/Web/HTTP/Status/502
 /en-US/docs/Glossary/AOM	/en-US/docs/Glossary/Accessibility_tree
-/en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Boot2Gecko
+/en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Firefox_OS
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
 /en-US/docs/Glossary/Block/Block_(scripting)	/en-US/docs/Glossary/Block/Scripting
+/en-US/docs/Glossary/Boot2Gecko	/en-US/docs/Glossary/Firefox_OS
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext

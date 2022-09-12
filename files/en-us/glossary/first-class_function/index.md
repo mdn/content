@@ -16,7 +16,7 @@ A programming language is said to have **First-class functions** when functions 
 ```js
 const foo = () => {
   console.log("foobar");
-}
+};
 foo(); // Invoke it using the variable
 // foobar
 ```
@@ -49,7 +49,7 @@ We are passing our `sayHello()` function as an argument to the `greeting()` func
 function sayHello() {
   return () => {
     console.log("Hello!");
-  }
+  };
 }
 ```
 

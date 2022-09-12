@@ -7,6 +7,7 @@ tags:
   - wasm
 browser-compat: javascript.builtins.WebAssembly
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly is a new type of code that can be run in modern web browsers — it is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages such as C/C++, C# and Rust with a compilation target so that they can run on the web. It is also designed to run alongside JavaScript, allowing both to work together.
@@ -51,7 +52,7 @@ And what's even better is that it is being developed as a web standard via the [
 - {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}
   - : A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
-  - : A `WebAssembly.Instance` object is a stateful, executable instance of a `Module`.  `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
+  - : A `WebAssembly.Instance` object is a stateful, executable instance of a `Module`. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
 - {{jsxref("WebAssembly.compile()")}}
   - : The `WebAssembly.compile()` function compiles WebAssembly binary code into a `WebAssembly.Module` object.
 - {{jsxref("WebAssembly.compileStreaming()")}}

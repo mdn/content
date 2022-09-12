@@ -13,7 +13,7 @@ ARIA roles provide semantic meaning to content, allowing screen readers and othe
 
 By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return `null`. The `role` attribute can provide semantics.
 
-ARIA roles are added to HTML elements using `role="role type"`, where _role type_ is the name of a role in the ARIA specification.  Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
+ARIA roles are added to HTML elements using `role="role type"`, where _role type_ is the name of a role in the ARIA specification. Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
 
 For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab panel and accessibility has actually been negatively impacted.
 
@@ -49,7 +49,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [img](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) (use {{HTMLElement('img')}} or {{HTMLElement('picture')}} instead)
 - [list](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) (use either {{HTMLElement('ul')}} or {{HTMLElement('ol')}} instead)
 - [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) (use {{HTMLElement('li')}} instead)
-- [meter](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)  (use {{HTMLElement('meter')}} instead)
+- [meter](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) (use {{HTMLElement('meter')}} instead)
 - [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) (use the {{HTMLElement('tr')}} with {{HTMLElement('table')}})
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) (use {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}})
 - [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) (use `{{HTMLElement('th','&lt;th scope="row">')}}`)
@@ -143,6 +143,6 @@ The following are the reference pages covering the WAI-ARIA roles discussed on <
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

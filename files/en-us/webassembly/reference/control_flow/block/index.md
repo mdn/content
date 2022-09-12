@@ -8,6 +8,7 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`block`** statement creates a label that can later be branched out of with a `br`.

@@ -91,7 +91,7 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
           - : An integer representing the offset in bytes where the given plane begins.
         - `stride`
           - : An integer representing the number of bytes, including padding, used by each row of the plane.
-        Planes may not overlap. If no `layout` is specified, the planes will be tightly packed.
+            Planes may not overlap. If no `layout` is specified, the planes will be tightly packed.
     - `visibleRect` {{Optional_Inline}}
       - : A dictionary representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`

@@ -70,7 +70,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
    </p>
    ```
 
-    In this example, the accessible name is "read more 13 ARIA attributes you need to know".
+   In this example, the accessible name is "read more 13 ARIA attributes you need to know".
 
 3. The `aria-labelledby` property value order matters. When more than one element is referenced by `aria-labelledby`, the content from each referenced element is combined in the order that they are referenced in the `aria-labelledby` value. Had we written `aria-labelledby="attr rm13">`, the accessible name would have been "13 ARIA attributes you need to know read more".
 

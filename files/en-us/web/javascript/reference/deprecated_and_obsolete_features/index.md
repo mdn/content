@@ -135,7 +135,7 @@ The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a 
 
 The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
 
-Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce syntax errors in strict mode. They are silently ignored in non-strict mode.
+Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. They are silently ignored in non-strict mode.
 
 ## Obsolete features
 

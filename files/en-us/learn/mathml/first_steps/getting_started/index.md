@@ -102,7 +102,7 @@ You may also notice some subtle change in the appearance: the text and vertical 
 
 > **Note:** This corresponds to the LaTeX's concept of _inline_ formulas (delimited by dollar signs `$...$`) and _display_ formulas (delimited by `\[...\]`).
 
-> **Note:** The appearance change mentioned above is actually controlled by the  [`math-style`](/en-US/docs/Web/CSS/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
+> **Note:** The appearance change mentioned above is actually controlled by the [`math-style`](/en-US/docs/Web/CSS/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
 
 ## Grouping with the \<mrow> element
 

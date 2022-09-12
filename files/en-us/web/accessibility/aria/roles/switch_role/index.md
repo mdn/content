@@ -165,7 +165,6 @@ button.switch span {
 label.switch {
   font: 16px "Open Sans", "Arial", sans-serif;
   line-height: 20px;
-  user-select: none;
   vertical-align: middle;
   user-select: none;
 }
@@ -193,6 +192,6 @@ The result looks like this:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -64,8 +64,8 @@ deriveBits(algorithm, baseKey, length)
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-  containing the derived bits.
+that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the derived bits.
 
 ### Exceptions
 

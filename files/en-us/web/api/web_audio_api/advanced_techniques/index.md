@@ -16,6 +16,8 @@ tags:
 
 In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We will introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and looking for an introduction to their application with the Web Audio API, you've come to the right place.
 
+> **Note:** You can find the source code for the demo below on GitHub in the [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer) subdirectory of the MDN [webaudio-examples](https://github.com/mdn/webaudio-examples) repo. You can also see the [live demo](https://mdn.github.io/webaudio-examples/step-sequencer/).
+
 ## Demo
 
 We're going to be looking at a very simple step sequencer:
@@ -23,8 +25,6 @@ We're going to be looking at a very simple step sequencer:
 ![A sound sequencer application featuring play and BPM master controls and 4 different voices with controls for each.](sequencer.png)
 
 In practice, this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, [tone.js](https://tonejs.github.io/) would be an excellent place to start. However, we want to demonstrate how to create such a demo from first principles as a learning exercise.
-
-> **Note:** You can find the source code on GitHub as [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer); see the [step-sequencer running live](https://mdn.github.io/webaudio-examples/step-sequencer/) also.
 
 The interface consists of master controls, which allow us to play/stop the sequencer, and adjust the BPM (beats per minute) to speed up or slow down the "music".
 

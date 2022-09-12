@@ -194,82 +194,82 @@ Let's put these ideas into practice and build a slightly more involved form — 
 1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
 2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
 
-    ```html
-    <link href="payment-form.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="payment-form.css" rel="stylesheet">
+   ```
 
 3. Next, create your form by adding the outer {{htmlelement("form")}} element:
 
-    ```html
-    <form>
+   ```html
+   <form>
 
-    </form>
-    ```
+   </form>
+   ```
 
 4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
 
-    ```html
-    <h1>Payment form</h1>
-    <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
-    ```
+   ```html
+   <h1>Payment form</h1>
+   <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
+   ```
 
 5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
-    ```html
-    <section>
-        <h2>Contact information</h2>
-        <fieldset>
-          <legend>Title</legend>
-          <ul>
-              <li>
-                <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="K">
-                  King
-                </label>
-              </li>
-              <li>
-                <label for="title_2">
-                  <input type="radio" id="title_2" name="title" value="Q">
-                  Queen
-                </label>
-              </li>
-              <li>
-                <label for="title_3">
-                  <input type="radio" id="title_3" name="title" value="J">
-                  Joker
-                </label>
-              </li>
-          </ul>
-        </fieldset>
-        <p>
-          <label for="name">
-            <span>Name: </span>
-            <strong><span aria-label="required">*</span></strong>
-          </label>
-          <input type="text" id="name" name="username">
-        </p>
-        <p>
-          <label for="mail">
-            <span>E-mail: </span>
-            <strong><span aria-label="required">*</span></strong>
-          </label>
-          <input type="email" id="mail" name="usermail">
-        </p>
-        <p>
-          <label for="pwd">
-            <span>Password: </span>
-            <strong><span aria-label="required">*</span></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+       <h2>Contact information</h2>
+       <fieldset>
+         <legend>Title</legend>
+         <ul>
+             <li>
+               <label for="title_1">
+                 <input type="radio" id="title_1" name="title" value="K">
+                 King
+               </label>
+             </li>
+             <li>
+               <label for="title_2">
+                 <input type="radio" id="title_2" name="title" value="Q">
+                 Queen
+               </label>
+             </li>
+             <li>
+               <label for="title_3">
+                 <input type="radio" id="title_3" name="title" value="J">
+                 Joker
+               </label>
+             </li>
+         </ul>
+       </fieldset>
+       <p>
+         <label for="name">
+           <span>Name: </span>
+           <strong><span aria-label="required">*</span></strong>
+         </label>
+         <input type="text" id="name" name="username">
+       </p>
+       <p>
+         <label for="mail">
+           <span>E-mail: </span>
+           <strong><span aria-label="required">*</span></strong>
+         </label>
+         <input type="email" id="mail" name="usermail">
+       </p>
+       <p>
+         <label for="pwd">
+           <span>Password: </span>
+           <strong><span aria-label="required">*</span></strong>
+         </label>
+         <input type="password" id="pwd" name="password">
+       </p>
+   </section>
+   ```
 
 6. The second `<section>` of our form is the payment information.
    We have three distinct controls along with their labels, each contained inside a `<p>`.
    The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
    The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
-   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a  _placeholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
+   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a _placeholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
    These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
    Enter the following below the previous section:
@@ -312,7 +312,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <button type="submit">Validate the payment</button>
        </p>
    </section>
-    ```
+   ```
 
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 

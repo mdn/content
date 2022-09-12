@@ -17,13 +17,13 @@ The `aria-multiselectable` attribute indicates that the user may select more tha
 
 The default behavior of selection lists, such as {{HTMLElement('select')}}, is to be able to choose only one item or option. By default or by convention, when a user is presented with list from which they must select an item, they assume they can only select a single item unless otherwise notified. The `aria-multiselectable` attribute is the way to inform assistive technology users that they may select more than one item from the current selectable items if they so choose. Lists and trees are examples of roles that might allow users to select more than one item at a time.
 
-> **Note:**  When allowing for multiple selections, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "to select more than one value, keep the control key pressed during selection."
+> **Note:** When allowing for multiple selections, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "to select more than one value, keep the control key pressed during selection."
 
 ### Used with `aria-selected`
 
 When the user does select one or more items, remember to set the selected descendants as selected with [`aria-selected="true"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and selectable descendants that are not selected have `aria-selected="false"` set. If an element is not selectable, omit the `aria-selected` attribute altogether as its presence informs the user the item is selectable.
 
-If a tree, grid, tab list, or list box supports selection of more than one node, the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role),  [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role), or [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) has `aria-multiselectable` set to `true.` Otherwise, `aria-multiselectable` is either set to `false` or the default value of false is implied.
+If a tree, grid, tab list, or list box supports selection of more than one node, the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role), or [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) has `aria-multiselectable` set to `true.` Otherwise, `aria-multiselectable` is either set to `false` or the default value of false is implied.
 
 ## Example
 
@@ -101,7 +101,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 
 This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explicitly set to `false` indicates to assistive technology users that the item is selectable.
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."  Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected.
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected.
 
 ```html
 <label for="flagcolors">

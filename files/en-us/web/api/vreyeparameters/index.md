@@ -29,7 +29,7 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 - {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
-- {{domxref("VREyeParameters.fieldOfView")}}  {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("VREyeParameters.fieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 - {{domxref("VREyeParameters.renderWidth")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.

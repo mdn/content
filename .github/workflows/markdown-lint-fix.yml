@@ -24,7 +24,7 @@ jobs:
 
       - name: Lint markdown files
         run: |
-          yarn lint:md
+          yarn fix:md
 
       - name: Create PR with only fixable issues
         if: success()
@@ -47,4 +47,4 @@ jobs:
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.
-            Please review the run log: https://github.com/mdn/content/actions/runs/${GITHUB_RUN_ID}?check_suite_focus=true#step:5:1
+            Please review the run log: https://github.com/mdn/content/actions/runs/${{ github.run_id }}

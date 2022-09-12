@@ -58,6 +58,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : The user agent blocked the registration.
     This might happen if:
 

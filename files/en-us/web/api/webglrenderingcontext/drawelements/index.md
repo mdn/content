@@ -53,9 +53,10 @@ drawElements(mode, count, type, offset)
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
+
     When using the {{domxref("OES_element_index_uint")}} extension:
 
-      - `gl.UNSIGNED_INT`
+    - `gl.UNSIGNED_INT`
 
 - `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying a byte offset in the element array buffer. Must

@@ -88,10 +88,10 @@ When a keyboard user encounters a grid, they navigate the rows and columns using
 
 | Key                               | Action                                                                                                                                                                                                                                |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>→</kbd>                      | Moves focus one cell to the right. Optionally (layout grids), if focus is on the right-most cell in the row, focus may move to the first cell in the following row. If focus is on the last cell in the grid, focus does not move.                                                                                                                                |
-| <kbd>←</kbd>                      | Moves focus one cell to the left. Optionally (layout grids), if focus is on the left-most cell in the row, focus may move to the last cell in the previous row. If focus is on the first cell in the grid, focus does not move.                                                                                                                                  |
-| <kbd>↓</kbd>                      | Moves focus one cell down. Optionally (layout grids), if focus is on the bottom cell in the column, focus may move to the top cell in the following column. If focus is on the last cell in the grid, focus does not move.                                                                                                                                         |
-| <kbd>↑</kbd>                      | Moves focus one cell up. Optionally (layout grids), if focus is on the top cell in the column, focus may move to the bottom cell in the previous column. If focus is on the first cell in the grid, focus does not move.                                                                                                                                              |
+| <kbd>→</kbd>                      | Moves focus one cell to the right. Optionally (layout grids), if focus is on the right-most cell in the row, focus may move to the first cell in the following row. If focus is on the last cell in the grid, focus does not move.    |
+| <kbd>←</kbd>                      | Moves focus one cell to the left. Optionally (layout grids), if focus is on the left-most cell in the row, focus may move to the last cell in the previous row. If focus is on the first cell in the grid, focus does not move.       |
+| <kbd>↓</kbd>                      | Moves focus one cell down. Optionally (layout grids), if focus is on the bottom cell in the column, focus may move to the top cell in the following column. If focus is on the last cell in the grid, focus does not move.            |
+| <kbd>↑</kbd>                      | Moves focus one cell up. Optionally (layout grids), if focus is on the top cell in the column, focus may move to the bottom cell in the previous column. If focus is on the first cell in the grid, focus does not move.              |
 | <kbd>Page Down</kbd>              | Moves focus down an author-determined number of rows, typically scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row of the grid, focus does not move. |
 | <kbd>Page Up</kbd>                | Moves focus up an author-determined number of rows, typically scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row of the grid, focus does not move.      |
 | <kbd>Home</kbd>                   | Moves focus to the first cell in the row that contains focus.                                                                                                                                                                         |
@@ -240,7 +240,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       <td role="gridcell" tabindex="-1">
         29
       </td>
-    </tr> 
+    </tr>
     <tr role="row">
       <th scope="row" role="rowheader">Week 6</th>
       <td role="gridcell" tabindex="-1">
@@ -439,6 +439,6 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

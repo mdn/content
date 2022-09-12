@@ -576,10 +576,10 @@ window.addEventListener('load', () => {
 
 At that point, our control will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                                                 |
+| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)            |
 
 ### Handling the control's value
 
@@ -679,10 +679,10 @@ In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web
 
 With that, we're done! Here's the result:
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                                                 |
+| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)            |
 
 But wait a second, are we really done?
 
@@ -748,10 +748,10 @@ It might have seemed simpler to let a screen reader focus on the off-screen sele
 
 Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)):
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
-| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                                           |
+| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)      |
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 

@@ -119,7 +119,7 @@ const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
   .attr(dim2)
   .circle(20, "blue");
 
-circle2.bind("EnterFrame", () => {
+circle2.bind("EnterFrame", function () {
   const dx = circle1.x - circle2.x;
   const dy = circle1.y - circle2.y;
   const distance = Math.sqrt(dx * dx + dy * dy);

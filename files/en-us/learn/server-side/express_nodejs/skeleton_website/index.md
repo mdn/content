@@ -182,32 +182,32 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
 1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. Then run the application.
 
-    - On the Windows CMD prompt, use this command:
+   - On the Windows CMD prompt, use this command:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - On Windows Powershell, use this command:
+   - On Windows Powershell, use this command:
 
-      ```bash
-      $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
-      ```
+     ```bash
+     $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     ```
 
-      > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
-    - On macOS or Linux, use this command:
+   - On macOS or Linux, use this command:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. Then load `http://localhost:3000/` in your browser to access the app.
 

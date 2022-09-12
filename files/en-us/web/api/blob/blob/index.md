@@ -27,6 +27,7 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
+
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,

@@ -20,7 +20,7 @@ During the render pipeline, texture mapping is typically done prior to lighting 
 
 ## See also
 
-- [Texel (graphics)](https://en.wikipedia.org/wiki/Texel_(graphics)) on Wikipedia
+- [Texel (graphics)](<https://en.wikipedia.org/wiki/Texel_(graphics)>) on Wikipedia
 - [Texture mapping](https://en.wikipedia.org/wiki/Texture_mapping) on Wikipedia
 - [Texture filtering](https://en.wikipedia.org/wiki/Texture_filtering) on Wikipedia
 - [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)

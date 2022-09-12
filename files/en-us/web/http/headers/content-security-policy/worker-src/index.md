@@ -73,7 +73,7 @@ blocked and won't load:
 
 ```html
 <script>
-  const blockedWorker = new Worker("data:application/javascript,…");
+  let blockedWorker = new Worker("data:application/javascript,…");
   blockedWorker = new SharedWorker("https://not-example.com/");
   navigator.serviceWorker.register('https://not-example.com/sw.js');
 </script>

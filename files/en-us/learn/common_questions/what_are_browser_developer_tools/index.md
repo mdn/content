@@ -106,10 +106,9 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 ### Find out more
 
-Find more out about the Inspector in different browsers:
+Find out more about the Inspector in different browsers:
 
 - [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [IE DOM Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
 - [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera's inspector works the same as this)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
@@ -163,7 +162,7 @@ The final section, **Scopes**, shows what values are visible from various points
 
 ### Find out more
 
-Find more out about the JavaScript debugger in different browsers:
+Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
 - [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
@@ -221,7 +220,6 @@ You'll start to see the kind of errors that the browser returns. Often these err
 Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [IE JavaScript console](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))
 - [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera's inspector works the same as this)
 - [Safari Console](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 

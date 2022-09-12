@@ -692,7 +692,7 @@ After this step, the GPU pipeline will clip the out of range vertices, and send 
 
 ### Relating the coordinate systems
 
-At this point it would be beneficial to take a step back and look at and label the various coordinate systems we use. First off, the cube's vertices are defined in **model space**. To move the model around the scene. these vertices need to be converted into **world space** by applying the model matrix.
+At this point it would be beneficial to take a step back and look at and label the various coordinate systems we use. First off, the cube's vertices are defined in **model space**. To move the model around the scene. These vertices need to be converted into **world space** by applying the model matrix.
 
 model space → model matrix → world space
 

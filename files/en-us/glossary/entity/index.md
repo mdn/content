@@ -18,11 +18,11 @@ Some special characters are reserved for use in HTML, meaning that your browser 
 
 To display these characters as text, replace them with their corresponding character entities, as shown in the following table.
 
-| Character | Entity   | Note                                                                                 |
-| --------- | -------- | ------------------------------------------------------------------------------------ |
-| &         | `&amp;`  | Interpreted as the beginning of an entity or character reference.                    |
-| <         | `&lt;`   | Interpreted as the beginning of a {{Glossary('tag')}}                           |
-| >         | `&gt;`   | Interpreted as the ending of a {{Glossary('tag')}}                              |
+| Character | Entity   | Note                                                                          |
+| --------- | -------- | ----------------------------------------------------------------------------- |
+| &         | `&amp;`  | Interpreted as the beginning of an entity or character reference.             |
+| <         | `&lt;`   | Interpreted as the beginning of a {{Glossary('tag')}}                         |
+| >         | `&gt;`   | Interpreted as the ending of a {{Glossary('tag')}}                            |
 | "         | `&quot;` | Interpreted as the beginning and end of an {{Glossary('attribute')}}'s value. |
 
 ## See also
