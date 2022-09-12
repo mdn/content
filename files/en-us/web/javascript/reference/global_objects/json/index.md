@@ -12,42 +12,26 @@ browser-compat: javascript.builtins.JSON
 
 {{JSRef}}
 
-The **`JSON`** object contains methods
-for parsing [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}) and converting values to JSON.
-It can't be called or constructed, and aside from its two method properties,
-it has no interesting functionality of its own.
+The **`JSON`** object contains methods for parsing [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}) and converting values to JSON. It can't be called or constructed.
 
 ## Description
 
+Unlike most global objects, `JSON` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `JSON` object as a function. All properties and methods of `JSON` are static (just like the {{jsxref("Math")}} object).
+
 ### JavaScript and JSON differences
 
-JSON is a syntax for serializing objects, arrays, numbers, strings, booleans, and
-[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). It is based upon JavaScript syntax but is distinct from it: some
-JavaScript is _not_ JSON.
+JSON is a syntax for serializing objects, arrays, numbers, strings, booleans, and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). It is based upon JavaScript syntax, but is distinct from JavaScript: most of JavaScript is _not_ JSON. For example:
 
-- **Objects and Arrays**
-  - : Property names must be double-quoted strings; [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are
-    forbidden.
-- **Numbers**
-  - : Leading zeros are prohibited. A decimal point must be followed by at least one
-    digit. `NaN` and `Infinity` are unsupported.
+- Objects and Arrays
+  - : Property names must be double-quoted strings; [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are forbidden.
+- Numbers
+  - : Leading zeros are prohibited. A decimal point must be followed by at least one digit. `NaN` and `Infinity` are unsupported.
 
-Any JSON text is a valid JavaScript expression, but only in JavaScript engines that have implemented the [proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset).
-In engines that haven't implemented the proposal, U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR are allowed in string literals and property keys in JSON; but their use in these features in JavaScript string literals is a {{jsxref("SyntaxError")}}.
+Any JSON text is a valid JavaScript expression, but only after the [JSON superset](https://github.com/tc39/proposal-json-superset) revision. Before the revision, U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR are allowed in string literals and property keys in JSON; but the same use in JavaScript string literals is a {{jsxref("SyntaxError")}}.
 
-Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON and
-{{jsxref("Global_Objects/eval", "eval")}} executes the string as JavaScript:
+Other differences include allowing only double-quoted strings and no support for {{jsxref("undefined")}} or comments. For those who wish to use a more human-friendly configuration format based on JSON, there is [JSON5](https://json5.org/), used by the Babel compiler, and the more commonly used [YAML](https://en.wikipedia.org/wiki/YAML).
 
-```js
-const code = '"\u2028\u2029"';
-JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
-eval(code); // throws a SyntaxError in old engines
-```
-
-Other differences include allowing only double-quoted strings and having no provisions
-for {{jsxref("undefined")}} or comments. For those who wish to use a more human-friendly
-configuration format based on JSON, there is [JSON5](https://json5.org/),
-used by the Babel compiler, and the more commonly used [YAML](https://en.wikipedia.org/wiki/YAML).
+The same text may represent different values in JavaScript object literals vs. JSON as well. For more information, see [Object literal syntax vs. JSON](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#object_literal_syntax_vs._json).
 
 ### Full JSON grammar
 
@@ -106,27 +90,14 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-Insignificant {{glossary("whitespace")}} may be present anywhere except within a
-`JSONNumber` (numbers must contain no whitespace) or
-`JSONString` (where it is interpreted as the corresponding
-character in the string, or would cause an error). The tab character ([U+0009](https://unicode-table.com/en/0009/)), carriage return ([U+000D](https://unicode-table.com/en/000D/)), line feed ([U+000A](https://unicode-table.com/en/000A/)), and space ([U+0020](https://unicode-table.com/en/0020/)) characters are the only valid
-whitespace characters.
+Insignificant {{glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://unicode-table.com/en/0009/)), carriage return ([U+000D](https://unicode-table.com/en/000D/)), line feed ([U+000A](https://unicode-table.com/en/000A/)), and space ([U+0020](https://unicode-table.com/en/0020/)) characters are the only valid whitespace characters.
 
 ## Static methods
 
 - {{jsxref("JSON.parse()")}}
-  - : Parse the string `text` as JSON, optionally transform the
-    produced value and its properties, and return the value. Any violations of the JSON
-    syntax, including those pertaining to the differences between JavaScript and JSON,
-    cause a {{jsxref("SyntaxError")}} to be thrown. The `reviver`
-    option allows for interpreting what the `replacer` has used to
-    stand in for other datatypes.
+  - : Parse a piece of string text as JSON, optionally transforming the produced value and its properties, and return the value.
 - {{jsxref("JSON.stringify()")}}
-  - : Return a JSON string corresponding to the specified value, optionally including only
-    certain properties or replacing property values in a user-defined manner. By default,
-    all instances of {{jsxref("undefined")}} are replaced with [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and
-    other unsupported native data types are censored. The `replacer`
-    option allows for specifying other behavior.
+  - : Return a JSON string corresponding to the specified value, optionally including only certain properties or replacing property values in a user-defined manner.
 
 ## Examples
 
@@ -149,6 +120,29 @@ whitespace characters.
     }
   }
 }
+```
+
+You can use the {{jsxref("JSON.parse()")}} method to convert the above JSON string into a JavaScript object:
+
+```js
+const jsonText = `{
+  "browsers": {
+    "firefox": {
+      "name": "Firefox",
+      "pref_url": "about:config",
+      "releases": {
+        "1": {
+          "release_date": "2004-11-09",
+          "status": "retired",
+          "engine": "Gecko",
+          "engine_version": "1.7"
+        }
+      }
+    }
+  }
+}`;
+
+console.log(JSON.parse(jsonText));
 ```
 
 ## Specifications
