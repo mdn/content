@@ -251,6 +251,6 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 ## See also
 
-- {{jsxref("statements/class","Class declaration","",1)}}
-- {{jsxref("Classes/constructor","Class constructor","",1)}}
-- Glossary: {{Glossary("constructor", "", 1)}}
+- {{jsxref("statements/class", "Class declaration")}}
+- {{jsxref("Classes/constructor", "Class constructor")}}
+- Glossary: {{Glossary("constructor")}}
