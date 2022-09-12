@@ -23,6 +23,10 @@
     "MD026": false,
     // Consectutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
+    // Force orderd numbering to catch accidental list ending from indenting
+    "MD029": {
+      "style": "ordered"
+    },
     "MD033": {
       "allowed_elements": [
         "a",
