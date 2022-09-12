@@ -74,7 +74,7 @@ See [CanIUse.com](https://caniuse.com/#search=video) for current browser support
 
 ### Video autoplay
 
-To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline.`
+To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline`.
 
 ```html
 <video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
