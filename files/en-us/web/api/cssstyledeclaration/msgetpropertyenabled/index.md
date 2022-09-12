@@ -18,7 +18,7 @@ This proprietary method is specific to Internet Explorer browser.
 
 ### Syntax
 
-```js
+```js-nolint
 msGetPropertyEnabled(name)
 ```
 

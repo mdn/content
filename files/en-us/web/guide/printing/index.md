@@ -9,7 +9,7 @@ tags:
   - printing
 ---
 
-There may be times in which your web site or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
+There may be times in which your website or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.
 - You wish to use different styles to enhance the appearance of your content on paper.
@@ -49,7 +49,7 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 <title>JavaScript Window Close Example </title>
   <script>
     function popuponclick() {
-      my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
+      const my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
       my_window.document.write('<html><head><title>Print Me</title></head>');
       my_window.document.write('<body onafterprint="self.close()">');
       my_window.document.write('<p>When you print this window, it will close afterward.</p>');
