@@ -48,17 +48,17 @@ A typical font face definition using a URL source might be as shown below.
 Note that the `url()` function is required for URL font sources.
 
 ```js
-const font = new FontFace('myfont', 'url(myfont.woff)', {
-  style: 'italic',
-  weight: '400',
-  stretch: 'condensed'
+const font = new FontFace("myfont", "url(myfont.woff)", {
+  style: "italic",
+  weight: "400",
+  stretch: "condensed",
 });
 ```
 
 > **Note:** As with `@font-face`, some descriptors represent the expected data in the font data and are used for font matching, while others actually set/define properties of the generated font face.
 > For example, setting the `style` to "italic" indicates that the file contains italic fonts; it is up to the author to specify a file for which this is true.
 
-Font faces with a _binary source_ are automatically loaded if the font definition is valid and the font data can be loaded — {{domxref('FontFace.status')}} is set to `loaded` on success and `failed` otherwise.  
+Font faces with a _binary source_ are automatically loaded if the font definition is valid and the font data can be loaded — {{domxref('FontFace.status')}} is set to `loaded` on success and `failed` otherwise.
 Font faces with a URL source are validated but not automatically loaded — {{domxref('FontFace.status')}} is set `unloaded` if the font face definition is valid and `failed` otherwise.
 
 ### Adding a font to a document or worker
@@ -69,10 +69,10 @@ The code below shows a font face being added to the document.
 
 ```js
 // Define a FontFace
-const font = new FontFace('myfont', 'url(myfont.woff)', {
-  style: 'italic',
-  weight: '400',
-  stretch: 'condensed'
+const font = new FontFace("myfont", "url(myfont.woff)", {
+  style: "italic",
+  weight: "400",
+  stretch: "condensed",
 });
 
 // Add to the document.fonts (FontFaceSet)
@@ -88,7 +88,7 @@ The code below shows how to define a font face, add it to the document fonts, an
 
 ```js
 // Define a FontFace
-const font = new FontFace('myfont', 'url(myfont.woff)');
+const font = new FontFace("myfont", "url(myfont.woff)");
 
 // Add to the document.fonts (FontFaceSet)
 document.fonts.add(font);
@@ -97,8 +97,8 @@ document.fonts.add(font);
 font.load();
 
 // Wait until the fonts are all loaded
-document.fonts.ready.then( () => {
-  // Use the font to render text (for example, in a canvas) 
+document.fonts.ready.then(() => {
+  // Use the font to render text (for example, in a canvas)
 });
 ```
 
@@ -135,7 +135,7 @@ This code defines a canvas for drawing to and a textarea for logging.
 First we get the element to which we will log, and the canvas that will be used to render text in the downloaded font.
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 const canvas = document.getElementById("js-canvas");
 canvas.width = 650;
@@ -146,26 +146,30 @@ Next we define a `FontFace` that has a URL source that is a Google Font and add 
 We then log the font status, which should be `unloaded`.
 
 ```js
-const bitterFontFace = new FontFace('FontFamily Bitter', 'url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)');
+const bitterFontFace = new FontFace(
+  "FontFamily Bitter",
+  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)"
+);
 document.fonts.add(bitterFontFace);
-log.textContent += `Bitter font: ${bitterFontFace.status}\n`;  // > Bitter font: unloaded
+log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
 ```
 
 Then we call the {{domxref('FontFace.load()')}} method to load the font face, and wait on the returned promise.
 Once the promise resolves we log the loaded status (which should be `loaded`) and draw text in the loaded font to the canvas.
 
 ```js
-bitterFontFace.load().then(() => {
-  log.textContent += `Bitter font: ${bitterFontFace.status}\n`;  // > Bitter font: loaded
+bitterFontFace.load().then(
+  () => {
+    log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: loaded
 
-  const ctx = canvas.getContext('2d')
-  ctx.font = '36px "FontFamily Bitter"'
-  ctx.fillText('Bitter font loaded', 20, 50)
-
+    const ctx = canvas.getContext("2d");
+    ctx.font = '36px "FontFamily Bitter"';
+    ctx.fillText("Bitter font loaded", 20, 50);
   },
-(err) => {
-  console.error(err)
-});
+  (err) => {
+    console.error(err);
+  }
+);
 ```
 
 Note that we could also have waited on the promise returned by the {{domxref('FontFace.loaded')}} property, or on {{domxref('FontFaceSet.ready')}}.
@@ -194,14 +198,17 @@ It also demonstrates how to listen for font loading events.
 The code below defines a canvas context for drawing text, defines a font face, and adds it to the document font face set.
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 const canvas = document.getElementById("js-canvas");
 canvas.width = 650;
 canvas.height = 75;
-const ctx = canvas.getContext('2d')
+const ctx = canvas.getContext("2d");
 
-const oxygenFontFace = new FontFace('FontFamily Oxygen', 'url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)');
+const oxygenFontFace = new FontFace(
+  "FontFamily Oxygen",
+  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)"
+);
 document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
 ```
@@ -212,15 +219,17 @@ If the promise is resolved we use the font to draw some text.
 If it is rejected the error is logged.
 
 ```js
-document.fonts.load('36px FontFamily Oxygen').then((fonts) => {
-  log.textContent += `Bitter font: ${fonts}\n`;  // > Oxygen font: loaded
-  log.textContent += `Bitter font: ${oxygenFontFace.status}\n`;  // > Oxygen font: loaded
-  ctx.font = '36px "FontFamily Oxygen"'
-  ctx.fillText('Oxygen font loaded', 20, 50)
+document.fonts.load("36px FontFamily Oxygen").then(
+  (fonts) => {
+    log.textContent += `Bitter font: ${fonts}\n`; // > Oxygen font: loaded
+    log.textContent += `Bitter font: ${oxygenFontFace.status}\n`; // > Oxygen font: loaded
+    ctx.font = '36px "FontFamily Oxygen"';
+    ctx.fillText("Oxygen font loaded", 20, 50);
   },
-(err) => {
-  console.error(err)
-});
+  (err) => {
+    console.error(err);
+  }
+);
 ```
 
 Instead of waiting on a promise we might instead use events to track the font loading operation.
@@ -228,15 +237,15 @@ The code below listens for the `loading` and `loadingerror` events and logs the 
 In the `loadingdone` event listener we additionally iterate through the font faces and log the family names.
 
 ```js
-document.fonts.addEventListener('loading', (event) => { 
+document.fonts.addEventListener("loading", (event) => {
   log.textContent += `loading_event: ${event.fontfaces.length}\n`;
 });
-document.fonts.addEventListener('loadingerror', (event) => { 
+document.fonts.addEventListener("loadingerror", (event) => {
   log.textContent += `loadingerror_event: ${event.fontfaces.length}\n`;
 });
-document.fonts.addEventListener('loadingdone', (event) => { 
+document.fonts.addEventListener("loadingdone", (event) => {
   log.textContent += `loadingdone_event: ${event.fontfaces.length}\n`;
-  event.fontfaces.forEach( (value) => {
+  event.fontfaces.forEach((value) => {
     log.textContent += `  fontface: ${value.family}\n`;
   });
 });
@@ -248,11 +257,11 @@ Unlike the other mechanisms this returns when all fonts defined in the document 
 When the promise resolves we iterate the values in the document's font faces.
 
 ```js
-document.fonts.ready.then(function() {
-  log.textContent += (`\nFontFaces in document: ${document.fonts.size}.\n`);
+document.fonts.ready.then(function () {
+  log.textContent += `\nFontFaces in document: ${document.fonts.size}.\n`;
 
   for (const fontFace of document.fonts.values()) {
-    log.textContent += 'FontFace:\n';
+    log.textContent += "FontFace:\n";
     for (const property in fontFace) {
       log.textContent += `  ${property}: ${fontFace[property]}\n`;
     }
