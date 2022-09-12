@@ -132,7 +132,8 @@ When generating the hash, don't include the {{HTMLElement("script")}} tags and n
 
 ### Unsafe eval expressions
 
-The `'unsafe-eval'` source expression controls several script execution methods that create code from strings. If `'unsafe-eval'` isn't specified with the `script-src` directive, the following methods are blocked and won't have any effect:
+The `'unsafe-eval'` source expression controls several script execution methods that create code from strings.
+If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-src` directive, the following methods are blocked and won't have any effect:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
@@ -146,13 +147,13 @@ The `'unsafe-eval'` source expression controls several script execution methods 
 
 ### Unsafe WebAssembly execution
 
-The `'unsafe-wasm-eval'` source expression controls WebAssembly execution.
-If `'unsafe-wasm-eval'` isn't specified with the `script-src` directive, WebAssembly execution is blocked from loading and executing on the page.
-The `'unsafe-wasm-eval'` source expression is more specific than `'unsafe-eval'` which permits both compilation (and instantiation) of WebAssembly and, for example, the use of the `eval` operation in JavaScript.
-If the `'unsafe-eval'` source keyword is used, then this overrides any occurrence of `'unsafe-wasm-eval'` in the CSP policy.
+The `'wasm-unsafe-eval'` source expression controls WebAssembly execution.
+If a page has a CSP header and `'wasm-unsafe-eval'` isn't specified in the `script-src` directive, WebAssembly is blocked from loading and executing on the page.
+The `'wasm-unsafe-eval'` source expression is more specific than `'unsafe-eval'` which permits both compilation (and instantiation) of WebAssembly and, for example, the use of the `eval` operation in JavaScript.
+If the `'unsafe-eval'` source keyword is used, then this overrides any occurrence of `'wasm-unsafe-eval'` in the CSP policy.
 
 ```http
-Content-Security-Policy: script-src 'unsafe-wasm-eval'
+Content-Security-Policy: script-src 'wasm-unsafe-eval'
 ```
 
 ### strict-dynamic
