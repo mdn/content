@@ -40,6 +40,8 @@ This article provides information about the changes in Firefox 105 that will aff
 
 #### DOM
 
+- The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces [Encoding API](/en-US/docs/Web/API/Encoding_API) are now supported ({{bug(1486949)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
