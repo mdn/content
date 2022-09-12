@@ -28,12 +28,16 @@ new TextDecoderStream(label, options)
     This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options` {{optional_inline}}
 
-  - : A `TextDecoderOptions` dictionary with the property:
+  - : An object with the property:
 
     - `fatal`
-      - : A boolean value indicating the error mode.
-        If true then a {{domxref("DOMException")}} will be thrown if the decoder encounters an error.
-        Defaults to `false`.
+      - : A boolean value indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
+        It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if the value of `label` is unknown, or is one of the values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`).
 
 ## Examples
 

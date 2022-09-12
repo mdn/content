@@ -26,20 +26,20 @@ new TextDecoder(label, options)
 ### Parameters
 
 - `label` {{optional_inline}}
-  - : A string, defaulting to `"utf-8"`, containing the _label_ of the encoder.
+  - : A string, defaulting to `"utf-8"`.
     This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options` {{optional_inline}}
 
   - : An object with the property:
 
     - `fatal`
-      - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) flag indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
+      - : A boolean value indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
         It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the value of label is unknown, or is one of the two values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`).
+  - : Thrown if the value of `label` is unknown, or is one of the values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`).
 
 ## Examples
 
