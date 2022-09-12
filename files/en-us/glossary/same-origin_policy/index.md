@@ -2,7 +2,6 @@
 title: Same-origin policy
 slug: Glossary/Same-origin_policy
 tags:
-  - Glossary
   - Same-origin policy
   - origin
 ---

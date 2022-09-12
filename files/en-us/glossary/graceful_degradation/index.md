@@ -3,7 +3,6 @@ title: Graceful degradation
 slug: Glossary/Graceful_degradation
 tags:
   - Design
-  - Glossary
   - graceful degradation
 ---
 

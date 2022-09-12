@@ -5,7 +5,6 @@ tags:
   - Abstraction
   - Coding
   - CodingScripting
-  - Glossary
   - Programming Language
 ---
 

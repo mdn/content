@@ -3,7 +3,6 @@ title: Digest
 slug: Glossary/Digest
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

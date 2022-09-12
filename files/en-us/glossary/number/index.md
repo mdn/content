@@ -3,7 +3,6 @@ title: Number
 slug: Glossary/Number
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

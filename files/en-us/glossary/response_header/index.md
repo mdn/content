@@ -2,7 +2,6 @@
 title: Response header
 slug: Glossary/Response_header
 tags:
-  - Glossary
   - WebMechanics
 ---
 

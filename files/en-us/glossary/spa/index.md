@@ -2,7 +2,6 @@
 title: SPA (Single-page application)
 slug: Glossary/SPA
 tags:
-  - Glossary
   - SPA
   - single-page app
 ---

@@ -3,7 +3,6 @@ title: Primitive
 slug: Glossary/Primitive
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

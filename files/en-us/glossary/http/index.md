@@ -3,7 +3,6 @@ title: HTTP
 slug: Glossary/HTTP
 tags:
   - Beginner
-  - Glossary
   - HTTP
   - Infrastructure
   - Web Performance

@@ -4,7 +4,6 @@ slug: Glossary/SGML
 tags:
   - CodingScripting
   - Composing
-  - Glossary
   - SGML
 ---
 

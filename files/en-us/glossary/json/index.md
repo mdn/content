@@ -3,7 +3,6 @@ title: JSON
 slug: Glossary/JSON
 tags:
   - CodingScripting
-  - Glossary
   - Intro
   - JSON
   - "l10n:priority"

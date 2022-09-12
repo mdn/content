@@ -2,7 +2,6 @@
 title: TCP
 slug: Glossary/TCP
 tags:
-  - Glossary
   - Infrastructure
   - Networking
   - TCP

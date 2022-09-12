@@ -2,7 +2,6 @@
 title: OWASP
 slug: Glossary/OWASP
 tags:
-  - Glossary
   - Security
 ---
 

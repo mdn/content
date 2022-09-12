@@ -2,7 +2,6 @@
 title: Keyword
 slug: Glossary/Keyword
 tags:
-  - Glossary
   - Keyword
   - Search
   - keyword search

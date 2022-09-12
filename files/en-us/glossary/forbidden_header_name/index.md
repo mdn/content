@@ -3,7 +3,6 @@ title: Forbidden header name
 slug: Glossary/Forbidden_header_name
 tags:
   - Fetch
-  - Glossary
   - HTTP
   - Headers
   - forbidden

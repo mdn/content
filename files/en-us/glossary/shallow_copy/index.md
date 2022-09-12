@@ -2,7 +2,6 @@
 title: Shallow copy
 slug: Glossary/Shallow_copy
 tags:
-  - Glossary
   - Shallow copy
 ---
 

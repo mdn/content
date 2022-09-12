@@ -2,7 +2,6 @@
 title: ITU
 slug: Glossary/ITU
 tags:
-  - Glossary
   - ITU
   - Standardization
   - organization

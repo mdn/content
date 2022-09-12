@@ -3,7 +3,6 @@ title: PDF
 slug: Glossary/PDF
 tags:
   - Composing
-  - Glossary
   - PDF
   - Portable Document Format
 ---
