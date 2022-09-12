@@ -39,7 +39,7 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
   <option>Happy</option>
   <option>Sleepy</option>
   <option>Bashful</option>
-  <option>Sneezy</option>
+  <option>Angry</option>
   <option>Dopey</option>
   <option>Doc</option>
 </select>
@@ -66,7 +66,7 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
   <option value="happy@woodworkers.com">Happy</option>
   <option value="sleepy@woodworkers.com">Sleepy</option>
   <option value="bashful@woodworkers.com">Bashful</option>
-  <option value="sneezy@woodworkers.com">Sneezy</option>
+  <option value="angry@woodworkers.com">Angry</option>
   <option value="dopey@woodworkers.com">Dopey</option>
   <option value="doc@woodworkers.com">Doc</option>
 </datalist>
@@ -117,13 +117,13 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 ```html
 <form method="get" action="#">
 <p>
- <label for="dwarfs">Select the woodsmen you like:</label>
+ <label for="drawfs">Select the woodsmen you like:</label>
   <select multiple name="drawfs" id="drawfs">
     <option>grumpy@woodworkers.com</option>
     <option>happy@woodworkers.com</option>
     <option>sleepy@woodworkers.com</option>
     <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
+    <option>angry@woodworkers.com</option>
     <option>dopey@woodworkers.com</option>
     <option>doc@woodworkers.com</option>
   </select>
@@ -135,7 +135,7 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
     <option>happy@woodworkers.com</option>
     <option>sleepy@woodworkers.com</option>
     <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
+    <option>angry@woodworkers.com</option>
     <option>dopey@woodworkers.com</option>
     <option>doc@woodworkers.com</option>
   </select>
@@ -165,7 +165,7 @@ select[multiple]:active {
 */
 ```
 
-There are a few ways to select multiple options in a `<select>` element with a `multiple` attribute. Depending on the operating system, mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys and then click multiple options to select/deselect them. Keyboard users can select multiple contiguous items by focusing on the `<select>` element, selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options. The selection of non-contiguous is not as well supported: items should be able to be selected and deselected by pressing <kbd>Space</kbd> , but support varies between browsers.
+There are a few ways to select multiple options in a `<select>` element with a `multiple` attribute. Depending on the operating system, mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys and then click multiple options to select/deselect them. Keyboard users can select multiple contiguous items by focusing on the `<select>` element, selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options. The selection of non-contiguous is not as well-supported: items should be able to be selected and deselected by pressing <kbd>Space</kbd> , but support varies between browsers.
 
 ## Specifications
 
