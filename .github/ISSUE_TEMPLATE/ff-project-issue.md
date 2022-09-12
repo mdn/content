@@ -25,3 +25,5 @@ or
 ## Related Gecko bugs
 
 ## Other
+
+- [ ] Check content open issues to see if any pertain to the subject matter. If there are any that can be closed because of the work, do so. If there are any that can be fixed relatively quickly because of the knowledge from completing this issue and you have time, feel free to go ahead and fix them.
