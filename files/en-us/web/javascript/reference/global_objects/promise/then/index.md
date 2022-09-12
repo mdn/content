@@ -27,7 +27,7 @@ takes up to two arguments: callback functions for the success and failure cases 
 
 ## Syntax
 
-```js
+```js-nolint
 then(onFulfilled)
 then(onFulfilled, onRejected)
 
