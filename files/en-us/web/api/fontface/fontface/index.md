@@ -27,6 +27,7 @@ new FontFace(family, source, descriptors)
 ### Parameters
 
 - `family`
+
   - : Specifies a font family name that can be used to match against this font face when styling elements.
 
     Takes the same type of values as the {{cssxref("@font-face/font-family", "font-family")}} descriptor of {{cssxref("@font-face")}}.
@@ -76,17 +77,17 @@ new FontFace(family, source, descriptors)
 
 ```js
 async function loadFonts() {
-    const font = new FontFace('myfont', 'url(myfont.woff)',{
-      style: 'normal',
-      weight: '400',
-      stretch: 'condensed'
-      });
-    // wait for font to be loaded
-    await font.load();
-    // add font to document
-    document.fonts.add(font);
-    // enable font with CSS class
-    document.body.classList.add('fonts-loaded');
+  const font = new FontFace("myfont", "url(myfont.woff)", {
+    style: "normal",
+    weight: "400",
+    stretch: "condensed",
+  });
+  // wait for font to be loaded
+  await font.load();
+  // add font to document
+  document.fonts.add(font);
+  // enable font with CSS class
+  document.body.classList.add("fonts-loaded");
 }
 ```
 

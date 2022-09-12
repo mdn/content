@@ -13,8 +13,7 @@ browser-compat: api.FontFace.ascentOverride
 
 {{APIRef("CSS Font Loading API")}}
 
-The **`ascentOverride`** property of the {{domxref("FontFace")}} interface returns and sets the ascent metric for the font,
-the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
+The **`ascentOverride`** property of the {{domxref("FontFace")}} interface returns and sets the ascent metric for the font, the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
 
 This property is equivalent to the {{cssxref("@font-face/ascent-override")}} descriptor of {{cssxref("@font-face")}}.
 

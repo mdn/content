@@ -18,7 +18,7 @@ The **`values()`** method of the {{domxref("FontFaceSet")}} interface returns a 
 ## Syntax
 
 ```js
-values();
+values()
 ```
 
 ### Parameters

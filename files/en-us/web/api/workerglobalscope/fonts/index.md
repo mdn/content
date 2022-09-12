@@ -12,6 +12,7 @@ tags:
   - Property
 browser-compat: api.WorkerGlobalScope.fonts
 ---
+
 {{APIRef("DOM")}}
 
 The **`fonts`** property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("FontFaceSet")}} interface of the worker.
