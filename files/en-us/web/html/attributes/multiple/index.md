@@ -34,12 +34,12 @@ When the attribute is omitted, the user can only select a single file per `<inpu
 The `multiple` attribute on the {{HTMLElement("select")}} element represents a control for selecting zero or more options from the list of options. Otherwise, the {{HTMLElement("select")}} element represents a control for selecting a single {{HTMLElement("option")}} from the list of options.
 
 ```html
-<select multiple name="drawfs" id="drawfs">
+<select multiple name="dwarfs" id="dwarfs">
   <option>Grumpy</option>
   <option>Happy</option>
   <option>Sleepy</option>
   <option>Bashful</option>
-  <option>Angry</option>
+  <option>Sneezy</option>
   <option>Dopey</option>
   <option>Doc</option>
 </select>
@@ -66,7 +66,7 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
   <option value="happy@woodworkers.com">Happy</option>
   <option value="sleepy@woodworkers.com">Sleepy</option>
   <option value="bashful@woodworkers.com">Bashful</option>
-  <option value="angry@woodworkers.com">Angry</option>
+  <option value="sneezy@woodworkers.com">Sneezy</option>
   <option value="dopey@woodworkers.com">Dopey</option>
   <option value="doc@woodworkers.com">Doc</option>
 </datalist>
@@ -117,13 +117,13 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 ```html
 <form method="get" action="#">
 <p>
- <label for="drawfs">Select the woodsmen you like:</label>
-  <select multiple name="drawfs" id="drawfs">
+ <label for="dwarfs">Select the Dwarf Woodsman you like:</label>
+  <select multiple name="dwarfs" id="dwarfs">
     <option>grumpy@woodworkers.com</option>
     <option>happy@woodworkers.com</option>
     <option>sleepy@woodworkers.com</option>
     <option>bashful@woodworkers.com</option>
-    <option>angry@woodworkers.com</option>
+    <option>sneezy@woodworkers.com</option>
     <option>dopey@woodworkers.com</option>
     <option>doc@woodworkers.com</option>
   </select>
@@ -135,7 +135,7 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
     <option>happy@woodworkers.com</option>
     <option>sleepy@woodworkers.com</option>
     <option>bashful@woodworkers.com</option>
-    <option>angry@woodworkers.com</option>
+    <option>sneezy@woodworkers.com</option>
     <option>dopey@woodworkers.com</option>
     <option>doc@woodworkers.com</option>
   </select>
