@@ -83,7 +83,7 @@ function logIterable(it) {
     return;
   }
 
-  for (const letter of iterator) {
+  for (const letter of it) {
     console.log(letter);
   }
 }
