@@ -55,7 +55,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 [itemref](/en-US/docs/Web/HTML/Global_attributes/itemref) – Properties that are not descendants of an element with the `itemscope` attribute can be associated with the item using an **itemref**. Itemref provides a list of element ids (not `itemid`s) with additional properties elsewhere in the document.
 
-[itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) – Itemscope (usually) works along with [itemtype](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
+[itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) – Itemscope (usually) works along with [itemtype](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. Itemscope creates the Item and defines the scope of the itemtype associated with it. Itemtype is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
 
 [itemtype](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. [Itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
 
