@@ -44,7 +44,7 @@ such as during the bubbling phase.
 
 ## Syntax
 
-```js
+```js-nolint
 addEventListener(type, listener);
 addEventListener(type, listener, options);
 addEventListener(type, listener, useCapture);

@@ -33,7 +33,7 @@ to interact with the opener window until they close the modal dialog.
 
 ## Syntax
 
-```js
+```js-nolint
 openDialog(url)
 openDialog(url, name)
 openDialog(url, name, features)
