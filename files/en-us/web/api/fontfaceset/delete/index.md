@@ -20,7 +20,7 @@ Font faces that were added to the set using the CSS {{cssxref("@font-face")}} ru
 ## Syntax
 
 ```js
-delete(font)
+delete font
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ A boolean value which is `true` if the deletion was successful, and `false` othe
 In the following example a new {{domxref("FontFace")}} object is created and then deleted from the {{domxref("FontFaceSet")}}.
 
 ```js
-let font = new FontFace('MyFont', 'url(myFont.woff2)');
+let font = new FontFace("MyFont", "url(myFont.woff2)");
 document.fonts.delete(font);
 ```
 
