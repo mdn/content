@@ -22,7 +22,7 @@ In any case, the best way to know if something is broken in Firefox is to downlo
 
 The best strategy to avoid mixed content blocking is to serve all the content as HTTPS instead of HTTP.
 
-**For your own domain,** serve all content as HTTPS and fix your links.  Often, the HTTPS version of the content already exists and this just requires adding an "s" to links - http\:// to https\://.
+**For your own domain,** serve all content as HTTPS and fix your links. Often, the HTTPS version of the content already exists and this just requires adding an "s" to links - http\:// to https\://.
 
 However, in some cases, the path may just be incorrect to the media in question. There are online as well as offline tools (depending on your operating system) such as [linkchecker](https://linkchecker.github.io/linkchecker/) to help resolve this.
 

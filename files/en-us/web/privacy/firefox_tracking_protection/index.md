@@ -24,7 +24,7 @@ Note that with Firefox for Android, you can access console output using the remo
 
 ![Page information showing possible blocked content.](blocked_content.png)
 
-Click the ⓘ symbol in the address bar to view information about the currently loaded page. The popup that appears will notify you when content has been blocked.  You will also be able to disable tracking protection entirely if you choose by accessing the tracking settings.
+Click the ⓘ symbol in the address bar to view information about the currently loaded page. The popup that appears will notify you when content has been blocked. You will also be able to disable tracking protection entirely if you choose by accessing the tracking settings.
 
 If tracking cookies were present, you would be able to view the list by clicking on "Blocking Tracking Cookies" in the above image to view the following popup:
 

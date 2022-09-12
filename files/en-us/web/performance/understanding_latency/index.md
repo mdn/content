@@ -12,7 +12,7 @@ tags:
 
 ## What is Latency?
 
-Latency is generally considered to be the amount of time it takes from when a request is made by the user to the time it takes for the response to get back to that user.  On a first request, for the first 14Kb bytes, latency is longer because it includes a {{glossary('DNS')}} lookup, a {{glossary('TCP handshake')}}, the secure {{glossary('TLS')}} negotiation. Subsequent requests will have less latency because the connection to the server is already set.
+Latency is generally considered to be the amount of time it takes from when a request is made by the user to the time it takes for the response to get back to that user. On a first request, for the first 14Kb bytes, latency is longer because it includes a {{glossary('DNS')}} lookup, a {{glossary('TCP handshake')}}, the secure {{glossary('TLS')}} negotiation. Subsequent requests will have less latency because the connection to the server is already set.
 
 Latency describes the amount of delay on a network or Internet connection. Low latency implies that there are no or almost no delays. High latency implies that there are many delays. One of the main aims of improving performance is to reduce latency.
 
@@ -63,6 +63,6 @@ The **{{glossary('TLS')}} handshake** is how long it took to set up a secure con
 
 ## Measuring latency
 
-**Network latency** is the time it takes for a data request to get from the computer making the request, to the computer responding. Including the time it takes for a byte of data to make it from the responding computer back to the requesting computer.  It is generally measured as a round trip delay.
+**Network latency** is the time it takes for a data request to get from the computer making the request, to the computer responding. Including the time it takes for a byte of data to make it from the responding computer back to the requesting computer. It is generally measured as a round trip delay.
 
 **Disk latency** is the time it takes from the moment a computer, usually a server, receives a request, to the time the computer returns the response.
