@@ -97,9 +97,9 @@ An `SVGNumberList` is indexable and can be accessed like an array.
 
 ## Properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
 ## Methods

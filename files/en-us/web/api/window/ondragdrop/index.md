@@ -35,7 +35,7 @@ In this example, an event listener is added to the window (the event target). If
 <!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"> 
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>dragdroptest</title>
 

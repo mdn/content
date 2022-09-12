@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Comparison
 ---
+
 {{WebAssemblySidebar}}
 
 The **`ne`** instructions, short for _not equal_, check if two numbers are not equal. If the numbers are not equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.

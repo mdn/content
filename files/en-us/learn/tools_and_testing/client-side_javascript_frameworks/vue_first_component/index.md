@@ -89,14 +89,14 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
 1. Add an empty `<div>` inside your component template now.
 2. Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```html
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### Using TodoItem inside our app
 
@@ -105,9 +105,9 @@ This is all fine, but we haven't added the component to our app yet, so there's 
 1. Open up `App.vue` again.
 2. At the top of your `<script>` tag, add the following to import your `ToDoItem` component:
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from './components/ToDoItem.vue';
+   ```
 
 3. Inside your component object, add the `components` property, and inside it add your `ToDoItem` component to register it.
 
@@ -170,13 +170,13 @@ For this component, we'll use the object registration method.
 3. Inside this object, add two properties with the keys `label` and `done`.
 4. The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
 
-    1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
-    2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
+   1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
+   2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
 
 5. Now on to the `done` prop.
 
-    1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
-    2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
+   1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
+   2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
 
 Your component object should now look like this:
 

@@ -57,7 +57,7 @@ Only use the `region` role if no other relevant [content sectioning](/en-US/docs
 
 ### Prefer HTML
 
-Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}}  instead.
+Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}} instead.
 
 ### Labeling landmarks
 
@@ -85,7 +85,7 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 ### SVG
 
-`role="region"` can be declared on areas of {{HTMLElement('svg')}}  along with an `aria-label` to allow individual sections of the SVG to be described.
+`role="region"` can be declared on areas of {{HTMLElement('svg')}} along with an `aria-label` to allow individual sections of the SVG to be described.
 
 ## Specifications
 
@@ -108,6 +108,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

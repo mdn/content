@@ -56,22 +56,22 @@ To understand what's currently happening:
 
 1. Reload your page, then press
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    . You should see a focus outline on the input for adding new to-do items.
+   . You should see a focus outline on the input for adding new to-do items.
 
 2. Press
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    again. The focus should move to the "Add" button.
+   again. The focus should move to the "Add" button.
 
 3. Hit it again, and it'll be on the first checkbox. One more time, and focus should be on the first "Edit" button.
 4. Activate the "Edit" button by pressing
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    . The checkbox will be replaced with our edit component, but the focus outline will be gone.
+   . The checkbox will be replaced with our edit component, but the focus outline will be gone.
 
 This behavior can be jarring. In addition, what happens when you press <kbd>Tab</kbd> again varies depending on the browser you're using. Similarly, if you save or cancel your edit, focus will disappear again as you move back to the non-edit view.
 

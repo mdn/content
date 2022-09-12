@@ -321,19 +321,19 @@ So, let's implement the fix:
 
 1. Remove the following line from inside our `data()` property:
 
-    ```js
-    isDone: this.done,
-    ```
+   ```js
+   isDone: this.done,
+   ```
 
 2. Add the following block below the data() { } block:
 
-    ```js
-    computed: {
-      isDone() {
-        return this.done;
-      }
-    },
-    ```
+   ```js
+   computed: {
+     isDone() {
+       return this.done;
+     }
+   },
+   ```
 
 Now when you save and reload, you'll find that the problem is solved — the checkbox state is now preserved when you switch between todo item templates.
 

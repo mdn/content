@@ -135,8 +135,8 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
   animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@keyframes move_eye { 
-  from { margin-left: -20%; } 
+@keyframes move_eye {
+  from { margin-left: -20%; }
   to { margin-left: 100%; }
 }
 ```

@@ -50,7 +50,7 @@ The index controller function needs to fetch information about how many `Book`, 
 
 Open **/controllers/bookController.js**. Near the top of the file you should see the exported `index()` function.
 
-```python
+```js
 const Book = require('../models/book')
 
 exports.index = (req, res, next) => {

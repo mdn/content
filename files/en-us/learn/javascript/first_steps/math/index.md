@@ -69,22 +69,22 @@ Let's quickly play with some numbers to reacquaint ourselves with the basic synt
 
 1. First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
 
-    ```js
-    const myInt = 5;
-    const myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   const myInt = 5;
+   const myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. Number values are typed in without quote marks — try declaring and initializing a couple more variables containing numbers before you move on.
 3. Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
+   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
 
 ### Useful Number methods
 
@@ -203,29 +203,29 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 1. First try entering some simple examples of your own, such as
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7
+   9 * 8
+   60 % 3
+   ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
-    ```js
-    const num1 = 10;
-    const num2 = 50;
-    9 * num1;
-    num1 ** 3;
-    num2 / num1;
-    ```
+   ```js
+   const num1 = 10;
+   const num2 = 50;
+   9 * num1;
+   num1 ** 3;
+   num2 / num1;
+   ```
 
 3. Last for this section, try entering some more complex expressions, such as:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   num2 % 9 * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Parts of this last set of calculations might not give you quite the result you were expecting; the section below might well give the answer as to why.
 

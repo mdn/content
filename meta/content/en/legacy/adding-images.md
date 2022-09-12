@@ -23,7 +23,7 @@ It's as easy as that. Let's walk through an example:
     git checkout -b my-images
     ```
 
-1. Add your image to the document folder. For this example, let's assume
+2. Add your image to the document folder. For this example, let's assume
     we're adding a new image to the `files/en-us/web/css` document.
 
     ```sh
@@ -31,7 +31,7 @@ It's as easy as that. Let's walk through an example:
     cp /some/path/my-cool-image.png files/en-us/web/css/
     ```
 
-1. Run the `filecheck` command on each image you add. It'll complain if
+3. Run the `filecheck` command on each image you add. It'll complain if
     something's wrong (see also the [Compressing images](#compressing-images)
     section below).
     We'll automatically run this as one of the tests we run when your new pull
@@ -41,14 +41,14 @@ It's as easy as that. Let's walk through an example:
     yarn filecheck files/en-us/web/css/my-cool-image.png
     ```
 
-1. Use your image within the document. For example, add the following `<img>` element
+4. Use your image within the document. For example, add the following `<img>` element
     somewhere inside `files/en-us/web/css/index.html`:
 
     ```html
     <img src="my-cool-image.png" alt="My cool image" />
     ```
 
-1. Add and commit all of the deleted, created, and modified files, as well as
+5. Add and commit all of the deleted, created, and modified files, as well as
     push your branch to your fork:
 
     ```sh
@@ -57,7 +57,7 @@ It's as easy as that. Let's walk through an example:
     git push -u origin my-images
     ```
 
-1. Now you're ready to create your
+6. Now you're ready to create your
     [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## Compressing images

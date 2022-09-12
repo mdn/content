@@ -94,7 +94,7 @@ function displayReports(reports) {
       innerListItem.textContent = `${key}: ${value}`;
       innerList.appendChild(innerListItem);
     }
-  }
+  });
 }
 ```
 

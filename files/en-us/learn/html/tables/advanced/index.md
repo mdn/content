@@ -98,16 +98,16 @@ Let's put these new elements into action.
 5. Next, add a {{htmlattrxref("colspan","td")}} attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
 6. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
 
-    ```css
-    tbody {
-      font-size: 95%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 95%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
 7. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
 

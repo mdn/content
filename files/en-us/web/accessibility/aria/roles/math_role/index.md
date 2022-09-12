@@ -57,6 +57,6 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

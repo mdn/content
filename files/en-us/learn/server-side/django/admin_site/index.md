@@ -339,7 +339,7 @@ That's it! You've now learned how to set up the administration site in both its 
 
 ## Further reading
 
-- [Writing your first Django app, part 2: Introducing the Django Admin](https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
+- [Writing your first Django app, part 2: Introducing the Django Admin](https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin) (Django docs)
 - [The Django Admin site](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}

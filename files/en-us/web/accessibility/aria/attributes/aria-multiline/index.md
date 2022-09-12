@@ -28,6 +28,7 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 ## Values
 
 - `true`
+
   - : The text box accepts multiple lines of input.
 
 - `false`

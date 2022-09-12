@@ -25,7 +25,7 @@ segment(input)
 ### Parameters
 
 - `input`
-  - : The text to be segmented as a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+  - : The text to be segmented as a string.
 
 ### Return value
 

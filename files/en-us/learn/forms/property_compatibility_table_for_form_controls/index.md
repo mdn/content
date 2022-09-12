@@ -647,7 +647,7 @@ See the `{{htmlelement("input/button", "button")}}`, `{{htmlelement("input/submi
 
 ### Number
 
-See the  `{{htmlelement("input/number", "number")}}` input type. There is no standard way to change the style of spinners used to change the value of the field, with the spinners on Safari being outside the field.
+See the `{{htmlelement("input/number", "number")}}` input type. There is no standard way to change the style of spinners used to change the value of the field, with the spinners on Safari being outside the field.
 
 <table>
   <thead>
@@ -1437,7 +1437,7 @@ Note Firefox does not provide any way to change the down arrow on the `{{htmlele
 
 ### Select boxes (multiline)
 
-See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmlelement("option")}}` elements and the [`size` attribute](/en-US/docs/Web/HTML/Attributes/size).
+See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlelement("option")}}` elements and the [`size` attribute](/en-US/docs/Web/HTML/Attributes/size).
 
 <table>
   <thead>

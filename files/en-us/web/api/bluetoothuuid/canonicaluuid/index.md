@@ -14,7 +14,7 @@ browser-compat: api.BluetoothUUID.canonicalUUID
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`canonicalUUID()`**  method of the {{domxref("BluetoothUUID")}} interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
+The **`canonicalUUID()`** method of the {{domxref("BluetoothUUID")}} interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
 
 ## Syntax
 

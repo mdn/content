@@ -117,7 +117,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** To find more out about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+> **Note:** To find out more about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 #### Drag & Drop
 

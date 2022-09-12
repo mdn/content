@@ -26,6 +26,7 @@ new TaskController(init)
 ### Parameters
 
 - `init` {{optional_inline}}
+
   - : An object with the following properties:
 
     - `priority` {{optional_inline}}

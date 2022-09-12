@@ -59,7 +59,7 @@ if (displaySurface === "monitor" || displaySurface ==="application") {
 }
 ```
 
-Following this code, `mayHaveBackdrop`  is `true` if the display
+Following this code, `mayHaveBackdrop` is `true` if the display
 surface contained in the stream is of type `monitor` or
 `application`; either of these _may_ have non-content backdrop areas.
 Later code can use this flag to determine whether or not to perform special processing,

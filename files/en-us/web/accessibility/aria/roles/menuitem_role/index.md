@@ -35,7 +35,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
   - : A widget providing a list of choices. Required context role (or `menubar`)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role
   - : A presentation of a `menu` that usually remains visible and is usually presented horizontally. Required context role (or `menu`)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)  role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Can be used to identify a set of related `menuitem`s within or otherwise owned by a `menu` or `menubar`
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
   - : Indicates the element is perceivable but disabled, so it is not operable
@@ -130,6 +130,6 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

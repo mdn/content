@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element).
 
 ## Examples

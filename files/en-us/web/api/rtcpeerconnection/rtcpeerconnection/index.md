@@ -27,6 +27,7 @@ new RTCPeerConnection(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
+
   - : An object providing options to configure the new connection:
 
     - `bundlePolicy` {{optional_inline}}

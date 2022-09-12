@@ -78,10 +78,11 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-  - :  Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
+  - : Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ## Specifications
 
@@ -99,6 +100,6 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

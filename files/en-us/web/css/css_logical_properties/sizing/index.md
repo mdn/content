@@ -21,14 +21,14 @@ The table below provides mappings between logical and physical properties. These
 
 If you were in a vertical writing mode then {{CSSxRef("inline-size")}} would be mapped to {{CSSxRef("height")}}.
 
-| Logical Property                         | Physical Property                |
-| ---------------------------------------- | -------------------------------- |
-| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}     |
-| {{CSSxRef("block-size")}}         | {{CSSxRef("height")}}     |
-| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}} |
-| {{CSSxRef("min-block-size")}} | {{CSSxRef("min-height")}} |
-| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}} |
-| {{CSSxRef("max-block-size")}} | {{CSSxRef("max-height")}} |
+| Logical Property               | Physical Property         |
+| ------------------------------ | ------------------------- |
+| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}      |
+| {{CSSxRef("block-size")}}      | {{CSSxRef("height")}}     |
+| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}}  |
+| {{CSSxRef("min-block-size")}}  | {{CSSxRef("min-height")}} |
+| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}}  |
+| {{CSSxRef("max-block-size")}}  | {{CSSxRef("max-height")}} |
 
 ## Width and height example
 

@@ -32,7 +32,7 @@ This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
 then being logged. For a full example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
- app ([view example live](https://mdn.github.io/to-do-notifications/)).
+app ([view example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 // Let us open our database

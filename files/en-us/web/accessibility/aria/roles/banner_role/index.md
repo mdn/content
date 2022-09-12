@@ -80,6 +80,6 @@ While it is best to use the `header` element and ensure it is not a descendant o
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

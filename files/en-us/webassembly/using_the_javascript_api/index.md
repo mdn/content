@@ -11,6 +11,7 @@ tags:
   - memory
   - table
 ---
+
 {{WebAssemblySidebar}}
 
 If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/C_to_wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
@@ -29,21 +30,21 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
 
-    ```wasm
-    (module
-      (func $i (import "imports" "imported_func") (param i32))
-      (func (export "exported_func")
-        i32.const 42
-        call $i))
-    ```
+   ```wasm
+   (module
+     (func $i (import "imports" "imported_func") (param i32))
+     (func (export "exported_func")
+       i32.const 42
+       call $i))
+   ```
 
 4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
 
-    ```js
-    const importObject = {
-      imports: { imported_func: (arg) => console.log(arg) }
-    };
-    ```
+   ```js
+   const importObject = {
+     imports: { imported_func: (arg) => console.log(arg) },
+   };
+   ```
 
 ### Streaming the WebAssembly module
 
@@ -101,23 +102,23 @@ Let's start exploring this by looking at a quick example.
 1. Create another new simple HTML page (copy our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) and call it `memory.html`. Add a `<script></script>` element to the page.
 2. Now add the following line to the top of your script, to create a memory instance:
 
-    ```js
-    const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
-    ```
+   ```js
+   const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+   ```
 
-    The unit of `initial` and `maximum` is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.
+   The unit of `initial` and `maximum` is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.
 
-    WebAssembly memory exposes its bytes by providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
+   WebAssembly memory exposes its bytes by providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
 
-    ```js
-    new Uint32Array(memory.buffer)[0] = 42;
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0] = 42;
+   ```
 
-    You can then return the same value using:
+   You can then return the same value using:
 
-    ```js
-    new Uint32Array(memory.buffer)[0]
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0];
+   ```
 
 3. Try this now in your demo — save what you've added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
 
@@ -141,30 +142,30 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
 1. make a local copy of `memory.wasm` in the same directory as before.
 
-    > **Note:** You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+   > **Note:** You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
 2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
 
-    ```js
-    WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
-      js: { mem: memory },
-    }).then((results) => {
-      // add code here
-    });
-    ```
+   ```js
+   WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+     js: { mem: memory },
+   }).then((results) => {
+     // add code here
+   });
+   ```
 
 3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance's linear memory (`mem`). Add the following into your code, where indicated:
 
-    ```js
-    const i32 = new Uint32Array(memory.buffer);
+   ```js
+   const i32 = new Uint32Array(memory.buffer);
 
-    for (let i = 0; i < 10; i++) {
-      i32[i] = i;
-    }
+   for (let i = 0; i < 10; i++) {
+     i32[i] = i;
+   }
 
-    const sum = results.instance.exports.accumulate(0, 10);
-    console.log(sum);
-    ```
+   const sum = results.instance.exports.accumulate(0, 10);
+   console.log(sum);
+   ```
 
 Note how we create the {{jsxref("Uint32Array")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
 
@@ -193,24 +194,24 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
 1. Make a local copy of `table.wasm` in a new directory.
 
-    > **Note:** You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
+   > **Note:** You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
 3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
 
-    ```js
-    WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
-      // add code here
-    });
-    ```
+   ```js
+   WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
+     // add code here
+   });
+   ```
 
 4. Now let's access the data in the tables — add the following lines to your code in the indicated place:
 
-    ```js
-    const tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)()); // 13
-    console.log(tbl.get(1)()); // 42
-    ```
+   ```js
+   const tbl = results.instance.exports.tbl;
+   console.log(tbl.get(0)()); // 13
+   console.log(tbl.get(1)()); // 42
+   ```
 
 This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
 
@@ -243,7 +244,10 @@ The value of the global is then changed, first to `42` using the `Global.value` 
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  const result = got === expected ? `SUCCESS! Got: ${got}<br>` : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  const result =
+    got === expected
+      ? `SUCCESS! Got: ${got}<br>`
+      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
   output.innerHTML += `Testing ${msg}: ${result}`;
 }
 

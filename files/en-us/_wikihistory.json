@@ -1314,22 +1314,6 @@
       "ajinkya_p"
     ]
   },
-  "Glossary/Boot2Gecko": {
-    "modified": "2019-03-23T23:09:40.840Z",
-    "contributors": ["Andrew_Pfeiffer", "Jeremie", "klez", "chrisdavidmills"]
-  },
-  "Glossary/Bootstrap": {
-    "modified": "2020-05-23T17:08:33.612Z",
-    "contributors": [
-      "iigmir",
-      "roshan0708",
-      "mfuji09",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "feifeili18",
-      "Igor-Sangin"
-    ]
-  },
   "Glossary/Breadcrumb": {
     "modified": "2019-06-12T15:21:56.948Z",
     "contributors": ["chrisdavidmills", "robMhen", "estelle"]
@@ -5654,21 +5638,6 @@
       "asmatascy",
       "Jeremie",
       "klez"
-    ]
-  },
-  "Glossary/jQuery": {
-    "modified": "2020-05-09T23:42:24.101Z",
-    "contributors": [
-      "sideshowbarker",
-      "RainSlide",
-      "vecr25",
-      "wbamberg",
-      "acediallo",
-      "xfq",
-      "iigmir",
-      "faroukcharkas",
-      "Sparks",
-      "6stringbeliever"
     ]
   },
   "Glossary/jpeg": {
