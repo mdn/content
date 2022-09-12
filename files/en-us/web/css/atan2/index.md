@@ -31,8 +31,7 @@ transform: rotate(atan2(e, 30));
 
 ### Parameter
 
-The `atan2(y, x)` function accepts two comma-separated values as its parameters.
-The values can be a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage>&gt;")}}, but both must be the same type.
+The `atan2(y, x)` function accepts two comma-separated values as its parameters. The values can be a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage>&gt;")}}, but both must be the same type.
 
 - `y`
   - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage>&gt;")}}.
@@ -42,7 +41,7 @@ The values can be a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;"
 
 ### Return value
 
-The function returns the {{cssxref("&lt;angle&gt;")}} between the positive X-axis and the point (x,y).
+Given two points `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("&lt;angle&gt;")}} between the positive `x` axis and the ray from the origin to the point `(x, y)`.
 
 ### Formal syntax
 
