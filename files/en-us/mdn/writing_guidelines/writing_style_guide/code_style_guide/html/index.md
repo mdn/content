@@ -101,11 +101,9 @@ Use lowercase for all element names and attribute names/values because it looks 
 <p class="nice">This looks nice and neat</p>
 ```
 
-<!-- prettier-ignore-start -->
 ```html example-bad
 <P CLASS="WHOA-THERE">Why is my markup shouting?</P>
 ```
-<!-- prettier-ignore-end -->
 
 ## Class and ID names
 
@@ -127,11 +125,9 @@ Use double quotes for HTML, not single quotes, like so:
 <p class="important">Yes</p>
 ```
 
-<!-- prettier-ignore-start -->
 ```html example-bad
 <p class='important'>Nope</p>
 ```
-<!-- prettier-ignore-end -->
 
 ## Entity references
 
