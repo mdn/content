@@ -10,7 +10,7 @@ tags:
   - JavaScript
   - Logic
   - control
-  - l10n:priority
+  - "l10n:priority"
   - statements
 ---
 

@@ -12,7 +12,7 @@ tags:
   - Learn
   - Tutorial
   - console.log
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

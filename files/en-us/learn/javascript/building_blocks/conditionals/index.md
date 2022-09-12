@@ -12,7 +12,7 @@ tags:
   - conditions
   - else
   - if
-  - l10n:priority
+  - "l10n:priority"
   - ternary
 ---
 

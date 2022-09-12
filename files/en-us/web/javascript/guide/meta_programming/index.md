@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - Proxy
   - Reflect
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}

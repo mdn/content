@@ -6,7 +6,7 @@ tags:
   - CodingScripting
   - Glossary
   - Infrastructure
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 **Ajax**, which initially stood for Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}, is a programming practice of building complex, dynamic webpages using a technology known as {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.

@@ -8,7 +8,7 @@ tags:
   - Promise
   - Promises
   - asynchronous
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}

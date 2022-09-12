@@ -15,7 +15,7 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

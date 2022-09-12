@@ -15,7 +15,7 @@ tags:
   - comments
   - external
   - inline
-  - l10n:priority
+  - "l10n:priority"
   - what
 ---
 

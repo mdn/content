@@ -8,7 +8,7 @@ tags:
   - Guide
   - HTML
   - Index
-  - l10n:priority
+  - "l10n:priority"
   - publishing
   - theory
 ---

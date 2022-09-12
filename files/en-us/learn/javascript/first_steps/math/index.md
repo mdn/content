@@ -12,7 +12,7 @@ tags:
   - Operators
   - augmented
   - increment
-  - l10n:priority
+  - "l10n:priority"
   - maths
   - modulo
 ---

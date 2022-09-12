@@ -13,7 +13,7 @@ tags:
   - Math
   - Numbers
   - Numeric
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}

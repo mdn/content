@@ -11,7 +11,7 @@ tags:
   - Landing page
   - Reference
   - es
-  - l10n:priority
+  - "l10n:priority"
   - programming
 ---
 

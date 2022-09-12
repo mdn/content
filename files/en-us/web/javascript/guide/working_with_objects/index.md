@@ -8,7 +8,7 @@ tags:
   - Guide
   - JavaScript
   - Object
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}

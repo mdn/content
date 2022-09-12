@@ -13,7 +13,7 @@ tags:
   - break
   - continue
   - for
-  - l10n:priority
+  - "l10n:priority"
   - while
 ---
 

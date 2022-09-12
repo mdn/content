@@ -5,7 +5,7 @@ tags:
   - HTML
   - Landing
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{HTMLSidebar}}
