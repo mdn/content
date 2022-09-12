@@ -61,7 +61,7 @@ These guidelines for formatting code examples for MDN Web Docs are also good pra
 ```js example-good
 function myFunc() {
   if (thingy) {
-    console.log('Yup, that worked.');
+    console.log("Yup, that worked.");
   }
 }
 ```
@@ -72,9 +72,9 @@ Add a space between a control statement or loop keyword and its opening parenthe
 
 ```js example-good
 if (condition) {
- /* handle the condition */
+  /* handle the condition */
 } else {
- /* handle the "else" case */
+  /* handle the "else" case */
 }
 ```
 
@@ -87,16 +87,18 @@ if (condition) {
 For example, this is not great:
 
 ```js example-bad
-let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';
+let tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.";
 ```
 
 This is better, but somewhat awkward:
 
 ```js
-const tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
-+ 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
-+ 'had met its demise while staring point blank down the cavernous barrel of '
-+ 'this awesome prowling machine.';
+const tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign " +
+  "matter may have nestled its way into his mighty throat. Many a fat alley rat " +
+  "had met its demise while staring point blank down the cavernous barrel of " +
+  "this awesome prowling machine.";
 ```
 
 Even better is to use a template literal:
@@ -109,14 +111,18 @@ const tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
 ```
 
 ```js example-good
-if (obj.CONDITION || obj.OTHER_CONDITION || obj.SOME_OTHER_CONDITION
-       || obj.YET_ANOTHER_CONDITION ) {
+if (
+  obj.CONDITION ||
+  obj.OTHER_CONDITION ||
+  obj.SOME_OTHER_CONDITION ||
+  obj.YET_ANOTHER_CONDITION
+) {
   /* something */
 }
 
-const toolkitProfileService =
-  Components.classes["@mozilla.org/toolkit/profile-service;1"]
-    .createInstance(Components.interfaces.nsIToolkitProfileService);
+const toolkitProfileService = Components.classes[
+  "@mozilla.org/toolkit/profile-service;1"
+].createInstance(Components.interfaces.nsIToolkitProfileService);
 ```
 
 ### Code block height
@@ -181,28 +187,28 @@ To get this rendering, use "code fences" to demarcate the code block, followed b
 
 ```js
 function myFunc() {
-  console.log('Hello!');
-};
+  console.log("Hello!");
+}
 ```
 
 To represent the code block as a good or bad example, add `example-good` or `example-bad` after the language string, like so:
 
 ````plain
 ```html example-good
-<p class="brush: js example-good">
+<p class="brush: js example-good"></p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad">
+<p class="brush: js example-bad"></p>
 ```
 ````
 
 These will be rendered as:
 
 ```html example-good
-<p class="brush: js example-good">
+<p class="brush: js example-good"></p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad">
+<p class="brush: js example-bad"></p>
 ```

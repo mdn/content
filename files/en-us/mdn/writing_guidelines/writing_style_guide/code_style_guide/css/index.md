@@ -147,13 +147,13 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 
   ```css example-good
   .editorial-summary {
-    ...
+    // ...
   }
   ```
 
   ```css example-bad
   #editorial-summary {
-    ...
+    // ...
   }
   ```
 
@@ -172,12 +172,14 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 
   Not this: <!--I thought this is the preferred style-->
 
+<!-- prettier-ignore-start -->
   ```css example-bad
   h1, h2, h3 {
     font-family: sans-serif;
     text-align: center;
   }
   ```
+<!-- prettier-ignore-end -->
 
 ## Space after function parameters
 
@@ -208,9 +210,11 @@ p {
 }
 ```
 
+<!-- prettier-ignore-start -->
 ```css example-bad
 p { color: white; background-color: black; padding: 1rem; }
 ```
+<!-- prettier-ignore-end -->
 
 ## Value to turn off properties
 
