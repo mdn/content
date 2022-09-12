@@ -137,9 +137,9 @@ First we get the element to which we will log, and the canvas that will be used 
 ```js
 const log = document.getElementById('log');
 
-const mycanvas = document.getElementById("js-canvas");
-mycanvas.width = 650;
-mycanvas.height = 75;
+const canvas = document.getElementById("js-canvas");
+canvas.width = 650;
+canvas.height = 75;
 ```
 
 Next we define a `FontFace` that has a URL source that is a Google Font and add it to `document.fonts`.
