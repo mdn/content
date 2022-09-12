@@ -77,7 +77,7 @@ However, it is executed for elements that are present and have the value
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callbackFn` when invoked, for use as its
-`this` value.  Otherwise, the value {{jsxref("undefined")}} will be passed
+`this` value. Otherwise, the value {{jsxref("undefined")}} will be passed
 for use as its `this` value. The `this` value ultimately
 observable by `callbackFn` is determined according to
 [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).

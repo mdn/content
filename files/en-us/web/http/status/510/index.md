@@ -10,7 +10,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP)  **`510 Not Extended`**
+The HyperText Transfer Protocol (HTTP) **`510 Not Extended`**
 response status code is sent in the context of the HTTP Extension Framework, defined in
 [RFC 2774](https://datatracker.ietf.org/doc/html/rfc2774).
 

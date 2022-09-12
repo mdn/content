@@ -189,12 +189,12 @@ window.addEventListener('load', setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is…                                                                                                                                                                  | Use this Web Audio node type                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
-| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                   | {{domxref("MediaElementAudioSourceNode")}} |
-| A plain raw audio data buffer in memory                                                                                                                                                    | {{domxref("AudioBufferSourceNode")}}         |
-| An oscillator generating a sine wave or other computed waveform                                                                                                                            | {{domxref("OscillatorNode")}}                 |
-| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}} |
+| If the audio source is…                                                                                                                                                  | Use this Web Audio node type               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                 | {{domxref("MediaElementAudioSourceNode")}} |
+| A plain raw audio data buffer in memory                                                                                                                                  | {{domxref("AudioBufferSourceNode")}}       |
+| An oscillator generating a sine wave or other computed waveform                                                                                                          | {{domxref("OscillatorNode")}}              |
+| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}}  |
 
 ### Audio filters
 

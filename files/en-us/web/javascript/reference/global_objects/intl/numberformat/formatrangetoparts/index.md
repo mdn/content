@@ -31,6 +31,7 @@ formatRangeToParts(startRange, endRange)
 ### Parameters
 
 - `startRange`
+
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`

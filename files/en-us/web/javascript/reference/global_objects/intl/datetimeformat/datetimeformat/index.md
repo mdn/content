@@ -52,6 +52,7 @@ Intl.DateTimeFormat(locales, options)
         `"mymr"`, `"orya"`, `"tamldec"`,
         `"telu"`, `"thai"`, `"tibt"`.
     - `ca`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -98,6 +99,7 @@ Intl.DateTimeFormat(locales, options)
         > `hour`, `month`, etc.).
 
     - `calendar`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -334,7 +336,7 @@ const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 console.log(new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
   hourCycle: 'h12',
-  dayPeriod: 'short', 
+  dayPeriod: 'short',
   timeZone: 'UTC',
 }).format(date));
 // > 4 at night"  (same formatting in en-GB for all dayPeriod values)

@@ -270,6 +270,7 @@ console.log(JSON.stringify({ a: 2 }, null, " "));
 Using a tab character mimics standard pretty-print appearance:
 
 <!-- markdownlint-disable MD010 -->
+
 ```js
 console.log(JSON.stringify({ uno: 1, dos: 2 }, null, "\t"));
 /*
@@ -279,6 +280,7 @@ console.log(JSON.stringify({ uno: 1, dos: 2 }, null, "\t"));
 }
 */
 ```
+
 <!-- markdownlint-enable MD010 -->
 
 ### toJSON() behavior

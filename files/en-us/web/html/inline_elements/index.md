@@ -92,6 +92,7 @@ You can change the _visual presentation_ of an element using the CSS {{cssxref("
 In brief, here are the basic conceptual differences between inline and block-level elements:
 
 - Content model
+
   - : Generally, inline elements may contain only data and other inline elements. An exception is the inline `a` element which may contain block level elements such as `div`.
     > **Note:** Links that wrap multiple lines of block-level content make for a poor-to-unusable experience for some assistive technologies and should be avoided.
 

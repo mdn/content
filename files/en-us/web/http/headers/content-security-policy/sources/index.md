@@ -104,6 +104,7 @@ Directives for which the above sources apply include:
   - {{CSP("worker-src")}}
 
 - {{Glossary("Document directive", "Document directives")}}:
+
   - {{CSP("base-uri")}}
 
 - {{Glossary("Navigation directive", "Navigation directives")}}:

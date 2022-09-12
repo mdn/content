@@ -224,10 +224,10 @@ Because of this, you should make sure that the `accept` attribute is backed up b
 
 1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
-    ```js
-    const input = document.querySelector("input[type=file]");
-    input.value = "foo";
-    ```
+   ```js
+   const input = document.querySelector("input[type=file]");
+   input.value = "foo";
+   ```
 
 2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` prepended to it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 

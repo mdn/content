@@ -37,6 +37,7 @@ The constructor may then return an exception with a stack trace attached to the 
 ## Instance methods
 
 - [`Exception.prototype.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is)
+
   - : Tests whether the exception matches a particular tag.
 
 - [`Exception.prototype.getArg()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg)

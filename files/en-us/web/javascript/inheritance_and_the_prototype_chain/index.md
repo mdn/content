@@ -712,7 +712,7 @@ Object.setPrototypeOf(obj, anotherObj);
   </tbody>
 </table>
 
-### With the \_\_proto__ accessor
+### With the \_\_proto\_\_ accessor
 
 All objects inherit the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter, which can be used to set the `[[Prototype]]` of an existing object (if the `__proto__` key is not overridden on the object).
 

@@ -105,59 +105,59 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 ### `no-referrer`
 
-| From document            | Navigation to | Referrer used   |
-| ------------------------ | ------------- | --------------- |
+| From document              | Navigation to | Referrer used   |
+| -------------------------- | ------------- | --------------- |
 | `https://example.com/page` | _anywhere_    | _(no referrer)_ |
 
 ### `no-referrer-when-downgrade`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
 | `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
-| `https://example.com/page` | **http**://example.com        | _(no referrer)_          |
+| `https://example.com/page` | **http**://example.com          | _(no referrer)_            |
 
 ### `origin`
 
-| From document            | Navigation to | Referrer used        |
-| ------------------------ | ------------- | -------------------- |
+| From document              | Navigation to | Referrer used          |
+| -------------------------- | ------------- | ---------------------- |
 | `https://example.com/page` | _anywhere_    | `https://example.com/` |
 
 ### `origin-when-cross-origin`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
 | `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
-| `https://example.com/page` | **http**://example.com/page   | `https://example.com/`     |
+| `https://example.com/page` | **http**://example.com/page     | `https://example.com/`     |
 
 ### `same-origin`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | _(no referrer)_          |
+| `https://example.com/page` | `https://mozilla.org`           | _(no referrer)_            |
 
 ### `strict-origin`
 
-| From document               | Navigation to          | Referrer used        |
-| --------------------------- | ---------------------- | -------------------- |
-| `https://example.com/page`    | `https://mozilla.org`    | `https://example.com/` |
-| `https://example.com/page`    | **http**://example.com | _(no referrer)_      |
+| From document               | Navigation to          | Referrer used          |
+| --------------------------- | ---------------------- | ---------------------- |
+| `https://example.com/page`  | `https://mozilla.org`  | `https://example.com/` |
+| `https://example.com/page`  | **http**://example.com | _(no referrer)_        |
 | **http**://example.com/page | _anywhere_             | `http://example.com/`  |
 
 ### `strict-origin-when-cross-origin`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
 | `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
-| `https://example.com/page` | **http**://example.com        | _(no referrer)_          |
+| `https://example.com/page` | **http**://example.com          | _(no referrer)_            |
 
 ### `unsafe-url`
 
-| From document                  | Navigation to | Referrer used                  |
-| ------------------------------ | ------------- | ------------------------------ |
+| From document                    | Navigation to | Referrer used                    |
+| -------------------------------- | ------------- | -------------------------------- |
 | `https://example.com/page?q=123` | _anywhere_    | `https://example.com/page?q=123` |
 
 ### Specify a fallback policy

@@ -41,10 +41,11 @@ Sec-CH-UA-Platform-Version: <version>
 ### Directives
 
 - `<version>`
-  - : The version string typically contains the operating system version in a string, consisting of dot-separated major, minor and patch version numbers.
-     For example, `"11.0.0"`
 
-     The version string on Linux is always empty.
+  - : The version string typically contains the operating system version in a string, consisting of dot-separated major, minor and patch version numbers.
+    For example, `"11.0.0"`
+
+    The version string on Linux is always empty.
 
 ## Examples
 
