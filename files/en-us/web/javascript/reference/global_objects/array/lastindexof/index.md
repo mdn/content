@@ -49,7 +49,7 @@ The last index of the element in the array; **-1** if not found.
 using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
 (the same method used by the `===`, or triple-equals, operator).
 
-The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+The `lastIndexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 ## Examples
 
