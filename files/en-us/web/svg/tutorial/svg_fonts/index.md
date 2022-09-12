@@ -79,7 +79,7 @@ You can use `@font-face` to reference remote (and not so remote) fonts:
   <!-- and so on -->
 </font>
 
-<style type="text/css">
+<style>
 @font-face {
   font-family: "Super Sans";
   src: url(#Super_Sans);
