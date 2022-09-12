@@ -374,14 +374,14 @@ query.exec((err, athletes) => {
 Above we've defined the query conditions in the `find()` method. We can also do this using a `where()` function, and we can chain all the parts of our query together using the dot operator (.) rather than adding them separately. The code fragment below is the same as our query above, with an additional condition for the age.
 
 ```js
-Athlete.
-  find().
-  where('sport').equals('Tennis').
-  where('age').gt(17).lt(50). // Additional where query
-  limit(5).
-  sort({ age: -1 }).
-  select('name age').
-  exec(callback); // where callback is the name of our callback function.
+Athlete
+  .find()
+  .where('sport').equals('Tennis')
+  .where('age').gt(17).lt(50) // Additional where query
+  .limit(5)
+  .sort({ age: -1 })
+  .select('name age')
+  .exec(callback); // where callback is the name of our callback function.
 ```
 
 The [find()](https://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
