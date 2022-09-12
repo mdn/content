@@ -18,7 +18,7 @@ browser-compat: api.Document.fonts
 
 The **`fonts`** property of the {{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of the document.
 
-This is part of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
+This feature is part of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
 ## Value
 

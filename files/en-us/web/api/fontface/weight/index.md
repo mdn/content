@@ -17,7 +17,8 @@ browser-compat: api.FontFace.weight
 {{APIRef("CSS Font Loading API")}}
 
 The **`weight`** property of the {{domxref("FontFace")}} interface retrieves or sets the weight of the font.
-It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
+
+This property is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
 
 ## Value
 

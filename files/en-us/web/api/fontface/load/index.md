@@ -52,10 +52,10 @@ This simple example loads a font and uses it to display some text in a canvas el
 const mycanvas = document.getElementById("js-canvas");
 
 // load the "Bitter" font from Google Fonts
-let font_file = new FontFace('FontFamily Style Bitter', 'url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)');
-document.fonts.add(font_file);
+const fontFile = new FontFace('FontFamily Style Bitter', 'url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)');
+document.fonts.add(fontFile);
 
-font_file.load().then(() => {
+fontFile.load().then(() => {
   // font loaded successfully!
   mycanvas.width = 650;
   mycanvas.height = 100;

@@ -17,7 +17,7 @@ browser-compat: api.FontFace
 
 The **`FontFace`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) represents a single usable font face.
 
-The interface defines the source of a font face, either a URL to an external resource or a buffer, and font properties such as the style, weight, and so on.
+This interface defines the source of a font face, either a URL to an external resource or a buffer, and font properties such as `style`, `weight`, and so on.
 For URL font sources it allows authors to trigger when the remote font is fetched and loaded, and to track loading status.
 
 ## Constructor

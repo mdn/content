@@ -41,14 +41,11 @@ The stretch value is also displayed for each case by reading the property.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-let font_file = new FontFace('30px "Inconsolata"', 'url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2) format("woff2")', {stretch: '50% 200%'});
-//font_file.stretch= 'normal semi-expanded'; // https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200
-//font_file.stretch= '30% 200%';
+const fontFile = new FontFace('30px "Inconsolata"', 'url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2) format("woff2")', {stretch: '50% 200%'});
 
-document.fonts.add(font_file);
+document.fonts.add(fontFile);
 
 document.fonts.load('30px "Inconsolata"').then(() => {
-
 ctx.font = '30px "Inconsolata"'
 // Default (normal)
 ctx.fillText(`Hello world (default: ${ctx.fontStretch})`, 5, 20);
@@ -89,8 +86,6 @@ ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 260);
 // Font stretch: ultra-expanded
 ctx.fontStretch = 'ultra-expanded';
 ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 290);
-
-
 },
 (err) => {
   console.error(err);

@@ -16,7 +16,7 @@ browser-compat: api.FontFaceSet
 
 The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status.
 
-It is available as {{domxref("Document.fonts")}}, or `self.fonts` in [web workers](/en-US/docs/Web/API/Web_Workers_API).
+This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in [web workers](/en-US/docs/Web/API/Web_Workers_API).
 
 {{InheritanceDiagram}}
 

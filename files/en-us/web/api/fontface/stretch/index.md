@@ -17,7 +17,8 @@ browser-compat: api.FontFace.stretch
 {{APIRef("CSS Font Loading API")}}
 
 The **`stretch`** property of the {{domxref("FontFace")}} interface retrieves or sets how the font stretches.
-It is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
+
+This property is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
 
 ## Value
 
