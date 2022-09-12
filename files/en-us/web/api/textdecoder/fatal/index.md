@@ -11,11 +11,17 @@ tags:
 browser-compat: api.TextDecoder.fatal
 ---
 
-{{DefaultAPISidebar("")}}
+{{APIRef("Encoding API")}}
 
-The **`fatal`** property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
-If this value is `true`, the processed text cannot be decoded because of malformed data.
-If this value is `false` malformed data is replaced with placeholder characters.
+The **`fatal`** read-only property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+
+If the property is `true` then a decoder will throw a {{jsxref("TypeError")}} if it encounters malformed data while decoding.
+If `false` the decoder will substitute the invalid data with replacement characters.
+The value is set in the [`TextDecoder()` constructor](/en-US/docs/Web/API/TextDecoder/TextDecoder).
+
+## Value
+
+`true` indicates that errors are fatal; `false` indicates that invalid data is substituted with placeholder characters.
 
 ## Specifications
 
