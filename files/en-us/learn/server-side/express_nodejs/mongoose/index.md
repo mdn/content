@@ -132,17 +132,17 @@ Installing _Mongoose_ adds all its dependencies, including the MongoDB database 
 _Mongoose_ requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
 
 ```js
-//Import the mongoose module
+// Import the mongoose module
 const mongoose = require('mongoose');
 
-//Set up default mongoose connection
+// Set up default mongoose connection
 const mongoDB = 'mongodb://127.0.0.1/my_database';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
-//Get the default connection
+// Get the default connection
 const db = mongoose.connection;
 
-//Bind connection to error event (to get notification of connection errors)
+// Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 ```
 
@@ -163,10 +163,10 @@ Schemas are then "compiled" into models using the `mongoose.model()` method. Onc
 The code fragment below shows how you might define a simple schema. First you `require()` mongoose, then use the Schema constructor to create a new schema instance, defining the various fields inside it in the constructor's object parameter.
 
 ```js
-//Require Mongoose
+// Require Mongoose
 const mongoose = require('mongoose');
 
-//Define a schema
+// Define a schema
 const Schema = mongoose.Schema;
 
 const SomeModelSchema = new Schema({
@@ -431,7 +431,7 @@ const bob = new Author({ name: 'Bob Smith' });
 bob.save((err) => {
   if (err) return handleError(err);
 
-  //Bob now exists, so lets create a story
+  // Bob now exists, so lets create a story
   const story = new Story({
     title: "Bob goes sledding",
     author: bob._id    // assign the _id from our author Bob. This ID is created by default!
@@ -449,7 +449,7 @@ Our story document now has an author referenced by the author document's ID. In 
 ```js
 Story
   .findOne({ title: 'Bob goes sledding' })
-  .populate('author') //This populates the author id with actual author information!
+  .populate('author') // This populates the author id with actual author information!
   .exec((err, story) => {
     if (err) return handleError(err);
     console.log('The author is %s', story.author.name);
@@ -611,7 +611,7 @@ We will define a separate module for each model, as [discussed above](#one_schem
 Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  // the project root
   /models
     author.js
     book.js
@@ -661,7 +661,7 @@ AuthorSchema
     return `/catalog/author/${this._id}`;
   });
 
-//Export model
+// Export model
 module.exports = mongoose.model('Author', AuthorSchema);
 ```
 
@@ -700,7 +700,7 @@ BookSchema
     return '/catalog/book/' + this._id;
   });
 
-//Export model
+// Export model
 module.exports = mongoose.model('Book', BookSchema);
 ```
 
@@ -721,7 +721,7 @@ const Schema = mongoose.Schema;
 
 const BookInstanceSchema = new Schema(
   {
-    book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, //reference to the associated book
+    book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, // reference to the associated book
     imprint: { type: String, required: true },
     status: { type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance' },
     due_back: { type: Date, default: Date.now }
@@ -735,7 +735,7 @@ BookInstanceSchema
     return `/catalog/bookinstance/${this._id}`;
   });
 
-//Export model
+// Export model
 module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 ```
 
