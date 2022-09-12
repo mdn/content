@@ -320,4 +320,3 @@ Refer back here if you start to come across strange issues with styles not apply
 - [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
 - [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
 - [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
-
