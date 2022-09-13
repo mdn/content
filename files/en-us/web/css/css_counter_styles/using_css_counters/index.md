@@ -161,8 +161,8 @@ body {
 h3::before {
   counter-increment: section; /* Increment the value of section counter by 1 */
   content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
-                                                  section counter, and a colon before the content
-                                                  of each h3 */
+                                                section counter, and a colon before the content
+                                                of each h3 */
 }
 ```
 
