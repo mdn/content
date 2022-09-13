@@ -30,7 +30,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -121,7 +125,11 @@ html,body,svg { height:100% }
 The `arcs` value indicates that an arcs corner is to be used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -151,7 +159,11 @@ html,body,svg { height:100% }
 The `bevel` value indicates that a bevelled corner is to be used to join path segments.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -183,7 +195,11 @@ The `miter` value indicates that a sharp corner is to be used to join path segme
 > **Note:** If the {{SVGAttr('stroke-miterlimit')}} is exceeded, the line join falls back to `bevel`.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -227,7 +243,11 @@ The `miter-clip` value indicates that a sharp corner is to be used to join path 
 If the {{SVGAttr('stroke-miterlimit')}} is exceeded, the miter is clipped at a distance equal to half the {{SVGAttr('stroke-miterlimit')}} value multiplied by the stroke width from the intersection of the path segments. This provides a better rendering than `miter` on very sharp join or in case of an animation.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -266,7 +286,11 @@ html,body,svg { height:100% }
 The `round` value indicates that a round corner is to be used to join path segments.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

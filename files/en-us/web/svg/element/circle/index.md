@@ -17,7 +17,11 @@ The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/e
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

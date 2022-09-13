@@ -17,7 +17,11 @@ A clipping path restricts the region to which paint can be applied. Conceptually
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -45,7 +49,14 @@ html,body,svg { height:100% }
 /* With a touch of CSS for browsers who *
  * implemented the r Geometry Property. */
 
-@keyframes openYourHeart {from {r: 0} to {r: 60px}}
+@keyframes openYourHeart {
+  from {
+    r: 0;
+  }
+  to {
+    r: 60px;
+  }
+}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;

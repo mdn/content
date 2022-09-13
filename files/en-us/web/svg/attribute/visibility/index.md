@@ -44,7 +44,9 @@ You can use this attribute with the following SVG elements:
 ### Example 1
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

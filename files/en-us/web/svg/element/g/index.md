@@ -18,7 +18,11 @@ Transformations applied to the `<g>` element are performed on its child elements
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
