@@ -65,21 +65,21 @@ nested {{HTMLElement("div")}} elements).
       function getAllParaElems() {
         const allParas = document.getElementsByTagName("p");
         const num = allParas.length;
-        alert("There are " + num + " paragraph in this document");
+        alert(`There are ${num} paragraph in this document`);
       }
 
       function div1ParaElems() {
         const div1 = document.getElementById("div1");
         const div1Paras = div1.getElementsByTagName("p");
         const num = div1Paras.length;
-        alert("There are " + num + " paragraph in #div1");
+        alert(`There are ${num} paragraph in #div1`);
       }
 
       function div2ParaElems() {
         const div2 = document.getElementById("div2");
         const div2Paras = div2.getElementsByTagName("p");
         const num = div2Paras.length;
-        alert("There are " + num + " paragraph in #div2");
+        alert(`There are ${num} paragraph in #div2`);
       }
     </script>
   </head>
@@ -101,15 +101,16 @@ nested {{HTMLElement("div")}} elements).
     <p>Some outer text</p>
     <p>Some outer text</p>
 
-    <button onclick="getAllParaElems();">show all p elements in document</button
-    ><br />
+    <button onclick="getAllParaElems();">
+      Show all p elements in document
+    </button><br />
 
     <button onclick="div1ParaElems();">
-      show all p elements in div1 element</button
-    ><br />
+      Show all p elements in div1 element
+    </button><br />
 
     <button onclick="div2ParaElems();">
-      show all p elements in div2 element
+      Show all p elements in div2 element
     </button>
   </body>
 </html>

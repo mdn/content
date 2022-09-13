@@ -115,12 +115,12 @@ extension.
     <p>Some outer text</p>
 
     <button onclick="getAllParaElems();">
-      show all p elements in document
+      Show all p elements in document
     </button>
     <br />
 
     <button onclick="div1ParaElems();">
-      show all p elements in div1 element
+      Show all p elements in div1 element
     </button>
     <br />
 
