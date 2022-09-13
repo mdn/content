@@ -1,6 +1,7 @@
 ---
 title: Element.ariaExpanded
 slug: Web/API/Element/ariaExpanded
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaExpanded
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The grouping element this element owns or controls is expanded.

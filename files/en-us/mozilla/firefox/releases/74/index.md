@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
@@ -17,7 +18,7 @@ This article provides information about the changes in Firefox 74 that will affe
 
 #### Web console
 
-- The `$x()` [web console helper](/en-US/docs/Tools/Web_Console/Helpers)'s third argument (result type) now accepts simple string values as well as [`XPathResult` constants](/en-US/docs/Web/API/XPathResult#constants) ([bug 1602591](https://bugzilla.mozilla.org/show_bug.cgi?id=1602591)).
+- The `$x()` [web console helper](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html)'s third argument (result type) now accepts simple string values as well as [`XPathResult` constants](/en-US/docs/Web/API/XPathResult#constants) ([bug 1602591](https://bugzilla.mozilla.org/show_bug.cgi?id=1602591)).
 - Freshly landed support for the optional chaining operator "?." which can also be used with Console's autocomplete ([bug 1594009](https://bugzilla.mozilla.org/show_bug.cgi?id=1594009)).
 - The Debugger can now inspect and debug [nested workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ([bug 1590766](https://bugzilla.mozilla.org/show_bug.cgi?id=1590766))
 
@@ -46,7 +47,7 @@ _No changes._
 
 #### Removals
 
-- The {{jsxref("Object.toSource()")}} method and the global function {{jsxref("uneval()")}} are no longer available for use by web content or extensions ([bug 1565170](https://bugzilla.mozilla.org/show_bug.cgi?id=1565170)).
+- The `Object.toSource()` method and the global function `uneval()` are no longer available for use by web content or extensions ([bug 1565170](https://bugzilla.mozilla.org/show_bug.cgi?id=1565170)).
 
 ### APIs
 
@@ -66,7 +67,7 @@ _No changes._
 
 - The non-standard `IDBDatabase.mozCreateFileHandle()` method has been removed, in favor of the (also non-standard) `IDBDatabase.createMutableFile()` method ({{bug(1024312)}}).
 - The non-standard `IDBMutableFile.getFile()` method has been removed ({{bug(1607791)}}).
-- The non-standard {{domxref("HTMLCanvasElement")}} method {{domxref("HTMLCanvasElement.mozGetAsFile", "mozGetAsFile()")}} has been removed, after being deprecated several years ago ({{bug(1588980)}}).
+- The non-standard {{domxref("HTMLCanvasElement")}} method `mozGetAsFile()` has been removed, after being deprecated several years ago ({{bug(1588980)}}).
 - The {{domxref("FetchEvent")}} property {{domxref("FetchEvent.isReload", "isReload")}} has been removed, from both Firefox and the specification ({{bug(1264175)}}).
 
 ### HTTP
@@ -76,14 +77,11 @@ _No changes._
 ### Security
 
 - TLS 1.0 and 1.1 support has been removed from Firefox; you'll need to make sure your web server supports TLS 1.2 or 1.3 going forward. From now on, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ({{bug(1606734)}}).
+- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the {{htmlattrxref("allow", "iframe")}} attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user {{bug(1483631)}}.
 
 ### Plugins
 
 _No changes._
-
-### Security
-
-- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the {{htmlattrxref("allow", "iframe")}} attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user {{bug(1483631)}}.
 
 ### WebDriver conformance (Marionette)
 

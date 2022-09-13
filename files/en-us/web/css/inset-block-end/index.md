@@ -9,9 +9,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.inset-block-end
 ---
+
 {{CSSRef}}
 
 The **`inset-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+{{EmbedInteractiveExample("pages/css/inset-block-end.html")}}
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -31,8 +36,6 @@ inset-block-end: revert;
 inset-block-end: revert-layer;
 inset-block-end: unset;
 ```
-
-## Syntax
 
 ### Values
 

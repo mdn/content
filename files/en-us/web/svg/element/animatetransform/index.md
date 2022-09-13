@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateTransform
 ---
+
 {{SVGRef}}
 
 The `animateTransform` element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.
@@ -32,8 +33,6 @@ The `animateTransform` element animates a transformation attribute on its target
     </polygon>
 </svg>
 ```
-
-**Live sample**
 
 {{ EmbedLiveSample('Example','120','120') }}
 

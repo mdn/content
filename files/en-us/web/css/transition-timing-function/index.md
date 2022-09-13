@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transition-timing-function
 ---
+
 {{CSSRef}}
 
 The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
@@ -78,7 +79,7 @@ transition-timing-function: unset;
       - : An author-defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
     - `steps( n, <jumpterm>)`
 
-      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5,  there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
+      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
         - `jump-start`
           - : Denotes a left-continuous function, so that the first jump happens when the transition begins;
@@ -152,13 +153,13 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
@@ -222,13 +223,13 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
@@ -265,6 +266,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 ## See also
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

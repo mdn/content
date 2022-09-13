@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue.value
 slug: Web/API/CSSKeywordValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - value
 browser-compat: api.CSSKeywordValue.value
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`value`** property of the
@@ -20,12 +22,12 @@ The **`value`** property of the
 
 ## Value
 
-A {{domxref('USVString')}}.
+A string.
 
 ### Exceptions
 
-- `TypeError`
-  - : If the `value` property is an empty {{jsxref('String')}} when being set.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `value` property is an empty {{jsxref('String')}} when being set.
 
 ## Examples
 

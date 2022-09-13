@@ -8,13 +8,14 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`block`** statement creates a label that can later be branched out of with a `br`.
 
 The **`loop`** statement is the opposite of the `block` statement, in the sense that while branching to a `loop` jumps to the beginning of the loop, branching to a `block` jumps to the end of the block; that is, out of the block.
 
-{{EmbedInteractiveExample("pages/wat/block.html")}}
+{{EmbedInteractiveExample("pages/wat/block.html", "tabbed-taller")}}
 
 ## Syntax
 

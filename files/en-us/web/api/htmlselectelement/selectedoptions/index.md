@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,6 +15,7 @@ tags:
   - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **read-only** {{domxref("HTMLSelectElement")}} property
@@ -80,11 +82,11 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", function() {
+orderButton.addEventListener("click", () => {
   let collection = itemList.selectedOptions;
   let output = "";
 
-  for (let i=0; i<collection.length; i++) {
+  for (let i = 0; i < collection.length; i++) {
     if (output === "") {
       output = "Your order for the following items has been placed: ";
     }
@@ -107,17 +109,17 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-This script sets up a {{event("click")}} event listener on the "Order Now" button. When
+This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
 clicked, the event handler fetches the list of selected options using
 `selectedOptions`, then iterates over the options in the list. A string is
 constructed to list the ordered items, with logic to build the list using proper English
-grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).
+grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma)).
 
 ### Result
 
 The resulting content looks like this in action:
 
-{{EmbedLiveSample("Example", 600, 250)}}
+{{EmbedLiveSample("Examples", 600, 250)}}
 
 ## Specifications
 

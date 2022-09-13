@@ -1,10 +1,10 @@
 ---
 title: VideoPlaybackQuality.droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Data Loss
-  - Experimental
   - Frames
   - Media
   - Media Playback Quality
@@ -18,6 +18,7 @@ tags:
   - droppedVideoFrames
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`droppedVideoFrames`**
@@ -43,11 +44,11 @@ then determines what percentage of frames have been dropped. That value is then
 presented in an element for the user's reference.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var percentElem = document.getElementById("percent");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const percentElem = document.getElementById("percent");
+const quality = videoElem.getVideoPlaybackQuality();
 
-var dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
+const dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
 percentElem.innerText = Math.trunc(dropPercent).toString(10);
 ```
 

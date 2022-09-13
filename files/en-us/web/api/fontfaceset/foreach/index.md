@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.forEach()
 slug: Web/API/FontFaceSet/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.forEach
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`forEach()`** method of the {{domxref("FontFaceSet")}} interface executes a provided function for each value in the `FontFaceSet` object.
@@ -16,8 +18,8 @@ The **`forEach()`** method of the {{domxref("FontFaceSet")}} interface executes 
 ## Syntax
 
 ```js
-FontFaceSet.forEach(callbackFn)
-FontFaceSet.forEach(callbackFn, thisArg)
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
@@ -31,7 +33,7 @@ FontFaceSet.forEach(callbackFn, thisArg)
 - `thisArg`
   - : Value to use as {{jsxref('this')}} when executing `callbackFn`.
 
-### Return Value
+### Return value
 
 Undefined.
 

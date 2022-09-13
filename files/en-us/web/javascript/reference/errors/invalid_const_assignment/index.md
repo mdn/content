@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid assignment to const" occurs when it was attempted to
@@ -15,11 +16,10 @@ declarations can't be re-assigned or redeclared.
 
 ## Message
 
-```js
-TypeError: invalid assignment to const "x" (Firefox)
-TypeError: Assignment to constant variable. (Chrome)
-TypeError: Assignment to const (Edge)
-TypeError: Redeclaration of const 'x' (IE)
+```
+TypeError: Assignment to constant variable. (V8-based)
+TypeError: invalid assignment to const 'x' (Firefox)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
@@ -43,7 +43,7 @@ Assigning a value to the same constant name in the same block-scope will throw.
 ```js example-bad
 const COLUMNS = 80;
 
-// ...
+// …
 
 COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
 ```
@@ -63,7 +63,7 @@ const COLUMNS = 80;
 const WIDE_COLUMNS = 120;
 ```
 
-#### `const`, `let` or `var`?
+#### const, let or var?
 
 Do not use const if you weren't meaning to declare a constant. Maybe you meant to
 declare a block-scoped variable with
@@ -74,9 +74,9 @@ global variable with
 ```js example-good
 let columns = 80;
 
-// ...
+// …
 
-let columns = 120;
+columns = 120;
 ```
 
 #### Scoping
@@ -92,7 +92,7 @@ function setupBigScreenEnvironment() {
 }
 ```
 
-### `const` and immutability
+### const and immutability
 
 The `const` declaration creates a read-only reference to a value. It does
 **not** mean the value it holds is immutable, just that the variable

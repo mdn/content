@@ -1,6 +1,7 @@
 ---
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
@@ -18,7 +20,7 @@ parts of two specified DOM nodes, and any content located between them.
 ## Syntax
 
 ```js
-sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 ```
 
 ### Parameters
@@ -42,9 +44,9 @@ sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 > might follow. For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection
 > to narrow from the beginning rather than grow at the end.
 
-### Return Value
+### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -91,25 +93,25 @@ selection into the output paragraph at the very bottom of the HTML.
 The JavaScript looks like so:
 
 ```js
-var one = document.querySelector('.one');
-var two = document.querySelector('.two');
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
 
-var aOffset = document.getElementById('aOffset');
-var fOffset = document.getElementById('fOffset');
+const aOffset = document.getElementById('aOffset');
+const fOffset = document.getElementById('fOffset');
 
-var button = document.querySelector('button');
+const button = document.querySelector('button');
 
-var output = document.querySelector('.output');
+const output = document.querySelector('.output');
 
-var selection;
+let selection;
 
-button.onclick = function() {
+button.onclick = () => {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
-    var text = selection.toString();
+    const text = selection.toString();
     output.textContent = text;
-  } catch(e) {
+  } catch (e) {
     output.textContent = e.message;
   }
 }
@@ -120,9 +122,7 @@ affects the selection.
 
 {{ EmbedLiveSample('Examples', '100%', 370) }}
 
-> **Note:** You can find this [example
-> on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see
-> it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
+> **Note:** You can find this [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
 ## Specifications
 

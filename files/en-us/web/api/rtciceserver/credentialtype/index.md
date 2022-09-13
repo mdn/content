@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.credentialType
 slug: Web/API/RTCIceServer/credentialType
+page-type: web-api-instance-property
 tags:
   - Authentication
   - ICE
@@ -13,9 +14,12 @@ tags:
   - credentialType
   - credentials
   - password
+  - Deprecated
+  - Non-standard
 browser-compat: api.RTCIceServer.credentialType
 ---
-{{APIRef("WebRTC")}}
+
+{{APIRef("WebRTC")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The {{domxref("RTCIceServer")}} dictionary's
 **`credentialType`** property is a string value which
@@ -25,13 +29,13 @@ The default is `password`.
 ## Syntax
 
 ```js
-var iceServer = {
-                  ...
-                  credentialType = newCredentialType,
-                  ...
-                };
+const iceServer = {
+  // ...
+  credentialType: newCredentialType,
+  // ...
+};
 
-var credentialType = iceServer.credentialType;
+const credentialType = iceServer.credentialType;
 
 iceServer.credentialType = newCredentialType;
 ```
@@ -67,7 +71,7 @@ const myPeerConnection = new RTCPeerConnection({
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any current specification.
 
 ## Browser compatibility
 

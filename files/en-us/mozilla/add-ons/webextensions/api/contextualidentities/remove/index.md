@@ -12,6 +12,7 @@ tags:
   - remove
 browser-compat: webextensions.api.contextualIdentities.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes a contextual identity, given its cookie store ID.

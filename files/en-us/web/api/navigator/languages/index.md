@@ -1,9 +1,9 @@
 ---
 title: Navigator.languages
 slug: Web/API/Navigator/languages
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Navigator
   - Property
   - Read-only
@@ -11,10 +11,11 @@ tags:
   - languages
 browser-compat: api.Navigator.languages
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`Navigator.languages`** read-only property
-returns an array of {{domxref("DOMString")}}s representing the user's preferred
+returns an array of strings representing the user's preferred
 languages. The language is described using language tags according to
 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned
 array they are ordered by preference with the most preferred language first.
@@ -52,4 +53,4 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 - {{domxref("navigator.language")}}
 - {{domxref("navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- {{domxref("Window.languagechange_event", "languagechange")}} event

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.prefix
 ---
+
 {{CSSRef}}
 
 The **`prefix`** descriptor of the {{cssxref('@counter-style')}} rule specifies content that will be prepended to the marker representation. If not specified, the default value will be `""` (an empty string).
@@ -34,7 +35,14 @@ prefix: url(bullet.png);
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 

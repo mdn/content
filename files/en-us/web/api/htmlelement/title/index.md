@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.title`** property

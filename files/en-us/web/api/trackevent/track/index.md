@@ -1,6 +1,7 @@
 ---
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.TrackEvent.track
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`track`** property of

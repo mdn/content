@@ -7,9 +7,11 @@ tags:
   - Media Queries
   - Reference
   - media feature
+  - Experimental
 browser-compat: css.at-rules.media.update
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`update`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test how frequently (if at all) the output device is able to modify the appearance of content.
 

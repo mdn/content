@@ -1,6 +1,7 @@
 ---
 title: RTCError
 slug: Web/API/RTCError
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -16,6 +17,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCError
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCError`** interface describes an error which has occurred while handling [WebRTC](/en-US/docs/Web/API/WebRTC_API) operations. It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.
@@ -32,7 +34,7 @@ The **`RTCError`** interface describes an error which has occurred while handlin
 _In addition to the properties defined by the parent interface, {{domxref("DOMException")}}, `RTCError` includes the following properties:_
 
 - {{domxref("RTCError.errorDetail", "errorDetail")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the WebRTC-specific error code identifying the type of error that occurred.
+  - : A string specifying the WebRTC-specific error code identifying the type of error that occurred.
 - {{domxref("RTCError.receivedAlert", "receivedAlert")}} {{ReadOnlyInline}}
   - : An unsigned long integer value indicating the fatal {{Glossary("DTLS")}} error which was received from the network. Only valid if the `errorDetail` string is `dtls-failure`. If `null`, no DTLS error was received.
 - {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}} {{ReadOnlyInline}}

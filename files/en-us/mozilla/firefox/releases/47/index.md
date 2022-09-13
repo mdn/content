@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -13,20 +14,20 @@ tags:
 
 ### Developer Tools
 
-- [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](/en-US/docs/Tools/Responsive_Design_Mode)
-- [Retaining paths panel](/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel) in memory tool
+- [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
+- [Retaining paths panel](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining-paths-panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
 
-  - [about:debugging](/en-US/docs/Tools/about:debugging) dashboard for workers
-  - Cached requests are now shown in [Network Monitor](/en-US/docs/Tools/Network_Monitor)
-  - Support for [cache storage](/en-US/docs/Web/API/Cache) in [Storage Inspector](/en-US/docs/Tools/Storage_Inspector)
+  - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) dashboard for workers
+  - Cached requests are now shown in [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+  - Support for [cache storage](/en-US/docs/Web/API/Cache) in [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 
-- Ability to filter [Storage Inspector](/en-US/docs/Tools/Storage_Inspector) entries
-- [Console](/en-US/docs/Tools/Web_Console) now detects incomplete input and switches multi-line mode
-- Updated breakpoint style in [Debugger](/en-US/docs/Tools/Debugger)
-- Prevent panels from hiding automatically using the [Browser Toolbox](/en-US/docs/Tools/Browser_Toolbox), to aid browser and add-on debugging
-- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been disabled by default
-- [3D view](/en-US/docs/Tools/3D_View) has been removed
+- Ability to filter [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) entries
+- [Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) now detects incomplete input and switches multi-line mode
+- Updated breakpoint style in [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- Prevent panels from hiding automatically using the [Browser Toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html), to aid browser and add-on debugging
+- [Font inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts-view) has been disabled by default
+- [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) has been removed
 - Developer tools theme refresh
 - Disable the Font Panel ({{bug(1247723)}}).
 
@@ -74,7 +75,7 @@ _No change._
 
 - The {{domxref("Request.Request", "Request()")}} constructor can now accept a referrer option in its init object ({{bug(1251448)}}).
 - The {{domxref("Request.referrerPolicy")}} property is now supported ({{bug(1251872)}}).
-- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/) (ESR) ({{bug(1232029)}}).
+- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/enterprise/) (ESR) ({{bug(1232029)}}).
 
 #### WebRTC
 
@@ -109,7 +110,7 @@ _No change._
 
 ## Security
 
-- URL with the `view-source:` protocol don't open the [View Source](/en-US/docs/Tools/View_source) tool anymore when used from a Web page ({{bug(1172165)}}).
+- URL with the `view-source:` protocol don't open the [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) tool anymore when used from a Web page ({{bug(1172165)}}).
 - The Firefox [click-to-activate plugin whitelist](https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/) has been removed: only Flash doesn't need to be clicked to be activated ({{bug(1263630)}}).
 
 ## Changes for add-on and Mozilla developers

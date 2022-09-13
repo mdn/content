@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.validity
 slug: Web/API/HTMLObjectElement/validity
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - validity
 browser-compat: api.HTMLObjectElement.validity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`validity`** read-only property of the

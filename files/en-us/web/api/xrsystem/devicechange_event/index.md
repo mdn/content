@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: devicechange event'
 slug: Web/API/XRSystem/devicechange_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -12,9 +13,11 @@ tags:
   - XR
   - XRSystem
   - devicechange
+  - Experimental
 browser-compat: api.XRSystem.devicechange_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
 
@@ -25,9 +28,9 @@ A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object wheneve
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', event => { })
+addEventListener('devicechange', (event) => { })
 
-ondevicechange = event => { }
+ondevicechange = (event) => { }
 ```
 
 ## Event type
@@ -42,7 +45,7 @@ Triggered whenever the availability of immersive XR devices has changed. For exa
 
 ### Use cases
 
-You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the [example](#example) below.
+You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the [example](#examples) below.
 
 ## Examples
 
@@ -50,14 +53,10 @@ The example shown here handles the `devicechange` event by toggling the availabi
 
 ```js
 if (navigator.xr) {
-  navigator.xr.addEventListener("devicechange", event => {
+  navigator.xr.addEventListener("devicechange", (event) => {
     navigator.xr.isSessionSupported("immersive-vr")
-    .then(immersiveOK) => {
-      if (immersiveOK) {
-        enableXRButton.disabled = false;
-      } else {
-        enableXRButton.disabled = true;
-      }
+    .then((immersiveOK) => {
+      enableXRButton.disabled = !immersiveOK;
     });
   });
 }
@@ -69,8 +68,8 @@ You can also use the `ondevicechange` event handler property to set a single han
 
 ```js
 if (navigator.xr) {
-  navigator.xr.ondevicechange = event => {
-    /* ... etc ... */
+  navigator.xr.ondevicechange = (event) => {
+    // …
   };
 }
 ```

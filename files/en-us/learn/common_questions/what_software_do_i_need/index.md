@@ -6,6 +6,7 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
 In this article, we lay out which software components you need when you're editing, uploading, or viewing a website.
 
 <table class="standard-table">
@@ -45,7 +46,7 @@ Nearly all operating systems by default include a text editor and a browser, whi
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 
@@ -182,7 +183,7 @@ Here is a screenshot of an online text editor:
 
 ### Uploading files on the Web
 
-When your website is ready for public viewing, you'll have to upload your webpages to your web server. You can buy space on a server from various providers (see [How much does it cost to do something on the web?](/en-US/docs/Learn/Common_questions/How_much_does_it_cost)). Once you settle on which provider to use, the provider will email you the access information, usually in the form of an SFTP URL, username, password, and other information needed to connect to their server. Bear in mind that (S)FTP is now somewhat old-fashioned, and other uploading systems are starting to become popular, such as [RSync](https://en.wikipedia.org/wiki/Rsync) and [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+When your website is ready for public viewing, you'll have to upload your webpages to your web server. You can buy space on a server from various providers (see [How much does it cost to do something on the web?](/en-US/docs/Learn/Common_questions/How_much_does_it_cost)). Once you settle on which provider to use, the provider will email you the access information, usually in the form of an SFTP URL, username, password, and other information needed to connect to their server. Bear in mind that (S)FTP is now somewhat old-fashioned, and other uploading systems are starting to become popular, such as [RSync](https://en.wikipedia.org/wiki/Rsync) and [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 > **Note:** FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g. SFTP or RSync over SSH.
 
@@ -256,14 +257,14 @@ As you already know, you need a web browser to view websites. There are [dozens]
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
+- [Microsoft Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70)
 - [Apple Safari](https://www.apple.com/safari/)
 
-If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://www.konqueror.org/), or [UC Browser](https://www.ucweb.com/ucbrowser/).
+If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/).
 
-But testing gets complicated because some browsers only run on certain operating systems. Apple Safari runs on iOS and Mac OS, while Internet Explorer runs only on Windows. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots furnishes screenshots of your website as it will look in various browsers. Browserstack actually gives you full remote access to virtual machines so you can test your site in the most common environments. Alternatively, you can set up your own virtual machine, but that takes some expertise. (If you're going that route, Microsoft has some tools for developers including a ready-to-use virtual machine at [modern.ie](https://modern.ie).)
+But testing gets complicated because some browsers only run on certain operating systems. Apple Safari runs on iOS and Mac OS, while Internet Explorer runs only on Windows. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots furnishes screenshots of your website as it will look in various browsers. Browserstack actually gives you full remote access to virtual machines so you can test your site in the most common environments. Alternatively, you can set up your own virtual machine, but that takes some expertise. (If you're going that route, Microsoft has made [ready-to-use virtual machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) available.)
 
-By all means run some tests on a real device, especially on real mobile devices. Mobile device simulation is a new, evolving technology and less reliable than desktop simulation. Mobile devices cost money, of course, so we suggest taking a look at the [Open Device Lab initiative](https://opendevicelab.com/). You can also share devices if you want to test on many platforms without spending too much.
+By all means run some tests on a real device, especially on real mobile devices. Mobile device simulation is a new, evolving technology and less reliable than desktop simulation. Mobile devices cost money, of course, so we suggest taking a look at the [Open Device Lab initiative](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls). You can also share devices if you want to test on many platforms without spending too much.
 
 ## Next steps
 

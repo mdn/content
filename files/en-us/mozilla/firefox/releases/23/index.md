@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 23
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -67,7 +68,7 @@ Addons that overlay chrome://browser/content/debugger.xul must now overlay chrom
 
 ## See also
 
-- [Firefox 23 Aurora Notes](https://www.mozilla.org/en-US/firefox/23.0a2/auroranotes/)
+- [Firefox 23 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/23.0a2/auroranotes/)
 
 ### Older versions
 

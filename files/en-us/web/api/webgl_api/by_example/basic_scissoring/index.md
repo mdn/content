@@ -1,6 +1,7 @@
 ---
 title: Basic scissoring
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -11,6 +12,7 @@ tags:
   - WebGL
   - scissor
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
 
 In this example, we see how to draw simple rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
@@ -34,7 +36,7 @@ The scissoring stage of the pipeline is disabled by default. We enable it here u
 ```html
 <p>Result of scissoring.</p>
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css
@@ -56,8 +58,8 @@ canvas {
 window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupWebGL, false);
-  var paragraph = document.querySelector("p");
-  var canvas = document.querySelector("canvas");
+  const paragraph = document.querySelector("p");
+  const canvas = document.querySelector("canvas");
 
   // The following two lines set the size (in CSS pixels) of
   // the drawing buffer to be identical to the size of the
@@ -65,7 +67,7 @@ window.addEventListener("load", function setupWebGL (evt) {
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
 
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
   if (!gl) {
     paragraph.innerHTML = "Failed to get WebGL context. "

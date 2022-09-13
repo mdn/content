@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets how a flex _item_ will grow or shrink to fit the space available in its flex container.
@@ -225,10 +226,10 @@ By default flex items don't shrink below their minimum content size. To change t
 ```
 
 ```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+const flex = document.getElementById("flex");
+const raw = document.getElementById("raw");
+flex.addEventListener("click", () => {
+  raw.style.display = raw.style.display === "none" ? "block" : "none";
 });
 ```
 

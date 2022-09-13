@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -26,6 +27,7 @@ tags:
   - transform
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property
@@ -60,8 +62,8 @@ a scene, updating each object's position by multiplying it with the event's give
 all the objects in an array called `objects` within it.
 
 ```js
-xrReferenceSpace.addEventListener("reset", event => {
-  for (let obj of scene.objects) {
+xrReferenceSpace.addEventListener("reset", (event) => {
+  for (const obj of scene.objects) {
     mat4.multiply(obj.transform, obj.transform, event.transform);
   }
 });

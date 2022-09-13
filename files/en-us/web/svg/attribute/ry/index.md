@@ -4,7 +4,9 @@ slug: Web/SVG/Attribute/ry
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/svg2-draft/geometry.html#RY
 ---
+
 {{SVGRef}}
 
 The **`ry`** attribute defines a radius on the y-axis.
@@ -68,7 +70,7 @@ For {{SVGElement('ellipse')}}, `ry` defines the y-radius of the shape. With a va
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `ry` is a *Geometry Property* meaning this attribute can also be used as a CSS property for ellipses.
+> **Note:** Starting with SVG2, `ry` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
 
 ## rect
 
@@ -110,37 +112,8 @@ The way the value of the `ry` attribute is interpreted depend on both the {{SVGA
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `ry` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rects.
+> **Note:** Starting with SVG2, `ry` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rects.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "geometry.html#RY", "ry")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition as a geometry property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#EllipseElementRYAttribute", "ry")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;ellipse></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#RectElementRYAttribute", "ry")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;rect></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

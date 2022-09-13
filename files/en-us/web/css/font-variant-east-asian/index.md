@@ -10,9 +10,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-east-asian
 ---
+
 {{CSSRef}}
 
 The **`font-variant-east-asian`** CSS property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
+
+{{EmbedInteractiveExample("pages/css/font-variant-east-asian.html")}}
+
+## Syntax
 
 ```css
 font-variant-east-asian: normal;
@@ -34,8 +39,6 @@ font-variant-east-asian: revert;
 font-variant-east-asian: revert-layer;
 font-variant-east-asian: unset;
 ```
-
-## Syntax
 
 ### Values
 

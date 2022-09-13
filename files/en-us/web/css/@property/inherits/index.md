@@ -7,11 +7,13 @@ tags:
   - Web
   - Property
   - Houdini
+  - Experimental
 browser-compat: css.at-rules.property.inherits
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and controls whether the custom property registration specified by `@property` inherits by default.
+The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and controls whether the custom property registration specified by `@property` inherits by default.
 
 ## Syntax
 
@@ -42,7 +44,9 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+true | false
+```
 
 ## Examples
 
@@ -82,4 +86,4 @@ window.CSS.registerProperty({
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

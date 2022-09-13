@@ -1,0 +1,170 @@
+name: On Demand Preview Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: "Notes"
+        required: false
+        default: "Default on demand preview build"
+
+      # This is very useful when combined with the "Use workflow from"
+      # feature that is built into the "Run workflow" button on
+      # https://github.com/mdn/yari/actions?query=workflow%3A%22Production+Build%22
+      # If you override the deployment prefix to something like the name
+      # of the branch, you can deploy that entire branch to its own prefix
+      # in S3 which means that it can be fully hosted as its own site.
+      deployment_prefix:
+        description: "Deployment prefix"
+        required: false
+        default: "contributor-docs"
+
+jobs:
+  on-demand-preview-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Build content
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/files
+
+          # This is so that if there's a single 'unsafe_html' flaw, it
+          # completely fails the build.
+          # But all other flaws should be 'warn', so that we can include
+          # information about the flaws when we analyze the built PR.
+          BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
+
+          # Because we build these pages in a way that you get a toolbar,
+          # so the flaws can be displayed, but we don't want any of the
+          # other toolbar features like "Fix fixable flaws" or "Quick-edit"
+          # we set this to disable that stuff.
+          REACT_APP_CRUD_MODE_READONLY: true
+
+          # Setting this to an empty string effectively means that the
+          # <iframe> src will end up being the relative URL of the current
+          # document as a base.
+          # I.e. like this, if the current document is '/en-US/docs/Foo':
+          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
+          # ...for example.
+          # Yes, it's potentially "insecure" because the iframe will execute
+          # whatever code is inserted into the code example. But since the
+          # whole (possible) domain for PR builds will never be somewhere
+          # where there are interesting cookies, it's a safe choice.
+          BUILD_LIVE_SAMPLES_BASE_URL: ""
+
+          # In these builds, we never care for or need the ability to sign in.
+          # This environment variable will disable that functionality entirely.
+          REACT_APP_DISABLE_AUTH: true
+
+          # TODO: This should be implicit when `CI=true`
+          BUILD_NO_PROGRESSBAR: true
+
+        run: |
+          # The reason this script isn't in `package.json` is because
+          # you don't need that script as a writer. It's only used in CI
+          # and it can't use the default CONTENT_ROOT that gets set in
+          # package.json.
+          yarn build
+          echo "Disk usage size of build/"
+          du -sh $BUILD_OUT_ROOT
+
+      - name: Merge static assets with built documents
+        run: |
+          rsync -a node_modules/@mdn/yari/client/build/ build/
+          # Now that build/ directory contains everything you need to deploy
+          # that as a site. HTML, static assets, images, etc.
+          # However, that Yari static files is very heavy and it's in large
+          # part due to the .map files.
+          # In fact, as of March 2021, the client/build/static directory
+          # is 2.3MB but only 864KB without all the .map files.
+          # Let's delete those this time because this isn't the right time
+          # to debug JS or CSS.
+          echo "Before..."
+          du -sh build
+          find build/static -type f -name "*.map" | xargs ls -lh
+          find build/static -type f -name "*.map" | xargs rm
+          echo "After..."
+          du -sh build
+
+      - uses: technote-space/get-diff-action@v6.1.0
+        with:
+          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
+          ABSOLUTE: true
+          SET_ENV_NAME: GIT_DIFF_FILES
+
+      - name: Install Python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
+      - name: Load cached ~/.local
+        uses: actions/cache@v3
+        with:
+          path: ~/.local
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
+
+      - name: Install Python poetry
+        uses: snok/install-poetry@v1.3
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: yari/deployer/.venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+
+      - name: Checkout Yari
+        uses: actions/checkout@v3
+        with:
+          repository: mdn/yari
+          path: yari
+
+      - name: Install poetry dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction --no-root
+
+      - name: Install Deployer
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
+
+      - name: Deploy and analyze built content
+        env:
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
+          DEPLOYMENT_PREIFIX: ${{ github.event.inputs.deployment_prefix }}
+
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
+          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
+
+        run: |
+          echo "ON DEMAND PREVIEW DEPLOY: $DEPLOYMENT_PREIFIX"
+
+          cd yari/deployer
+
+          poetry run deployer upload \
+            --prefix="$DEPLOYMENT_PREIFIX" \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"

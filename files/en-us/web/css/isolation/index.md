@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.isolation
 ---
+
 {{CSSRef}}
 
 The **`isolation`** [CSS](/en-US/docs/Web/CSS) property determines whether an element must create a new {{glossary("stacking context")}}.

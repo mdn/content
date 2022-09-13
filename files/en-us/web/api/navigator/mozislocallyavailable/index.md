@@ -1,6 +1,7 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.mozIsLocallyAvailable
 ---
+
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 
 The **`Navigator.mozIsLocallyAvailable()`** method allows
@@ -19,7 +21,7 @@ add-ons to determine whether or not a given resource is available.
 ## Syntax
 
 ```js
-navigator.mozIsLocallyAvailable(uri, ifOffline);
+mozIsLocallyAvailable(uri, ifOffline)
 ```
 
 ### Parameters
@@ -30,10 +32,14 @@ navigator.mozIsLocallyAvailable(uri, ifOffline);
   - : Allows you to specify whether or not the offline resources cache should be checked;
     specify `true` to consider the offline resources cache.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
+const available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
 if (available) {
   /* the offline resource is present */
 } else {

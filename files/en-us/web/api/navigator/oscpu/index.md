@@ -1,6 +1,7 @@
 ---
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -10,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.Navigator.oscpu
 ---
+
 {{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
 The **`Navigator.oscpu`** property returns a string that identifies the current operating system.
 
 ## Value
 
-A {{domxref("DOMString")}} providing a string which identifies the operating system on which the browser is running.
+A string providing a string which identifies the operating system on which the browser is running.
 
 | Operating system              | `oscpuInfo` string format                         |
 | ----------------------------- | ------------------------------------------------- |

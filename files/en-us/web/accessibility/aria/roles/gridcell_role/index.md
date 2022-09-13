@@ -5,6 +5,7 @@ tags:
   - ARIA
   - HTML
 ---
+
 The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
 
 ```html
@@ -24,7 +25,7 @@ Elements that have `role="gridcell"` applied to them must be the child of an ele
 </div>
 ```
 
-The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the HTML {{HTMLElement('td')}} element in conjunction with the and [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable):
+The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the HTML {{HTMLElement('td')}} element:
 
 ```html
 <td>Potato</td>
@@ -156,12 +157,12 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 - [The Table row element](/en-US/docs/Web/HTML/Element/tr)
 - [ARIA: row role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [Row Role - Maxability](https://www.maxability.co.in/wai-aria-overview/row-role/)
-- [aria-rowcount - Maxability](https://www.maxability.co.in/2018/09/aria-rowcount-property/)
+- [aria-rowcount - Maxability](https://www.maxability.co.in/2018/09/07/aria-rowcount-property/)
 - [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [Rowgroup Role - Maxability](https://www.maxability.co.in/wai-aria-overview/rowgroup-role/)
 - [The Table header element](/en-US/docs/Web/HTML/Element/th)
 - [Columnheader - Maxability](https://www.maxability.co.in/wai-aria-overview/columnheader-role/)
-- [aria-colcount - Maxability](https://www.maxability.co.in/2017/07/aria-colcount-property/)
+- [aria-colcount - Maxability](https://www.maxability.co.in/2017/07/26/aria-colcount-property/)
 - [The Table Data Cell element](/en-US/docs/Web/HTML/Element/td)
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
 - [Gridcell Role - Maxability](https://www.maxability.co.in/wai-aria-overview/gridcell-role/)
@@ -170,6 +171,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -1,16 +1,18 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Node.isConnected
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`isConnected`** property of the {{domxref("Node")}} interface
- returns a boolean indicating whether the node is connected
+returns a boolean indicating whether the node is connected
 (directly or indirectly) to the context object,
 for example the {{domxref("Document")}} object in the case of the normal DOM,
 or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
@@ -41,7 +43,7 @@ A shadow DOM example:
 // Create a shadow root
 const shadow = this.attachShadow({mode: 'open'});
 
-// Create some CSS to apply to the shadow dom
+// Create some CSS to apply to the shadow DOM
 const style = document.createElement('style');
 console.log(style.isConnected); // returns false
 
@@ -67,7 +69,7 @@ style.textContent = `
 }
 `;
 
-// Attach the created style element to the shadow dom
+// Attach the created style element to the shadow DOM
 
 shadow.appendChild(style);
 console.log(style.isConnected); // Returns true

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-fill-mode
 ---
+
 {{CSSRef}}
 
 The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
@@ -67,7 +68,7 @@ animation-fill-mode: unset;
 - `both`
   - : The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ## Formal definition
 
@@ -79,9 +80,11 @@ animation-fill-mode: unset;
 
 ## Examples
 
+### Setting fill mode
+
 You can see the effect of `animation-fill-mode` in the following example. It demonstrates how, for an animation that runs for an infinite time, you can cause it to remain in its final state rather than reverting to the original state (which is the default).
 
-### HTML
+#### HTML
 
 ```html
 <p>Move your mouse over the gray box!</p>
@@ -91,7 +94,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .demo {
@@ -116,9 +119,9 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples',700,300)}}
+{{EmbedLiveSample('Setting fill mode',700,300)}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
 

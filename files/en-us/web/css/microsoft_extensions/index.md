@@ -9,6 +9,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 Microsoft applications such as Edge and Internet Explorer support a number of special **Microsoft extensions to [CSS](/en-US/docs/Web/CSS)**. These extensions are prefixed with `-ms-`.
@@ -98,5 +99,5 @@ Microsoft applications such as Edge and Internet Explorer support a number of sp
 
 - [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
 - [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
-- [Microsoft API Extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API Extensions](/en-US/docs/Web/API/Microsoft_Extensions)
 - [Microsoft JavaScript Extensions](/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions)

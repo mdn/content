@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - CORS
@@ -15,6 +16,7 @@ tags:
   - origin
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
@@ -24,7 +26,7 @@ retrieving the image.
 
 ## Value
 
-A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+A string of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched
 without CORS (the fetch `no-cors` mode).
 
@@ -118,7 +120,7 @@ output {
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## Specifications
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.src
 ---
+
 {{CSSRef}}
 
 The **`src`** CSS descriptor of the {{cssxref("@font-face")}} rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
@@ -55,7 +56,13 @@ As with other URLs in CSS, the URL may be relative, in which case it is resolved
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+[ <url> [ format( <string># ) ]? | local( <family-name> ) ]#
+
+<family-name> =
+  <string>        |
+  <custom-ident>+
+```
 
 ## Examples
 

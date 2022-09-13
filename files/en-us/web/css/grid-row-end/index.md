@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.grid-row-end
 ---
+
 {{CSSRef}}
 
 The **`grid-row-end`** CSS property specifies a grid item's end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its {{glossary("grid areas", "grid area")}}.
@@ -159,4 +160,4 @@ grid-row-end: unset;
 
 - Related CSS properties: {{cssxref("grid-row-start")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

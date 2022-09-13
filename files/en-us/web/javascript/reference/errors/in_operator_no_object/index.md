@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "right-hand side of 'in' should be an object" occurs when the
@@ -16,10 +17,10 @@ used to check if a property is in an object.
 
 ## Message
 
-```js
-TypeError: Invalid operand to 'in' (Edge)
-TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
+TypeError: Cannot use 'in' operator to search for 'x' in 'y' (V8-based & Firefox)
+TypeError: right-hand side of 'in' should be an object, got null (Firefox)
+TypeError: "y" is not an Object. (evaluating '"x" in "y"') (Safari)
 ```
 
 ## Error type
@@ -44,20 +45,20 @@ the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
 ```
 
-Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for example.
+Instead you will need to use {{jsxref("String.prototype.includes()")}}, for example.
 
 ```js example-good
-"Hello World".indexOf("Hello") !== -1;
+"Hello World".includes("Hello");
 // true
 ```
 
 ### The operand can't be null or undefined
 
-Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
+Make sure the object you are inspecting isn't actually [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
 {{jsxref("undefined")}}.
 
 ```js example-bad
-var foo = null;
+const foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo' (Chrome)
 // TypeError: right-hand side of 'in' should be an object, got null (Firefox)
@@ -66,7 +67,7 @@ var foo = null;
 The `in` operator always expects an object.
 
 ```js example-good
-var foo = { baz: "bar" };
+const foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
@@ -80,7 +81,7 @@ objects. The `in` operator checks the index number, not the value at that
 index.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 3 in trees; // true
 "oak" in trees; // false
 ```

@@ -1,15 +1,18 @@
 ---
 title: PerformanceElementTiming.element
 slug: Web/API/PerformanceElementTiming/element
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - element
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.element
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns an {{domxref("Element")}} which is a literal representation of the associated element.
 
@@ -28,7 +31,7 @@ In this example calling `entry.element` will log to the console
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.element);
     }

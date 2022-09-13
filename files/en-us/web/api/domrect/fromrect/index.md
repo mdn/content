@@ -1,6 +1,7 @@
 ---
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
+page-type: web-api-static-method
 tags:
   - API
   - DOMRect
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMRect.fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
@@ -18,7 +20,8 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js
-DOMRect.fromRect(rectangle)
+fromRect()
+fromRect(rectangle)
 ```
 
 ### Parameters

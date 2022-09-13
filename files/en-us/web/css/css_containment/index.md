@@ -7,8 +7,11 @@ tags:
   - Guide
   - Paint
   - Performance
-spec-urls: https://drafts.csswg.org/css-contain/#contain-property
+browser-compat:
+  - css.properties.contain
+  - css.properties.content-visibility
 ---
+
 {{CSSRef}}
 The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
 
@@ -134,11 +137,8 @@ contain: strict style;
 
 ## Browser compatibility
 
-{{Compat("css.properties.contain")}}
-
-{{Compat("css.properties.content-visibility")}}
+{{Compat}}
 
 ## External resources
 
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
-- [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)

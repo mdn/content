@@ -8,6 +8,9 @@ tags:
   - Web
   - WebDriver
 ---
+
+{{QuickLinksWithSubpages}}
+
 Any WebDriver [command](/en-US/docs/Web/WebDriver/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 
 ## Payload
@@ -57,7 +60,7 @@ Because both WebDriver and JavaScript execution is halted by such a dialog, we s
 }
 ```
 
-In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represented by some sort of error _type_ or _object representation_. In Python it is represented as a [`WebDriverException`](https://seleniumhq.github.io/selenium/docs/api/py/common/selenium.common.exceptions.html), in Node.js as a [`WebDriverError`](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/error_exports_WebDriverError.html), and in Java also as a [`WebDriverException`](https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/WebDriverException.html).
+In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represented by some sort of error _type_ or _object representation_. In Python it is represented as a [`WebDriverException`](https://www.selenium.dev/selenium/docs/api/py/common/selenium.common.exceptions.html), in Node.js as a [`WebDriverError`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/error_exports_WebDriverError.html), and in Java also as a [`WebDriverException`](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebDriverException.html).
 
 ## Table of errors
 
@@ -94,5 +97,3 @@ In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represen
 
 - [WebDriver responses](/en-US/docs/Web/WebDriver/Response)
 - [WebDriver commands](/en-US/docs/Web/WebDriver/Commands)
-
-{{QuickLinksWithSubpages}}

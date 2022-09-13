@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setSeconds
 ---
+
 {{JSRef}}
 
 The **`setSeconds()`** method sets the seconds for a specified
@@ -51,7 +52,7 @@ seconds.
 ### Using setSeconds()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setSeconds(30);
 ```
 

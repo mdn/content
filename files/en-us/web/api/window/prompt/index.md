@@ -1,6 +1,7 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - prompt
 browser-compat: api.Window.prompt
 ---
+
 {{ApiRef("Window")}}
 
 `window.prompt()` instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
@@ -20,7 +22,9 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-result = window.prompt(message, default);
+prompt()
+prompt(message)
+prompt(message, defaultValue)
 ```
 
 ### Parameters
@@ -28,7 +32,7 @@ result = window.prompt(message, default);
 - `message` {{optional_inline}}
   - : A string of text to display to the user. Can be omitted if there is nothing to show
     in the prompt window.
-- `default` {{optional_inline}}
+- `defaultValue` {{optional_inline}}
   - : A string containing the default value displayed in the text input field. Note that
     in Internet Explorer 7 and 8, if you do not provide this parameter, the string
     `"undefined"` is the default value.
@@ -37,12 +41,12 @@ result = window.prompt(message, default);
 
 A string containing the text entered by the user, or `null`.
 
-## Example
+## Examples
 
 ```js
 let sign = prompt("What's your sign?");
 
-if (sign.toLowerCase() == "scorpio") {
+if (sign.toLowerCase() === "scorpio") {
   alert("Wow! I'm a Scorpio too!");
 }
 
@@ -57,9 +61,9 @@ When the user clicks the OK button, text entered in the input field is returned.
 user clicks OK without entering any text, an empty string is returned. If the user
 clicks the Cancel button, this function returns `null`.
 
-The above prompt appears as follows (in Chrome on OS X):
+The above prompt appears as follows (in Chrome on macOS):
 
-[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
+[![prompt() dialog in Chrome on macOS](prompt.png)](prompt.png)
 
 ## Notes
 

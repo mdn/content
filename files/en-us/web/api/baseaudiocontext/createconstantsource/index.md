@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - createConstantSource
 browser-compat: api.BaseAudioContext.createConstantSource
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`createConstantSource()`**
@@ -27,14 +29,14 @@ value.
 ## Syntax
 
 ```js
-var constantSourceNode = AudioContext.createConstantSource()
+createConstantSource()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref('ConstantSourceNode')}} instance.
 

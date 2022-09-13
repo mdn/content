@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-repeat-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-x` property specifies whether and how a mask image is repeated (tiled) horizontally.
@@ -51,7 +52,10 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-repeat-x =
+  repeat | no-repeat | space | round
+```
 
 ## Examples
 

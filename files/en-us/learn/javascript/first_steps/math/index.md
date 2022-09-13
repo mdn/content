@@ -16,6 +16,7 @@ tags:
   - maths
   - modulo
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 At this point in the course we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
@@ -68,28 +69,28 @@ Let's quickly play with some numbers to reacquaint ourselves with the basic synt
 
 1. First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
 
-    ```js
-    const myInt = 5;
-    const myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   const myInt = 5;
+   const myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. Number values are typed in without quote marks — try declaring and initializing a couple more variables containing numbers before you move on.
 3. Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
+   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
 
 ### Useful Number methods
 
 The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object, an instance of which represents all standard numbers you'll use in your JavaScript, has a number of useful methods available on it for you to manipulate numbers. We don't cover these in detail in this article because we wanted to keep it as a simple introduction and only cover the real basic essentials for now; however, once you've read through this module a couple of times it is worth going to the object reference pages and learning more about what's available.
 
-For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](/en-US/docs/Tools/Web_Console):
+For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
 
 ```js
 const lotsOfDecimal = 1.766584958675746364;
@@ -118,8 +119,11 @@ typeof myNumber;
 To fix the calculation, you can do this:
 
 ```js
-Number(myNumber) + 3;
+let myNumber = '74';
+myNumber = Number(myNumber) + 3;
 ```
+
+The result is then 77, as initially expected.
 
 ## Arithmetic operators
 
@@ -181,7 +185,7 @@ Arithmetic operators are the basic operators that we use to do sums in JavaScrip
       <td>
         Raises a <code>base</code> number to the <code>exponent</code> power,
         that is, the <code>base</code> number multiplied by itself,
-        <code>exponent</code> times. It was first Introduced in EcmaScript 2016.
+        <code>exponent</code> times.
       </td>
       <td>
         <code>5 ** 2</code> (returns <code>25</code>, which is the same as
@@ -199,29 +203,29 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 1. First try entering some simple examples of your own, such as
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7
+   9 * 8
+   60 % 3
+   ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
-    ```js
-    const num1 = 10;
-    const num2 = 50;
-    9 * num1;
-    num1 ** 3;
-    num2 / num1;
-    ```
+   ```js
+   const num1 = 10;
+   const num2 = 50;
+   9 * num1;
+   num1 ** 3;
+   num2 / num1;
+   ```
 
 3. Last for this section, try entering some more complex expressions, such as:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   num2 % 9 * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Parts of this last set of calculations might not give you quite the result you were expecting; the section below might well give the answer as to why.
 
@@ -237,7 +241,7 @@ As a human being, you may read this as _"50 plus 10 equals 60"_, then _"8 plus 2
 
 But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2 equals 53.25"_.
 
-This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).
+This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).
 
 If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
 
@@ -259,7 +263,7 @@ guessCount++;
 
 Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:
 
-```js
+```js example-bad
 3++;
 ```
 
@@ -354,7 +358,7 @@ But there are some more complex types, which provide useful shortcuts to keep yo
 
 Try typing some of the above examples into your console, to get an idea of how they work. In each case, see if you can guess what the value is before you type in the second line.
 
-Note that you can quite happily use other variables on the right hand side of each expression, for example:
+Note that you can quite happily use other variables on the right-hand side of each expression, for example:
 
 ```js
 let x = 3; // x contains the value 3

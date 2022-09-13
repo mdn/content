@@ -1,6 +1,7 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -11,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.finished
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation.finished`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a {{jsxref("Promise")}} which resolves once the animation has finished playing.
@@ -27,16 +29,8 @@ The following code waits until all animations running on the element `elem` have
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map((animation) => animation.finished),
+).then(() => elem.remove());
 ```
 
 ## Specifications

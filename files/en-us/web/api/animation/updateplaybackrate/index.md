@@ -1,6 +1,7 @@
 ---
 title: Animation.updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -14,6 +15,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`updatePlaybackRate()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s
@@ -37,19 +39,19 @@ animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
 ## Syntax
 
 ```js
-Animation.updatePlaybackRate(2);
+updatePlaybackRate(playbackRate)
 ```
 
 ### Parameters
 
-- playbackRate
+- `playbackRate`
   - : The new speed to set. This may be a positive number (to speed up or slow down
     the animation), a negative number (to make it play backwards), or zero (to
     effectively pause the animation).
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -57,7 +59,7 @@ A speed selector component would benefit from smooth updating of
 `updatePlaybackRate()`, as demonstrated below:
 
 ```js
-speedSelector.addEventListener('input', evt => {
+speedSelector.addEventListener('input', (evt) => {
   cartoon.updatePlaybackRate(parseFloat(evt.target.value));
   cartoon.ready.then(() => {
     console.log(`Playback rate set to ${cartoon.playbackRate}`);

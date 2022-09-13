@@ -12,7 +12,11 @@ tags:
   - WebExtensions
   - copy
   - paste
+browser-compat:
+  - api.Clipboard
+  - webextensions.api.clipboard
 ---
+
 {{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
@@ -42,8 +46,8 @@ The Clipboard API writes arbitrary data to the clipboard from your extension. Us
 For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then(result => {
-  if (result.state == "granted" || result.state == "prompt") {
+navigator.permissions.query({name: "clipboard-write"}).then((result) => {
+  if (result.state === "granted" || result.state === "prompt") {
     /* write to the clipboard now */
   }
 });
@@ -55,9 +59,9 @@ This function takes a string and writes it to the clipboard:
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
+  navigator.clipboard.writeText(newClip).then(() => {
     /* clipboard successfully set */
-  }, function() {
+  }, () => {
     /* clipboard write failed */
   });
 }
@@ -137,13 +141,13 @@ The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readTex
 Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
 ```js
-navigator.clipboard.readText().then(clipText =>
+navigator.clipboard.readText().then((clipText) =>
   document.getElementById("outbox").innerText = clipText);
 ```
 
 ### Using execCommand()
 
-To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{event("click")}} or {{event("keypress")}}.
+To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{domxref("Element/click_event", "click")}} or {{domxref("Element/keypress_event", "keypress")}}.
 
 Consider HTML that includes something like this:
 
@@ -171,13 +175,7 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Browser compatibility
 
-### navigator.clipboard
-
-{{Compat("api.Clipboard")}}
-
-### clipboard.setImageData
-
-{{Compat("webextensions.api.clipboard")}}
+{{Compat}}
 
 ## See also
 

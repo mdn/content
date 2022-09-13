@@ -1,6 +1,7 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -12,6 +13,7 @@ tags:
   - Window
 browser-compat: api.Window.matchMedia
 ---
+
 {{APIRef}}
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
@@ -23,7 +25,7 @@ media query.
 ## Syntax
 
 ```js
-mqList = window.matchMedia(mediaQueryString)
+matchMedia(mediaQueryString)
 ```
 
 ### Parameters
@@ -95,8 +97,7 @@ A simple `<span>` to receive the output.
 
 {{EmbedLiveSample("Examples", "100%", "60")}}
 
-See [Testing media
-queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
+See [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
 
 ## Specifications
 

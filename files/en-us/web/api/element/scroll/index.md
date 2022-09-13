@@ -1,6 +1,7 @@
 ---
 title: Element.scroll()
 slug: Web/API/Element/scroll
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -9,6 +10,7 @@ tags:
   - Scroll
 browser-compat: api.Element.scroll
 ---
+
 {{APIRef}}
 
 The **`scroll()`** method of the {{domxref("Element")}}
@@ -18,8 +20,8 @@ element.
 ## Syntax
 
 ```js
-element.scroll(x-coord, y-coord)
-element.scroll(options)
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parameters
@@ -41,6 +43,10 @@ element.scroll(options)
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

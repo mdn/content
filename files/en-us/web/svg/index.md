@@ -15,6 +15,7 @@ tags:
   - Web
   - l10n:priority
 ---
+
 {{SVGRef}}
 
 ## Getting Started with SVG
@@ -29,7 +30,7 @@ Compared to classic bitmapped image formats such as {{Glossary("JPEG")}} or {{Gl
 
 SVG has been developed by the [World Wide Web Consortium (W3C)](https://www.w3.org/) since 1999.
 
-See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
+See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial).
 
 ## Documentation
 
@@ -40,7 +41,7 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
 - [SVG DOM interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
   - : Details about the SVG DOM API, for interaction with JavaScript.
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-  - : SVG works together with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Use SVG to [enhance a regular HTML page or web application](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+  - : SVG works together with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}.
 
 ## Tools
 
@@ -52,5 +53,5 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
 - [SVG authoring guidelines](https://jwatt.org/svg/authoring/)
 - [SVG as an image](/en-US/docs/Web/SVG/SVG_as_an_Image)
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
-- [SVG art gallery](https://plurib.us/1shot/2007/svg_gallery/)
+- [SVG art gallery](https://www1.plurib.us/svg_gallery/)
 - [D3](https://d3js.org) (JavaScript library for visualizing data with HTML, SVG, and CSS)

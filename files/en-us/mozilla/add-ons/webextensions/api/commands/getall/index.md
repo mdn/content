@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.commands.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all commands for the extension that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
@@ -43,7 +44,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function logCommands(commands) {
-  commands.forEach(function(command) {
+  commands.forEach((command) => {
     console.log(command);
   });
 }
@@ -54,6 +55,6 @@ getCommands.then(logCommands);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/extensions/commands) API.
+> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

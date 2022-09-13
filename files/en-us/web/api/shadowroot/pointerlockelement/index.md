@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - mouse lock
 browser-compat: api.ShadowRoot.pointerLockElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`pointerLockElement`** property

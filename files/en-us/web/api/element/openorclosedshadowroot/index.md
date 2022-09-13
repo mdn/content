@@ -1,6 +1,7 @@
 ---
 title: Element.openOrClosedShadowRoot
 slug: Web/API/Element/openOrClosedShadowRoot
+page-type: web-api-instance-property
 tags:
   - API
   - Add-ons
@@ -13,9 +14,10 @@ tags:
   - Reference
   - WebExtensions
   - openOrClosedShadowRoot
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.openOrClosedShadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}{{non-standard_header}}
 
 > **Note:** This API is available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).

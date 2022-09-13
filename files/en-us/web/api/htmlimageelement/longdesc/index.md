@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.longDesc
 slug: Web/API/HTMLImageElement/longDesc
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -15,6 +16,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _deprecated_ property **`longDesc`** on
@@ -25,11 +27,11 @@ provide optional added details beyond the short description provided in the
 
 ## Value
 
-A {{domxref("DOMString")}} which may be either an empty string (indicating that no long
+A string which may be either an empty string (indicating that no long
 description is available) or the URL of a file containing a long form description of the
 image's contents.
 
-For example, if the image is a [PNG](/en-US/docs/Web/Media/Formats/Image_types#PNG_Portable_Network_Graphics) of a flowchart.
+For example, if the image is a [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) of a flowchart.
 The `longDesc` property could be used to provide an explanation of the flow
 of control represented by the chart, using only text. This can be used by readers both
 as an explanation, but also as a substitute for visually-impaired users.

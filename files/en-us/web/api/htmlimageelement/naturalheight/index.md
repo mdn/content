@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement
@@ -12,6 +13,7 @@ tags:
   - size
 browser-compat: api.HTMLImageElement.naturalHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} interface's
@@ -26,8 +28,7 @@ image height, it will be rendered this tall.
 
 > **Note:** Most of the time the natural height is the actual height of the image sent by the server.
 > Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-> [degrades the resolution of
-> images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
+> [degrades the resolution of images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
 > by such browser interventions as the natural height, and returns this value.
 
 ## Value
@@ -51,7 +52,7 @@ its rendered size as altered by the page's CSS and other factors.
 
 ```html
 <div class="box">
-  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
+  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image" alt="A round wall clock with a white dial and black numbers">
 </div>
 <div class="output">
 </div>
@@ -87,7 +88,7 @@ image will be drawn in is 200px wide, and the image will be drawn to fill its wi
 let output = document.querySelector(".output");
 let image = document.querySelector("img");
 
-window.addEventListener("load", event => {
+window.addEventListener("load", (event) => {
   output.innerHTML += `Natural size: ${image.naturalWidth} x ` +
                       `${image.naturalHeight} pixels<br>`;
   output.innerHTML += `Displayed size: ${image.width} x ` +
@@ -102,7 +103,7 @@ that the image is available before attempting to examine its width and height.
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 280)}}
+{{EmbedLiveSample("Examples", 600, 280)}}
 
 ## Specifications
 

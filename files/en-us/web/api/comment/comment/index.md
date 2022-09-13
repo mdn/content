@@ -1,11 +1,13 @@
 ---
 title: Comment()
 slug: Web/API/Comment/Comment
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
 browser-compat: api.Comment.Comment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Comment()`** constructor returns a newly created

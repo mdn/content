@@ -1,6 +1,7 @@
 ---
 title: PannerNode.coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -10,6 +11,7 @@ tags:
   - coneOuterAngle
 browser-compat: api.PannerNode.coneOuterAngle
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `coneOuterAngle` property of the {{ domxref("PannerNode") }} interface is a double value describing the angle, in degrees, of a cone outside of which the volume will be reduced by a constant value, defined by the {{domxref("PannerNode.coneOuterGain","coneOuterGain")}} property.
@@ -35,4 +37,4 @@ See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#exam
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

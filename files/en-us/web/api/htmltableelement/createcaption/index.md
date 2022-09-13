@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.createCaption()`** method returns the
@@ -25,14 +27,18 @@ it, and then returns it.
 ## Syntax
 
 ```js
-HTMLTableElement = table.createCaption();
+createCaption()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 {{domxref("HTMLTableCaptionElement")}}
 
-## Example
+## Examples
 
 This example uses JavaScript to add a caption to a table that initially lacks one.
 
@@ -55,7 +61,7 @@ caption.textContent = 'This caption was created by JavaScript!';
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

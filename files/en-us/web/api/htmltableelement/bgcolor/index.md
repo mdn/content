@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.bgColor
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.bgcolor`** property represents the
@@ -32,14 +34,13 @@ A string representing a color value.
 
 ```js
 // Set table background color to lightblue
-var t = document.getElementById('TableA');
+const t = document.getElementById('TableA');
 t.bgColor = 'lightblue';
 ```
 
 ## Specifications
 
-- [DOM Level 2
-  HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
+- [DOM Level 2 HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
 
 ## Browser compatibility
 

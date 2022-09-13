@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.threshold
 slug: Web/API/DynamicsCompressorNode/threshold
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode
@@ -10,6 +11,7 @@ tags:
   - threshold
 browser-compat: api.DynamicsCompressorNode.threshold
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `threshold` property of the {{ domxref("DynamicsCompressorNode") }} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.
@@ -27,8 +29,8 @@ An {{domxref("AudioParam")}}.
 ## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.value = -50;
 ```
 

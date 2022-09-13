@@ -8,6 +8,7 @@ tags:
   - Web
   - console
 ---
+
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
 ## Types of mixed content
@@ -52,7 +53,7 @@ Other resource types like web fonts and workers may be considered active mixed c
 
 ## Loading mixed-content resources
 
-Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
+Most browsers prevent _mixed active content_ from loading, and some also block _mixed display content_.
 
 ### Loading locally delivered mixed-resources
 
@@ -79,7 +80,7 @@ The Firefox Web Console displays a mixed content warning message in the Net pane
 
 ![Screen shot of the web console displaying a mixed content warning.](mixed_content_-_net_pane.png)
 
-As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](http://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
+As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](https://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
 
 Starting in Firefox 23, mixed active content is blocked by default (and mixed display content can be blocked by setting a preference). To make it easier for web developers to find mixed content errors, all blocked mixed content requests are logged to the Security pane of the Web Console, as seen below:
 

@@ -9,11 +9,14 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.rotate
 ---
+
 {{CSSRef}}
 
 The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
 fixed point on the 2D plane, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data
 type.
+
+{{EmbedInteractiveExample("pages/css/function-rotate.html")}}
 
 The fixed point that the element rotates around — mentioned above — is also known as the **transform
 origin**. This defaults to the center of the element, but you can set your own custom transform origin using
@@ -33,8 +36,8 @@ rotate(a)
 
 - _a_
   - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. The direction of rotation depends on the writing direction.
-      In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
-      a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
+    In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
+    a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
 
 <table class="standard-table">
   <thead>
@@ -292,4 +295,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d())
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

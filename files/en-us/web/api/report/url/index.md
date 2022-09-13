@@ -1,6 +1,7 @@
 ---
 title: Report.url
 slug: Web/API/Report/url
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -11,6 +12,7 @@ tags:
   - URL
 browser-compat: api.Report.url
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Report")}}
@@ -23,13 +25,12 @@ A string representing the URL of the document that generated the report.
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the URL of the document that generated the first report
   // e.g. "https://www.example.com/cats.html"
   console.log(firstReport.url);

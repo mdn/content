@@ -1,6 +1,7 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.classList
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.classList`** is a read-only property that

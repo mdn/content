@@ -7,13 +7,14 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feDisplacementMap
 ---
+
 {{SVGRef}}
 
 The **`<feDisplacementMap>`** [SVG](/en-US/docs/Web/SVG) filter primitive uses the pixel values from the image from {{SVGAttr("in2")}} to spatially displace the image from {{SVGAttr("in")}}.
 
 The formula for the transformation looks like this:
 
-`P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))`
+`P'(x,y) ← P(x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))`
 
 where `P(x,y)` is the input image, {{SVGAttr("in")}}, and `P'(x,y)` is the destination. `XC(x,y)` and `YC(x,y)` are the component values of the channel designated by {{SVGAttr("xChannelSelector")}} and {{SVGAttr("yChannelSelector")}}.
 

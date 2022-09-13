@@ -6,6 +6,7 @@ tags:
   - Guide
   - NeedsUpdate
 ---
+
 {{CSSRef}}
 
 One of the most common style changes made to lists is a change in the indentation distance—that is, how far the list items are pushed over to the right. This often leads to frustration, because what works in one browser often doesn't have the same effect in another. For example, if you declare that lists have no left margin, they move over in Internet Explorer, but sit stubbornly in place in Gecko-based browsers. This article will help you understand the problems that can occur and how to avoid them.
@@ -78,7 +79,7 @@ If you're more interested in following the Internet Explorer/Opera model, then:
 ul {margin-left: 40px; padding-left: 0;}
 ```
 
-Of course, you can fill in your preferred values. Set both to `1.25em`, if you like -- there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
+Of course, you can fill in your preferred values. Set both to `1.25em`, if you like — there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
 
 ```css
 ul {margin-left: 0; padding-left: 0;}

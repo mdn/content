@@ -1,6 +1,7 @@
 ---
 title: Element.ariaHasPopup
 slug: Web/API/Element/ariaHasPopup
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaHasPopup
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaHasPopup`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"false"`
   - : The element does not have a popup.

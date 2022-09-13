@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.author
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -18,6 +19,10 @@ browser-compat: webextensions.manifest.author
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>

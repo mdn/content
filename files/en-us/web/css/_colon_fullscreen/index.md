@@ -12,13 +12,16 @@ tags:
   - screen
 browser-compat: css.selectors.fullscreen
 ---
+
 {{CSSRef}}
 
 The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element which is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects them all.
 
 ## Syntax
 
-{{csssyntax}}
+```
+:fullscreen
+```
 
 ## Usage notes
 

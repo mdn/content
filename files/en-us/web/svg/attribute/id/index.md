@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.core.id
 ---
+
 {{SVGRef}}
 
 The **`id`** attribute assigns a unique name to an element.
@@ -16,7 +17,7 @@ You can use this attribute with any SVG element.
 
 ```html
 <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css">
+  <style>
     <![CDATA[
       #smallRect {
         stroke: #000066;
@@ -59,31 +60,7 @@ You can use this attribute with any SVG element.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#IDAttribute", "id")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Defines the allowed values in more detail.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

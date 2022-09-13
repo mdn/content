@@ -1,6 +1,7 @@
 ---
 title: AudioContext.baseLatency
 slug: Web/API/AudioContext/baseLatency
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - baseLatency
 browser-compat: api.AudioContext.baseLatency
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`baseLatency`** read-only property of the

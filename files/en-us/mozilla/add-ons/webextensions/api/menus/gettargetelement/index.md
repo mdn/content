@@ -10,6 +10,7 @@ tags:
   - menus
 browser-compat: webextensions.api.menus.getTargetElement
 ---
+
 {{AddonSidebar}}
 
 Returns the element for a given `targetElementId`

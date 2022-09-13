@@ -1,15 +1,18 @@
 ---
 title: SVGPoint
 slug: Web/API/SVGPoint
+page-type: web-api-interface
 tags:
   - API
   - DOM
   - NeedsContent
   - SVG
   - deprecated
+  - Deprecated
 browser-compat: api.SVGPoint
 ---
-{{APIRef("SVG")}}{{Deprecated_header}}
+
+{{APIRef("SVG")}}{{Deprecated_Header}}
 
 > **Warning:** `SVGPoint` is deprecated.
 > Use {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instead.

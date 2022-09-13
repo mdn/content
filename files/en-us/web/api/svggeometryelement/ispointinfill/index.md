@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInFill
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.isPointInFill()`** method determines
@@ -21,20 +23,20 @@ interpreted as a point in the local coordinate system of the element.
 ## Syntax
 
 ```js
-boolean someElement.isPointInFill(DOMPointInit point);
+isPointInFill(point)
 ```
 
 ### Parameters
 
-- point
-  - : An object interpreted as a point in the local coordinate system
+- `point`
+  - : A DOMPointInit object interpreted as a point in the local coordinate system
     of the element.
 
 ### Return value
 
 A boolean indicating whether the given point is within the fill or not.
 
-## Example
+## Examples
 
 ### SVG
 
@@ -52,18 +54,34 @@ A boolean indicating whether the given point is within the fill or not.
 ### JavaScript
 
 ```js
-var circle = document.getElementById('circle');
+const circle = document.getElementById('circle');
 
-// Point is outside
-console.log('Point at 10,10:', circle.isPointInFill(new DOMPoint(10, 10)));
+try {
+  // Point is outside
+  console.log('Point at 10,10:', circle.isPointInFill(new DOMPoint(10, 10)));
 
-// Point is inside
-console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));
+  // Point is inside
+  console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));
+} catch (e) {
+  // for the browsers that still support the deprecated interface SVGPoint
+  const svg = document.getElementsByTagName('svg')[0];
+  const point = svg.createSVGPoint();
+
+  // Point is outside
+  point.x = 10;
+  point.y = 10;
+  console.log('Point at 10,10: ', circle.isPointInFill(point));
+
+  // Point is inside
+  point.x = 40;
+  point.y = 30;
+  console.log('Point at 40,30: ', circle.isPointInFill(point));
+}
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example", "150", "150")}}
+{{EmbedLiveSample("Examples", "150", "155")}}
 
 ## Specifications
 

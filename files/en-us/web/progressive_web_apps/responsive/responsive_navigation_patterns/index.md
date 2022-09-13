@@ -8,6 +8,7 @@ tags:
   - Responsive Design
   - patterns
 ---
+
 Need some help designing your app's navigation? These patterns are a great place to start. The following present several ways to handle navigation on large and small screens. Top and left navigation menus are common on larger screens, but are often not the optimal way to present information on small screens because of the reduced screen real estate. Therefore, it is necessary to consider the presentation of content and ease of navigation for all screen sizes.
 
 ## Pattern 1: Top toggle menu
@@ -78,10 +79,10 @@ The main navigation is always on the left except in the smallest screen size, wh
 - **users may not notice the button** contains a navigation menu in the smallest screen size
 - **one more step** is needed to access the navigation items that are hidden
 
-![wide UI layout with vertical navigation menu down the left hand side](design_patterns-pattern9.gif)
+![wide UI layout with vertical navigation menu down the left-hand side](design_patterns-pattern9.gif)
 
-![moderate layout with vertical navigation down the left hand side and narrower content area](design_patterns-pattern10.gif)
+![moderate layout with vertical navigation down the left-hand side and narrower content area](design_patterns-pattern10.gif)
 
-![moderate but short layout with vertical navigation down the left hand side and narrower content area](design_patterns-pattern11.gif)
+![moderate but short layout with vertical navigation down the left-hand side and narrower content area](design_patterns-pattern11.gif)
 
-![narrow mobile layout with hidden left hand menu, which can be dragged onto the screen using a special button to reveal the menu options.](design_patterns-pattern12.gif)
+![narrow mobile layout with hidden left-hand menu, which can be dragged onto the screen using a special button to reveal the menu options.](design_patterns-pattern12.gif)

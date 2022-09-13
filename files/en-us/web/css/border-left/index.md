@@ -9,27 +9,28 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-left
 ---
+
 {{CSSRef}}
 
 The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
 
 {{EmbedInteractiveExample("pages/css/border-left.html")}}
 
-As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
+As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 
 ```css
 border-left-style: dotted;
 border-left: thick green;
 ```
 
-... is actually the same as ...
+It is actually the same as this one:
 
 ```css
 border-left-style: dotted;
 border-left: none thick green;
 ```
 
-... and the value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
+The value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 

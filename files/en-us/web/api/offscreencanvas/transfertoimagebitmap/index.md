@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas.transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas.transferToImageBitmap()`** method
@@ -19,8 +21,12 @@ the `OffscreenCanvas`.
 ## Syntax
 
 ```js
-ImageBitmap OffscreenCanvas.transferToImageBitmap()
+transferToImageBitmap()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -29,10 +35,10 @@ An {{domxref("ImageBitmap")}}.
 ## Examples
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
 offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }

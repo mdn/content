@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: css.selectors.in-range
 ---
+
 {{CSSRef}}
 
 The **`:in-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
@@ -27,7 +28,9 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ## Syntax
 
-{{csssyntax}}
+```
+:in-range
+```
 
 ## Examples
 

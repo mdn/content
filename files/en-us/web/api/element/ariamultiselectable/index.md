@@ -1,6 +1,7 @@
 ---
 title: Element.ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaMultiSelectable
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
@@ -19,7 +21,7 @@ The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface r
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : More than one item may be selected at a time.

@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.polyline
 ---
+
 {{SVGRef}}
 
 The **`<polyline>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape that creates straight lines connecting several points. Typically a `polyline` is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the {{SVGElement("polygon")}} element.
@@ -35,10 +36,10 @@ html,body,svg { height:100% }
 
 - {{SVGAttr('points')}}
   - : This attribute defines the list of points (pairs of x,y absolute coordinates) required to draw the polyline
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)+ ; *Default value*: `""`; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)+ ; _Default value_: `""`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : This attribute lets specify the total length for the path, in user units.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 

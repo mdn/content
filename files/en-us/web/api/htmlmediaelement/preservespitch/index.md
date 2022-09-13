@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLMediaElement.preservesPitch
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.preservesPitch`** property determines whether or not the browser should adjust the pitch of the audio to compensate for changes to the playback rate made by setting {{domxref("HTMLMediaElement.playbackRate")}}.
@@ -52,8 +54,11 @@ rate.addEventListener('input', () => audio.playbackRate = rate.value );
 
 const pitch = document.querySelector('#pitch');
 pitch.addEventListener('change', () => {
-  audio.mozPreservesPitch = pitch.checked;
-  audio.preservesPitch = pitch.checked;
+  if ('preservesPitch' in audio) {
+    audio.preservesPitch = pitch.checked;
+  } else if ('mozPreservesPitch' in audio) { //deprecated
+    audio.mozPreservesPitch = pitch.checked;
+  }
 });
 ```
 

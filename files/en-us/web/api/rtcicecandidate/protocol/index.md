@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.protocol
 slug: Web/API/RTCIceCandidate/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -14,6 +15,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`protocol`** property is a string
@@ -26,7 +28,7 @@ You can't specify the value of `protocol` directly in the options object, but it
 
 ## Value
 
-A {{domxref("DOMString")}} that indicates what network protocol the candidate uses:
+A string that indicates what network protocol the candidate uses:
 
 - `tcp`
   - : The candidate, if selected, would use {{Glossary("TCP")}} as the transport protocol for its data. The {{domxref("RTCIceCandidate.tcpType", "tcpType")}} property provides additional information about the kind of TCP candidate represented by the object.
@@ -54,9 +56,10 @@ look at the value of {{domxref("RTCIceCandidate.tcpType", "tcpType")}} to see if
 **simultaneous-open** (**S-O**) candidate.
 
 ```js
-if (candidate.protocol == "tcp") {
-  if (candidate.tcpType == "so") {
+if (candidate.protocol === "tcp") {
+  if (candidate.tcpType === "so") {
     adjustForSimultaneousOpen(candidate);
+  }
 }
 ```
 

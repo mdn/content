@@ -1,6 +1,7 @@
 ---
 title: XRSession.cancelAnimationFrame()
 slug: Web/API/XRSession/cancelAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -16,7 +17,8 @@ tags:
   - cancelAnimationFrame()
 browser-compat: api.XRSession.cancelAnimationFrame
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`cancelAnimationFrame()`** method of
 the {{domxref("XRSession")}} interface cancels an animation frame which was previously
@@ -38,13 +40,13 @@ cancelAnimationFrame(handle)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
 This function has no effect if the specified `handle` cannot be found.
 
-## Example
+## Examples
 
 In the example below we see code which starts up a WebXR session if immersive VR mode
 is supported. Once started, the session schedules its first frame to be rendered by

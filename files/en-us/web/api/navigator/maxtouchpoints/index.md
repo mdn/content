@@ -1,6 +1,7 @@
 ---
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.maxTouchPoints
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`maxTouchPoints`** read-only property of the

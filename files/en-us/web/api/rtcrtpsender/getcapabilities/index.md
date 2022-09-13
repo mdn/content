@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.getCapabilities() static function
 slug: Web/API/RTCRtpSender/getCapabilities
+page-type: web-api-static-method
 tags:
   - API
   - Audio
@@ -18,6 +19,7 @@ tags:
   - getCapabilities
 browser-compat: api.RTCRtpSender.getCapabilities
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The _static function_
@@ -31,13 +33,13 @@ calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 ## Syntax
 
 ```js
-let rtpCapabilities = RTCRtpSender.getCapabilities(kind);
+getCapabilities(kind) //static function
 ```
 
 ### Parameters
 
 - `kind`
-  - : A {{domxref("DOMString")}} indicating the type of media for which you wish to get
+  - : A string indicating the type of media for which you wish to get
     the sender's capability to receive. All browsers support the primary media kinds:
     `audio` and `video`.
 
@@ -71,7 +73,7 @@ user. For that reason, in privacy-sensitive contexts, the browser may choose to 
 the capabilities; this might be done, for example, by leaving out rarely-used codec
 configurations.
 
-## Example
+## Examples
 
 The function below returns a Boolean indicating whether or not the device supports
 sending H.264 video on an {{domxref("RTCRtpSender")}}.

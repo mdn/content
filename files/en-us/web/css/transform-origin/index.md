@@ -11,6 +11,7 @@ tags:
   - transform-origin
 browser-compat: css.properties.transform-origin
 ---
+
 {{ CSSRef }}
 
 The **`transform-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin for an element's transformations.
@@ -293,7 +294,7 @@ transform-origin: 100% -30%;
   transform: scale(1.7);
 }
 
-.box7  {
+.box7 {
   transform: scale(1.7);
   transform-origin: 0 0;
 }
@@ -315,6 +316,10 @@ transform-origin: 100% -30%;
 ```
 
 {{EmbedLiveSample('A_demonstration_of_various_transform_values', '', 1350) }}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

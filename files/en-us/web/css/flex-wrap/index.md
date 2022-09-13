@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-wrap
 ---
+
 {{ CSSRef}}
 
 The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
@@ -127,7 +128,7 @@ The following values are accepted:
 
 #### Results
 
-{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
 
 ## Specifications
 

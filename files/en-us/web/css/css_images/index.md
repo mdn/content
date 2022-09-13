@@ -12,6 +12,7 @@ spec-urls:
   - https://compat.spec.whatwg.org/#css-%3Cimage%3E-type
   - https://drafts.csswg.org/css-values/#urls
 ---
+
 {{CSSRef}}
 
 **CSS Images** is a module of CSS that defines what types of images can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.

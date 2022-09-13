@@ -8,6 +8,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.margin
 ---
+
 {{CSSRef}}
 
 The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
@@ -18,10 +19,10 @@ The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin 
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-right")}}
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
 
 ## Syntax
 

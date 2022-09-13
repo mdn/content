@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer.byteLength
 ---
+
 {{JSRef}}
 
 The **`byteLength`** accessor property represents the length of an {{jsxref("SharedArrayBuffer")}} in bytes.
@@ -24,7 +25,7 @@ The `byteLength` property is an accessor property whose set accessor function is
 ### Using byteLength
 
 ```js
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 sab.byteLength; // 1024
 ```
 

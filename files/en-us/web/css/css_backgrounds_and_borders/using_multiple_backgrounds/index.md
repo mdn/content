@@ -8,6 +8,7 @@ tags:
   - Guide
   - Reference
 ---
+
 {{CSSRef}}
 
 You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
@@ -16,7 +17,7 @@ Specifying multiple backgrounds is easy:
 
 ```css
 .myclass {
-  background: background1, background2, ..., backgroundN;
+  background: background1, background2, /* … ,*/ backgroundN;
 }
 ```
 
@@ -24,7 +25,7 @@ You can do this with both the shorthand {{ cssxref("background") }} property and
 
 ## Example
 
-In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient()):
+In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient):
 
 ### HTML
 

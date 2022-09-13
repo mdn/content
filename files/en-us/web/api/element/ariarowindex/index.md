@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRowIndex
 slug: Web/API/Element/ariaRowIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaRowIndex
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaRowIndex`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -70,4 +72,4 @@ console.log(el.ariaRowIndex); // 2
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

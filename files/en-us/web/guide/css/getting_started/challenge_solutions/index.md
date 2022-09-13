@@ -5,6 +5,7 @@ tags:
   - Beginner
   - NeedsUpdate
 ---
+
 This page provides solutions to the challenges posed in the [CSS Getting Started](/en-US/docs/Learn/CSS/First_steps) tutorial. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.
 
 ## Why use CSS
@@ -157,7 +158,7 @@ The challenges on page are:
   - : Add this rule to your stylesheet:
 
     ```css
-    p:before{
+    p::before {
       content: url("yellow-pin.png");
     }
     ```
@@ -191,7 +192,7 @@ The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
     ```css
     /* numbered headings */
     body {counter-reset: headnum;}
-    h3:before {
+    h3::before {
       content: "(" counter(headnum, upper-latin) ") ";
       counter-increment: headnum;
     }
@@ -212,7 +213,7 @@ The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
     ```css
     ul {
       border: 10px solid lightblue;
-      width:  100px;
+      width: 100px;
     }
     ```
 
@@ -236,8 +237,8 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
   - : The following rule achieves the desired result:
 
     ```css
-    #fixed-pin  {
-      position:fixed;
+    #fixed-pin {
+      position: fixed;
       top: 3px;
       right: 3px;
     }
@@ -257,13 +258,13 @@ The challenges on page [Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_ta
 
     ```css
     #demo-table tbody td {
-      border:1px solid #7a7;
+      border: 1px solid #7a7;
     }
     ```
 
 ## Media
 
-The challenges on page [Media](/en-US/docs/Web/Progressive_web_apps/Responsive/Media_types) are:
+The challenges on page [Media](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) are:
 
 ### Separate print style file
 
@@ -304,7 +305,7 @@ The challenges on page [Media](/en-US/docs/Web/Progressive_web_apps/Responsive/M
     ```js
     // JavaScript demonstration
     function doDemo (button) {
-      var square = document.getElementById("square");
+      const square = document.getElementById("square");
       square.style.backgroundColor = "#fa4";
       square.style.marginLeft = "20em";
       button.setAttribute("disabled", "true");
@@ -312,7 +313,7 @@ The challenges on page [Media](/en-US/docs/Web/Progressive_web_apps/Responsive/M
     }
 
     function clearDemo (button) {
-      var square = document.getElementById("square");
+      const square = document.getElementById("square");
       square.style.backgroundColor = "transparent";
       square.style.marginLeft = "0em";
       button.removeAttribute("disabled");

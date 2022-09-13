@@ -1,6 +1,7 @@
 ---
 title: SVGHKernElement
 slug: Web/API/SVGHKernElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGHKernElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGHKernElement`** interface corresponds to the {{SVGElement("hkern")}} elements.

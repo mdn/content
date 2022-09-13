@@ -9,10 +9,13 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.matrix3d
 ---
+
 {{CSSRef}}
 
 The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
 Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+
+{{EmbedInteractiveExample("pages/css/function-matrix3d.html")}}
 
 ## Syntax
 
@@ -257,5 +260,4 @@ body {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS
-  Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

@@ -1,6 +1,7 @@
 ---
 title: CSSMathProduct()
 slug: Web/API/CSSMathProduct/CSSMathProduct
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathProduct()`** constructor creates
@@ -26,7 +28,7 @@ new CSSMathProduct(args)
 
 ### Parameters
 
-- args
+- `args`
   - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 

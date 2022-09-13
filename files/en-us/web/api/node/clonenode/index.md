@@ -1,11 +1,13 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Node.cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`cloneNode()`** method of the {{domxref("Node")}} interface

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setMilliseconds
 ---
+
 {{JSRef}}
 
 The **`setMilliseconds()`** method sets the milliseconds for a
@@ -42,7 +43,7 @@ number of seconds is incremented by 1, and 5 is used for the milliseconds.
 ### Using setMilliseconds()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMilliseconds(100);
 ```
 

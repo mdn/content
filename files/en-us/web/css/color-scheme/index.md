@@ -16,6 +16,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.color-scheme
 ---
+
 {{CSSRef}}
 
 The **`color-scheme`** CSS property allows an element to indicate which color schemes it can comfortably be rendered in.
@@ -79,7 +80,7 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}

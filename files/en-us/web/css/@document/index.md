@@ -5,9 +5,12 @@ tags:
   - At-rule
   - CSS
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: css.at-rules.document
 ---
-{{CSSRef}}{{Deprecated_header}}
+
+{{CSSRef}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.
 
@@ -23,11 +26,16 @@ The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-
 
 An `@document` rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:
 
-- `url()`, which matches an exact URL.
-- `url-prefix()`, which matches if the document URL starts with the value provided.
-- `domain()`, which matches if the document URL is on the domain provided (or a subdomain of it).
-- `media-document()`, with the parameter of video, image, plugin or all.
-- `regexp()`, which matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
+- `url()`
+  - : Matches an exact URL.
+- `url-prefix()`
+  - : Matches if the document URL starts with the value provided.
+- `domain()`
+  - : Matches if the document URL is on the domain provided (or a subdomain of it).
+- `media-document()`
+  - : Matches the media according to the string in parameter, one of `video`, `image`, `plugin` or `all`.
+- `regexp()` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
 
 The values provided to the `url()`, `url-prefix()`, `domain()`, and `media-document()` functions can be optionally enclosed by single or double quotes. The values provided to the `regexp()` function _must_ be enclosed in quotes.
 
@@ -39,7 +47,16 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@document [ <url>                    |
+            url-prefix(<string>)     |
+            domain(<string>)         |
+            media-document(<string>) |
+            regexp(<string>)
+          ]# {
+  <group-rule-body>
+}
+```
 
 ## Examples
 
@@ -69,7 +86,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Specifications
 
-[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4 then removed.
+[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in Level 3, `@document` was [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4, but then subsequently removed.
 
 ## Browser compatibility
 
@@ -77,4 +94,4 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## See also
 
-- [Per-site user style sheet rules](http://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
+- [Per-site user style sheet rules](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.

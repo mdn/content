@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.padEnd
 ---
+
 {{JSRef}}
 
 The **`padEnd()`** method pads the current string with a given
@@ -68,5 +69,4 @@ A {{jsxref("String")}} of the specified `targetLength` with the
 
 - [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}
-- [A
-  polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

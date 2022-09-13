@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.a.target
 ---
+
 {{SVGRef}}
 
 The **`target`** attribute should be used when there are multiple possible targets for the ending resource, such as when the parent document is embedded within an HTML or XHTML document, or is viewed with a tabbed browser. This attribute specifies the name of the browsing context (e.g., a browser tab or an (X)HTML iframe or object element) into which a document is to be opened when the link is activated:
@@ -83,31 +84,7 @@ text {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "linking.html#AElementTargetAttribute", "target")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Removed the <code>_replace</code> value.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "linking.html#AElementTargetAttribute", "target")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

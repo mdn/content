@@ -1,6 +1,7 @@
 ---
 title: 'Element: msContentZoom event'
 slug: Web/API/Element/msContentZoom_event
+page-type: web-api-event
 tags:
   - Event
   - Event:Microsoft Extensions
@@ -9,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.Element.msContentZoom_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`msContentZoom`** event fires when a user zooms the element (changes the scale of the content).
 
 It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 
-Zoomed elements can expose their zoom level through `msContentZoom` (ie. scrollTop/Left). The zoom level can be reset with {{DOMxRef("Element.msZoomTo()")}}.
+Zoomed elements can expose their zoom level through `msContentZoom` (i.e. scrollTop/Left). The zoom level can be reset with {{DOMxRef("Element.msZoomTo()")}}.
 
 <table class="properties">
   <tbody>
@@ -41,7 +43,7 @@ Zoomed elements can expose their zoom level through `msContentZoom` (ie. scrollT
 ## Example
 
 ```js
-  contentZoom.addEventListener("MSContentZoom", function(e) {
+  contentZoom.addEventListener("MSContentZoom", (e) => {
      zoomFactor.value = contentZoom.msContentZoomFactor.toFixed(2);
   });
 ```

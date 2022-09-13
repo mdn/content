@@ -1,6 +1,7 @@
 ---
 title: SVGFEOffsetElement
 slug: Web/API/SVGFEOffsetElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEOffsetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEOffsetElement`** interface corresponds to the {{SVGElement("feOffset")}} element.

@@ -1,6 +1,7 @@
 ---
 title: CSSRotate.x
 slug: Web/API/CSSRotate/x
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.x
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`x`** property of the

@@ -16,6 +16,7 @@ tags:
   - Web
   - Web Performance
 ---
+
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
 The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
@@ -66,9 +67,9 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 ## Other documentation
 
-- [Developer Tools Performance Features](/en-US/docs/Tools/Performance)
-  - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](/en-US/docs/Tools/Performance/Waterfall), [Call Tree](/en-US/docs/Tools/Performance/Call_Tree), and [Flame Charts](/en-US/docs/Tools/Performance/Flame_Chart).
-- [Profiling with the built-in profiler](/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler)
+- [Firefox Profiler Performance Features](https://profiler.firefox.com/docs/#/)
+  - : This website provides information on how to use and understand the performance features in your developer tools, including [Call Tree](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-call-tree), [Flame Graph](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-flame-graph), [Stack Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-stack-chart), [Marker Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-marker-chart) and [Network Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-network-chart).
+- [Profiling with the built-in profiler](https://profiler.firefox.com/docs/#/./guide-getting-started)
   - : Learn how to profile app performance with Firefox's built-in profiler.
 
 ## Glossary Terms
@@ -182,10 +183,7 @@ Headers
 
 Tools
 
-- [Performance in Firefox Developer Tools](/en-US/docs/Tools/Performance)
-- Flame charts
-- The Network panel
-- Waterfall charts
+- [Performance in Firefox Developer Tools](https://profiler.firefox.com/docs/#/)
 
 Additional Metrics
 

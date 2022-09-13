@@ -8,6 +8,7 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
 In this article, we describe various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
 
 <table>
@@ -33,7 +34,7 @@ In this article, we describe various web-related concepts: web pages, websites, 
 
 ## Summary
 
-As with any area of knowledge, the web comes with a lot of jargon. Don't worry, we won't overwhelm you with all of it (we have a [glossary](/en-US/docs/Glossary) if you're curious). However, there are a few basic terms you need to understand at the outset, since you'll hear these expressions all the time as you read on. It's easy to confuse these terms sometimes since they refer to related but different functionalities. In fact, you'll sometimes see these terms misused in news reports and elsewhere, so getting them mixed up is understandable!
+As with any area of knowledge, the web comes with a lot of jargon. Don't worry. We won't overwhelm you with all of it (we have a [glossary](/en-US/docs/Glossary) if you're curious). However, there are a few basic terms you need to understand at the outset since you'll hear these expressions all the time as you read on. It's easy to mix these terms since they refer to related but different functionalities. You'll sometimes see these terms misused in news reports and elsewhere, so getting them mixed up is understandable.
 
 We'll cover these terms and technologies in more detail as we explore further, but these quick definitions will be a great start for you:
 
@@ -61,7 +62,7 @@ Let's compare the library with a web server:
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Deeper dive
 
@@ -83,7 +84,7 @@ All web pages available on the web are reachable through a unique address. To ac
 
 ### Web site
 
-A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portion of text—that allow the user to move from one page of the website to another.
+A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
 To access a website, type its domain name in your browser address bar, and the browser will display the website's main web page, or _homepage_ (casually referred as "the home"):
 
@@ -101,7 +102,7 @@ Don't confuse _websites_ and _web servers_. For example, if you hear someone say
 
 Search engines are a common source of confusion on the web. A search engine is a special kind of website that helps users find web pages from _other_ websites.
 
-There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized about certain topics. Use whichever you prefer.
+There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized about certain topics. Use whichever you prefer.
 
 Many beginners on the web confuse search engines and browsers. Let's make it clear: A **_browser_** is a piece of software that retrieves and displays web pages; a **_search engine_** is a website that helps people find web pages from other websites. The confusion arises because, the first time someone launches a browser, the browser displays a search engine's homepage. This makes sense, because, obviously, the first thing you want to do with a browser is to find a web page to display. Don't confuse the infrastructure (e.g., the browser) with the service (e.g., the search engine). The distinction will help you quite a bit, but even some professionals speak loosely, so don't feel anxious about it.
 

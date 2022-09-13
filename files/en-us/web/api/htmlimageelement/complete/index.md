@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
+page-type: web-api-instance-property
 tags:
   - API
   - Fetching
@@ -13,6 +14,7 @@ tags:
   - complete
 browser-compat: api.HTMLImageElement.complete
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} interface's
@@ -76,7 +78,7 @@ async function lightBox(url) {
   lightboxControlsElem.disabled = false;
 }
 
-/* ... */
+// …
 
 function fixRedEyeCommand() {
   if (lightboxElem.style.display === "block" && lightboxImgElem.complete) {

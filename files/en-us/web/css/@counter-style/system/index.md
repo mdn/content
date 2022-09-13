@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.system
 ---
+
 {{CSSRef}}
 
 The **`system`** descriptor specifies the algorithm to be used for converting the integer value of a counter to a string representation. It is used in a {{cssxref("@counter-style")}} to define the behavior of the defined style.
@@ -76,7 +77,17 @@ This may take one of three forms:
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+cyclic                             |
+numeric                            |
+alphabetic                         |
+symbolic                           |
+additive                           |
+[ fixed <integer>? ]               |
+[ extends <counter-style-name> ]
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 

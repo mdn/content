@@ -4,6 +4,7 @@ slug: Web/CSS/scroll-padding-block
 tags:
   - CSS
   - CSS Scroll Snap
+  - CSS Property
   - Reference
   - Web
   - recipe:css-shorthand-property
@@ -11,6 +12,7 @@ tags:
   - scroll-padding-block
 browser-compat: css.properties.scroll-padding-block
 ---
+
 {{CSSRef}}
 
 The `scroll-padding-block` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll padding of an element in the block dimension.

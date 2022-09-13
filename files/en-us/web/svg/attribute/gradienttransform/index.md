@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.linearGradient.gradientTransform
 ---
+
 {{SVGRef}}
 
 The `gradientTransform` attribute contains the definition of an optional additional transformation from the gradient coordinate system onto the target coordinate system (i.e., userSpaceOnUse or objectBoundingBox). This allows for things such as skewing the gradient. This additional transformation matrix is post-multiplied to (i.e., inserted to the right of) any previously defined transformations, including the implicit transformation necessary to convert from object bounding box units to user space.
@@ -70,52 +71,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Transforms", "#typedef-transform-list", "surfaceScale for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("CSS3 Transforms")}}</td>
-      <td>Defines the <code>&#x3C;transformation-list></code> value.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementGradientTransformAttribute", "gradientTransformation for &lt;linearGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementGradientTransformAttribute", "gradientTransformation for &lt;radialGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementGradientTransformAttribute", "gradientTransformation for &lt;linearGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#RadialGradientElementGradientTransformAttribute", "gradientTransformation for &lt;radialGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;radialGradient></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: CompressionStream()
 slug: Web/API/CompressionStream/CompressionStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,14 +9,15 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.CompressionStream
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+
+{{APIRef("Compression Streams API")}}
 
 The **`CompressionStream()`** constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.
 
 ## Syntax
 
 ```js
-new CompressionStream(format);
+new CompressionStream(format)
 ```
 
 ### Parameters
@@ -26,6 +28,7 @@ new CompressionStream(format);
 
     - `"gzip"`
     - `"deflate"`
+    - `"deflate-raw"`
 
 ## Exceptions
 

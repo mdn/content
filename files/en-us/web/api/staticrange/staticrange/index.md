@@ -1,6 +1,7 @@
 ---
 title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -11,6 +12,7 @@ tags:
   - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`StaticRange()`** constructor
@@ -59,7 +61,7 @@ the `rangeSpec` object.
     are `Node.DOCUMENT_TYPE_NODE` (representing the {{domxref("DocumentType")}}
     node derived from the {{Glossary("Doctype", "DTD")}} identified using the `doctype`
     preamble in the HTML, for example) and the {{domxref("Attr")}} node describing an
-    attribute of an element on the DOM..
+    attribute of an element on the DOM.
 
 ## Specifications
 

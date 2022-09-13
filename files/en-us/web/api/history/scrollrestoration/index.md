@@ -1,6 +1,7 @@
 ---
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.scrollRestoration
 ---
+
 {{APIRef("History API")}}
 
 The **`scrollRestoration`** property of {{DOMxRef("History")}}
@@ -18,7 +20,7 @@ on history navigation.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `auto`
   - : The location on the page to which the user has scrolled will be restored.
@@ -28,7 +30,7 @@ One of the followings:
 
 ## Examples
 
-### Query the current scroll restoration behavior.
+### Query the current scroll restoration behavior
 
 ```js
 const scrollRestoration = history.scrollRestoration

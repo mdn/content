@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.twist
 slug: Web/API/PointerEvent/twist
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - twist
 browser-compat: api.PointerEvent.twist
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`twist`** read-only property of the
@@ -26,12 +28,12 @@ inclusive. For devices that do not report `twist`, the value is
 
 ## Examples
 
-When a {{event("pointerdown")}} event is fired, different functions are called
+When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions are called
 depending on the value of the event's `twist` property.
 
 ```js
-someElement.addEventListener('pointerdown', function(event) {
-  if (event.twist == 0) {
+someElement.addEventListener('pointerdown', (event) => {
+  if (event.twist === 0) {
     // No twist
     process_no_twist(event);
   } else {

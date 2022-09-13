@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.grammar-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`::grammar-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.
@@ -47,7 +48,7 @@ In this example, eventual supporting browsers should highlight any flagged gramm
 #### CSS
 
 ```css
-::grammar-error  {
+::grammar-error {
   text-decoration: underline red;
   color: red;
 }

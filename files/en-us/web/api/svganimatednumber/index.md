@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedNumber
 slug: Web/API/SVGAnimatedNumber
+page-type: web-api-interface
 tags:
   - API
   - HTML
@@ -9,11 +10,12 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedNumber
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated number interface
 
-The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number>](/en-US/docs/Web/SVG/Content_type#Number) which can be animated.
+The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number>](/en-US/docs/Web/SVG/Content_type#number) which can be animated.
 
 ### Interface overview
 

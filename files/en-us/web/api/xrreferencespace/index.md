@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace
 slug: Web/API/XRReferenceSpace
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -22,6 +23,7 @@ tags:
   - transform
 browser-compat: api.XRReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](#reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
@@ -32,7 +34,7 @@ All reference spaces—with the sole exception being bounded reference spaces—
 
 ## Properties
 
-_`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
+_`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
 ## Methods
 
@@ -71,7 +73,7 @@ There are two situations in which you need to obtain an `XRReferenceSpace`. The 
 ```js
 xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
-  /* ... */
+  // …
 });
 ```
 

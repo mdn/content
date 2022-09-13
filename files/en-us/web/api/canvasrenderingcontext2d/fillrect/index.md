@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.fillRect
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +26,7 @@ on it.
 ## Syntax
 
 ```js
-void ctx.fillRect(x, y, width, height);
+fillRect(x, y, width, height)
 ```
 
 The `fillRect()` method draws a filled rectangle whose starting point is at
@@ -42,6 +44,10 @@ attribute.
   - : The rectangle's width. Positive values are to the right, and negative to the left.
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

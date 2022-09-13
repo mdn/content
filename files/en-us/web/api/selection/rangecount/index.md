@@ -1,6 +1,7 @@
 ---
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -10,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.rangeCount
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.rangeCount`** read-only property returns the
@@ -48,7 +50,7 @@ in the browser to see it change.
 ### JavaScript
 
 ```js
-window.setInterval(function () {
+setInterval(() => {
   console.log(window.getSelection().rangeCount);
 }, 1000);
 ```
@@ -59,7 +61,7 @@ Open your console to see how many ranges are in the selection. In Gecko browsers
 can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
 dragging with the mouse.
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

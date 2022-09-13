@@ -4,7 +4,6 @@ slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
-  - Experimental
   - NeedsBrowserCompatibility
   - NeedsContent
   - NeedsExample
@@ -15,6 +14,7 @@ tags:
   - Web
 browser-compat: css.selectors.where
 ---
+
 {{CSSRef}}
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
@@ -46,7 +46,7 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 
 ```css
 :where(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
@@ -54,7 +54,7 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 
 ```css
 :valid, :unsupported {
-  ...
+  /* … */
 }
 ```
 
@@ -72,30 +72,30 @@ Take the following HTML:
 <article>
   <h2>:is()-styled links</h2>
   <section class="is-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.</p>
   </section>
 
   <aside class="is-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.</p>
   </aside>
 
   <footer class="is-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.</p>
   </footer>
 </article>
 
 <article>
   <h2>:where()-styled links</h2>
   <section class="where-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.</p>
   </section>
 
   <aside class="where-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.</p>
   </aside>
 
   <footer class="where-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.</p>
   </footer>
 </article>
 ```
@@ -137,7 +137,9 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:where( <complex-selector-list> )
+```
 
 ## Specifications
 

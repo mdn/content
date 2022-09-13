@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.keyframes
 ---
+
 {{CSSRef}}
 
 The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than [transitions](/en-US/docs/Web/CSS/CSS_Transitions).
@@ -39,11 +40,11 @@ The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the int
 
 ## Description
 
-JavaScript can access the `@keyframes` at-rule with the CSS object model interface {{domxref("CSSKeyframesRule")}}.
-
 To use keyframes, create a `@keyframes` rule with a name that is then used by the {{ cssxref("animation-name") }} property to match an animation to its keyframe declaration. Each `@keyframes` rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyframe.
 
 You can list the keyframe percentages in any order; they will be handled in the order they should occur.
+
+JavaScript can access the `@keyframes` at-rule with the CSS object model interface {{domxref("CSSKeyframesRule")}}.
 
 ### Valid keyframe lists
 
@@ -110,7 +111,9 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@keyframes <keyframes-name> { <rule-list> }
+```
 
 ## Examples
 

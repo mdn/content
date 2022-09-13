@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.url
 slug: Web/API/RTCIceCandidateStats/url
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -20,6 +21,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidateStats.url
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
@@ -29,7 +31,7 @@ property is _only_ available for local candidates.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the URL of the ICE server from which the
+A string specifying the URL of the ICE server from which the
 candidate described by the `RTCIceCandidateStats` was obtained. This is the
 same URL that would be received in the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event's
 {{domxref("RTCPeerConnectionIceEvent.url", "url")}} property.

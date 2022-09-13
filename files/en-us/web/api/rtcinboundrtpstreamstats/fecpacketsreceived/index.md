@@ -1,8 +1,10 @@
 ---
 title: RTCInboundRtpStreamStats.fecPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.fecPacketsReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`fecPacketsReceived`** property
@@ -17,7 +19,7 @@ transit.
 ## Syntax
 
 ```js
-var fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived;
+const fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived;
 ```
 
 ### Value

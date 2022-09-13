@@ -1,6 +1,7 @@
 ---
-title: AudioWorkletGlobalScope.registerProcessor
+title: AudioWorkletGlobalScope.registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`registerProcessor`** method of the
@@ -20,7 +22,7 @@ from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 ## Syntax
 
 ```js
-AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
+registerProcessor(name, processorCtor)
 ```
 
 ### Parameters
@@ -38,7 +40,7 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -50,7 +52,7 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
     - A constructor under the given _name_ is already registered. Registering
       the same name twice is not allowed.
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
 
   - : Thrown under the following conditions:
 

@@ -13,6 +13,7 @@ tags:
   - interactivity
   - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way, and ending up with an app in which we can successfully add and delete tasks, and toggle tasks as completed.
@@ -73,7 +74,7 @@ In the above example, we're adding an `onClick` attribute to the `<button>` elem
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 
-- The camel-cased nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) handler properties).
+- The camel-cased nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
 - All browser events follow this format in JSX – `on`, followed by the name of the event.
 
 Let's apply this to our app, starting in the `Form.js` component.
@@ -136,11 +137,11 @@ Clicking on the "Add" button in your browser will prove that the `addTask()` cal
 
 So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with user input and data updates, however, we need something more.
 
-For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />`  element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
+For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />` element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
-To use a React hook, we need to import it from the react module. In `Form.js`, change your very first line so that it reads like this:
+To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
 
 ```js
 import React, { useState } from "react";
@@ -307,15 +308,14 @@ const [tasks, setTasks] = useState(props.tasks);
 Now, we can change our `taskList` mapping so that it is the result of mapping `tasks`, instead of `props.tasks`. Your `taskList` constant declaration should now look like so:
 
 ```js
-const taskList = tasks.map(task => (
-    <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+const taskList = tasks.map((task) => (
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 ### Adding a task
@@ -330,14 +330,14 @@ Putting that all together, your `addTask()` function should read like so:
 
 ```js
 function addTask(name) {
-  const newTask = { id: "id", name: name, completed: false };
+  const newTask = { id: "id", name, completed: false };
   setTasks([...tasks, newTask]);
 }
 ```
 
 Now you can use the browser to add a task to our data! Type anything into the form and click "Add" (or press the <kbd>Enter</kbd> key) and you'll see your new todo item appear in the UI!
 
-**However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key..."
+**However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key…"
 
 We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
 
@@ -358,7 +358,7 @@ import { nanoid } from "nanoid";
 Now let's update `addTask()` so that each task ID becomes a prefix todo- plus a unique string generated by nanoid. Update your `newTask` constant declaration to this:
 
 ```js
-const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
+const newTask = { id: `todo-${nanoid()}`, name, completed: false };
 ```
 
 Save everything, and try your app again — now you can add tasks without getting that warning about duplicate IDs.
@@ -407,7 +407,7 @@ function toggleTaskCompleted(id) {
 Next, we'll add `toggleTaskCompleted` to the props of each `<Todo />` component rendered inside our `taskList`; update it like so:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
   <Todo
       id={task.id}
       name={task.name}
@@ -431,7 +431,7 @@ Next, go over to your `Todo.js` component and add an `onChange` handler to your 
 
 Save everything and return to your browser and notice that our first task, Eat, is checked. Open your JavaScript console, then click on the checkbox next to Eat. It unchecks, as we expect. Your JavaScript console, however, will log something like this:
 
-```js
+```
 Object { id: "task-0", name: "Eat", completed: true }
 ```
 
@@ -445,7 +445,7 @@ Update your `toggleTaskCompleted()` function to the following:
 
 ```js
 function toggleTaskCompleted(id) {
-  const updatedTasks = tasks.map(task => {
+  const updatedTasks = tasks.map((task) => {
     // if this task has the same ID as the edited task
     if (id === task.id) {
       // use object spread to make a new object
@@ -458,7 +458,7 @@ function toggleTaskCompleted(id) {
 }
 ```
 
-Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)  to create a new object, and toggle the `checked` property of that object before returning it. If it doesn't match, we return the original object.
+Here, we define an `updatedTasks` constant that maps over the original `tasks` array. If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create a new object, and toggle the `completed` property of that object before returning it. If it doesn't match, we return the original object.
 
 Then we call `setTasks()` with this new array in order to update our state.
 
@@ -479,7 +479,7 @@ function deleteTask(id) {
 Next, add another callback prop to our array of `<Todo />` components:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -517,7 +517,7 @@ Update the `deleteTask()` function inside your `App.js` file as follows:
 
 ```js
 function deleteTask(id) {
-  const remainingTasks = tasks.filter(task => id !== task.id);
+  const remainingTasks = tasks.filter((task) => id !== task.id);
   setTasks(remainingTasks);
 }
 ```

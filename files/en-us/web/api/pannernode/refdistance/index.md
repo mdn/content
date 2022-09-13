@@ -1,6 +1,7 @@
 ---
 title: PannerNode.refDistance
 slug: Web/API/PannerNode/refDistance
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -10,6 +11,7 @@ tags:
   - refDistance
 browser-compat: api.PannerNode.refDistance
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `refDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
@@ -18,12 +20,12 @@ The `refDistance` property's default value is `1`.
 
 ## Value
 
-A non-negative number. If the value is set to less than 0, a `RangeError` is thrown.
+A non-negative number. If the value is set to less than 0, a {{jsxref("RangeError")}} is thrown.
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
 ## Examples
 
@@ -79,4 +81,4 @@ After running this code, the resulting waveforms should look something like this
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.501
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`501 Not Implemented`** server error response code means that **the server does not support the functionality required to fulfill the request**.

@@ -7,9 +7,10 @@ tags:
   - NeedsContent
   - XML
 ---
+
 XML (Extensible Markup Language) is a markup language similar to {{Glossary("HTML")}}, but without predefined tags to use. Instead, you define your own tags designed specifically for your needs. This is a powerful way to store data in a format that can be stored, searched, and shared. Most importantly, since the fundamental format of XML is standardized, if you share or transmit XML across systems or platforms, either locally or over the internet, the recipient can still parse the data due to the standardized XML syntax.
 
-There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XHTML), [MathML](/en-US/docs/Web/MathML), [SVG](/en-US/docs/Web/SVG), [XUL](/en-US/docs/Mozilla/Tech/XUL), [XBL](/en-US/docs/Mozilla/Tech/XBL), [RSS](/en-US/docs/Web/RSS), and [RDF](/en-US/docs/Web/RDF). You can also define your own.
+There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XHTML), [MathML](/en-US/docs/Web/MathML), [SVG](/en-US/docs/Web/SVG), [RSS](/en-US/docs/Glossary/RSS), and [RDF](/en-US/docs/Glossary/RDF). You can also define your own.
 
 ## Structure of an XML document
 
@@ -76,13 +77,13 @@ Most browsers offer a debugger that can identify poorly-formed XML documents.
 
 Like HTML, XML offers methods (called entities) for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
 
-| Entity | Character | Description                               |
-| ------ | --------- | ----------------------------------------- |
-| &lt;   | <         | Less than sign                            |
-| &gt;   | >         | Greater than sign                         |
-| &amp;  | &         | Ampersand                                 |
-| &quot; | "         | One double-quotation mark                 |
-| &apos; | '         | One apostrophe (or single-quotation mark) |
+| Entity     | Character | Description                               |
+| ---------- | --------- | ----------------------------------------- |
+| &amp;lt;   | <         | Less than sign                            |
+| &amp;gt;   | >         | Greater than sign                         |
+| &amp;amp;  | &         | Ampersand                                 |
+| &amp;quot; | "         | One double-quotation mark                 |
+| &amp;apos; | '         | One apostrophe (or single-quotation mark) |
 
 Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 

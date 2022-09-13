@@ -13,6 +13,7 @@ tags:
   - application/json
   - application/xml
 ---
+
 {{HTTPSidebar}}
 
 A **media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
@@ -119,7 +120,7 @@ There are two multipart types:
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
 - `multipart`
   - : Data that consists of multiple components which may individually have different MIME types.
-    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
+    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "", "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
     "Partial Content" response returned when the fetched data is only part of the content, such as is delivered using the {{HTTPHeader("Range")}} header).
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
 
@@ -152,11 +153,11 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 
 ### text/javascript
 
-Per the current relevant standards, JavaScript content should always be served using the MIME type `text/javascript`.
-No other MIME types are considered valid for JavaScript, and using any MIME type other than`text/javascript` may result in scripts that do not load or run.
+Per the [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript), JavaScript content should always be served using the MIME type `text/javascript`.
+No other MIME types are considered valid for JavaScript, and using any MIME type other than `text/javascript` may result in scripts that do not load or run.
 
 You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
-That `charset` parameter isn’t valid for JavaScript content, and in most cases will result in a script failing to load.
+That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
 
 #### Legacy JavaScript MIME types
 
@@ -198,7 +199,7 @@ The following image types are used commonly enough to be considered _safe_ for u
 - [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
 - [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
 
-The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types##common_image_file_types) provides information and recommendations about when to use the different image formats.
+The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 
@@ -233,7 +234,7 @@ The `multipart/form-data` type can be used when sending the values of a complete
 As a multipart document format, it consists of different parts, delimited by a boundary (a string starting with a double dash `--`).
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
 
-```
+```http
 Content-Type: multipart/form-data; boundary=aBoundaryString
 (other headers associated with the multipart document as a whole)
 
@@ -300,7 +301,7 @@ When the {{HTTPStatus("206", "206 Partial Content")}} status code is sent, this 
 requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}} uses a `boundary` to separate the pieces.
 Each piece has a {{HTTPHeader("Content-Type")}} header with its actual type and a {{HTTPHeader("Content-Range")}} of the range it represents.
 
-```
+```http
 HTTP/1.1 206 Partial Content
 Accept-Ranges: bytes
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5

@@ -9,6 +9,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.add
 ---
+
 {{JSRef}}
 
 The **`add()`** method appends a new object to the end of a
@@ -36,7 +37,7 @@ The `WeakSet` object.
 ### Using add
 
 ```js
-var ws = new WeakSet();
+const ws = new WeakSet();
 
 ws.add(window); // add the window object to the WeakSet
 

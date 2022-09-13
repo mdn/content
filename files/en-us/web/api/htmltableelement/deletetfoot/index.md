@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteTFoot()`** method removes the
@@ -18,10 +20,18 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 ## Syntax
 
 ```js
-HTMLTableElement.deleteTFoot();
+deleteTFoot()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example uses JavaScript to delete a table's footer.
 
@@ -45,7 +55,7 @@ table.deleteTFoot();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.pointer-events
 ---
+
 {{SVGRef}}
 
 The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
@@ -69,14 +70,14 @@ html,body,svg { height:100% }
 ```js
 window.addEventListener('mouseup', (e) => {
   // Let's pick a random color between #000000 and #FFFFFF
-  const color = Math.round(Math.random() * 0xFFFFFF)
+  const color = Math.round(Math.random() * 0xFFFFFF);
 
   // Let's format the color to fit CSS requirements
-  const fill = '#' + color.toString(16).padStart(6,'0')
+  const fill = `#${color.toString(16).padStart(6, '0')}`;
 
   // Let's apply our color in the
   // element we actually clicked on
-  e.target.style.fill = fill
+  e.target.style.fill = fill;
 })
 ```
 
@@ -106,35 +107,11 @@ window.addEventListener('mouseup', (e) => {
   </tbody>
 </table>
 
-*For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation.*
+_For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation._
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "interact.html#PointerEventsProperty", "pointer-events")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "interact.html#PointerEventsProperty", "pointer-events")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.sourceBuffer
 slug: Web/API/VideoTrack/sourceBuffer
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.sourceBuffer
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrack")}}**

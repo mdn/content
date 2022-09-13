@@ -1,6 +1,7 @@
 ---
 title: Element.ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaReadOnly
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
@@ -19,7 +21,7 @@ The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The user cannot change the value of the element.

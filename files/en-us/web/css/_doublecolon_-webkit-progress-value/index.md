@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-progress-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the filled-in portion of the bar of a {{HTMLElement("progress")}} element. It is a child of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.
@@ -51,7 +52,7 @@ progress {
 
 A progress bar using the style above would look like this:
 
-![](progress-value.png)
+![A long orange and grey box. The left 20% is orange. The right 80% is grey.](progress-value.png)
 
 ## Specifications
 

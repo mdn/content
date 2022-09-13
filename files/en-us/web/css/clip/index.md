@@ -10,7 +10,8 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.clip
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{Deprecated_Header}}
 
 The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of an element. The `clip` property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: MediaError.code
 slug: Web/API/MediaError/code
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - Video
 browser-compat: api.MediaError.code
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.code`** returns a numeric
@@ -26,7 +28,7 @@ string with specific diagnostic information, see {{domxref("MediaError.message")
 A numeric value indicating the general type of error which occurred. The possible
 values are described below, in [Media error code constants](#media_error_code_constants).
 
-#### Media error code constants
+### Media error code constants
 
 <table class="no-markdown">
   <thead>
@@ -80,8 +82,8 @@ for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute t
 video resource to present in the element. The error handler outputs a message
 
 ```js
-var obj = document.createElement('video');
-obj.onerror = function() {console.log("Error with media: " + obj.error.code);}
+const obj = document.createElement('video');
+obj.onerror = () => {console.error(`Error with media: ${obj.error.code}`);}
 obj.src="https://example.com/blahblah.mp4";
 ```
 

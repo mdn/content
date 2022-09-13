@@ -9,12 +9,13 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translateY
 ---
+
 {{CSSRef}}
 
 The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element vertically on the 2D plane. Its result
 is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](translatey.png)
+{{EmbedInteractiveExample("pages/css/function-translateY.html")}}
 
 > **Note:** `translateY(ty)` is equivalent to
 > `translate(0, ty)` or

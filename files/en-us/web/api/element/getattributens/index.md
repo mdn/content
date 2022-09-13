@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getAttributeNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttributeNS()`** method of the {{domxref("Element")}}
@@ -20,7 +22,7 @@ details.
 ## Syntax
 
 ```js
-attrVal = element.getAttributeNS(namespace, name)
+getAttributeNS(namespace, name)
 ```
 
 ### Parameters
@@ -52,21 +54,25 @@ custom namespace.
   <circle id="target" cx="12" cy="12" r="10" stroke="#444"
       stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
-  <script type="text/javascript">
-    var ns = 'http://www.example.com/2014/test';
-    var circle = document.getElementById( 'target' );
+  <script>
+    const ns = 'http://www.example.com/2014/test';
+    const circle = document.getElementById('target');
 
-    console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
+    console.log(`attribute test:foo: "${circle.getAttributeNS(ns, 'foo')}"`);
   </script>
 </svg>
 ```
 
-In an HTML5 document the attribute has to be accessed with `test:foo` since
+In an HTML document the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>getAttributeNS() test page</title>
+</head>
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -75,10 +81,10 @@ namespaces are not supported.
       fill="none" test:foo="Foo value"/>
 </svg>
 
-<script type="text/javascript">
-  var ns = 'http://www.example.com/2014/test';
-  var circle = document.getElementById( 'target' );
-  console.log('Attribute value: ' + circle.getAttribute('test:foo'));
+<script>
+  const ns = 'http://www.example.com/2014/test';
+  const circle = document.getElementById('target');
+  console.log(`Attribute value: ${circle.getAttribute('test:foo')}`);
 </script>
 
 </body>
@@ -87,7 +93,7 @@ namespaces are not supported.
 
 ## Notes
 
-Namespaces are only supported in XML documents. HTML5 documents have to use
+Namespaces are only supported in XML documents. HTML documents have to use
 `getAttribute()` instead.
 
 `getAttributeNS()` differs from {{domxref("element.getAttribute()",
@@ -115,5 +121,4 @@ requested attribute does not exist on the specified element.
 
 ## See also
 
-- [Code
-  snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)
+- [Code snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)

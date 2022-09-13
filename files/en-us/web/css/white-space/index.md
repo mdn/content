@@ -10,6 +10,7 @@ tags:
   - white-space
 browser-compat: css.properties.white-space
 ---
+
 {{CSSRef}}
 
 The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
@@ -140,7 +141,7 @@ The following table summarizes the behavior of the various `white-space` values:
 
 ## Collapsing of white space
 
-The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text-3/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
 
 ## Formal definition
 
@@ -222,10 +223,10 @@ pre {
 ```
 
 ```js hidden
-var select  = document.querySelector("#css-code select");
-var results = document.querySelector("#results p");
-select.addEventListener("change", function(e) {
-  results.setAttribute("style", "white-space: "+e.target.value);
+const select  = document.querySelector("#css-code select");
+const results = document.querySelector("#results p");
+select.addEventListener("change", (e) => {
+  results.setAttribute("style", `white-space: ${e.target.value}`);
 })
 ```
 

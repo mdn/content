@@ -1,6 +1,7 @@
 ---
 title: RTCError.receivedAlert
 slug: Web/API/RTCError/receivedAlert
+page-type: web-api-instance-property
 tags:
   - API
   - DTLS
@@ -16,6 +17,7 @@ tags:
   - receivedAlert
 browser-compat: api.RTCError.receivedAlert
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} read-only property

@@ -11,23 +11,18 @@ tags:
   - Web
 browser-compat: css.selectors.read-only
 ---
+
 {{CSSRef}}
 
 The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is not editable by the user.
 
-```css
-input:read-only, textarea:read-only {
-  background-color: #ccc;
-}
-
-p:read-only {
-  background-color: #ccc;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-only.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```
+:read-only
+```
 
 ## Examples
 
@@ -35,7 +30,7 @@ p:read-only {
 
 One use of `readonly` form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. We do just this in the example below.
 
-The `:read-only` pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs.The `:read-write` pseudo-class on the other hand is used to provide some nicer styling to the editable `<textarea>`.
+The `:read-only` pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs. The `:read-write` pseudo-class on the other hand is used to provide some nicer styling to the editable `<textarea>`.
 
 ```css
 input:-moz-read-only, textarea:-moz-read-only,

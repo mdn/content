@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getInt32
 ---
+
 {{JSRef}}
 
 The **`getInt32()`** method gets a signed 32-bit integer (long)
@@ -51,8 +52,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getInt32 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getInt32(1); // 0
 ```
 

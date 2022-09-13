@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.
@@ -21,7 +22,7 @@ Now we're ready to start distorting our beautiful images. But first, let's forma
 </svg>
 ```
 
-{{ EmbedLiveSample('Example', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
+{{ EmbedLiveSample('Example', '', '100') }}
 
 All following transformations are summed up in an element's `transform` attribute. Transformations can be chained by concatenating them, separated by whitespace.
 
@@ -37,9 +38,9 @@ It may be necessary to move an element around, even though you can position it w
 
 The example will render a rectangle, translated to the point (30,40) instead of (0,0).
 
-{{ EmbedLiveSample('Translation', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
+{{ EmbedLiveSample('Translation', '', '100') }}
 
-If the second value is not given, it is assumed to be *0*.
+If the second value is not given, it is assumed to be _0_.
 
 ## Rotation
 
@@ -53,7 +54,7 @@ Rotating an element is quite a common task. Use the `rotate()` transformation fo
 
 This example shows a square that is rotated by 45 degrees. The value for `rotate()` is given in degrees.
 
-{{ EmbedLiveSample('Rotation', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
+{{ EmbedLiveSample('Rotation', '', '100') }}
 
 ## Multiple transformations
 
@@ -73,7 +74,7 @@ To make a rhombus out of our rectangle, the `skewX()` and `skewY()` transformati
 
 ## Scaling
 
-`scale()` changes the size of an element. It takes two numbers, the first being the *x* scale factor and the second being the *y* scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, *0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first.*
+`scale()` changes the size of an element. It takes two numbers, the first being the _x_ scale factor and the second being the _y_ scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, _0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first._
 
 ## Complex transformations with `matrix()`
 
@@ -97,7 +98,7 @@ When using transformations you establish a new coordinate system inside the elem
 
 The resulting rectangular in the above example will be 100x100px. The more intriguing effects arise, when you rely on attributes like `userSpaceOnUse` and the such.
 
-{{ EmbedLiveSample('Effects_on_Coordinate_Systems', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
+{{ EmbedLiveSample('Effects_on_Coordinate_Systems', '', '150') }}
 
 ## Embedding SVG in SVG
 
@@ -113,6 +114,6 @@ In contrast to HTML, SVG allows you to embed other `svg` elements seamlessly. Th
 
 The example above has basically the same effect as the one above, namely that the rect will be twice as large as specified.
 
-{{ EmbedLiveSample('Embedding_SVG_in_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
+{{ EmbedLiveSample('Embedding_SVG_in_SVG', '100', '150') }}
 
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}

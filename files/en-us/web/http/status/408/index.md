@@ -7,7 +7,9 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
@@ -33,9 +35,7 @@ use HTTP pre-connection mechanisms to speed up surfing.
 
 ## Specifications
 
-| Specification                                                    | Title                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

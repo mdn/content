@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.properties
 slug: Web/API/BluetoothRemoteGATTCharacteristic/properties
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -12,7 +13,8 @@ tags:
   - properties
 browser-compat: api.BluetoothRemoteGATTCharacteristic.properties
 ---
-{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.properties`**
 read-only property returns a {{domxref('BluetoothCharacteristicProperties')}} instance

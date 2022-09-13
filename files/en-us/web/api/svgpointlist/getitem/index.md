@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.getItem()
 slug: Web/API/SVGPointList/getItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.getItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`getItem()`** method of the {{domxref("SVGPointList")}} interface gets one item from the list at the specified index.
@@ -16,7 +18,7 @@ The **`getItem()`** method of the {{domxref("SVGPointList")}} interface gets one
 ## Syntax
 
 ```js
-SVGPointList.getItem(index);
+getItem(index)
 ```
 
 ### Parameters

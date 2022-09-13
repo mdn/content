@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.rotate3d
 ---
+
 {{CSSRef}}
 
 The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
@@ -20,7 +21,7 @@ In 3D space, rotations have three degrees of liberty, which together describe a 
 rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
 property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three
 coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
-the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invaliding the whole CSS property.
+the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invalidating the whole CSS property.
 
 > **Note:** Unlike rotations in the 2D plane, the composition of 3D rotations is usually
 > not commutative. In other words, the order in which the rotations are applied impacts the result.

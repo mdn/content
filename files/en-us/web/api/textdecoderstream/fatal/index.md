@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.fatal
 slug: Web/API/TextDecoderStream/fatal
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.fatal
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`fatal`** read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref("boolean")}} indicating if the error mode of the `TextDecoderStream` object is set to `fatal`.

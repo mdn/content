@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.list-style-type
 ---
+
 {{CSSRef}}
 
 The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.
@@ -78,7 +79,7 @@ Note that:
   - : A filled square.
 - `decimal`
   - : Decimal numbers, beginning with 1.
-- `cjk-decimal` {{experimental_inline}}
+- `cjk-decimal`
   - : Han decimal numbers.
 - `decimal-leading-zero`
   - : Decimal numbers, padded by initial zeros.
@@ -104,11 +105,11 @@ Note that:
   - : Han "Earthly Branch" ordinals.
 - `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
   - : Han "Heavenly Stem" ordinals.
-- `cjk-ideographic`{{experimental_inline}}
+- `cjk-ideographic`
   - : Identical to `trad-chinese-informal`.
 - `devanagari`, `-moz-devanagari`
   - : Devanagari numbering.
-- `ethiopic-numeric` {{experimental_inline}}
+- `ethiopic-numeric`
   - : Ethiopic numbering.
 - `georgian`
   - : Traditional Georgian numbering.
@@ -116,63 +117,63 @@ Note that:
   - : Gujarati numbering.
 - `gurmukhi`, `-moz-gurmukhi`
   - : Gurmukhi numbering.
-- `hebrew` {{experimental_inline}}
+- `hebrew`
   - : Traditional Hebrew numbering
-- `hiragana` {{experimental_inline}}
+- `hiragana`
   - : Dictionary-order hiragana lettering.
-- `hiragana-iroha` {{experimental_inline}}
-  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} hiragana lettering
-- `japanese-formal` {{experimental_inline}}
+- `hiragana-iroha`
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering
+- `japanese-formal`
   - : Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.
-- `japanese-informal` {{experimental_inline}}
+- `japanese-informal`
   - : Japanese informal numbering.
 - `kannada`, `-moz-kannada`
   - : Kannada numbering.
-- `katakana` {{experimental_inline}}
+- `katakana`
   - : Dictionary-order katakana lettering
-- `katakana-iroha` {{experimental_inline}}
-  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} katakana lettering
-- `korean-hangul-formal` {{experimental_inline}}
+- `katakana-iroha`
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering
+- `korean-hangul-formal`
   - : Korean hangul numbering.
-- `korean-hanja-formal` {{experimental_inline}}
+- `korean-hanja-formal`
   - : Formal Korean Han numbering.
-- `korean-hanja-informal` {{experimental_inline}}
+- `korean-hanja-informal`
   - : Korean hanja numbering.
 - `lao`, `-moz-lao`
   - : Laotian numbering.
-- `lower-armenian` {{experimental_inline}}\*
+- `lower-armenian`
   - : Lowercase Armenian numbering.
 - `malayalam`, `-moz-malayalam`
   - : Malayalam numbering.
-- `mongolian` {{experimental_inline}}
+- `mongolian`
   - : Mongolian numbering.
 - `myanmar`, `-moz-myanmar`
   - : Myanmar (Burmese) numbering.
 - `oriya`, `-moz-oriya`
   - : Oriya numbering.
-- `persian` {{experimental_inline}}, `-moz-persian`
+- `persian`, `-moz-persian`
   - : Persian numbering
-- `simp-chinese-formal` {{experimental_inline}}
+- `simp-chinese-formal`
   - : Simplified Chinese formal numbering.
-- `simp-chinese-informal` {{experimental_inline}}
+- `simp-chinese-informal`
   - : Simplified Chinese informal numbering.
-- `tamil` {{experimental_inline}}, `-moz-tamil`
+- `tamil`, `-moz-tamil`
   - : Tamil numbering.
 - `telugu`, `-moz-telugu`
   - : Telugu numbering.
 - `thai`, `-moz-thai`
   - : Thai numbering.
-- `tibetan` {{experimental_inline}}\*
+- `tibetan`
   - : Tibetan numbering.
-- `trad-chinese-formal` {{experimental_inline}}
+- `trad-chinese-formal`
   - : Traditional Chinese formal numbering.
-- `trad-chinese-informal` {{experimental_inline}}
+- `trad-chinese-informal`
   - : Traditional Chinese informal numbering.
-- `upper-armenian` {{experimental_inline}}\*
+- `upper-armenian`
   - : Traditional uppercase Armenian numbering.
-- `disclosure-open` {{experimental_inline}}
+- `disclosure-open`
   - : Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.
-- `disclosure-closed` {{experimental_inline}}
+- `disclosure-closed`
   - : Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.
 
 ### Non-standard extensions
@@ -201,7 +202,7 @@ ul li::before {
 }
 ```
 
-- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -450,8 +451,8 @@ ol.shortcut {
     <input type="radio" id="tamil" name="type" value="tamil">tamil
   </label>
 
-  <label for="telegu">
-    <input type="radio" id="telegu" name="type" value="telegu">telegu
+  <label for="telugu">
+    <input type="radio" id="telugu" name="type" value="telugu">telugu
   </label>
 
   <label for="thai">
@@ -536,7 +537,6 @@ ol.shortcut {
 #### CSS
 
 ```css
-
 ol {
   font-size: 1.2rem;
 }
@@ -558,7 +558,7 @@ input {
 
 ```js
 const container = document.querySelector(".container");
-container.addEventListener("change", event => {
+container.addEventListener("change", (event) => {
   const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });

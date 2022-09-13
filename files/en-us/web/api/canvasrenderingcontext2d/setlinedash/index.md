@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -13,6 +14,7 @@ tags:
   - setLineDash
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
+
 {{APIRef}}
 
 The **`setLineDash()`** method of the Canvas 2D API's
@@ -26,7 +28,7 @@ and gaps which describe the pattern.
 ## Syntax
 
 ```js
-ctx.setLineDash(segments);
+setLineDash(segments)
 ```
 
 ### Parameters
@@ -41,7 +43,7 @@ ctx.setLineDash(segments);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

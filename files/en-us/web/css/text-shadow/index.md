@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-shadow
 ---
+
 {{CSSRef}}
 
 The **`text-shadow`** CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
@@ -117,12 +118,8 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 {{Compat}}
 
-### Quantum CSS notes
-
-- Gecko has a bug whereby {{cssxref("transition")}}s will not work when transitioning from a `text-shadow` with a color specified to a `text-shadow` without a color specified ({{bug(726550)}}). This has been fixed in Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), planned for release in Firefox 57).
-
 ## See also
 
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

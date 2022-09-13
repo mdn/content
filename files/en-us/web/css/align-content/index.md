@@ -9,9 +9,12 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.align-content
 ---
+
+{{CSSRef}}
+
 The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout)'s block axis.
 
-The interactive example below use Grid Layout to demonstrate some of the values of this property.
+The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
 {{EmbedInteractiveExample("pages/css/align-content.html")}}
 
@@ -211,8 +214,6 @@ select {
 
     <option value="start">start</option>
     <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="baseline">baseline</option>
     <option value="first baseline">first baseline</option>
@@ -231,15 +232,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+const values = document.getElementById('values');
+const display = document.getElementById('display');
+const container = document.getElementById('container');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener('change', (evt) => {
   container.className = evt.target.value;
 });
 ```
@@ -250,7 +251,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -262,5 +263,3 @@ display.addEventListener('change', function (evt) {
 - CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-
-{{CSSRef}}

@@ -1,6 +1,7 @@
 ---
 title: CSSMathSum()
 slug: Web/API/CSSMathSum/CSSMathSum
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum()`** constructor creates a
@@ -28,7 +30,7 @@ new CSSMathSum(values)
 
 ### Parameters
 
-- values
+- `values`
   - : One or more double integers or {{domxref('CSSNumericValue')}} objects.
 
 ## Specifications

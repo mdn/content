@@ -8,15 +8,17 @@ tags:
   - Reference
   - Web
   - color
+  - Experimental
 browser-compat: css.types.color.color
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`color()`** functional notation allows a color to be specified in a particular, specified colorspace rather than the implicit sRGB colorspace that most of the other color functions operate in.
 
 Support for a particular colorspace can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) CSS media feature.
 
-The [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) [CSS](/en-US/docs/Web/CSS) {{cssxref("at-rule")}} can be used to define and names a color profile to be used in the `color()` function to specify a color.
+The [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to define and names a color profile to be used in the `color()` function to specify a color.
 
 ## Syntax
 

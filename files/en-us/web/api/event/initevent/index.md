@@ -1,12 +1,14 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Method
   - Reference
 browser-compat: api.Event.initEvent
 ---
+
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
 The **`Event.initEvent()`** method is used to initialize the
@@ -30,13 +32,13 @@ event.initEvent(type, bubbles, cancelable);
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : A string defining the type of event.
-- _`bubbles`_
+- `bubbles`
   - : A boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.
-- _`cancelable`_
+- `cancelable`
   - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
 
@@ -55,7 +57,7 @@ const event = document.createEvent('Event');
 event.initEvent('click', true, false);
 
 // Listen for the event.
-elem.addEventListener('click', function (e) {
+elem.addEventListener('click', (e) => {
   // e.target matches elem
 }, false);
 

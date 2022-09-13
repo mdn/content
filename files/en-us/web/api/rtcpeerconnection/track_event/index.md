@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: track event'
 slug: Web/API/RTCPeerConnection/track_event
+page-type: web-api-event
 tags:
   - DOM
   - DOM Event Reference
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.RTCPeerConnection.track_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`track`** event is sent to the `ontrack` event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
@@ -28,9 +30,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('track', event => { });
+addEventListener('track', (event) => { });
 
-ontrack = event => { };
+ontrack = (event) => { };
 ```
 
 ## Event type
@@ -67,7 +69,7 @@ pc = new RTCPeerConnection({
   ]
 });
 
-pc.addEventListener("track", e => {
+pc.addEventListener("track", (e) => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
 }, false);
@@ -78,7 +80,7 @@ The event handler assigns the new track's first stream to an existing {{HTMLElem
 You can also assign the event handler function to the `ontrack` property, rather than use {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
 ```js
-pc.ontrack = e => {
+pc.ontrack = (e) => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
   return false;

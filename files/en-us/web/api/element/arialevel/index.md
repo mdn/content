@@ -1,6 +1,7 @@
 ---
 title: Element.ariaLevel
 slug: Web/API/Element/ariaLevel
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaLevel
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects the value of the `aria-level` attribute, which defines the hierarchical level of an element within a structure.
@@ -19,7 +21,7 @@ The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects th
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 

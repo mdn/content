@@ -5,7 +5,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-result
 ---
+
 {{SVGRef}}
 
 The **`result`** attribute defines the assigned name for this filter primitive. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its `in` attribute.
@@ -78,30 +80,4 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-filter-primitive-result", "result")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>
-        Clarifies that the value is a {{cssxref("custom-ident")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveResultAttribute", "result")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

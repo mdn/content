@@ -1,6 +1,7 @@
 ---
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Element.firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.firstElementChild`** read-only property

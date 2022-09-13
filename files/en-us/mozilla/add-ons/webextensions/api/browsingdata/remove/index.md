@@ -12,6 +12,7 @@ tags:
   - remove
 browser-compat: webextensions.api.browsingData.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes the specified browsing data.
@@ -36,7 +37,7 @@ let removing = browser.browsingData.remove(
 - `removalOptions`
   - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to control how far back in time to remove data, and whether to remove data from hosted web apps and extensions, or just normal web pages.
 - `dataTypes`
-  - : `object`. A {{WebExtAPIRef("browsingData.DataTypeSet")}} object, describing the types of data to remove (e.g. history, downloads, ...).
+  - : `object`. A {{WebExtAPIRef("browsingData.DataTypeSet")}} object, describing the types of data to remove (e.g. history, downloads, …).
 
 ### Return value
 
@@ -83,17 +84,18 @@ browser.browsingData.remove({},
 then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,4 +122,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

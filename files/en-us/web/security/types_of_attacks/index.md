@@ -62,7 +62,7 @@ For more prevention tips, see the OWASP CSRF prevention cheat sheet.
 
 ## Man-in-the-middle (MitM)
 
-A third party intercepts traffic between a web server and a client (browser), and impersonates the web server in order to capture data (such as login credentials or credit card information). The traffic is passed through, possibly with alterations. Open WiFi networks are a typically means of executing this attack.
+A third party intercepts traffic between a web server and a client (browser), and impersonates the web server in order to capture data (such as login credentials or credit card information). The traffic is passed through, possibly with alterations. Open Wi-Fi networks are a typically means of executing this attack.
 
 ## Session hijacking
 
@@ -76,12 +76,12 @@ A third party is able to determine a user's session identifier (i.e., by reading
 
 Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other sub-domains by setting the `Domain` attribute:
 
-```
+```http
 Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
 ```
 
 If a vulnerable application is available on a sub-domain, this mechanism can be abused in a session fixation attack. When the user visits a page on the parent domain (or another subdomain), the application may trust the existing value sent in the user's cookie. This could allow an attacker to bypass CSRF protection or hijack a session after the user logs in.
-Alternatively, if the parent domain does not use [HTTP Strict-Transport-Security](/en-US/docs/Glossary/HSTS) with `includeSubdomains` set, a user subject to an active MitM (perhaps connected to an open WiFi network) could be served a response with a Set-Cookie header from a non-existent sub-domain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.
+Alternatively, if the parent domain does not use [HTTP Strict-Transport-Security](/en-US/docs/Glossary/HSTS) with `includeSubdomains` set, a user subject to an active MitM (perhaps connected to an open Wi-Fi network) could be served a response with a Set-Cookie header from a non-existent sub-domain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.
 
 Session fixation should primarily be mitigated by regenerating session cookie values when the user authenticates (even if a cookie already exists) and by tieing any CSRF token to the user.
 

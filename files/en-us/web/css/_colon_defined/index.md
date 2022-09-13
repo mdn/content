@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.defined
 ---
+
 {{ CSSRef }}
 
 The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
@@ -28,13 +29,15 @@ simple-custom:defined {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:defined
+```
 
 ## Examples
 
 ### Hiding elements until they are defined
 
-The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/main/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
 In this demo we define a very simple trivial custom element:
 

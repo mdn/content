@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.font-style
 ---
+
 {{CSSRef}}
 
 The **`font-style`** CSS descriptor allows authors to specify font styles for the fonts specified in the {{cssxref("@font-face")}} rule.
@@ -45,7 +46,11 @@ font-style: oblique 30deg 50deg;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+normal               |
+italic               |
+oblique <angle>{0,2}
+```
 
 ## Examples
 

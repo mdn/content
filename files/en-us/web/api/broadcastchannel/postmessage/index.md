@@ -1,11 +1,13 @@
 ---
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.BroadcastChannel.postMessage
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel.postMessage()`** sends a message,

@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.page_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -18,6 +19,10 @@ browser-compat: webextensions.manifest.page_action
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -235,7 +240,7 @@ The `page_action` key is an object that may have any of three properties, all op
 }</pre
         >
         <p>
-          This shows the page action by default for all HTTPS  URLs under the
+          This shows the page action by default for all HTTPS URLs under the
           <code>"mozilla.org"</code> domain, except for pages under
           <code>"developer.mozilla.org"</code>.
         </p>

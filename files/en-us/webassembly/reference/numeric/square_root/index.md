@@ -8,11 +8,12 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
-The **`sqrt`** instructions, short for *square root*, are used to get the square root of a number.
+The **`sqrt`** instructions, short for _square root_, are used to get the square root of a number.
 
-{{EmbedInteractiveExample("pages/wat/sqrt.html")}}
+{{EmbedInteractiveExample("pages/wat/sqrt.html", "tabbed-standard")}}
 
 ## Syntax
 
@@ -20,7 +21,7 @@ The **`sqrt`** instructions, short for *square root*, are used to get the square
 ;; load a number onto the stack
 f32.const 289
 
-;; get the square root of 289 
+;; get the square root of 289
 f32.sqrt
 
 ;; the top item on the stack will now be 17

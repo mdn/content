@@ -10,23 +10,18 @@ tags:
   - Web
 browser-compat: css.selectors.first-child
 ---
+
 {{CSSRef}}
 
 The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element among a group of sibling elements.
 
-```css
-/* Selects any <p> that is the first element
-   among its siblings */
-p:first-child {
-  color: lime;
-}
-```
-
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-child.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```
+:first-child
+```
 
 ## Examples
 

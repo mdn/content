@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -9,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
@@ -16,10 +18,7 @@ The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} I
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Float32Array(analyser.fftSize); // Float32Array needs to be the same length as the fftSize
-analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data returned from getFloatTimeDomainData()
+getFloatTimeDomainData(array)
 ```
 
 ### Parameters
@@ -30,22 +29,22 @@ analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data r
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 1024;
-var bufferLength = analyser.fftSize;
+const bufferLength = analyser.fftSize;
 console.log(bufferLength);
-var dataArray = new Float32Array(bufferLength);
+const dataArray = new Float32Array(bufferLength);
 
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
@@ -59,14 +58,14 @@ function draw() {
   canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
   canvasCtx.beginPath();
 
-  var sliceWidth = WIDTH * 1.0 / bufferLength;
-  var x = 0;
+  const sliceWidth = WIDTH * 1.0 / bufferLength;
+  let x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    var v = dataArray[i] * 200.0;
-    var y = HEIGHT/2 + v;
+  for (let i = 0; i < bufferLength; i++) {
+    const v = dataArray[i] * 200.0;
+    const y = HEIGHT/2 + v;
 
-    if(i === 0) {
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
     } else {
       canvasCtx.lineTo(x, y);

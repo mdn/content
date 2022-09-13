@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
+
 {{JSRef}}
 
 The **`setUTCMinutes()`** method sets the minutes for a
@@ -60,7 +61,7 @@ If a parameter you specify is outside of the expected range,
 ### Using setUTCMinutes()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCMinutes(43);
 ```
 

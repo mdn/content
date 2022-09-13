@@ -1,6 +1,7 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,11 +10,12 @@ tags:
   - URL API
 browser-compat: api.URL.search
 ---
+
 {{ApiRef("URL API")}}
 
 The **`search`** property of the {{domxref("URL")}} interface
 is a search string, also called a _query string_, that is a
-{{domxref("USVString")}} containing a `'?'` followed by the parameters of the
+string containing a `'?'` followed by the parameters of the
 URL.
 
 Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to
@@ -23,7 +25,7 @@ parse out the parameters from the query string.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

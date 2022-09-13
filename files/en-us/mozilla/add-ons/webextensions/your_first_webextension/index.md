@@ -7,6 +7,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 > **Note:** If you're familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
@@ -115,7 +116,7 @@ borderify/
 
 ### Installing
 
-In Firefox: Open the [about:debugging](/en-US/docs/Tools/about:debugging) page, click the This Firefox option, click the Load Temporary Add-on button, then select any file in your extension's directory.
+In Firefox: Open the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page, click the This Firefox option, click the Load Temporary Add-on button, then select any file in your extension's directory.
 
 The extension now installs, and remains installed until you restart Firefox.
 

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.getLineDash
 ---
+
 {{APIRef}}
 
 The **`getLineDash()`** method of the Canvas 2D API's
@@ -17,8 +19,12 @@ The **`getLineDash()`** method of the Canvas 2D API's
 ## Syntax
 
 ```js
-ctx.getLineDash();
+getLineDash()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

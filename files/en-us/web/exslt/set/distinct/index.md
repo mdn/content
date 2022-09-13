@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `set:distinct()` returns a subset of the nodes in the specified node-set, returning only nodes with unique string values.
 
 ## Syntax
 
-```js
+```plain
 set:distinct(nodeSet)
 ```
 
@@ -27,4 +28,4 @@ A node-set containing the nodes that have unique string values.
 
 ## Specifications
 
-[EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/index.html)
+[EXSLT - SET:DISTINCT](http://exslt.org/set/functions/distinct/index.html)

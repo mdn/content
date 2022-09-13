@@ -9,10 +9,13 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.@@toPrimitive
 ---
+
 {{JSRef}}
 
 The **`[@@toPrimitive]()`** method converts a `Date`
 object to a primitive value.
+
+{{EmbedInteractiveExample("pages/js/date-toprimitive.html")}}
 
 ## Syntax
 

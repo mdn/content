@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-fill
 ---
+
 {{CSSRef}}
 
 The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an element's contents are balanced when broken into columns.
@@ -39,7 +40,7 @@ The `column-fill` property is specified as one of the keyword values listed belo
   - : Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.
 - `balance`
   - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Paged_Media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
-- `balance-all`
+- `balance-all` {{Experimental_Inline}}
   - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Paged_Media), all fragments are balanced.
 
 ## Formal definition

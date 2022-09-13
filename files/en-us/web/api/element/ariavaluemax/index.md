@@ -1,6 +1,7 @@
 ---
 title: Element.ariaValueMax
 slug: Web/API/Element/ariaValueMax
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueMax
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaValueMax`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains a number.
+A string which contains a number.
 
 ## Examples
 

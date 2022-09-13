@@ -1,18 +1,20 @@
 ---
 title: Document.origin
 slug: Web/API/Document/origin
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
   - Document
-  - Experimental
   - Interface
   - Property
   - Read-only
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.origin
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 > **Note:** Use `self.origin` instead.
 
@@ -27,14 +29,14 @@ A string containing the document's origin.
 ## Examples
 
 ```js
-var origin = document.origin;
-// On this page, returns:'https://developer.mozilla.org'
+console.log(document.origin);
+// On this page, logs: 'https://developer.mozilla.org'
 
-var origin = document.origin;
-// On "about:blank", returns:'null'
+console.log(document.origin);
+// On "about:blank", logs: 'null'
 
-var origin = document.origin;
-// On "data:text/html,<b>foo</b>", returns:'null'
+console.log(document.origin);
+// On "data:text/html,<p>foo</p>", logs: 'null'
 ```
 
 ## Browser compatibility

@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.fullscreenElement
 slug: Web/API/ShadowRoot/fullscreenElement
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.fullscreenElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`fullscreenElement`** read-only property of the

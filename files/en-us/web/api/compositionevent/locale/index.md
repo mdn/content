@@ -1,6 +1,7 @@
 ---
 title: CompositionEvent.locale
 slug: Web/API/CompositionEvent/locale
+page-type: web-api-instance-property
 tags:
   - API
   - CompositionEvent
@@ -8,9 +9,11 @@ tags:
   - Locale
   - Property
   - Reference
+  - Non-standard
 browser-compat: api.CompositionEvent.locale
 ---
-{{deprecated_header}}{{APIRef("DOM Events")}}
+
+{{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
 
 The **`locale`** read-only property of the
 {{domxref("CompositionEvent")}} interface returns the locale of current input method
@@ -22,7 +25,7 @@ The **`locale`** read-only property of the
 
 ## Value
 
-A {{domxref("DOMString")}} representing the locale of current input method.
+A string representing the locale of current input method.
 
 ## Specifications
 

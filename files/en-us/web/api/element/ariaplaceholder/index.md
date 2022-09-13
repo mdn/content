@@ -1,6 +1,7 @@
 ---
 title: Element.ariaPlaceholder
 slug: Web/API/Element/ariaPlaceholder
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaPlaceholder
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface reflects the value of the `aria-placeholder` attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
@@ -19,7 +21,7 @@ The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface refle
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

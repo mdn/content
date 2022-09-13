@@ -4,6 +4,7 @@ slug: Glossary/privileged_code
 tags:
   - privileged
 ---
-**Privileged code** - Javascript code of your extension. For example, code in content scripts.
 
-**Non-privileged** - Javascript on web-page.
+**Privileged code** - JavaScript code of your extension. For example, code in content scripts.
+
+**Non-privileged** - JavaScript on web-page.

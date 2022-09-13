@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.setRangeText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setRangeText()`** method replaces a
@@ -20,8 +22,10 @@ a new string.
 ## Syntax
 
 ```js
-element.setRangeText(replacement);
-element.setRangeText(replacement, start, end [, selectMode]);
+setRangeText(replacement)
+setRangeText(replacement, start)
+setRangeText(replacement, start, end)
+setRangeText(replacement, start, end, selectMode)
 ```
 
 ### Parameters
@@ -45,7 +49,11 @@ element.setRangeText(replacement, start, end [, selectMode]);
     - `"end"` moves the selection to just after the inserted text.
     - `"preserve"` attempts to preserve the selection. This is the default.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Click the button in this example to replace part of the text in the text box. The newly
 inserted text will be highlighted (selected) afterwards.
@@ -69,7 +77,7 @@ function selectText() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

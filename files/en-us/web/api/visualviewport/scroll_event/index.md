@@ -1,6 +1,7 @@
 ---
 title: 'VisualViewport: scroll event'
 slug: Web/API/VisualViewport/scroll_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -9,6 +10,7 @@ tags:
   - events
 browser-compat: api.VisualViewport.scroll_event
 ---
+
 {{APIRef("Window")}}
 
 The **`scroll`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is scrolled.
@@ -18,9 +20,9 @@ The **`scroll`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('scroll', event => { })
+addEventListener('scroll', (event) => { })
 
-onscroll = event => { }
+onscroll = (event) => { }
 ```
 
 ## Event type
@@ -32,16 +34,16 @@ A generic {{domxref("Event")}}.
 You can use the `scroll` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-visualViewport.addEventListener('scroll', function() {
-  /* ... */
+visualViewport.addEventListener('scroll', () => {
+  // …
 });
 ```
 
 Or use the `onscroll` event handler property:
 
 ```js
-visualViewport.onscroll = function() {
-  /* ... */
+visualViewport.onscroll = () => {
+  // …
 };
 ```
 

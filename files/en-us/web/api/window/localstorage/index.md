@@ -1,6 +1,7 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,6 +14,7 @@ tags:
   - localStorage
 browser-compat: api.Window.localStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`localStorage`** read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.
@@ -30,7 +32,7 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 
 ## Description
 
-The keys and the values stored with `localStorage` are _always_ in the UTF-16 {{domxref("DOMString")}} format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.
+The keys and the values stored with `localStorage` are _always_ in the UTF-16 string format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.
 
 `localStorage` data **is specific to the protocol of the document**. In particular, for a site loaded over HTTP (e.g., `http://example.com`), `localStorage` returns a different object than `localStorage` for the corresponding site loaded over HTTPS (e.g., `https://example.com`).
 

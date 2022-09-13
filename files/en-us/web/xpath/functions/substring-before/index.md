@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `substring-before` function returns a string that is the part of a given string before a given substring.
@@ -17,10 +18,10 @@ substring-before( haystack, needle )
 
 ### Arguments
 
-- _`haystack`_
+- `haystack`
   - : The string to be evaluated. Part of this string will be returned.
-- _`needle`_
-  - : The substring to search for. Everything before the first occurrence of*`needle`* in*`haystack`* will be returned.
+- `needle`
+  - : The substring to search for. Everything before the first occurrence of `needle` in `haystack` will be returned.
 
 ### Returns
 
@@ -37,7 +38,7 @@ A string.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-before)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-substring-before)
 
 ### Gecko support
 

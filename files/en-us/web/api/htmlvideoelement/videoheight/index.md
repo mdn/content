@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -21,6 +22,7 @@ tags:
   - videoWidth
 browser-compat: api.HTMLVideoElement.videoHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}} interface's read-only **`videoHeight`** property indicates the [intrinsic height](#about_intrinsic_width_and_height) of the video, expressed in CSS pixels.
@@ -53,7 +55,7 @@ This example creates a handler for the {{domxref("HTMLVideoElement.resize", "res
 ```js
 let v = document.getElementById("myVideo");
 
-v.addEventListener("resize", ev => {
+v.addEventListener("resize", (ev) => {
   let w = v.videoWidth;
   let h = v.videoHeight;
 

@@ -7,9 +7,11 @@ tags:
   - Pseudo-class
   - Reference
   - Selector
+  - Experimental
 browser-compat: css.selectors.user-valid
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
 
@@ -26,7 +28,9 @@ The result is that if the control was valid when the user started interacting wi
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:user-valid
+```
 
 ## Examples
 

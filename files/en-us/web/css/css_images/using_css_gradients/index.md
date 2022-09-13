@@ -10,6 +10,7 @@ tags:
   - Guide
   - Web
 ---
+
 {{CSSRef}}
 
 **CSS gradients** are represented by the {{cssxref("&lt;gradient&gt;")}} data type, a special type of {{cssxref("&lt;image&gt;")}} made of a progressive transition between two or more colors. You can choose between three types of gradients: _linear_ (created with the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function), _radial_ (created with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function), and _conic_ (created with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function). You can also create repeating gradients with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, and {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} functions.
@@ -116,7 +117,7 @@ div {
 
 When using an angle, `0deg` creates a vertical gradient running bottom to top, `90deg` creates a horizontal gradient running left to right, and so on in a clockwise direction. Negative angles run in the counterclockwise direction.
 
-![](linear_red_angles.png)
+![Four boxes listing angle and showing associated gradient. 0deg starts and top and goes to bottom. 90deg starts at right and goes left. 180deg starts and bottom and goes to the top. -90deg starts at left and goes right.](linear_red_angles.png)
 
 ## Declaring colors & creating effects
 
@@ -260,7 +261,7 @@ In both examples, the gradient is written twice: the first is the CSS Images Lev
 
 ### Controlling the progression of a gradient
 
-By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the interpolation, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
+By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the {{Glossary("interpolation")}}, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
 
 ```html hidden
 <div class="colorhint-gradient"></div> <div class="regular-progression"></div>
@@ -462,7 +463,7 @@ div {
 
 #### Example: closest-side for circles
 
-This example uses `closest-side`, which makes the circle's size to be the distance between the starting point (the center) and the closest side. The circle's radius is the distance between the center of the gradient and the closest edge, which due to the positioning of the 25% from the top and 25% from the bottom, is closest to the bottom, since the height in this case is narrower than the width.
+This example uses `closest-side`, which makes the circle's radius to be the distance between the center of the gradient and the closest side. In this case the radius is the distance between the center and the bottom edge, because the gradient is placed 25% from the left and 25% from the bottom, and the div element's height is smaller than the width.
 
 ```html hidden
 <div class="radial-circle-close"></div>
@@ -567,7 +568,7 @@ div {
 
 ## Using conic gradients
 
-The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and color wheels, but they can also be used for creating checker boards and other interesting effects.
+The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and {{glossary("color wheel", "color wheels")}}, but they can also be used for creating checker boards and other interesting effects.
 
 The conic-gradient syntax is similar to the radial-gradient syntax, but the color-stops are placed around a gradient arc, the circumference of a circle, rather than on the gradient line emerging from the center of the gradient, and the color-stops are percentages or degrees: absolute lengths are not valid.
 
@@ -823,5 +824,5 @@ div {
 - Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
-- [CSS3 Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients)
+- [CSS Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)

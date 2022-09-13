@@ -7,6 +7,7 @@ tags:
   - events
 browser-compat: svg.attributes.events.global.onclick
 ---
+
 {{SVGRef}}
 
 The **`onclick`** attribute specifies some script to run when the element is clicked.
@@ -95,31 +96,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "interact.html#EventAttributes", "onclick")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "script.html#OnClickEventAttribute", "onclick")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

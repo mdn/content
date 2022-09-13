@@ -1,6 +1,7 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`removeItem()`** method of the {{domxref("Storage")}}
@@ -22,19 +24,19 @@ If there is no item associated with the given key, this method will do nothing.
 ## Syntax
 
 ```js
-storage.removeItem(keyName);
+removeItem(keyName)
 ```
 
 ### Parameters
 
 - `keyName`
-  - : A {{domxref("DOMString")}} containing the name of the key you want to remove.
+  - : A string containing the name of the key you want to remove.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following function creates three data items inside local storage, then removes the
 `image` data item.
@@ -73,5 +75,4 @@ function populateStorage() {
 
 ## See also
 
-[Using the Web
-Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

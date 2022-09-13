@@ -1,12 +1,14 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Attr.localName
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`localName`** property of the {{domxref("Attr")}} interface returns the _local part_ of the _qualified name_ of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is `xml:lang`, the returned local name is `lang`, if the element supports that namespace.
@@ -17,9 +19,9 @@ The local name is always in lower case, whatever case at the attribute creation.
 >
 > That means that the local name of an attribute of an HTML element is always be equal to its qualified name: Colons are treated as regular characters. In XML, like in SVG or MathML, the colon denotes the end of the prefix and what is before is the namespace; the local name may be different from the qualified name.
 
-### Value
+## Value
 
-A {{jsxref("String")}} representing the local part of the attribute's qualified name.
+A string representing the local part of the attribute's qualified name.
 
 ## Example
 
@@ -31,29 +33,31 @@ The following example displays the local name of the first attribute of the two 
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<button>Click me for &lt;svg&gt;…</button>
-<button>Click me for &lt;label&gt;…</button>
-<br><br>
-Local part of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Local part of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript Content
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
 
-function handleEvent(element) {
-  return function(e) {
-    attribute = element.attributes[0];
-    result.value = attribute.localName;
-  }
-}
-
-let i=0;
-for (let button of buttons) {
-  button.addEventListener('click', handleEvent(elements[i]));
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.localName;
+  });
   i++;
 }
 ```

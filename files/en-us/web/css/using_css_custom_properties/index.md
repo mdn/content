@@ -9,6 +9,7 @@ tags:
   - Web
   - cascading variables
 ---
+
 {{CSSRef}}
 
 **Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., **`--main-color: black;`**) and are accessed using the {{cssxref("var", "var()")}} function (e.g., `color: var(--main-color);`).
@@ -49,7 +50,7 @@ element {
 
 ## First steps with custom properties
 
-Let's start with this simple CSS that applies the same color to elements of different classes:
+Let's start with this CSS that applies the same color to elements of different classes:
 
 ```css
 .one {
@@ -98,7 +99,7 @@ We'll apply it to this HTML:
 </div>
 ```
 
-... which leads us to this:
+This produces the following result:
 
 {{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
 
@@ -170,7 +171,7 @@ Custom properties do inherit. This means that if no value is set for a custom pr
 </div>
 ```
 
-... with the following CSS:
+… with the following CSS:
 
 ```css
 .two {
@@ -193,7 +194,7 @@ Keep in mind that these are custom properties, not actual variables like you mig
 
 ## Custom property fallback values
 
-Using the [`var()`](</en-US/docs/Web/CSS/var()>) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
 > **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
@@ -201,15 +202,18 @@ The first argument to the function is the name of the [custom property](https://
 
 ```css
 .two {
-  color: var(--my-var, red); /* Red if --my-var is not defined */
+  /* Red if --my-var is not defined */
+  color: var(--my-var, red);
 }
 
 .three {
-  background-color: var(--my-var, var(--my-background, pink)); /* pink if --my-var and --my-background are not defined */
+  /* pink if --my-var and --my-background are not defined */
+  background-color: var(--my-var, var(--my-background, pink));
 }
 
 .three {
-  background-color: var(--my-var, --my-background, pink); /* Invalid: "--my-background, pink" */
+   /* Invalid: "--my-background, pink" */
+  background-color: var(--my-var, --my-background, pink);
 }
 ```
 
@@ -217,44 +221,80 @@ Including a custom property as a fallback, as seen in the second example above, 
 
 > **Note:** The syntax of the fallback, like that of [custom properties](https://www.w3.org/TR/css-variables/#custom-property), allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
 
-## Validity and values
+## Handling invalid custom properties
 
-The classical CSS concept of validity, tied to each property, is not very useful in regard to custom properties. When the values of the custom properties are parsed, the browser doesn't know where they will be used, so must, therefore, consider nearly all values as _valid_.
+Each CSS property can be assigned a defined set of values. If you try to assign a value to a property that is outside its set of valid values, it's considered _invalid_.
+
+When the browser encounters an invalid value for a normal property, it discards the value, and elements are assigned the values that they would have had if the declaration simply did not exist.
+
+However, when the values of custom properties are parsed, the browser doesn't yet know where they will be used, so it must consider nearly all values as _valid_.
 
 Unfortunately, these valid values can be used, via the `var()` functional notation, in a context where they might not make sense. Properties and custom variables can lead to invalid CSS statements, leading to the new concept of _valid at computed time._
 
-## What happens with invalid variables?
+When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/inheritance) value of the property is used.
 
-When the browser encounters an invalid `var()` substitution, the initial or inherited value of the property is used.
+The next two examples illustrate this.
 
-Consider the code snippet below.
+### Invalid normal properties
 
-### HTML
+In this example we attempt to apply a value of `16px` to the {{cssxref("color")}} property. Because this is invalid, the CSS is discarded and the result is as if the rule did not exist, so the previous `color: blue` rule is applied instead, and the paragraph is blue.
+
+#### HTML
 
 ```html
-<p>This paragraph is initial black.</p>
+<p>This paragraph is initially black.</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+p {
+  color: blue;
+}
+
+p {
+  color: 16px;
+}
 ```
 
-As expected, the browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}. After substitution, the property doesn't make any sense. The browser handles this situation in two steps:
+#### Result
 
-1. Check if the property color is inheritable. Yes, but `<p>` doesn't have any parent with color property. So move on to the next step.
-2. Set the value to its **default initial value**, i.e., black.
+{{EmbedLiveSample('Invalid normal properties', 100, 100)}}
 
-### Result
+### Invalid custom properties
 
-{{EmbedLiveSample('What_happens_with_invalid_variables')}}
+This example is just like the last one, except we use a custom property.
 
-The paragraph color will not be blue because invalid substitution is replaced by the initial value, not by the fallback. If you had written `color: 16px` without any variable substitutes, then it was a syntax error. The previous declaration will then be used.
+As expected, the browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}. After substitution, the property doesn't make sense. The browser handles this situation in two steps:
 
-> **Note:** While a syntax error in a CSS property / value pair will lead to the line being ignored, using a cascaded value, invalid substitution -- using a custom property value that is invalid -- is not ignored, leading to the value to be inherited.
+1. Check if the property {{cssxref("color")}} is inheritable. It is, but this `<p>` doesn't have any parent with the `color` property set. So we move on to the next step.
+2. Set the value to its **default initial value**, which is black.
+
+#### HTML
+
+```html
+<p>This paragraph is initially black.</p>
+```
+
+#### CSS
+
+```css
+:root {
+  --text-color: 16px;
+}
+
+p {
+  color: blue;
+}
+
+p {
+  color: var(--text-color);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Invalid custom properties', 100, 100)}}
 
 ## Values in JavaScript
 
@@ -271,12 +311,7 @@ getComputedStyle(element).getPropertyValue("--my-var");
 element.style.setProperty("--my-var", jsVar + 4);
 ```
 
-## Browser compatibility
-
-{{Compat("css.properties.custom-property")}}
-
-> **Note:** The custom property prefix was `var-` in the earlier spec, but later changed to `--`. Firefox 31 and above follow the new spec. ({{bug(985838)}})
-
 ## See also
 
-- {{cssxref("--*", "Custom properties")}}
+- [Custom property syntax](/en-US/docs/Web/CSS/--*)
+- [`var()`](/en-US/docs/Web/CSS/var)

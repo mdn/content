@@ -7,6 +7,7 @@ tags:
   - Web Performance
   - latency
 ---
+
 **Latency** is the time it takes for a packet of data to travel from source to a destination. In terms of performance optimization, it's important to optimize to reduce causes of latency and to test site performance emulating high latency to optimize for users with lousy connections. This article explains what latency is, how it impacts performance, how to measure latency, and how to reduce it.
 
 ## What is Latency?
@@ -15,7 +16,7 @@ Latency is generally considered to be the amount of time it takes from when a re
 
 Latency describes the amount of delay on a network or Internet connection. Low latency implies that there are no or almost no delays. High latency implies that there are many delays. One of the main aims of improving performance is to reduce latency.
 
-The latency associated with a single asset, especially a basic HTML page, may seem trivial. But websites generally involve multiple requests: the HTML includes requests for multiple  CSS, scripts, and media files. The greater the number and size of these requests, the greater the impact of high latency on user experience.
+The latency associated with a single asset, especially a basic HTML page, may seem trivial. But websites generally involve multiple requests: the HTML includes requests for multiple CSS, scripts, and media files. The greater the number and size of these requests, the greater the impact of high latency on user experience.
 
 On a connection with low latency, requested resources will appear almost immediately. On a connection with high latency, there will be a discernible delay between the time that a request is sent, and the resources are returned. We can determine the amount of latency by measuring the speed with which the data moves from one network location to another.
 

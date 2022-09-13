@@ -15,6 +15,7 @@ tags:
   - spacing
   - weight
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 In this article we'll start you on your journey towards mastering text styling with {{glossary("CSS")}}. Here we'll go through all the basic fundamentals of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
@@ -61,7 +62,7 @@ Let's move straight on to look at properties for styling fonts. In this example,
 ```html
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -90,7 +91,7 @@ This will cause the paragraphs to become red, rather than the standard browser d
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -205,7 +206,7 @@ The five names are defined as follows:
       <td><code>serif</code></td>
       <td>
         Fonts that have serifs (the flourishes and other small details you see
-        at the ends of the strokes in some typefaces)
+        at the ends of the strokes in some typefaces).
       </td>
       <td id="serif-example">
         <pre class="brush: html hidden">My big red elephant</pre>
@@ -310,7 +311,7 @@ This gives us the following result:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -352,7 +353,7 @@ Our new result is like so:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -392,7 +393,7 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
 
 - {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
 
-  - `normal`, `bold`: Normal and bold font weight
+  - `normal`, `bold`: Normal and bold font weight.
   - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
   - `100`–`900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
 
@@ -420,7 +421,7 @@ Our new result is like so:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -466,7 +467,7 @@ The four properties are as follows:
 1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
 3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors). If not included, it defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
+4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors). If not included, it defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
 
 #### Multiple shadows
 
@@ -484,7 +485,7 @@ If we applied this to the {{htmlelement("h1")}} element in our Tommy The Cat exa
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -521,7 +522,7 @@ p {
 
 ## Text layout
 
-With basic font properties out the way, let's have a look at properties we can use to affect text layout.
+With basic font properties out of the way, let's have a look at properties we can use to affect text layout.
 
 ### Text alignment
 
@@ -537,7 +538,7 @@ If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example,
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -588,7 +589,7 @@ Applying this to the {{htmlelement("p")}} elements in our example would give us 
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -643,7 +644,7 @@ This renders our HTML as:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -775,7 +776,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
@@ -790,13 +791,13 @@ window.addEventListener("load", drawOutput);
 
 ## Summary
 
-We hoped you enjoyed playing with text in this article! The next article will provide you with all you need to know about styling HTML lists.
+We hope you enjoyed playing with text in this article! The next article will provide you with all you need to know about [styling HTML lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists).
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 ## In this module
 
-- **Fundamental text and font styling**
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)

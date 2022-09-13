@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`fileName`** property contains the path to the file that raised this error.
@@ -21,7 +22,7 @@ This non-standard property contains the path to the file that raised this error.
 ### Using fileName
 
 ```js
-var e = new Error('Could not parse input');
+const e = new Error('Could not parse input');
 throw e;
 // e.fileName could look like "file:///C:/example.html"
 ```

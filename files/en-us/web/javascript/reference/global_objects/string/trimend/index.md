@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
 ---
+
 {{JSRef}}
 
 The **`trimEnd()`** method removes whitespace from the end of a
@@ -49,7 +50,7 @@ String.prototype.trimRight.name === "trimEnd";
 The following example displays the lowercase string `' foo'`:
 
 ```js
-var str = '   foo  ';
+let str = '   foo  ';
 
 console.log(str.length); // 8
 

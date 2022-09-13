@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`text-size-adjust`** [CSS](/en-US/docs/Web/API/CSS) property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.
@@ -79,6 +80,6 @@ p {
 
 ## See also
 
-- [Apple's documentation](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16)
-- [Gecko's behavior description](http://dbaron.org/log/20111126-font-inflation), by L. David Baron
+- [Apple's documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16)
+- [Gecko's behavior description](https://dbaron.org/log/20111126-font-inflation), by L. David Baron
 - [Microsoft's documentation](<https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS>)

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.lookupSetter
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`__lookupSetter__`** method returns the function bound as
@@ -45,19 +46,19 @@ It is now possible to do this in a standardized way using
 ### Standard-compliant and non-standard ways to get a property setter
 
 ```js
-var obj = {
+const obj = {
   set foo(value) {
     this.bar = value;
   }
 };
 
 // Non-standard and deprecated way
-obj.__lookupSetter__('foo')
-// (function(value) { this.bar = value; })
+obj.__lookupSetter__('foo');
+// function foo(value)
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, 'foo').set;
-// (function(value) { this.bar = value; })
+// function foo(value)
 ```
 
 ## Specifications
@@ -71,10 +72,10 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 ## See also
 
 - [Polyfill of `Object.prototype.__lookupSetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - {{jsxref("Functions/set", "set")}} operator
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and
   {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

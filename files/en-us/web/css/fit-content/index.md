@@ -9,6 +9,7 @@ tags:
   - fit-content
 browser-compat: css.properties.width.fit-content
 ---
+
 {{CSSRef}}
 
 The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
@@ -20,8 +21,8 @@ When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, 
 ## Syntax
 
 ```css
-width: fit-content
-block-size: fit-content
+width: fit-content;
+block-size: fit-content;
 ```
 
 ## Examples
@@ -65,8 +66,6 @@ block-size: fit-content
 {{Specifications}}
 
 ## Browser compatibility
-
-### Supported for width (and other sizing properties)
 
 {{Compat}}
 

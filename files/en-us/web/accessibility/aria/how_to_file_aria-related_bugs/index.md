@@ -1,13 +1,12 @@
 ---
 title: How to file ARIA-related bugs
-slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs 
+slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 tags:
   - ARIA
   - Bugzilla
 ---
-The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
-> **Note:** When finding a bug, please also update the relevant compatibility tables in the [examples page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases).
+The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
 ### Screen Readers
 
@@ -77,7 +76,7 @@ The state of ARIA technology has always depended on the community. If you notice
   <tr>
    <td>Opera</td>
    <td><a href="https://bugs.opera.com/wizard/">File Opera bugs</a></td>
-   <td><span>Use [ARIA] in the summary field</span></td>
+   <td>Use [ARIA] in the summary field</td>
   </tr>
  </tbody>
 </table>

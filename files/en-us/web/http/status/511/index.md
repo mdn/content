@@ -7,7 +7,9 @@ tags:
   - Reference
   - Server error
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-6
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`511 Network Authentication Required`** response
@@ -29,9 +31,7 @@ Control (MAC) addresses.
 
 ## Specifications
 
-| Specification                                                                    | Title                        |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "511 Network Authentication Required" , "6")}} | Additional HTTP Status Codes |
+{{Specifications}}
 
 ## See also
 

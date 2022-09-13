@@ -1,15 +1,18 @@
 ---
 title: AudioData.sampleRate
 slug: Web/API/AudioData/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - sampleRate
   - AudioData
+  - Experimental
 browser-compat: api.AudioData.sampleRate
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`sampleRate`** read-only property of the {{domxref("AudioData")}} interface returns the sample rate in Hz.
 
@@ -22,7 +25,7 @@ A decimal value.
 The below example prints the value of `sampleRate` to the console.
 
 ```js
-console.log(AudioData.duration);
+console.log(audioData.sampleRate);
 ```
 
 ## Specifications

@@ -1,12 +1,15 @@
 ---
 title: Server-sent events
 slug: Web/API/Server-sent_events
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - SSE
   - Server-sent events
+spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/en-US/docs/Web/API/Event) + data_ inside the web page.
@@ -26,13 +29,11 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Examples
 
-- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## Specifications
 
-| Specification                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------ |
-| [HTML Living Standard # server-sent-events](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events) |
+{{Specifications}}
 
 ## See also
 
@@ -42,7 +43,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
 - Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
 - Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
 - intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
 
 ### Related Topics
@@ -54,5 +55,4 @@ To learn how to use server-sent events, see our article [Using server-sent event
 ### Other resources
 
 - A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Server-sent events using Asp.Net](https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)

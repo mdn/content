@@ -1,6 +1,7 @@
 ---
 title: Clearing with colors
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -9,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}
 
 An example showing how to clear a WebGL rendering context to a solid color.
@@ -30,7 +32,7 @@ Finally, we note that color in WebGL is usually in {{Glossary("RGBA")}} format, 
 <!-- Text within a canvas element is displayed
     only if canvas is not supported. -->
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css
@@ -62,11 +64,11 @@ window.addEventListener("load", function setupWebGL (evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
 
   // References to the document elements.
-  var paragraph = document.querySelector("p"),
+  const paragraph = document.querySelector("p"),
     canvas = document.querySelector("canvas");
 
   // Getting the WebGL rendering context.
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
 
   // If failed, inform user of failure. Otherwise, initialize

@@ -10,6 +10,7 @@ tags:
   - Security
   - source
 ---
+
 {{HTTPSidebar}}
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) header directives that specify a `<source>` from which resources may be loaded can use any one of the values listed below.
@@ -34,8 +35,8 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     Unlike other values below, single quotes shouldn't be used.
     You can also specify data schemes (not recommended).
 
-    - `data:` Allows [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to be used as a content source.
-      _This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts._
+    - `data:` Allows [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) to be used as a content source.
+      _This is insecure; an attacker can also inject arbitrary `data:` URLs. Use this sparingly and definitely not for scripts._
     - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Streams_API) to be used as a content source.
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
     - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
@@ -68,7 +69,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 
 - `'<hash-algorithm>-<base64-value>'`
   - : A sha256, sha384 or sha512 hash of scripts or styles.
-    The use of this source consists of two portions separated by a dash: the encryption algorithm used to create the hash and the base64-encoded hash of the script or style.
+    The use of this source consists of two portions separated by a dash: the algorithm used to create the hash and the base64-encoded hash of the script or style.
     When generating the hash, don't include the \<script> or \<style> tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
     See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example.
     In CSP 2.0, this is applied only to inline scripts. CSP 3.0 allows it in the case of `script-src` for external scripts.
@@ -103,6 +104,7 @@ Directives for which the above sources apply include:
   - {{CSP("worker-src")}}
 
 - {{Glossary("Document directive", "Document directives")}}:
+
   - {{CSP("base-uri")}}
 
 - {{Glossary("Navigation directive", "Navigation directives")}}:

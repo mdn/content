@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -9,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
@@ -20,11 +22,7 @@ If you need higher performance and don't care about precision, you can use {{dom
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Float32Array(analyser.frequencyBinCount); // Float32Array should be the same length as the frequencyBinCount
-
-void analyser.getFloatFrequencyData(dataArray); // fill the Float32Array with data returned from getFloatFrequencyData()
+getFloatFrequencyData(array)
 ```
 
 ### Parameters
@@ -35,9 +33,9 @@ void analyser.getFloatFrequencyData(dataArray); // fill the Float32Array with da
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();
@@ -81,8 +79,8 @@ analyserNode.connect(audioCtx.destination);
 //Create 2D canvas
 const canvas = document.createElement('canvas');
 canvas.style.position = 'absolute';
-canvas.style.top = 0;
-canvas.style.left = 0;
+canvas.style.top = '0';
+canvas.style.left = '0';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);

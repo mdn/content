@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
@@ -17,7 +18,7 @@ This article provides information about the changes in Firefox 88 that will affe
 
 ### Developer Tools
 
-- The toggle button for switching between raw and formatted response views has been implemented ({{bug(1693147)}}). For examples, see [Network request details > Response tab](/en-US/docs/Tools/Network_Monitor/request_details#response_tab).
+- The toggle button for switching between raw and formatted response views has been implemented ({{bug(1693147)}}). For examples, see [Network request details > Response tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab).
 
 ### HTML
 

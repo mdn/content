@@ -1,12 +1,14 @@
 ---
 title: Node.isSupported()
 slug: Web/API/Node/isSupported
+page-type: web-api-instance-method
 tags:
   - Method
   - Deprecated
   - Reference
 browser-compat: api.Node.isSupported
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 The **`isSupported()`** method of the {{domxref("Node")}} interface returns a boolean

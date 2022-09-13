@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.optional
 ---
+
 {{ CSSRef }}
 
 The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the {{ htmlattrxref("required", "input") }} attribute set on it.
@@ -27,7 +28,9 @@ This pseudo-class is useful for styling fields that are not required to submit a
 
 ## Syntax
 
-{{csssyntax}}
+```
+:optional
+```
 
 ## Examples
 

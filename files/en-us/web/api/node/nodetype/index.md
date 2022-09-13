@@ -1,12 +1,14 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Node.nodeType
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`nodeType`** property of a {{domxref("Node")}} interface is an integer

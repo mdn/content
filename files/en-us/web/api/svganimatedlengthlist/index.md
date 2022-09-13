@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedLengthList
 slug: Web/API/SVGAnimatedLengthList
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedLengthList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated length list interface

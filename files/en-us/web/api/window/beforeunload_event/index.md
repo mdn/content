@@ -1,38 +1,17 @@
 ---
 title: 'Window: beforeunload event'
 slug: Web/API/Window/beforeunload_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
   - Window
 browser-compat: api.Window.beforeunload_event
 ---
+
 {{APIRef}}
 
 The **`beforeunload`** event is fired when the window, the document and its resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 This event enables a web page to trigger a confirmation dialog asking the user if they really want to leave the page. If the user confirms, the browser navigates to the new page, otherwise it cancels the navigation.
 
@@ -41,6 +20,27 @@ According to the specification, to show the confirmation dialog an event handler
 To combat unwanted pop-ups, browsers may not display prompts created in `beforeunload` event handlers unless the page has been interacted with, or may even not display them at all.
 
 The HTML specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) for more details.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('beforeunload', (event) => { });
+onbeforeunload = (event) => { };
+```
+
+## Event type
+
+A {{domxref("BeforeUnloadEvent")}}. Inherits from {{domxref("Event")}}.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onbeforeunload` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Usage notes
 
@@ -89,7 +89,41 @@ nameInput.addEventListener("input", (event) => {
 
 {{Compat}}
 
-See [WindowEventHandlers/onbeforeunload](/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#browser_compatibility) for more details on how various browsers handle this event.
+## Compatibility notes
+
+The HTML specification states that authors should use the
+{{domxref("Event.preventDefault()")}} method instead of using
+{{domxref("Event.returnValue")}} to prompt the user. However, this is not yet supported
+by all browsers.
+
+When this event returns (or sets the `returnValue` property to) a value
+other than `null` or `undefined`, the user will be prompted to
+confirm the page unload. In older browsers, the return value of the event is displayed
+in this dialog. Starting with Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
+string not under the control of the webpage will be shown instead of the returned
+string. For example:
+
+- Firefox displays the string, "This page is asking you to confirm that you want to
+  leave - data you have entered may not be saved." (see {{bug("588292")}}).
+- Chrome displays the string, "Do you want to leave this site? Changes you made may
+  not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
+
+Internet Explorer does not respect the `null` return value and will display
+this to users as "null" text. You have to use `undefined` to skip the prompt.
+
+In some browsers, calls to {{domxref("window.alert()")}},
+{{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored
+during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#user-prompts)
+for more details.
+
+Note also, that various browsers ignore the result of the event and do not ask the user
+for confirmation at all. In such cases, the document will always be unloaded
+automatically. Firefox has a switch named `dom.disable_beforeunload` in
+_about:config_ to enable this behavior. As of Chrome 60, the confirmation [will be skipped](https://chromestatus.com/feature/5082396709879808) if
+the user has not performed a gesture in the frame or page since it was loaded. Pressing
+F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh
+arrow or pressing F5 with Chrome DevTools focused does not count as user interaction (as
+of Chrome 81).
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
-title: Worker.prototype.postMessage()
+title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - JavaScript
@@ -11,6 +12,7 @@ tags:
   - postMessage
 browser-compat: api.Worker.postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`postMessage()`** method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
@@ -22,46 +24,47 @@ The `Worker` can send back information to the thread that spawned it using the {
 ## Syntax
 
 ```js
-worker.postMessage(message, [transfer]);
+postMessage(message)
+postMessage(message, transfer)
 ```
 
 ### Parameters
 
-- _message_
+- `message`
 
   - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.message_event")}} event. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
-    If the `message` parameter is _not_ provided, a `TypeError` will be thrown. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
+    If the `message` parameter is _not_ provided, a {{jsxref("SyntaxError")}} will be thrown by the parser. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
 
-- _transfer_ {{optional_inline}}
+- `transfer` {{optional_inline}}
 
   - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{Glossary("Transferable Objects")}} to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
 
     Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. `null` is not an acceptable value for `transfer`.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{event("change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
+The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{domxref("HTMLElement/change_event", "change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+second.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
 
-For a full example, see our [simple worker example](https://github.com/mdn/simple-web-worker) ([run example](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
@@ -73,13 +76,13 @@ This minimum example has `main` create an `ArrayBuffer` and transfer it to `myWo
 
 ```js
 // create worker
-var myWorker = new Worker("myWorker.js");
+const myWorker = new Worker("myWorker.js");
 
 // listen for myWorker to transfer the buffer back to main
 myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
   console.log("message from worker received in main:", msg);
 
-  var bufTransferredBackFromWorker = msg.data;
+  const bufTransferredBackFromWorker = msg.data;
 
   console.log(
     "buf.byteLength in main AFTER transfer back from worker:",
@@ -88,7 +91,7 @@ myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
 });
 
 // create the buffer
-var myBuf = new ArrayBuffer(8);
+const myBuf = new ArrayBuffer(8);
 
 console.log(
   "buf.byteLength in main BEFORE transfer to worker:",
@@ -111,7 +114,7 @@ console.log(
 self.onmessage = function handleMessageFromMain(msg) {
   console.log("message from main received in worker:", msg);
 
-  var bufTransferredFromMain = msg.data;
+  const bufTransferredFromMain = msg.data;
 
   console.log(
     "buf.byteLength in worker BEFORE transfer back to main:",

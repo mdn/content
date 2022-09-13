@@ -4,13 +4,14 @@ slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
 tags:
   - SVG filters primitives
 ---
+
 ## Filters
 
 SVG allows us to use similar tools as the bitmap description language such as the use of shadow, blur effects or even merging the results of different filters. With the filter element <`filter`> it is possible to add these effects and later on attach them to an object.
 
 Filters act like layers. When creating them, try applying and testing the effect step by step.
 
-This element has different attributes that help us create the clipping region. Between the filter tags, we can define the *primitives* that allow us to implement the desired effect. One of these primitives is the [feGaussianBlur](https://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement). The keyword [SourceAlpha](https://www.w3.org/TR/SVG/filters.html#SourceAlpha) identifies the input for this primitive, is in this case input '`in`'. The amount of blur to be applied is done using the `stdDeviation` attribute.
+This element has different attributes that help us create the clipping region. Between the filter tags, we can define the _primitives_ that allow us to implement the desired effect. One of these primitives is the [feGaussianBlur](https://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement). The keyword [SourceAlpha](https://www.w3.org/TR/SVG/filters.html#SourceAlpha) identifies the input for this primitive, is in this case input '`in`'. The amount of blur to be applied is done using the `stdDeviation` attribute.
 
 ### SVG filter example
 

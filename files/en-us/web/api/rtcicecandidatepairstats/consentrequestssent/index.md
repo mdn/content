@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.consentRequestsSent
 slug: Web/API/RTCIceCandidatePairStats/consentRequestsSent
+page-type: web-api-instance-property
 tags:
   - API
   - Candidates
@@ -18,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePairStats.consentRequestsSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

@@ -1,6 +1,7 @@
 ---
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
+page-type: web-api-constructor
 tags:
   - API
   - Broadcast Channel API
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.BroadcastChannel
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel()`** constructor creates a new
@@ -20,13 +22,13 @@ The **`BroadcastChannel()`** constructor creates a new
 ## Syntax
 
 ```js
-new BroadcastChannel(channelName);
+new BroadcastChannel(channelName)
 ```
 
-### Values
+### Parameters
 
-- _channelName_
-  - : Is a {{domxref("DOMString")}} representing the name of the channel; there is one
+- `channelName`
+  - : A string representing the name of the channel; there is one
     single channel with this name for all {{glossary("browsing context", "browsing
     contexts")}} with the same {{glossary("origin")}}.
 
@@ -35,7 +37,7 @@ new BroadcastChannel(channelName);
 ```js
 // create a new channel listening to the "internal_notification" channel.
 
-var bc = new BroadcastChannel('internal_notification');
+const bc = new BroadcastChannel('internal_notification');
 bc.postMessage('New listening connected!');
 ```
 

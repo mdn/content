@@ -1,6 +1,7 @@
 ---
 title: SVGNumberList
 slug: Web/API/SVGNumberList
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGNumberList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG number list interface
@@ -16,7 +18,7 @@ The `SVGNumberList` defines a list of {{ domxref("SVGNumber") }} objects.
 
 An `SVGNumberList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{ Gecko("5.0") }},the `SVGNumberList` DOM interface is now indexable and can be accessed like arrays.
+An `SVGNumberList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
@@ -95,9 +97,9 @@ An `SVGNumberList` object can be designated as read only, which means that attem
 
 ## Properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
 ## Methods

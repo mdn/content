@@ -1,7 +1,9 @@
 ---
 title: HTMLAudioElement.msAudioCategory
 slug: Web/API/HTMLAudioElement/msAudioCategory
+page-type: web-api-instance-property
 ---
+
 {{APIRef("Audio element")}}
 
 {{Non-standard_header()}}

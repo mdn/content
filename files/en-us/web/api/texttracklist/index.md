@@ -1,6 +1,7 @@
 ---
 title: TextTrackList
 slug: Web/API/TextTrackList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -14,6 +15,7 @@ tags:
   - list
 browser-compat: api.TextTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TextTrackList`** interface is used to represent a list of the text tracks defined by the {{HTMLElement("track")}} element, with each track represented by a separate {{domxref("textTrack")}} object in the list.
@@ -22,7 +24,7 @@ Retrieve an instance of this object with the {{domxref('HTMLMediaElement.textTra
 
 For a given {{domxref('HTMLMediaElement')}} object _media_, the individual tracks can be accessed using:
 
-- `media.TextTracks[n]`, to get the *n*th text track from the object's list of text tracks
+- `media.TextTracks[n]`, to get the n-th text track from the object's list of text tracks
 
 - the `media.textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
 
@@ -56,7 +58,7 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 
 ## Usage notes
 
-In addition to being able to obtain direct access to the text tracks present on a media element, `TextTrackList` lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
+In addition to being able to obtain direct access to the text tracks present on a media element, `TextTrackList` lets you set event handlers on the {{domxref("TextTrackList/addtrack_event", "addtrack")}} and {{domxref("TextTrackList/removetrack_event", "removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
 
 ## Examples
 
@@ -65,12 +67,12 @@ In addition to being able to obtain direct access to the text tracks present on 
 To get a media element's `TextTrackList`, use its {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property.
 
 ```js
-var textTracks = document.querySelector("video").textTracks;
+const textTracks = document.querySelector("video").textTracks;
 ```
 
 ### Monitoring track count changes
 
-In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.
+In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{domxref("TextTrackList/addtrack_event", "addtrack")}} and {{domxref("TextTrackList/removetrack_event", "removetrack")}} events are set up.
 
 ```js
 textTracks.onaddtrack = updateTrackCount;

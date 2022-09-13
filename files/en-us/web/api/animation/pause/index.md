@@ -1,6 +1,7 @@
 ---
 title: Animation.pause()
 slug: Web/API/Animation/pause
+page-type: web-api-instance-method
 tags:
   - Animation
   - Method
@@ -11,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.pause
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface suspends playback of the animation.
@@ -40,7 +42,7 @@ None.
 
 ```js
 // animation of the cupcake slowly getting eaten up
-var nommingCake = document.getElementById('eat-me_sprite').animate(
+const nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -58,7 +60,7 @@ Additionally, when resetting :
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
-var stopPlayingAlice = function() {
+const stopPlayingAlice = () => {
   aliceChange.pause();
   nommingCake.pause();
   drinking.pause();

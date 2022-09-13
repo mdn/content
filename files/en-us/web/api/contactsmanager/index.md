@@ -1,15 +1,18 @@
 ---
 title: ContactsManager
 slug: Web/API/ContactsManager
+page-type: web-api-interface
 tags:
   - Contact Picker API
   - Contacts
   - Interface
   - PWA
   - contact picker
+  - Experimental
 browser-compat: api.ContactsManager
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
@@ -17,9 +20,9 @@ The `ContactsManager` is available through the global {{domxref('navigator.conta
 
 ## Methods
 
-- {{domxref('ContactsManager.select','select()')}}
+- {{domxref('ContactsManager.select','select()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which, when resolved, presents the user with a contact picker which allows them to select contact(s) they wish to share.
-- {{domxref('ContactsManager.getProperties()','getProperties()')}}
+- {{domxref('ContactsManager.getProperties()','getProperties()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact properties are available.
 
 ## Examples

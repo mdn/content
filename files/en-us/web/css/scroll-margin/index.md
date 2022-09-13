@@ -3,7 +3,7 @@ title: scroll-margin
 slug: Web/CSS/scroll-margin
 tags:
   - CSS
-  - Property
+  - CSS Property
   - Reference
   - margin
   - recipe:css-shorthand-property
@@ -12,6 +12,7 @@ tags:
   - scrolling
 browser-compat: css.properties.scroll-margin
 ---
+
 {{CSSRef}}
 
 The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the [`margin`](/en-US/docs/Web/CSS/margin) property does for margins of an element.
@@ -84,7 +85,7 @@ The HTML that represents the blocks is very simple:
 
 #### CSS
 
-Let's walk through the CSS. the outer container is styled like this:
+Let's walk through the CSS. The outer container is styled like this:
 
 ```css
 .scroller {

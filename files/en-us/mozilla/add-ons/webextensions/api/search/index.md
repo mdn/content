@@ -9,7 +9,9 @@ tags:
   - Search
   - Search Engines
   - WebExtensions
+browser-compat: webextensions.api.search
 ---
+
 {{AddonSidebar}}
 
 Retrieves search engines and executes a search with a specific search engine.
@@ -25,4 +27,6 @@ To use this API you need to have the `"search"` [permission](/en-US/docs/Mozilla
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.search", 1, 1)}} {{WebExtExamples("h2")}}
+{{WebExtExamples("h2")}}
+
+{{Compat}}

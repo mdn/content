@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastParen
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **`lastParen`** property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. `RegExp.$+` is an alias for this property.
@@ -28,7 +29,7 @@ You can not use the shorthand alias with the dot property accessor (`RegExp.$+`)
 ### Using lastParen and $+
 
 ```js
-var re = /(hi)/g;
+const re = /(hi)/g;
 re.test('hi there!');
 RegExp.lastParen; // "hi"
 RegExp['$+'];     // "hi"

@@ -1,6 +1,7 @@
 ---
 title: AudioParam.minValue
 slug: Web/API/AudioParam/minValue
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - minValue
 browser-compat: api.AudioParam.minValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`minValue`**

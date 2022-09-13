@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setMinutes
 ---
+
 {{JSRef}}
 
 The **`setMinutes()`** method sets the minutes for a specified
@@ -59,7 +60,7 @@ seconds.
 ### Using setMinutes()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMinutes(45);
 ```
 

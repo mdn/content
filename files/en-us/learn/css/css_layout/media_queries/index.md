@@ -8,9 +8,10 @@ tags:
   - Learn
   - media query
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
-The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example "viewport is wider than 480 pixels". Media queries are a key part of responsive web design, as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse. In this lesson you will first learn about the syntax used in media queries, and then move on to use them in a worked example showing how a simple design might be made responsive.
+The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example "viewport is wider than 480 pixels". Media queries are a key part of responsive web design, as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse. In this lesson you will first learn about the syntax used in media queries, and then move on to use them in a working example showing how a simple design might be made responsive.
 
 <table>
   <tbody>
@@ -70,11 +71,11 @@ The following media query will only set the body to 12pt if the page is printed.
 }
 ```
 
-> **Note:** the media type here is different from the so-called {{glossary("MIME type")}}.
+> **Note:** The media type here is different from the so-called {{glossary("MIME type")}}.
 
-> **Note:** there were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
+> **Note:** There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
 
-> **Note:** Media types are optional; if you do not indicate a media type in your media query then the media query will default to being for all media types.
+> **Note:** Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
 
 ### Media feature rules
 
@@ -96,7 +97,7 @@ These features are used to create layouts that respond to different screen sizes
 
 [Open this example](https://mdn.github.io/css-examples/learn/media-queries/width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/width.html).
 
-The `width` (and `height`) media features can be used as ranges, and therefore be prefixed with `min-` or `max-` to indicate that the given value is a minimum, or a maximum. For example, to make the color blue if the viewport is narrower than 600 pixels, use `max-width`:
+The `width` (and `height`) media features can be used as ranges, and therefore be prefixed with `min-` or `max-` to indicate that the given value is a minimum, or a maximum. For example, to make the color blue if the viewport is 600 pixels or narrower, use `max-width`:
 
 ```css
 @media screen and (max-width: 600px) {
@@ -200,7 +201,7 @@ In the early days of responsive design, many designers would attempt to target v
 
 There are now far too many devices, with a huge variety of sizes, to make that feasible. This means that instead of targeting specific sizes for all designs, a better approach is to change the design at the size where the content starts to break in some way. Perhaps the line lengths become far too long, or a boxed out sidebar gets squashed and hard to read. That's the point at which you want to use a media query to change the design to a better one for the space you have available. This approach means that it doesn't matter what the exact dimensions are of the device being used, every range is catered for. The points at which a media query is introduced are known as **breakpoints**.
 
-The [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) in Firefox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller and larger to see where the content would be improved by adding a media query and tweaking the design.
+The [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) in Firefox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller and larger to see where the content would be improved by adding a media query and tweaking the design.
 
 ![A screenshot of a layout in a mobile view in Firefox DevTools.](rwd-mode.png)
 
@@ -289,12 +290,12 @@ We've made no layout changes, however the source of the document is ordered in a
           <div class="content">
             <h1>Veggies!</h1>
             <p>
-              ...
+              …
             </p>
           </div>
           <aside class="related">
             <p>
-              ...
+              …
             </p>
           </aside>
         </article>
@@ -303,7 +304,7 @@ We've made no layout changes, however the source of the document is ordered in a
           <h2>External vegetable-based links</h2>
           <ul>
             <li>
-              ...
+              …
             </li>
           </ul>
         </aside>
@@ -346,7 +347,7 @@ This CSS gives us a two-column layout inside the article, of the article content
 
 [Open step 2](https://mdn.github.io/css-examples/learn/media-queries/step2.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step2.html).
 
-Lets continue to expand the width until we feel there is enough room for the sidebar to also form a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the {{cssxref("margin-bottom")}} on the article in order that the two sidebars align with each other, and we'll add a {{cssxref("border")}} to the top of the footer. Typically these small tweaks are the kind of thing you will do to make the design look good at each breakpoint.
+Let's continue to expand the width until we feel there is enough room for the sidebar to also form a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the {{cssxref("margin-bottom")}} on the article in order that the two sidebars align with each other, and we'll add a {{cssxref("border")}} to the top of the footer. Typically these small tweaks are the kind of thing you will do to make the design look good at each breakpoint.
 
 **Again, add the below code into the bottom of your step1.html CSS.**
 
@@ -383,7 +384,7 @@ If you look at the HTML source in the above example, you'll see the following el
 
 This is the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag) — it exists as a way to control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 980 pixels), and then shrink the rendered result so that it fits in the display.
 
-This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 980 pixels, then mobile layouts (for example created using a media query of `@media screen and (max-width: 600px) { ... }`) are not going to render as expected.
+This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 980 pixels, then mobile layouts (for example created using a media query of `@media screen and (max-width: 600px) { }`) are not going to render as expected.
 
 To remedy this, including a viewport meta tag like the one above on your page tells the browser "don't render the content with a 980 pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.
 
@@ -399,23 +400,23 @@ This could be achieved using the following:
 <ul class="grid">
     <li>
         <h2>Card 1</h2>
-        <p>...</p>
+        <p>…</p>
     </li>
     <li>
         <h2>Card 2</h2>
-        <p>...</p>
+        <p>…</p>
     </li>
     <li>
         <h2>Card 3</h2>
-        <p>...</p>
+        <p>…</p>
     </li>
     <li>
         <h2>Card 4</h2>
-        <p>...</p>
+        <p>…</p>
     </li>
     <li>
         <h2>Card 5</h2>
-        <p>...</p>
+        <p>…</p>
     </li>
 </ul>
 ```
@@ -442,7 +443,7 @@ With the example open in your browser, make the screen wider and narrower to see
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive Web Design](/en-US/docs/Learn/CSS/CSS_layout/rwd_skills).
+You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn/CSS/CSS_layout/rwd_skills).
 
 ## Summary
 
@@ -467,4 +468,4 @@ You could also experiment with adding different components and seeing whether th
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

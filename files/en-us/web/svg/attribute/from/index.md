@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animate.from
 ---
+
 {{SVGRef}}
 
 The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.
@@ -62,31 +63,7 @@ When a list of values is defined via the {{SVGAttr("values")}} attribute, the `f
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#FromAttribute", "from")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#FromAttribute", "from")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

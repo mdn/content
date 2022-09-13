@@ -12,6 +12,7 @@ tags:
   - websites
 browser-compat: webextensions.api.privacy.websites
 ---
+
 {{AddonSidebar}}
 
 The {{WebExtAPIRef("privacy.websites")}} property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
@@ -35,7 +36,7 @@ Default values for these properties tend to vary across browsers.
       - "reject_trackers": reject tracking cookies
       - "reject_trackers_and_partition_foreign": reject trackers and partition third-party cookies.
 
-    - `nonPersistentCookies`: a boolean. If true, all cookies will be treated as session cookies.
+    - `nonPersistentCookies` {{deprecated_inline}}: a boolean. If true, all cookies will be treated as session cookies.
 
 - `firstPartyIsolate`
 
@@ -109,11 +110,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -140,4 +142,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

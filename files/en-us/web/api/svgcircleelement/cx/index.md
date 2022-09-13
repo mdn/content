@@ -1,6 +1,7 @@
 ---
 title: SVGCircleElement.cx
 slug: Web/API/SVGCircleElement/cx
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - cx
 browser-compat: api.SVGCircleElement.cx
 ---
+
 {{APIRef("SVG")}}
 
 The **`cx`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("cx")}} attribute of a {{SVGElement("circle")}} element and by that defines the x-coordinate of the circle's center.<
@@ -37,7 +39,7 @@ const circle = document.getElementById('circle');
 console.log(circle.cx);
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Examples", "200", "200")}}
 
 ## Specifications
 

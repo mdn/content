@@ -20,9 +20,9 @@ The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{H
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}}
+- {{htmlattrdef("cols")}} {{Deprecated_Inline}}
   - : This attribute specifies the number and size of horizontal spaces in a frameset.
-- {{htmlattrdef("rows")}}
+- {{htmlattrdef("rows")}} {{Deprecated_Inline}}
   - : This attribute specifies the number and size of vertical spaces in a frameset.
 
 ## Example

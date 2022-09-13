@@ -7,11 +7,12 @@ tags:
   - header
 browser-compat: http.headers.TE
 ---
+
 {{HTTPSidebar}}
 
 The **`TE`** request header specifies the transfer encodings
 the user agent is willing to accept. (you could informally call it
-_`Accept-Transfer-Encoding`_, which would be more intuitive).
+`Accept-Transfer-Encoding`, which would be more intuitive).
 
 > **Note:** [In HTTP/2,
 > the `TE` header field is only accepted
@@ -38,7 +39,7 @@ trailer fields in a chunked transfer coding using the "trailers" value.
 
 ## Syntax
 
-```
+```http
 TE: compress
 TE: deflate
 TE: gzip

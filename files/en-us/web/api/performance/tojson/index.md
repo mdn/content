@@ -1,6 +1,7 @@
 ---
 title: performance.toJSON()
 slug: Web/API/Performance/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Performance.toJSON
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 The **`toJSON()`** method of the {{domxref("Performance")}}
@@ -19,25 +21,22 @@ object's properties.
 ## Syntax
 
 ```js
-myPerf = performance.toJSON()
+toJSON()
 ```
 
-### Arguments
+### Parameters
 
-- None
-  - :
+None.
 
 ### Return value
 
-- myPerf
-  - : A JSON object that is the serialization of the {{domxref("Performance")}} object.
+A JSON object that is the serialization of the {{domxref("Performance")}} object.
 
-## Example
+## Examples
 
 ```js
-var js;
-js = window.performance.toJSON();
-console.log("json = " + JSON.stringify(js));
+const js = window.performance.toJSON();
+console.log(`json = ${JSON.stringify(js)}`);
 ```
 
 ## Specifications

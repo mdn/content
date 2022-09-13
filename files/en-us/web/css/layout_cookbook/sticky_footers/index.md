@@ -9,7 +9,13 @@ tags:
   - flexbox
   - grid
   - sticky footer
+browser-compat:
+  - css.properties.grid-template-rows
+  - css.properties.flex-direction
+  - css.properties.flex-grow
+  - css.properties.flex-shrink
 ---
+
 {{CSSRef}}
 
 A sticky footer pattern is one where the footer of your page "sticks" to the bottom of the viewport in cases where the content is shorter than the viewport height. We'll look at a couple of techniques for creating one in this recipe.
@@ -49,21 +55,7 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Browser compatibility
 
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Resources on MDN
 

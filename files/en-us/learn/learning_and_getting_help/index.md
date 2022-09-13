@@ -8,6 +8,7 @@ tags:
   - Web Development
   - getting help
 ---
+
 {{learnsidebar}}
 
 It is great that you are putting some time into learning a new set of skills, but there are good practices to employ that will make your learning more effective. There also are times when you'll get stuck and feel frustrated — even professional web developers feel like this regularly — and it pays to know about the most effective ways to try and get help so you can progress in your work. This article provides some hints and tips in both of these areas that will help you get more out of learning web development, as well as further reading so you can find out more information about each sub-topic should you wish.
@@ -264,15 +265,15 @@ We already mentioned Stack Overflow, but there are other online resources that c
 
 It is good to find a community to be part of, and you'll get a lot of respect if you try to help others answer their questions as well as asking your own. Other good examples include:
 
-- [MDN Discourse](https://discourse.mozilla.org/c/mdn)
+- [MDN Discourse](https://discourse.mozilla.org/c/mdn/236)
 - [Sitepoint Forums](https://www.sitepoint.com/community/)
-- [webdeveloper.com Forums](https://www.webdeveloper.com/)
+- [webdeveloper.com Forums](https://webdeveloper.com/)
 
 However, it also makes sense to find useful groups on social networking sites such as Twitter or Facebook. Look for groups that discuss web development subjects you are interested in and join up. Follow people on twitter you know are influential, smart, or just plain seem to share lots of useful tips.
 
 ### Physical meetups
 
-Lastly, you should try attending some physical meetups to meet other like-minded people, especially ones that cater to beginners. [meetup.com](https://www.meetup.com/find/tech/) is a good place to find local physical meetups, and you could also try your local press/what's on sites.
+Lastly, you should try attending some physical meetups to meet other like-minded people, especially ones that cater to beginners. [meetup.com](https://www.meetup.com/find/?keywords=tech&source=EVENTS) is a good place to find local physical meetups, and you could also try your local press/what's on sites.
 
 You could also try attending full-fledged web conferences. While these can be expensive, you could try volunteering at them, and many conferences offer reduced rate tickets, for example, student or diversity tickets.
 

@@ -12,6 +12,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-focus-inner
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents an inner focus ring of the {{HTMLElement("button")}} element as well as the {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}}, and {{HTMLElement("input/color","color")}} types of the {{HTMLElement("input")}} element.
@@ -20,7 +21,9 @@ The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-focus-inner
+```
 
 ## Example
 

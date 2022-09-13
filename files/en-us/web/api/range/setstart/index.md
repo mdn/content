@@ -1,6 +1,7 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setStart
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStart()`** method sets the start position of a
@@ -25,16 +27,20 @@ collapsed range with the start and end points both set to the specified start po
 ## Syntax
 
 ```js
-range.setStart(startNode, startOffset);
+setStart(startNode, startOffset)
 ```
 
 ### Parameters
 
-- _startNode_
+- `startNode`
   - : The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.
-- _startOffset_
+- `startOffset`
   - : An integer greater than or equal to zero representing the offset for the start of
     the {{ domxref("Range") }} from the start of `startNode`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -42,7 +48,7 @@ range.setStart(startNode, startOffset);
 
 This example uses the `Range.setStart()` and {{domxref("Range.setEnd()")}}
 methods to add part of an address to a range. The selected range is then highlighted
-using  {{domxref("Range.surroundContents()")}}.
+using {{domxref("Range.surroundContents()")}}.
 
 The address contains nine nodes: five text nodes, and four {{htmlElement("br")}}
 elements.
@@ -68,7 +74,7 @@ const address = document.getElementById('address');
 const log = document.getElementById('log');
 
 // Log info
-address.childNodes.forEach(node => {
+address.childNodes.forEach((node) => {
   const li = document.createElement('li');
   li.textContent = `${node.nodeName}, ${node.nodeValue}`;
   log.appendChild(li);

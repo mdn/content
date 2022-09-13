@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.apply
 ---
+
 {{JSRef}}
 
 The static **`Reflect.apply()`** method calls a target function
@@ -47,7 +48,7 @@ A {{jsxref("TypeError")}}, if the `target` is not callable.
 
 In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a
 function with a given `this` value and `arguments` provided as an array
-(or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+(or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

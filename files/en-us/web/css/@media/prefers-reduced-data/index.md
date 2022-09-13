@@ -7,8 +7,10 @@ tags:
   - Media Queries
   - Reference
   - media feature
+  - Experimental
 browser-compat: css.at-rules.media.prefers-reduced-data
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Note:** This feature is not supported by any user agent and its specifics are subject to change.
@@ -60,10 +62,6 @@ body {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Microsoft YaHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 ```
-
-### Result
-
-{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

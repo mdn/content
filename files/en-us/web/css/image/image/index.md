@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.image.image
 ---
+
 {{CSSRef}}
 
 The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
@@ -18,15 +19,15 @@ The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 
 ## Syntax
 
-{{CSSSyntax("image()")}}
+{{CSSSyntax}}
 
 where:
 
-- `image-tags`{{Optional_Inline}}
+- `image-tags` {{optional_inline}}
   - : The directionality of the image, either `ltr` for left-to-right or `rtl` for right-to-left.
 - `image-src` {{Optional_Inline}}
   - : Zero or more {{CSSxRef("url", "url()")}}s or {{CSSxRef("&lt;string&gt;")}}s specifying the image sources, with optional image fragment identifiers.
-- `color`{{Optional_Inline}}
+- `color` {{optional_inline}}
   - : A color, specifying a solid background color to use as a fallback if no `image-src` is found, supported, or declared.
 
 ### Bi-directional awareness
@@ -41,7 +42,7 @@ One key difference between `url()` and `image()` is the ability to add a media f
 background-image: image('myimage.webp#xywh=0,20,40,60');
 ```
 
-The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left hand corner) and is 40px wide and 60px tall.
+The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left-hand corner) and is 40px wide and 60px tall.
 
 The `#xywh=#,#,#,#` media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordinates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The [spacial dimension definition in the media specification](https://www.w3.org/TR/media-frags/#naming-space) indicates that percentages will be supported as well:
 

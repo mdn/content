@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.hostfunction
 ---
+
 {{CSSRef}}
 
 The **`:host()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
@@ -29,13 +30,15 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:host( <compound-selector> )
+```
 
 ## Examples
 
 ### Selectively styling shadow hosts
 
-The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 

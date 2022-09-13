@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.currentDirection
 slug: Web/API/RTCRtpTransceiver/currentDirection
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - currentDirection
 browser-compat: api.RTCRtpTransceiver.currentDirection
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only {{domxref("RTCRtpTransceiver")}} property
@@ -27,7 +29,7 @@ You can examine and set the transceiver's preferred directionality using
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the following values.
+A string whose value is one of the strings which are a member of the following values.
 
 <table class="standard-table">
   <thead>

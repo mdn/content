@@ -1,6 +1,7 @@
 ---
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer
@@ -10,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
@@ -19,9 +21,7 @@ that resolves with an {{jsxref("ArrayBuffer")}}.
 ## Syntax
 
 ```js
-response.arrayBuffer().then(function(buffer) {
-  // do something with buffer
-});
+arrayBuffer()
 ```
 
 ### Parameters
@@ -36,8 +36,7 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ### Playing music
 
-In our [fetch array
-buffer live](https://mdn.github.io/fetch-examples/fetch-array-buffer/), we have a Play button. When pressed, the `getData()`
+In our [fetch array buffer live](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-array-buffer), we have a Play button. When pressed, the `getData()`
 function is run. Note that before playing full audio file will be downloaded. If you
 need to play ogg during downloading (stream it) - consider
 {{domxref("HTMLAudioElement")}}:
@@ -61,26 +60,31 @@ when it is already playing (this would cause an error.)
 
 ```js
 function getData() {
-  source = audioCtx.createBufferSource();
+  const audioCtx = new AudioContext();
 
-  var myRequest = new Request('viper.ogg');
-
-  fetch(myRequest).then(function(response) {
-    return response.arrayBuffer();
-  }).then(function(buffer) {
-    audioCtx.decodeAudioData(buffer, function(decodedData) {
+  return fetch('viper.ogg')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error, status = ${response.status}`);
+      }
+      return response.arrayBuffer();
+    })
+    .then((buffer) => audioCtx.decodeAudioData(buffer))
+    .then((decodedData) => {
+      const source = new AudioBufferSourceNode();
       source.buffer = decodedData;
       source.connect(audioCtx.destination);
+      return source;
     });
-  });
 };
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
-  getData();
-  source.start(0);
-  play.setAttribute('disabled', 'disabled');
+play.onclick = () => {
+  getData().then((source) => {
+    source.start(0);
+    play.setAttribute('disabled', 'disabled');
+  });
 }
 ```
 

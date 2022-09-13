@@ -1,17 +1,19 @@
 ---
 title: HTMLAnchorElement.protocol
 slug: Web/API/HTMLAnchorElement/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
   - Property
 browser-compat: api.HTMLAnchorElement.protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The
 **`HTMLAnchorElement.protocol`**
-property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+property is a string representing the protocol scheme of the URL,
 including the final `':'`.
 
 ## Value

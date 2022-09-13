@@ -1,6 +1,7 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
+page-type: web-api-instance-property
 tags:
   - API
   - File API
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.error
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`error`** property returns the

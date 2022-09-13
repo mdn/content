@@ -10,9 +10,10 @@ tags:
   - createProperties
 browser-compat: webextensions.api.menus.createProperties
 ---
+
 {{AddonSidebar()}}
 
-An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}} or  {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.
+An `object` passed to the {{WebExtAPIRef("menus.create()", "menus.create()")}} or {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.
 
 - `checked` {{optional_inline}}
   - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.
@@ -93,9 +94,10 @@ An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}} 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#type-OnClickData) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-OnClickData) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -121,4 +123,5 @@ An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}} 
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre></div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

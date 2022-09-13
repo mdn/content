@@ -1,6 +1,7 @@
 ---
 title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -13,7 +14,8 @@ tags:
   - Video
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
-{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The **`OverconstrainedError`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
@@ -30,9 +32,9 @@ new OverconstrainedError()
 
 ### Parameters
 
-- constraint
+- `constraint`
   - : The constraint that was not satisfied.
-- message
+- `message`
   - : Text for the error's `message` property.
 
 ## Specifications

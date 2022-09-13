@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.isFile
 slug: Web/API/FileSystemEntry/isFile
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -12,6 +13,7 @@ tags:
   - isFile
 browser-compat: api.FileSystemEntry.isFile
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isFile`** property of
@@ -57,10 +59,8 @@ if (entry.isDirectory) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemEntry.isDirectory")}}
 - {{domxref("FileSystemFileEntry")}}

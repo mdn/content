@@ -1,6 +1,7 @@
 ---
 title: StyleSheetList.item()
 slug: Web/API/StyleSheetList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList.item
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a single {{domxref("CSSStyleSheet")}} object.
@@ -16,7 +18,7 @@ The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a
 ## Syntax
 
 ```js
-StyleSheetList.item(index);
+item(index)
 ```
 
 ### Parameters

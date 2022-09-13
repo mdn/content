@@ -9,9 +9,10 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-align
 ---
+
 {{CSSRef}}
 
-The **`text-align`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal alignment of the content inside a block element or table-cell box. This means it works like {{cssxref("vertical-align")}} but in the horizontal direction.
+The **`text-align`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like {{cssxref("vertical-align")}} but in the horizontal direction.
 
 {{EmbedInteractiveExample("pages/css/text-align.html")}}
 

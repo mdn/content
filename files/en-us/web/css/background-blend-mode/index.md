@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-blend-mode
 ---
+
 {{CSSRef}}
 
 The **`background-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's background images should blend with each other and with the element's background color.
@@ -93,8 +94,8 @@ background-blend-mode: unset;
 ```
 
 ```js hidden
-document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
+document.getElementById("select").onchange = (event) => {
+  document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
 console.log(document.getElementById('div'));
 ```

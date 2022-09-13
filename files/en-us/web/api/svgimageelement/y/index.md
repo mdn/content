@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.y
 slug: Web/API/SVGImageElement/y
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -13,6 +14,7 @@ tags:
   - 'y'
 browser-compat: api.SVGImageElement.y
 ---
+
 {{APIRef("SVG")}}
 
 The **`y`** read-only property of the

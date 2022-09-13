@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement.rowIndex
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableRowElement.rowIndex`** read-only property
@@ -60,7 +62,7 @@ rows.forEach((row) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Browser compatibility
 

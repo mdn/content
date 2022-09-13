@@ -5,6 +5,7 @@ tags:
   - Firefox 3.6
   - Themes
 ---
+
 {{FirefoxSidebar}}
 
 This article intends to help theme authors update Firefox-3.5-compatible themes for Firefox 3.6 compatibility.
@@ -31,6 +32,6 @@ There's a new [Full Screen toolbar button](https://bugzilla.mozilla.org/show_bug
 
 ## See also
 
-- [MozillaZine forum: Mozilla 1.9.2 / Firefox 3.6 theme changes](http://forums.mozillazine.org/viewtopic.php?f=18&t=975065)
+- [MozillaZine forum: Mozilla 1.9.2 / Firefox 3.6 theme changes](https://forums.mozillazine.org/viewtopic.php?f=18&t=975065)
 - [Themes](/en-US/docs/Themes)
 - [Building a theme](/en-US/docs/Building_a_Theme)

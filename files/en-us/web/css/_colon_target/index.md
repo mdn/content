@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.target
 ---
+
 {{CSSRef}}
 
 The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an {{htmlattrxref("id")}} matching the URL's fragment.
@@ -35,7 +36,9 @@ The following element would be selected by a `:target` selector when the current
 
 ## Syntax
 
-{{csssyntax}}
+```
+:target
+```
 
 ## Examples
 

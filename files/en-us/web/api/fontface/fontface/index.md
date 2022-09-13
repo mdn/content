@@ -1,6 +1,7 @@
 ---
 title: FontFace()
 slug: Web/API/FontFace/FontFace
+page-type: web-api-constructor
 tags:
   - API
   - CSS Font Loading API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FontFace.FontFace
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`FontFace()`** constructor creates a new
@@ -19,24 +21,24 @@ The **`FontFace()`** constructor creates a new
 ## Syntax
 
 ```js
-new FontFace(family, source);
-new FontFace(family, source, descriptors);
+new FontFace(family, source)
+new FontFace(family, source, descriptors)
 ```
 
 ### Parameters
 
-- _family_
+- `family`
   - : Specifies a name that will be used as the font face value for font properties. Takes
     the same type of values as the {{cssxref("@font-face/font-family", "font-family")}}
     descriptor of {{cssxref("@font-face")}} .
-- _source_
+- `source`
 
   - : The font source. This can be either:
 
     - A URL
     - Binary font data
 
-- descriptors {{optional_inline}}
+- `descriptors` {{optional_inline}}
 
   - : A set of optional descriptors passed as an object. It can contain any of the descriptors available for `@font-face`:
 
@@ -65,7 +67,11 @@ new FontFace(family, source, descriptors);
 
 ```js
 async function loadFonts() {
-    const font = new FontFace('myfont', 'url(myfont.woff)');
+    const font = new FontFace('myfont', 'url(myfont.woff)',{
+      style: 'normal',
+      weight: '400',
+      stretch: 'condensed'
+      });
     // wait for font to be loaded
     await font.load();
     // add font to document

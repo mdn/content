@@ -1,6 +1,7 @@
 ---
 title: 'FileReader: load event'
 slug: Web/API/FileReader/load_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -9,6 +10,7 @@ tags:
   - load
 browser-compat: api.FileReader.load_event
 ---
+
 {{APIRef}}
 
 The `load` event is fired when a file has been read successfully.
@@ -20,20 +22,27 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('load', event => { });
+addEventListener('load', (event) => { });
 
-onload = event => { };
+onload = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/ProgressEvent", "Properties")}}
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
 
 ## Examples
 
@@ -51,11 +60,11 @@ An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
                accept="image/png, image/jpeg">
     </div>
 
-    <img src="" class="preview" height="200" alt="Image preview...">
+    <img src="" class="preview" height="200" alt="Image preview">
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
   </div>
@@ -102,7 +111,7 @@ img.preview {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');
@@ -111,7 +120,7 @@ const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
     if (event.type === "load") {
         preview.src = reader.result;

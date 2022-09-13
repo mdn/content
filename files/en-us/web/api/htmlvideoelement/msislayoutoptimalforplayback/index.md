@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msIsLayoutOptimalForPlayback
 slug: Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -10,6 +11,7 @@ tags:
   - msIsLayoutOptimalForPlayback
   - onMSVideoOptimalLayoutChanged
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
 
 **`msIsLayoutOptimalForPlayback`** is a read-only property
@@ -29,7 +31,7 @@ For `msIsLayoutOptimalForPlayback` to be true, avoid the following:
 - Rendering a video element through a canvas element.
 - Embedding video elements in a Scalable Vector Graphics (SVG).
 
-You can listen to the [onMSVideoOptimalLayoutChanged](/en-US/docs/Web/API/OnMSVideoOptimalLayoutChanged)
+You can listen to the [onMSVideoOptimalLayoutChanged](/en-US/docs/Web/API/HTMLVideoElement/onMSVideoOptimalLayoutChanged)
 event to be notified when the `msIsLayoutOptimalForPlayback` property
 changes.
 
@@ -38,4 +40,4 @@ changes.
 ## See also
 
 - {{DOMxRef("HTMLVideoElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

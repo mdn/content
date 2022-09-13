@@ -5,6 +5,7 @@ tags:
   - Firefox 3
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as improvements to existing elements. While this material is documented in detail elsewhere, this article provides a convenient list of these improvements as well as links to the detailed documentation.
@@ -14,9 +15,9 @@ Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as i
 - [Numeric controls](/en-US/docs/XUL_Tutorial/Numeric_Controls):
 
   - The new [`<scale>`](/en-US/docs/XUL/scale) element lets you create sliding scales that let the user select any value in a specified range. This widget would typically be used, for example, to create a volume control.
-  - A new value, `number`, for the `type` attribute of textboxes creates a textbox in which only numbers may be entered. In addition, arrow buttons appear to one side which may be used to step through values. {{ interwiki('wikimo', 'XUL:Specs:NumberBox', 'More information about numeric textboxes') }} ({{ Bug(345510) }})
+  - A new value, `number`, for the `type` attribute of textboxes creates a textbox in which only numbers may be entered. In addition, arrow buttons appear to one side which may be used to step through values. [More information about numeric textboxes](https://wiki.mozilla.org/XUL:Specs:NumberBox). ({{ Bug(345510) }})
   - A [`<spinbuttons>`](/en-US/docs/XUL/spinbuttons) element is added which can be used when creating widgets using XBL bindings. ({{ Bug(155053) }})
-  - Two widgets, [`<datepicker>`](/en-US/docs/XUL/datepicker) and [`<timepicker>`](/en-US/docs/XUL/timepicker), can be used to allow the entry of dates and times. The datepicker is available in a number of styles by setting the `type` attribute, to allow entry with textboxes or a calendar grid. {{ interwiki('wikimo', 'XUL:Specs:DateTimePickers', 'More information about date pickers') }} [Datepicker Reference](/en-US/docs/XUL/datepicker) [Timepicker Reference](/en-US/docs/XUL/timepicker)
+  - Two widgets, [`<datepicker>`](/en-US/docs/XUL/datepicker) and [`<timepicker>`](/en-US/docs/XUL/timepicker), can be used to allow the entry of dates and times. The datepicker is available in a number of styles by setting the `type` attribute, to allow entry with textboxes or a calendar grid. [More information about date pickers](https://wiki.mozilla.org/XUL:Specs:DateTimePickers) [Datepicker Reference](/en-US/docs/XUL/datepicker) [Timepicker Reference](/en-US/docs/XUL/timepicker)
 
 - A guide has been created for [menus and popups](/en-US/docs/XUL/PopupGuide) describing new features available:
 
@@ -27,7 +28,7 @@ Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as i
 
 - Trees can now be scrolled horizontally. If the columns don't fit into the available width, a horizontal scrollbar appears. This happens if the columns' specified widths add up to more than the available space. See {{ Bug(212789) }} for details.
 - A new selection style allows cells to be selected individually, instead of entire rows. To use this selection style, set the tree's `seltype` attribute to `cell`.
-- Trees now support editing of individual cells. When the user double-clicks an editable cell, a text field appears in which the user can edit the contents of the cell. See {{ interwiki('wikimo', 'XUL:Tree', 'these notes') }} for details.
+- Trees now support editing of individual cells. When the user double-clicks an editable cell, a text field appears in which the user can edit the contents of the cell. See [these notes](https://wiki.mozilla.org/XUL:Tree) for details.
 - \<treecol> elements now support an `overflow` attribute which may be set to true to allow the text of cells within that column to expand to neighboring blank cells if the text is too large to fit into that single cell.
 
 ### Improvements to menus
@@ -39,14 +40,14 @@ Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as i
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now have a readonly `control` property which returns the enclosing \<menulist>
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now support the `accessKey`, `disabled`, `crop`, `image` and `label` properties which set the corresponding attribute
 - The \<menu> element now has methods to append, insert and remove menuitems. ({{ Bug(372552) }})
-- Editable menulists now offer an `editor` property to get the internal {{ Interface("nsIEditor") }} for its text field.
+- Editable menulists now offer an `editor` property to get the internal `nsIEditor` for its text field.
 - Menus may now be made translucent on platforms that support it ({{ Bug(70798) }}).
 
 ### Improvements to textboxes
 
 - Setting a [textbox](/en-US/docs/XUL/textbox)'s `spellcheck` attribute to `true` enables inline spellchecking for that textbox.
 - The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox.
-- An `editor` property is now offered, which lets you get the internal {{ Interface("nsIEditor") }} for the text field.
+- An `editor` property is now offered, which lets you get the internal `nsIEditor` for the text field.
 - [`textbox`](/en-US/docs/XUL/textbox) now supports a `newlines` attribute which specifies how line breaks in pasted text are handled. Possible values are:
 
   - `pasteintact` - paste everything as is

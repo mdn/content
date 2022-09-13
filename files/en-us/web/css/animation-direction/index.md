@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-direction
 ---
+
 {{CSSRef}}
 
 The **`animation-direction`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.
@@ -49,7 +50,7 @@ animation-direction: unset;
 - `alternate-reverse`
   - : The animation reverses direction each cycle, with the first iteration being played _backwards_. The count to determine if a cycle is even or odd starts at one.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ## Formal definition
 
@@ -61,7 +62,7 @@ animation-direction: unset;
 
 ## Examples
 
-### The animation is  playing reversed
+### Reversing the animation direction
 
 #### HTML
 
@@ -77,6 +78,9 @@ animation-direction: unset;
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-direction: reverse;
@@ -94,7 +98,7 @@ animation-direction: unset;
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+{{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

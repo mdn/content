@@ -1,6 +1,7 @@
 ---
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
+page-type: web-api-instance-method
 tags:
   - API
   - Clip
@@ -16,6 +17,7 @@ tags:
   - writeText
 browser-compat: api.Clipboard.writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} interface's **`writeText()`**
@@ -29,13 +31,13 @@ automatically to pages when they are in the active tab.
 ## Syntax
 
 ```js
-var promise = navigator.clipboard.writeText(newClipText)
+writeText(newClipText)
 ```
 
 ### Parameters
 
 - `newClipText`
-  - : The {{domxref("DOMString")}} to be written to the clipboard.
+  - : The string to be written to the clipboard.
 
 ### Return value
 
@@ -43,14 +45,14 @@ A {{jsxref("Promise")}} which is resolved once the clipboard's contents have bee
 updated. The promise is rejected if the caller does not have permission to write to the
 clipboard.
 
-## Example
+## Examples
 
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(function() {
+navigator.clipboard.writeText("<empty clipboard>").then(() => {
   /* clipboard successfully set */
-}, function() {
+}, () => {
   /* clipboard write failed */
 });
 ```
@@ -66,7 +68,5 @@ navigator.clipboard.writeText("<empty clipboard>").then(function() {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on
-  Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async
-  Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -14,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreen
 ---
+
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in fullscreen mode.

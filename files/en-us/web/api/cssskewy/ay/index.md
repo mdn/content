@@ -1,6 +1,7 @@
 ---
 title: CSSSkewY.ay
 slug: Web/API/CSSSkewY/ay
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSSkewY.ay
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`ay`** property of the

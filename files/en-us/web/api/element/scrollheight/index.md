@@ -1,6 +1,7 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollHeight`** read-only property is a
@@ -63,7 +65,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 ### Checking that the user has read a text
 
-Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this
+Associated with the {{domxref("Element.scroll_event", "scroll")}} event, this
 equivalence can be useful to determine whether a user has read a text or not (see also
 the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
 properties).
@@ -141,8 +143,8 @@ function checkReading () {
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
+onload = () => {
+  const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;
   checkReading.noticeBox.id = "notice";
@@ -165,10 +167,7 @@ onload = function () {
 
 ## See also
 
-- [MSDN:
-  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

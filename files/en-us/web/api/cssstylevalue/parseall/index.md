@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue.parseAll()
 slug: Web/API/CSSStyleValue/parseAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - parseAll()
 browser-compat: api.CSSStyleValue.parseAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`parseAll()`** method of the {{domxref("CSSStyleValue")}}
@@ -22,14 +24,14 @@ supplied values.
 ## Syntax
 
 ```js
-CSSStyleValue.parseAll(property, value)
+parseAll(property, value)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : A CSS property to set.
-- cssText
+- `cssText`
   - : A comma-separated string containing one or more values that apply to the provided
     property.
 

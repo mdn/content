@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.nackCount
 slug: Web/API/RTCOutboundRtpStreamStats/nackCount
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,6 +22,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats.nackCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`nackCount`** property of the

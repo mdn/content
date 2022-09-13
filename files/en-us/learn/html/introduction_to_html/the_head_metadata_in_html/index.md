@@ -12,6 +12,7 @@ tags:
   - lang
   - metadata
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 The {{glossary("Head", "head")}} of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document). Web browsers use information contained in the {{glossary("Head", "head")}} to render the HTML document correctly. In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.
@@ -43,7 +44,7 @@ Let's revisit the simple [HTML document we covered in the previous article](/en-
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
@@ -76,12 +77,14 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
-    1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
-    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *File > Save Page As...* menu and choose a sensible place to save the file.
+   1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
+   2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's _Save Page As…_ menu and choose a sensible place to save the file.
 
 2. Now open the file in your browser. You should see something like this:
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)It should now be completely obvious where the `<h1>` content appears, and where the `<title>` content appears!
+   ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)
+
+   It should now be completely obvious where the `<h1>` content appears and where the `<title>` content appears!
 
 3. You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.
 
@@ -147,18 +150,18 @@ The description is also used on search engine result pages. Let's go through an 
 2. View the page's source (right-click on the page, choose _View Page Source_ from the context menu.)
 3. Find the description meta tag. It will look something like this (although it may change over time):
 
-    ```html
-    <meta name="description" content="The MDN Web Docs site
-      provides information about Open Web technologies
-      including HTML, CSS, and APIs for both Web sites and
-      progressive web apps.">
-    ```
+   ```html
+   <meta name="description" content="The MDN Web Docs site
+     provides information about Open Web technologies
+     including HTML, CSS, and APIs for both Web sites and
+     progressive web apps.">
+   ```
 
 4. Now search for "MDN Web Docs" in your favorite search engine (We used Google.) You'll notice the description `<meta>` and `<title>` element content used in the search result — definitely worth having!
 
-    ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
+   ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
-> **Note:** In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](https://www.google.com/webmasters/tools/) — a way to make your site's search results better in the Google search engine.
+> **Note:** In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](https://search.google.com/search-console/about?hl=en) — a way to make your site's search results better in the Google search engine.
 
 > **Note:** Many `<meta>` features just aren't used any more. For example, the keyword `<meta>` element (`<meta name="keywords" content="fill, in, your, keywords, here">`) — which is supposed to provide keywords for search engines to determine relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.
 
@@ -172,15 +175,15 @@ For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Face
 <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
 <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+and HTML Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
 ```
 
-One effect of this is that when you link to MDN Web Docs on facebook, the link appears along with an image and description: a richer experience for users.
+One effect of this is that when you link to MDN Web Docs on Facebook, the link appears along with an image and description: a richer experience for users.
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)
 
-Twitter also has its own similar proprietary metadata called [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards), which has a similar effect when the site's URL is displayed on twitter.com. For example:
+Twitter also has its own similar proprietary metadata called [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards), which has a similar effect when the site's URL is displayed on twitter.com. For example:
 
 ```html
 <meta name="twitter:title" content="Mozilla Developer Network">
@@ -197,9 +200,9 @@ A favicon can be added to your page by:
 1. Saving it in the same directory as the site's index page, saved in `.ico` format (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
 2. Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
 
-    ```html
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    ```
+   ```html
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+   ```
 
 Here is an example of a favicon in a bookmarks panel:
 
@@ -279,7 +282,7 @@ These codes are defined by the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639
 
 ## Summary
 
-That marks the end of our quickfire tour of the HTML head — there's a lot more you can do in here, but an exhaustive tour would be boring and confusing at this stage, and we just wanted to give you an idea of the most common things you'll find in there for now! In the next article we'll be looking at HTML text fundamentals.
+That marks the end of our quickfire tour of the HTML head — there's a lot more you can do in here, but an exhaustive tour would be boring and confusing at this stage, and we just wanted to give you an idea of the most common things you'll find in there for now! In the next article, we'll be looking at [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals).
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 

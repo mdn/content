@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.pointer-events
 ---
+
 {{CSSRef}}
 
 The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what circumstances (if any) a particular graphic element can become the [target](/en-US/docs/Web/API/Event/target) of pointer events.
@@ -65,7 +66,7 @@ The `pointer-events` property is specified as a single keyword chosen from the l
 - `stroke`
   - : SVG only. The element can only be the target of a pointer event when the pointer is over the perimeter (i.e., stroke) of the element. The values of the `stroke` and `visibility` properties do not affect event processing.
 - `all`
-  - : SVG only  (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
+  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
 
 ## Description
 
@@ -77,7 +78,7 @@ Note that preventing an element from being the target of pointer events by using
 
 Elements with `pointer-events: none` will still receive focus through sequential keyboard navigation using the <kbd>Tab</kbd> key.
 
-We would like to provide finer grained control (than just `auto` and `none`) in HTML for which parts of an element will cause it to "catch" pointer events, and when. To help us in deciding how `pointer-events` should be further extended for HTML, if you have any particular things that you would like to be able to do with this property, then please add them to the Use Cases section of [this wiki page](https://wiki.mozilla.org/SVG:pointer-events) (don't worry about keeping it tidy).
+We would like to provide finer grained control (than just `auto` and `none`) in HTML for which parts of an element will cause it to "catch" pointer events, and when. To help us in deciding how `pointer-events` should be further extended for HTML, if you have any particular things that you would like to be able to do with this property, then please add them to the Use Cases section of [this wiki page](https://wiki.mozilla.org/SVG:Pointer-events) (don't worry about keeping it tidy).
 
 ## Formal definition
 
@@ -101,7 +102,7 @@ img {
 
 ### Disabling pointer events on a single link
 
-This example disables pointer events on the link to http\://example.com.
+This example disables pointer events on the link to `http://example.com`.
 
 #### HTML
 
@@ -128,7 +129,7 @@ a[href="http://example.com"] {
 
 {{Specifications}}
 
-Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
+Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](https://wiki.csswg.org/spec/css4-ui#pointer-events).
 
 ## Browser compatibility
 
@@ -138,5 +139,5 @@ Its extension to HTML elements, though present in early drafts of CSS Basic User
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
 - The SVG attribute {{SVGAttr("visibility")}}
-- [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
+- [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
 - {{cssxref("user-select")}} - controls whether the user can select text

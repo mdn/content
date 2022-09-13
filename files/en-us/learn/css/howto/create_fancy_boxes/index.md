@@ -7,6 +7,7 @@ tags:
   - CodingScripting
   - Learn
 ---
+
 CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.
 
 Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
@@ -119,7 +120,7 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://lea.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
 ## Pseudo-elements
 
@@ -180,7 +181,7 @@ Let's have an example by turning our box into a cloud:
 }
 
 .fancy::before {
-  /* This is the  size of the clouds left ear */
+  /* This is the size of the clouds left ear */
   width  : 125px;
   height : 125px;
 
@@ -265,7 +266,6 @@ blockquote i {
   display   : block;
   font-size : 0.8em;
   margin-top: 1rem;
-  text-style: italic;
   text-align: right;
 }
 ```
@@ -280,7 +280,7 @@ So it's possible to create a wonderful effect when we mix all of this together. 
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-Let's create some partial drop shadow effect.  The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
+Let's create some partial drop shadow effect. The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
 
 ```css
 .fancy {

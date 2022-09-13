@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `contains` function determines whether the first argument string contains the second argument string and returns boolean true or false.
@@ -28,7 +29,7 @@ contains(haystack, needle)
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-contains)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-contains)
 
 ### Gecko support
 

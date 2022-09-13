@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.select()`** method selects all the text
@@ -19,10 +21,18 @@ that includes a text field.
 ## Syntax
 
 ```js
-element.select();
+select()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Click the button in this example to select all the text in the
 `<input>` element.
@@ -46,7 +56,7 @@ function selectText() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaAtomic
 slug: Web/API/ElementInternals/ariaAtomic
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaAtomic
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaAtomic`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the `aria-relevant` attribute.
@@ -19,7 +21,7 @@ The **`ariaAtomic`** property of the {{domxref("ElementInternals")}} interface r
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"false"`
   - : Assistive technologies will present only the changed node or nodes.
@@ -31,10 +33,12 @@ A {{domxref("DOMString")}} with one of the following values:
 In this example the value of `ariaAtomic` is set to "true" in the constructor for a custom element .
 
 ```js
-constructor() {
-  super();
-  this.internals_ = this.attachInternals();
-  this.internals_.ariaAtomic = "true";
+class MyCustomElement extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaAtomic = "true";
+  }
 }
 ```
 

@@ -9,17 +9,17 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleX
 ---
+
 {{CSSRef}}
 
 The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
 x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](scalex.png)
+{{EmbedInteractiveExample("pages/css/function-scaleX.html")}}
 
 It modifies the abscissa of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
-`scaleX(-1)` defines an [axial
-symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
+`scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
 > **Note:** `scaleX(sx)` is equivalent to
@@ -164,8 +164,8 @@ div {
 
 ## See also
 
-- [`scaleY()`](</en-US/docs/Web/CSS/transform-function/scaleY()>)
-- [`scaleZ()`](</en-US/docs/Web/CSS/transform-function/scaleZ()>)
+- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

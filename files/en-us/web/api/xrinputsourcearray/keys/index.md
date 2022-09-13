@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray.keys()
 slug: Web/API/XRInputSourceArray/keys
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -22,9 +23,11 @@ tags:
   - XRInputSourceArray
   - augmented
   - keys
+  - Experimental
 browser-compat: api.XRInputSourceArray.keys
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`keys()`** method in the
 {{domxref("XRInputSourceArray")}} interface returns a {{Glossary("JavaScript")}}
@@ -35,7 +38,7 @@ of input sources.
 ## Syntax
 
 ```js
-xrInputSourceArray.keys();
+keys()
 ```
 
 ### Parameters

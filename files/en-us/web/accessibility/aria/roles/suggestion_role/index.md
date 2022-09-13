@@ -8,11 +8,12 @@ tags:
   - annotations
   - suggestion
 ---
-The `suggestion` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
+
+The `suggestion` role semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
 
 ## Examples
 
-When you've got a content change that involves an insertion _and_ a deletion, there is no way for a screenreader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
+When you've got a content change that involves an insertion _and_ a deletion, there is no way for a screen reader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
 
 ```html
 <p>Freida's pet is a
@@ -38,10 +39,6 @@ We could even provide an information box saying who made the suggestion and when
 
 Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use
 
-## Accessibility concerns
-
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
-
 ## Best practices
 
 ### Prefer HTML
@@ -60,6 +57,6 @@ Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

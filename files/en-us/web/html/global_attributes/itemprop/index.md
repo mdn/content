@@ -291,13 +291,13 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 1. If the item is a typed item it must be either:
 
-    1. A defined property name, or
-    2. A valid URL, which refers to the vocabulary definition, or
-    3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+   1. A defined property name, or
+   2. A valid URL, which refers to the vocabulary definition, or
+   3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
 
 2. If the item is not a typed item it must be:
 
-    1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+   1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
 > **Note:** The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
@@ -315,7 +315,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
 
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
 
 - If the element is an `a`, `area`, or `link` element
 
@@ -389,28 +389,9 @@ And the following
 </div>
 ```
 
-## Other examples
+### Representing structured data for a book
 
-### HTML
-
-```html
-<dl itemscope
-  itemtype="https://schema.org/Book"
-  itemid="urn:isbn:0-374-22848-5<">
- <dt>Title
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Author
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Publication date
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">August 4 2020</time>
-</dl>
-```
-
-### Structured data
+This example uses microdata attributes to represent the following structured data:
 
 <table class="standard-table">
   <tbody>
@@ -437,9 +418,28 @@ And the following
   </tbody>
 </table>
 
-### Result
+#### HTML
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+```html
+<dl itemscope
+  itemtype="https://schema.org/Book"
+  itemid="urn:isbn:0-374-22848-5<">
+ <dt>Title
+   <dd
+    itemprop="title">Owls of the Eastern Ice
+ <dt>Author
+   <dd
+     itemprop="author">Jonathan C Slaght
+ <dt>Publication date
+ <dd><time
+   itemprop="datePublished"
+   datetime="2020-08-04">August 4 2020</time>
+</dl>
+```
+
+#### Result
+
+{{EmbedLiveSample('Representing structured data for a book')}}
 
 ## Specifications
 
@@ -452,10 +452,9 @@ And the following
 ## See also
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- Other, microdata related, global attributes:
+- Other microdata related global attributes:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)

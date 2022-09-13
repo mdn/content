@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.id
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`id`** property contains a
@@ -29,7 +31,7 @@ the media associated with a media element. The track ID can also be used as the 
 
 ## Value
 
-A {{domxref("DOMString")}} which identifies the track, suitable for use when calling
+A string which identifies the track, suitable for use when calling
 {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} on an
 {{domxref("AudioTrackList")}} such as the one specified by a media element's
 {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.

@@ -11,9 +11,10 @@ tags:
   - color-profile
 browser-compat: css.at-rules.color-profile
 ---
+
 {{CSSRef}}
 
-The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) {{cssxref("at-rule")}} defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
+The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
 
 ## Syntax
 
@@ -58,8 +59,6 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 ```
 
 ## Formal syntax
-
-{{csssyntax}}
 
 ## Specifications
 

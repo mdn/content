@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.sidebar_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -16,6 +17,10 @@ browser-compat: webextensions.manifest.sidebar_action
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -77,7 +82,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
         <p>
           In Firefox, the stylesheet can be seen at
           chrome://browser/content/extension.css, or
-          chrome://browser/content/extension-mac.css on OS X. When setting
+          chrome://browser/content/extension-mac.css on macOS. When setting
           dimensions, be aware that this style sheet currently sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).

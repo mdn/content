@@ -11,6 +11,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-inner-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-inner-spin-button`** CSS pseudo-element is used to style the inner part of the spinner button of number picker input elements.
@@ -59,4 +60,4 @@ Not part of any standard.
 
 - {{cssxref("::-webkit-outer-spin-button")}}
 - {{cssxref("::-webkit-textfield-decoration-container")}}
-- [Styling Form Controls – WebKit](http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- [Styling Form Controls – WebKit](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

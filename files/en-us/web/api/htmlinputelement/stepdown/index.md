@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,11 +11,12 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepDown
 ---
+
 {{APIRef("HTML DOM")}}
 
 The
 **`HTMLInputElement.stepDown([n])`** method decrements the
-value of a numeric type of  {{HTMLElement("input")}} element by the value of the
+value of a numeric type of {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute or up
 to `n` multiples of the step attribute if a number is passed as the
 parameter.
@@ -26,7 +28,7 @@ defaults to 1 if not specified, and
 default value for `step` if not specified.
 
 Valid on all numeric, date, and time input types that support the step attribute,
-including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
+including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},
 {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.
@@ -107,21 +109,26 @@ support the `step` attribute (see the list of supported input types above), or i
 ## Syntax
 
 ```js
-element.stepDown( [ stepDecrement ] );
+stepDown()
+stepDown(stepDecrement)
 ```
 
 ### Parameters
 
-- _`stepDecrement`_
+- `stepDecrement` {{optional_inline}}
 
-  - : The optional  `stepDecrement` parameter is a numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
+  - : A numeric value. If no parameter is passed, _stepDecrement_ defaults to 1.
 
     If the value is a float, the value will decrement as if
     [`Math.floor(stepDecrement)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
     was passed. If the value is negative, the value will be incremented instead of
     decremented.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Click the button in this example to decrement the {{HTMLElement("input/number",
   "number")}} input type:
@@ -147,17 +154,17 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 ```js
 /* make the button call the function */
 let button = document.getElementById('theButton');
-button.addEventListener('click', function() {
-  stepondown();}
-);
+button.addEventListener('click', () => {
+  stepondown();
+});
 
 function stepondown() {
   let input = document.getElementById('theNumber');
   let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
+  if (val) {  // decrement with a parameter
     input.stepDown(val);
-  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
+  } else {    // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
 }
@@ -173,11 +180,11 @@ input:invalid {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 Note if you don't pass a parameter to the `stepDown()` method, it defaults
 to 1. Any other value is a multiplier of the `step` attribute value, which in
-this case is 5. If we pass `4` as the _`stepDecrement`_, the input will `stepDown` by
+this case is 5. If we pass `4` as the `stepDecrement`, the input will `stepDown` by
 `4 * 5`, or `20`. If the parameter is `0`, the number will not be
 decremented. The `stepDown()` method will not allow the input to go out of range, in this
 case stopping when it reaches 0 and rounding down and floats that are passed as a

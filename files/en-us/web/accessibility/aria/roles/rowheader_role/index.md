@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: rowheader role'
 slug: Web/Accessibility/ARIA/Roles/rowheader_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -11,8 +11,9 @@ tags:
   - document structure role
   - Accessibility
   - ARIA role
-  - reference
+spec-urls: https://w3c.github.io/aria/#rowheader
 ---
+
 An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) containing header information for a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure of a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
@@ -43,7 +44,7 @@ An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARI
 
 It is a structural equivalent to the {{HTMLElement('th')}} element with a scope of `row`, `<th scope="row">`. Using the native {{HTMLElement('th')}} HTML element is strongly encouraged.
 
-To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`,.
+To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`.
 
 > **Note:** Using the native [table elements](/en-US/docs/Learn/HTML/Tables/Basics) whenever possible, is strongly encouraged.
 
@@ -52,7 +53,7 @@ To create an ARIA row header, add `role="rowheader"` to the element. That row he
 #### Context roles
 
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : The only context in which you will find a row.  It encompasses a cell or group of cells row, of which only one should be of rowheader type. Similar to the native {{HTMLElement('tr')}} HTML element.
+  - : The only context in which you will find a row. It encompasses a cell or group of cells row, of which only one should be of rowheader type. Similar to the native {{HTMLElement('tr')}} HTML element.
 
 ### Keyboard interactions
 
@@ -80,15 +81,15 @@ None.
        <span role="rowheader">header</span>
        <span role="cell">h1</span>
     </div>
-    <div role="row"  aria-rowindex="16">
+    <div role="row" aria-rowindex="16">
       <span role="rowheader">header</span>
       <span role="cell">h6</span>
     </div>
-    <div role="row"  aria-rowindex="18">
+    <div role="row" aria-rowindex="18">
       <span role="rowheader">rowgroup</span>
       <span role="cell">thead</span>
     </div>
-    <div role="row"  aria-rowindex="24">
+    <div role="row" aria-rowindex="24">
       <span role="rowheader">term</span>
       <span role="cell">dt</span>
     </div>
@@ -100,7 +101,7 @@ The above is a non-semantic ARIA table with a table header and table body, with 
 
 ## Best practices
 
-Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, and so on for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for all the ARIA table roles  is when the CSS's `display` property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to add in the semantics.
+Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, and so on for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for all the ARIA table roles is when the CSS's `display` property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to add in the semantics.
 
 ```html
 <table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
@@ -132,10 +133,7 @@ none
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#rowheader","ARIA: rowheader role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_rowheader_role","rowheader role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -150,6 +148,6 @@ none
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

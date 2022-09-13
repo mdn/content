@@ -1,11 +1,13 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Node.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("Node")}} interface

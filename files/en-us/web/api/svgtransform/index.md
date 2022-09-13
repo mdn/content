@@ -1,6 +1,7 @@
 ---
 title: SVGTransform
 slug: Web/API/SVGTransform
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTransform
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG transform interface

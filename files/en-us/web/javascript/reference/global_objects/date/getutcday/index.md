@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCDay
 ---
+
 {{JSRef}}
 
 The **`getUTCDay()`** method returns the day of the week in the
@@ -24,11 +25,11 @@ getUTCDay()
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer number corresponding to the day
 of the week for the given date, according to universal time: 0 for Sunday, 1 for Monday,
 2 for Tuesday, and so on.
-Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
 if the `Date` object doesn't represent a valid date.
 
 ## Examples
@@ -39,8 +40,8 @@ The following example assigns the weekday portion of the current date to the var
 `weekday`.
 
 ```js
-var today = new Date();
-var weekday = today.getUTCDay();
+const today = new Date();
+const weekday = today.getUTCDay();
 ```
 
 ## Specifications

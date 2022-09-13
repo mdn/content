@@ -1,6 +1,7 @@
 ---
 title: Using the Media Capabilities API
 slug: Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
+page-type: guide
 tags:
   - API
   - Audio
@@ -11,7 +12,9 @@ tags:
   - Media Capabilities API
   - Video
   - capabilities
+browser-compat: api.MediaCapabilities
 ---
+
 {{APIRef("Media Capabilities API")}}
 
 The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
@@ -28,7 +31,7 @@ These features include:
 
 The {{domxref("MediaCapabilities")}} is available using the {{domxref("Navigator.mediaCapabilities", "mediaCapabilities")}} property which is provided by both the `navigator` object and the {{domxref("WorkerNavigator")}} object; in other words, the Media Capabilities API is available both on the main thread and from workers.
 
-If the object exists, Media Capabilities API is available. You can, therefore, test for the presence of the API  like so:
+If the object exists, Media Capabilities API is available. You can, therefore, test for the presence of the API like so:
 
 ```js
 if ("mediaCapabilities" in navigator) {
@@ -38,13 +41,13 @@ if ("mediaCapabilities" in navigator) {
 }
 ```
 
-Taking video as an example, to obtain information about video decoding abilities, you create a video decoding configuration which you pass as a parameter to  {{domxref("MediaCapabilities.decodingInfo()")}} method. This returns a promise that fulfills with information about the media capabilities as to whether the video can be decoded, and whether decoding will be smooth and power efficient. You can also test audio decoding as well as video and audio encoding.
+Taking video as an example, to obtain information about video decoding abilities, you create a video decoding configuration which you pass as a parameter to {{domxref("MediaCapabilities.decodingInfo()")}} method. This returns a promise that fulfills with information about the media capabilities as to whether the video can be decoded, and whether decoding will be smooth and power efficient. You can also test audio decoding as well as video and audio encoding.
 
 ### Creating a video decoding configuration
 
-The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter a media decoding configuration. There are very specific ways to go about creating the configuration defined by the {{domxref("MediaDecodingConfiguration")}} dictionary.
+The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter a media decoding configuration.
 
-In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a {{domxref("VideoConfiguration")}} including values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`**:**
+In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
 
 - The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Formats/Video_codecs).
 - The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the aspect ratio.
@@ -78,14 +81,15 @@ const audioConfiguration = {
 };
 ```
 
-Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
+Had we been testing encoding capabilities, we would have created a slightly different configuration.
+In this case the type of media being tested is either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
 
 ### Querying the browser about decoding abilities
 
 Now that we've created a video decoding configuration we can pass it as a parameter of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.
 
 ```js
-var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);
+let promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);
 ```
 
 The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises. Once the promises state is fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
@@ -95,28 +99,27 @@ The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingIn
 Instead of the assigning the promise to a variable, we can output the values returned by the promise to the console:
 
 ```js
-navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result => {
-  console.log('This configuration is ' +
-    (result.supported ? '' : 'not ') + 'supported, ' +
-    (result.smooth ? '' : 'not ') + 'smooth, and ' +
-    (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+navigator.mediaCapabilities.decodingInfo(videoConfiguration).then((result) => {
+  console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+  console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+  console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
 });
 ```
 
 ## Handling errors
 
-In our video decoding example, a `TypeError` would be raised if the media configuration passed to the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method was invalid. There are a few reasons why an error might occur, including:
+In our video decoding example, a {{jsxref("TypeError")}} would be raised if the media configuration passed to the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method was invalid. There are a few reasons why an error might occur, including:
 
 - The specified `type` isn't one of the two permitted values: `file` or `media-source`
 - The `contentType` given is
 
-The error can be due to the `type` not being one of the two possible values, the `contentType` not being a valid codec MIME type, or invalid or omitted definitions required in the {{domxref("VideoConfiguration")}}.
+The error can be due to the `type` not being one of the two possible values, the `contentType` not being a valid codec MIME type, or invalid or omitted definitions being omitted from the video configuration object.
 
 ```js
 navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
   console.log('It worked')
-).catch(error =>
-  console.log('It failed: ' + error)
+).catch((error) =>
+  console.error(`It failed: ${error}`)
 );
 ```
 
@@ -191,13 +194,13 @@ and whether decoding will be smooth and power efficient:</p>
 let mc = {
   videoConfiguration : new Object(),
 
-  tryIt: function () {
+  tryIt() {
    mc.createConfiguration();
    mc.testIt();
   },
 
-  createConfiguration: function () {
-    var size = document.getElementById('size').value.split('x');
+  createConfiguration() {
+    const size = document.getElementById('size').value.split('x');
     mc.videoConfiguration = {
       type: 'file',
       video: {
@@ -210,23 +213,21 @@ let mc = {
     }
   },
 
-  testIt: function () {
+  testIt() {
     let content = '';
-    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
-      var li = document.createElement('li'),
+    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then((result) => {
+      const li = document.createElement('li'),
         mcv = mc.videoConfiguration.video;
-      content = 'A ' + mcv.width + 'x' + mcv.height + ', ' + mcv.contentType + ' at ' +
-        mcv.framerate  + 'fps and ' +  mcv.bitrate + ' bps video ' +
-        (result.supported ? ' IS ' : 'IS NOT ') + ' supported, ' +
-        (result.smooth ? ' IS ' : ' is NOT ') + ' smooth, and' +
-        (result.powerEfficient ? ' IS ' : ' IS NOT ') + 'power efficient.';
-      var ul = document.getElementById("results")
+      content = `A ${mcv.width}x${mcv.height}, ${mcv.contentType} at ${mcv.framerate}fps and ${mcv.bitrate} bps video ${result.supported ? ' IS ' : 'IS NOT '} supported,`;
+      content += `${result.smooth ? ' IS ' : ' is NOT '} smooth, and`;
+      content += `${result.powerEfficient ? ' IS ' : ' IS NOT '}power efficient.`;
+      const ul = document.getElementById("results")
       li.innerHTML = content;
       ul.appendChild(li);
     }).catch((error) => {
-        var li = document.createElement('li'),
+        const li = document.createElement('li'),
             ul = document.getElementById("results");
-        li.innerText = 'Codec ' + mc.videoConfiguration.video.contentType + ' threw an error: ' + error;
+        li.textContent = `Codec ${mc.videoConfiguration.video.contentType} threw an error: ${error}`;
         ul.appendChild(li);
     });
   }
@@ -241,7 +242,7 @@ document.getElementById('try-it').addEventListener('click', mc.tryIt);
 
 ## Browser compatibility
 
-{{Compat("api.MediaCapabilities")}}
+{{Compat}}
 
 ## See also
 

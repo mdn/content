@@ -12,6 +12,7 @@ tags:
   - django
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 This second article in our [Django Tutorial](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.
@@ -48,12 +49,12 @@ To get started:
 1. Use the `django-admin` tool to generate a project folder, the basic file templates, and **manage.py**, which serves as your project management script.
 2. Use **manage.py** to create one or more _applications_.
 
-    > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
+   > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
 
 3. Register the new applications to include them in the project.
 4. Hook up the **url/path** mapper for each application.
 
-For the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), the website and project folders are named *locallibrary*, and includes one application named _catalog_.
+For the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), the website and project folders are named _locallibrary_, and includes one application named _catalog_.
 The top-level folder structure will therefore be as follows:
 
 ```bash
@@ -73,17 +74,17 @@ To create the project:
 1. Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
 2. Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your _Documents_ folder), and create a folder for your new website (in this case: _django_projects_). Then change into your newly-created directory:
 
-    ```bash
-    mkdir django_projects
-    cd django_projects
-    ```
+   ```bash
+   mkdir django_projects
+   cd django_projects
+   ```
 
 3. Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
 
-    ```bash
-    django-admin startproject locallibrary
-    cd locallibrary
-    ```
+   ```bash
+   django-admin startproject locallibrary
+   cd locallibrary
+   ```
 
 The `django-admin` tool creates a folder/file structure as follows:
 
@@ -153,7 +154,7 @@ In addition we now have:
 - A _migrations_ folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models.
 - **\_\_init\_\_.py** — an empty file created here so that Django/Python will recognize the folder as a [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) and allow you to use its objects within other parts of the project.
 
-> **Note:** Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your url mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
+> **Note:** Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your URL mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
 
 ## Registering the catalog application
 
@@ -176,7 +177,7 @@ INSTALLED_APPS = [
 
 The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/locallibrary/catalog/apps.py** when you created the application.
 
-> **Note:** You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc).
+> **Note:** You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
 
 ## Specifying the database
 
@@ -238,9 +239,9 @@ urlpatterns = [
 ]
 ```
 
-The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls` , which contains the Administration application's own URL mapping definitions.
+The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls`, which contains the Administration application's own URL mapping definitions.
 
-> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass *any_chars* to the view as a string with parameter name `id`. We discuss path methods and route patterns further in later topics.
+> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass _`any_chars`_ to the view as a string with the parameter name `id`. We discuss path methods and route patterns further in later topics.
 
 To add a new list item to the `urlpatterns` list, add the following lines to the bottom of the file. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **catalog/urls.py**).
 
@@ -283,7 +284,7 @@ Django does not serve static files like CSS, JavaScript, and images by default, 
 Add the following final block to the bottom of the file now:
 
 ```python
-# Use static() to add url mapping to serve static files during development (only)
+# Use static() to add URL mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -313,7 +314,7 @@ urlpatterns = [
 
 ## Testing the website framework
 
-At this point we have a complete skeleton project. The website doesn't actually *do* anything yet, but it's worth running it to make sure that none of our changes have broken anything.
+At this point we have a complete skeleton project. The website doesn't actually _do_ anything yet, but it's worth running it to make sure that none of our changes have broken anything.
 
 Before we do that, we should first run a _database migration_. This updates our database (to include any models in our installed applications) and removes some build warnings.
 
@@ -330,7 +331,7 @@ python3 manage.py migrate
 
 > **Warning:** You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 
-The `makemigrations` command *creates* (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
+The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 
@@ -377,7 +378,7 @@ As you saw previously, a URL-mapping for the Admin site has already been added i
 
 ## Summary
 
-You have now created a complete skeleton website project, which you can go on to populate with urls, models, views, and templates.
+You have now created a complete skeleton website project, which you can go on to populate with URLs, models, views, and templates.
 
 Now that the skeleton for the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.
 

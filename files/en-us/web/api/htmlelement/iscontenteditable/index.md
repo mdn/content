@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
+page-type: web-api-instance-property
 tags:
   - API
   - Editing
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.isContentEditable`** read-only property
@@ -42,7 +44,7 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 

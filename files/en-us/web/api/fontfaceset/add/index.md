@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.add()
 slug: Web/API/FontFaceSet/add
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.add
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new font to the set.
@@ -16,7 +18,7 @@ The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new fo
 ## Syntax
 
 ```js
-FontFaceSet.add(font)
+add(font)
 ```
 
 ### Parameters
@@ -24,13 +26,13 @@ FontFaceSet.add(font)
 - `font`
   - : A {{domxref("FontFace")}} to be added to the set.
 
-### Return Value
+### Return value
 
 A new {{domxref("FontFaceSet")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidModificationError`
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if this font is already included via the CSS {{cssxref("@font-face")}} rule.
 
 ## Examples

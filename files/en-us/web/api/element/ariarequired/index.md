@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRequired
 slug: Web/API/Element/ariaRequired
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaRequired
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects the value of the `aria-required` attribute, which indicates that user input is required on the element before a form may be submitted.
@@ -19,7 +21,7 @@ The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : Users need to provide input on an element before a form is submitted.

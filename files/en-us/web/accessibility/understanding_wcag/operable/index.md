@@ -1,6 +1,6 @@
 ---
 title: Operable
-slug: Web/Accessibility/Understanding_WCAG/Operable 
+slug: Web/Accessibility/Understanding_WCAG/Operable
 tags:
   - Accessibility
   - Focus
@@ -16,6 +16,7 @@ tags:
   - operable
   - seizures
 ---
+
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 
 > **Note:** To read the W3C definitions for Operable and its guidelines and success criteria, see [Principle 2: Operable — User interface components and navigation must be operable.](https://www.w3.org/TR/WCAG21/#operable)
@@ -336,7 +337,7 @@ The conformance criteria under this guideline relate to ways in which users can 
           >Meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
-        for screenreader users, who will often bring up a list of the links out
+        for screen reader users, who will often bring up a list of the links out
         of context — several links all labelled "click here", "click here",
         "click here" would be confusing.
       </td>
@@ -374,7 +375,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     <tr>
       <td>2.4.6 Headings and labels (AA)</td>
       <td>
-        Heading (e.g. {{htmlelement("h2")}}) and
+        Heading (e.g. {{htmlelement("Heading_Elements", "&lt;h2&gt;")}}) and
         {{htmlelement("label")}} elements clearly describe the purpose
         of the content and form elements they are supposed to be describing.
       </td>
@@ -442,7 +443,7 @@ The conformance criteria under this guideline relate to ways in which users can 
           >Meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
-        for screenreader users, who will often bring up a list of the links out
+        for screen reader users, who will often bring up a list of the links out
         of context — several links all labelled "click here", "click here",
         "click here" would be confusing.
       </td>
@@ -510,7 +511,7 @@ The conformance criteria under this guideline ensures that users are able to int
   </tr>
   <tr>
    <td>2.5.5 Target Size (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height.  Exceptions exist.</td>
+   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height. Exceptions exist.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Target Size</a></td>
   </tr>
   <tr>
@@ -525,7 +526,7 @@ The conformance criteria under this guideline ensures that users are able to int
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
   2. Operable

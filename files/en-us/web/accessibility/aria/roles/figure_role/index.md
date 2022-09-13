@@ -10,7 +10,11 @@ tags:
   - Role
   - document structure role
   - figure
+spec-urls:
+  - https://w3c.github.io/aria/#figure
+  - https://w3c.github.io/aria-practices/#describing_with_captions
 ---
+
 The ARIA `figure` role can be used to identify a figure inside page content where appropriate semantics do not already exist. A figure is generally considered to be one or more images, code snippets, or other content that puts across information in a different way to a regular flow of text.
 
 ## Description
@@ -27,12 +31,12 @@ A `figure` is a perceivable section of content that typically contains a graphic
 
 In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`.
 
-For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
+For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure. When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
 If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be used.
 
 ```html
 <div role="figure" aria-labelledby="figure-1">
-  ...
+  …
   <p id="figure-1">Text that describes the figure.</p>
 </div>
 ```
@@ -106,10 +110,7 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 ## Specifications
 
-| Specification                                        | Status                   |
-| ---------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#figure","figure")}} | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#describing_with_captions","Describing with captions")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -122,6 +123,6 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

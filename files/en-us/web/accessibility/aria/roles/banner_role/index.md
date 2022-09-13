@@ -6,6 +6,9 @@ tags:
   - ARIA role
   - Accessibility
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#banner
+  - https://w3c.github.io/aria-practices/#aria_lh_banner
 ---
 
 The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
@@ -44,7 +47,7 @@ Here's a fake simple banner with a skip to navigation link, a logo, a title and 
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
-  <nav>...</nav>
+  <nav>…</nav>
 </div>
 ```
 
@@ -56,7 +59,7 @@ We could also have written the above with the HTML `header` element:
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
-  <nav>...</nav>
+  <nav>…</nav>
 </header>
 ```
 
@@ -66,10 +69,7 @@ While it is best to use the `header` element and ensure it is not a descendant o
 
 ## Specifications
 
-| Specification                                                                                                | Status                                           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -80,6 +80,6 @@ While it is best to use the `header` element and ensure it is not a descendant o
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

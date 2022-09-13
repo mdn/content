@@ -1,6 +1,7 @@
 ---
 title: CSSNumericArray.length
 slug: Web/API/CSSNumericArray/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,6 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSNumericArray.length
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`length`** property of the

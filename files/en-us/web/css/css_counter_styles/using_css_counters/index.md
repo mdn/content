@@ -11,6 +11,7 @@ tags:
   - Web
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
+
 {{CSSRef}}
 
 **CSS counters** let you adjust the appearance of content based on its location in a document.
@@ -25,8 +26,10 @@ To use a counter it must first be initialized to a value with the {{cssxref("cou
 The counter's value can then be increased or decreased using {{cssxref("counter-increment")}} property.
 The current value of a counter is displayed using the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) {{CSSxRef("content")}} property.
 
-Note that counters can only be set, reset, or incremented in elements that generate boxes.
+Counters can only be set, reset, or incremented in elements that generate boxes.
 For example, if an element is set to `display: none` then any counter operation on that element will be ignored.
+
+The properties of counters can be scoped to specific elements using style containment which is described in more detail in the {{cssxref("contain")}} property.
 
 ### Manipulating a counter's value
 
@@ -79,7 +82,7 @@ For example, here each nested level restarts from one:
 1 One
   1 Nested one
   2 Nested two
-2 Two 
+2 Two
   1 Nested one
   2 Nested two
   3 Nested three
@@ -92,24 +95,24 @@ For example, you might use this to lay out sections as shown:
 ```
 1 One
   1.1 Nested one
-  2.1 Nested two
-2 Two 
-  1.1 Nested one
-  2.1 Nested two
-  3.1 Nested three
+  1.2 Nested two
+2 Two
+  2.1 Nested one
+  2.2 Nested two
+  2.3 Nested three
 3 Three
 ```
 
 The {{cssxref("counter", "counter()")}} function has two forms: `counter(<counter-name>)` and `counter(<counter-name>, <counter-style>)`.
 The generated text is the value of the innermost counter of the given name in scope at the pseudo-element.
 
-The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and  `counters(<counter-name>, <separator>, <counter-style>)`.
+The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and `counters(<counter-name>, <separator>, <counter-style>)`.
 The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string (`<separator>`).
 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
 You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/CSS_Counter_Styles).
 
-Examples showing the use of `counter()` and `counter()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
+Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
 
 ### Reversed counters
 
@@ -122,7 +125,7 @@ This makes it easy to implement a counter that counts from the number of element
 For example, to create a reversed counter named `section` with a default initial value, you would use the following syntax:
 
 ```css
-counter-reset: reversed(section); 
+counter-reset: reversed(section);
 ```
 
 You can of course specify any initial value that you like.
@@ -207,7 +210,7 @@ h3::before {
 
 #### Result
 
-{{EmbedLiveSample("Reversing a counter", "100%", 150)}}
+{{EmbedLiveSample("Basic example: reversed counter", "100%", 150)}}
 
 ### A more sophisticated example
 
@@ -242,12 +245,10 @@ a[href]:empty::after {
 
 {{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}
 
-## Nesting counters
+### Example of a nested counter
 
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
 Using the {{cssxref("counters", "counters()")}} function, separating text can be inserted between different levels of nested counters.
-
-### Example of a nested counter
 
 #### CSS
 
@@ -310,6 +311,7 @@ li::before {
 
 ## See also
 
+- {{cssxref("contain")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}

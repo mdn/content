@@ -6,6 +6,7 @@ tags:
   - Glossary
   - JavaScript
 ---
+
 **Transient activation** (or "transient user activation") is a window state that indicates a user has recently pressed a button, moved a mouse, used a menu, or performed some other user interaction.
 
 This state is sometimes used as a mechanism for ensuring that a web API can only function if triggered by user interaction.

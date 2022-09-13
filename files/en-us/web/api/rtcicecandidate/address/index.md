@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.address
 slug: Web/API/RTCIceCandidate/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -17,6 +18,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`address`** property is a string providing the IP address of the device which is the source of the candidate.
@@ -27,7 +29,7 @@ You can't specify the value of `address` directly in the options object, but its
 
 ## Value
 
-A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
+A string providing the IP address from which the candidate comes.
 
 > **Note:** If `port` is `null` — and
 > `port` is supported by the {{Glossary("user agent")}} — passing the
@@ -53,7 +55,7 @@ address from being exposed, but reduces the pool of available candidates to choo
 To do this, configure the ICE agent's ICE transport policy with an object confirming to the `configuration` property described in {{domxref("RTCPeerConnection.setConfiguration")}}, like this:
 
 ```js
-var rtcConfig = {
+const rtcConfig = {
   iceServers: [
     {
       urls: "turn:myturn.server.ip",

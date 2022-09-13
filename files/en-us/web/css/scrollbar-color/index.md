@@ -10,6 +10,7 @@ tags:
   - scrollbar-color
 browser-compat: css.properties.scrollbar-color
 ---
+
 {{CSSRef}}
 
 The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the scrollbar track and thumb.
@@ -17,8 +18,6 @@ The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of 
 The **track** refers to the background of the scrollbar, which is generally fixed regardless of the scrolling position.
 
 The **thumb** refers to the moving part of the scrollbar, which usually floats on top of the track.
-
-{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}
 
 ## Syntax
 

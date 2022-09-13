@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mix-blend-mode
 ---
+
 {{CSSRef}}
 
 The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
@@ -644,6 +645,55 @@ circle { mix-blend-mode: screen; }
 #### Result
 
 {{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
+
+### Using mix-blend-mode with text
+
+This example uses `mix-blend-mode` to blend text color with the background color of its parent element.
+
+#### HTML
+
+```html
+<div class="container">
+  <p>Mostly Harmless</p>
+  <p class="multiply">Mostly Harmless</p>
+  <p class="screen">Mostly Harmless</p>
+  <p class="hard-light">Mostly Harmless</p>
+</div>
+```
+
+#### CSS
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+.container {
+  background-color: blue;
+}
+
+p {
+  font: 4rem  'Rubik Moonrocks', cursive;
+  font-weight: bold;
+  color: orange;
+  padding: .5rem;
+  margin: 0;
+}
+
+.multiply {
+  mix-blend-mode: multiply;
+}
+
+.screen {
+  mix-blend-mode: screen;
+}
+
+.hard-light {
+  mix-blend-mode: hard-light;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using mix-blend-mode with text", "", "420")}}
 
 ## Specifications
 

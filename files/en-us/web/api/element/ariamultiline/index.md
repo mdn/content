@@ -1,6 +1,7 @@
 ---
-title: Element.ariaMultiline
-slug: Web/API/Element/ariaMultiline
+title: Element.ariaMultiLine
+slug: Web/API/Element/ariaMultiLine
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,18 @@ tags:
   - AriaAttributes
   - AriaMixin
   - Element
-browser-compat: api.Element.ariaMultiline
+browser-compat: api.Element.ariaMultiLine
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaMultiline`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
+The **`ariaMultiLine`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : This is a multi-line text box.
@@ -28,7 +30,7 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example the `aria-multiline` attribute on the element with an ID of `txtBoxInput` is set to "true" indicating that this box allows for multiple lines of input. Using `ariaPlaceholder` we update the value to "false".
+In this example the `aria-multiline` attribute on the element with an ID of `txtBoxInput` is set to "true" indicating that this box allows for multiple lines of input. Using `ariaMultiLine` we update the value to "false".
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
@@ -38,9 +40,9 @@ In this example the `aria-multiline` attribute on the element with an ID of `txt
 
 ```js
 let el = document.getElementById('txtBoxInput');
-console.log(el.ariaMultiline); // "true"
-el.ariaMultiline = "false"
-console.log(el.ariaMultiline); // "false"
+console.log(el.ariaMultiLine); // "true"
+el.ariaMultiLine = "false"
+console.log(el.ariaMultiLine); // "false"
 ```
 
 ## Specifications

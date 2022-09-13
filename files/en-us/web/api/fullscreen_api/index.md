@@ -1,6 +1,7 @@
 ---
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -16,14 +17,21 @@ tags:
   - View
   - fullscreen
   - screen
+browser-compat:
+  - api.Document.fullscreen
+  - api.Document.fullscreenElement
+  - api.Document.fullscreenEnabled
+  - api.Document.exitFullscreen
+  - api.Element.requestFullscreen
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 The **Fullscreen API** adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in fullscreen mode, and to exit fullscreen mode once it is no longer needed. This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until fullscreen mode is shut off.
 
 See the article [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide) for details on how to use the API.
 
-> **Note:** Support for this API varies somewhat across browsers, with many requiring vendor prefixes and/or not implementing the latest specification. See the [Browser compatibility](#browser_compatibility) section below for details on support for this API. You may wish to consider using a library such as [Fscreen](https://github.com/rafrex/fscreen) for vendor agnostic access to the Fullscreen API.
+> **Note:** Support for this API varies somewhat across browsers, with many requiring vendor prefixes and/or not implementing the latest specification. See the [Browser compatibility](#browser_compatibility) section below for details on support for this API. You may wish to consider using a library such as [Fscreen](https://github.com/rafgraph/fscreen) for vendor agnostic access to the Fullscreen API.
 
 ## Interfaces
 
@@ -64,9 +72,9 @@ _The {{DOMxRef("Document")}} interface provides properties that can be used to d
 
 _The Fullscreen API defines two events which can be used to detect when fullscreen mode is turned on and off, as well as when errors occur during the process of changing between fullscreen and windowed modes._
 
-- {{Event("fullscreenchange")}}
+- {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of fullscreen mode.
-- {{Event("fullscreenerror")}}
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of fullscreen mode.
 
 ## Controlling access
@@ -94,7 +102,7 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     toggleFullScreen();
   }
@@ -108,11 +116,9 @@ This code is called by the event handler above when the user hits the <kbd>Enter
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
   }
 }
 ```
@@ -123,31 +129,11 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## Specifications
 
-| Specification                        | Status                           |
-| ------------------------------------ | -------------------------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenElement`
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### `Document.exitFullscreen`
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### `Element.requestFullscreen`
-
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## See also
 

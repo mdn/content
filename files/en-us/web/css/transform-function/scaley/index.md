@@ -9,24 +9,24 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleY
 ---
+
 {{CSSRef}}
 
 The **`scaleY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
 y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](scaley.png)
+{{EmbedInteractiveExample("pages/css/function-scaleY.html")}}
 
 It modifies the ordinate of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
-`scaleY(-1)` defines an [axial
-symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
+`scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
 > **Note:** `scaleY(sy)` is equivalent to
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
 ## Syntax
 
@@ -166,8 +166,8 @@ div {
 
 ## See also
 
-- [`scaleX()`](</en-US/docs/Web/CSS/transform-function/scaleX()>)
-- [`scaleZ()`](</en-US/docs/Web/CSS/transform-function/scaleZ()>)
+- [`scaleX()`](/en-US/docs/Web/CSS/transform-function/scaleX)
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

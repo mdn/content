@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.hash
 slug: Web/API/HTMLAnchorElement/hash
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -8,11 +9,12 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.hash
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The
 **`HTMLAnchorElement.hash`** property returns a
-{{domxref("USVString")}} containing a `'#'` followed by the fragment
+string containing a `'#'` followed by the fragment
 identifier of the URL.
 
 The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not

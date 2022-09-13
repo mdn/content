@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.beginPath
 ---
+
 {{APIRef}}
 
 The
@@ -22,8 +24,16 @@ this method when you want to create a new path.
 ## Syntax
 
 ```js
-void ctx.beginPath();
+beginPath()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

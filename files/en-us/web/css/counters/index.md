@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.counters
 ---
+
 {{CSSRef}}
 
 The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The `counters()` function has two forms: `counters(name, string)` or `counters(name, string, style)`. It is generally used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can be used, theoretically, anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to `decimal` if no style is specified.
@@ -34,7 +35,7 @@ A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no vi
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
 - `<counter-style>`
-  - : A counter style name or [`symbols()`](/en-US/docs/Web/CSS/symbols()) function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_Counter_Styles). If omitted, the counter-style defaults to decimal
+  - : A counter style name or [`symbols()`](/en-US/docs/Web/CSS/symbols) function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_Counter_Styles). If omitted, the counter-style defaults to decimal
 - {{cssxref("&lt;string&gt;")}}
   - : Any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
 
@@ -161,5 +162,5 @@ li::before {
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- CSS [`counter()`](/en-US/docs/Web/CSS/counter()) function
+- CSS [`counter()`](/en-US/docs/Web/CSS/counter) function
 - {{cssxref("::marker")}}

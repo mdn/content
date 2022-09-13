@@ -1,6 +1,7 @@
 ---
 title: SharedWorkerGlobalScope.close()
 slug: Web/API/SharedWorkerGlobalScope/close
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - close
 browser-compat: api.SharedWorkerGlobalScope.close
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`close()`** method of the {{domxref("SharedWorkerGlobalScope")}} interface discards any tasks queued in the `SharedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
@@ -18,10 +20,18 @@ The **`close()`** method of the {{domxref("SharedWorkerGlobalScope")}} interface
 ## Syntax
 
 ```js
-self.close();
+close()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 If you want to close your worker instance from inside the worker itself, you can call the following:
 

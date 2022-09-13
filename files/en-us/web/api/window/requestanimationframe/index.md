@@ -1,6 +1,7 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Animations
@@ -19,6 +20,7 @@ tags:
   - Polyfill
 browser-compat: api.Window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the
@@ -55,7 +57,7 @@ timestamp is a decimal number, in milliseconds, but with a minimal precision of 
 ## Syntax
 
 ```js
-window.requestAnimationFrame(callback);
+requestAnimationFrame(callback)
 ```
 
 ### Parameters
@@ -74,7 +76,7 @@ in the callback list. This is a non-zero value, but you may not make any other
 assumptions about its value. You can pass this value to
 {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.
 
-## Example
+## Examples
 
 In this example, an element is animated for 2 seconds (2000 milliseconds). The element
 moves at a speed of 0.1px/ms to the right, so its relative position (in CSS pixels) can
@@ -96,23 +98,20 @@ function step(timestamp) {
   if (previousTimeStamp !== timestamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
-    element.style.transform = 'translateX(' + count + 'px)';
+    element.style.transform = `translateX(${count}px)`;
     if (count === 200) done = true;
   }
 
   if (elapsed < 2000) { // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp
-    !done && window.requestAnimationFrame(step);
+    previousTimeStamp = timestamp;
+    if (!done) {
+      window.requestAnimationFrame(step);
+    }
   }
 }
 
 window.requestAnimationFrame(step);
 ```
-
-## Notes
-
-Edge versions below 17 and Internet Explorer do not reliably fire
-`requestAnimationFrame` before the paint cycle.
 
 ## Specifications
 
@@ -125,14 +124,9 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 ## See also
 
 - {{domxref("Window.cancelAnimationFrame()")}}
-- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html)
-  \- Blog post
-- [requestAnimationFrame
-  for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
-- [Animating
-  with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [TestUFO: Test your web
-  browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
-- Paul Irish: [requestAnimationFrame
-  API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)
+- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) – Blog post
+- [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
+- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

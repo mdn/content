@@ -1,7 +1,7 @@
 ---
 title: 'aria-autocomplete'
 slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -11,9 +11,12 @@ tags:
   - searchbox
   - listbox
   - NeedsExample
+spec-urls:
+  - https://w3c.github.io/aria/#aria-autocomplete,
+  - https://w3c.github.io/aria-practices/#combobox
 ---
 
-The  `aria-autocomplete` attribute indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role), or [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) and specifies how predictions will be presented if they are made.
+The `aria-autocomplete` attribute indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role), or [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) and specifies how predictions will be presented if they are made.
 
 ## Description
 
@@ -38,10 +41,10 @@ If an autocomplete list value is automatically accepted when the field loses foc
 
 ## Values
 
-- `none`  (default)
+- `none` (default)
   - : When a user is providing input, not automatic suggestion is displayed.
 - `inline`
-  - : `aria-autocomplete="inline"`  text suggesting one way to complete the provided input may be dynamically inserted after the caret.
+  - : `aria-autocomplete="inline"` text suggesting one way to complete the provided input may be dynamically inserted after the caret.
 - `list`
   - : `aria-autocomplete="list"` When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed.
 - `both`
@@ -57,17 +60,14 @@ Used in roles:
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-autocomplete","ARIA: aria-autocomplete Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","##combobox","using aria-autocomplete in a combobox")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
-- {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Element/input#attr-list)
+- {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Element/input#list)
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) attribute
@@ -79,6 +79,6 @@ Used in roles:
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

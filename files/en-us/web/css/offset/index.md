@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.offset
 ---
+
 {{CSSRef}}
 
 The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the properties required for animating an element along a defined path.

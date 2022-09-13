@@ -1,6 +1,7 @@
 ---
 title: RadioNodeList.value
 slug: Web/API/RadioNodeList/value
+page-type: web-api-instance-property
 tags:
   - HTML DOM
   - Property
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.RadioNodeList.value
 ---
+
 {{ APIRef("HTML DOM") }}
 
 If the underlying element collection contains radio buttons, the

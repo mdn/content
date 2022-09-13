@@ -9,9 +9,21 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.inset-inline
 ---
+
 {{CSSRef}}
 
 The **`inset-inline`** [CSS](/en-US/docs/Web/CSS) property defines the logical start and end offsets of an element in the inline direction, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}} and {{cssxref("bottom")}}, or {{cssxref("right")}} and {{cssxref("left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+{{EmbedInteractiveExample("pages/css/inset-inline.html")}}
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-inline-start")}}
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -32,15 +44,6 @@ inset-inline: revert;
 inset-inline: revert-layer;
 inset-inline: unset;
 ```
-
-## Constituent properties
-
-This property is a shorthand for the following CSS properties:
-
-- {{cssxref("inset-inline-end")}}
-- {{cssxref("inset-inline-start")}}
-
-## Syntax
 
 ### Values
 

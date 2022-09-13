@@ -5,6 +5,7 @@ tags:
   - Glossary
   - Security
 ---
+
 DoS (Denial of Service) is a network attack that prevents legitimate use of {{glossary("server")}} resources by flooding the server with requests.
 
 Computers have limited resources, for example computation power or memory. When these are exhausted, the program can freeze or crash, making it unavailable. A DoS attack consists of various techniques to exhaust these resources and make a server or a network unavailable to legitimate users, or at least make the server perform sluggishly.
@@ -25,6 +26,6 @@ DoS attacks are more of a category than a particular kind of attack. Here is a n
 
 ## See also
 
-- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
-- [Denial-of-service on OWASP](https://www.owasp.org/index.php/Denial_of_Service)
+- [Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia
+- [Denial-of-service on OWASP](https://owasp.org/www-community/attacks/Denial_of_Service)
 - {{Glossary("Distributed Denial of Service","DDoS")}}

@@ -6,7 +6,9 @@ tags:
   - Reference
   - StyleSheet
   - XSLT
+spec-urls: https://www.w3.org/TR/xslt-30/#stylesheet-element
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
 
 The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.
@@ -62,8 +64,4 @@ Required outermost element of stylesheet.
 
 ## Specifications
 
-| Specification                                                                                    | Status                       | Comment                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("XSLT 3.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}} | {{Spec2("XSLT 3.0")}} | Added the attributes `default-mode`, `expand-text`, and `use-when`.                                                                                                        |
-| [XSLT 2.0](https://www.w3.org/TR/xslt20/#stylesheet-element)                                     |                              | Added the attributes `xpath-default-namespace`, `default-validation`, `default-collation`, and `input-type-annotations` and made all attributes except `version` optional. |
-| [XSLT 1.0](https://www.w3.org/TR/xslt-10/#stylesheet-element)                                    |                              | Initial definition                                                                                                                                                         |
+{{Specifications}}

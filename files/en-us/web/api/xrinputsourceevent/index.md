@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent
 slug: Web/API/XRInputSourceEvent
+page-type: web-api-interface
 tags:
   - 3D
   - API
@@ -24,6 +25,7 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent
 ---
+
 {{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRInputSourceEvent`** interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an {{domxref("XRInputSource")}}.
@@ -51,24 +53,24 @@ _The `XRInputSourceEvent` interface doesn't define any methods; however, several
 ## Event types
 
 - {{domxref("XRSession.select_event", "select")}}
-  - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions).
+  - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions).
 - {{domxref("XRSession.selectend_event", "selectend")}}
-  - : Sent to an {{domxref("XRSession")}} when an ongoing [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions) ends, or when an input source with an ongoing primary action has been disconnected from the system.
+  - : Sent to an {{domxref("XRSession")}} when an ongoing [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions) ends, or when an input source with an ongoing primary action has been disconnected from the system.
 - {{domxref("XRSession.selectstart_event", "selectstart")}}
-  - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions), indicating that the user has begun a command-like input, such as pressing a trigger or button, issuing a spoken command, tapping on a touchpad, or the like.
+  - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions), indicating that the user has begun a command-like input, such as pressing a trigger or button, issuing a spoken command, tapping on a touchpad, or the like.
 - {{domxref("XRSession.squeeze_event", "squeeze")}}
-  - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions).
+  - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions).
 - {{domxref("XRSession.squeezeend_event", "squeezeend")}}
-  - : Sent to an {{domxref("XRSession")}} when an ongoing [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions) ends or when an input source with an ongoing primary squeeze action is disconnected.
+  - : Sent to an {{domxref("XRSession")}} when an ongoing [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) ends or when an input source with an ongoing primary squeeze action is disconnected.
 - {{domxref("XRSession.squeezestart_event", "squeezestart")}}
-  - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions), indicating that the user has begun to grab, squeeze, or grip the controller.
+  - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions), indicating that the user has begun to grab, squeeze, or grip the controller.
 
 ## Examples
 
 The code below sets up handlers for primary action events in order to determine when the user clicks on (shoots at/pokes at/whatever) objects in the scene.
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace);
 
   if (targetRayPose) {

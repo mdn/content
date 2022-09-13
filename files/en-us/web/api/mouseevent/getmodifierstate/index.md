@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,7 +12,8 @@ tags:
   - getModifierState
 browser-compat: api.MouseEvent.getModifierState
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.getModifierState()`** method returns the current state of the specified modifier key: `true` if the modifier is active (i.e., the modifier key is pressed or locked), otherwise, `false`.
 
@@ -20,19 +22,19 @@ See {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()
 ## Syntax
 
 ```js
-getModifierState(keyArg)
+getModifierState(key)
 ```
-
-### Returns
-
-A boolean value
 
 ### Parameters
 
-- _`keyArg`_
+- `key`
   - : A modifier key value.
-    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"`{{deprecated_inline}}.
+    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"` {{deprecated_inline}}.
     This is case-sensitive.
+
+### Return value
+
+A boolean value.
 
 ## Specifications
 

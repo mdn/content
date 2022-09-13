@@ -1,6 +1,7 @@
 ---
 title: SVGDescElement
 slug: Web/API/SVGDescElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGDescElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGDescElement`** interface corresponds to the {{SVGElement("desc")}} element.

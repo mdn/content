@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.totalRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/totalRoundTripTime
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -20,6 +21,7 @@ tags:
   - totalRoundTripTime
 browser-compat: api.RTCIceCandidatePairStats.totalRoundTripTime
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's

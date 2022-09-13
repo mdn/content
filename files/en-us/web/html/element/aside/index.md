@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML sections
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Sectioning content
@@ -114,7 +113,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     </p>
   </aside>
   <p>
-    More info about the movie...
+    More info about the movie…
   </p>
 </article>
 ```
@@ -133,4 +132,4 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)

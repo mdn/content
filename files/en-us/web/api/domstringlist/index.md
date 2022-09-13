@@ -1,6 +1,7 @@
 ---
 title: DOMStringList
 slug: Web/API/DOMStringList
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.DOMStringList
 ---
+
 {{ APIRef("DOM") }}
 
 A type returned by some APIs which contains a list of [DOMString](/en-US/docs/Web/API/DOMString) (strings).
@@ -20,7 +22,7 @@ A type returned by some APIs which contains a list of [DOMString](/en-US/docs/We
 ## Methods
 
 - {{domxref("DOMStringList.item()")}}
-  - : Returns a {{domxref("DOMString")}}.
+  - : Returns a string.
 - {{domxref("DOMStringList.contains()")}}
   - : Returns a boolean value indicating if the given string is in the list
 

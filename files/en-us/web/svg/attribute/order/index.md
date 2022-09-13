@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.order
 ---
+
 {{SVGRef}}
 
 The **`order`** attribute indicates the size of the matrix to be used by a {{SVGElement("feConvolveMatrix")}} element.
@@ -27,11 +28,11 @@ html, body, svg {
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="emboss1" x="0" y="0" width="100%" height="100%">
     <feTurbulence baseFrequency="0.025" seed="0" />
-    <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="3"/>
+    <feConvolveMatrix kernelMatrix="3 0 0 -4" order="2"/>
   </filter>
   <filter id="emboss2" x="0" y="0" width="100%" height="100%">
     <feTurbulence baseFrequency="0.025" seed="0" />
-    <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="1 1 1"/>
+    <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="3"/>
   </filter>
 
   <rect x="0" y="0" width="200" height="200" style="filter:url(#emboss1);" />
@@ -73,31 +74,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-order", "order")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementOrderAttribute", "order")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

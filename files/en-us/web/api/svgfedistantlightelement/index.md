@@ -1,6 +1,7 @@
 ---
 title: SVGFEDistantLightElement
 slug: Web/API/SVGFEDistantLightElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDistantLightElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDistantLightElement`** interface corresponds to the {{SVGElement("feDistantLight")}} element.

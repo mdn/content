@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowColor
 slug: Web/API/CanvasRenderingContext2D/shadowColor
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowColor
 ---
+
 {{APIRef}}
 
 The
@@ -29,7 +31,7 @@ stroking.
 
 ## Value
 
-A {{domxref("DOMString")}} parsed as a [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
+A string parsed as a [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
 
 ## Examples
 

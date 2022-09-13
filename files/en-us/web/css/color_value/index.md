@@ -19,6 +19,7 @@ tags:
   - lwb
 browser-compat: css.types.color
 ---
+
 {{CSSRef}}
 
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
@@ -26,20 +27,20 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 
 A `<color>` can be defined in any of the following ways:
 
-- Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+- Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl","hsl()")}} and {{cssxref("color_value/hsla","hsla()")}} functional notations).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb","hwb()")}} functional notation).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC), via the {{cssxref("color_value/lch","lch()")}} functional notation.
   This can specify any visible color.
 - Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab","lab()")}} functional notation.
   This can specify any visible color.
 - Using the {{cssxref("color_value/color","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
 
-> **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
+> **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
 
 ## Syntax
 
@@ -47,82 +48,57 @@ The `<color>` data type is specified using one of the options listed below.
 
 > **Note:** Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
 
-### Color keywords
+### Named colors
 
-Color keywords are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describes their respective colors, they are essentially artificial, without a strict rationale behind the names used.
+Named colors are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the names used.
 
-The complete list of such keywords is available [here](/en-US/docs/Web/CSS/color_value/color_keywords).
+The complete list of such keywords is available [here](/en-US/docs/Web/CSS/named-color).
 
-### transparent keyword
+### currentcolor keyword
 
-The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
+The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
-> **Note:** To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
-
-> **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
-
-### currentColor keyword
-
-The `currentColor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
-
-If `currentColor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
-
-#### currentColor example
+If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
-<div style="color:blue; border: 1px dashed currentColor;">
+<div style="color: blue; border: 1px dashed currentcolor;">
   The color of this text is blue.
-  <div style="background:currentColor; height:9px;"></div>
+  <div style="background: currentcolor; height:9px;"></div>
   This block is surrounded by a blue border.
 </div>
 ```
 
-{{EmbedLiveSample('currentColor_example', 600, 80)}}
+{{EmbedLiveSample('currentcolor_keyword', 600, 80)}}
 
-### RGB colors
+### RGB color model
 
 The RGB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-#### Syntax
-
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-> **Note:** As of CSS Colors Level 4, `rgba()` is an alias for `rgb()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
-
-- Hexadecimal notation: `#RRGGBB[AA]`
-  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`.
-- Hexadecimal notation: `#RGB[A]`
-  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- Functional notation: `rgb[a](R, G, B[, A])`
+- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
+  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
-- Functional notation: `rgb[a](R G B[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
-### HSL colors
+### HSL color model
 
 The HSL color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
 
 Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 However, using HSL to create color variations can produce surprising results, as it is not [perceptually uniform](https://en.wikipedia.org/wiki/Color_difference#Tolerance). For example, both `hsl(240 100% 50%)` and `hsl(60 100% 50%)` have the same lightness, even though the former is much darker than the latter.
 
-#### Syntax
-
 HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
-> **Note:** As of CSS Colors Level 4, `hsla()` is an alias for `hsl()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
+- [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) or [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla): `hsl[a](H, S, L[, A])` or `hsl[a](H S L[ / A])`
 
-- Functional notation: `hsl[a](H, S, L[, A])`
+  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
-
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
+    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal".
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
-- Functional notation: `hsl[a](H S L[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
-
-### HWB colors
+### HWB color model
 
 Similar to HSL color model, the HWB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, whiteness and blackness components.
 
@@ -130,15 +106,13 @@ As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in th
 
 > **Note:** There is **no** separate `hwba()` function as there is with HSL, the alpha value is an optional parameter, if it is not specified an alpha value of 1 (or 100%) is used. To specify this value a forward slash (`/`) must follow the blackness value before the alpha value is specified.
 
-#### Syntax
-
 HWB colors are expressed through the functional `hwb()` notation.
 
-> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
+> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions.
 
-- Functional notation: `hwb(H W B[ / A])`
+- [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
-  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
     `W` (whiteness) and `B` (blackness) are percentages. These two colors mix, so you would need `0%` **whiteness** and `100%` **blackness** to produce the color black. And vice versa `100%` whiteness and `0%` blackness for the color white. `50%` of both values renders a mid grey and any other variations a shade of the hue specified.
 
@@ -148,155 +122,9 @@ HWB colors are expressed through the functional `hwb()` notation.
 
 In _forced colors mode_ (detectable with the [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers.
 
-The keywords in the following list are defined by the CSS Color Module Level 4 specification.
+The keywords in the following list are defined by the CSS Color Module Level 4 specification: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
 
 > **Note:** Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
-
-- ActiveText
-  - : Text of active links
-- ButtonBorder
-  - : Base border color of controls
-- ButtonFace
-  - : Background color of controls
-- ButtonText
-  - : Foreground color of controls
-- Canvas
-  - : Background of application content or documents
-- CanvasText
-  - : Foreground color in application content or documents
-- Field
-  - : Background of input fields
-- FieldText
-  - : Text in input fields
-- GrayText
-  - : Foreground color for disabled items (e.g. a disabled control)
-- Highlight
-  - : Background of selected items
-- HighlightText
-  - : Foreground color of selected items
-- LinkText
-  - : Text of non-active, non-visited links
-- Mark
-  - : Background of text that has been specially marked (such as by the HTML `mark` element)
-- MarkText
-  - : Text that has been specially marked (such as by the HTML `mark` element)
-- VisitedText
-  - : Text of visited links
-
-#### Deprecated system color keywords
-
-The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated. {{deprecated_inline}} for use on public web pages.
-
-- ActiveBorder
-  - : Active window border.
-- ActiveCaption
-  - : Active window caption. Should be used with `CaptionText` as foreground color.
-- AppWorkspace
-  - : Background color of multiple document interface.
-- Background
-  - : Desktop background.
-- ButtonHighlight
-  - : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- ButtonShadow
-  - : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- CaptionText
-  - : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
-- InactiveBorder
-  - : Inactive window border.
-- InactiveCaption
-  - : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
-- InactiveCaptionText
-  - : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
-- InfoBackground
-  - : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
-- InfoText
-  - : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
-- Menu
-  - : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
-- MenuText
-  - : Text in menus. Should be used with the `Menu` background color.
-- Scrollbar
-  - : Background color of scroll bars.
-- ThreeDDarkShadow
-  - : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- ThreeDFace
-  - : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
-- ThreeDHighlight
-  - : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- ThreeDLightShadow
-  - : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- ThreeDShadow
-  - : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- Window
-  - : Window background. Should be used with the `WindowText` foreground color.
-- WindowFrame
-  - : Window frame.
-- WindowText
-  - : Text in windows. Should be used with the `Window` background color.
-
-### Mozilla System Color Extensions
-
-- \-moz-ButtonDefault
-  - : The border color that goes around buttons that represent the default action for a dialog box.
-- \-moz-ButtonHoverFace
-  - : The background color of a button that the mouse pointer is over (which would be `ThreeDFace` or `ButtonFace` when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverText` foreground color.
-- \-moz-ButtonHoverText
-  - : The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverFace background` color.
-- \-moz-CellHighlight
-  - : Background color for selected item in a tree widget. Should be used with the `-moz-CellHighlightText` foreground color. See also `-moz-html-CellHighlight`.
-- \-moz-CellHighlightText
-  - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
-- \-moz-Combobox
-  - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
-- \-moz-ComboboxText
-  - : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
-- \-moz-Dialog
-  - : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
-- \-moz-DialogText
-  - : Text color for dialog boxes. Should be used with the `-moz-Dialog` background color.
-- \-moz-dragtargetzone, -moz-EvenTreeRow
-  - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
-- \-moz-html-CellHighlight
-  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
-- \-moz-html-CellHighlightText
-  - : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
-- \-moz-mac-accentdarkestshadow, -moz-mac-accentdarkshadow, -moz-mac-accentface, -moz-mac-accentlightesthighlight, -moz-mac-accentlightshadow, -moz-mac-accentregularhighlight, -moz-mac-accentregularshadow
-  - : Accent colors.
-- \-moz-mac-chrome-active, -moz-mac-chrome-inactive
-  - : Colors for inactive and active browser chrome.
-- \-moz-mac-focusring, -moz-mac-menuselect, -moz-mac-menushadow, -moz-mac-menutextselect, -moz-MenuHover
-  - : Background color for hovered menu items. Often similar to `Highlight`. Should be used with the `-moz-MenuHoverText` or `-moz-MenuBarHoverText` foreground color.
-- \-moz-MenuHoverText
-  - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
-- \-moz-MenuBarText
-  - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
-- \-moz-MenuBarHoverText
-  - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
-- \-moz-nativehyperlinktext
-  - : Default platform hyperlink color.
-- \-moz-OddTreeRow
-  - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
-- \-moz-win-communicationstext
-  - : Should be used for text in objects with `{{cssxref("appearance")}}: -moz-win-communications-toolbox;`.
-- \-moz-win-mediatext
-  - : Should be used for text in objects with `{{cssxref("appearance")}}: -moz-win-media-toolbox`.
-- \-moz-win-accentcolor
-  - : Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.
-- \-moz-win-accentcolortext
-  - : Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.
-
-### Mozilla Color Preference Extensions
-
-- \-moz-activehyperlinktext
-  - : User's preference for text color of active links. Should be used with the default document background color.
-- \-moz-default-background-color
-  - : User's preference for the document background color.
-- \-moz-default-color
-  - : User's preference for the text color.
-- \-moz-hyperlinktext
-  - : User's preference for the text color of unvisited links. Should be used with the default document background color.
-- \-moz-visitedhyperlinktext
-  - : User's preference for the text color of visited links. Should be used with the default document background color.
 
 ### Lab colors
 
@@ -304,7 +132,7 @@ CSS Color 4 introduced Lab colors.
 Lab colors are specified via the {{cssxref("color_value/lab","lab()")}} functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.
 
-### LCH colors
+### LCH color model
 
 CSS Color 4 introduced LCH colors.
 LCH colors are specified via the {{cssxref("color_value/lch","lch()")}} functional notation.
@@ -325,11 +153,15 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
 
 ## Accessibility considerations
 
 Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast) for more information.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -374,7 +206,7 @@ function validTextColor(stringToTest) {
 }
 
 inputElem.addEventListener('change', () => {
-  if(validTextColor(inputElem.value)) {
+  if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
     divElem.textContent = '';
   } else {
@@ -680,4 +512,4 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 
 - The {{Cssxref("opacity")}} property lets you define transparency at the element level.
 - Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

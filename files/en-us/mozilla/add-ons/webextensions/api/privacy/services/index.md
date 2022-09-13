@@ -11,6 +11,7 @@ tags:
   - Services
 browser-compat: webextensions.api.privacy.services
 ---
+
 {{AddonSidebar}}
 
 The {{WebExtAPIRef("privacy.services")}} property contains privacy-related settings controlling services offered by the browser or by third parties. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
@@ -54,4 +55,4 @@ function onSet(result) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API.

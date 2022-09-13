@@ -1,6 +1,7 @@
 ---
 title: 'Window: pagehide event'
 slug: Web/API/Window/pagehide_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -11,32 +12,40 @@ tags:
   - pagehide
 browser-compat: api.Window.pagehide_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pagehide`** event is sent to a {{domxref("Window")}} when the browser hides the current page in the process of presenting a different page from the session's history.
 
 For example, when the user clicks the browser's Back button, the current page receives a `pagehide` event before the previous page is shown.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PageTransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("Window.onpagehide", "onpagehide")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('pagehide', (event) => { });
+onpagehide = (event) => { };
+```
+
+## Event type
+
+A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PageTransitionEvent")}}
+
+## Event properties
+
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
+  - : Indicates if the document is loading from a cache.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onpagehide` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Usage notes
 
@@ -61,7 +70,7 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 In this example, an event handler is established to watch for `pagehide` events and to perform special handling if the page is being persisted for possible reuse.
 
 ```js
-window.addEventListener("pagehide", event => {
+window.addEventListener("pagehide", (event) => {
   if (event.persisted) {
     /* the page isn't being discarded, so it can be reused later */
   }
@@ -71,7 +80,7 @@ window.addEventListener("pagehide", event => {
 This can also be written using the {{domxref("Window.onpagehide", "onpagehide")}} event handler property on the {{domxref("Window")}}:
 
 ```js
-window.onpagehide = event => {
+window.onpagehide = (event) => {
   if (event.persisted) {
     /* the page isn't being discarded, so it can be reused later */
   }

@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.refX
 slug: Web/API/SVGMarkerElement/refX
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.refX
 ---
+
 {{APIRef("SVG")}}
 
 The **`refX`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.

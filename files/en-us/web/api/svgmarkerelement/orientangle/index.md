@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.orientAngle
 slug: Web/API/SVGMarkerElement/orientAngle
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientAngle
 ---
+
 {{APIRef("SVG")}}
 
 The **`orientAngle`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.

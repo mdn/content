@@ -12,6 +12,7 @@ tags:
   - onRequest
 browser-compat: webextensions.api.proxy.onRequest
 ---
+
 {{AddonSidebar()}}
 
 Fired when a web request is about to be made, to give the extension an opportunity to proxy it.
@@ -83,7 +84,7 @@ This code intercepts requests to `<all_urls>`, and proxies them if they are not 
 
 ```js
 function shouldProxyRequest(requestInfo) {
-  return requestInfo.parentFrameId != -1;
+  return requestInfo.parentFrameId !== -1;
 }
 
 function handleProxyRequest(requestInfo) {

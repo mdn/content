@@ -50,13 +50,13 @@ Tier 1 content is the most important content on MDN — it has the most users, a
 - [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) (12)
 - [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) (5)
 
-**Total Tier 1 pages: 4150**
+Total Tier 1 pages: **4150**
 
 ## Tier 2
 
 Tier 2 content is less commonly-used, but useful nonetheless.
 
-- [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Houdini) (1)
+- [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Guide/Houdini) (1)
 - [Game development docs](https://developer.mozilla.org/en-US/docs/Games) (73)
 - [Guides](https://developer.mozilla.org/en-US/docs/Web/Guide) (56)
 - [MathML](https://developer.mozilla.org/en-US/docs/Web/MathML) (38)
@@ -66,7 +66,7 @@ Tier 2 content is less commonly-used, but useful nonetheless.
 - [WebAPIs](https://developer.mozilla.org/en-US/docs/Web/API) that aren't in the "Tier 1 WebAPIs" list (4701)
 - [WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) (635). Not really web platform, but still important)
 
-**Total Tier 2 pages: 6502**
+Total Tier 2 pages: **6502**
 
 ## Other content
 
@@ -76,10 +76,9 @@ There is other content on MDN that is outside our web platform technology remit 
 
 The following API interface reference documents (and their child pages) are currently considered Tier 1. For more information on the rationale for these groupings and priorities, see the work done in <https://github.com/mdn/sprints/issues/3327>.
 
-### Canvas API (112)
+### Canvas API (111)
 
 - [`CanvasGradient`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient) (2)
-- [`CanvasImageSource`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasImageSource) (1)
 - [`CanvasPattern`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern) (2)
 - [`CanvasRenderingContext2D`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) (71)
 - [`ImageBitmap`](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap) (4)
@@ -95,7 +94,7 @@ The following API interface reference documents (and their child pages) are curr
 - [`ClipboardEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent) (3)
 - [`ClipboardItem`](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem) (5)
 
-### DOM (439)
+### DOM (436)
 
 > **Note:** "DOM" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other DOM interfaces not in this list are in Tier 2.
 
@@ -103,7 +102,6 @@ The following API interface reference documents (and their child pages) are curr
 - [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) (4)
 - [`Document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) (164)
 - [`DOMParser`](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (2)
-- [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString) (2)
 - [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/Element) (176)
 - [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) (24)
 - [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) (5)
@@ -111,13 +109,12 @@ The following API interface reference documents (and their child pages) are curr
 - [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) (5)
 - [`Node`](https://developer.mozilla.org/en-US/docs/Web/API/Node) (36)
 - [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (7)
-- [`USVString`](https://developer.mozilla.org/en-US/docs/Web/API/USVString) (1)
 
 ### DOM Events (22)
 
 > **Note:** "DOM Events" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other DOM Events interfaces not in this list are in Tier 2.
 
-- [`EventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventListener) (2)
+- [`EventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) (2)
 - [`KeyboardEvent`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent) (20)
 
 ### Fetch API (39)
@@ -147,16 +144,15 @@ The following API interface reference documents (and their child pages) are curr
 - [`HTMLTextAreaElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement) (2)
 - [`Location`](https://developer.mozilla.org/en-US/docs/Web/API/Location) (17)
 - [`Navigator`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) (45)
-- [`NavigatorLanguage`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage) (3)
-- [`NavigatorOnLine`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine) (3)
+- [`NavigatorLanguage`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) (3)
+- [`NavigatorOnLine`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine) (3)
 - [`Window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) (182)
-- [`WindowEventHandlers`](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers) (13)
 
 ### URL API (43)
 
 - [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) (18)
 - [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) (14)
-- [`URLUtilsReadOnly`](https://developer.mozilla.org/en-US/docs/Web/API/URLUtilsReadOnly) (11)
+- [`URLUtilsReadOnly`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation) (11)
 
 ### Web Storage API (8)
 

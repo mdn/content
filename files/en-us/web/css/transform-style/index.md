@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transform-style
 ---
+
 {{CSSRef}}
 
 The **`transform-style`** [CSS](/en-US/docs/Web/CSS) property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
@@ -136,11 +137,7 @@ const cube = document.getElementById('example-element');
 const checkbox = document.getElementById('preserve');
 
 checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    cube.style.transformStyle = 'preserve-3d';
-  } else {
-    cube.style.transformStyle = 'flat';
-  }
+  cube.style.transformStyle = checkbox.checked ? 'preserve-3d' : 'flat';
 })
 ```
 
@@ -158,4 +155,4 @@ checkbox.addEventListener('change', () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

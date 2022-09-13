@@ -16,6 +16,7 @@ tags:
   - get
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
+
 {{AddonSidebar()}}
 
 Retrieves one or more items from the storage area.
@@ -137,7 +138,7 @@ let gettingItem = browser.storage.local.get({
 ### Chrome examples
 
 ```js
-chrome.storage.local.get("kitten", function(items){
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
 });
 ```
@@ -145,7 +146,7 @@ chrome.storage.local.get("kitten", function(items){
 Or with an arrow function
 
 ```js
-chrome.storage.local.get("kitten", items => {
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
@@ -153,10 +154,10 @@ chrome.storage.local.get("kitten", items => {
 Or using a Promise
 
 ```js
-let gettingItem = new Promise(resolve => chrome.storage.local.get("kitten", resolve));
+let gettingItem = new Promise((resolve) => chrome.storage.local.get("kitten", resolve));
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

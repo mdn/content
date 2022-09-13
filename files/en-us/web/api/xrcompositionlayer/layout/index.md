@@ -1,6 +1,7 @@
 ---
 title: XRCompositionLayer.layout
 slug: Web/API/XRCompositionLayer/layout
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,10 +11,12 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 
 browser-compat: api.XRCompositionLayer.layout
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`layout`** property of the {{domxref("XRCompositionLayer")}} interface is the layout type of the layer.
 

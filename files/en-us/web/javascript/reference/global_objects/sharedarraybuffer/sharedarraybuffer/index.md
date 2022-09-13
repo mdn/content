@@ -8,6 +8,7 @@ tags:
   - SharedArrayBuffer
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 > **Note:** `SharedArrayBuffer` was disabled by default in all major
@@ -29,6 +30,8 @@ new SharedArrayBuffer()
 new SharedArrayBuffer(length)
 ```
 
+> **Note:** `SharedArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `length` {{optional_inline}}
@@ -48,13 +51,13 @@ initialized to 0.
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var sab = SharedArrayBuffer(1024);
+const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 ```
 
 ## Specifications

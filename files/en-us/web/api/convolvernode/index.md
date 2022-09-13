@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode
 slug: Web/API/ConvolverNode
+page-type: web-api-interface
 tags:
   - API
   - ConvolverNode
@@ -9,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConvolverNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A `ConvolverNode` always has exactly one input and one output.
@@ -80,7 +82,7 @@ async function createReverb() {
     return convolver;
 }
 
-...
+// …
 
 let reverb = await createReverb();
 

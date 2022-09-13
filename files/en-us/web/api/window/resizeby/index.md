@@ -1,6 +1,7 @@
 ---
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -10,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.resizeBy
 ---
+
 {{APIRef}}
 
 The **`Window.resizeBy()`** method resizes the current window
@@ -18,7 +20,7 @@ by a specified amount.
 ## Syntax
 
 ```js
-window.resizeBy(xDelta, yDelta)
+resizeBy(xDelta, yDelta)
 ```
 
 ### Parameters
@@ -26,7 +28,11 @@ window.resizeBy(xDelta, yDelta)
 - `xDelta` is the number of pixels to grow the window horizontally.
 - `yDelta` is the number of pixels to grow the window vertically.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Shrink the window

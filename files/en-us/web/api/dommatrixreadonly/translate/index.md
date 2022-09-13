@@ -1,11 +1,13 @@
 ---
 title: DOMMatrixReadOnly.translate()
 slug: Web/API/DOMMatrixReadOnly/translate
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface

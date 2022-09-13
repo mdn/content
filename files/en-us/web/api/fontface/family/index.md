@@ -1,6 +1,7 @@
 ---
 title: FontFace.family
 slug: Web/API/FontFace/family
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -12,6 +13,7 @@ tags:
   - family
 browser-compat: api.FontFace.family
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`FontFace.family`** property
@@ -21,7 +23,7 @@ descriptor of {{cssxref("@font-face")}}.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

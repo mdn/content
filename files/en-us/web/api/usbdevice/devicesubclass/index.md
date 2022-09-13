@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceSubclass
 slug: Web/API/USBDevice/deviceSubclass
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - deviceSubclass
+  - Experimental
 browser-compat: api.USBDevice.deviceSubclass
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`deviceSubclass`** read only property of the

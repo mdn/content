@@ -1,6 +1,7 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.slice
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's **`slice()`** method
@@ -18,10 +20,10 @@ the blob on which it's called.
 ## Syntax
 
 ```js
-slice();
-slice(start);
-slice(start, end);
-slice(start, end, contentType);
+slice()
+slice(start)
+slice(start, end)
+slice(start, end, contentType)
 ```
 
 ### Parameters
@@ -59,5 +61,4 @@ within the blob on which this method was called. The original blob is not altere
 ## See also
 
 - {{domxref("Blob")}}
-- [Using files
-  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

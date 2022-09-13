@@ -9,12 +9,13 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translateX
 ---
+
 {{CSSRef}}
 
 The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element horizontally on the 2D plane. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](transform-functions-translatex_2.png)
+{{EmbedInteractiveExample("pages/css/function-translateX.html")}}
 
 > **Note:** `translateX(tx)` is equivalent to
 > `translate(tx, 0)` or
@@ -161,7 +162,7 @@ div {
 
 ## See also
 
-- [`translate()`](/en-US/docs/Web/CSS/transform-function/translate())
-- [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY())
+- [`translate()`](/en-US/docs/Web/CSS/transform-function/translate)
+- [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

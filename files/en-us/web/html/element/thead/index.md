@@ -93,37 +93,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Warning:** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
-    > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "thead")}} as the value of the {{cssxref("text-align")}} property.
+    > - To align values, use the CSS {{cssxref("text-align")}} property instead.
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
-  - : This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixed by a '#'. One of the sixteen predefined color strings may be used:
+  - : This attribute defines the background color of each column cell. It accepts a 6-digit hexadecimal color or a named color. Alpha transparency is not supported.
 
-    - `black` = "#000000"
-    - `green` = "#008000"
-    - `silver` = "#C0C0C0"
-    - `lime` = "#00FF00"
-    - `gray` = "#808080"
-    - `olive` = "#808000"
-    - `white` = "#FFFFFF"
-    - `yellow` = "#FFFF00"
-    - `maroon` = "#800000"
-    - `navy` = "#000080"
-    - `red` = "#FF0000"
-    - `blue` = "#0000FF"
-    - `purple` = "#800080"
-    - `teal` = "#008080"
-    - `fuchsia` = "#FF00FF"
-    - `aqua` = "#00FFFF"
-
-    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{HTMLElement("thead")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/en-US/docs/Web/CSS) property {{cssxref("background-color")}}, on the relevant {{HTMLElement("td")}} or {{HTMLElement("th")}} elements.
+    > **Note:** Do not use this attribute, as it is non-standard. The `thead` element should be styled using the CSS {{cssxref("background-color")}} property, which can be applied to any element, including the `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "thead")}} is not set to `char`, this attribute is ignored.
 
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "thead")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "thead")}} attribute as the value of the {{cssxref("text-align")}} property.
+    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 

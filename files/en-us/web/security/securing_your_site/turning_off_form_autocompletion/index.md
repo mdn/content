@@ -7,6 +7,7 @@ tags:
   - Security
   - Web Development
 ---
+
 This article explains how a website can disable autocomplete for form fields.
 
 By default, browsers remember information that the user submits through {{HTMLElement("input")}} fields on websites. This enables the browser to offer autocompletion (that is, suggest possible completions for fields that the user has started typing in) or autofill (that is, pre-populate certain fields upon load).
@@ -19,7 +20,7 @@ Note that the [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https:/
 
 To disable autocompletion in forms, you can set the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to "off":
 
-```html
+```plain
 autocomplete="off"
 ```
 
@@ -67,6 +68,6 @@ This is the behavior in Firefox (since version 38), Google Chrome (since 34), an
 
 If you are defining a user management page where a user can specify a new password for another person, and therefore you want to prevent autofilling of password fields, you can use `autocomplete="new-password"`.
 
-This is a hint, which browsers are not required to comply with. However modern browsers have stopped autofilling `<input>` elements with `autocomplete="new-password"` for this very reason. For example, Firefox version 67 (see {{bug(1119063)}}) stopped autofilling in this case; however, Firefox 70 (see {{bug(1565407)}}) can suggest securely-generated passwords, but does not autofill a saved password. See the [`autocomplete` compat table](/en-US/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility) for more details.
+This is a hint, which browsers are not required to comply with. However modern browsers have stopped autofilling `<input>` elements with `autocomplete="new-password"` for this very reason. For example, Firefox version 67 (see {{bug(1119063)}}) stopped autofilling in this case; however, Firefox 70 (see {{bug(1565407)}}) can suggest securely-generated passwords, but does not autofill a saved password. See the [`autocomplete` compat table](/en-US/docs/Web/HTML/Attributes/autocomplete#browser_compatibility) for more details.
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

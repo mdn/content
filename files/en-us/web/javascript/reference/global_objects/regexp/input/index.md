@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.input
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **`input`** property is a static property of regular expressions that contains the string against which a regular expression is matched. `RegExp.$_` is an alias for this property.
@@ -25,7 +26,7 @@ The value of the **`input`** property is modified whenever the searched string o
 ### Using `input` and `$_`
 
 ```js
-var re = /hi/g;
+const re = /hi/g;
 re.test('hi there!');
 RegExp.input;         // "hi there!"
 re.test('foo');       // new test, non-matching

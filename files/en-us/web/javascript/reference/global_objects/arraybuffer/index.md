@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer.
@@ -17,6 +18,8 @@ The **`ArrayBuffer`** object is used to represent a generic, fixed-length raw bi
 It is an array of bytes, often referred to in other languages as a "byte array". You cannot directly manipulate the contents of an `ArrayBuffer`; instead, you create one of the [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
 
 The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) constructor creates a new `ArrayBuffer` of the given length in bytes. You can also get an array buffer from existing data, for example, from a [Base64](/en-US/docs/Glossary/Base64) string or [from a local file](/en-US/docs/Web/API/FileReader/readAsArrayBuffer).
+
+`ArrayBuffer` is a {{glossary("Transferable objects","transferable object")}}.
 
 ## Constructor
 
@@ -30,7 +33,7 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 ## Static methods
 
-- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(<var>arg</var>)")}}
+- {{jsxref("ArrayBuffer.isView()")}}
   - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
 
 ## Instance properties

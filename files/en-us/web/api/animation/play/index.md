@@ -1,6 +1,7 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -13,6 +14,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.play
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`play()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{ domxref("Animation") }} Interface starts or resumes playing of an animation. If the animation is finished, calling `play()` restarts the animation, playing it from the beginning.
@@ -20,7 +22,7 @@ The **`play()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Anim
 ## Syntax
 
 ```js
-animation.play();
+play()
 ```
 
 ### Parameters
@@ -29,15 +31,15 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the cake causes Alice's growing animation (`aliceChange`) to play forward, causing her to get bigger, as well as triggering the cake's animation. Two `Animation.play()`s, one `EventListener`:
 
 ```js
 // The cake has its own animation:
-var nommingCake = document.getElementById('eat-me_sprite').animate(
+const nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -51,7 +53,7 @@ var nommingCake = document.getElementById('eat-me_sprite').animate(
 nommingCake.pause();
 
 // This function will play when ever a user clicks or taps
-var growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();

@@ -86,4 +86,4 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## See also
 
-- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)

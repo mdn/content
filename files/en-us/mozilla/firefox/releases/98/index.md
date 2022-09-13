@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 98 that affect developers. Firefox 98 was released on March 8, 2022.
@@ -38,7 +39,7 @@ No notable changes
 
 - The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is now disabled by default on all builds (previously it was enabled on Windows, macOS, and all nightly/dev builds).
   It can be re-enabled in `about:config` by setting `dom.vr.enabled` to `true` ({{bug(1750902)}}).
-  
+
 ### WebDriver conformance (Marionette)
 
 - Improved initial page load checks for newly opened tabs ({{bug(1747359)}}).

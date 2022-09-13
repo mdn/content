@@ -1,11 +1,13 @@
 ---
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.DOMTokenList.keys
 ---
+
 {{APIRef("DOM")}}
 
 The **`keys()`** method of the {{domxref("DOMTokenList")}} interface
@@ -47,7 +49,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.keys();
 
-for(let value of iterator) {
+for (let value of iterator) {
   span.textContent += `(${value}) `;
 }
 ```

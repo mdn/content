@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.availableIncomingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableIncomingBitrate
+page-type: web-api-instance-property
 tags:
   - API
   - Bandwidth
@@ -21,6 +22,7 @@ tags:
   - speed
 browser-compat: api.RTCIceCandidatePairStats.availableIncomingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -53,7 +55,7 @@ including IP, UDP, or TCP.
 
 > **Note:** The returned value is computed using a method similar—but not
 > identical—to the Transport Independent Application Specific Maximum (TIAS) described
-> in {{RFC(3890, "6.2")}}.
+> in {{RFC(3890, "", "6.2")}}.
 
 ## Specifications
 

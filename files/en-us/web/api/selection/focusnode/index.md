@@ -1,6 +1,7 @@
 ---
 title: Selection.focusNode
 slug: Web/API/Selection/focusNode
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -10,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.focusNode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.focusNode`** read-only property returns the

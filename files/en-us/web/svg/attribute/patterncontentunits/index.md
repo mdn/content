@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.pattern.patternContentUnits
 ---
+
 {{SVGRef}}
 
 The **`patternContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.
@@ -82,35 +83,11 @@ For {{SVGElement('pattern')}}, `patternContentUnits` defines the coordinate syst
 - `userSpaceOnUse`
   - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element refer to the user coordinate system as defined when the pattern tile was created.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }} for a pattern tile of width and height of 100%.
+  - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }} for a pattern tile of width and height of 100%.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#PatternElementPatternContentUnitsAttribute", "patternContentUnits")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#PatternElementPatternContentUnitsAttribute", "patternContentUnits")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

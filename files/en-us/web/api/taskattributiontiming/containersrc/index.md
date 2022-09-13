@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerSrc
 slug: Web/API/TaskAttributionTiming/containerSrc
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -8,9 +9,11 @@ tags:
   - Property
   - Reference
   - TaskAttributionTiming
+  - Experimental
 browser-compat: api.TaskAttributionTiming.containerSrc
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+
+{{APIRef("Long Tasks")}}{{SeeCompatTable}}
 
 The **`containerSrc`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the container's `src`
@@ -19,7 +22,7 @@ the whole, for a long task.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the container's `src` attribute.
+A string containing the container's `src` attribute.
 
 ## Specifications
 

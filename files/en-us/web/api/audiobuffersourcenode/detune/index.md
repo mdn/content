@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.detune
 slug: Web/API/AudioBufferSourceNode/detune
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - detune
 browser-compat: api.AudioBufferSourceNode.detune
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`detune`** property of the

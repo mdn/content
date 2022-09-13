@@ -1,6 +1,7 @@
 ---
 title: Document.caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -8,7 +9,8 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
-{{APIRef("CSSOM View")}} {{SeeCompatTable}}
+
+{{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
 property of the {{domxref("Document")}} interface returns a
@@ -18,7 +20,7 @@ caret's character offset within that node.
 ## Syntax
 
 ```js
-caretPositionFromPoint(x, y);
+caretPositionFromPoint(x, y)
 ```
 
 ### Parameters
@@ -28,17 +30,17 @@ caretPositionFromPoint(x, y);
 - `y`
   - : The vertical coordinate of a point.
 
-### Returns
+### Return value
 
 A {{domxref('CaretPosition')}} object.
 
-## Example
+## Examples
 
 Click anywhere in the **Demo** paragraph below to insert a line break at the point where you click. The code for it is below the demo.
 
 ### Demo
 
-{{EmbedLiveSample('Example', '100%', '100px')}}
+{{EmbedLiveSample('Examples')}}
 
 The code below first checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} support, but if the browser doesn't support that, the code then checks for `document.caretPositionFromPoint`, and uses that instead.
 
@@ -65,7 +67,7 @@ function insertBreakAtPoint(e) {
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode && textNode.nodeType == 3) {
+  if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);
@@ -73,8 +75,8 @@ function insertBreakAtPoint(e) {
 }
 
 let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+for (const paragraph of paragraphs) {
+  paragraph.addEventListener('click', insertBreakAtPoint, false);
 }
 ```
 

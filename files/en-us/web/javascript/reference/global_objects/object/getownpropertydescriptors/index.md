@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyDescriptors()`** method returns all

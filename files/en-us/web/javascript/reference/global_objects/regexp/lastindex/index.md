@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastIndex
 ---
+
 {{JSRef}}
 
 **`lastIndex`** is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.
@@ -34,7 +35,7 @@ This property is set only if the regular expression instance used the `g` flag t
 Consider the following sequence of statements:
 
 ```js
-var re = /(hi)?/g;
+const re = /(hi)?/g;
 ```
 
 Matches the empty string.

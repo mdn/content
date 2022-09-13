@@ -11,9 +11,10 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.length
 ---
+
 {{JSRef}}
 
-The **`length`** prototype property of the
+The read-only **`length`** prototype property of the
 {{jsxref("WebAssembly.Table")}} object returns the length of the table, i.e. the number
 of elements in the table.
 
@@ -22,18 +23,22 @@ of elements in the table.
 ### Using length
 
 The following example creates a new WebAssembly Table instance with an initial size of
-2 and a maximum size of 10.
+2 and a maximum size of 10:
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+const table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
-You can then grow the table by 1 with the following:
+Grow the table by 1 using `WebAssembly.grow()`:
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length);   // 2
+table.grow(1);
+console.log(table.length);   // 3
 ```
 
 ## Specifications

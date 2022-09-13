@@ -1,6 +1,7 @@
 ---
 title: Element.previousElementSibling
 slug: Web/API/Element/previousElementSibling
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.previousElementSibling`**

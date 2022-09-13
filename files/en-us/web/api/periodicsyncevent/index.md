@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncEvent
 slug: Web/API/PeriodicSyncEvent
+page-type: web-api-interface
 tags:
   - API
   - Background Sync
@@ -10,9 +11,11 @@ tags:
   - Reference
   - ServiceWorker
   - Workers
+  - Experimental
 browser-compat: api.PeriodicSyncEvent
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to run tasks in the service worker with network connectivity.
 
@@ -22,12 +25,12 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.p
 
 ## Constructor
 
-- {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}}
+- {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}} {{Experimental_Inline}}
   - : Creates a new `PeriodicSyncEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.periodicsync_event', 'onperiodicsync')}} callback.
 
 ## Properties
 
-- {{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}
+- {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
 ## Methods
@@ -39,8 +42,8 @@ Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', event => {
-  if (event.tag == 'get-latest-news') {
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

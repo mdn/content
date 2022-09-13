@@ -8,14 +8,14 @@ tags:
   - HTML
   - Input
   - Reference
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-accept
+browser-compat: html.elements.input.accept
 ---
 
 {{HTMLSidebar}}
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
 
-The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}} in HTML5.
+The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}}.
 
 Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of specific type, or use the wild card to denote a type of any format is acceptable.
 
@@ -149,9 +149,9 @@ div {
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [File API](/en-US/docs/Web/API/File)

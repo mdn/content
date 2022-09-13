@@ -1,10 +1,10 @@
 ---
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
+page-type: web-api-instance-method
 tags:
   - API
   - Background
-  - Experimental
   - Houdini
   - Method
   - Multiprocessor
@@ -15,7 +15,8 @@ tags:
   - addModule
 browser-compat: api.Worklet.addModule
 ---
-{{APIRef("Worklets")}}{{SeeCompatTable}}
+
+{{APIRef("Worklets")}}
 
 The **`addModule()`** method of the
 {{domxref("Worklet")}} interface loads the module in the given JavaScript file and
@@ -24,8 +25,8 @@ adds it to the current `Worklet`.
 ## Syntax
 
 ```js
-addPromise = worklet.addModule(moduleURL);
-addPromise = worklet.addModule(moduleURL, options);
+addModule(moduleURL)
+addModule(moduleURL, options)
 ```
 
 ### Parameters
@@ -37,11 +38,12 @@ addPromise = worklet.addModule(moduleURL, options);
 
   - : An object with any of the following options:
 
-    - `credentials`: A {{domxref("Request.credentials")}} value that
-      indicates whether to send credentials (e.g. cookies and HTTP authentication)
-      when loading the module. Can be one of `"omit"`,
-      `"same-origin"`, or `"include"`. Defaults to
-      `"same-origin"`. See also {{domxref("Request.credentials")}}.
+    - `credentials`
+      - : A {{domxref("Request.credentials")}} value that
+        indicates whether to send credentials (e.g. cookies and HTTP authentication)
+        when loading the module. Can be one of `"omit"`,
+        `"same-origin"`, or `"include"`. Defaults to
+        `"same-origin"`. See also {{domxref("Request.credentials")}}.
 
 ### Return value
 
@@ -53,9 +55,9 @@ added. The promise doesn't return any value.
 If `addModule()` fails, it rejects the promise, delivering one of the
 following errors to the rejection handler.
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The specified script is invalid or could not be loaded.
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The specified `moduleURL` is invalid.
 
 ## Examples

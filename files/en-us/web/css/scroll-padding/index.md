@@ -8,6 +8,7 @@ tags:
   - scroll-snap
 browser-compat: css.properties.scroll-padding
 ---
+
 {{CSSRef}}
 
 The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.

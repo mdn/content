@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaSelected
 slug: Web/API/ElementInternals/ariaSelected
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaSelected
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaSelected`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
@@ -19,7 +21,7 @@ The **`ariaSelected`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The item is selected.
@@ -46,4 +48,4 @@ this.internals_.ariaSelected = "true";
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

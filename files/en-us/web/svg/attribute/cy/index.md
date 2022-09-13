@@ -4,7 +4,11 @@ slug: Web/SVG/Attribute/cy
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/geometry.html#CY
+  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute
 ---
+
 {{SVGRef}}
 
 The **`cy`** attribute define the y-axis coordinate of a center point.
@@ -28,7 +32,7 @@ html,body,svg { height:100% }
     <stop offset="100%" stop-color="black" />
   </radialGradient>
 
-  <circle  cy="50"  cx="50" r="45"/>
+  <circle cy="50"  cx="50" r="45"/>
   <ellipse cy="150" cx="50" rx="45" ry="25" />
   <rect x="5" y="205" width="90" height="90" fill="url(#myGradient)" />
 </svg>
@@ -67,7 +71,7 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a *Geometry Property* meaning this attribute can also be used as a CSS property for circles.
+> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
 
 ## ellipse
 
@@ -100,7 +104,7 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a *Geometry Property* meaning this attribute can also be used as a CSS property for ellipses.
+> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
 
 ## radialGradient
 
@@ -127,7 +131,7 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
   </tbody>
 </table>
 
-#### Example
+### Example
 
 ```css hidden
 html,body,svg { height:100% }
@@ -165,47 +169,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "geometry.html#CY", "cy")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition as a geometry property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementCYAttribute", "cy")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for SVG2 paint servers.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCYAttribute", "cy")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;radialGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#EllipseElementCYAttribute", "cy")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;ellipse></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#CircleElementCYAttribute", "cy")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;circle></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

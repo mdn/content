@@ -1,6 +1,7 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - confirm
 browser-compat: api.Window.confirm
 ---
+
 {{ApiRef("Window")}}
 
 `window.confirm()` instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.
@@ -19,7 +21,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-result = window.confirm(message);
+confirm(message)
 ```
 
 ### Parameters
@@ -33,7 +35,7 @@ A boolean indicating whether OK (`true`) or Cancel (`false`) was
 selected. If a browser is ignoring in-page dialogs, then the returned value is always
 `false`.
 
-## Example
+## Examples
 
 ```js
 if (window.confirm("Do you really want to leave?")) {
@@ -50,8 +52,7 @@ Produces:
 Dialog boxes are modal windows — they
 prevent the user from accessing the rest of the program's interface until the dialog box
 is closed. For this reason, you should not overuse any function that creates a dialog
-box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for
-confirmation](https://alistapart.com/article/neveruseawarning/).
+box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for confirmation](https://alistapart.com/article/neveruseawarning/).
 
 Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
 

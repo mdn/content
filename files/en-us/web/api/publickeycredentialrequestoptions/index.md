@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredentialRequestOptions
 slug: Web/API/PublicKeyCredentialRequestOptions
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -10,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) holds the options passed to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} in order to fetch a given {{domxref("PublicKeyCredential")}}.
@@ -17,11 +19,11 @@ The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authenticatio
 ## Properties
 
 - {{domxref("PublicKeyCredentialRequestOptions.challenge")}}
-  - : A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
 - {{domxref("PublicKeyCredentialRequestOptions.timeout")}} {{optional_inline}}
   - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
 - {{domxref("PublicKeyCredentialRequestOptions.rpId")}} {{optional_inline}}
-  - : A {{domxref("USVString")}} which indicates the relying party's identifier (ex. `"login.example.org"`). If this option is not provided, the client will use the current origin's domain.
+  - : A string which indicates the relying party's identifier (ex. `"login.example.org"`). If this option is not provided, the client will use the current origin's domain.
 - {{domxref("PublicKeyCredentialRequestOptions.allowCredentials")}} {{optional_inline}}
   - : An {{jsxref("Array")}} of credentials descriptor which restricts the acceptable existing credentials for retrieval.
 - {{domxref("PublicKeyCredentialRequestOptions.userVerification")}} {{optional_inline}}
@@ -36,7 +38,7 @@ None.
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array([/* bytes sent from the server */]),
   rpId: "example.com", /* will only work if the current domain
                          is something like foo.example.com */
@@ -62,10 +64,10 @@ var options = {
 };
 
 navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+    .then((credentialInfoAssertion) => {
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
+}).catch((err) => {
      console.error(err);
 });
 ```

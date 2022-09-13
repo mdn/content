@@ -14,6 +14,7 @@ tags:
   - radio button
 browser-compat: css.selectors.indeterminate
 ---
+
 {{CSSRef}}
 
 The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes which have their HTML [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate) attribute set to `true`, radio buttons which are members of a group in which all radio buttons are unchecked, and indeterminate {{HTMLElement("progress")}} elements.
@@ -33,7 +34,9 @@ Elements targeted by this selector are:
 
 ## Syntax
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## Examples
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setFullYear
 ---
+
 {{JSRef}}
 
 The **`setFullYear()`** method sets the full year for a
@@ -58,7 +59,7 @@ attempts to update the other parameters and the date information in the
 ### Using setFullYear()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setFullYear(1997);
 ```
 

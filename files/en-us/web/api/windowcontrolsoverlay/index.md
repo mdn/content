@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlay
 slug: Web/API/WindowControlsOverlay
+page-type: web-api-interface
 tags:
   - API
   - Window Controls Overlay
@@ -10,7 +11,8 @@ tags:
   - Progressive Web Apps
 browser-compat: api.WindowControlsOverlay
 ---
-{{SeeCompatTable}}{{APIRef("Window Controls Overlay API")}}{{securecontext_header}}
+
+{{APIRef("Window Controls Overlay API")}}{{securecontext_header}}
 
 The **`WindowControlsOverlay`** interface of the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) exposes information about the geometry
 of the title bar area in desktop Progressive Web Apps, and an event to know whenever it changes. This interface is accessible from {{domxref('Navigator.windowControlsOverlay')}}.
@@ -19,7 +21,7 @@ of the title bar area in desktop Progressive Web Apps, and an event to know when
 
 ## Properties
 
-- {{domxref("WindowControlsOverlay.visible")}} {{readonlyInline}}
+- {{domxref("WindowControlsOverlay.visible")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
 ## Methods
@@ -38,9 +40,9 @@ Listen to these events using {{domxref('EventTarget.addEventListener()')}} or by
 
 ```js
 if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', event => {
+  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
     if (event.visible) {
-      var rect = event.titlebarAreaRect;
+      const rect = event.titlebarAreaRect;
       // Do something with the coordinates of the title bar area.
     }
   });

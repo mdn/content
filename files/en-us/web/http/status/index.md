@@ -8,7 +8,9 @@ tags:
   - Reference
   - Status code
   - Web
+browser-compat: http.status
 ---
+
 {{HTTPSidebar}}
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
@@ -22,7 +24,7 @@ Responses are grouped in five classes:
 
 The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6).
 
-> **Note:** If you receive a response that is not in [this list](#information-responses), it is a non-standard response, possibly custom to the server's software.
+> **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
 ## Information responses
 
@@ -50,15 +52,15 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
   - : The request succeeded, and a new resource was created as a result. This is typically the response sent after `POST` requests, or some `PUT` requests.
 - {{HTTPStatus(202, "202 Accepted")}}
   - : The request has been received but not yet acted upon.
-     It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request.
-     It is intended for cases where another process or server handles the request, or for batch processing.
+    It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request.
+    It is intended for cases where another process or server handles the request, or for batch processing.
 - {{HTTPStatus(203, "203 Non-Authoritative Information")}}
   - : This response code means the returned metadata is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy.
-     This is mostly used for mirrors or backups of another resource.
-     Except for that specific case, the `200 OK` response is preferred to this status.
+    This is mostly used for mirrors or backups of another resource.
+    Except for that specific case, the `200 OK` response is preferred to this status.
 - {{HTTPStatus(204, "204 No Content")}}
   - : There is no content to send for this request, but the headers may be useful.
-     The user agent may update its cached headers for this resource with the new ones.
+    The user agent may update its cached headers for this resource with the new ones.
 - {{HTTPStatus(205, "205 Reset Content")}}
   - : Tells the user agent to reset the document which sent this request.
 - {{HTTPStatus(206, "206 Partial Content")}}
@@ -72,7 +74,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Redirection messages
 
-- {{HTTPStatus(300, "300 Multiple Choice")}}
+- {{HTTPStatus(300, "300 Multiple Choices")}}
   - : The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : The URL of the requested resource has been changed permanently. The new URL is given in the response.
@@ -208,7 +210,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Browser compatibility
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## See also
 

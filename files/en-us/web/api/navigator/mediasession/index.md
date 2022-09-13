@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaSession
 slug: Web/API/Navigator/mediaSession
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - metadata
 browser-compat: api.Navigator.mediaSession
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Navigator")}} property

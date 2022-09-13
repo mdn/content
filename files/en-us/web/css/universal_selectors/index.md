@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.universal
 ---
+
 {{CSSRef}}
 
 The CSS **universal selector** (`*`) matches elements of any type.
@@ -19,7 +20,7 @@ The CSS **universal selector** (`*`) matches elements of any type.
 }
 ```
 
-Universal selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.
+Universal selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|*` - matches all elements in namespace _ns_
 - `*|*` - matches all elements

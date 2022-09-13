@@ -11,12 +11,13 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.filter
 ---
+
 {{JSRef}}
 
 The **`filter()`** method creates a new typed array with all
 elements that pass the test implemented by the provided function. This method has the
 same algorithm as {{jsxref("Array.prototype.filter()")}}. _TypedArray_ is one of
-the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
 
@@ -42,11 +43,13 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 ### Parameters
 
 - `callbackFn`
+
   - : Function to test each element of the typed array.
 
     The function is called with the following arguments: `(element, index, array)`.
     Return `true` to keep the element, `false` otherwise.
-- `thisArg`{{optional_inline}}
+
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
@@ -107,7 +110,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
+new Uint8Array([12, 5, 8, 130, 44]).filter((elem) => elem >= 10);
 // Uint8Array [ 12, 130, 44 ]
 ```
 

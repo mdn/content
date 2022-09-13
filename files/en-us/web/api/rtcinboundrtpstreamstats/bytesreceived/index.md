@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.bytesReceived
 slug: Web/API/RTCInboundRtpStreamStats/bytesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -18,6 +19,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.bytesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCInboundRtpStreamStats")}} dictionary's

@@ -1,11 +1,13 @@
 ---
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Node.compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 The **`compareDocumentPosition()`** method of the {{domxref("Node")}} interface

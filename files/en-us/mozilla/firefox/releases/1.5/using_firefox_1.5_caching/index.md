@@ -9,9 +9,8 @@ tags:
   - JavaScript
   - Web Development
 ---
-{{FirefoxSidebar}}
 
-## Introduction
+{{FirefoxSidebar}}
 
 [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5) uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as **bfcache** (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.
 
@@ -41,7 +40,7 @@ Two new browser events enable Web authors to do both.
 
 If you use these new events, your pages will continue to display properly in other browsers (we've tested earlier versions of Firefox, Internet Explorer, Opera, and Safari), and will use this new caching functionality when loaded in Firefox 1.5.
 
-Note: as of 10-2009 development versions of Safari added support for these new events (see [the webkit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
+Note: as of 10-2009 development versions of Safari added support for these new events (see [the WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
 
 Standard behavior for Web pages is:
 
@@ -100,7 +99,7 @@ body, p {
   font-size: 12px;
      }
 </style>
-<script type="text/javascript">
+<script>
 function onLoad() {
   loadOnlyFirst();
   onPageShow();

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.negative
 ---
+
 {{CSSRef}}
 
 When defining custom counter styles, the **`negative`** descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
@@ -38,7 +39,14 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol> <symbol>?
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -72,7 +80,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 #### Result
 
-{{ EmbedLiveSample('Rendering_negative_counters', '', '', '', 'Web/CSS/@counter-style/negative') }}
+{{ EmbedLiveSample('Rendering negative counters') }}
 
 ## Specifications
 

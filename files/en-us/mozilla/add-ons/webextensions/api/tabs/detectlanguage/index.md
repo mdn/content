@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.detectLanguage
 ---
+
 {{AddonSidebar()}}
 
 Detects the primary language of the content in a tab, using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
@@ -52,9 +53,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let detecting = browser.tabs.detectLanguage();
-  detecting.then(onLanguageDetected, onError);
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.detectLanguage().then(onLanguageDetected, onError);
 });
 ```
 
@@ -70,16 +70,15 @@ function onError(error) {
 }
 
 function detectLanguages(tabs) {
-  for (tab of tabs) {
-    let onFulfilled = onLanguageDetected.bind(null, tab.url);
-    let detecting = browser.tabs.detectLanguage(tab.id);
-    detecting.then(onFulfilled, onError);
+  for (const tab of tabs) {
+    browser.tabs
+      .detectLanguage(tab.id)
+      .then((lang) => onLanguageDetected(tab.url, lang), onError);
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let querying = browser.tabs.query({});
-  querying.then(detectLanguages, onError);
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.query({}).then(detectLanguages, onError);
 });
 ```
 
@@ -89,11 +88,12 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,4 +120,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

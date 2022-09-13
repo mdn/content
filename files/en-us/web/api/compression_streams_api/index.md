@@ -1,6 +1,7 @@
 ---
 title: Compression Streams API
 slug: Web/API/Compression_Streams_API
+page-type: web-api-overview
 tags:
   - API
   - Compression_Streams_API
@@ -8,7 +9,9 @@ tags:
   - Decompression
   - Reference
   - Overview
+browser-compat: api.CompressionStream
 ---
+
 {{DefaultAPISidebar("Compression Streams API")}}
 
 The **Compression Streams API** provides a JavaScript API for compressing and decompressing streams of data using the gzip or deflate formats.
@@ -42,8 +45,8 @@ async function DecompressBlob(blob) {
 
 ## Specifications
 
-{{Specifications("api.CompressionStream")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CompressionStream")}}
+{{Compat}}

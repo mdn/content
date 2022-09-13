@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -11,7 +12,8 @@ tags:
   - rootMargin
 browser-compat: api.IntersectionObserver.rootMargin
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
 **`rootMargin`** property is a string with syntax similar to
@@ -41,7 +43,7 @@ the values
 If `rootMargin` isn't specified when the object was instantiated, it
 defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection
 will be computed between the root element's unmodified bounds rectangle and the target's
-bounds.  {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root
+bounds. {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root
   element and root margin")}} describes how the `rootMargin` is used in more
 detail.
 

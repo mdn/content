@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyDescriptor()`** method returns an
@@ -70,7 +71,7 @@ A _property descriptor_ is a record with some of the following attributes:
 ### Using Object.getOwnPropertyDescriptor
 
 ```js
-var o, d;
+let o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');

@@ -1,9 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Streams
@@ -11,7 +11,8 @@ tags:
   - closed
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`closed`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns a
@@ -29,21 +30,21 @@ const writableStream = new WritableStream({
   start(controller) {
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-..
+// ..
 
 // check if the stream is closed
 writer.closed.then(() => {

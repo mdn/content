@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaDisabled
 slug: Web/API/ElementInternals/ariaDisabled
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaDisabled
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaDisabled`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
@@ -19,7 +21,7 @@ The **`ariaDisabled`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.

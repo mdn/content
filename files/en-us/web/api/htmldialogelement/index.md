@@ -1,16 +1,17 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Interface
   - Reference
 browser-compat: api.HTMLDialogElement
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
 
@@ -23,14 +24,14 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.open")}}
   - : A boolean value reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
-  - : A {{domxref("DOMString")}} that sets or returns the return value for the dialog.
+  - : A string that sets or returns the return value for the dialog.
 
 ## Methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
-  - : Closes the dialog. An optional {{domxref("DOMString")}} may be passed as an argument, updating the `returnValue` of the dialog.
+  - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}
@@ -40,10 +41,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the user instructs the browser that they wish to dismiss the current open dialog.
-    Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
   - : Fired when the dialog is closed.
-    Also available via the {{domxref("GlobalEventHandlers/onclose", "onclose")}} property.
 
 ## Examples
 
@@ -74,14 +73,14 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
   </menu>
 
   <script>
-    (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+    (() => {
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -89,13 +88,13 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
       }
 
       // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
       });
 
       // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
+      cancelButton.addEventListener('click', () => {
         dialog.close('animalNotChosen');
         openCheck(dialog);
       });
@@ -104,7 +103,7 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: History.back()
 slug: Web/API/History/back
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: api.History.back
 ---
+
 {{APIRef("History API")}}
 
 The **`History.back()`** method causes
@@ -26,8 +28,16 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.back()
+back()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -59,5 +69,4 @@ document.getElementById('go-back').addEventListener('click', () => {
 ## See also
 
 - {{domxref("History")}}
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scale3d
 ---
+
 {{CSSRef}}
 
 The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element in 3D space.
@@ -172,6 +173,6 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ())
-- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d())
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d())
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
+- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

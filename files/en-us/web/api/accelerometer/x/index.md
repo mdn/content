@@ -1,6 +1,7 @@
 ---
 title: Accelerometer.x
 slug: Web/API/Accelerometer/x
+page-type: web-api-instance-property
 tags:
   - API
   - Accelerometer
@@ -12,8 +13,10 @@ tags:
   - Sensor APIs
   - Sensors
   - x
+  - Experimental
 browser-compat: api.Accelerometer.x
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`x`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along its x axis.
@@ -31,10 +34,10 @@ Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading
 ```js
 let accelerometer = new Accelerometer({frequency: 60});
 
-accelerometer.addEventListener('reading', e => {
-  console.log("Acceleration along the X-axis " + accelerometer.x);
-  console.log("Acceleration along the Y-axis " + accelerometer.y);
-  console.log("Acceleration along the Z-axis " + accelerometer.z);
+accelerometer.addEventListener('reading', (e) => {
+  console.log(`Acceleration along the X-axis ${accelerometer.x}`);
+  console.log(`Acceleration along the Y-axis ${accelerometer.y}`);
+  console.log(`Acceleration along the Z-axis ${accelerometer.z}`);
 });
 accelerometer.start();
 ```

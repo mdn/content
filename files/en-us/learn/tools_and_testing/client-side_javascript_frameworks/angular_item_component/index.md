@@ -13,9 +13,10 @@ tags:
   - Events
   - Data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.
+Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
 <table>
   <tbody>
@@ -160,7 +161,7 @@ remove(item) {
 }
 ```
 
-The `remove()` method uses the JavaScript `Array.splice()` method to remove one item at at the `indexOf` the relevant item.
+The `remove()` method uses the JavaScript `Array.splice()` method to remove one item at the `indexOf` the relevant item.
 In plain English, this means that the `splice()` method removes the item from the array.
 For more information on the `splice()` method, see the MDN Web Docs article on [`Array.prototype.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 

@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.
@@ -17,7 +18,7 @@ This article provides information about the changes in Firefox 84 that will affe
 
 ### Developer Tools
 
-- The Firefox [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) now supports displaying the [keyboard tab order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order) on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).
+- The Firefox [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now supports displaying the [keyboard tab order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order) on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).
 
 ### HTML
 
@@ -41,7 +42,7 @@ _No changes._
 
 ### Security
 
-- Firefox now ensures that `localhost` URLs — such as *http\://localhost/* and *http\://dev.localhost/* — refer to the local host's loopback interface (e.g. _http\://127.0.0.1_). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ({{bug(1220810)}}, {{bug(1488740)}}).
+- Firefox now ensures that `localhost` URLs — such as `http://localhost/` and `http://dev.localhost/` — refer to the local host's loopback interface (e.g. `http://127.0.0.1`). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ({{bug(1220810)}}, {{bug(1488740)}}).
 
 ### APIs
 

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-width
 ---
+
 {{CSSRef}}
 
 The **`border-image-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [border image](/en-US/docs/Web/CSS/border-image).
@@ -79,7 +80,7 @@ The `border-image-width` property may be specified using one, two, three, or fou
 
 This example creates a border image using the following ".png" file, which is 90 by 90 pixels:
 
-![](border.png)
+![Square image containing eight circles. The circles in each corner are light purple. The four side circles are blue. The area in the middle, where a ninth circle could fit, is blank.](border.png)
 
 Thus, each circle in the source image is 30 by 30 pixels.
 

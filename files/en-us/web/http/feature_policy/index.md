@@ -13,7 +13,9 @@ tags:
   - delegation
   - header
   - permission
+browser-compat: http.headers.Feature-Policy
 ---
+
 {{HTTPSidebar}}
 
 Feature Policy allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to {{Glossary("CSP", "Content Security Policy")}} but controls features instead of security behavior.
@@ -122,13 +124,11 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Feature Policy","#feature-policy-http-header-field","Feature-Policy")}} | {{Spec2("Feature Policy")}} | Initial definition. Defines the {{httpheader("Feature-Policy")}} header. Directives are defined in the specs for the features they control. See individual directive pages for details. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## See also
 
@@ -136,6 +136,6 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
 - [Introduction to Feature Policy](https://developer.chrome.com/blog/feature-policy/)
-- [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
+- [Feature policies on www.chromestatus.com](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

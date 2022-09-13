@@ -7,7 +7,9 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`415 Unsupported Media Type`** client error response
@@ -26,9 +28,7 @@ inspecting the data directly.
 
 ## Specifications
 
-| Specification                                                                | Title                                                         |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

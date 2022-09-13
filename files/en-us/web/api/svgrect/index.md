@@ -1,6 +1,7 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRect
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGRect`** represents a rectangle. Rectangles consist of an `x` and `y` coordinate pair identifying a minimum `x` value, a minimum `y` value, and a `width` and `height`, which are constrained to be non-negative.

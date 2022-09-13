@@ -1,6 +1,7 @@
 ---
 title: SVGGradientElement
 slug: Web/API/SVGGradientElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGradientElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinearGradientElement")}} and {{domxref("SVGRadialGradientElement")}}.

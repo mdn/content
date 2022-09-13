@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Cross-Origin-Embedder-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using [CORP](</en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) or [CORS](/en-US/docs/Web/HTTP/CORS)).
@@ -28,7 +29,7 @@ The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header prevents a do
 
 ## Syntax
 
-```
+```http
 Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 ```
 
@@ -46,7 +47,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 
 You can only access certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers, if your document has a COEP header with the value `require-corp` value set.
 
-```
+```http
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```

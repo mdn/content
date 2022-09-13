@@ -1,11 +1,13 @@
 ---
 title: Text()
 slug: Web/API/Text/Text
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
 browser-compat: api.Text.Text
 ---
+
 {{ APIRef("DOM")}}
 
 The **`Text()`** constructor returns a new {{domxref("Text")}} object

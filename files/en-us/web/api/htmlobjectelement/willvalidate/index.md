@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.willValidate
 slug: Web/API/HTMLObjectElement/willValidate
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - willValidate
 browser-compat: api.HTMLObjectElement.willValidate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`willValidate`** read-only property of

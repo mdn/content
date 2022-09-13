@@ -5,7 +5,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
 ---
+
 {{SVGRef}}
 
 The **`attributeName`** attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.
@@ -60,31 +62,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

@@ -9,21 +9,22 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
+
 {{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
+In this example, the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
 The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at 200px but then shrink to fit the space available with the other items being at least `min-content` sized.
 
-The image below shows how the Firefox [Flexbox Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) helps you understand the size items become:
+The image below shows how the Firefox [Flexbox Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) helps you understand the size items become:
 
 ![The Firefox Flexbox Inspector showing the size of the item once it has shrunk.](firefox-flex-basis.png)
 
-> **Note:** in case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
+> **Note:** In case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
 
 ## Syntax
 
@@ -31,10 +32,10 @@ The image below shows how the Firefox [Flexbox Inspector](/en-US/docs/Tools/Page
 /* Specify <'width'> */
 flex-basis: 10em;
 flex-basis: 3px;
+flex-basis: 50%;
 flex-basis: auto;
 
 /* Intrinsic sizing keywords */
-flex-basis: fill;
 flex-basis: max-content;
 flex-basis: min-content;
 flex-basis: fit-content;
@@ -60,7 +61,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
   - : Indicates automatic sizing, based on the flex item's content.
 
-    > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) or [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) of `auto`.
+    > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/#the-width-property) or [height](https://drafts.csswg.org/css2/#the-height-property)) of `auto`.
     >
     > - Originally, `flex-basis:auto` meant "look at my `width` or `height` property".
     > - Then, `flex-basis:auto` was changed to mean automatic sizing, and "main-size" was introduced as the "look at my `width` or `height` property" keyword. It was implemented in {{bug("1032922")}}.
@@ -117,7 +118,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   position: relative;
 }
 
-.flex:after {
+.flex::after {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -132,7 +133,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: auto;
 }
 
-.flex1:after {
+.flex1::after {
   content: 'auto';
 }
 
@@ -140,7 +141,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: max-content;
 }
 
-.flex2:after {
+.flex2::after {
   content: 'max-content';
 }
 
@@ -148,7 +149,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: min-content;
 }
 
-.flex3:after {
+.flex3::after {
   content: 'min-content';
 }
 
@@ -156,7 +157,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: fit-content;
 }
 
-.flex4:after {
+.flex4::after {
   content: 'fit-content';
 }
 
@@ -164,16 +165,8 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
    flex-basis: content;
 }
 
-.flex5:after {
+.flex5::after {
   content: 'content';
-}
-
-.flex6 {
-  flex-basis: fill;
-}
-
-.flex6:after {
-  content: 'fill';
 }
 ```
 

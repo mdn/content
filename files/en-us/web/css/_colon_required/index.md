@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.required
 ---
+
 {{ CSSRef }}
 
 The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.
@@ -27,7 +28,9 @@ This pseudo-class is useful for highlighting fields that must have valid data be
 
 ## Syntax
 
-{{csssyntax}}
+```
+:required
+```
 
 ## Examples
 

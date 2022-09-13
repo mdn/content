@@ -1,6 +1,7 @@
 ---
 title: FontFace.loaded
 slug: Web/API/FontFace/loaded
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -12,6 +13,7 @@ tags:
   - loaded
 browser-compat: api.FontFace.loaded
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`loaded`** read-only property of the

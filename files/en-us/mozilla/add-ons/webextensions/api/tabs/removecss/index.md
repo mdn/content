@@ -13,9 +13,12 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.removeCSS
 ---
+
 {{AddonSidebar()}}
 
 Removes from a page CSS which was previously injected by a call to {{WebExtAPIRef("tabs.insertCSS()")}}.
+
+> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -36,17 +39,17 @@ let removing = browser.tabs.removeCSS(
 
   - : An object describing the CSS to remove from the page. It contains the following properties:
 
-    - `allFrames`{{optional_inline}}
+    - `allFrames` {{optional_inline}}
       - : `boolean`. If `true`, the code will be removed from all frames of the current page. If it is `false`, code is only removed from the top frame. Defaults to `false`.
-    - `code`{{optional_inline}}
+    - `code` {{optional_inline}}
       - : `string`. CSS to remove, as a text string. This must exactly match a CSS string previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
-    - `cssOrigin`{{optional_inline}}
+    - `cssOrigin` {{optional_inline}}
       - : `string`. This can take one of two values: "user", for CSS added as a user stylesheet, or "author" for CSS added as an author stylesheet. If this option was set previously by {{WebExtAPIRef("tabs.insertCSS()")}}, then it must exactly match.
-    - `file`{{optional_inline}}
+    - `file` {{optional_inline}}
       - : `string`. Path to a file containing the CSS to remove. This must exactly match a CSS file previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
-    - `frameId`{{optional_inline}}
+    - `frameId` {{optional_inline}}
       - : `integer`. The frame from which to remove the CSS. Defaults to `0` (the top-level frame).
-    - `matchAboutBlank`{{optional_inline}}
+    - `matchAboutBlank` {{optional_inline}}
       - : `boolean`. If `true`, the CSS will be removed from embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. Defaults to `false`.
 
 ### Return value
@@ -79,11 +82,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +114,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

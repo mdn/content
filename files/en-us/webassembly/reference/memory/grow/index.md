@@ -7,13 +7,14 @@ tags:
   - Reference
   - Memory
 ---
+
 {{WebAssemblySidebar}}
 
 The **`grow`** instruction, increases the size of the memory instance by a specified number of pages, each page is sized 64KiB.
 
 The **`grow`** instruction returns **`1`** if the operation was successful, and returns **`-1`** if the operation failed.
 
-{{EmbedInteractiveExample("pages/wat/grow.html")}}
+{{EmbedInteractiveExample("pages/wat/grow.html", "tabbed-taller")}}
 
 ## Syntax
 

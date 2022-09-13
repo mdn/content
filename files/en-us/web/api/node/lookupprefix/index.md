@@ -1,11 +1,13 @@
 ---
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Node.lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupPrefix()`** method of the {{domxref("Node")}} interface
@@ -48,10 +50,10 @@ Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;: <ou
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector('button');
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector('output');
+  const aSvgElt = document.querySelector('svg');
 
   const result = document.getElementsByTagName('output');
   result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true

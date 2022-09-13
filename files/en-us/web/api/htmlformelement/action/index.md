@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
+page-type: web-api-instance-property
 tags:
   - API
   - Forms
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.action
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.action`** property represents the action

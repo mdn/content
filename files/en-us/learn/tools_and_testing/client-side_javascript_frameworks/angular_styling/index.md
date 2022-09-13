@@ -10,6 +10,7 @@ tags:
   - Angular
   - Styling
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.
@@ -108,14 +109,13 @@ body {
 }
 ```
 
-The CSS in `src/styles.css` apply to the entire application, however, these styles don't effect everything on the page.
+The CSS in `src/styles.css` apply to the entire application, however, these styles don't affect everything on the page.
 The next step is to add styles that apply specifically to the `AppComponent`.
 
 In `app.component.css`, add the following styles:
 
 ```css
 body {
-  color: #4d4d4d;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }

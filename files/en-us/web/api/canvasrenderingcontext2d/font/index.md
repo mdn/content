@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.font
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +21,7 @@ specifier.
 
 ## Value
 
-A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font is 10px sans-serif.
+A string parsed as CSS {{cssxref("font")}} value. The default font is 10px sans-serif.
 
 ## Examples
 
@@ -56,7 +58,7 @@ using them in a canvas.
 ```js
 let f = new FontFace('test', 'url(x)');
 
-f.load().then(function() {
+f.load().then(() => {
   // Ready to use the font in a canvas context
 });
 ```

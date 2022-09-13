@@ -7,9 +7,11 @@ tags:
   - Pseudo-class
   - Reference
   - Selector
+  - Experimental
 browser-compat: css.selectors.user-invalid
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:user-invalid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value isn't valid based on their [validation constraints](/en-US/docs/Learn/Forms#constraint_validation), after the user has interacted with it.
 
@@ -19,7 +21,9 @@ The `:user-invalid` pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRe
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:user-invalid
+```
 
 ## Examples
 

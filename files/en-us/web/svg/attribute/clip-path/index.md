@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.clip-path
 ---
+
 {{SVGRef}}
 
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
@@ -99,35 +100,7 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}
-      </td>
-      <td>{{Spec2('CSS Masks')}}</td>
-      <td>
-        Extends its application to HTML elements. The
-        <code>clip-path</code> property replaces the deprecated
-        {{cssxref("clip")}} property.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition (applies to SVG elements only).</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

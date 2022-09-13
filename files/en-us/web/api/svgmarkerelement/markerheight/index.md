@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.markerHeight
 slug: Web/API/SVGMarkerElement/markerHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.markerHeight
 ---
+
 {{APIRef("SVG")}}
 
 The **`markerHeight`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerHeight")}} attribute.

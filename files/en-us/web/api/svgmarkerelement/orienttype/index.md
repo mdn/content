@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.orientType
 slug: Web/API/SVGMarkerElement/orientType
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientType
 ---
+
 {{APIRef("SVG")}}
 
 The **`orientType`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object indicating whether the {{SVGattr("orient")}} attribute is `auto`, an angle value, or something else.
@@ -19,11 +21,11 @@ This _something else_ is most likely to be the keyword `auto-start-reverse` howe
 
 An {{domxref("SVGAnimatedEnumeration")}} object. This contains one of the following values:
 
-- 0
+- `0`
   - : `SVG_MARKER_ORIENT_UNKNOWN` which means that the {{SVGattr("orient")}} attribute has a value other than `auto` or an angle.
-- 1
+- `1`
   - : `SVG_MARKERUNITS_ORIENT_AUTO` which means that the {{SVGattr("orient")}} attribute has the keyword value `auto`.
-- 2
+- `2`
   - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
 
 ## Examples

@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -12,7 +13,8 @@ tags:
   - periodicSync
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
-{{DefaultAPISidebar("Service Worker API")}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`periodicSync`** read-only property of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
@@ -21,7 +23,7 @@ run at specific intervals.
 
 ## Value
 
-A PeriodicSyncManager {{jsxref('Object')}}.
+A {{domxref('PeriodicSyncManager')}} object.
 
 ## Examples
 
@@ -43,7 +45,7 @@ if ('periodicSync' in registration) {
 }
 ```
 
-From the {{domxref('Service Worker API','service worker')}}:
+From the [service worker](/en-US/docs/Web/API/Service_Worker_API):
 
 ```js
 // service worker script
@@ -61,7 +63,5 @@ const periodicSync = self.registration.periodicSync;
 
 ## See also
 
-- [Richer offline experiences with
-  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A
-  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

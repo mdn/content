@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.delete()
 slug: Web/API/FontFaceSet/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.delete
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a font from the set.
@@ -16,7 +18,7 @@ The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a 
 ## Syntax
 
 ```js
-FontFaceSet.delete(font)
+delete(font)
 ```
 
 ### Parameters
@@ -24,7 +26,7 @@ FontFaceSet.delete(font)
 - `font`
   - : A {{domxref("FontFace")}} to be removed from the set.
 
-### Return Value
+### Return value
 
 A boolean value which is `true` if the deletion was successful.
 

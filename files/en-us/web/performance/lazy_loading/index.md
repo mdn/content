@@ -11,7 +11,9 @@ tags:
   - Performance
   - Web Performance
   - rendering
+spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
+
 **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
 Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation.
@@ -22,7 +24,7 @@ As the web has evolved, we have come to see huge increases in the number and siz
 Between 2011 and 2019, the median resource weight increased from **\~100KB** to **\~400KB** for desktop and **\~50KB** to **\~350KB** for mobile. While Image size has increased from **\~250KB** to **\~900KB** on desktop and **\~100KB** to **\~850KB** on mobile.
 
 One of the methods we can use to tackle this problem is to shorten the [Critical Rendering Path](/en-US/docs/Web/Performance/Critical_rendering_path) length by lazy loading resources that are not critical for the first render to happen.
-A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images...) are downloaded **only** when the user navigates to that cart page.
+A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images…) are downloaded **only** when the user navigates to that cart page.
 
 ## Strategies
 
@@ -51,7 +53,7 @@ By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Cr
 <link href="print.css"    rel="stylesheet" media="print">
 ```
 
-It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS)  to achieve that.
+It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS) to achieve that.
 
 ### Fonts
 
@@ -92,9 +94,7 @@ When browser compatibility is crucial, there are a few options:
 
 ## Specifications
 
-| **Specification**                                                        | **Status**                       | **Comment** |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 

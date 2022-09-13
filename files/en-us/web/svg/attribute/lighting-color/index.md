@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.attributes.presentation.lighting-color
 ---
+
 {{SVGRef}}
 
 The **`lighting-color`** attribute defines the color of the light source for lighting filter primitives.
@@ -65,31 +66,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#LightingColorProperty", "lighting-color")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>Removed the <code>&#x3C;icccolor></code> value.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#LightingColorProperty", "lighting-color")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

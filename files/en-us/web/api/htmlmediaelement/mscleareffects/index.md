@@ -1,9 +1,11 @@
 ---
 title: HTMLMediaElement.msClearEffects
 slug: Web/API/HTMLMediaElement/msClearEffects
+page-type: web-api-instance-property
 tags:
   - msClearEffects
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 {{Non-standard_header()}}

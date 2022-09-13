@@ -31,17 +31,6 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
-
-  - : This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
-
-    - `none`: Completely disables automatic capitalization.
-    - `sentences`: Automatically capitalize the first letter of sentences.
-    - `words`: Automatically capitalize the first letter of words.
-    - `characters`: Automatically capitalize all characters.
-    - `on`: {{deprecated_inline}} Deprecated since iOS 5.
-    - `off`: {{deprecated_inline}} Deprecated since iOS 5.
-
 - {{htmlattrdef("autocomplete")}}
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
@@ -118,7 +107,7 @@ The HTML specification doesn't define where the baseline of a `<textarea>` is, s
 
 In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right-hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
 
-```html
+```css
 textarea {
   resize: none;
 }

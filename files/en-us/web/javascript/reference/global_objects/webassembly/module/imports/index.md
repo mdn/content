@@ -12,6 +12,7 @@ tags:
   - imports
 browser-compat: javascript.builtins.WebAssembly.Module.imports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.imports()`** function returns an array
@@ -25,7 +26,7 @@ WebAssembly.Module.imports(module)
 
 ### Parameters
 
-- _module_
+- `module`
   - : A {{jsxref("WebAssembly.Module")}} object.
 
 ### Return value
@@ -41,22 +42,22 @@ If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
 
 ### Using imports
 
-The following example (see imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html);
-[see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html))
-compiles the loaded simple.wasm module.
-This module is then queried for its imports.
+The following example compiles a loaded wasm module and queries the module's imports.
+
+See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) and
+[live version](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html).
 
 ```js
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(function(mod) {
-  var imports = WebAssembly.Module.imports(mod);
+  const imports = WebAssembly.Module.imports(mod);
   console.log(imports[0]);
 });
 ```
 
-The output looks like this:
+The console log displays the following description for the imported module:
 
-```js
+```
 { module: "imports", name: "imported_func", kind: "function" }
 ```
 

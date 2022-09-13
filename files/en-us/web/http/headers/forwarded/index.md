@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Forwarded
 ---
+
 {{HTTPSidebar}}
 
 The **`Forwarded`** request header contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
@@ -30,7 +31,7 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -50,6 +51,7 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 ## Directives
 
 - `by` {{optional_inline}}
+
   - : The interface where the request came in to the proxy server.
     The identifier can be:
 
@@ -99,10 +101,6 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 ---
+
 {{CSSRef}}
 
 The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
@@ -77,14 +78,16 @@ This property may take one of two forms:
 
 ## Examples
 
-### HTML
+### Enabling swash glyphs
+
+#### HTML
 
 ```html
 <p>Firefox rocks!</p>
 <p class="variant">Firefox rocks!</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
@@ -101,15 +104,15 @@ p {
 }
 ```
 
-### Result
+#### Result
 
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{ EmbedLiveSample('Enabling swash glyphs') }}
 
 ## Specifications
 
-Not part of any standard.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -11,9 +11,16 @@ tags:
   - writing modes
 browser-compat: css.properties.border-end-start-radius
 ---
+
 {{CSSRef}}
 
 The **`border-end-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius depending on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
+
+{{EmbedInteractiveExample("pages/css/border-end-start-radius.html")}}
+
+This property affects the corner between the block-end and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-left-radius")}} property.
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -31,10 +38,6 @@ border-end-start-radius: revert;
 border-end-start-radius: revert-layer;
 border-end-start-radius: unset;
 ```
-
-This property affects the corner between the block-end and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-left-radius")}} property.
-
-## Syntax
 
 ### Values
 

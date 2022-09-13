@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
@@ -15,11 +16,11 @@ This article provides information about the changes in Firefox 65 that will affe
 
 ### Developer tools
 
-- The [Flexbox inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) is now enabled by default.
-- Support has been added to the [JavaScript Debugger](/en-US/docs/Tools/Debugger) for XHR Breakpoints ({{bug(821610)}}).
-- Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as json](/en-US/docs/Tools/Accessibility_inspector#print_accessibility_tree_to_json) to the JSON viewer.
-- The [color contrast](/en-US/docs/Tools/Accessibility_inspector#color_contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
-- The Headers tab of the [Network Monitor](/en-US/docs/Tools/Network_Monitor) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
+- The [Flexbox inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) is now enabled by default.
+- Support has been added to the [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) for XHR Breakpoints ({{bug(821610)}}).
+- Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as JSON](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#print-accessibility-tree-to-json) to the JSON viewer.
+- The [color contrast](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#color-contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
+- The Headers tab of the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
 - When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.
 - In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (`F9` on Windows/Linux or `Ctrl` + `R` on macOS, then type a search term, followed by `Ctrl` + `R`/`Ctrl` + `S` to toggle through results).
 - The JavaScript console's `$0` shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type `$0.te` to get autocomplete suggestions for properties like `$0.textContent`.
@@ -45,9 +46,9 @@ This article provides information about the changes in Firefox 65 that will affe
 - The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](</en-US/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) — have been implemented ({{bug(1496619)}}). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
 - Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
 
-  - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. the existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
-  - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. the existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
-  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. the existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
+  - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
+  - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. The existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
+  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. The existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
 
 - The behavior of {{cssxref("user-select")}} has been changed to make it align more with other browsers ({{bug(1506547)}}). Specifically:
 
@@ -61,7 +62,7 @@ This article provides information about the changes in Firefox 65 that will affe
 
     The `<div>` with `none` set on it is now non-selectable. Previously this value would have been overridden by the `all` value set on the parent element.
 
-  - non-`contenteditable` elements nested inside `contenteditable` elements  are now selectable.
+  - non-`contenteditable` elements nested inside `contenteditable` elements are now selectable.
   - `user-select` now behaves consistently inside and outside shadow DOM.
   - The proprietary `-moz-text` value has been removed.
 
@@ -100,7 +101,7 @@ _No changes._
 #### DOM events
 
 - Going forward, only one {{domxref("Window.open()")}} call is allowed per event ({{bug(675574)}}).
-- The [`keyup`](/en-US/docs/Web/API/Document/keyup_event) and [`keydown`](/en-US/docs/Web/API/Document/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}.
+- The [`keyup`](/en-US/docs/Web/API/Element/keyup_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}.
 
 #### Web workers
 
@@ -121,7 +122,7 @@ _No changes._
 
 #### Canvas and WebGL
 
-- The  {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
+- The {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
 
 #### Removals
 
@@ -129,7 +130,7 @@ _No changes._
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ({{bug(1502927)}}).
 - The `dom.webcomponents.shadowdom.enabled` and `dom.webcomponents.customelements.enabled` prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in `about:config` ({{bug(1503019)}}).
 - The non-standard DOM `text` event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ({{bug(1288640)}}).
-- The {{event("keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
+- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
 
 ### Security
 
@@ -177,7 +178,7 @@ _No changes._
   - The {{WebExtAPIRef("tabs.Tab")}} type now has a `successorId` property, which can be used to store/retrieve the ID of the tab's successor.
   - The {{WebExtAPIRef("tabs.onActivated")}} event listener's callback has a new parameter available, `previousTabId`, which contains the ID of the previous activated tab, if it is still open.
   - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
-  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}}  and {{WebExtAPIRef("tabs.query()")}}.
+  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}} and {{WebExtAPIRef("tabs.query()")}}.
   - The new function `tabs.moveInSuccession()` allows manipulation of tab successors in bulk.
 
 ### Manifest changes
@@ -186,7 +187,7 @@ _No changes._
 
 ### Other
 
-- The `headerURL`/`theme_frame` properties for [Webextension themes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) are now supported on Firefox for Android ({{bug(1429488)}}).
+- The `headerURL`/`theme_frame` properties for [WebExtension themes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) are now supported on Firefox for Android ({{bug(1429488)}}).
 
 ## See also
 

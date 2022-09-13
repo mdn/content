@@ -6,9 +6,10 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.fill-rule
 ---
+
 {{SVGRef}}
 
-The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the *inside* part of a shape.
+The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the _inside_ part of a shape.
 
 > **Note:** As a presentation attribute, `fill-rule` can be used as a CSS property.
 
@@ -147,31 +148,7 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and text</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and text</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

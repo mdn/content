@@ -7,12 +7,12 @@ tags:
   - HTTP
   - fullscreen
   - header
-  - Experimental
 browser-compat: http.headers.Feature-Policy.fullscreen
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Feature-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullScreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.
+{{HTTPSidebar}}
+
+The HTTP {{HTTPHeader("Feature-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullscreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.
 
 By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.
 
@@ -20,7 +20,7 @@ By default, top-level documents and their same-origin child frames can request a
 
 ## Syntax
 
-```
+```http
 Feature-Policy: fullscreen <allowlist>;
 ```
 
@@ -37,7 +37,7 @@ Default allow list for `fullscreen` is `'self'`.
 
 SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: fullscreen 'self' https://example.com
 ```
 
@@ -45,7 +45,7 @@ Feature-Policy: fullscreen 'self' https://example.com
 
 FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific \<iframe>. It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: fullscreen 'self'
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SVGClipPathElement
 slug: Web/API/SVGClipPathElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGClipPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGClipPathElement`** interface provides access to the properties of {{SVGElement("clipPath")}} elements, as well as methods to manipulate them.

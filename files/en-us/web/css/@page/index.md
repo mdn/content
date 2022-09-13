@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.at-rules.page
 ---
+
 {{CSSRef}}
 
 The **`@page`** CSS at-rule is used to modify some CSS properties when printing a document.
@@ -28,6 +29,10 @@ The **`@page`** CSS at-rule is used to modify some CSS properties when printing 
 
 ### Descriptors
 
+- [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
+
+  - : Specifies the orientation of the document on the page, allowing it to be laid out and formatted as normal or be rotated to one either left or right side.
+
 - [`size`](/en-US/docs/Web/CSS/@page/size)
   - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
@@ -41,7 +46,11 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@page <page-selector-list> {
+  <page-body>
+}
+```
 
 ## Examples
 

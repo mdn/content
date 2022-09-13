@@ -1,6 +1,7 @@
 ---
 title: Animation.timeline
 slug: Web/API/Animation/timeline
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -11,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.timeline
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation.timeline`** property of the {{domxref("Animation")}} interface returns or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation. A timeline is a source of time values for synchronization purposes, and is an {{domxref("AnimationTimeline")}}-based object. By default, the animation's timeline and the {{domxref("Document")}}'s timeline are the same.

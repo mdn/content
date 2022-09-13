@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -9,13 +10,13 @@ tags:
   - Media Source
   - Media Source Extensions
   - Method
-  - Non-standard
   - SourceBuffer
   - Video
   - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{Non-standard_Header}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`changeType()`** method of the
 {{domxref("SourceBuffer")}} interface sets the MIME type that future calls to
@@ -30,22 +31,22 @@ constraints change.
 ## Syntax
 
 ```js
-sourceBuffer.changeType(type);
+changeType(type)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} specifying the MIME type that future buffers will conform
+  - : A string specifying the MIME type that future buffers will conform
     to.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified string is empty, rather than indicating a valid MIME type.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SourceBuffer")}} is not a member of the parent media source's

@@ -1,22 +1,25 @@
 ---
 title: SerialPort.getSignals()
 slug: Web/API/SerialPort/getSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - getSignals()
   - SerialPort
+  - Experimental
 browser-compat: api.SerialPort.getSignals
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
 
 ## Syntax
 
 ```js
-var promise = SerialPort.getSignals();
+getSignals()
 ```
 
 ### Parameters

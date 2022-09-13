@@ -1,12 +1,15 @@
 ---
 title: Remote Playback API
 slug: Web/API/Remote_Playback_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Remote Playback API
+browser-compat: api.RemotePlayback
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The Remote Playback API extends the {{domxref("HTMLMediaElement")}} to enable the control of remote playback of media from a webpage.
@@ -55,8 +58,8 @@ videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
 
 ## Specifications
 
-{{Specifications("api.RemotePlayback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.RemotePlayback")}}
+{{Compat}}

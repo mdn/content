@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.set
 ---
+
 {{JSRef}}
 
 The **`set()`** prototype method of
@@ -25,15 +26,15 @@ set(index, value)
 
 ### Parameters
 
-- _index_
+- `index`
   - : The index of the function reference you want to mutate.
-- _value_
+- `value`
   - : The value you want to mutate the reference to. This must be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions),
     a JavaScript wrapper for an underlying wasm function.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -41,7 +42,7 @@ Void.
   to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
   {{jsxref("RangeError")}} is thrown.
 - If _value_ is not an exported WebAssembly function or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
@@ -54,10 +55,10 @@ creates a new WebAssembly Table instance with an initial size of 2
 references. We then print out the table length and contents of the two indexes
 (retrieved via {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) to show that
 the length is two, and the indexes currently contain no function references (they
-currently return {{jsxref("null")}}).
+currently return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);
 console.log(tbl.get(0));
 console.log(tbl.get(1));
@@ -66,17 +67,15 @@ console.log(tbl.get(1));
 We then create an import object that contains a reference to the table:
 
 ```js
-var importObj = {
-  js: {
-    tbl:tbl
-  }
+const importObj = {
+  js: { tbl },
 };
 ```
 
 Finally, we load and instantiate a wasm module (table2.wasm) using the
 {{jsxref("WebAssembly.instantiateStreaming()")}}, log the table length, and invoke the
 two referenced functions that are now stored in the table (the table2.wasm module (see
-[text representation](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was))
+[text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
 adds two function references to the table, both of which print out
 a simple value):
 

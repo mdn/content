@@ -1,6 +1,7 @@
 ---
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -10,7 +11,8 @@ tags:
   - Web Audio API
 browser-compat: api.ScriptProcessorNode
 ---
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `ScriptProcessorNode` interface allows the generation, processing, or analyzing of audio using JavaScript.
 
@@ -55,7 +57,7 @@ If the buffer size is not defined, which is recommended, the browser will pick o
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-- {{domxref("ScriptProcessorNode.bufferSize")}} {{readonlyInline}}
+- {{domxref("ScriptProcessorNode.bufferSize")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns an integer representing both the input and output buffer size. Its value can be a power of 2 value in the range `256`–`16384`.
 
 ## Methods
@@ -66,7 +68,7 @@ _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-- [`audioprocess`](/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+- [`audioprocess`](/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event) {{Deprecated_Inline}}
   - : Fired when an input buffer of a `ScriptProcessorNode` is ready to be processed.
     Also available via the `onaudioprocess` event handler property.
 

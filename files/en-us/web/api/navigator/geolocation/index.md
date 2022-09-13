@@ -1,6 +1,7 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -10,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.Navigator.geolocation
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`Navigator.geolocation`** read-only property returns a
@@ -35,5 +37,4 @@ A {{domxref("Geolocation")}} object.
 
 ## See also
 
-- [Using the
-  Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)

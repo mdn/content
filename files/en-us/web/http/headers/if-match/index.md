@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.If-Match
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Match`** HTTP request header makes a request conditional.
@@ -41,7 +42,7 @@ There are two common use cases:
 
 ## Syntax
 
-```
+```http
 If-Match: <etag_value>
 If-Match: <etag_value>, <etag_value>, …
 ```
@@ -56,7 +57,6 @@ If-Match: <etag_value>, <etag_value>, …
 - `*`
   - : The asterisk is a special value representing any resource.
     Note that this must match as `false` if the origin server does not have a current representation for the target resource.
-    
 
 ## Examples
 

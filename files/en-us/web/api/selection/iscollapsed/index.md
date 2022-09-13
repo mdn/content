@@ -1,6 +1,7 @@
 ---
 title: Selection.isCollapsed
 slug: Web/API/Selection/isCollapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - Selection
 browser-compat: api.Selection.isCollapsed
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.isCollapsed`** read-only property returns a

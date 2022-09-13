@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -14,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenEnabled
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The read-only **`fullscreenEnabled`**
@@ -42,9 +44,9 @@ In this example, before attempting to request fullscreen mode for a
 checked, in order to avoid making the attempt when not available.
 
 ```js
-function requestFullScreen() {
+function requestFullscreen() {
   if (document.fullscreenEnabled) {
-    videoElement.requestFullScreen();
+    videoElement.requestFullscreen();
   } else {
     console.log('Your browser cannot use fullscreen right now');
   }

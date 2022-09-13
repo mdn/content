@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.name
 slug: Web/API/CSSKeyframesRule/name
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -10,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.name
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 

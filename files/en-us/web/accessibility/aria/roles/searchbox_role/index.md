@@ -1,25 +1,26 @@
 ---
 title: 'ARIA: searchbox role'
 slug: Web/Accessibility/ARIA/Roles/searchbox_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
   - searchbox
+spec-urls: https://w3c.github.io/aria/#searchbox
 ---
 
 The `searchbox` role indicates an element is a type of `textbox` intended for specifying search criteria.
 
 ## Description
 
-The `searchbox` can be used instead of [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) when the text box is within an element with role [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role).  A `searchbox` is the semantic equivalent is HTML's {{HTMLElement('input')}} of type `search`,  [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search), which should be used instead if possible.
+The `searchbox` can be used instead of [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) when the text box is within an element with role [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role). A `searchbox` is the semantic equivalent is HTML's {{HTMLElement('input')}} of type `search`, [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search), which should be used instead if possible.
 
 The `searchbox` must have an accessible name. If the `searchbox` role is applied to an HTML {{HTMLElement('input')}} element, an associated {{HTMLElement('label')}} should be used.
 Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
-The screen reader will announce "search box", "search edit", or "search field" plus the accessible name. This can be redundant if "search" is included in the label.  
+The screen reader will announce "search box", "search edit", or "search field" plus the accessible name. This can be redundant if "search" is included in the label.
 
 ## Examples
 
@@ -55,9 +56,7 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#searchbox","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 
@@ -69,6 +68,6 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

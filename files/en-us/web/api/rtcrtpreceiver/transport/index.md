@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.transport
 slug: Web/API/RTCRtpReceiver/transport
+page-type: web-api-instance-property
 tags:
   - API
   - Communications
@@ -18,6 +19,7 @@ tags:
   - receiver
 browser-compat: api.RTCRtpReceiver.transport
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only **`transport`** property of an

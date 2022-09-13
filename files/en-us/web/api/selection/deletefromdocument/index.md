@@ -1,6 +1,7 @@
 ---
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -10,6 +11,7 @@ tags:
   - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`deleteFromDocument()`** method of the
@@ -18,14 +20,18 @@ The **`deleteFromDocument()`** method of the
 ## Syntax
 
 ```js
-sel.deleteFromDocument()
+deleteFromDocument()
 ```
 
 ### Parameters
 
-_None._
+None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example lets you delete selected text by clicking a button. Upon clicking the
 button, the
@@ -53,7 +59,7 @@ function deleteSelection() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

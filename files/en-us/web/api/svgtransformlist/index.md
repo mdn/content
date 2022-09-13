@@ -1,6 +1,7 @@
 ---
 title: SVGTransformList
 slug: Web/API/SVGTransformList
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTransformList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG transform list interface
@@ -16,7 +18,7 @@ The `SVGTransformList` defines a list of {{ domxref("SVGTransform") }} objects.
 
 An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{Gecko("9.0") }},the `SVGTransformList` DOM interface is now indexable and can be accessed like Arrays
+An `SVGTransformList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
@@ -106,9 +108,9 @@ An `SVGTransformList` object can be designated as read only, which means that at
 
 ## Properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
 ## Methods
@@ -358,7 +360,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
 
 ### Using multiple SVGTransform objects
 
-In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation -- such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
+In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation — such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
 
 ```html
 <svg id="my-svg" viewBox="0 0 300 280"
@@ -367,19 +369,19 @@ In this example we create a function that will apply three different transformat
   <script type="application/ecmascript"> <![CDATA[
     function transformMe(evt) {
       // svg root element to access the createSVGTransform() function
-      var svgroot = evt.target.parentNode;
+      const svgroot = evt.target.parentNode;
 
       // SVGTransformList of the element that has been clicked on
-      var tfmList = evt.target.transform.baseVal;
+      const tfmList = evt.target.transform.baseVal;
 
       // Create a separate transform object for each transform
-      var translate = svgroot.createSVGTransform();
+      const translate = svgroot.createSVGTransform();
       translate.setTranslate(50,5);
 
-      var rotate = svgroot.createSVGTransform();
+      const rotate = svgroot.createSVGTransform();
       rotate.setRotate(10,0,0);
 
-      var scale = svgroot.createSVGTransform();
+      const scale = svgroot.createSVGTransform();
       scale.setScale(0.8,0.8);
 
       // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element

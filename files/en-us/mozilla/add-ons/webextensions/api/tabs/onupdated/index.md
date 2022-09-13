@@ -13,13 +13,14 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onUpdated
 ---
+
 Fired when a tab is updated.
 
-When the user navigates to a new URL in a tab, this will typically generate several  `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
+When the user navigates to a new URL in a tab, this will typically generate several `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
 
 This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the `pinned` property) and muting or unmuting (which updates the `audible` and `mutedInfo` properties).
 
-You can filter this event, making it only fire for tabs whose urls match specific [patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.
+You can filter this event, making it only fire for tabs whose URLs match specific [patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.
 
 ## Syntax
 
@@ -49,11 +50,11 @@ Events have three functions:
     - `tabId`
       - : `integer`. ID of the tab that was updated.
     - `changeInfo`
-      - : [`object`](#changeinfo). Contains properties for the tab properties that have changed. See [`changeInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo) below.
+      - : [`object`](#changeinfo). Contains properties for the tab properties that have changed. See [`changeInfo`](#changeinfo_2) below.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
-- `extraParameters`{{optional_inline}}
+- `extraParameters` {{optional_inline}}
 
   - : `object`. A set of filters that restricts the events that will be sent to this listener. This is an object which may have one or more of the following properties. Events will only be sent if they satisfy all the filters given.
 
@@ -91,25 +92,25 @@ Lists the changes to the state of the tab that was updated. To learn more about 
 
 - `attention` {{optional_inline}}
   - : `boolean`. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, `attention` will be `true`.
-- `audible`{{optional_inline}}
+- `audible` {{optional_inline}}
   - : `boolean`. The tab's new audible state.
 - `discarded` {{optional_inline}}
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
-- `favIconUrl`{{optional_inline}}
-  - : `string`. The tab's new favicon URL.
-- `hidden`{{optional_inline}}
+- `favIconUrl` {{optional_inline}}
+  - : `string`. The tab's new favicon URL. Not included when a tab loses its favicon (navigating from a page with a favicon to a page that without one), please check `favIconUrl` in [tab](#tab) instead.
+- `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
-- `isArticle`{{optional_inline}}
-  - : `boolean`. True if the tab is an article and is therefore eligible for display in  {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
-- `mutedInfo`{{optional_inline}}
+- `isArticle` {{optional_inline}}
+  - : `boolean`. True if the tab is an article and is therefore eligible for display in {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
+- `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
-- `pinned`{{optional_inline}}
+- `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
-- `status`{{optional_inline}}
+- `status` {{optional_inline}}
   - : `string`. The status of the tab. Can be either _loading_ or _complete_.
-- `title`{{optional_inline}}
+- `title` {{optional_inline}}
   - : `string`. The tab's new title.
-- `url`{{optional_inline}}
+- `url` {{optional_inline}}
   - : `string`. The tab's URL if it has changed.
 
 ## Examples
@@ -118,11 +119,9 @@ Listen for and log all the change info and new state:
 
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log("Updated tab: " + tabId);
-  console.log("Changed attributes: ");
-  console.log(changeInfo);
-  console.log("New tab Info: ");
-  console.log(tabInfo);
+  console.log(`Updated tab: ${tabId}`);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(handleUpdated);
@@ -133,8 +132,7 @@ Log changes to URLs:
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
-    console.log("Tab: " + tabId +
-                " URL changed to " + changeInfo.url);
+    console.log(`Tab: ${tabId} URL changed to ${changeInfo.url}`);
   }
 }
 
@@ -143,7 +141,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -181,7 +179,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combine both the previous filters: log changes only:
 
 - to the `pinned` property of tabs
-- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -206,7 +204,7 @@ browser.tabs.onUpdated.addListener(
 Log changes only:
 
 - to the `pinned` property of tabs
-- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet"
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`
 - and which are part of the current browser window at the time the update event is fired:
 
 ```js
@@ -236,9 +234,10 @@ browser.tabs.onUpdated.addListener(
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -265,6 +264,6 @@ browser.tabs.onUpdated.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
 {{AddonSidebar}}

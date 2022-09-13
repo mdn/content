@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.form
 slug: Web/API/HTMLSelectElement/form
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSelectElement
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.form
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.form`** read-only property returns a

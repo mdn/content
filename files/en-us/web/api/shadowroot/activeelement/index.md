@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.activeElement
 slug: Web/API/ShadowRoot/activeElement
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`activeElement`** read-only property of the

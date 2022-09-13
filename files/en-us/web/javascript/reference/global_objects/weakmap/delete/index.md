@@ -10,6 +10,7 @@ tags:
   - WeakMap
 browser-compat: javascript.builtins.WeakMap.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a
@@ -39,7 +40,7 @@ if the key is not an object.
 ### Using the delete() method
 
 ```js
-var wm = new WeakMap();
+const wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.delete(window); // Returns true. Successfully removed.

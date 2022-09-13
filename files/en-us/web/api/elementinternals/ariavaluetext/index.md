@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaValueText
 slug: Web/API/ElementInternals/ariaValueText
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaValueText
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaValueText`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
@@ -19,7 +21,7 @@ The **`ariaValueText`** property of the {{domxref("ElementInternals")}} interfac
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

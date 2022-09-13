@@ -8,6 +8,7 @@ tags:
   - Intermediate
   - Navigation
 ---
+
 Here we go over how to set up an image map, and some downsides to consider first.
 
 <table>
@@ -127,4 +128,4 @@ If you must use image maps, you may want to look into [Matt Stow's jQuery plugin
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [Online image map editor](http://www.maschek.hu/imagemap/imgmap)
+- [Online image map editor](http://maschek.hu/imagemap/imgmap/)

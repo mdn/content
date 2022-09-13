@@ -14,6 +14,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.object-position
 ---
+
 {{CSSRef}}
 
 The **`object-position`** [CSS](/en-US/docs/Web/CSS) property specifies the alignment of the selected [replaced element](/en-US/docs/Web/CSS/Replaced_element)'s contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
@@ -25,9 +26,25 @@ You can adjust how the replaced element's object's intrinsic size (that is, its 
 ## Syntax
 
 ```css
-/* <position> values */
-object-position: center top;
-object-position: 100px 50px;
+/* Keyword values */
+object-position: top;
+object-position: bottom;
+object-position: left;
+object-position: right;
+object-position: center;
+
+/* <percentage> values */
+object-position: 25% 75%;
+
+/* <length> values */
+object-position: 0 0;
+object-position: 1cm 2cm;
+object-position: 10ch 8em;
+
+/* Edge offsets values */
+object-position: bottom 10px right 20px;
+object-position: right 3em bottom 10px;
+object-position: top 0 right 10px;
 
 /* Global values */
 object-position: inherit;

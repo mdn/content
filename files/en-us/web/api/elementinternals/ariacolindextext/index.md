@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaColIndexText
 slug: Web/API/ElementInternals/ariaColIndexText
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaColIndexText
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaColIndexText`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
@@ -19,7 +21,7 @@ The **`ariaColIndexText`** property of the {{domxref("ElementInternals")}} inter
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -39,4 +41,4 @@ this.internals_.ariaColIndexText = "Column name";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

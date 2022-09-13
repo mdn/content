@@ -1,6 +1,7 @@
 ---
 title: SVGLineElement
 slug: Web/API/SVGLineElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLineElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGLineElement`** interface provides access to the properties of {{ SVGElement("line") }} elements, as well as methods to manipulate them.

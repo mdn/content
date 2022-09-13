@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `current` function can be used to get the context node in an XSLT instruction.
@@ -65,7 +66,7 @@ the `.` returns the `bar` node, which may be different from the current node.
 
 ### Defined
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-current)
+[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-current)
 
 ### Gecko support
 

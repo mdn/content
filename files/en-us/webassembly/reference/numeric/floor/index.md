@@ -8,13 +8,14 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`floor`** instructions, are used for getting the value of a number rounded down to the next integer.
 
 **`floor`** differs from **`trunc`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 
-{{EmbedInteractiveExample("pages/wat/floor.html")}}
+{{EmbedInteractiveExample("pages/wat/floor.html", "tabbed-standard")}}
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.clear()
 slug: Web/API/FontFaceSet/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.clear
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`clear()`** method of the {{domxref("FontFaceSet")}} interface removes all fonts added via this interface. Fonts added with the {{cssxref("@font-face")}} rule are not removed.
@@ -16,16 +18,16 @@ The **`clear()`** method of the {{domxref("FontFaceSet")}} interface removes all
 ## Syntax
 
 ```js
-FontFaceSet.clear()
+clear()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

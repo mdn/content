@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setHours
 ---
+
 {{JSRef}}
 
 The **`setHours()`** method sets the hours for a specified date
@@ -68,7 +69,7 @@ seconds.
 ### Using setHours()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setHours(7);
 ```
 

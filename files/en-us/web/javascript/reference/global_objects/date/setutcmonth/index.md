@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCMonth
 ---
+
 {{JSRef}}
 
 The **`setUTCMonth()`** method sets the month for a specified
@@ -49,7 +50,7 @@ For example, if you use 15 for `monthValue`, the year will be incremented by
 ### Using setUTCMonth()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCMonth(11);
 ```
 

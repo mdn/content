@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.rel
 slug: Web/API/HTMLLinkElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,10 +10,11 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement.rel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLinkElement.rel`** property reflects the
-{{htmlattrxref("rel", "link")}} attribute. It is a {{domxref("DOMString")}} containing a
+{{htmlattrxref("rel", "link")}} attribute. It is a string containing a
 space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
 indicating the relationship between the resource represented by the
 {{HTMLElement("link")}} element and the current document.
@@ -28,10 +30,9 @@ A string.
 ## Examples
 
 ```js
-var links = document.getElementsByTagName('link');
-var length = links.length;
-for (var i = 0; i < length; i++) {
-  alert(links[i]);
+const links = document.getElementsByTagName('link');
+for (const link of links) {
+  console.log(link);
 }
 ```
 

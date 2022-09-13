@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.font-variation-settings
 ---
+
 {{CSSRef}}
 
 The **`font-variation-settings`** CSS descriptor allows authors to specify low-level OpenType or TrueType font variations in the {{cssxref("@font-face")}} rule.
@@ -37,7 +38,10 @@ font-variation-settings: "xhgt" 0.7;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+normal                 |
+[ <string> <number> ]#
+```
 
 ## Examples
 

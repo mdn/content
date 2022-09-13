@@ -1,6 +1,7 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - importNode
 browser-compat: api.Document.importNode
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} object's **`importNode()`** method creates a copy of a
@@ -55,7 +57,7 @@ The copied `importedNode` in the scope of the importing document.
 
 > **Note:** `importedNode`'s {{domxref("Node.parentNode")}} is `null`, since it has not yet been inserted into the document tree!
 
-## Example
+## Examples
 
 ```js
 const iframe  = document.querySelector("iframe");

@@ -1,6 +1,7 @@
 ---
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
+page-type: web-api-overview
 tags:
   - API
   - CSSFontLoading
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.FontFace
 ---
+
 {{DefaultAPISidebar("CSS Font Loading API")}}
 
 The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
@@ -30,7 +32,5 @@ The CSS Font Loading API provides events and interfaces for dynamically loading 
 {{Specifications}}
 
 ## Browser compatibility
-
-### FontFace
 
 {{Compat}}

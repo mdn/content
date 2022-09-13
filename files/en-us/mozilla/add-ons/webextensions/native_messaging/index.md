@@ -4,13 +4,14 @@ slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
 Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g., particular hardware).
 
 The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
@@ -23,7 +24,7 @@ After installing, the extension can exchange JSON messages with the native appli
 Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:
 
 - The app manifest lists `allowed_extensions` as an array of app IDs, while Chrome lists `allowed_origins`, as an array of `"chrome-extension"` URLs.
-- The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+- The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location).
 
 There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
 
@@ -95,7 +96,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
 
 This allows the extension whose ID is `"ping_pong@example.org"` to connect, by passing the name `"ping_pong"` into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at `"/path/to/native-messaging/app/ping_pong.py"`.
 
-> **Note:** Chrome identifies allowed extensions with another key: `allowed_origins`, using the ID of the WebExtension. Refer to [Chrome documentation for more details](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host) and see [Chrome incompatibilities below](#chrome_incompatibilities).
+> **Note:** Chrome identifies allowed extensions with another key: `allowed_origins`, using the ID of the WebExtension. Refer to [Chrome documentation for more details](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host) and see [Chrome incompatibilities below](#chrome_incompatibilities).
 
 ### Windows setup
 
@@ -129,7 +130,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
 The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location).
 
-Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host-location)), two registry entries should be created for the messaging to work:
+Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)), two registry entries should be created for the messaging to work:
 
 - `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
 
@@ -181,7 +182,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*
@@ -212,7 +213,7 @@ Here's the example above, rewritten to use `runtime.sendNativeMessage()`:
 
 ```js
 function onResponse(response) {
-  console.log("Received " + response);
+  console.log(`Received ${response}`);
 }
 
 function onError(error) {
@@ -268,7 +269,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
         // The browser will emit the size as a header of the payload,
         // if it hasn't been read yet, do it.
         // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (ie. data.length >= payloadSize + 4)
+        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
         if (!sizeHasBeenRead()) {
             payloadSize = stringData.readUInt32LE(0);
         }
@@ -284,8 +285,8 @@ You can quickly get started sending and receiving messages with this NodeJS code
             flushChunksQueue();
 
             const json = JSON.parse(contentWithoutSize);
-            // Do something with the data...
-            }
+            // Do something with the data…
+         }
     };
 
     process.stdin.on('readable', () => {
@@ -395,7 +396,7 @@ If you connected to the native application using `runtime.connectNative()`, then
 To close the native application:
 
 - On \*nix systems like macOS and Linux, the browser sends `SIGTERM` to the native application, then `SIGKILL` after the application has had a chance to exit gracefully. These signals propagate to any subprocesses unless they break away into a new process group.
-- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>), and kills the job. If the native application launches any additional processes and wants them to remain open after the native application itself is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
+- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
 
 ## Troubleshooting
 

@@ -9,6 +9,7 @@ tags:
   - variable fonts
   - web fonts
 ---
+
 {{CSSRef}}
 
 **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.
@@ -54,13 +55,13 @@ In this section we'll demonstrate the five registered axes defined with examples
 
 1. When using `font-variation-settings` it is important to note that axis names are case-sensitive. The registered axis names must be in lower case, and custom axes must be in upper case. For example:
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings: 'wght' 375, 'GRAD' 88;
+   ```
 
-    `wght` (weight) is a registered axis, and `GRAD` (grade) is a custom one.
+   `wght` (weight) is a registered axis, and `GRAD` (grade) is a custom one.
 
-2. If you have set values using `font-variation-settings` and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_variables) (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.
+2. If you have set values using `font-variation-settings` and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.
 
 ### Weight
 
@@ -248,7 +249,7 @@ The following example pages show two different ways to structure your CSS. The f
 
 ## Resources
 
-- [W3C CSS Fonts Module 4 Specification](https://drafts.csswg.org/css-fonts-4) (editor's draft)
+- [W3C CSS Fonts Module 4 Specification](https://drafts.csswg.org/css-fonts-4/) (editor's draft)
 - [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://docs.microsoft.com/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg)

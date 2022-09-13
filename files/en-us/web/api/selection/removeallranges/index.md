@@ -1,6 +1,7 @@
 ---
 title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -9,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.removeAllRanges
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.removeAllRanges()`** method removes all ranges
@@ -19,12 +21,16 @@ leaving nothing selected.
 ## Syntax
 
 ```js
-sel.removeAllRanges();
+removeAllRanges()
 ```
 
 ### Parameters
 
-_None._
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

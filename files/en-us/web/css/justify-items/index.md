@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.justify-items
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
@@ -92,7 +93,7 @@ This property can take one of four different forms:
 - `self-end`
   - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
 - `center`
-  - : The items are packed flush to each other toward the center of the of the alignment container.
+  - : The items are packed flush to each other toward the center of the alignment container.
 - `left`
   - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
 - `right`
@@ -181,7 +182,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-items.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

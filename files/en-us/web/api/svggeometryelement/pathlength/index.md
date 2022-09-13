@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.pathLength
 slug: Web/API/SVGGeometryElement/pathLength
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.pathLength
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.pathLength`** property reflects the

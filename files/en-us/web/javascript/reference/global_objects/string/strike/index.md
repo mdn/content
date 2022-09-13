@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.strike
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`strike()`** method creates a {{HTMLElement("strike")}}
@@ -28,17 +29,16 @@ A string containing a {{HTMLElement("strike")}} HTML element.
 
 ## Description
 
-The `strike()` method embeds a string in a `<strike>`
-element: "`<strike>str</strike>`".
+The `strike()` method embeds a string in a `<strike>` element: `"<strike>str</strike>"`.
 
 ## Examples
 
 ### Using strike()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.blink()); // <blink>Hello, world</blink>
 console.log(worldString.bold()); // <b>Hello, world</b>

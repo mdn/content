@@ -1,6 +1,7 @@
 ---
 title: FontFace.variationSettings
 slug: Web/API/FontFace/variationSettings
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -12,6 +13,7 @@ tags:
   - variationSettings
 browser-compat: api.FontFace.variationSettings
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`variationSettings`** property of the
@@ -21,7 +23,7 @@ It is equivalent to the
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing a descriptor.
+A string containing a descriptor.
 
 ## Specifications
 

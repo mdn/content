@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.removeItem()
 slug: Web/API/SVGPointList/removeItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.removeItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface removes a {{domxref("SVGPoint","point")}} from the list.
@@ -16,8 +18,10 @@ The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface remov
 ## Syntax
 
 ```js
-SVGPointList.removeItem(index);
+removeItem(index)
 ```
+
+### Parameters
 
 - `index`
   - : The index of the item to remove.

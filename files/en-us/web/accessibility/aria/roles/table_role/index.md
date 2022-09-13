@@ -10,7 +10,11 @@ tags:
   - Reference
   - Table Role
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#table
+  - https://w3c.github.io/aria-practices/#table
 ---
+
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 
 ```html
@@ -51,7 +55,7 @@ An element with `role="table"` is a static tabular structure with rows containin
 
 To create an ARIA table, add `role="table"` to the container element. Within that container, each row has `role="row"` set and contains child cells. Each cell has a role of either `columnheader`, `rowheader`, or `cell`. Rows can be children of the table or within a `rowgroup`.
 
-The table caption can be defined via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).  All other semantic table elements, such as {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}}, need to be added via associated roles, such as `rowgroup`, `row`, `columnheader`, and `cell`.
+The table caption can be defined via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). All other semantic table elements, such as {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}}, need to be added via associated roles, such as `rowgroup`, `row`, `columnheader`, and `cell`.
 
 If the table contains sortable columns or rows, the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute should be added on the header cell element (not the table itself). If any rows or columns are hidden, the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) or [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) should be included indicating the total number of columns or rows, respectively, along with the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) or [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) on each cell. The [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) or [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) is set to the position of a cell within the row or column, respectively. If the table includes cells that span multiple rows or multiple columns, then [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) or [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) should be included as well. Realize, it is much simpler to use the {{HTMLElement('table')}} element, along with all the related semantic elements and attributes that are all supported by all assistive technologies.
 
@@ -100,15 +104,15 @@ None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility
        <span role="cell">header</span>
        <span role="cell">h1</span>
     </div>
-    <div role="row"  aria-rowindex="16">
+    <div role="row" aria-rowindex="16">
       <span role="cell">header</span>
       <span role="cell">h6</span>
     </div>
-    <div role="row"  aria-rowindex="18">
+    <div role="row" aria-rowindex="18">
       <span role="cell">rowgroup</span>
       <span role="cell">thead</span>
     </div>
-    <div role="row"  aria-rowindex="24">
+    <div role="row" aria-rowindex="24">
       <span role="cell">term</span>
       <span role="cell">dt</span>
     </div>
@@ -128,10 +132,7 @@ none
 
 ## Specifications
 
-| Specification                                                                            | Status                                           |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#table","ARIA Table Role")}}                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#table","ARIA Table Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -143,6 +144,6 @@ none
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSendParameters.encodings
 slug: Web/API/RTCRtpSendParameters/encodings
+page-type: web-api-instance-property
 tags:
   - API
   - Codec
@@ -19,6 +20,7 @@ tags:
   - sender
 browser-compat: api.RTCRtpSendParameters.encodings
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSendParameters")}} dictionary's

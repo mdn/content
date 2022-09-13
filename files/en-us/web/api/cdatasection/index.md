@@ -1,11 +1,13 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
 browser-compat: api.CDATASection
 ---
+
 {{APIRef("DOM")}}
 
 The **`CDATASection`** interface represents a CDATA section
@@ -15,8 +17,8 @@ as they normally do.
 
 In XML, a CDATA section looks like:
 
-```js
-<![CDATA[ ... ]]>
+```xml
+<![CDATA[ … ]]>
 ```
 
 For example:

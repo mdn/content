@@ -1,6 +1,7 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
+page-type: web-api-interface
 tags:
   - API
   - Geolocation API
@@ -9,6 +10,7 @@ tags:
   - Secure context
 browser-compat: api.GeolocationPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPosition`** interface represents the position of the concerned device at a given time. The position, represented by a {{domxref("GeolocationCoordinates")}} object, comprehends the 2D position of the device, on a spheroid representing the Earth, but also its altitude and its speed.
@@ -17,9 +19,9 @@ The **`GeolocationPosition`** interface represents the position of the concerned
 
 _The `GeolocationPosition` interface doesn't inherit any properties._
 
-- {{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.
-- {{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("DOMTimeStamp")}} representing the time at which the location was retrieved.
 
 ## Methods

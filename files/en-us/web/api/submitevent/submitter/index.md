@@ -1,6 +1,7 @@
 ---
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
+page-type: web-api-instance-property
 tags:
   - API
   - Forms
@@ -14,6 +15,7 @@ tags:
   - submitter
 browser-compat: api.SubmitEvent.submitter
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`submitter`** property found on
@@ -24,7 +26,7 @@ that was invoked to cause the form to be submitted.
 
 An element, indicating the element that sent
 the {{domxref("HTMLFormElement.submit_event", "submit")}} event to the form. While this
-is often an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#htmlattrdeftype) is `submit` or a {{HTMLElement("button")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#htmlattrdeftype) is `submit`, it could be some other element which has initiated a
+is often an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `submit` or a {{HTMLElement("button")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `submit`, it could be some other element which has initiated a
 submission process.
 
 If the submission was not triggered by a button of some kind, the value of `submitter` is `null`.

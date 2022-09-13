@@ -1,6 +1,7 @@
 ---
 title: MIDIAccess.outputs
 slug: Web/API/MIDIAccess/outputs
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.outputs
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`outputs`** read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI output ports.
@@ -23,7 +25,7 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
 
      console.log(access.outputs);
 

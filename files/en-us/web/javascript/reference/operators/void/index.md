@@ -9,6 +9,7 @@ tags:
   - Unary
 browser-compat: javascript.operators.void
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`void` operator** evaluates the given
@@ -28,8 +29,8 @@ This operator allows evaluating expressions that produce a value into places whe
 expression that evaluates to {{jsxref("undefined")}} is desired.
 
 The `void` operator is often used merely to obtain the
-`undefined` primitive value, usually using "`void(0)`" (which is
-equivalent to "`void 0`"). In these cases, the global variable
+`undefined` primitive value, usually using `void(0)` (which is
+equivalent to `void 0`). In these cases, the global variable
 {{jsxref("undefined")}} can be used.
 
 It should be noted that [the precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
@@ -38,8 +39,8 @@ parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
 ```js
-void 2 == '2';   // (void 2) == '2', returns false
-void (2 == '2'); // void (2 == '2'), returns undefined
+void 2 === '2';   // (void 2) === '2', returns false
+void (2 === '2'); // void (2 === '2'), returns undefined
 ```
 
 ## Examples
@@ -52,9 +53,7 @@ to be treated as an expression instead of a declaration.
 
 ```js
 void function iife() {
-
   console.log("Executed!");
-
 }();
 
 // Output: "Executed!"

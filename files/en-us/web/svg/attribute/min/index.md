@@ -4,8 +4,9 @@ slug: Web/SVG/Attribute/min
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.min
+spec-urls: https://svgwg.org/specs/animations/#MinAttribute
 ---
+
 {{SVGRef}}
 
 The **`min`** attribute specifies the minimum value of the active animation duration.
@@ -69,32 +70,4 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#MinAttribute", "min")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#MinAttribute", "min")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
-
-## Browser compatibility
-
-{{Compat}}
+{{Specifications}}

@@ -3,10 +3,15 @@ title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
 tags:
   - CSS
+  - CSS Property
+  - Reference
+  - Web
   - recipe:css-shorthand-property
+  - scroll-margin
   - scroll-margin-block
 browser-compat: css.properties.scroll-margin-block
 ---
+
 {{CSSRef}}
 
 The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the block dimension.

@@ -8,6 +8,7 @@ tags:
   - Reference
   - media feature
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
@@ -23,8 +24,7 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 ### Values
 
 - `none` {{Deprecated_Inline}}
-  - : ...
-    **No longer supported as of Microsoft Edge 18.**
+  - : _No longer supported as of Microsoft Edge 18._
 - `active`
   - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.
 - `black-on-white`

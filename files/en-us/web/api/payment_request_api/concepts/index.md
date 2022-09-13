@@ -1,6 +1,7 @@
 ---
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
+page-type: guide
 tags:
   - API
   - Apple Pay
@@ -13,7 +14,11 @@ tags:
   - Payment Method
   - Payment Request API
   - Payments
+spec-urls:
+  - https://w3c.github.io/payment-request/
+  - https://w3c.github.io/payment-method-id/
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy to handle payments in a web site or app. In this article, we'll take a look at how the API operates and what each of its components does.
@@ -53,7 +58,7 @@ These may vary substantially depending on the specifics of the service, and a gi
 - `https://apple.com/apple-pay`
   - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. Currently, Apple Pay is only supported by Safari.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/). This is currently supported only by Chrome and Chromium-based browsers.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home). This is currently supported only by Chrome and Chromium-based browsers.
 
 ## Functions of a payment handler
 
@@ -70,7 +75,7 @@ Some payment handlers use **merchant validation**, which is the process of valid
 The exact validation technology depends on the payment handler, and merchant validation is entirely optional. In the end, the only thing that the web site or app is responsible for is fetching the merchant's validation key and passing it into the event's {{domxref("MerchantValidationEvent.complete", "complete()")}} method.
 
 ```js
-paymentRequest.onmerchantvalidation = function(event) {
+paymentRequest.onmerchantvalidation = (event) => {
   event.complete(fetchValidationData(event.validationURL));
 }
 ```
@@ -83,36 +88,7 @@ Thus, it's important to note that the {{Glossary("user agent")}} never sends a {
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Basic Card Payment')}}</td>
-      <td>{{Spec2('Basic Card Payment')}}</td>
-      <td>
-        Defines {{domxref("BasicCardRequest")}} and
-        {{domxref("BasicCardResponse")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment Method Identifiers')}}</td>
-      <td>{{Spec2('Payment Method Identifiers')}}</td>
-      <td>
-        Defines payment method identifiers and how they are validated, and,
-        where applicable, minted and formally registered with the W3C.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

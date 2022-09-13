@@ -15,6 +15,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
 ---
+
 {{CSSRef}}
 
 The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
@@ -169,4 +170,4 @@ ul {
 - Other border-related CSS properties: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}
 - The {{CSSxRef("&lt;color&gt;")}} data type
 - Other color-related properties: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

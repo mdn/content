@@ -1,11 +1,13 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Event.stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 The **`stopImmediatePropagation()`** method of the

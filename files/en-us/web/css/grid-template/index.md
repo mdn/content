@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid-template
 ---
+
 {{CSSRef}}
 
 The **`grid-template`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid rows", "rows")}}, and {{glossary("grid areas", "areas")}}.
@@ -140,4 +141,4 @@ footer {
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
 - Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
-- Video tutorial: _[Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
+- Video tutorial: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

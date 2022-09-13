@@ -1,6 +1,7 @@
 ---
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.deleteContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.deleteContents()`** method removes the contents of
@@ -19,10 +21,18 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 ## Syntax
 
 ```js
-range.deleteContents()
+deleteContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

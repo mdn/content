@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.vertical-align
 ---
+
 {{CSSRef}}
 
 The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
@@ -232,7 +233,7 @@ td {
 
 ## See also
 
-- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item)
+- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

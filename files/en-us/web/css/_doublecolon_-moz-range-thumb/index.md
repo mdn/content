@@ -10,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-range-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _thumb_ (i.e., virtual knob) of an {{HTMLElement("input")}} of `type="range"`. The user can move the thumb along the input's track to alter its numerical value.
@@ -18,7 +19,9 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-range-thumb
+```
 
 ## Examples
 
@@ -65,4 +68,4 @@ Not part of any standard.
   - {{cssxref("::-ms-thumb")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML forms
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.progress
@@ -115,7 +114,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Example
 
@@ -126,7 +125,7 @@ If the `<progress>` element is describing the loading progress of a section of a
 
   <!-- ... -->
 
-  <progress id="progress-bar" aria-label="Content loading..."></progress>
+  <progress id="progress-bar" aria-label="Content loading…"></progress>
 ```
 
 ## Specifications

@@ -6,41 +6,39 @@ tags:
   - Errors
   - JavaScript
   - Strict Mode
-  - Warning
+  - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception
 "deprecated caller or arguments usage" occurs when the
-deprecated {{jsxref("Function.caller")}} or {{jsxref("Function.arguments")}} properties
+deprecated {{jsxref("Function.prototype.caller")}} or {{jsxref("Function.prototype.arguments")}} properties
 are used.
 
 ## Message
 
-```js
-TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
-Warning: ReferenceError: deprecated caller usage (Firefox)
-Warning: ReferenceError: deprecated arguments usage (Firefox)
-TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+```
+TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them (V8-based & Firefox)
+TypeError: 'arguments', 'callee', and 'caller' cannot be accessed in this context. (Safari)
 ```
 
 ## Error type
 
-A strict-mode-only warning that a {{jsxref("ReferenceError")}} occurred. JavaScript
-execution won't be halted.
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
 
 ## What went wrong?
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the
-{{jsxref("Function.caller")}} or {{jsxref("Function.arguments")}} properties are used
+{{jsxref("Function.prototype.caller")}} or {{jsxref("Function.prototype.arguments")}} properties are used
 and shouldn't be. They are deprecated, because they leak the function caller, are
 non-standard, hard to optimize and potentially a performance-harmful feature.
 
 ## Examples
 
-### Deprecated `function.caller` or `arguments.callee.caller`
+### Deprecated function.caller or arguments.callee.caller
 
-{{jsxref("Function.caller")}} and
+{{jsxref("Function.prototype.caller")}} and
 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 are deprecated (see the reference articles for more information).
 
@@ -48,21 +46,20 @@ are deprecated (see the reference articles for more information).
 'use strict';
 
 function myFunc() {
-  if (myFunc.caller == null) {
+  if (myFunc.caller === null) {
     return 'The function was called from the top!';
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return `This function's caller was ${myFunc.caller}`;
   }
 }
 
 myFunc();
-// Warning: ReferenceError: deprecated caller usage
-// "The function was called from the top!"
+// TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 
-### `Function.arguments`
+### Function.prototype.arguments
 
-{{jsxref("Function.arguments")}} is deprecated (see the reference article for more
+{{jsxref("Function.prototype.arguments")}} is deprecated (see the reference article for more
 information).
 
 ```js example-bad
@@ -71,21 +68,21 @@ information).
 function f(n) { g(n - 1); }
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
+  console.log(`before: ${g.arguments[0]}`);
   if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log(`after: ${g.arguments[0]}`);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
-// Warning: ReferenceError: deprecated arguments usage
+console.log(`returned: ${g.arguments}`);
+// TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 
 ## See also
 
 - [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} and
+- {{jsxref("Function.prototype.arguments")}}
+- {{jsxref("Function.prototype.caller")}} and
   [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)

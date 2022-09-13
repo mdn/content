@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-box-image
 ---
+
 {{ CSSRef() }} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` sets the mask image for an element's border box.
@@ -92,4 +93,4 @@ Not part of any standard.
 
 ## See also
 
-{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("mask-clip") }},{{ cssxref("mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("mask-repeat") }}
+{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }}, {{ cssxref("mask-clip") }}, {{ cssxref("mask-image") }}, {{ cssxref("-webkit-mask-composite") }}, {{ cssxref("mask-repeat") }}

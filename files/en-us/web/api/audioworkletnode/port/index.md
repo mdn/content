@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode.port
 slug: Web/API/AudioWorkletNode/port
+page-type: web-api-instance-property
 tags:
   - API
   - AudioWorkletNode
@@ -10,7 +11,8 @@ tags:
   - port
 browser-compat: api.AudioWorkletNode.port
 ---
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated
@@ -82,5 +84,4 @@ every second.
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

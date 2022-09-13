@@ -1,6 +1,7 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - createElement
 browser-compat: api.Document.createElement
 ---
+
 {{APIRef("DOM")}}
 
 In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by _tagName_, or an {{domxref("HTMLUnknownElement")}} if _tagName_ isn't recognized.
@@ -17,15 +19,19 @@ In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** 
 ## Syntax
 
 ```js
-let element = document.createElement(tagName[, options]);
+createElement(tagName)
+createElement(tagName, options)
 ```
 
 ### Parameters
 
-- _tagName_
+- `tagName`
   - : A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of _tagName_. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts _tagName_ to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
-- _options_ {{optional_inline}}
-  - : An optional `ElementCreationOptions` object, containing a single property named `is`, whose value is the tag name of a custom element previously defined via `customElements.define()`. See [Web component example](#web_component_example) for more details.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `is`
+      - : The tag name of a custom element previously defined via `customElements.define()`.
+        See [Web component example](#web_component_example) for more details.
 
 ### Return value
 
@@ -43,8 +49,9 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>||Working with elements||</title>
 </head>
 <body>
@@ -80,7 +87,7 @@ function addElement () {
 
 ### Web component example
 
-The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
+The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
 
 ```js
 // Create a class for the element
@@ -90,7 +97,7 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // constructor definition left out for brevity
-    ...
+    // …
   }
 }
 

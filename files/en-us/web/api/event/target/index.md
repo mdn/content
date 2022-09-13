@@ -1,12 +1,14 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Event.target
 ---
+
 {{ApiRef("DOM")}}
 
 The read-only **`target`** property of the

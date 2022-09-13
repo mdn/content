@@ -12,6 +12,7 @@ tags:
   - options_ui
 browser-compat: webextensions.manifest.options_ui
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -23,6 +24,10 @@ browser-compat: webextensions.manifest.options_ui
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>

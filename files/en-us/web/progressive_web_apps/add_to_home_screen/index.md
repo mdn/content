@@ -10,7 +10,8 @@ tags:
   - add to home screen
   - icon
 ---
-Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
+
+Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, i.e. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?
 
@@ -28,7 +29,7 @@ See [caniuse.com](https://caniuse.com/#feat=web-app-manifest) for exact details.
 
 We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be added to a Home screen, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.
 
-If you have either Firefox for Android or Chrome for Android available, use it to navigate to our demo at https://mdn.github.io/pwa-examples/a2hs/ (the URL bar appears on the top in Chrome and at the bottom in Firefox).
+If you have either Firefox for Android or Chrome for Android available, use it to navigate to our [demo](https://mdn.github.io/pwa-examples/a2hs/) (the URL bar appears on the top in Chrome and at the bottom in Firefox).
 
 ![URL bar menu](url_bar_menu.png)
 
@@ -79,11 +80,11 @@ The fields needed for A2HS are as follows:
 - `display`: Specifies how the app should be displayed. To make it feel like a distinct app (and not just a web page), you should choose a value such as `fullscreen` (no UI is shown at all) or `standalone` (very similar, but system-level UI elements such as the status bar might be visible).
 - `icons`: Specifies icons for the browser to use when representing the app in different places (such as on the task switcher, or more important, the Home screen). We've included only one in our demo.
 - `name`/`short_name`: These fields provide an app name to be displayed when representing the app in different places. `name` provides the full app name, and `short_name` provides a shortened name to be used when there is insufficient space to display the full name. You are advised to provide both if your app's name is particularly long.
-- `start_url`: Provides a path to the asset that should be loaded when the added-to-Home screen app is launched. Note that this has to be a relative URL pointing to the site index, relative to the url of the manifest. Also, be aware that Chrome requires this before it will display the install banner, whereas Firefox doesn't require it for showing the home-with-a-plus icon.
+- `start_url`: Provides a path to the asset that should be loaded when the added-to-Home screen app is launched. Note that this has to be a relative URL pointing to the site index, relative to the URL of the manifest. Also, be aware that Chrome requires this before it will display the install banner, whereas Firefox doesn't require it for showing the home-with-a-plus icon.
 
 The manifest for our sample app looks like this:
 
-```js
+```json
 {
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",
@@ -107,7 +108,7 @@ As shown in the above manifest listing, we are including a 192 x 192 px icon for
 
 Note that the `type` member in each icon's object specifies the icon's mimetype, so the browser can quickly read what type the icon is, and then ignore it and move to a different icon if it doesn't support it.
 
-In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Android icon design guidelines](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)).
+In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications)).
 
 ### Link the HTML to the manifest
 

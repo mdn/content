@@ -1,6 +1,7 @@
 ---
 title: OrientationSensor.quaternion
 slug: Web/API/OrientationSensor/quaternion
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API
@@ -13,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.OrientationSensor.quaternion
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`quaternion`** read-only

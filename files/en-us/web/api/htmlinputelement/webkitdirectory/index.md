@@ -1,30 +1,30 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
+page-type: web-api-instance-property
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - Files
   - HTML DOM
   - HTMLInputElement
-  - Non-standard
   - Property
   - Reference
   - Web
   - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
-{{APIRef("HTML DOM")}}{{non-standard_header}}
 
-The
-**`HTMLInputElement.webkitdirectory`** is a property that
-reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute and indicates
-that the {{HTMLElement("input")}} element should let the user select directories
-instead of files. When a directory is selected, the directory and its entire hierarchy
-of contents are included in the set of selected items. The selected file system
-entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
-    "webkitEntries")}} property.
+{{APIRef("File and Directory Entries API")}}
+
+The **`HTMLInputElement.webkitdirectory`** is a property
+that reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute
+and indicates that the {{HTMLElement("input")}} element should let the user select directories instead of files.
+When a directory is selected, the directory and its entire hierarchy of contents are included in the set of selected items.
+The selected file system entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} property.
+
+> **Note:** This property is called `webkitEntries` in the specification due to its
+> origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
 ## Value
 
@@ -91,13 +91,11 @@ within the selected directory hierarchies is generated and displayed.
 ### JavaScript content
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
+document.getElementById("filepicker").addEventListener("change", (event) => {
   let output = document.getElementById("listing");
-  let files = event.target.files;
-
-  for (let i=0; i<files.length; i++) {
+  for (const file of event.target.files) {
     let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
+    item.textContent = file.webkitRelativePath;
     output.appendChild(item);
   };
 }, false);
@@ -105,13 +103,11 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 
 {{Specifications}}
-
-This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
@@ -119,7 +115,6 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{domxref("HTMLInputElement.webkitEntries")}}
 - {{domxref("File.webkitRelativePath")}}

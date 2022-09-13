@@ -1,14 +1,17 @@
 ---
 title: 'NDEFReader: reading event'
 slug: Web/API/NDEFReader/reading_event
+page-type: web-api-event
 tags:
   - NDEF
   - Reference
   - Web NFC
   - Event
+  - Experimental
 browser-compat: api.NDEFReader.reading_event
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever a new reading is available from compatible NFC devices (e.g. NFC tags supporting NDEF) when these devices are within the reader's magnetic induction field.
 
@@ -17,9 +20,9 @@ The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reading', event => { });
+addEventListener('reading', (event) => { });
 
-onreading = event => { };
+onreading = (event) => { };
 ```
 
 ## Event type
@@ -40,10 +43,9 @@ const ndef = new NDEFReader();
     ndef.onreading = (event) => {
       console.log("NDEF message read.");
     };
-  }).catch(error => {
+  }).catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-
 ```
 
 ## Specifications

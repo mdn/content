@@ -1,17 +1,18 @@
 ---
 title: DataTransfer.mozSourceNode
 slug: Web/API/DataTransfer/mozSourceNode
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
   - Property
   - Reference
   - drag and drop
+  - Experimental
 browser-compat: api.DataTransfer.mozSourceNode
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}
+{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSourceNode`** property is used to
 determine the {{domxref("Node")}} over which the mouse cursor was located when the drag
@@ -21,7 +22,7 @@ returned.
 
 > **Note:** This property is Firefox-specific.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 
@@ -31,17 +32,18 @@ A {{domxref("Node")}} representing `node` where the drag originated. Returns
 ## Examples
 
 This example shows the use of the `mozSourceNode` property in the
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function dragend_handler(event)
 {
-  var dragData = event.dataTransfer;
-  var node = dragData.mozSourceNode;
-  if (node != null)
-    console.log("mozSourceNode = " + dragData.mozSourceNode);
-  else
+  const dragData = event.dataTransfer;
+  const node = dragData.mozSourceNode;
+  if (node) {
+    console.log(`mozSourceNode = ${dragData.mozSourceNode}`);
+  } else {
     console.log("mozSourceNode is null");
+  }
 }
 ```
 

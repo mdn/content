@@ -9,6 +9,7 @@ tags:
   - django templates
   - django views
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
 This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding list and detail pages for books and authors. Here we'll learn about generic class-based views, and show how they can reduce the amount of code you have to write for common use cases. We'll also go into URL handling in greater detail, showing how to perform basic pattern matching.
@@ -170,7 +171,7 @@ If `book_list` is not empty, then we iterate through the list of books.
 ```
 
 The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g. `{% elif var2 %}`).
-For more information about conditional operators see: [if](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/4.0/ref/templates/builtins) (Django Docs).
+For more information about conditional operators see: [if](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/) (Django Docs).
 
 #### For loops
 
@@ -245,7 +246,7 @@ urlpatterns = [
 
 For the _book-detail_ path the URL pattern uses a special syntax to capture the specific id of the book that we want to see.
 The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data.
-For example, **\<something>** , will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
+For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
 
 In this case we use `'<int:pk>'` to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named `pk` (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 
@@ -289,7 +290,7 @@ The main parts of the syntax you will need to know for declaring the pattern mat
     </tr>
     <tr>
       <td>\d</td>
-      <td>Match a digit (0, 1, 2, ... 9)</td>
+      <td>Match a digit (0, 1, 2, … 9)</td>
     </tr>
     <tr>
       <td>\w</td>
@@ -369,7 +370,7 @@ Let's consider a few real examples of patterns:
           <strong>The captured values are always passed as a string!</strong>
         </p>
         <p>
-          For example, this would match <code>book/1234</code> , and send a
+          For example, this would match <code>book/1234</code>, and send a
           variable <code>pk='1234'</code> to the view.
         </p>
       </td>
@@ -569,7 +570,8 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 >
 > Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.
 
-The second interesting (and non-obvious) thing in the template is where we set a class (`text-success`, `text-danger`, `text-warning`) to color-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
+The second interesting (and non-obvious) thing in the template is where we display the status text for each book instance ("available", "maintenance", etc.).
+Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
 
 ```python
  <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
@@ -663,7 +665,7 @@ The pagination links are displayed on the bottom, with next/previous links being
 The challenge in this article is to create the author detail and list views required to complete the project. These should be made available at the following URLs:
 
 - `catalog/authors/` — The list of all authors.
-- `catalog/author/<id>` — The detail view for the specific author with a primary key field named *`<id>`*
+- `catalog/author/<id>` — The detail view for the specific author with a primary key field named `<id>`
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behavior.
 
@@ -698,7 +700,7 @@ In our next articles, we'll extend this library to support user accounts, and th
 - [Built-in class-based generic views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-display/) (Django docs)
 - [Generic display views](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-display/) (Django docs)
 - [Introduction to class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/) (Django docs)
-- [Built-in template tags and filters](https://docs.djangoproject.com/en/4.0/ref/templates/builtins) (Django docs)
+- [Built-in template tags and filters](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/) (Django docs)
 - [Pagination](https://docs.djangoproject.com/en/4.0/topics/pagination/) (Django docs)
 - [Making queries > Related objects](https://docs.djangoproject.com/en/4.0/topics/db/queries/#related-objects) (Django docs)
 

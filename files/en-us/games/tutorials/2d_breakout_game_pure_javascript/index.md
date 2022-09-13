@@ -9,11 +9,12 @@ tags:
   - JavaScript
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
-In this step-by-step tutorial we create a simple **MDN Breakout** game written entirely in pure JavaScript and rendered on HTML5 {{htmlelement("canvas")}}.
+In this step-by-step tutorial we create a simple **MDN Breakout** game written entirely in pure JavaScript and rendered on HTML {{htmlelement("canvas")}}.
 
 Every step has editable, live samples available to play with so you can see what the intermediate stages should look like. You will learn the basics of using the {{htmlelement("canvas")}} element to implement fundamental game mechanics like rendering and moving images, collision detection, control mechanisms, and winning and losing states.
 
@@ -23,7 +24,7 @@ To get the most out of this series of articles you should already have basic to 
 
 ## Lesson details
 
-All the lessons — and the different versions of the [MDN Breakout game](https://breakout.enclavegames.com/lesson10.html) we are building together — are [available on GitHub](https://github.com/end3r/Canvas-gamedev-workshop):
+All the lessons — and the different versions of the [MDN Breakout game](https://breakout.enclavegames.com/lesson10.html) we are building together — are [available on GitHub](https://github.com/end3r/Gamedev-Canvas-workshop):
 
 1. [Create the Canvas and draw on it](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
 2. [Move the ball](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)

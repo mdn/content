@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.getTransform
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +21,7 @@ the context.
 ## Syntax
 
 ```js
-let storedTransform = ctx.getTransform();
+getTransform()
 ```
 
 ### Parameters
@@ -59,14 +61,14 @@ We then apply the retrieved matrix directly to the second canvas context by pass
 `DOMMatrix` object directly to `setTransform()`, and draw a circle
 on it.
 
-#### HTML
+### HTML
 
 ```html
 <canvas width="240"></canvas>
 <canvas width="240"></canvas>
 ```
 
-#### CSS
+### CSS
 
 ```css
 canvas {
@@ -74,7 +76,7 @@ canvas {
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvases = document.querySelectorAll('canvas');
@@ -93,7 +95,7 @@ ctx2.arc(50, 50, 50, 0, 2 * Math.PI);
 ctx2.fill();
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', "100%", 180) }}
 

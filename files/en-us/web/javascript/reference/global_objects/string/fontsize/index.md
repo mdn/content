@@ -12,12 +12,13 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontsize()`** method creates a {{HTMLElement("font")}}
 HTML element that causes a string to be displayed in the specified font size.
 
-> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
 > Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
 ## Syntax
@@ -39,8 +40,7 @@ A string containing a {{HTMLElement("font")}} HTML element.
 
 When you specify size as an integer, you set the font size of `str` to one
 of the 7 defined sizes. When you specify `size` as a string such as "-2", you
-adjust the font size of `str` relative to the size set in the
-{{HTMLElement("basefont")}} element.
+adjust the font size of `str` relative to 3, the default value.
 
 ## Examples
 
@@ -49,7 +49,7 @@ adjust the font size of `str` relative to the size set in the
 The following example uses string methods to change the size of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.small());     // <small>Hello, world</small>
 console.log(worldString.big());       // <big>Hello, world</big>

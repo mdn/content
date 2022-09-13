@@ -1,21 +1,24 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.queryCommandState
 ---
-{{ApiRef("DOM")}}{{deprecated_header}}
+
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`queryCommandState()`** method will tell you if the current selection has a certain {{domxref("Document.execCommand()")}} command applied.
 
 ## Syntax
 
 ```js
-queryCommandState(String command)
+queryCommandState(command)
 ```
 
 ### Parameters

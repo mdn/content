@@ -1,6 +1,7 @@
 ---
 title: Animation.playState
 slug: Web/API/Animation/playState
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -11,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.playState
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`Animation.playState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets an enumerated value describing the playback state of an animation.
@@ -37,7 +39,7 @@ In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ
 ```js
 // Setting up the tear animations
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.animate(
     tearsFalling,
     {
@@ -51,13 +53,13 @@ tears.forEach(function(el) {
 
 // Play the tears falling when the ending needs to be shown.
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.play();
 });
 
 // Reset the crying tears animations and pause them.
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.pause();
   el.currentTime = 0;
 });

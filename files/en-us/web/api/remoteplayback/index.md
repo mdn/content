@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback
 slug: Web/API/RemotePlayback
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
@@ -16,7 +18,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 
 ## Properties
 
-- {{domxref("RemotePlayback.state")}}{{ReadOnlyInline}}
+- {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
 
   - : Represents the `RemotePlayback` connection's state. One of:
 

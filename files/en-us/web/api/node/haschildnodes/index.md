@@ -1,12 +1,14 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
+page-type: web-api-instance-method
 tags:
   - Method
 
   - Reference
 browser-compat: api.Node.hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasChildNodes()`** method of the {{domxref("Node")}} interface

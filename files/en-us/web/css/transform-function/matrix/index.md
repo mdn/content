@@ -9,10 +9,13 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.matrix
 ---
+
 {{CSSRef}}
 
 The **`matrix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a homogeneous 2D transformation matrix. Its result is
 a {{cssxref("&lt;transform-function&gt;")}} data type.
+
+{{EmbedInteractiveExample("pages/css/function-matrix.html")}}
 
 > **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for
 > `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
@@ -122,7 +125,7 @@ matrix(a, b, c, d, tx, ty)
 </table>
 
 The values represent the following functions:
-`matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )`
+`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
 
 ## Examples
 
@@ -164,6 +167,5 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d())
-- [Understanding the CSS Transforms
-  Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

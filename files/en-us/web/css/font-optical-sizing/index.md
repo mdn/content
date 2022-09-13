@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-optical-sizing
 ---
+
 {{CSSRef}}
 
 The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.
@@ -81,7 +82,7 @@ p {
 }
 ```
 
-> **Note:** The font referenced above — which includes optical sizing and is freely-licensed — is good for testing. You can [download it on GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
+> **Note:** The font referenced above — which includes optical sizing and is freely-licensed — is good for testing. You can [download it on GitHub](https://github.com/googlefonts/amstelvar/releases).
 
 ## Specifications
 

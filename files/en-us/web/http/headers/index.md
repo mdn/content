@@ -9,11 +9,12 @@ tags:
   - Overview
   - Reference
 ---
+
 {{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
 
-Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in an [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229). IANA also maintains a [registry of proposed new HTTP headers](https://www.iana.org/assignments/message-headers/prov-headers.html).
+Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in an [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229). IANA also maintains a [registry of proposed new HTTP headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers).
 
 Headers can be grouped according to their contexts:
 
@@ -68,7 +69,7 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
 
 ## Client hints
 
-HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
+HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
 
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
@@ -104,15 +105,15 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 
 ### Device client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-- {{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
@@ -168,7 +169,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("Expect")}}
   - : Indicates expectations that need to be fulfilled by the server to properly handle the request.
 - {{HTTPHeader("Max-Forwards")}}
-  - : TBD
+  - : When using [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE), indicates the maximum number of hops the request can do before being reflected to the sender.
 
 ## Cookies
 
@@ -179,7 +180,7 @@ Network client hints allow a server to choose what information is sent based on 
 
 ## CORS
 
-_Learn more about CORS [here](CORS)._
+_Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.
@@ -294,24 +295,15 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
 - {{HTTPHeader("X-Download-Options")}}
-  - : The [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
+  - : The [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application.
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html) for more information.
+  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) for more information.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
 - {{HTTPHeader("X-XSS-Protection")}}
   - : Enables cross-site scripting filtering.
-
-### HTTP Public Key Pinning (HPKP)
-
-{{Glossary("HPKP", "HTTP Public Key Pinning")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.
-
-- {{HTTPHeader("Public-Key-Pins")}}
-  - : Associates a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates.
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-  - : Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.
 
 ### Fetch metadata request headers
 
@@ -393,7 +385,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](https://w3c.github.io/ServiceWorker/#path-restriction) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
-  - : Links generated code to a [source map](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map).
+  - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
 - {{HTTPHeader("Upgrade")}}
   - : The relevant RFC document for the [Upgrade header field is RFC 7230, section 6.7](https://datatracker.ietf.org/doc/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 6.1 of the aforementioned RFC](https://datatracker.ietf.org/doc/html/rfc7230#section-6.1).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}
@@ -405,16 +397,16 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : Used by Internet Explorer to signal which document mode to use.
 
 ## Contributing
 
-You can help by [writing new entries](/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header) or improving the existing ones.
+You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving the existing ones.
 
 ## See also
 
 - [Wikipedia page on List of HTTP headers](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-- [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html)
+- [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)
 - [HTTP Working Group](https://httpwg.org/specs/)

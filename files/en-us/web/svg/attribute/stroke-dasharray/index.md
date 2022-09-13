@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
+
 {{SVGRef}}
 
 The **`stroke-dasharray`** attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape;
@@ -77,38 +78,14 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-- *\<dasharray>*
-  - : A list of comma and/or white space separated [*\<length>*](/en-US/docs/Web/SVG/Content_type#length)s and [*\<percentage>*](/en-US/docs/Web/SVG/Content_type#percentage)s that specify the lengths of alternating dashes and gaps.
+- \<dasharray>
+  - : A list of comma and/or white space separated [`<length>`](/en-US/docs/Web/SVG/Content_type#length)s and [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage)s that specify the lengths of alternating dashes and gaps.
 
     If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, `5,3,2` is equivalent to `5,3,2,5,3,2`.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The addition assignment operator (`+=`) adds the value of the right operand
@@ -29,28 +30,33 @@ x += y // x = x + y
 ### Using addition assignment
 
 ```js
-// Assuming the following variables
-//  foo = 'foo'
-//  bar = 5
-//  baz = true
-
-// Number + Number -> addition
-bar += 2 // 7
+let baz = true;
 
 // Boolean + Number -> addition
-baz += 1 // 2
+baz += 1; // 2
 
-// Boolean + Boolean -> addition
-baz += false // 1
+// Number + Boolean -> addition
+baz += false; // 2
+```
 
-// Number + String -> concatenation
-bar += 'foo' // "5foo"
+```js
+let foo = 'foo';
 
 // String + Boolean -> concatenation
-foo += false // "foofalse"
+foo += false; // "foofalse"
 
 // String + String -> concatenation
-foo += 'bar' // "foobar"
+foo += 'bar'; // "foofalsebar"
+```
+
+```js
+let bar = 5;
+
+// Number + Number -> addition
+bar += 2; // 7
+
+// Number + String -> concatenation
+bar += 'foo'; // "7foo"
 ```
 
 ## Specifications

@@ -1,12 +1,14 @@
 ---
 title: 'Element: MSGestureChange event'
 slug: Web/API/Element/MSGestureChange_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
   - Reference
 browser-compat: api.Element.MSGestureChange_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSGestureChange`** event is fired when touch contact positions move and also while inertia-based movements are being processed.

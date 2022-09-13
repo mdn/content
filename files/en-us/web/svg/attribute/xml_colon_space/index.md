@@ -4,8 +4,10 @@ slug: Web/SVG/Attribute/xml:space
 tags:
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.attributes.core.xml_space
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 SVG supports the built-in XML **`xml:space`** attribute to handle whitespace characters inside elements. Child elements inside an element may also have an `xml:space` attribute that overrides the parent's one.
@@ -66,34 +68,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#XMLSpaceAttribute", "xml:space")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Deprecates the attribute and suggests to use
-        {{cssxref("white-space")}} instead.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#XMLSpaceAttribute", "xml:space")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

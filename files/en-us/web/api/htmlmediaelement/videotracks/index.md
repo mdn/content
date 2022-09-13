@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,6 +16,7 @@ tags:
   - videoTracks
 browser-compat: api.HTMLMediaElement.videoTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`videoTracks`**

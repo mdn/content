@@ -1,6 +1,7 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -9,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchManager
 ---
+
 {{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
 
 The **Background Fetch API** provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.
@@ -40,7 +42,7 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 
 Before using Background Fetch, check for browser support.
 
-```css
+```js
 if (!('BackgroundFetchManager' in self)) {
   // Provide fallback downloading.
 }
@@ -69,9 +71,7 @@ You can find a demo application which implements Background Fetch [here](https:/
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Background Fetch](https://wicg.github.io/background-fetch/) |
+{{Specifications}}
 
 ## Browser compatibility
 

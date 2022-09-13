@@ -1,6 +1,7 @@
 ---
 title: 'Worker: error event'
 slug: Web/API/Worker/error_event
+page-type: web-api-event
 tags:
   - API
   - Worker
@@ -12,6 +13,7 @@ tags:
   - onerror
 browser-compat: api.Worker.error_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`error`** event of the {{domxref("Worker")}} interface fires when an error occurs in the worker.
@@ -21,9 +23,9 @@ The **`error`** event of the {{domxref("Worker")}} interface fires when an error
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type
@@ -35,9 +37,9 @@ A generic {{domxref("Event")}}.
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor and sets up an `onerror` handler on the resulting object:
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
-myWorker.onerror = function(event) {
+myWorker.onerror = (event) => {
   console.log('There is an error with your worker!');
 }
 ```

@@ -4,23 +4,18 @@ slug: Web/CSS/::marker
 tags:
   - CSS
   - CSS Lists
-  - Experimental
   - Layout
   - Pseudo-element
   - Reference
   - Selector
 browser-compat: css.selectors.marker
 ---
+
 {{CSSRef}}
 
 The **`::marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to [`display: list-item`](/en-US/docs/Web/CSS/display), such as the {{HTMLElement("li")}} and {{HTMLElement("summary")}} elements.
 
-```css
-::marker {
-  color: blue;
-  font-size: 1.2em;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
 
 ## Allowable properties
 
@@ -37,7 +32,9 @@ Only certain CSS properties can be used in a rule with `::marker` as a selector:
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::marker
+```
 
 ## Examples
 

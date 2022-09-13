@@ -1,6 +1,7 @@
 ---
 title: USBDevice.configuration
 slug: Web/API/USBDevice/configuration
+page-type: web-api-instance-property
 tags:
   - API
   - Configuration
@@ -10,8 +11,10 @@ tags:
   - USBDevice
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USBDevice.configuration
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`configuration`** read only property of the

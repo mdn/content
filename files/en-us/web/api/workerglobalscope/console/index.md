@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.console
 slug: Web/API/WorkerGlobalScope/console
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.console
 ---
+
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
 
 The **`console`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("console")}} object providing access to the browser console for the worker.
