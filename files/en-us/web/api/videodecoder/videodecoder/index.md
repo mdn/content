@@ -18,13 +18,13 @@ The **`VideoDecoder()`** constructor creates a new {{domxref("VideoDecoder")}} o
 ## Syntax
 
 ```js-nolint
-new VideoDecoder(init)
+new VideoDecoder(options)
 ```
 
 ### Parameters
 
-- `init`
-  - : A dictionary object containing two callbacks.
+- `options`
+  - : An object containing two callbacks.
     - `output`
       - : A callback which takes a {{domxref("VideoFrame")}} object as its only argument.
     - `error`
