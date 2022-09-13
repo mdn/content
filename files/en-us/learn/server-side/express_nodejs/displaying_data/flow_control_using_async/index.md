@@ -31,6 +31,7 @@ exports.some_model_count = function (req, res, next) {
     { a_model_field: "match_value" },
     function (err, count) {
       // Do something if there is an err.
+      // …
 
       // On success, render the result by passing count into the render function (here, as the variable 'data').
       res.render("the_template", { data: count });
