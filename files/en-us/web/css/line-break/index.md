@@ -80,12 +80,28 @@ See whether the text is wrapped before "々", "ぁ" and "。".
 #### CSS
 
 ```css
-.wrapbox { width: 10em; margin: 0.5em; white-space: normal; vertical-align: top; display: inline-block; }
-.auto { line-break: auto; }
-.loose { line-break: loose; }
-.normal { line-break: normal; }
-.strict { line-break: strict; }
-.anywhere { line-break: anywhere; }
+.wrapbox {
+  width: 10em;
+  margin: 0.5em;
+  white-space: normal;
+  vertical-align: top;
+  display: inline-block;
+}
+.auto {
+  line-break: auto;
+}
+.loose {
+  line-break: loose;
+}
+.normal {
+  line-break: normal;
+}
+.strict {
+  line-break: strict;
+}
+.anywhere {
+  line-break: anywhere;
+}
 ```
 
 #### Result

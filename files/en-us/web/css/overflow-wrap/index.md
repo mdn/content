@@ -91,25 +91,25 @@ This example compares the results of `overflow-wrap`, `word-break`, and `hyphens
 
 ```css
 p {
-   width: 13em;
-   margin: 2px;
-   background: gold;
+  width: 13em;
+  margin: 2px;
+  background: gold;
 }
 
 .ow-anywhere {
-   overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 .ow-break-word {
-   overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .word-break {
-   word-break: break-all;
+  word-break: break-all;
 }
 
 .hyphens {
-   hyphens: auto;
+  hyphens: auto;
 }
 ```
 

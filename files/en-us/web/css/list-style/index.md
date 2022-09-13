@@ -33,7 +33,7 @@ This property is a shorthand for the following CSS properties:
 list-style: square;
 
 /* image */
-list-style: url('../img/shape.png');
+list-style: url("../img/shape.png");
 
 /* position */
 list-style: inside;
@@ -42,7 +42,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/shape.png') outside;
+list-style: lower-roman url("../img/shape.png") outside;
 
 /* Keyword value */
 list-style: none;
@@ -89,13 +89,15 @@ ul li::before {
 A second approach is to apply a url value to the list-style property:
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* becomes */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```

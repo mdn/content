@@ -91,16 +91,27 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 #### CSS
 
 ```css
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   margin-bottom: 12px;
 }
 
-#div1 { overflow-inline: hidden;}
-#div2 { overflow-inline: scroll;}
-#div3 { overflow-inline: visible;}
-#div4 { overflow-inline: auto;}
+#div1 {
+  overflow-inline: hidden;
+}
+#div2 {
+  overflow-inline: scroll;
+}
+#div3 {
+  overflow-inline: visible;
+}
+#div4 {
+  overflow-inline: auto;
+}
 ```
 
 #### Result

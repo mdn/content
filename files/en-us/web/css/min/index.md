@@ -57,7 +57,8 @@ Another use case for CSS functions is to set a maximum size on responsive form c
 Let's look at some CSS:
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
