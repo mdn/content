@@ -7,7 +7,7 @@ tags:
   - Infrastructure
   - Reference
   - Web Performance
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 **HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP/Basics_of_HTTP).

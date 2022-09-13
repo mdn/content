@@ -10,7 +10,7 @@ tags:
   - Join
   - Quotes
   - concatenation
-  - l10n:priority
+  - "l10n:priority"
   - strings
 ---
 
