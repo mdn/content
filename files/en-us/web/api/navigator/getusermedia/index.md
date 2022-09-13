@@ -15,6 +15,7 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
+
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
@@ -29,7 +30,7 @@ If the user instead doesn't make a choice at all, neither callback is executed.
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints, successCallback, errorCallback)
 ```
 

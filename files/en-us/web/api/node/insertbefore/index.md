@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertBefore()`** method of the {{domxref("Node")}} interface
@@ -29,8 +30,8 @@ node.
 
 ## Syntax
 
-```js
-insertBefore(newNode, referenceNode);
+```js-nolint
+insertBefore(newNode, referenceNode)
 ```
 
 ### Parameters
@@ -71,17 +72,17 @@ const newNode = document.createElement("span");
 const parentDiv = document.getElementById("childElement").parentNode;
 
 // Begin test case [ 1 ] : Existing childElement (all works correctly)
-const sp2 = document.getElementById("childElement");
+let sp2 = document.getElementById("childElement");
 parentDiv.insertBefore(newNode, sp2);
 // End test case [ 1 ]
 
 // Begin test case [ 2 ] : childElement is of Type undefined
-const sp2 = undefined; // Non-existent node of id "childElement"
+sp2 = undefined; // Non-existent node of id "childElement"
 parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
 // End test case [ 2 ]
 
 // Begin test case [ 3 ] : childElement is of Type "undefined" (string)
-const sp2 = "undefined"; // Non-existent node of id "childElement"
+sp2 = "undefined"; // Non-existent node of id "childElement"
 parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
 // End test case [ 3 ]
 </script>

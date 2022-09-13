@@ -7,6 +7,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.name
 ---
+
 {{JSRef}}
 
 The **`name`** property represents a name for the type of error. The initial value is "Error".

@@ -15,6 +15,7 @@ tags:
   - menus
   - tabs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 When styling [links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), it's important to understand how to make use of pseudo-classes to style their states effectively. It's also important to know how to style links for use in common interface features whose content varies, such as navigation menus and tabs. We'll look at both these topics in this article.
@@ -129,27 +130,21 @@ To start off with, we'll write out our empty rulesets:
 
 ```css
 a {
-
 }
 
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -180,22 +175,22 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
@@ -379,7 +374,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -388,7 +384,7 @@ a:active {
 }
 
 a[href^="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -431,7 +427,8 @@ First, some HTML:
 And now our CSS:
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -450,7 +447,9 @@ a {
   color: black;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 The inequality operator (`!=`) checks whether its two operands are not
@@ -19,7 +20,7 @@ it attempts to convert and compare operands that are of different types.
 
 ## Syntax
 
-```js
+```js-nolint
 x != y
 ```
 

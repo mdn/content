@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.toggle
 ---
+
 {{APIRef("DOM")}}
 
 The **`toggle()`** method of the {{domxref("DOMTokenList")}} interface
@@ -15,9 +16,9 @@ If the token doesn't exist it's added and the function returns `true`.
 
 ## Syntax
 
-```js
-toggle(token);
-toggle(token, force);
+```js-nolint
+toggle(token)
+toggle(token, force)
 ```
 
 ### Parameters
@@ -26,8 +27,8 @@ toggle(token, force);
   - : A string representing the token you want to toggle.
 - `force` {{optional_inline}}
   - : If included, turns the toggle into a one way-only operation.
-     If set to `false`, then `token` will _only_ be removed, but not added.
-     If set to `true`, then `token` will _only_ be added, but not removed.
+    If set to `false`, then `token` will _only_ be removed, but not added.
+    If set to `true`, then `token` will _only_ be added, but not removed.
 
 ### Return value
 

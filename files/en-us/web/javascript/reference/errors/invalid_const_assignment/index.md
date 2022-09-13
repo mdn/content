@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid assignment to const" occurs when it was attempted to

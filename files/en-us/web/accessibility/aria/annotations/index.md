@@ -10,6 +10,7 @@ tags:
   - details
   - suggestions
 ---
+
 WAI-ARIA version 1.3 sees the addition of a set of new features, collectively known as ARIA annotations, which allow the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review).
 
 Below we'll introduce the new features associated with ARIA annotations, and have a look at some code examples that show them in action.
@@ -42,7 +43,7 @@ There are a number of different ways in which you can associate UI features with
 - `aria-label=""` can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a [search input](/en-US/docs/Web/HTML/Element/input/search) in a horizontal nav bar.
 - `aria-labelledby=""` can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element's label is available in the UI, but for some reason a conventional {{HTMLElement('label')}} won't work.
 - `aria-description=""` is similar to `aria-label=""` in that it accepts a string of text, but is used when you want to give an element a description, in addition to its short label.
-- `aria-describedby=""` is analogous to  `aria-labelledby=""` in that it accepts an ID reference, but is used when you want to associate the element with a more detailed description, in addition to its short label.
+- `aria-describedby=""` is analogous to `aria-labelledby=""` in that it accepts an ID reference, but is used when you want to associate the element with a more detailed description, in addition to its short label.
 - `aria-details=""` references a more complex sets of details, distinct from simple text descriptions. You can learn more about this in the next section.
 
 ### aria-details versus aria-describedby
@@ -156,17 +157,22 @@ We could even provide an information box saying who made the suggestion and when
 Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use some more interesting styling of your own, for example:
 
 ```css
-ins, [role="insertion"] {
+ins,
+[role="insertion"] {
   color: #0c0;
   text-decoration: underline;
 }
 
-del, [role="deletion"] {
+del,
+[role="deletion"] {
   color: red;
   text-decoration: line-through;
 }
 
-ins, [role="insertion"], del, [role="deletion"] {
+ins,
+[role="insertion"],
+del,
+[role="deletion"] {
   text-decoration-thickness: 2px;
   background-color: #fee;
   padding: 2px 4px;

@@ -19,6 +19,7 @@ tags:
   - track
 browser-compat: api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamTrackAudioSourceNode()`** constructor creates and returns a new {{domxref("MediaStreamTrackAudioSourceNode")}} object whose audio is taken from the {{domxref("MediaStreamTrack")}} specified in the given options object.
@@ -27,7 +28,7 @@ Another way to create a `MediaStreamTrackAudioSourceNode` is to call the {{domxr
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackAudioSourceNode(context, options)
 ```
 

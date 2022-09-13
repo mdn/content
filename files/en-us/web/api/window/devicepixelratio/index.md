@@ -14,6 +14,7 @@ tags:
   - resolution
 browser-compat: api.Window.devicePixelRatio
 ---
+
 {{APIRef}}
 
 The **`devicePixelRatio`** of

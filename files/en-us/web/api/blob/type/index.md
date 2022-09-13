@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.type
 ---
+
 {{APIRef("File API")}}
 
 The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
@@ -27,7 +28,7 @@ sure it's one of a given set of image file types.
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">Choose image files…</output>
 ```
 

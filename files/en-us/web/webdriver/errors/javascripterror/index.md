@@ -7,6 +7,9 @@ tags:
   - Reference
   - WebDriver
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+
 The **JavaScript** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when a script the supplied by the user fails to execute.
 
 The underlying cause of the execution error is often supplied in the error message, along with a stacktrace provided by the JavaScript engine in the browser.

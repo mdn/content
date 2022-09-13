@@ -13,6 +13,7 @@ tags:
   - checkValidity()
 browser-compat: api.HTMLObjectElement.checkValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`checkValidity()`** method of the
@@ -21,7 +22,7 @@ is true, because object objects are never candidates for constraint validation.
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

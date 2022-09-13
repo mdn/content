@@ -14,6 +14,7 @@ tags:
   - Web
 browser-compat: html.elements.input
 ---
+
 {{HTMLRef}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
@@ -557,6 +558,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
+
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
 - `step`
@@ -677,6 +679,7 @@ The following non-standard attributes are also available on some browsers. As a 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
 - `orient` {{non-standard_inline}}
+
   - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
 
 - `results` {{non-standard_inline}}
@@ -882,13 +885,16 @@ It is possible to target different types of form controls based on their [`type`
 
 ```css
 /* matches a password input */
-input[type="password"] {}
+input[type="password"] {
+}
 
 /* matches a form control whose valid values are limited to a range of values*/
-input[min][max] {}
+input[min][max] {
+}
 
 /* matches a form control with a pattern attribute */
- input[pattern] {}
+input[pattern] {
+}
 ```
 
 ### ::placeholder
@@ -927,7 +933,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif"
+  font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
 

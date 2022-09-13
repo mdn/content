@@ -13,6 +13,7 @@ tags:
   - state
 browser-compat: webextensions.api.downloads.State
 ---
+
 {{AddonSidebar()}}
 
 The `State` type of the {{WebExtAPIRef("downloads")}} API defines different states that a current download can be in.

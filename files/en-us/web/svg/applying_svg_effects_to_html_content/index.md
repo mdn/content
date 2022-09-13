@@ -7,6 +7,7 @@ tags:
   - HTML
   - SVG
 ---
+
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
@@ -189,12 +190,24 @@ And some more filters:
 The five filters are applied using the following CSS:
 
 ```css
-p.target { filter:url(#f3); }
-p.target:hover { filter:url(#f5); }
-em.target { filter:url(#f1); }
-em.target:hover { filter:url(#f4); }
-pre.target { filter:url(#f2); }
-pre.target:hover { filter:url(#f3); }
+p.target {
+  filter: url(#f3);
+}
+p.target:hover {
+  filter: url(#f5);
+}
+em.target {
+  filter: url(#f1);
+}
+em.target:hover {
+  filter: url(#f4);
+}
+pre.target {
+  filter: url(#f2);
+}
+pre.target:hover {
+  filter: url(#f3);
+}
 ```
 
 {{EmbedLiveSample('Example_Filtering', 650, 200)}}
@@ -217,7 +230,9 @@ In order to blur text, Webkit based browsers have a (prefixed) CSS filter called
 You can apply the SVG and the CSS filter in the same class:
 
 ```css
-.blur { filter: url(#wherearemyglasses); }
+.blur {
+  filter: url(#wherearemyglasses);
+}
 ```
 
 {{ EmbedLiveSample('Example_Blurred_Text', 300, 100) }}
@@ -243,7 +258,9 @@ SVG used for clipping, masking, and filtering can be loaded from an external sou
 For example, if your CSS is in a file named `default.css`, it can look like this:
 
 ```css
-.target { clip-path: url(resources.svg#c1); }
+.target {
+  clip-path: url(resources.svg#c1);
+}
 ```
 
 The SVG is then imported from a file named `resources.svg`, using the clip path with the ID `c1`.

@@ -11,6 +11,7 @@ tags:
   - SVGGraphicsElement
 browser-compat: api.SVGGraphicsElement.getBBox
 ---
+
 {{APIRef}}
 
 The **`SVGGraphicsElement.getBBox()`** method allows us to determine
@@ -28,7 +29,7 @@ geometry attributes on all the elements contained in the target element).
 
 ## Syntax
 
-```js
+```js-nolint
 getBBox()
 getBBox(options)
 ```

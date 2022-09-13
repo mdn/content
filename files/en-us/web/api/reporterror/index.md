@@ -10,6 +10,7 @@ tags:
   - Errors
 browser-compat: api.reportError
 ---
+
 {{APIRef}} {{AvailableInWorkers}}
 
 The **`reportError()`** global method may be used to report errors to the console or global event handlers, emulating an uncaught JavaScript exception.
@@ -22,7 +23,7 @@ This ensures that an exception in one callback will not prevent others from bein
 
 ## Syntax
 
-```js
+```js-nolint
 reportError(throwable)
 ```
 

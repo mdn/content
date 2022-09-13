@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.vertexAttribIPointer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.vertexAttribIPointer()`** method
@@ -18,7 +19,7 @@ formats and locations of vertex attributes in a vertex attributes array.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribIPointer(index, size, type, stride, offset)
 ```
 

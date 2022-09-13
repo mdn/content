@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.toRecords
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`toRecords()`**
@@ -20,8 +21,8 @@ as smart poster and external type records.
 
 ## Syntax
 
-```js
-NDEFRecord.toRecords()
+```js-nolint
+toRecords()
 ```
 
 ### Parameters

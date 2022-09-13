@@ -12,6 +12,7 @@ tags:
   - Tools
   - case study
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 In the final article in our series, we take the example toolchain we built up in the previous article and add to it so that we can deploy our sample app. We push the code to GitHub, deploy it using Netlify, and even show you how to add a simple test into the process.
@@ -77,36 +78,36 @@ We're going to add the build command to our `package.json` file as an npm script
 1. Open the `package.json` file in your project's root directory, and find the `scripts` property.
 2. We'll add a `build` command that we can run to build our code. Add the following line to your project now:
 
-    ```json
-    "scripts": {
-      // …
-      "build": "parcel build src/index.html"
-    }
-    ```
+   ```json
+   "scripts": {
+     // …
+     "build": "parcel build src/index.html"
+   }
+   ```
 
-    > **Note:** If the `scripts` property already has a command inside it, put a comma at the end of it. Keep the JSON valid.
+   > **Note:** If the `scripts` property already has a command inside it, put a comma at the end of it. Keep the JSON valid.
 
 3. You should now be able to run the following command in the root of your project directory to run the production build step (first quit the running process with <kbd>Ctrl</kbd> + <kbd>C</kbd> if you need to):
 
-    ```bash
-    npm run build
-    ```
+   ```bash
+   npm run build
+   ```
 
-    This should give you an output like the following, showing you the production files that were created, how big they are, and how long they took to build:
+   This should give you an output like the following, showing you the production files that were created, how big they are, and how long they took to build:
 
-    ```bash
-    dist/src.99d8a31a.js.map       446.15 KB     63ms
-    dist/src.99d8a31a.js           172.51 KB    5.55s
-    dist/stars.7f1dd035.svg          6.31 KB    145ms
-    dist/asteroid2.3ead4904.svg      3.51 KB    155ms
-    dist/asteroid1.698d75e9.svg       2.9 KB    153ms
-    dist/src.84f2edd1.css.map        2.57 KB      3ms
-    dist/src.84f2edd1.css            1.25 KB    1.53s
-    dist/bg.084d3fd3.svg               795 B    147ms
-    dist/index.html                    354 B    944ms
-    ```
+   ```bash
+   dist/src.99d8a31a.js.map       446.15 KB     63ms
+   dist/src.99d8a31a.js           172.51 KB    5.55s
+   dist/stars.7f1dd035.svg          6.31 KB    145ms
+   dist/asteroid2.3ead4904.svg      3.51 KB    155ms
+   dist/asteroid1.698d75e9.svg       2.9 KB    153ms
+   dist/src.84f2edd1.css.map        2.57 KB      3ms
+   dist/src.84f2edd1.css            1.25 KB    1.53s
+   dist/bg.084d3fd3.svg               795 B    147ms
+   dist/index.html                    354 B    944ms
+   ```
 
-    Try it now!
+   Try it now!
 
 For you to create your own instance of this project you will need to host this project's code in your own git repository. Our next step is to push the project to GitHub.
 
@@ -130,51 +131,51 @@ Now we have three tasks ahead of us:
 
 1. To add changes, run the following command:
 
-    ```bash
-    git add .
-    ```
+   ```bash
+   git add .
+   ```
 
-    Note the period at the end, it means "everything in this directory". The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
+   Note the period at the end, it means "everything in this directory". The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
 
 2. Now all the code is staged, we can commit; run the following command:
 
-    ```bash
-    git commit -m 'committing initial code'
-    ```
+   ```bash
+   git commit -m 'committing initial code'
+   ```
 
-    > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
+   > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
 
 3. Finally the code needs to be pushed to your GitHub hosted repository. Let's do that now.
 
-    Over at GitHub, visit <https://github.com/new> and create your own repository to host this code.
+   Over at GitHub, visit <https://github.com/new> and create your own repository to host this code.
 
 4. Give your repository a short, memorable name, without spaces in it (use hyphens to separate words), and a description, then click _Create repository_ at the bottom of the page.
 
-    You should now have a "remote" URL that points to your new GitHub repo.
+   You should now have a "remote" URL that points to your new GitHub repo.
 
-    ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
+   ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
 5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run a command with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
 
-    ```bash
-    git remote add github https://github.com/yourname/repo-name.git
-    ```
+   ```bash
+   git remote add github https://github.com/yourname/repo-name.git
+   ```
 
-    So if your remote URL was `https://github.com/remy/super-website.git`, as in the screenshot above, your command would be
+   So if your remote URL was `https://github.com/remy/super-website.git`, as in the screenshot above, your command would be
 
-    ```bash
-    git remote add github https://github.com/remy/super-website.git
-    ```
+   ```bash
+   git remote add github https://github.com/remy/super-website.git
+   ```
 
-    Change the URL to your own repository, and run it now.
+   Change the URL to your own repository, and run it now.
 
 6. Now we're ready to push our code to GitHub; run the following command now:
 
-    ```bash
-    git push github main
-    ```
+   ```bash
+   git push github main
+   ```
 
-    At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+   At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 > **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
@@ -195,30 +196,30 @@ Let's get this done:
 1. Go to <https://app.netlify.com/start>.
 2. Press the GitHub button underneath the _Continuous Deployment_ heading. "Continuous Deployment" means that whenever the code repository changes, Netlify will (try) to deploy the code, thus it being "continuous".
 
-    ![netlify deployment options, as described in the surrounding text](netlify-deploy.png)
+   ![netlify deployment options, as described in the surrounding text](netlify-deploy.png)
 
 3. Depending on whether you authorized Netlify before, you might need to authorize Netlify with GitHub, and choose what account you want to authorize it for (if you have multiple GitHub accounts or orgs). Choose the one you pushed your project to.
 4. Netlify will prompt you with a list of the GitHub repositories it can find. Select your project repository and proceed to the next step.
 5. Since we've connected Netlify to our GitHub account and given it access to deploy the project repository, Netlify will ask _how_ to prepare the project for deployment and _what_ to deploy.
 
-    You should enter the command `npm run build` for the _Build command_, and specify the `dist` directory for the _Publish directory_ — this contains the code that we want to make public.
+   You should enter the command `npm run build` for the _Build command_, and specify the `dist` directory for the _Publish directory_ — this contains the code that we want to make public.
 
 6. To finish up, click _Deploy site_.
 
-    ![netlify distribution options, as described in the surrounding text](netlify-dist.png)
+   ![netlify distribution options, as described in the surrounding text](netlify-dist.png)
 
 7. After a short wait for the deployment to occur, you should get a URL that you can go to, to see your published site — try it out!
 8. And even better, whenever we make a change and _push_ the change to our remote git repository (on GitHub), this will trigger a notification to Netlify which will then run our specified build task and then deploy the resulting `dist` directory to our published site.
 
-    Try it now — make a small change to your app, and then push it to GitHub using these commands:
+   Try it now — make a small change to your app, and then push it to GitHub using these commands:
 
-    ```bash
-    git add .
-    git commit -m 'simple netlify test'
-    git push github main
-    ```
+   ```bash
+   git add .
+   git commit -m 'simple netlify test'
+   git push github main
+   ```
 
-    You should see your published site update with the change — this might take a few minutes to publish, so have a little patience.
+   You should see your published site update with the change — this might take a few minutes to publish, so have a little patience.
 
 That's it for Netlify. We can optionally change the name of the Netlify project or specify to use our own domain name, which Netlify offers some [excellent documentation](https://docs.netlify.com/) on.
 
@@ -233,7 +234,7 @@ When approaching tests there's a good deal of ways to approach the problem:
 - End-to-end testing, which involves your visitor clicking a thing and some other thing happening.
 - Integration testing, which basically says "does one block of code still work when connected to another block?"
 - Unit testing, where small and specific bits of functionality are tested to see if they do what they are supposed to do.
-- [And many more types](https://en.m.wikipedia.org/wiki/Functional_testing). Also see our [cross browser testing module](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) for a bunch of useful testing information
+- [And many more types](https://en.wikipedia.org/wiki/Functional_testing). Also see our [cross browser testing module](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) for a bunch of useful testing information
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
@@ -250,57 +251,57 @@ Let's get started.
 1. Go to your `package.json` file and open it up.
 2. Find your `scripts` member, and update it so that it contains the following test and build commands:
 
-    ```json
-    "scripts": {
-      …
-      "test": "node tests/*.js",
-      "build": "npm run test && parcel build src/index.html"
-    }
-    ```
+   ```json
+   "scripts": {
+     …
+     "test": "node tests/*.js",
+     "build": "npm run test && parcel build src/index.html"
+   }
+   ```
 
 3. Now of course we need to add the test to our codebase; create a new directory in your root directory called tests:
 
-    ```bash
-    mkdir tests
-    ```
+   ```bash
+   mkdir tests
+   ```
 
 4. Inside the new directory, create a test file:
 
-    ```bash
-    cd tests
-    touch nasa-feed.test.js
-    ```
+   ```bash
+   cd tests
+   touch nasa-feed.test.js
+   ```
 
 5. Open this file, and add the contents of [nasa-feed.test.js](https://raw.githubusercontent.com/remy/mdn-will-it-miss/master/tests/nasa-feed.test.js) to it:
 6. This test uses the axios package to fetch the data feed we want to test; to install this dependency, run the following command:
 
-    ```bash
-    npm install --save-dev axios
-    ```
+   ```bash
+   npm install --save-dev axios
+   ```
 
-    We need to manually install axios because Parcel won't help us with this dependency. Our tests are outside of Parcel's view of our system — since Parcel never sees nor runs any of the test code, we're left to install the dependency ourselves.
+   We need to manually install axios because Parcel won't help us with this dependency. Our tests are outside of Parcel's view of our system — since Parcel never sees nor runs any of the test code, we're left to install the dependency ourselves.
 
 7. Now to manually run the test, from the command line we can run:
 
-    ```bash
-    npm run test
-    ```
+   ```bash
+   npm run test
+   ```
 
-    The result, if successful, is … nothing. This is considered a success. In general we only want tests to be noisy if there's something wrong. The test also exited with a special signal that tells the command line that it was successful — an exit signal of 0. If there's a failure the test fails with an exit code of 1 — this is a system-level value that says "something failed".
+   The result, if successful, is … nothing. This is considered a success. In general we only want tests to be noisy if there's something wrong. The test also exited with a special signal that tells the command line that it was successful — an exit signal of 0. If there's a failure the test fails with an exit code of 1 — this is a system-level value that says "something failed".
 
-    The `npm run test` command will use node to run all the files that are in the tests directory that end with `.js`.
+   The `npm run test` command will use node to run all the files that are in the tests directory that end with `.js`.
 
-    In our build script, `npm run test` is called, then you see the string `&&` — this means "if the thing on the left succeeded (exited with zero), then do this thing on the right". So this translates into: if the tests pass, then build the code.
+   In our build script, `npm run test` is called, then you see the string `&&` — this means "if the thing on the left succeeded (exited with zero), then do this thing on the right". So this translates into: if the tests pass, then build the code.
 
 8. You'll have to upload your new code to GitHub, using similar commands to what you used before:
 
-    ```bash
-    git add .
-    git commit -m 'adding test'
-    git push github main
-    ```
+   ```bash
+   git add .
+   git commit -m 'adding test'
+   git push github main
+   ```
 
-    In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
+   In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
 
 Now, finally, a minute or so after pushing, Netlify will deploy the project update. But only if it passes the test that was introduced.
 

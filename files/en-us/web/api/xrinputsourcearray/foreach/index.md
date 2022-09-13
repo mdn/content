@@ -23,6 +23,7 @@ tags:
   - Experimental
 browser-compat: api.XRInputSourceArray.forEach
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}}
@@ -32,7 +33,7 @@ list.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callback)
 forEach(callback, thisArg)
 ```

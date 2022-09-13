@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.waitAsync
 ---
+
 {{JSRef}}
 
 The static **`Atomics.waitAsync()`** method waits asynchronously on a shared memory location and returns a {{jsxref("Promise")}}.
@@ -18,7 +19,7 @@ Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on t
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.waitAsync(typedArray, index, value)
 Atomics.waitAsync(typedArray, index, value, timeout)
 ```

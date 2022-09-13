@@ -3,6 +3,7 @@ title: ':target-within'
 slug: Web/CSS/:target-within
 browser-compat: css.selectors.target-within
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`:target-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that is a target element or _contains_ an element that is a target. A target element is a unique element with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by `:target`. (This includes descendants in [shadow trees](/en-US/docs/Web/Web_Components/Using_shadow_DOM).)
@@ -58,7 +59,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* Style italic elements within the target element */

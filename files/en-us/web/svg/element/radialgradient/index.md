@@ -7,6 +7,7 @@ tags:
   - SVG Gradient
 browser-compat: svg.elements.radialGradient
 ---
+
 {{SVGRef}}
 
 The **`<radialGradient>`** element lets authors define radial gradients that can be applied to fill or stroke of graphical elements.
@@ -16,7 +17,11 @@ The **`<radialGradient>`** element lets authors define radial gradients that can
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

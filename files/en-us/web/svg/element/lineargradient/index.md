@@ -7,6 +7,7 @@ tags:
   - SVG Gradient
 browser-compat: svg.elements.linearGradient
 ---
+
 {{SVGRef}}
 
 The **`<linearGradient>`** element lets authors define linear gradients to apply to other SVG elements.
@@ -14,7 +15,11 @@ The **`<linearGradient>`** element lets authors define linear gradients to apply
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -13,6 +13,7 @@ tags:
   - interactivity
   - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way, and ending up with an app in which we can successfully add and delete tasks, and toggle tasks as completed.
@@ -136,7 +137,7 @@ Clicking on the "Add" button in your browser will prove that the `addTask()` cal
 
 So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with user input and data updates, however, we need something more.
 
-For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />`  element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
+For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />` element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
@@ -457,7 +458,7 @@ function toggleTaskCompleted(id) {
 }
 ```
 
-Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create a new object, and toggle the `completed` property of that object before returning it. If it doesn't match, we return the original object.
+Here, we define an `updatedTasks` constant that maps over the original `tasks` array. If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create a new object, and toggle the `completed` property of that object before returning it. If it doesn't match, we return the original object.
 
 Then we call `setTasks()` with this new array in order to update our state.
 

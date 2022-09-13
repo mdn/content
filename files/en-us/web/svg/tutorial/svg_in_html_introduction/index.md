@@ -5,6 +5,7 @@ tags:
   - Beginner
   - SVG
 ---
+
 ## Overview
 
 This article and its associated example shows how to use inline [SVG](/en-US/docs/Web/SVG).
@@ -65,8 +66,8 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
    <defs>
      <style>
      rect {
-       fill:#cccccc; 
-       stroke: #666; 
+       fill:#cccccc;
+       stroke: #666;
        transform-origin: top;
      }
      </style>

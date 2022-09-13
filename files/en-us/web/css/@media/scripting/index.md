@@ -9,6 +9,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.scripting
 ---
+
 {{CSSRef}}
 
 The **`scripting`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether scripting (such as JavaScript) is available.
@@ -43,7 +44,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 

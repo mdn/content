@@ -13,6 +13,7 @@ tags:
   - quote
   - semantic
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 There are many other elements in HTML for formatting text, which we didn't get to in the [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.
@@ -674,6 +675,7 @@ HTML also provides the {{htmlelement("time")}} element for marking up times and 
 Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
 
 <!-- markdownlint-disable MD033 -->
+
 - 20 January 2016
 - 20th January 2016
 - Jan 20 2016

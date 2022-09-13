@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.getGamepads
 ---
+
 {{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The **`Navigator.getGamepads()`** method returns an array of
@@ -23,7 +24,7 @@ Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if
 
 ## Syntax
 
-```js
+```js-nolint
 getGamepads()
 ```
 

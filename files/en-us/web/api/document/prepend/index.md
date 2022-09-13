@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.prepend()`** method
@@ -22,7 +23,7 @@ This method prepends a child to a `Document`. To prepend to an arbitrary element
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
 prepend(param1, param2, /* … ,*/ paramN)

@@ -285,15 +285,15 @@ There are useful pseudo-classes available for styling valid/invalid form element
 
 ```css
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -320,15 +320,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -367,15 +367,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -410,15 +410,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_nullish_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical nullish assignment (`x ??= y`) operator only assigns if
@@ -19,7 +20,7 @@ The logical nullish assignment (`x ??= y`) operator only assigns if
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 ??= expr2
 ```
 

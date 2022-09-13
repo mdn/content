@@ -11,6 +11,7 @@ tags:
   - getElementsByClassName
 browser-compat: api.Element.getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} method
@@ -24,7 +25,7 @@ on the entire document, starting at the document root.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByClassName(names)
 ```
 
@@ -117,10 +118,7 @@ then become `item(0)`.
 
 ### Filtering the results using array methods
 
-We can also use methods of {{jsxref("Array.prototype")}} on any {{
-  domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the
-method's `this` value. Here we'll find all {{HTMLElement("div")}} elements
-that have a class of `test`:
+We can also use {{jsxref("Array")}} methods on any {{domxref("HTMLCollection")}} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
 const testElements = document.getElementsByClassName('test');

@@ -11,6 +11,7 @@ tags:
   - grid system
   - legacy
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -189,7 +190,7 @@ The gutters between the columns are 20 pixels wide. We create these gutters as a
 
 We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.
 
-Our next step is to create a rule for the class `.col`,  floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
+Our next step is to create a rule for the class `.col`, floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
 
 ```css
 .col {
@@ -330,24 +331,24 @@ Anyway, back to our grids! Any column that spans more than one column of our gri
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 Try replacing your bottom block of rules with the following, then reload it in the browser to see if you get the same result:
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 { width: calc((6.25% * 2) + 2.08333333%); }
+.col.span3 { width: calc((6.25% * 3) + (2.08333333%*2)); }
+.col.span4 { width: calc((6.25% * 4) + (2.08333333%*3)); }
+.col.span5 { width: calc((6.25% * 5) + (2.08333333%*4)); }
+.col.span6 { width: calc((6.25% * 6) + (2.08333333%*5)); }
+.col.span7 { width: calc((6.25% * 7) + (2.08333333%*6)); }
+.col.span8 { width: calc((6.25% * 8) + (2.08333333%*7)); }
+.col.span9 { width: calc((6.25% * 9) + (2.08333333%*8)); }
+.col.span10 { width: calc((6.25% * 10) + (2.08333333%*9)); }
+.col.span11 { width: calc((6.25% * 11) + (2.08333333%*10)); }
+.col.span12 { width: calc((6.25% * 12) + (2.08333333%*11)); }
 ```
 
 > **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
@@ -362,7 +363,7 @@ These are not the only approach. You could instead decide on your grid and then 
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
@@ -380,7 +381,7 @@ Let's create a class in our CSS that will offset a container element by one colu
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -446,7 +447,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
@@ -566,7 +567,9 @@ Try saving your HTML file and loading it in your browser to see the effect.
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 All Skeleton (or any other grid framework) is doing is setting up predefined classes that you can use by adding them to your markup. It's exactly the same as if you did the work of calculating these percentages yourself.

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createRadialGradient
 ---
+
 {{APIRef}}
 
 The
@@ -29,7 +30,7 @@ properties.
 
 ## Syntax
 
-```js
+```js-nolint
 createRadialGradient(x0, y0, r0, x1, y1, r1)
 ```
 

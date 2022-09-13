@@ -10,6 +10,7 @@ tags:
   - revokeObjectURL
 browser-compat: api.URL.revokeObjectURL
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URL.revokeObjectURL()`** static
@@ -28,7 +29,7 @@ longer.
 
 ## Syntax
 
-```js
+```js-nolint
 revokeObjectURL(objectURL)
 ```
 

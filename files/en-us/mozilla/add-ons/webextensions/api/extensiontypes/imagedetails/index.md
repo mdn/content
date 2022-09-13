@@ -13,6 +13,7 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes.ImageDetails
 ---
+
 {{AddonSidebar()}}
 
 Details about the format, quality, area and scale of a captured image.
@@ -34,7 +35,7 @@ Values of this type are objects. They contain the following properties:
     - `width`: The width of the rectangle.
     - `height`: The height of the rectangle.
 
-    This option was introduced in Firefox 82.  If omitted, the currently visible viewport is captured.
+    This option was introduced in Firefox 82. If omitted, the currently visible viewport is captured.
 
 - `scale` {{optional_inline}}
   - : `number`. The scale to render at, defaults to [`devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio). This option was introduced in Firefox 82.

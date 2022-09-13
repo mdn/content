@@ -10,6 +10,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace.transfer
 ---
+
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **`transfer`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the opto-electronic transfer characteristics of the video.

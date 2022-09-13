@@ -13,6 +13,7 @@ tags:
   - getPopup
 browser-compat: webextensions.api.action.getPopup
 ---
+
 {{AddonSidebar()}}
 
 Gets the HTML document set as the popup for this browser action.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPopup = browser.action.getPopup(
   details               // object
 )

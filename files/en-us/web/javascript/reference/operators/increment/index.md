@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.increment
 ---
+
 {{jsSidebar("Operators")}}
 
 The increment operator (`++`) increments (adds one to) its operand and
@@ -17,7 +18,7 @@ returns a value.
 
 ## Syntax
 
-```js
+```js-nolint
 x++
 ++x
 ```

@@ -9,6 +9,7 @@ tags:
   - WebAssembly
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
@@ -36,20 +37,20 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 
 1. First we need an example to compile. Take a copy of the following simple C example, and save it in a file called `hello.c` in a new directory on your local drive:
 
-    ```cpp
-    #include <stdio.h>
+   ```cpp
+   #include <stdio.h>
 
-    int main() {
-        printf("Hello World\n");
-        return 0;
-    }
-    ```
+   int main() {
+       printf("Hello World\n");
+       return 0;
+   }
+   ```
 
 2. Now, using the terminal window you used to enter the Emscripten compiler environment, navigate to the same directory as your `hello.c` file, and run the following command:
 
-    ```bash
-    emcc hello.c -o hello.html
-    ```
+   ```bash
+   emcc hello.c -o hello.html
+   ```
 
 The options we've passed in with the command are as follows:
 
@@ -76,26 +77,26 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 1. First of all, save the following C code in a file called `hello2.c`, in a new directory:
 
-    ```cpp
-    #include <stdio.h>
+   ```cpp
+   #include <stdio.h>
 
-    int main() {
-        printf("Hello World\n");
-        return 0;
-    }
-    ```
+   int main() {
+       printf("Hello World\n");
+       return 0;
+   }
+   ```
 
-2. Search for the file `shell_minimal.html` in your emsdk repo. Copy it into a sub-directory called `html_template` inside your previous new directory.
+2. Search for the file `shell_minimal.html` in your emsdk repo. Copy it into a subdirectory called `html_template` inside your previous new directory.
 3. Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:
 
-    ```bash
-    emcc -o hello2.html hello2.c -O3 --shell-file html_template/shell_minimal.html
-    ```
+   ```bash
+   emcc -o hello2.html hello2.c -O3 --shell-file html_template/shell_minimal.html
+   ```
 
-    The options we've passed are slightly different this time:
+   The options we've passed are slightly different this time:
 
-    - We've specified `-o hello2.html`, meaning that the compiler will still output the JavaScript glue code and `.html`.
-    - We've also specified `--shell-file html_template/shell_minimal.html` — this provides the path to the HTML template you want to use to create the HTML you will run your example through.
+   - We've specified `-o hello2.html`, meaning that the compiler will still output the JavaScript glue code and `.html`.
+   - We've also specified `--shell-file html_template/shell_minimal.html` — this provides the path to the HTML template you want to use to create the HTML you will run your example through.
 
 4. Now let's run this example. The above command will have generated `hello2.html`, which will have much the same content as the template with some glue code added into load the generated wasm, run it, etc. Open it in your browser and you'll see much the same output as the last example.
 
@@ -109,60 +110,58 @@ If you have a function defined in your C code that you want to call as needed fr
 
 1. To start with, save the following code as `hello3.c` in a new directory:
 
-    ```cpp
-    #include <stdio.h>
-    #include <emscripten/emscripten.h>
+   ```cpp
+   #include <stdio.h>
+   #include <emscripten/emscripten.h>
 
-    int main() {
-        printf("Hello World\n");
-        return 0;
-    }
+   int main() {
+       printf("Hello World\n");
+       return 0;
+   }
 
-    #ifdef __cplusplus
-    #define EXTERN extern "C"
-    #else
-    #define EXTERN
-    #endif
+   #ifdef __cplusplus
+   #define EXTERN extern "C"
+   #else
+   #define EXTERN
+   #endif
 
-    EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
-        printf("MyFunction Called\n");
-    }
-    ```
+   EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
+       printf("MyFunction Called\n");
+   }
+   ```
 
-    By default, Emscripten-generated code always just calls the `main()` function, and other functions are eliminated as dead code. Putting `EMSCRIPTEN_KEEPALIVE` before a function name stops this from happening. You also need to import the `emscripten.h` library to use `EMSCRIPTEN_KEEPALIVE`.
+   By default, Emscripten-generated code always just calls the `main()` function, and other functions are eliminated as dead code. Putting `EMSCRIPTEN_KEEPALIVE` before a function name stops this from happening. You also need to import the `emscripten.h` library to use `EMSCRIPTEN_KEEPALIVE`.
 
-    > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
+   > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
 2. Now add `html_template/shell_minimal.html` with `\{\{{ SCRIPT }}}` as content into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
 3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
-    ```bash
-    emcc -o hello3.html hello3.c -O3 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
-    ```
+   ```bash
+   emcc -o hello3.html hello3.c -O3 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
+   ```
 
 4. If you load the example in your browser again, you'll see the same thing as before!
 5. Now we need to run our new `myFunction()` function from JavaScript. First of all, open up your hello3.html file in a text editor.
 6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
 
-    ```html
-    <button id="mybutton">Run myFunction</button>
-    ```
+   ```html
+   <button id="mybutton">Run myFunction</button>
+   ```
 
 7. Now add the following code at the end of the first {{HTMLElement("script")}} element:
 
-    ```js
-    document
-      .getElementById("mybutton")
-      .addEventListener("click", () => {
-        alert("check console");
-        const result = Module.ccall(
-          "myFunction",  // name of C function
-          null,  // return type
-          null,  // argument types
-          null,  // arguments
-        );
-      });
-    ```
+   ```js
+   document.getElementById("mybutton").addEventListener("click", () => {
+     alert("check console");
+     const result = Module.ccall(
+       "myFunction", // name of C function
+       null, // return type
+       null, // argument types
+       null // arguments
+     );
+   });
+   ```
 
 This illustrates how `ccall()` is used to call the exported function.
 

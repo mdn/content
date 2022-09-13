@@ -14,6 +14,7 @@ tags:
   - setValueCurveAtTime
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -28,7 +29,7 @@ values, which are scaled to fit into the given interval starting at
 
 ## Syntax
 
-```js
+```js-nolint
 setValueCurveAtTime(values, startTime, duration)
 ```
 

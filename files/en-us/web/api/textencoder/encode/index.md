@@ -11,6 +11,7 @@ tags:
   - encode
 browser-compat: api.TextEncoder.encode
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder.encode()`** method takes a
@@ -20,7 +21,7 @@ for that {{domxref("TextEncoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(string)
 ```
 

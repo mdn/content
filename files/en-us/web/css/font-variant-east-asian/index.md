@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-east-asian
 ---
+
 {{CSSRef}}
 
 The **`font-variant-east-asian`** CSS property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
@@ -21,13 +22,13 @@ The **`font-variant-east-asian`** CSS property controls the use of alternate gly
 ```css
 font-variant-east-asian: normal;
 font-variant-east-asian: ruby;
-font-variant-east-asian: jis78;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis83;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis90;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis04;              /* <east-asian-variant-values> */
-font-variant-east-asian: simplified;         /* <east-asian-variant-values> */
-font-variant-east-asian: traditional;        /* <east-asian-variant-values> */
-font-variant-east-asian: full-width;         /* <east-asian-width-values> */
+font-variant-east-asian: jis78; /* <east-asian-variant-values> */
+font-variant-east-asian: jis83; /* <east-asian-variant-values> */
+font-variant-east-asian: jis90; /* <east-asian-variant-values> */
+font-variant-east-asian: jis04; /* <east-asian-variant-values> */
+font-variant-east-asian: simplified; /* <east-asian-variant-values> */
+font-variant-east-asian: traditional; /* <east-asian-variant-values> */
+font-variant-east-asian: full-width; /* <east-asian-width-values> */
 font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
 font-variant-east-asian: ruby full-width jis83;
 
@@ -107,13 +108,13 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 #### CSS
 
 ```css
-td{
-  font-family:"Yu Gothic";
-  font-size:20px;
+td {
+  font-family: "Yu Gothic";
+  font-size: 20px;
 }
-th{
-  color:grey;
-  padding-right:10px;
+th {
+  color: grey;
+  padding-right: 10px;
 }
 
 .ruby {
@@ -124,7 +125,7 @@ th{
   font-variant-east-asian: jis78;
 }
 
-.traditional{
+.traditional {
   font-variant-east-asian: traditional;
 }
 ```

@@ -14,6 +14,7 @@ tags:
   - getSupportedConstraints
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The
@@ -24,7 +25,7 @@ specify one of the constrainable properties the {{Glossary("user agent")}} under
 
 ## Syntax
 
-```js
+```js-nolint
 getSupportedConstraints()
 ```
 

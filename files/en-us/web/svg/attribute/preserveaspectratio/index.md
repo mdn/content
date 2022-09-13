@@ -8,6 +8,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
   - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
 ---
+
 {{SVGRef}}
 
 The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given aspect ratio must fit into a viewport with a different aspect ratio.
@@ -17,7 +18,11 @@ Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -147,7 +152,8 @@ path {
   pointer-events: none;
 }
 
-rect:hover, rect:active {
+rect:hover,
+rect:active {
   outline: 1px solid red;
 }
 ```
@@ -163,6 +169,7 @@ preserveAspectRatio="<align> [<meetOrSlice>]"
 Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:
 
 - Alignment value
+
   - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
 
     - **none**

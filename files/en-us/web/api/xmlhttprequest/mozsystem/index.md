@@ -13,6 +13,7 @@ tags:
   - mozSystem
   - origin
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`mozSystem`** is a boolean. If true, the same origin policy is not enforced on the request.

@@ -15,6 +15,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
@@ -26,7 +27,7 @@ Most elements only have one border box each, but a multiline [inline element](/e
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 
@@ -199,10 +200,15 @@ div {
   display: inline-block;
   width: 150px;
 }
-div p, ol, table {
+div p,
+ol,
+table {
   border: 1px solid blue;
 }
-span, li, th, td {
+span,
+li,
+th,
+td {
   border: 1px solid green;
 }
 ```
@@ -237,9 +243,9 @@ function addClientRectsOverlay(elt) {
 (() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  const elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (let i = 0; i < elt.length; i++) {
-    addClientRectsOverlay(elt[i]);
+  const elts = document.getElementsByClassName('withClientRectsOverlay');
+  for (const elt of elts) {
+    addClientRectsOverlay(elt);
   }
 })();
 ```

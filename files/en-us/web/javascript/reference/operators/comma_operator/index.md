@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.comma
 ---
+
 {{jsSidebar("Operators")}}
 
 The **comma operator** (**`,`**) evaluates each of
@@ -24,7 +25,7 @@ expressions. This is commonly used to provide multiple parameters to a
 
 ## Syntax
 
-```js
+```js-nolint
 expr1, expr2, expr3/* , … */
 ```
 

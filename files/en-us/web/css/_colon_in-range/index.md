@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: css.selectors.in-range
 ---
+
 {{CSSRef}}
 
 The **`:in-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
@@ -68,11 +69,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'okay.';
+  content: "okay.";
 }
 
 input:out-of-range + label::after {
-  content: 'out of range!';
+  content: "out of range!";
 }
 ```
 

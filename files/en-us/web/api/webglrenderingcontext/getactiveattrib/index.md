@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveAttrib
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getActiveAttrib()`** method of the
@@ -20,7 +21,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveAttrib(program, index)
 ```
 

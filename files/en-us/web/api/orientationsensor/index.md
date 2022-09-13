@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.OrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it.

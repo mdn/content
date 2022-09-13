@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.gap
 ---
+
 {{CSSRef}}
 
 The **`gap`** [CSS](/en-US/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
@@ -105,7 +106,6 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 

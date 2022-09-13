@@ -8,6 +8,7 @@ tags:
   - Layout
   - Web
 ---
+
 {{CSSRef}}
 
 In CSS, **inheritance** controls what happens when no value is specified for a property on an element.
@@ -26,7 +27,9 @@ When no value for an **inherited property** has been specified on an element, th
 A typical example of an inherited property is the {{ Cssxref("color") }} property. Consider the following style rules and the markup:
 
 ```css
-p { color: green; }
+p {
+  color: green;
+}
 ```
 
 ```html
@@ -39,10 +42,12 @@ The words "emphasized text" will appear green, since the `em` element has inheri
 
 When no value for a **non-inherited property** has been specified on an element, the element gets the [initial value](/en-US/docs/Web/CSS/initial_value) of that property (as specified in the property's summary).
 
-A typical example of a non-inherited property is the {{ Cssxref("border") }} property.  Consider the following style rules and the markup:
+A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Consider the following style rules and the markup:
 
 ```css
- p { border: medium solid; }
+p {
+  border: medium solid;
+}
 ```
 
 ```html

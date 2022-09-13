@@ -12,6 +12,7 @@ tags:
   - removeCookies
 browser-compat: webextensions.api.browsingData.removeCookies
 ---
+
 {{AddonSidebar()}}
 
 Clears the browser's cookies.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeCookies(
   removalOptions            // RemovalOptions object
 )

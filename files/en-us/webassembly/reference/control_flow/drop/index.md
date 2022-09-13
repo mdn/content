@@ -7,6 +7,7 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`drop`** instruction, pops a value from the stack, and discards it.

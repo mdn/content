@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.initEvent
 ---
+
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
 The **`Event.initEvent()`** method is used to initialize the
@@ -25,8 +26,8 @@ Once dispatched, it doesn't do anything anymore.
 
 ## Syntax
 
-```js
-event.initEvent(type, bubbles, cancelable);
+```js-nolint
+event.initEvent(type, bubbles, cancelable)
 ```
 
 ### Parameters

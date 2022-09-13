@@ -11,6 +11,7 @@ tags:
   - supports
 browser-compat: api.CSS.supports
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSS.supports()`** method returns a boolean value
@@ -18,7 +19,7 @@ indicating if the browser supports a given CSS feature, or not.
 
 ## Syntax
 
-```js
+```js-nolint
 supports(propertyName, value)
 supports(supportCondition)
 ```

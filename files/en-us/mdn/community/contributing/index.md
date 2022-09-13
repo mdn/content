@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
 - [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started)

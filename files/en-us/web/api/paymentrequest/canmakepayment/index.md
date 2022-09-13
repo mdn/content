@@ -13,6 +13,7 @@ tags:
   - canMakePayment
 browser-compat: api.PaymentRequest.canMakePayment
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -31,7 +32,7 @@ Request API (or even provide instructions for paying by mail or by phone).
 
 ## Syntax
 
-```js
+```js-nolint
 canMakePayment()
 ```
 

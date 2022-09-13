@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getStringValue()`** method of the
@@ -26,7 +27,7 @@ value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 getStringValue()
 ```
 

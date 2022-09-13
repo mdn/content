@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
+
 {{APIRef("UI Events")}}{{SeeCompatTable}}
 
 The **`UIEvent.sourceCapabilities`** read-only property returns

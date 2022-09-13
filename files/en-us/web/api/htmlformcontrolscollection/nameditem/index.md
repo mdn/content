@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormControlsCollection.namedItem
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormControlsCollection.namedItem()`** method returns
@@ -24,7 +25,7 @@ equivalent to `collection.namedItem("value")`.
 
 ## Syntax
 
-```js
+```js-nolint
 namedItem(str)
 // or collection[str]
 ```

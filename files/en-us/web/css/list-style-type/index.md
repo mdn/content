@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.list-style-type
 ---
+
 {{CSSRef}}
 
 The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.
@@ -32,7 +33,7 @@ list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
 /* <string> value */
-list-style-type: '-';
+list-style-type: "-";
 
 /* Identifier matching an @counter-style rule */
 list-style-type: custom-counter-style;
@@ -549,7 +550,7 @@ label {
 }
 
 input {
-  margin: .4rem;
+  margin: 0.4rem;
 }
 ```
 

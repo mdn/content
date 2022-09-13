@@ -22,6 +22,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePairStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC **`RTCIceCandidatePairStats`** dictionary reports statistics which provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.

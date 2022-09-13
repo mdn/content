@@ -18,6 +18,7 @@ tags:
   - fecPacketsDiscarded
 browser-compat: api.RTCInboundRtpStreamStats.fecPacketsDiscarded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`fecPacketsDiscarded`** property

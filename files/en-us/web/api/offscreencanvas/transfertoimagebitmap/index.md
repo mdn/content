@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas.transferToImageBitmap()`** method
@@ -19,7 +20,7 @@ the `OffscreenCanvas`.
 
 ## Syntax
 
-```js
+```js-nolint
 transferToImageBitmap()
 ```
 

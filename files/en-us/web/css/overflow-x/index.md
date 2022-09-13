@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overflow-x
 ---
+
 {{CSSRef}}
 
 The **`overflow-x`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows a block-level element's left and right edges. This may be nothing, a scroll bar, or the overflow content.
@@ -91,16 +92,27 @@ The `overflow-x` property is specified as a single keyword chosen from the list 
 ### CSS
 
 ```css
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   margin-bottom: 12px;
 }
 
-#div1 { overflow-x: hidden;}
-#div2 { overflow-x: scroll;}
-#div3 { overflow-x: visible;}
-#div4 { overflow-x: auto;}
+#div1 {
+  overflow-x: hidden;
+}
+#div2 {
+  overflow-x: scroll;
+}
+#div3 {
+  overflow-x: visible;
+}
+#div4 {
+  overflow-x: auto;
+}
 ```
 
 ### Result

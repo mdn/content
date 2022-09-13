@@ -15,6 +15,7 @@ tags:
   - reader
   - tee
 ---
+
 {{apiref("Streams")}}
 
 Readable _byte streams_ are [readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) that have an underlying byte source of `type: "bytes"`, and which support efficient zero-copy transfer of data from the underlying source to a consumer (bypassing the stream's internal queues).
@@ -936,7 +937,7 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
- button {
+button {
   display: block;
 }
 ```

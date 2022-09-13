@@ -18,6 +18,7 @@ tags:
   - img
 browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -37,7 +38,7 @@ manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/
 
 ## Syntax
 
-```js
+```js-nolint
 getImageData(sx, sy, sw, sh)
 ```
 

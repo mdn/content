@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.json
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`json()`** method of the {{domxref("Request")}} interface
@@ -20,7 +21,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 
 ## Syntax
 
-```js
+```js-nolint
 json()
 ```
 

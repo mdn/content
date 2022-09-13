@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsText
 ---
+
 {{APIRef("File API")}}
 
 The **`readAsText()`** method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}.
@@ -20,7 +21,7 @@ the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and t
 
 ## Syntax
 
-```js
+```js-nolint
 readAsText(blob)
 readAsText(blob, encoding)
 ```

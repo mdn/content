@@ -7,6 +7,7 @@ tags:
   - Guide
   - Tutorial
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 The Geolocation API is used to retrieve the user's location, so that it can for example be used to display their position using a mapping API. This article explains the basics of how to use it.
@@ -121,11 +122,11 @@ In the following example the Geolocation API is used to retrieve the user's lati
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 

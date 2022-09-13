@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Keyboard.lock
 ---
+
 {{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
@@ -23,7 +24,7 @@ system.
 
 ## Syntax
 
-```js
+```js-nolint
 lock()
 lock(keyCodes)
 ```

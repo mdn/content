@@ -9,6 +9,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-z
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-z
 ---
+
 {{SVGRef}}
 
 The **`z`** attribute defines the location along the z-axis for a light source in the coordinate system established by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element, assuming that, in the initial coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y.
@@ -21,7 +22,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

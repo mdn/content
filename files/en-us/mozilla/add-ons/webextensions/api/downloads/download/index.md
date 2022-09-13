@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.download
 ---
+
 {{AddonSidebar()}}
 
 The **`download()`** function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.
@@ -28,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let downloading = browser.downloads.download(
   options                   // object
 )

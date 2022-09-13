@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: svg.attributes.conditional_processing.requiredFeatures
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`requiredFeatures`** attribute takes a list of feature strings, with the individual strings separated by white space. It determines whether or not all of the named features are supported by the browser; if all of them are supported, the attribute evaluates to `true` end the element is rendered; otherwise, the attribute evaluates to `false` and the current element and its children are skipped and thus will not be rendered. This provides a way to design SVG that gracefully falls back when features aren't available.
@@ -52,7 +53,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -118,7 +121,9 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
     - `http://www.w3.org/TR/SVG11/feature#SVG-animation`
     - `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
+
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
+
   - : At least one of the following feature is supported:
 
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-static`
@@ -535,8 +540,8 @@ rect {
   stroke-width: 2px;
 }
 
-text{
-  fill: #FFF;
+text {
+  fill: #fff;
   font: 12px sans-serif;
 }
 ```

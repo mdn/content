@@ -8,6 +8,7 @@ tags:
   - Web Components
 browser-compat: api.Event.composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`composedPath()`** method of the {{domxref("Event")}}
@@ -17,8 +18,8 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 
 ## Syntax
 
-```js
-const composed = Event.composedPath();
+```js-nolint
+const composed = Event.composedPath()
 ```
 
 ### Parameters

@@ -10,6 +10,7 @@ tags:
   - constants
 browser-compat: javascript.statements.const
 ---
+
 {{jsSidebar("Statements")}}
 
 Constants are block-scoped, much like variables declared using the
@@ -20,8 +21,8 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 
 ## Syntax
 
-```js
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
 ```
 
 - `nameN`

@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.createCubeLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createCubeLayer()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRCubeLayer")}} object, which is a layer that renders directly from a [cubemap](https://en.wikipedia.org/wiki/Cube_mapping), and projects it onto the inside faces of a cube.
 
 ## Syntax
 
-```js
+```js-nolint
 createCubeLayer(init)
 ```
 
@@ -29,29 +31,29 @@ createCubeLayer(init)
       - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA` (Default)
-        Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
+          Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
         - `ext.SRGB_EXT`
         - `ext.SRGB_ALPHA_EXT`
-        Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
+          Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
         - `gl.RGBA8`
         - `gl.RGB8`
         - `gl.SRGB8`
         - `gl.RGB8_ALPHA8`
-        Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_etc")}} extension enabled:
+          Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_etc")}} extension enabled:
         - `ext.COMPRESSED_RGB8_ETC2`
         - `ext.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`
         - `ext.COMPRESSED_RGBA8_ETC2_EAC`
         - `ext.COMPRESSED_SRGB8_ETC2`
         - `ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
         - `ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
-        Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
+          Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
         - All of the [formats](/en-US/docs/Web/API/WEBGL_compressed_texture_astc#constants) the extension supports.
     - `depthFormat` {{optional_inline}}
       - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
         Possible values for {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or for {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT` (Default)
         - `gl.DEPTH_STENCIL`
-        Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
+          Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
         - `gl.DEPTH_COMPONENT24`
         - `gl.DEPTH24_STENCIL24`
     - `isStatic` {{optional_inline}}
@@ -63,7 +65,7 @@ createCubeLayer(init)
         - `stereo`: The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right).
         - `stereo-left-right`: A single {{domxref("XRSubImage")}} is allocated. The left eye gets the left area of the texture, the right eye the right.
         - `stereo-top-bottom`: A single {{domxref("XRSubImage")}} is allocated. The left eye gets the top area of the texture, the right eye the bottom.
-        The default value is `mono`.
+          The default value is `mono`.
     - `mipLevels` {{optional_inline}}
       - : A number specifying the desired number of mip levels. The default value is `1`.
     - `orientation` {{optional_inline}}

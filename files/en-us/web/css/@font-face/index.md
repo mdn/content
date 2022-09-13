@@ -12,6 +12,7 @@ tags:
   - typography
 browser-compat: css.at-rules.font-face
 ---
+
 {{CSSRef}}
 
 The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
@@ -21,8 +22,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
 }
 ```
 
@@ -59,8 +60,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a format type inside a `format()` function:
 
     ```css
-    src: url(ideal-sans-serif.woff) format("woff"),
-         url(basic-sans-serif.ttf) format("truetype");
+    src: url(ideal-sans-serif.woff) format("woff"), url(basic-sans-serif.ttf)
+        format("truetype");
     ```
 
     The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`.
@@ -96,9 +97,8 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"),
-           local("HelveticaNeue-Bold"),
-           url(MgOpenModernaBold.ttf);
+      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }
@@ -151,9 +151,8 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```

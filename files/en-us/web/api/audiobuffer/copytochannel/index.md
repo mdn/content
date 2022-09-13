@@ -12,6 +12,7 @@ tags:
   - copyToChannel
 browser-compat: api.AudioBuffer.copyToChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `copyToChannel()` method of the {{ domxref("AudioBuffer") }} interface copies
@@ -19,7 +20,7 @@ the samples to the specified channel of the `AudioBuffer`, from the source array
 
 ## Syntax
 
-```js
+```js-nolint
 copyToChannel(source, channelNumber)
 copyToChannel(source, channelNumber, startInChannel)
 ```

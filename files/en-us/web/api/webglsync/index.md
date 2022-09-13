@@ -9,6 +9,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGLSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLSync`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and is used to synchronize activities between the GPU and the application.

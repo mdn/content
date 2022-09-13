@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: javascript.statements.switch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
@@ -17,7 +18,7 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 
 ## Syntax
 
-```js
+```js-nolint
 switch (expression) {
   case value1:
     //Statements executed when the

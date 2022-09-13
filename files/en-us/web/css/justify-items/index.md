@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.justify-items
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
@@ -154,7 +155,8 @@ article {
   justify-items: stretch;
 }
 
-article:hover, article:focus {
+article:hover,
+article:focus {
   justify-items: center;
 }
 
@@ -165,7 +167,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }

@@ -8,7 +8,8 @@ tags:
   - NeedsRelocation
   - printing
 ---
-There may be times in which your web site or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
+
+There may be times in which your website or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.
 - You wish to use different styles to enhance the appearance of your content on paper.
@@ -35,7 +36,7 @@ Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxr
 
 Here are some common examples.
 
-#### Open and automatically close a popup window when finished
+### Open and automatically close a popup window when finished
 
 If you want to be able to automatically close a [popup window](/en-US/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:
 
@@ -43,12 +44,12 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 <!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"> 
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>JavaScript Window Close Example </title>
   <script>
     function popuponclick() {
-      my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
+      const my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
       my_window.document.write('<html><head><title>Print Me</title></head>');
       my_window.document.write('<body onafterprint="self.close()">');
       my_window.document.write('<p>When you print this window, it will close afterward.</p>');
@@ -75,7 +76,7 @@ If you want to be able to print an external page without opening it, you can uti
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>MDN Example</title>
     <script>

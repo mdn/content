@@ -12,6 +12,7 @@ tags:
   - events
 spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 **HTML Drag and Drop** interfaces enable applications to use drag-and-drop features in browsers.
@@ -30,15 +31,15 @@ During drag operations, several event types are fired, and some events might fir
 
 Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associated event handler:
 
-| Event | Fires when... |
-| ----- | ------------- |
-| {{domxref('Document/drag_event', 'drag')}} | ...a _dragged item_ (element or text selection) is dragged. |
-| {{domxref('Document/dragend_event', 'dragend')}} |  ...a drag operation ends (such as releasing a mouse button or hitting the Esc key; see [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).) |
-| {{domxref('Document/dragenter_event', 'dragenter')}} | ...a dragged item enters a valid drop target. (See [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets).) |
-| {{domxref('Document/dragleave_event', 'dragleave')}} | ...a dragged item leaves a valid drop target. |
-| {{domxref('Document/dragover_event', 'dragover')}} | ...a dragged item is being dragged over a valid drop target, every few hundred milliseconds. |
-| {{domxref('Document/dragstart_event', 'dragstart')}} | ...the user starts dragging an item. (See [Starting a Drag Operation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart).) |
-| {{domxref('Document/drop_event', 'drop')}} | ...an item is dropped on a valid drop target. (See [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).) |
+| Event                                                | Fires when...                                                                                                                                                                   |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref('Document/drag_event', 'drag')}}           | ...a _dragged item_ (element or text selection) is dragged.                                                                                                                     |
+| {{domxref('Document/dragend_event', 'dragend')}}     | ...a drag operation ends (such as releasing a mouse button or hitting the Esc key; see [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).) |
+| {{domxref('Document/dragenter_event', 'dragenter')}} | ...a dragged item enters a valid drop target. (See [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets).)              |
+| {{domxref('Document/dragleave_event', 'dragleave')}} | ...a dragged item leaves a valid drop target.                                                                                                                                   |
+| {{domxref('Document/dragover_event', 'dragover')}}   | ...a dragged item is being dragged over a valid drop target, every few hundred milliseconds.                                                                                    |
+| {{domxref('Document/dragstart_event', 'dragstart')}} | ...the user starts dragging an item. (See [Starting a Drag Operation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart).)                                   |
+| {{domxref('Document/drop_event', 'drop')}}           | ...an item is dropped on a valid drop target. (See [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).)                                       |
 
 > **Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
 

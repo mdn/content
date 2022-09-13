@@ -12,6 +12,7 @@ tags:
   - removeDownloads
 browser-compat: webextensions.api.browsingData.removeFormData
 ---
+
 {{AddonSidebar()}}
 
 Clears data that the browser has saved for autofilling forms.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeFormData(
   removalOptions            // RemovalOptions object
 )

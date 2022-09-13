@@ -10,6 +10,7 @@ tags:
   - Window
   - ondragdrop
 ---
+
 {{ APIRef() }}{{deprecated_header}}{{non-standard_header}}
 
 > **Warning:** Removed in Firefox 50, and never implemented in any other browser. Use the modern standard [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) feature instead.
@@ -34,7 +35,7 @@ In this example, an event listener is added to the window (the event target). If
 <!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"> 
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>dragdroptest</title>
 

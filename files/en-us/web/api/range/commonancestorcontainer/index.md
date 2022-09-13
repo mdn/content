@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.commonAncestorContainer`** read-only property
@@ -71,8 +72,12 @@ The `.highlight` class created below uses a set of CSS
 }
 
 @keyframes highlight {
-  from { outline: 1px solid #f00f; }
-  to   { outline: 1px solid #f000; }
+  from {
+    outline: 1px solid #f00f;
+  }
+  to {
+    outline: 1px solid #f000;
+  }
 }
 ```
 

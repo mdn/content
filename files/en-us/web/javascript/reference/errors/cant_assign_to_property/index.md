@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript strict mode exception "can't assign to property" occurs when attempting
@@ -27,7 +28,7 @@ TypeError: Attempted to assign to readonly property. (Safari)
 
 ## What went wrong?
 
-In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), a {{jsxref("TypeError")}} is raised when attempting to
 create a property on [primitive](/en-US/docs/Glossary/Primitive) value such
 as a [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), a [string](/en-US/docs/Glossary/String), a [number](/en-US/docs/Glossary/Number) or a [boolean](/en-US/docs/Glossary/Boolean). [Primitive](/en-US/docs/Glossary/Primitive) values cannot hold any [property](/en-US/docs/Glossary/property/JavaScript).
 
@@ -59,5 +60,5 @@ foo.bar = {};
 
 ## See also
 
-- {{jsxref("Strict_mode")}}
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - [primitive](/en-US/docs/Glossary/Primitive)

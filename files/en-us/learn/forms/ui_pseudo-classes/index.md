@@ -12,6 +12,7 @@ tags:
   - Styling
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 In the previous articles, we covered the styling of various form controls, in a general manner. This included some usage of pseudo-classes, for example using `:checked` to target a checkbox only when it is selected. In this article, we will explore in detail the different UI pseudo-classes available to us in modern browsers for styling forms in different states.
@@ -256,12 +257,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -389,8 +390,8 @@ Now onto the CSS. The most relevant parts of this example are as follows:
 
 ```css
 input[type="text"]:disabled {
-    background: #eee;
-    border: 1px solid #ccc;
+  background: #eee;
+  border: 1px solid #ccc;
 }
 
 .disabled-label {

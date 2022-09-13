@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isFramebuffer()`** method of the
@@ -18,7 +19,7 @@ passed {{domxref("WebGLFramebuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isFramebuffer(framebuffer)
 ```
 

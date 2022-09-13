@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.firstChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.firstChild()`** method moves the current
@@ -19,7 +20,7 @@ returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 firstChild()
 ```
 

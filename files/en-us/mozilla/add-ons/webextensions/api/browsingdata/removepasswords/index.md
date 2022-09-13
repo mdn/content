@@ -12,6 +12,7 @@ tags:
   - removePasswords
 browser-compat: webextensions.api.browsingData.removePasswords
 ---
+
 {{AddonSidebar()}}
 
 Clears saved passwords.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removePasswords(
   removalOptions            // RemovalOptions object
 )

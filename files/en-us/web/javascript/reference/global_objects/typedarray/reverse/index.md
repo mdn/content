@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reverse
 ---
+
 {{JSRef}}
 
 The **`reverse()`** method reverses a typed array in place. The
@@ -22,7 +23,7 @@ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 

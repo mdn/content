@@ -11,6 +11,7 @@ tags:
   - SVG OM
 browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 The **`cut`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "cut" action through the browser's user interface.
@@ -55,5 +56,5 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 - Related events: [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event), [`paste`](/en-US/docs/Web/API/SVGGraphicsElement/paste_event)
 - This event on HTML {{domxref("Element")}} targets: [`cut`](/en-US/docs/Web/API/Element/cut_event)
-- This event on {{domxref("Document")}} targets: [`cut`](Web/API/Document/cut_event)
-- This event on {{domxref("Window")}} targets: [`cut`](Web/API/Window/cut_event)
+- This event on {{domxref("Document")}} targets: [`cut`](/en-US/docs/Web/API/Document/cut_event)
+- This event on {{domxref("Window")}} targets: [`cut`](/en-US/docs/Web/API/Window/cut_event)

@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.@@species
 ---
+
 {{JSRef}}
 
 The **`TypedArray[@@species]`** accessor property returns the constructor of a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).

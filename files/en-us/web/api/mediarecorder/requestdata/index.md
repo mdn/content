@@ -37,8 +37,8 @@ runs the following steps:
 
 ## Syntax
 
-```js
-requestData();
+```js-nolint
+requestData()
 ```
 
 ### Parameters

@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.menus.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes a menu item.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.menus.remove(
   menuItemId      // integer or string
 )

@@ -13,6 +13,7 @@ tags:
   - parse()
 browser-compat: api.CSSNumericValue.parse
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the
@@ -21,7 +22,7 @@ members are value and the units.
 
 ## Syntax
 
-```js
+```js-nolint
 parse(cssText)
 ```
 

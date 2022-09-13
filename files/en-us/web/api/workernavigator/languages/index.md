@@ -11,6 +11,7 @@ tags:
   - languages
 browser-compat: api.WorkerNavigator.languages
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`WorkerNavigator.languages`** read-only property

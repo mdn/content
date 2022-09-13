@@ -10,8 +10,9 @@ tags:
   - JavaScript
   - Learn
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
@@ -82,7 +83,9 @@ In the following example, we have a single {{htmlelement("button")}}, which when
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 The JavaScript looks like so:
@@ -355,8 +358,8 @@ So, in this example, we are setting a random background color on the button, not
 > **Note:** See the [Event delegation](#event_delegation) section below for an example where we use `event.target`.
 
 > **Note:** You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
-`e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
-It's always good to be consistent — with yourself, and with others if possible.
+> `e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
+> It's always good to be consistent — with yourself, and with others if possible.
 
 ### Extra properties of event objects
 
@@ -377,7 +380,7 @@ textBox.addEventListener('keydown', (event) => output.textContent = `You pressed
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -569,12 +572,16 @@ btn.addEventListener('click', displayVideo);
 div {
   position: absolute;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 480px;
   height: 380px;
   border-radius: 10px;
   background-color: #eee;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1)
+  );
 }
 
 .hidden {
@@ -663,21 +670,21 @@ Hover over the numbers and click on them to trigger events, and then observe the
 
 ```css
 p {
-    line-height: 0;
+  line-height: 0;
 }
 
 div {
-    display: inline-block;
-    padding: 5px;
+  display: inline-block;
+  padding: 5px;
 
-    background: #fff;
-    border: 1px solid #aaa;
-    cursor: pointer;
+  background: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
 }
 
 div:hover {
-    border: 1px solid #faa;
-    background: #fdd;
+  border: 1px solid #faa;
+  background: #fdd;
 }
 ```
 

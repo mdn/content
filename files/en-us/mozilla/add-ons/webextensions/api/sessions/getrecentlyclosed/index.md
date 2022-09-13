@@ -13,6 +13,7 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.getRecentlyClosed
 ---
+
 {{AddonSidebar()}}
 
 Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSessions = browser.sessions.getRecentlyClosed(
   filter             // optional object
 )

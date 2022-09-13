@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Host
 ---
+
 {{HTTPSidebar}}
 
 The **`Host`** request header specifies the host and port

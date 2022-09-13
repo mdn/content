@@ -12,6 +12,7 @@ tags:
   - resume
 browser-compat: api.AudioContext.resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`resume()`** method of the {{ domxref("AudioContext") }}
@@ -23,7 +24,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

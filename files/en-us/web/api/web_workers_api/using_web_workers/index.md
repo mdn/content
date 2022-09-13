@@ -12,6 +12,7 @@ tags:
   - Workers
 spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) (although the `responseXML` and `channel` attributes are always null) or [`fetch`](/en-US/docs/Web/API/Fetch_API) (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
@@ -144,7 +145,7 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("setTimeout()")}}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
 
-> **Note:** Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()` . This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
+> **Note:** Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()`. This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
 
 ## Shared workers
 
@@ -615,7 +616,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
       // In the past blob builder existed, but now we use Blob
       const blob = new Blob(Array.prototype.map.call(
         document.querySelectorAll("script[type='text\/js-worker']"),
-        (script) => script.textContent, 
+        (script) => script.textContent,
         { type: 'text/javascript' }
       );
 
@@ -773,7 +774,7 @@ You can use most standard JavaScript features inside a web worker, including:
 
 The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.
 
-> **Note:** You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/> . For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
+> **Note:** You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
 
 > **Note:** For a complete list of functions available to workers, see [Functions and interfaces available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
@@ -786,3 +787,4 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 - [`Worker`](/en-US/docs/Web/API/Worker) interface
 - [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
 - [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface

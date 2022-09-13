@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollHeight`** read-only property is a
@@ -118,14 +119,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```

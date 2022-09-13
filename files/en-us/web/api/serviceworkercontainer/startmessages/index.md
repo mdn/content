@@ -10,6 +10,7 @@ tags:
   - startMessages
 browser-compat: api.ServiceWorkerContainer.startMessages
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`startMessages()`** method of
@@ -35,8 +36,8 @@ want to start processing the messages right away.
 
 ## Syntax
 
-```js
-serviceWorkerContainer.startMessages();
+```js-nolint
+startMessages()
 ```
 
 ### Parameters

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.format
 ---
+
 {{JSRef}}
 
 The **`format()`** method returns a string with a
@@ -23,7 +24,7 @@ language-specific representation of the list.
 
 ## Syntax
 
-```js
+```js-nolint
 format()
 format(list)
 ```

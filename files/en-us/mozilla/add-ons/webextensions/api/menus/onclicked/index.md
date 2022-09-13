@@ -13,6 +13,7 @@ tags:
   - onClicked
 browser-compat: webextensions.api.menus.onClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when a menu item is clicked.
@@ -21,7 +22,7 @@ For compatibility with other browsers, Firefox makes this event available via th
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.onClicked.addListener(listener)
 browser.menus.onClicked.removeListener(listener)
 browser.menus.onClicked.hasListener(listener)

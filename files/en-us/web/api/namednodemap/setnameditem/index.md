@@ -17,8 +17,8 @@ it is _replaced_.
 
 ## Syntax
 
-```js
-setNamedItem(attr);
+```js-nolint
+setNamedItem(attr)
 ```
 
 ### Parameters

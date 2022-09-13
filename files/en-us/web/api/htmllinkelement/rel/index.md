@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement.rel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLinkElement.rel`** property reflects the

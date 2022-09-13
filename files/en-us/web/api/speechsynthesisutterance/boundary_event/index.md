@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.boundary_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`boundary`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the spoken utterance reaches a word or sentence boundary.

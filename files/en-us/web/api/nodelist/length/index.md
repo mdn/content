@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.NodeList.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.length`** property returns the number of items

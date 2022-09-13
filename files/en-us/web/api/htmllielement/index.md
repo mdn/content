@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLIElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLIElement`** interface exposes specific properties and methods (beyond those defined by regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating list elements.

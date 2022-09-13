@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder.configure
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 

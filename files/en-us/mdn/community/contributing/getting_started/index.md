@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
 We are an open community of developers, technical writers, and learners building resources for a better Web, regardless of brand, browser, or platform. Anyone can contribute, and each person who does contribute makes us stronger. Together we can continue to drive innovation on the Web to serve the greater good. It starts here, with you.

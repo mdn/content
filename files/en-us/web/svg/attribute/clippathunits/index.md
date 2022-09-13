@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://drafts.fxtf.org/css-masking-1/#element-attrdef-clippath-clippathunits
 ---
+
 {{SVGRef}}
 
 The **`clipPathUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("clipPath") }} element.
@@ -17,7 +18,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

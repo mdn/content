@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes a specified value from a
@@ -19,7 +20,7 @@ The **`delete()`** method removes a specified value from a
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 

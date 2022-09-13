@@ -9,6 +9,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.attribute
 ---
+
 {{CSSRef}}
 
 The CSS **attribute selector** matches elements based on the presence or value of a given attribute.
@@ -20,7 +21,8 @@ a[title] {
 }
 
 /* <a> elements with an href matching "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 

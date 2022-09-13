@@ -13,17 +13,14 @@ tags:
   - status
 browser-compat: api.FontFace.status
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`status`** read-only property of the
-{{domxref("FontFace")}} interface returns an enumerated value indicating the status of
-the font, one of `"unloaded"`, `"loading"`, `"loaded"`,
-or `"error"`.
+The **`status`** read-only property of the {{domxref("FontFace")}} interface returns an enumerated value indicating the status of the font, one of `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 
 ## Value
 
-One of `"unloaded"`, `"loading"`, `"loaded"`, or
-`"error"`.
+One of `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 
 ## Specifications
 

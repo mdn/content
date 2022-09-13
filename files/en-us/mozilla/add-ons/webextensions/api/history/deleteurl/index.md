@@ -13,6 +13,7 @@ tags:
   - deleteUrl
 browser-compat: webextensions.api.history.deleteUrl
 ---
+
 {{AddonSidebar()}}
 
 Removes all visits to the given URL from the browser history.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let deletingUrl = browser.history.deleteUrl(
   details         // object
 )

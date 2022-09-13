@@ -8,6 +8,7 @@ tags:
   - Guide
   - Reference
 ---
+
 {{CSSRef}}
 
 CSS Animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
@@ -51,8 +52,12 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {

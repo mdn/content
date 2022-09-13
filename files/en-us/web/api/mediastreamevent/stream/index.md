@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaStreamEvent.stream
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}{{Non-standard_header}}
 
 The read-only property **`MediaStreamEvent.stream`** returns
@@ -19,8 +20,8 @@ the {{domxref("MediaStream")}} associated with the event.
 
 ## Syntax
 
-```js
- const stream = event.stream;
+```js-nolint
+event.stream
 ```
 
 ## Example

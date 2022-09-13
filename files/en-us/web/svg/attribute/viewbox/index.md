@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
 ---
+
 {{SVGRef}}
 
 The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport.
@@ -23,8 +24,14 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
-svg:not(:root) { display: inline-block; }
+html,
+body,
+svg {
+  height: 100%;
+}
+svg:not(:root) {
+  display: inline-block;
+}
 ```
 
 ```html

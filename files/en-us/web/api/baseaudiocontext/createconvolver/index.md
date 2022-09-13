@@ -12,6 +12,7 @@ tags:
   - createConvolver
 browser-compat: api.BaseAudioContext.createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
@@ -24,7 +25,7 @@ reverb effects to your audio. See the [spec definition of Convolution](https://w
 
 ## Syntax
 
-```js
+```js-nolint
 createConvolver()
 ```
 

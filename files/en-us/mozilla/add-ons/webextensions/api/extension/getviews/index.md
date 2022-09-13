@@ -13,6 +13,7 @@ tags:
   - getViews
 browser-compat: webextensions.api.extension.getViews
 ---
+
 {{AddonSidebar()}}
 
 Returns an array of the [Window](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension. This includes, for example:
@@ -26,7 +27,7 @@ In Firefox, if this method is called from a page that is part of a private brows
 
 ## Syntax
 
-```js
+```js-nolint
 let windows = browser.extension.getViews(
   fetchProperties // optional object
 )

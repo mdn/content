@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.abort
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`abort()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) stops the speech
@@ -21,7 +22,7 @@ recognition service from listening to incoming audio, and doesn't attempt to ret
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

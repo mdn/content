@@ -7,6 +7,7 @@ tags:
   - JavaScript
 browser-compat: javascript.builtins.Function
 ---
+
 {{JSRef}}
 
 Every JavaScript function is actually a `Function` object. This can be seen with the code `(function () {}).constructor === Function`, which returns true.
@@ -21,7 +22,7 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 - {{jsxref("Function.prototype.arguments")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : An array corresponding to the arguments passed to a function.
     This is deprecated as a property of {{jsxref("Function")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object (available within the function) instead.
-- {{jsxref("Function.prototype.caller")}} {{Non-standard_Inline}}
+- {{jsxref("Function.prototype.caller")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Specifies the function that invoked the currently executing function.
     This property is deprecated, and is only functional for some non-strict functions.
 - {{jsxref("Function.prototype.displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}

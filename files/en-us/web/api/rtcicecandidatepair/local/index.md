@@ -17,6 +17,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePair.local
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`local`** property of the

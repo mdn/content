@@ -12,6 +12,7 @@ tags:
   - Learn
   - Web
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 The first article in our series provides you with your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML form controls and other HTML elements, adding some very simple styling via CSS, and describing how data is sent to a server.
@@ -150,7 +151,7 @@ To define the default value of an {{HTMLElement("input")}} element you have to u
 <input type="text" value="by default this element is filled with this text">
 ```
 
-On the other hand,  if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:
+On the other hand, if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:
 
 ```html
 <textarea>
@@ -202,7 +203,7 @@ form {
   width: 400px;
   /* Form outline */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -259,7 +260,7 @@ textarea {
 button {
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
@@ -341,7 +342,7 @@ form {
 
   /* To see the limits of the form */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -356,7 +357,8 @@ label {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* To make sure that all text field have the same font settings
      By default, textarea are set with a monospace font */
   font: 1em sans-serif;
@@ -365,13 +367,14 @@ input, textarea {
   width: 300px;
 
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
   border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* To give a little highlight on active elements */
   border-color: #000;
 }
@@ -396,7 +399,7 @@ textarea {
 button {
   /* This extra margin represent the same space as the space between
      the labels and their text fields */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 

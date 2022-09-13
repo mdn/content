@@ -9,6 +9,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.async_generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`async function*`** declaration defines an _async generator function_, which returns an {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} object.
@@ -19,7 +20,7 @@ You can also define async generator functions using the {{jsxref("AsyncGenerator
 
 ## Syntax
 
-```js
+```js-nolint
 async function* name(param0) {
   statements
 }

@@ -13,13 +13,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onConnect
 ---
+
 {{AddonSidebar()}}
 
 Fired when a connection is made with either an extension process or a content script.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onConnect.addListener(listener)
 browser.runtime.onConnect.removeListener(listener)
 browser.runtime.onConnect.hasListener(listener)

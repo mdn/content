@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.ServiceWorkerRegistration.index
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`index`** read-only property of the

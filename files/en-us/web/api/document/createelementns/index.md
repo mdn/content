@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.
@@ -18,7 +19,7 @@ To create an element without specifying a namespace URI, use the
 
 ## Syntax
 
-```js
+```js-nolint
 createElementNS(namespaceURI, qualifiedName)
 createElementNS(namespaceURI, qualifiedName, options)
 ```

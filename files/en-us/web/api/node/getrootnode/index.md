@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`getRootNode()`** method of the {{domxref("Node")}} interface
@@ -15,9 +16,9 @@ which optionally includes the shadow root if it is available.
 
 ## Syntax
 
-```js
-getRootNode();
-getRootNode(options);
+```js-nolint
+getRootNode()
+getRootNode(options)
 ```
 
 ### Parameters

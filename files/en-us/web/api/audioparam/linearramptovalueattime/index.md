@@ -12,6 +12,7 @@ tags:
   - linearRampToValueAtTime
 browser-compat: api.AudioParam.linearRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `linearRampToValueAtTime()` method of the {{ domxref("AudioParam") }}
@@ -23,7 +24,7 @@ _previous_ event, follows a linear ramp to the new value given in the
 
 ## Syntax
 
-```js
+```js-nolint
 linearRampToValueAtTime(value, endTime)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - inFinite
 browser-compat: javascript.builtins.isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`isFinite()`** function determines whether the
@@ -19,7 +20,7 @@ number.
 
 ## Syntax
 
-```js
+```js-nolint
 isFinite(testValue)
 ```
 

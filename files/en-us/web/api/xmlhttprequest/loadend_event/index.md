@@ -14,6 +14,7 @@ tags:
   - loadend
 browser-compat: api.XMLHttpRequest.loadend_event
 ---
+
 {{APIRef}}
 
 The **`loadend`** event is fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
@@ -63,16 +64,16 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```css hidden
 .event-log {
-    width: 25rem;
-    height: 4rem;
-    border: 1px solid black;
-    margin: .5rem;
-    padding: .2rem;
+  width: 25rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 input {
-    width: 11rem;
-    margin: .5rem;
+  width: 11rem;
+  margin: 0.5rem;
 }
 ```
 

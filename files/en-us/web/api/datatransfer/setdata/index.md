@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.setData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.setData()`** method sets the drag
@@ -25,7 +26,7 @@ Example data types are `text/plain` and `text/uri-list`.
 
 ## Syntax
 
-```js
+```js-nolint
 setData(format, data)
 ```
 

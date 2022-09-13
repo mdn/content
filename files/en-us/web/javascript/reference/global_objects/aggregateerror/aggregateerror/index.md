@@ -8,13 +8,14 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
+
 {{JSRef}}
 
 The **`AggregateError()`** constructor creates an error for several errors that need to be wrapped in a single error.
 
 ## Syntax
 
-```js
+```js-nolint
 new AggregateError(errors)
 new AggregateError(errors, message)
 new AggregateError(errors, message, options)
@@ -36,7 +37,7 @@ AggregateError(errors, message, options)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 
 ## Examples
 

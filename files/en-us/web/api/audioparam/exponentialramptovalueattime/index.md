@@ -11,6 +11,7 @@ tags:
   - exponentialRampToValueAtTime
 browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`exponentialRampToValueAtTime()`** method of the {{
@@ -26,7 +27,7 @@ _previous_ event, follows an exponential ramp to the new value given in the
 
 ## Syntax
 
-```js
+```js-nolint
 exponentialRampToValueAtTime(value, endTime)
 ```
 

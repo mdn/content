@@ -8,6 +8,7 @@ tags:
   - Promise
 browser-compat: javascript.builtins.Promise.all
 ---
+
 {{JSRef}}
 
 The **`Promise.all()`** method takes an iterable of promises as
@@ -21,8 +22,8 @@ error, and will reject with this first rejection message / error.
 
 ## Syntax
 
-```js
-Promise.all(iterable);
+```js-nolint
+Promise.all(iterable)
 ```
 
 ### Parameters

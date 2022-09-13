@@ -7,6 +7,7 @@ tags:
   - Experimental
 browser-compat: svg.elements.textPath.side
 ---
+
 {{SVGRef}}{{SeeCompatTable}}
 
 The **`side`** attribute determines the side of a path the text is placed on (relative to the path direction).
@@ -18,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 

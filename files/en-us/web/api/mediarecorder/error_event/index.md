@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.MediaRecorder.error_event
 ---
+
 {{APIRef}}
 
 The {{domxref("MediaRecorder")}} interface's **`error`** event is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.

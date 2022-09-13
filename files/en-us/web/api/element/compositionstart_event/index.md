@@ -10,6 +10,7 @@ tags:
   - compositionstart
 browser-compat: api.Element.compositionstart_event
 ---
+
 {{APIRef}}
 
 The **`compositionstart`** event is fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
@@ -70,7 +71,7 @@ inputElement.addEventListener('compositionstart', (event) => {
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -87,12 +88,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {

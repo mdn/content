@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLIFrameElement`** interface provides special properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.

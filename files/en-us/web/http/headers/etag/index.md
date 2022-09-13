@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.ETag
 ---
+
 {{HTTPSidebar}}
 
 The **`ETag`** (or **entity tag**) HTTP response header is an identifier for a

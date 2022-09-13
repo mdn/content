@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.deleteProperty(target, propertyKey)
 ```
 

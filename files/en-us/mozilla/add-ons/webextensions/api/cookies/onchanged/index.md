@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.cookies.onChanged
 ---
+
 {{AddonSidebar()}}
 
 The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
@@ -26,7 +27,7 @@ Note that updating a cookie's properties is implemented as a two step process:
 
 ## Syntax
 
-```js
+```js-nolint
 browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)

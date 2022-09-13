@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.greater_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 The greater than or equal operator (`>=`) returns `true` if
@@ -18,7 +19,7 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 x >= y
 ```
 

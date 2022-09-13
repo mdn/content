@@ -12,6 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new
@@ -26,13 +27,13 @@ specified object.
 
 ## Syntax
 
-```js
-new RTCSessionDescription(rtcSessionDescriptionInit);
+```js-nolint
+new RTCSessionDescription(options)
 ```
 
 ### Values
 
-- `rtcSessionDescriptionInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing the default values for the session description; the object
     conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has

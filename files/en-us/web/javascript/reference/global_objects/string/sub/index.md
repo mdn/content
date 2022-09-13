@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.sub
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`sub()`** method creates a {{HTMLElement("sub")}} HTML
@@ -18,7 +19,7 @@ element that causes a string to be displayed as subscript.
 
 ## Syntax
 
-```js
+```js-nolint
 sub()
 ```
 

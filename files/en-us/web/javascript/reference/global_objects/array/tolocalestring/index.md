@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
@@ -20,16 +21,16 @@ String (such as a comma ",").
 
 ## Syntax
 
-```js
-toLocaleString();
-toLocaleString(locales);
-toLocaleString(locales, options);
+```js-nolint
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
 ```
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the {{jsxref("Intl")}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
   - : An object with configuration properties. For numbers, see {{jsxref("Number.prototype.toLocaleString()")}}; for dates, see {{jsxref("Date.prototype.toLocaleString()")}}.
 

@@ -12,6 +12,7 @@ tags:
   - sound
 browser-compat: api.AudioContext
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning) and much more.
@@ -36,7 +37,7 @@ A simple, typical workflow for web audio would look something like this:
 
 Timing is controlled with high precision and low latency, allowing developers to write code that responds accurately to events and is able to target specific samples, even at a high sample rate. So applications such as drum machines and sequencers are well within reach.
 
-The Web Audio API also allows us to control how audio is _spatialized_. Using a system based on a _source-listener model_, it allows control of the _panning model_ and deals with *distance-induced attenuation* induced by a moving source (or moving listener).
+The Web Audio API also allows us to control how audio is _spatialized_. Using a system based on a _source-listener model_, it allows control of the _panning model_ and deals with _distance-induced attenuation_ induced by a moving source (or moving listener).
 
 > **Note:** You can read about the theory of the Web Audio API in a lot more detail in our article [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
@@ -86,7 +87,7 @@ Interfaces that define audio sources for use in the Web Audio API.
 - {{domxref("AudioScheduledSourceNode")}}
   - : The **`AudioScheduledSourceNode`** is a parent interface for several types of audio source node interfaces. It is an {{domxref("AudioNode")}}.
 - {{domxref("OscillatorNode")}}
-  - : The **`OscillatorNode`** interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given *frequency* of wave to be created.
+  - : The **`OscillatorNode`** interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given _frequency_ of wave to be created.
 - {{domxref("AudioBuffer")}}
   - : The **`AudioBuffer`** interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext.decodeAudioData") }} method, or created with raw data using {{ domxref("BaseAudioContext.createBuffer") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("AudioBufferSourceNode")}}

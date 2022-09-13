@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - set
 ---
+
 {{AddonSidebar()}}
 
 Use `BrowserSetting.set()` to change the browser setting to a new value.
@@ -33,7 +34,7 @@ The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types
 
 ## Syntax
 
-```js
+```js-nolint
 let setting = setting.set(
   details     // object
 )

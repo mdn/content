@@ -12,6 +12,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.setRangeText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setRangeText()`** method replaces a
@@ -20,7 +21,7 @@ a new string.
 
 ## Syntax
 
-```js
+```js-nolint
 setRangeText(replacement)
 setRangeText(replacement, start)
 setRangeText(replacement, start, end)

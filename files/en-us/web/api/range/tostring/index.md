@@ -10,6 +10,7 @@ tags:
   - Stringifier
 browser-compat: api.Range.toString
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.toString()`** method is a {{Glossary("stringifier")}} returning
@@ -21,7 +22,7 @@ ineffective.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

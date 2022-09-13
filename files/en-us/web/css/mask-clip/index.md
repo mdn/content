@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-clip
 ---
+
 {{CSSRef}}
 
 The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.

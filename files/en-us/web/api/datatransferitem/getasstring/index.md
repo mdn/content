@@ -13,6 +13,7 @@ tags:
   - getAsString
 browser-compat: api.DataTransferItem.getAsString
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItem.getAsString()`** method invokes the
@@ -22,7 +23,7 @@ given callback with the drag data item's string data as the argument if the item
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 getAsString((data) => { /* … */ } )
 

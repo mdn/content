@@ -9,6 +9,7 @@ tags:
   - TaskController
 browser-compat: api.TaskController
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskController`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a controller object that can be used to both abort and change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of one or more prioritized tasks.
@@ -49,7 +50,7 @@ _This interface also inherits the properties of its parent, {{domxref("AbortCont
 
 ## Examples
 
-> **Note:** Additional "live" examples can be found in:  [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
+> **Note:** Additional "live" examples can be found in: [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 First we create a task controller, setting the priority of its associated signal to `user-blocking`.
 

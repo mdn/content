@@ -16,6 +16,7 @@ tags:
   - datetime-local
 browser-compat: html.elements.input.type_datetime-local
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
@@ -226,9 +227,9 @@ Here's the CSS used in the above example. Here we make use of the {{cssxref(":va
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -300,7 +301,7 @@ input:invalid + span {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -310,7 +311,7 @@ input:valid + span {
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -426,13 +427,13 @@ input + span {
 
 input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
 input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

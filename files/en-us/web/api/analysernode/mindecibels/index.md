@@ -11,6 +11,7 @@ tags:
   - minDecibels
 browser-compat: api.AnalyserNode.minDecibels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`minDecibels`** property of the {{ domxref("AnalyserNode") }} interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using `getByteFrequencyData()`.

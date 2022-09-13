@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This page lists many of the general-purpose macros created for use on MDN.
@@ -272,14 +273,14 @@ They can also be used to mark up a section on a page.
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
 
-##### Syntax
+#### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-##### Examples
+#### Examples
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}

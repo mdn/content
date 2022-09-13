@@ -13,6 +13,7 @@ tags:
   - WebGL
   - developer recommendation
 ---
+
 The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.
 
 ## Video manipulation
@@ -188,12 +189,12 @@ window.addEventListener('load', setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is…                                                                                                                                                                  | Use this Web Audio node type                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
-| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                   | {{domxref("MediaElementAudioSourceNode")}} |
-| A plain raw audio data buffer in memory                                                                                                                                                    | {{domxref("AudioBufferSourceNode")}}         |
-| An oscillator generating a sine wave or other computed waveform                                                                                                                            | {{domxref("OscillatorNode")}}                 |
-| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}} |
+| If the audio source is…                                                                                                                                                  | Use this Web Audio node type               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                 | {{domxref("MediaElementAudioSourceNode")}} |
+| A plain raw audio data buffer in memory                                                                                                                                  | {{domxref("AudioBufferSourceNode")}}       |
+| An oscillator generating a sine wave or other computed waveform                                                                                                          | {{domxref("OscillatorNode")}}              |
+| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}}  |
 
 ### Audio filters
 

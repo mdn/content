@@ -8,6 +8,7 @@ tags:
   - WeakRef
 browser-compat: javascript.builtins.WeakRef.WeakRef
 ---
+
 {{JSRef}}
 
 The **`WeakRef`** constructor creates a {{jsxref("WeakRef")}}
@@ -15,7 +16,7 @@ object referring to a given target object.
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakRef(targetObject)
 ```
 

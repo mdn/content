@@ -14,6 +14,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.addFromURI
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`addFromURI()`** method of the
@@ -26,7 +27,7 @@ specified by URI.
 
 ## Syntax
 
-```js
+```js-nolint
 addFromURI(src)
 addFromURI(src, weight)
 ```

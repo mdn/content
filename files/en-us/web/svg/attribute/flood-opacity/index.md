@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.attributes.presentation.flood-opacity
 ---
+
 {{SVGRef}}
 
 The **`flood-opacity`** attribute indicates the opacity value to use across the current filter primitive subregion.
@@ -20,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

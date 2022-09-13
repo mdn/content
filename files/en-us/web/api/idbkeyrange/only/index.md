@@ -13,6 +13,7 @@ tags:
   - only
 browser-compat: api.IDBKeyRange.only
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`only()`** method of the {{domxref("IDBKeyRange")}}
@@ -22,7 +23,7 @@ interface creates a new key range containing a single value.
 
 ## Syntax
 
-```js
+```js-nolint
 only(value)
 ```
 

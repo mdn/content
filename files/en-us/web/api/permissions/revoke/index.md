@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Permissions.revoke
 ---
+
 {{APIRef("Permissions API")}}{{deprecated_header}}
 
 The **`Permissions.revoke()`** method of the
@@ -22,7 +23,7 @@ This method is called on the global {{domxref("Permissions")}} object
 
 ## Syntax
 
-```js
+```js-nolint
 revoke(descriptor)
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Product advisory board
   - Terms and conditions
 ---
+
 {{MDNSidebar}}
 
 ## 1. Purpose and Objectives
@@ -110,6 +111,3 @@ c. Costs for participant travel and living expenses or other involvement are to 
 ## See also
 
 - [Product Advisory Board home](/en-US/docs/MDN/MDN_Product_Advisory_Board)
-- [Product Advisory Board meeting minutes](https://github.com/mdn/pab) (GitHub)
-- [Product Advisory Board members](/en-US/docs/MDN/MDN_Product_Advisory_Board/Members)
-- [Membership application](https://www.surveygizmo.com/s3/4024118/MDN-Advisory-Board-Application)

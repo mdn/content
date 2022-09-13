@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.target
 ---
+
 {{CSSRef}}
 
 The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an {{htmlattrxref("id")}} matching the URL's fragment.
@@ -75,7 +76,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* Style italic elements within the target element */
@@ -178,7 +179,7 @@ You can use the `:target` pseudo-class to create a lightbox without using any Ja
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
   cursor: default;
 }

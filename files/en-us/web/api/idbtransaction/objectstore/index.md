@@ -13,6 +13,7 @@ tags:
   - objectStore
 browser-compat: api.IDBTransaction.objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore()`** method of the
@@ -27,7 +28,7 @@ transaction object, a different {{domxref("IDBObjectStore")}} instance is return
 
 ## Syntax
 
-```js
+```js-nolint
 objectStore(name)
 ```
 

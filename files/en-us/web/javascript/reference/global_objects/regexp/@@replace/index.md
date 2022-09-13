@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@replace
 ---
+
 {{JSRef}}
 
 The **`[@@replace]()`** method of a regular expression specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
@@ -19,7 +20,7 @@ The **`[@@replace]()`** method of a regular expression specifies how [`String.pr
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.replace](str, replacement)
 ```
 

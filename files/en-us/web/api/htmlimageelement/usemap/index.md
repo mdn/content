@@ -17,6 +17,7 @@ tags:
   - useMap
 browser-compat: api.HTMLImageElement.useMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`useMap`** property on the

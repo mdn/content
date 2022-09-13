@@ -241,7 +241,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Result

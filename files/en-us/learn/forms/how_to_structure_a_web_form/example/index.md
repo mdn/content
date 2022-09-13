@@ -10,6 +10,7 @@ tags:
   - Intro
   - Reference
 ---
+
 This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## A payment form
@@ -104,64 +105,67 @@ This the example for a basic payment form for the article [How to structure an H
 
 ```css
 h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
 }
 
-div+div {
-    margin-top: 1em;
+div + div {
+  margin-top: 1em;
 }
 
 label span {
-    display: inline-block;
-    width: 120px;
-    text-align: right;
+  display: inline-block;
+  width: 120px;
+  text-align: right;
 }
 
-input, textarea {
-    font: 1em sans-serif;
-    width: 250px;
-    box-sizing: border-box;
-    border: 1px solid #999;
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
 }
 
-input[type=checkbox], input[type=radio] {
-    width: auto;
-    border: none;
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
 }
 
-input:focus, textarea:focus {
-    border-color: #000;
+input:focus,
+textarea:focus {
+  border-color: #000;
 }
 
 textarea {
-    vertical-align: top;
-    height: 5em;
-    resize: vertical;
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
 }
 
 fieldset {
-    width: 250px;
-    box-sizing: border-box;
-    margin-left: 136px;
-    border: 1px solid #999;
+  width: 250px;
+  box-sizing: border-box;
+  margin-left: 136px;
+  border: 1px solid #999;
 }
 
 button {
-    margin: 20px 0 0 124px;
+  margin: 20px 0 0 124px;
 }
 
 label {

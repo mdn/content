@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLInputElement.selectionchange_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("input")}} element is changed.

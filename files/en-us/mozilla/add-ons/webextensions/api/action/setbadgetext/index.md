@@ -13,6 +13,7 @@ tags:
   - setBadgeText
 browser-compat: webextensions.api.action.setBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
@@ -23,7 +24,7 @@ Tabs without an specific badge text will inherit the global badge text, which is
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeText(
   details // object
 )

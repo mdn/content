@@ -24,6 +24,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.postalCode
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`postalCode`** read-only property of the

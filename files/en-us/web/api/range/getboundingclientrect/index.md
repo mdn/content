@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Range.getBoundingClientRect
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.getBoundingClientRect()`** method returns a {{
@@ -22,7 +23,7 @@ details on the returned value.
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 

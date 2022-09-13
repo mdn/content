@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a new typed array (with a new
@@ -22,7 +23,7 @@ _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Refere
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

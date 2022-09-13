@@ -5,6 +5,7 @@ page-type: guide
 tags:
   - File API
 ---
+
 {{APIRef("File API")}}
 
 Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
@@ -105,8 +106,8 @@ The following example shows a possible use of the `size` property:
           units.length - 1,
         );
         const approx = numberOfBytes / 1024 ** exponent;
-        const output = exponent === 0 
-          ? `${numberOfBytes} bytes` 
+        const output = exponent === 0
+          ? `${numberOfBytes} bytes`
           : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
 
         document.getElementById("fileNum").textContent = fileList.length;
@@ -330,12 +331,12 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is `null`, we se
 2. The new list element is inserted into the {{HTMLElement("div")}} block by calling its {{DOMxRef("Node.appendChild()")}} method.
 3. For each {{DOMxRef("File")}} in the {{DOMxRef("FileList")}} represented by `files`:
 
-    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
-    2. Create a new image ({{HTMLElement("img")}}) element.
-    3. Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
-    4. Set the image's height to 60 pixels.
-    5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
-    6. Append the new list item to the list.
+   1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
+   2. Create a new image ({{HTMLElement("img")}}) element.
+   3. Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
+   4. Set the image's height to 60 pixels.
+   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
+   6. Append the new list item to the list.
 
 Here is a live demo of the code above:
 

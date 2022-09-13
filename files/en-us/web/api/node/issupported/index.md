@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Node.isSupported
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 The **`isSupported()`** method of the {{domxref("Node")}} interface returns a boolean
@@ -16,8 +17,8 @@ specific feature and this feature is supported by the specific node.
 
 ## Syntax
 
-```js
-isSupported(feature, version);
+```js-nolint
+isSupported(feature, version)
 ```
 
 ### Parameters

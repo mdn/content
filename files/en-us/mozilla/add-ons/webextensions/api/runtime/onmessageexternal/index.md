@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onMessageExternal
 ---
+
 {{AddonSidebar()}}
 
 Use this event to listen for messages from another extension.
@@ -28,7 +29,7 @@ This API can't be used in a content script.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onMessageExternal.addListener()
 browser.runtime.onMessageExternal.removeListener(listener)
 browser.runtime.onMessageExternal.hasListener(listener)

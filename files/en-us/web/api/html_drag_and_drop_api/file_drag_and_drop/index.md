@@ -7,6 +7,7 @@ tags:
   - drag and drop
   - drop zone
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
@@ -38,7 +39,7 @@ Lastly, an application may want to style the drop target element to visually ind
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```

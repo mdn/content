@@ -14,6 +14,7 @@ tags:
   - width
 browser-compat: svg.attributes.textLength
 ---
+
 {{SVGRef}}
 
 The **`textLength`** attribute, available on SVG {{SVGElement("text")}} and {{SVGElement("tspan")}} elements, lets you specify the width of the space into which the text will draw. The {{glossary("user agent")}} will ensure that the text does not extend farther than that distance, using the method or methods specified by the {{SVGAttr("lengthAdjust")}} attribute. By default, only the spacing between characters is adjusted, but the glyph size can also be adjusted if you change `lengthAdjust`.
@@ -30,7 +31,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

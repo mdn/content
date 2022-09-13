@@ -19,6 +19,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsDuplicated
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`packetsDuplicated`** property

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createEvent
 ---
+
 {{APIRef("DOM")}}
 
 > **Warning:** Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.
@@ -20,7 +21,7 @@ returned object should be first initialized and can then be passed to
 
 ## Syntax
 
-```js
+```js-nolint
 createEvent(type)
 ```
 

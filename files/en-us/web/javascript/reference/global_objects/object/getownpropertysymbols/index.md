@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertySymbols()`** method returns an array of all symbol properties found directly upon a given object.
@@ -17,7 +18,7 @@ The **`Object.getOwnPropertySymbols()`** method returns an array of all symbol p
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertySymbols(obj)
 ```
 

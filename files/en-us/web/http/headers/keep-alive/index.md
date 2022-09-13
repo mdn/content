@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Keep-Alive
 ---
+
 {{HTTPSidebar}}
 
 The **`Keep-Alive`** general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.

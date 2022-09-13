@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.small
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`small()`** method creates a {{HTMLElement("small")}}
@@ -19,7 +20,7 @@ HTML element that causes a string to be displayed in a small font.
 
 ## Syntax
 
-```js
+```js-nolint
 small()
 ```
 

@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.name
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`name`** read-only property of the
@@ -26,16 +27,16 @@ A string representing the name of the voice.
 ## Examples
 
 ```js
-for (let i = 0; i < voices.length ; i++) {
+for (const voice of voices) {
   const option = document.createElement('option');
-  option.textContent = `${voices[i].name} (${voices[i].lang})`;
+  option.textContent = `${voice.name} (${voice.lang})`;
 
-  if (voices[i].default) {
+  if (voice.default) {
     option.textContent += ' — DEFAULT';
   }
 
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+  option.setAttribute('data-lang', voice.lang);
+  option.setAttribute('data-name', voice.name);
   voiceSelect.appendChild(option);
 }
 ```

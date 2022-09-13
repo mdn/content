@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.sendRequest
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("tabs.sendMessage()")}} instead.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let sending = browser.tabs.sendRequest(
   tabId,                   // integer
   request                  // any

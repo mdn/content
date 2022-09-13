@@ -7,6 +7,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.mask
 ---
+
 {{SVGRef}}
 
 The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
@@ -14,7 +15,11 @@ The **`<mask>`** element defines an alpha mask for compositing the current objec
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

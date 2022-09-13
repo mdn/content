@@ -13,6 +13,7 @@ browser-compat:
   - css.at-rules.media
   - css.at-rules.supports
 ---
+
 {{CSSRef}}
 
 **CSS Conditional Rules** is a CSS module that allows to define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.

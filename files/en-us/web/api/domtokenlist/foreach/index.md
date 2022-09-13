@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 The **`forEach()`** method of the {{domxref("DOMTokenList")}} interface
@@ -15,9 +16,9 @@ insertion order.
 
 ## Syntax
 
-```js
-forEach(callback);
-forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters

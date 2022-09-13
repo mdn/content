@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.escape
 ---
+
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `escape()` is not
@@ -37,7 +38,7 @@ sequence.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Read-only
 browser-compat: api.HTMLMediaElement.paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLMediaElement.paused`** property

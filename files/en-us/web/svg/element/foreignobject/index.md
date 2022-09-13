@@ -7,6 +7,7 @@ tags:
   - SVG
 browser-compat: svg.elements.foreignObject
 ---
+
 {{SVGRef}}
 
 The **`<foreignObject>`** [SVG](/en-US/docs/Web/SVG) element includes elements from a different XML namespace. In the context of a browser, it is most likely (X)HTML.
@@ -14,7 +15,11 @@ The **`<foreignObject>`** [SVG](/en-US/docs/Web/SVG) element includes elements f
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

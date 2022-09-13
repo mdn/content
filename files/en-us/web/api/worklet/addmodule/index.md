@@ -15,6 +15,7 @@ tags:
   - addModule
 browser-compat: api.Worklet.addModule
 ---
+
 {{APIRef("Worklets")}}
 
 The **`addModule()`** method of the
@@ -23,7 +24,7 @@ adds it to the current `Worklet`.
 
 ## Syntax
 
-```js
+```js-nolint
 addModule(moduleURL)
 addModule(moduleURL, options)
 ```
@@ -83,7 +84,7 @@ can be used to include the image created by the worklet:
 ```css
 @supports (background-image: paint(id)) {
   h1 {
-      background-image: paint(hollowHighlights, filled, 3px);
+    background-image: paint(hollowHighlights, filled, 3px);
   }
 }
 ```

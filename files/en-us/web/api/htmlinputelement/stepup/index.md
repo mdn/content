@@ -11,6 +11,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepUp
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.stepUp()`** method increments the value
@@ -119,7 +120,7 @@ table above), or if the step value is set to `any`, an
 
 ## Syntax
 
-```js
+```js-nolint
 stepUp()
 stepUp(stepIncrement)
 ```

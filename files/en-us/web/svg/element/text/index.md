@@ -8,6 +8,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.text
 ---
+
 {{SVGRef}}
 
 The SVG **`<text>`** element draws a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to `<text>`, like any other SVG graphics element.
@@ -17,7 +18,11 @@ If text is included in SVG not inside of a `<text>` element, it is not rendered.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

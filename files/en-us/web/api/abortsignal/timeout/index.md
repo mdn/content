@@ -10,6 +10,7 @@ tags:
   - timeout
 browser-compat: api.AbortSignal.timeout
 ---
+
 {{APIRef("DOM")}}
 
 The static **`AbortSignal.timeout()`** method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
@@ -24,7 +25,7 @@ The timeout is based on active rather than elapsed time, and will effectively be
 
 ## Syntax
 
-```js
+```js-nolint
 timeout(time)
 ```
 

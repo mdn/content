@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getURL
 ---
+
 {{AddonSidebar()}}
 
 Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, return a fully-qualified URL.
@@ -21,7 +22,7 @@ This function does _not_ check that the resource actually exists at that URL.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.getURL(
   path // string
 )

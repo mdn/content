@@ -16,6 +16,7 @@ tags:
   - origin
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.

@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 Perhaps more exciting than just fills and strokes is the fact that you can also create and apply gradients as either fills or strokes.
@@ -31,7 +32,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
         <stop offset="50%" stop-color="black" stop-opacity="0"/>
         <stop offset="100%" stop-color="blue"/>
       </linearGradient>
-      <style type="text/css"><![CDATA[
+      <style><![CDATA[
         #rect1 { fill: url(#Gradient1); }
         .stop1 { stop-color: red; }
         .stop2 { stop-color: black; stop-opacity: 0; }

@@ -9,6 +9,7 @@ tags:
   - setPriority
 browser-compat: api.TaskController.setPriority
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`setPriority()`** method of the {{domxref("TaskController")}} interface can be called to set a new [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) for this controller's [`signal`](/en-US/docs/Web/API/TaskController#taskcontroller.signal).
@@ -22,7 +23,7 @@ If the task is immutable, the function call is ignored.
 
 ## Syntax
 
-```js
+```js-nolint
 setPriority(priority)
 ```
 

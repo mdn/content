@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.path.d
 ---
+
 {{SVGRef}}
 
 The **`d`** attribute defines a path to be drawn.
@@ -20,7 +21,11 @@ You can use this attribute with the following SVG elements: [`<path>`](#path), [
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -120,11 +125,17 @@ The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
 
 ```css
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 
 /* This path is displayed on hover*/
 #svg_css_ex1:hover path {
-  d: path("M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90")
+  d: path(
+    "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
+  );
 }
 ```
 
@@ -230,7 +241,11 @@ _MoveTo_ instructions can be thought of as picking up the drawing instrument, an
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -406,7 +421,11 @@ _LineTo_ instructions draw a straight line from the _current point_ (_P<sub>o</s
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -596,7 +615,11 @@ After drawing, the _end point_ (_P<sub>n</sub>_) becomes the _current point_ for
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -806,7 +829,11 @@ After drawing, the _end point_ (_P<sub>n</sub>_) becomes the _current point_ for
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -964,7 +991,11 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1019,7 +1050,11 @@ _ClosePath_ instructions draw a straight line from the _current position_ to the
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

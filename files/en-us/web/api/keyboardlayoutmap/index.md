@@ -13,6 +13,7 @@ tags:
   - keyboard
 browser-compat: api.KeyboardLayoutMap
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`KeyboardLayoutMap`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) is a map-like object with functions for retrieving the string associated with specific physical keys.

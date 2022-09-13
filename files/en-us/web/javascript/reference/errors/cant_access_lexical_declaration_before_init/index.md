@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - ReferenceError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't access lexical declaration \`_variable_' before initialization" occurs when a lexical variable was accessed before it was initialized.

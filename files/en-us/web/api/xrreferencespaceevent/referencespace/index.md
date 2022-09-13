@@ -23,6 +23,7 @@ tags:
   - Property
 browser-compat: api.XRReferenceSpaceEvent.referenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property

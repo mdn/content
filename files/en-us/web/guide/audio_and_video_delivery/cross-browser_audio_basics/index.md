@@ -9,6 +9,7 @@ tags:
   - Media
   - events
 ---
+
 This article provides:
 
 - a basic guide to creating a cross-browser HTML audio player with all the associated attributes, properties, and events explained
@@ -443,19 +444,19 @@ Styled like so:
 
 ```css
 #controls {
-   width: 80px;
-   float: left;
+  width: 80px;
+  float: left;
 }
 
 #progress {
-   margin-left: 80px;
-   border: 1px solid black;
+  margin-left: 80px;
+  border: 1px solid black;
 }
 
 #bar {
-   height: 20px;
-   background-color: green;
-   width: 0;
+  height: 20px;
+  background-color: green;
+  width: 0;
 }
 ```
 
@@ -516,9 +517,9 @@ First of all, we apply a quick update to the progress bar CSS to display the han
 
 ```css
 #progress {
-   margin-left: 80px;
-   border: 1px solid black;
-   cursor: pointer;
+  margin-left: 80px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.AudioListener.setOrientation
 ---
+
 {{ APIRef("Web Audio API") }}{{deprecated_header}}
 
 The `setOrientation()` method of the {{ domxref("AudioListener") }} interface defines the orientation of the listener.
@@ -25,7 +26,7 @@ The two vectors must be separated by an angle of 90° — in linear analysis ter
 
 ## Syntax
 
-```js
+```js-nolint
 setOrientation(x, y, z, xUp, yUp, zUp)
 ```
 

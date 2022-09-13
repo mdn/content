@@ -11,6 +11,7 @@ tags:
   - credential management
 browser-compat: api.Credential
 ---
+
 {{APIRef("Credential Management API")}}{{securecontext_header}}
 
 The **`Credential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about an entity (usually a user) as a prerequisite to a trust decision.

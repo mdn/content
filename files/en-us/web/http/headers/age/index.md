@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Age
 ---
+
 {{HTTPSidebar}}
 
 The **`Age`** header contains the time in seconds the object was in a proxy cache.

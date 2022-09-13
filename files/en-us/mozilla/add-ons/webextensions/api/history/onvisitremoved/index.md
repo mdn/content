@@ -13,6 +13,7 @@ tags:
   - onVisitRemoved
 browser-compat: webextensions.api.history.onVisitRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a page is removed completely from the browser history.
@@ -23,7 +24,7 @@ Fired when a page is removed completely from the browser history.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.history.onVisitRemoved.addListener(listener)
 browser.history.onVisitRemoved.removeListener(listener)
 browser.history.onVisitRemoved.hasListener(listener)
@@ -51,7 +52,7 @@ Events have three functions:
       - : `object`. Details of the removal. This is an object containing two properties: a boolean `allHistory` and an array `urls`.
 
         - If this event is firing because all history was cleared, `allHistory` will be `true` and `urls` will be an empty array.
-        - Otherwise,  `allHistory` will be `false` and `urls` will contain one item, which is the URL of the removed page.
+        - Otherwise, `allHistory` will be `false` and `urls` will contain one item, which is the URL of the removed page.
 
 ## Browser compatibility
 

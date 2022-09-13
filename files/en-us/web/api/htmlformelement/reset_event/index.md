@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reset_event
 ---
+
 {{APIRef}}
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.

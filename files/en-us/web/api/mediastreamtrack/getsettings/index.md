@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getSettings()`** method of the
@@ -22,7 +23,7 @@ See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_
 
 ## Syntax
 
-```js
+```js-nolint
 getSettings()
 ```
 

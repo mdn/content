@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.cookies.getAll
 ---
+
 {{AddonSidebar()}}
 
 The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a single cookie store that match the given information.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.cookies.getAll(
   details                // object
 )

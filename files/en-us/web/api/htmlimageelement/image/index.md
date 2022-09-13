@@ -14,6 +14,7 @@ tags:
   - img
 browser-compat: api.HTMLImageElement.Image
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Image()`**
@@ -25,7 +26,7 @@ equivalent to {{DOMxRef("Document.createElement()",
 
 ## Syntax
 
-```js
+```js-nolint
 new Image()
 new Image(width)
 new Image(width, height)

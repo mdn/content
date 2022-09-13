@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.AudioTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrackList")}}**

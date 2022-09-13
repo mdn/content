@@ -13,6 +13,7 @@ tags:
   - abort
 browser-compat: api.IDBTransaction.abort
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`abort()`** method of the {{domxref("IDBTransaction")}}
@@ -26,7 +27,7 @@ their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

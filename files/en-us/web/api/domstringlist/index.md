@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.DOMStringList
 ---
+
 {{ APIRef("DOM") }}
 
 A type returned by some APIs which contains a list of [DOMString](/en-US/docs/Web/API/DOMString) (strings).

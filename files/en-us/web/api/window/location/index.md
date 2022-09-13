@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.location
 ---
+
 {{APIRef}}
 
 The **`Window.location`** read-only property returns a
@@ -111,10 +112,10 @@ taken by the server, the current document is reloaded with the modified search s
     function showBookmark(bookmark, useHash) {
       if (arguments.length === 1 || useHash) {
         location.hash = bookmark;
-        return; 
+        return;
       }
       const bookmarkElement = document.querySelector(bookmark);
-      if (bookmarkElement) { 
+      if (bookmarkElement) {
         showNode(bookmarkElement);
       }
     }
@@ -176,8 +177,8 @@ const showBookmark = (() => {
 
   function _next() {
     if (_itFrame > frames) {
-      clearInterval(_scrollId); 
-      _scrollId = -1; 
+      clearInterval(_scrollId);
+      _scrollId = -1;
       return;
     }
     _isBot = true;

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupPrefix()`** method of the {{domxref("Node")}} interface
@@ -16,8 +17,8 @@ When multiple prefixes are possible, the first prefix is returned.
 
 ## Syntax
 
-```js
-lookupPrefix(namespace);
+```js-nolint
+lookupPrefix(namespace)
 ```
 
 ### Parameters

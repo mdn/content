@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CX
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCXAttribute
 ---
+
 {{SVGRef}}
 
 The **`cx`** attribute define the x-axis coordinate of a center point.
@@ -21,7 +22,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -106,10 +111,14 @@ For {{SVGElement('radialGradient')}}, `cx` defines the x-axis coordinate of the 
   </tbody>
 </table>
 
-#### Example
+### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

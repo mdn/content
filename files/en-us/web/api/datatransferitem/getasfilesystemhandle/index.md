@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.DataTransferItem.getAsFileSystemHandle
 ---
+
 {{securecontext_header}}{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}
 
 The **`getAsFileSystemHandle()`** method of the
@@ -20,7 +21,7 @@ dragged item is a directory.
 
 ## Syntax
 
-```js
+```js-nolint
 getAsFileSystemHandle()
 ```
 

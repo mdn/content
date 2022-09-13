@@ -15,6 +15,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceTransport`** interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.

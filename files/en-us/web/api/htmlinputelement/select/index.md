@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.select()`** method selects all the text
@@ -19,7 +20,7 @@ that includes a text field.
 
 ## Syntax
 
-```js
+```js-nolint
 select()
 ```
 

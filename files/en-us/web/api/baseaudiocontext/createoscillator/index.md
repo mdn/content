@@ -12,6 +12,7 @@ tags:
   - createOscillator
 browser-compat: api.BaseAudioContext.createOscillator
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createOscillator()` method of the {{domxref("BaseAudioContext")}}
@@ -24,7 +25,7 @@ waveform. It basically generates a constant tone.
 
 ## Syntax
 
-```js
+```js-nolint
 createOscillator()
 ```
 

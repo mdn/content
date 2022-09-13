@@ -11,6 +11,7 @@ tags:
   - locks
 browser-compat: api.Navigator.locks
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`locks`** read-only property of

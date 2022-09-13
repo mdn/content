@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
+
 {{JSRef}}
 
 The `unregister()` method unregisters a target object from a
@@ -16,8 +17,8 @@ The `unregister()` method unregisters a target object from a
 
 ## Syntax
 
-```js
-unregister(unregisterToken);
+```js-nolint
+unregister(unregisterToken)
 ```
 
 ### Parameters

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.RadioNodeList.value
 ---
+
 {{ APIRef("HTML DOM") }}
 
 If the underlying element collection contains radio buttons, the
@@ -23,9 +24,9 @@ does not contain any radio buttons or none of the radio buttons in the collectio
 
 ## Syntax
 
-```js
-value = radioNodeList.value;
-radioNodeList.value = string;
+```js-nolint
+value = radioNodeList.value
+radioNodeList.value = string
 ```
 
 ## Example

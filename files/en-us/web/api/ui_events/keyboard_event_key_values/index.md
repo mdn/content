@@ -21,6 +21,7 @@ tags:
   - keyboard
   - keys
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 The tables below list the standard values for the [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key) property, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
@@ -1112,7 +1113,7 @@ Keys used when using an Input Method Editor (IME) to input text which can't read
 
 Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.
 
-#### Common IME keys
+### Common IME keys
 
 <table class="no-markdown">
   <thead>
@@ -1629,7 +1630,7 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{domxref("Element/compositionupdate_event", "compositionupdate")}}} event's {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{domxref("Element/compositionupdate_event", "compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
 

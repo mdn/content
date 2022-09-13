@@ -13,6 +13,7 @@ tags:
   - numberingSystems
 browser-compat: javascript.builtins.Intl.Locale.numberingSystems
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.numberingSystems`** property is an accessor property that returns one or more unique numbering system identifiers according to the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) used by the `Locale`.

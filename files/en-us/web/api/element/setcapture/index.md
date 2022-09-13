@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Element.setCapture
 ---
+
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
@@ -24,7 +25,7 @@ to this element until the mouse button is released or {{
 
 ## Syntax
 
-```js
+```js-nolint
 setCapture(retargetToElement)
 ```
 

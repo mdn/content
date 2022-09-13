@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.pattern.patternUnits
 ---
+
 {{SVGRef}}
 
 The **`patternUnits`** attribute indicates which coordinate system to use for the geometry properties of the {{ SVGElement("pattern") }} element.
@@ -17,7 +18,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

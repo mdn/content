@@ -12,6 +12,7 @@ tags:
   - removeCache
 browser-compat: webextensions.api.browsingData.removeCache
 ---
+
 {{AddonSidebar()}}
 
 Clears the browser's cache.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeCache(
   removalOptions            // RemovalOptions object
 )

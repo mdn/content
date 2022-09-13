@@ -11,6 +11,7 @@ tags:
   - setTargetAtTime
 browser-compat: api.AudioParam.setTargetAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setTargetAtTime()` method of the
@@ -20,7 +21,7 @@ envelopes.
 
 ## Syntax
 
-```js
+```js-nolint
 setTargetAtTime(target, startTime, timeConstant)
 ```
 

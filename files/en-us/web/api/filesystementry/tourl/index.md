@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.toURL
 ---
+
 {{APIRef("File and Directory Entry API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
@@ -24,7 +25,7 @@ the value of `src` and `href` attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 toURL()
 toURL(mimeType)
 ```

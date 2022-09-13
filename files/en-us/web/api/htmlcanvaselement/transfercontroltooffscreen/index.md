@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.transferControlToOffscreen
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The
@@ -20,7 +21,7 @@ thread or on a worker.
 
 ## Syntax
 
-```js
+```js-nolint
 transferControlToOffscreen()
 ```
 

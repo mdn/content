@@ -9,6 +9,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
 
 The **`Window.captureEvents()`** method registers the window to
@@ -16,7 +17,7 @@ capture all events of the specified type.
 
 ## Syntax
 
-```js
+```js-nolint
 captureEvents(eventType)
 ```
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Element.compositionupdate_event
 ---
+
 {{APIRef}}
 
 The **`compositionupdate`** event is fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
@@ -67,7 +68,7 @@ inputElement.addEventListener('compositionupdate', (event) => {
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -84,12 +85,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {

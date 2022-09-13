@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.saturate
 ---
+
 {{CSSRef}}
 
 The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.

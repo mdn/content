@@ -10,6 +10,7 @@ tags:
   - getConfiguration
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getConfiguration()`** method returns
@@ -25,7 +26,7 @@ identity information.
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 

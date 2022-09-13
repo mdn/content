@@ -10,6 +10,7 @@ tags:
   - polyfill
 browser-compat: javascript.builtins.Date.toISOString
 ---
+
 {{JSRef}}
 
 The **`toISOString()`** method returns a string in _simplified_ extended ISO format ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)), which is always 24 or 27 characters long (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectively). The timezone is always zero UTC offset, as denoted by the suffix `Z`.
@@ -18,7 +19,7 @@ The **`toISOString()`** method returns a string in _simplified_ extended ISO for
 
 ## Syntax
 
-```js
+```js-nolint
 toISOString()
 ```
 

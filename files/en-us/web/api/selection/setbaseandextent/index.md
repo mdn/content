@@ -10,6 +10,7 @@ tags:
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
@@ -18,8 +19,8 @@ parts of two specified DOM nodes, and any content located between them.
 
 ## Syntax
 
-```js
-setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+```js-nolint
+setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 ```
 
 ### Parameters

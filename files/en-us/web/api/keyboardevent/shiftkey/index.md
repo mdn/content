@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.shiftKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.shiftKey`** read-only property is a
@@ -26,7 +27,7 @@ A boolean value.
 ```html
 <html lang="en-US">
 <head>
-<meta charset="utf-8"> 
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>shiftKey example</title>
 

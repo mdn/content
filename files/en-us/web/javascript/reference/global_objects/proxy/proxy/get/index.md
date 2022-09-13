@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.get
 ---
+
 {{JSRef}}
 
 The **`handler.get()`** method is a trap for getting a property
@@ -17,7 +18,7 @@ value.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   get(target, property, receiver) {
   }
@@ -32,7 +33,7 @@ is bound to the handler.
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}}  of the property to get.
+  - : The name or {{jsxref("Symbol")}} of the property to get.
 - `receiver`
   - : Either the proxy or an object that inherits from the proxy.
 

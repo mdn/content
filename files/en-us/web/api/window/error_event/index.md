@@ -9,6 +9,7 @@ tags:
   - Window
 browser-compat: api.Window.error_event
 ---
+
 {{APIRef}}
 
 The `error` event is fired on a {{domxref("Window")}} object when a resource failed to load or couldn't be used — for example if a script has an execution error.
@@ -70,13 +71,14 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 button {
   height: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 img {

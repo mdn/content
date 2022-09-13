@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.endQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.endQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) marks the end of a given query
@@ -17,7 +18,7 @@ target.
 
 ## Syntax
 
-```js
+```js-nolint
 endQuery(target)
 ```
 

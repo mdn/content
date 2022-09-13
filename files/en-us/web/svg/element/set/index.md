@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.set
 ---
+
 {{SVGRef}}
 
 The SVG **`<set>`** element provides a simple means of just setting the value of an attribute for a specified duration.
@@ -18,7 +19,11 @@ It supports all attribute types, including those that cannot reasonably be inter
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

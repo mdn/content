@@ -16,6 +16,7 @@ tags:
   - height
 browser-compat: api.MediaTrackSettings.height
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`height`**

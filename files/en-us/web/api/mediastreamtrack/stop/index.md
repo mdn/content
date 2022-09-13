@@ -15,13 +15,14 @@ tags:
   - stop
 browser-compat: api.MediaStreamTrack.stop
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.stop()`** method stops the track.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

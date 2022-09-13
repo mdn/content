@@ -12,6 +12,7 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient.focus
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`focus()`** method of the {{domxref("WindowClient")}}
@@ -21,7 +22,7 @@ interface gives user input focus to the current client and returns a
 
 ## Syntax
 
-```js
+```js-nolint
 focus()
 ```
 

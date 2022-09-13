@@ -8,6 +8,7 @@ tags:
   - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
+
 {{JSRef}}
 
 The **`URIError()`** constructor creates an error when a global
@@ -15,7 +16,7 @@ URI handling function was used in a wrong way.
 
 ## Syntax
 
-```js
+```js-nolint
 new URIError()
 new URIError(message)
 new URIError(message, options)
@@ -39,7 +40,7 @@ URIError(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception.
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}

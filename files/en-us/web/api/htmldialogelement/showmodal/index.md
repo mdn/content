@@ -11,6 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the
@@ -21,7 +22,7 @@ the content outside it is rendered inert.
 
 ## Syntax
 
-```js
+```js-nolint
 showModal()
 ```
 
@@ -35,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element).
 
 ## Examples

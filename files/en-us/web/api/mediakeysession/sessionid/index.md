@@ -12,6 +12,7 @@ tags:
   - sessionId
 browser-compat: api.MediaKeySession.sessionId
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeySession.sessionId`** is a read-only property

@@ -11,6 +11,7 @@ tags:
   - has()
 browser-compat: api.MediaKeyStatusMap.has
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`has`** property of the
@@ -19,7 +20,7 @@ whether a value has been associated with the given key.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

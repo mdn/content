@@ -8,6 +8,7 @@ tags:
   - Reference
   - Selectors
 ---
+
 {{CSSRef}}
 
 When a URL points at a specific piece of a document, it can be difficult for the user to notice. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience.
@@ -19,13 +20,17 @@ The [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}} is
 Suppose you wish to style any `h2` element that is the target of a URL, but do not want any other kind of element to get a target style. This is simple enough:
 
 ```css
-h2:target { outline: 2px solid; }
+h2:target {
+  outline: 2px solid;
+}
 ```
 
 It's also possible to create styles that are specific to a particular fragment of the document. This is done using the same identifying value that is found in the URI. Thus, to add a background color to the `#reference` fragment, we would write:
 
 ```css
-#reference:target { background-color: yellow; }
+#reference:target {
+  background-color: yellow;
+}
 ```
 
 ## Targeting all elements
@@ -33,7 +38,9 @@ It's also possible to create styles that are specific to a particular fragment o
 If the intent is to create a "blanket" style that will apply to all targeted elements, then the universal selector comes in handy:
 
 ```css
-:target { color: red; }
+:target {
+  color: red;
+}
 ```
 
 ## Example

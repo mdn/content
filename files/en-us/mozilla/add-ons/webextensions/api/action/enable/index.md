@@ -13,6 +13,7 @@ tags:
   - action
 browser-compat: webextensions.api.action.enable
 ---
+
 {{AddonSidebar()}}
 
 Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
@@ -21,7 +22,7 @@ Enables the browser action for a tab. By default, browser actions are enabled fo
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.enable(
   tabId // optional integer
 )

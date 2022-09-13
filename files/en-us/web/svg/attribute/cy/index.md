@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CY
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute
 ---
+
 {{SVGRef}}
 
 The **`cy`** attribute define the y-axis coordinate of a center point.
@@ -21,7 +22,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -130,10 +135,14 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
   </tbody>
 </table>
 
-#### Example
+### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

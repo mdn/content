@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.previousElementSibling`**

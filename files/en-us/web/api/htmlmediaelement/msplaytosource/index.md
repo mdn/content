@@ -7,19 +7,20 @@ tags:
   - Non-standard
   - Property
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
 
 **`msPlayToSource`** is a read-only property which gets the
-source associated with the media element for use by the [`PlayToManager`](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto.playtomanager?view=winrt-22000).
+source associated with the media element for use by the [`PlayToManager`](https://docs.microsoft.com/uwp/api/windows.media.playto.playtomanager?view=winrt-22000).
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Value
 
 _PlayTo_ enables an app can connect local playback/display for
-audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto?view=winrt-22000)
+audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/uwp/api/windows.media.playto?view=winrt-22000)
 APIs.
 
 **`msPlayToSource`** is used in the

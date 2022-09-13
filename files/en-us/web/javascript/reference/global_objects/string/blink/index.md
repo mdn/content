@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.blink
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`blink()`** method creates a {{HTMLElement("blink")}}
@@ -23,7 +24,7 @@ HTML element that causes a string to blink.
 
 ## Syntax
 
-```js
+```js-nolint
 blink()
 ```
 

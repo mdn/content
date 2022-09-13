@@ -6,6 +6,7 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
 In this article, we lay out which software components you need when you're editing, uploading, or viewing a website.
 
 <table class="standard-table">

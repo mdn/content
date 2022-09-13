@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.subarray
 ---
+
 {{JSRef}}
 
 The **`subarray()`** method returns a new _TypedArray_
@@ -22,7 +23,7 @@ offset is **exclusive**. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 subarray()
 subarray(begin)
 subarray(begin, end)

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Element.compositionend_event
 ---
+
 {{APIRef}}
 
 The **`compositionend`** event is fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
@@ -67,7 +68,7 @@ inputElement.addEventListener('compositionend', (event) => {
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -84,12 +85,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {

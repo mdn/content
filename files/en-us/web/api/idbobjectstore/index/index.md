@@ -14,6 +14,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.index
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`index()`** method of the {{domxref("IDBObjectStore")}}
@@ -24,7 +25,7 @@ to, for example, return a series of records sorted by that index using a cursor.
 
 ## Syntax
 
-```js
+```js-nolint
 index(name)
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 The `readAsDataURL` method is used to read the contents of the specified
@@ -28,7 +29,7 @@ file's data as a base64 encoded string.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsDataURL(blob)
 ```
 

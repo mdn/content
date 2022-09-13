@@ -9,6 +9,7 @@ spec-urls:
   - https://drafts.csswg.org/css-transforms/#svg-transform
   - https://svgwg.org/svg2-draft/coords.html#TransformProperty
 ---
+
 {{SVGRef}}
 
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
@@ -20,7 +21,11 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -79,7 +84,11 @@ The `matrix(<a> <b> <c> <d> <e> <f>)` transform function specifies a transformat
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -131,7 +140,11 @@ ynew = yold + <y>
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -162,7 +175,11 @@ The `scale(<x> [<y>])` transform function specifies a scale operation by `x` and
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -193,7 +210,11 @@ The `rotate(<a> [<x> <y>])` transform function specifies a rotation by `a` degre
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -219,7 +240,11 @@ The `skewX(<a>)` transform function specifies a skew transformation along the x 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -240,7 +265,11 @@ The `skewY(<a>)` transform function specifies a skew transformation along the y 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: svg.attributes.presentation.clip
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`clip`** attribute is a presentation attribute defining the visible region of an element.
@@ -25,7 +26,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

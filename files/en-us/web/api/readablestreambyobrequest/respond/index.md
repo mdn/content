@@ -11,6 +11,7 @@ tags:
   - respond
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
+
 {{APIRef("Streams")}}
 
 The **`respond()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface is used to signal to the associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) that the specified number of bytes were written into the {{domxref("ReadableStreamBYOBRequest.view")}}.
@@ -19,7 +20,7 @@ After this method is called, the {{domxref("ReadableStreamBYOBRequest/view","vie
 
 ## Syntax
 
-```js
+```js-nolint
 respond(bytesWritten)
 ```
 

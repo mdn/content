@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet.forEach
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface executes a provided function for each value in the `CustomStateSet` object.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

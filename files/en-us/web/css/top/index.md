@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.top
 ---
+
 {{CSSRef}}
 
 The **`top`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.

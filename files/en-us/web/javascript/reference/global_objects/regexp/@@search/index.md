@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@search
 ---
+
 {{JSRef}}
 
 The **`[@@search]()`** method of a regular expression specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
@@ -19,7 +20,7 @@ The **`[@@search]()`** method of a regular expression specifies how [`String.pro
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.search](str)
 ```
 

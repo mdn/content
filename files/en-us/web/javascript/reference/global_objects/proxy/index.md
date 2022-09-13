@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
+
 {{JSRef}}
 
 The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
@@ -274,11 +275,11 @@ const Boy = extend(Person, function (name, age) {
 
 Boy.prototype.gender = 'M';
 
-const Peter = new Boy('Peter', 13);
+const peter = new Boy('Peter', 13);
 
-console.log(Peter.gender);  // "M"
-console.log(Peter.name);    // "Peter"
-console.log(Peter.age);     // 13
+console.log(peter.gender);  // "M"
+console.log(peter.name);    // "Peter"
+console.log(peter.age);     // 13
 ```
 
 ### Manipulating DOM nodes
@@ -391,7 +392,7 @@ console.log(products.latestBrowser);
 
 ### Finding an array item object by its property
 
-This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.
+This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement/rows", "table.rows")}}.
 
 ```js
 const products = new Proxy([

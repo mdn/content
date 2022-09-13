@@ -5,15 +5,16 @@ tags:
   - Guide
   - Intermediate
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of","for...of")}} loops.
 
 For details, see also:
 
-- {{jsxref("Iteration_protocols")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/for...of","for...of")}}
 - {{jsxref("Statements/function*","function*")}} and {{jsxref("Generator")}}
 - {{jsxref("Operators/yield","yield")}} and {{jsxref("Operators/yield*","yield*")}}
@@ -231,7 +232,7 @@ console.log(sequence.next().value);     // 2
 
 You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.
 
-If the exception is not caught from within the generator,  it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
+If the exception is not caught from within the generator, it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
 
 Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.
 

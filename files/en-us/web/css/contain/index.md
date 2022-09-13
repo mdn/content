@@ -14,6 +14,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.contain
 ---
+
 {{CSSRef}}
 
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree.
@@ -242,7 +243,7 @@ CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/co
 
 ```css
 body {
-  quotes: "«" "»" "‹" "›"
+  quotes: "«" "»" "‹" "›";
 }
 .open-quote:before {
   content: open-quote;

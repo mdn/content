@@ -10,6 +10,7 @@ tags:
   - scrollbar-color
 browser-compat: css.properties.scrollbar-color
 ---
+
 {{CSSRef}}
 
 The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the scrollbar track and thumb.
@@ -25,7 +26,7 @@ The **thumb** refers to the moving part of the scrollbar, which usually floats o
 scrollbar-color: auto;
 
 /* <color> values */
-scrollbar-color: rebeccapurple green;   /* Two valid colors.
+scrollbar-color: rebeccapurple green; /* Two valid colors.
 The first applies to the thumb of the scrollbar, the second to the track. */
 
 /* Global values */

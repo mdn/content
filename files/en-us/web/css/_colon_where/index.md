@@ -14,6 +14,7 @@ tags:
   - Web
 browser-compat: css.selectors.where
 ---
+
 {{CSSRef}}
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
@@ -52,7 +53,8 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
 ```css
-:valid, :unsupported {
+:valid,
+:unsupported {
   /* … */
 }
 ```

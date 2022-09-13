@@ -10,6 +10,7 @@ tags:
   - indexOf
 browser-compat: javascript.builtins.String.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
@@ -18,7 +19,7 @@ The **`indexOf()`** method, given one argument: a substring to search for, searc
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchString)
 indexOf(searchString, position)
 ```
@@ -27,7 +28,9 @@ indexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to `"undefined"`. Therefore,`'undefined'.indexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
+  - : Substring to search for, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+
+    If the method is called with no arguments, `searchString` is coerced to `"undefined"`. Therefore,`"undefined".indexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `"undefine".indexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 

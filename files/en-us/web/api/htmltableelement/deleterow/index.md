@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteRow()`** method removes a
@@ -18,7 +19,7 @@ specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRow(index)
 ```
 

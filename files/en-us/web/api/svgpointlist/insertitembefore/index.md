@@ -10,13 +10,14 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.insertItemBefore
 ---
+
 {{APIRef("SVG")}}
 
 The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface inserts a {{domxref("SVGPoint", "point")}} before another item in the list.
 
 ## Syntax
 
-```js
+```js-nolint
 insertItemBefore(obj, index)
 ```
 

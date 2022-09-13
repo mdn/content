@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.order
 ---
+
 {{SVGRef}}
 
 The **`order`** attribute indicates the size of the matrix to be used by a {{SVGElement("feConvolveMatrix")}} element.
@@ -18,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

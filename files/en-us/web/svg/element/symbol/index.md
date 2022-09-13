@@ -6,6 +6,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.symbol
 ---
+
 {{SVGRef}}
 
 The **`<symbol>`** element is used to define graphical template objects which can be instantiated by a {{SVGElement("use")}} element.
@@ -15,7 +16,11 @@ The use of `<symbol>` elements for graphics that are used multiple times in the 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

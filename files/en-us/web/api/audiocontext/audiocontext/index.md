@@ -16,6 +16,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioContext.AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioContext()`** constructor
@@ -25,9 +26,9 @@ graph, built from audio modules linked together, each represented by an
 
 ## Syntax
 
-```js
-new AudioContext();
-new AudioContext(options);
+```js-nolint
+new AudioContext()
+new AudioContext(options)
 ```
 
 ### Parameters

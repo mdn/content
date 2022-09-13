@@ -13,6 +13,7 @@ spec-urls:
   - https://drafts.csswg.org/selectors/
   - https://drafts.csswg.org/css-ui/
 ---
+
 {{CSSRef}}
 
 A [CSS](/en-US/docs/Web/CSS) **_pseudo-class_** is a keyword added to a selector that specifies a special state of the selected element(s). For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.
@@ -135,9 +136,9 @@ These pseudo-classes relate to the location of an element within the document tr
 - {{CSSxRef(":empty")}}
   - : Represents an element with no children other than white-space characters.
 - {{CSSxRef(":nth-child")}}
-  - : Uses A*n*+B notation to select elements from a list of sibling elements.
+  - : Uses `An+B` notation to select elements from a list of sibling elements.
 - {{CSSxRef(":nth-last-child")}}
-  - : Uses A*n*+B notation to select elements from a list of sibling elements, counting backwards from the end of the list.
+  - : Uses `An+B` notation to select elements from a list of sibling elements, counting backwards from the end of the list.
 - {{CSSxRef(":first-child")}}
   - : Matches an element that is the first of its siblings.
 - {{CSSxRef(":last-child")}}
@@ -145,9 +146,9 @@ These pseudo-classes relate to the location of an element within the document tr
 - {{CSSxRef(":only-child")}}
   - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
 - {{CSSxRef(":nth-of-type")}}
-  - : Uses A*n*+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
+  - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
 - {{CSSxRef(":nth-last-of-type")}}
-  - : Uses A*n*+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.
+  - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.
 - {{CSSxRef(":first-of-type")}}
   - : Matches an element that is the first of its siblings, and also matches a certain type selector.
 - {{CSSxRef(":last-of-type")}}

@@ -11,6 +11,7 @@ tags:
   - item
 browser-compat: api.HTMLCollection.item
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLCollection")}} method `item()`
@@ -23,7 +24,7 @@ returns the node located at the specified offset into the collection.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.first-child
 ---
+
 {{CSSRef}}
 
 The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element among a group of sibling elements.

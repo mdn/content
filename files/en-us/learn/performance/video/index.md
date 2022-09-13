@@ -8,6 +8,7 @@ tags:
   - Video
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
 
 As we learned in the previous section, media, namely images and video, account for over 70% of the bytes downloaded for the average website. We have already taken a look at optimizing images. This article looks at optimizing video to improve web performance.
@@ -73,7 +74,7 @@ See [CanIUse.com](https://caniuse.com/#search=video) for current browser support
 
 ### Video autoplay
 
-To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline.`
+To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline`.
 
 ```html
 <video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">

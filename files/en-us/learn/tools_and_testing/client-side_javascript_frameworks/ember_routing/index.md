@@ -10,6 +10,7 @@ tags:
   - Routing
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -82,7 +83,7 @@ Router.map(function() {
 
 The highlighted lines were added when the 2nd and 3rd commands above were run.
 
-`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured.  It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
+`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured. It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
 
 Creating the "Index" route did not add a route definition line to `router.js`, because like with URL navigation and JavaScript module loading, "Index" is a special word that indicates the default route to render, load, etc.
 

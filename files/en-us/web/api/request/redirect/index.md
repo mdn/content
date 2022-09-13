@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.redirect
 ---
+
 {{APIRef("Fetch")}}
 
 The **`redirect`** read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.

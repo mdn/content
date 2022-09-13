@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.showPicker()`** method displays the browser picker for an `input` element.
@@ -23,7 +24,7 @@ More generally, this method should ideally display the picker for any input elem
 
 ## Syntax
 
-```js
+```js-nolint
 showPicker()
 ```
 

@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{DOMxRef("XMLHttpRequest")}}, but the new API provides a more powerful and flexible feature set.
@@ -46,7 +47,7 @@ The `fetch` specification differs from `jQuery.ajax()` in three main ways:
 
 ### Aborting a fetch
 
-Browsers have started to add experimental support for the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (aka The Abort API), which allow operations like Fetch and XHR to be aborted if they have not already completed. See the interface pages for more details.
+To abort incomplete `fetch()`, and even `XMLHttpRequest`, operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
 
 ## Fetch Interfaces
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.EventTarget.EventTarget
 ---
+
 {{APIRef("DOM")}}
 
 The **`EventTarget()`** constructor creates a new {{domxref("EventTarget")}} object instance.
@@ -15,8 +16,8 @@ The **`EventTarget()`** constructor creates a new {{domxref("EventTarget")}} obj
 
 ## Syntax
 
-```js
-new EventTarget();
+```js-nolint
+new EventTarget()
 ```
 
 ### Parameters

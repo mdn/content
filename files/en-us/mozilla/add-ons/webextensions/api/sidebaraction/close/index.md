@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.close
 ---
+
 {{AddonSidebar()}}
 
 Closes the sidebar in the active window, if it is the extension's own sidebar.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.close()
 ```
 

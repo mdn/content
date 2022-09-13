@@ -14,6 +14,7 @@ tags:
   - text entry
   - text input
 ---
+
 > **Warning:** As the [`execCommand()` spec](https://w3c.github.io/editing/docs/execCommand/) warns, its features "are not implemented consistently or fully by user agents", and in addition, it is marked as deprecated on the [`Document.execCommand()`](/en-US/docs/Web/API/Document/execCommand) reference page. Therefore, much of the content on this page cannot be trusted for use in production code.
 
 In HTML, any element can be editable. By using some JavaScript event handlers, you can transform your web page into a full and fast rich text editor. This article provides some information about this functionality.
@@ -56,7 +57,7 @@ If you want to use a different paragraph separator, the above browsers all suppo
 document.execCommand("defaultParagraphSeparator", false, "p");
 ```
 
-Additionally, Firefox supports the *non-standard* argument, `br`, for `defaultParagraphSeparator` since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:
+Additionally, Firefox supports the _non-standard_ argument, `br`, for `defaultParagraphSeparator` since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:
 
 ```js
 document.execCommand("defaultParagraphSeparator", false, "br");
@@ -79,7 +80,7 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Rich Text Editor</title>
     <script>
@@ -88,13 +89,13 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
       function initDoc() {
         doc = document.getElementById("textBox");
         defTxt = doc.innerHTML;
-        if (document.compForm.switchMode.checked) { 
+        if (document.compForm.switchMode.checked) {
           setDocMode(true);
         }
       }
 
       function formatDoc(cmd, value) {
-        if (validateMode()) { 
+        if (validateMode()) {
           document.execCommand(cmd, false, value);
           doc.focus();
         }

@@ -14,6 +14,7 @@ tags:
   - getusermedia
   - webcam
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article shows how to use [`navigator.mediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
@@ -258,44 +259,44 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 #video {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  width: 320px;
+  height: 240px;
 }
 
 #photo {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  width: 320px;
+  height: 240px;
 }
 
 #canvas {
-  display:none;
+  display: none;
 }
 
 .camera {
   width: 340px;
-  display:inline-block;
+  display: inline-block;
 }
 
 .output {
   width: 340px;
-  display:inline-block;
+  display: inline-block;
   vertical-align: top;
 }
 
 #startbutton {
-  display:block;
-  position:relative;
-  margin-left:auto;
-  margin-right:auto;
-  bottom:32px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 32px;
   background-color: rgba(0, 150, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   font-family: "Lucida Grande", "Arial", sans-serif;
-  color: rgba(255, 255, 255, 1.0);
+  color: rgba(255, 255, 255, 1);
 }
 
 .contentarea {

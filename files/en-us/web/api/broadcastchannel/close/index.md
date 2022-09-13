@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.close
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel.close()`** terminates the connection to
@@ -20,8 +21,8 @@ that this channel is not needed anymore.
 
 ## Syntax
 
-```js
-channel.close();
+```js-nolint
+channel.close()
 ```
 
 ## Example

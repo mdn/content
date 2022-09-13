@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.WindowType
 ---
+
 {{AddonSidebar()}}
 
 The type of browser window this is.

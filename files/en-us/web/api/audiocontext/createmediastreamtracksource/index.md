@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioContext.createMediaStreamTrackSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`createMediaStreamTrackSource()`** method of the {{
@@ -33,7 +34,7 @@ first, lexicographically (alphabetically).
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamTrackSource(track)
 ```
 

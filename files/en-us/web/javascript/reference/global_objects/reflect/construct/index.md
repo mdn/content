@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.construct
 ---
+
 {{JSRef}}
 
 The static **`Reflect.construct()`** method acts like the
@@ -21,7 +22,7 @@ different prototype.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.construct(target, argumentsList)
 Reflect.construct(target, argumentsList, newTarget)
 ```

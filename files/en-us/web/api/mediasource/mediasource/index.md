@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.MediaSource.MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`MediaSource()`** constructor of the
@@ -21,7 +22,7 @@ The **`MediaSource()`** constructor of the
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaSource()
 ```
 

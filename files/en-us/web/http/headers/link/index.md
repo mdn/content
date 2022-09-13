@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: http.headers.Link
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Link`** entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.

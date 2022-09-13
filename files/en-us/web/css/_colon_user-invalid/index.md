@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: css.selectors.user-invalid
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`:user-invalid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value isn't valid based on their [validation constraints](/en-US/docs/Learn/Forms#constraint_validation), after the user has interacted with it.
@@ -45,7 +46,7 @@ input:user-invalid {
 }
 
 input:user-invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 ```

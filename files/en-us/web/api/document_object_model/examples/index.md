@@ -6,6 +6,7 @@ tags:
   - DOM
   - DOM Reference
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.
@@ -148,9 +149,17 @@ for (let i = 0; i < ss.length; i++) {
 For a document with a single stylesheet in which the following three rules are defined:
 
 ```css
-body { background-color: darkblue; }
-p { font-family: Arial; font-size: 10pt; margin-left: .125in; }
-#lumpy { display: none; }
+body {
+  background-color: darkblue;
+}
+p {
+  font-family: Arial;
+  font-size: 10pt;
+  margin-left: 0.125in;
+}
+#lumpy {
+  display: none;
+}
 ```
 
 This script outputs the following:
@@ -179,17 +188,17 @@ However, stopEvent also calls an event object method, {{domxref("event.stopPropa
 </style>
 
 <script>
-function stopEvent(ev) {
-  c2 = document.getElementById("c2");
-  c2.innerHTML = "hello";
+function stopEvent(event) {
+  const c2 = document.getElementById("c2");
+  c2.textContent = "hello";
 
   // this ought to keep t-daddy from getting the click.
-  ev.stopPropagation();
+  event.stopPropagation();
   alert("event propagation halted.");
 }
 
 function load() {
-  elem = document.getElementById("tbl1");
+  const elem = document.getElementById("tbl1");
   elem.addEventListener("click", stopEvent, false);
 }
 </script>
@@ -273,7 +282,7 @@ function cStyles() {
 
 ## Example 7: Displaying Event Object Properties
 
-This example uses DOM methods to display all the properties of the {{domxref("Window.load_event", "onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.
+This example uses DOM methods to display all the properties of the {{domxref("Window.load_event", "onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop to iterate over the properties of an object to get their values.
 
 The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org) lists the standard properties, however many browsers have extended these greatly.
 

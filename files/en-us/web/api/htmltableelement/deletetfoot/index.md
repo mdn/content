@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteTFoot()`** method removes the
@@ -18,7 +19,7 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTFoot()
 ```
 

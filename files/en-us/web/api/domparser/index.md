@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMParser`** interface provides

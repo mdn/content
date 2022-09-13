@@ -12,6 +12,7 @@ tags:
   - expiration
 browser-compat: api.MediaKeySession.expiration
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeySession.expiration`** read-only property returns

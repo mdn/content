@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.collapse
 ---
+
 {{APIRef("DOM")}}
 
 The **`Range.collapse()`** method collapses the
@@ -20,7 +21,7 @@ see the {{domxref("Range.collapsed")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 collapse()
 collapse(toStart)
 ```

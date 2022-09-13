@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: css.selectors.focus-visible
 ---
+
 {{CSSRef}}
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
@@ -42,7 +43,8 @@ In this example, the `:focus-visible` selector uses the UA's behavior to determi
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 

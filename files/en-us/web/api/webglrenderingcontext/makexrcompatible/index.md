@@ -25,6 +25,7 @@ tags:
   - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} method
@@ -40,7 +41,7 @@ standard 2D display but can then be transitioned to a 3D immersion system.
 
 ## Syntax
 
-```js
+```js-nolint
 makeXRCompatible()
 ```
 

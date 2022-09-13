@@ -8,6 +8,7 @@ tags:
   - SVG Attribute
 spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`attributeType`** attribute specifies the namespace in which the target attribute and its associated values are defined.
@@ -22,7 +23,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

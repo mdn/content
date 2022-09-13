@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.x-height
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`x-height`** attribute indicates the height of lowercase glyphs in the font within the font coordinate system.

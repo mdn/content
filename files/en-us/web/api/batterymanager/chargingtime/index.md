@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.chargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged. If the battery is currently

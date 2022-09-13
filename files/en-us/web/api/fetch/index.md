@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 The global **`fetch()`** method starts the process of fetching a
@@ -41,7 +42,7 @@ rather than the directive of the resources it's retrieving.
 
 ## Syntax
 
-```js
+```js-nolint
 fetch(resource)
 fetch(resource, options)
 ```

@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletProcessor.port
 ---
+
 {{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the

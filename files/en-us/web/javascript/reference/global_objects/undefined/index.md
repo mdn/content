@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive
@@ -19,7 +20,7 @@ value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 
 ## Syntax
 
-```js
+```js-nolint
 undefined
 ```
 

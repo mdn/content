@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.isDefaultNamespace
 ---
+
 {{APIRef("DOM")}}
 
 The **`isDefaultNamespace()`** method of the {{domxref("Node")}} interface
@@ -19,8 +20,8 @@ and `false` if not.
 
 ## Syntax
 
-```js
-isDefaultNamespace(namespaceURI);
+```js-nolint
+isDefaultNamespace(namespaceURI)
 ```
 
 ### Parameters

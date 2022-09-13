@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentRequest.shippingType
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingType`** read-only property of the

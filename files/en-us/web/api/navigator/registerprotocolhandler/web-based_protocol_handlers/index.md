@@ -7,6 +7,7 @@ tags:
   - HTML
   - Web-Based Protocol Handlers
 ---
+
 ## Background
 
 It's fairly common to find web pages link to resources using non-`http` protocols. An example is the `mailto:` protocol:
@@ -49,7 +50,7 @@ Registering the same protocol handler more than once will pop up a different not
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"> 
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
   <title>Web Protocol Handler Sample - Register</title>
   <script>

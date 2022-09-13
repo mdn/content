@@ -16,6 +16,7 @@ tags:
   - font-family
   - web fonts
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 In the first article of the module, we explored the basic CSS features available for styling fonts and text. In this article we will go further, exploring web fonts in detail. We'll see how to use custom fonts with your web page to allow for more varied, custom text styling.
@@ -150,19 +151,19 @@ To implement these fonts in your demo, follow these steps:
 3. Each of the `url()` functions points to a font file that we want to import into our CSS. We need to make sure the paths to the files are correct, so add `fonts/` to the start of each path (adjust as necessary).
 4. Now you can use these fonts in your font stacks, just like any web safe or default system font. For example:
 
-    ```css
-    @font-face {
-        font-family: 'zantrokeregular';
-        src: url('fonts/zantroke-webfont.woff2') format('woff2'),
-             url('fonts/zantroke-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    ```
+   ```css
+   @font-face {
+     font-family: "zantrokeregular";
+     src: url("fonts/zantroke-webfont.woff2") format("woff2"), url("fonts/zantroke-webfont.woff")
+         format("woff");
+     font-weight: normal;
+     font-style: normal;
+   }
+   ```
 
-    ```css
-    font-family: 'zantrokeregular', serif;
-    ```
+   ```css
+   font-family: "zantrokeregular", serif;
+   ```
 
 You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.
 
@@ -174,7 +175,7 @@ You should end up with a demo page with some nice fonts implemented on them. Bec
 
 Online font services generally store and serve fonts for you so you don't have to worry about writing the `@font-face` code. Instead, you generally just need to insert a simple line or two of code into your site to make everything work. Examples include [Adobe Fonts](https://fonts.adobe.com/) and [Cloud.typography](https://www.typography.com/webfonts). Most of these services are subscription-based, with the notable exception of [Google Fonts](https://fonts.google.com/), a useful free service, especially for rapid testing work and writing demos.
 
-Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
+Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google Fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
 
 1. Go to [Google Fonts](https://fonts.google.com/).
 2. Search for your favorite fonts or use the filters at the top of the page to display the kinds of fonts you want to choose and select a couple of fonts that you like.
@@ -191,9 +192,9 @@ Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This i
 
 ```css
 @font-face {
-  font-family: 'zantrokeregular';
-  src: url('zantroke-webfont.woff2') format('woff2'),
-       url('zantroke-webfont.woff') format('woff');
+  font-family: "zantrokeregular";
+  src: url("zantroke-webfont.woff2") format("woff2"), url("zantroke-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }

@@ -11,13 +11,14 @@ tags:
   - devtools.network
 browser-compat: webextensions.api.devtools.network.onNavigated
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user navigates the inspected window to a new page.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.network.onNavigated.addListener(listener)
 browser.devtools.network.onNavigated.removeListener(listener)
 browser.devtools.network.onNavigated.hasListener(listener)

@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
+
 {{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
@@ -26,7 +27,7 @@ To remove a single file, or an empty directory, you can also use
 
 ## Syntax
 
-```js
+```js-nolint
 removeRecursively(successCallback)
 removeRecursively(successCallback, errorCallback)
 ```

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.src
 ---
+
 {{CSSRef}}
 
 The **`src`** CSS descriptor of the {{cssxref("@font-face")}} rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.

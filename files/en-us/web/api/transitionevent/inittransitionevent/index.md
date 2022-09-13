@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.TransitionEvent.initTransitionEvent
 ---
+
 {{ apiref("CSSOM") }}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`TransitionEvent.initTransitionEvent()`** method
@@ -31,7 +32,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 initTransitionEvent(type, canBubble, cancelable, transitionName, elapsedTime)
 ```
 

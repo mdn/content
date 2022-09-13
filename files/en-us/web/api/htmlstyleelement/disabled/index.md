@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement.disabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
@@ -104,7 +105,7 @@ Before this point the document did not have an associated style, and so the valu
 
 ```js
 //Disable the style
-style.disabled=true; 
+style.disabled=true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).

@@ -14,6 +14,7 @@ tags:
   - Polyfill
 browser-compat: api.setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`setTimeout()`** method sets a timer which executes a function or specified
@@ -21,7 +22,7 @@ piece of code once the timer expires.
 
 ## Syntax
 
-```js
+```js-nolint
 setTimeout(code)
 setTimeout(code, delay)
 
@@ -42,6 +43,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
     recommended** for the same reasons that make using
     {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
+
   - : The time, in milliseconds that the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle.
@@ -405,7 +407,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 

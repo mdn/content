@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: http.headers.Connection
 ---
+
 {{HTTPSidebar}}
 
 The **`Connection`** general header controls whether the

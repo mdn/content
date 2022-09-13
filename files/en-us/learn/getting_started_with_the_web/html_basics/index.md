@@ -8,8 +8,9 @@ tags:
   - HTML
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
@@ -202,21 +203,21 @@ Links are very important — they are what makes the web a web! To add a link, w
 1. Choose some text. We chose the text "Mozilla Manifesto".
 2. Wrap the text in an {{htmlelement("a")}} element, as shown below:
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. Give the {{htmlelement("a")}} element an `href` attribute, as shown below:
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. Fill in the value of this attribute with the web address that you want the link to:
 
-    ```html
-    <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 

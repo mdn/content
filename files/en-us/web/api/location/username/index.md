@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Location.username
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`username`** property of the {{domxref("Location")}}

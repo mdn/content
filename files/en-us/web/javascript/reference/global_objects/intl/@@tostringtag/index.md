@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.@@toStringTag
 ---
+
 {{JSRef}}
 
 The **`Intl[@@toStringTag]`** property has an initial value of
@@ -23,7 +24,7 @@ The **`Intl[@@toStringTag]`** property has an initial value of
 
 ## Syntax
 
-```js
+```js-nolint
 Intl[Symbol.toStringTag]
 ```
 

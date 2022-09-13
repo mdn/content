@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollWidth
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollWidth`** read-only property is a

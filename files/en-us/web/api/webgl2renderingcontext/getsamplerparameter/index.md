@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getSamplerParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getSamplerParameter()`** method
@@ -18,7 +19,7 @@ information of a {{domxref("WebGLSampler")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSamplerParameter(sampler, pname)
 ```
 

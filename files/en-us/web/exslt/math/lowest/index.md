@@ -6,6 +6,7 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `math:lowest()` returns the node in the specified node-set with the lowest value (where the lowest value calculated using [`math:min()`](/en-US/docs/Web/EXSLT/math/min)).

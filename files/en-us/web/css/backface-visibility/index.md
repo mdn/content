@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.backface-visibility
 ---
+
 {{CSSRef}}
 
 The **`backface-visibility`** [CSS](/en-US/docs/Web/CSS) property sets whether the back face of an element is visible when turned towards the user.
@@ -176,8 +177,10 @@ This example shows a cube with transparent faces, and one with opaque faces.
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;

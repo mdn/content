@@ -9,13 +9,14 @@ tags:
   - Learn
   - case
   - indexOf
-  - l10n:priority
+  - "l10n:priority"
   - length
   - lower
   - replace
   - split
   - upper
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 Now that we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.

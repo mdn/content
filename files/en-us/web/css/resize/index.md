@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.resize
 ---
+
 {{CSSRef}}
 
 The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.

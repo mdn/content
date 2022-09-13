@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 The **`Map`** object holds key-value pairs and remembers the original insertion
@@ -278,23 +279,20 @@ console.log(contacts.size) // 1
 
 - {{jsxref("Map.prototype.clear()")}}
   - : Removes all key-value pairs from the `Map` object.
-- {{jsxref("Map.delete", "Map.prototype.delete(<var>key</var>)")}}
+- {{jsxref("Map.prototype.delete()")}}
   - : Returns `true` if an element in the `Map` object existed and has been
     removed, or `false` if the element does not exist. `Map.prototype.has(key)`
     will return `false` afterwards.
-- {{jsxref("Map.get", "Map.prototype.get(<var>key</var>)")}}
+- {{jsxref("Map.prototype.get()")}}
   - : Returns the value associated to the `key`, or `undefined` if there is
     none.
-- {{jsxref("Map.has", "Map.prototype.has(<var>key</var>)")}}
+- {{jsxref("Map.prototype.has()")}}
   - : Returns a boolean asserting whether a value has been associated to the
     `key` in the `Map` object or not.
-- {{jsxref("Map.set", "Map.prototype.set(<var>key</var>, <var>value</var>)")}}
+- {{jsxref("Map.prototype.set()")}}
   - : Sets the `value` for the `key` in the `Map` object. Returns the `Map`
     object.
-
-### Iteration methods
-
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
   - : Returns a new Iterator object that contains **an array of `[key, value]`**
     for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.keys()")}}
@@ -306,8 +304,7 @@ console.log(contacts.size) // 1
 - {{jsxref("Map.prototype.entries()")}}
   - : Returns a new Iterator object that contains **an array of `[key, value]`**
     for each element in the `Map` object in insertion order.
-- {{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[,
-    <var>thisArg</var>])")}}
+- {{jsxref("Map.prototype.forEach()")}}
   - : Calls `callbackFn` once for each key-value pair present in the `Map`
     object, in insertion order. If a `thisArg` parameter is provided to
     `forEach`, it will be used as the `this` value for each callback.
@@ -358,9 +355,9 @@ myMap.get(otherNaN);
 // "not a number"
 ```
 
-### Iterating Map with for..of
+### Iterating Map with for...of
 
-Maps can be iterated using a `for..of` loop:
+Maps can be iterated using a `for...of` loop:
 
 ```js
 const myMap = new Map();

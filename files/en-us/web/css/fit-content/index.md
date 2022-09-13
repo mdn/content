@@ -9,6 +9,7 @@ tags:
   - fit-content
 browser-compat: css.properties.width.fit-content
 ---
+
 {{CSSRef}}
 
 The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.

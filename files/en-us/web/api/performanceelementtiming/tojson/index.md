@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.PerformanceElementTiming.toJSON
 ---
+
 {{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interface is a standard serializer. It returns a JSON representation of the object's properties.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

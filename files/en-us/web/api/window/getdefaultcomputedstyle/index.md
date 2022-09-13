@@ -10,6 +10,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.getDefaultComputedStyle
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 The **`getDefaultComputedStyle()`** method gives the default [computed values](/en-US/docs/Web/CSS/computed_value) of all the CSS
@@ -18,7 +19,7 @@ styles are taken into account.
 
 ## Syntax
 
-```js
+```js-nolint
 getDefaultComputedStyle(element)
 getDefaultComputedStyle(element, pseudoElt)
 ```

@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs
 ---
+
 {{AddonSidebar}}
 
 Interact with the browser's tab system.

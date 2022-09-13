@@ -12,6 +12,7 @@ tags:
   - getTracks
 browser-compat: api.MediaStream.getTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getTracks()`** method of the
@@ -22,7 +23,7 @@ regardless of {{domxref("MediaStreamTrack.kind")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getTracks()
 ```
 

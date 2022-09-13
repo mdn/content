@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.SpeechGrammarList
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`SpeechGrammarList()`** constructor creates a new
@@ -20,7 +21,7 @@ The **`SpeechGrammarList()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechGrammarList()
 ```
 

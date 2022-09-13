@@ -16,6 +16,7 @@ tags:
   - latency
 browser-compat: api.MediaTrackSupportedConstraints.latency
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`latency`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the {{Glossary("user agent")}} supports the `latency` constraint.

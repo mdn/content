@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.arcTo
 ---
+
 {{APIRef}}
 
 The
@@ -26,7 +27,7 @@ This method is commonly used for making rounded corners.
 
 ## Syntax
 
-```js
+```js-nolint
 arcTo(x1, y1, x2, y2, radius)
 ```
 
@@ -193,8 +194,8 @@ arc changes.
 ```html
 <div>
   <label for="radius">Radius: </label>
-  <input name="radius"  type="range" id="radius" min=0 max=100 value=50>
-  <label for="radius"  id="radius-output">50</label>
+  <input name="radius" type="range" id="radius" min="0" max="100" value="50" />
+  <label for="radius" id="radius-output">50</label>
 </div>
 <canvas id="canvas"></canvas>
 ```
@@ -219,23 +220,22 @@ const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
 
-const labelPoint = (p, offset, i = 0) => {
-    const {x, y} = offset;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillText(`${i}:(${p.x}, ${p.y})`, p.x + x, p.y + y);
+function labelPoint(p, offset, i = 0) {
+  const { x, y } = offset;
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText(`${i}:(${p.x}, ${p.y})`, p.x + x, p.y + y);
 }
 
-const drawPoints = (points) => {
-  for (let i = 0; i < points.length; i++) {
-    const p = points[i];
-    labelPoint(p, { x: 0, y: -20 } , i)
-  }
+function drawPoints(points) {
+  points.forEach((p, i) => {
+    labelPoint(p, { x: 0, y: -20 }, i)
+  });
 }
 
 // Draw arc
-const drawArc = ([p0, p1, p2], r) => {
+function drawArc([p0, p1, p2], r) {
   ctx.beginPath();
   ctx.moveTo(p0.x, p0.y);
   ctx.arcTo(p1.x, p1.y, p2.x, p2.y, r);
@@ -243,14 +243,9 @@ const drawArc = ([p0, p1, p2], r) => {
   ctx.stroke();
 }
 
-let t0 = 0;
-let rr = 0; // the radius that changes over time
-let a  = 0; // angle
-const PI2 = Math.PI * 2;
-const loop = (t) => {
-  t0 = t / 1000;
-  a  = t0 % PI2;
-  rr = Math.abs(Math.cos(a) * radius);
+function loop(t) {
+  const angle = (t / 1000) % (2 * Math.PI);
+  const rr = Math.abs(Math.cos(angle) * radius);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

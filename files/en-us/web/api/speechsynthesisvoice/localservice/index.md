@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.localService
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`localService`** read-only property of the

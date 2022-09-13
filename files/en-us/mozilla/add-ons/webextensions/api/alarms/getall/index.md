@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.alarms.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all active alarms for the extension.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getAlarms = browser.alarms.getAll()
 ```
 

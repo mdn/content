@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.click()`** method simulates a mouse click on
@@ -22,7 +23,7 @@ events.
 
 ## Syntax
 
-```js
+```js-nolint
 click()
 ```
 

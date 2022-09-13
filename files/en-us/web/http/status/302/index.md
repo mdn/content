@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.302
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`302 Found`** redirect

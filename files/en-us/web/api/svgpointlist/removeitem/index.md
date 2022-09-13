@@ -10,13 +10,14 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.removeItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface removes a {{domxref("SVGPoint","point")}} from the list.
 
 ## Syntax
 
-```js
+```js-nolint
 removeItem(index)
 ```
 

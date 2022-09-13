@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.styleSheetSets
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`styleSheetSets`** read-only property returns a live list of all of the currently-available style sheet sets.
@@ -32,10 +33,9 @@ const sheets = document.styleSheetSets;
 
 list.textContent = '';
 
-for (let i = 0; i < sheets.length; i++) {
+for (const sheet of sheets) {
   const item = document.createElement('li');
-
-  item.textContent = sheets[i];
+  item.textContent = sheet;
   list.appendChild(item);
 }
 ```

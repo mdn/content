@@ -8,6 +8,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-blend-mode
 ---
+
 {{CSSRef}}
 
 The **`background-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's background images should blend with each other and with the element's background color.
@@ -52,10 +53,10 @@ background-blend-mode: unset;
 
 ```css
 .item {
-    width: 300px;
-    height: 300px;
-    background: url('image1.png'),url('image2.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("image1.png"), url("image2.png");
+  background-blend-mode: screen;
 }
 ```
 
@@ -85,10 +86,10 @@ background-blend-mode: unset;
 
 ```css hidden
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),url('tr.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
 }
 ```
 

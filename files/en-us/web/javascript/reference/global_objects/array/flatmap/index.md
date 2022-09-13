@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flatMap
 ---
+
 {{JSRef}}
 
 The **`flatMap()`** method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
@@ -20,7 +21,7 @@ The **`flatMap()`** method returns a new array formed by applying a given callba
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 flatMap((currentValue) => { /* … */ } )
 flatMap((currentValue, index) => { /* … */ } )

@@ -11,13 +11,14 @@ tags:
   - web animations api
 browser-compat: api.Animation.Animation
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The **`Animation()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `Animation` object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new Animation()
 new Animation(effect)
 new Animation(effect, timeline)

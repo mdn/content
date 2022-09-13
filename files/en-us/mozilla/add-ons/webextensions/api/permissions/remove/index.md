@@ -11,6 +11,7 @@ tags:
   - remove
 browser-compat: webextensions.api.permissions.remove
 ---
+
 {{AddonSidebar()}}
 
 Ask to give up the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.permissions.remove(
   permissions                // Permissions object
 )

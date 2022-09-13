@@ -11,6 +11,7 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.overrideContext
 ---
+
 {{AddonSidebar}}
 
 Hide all default Firefox menu items in favor of providing a custom context menu UI.
@@ -21,7 +22,7 @@ This interface requires the `menus.overrideContext` [permission](/en-US/docs/Moz
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.overrideContext(
   contextOptions // object
 )

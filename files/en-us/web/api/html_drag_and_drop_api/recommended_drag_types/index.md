@@ -6,6 +6,7 @@ tags:
   - Guide
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
@@ -99,7 +100,7 @@ Multiple files will be received during a drop as multiple items in the data tran
 
 The following example shows how to create an area for receiving dropped files:
 
-```xml
+```html
 <listbox ondragenter="return checkDrag(event)"
          ondragover="return checkDrag(event)"
          ondrop="doDrop(event)"/>

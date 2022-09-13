@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX2Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX2Attribute
 ---
+
 {{SVGRef}}
 
 The **`x2`** attribute is used to specify the second x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.
@@ -20,7 +21,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -73,7 +78,11 @@ For {{SVGElement('line')}}, `x2` defines the x coordinate of the ending point of
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -126,7 +135,11 @@ For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the endin
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

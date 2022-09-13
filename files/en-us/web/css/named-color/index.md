@@ -7,6 +7,7 @@ tags:
   - color
 browser-compat: css.types.color.color_keywords
 ---
+
 {{CSSRef}}
 
 The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).
@@ -818,7 +819,7 @@ Although various colors not in the specification (mostly adapted from the X11 co
   </tbody>
 </table>
 
-##### transparent
+#### transparent
 
 The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
 
@@ -826,7 +827,7 @@ To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the curren
 
 The `transparent` keyword wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 
-#### CSS Level 4 values
+### CSS Level 4 values
 
 [CSS Colors Level 4](https://drafts.csswg.org/css-color-4/) added the `rebeccapurple` keyword [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man).
 
@@ -895,7 +896,7 @@ Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/
   padding: 20px;
 }
 
-#container>div {
+#container > div {
   height: 100px;
   width: 100px;
   margin: 3px;

@@ -17,6 +17,7 @@ tags:
   - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
@@ -140,7 +141,7 @@ the wrap must occur.
 ### JavaScript
 
 The following code is run within a handler for the {{domxref("Window", "window")}}'s
-{{domxref("Window.load_event", "load")}} event.  It uses the image's
+{{domxref("Window.load_event", "load")}} event. It uses the image's
 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
 the URL selected by the browser from the `srcset`.
 

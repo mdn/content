@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.display
 ---
+
 {{CSSRef}}
 
 The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline element](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
@@ -65,6 +66,7 @@ The keyword values can be grouped into six value categories.
 ### Outside
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
+
   - : These keywords specify the element's outer display type, which is essentially its role in flow layout:
 
     - `block`
@@ -78,6 +80,7 @@ The keyword values can be grouped into six value categories.
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
+
   - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
 
     - `flow` {{Experimental_Inline}}
@@ -118,6 +121,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Internal
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
+
   - : Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill.
     This section defines those "internal" display values, which only have meaning within that particular layout mode.
 
@@ -149,9 +153,11 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Box
 
 - {{CSSxRef("&lt;display-box&gt;")}}
+
   - : These values define whether an element generates display boxes at all.
 
     - `contents`
+
       - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
         _Due to a bug in browsers, this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility concerns](#accessibility_concerns) section below for more details._
@@ -163,6 +169,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Precomposed
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
+
   - : CSS 2 used a single-keyword, precomposed syntax for the `display` property, requiring separate keywords for block-level and inline-level variants of the same layout mode.
 
     - `inline-block`
@@ -353,12 +360,14 @@ article span {
   margin: 1px;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
 
-article, div {
+article,
+div {
   margin: 20px;
 }
 ```

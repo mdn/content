@@ -11,14 +11,13 @@ const idlnames = await fs
   .readFile(path.join(webrefPath, "idlnames.json"), "utf-8")
   .then(JSON.parse);
 
-const idls =
-  await Promise.all(
-    Object.entries(idlnames)
-      .sort(([k1], [k2]) => k1.localeCompare(k2))
-      .map(([, { parsed: jsonIdlPath }]) =>
-        fs.readFile(path.join(webrefPath, jsonIdlPath), "utf-8").then(JSON.parse)
-      )
-  );
+const idls = await Promise.all(
+  Object.entries(idlnames)
+    .sort(([k1], [k2]) => k1.localeCompare(k2))
+    .map(([, { parsed: jsonIdlPath }]) =>
+      fs.readFile(path.join(webrefPath, jsonIdlPath), "utf-8").then(JSON.parse)
+    )
+);
 
 const interfaceData = idls.reduce((interfaceData, idl) => {
   if (idl.type === "interface") {

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/svg2-draft/geometry.html#RX
 ---
+
 {{SVGRef}}
 
 The **`rx`** attribute defines a radius on the x-axis.
@@ -18,7 +19,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

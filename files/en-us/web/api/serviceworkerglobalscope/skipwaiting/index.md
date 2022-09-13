@@ -21,7 +21,7 @@ Use this method with {{domxref("Clients.claim()")}} to ensure that updates to th
 
 ## Syntax
 
-```js
+```js-nolint
 skipWaiting()
 ```
 

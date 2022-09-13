@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.unescape
 ---
+
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `unescape()` is not strictly deprecated
@@ -32,7 +33,7 @@ escape sequences might be introduced by a function like {{jsxref("escape")}}. Us
 
 ## Syntax
 
-```js
+```js-nolint
 unescape(str)
 ```
 

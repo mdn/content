@@ -8,8 +8,9 @@ tags:
   - Promise
   - Promises
   - asynchronous
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.
@@ -385,7 +386,7 @@ Promise.resolve()
 console.log(1); // 1, 2, 3, 4
 ```
 
-#### Task queues vs microtasks
+### Task queues vs microtasks
 
 Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as Task queues.
 
@@ -492,7 +493,7 @@ If you think microtasks may help solve this problem, see the [microtask guide](/
 
 ## See also
 
-- {{jsxref("Promise.then()")}}
+- {{jsxref("Promise.prototype.then()")}}
 - [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)

@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 In the last article we discussed how to use APIs that return promises. In this article we'll look at the other side — how to _implement_ APIs that return promises. This is a much less common task than using promise-based APIs, but it's still worth knowing about.
@@ -44,7 +45,7 @@ In the example below, we call `setTimeout()` with a callback function and a dela
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -116,8 +117,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
@@ -173,8 +175,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 

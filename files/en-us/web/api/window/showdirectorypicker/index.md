@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
@@ -20,8 +21,8 @@ select a directory.
 
 ## Syntax
 
-```js
-const FileSystemDirectoryHandle = window.showDirectoryPicker();
+```js-nolint
+showDirectoryPicker()
 ```
 
 ### Parameters

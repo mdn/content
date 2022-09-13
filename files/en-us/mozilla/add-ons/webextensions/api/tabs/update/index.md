@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.update
 ---
+
 {{AddonSidebar()}}
 
 Navigate the tab to a new URL, or modify other properties of the tab.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object

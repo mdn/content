@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Opener-Policy`** (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.

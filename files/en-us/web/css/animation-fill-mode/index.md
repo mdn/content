@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-fill-mode
 ---
+
 {{CSSRef}}
 
 The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
@@ -102,8 +103,12 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 
 @keyframes grow {
-  0% { font-size: 0; }
-  100% { font-size: 40px; }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 
 .demo:hover .grows {

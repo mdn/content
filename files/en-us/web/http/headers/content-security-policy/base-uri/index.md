@@ -9,6 +9,7 @@ tags:
   - Security
 browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive restricts the URLs which can be used in a document's {{HTMLElement("base")}} element. If this value is absent, then any URI is allowed. If this directive is absent, the user agent will use the value in the {{HTMLElement("base")}} element.
@@ -32,7 +33,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more *sources* can be allowed for the base-uri policy:
+One or more _sources_ can be allowed for the base-uri policy:
 
 ```http
 Content-Security-Policy: base-uri <source>;

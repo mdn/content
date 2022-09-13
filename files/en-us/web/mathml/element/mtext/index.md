@@ -8,6 +8,7 @@ tags:
   - MathML:Token Elements
 browser-compat: mathml.elements.mtext
 ---
+
 {{MathMLRef}}
 
 The MathML \<mtext> element is used to render arbitrary text with _no_ notational meaning, such as comments or annotations.

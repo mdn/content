@@ -13,6 +13,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentRequest()`** constructor
@@ -21,7 +22,7 @@ process of generating, validating, and submitting a payment request.
 
 ## Syntax
 
-```js
+```js-nolint
 new PaymentRequest(methodData, details)
 new PaymentRequest(methodData, details, options)
 ```

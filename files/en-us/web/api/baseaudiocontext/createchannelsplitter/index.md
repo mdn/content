@@ -12,6 +12,7 @@ tags:
   - createChannelSplitter
 browser-compat: api.BaseAudioContext.createChannelSplitter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createChannelSplitter()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("ChannelSplitterNode")}},
@@ -23,7 +24,7 @@ which is used to access the individual channels of an audio stream and process t
 
 ## Syntax
 
-```js
+```js-nolint
 createChannelSplitter(numberOfOutputs)
 ```
 

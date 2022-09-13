@@ -12,6 +12,7 @@ tags:
   - name
 browser-compat: api.DedicatedWorkerGlobalScope.name
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`name`** read-only property of the

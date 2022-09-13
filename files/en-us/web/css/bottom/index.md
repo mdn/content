@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.bottom
 ---
+
 {{CSSRef}}
 
 The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
@@ -99,7 +100,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.2);
+  background: rgba(55, 55, 55, 0.2);
   border: 1px solid blue;
 }
 

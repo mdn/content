@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Sec-CH-UA-Platform
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Platform`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the platform or operating system on which the user agent is running.

@@ -15,6 +15,7 @@ tags:
   - lock
 browser-compat: javascript.builtins.Object.freeze
 ---
+
 {{JSRef}}
 
 The **`Object.freeze()`** method _freezes_ an object. Freezing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. `freeze()` returns the same object that was passed in.
@@ -25,7 +26,7 @@ Freezing an object is the highest integrity level that JavaScript provides.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.freeze(obj)
 ```
 
@@ -40,11 +41,10 @@ The object that was passed to the function.
 
 ## Description
 
-Freezing an object is equivalent to [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and then changing all existing [properties' descriptors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) to `configurable: false, writable: false`. Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}} exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}}).
+Freezing an object is equivalent to [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and then changing all existing [properties' descriptors'](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) `configurable` to `false` — and for data properties, `writable` to `false` as well. Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}} exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}}).
 
 For data properties of a frozen object, their values cannot be changed since the writable and
-configurable attributes are set to false. Accessor properties (getters and setters) work
-the same (and still give the illusion that you are changing the value). Note that values
+configurable attributes are set to false. Accessor properties (getters and setters) work the same — the property value returned by the getter may still change, and the setter can still be called without throwing errors when setting the property. Note that values
 that are objects can still be modified, unless they are also frozen. As an object, an
 array can be frozen; after doing so, its elements cannot be altered and no elements can
 be added to or removed from the array.

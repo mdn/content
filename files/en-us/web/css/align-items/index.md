@@ -97,7 +97,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;

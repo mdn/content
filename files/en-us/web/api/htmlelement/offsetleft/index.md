@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetLeft`** read-only property returns the number of pixels that the _upper left corner_ of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.

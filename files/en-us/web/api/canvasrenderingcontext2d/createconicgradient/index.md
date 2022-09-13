@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.createConicGradient()`** method of the Canvas 2D API creates a gradient around a point with given coordinates.
@@ -22,7 +23,7 @@ This method returns a conic {{domxref("CanvasGradient")}}. To be applied to a sh
 
 ## Syntax
 
-```js
+```js-nolint
 createConicGradient(startAngle, x, y)
 ```
 

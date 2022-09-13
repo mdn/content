@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: webextensions.api.events.Event
 ---
+
 {{AddonSidebar()}}
 
 An object which allows the addition and removal of listeners for a browser event.

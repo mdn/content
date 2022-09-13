@@ -7,6 +7,7 @@ tags:
   - Design
   - Guide
 ---
+
 {{CSSRef}}
 
 In Spring of 2017, we saw for the first time a major specification like Grid being shipped into browsers almost simultaneously, and we now have CSS Grid Layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having Grid Layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.
@@ -110,35 +111,37 @@ The above example is very simple, and we can get away without needing to write c
 In this next example, I have a set of floated cards. I have given the cards a {{cssxref("width")}}, in order to {{cssxref("float")}} them. To create gaps between the cards, I use a {{cssxref("margin")}} on the items, and then a negative margin on the container:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 600px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .wrapper li {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper ul {
-    overflow: hidden;
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  overflow: hidden;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 .wrapper li {
-    float: left;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  float: left;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 ```
 
@@ -187,9 +190,9 @@ _Feature queries_ will look very familiar if you have ever used a [media query](
 
 ```css
 @supports (display: grid) {
-    .wrapper {
-        /* do anything for grid supporting browsers here. */
-    }
+  .wrapper {
+    /* do anything for grid supporting browsers here. */
+  }
 }
 ```
 
@@ -198,48 +201,50 @@ Feature queries have excellent browser support, and all of the browsers that sup
 I use an `@supports` rule to check for support of `display: grid`. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to `auto`. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don't get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 600px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .wrapper li {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper ul {
-    overflow: hidden;
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  overflow: hidden;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 .wrapper li {
-    float: left;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  float: left;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 @supports (display: grid) {
-    .wrapper ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin: 0;
-    }
-    .wrapper li {
-        width: auto;
-        min-height: auto;
-        margin: 0;
-    }
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0;
+  }
+  .wrapper li {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
 }
 ```
 
@@ -278,49 +283,51 @@ Due to the problems of creating grids of items using floats, many of us would us
 Once again I can use feature queries to overwrite a layout that uses `display: inline-block`, and again I don't need to overwrite everything. An item that is set to `inline-block` becomes a grid item, and so the behavior of `inline-block` no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the `inline-block` display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 600px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .wrapper li {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper ul {
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 
 .wrapper li {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 @supports (display: grid) {
-    .wrapper ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin: 0;
-    }
-    .wrapper li {
-        width: auto;
-        margin: 0;
-    }
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0;
+  }
+  .wrapper li {
+    width: auto;
+    margin: 0;
+  }
 }
 ```
 

@@ -10,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.place-content
 ---
+
 {{CSSRef}}
 
 The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
@@ -192,7 +193,7 @@ direction.addEventListener("change", (evt) => {
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;

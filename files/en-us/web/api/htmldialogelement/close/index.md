@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.HTMLDialogElement.close
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}
@@ -19,7 +20,7 @@ argument, updating the `returnValue` of the dialog.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 close(returnValue)
 ```

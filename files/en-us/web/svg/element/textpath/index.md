@@ -8,6 +8,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.textPath
 ---
+
 {{SVGRef}}
 
 To render text along the shape of a {{SVGElement("path")}}, enclose the text in a **`<textPath>`** element that has an {{SVGAttr("href")}} attribute with a reference to the {{SVGElement("path")}} element.
@@ -15,7 +16,11 @@ To render text along the shape of a {{SVGElement("path")}}, enclose the text in 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -11,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_vertex_array_object.isVertexArrayOES
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_vertex_array_object.isVertexArrayOES()`** method of
@@ -19,7 +20,7 @@ the passed object is a {{domxref("WebGLVertexArrayObject")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isVertexArrayOES(arrayObject)
 ```
 

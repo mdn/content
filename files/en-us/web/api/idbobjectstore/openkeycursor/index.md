@@ -12,6 +12,7 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBObjectStore.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
@@ -25,7 +26,7 @@ results's `success` event.
 
 ## Syntax
 
-```js
+```js-nolint
 openKeyCursor()
 openKeyCursor(query)
 openKeyCursor(query, direction)

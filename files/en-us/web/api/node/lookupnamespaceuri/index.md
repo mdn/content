@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.lookupNamespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupNamespaceURI()`** method of the {{domxref("Node")}} interface
@@ -15,8 +16,8 @@ takes a prefix as parameter and returns the namespace URI associated with it on 
 
 ## Syntax
 
-```js
-lookupNamespaceURI(prefix);
+```js-nolint
+lookupNamespaceURI(prefix)
 ```
 
 ### Parameters

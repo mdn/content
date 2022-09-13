@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-span
 ---
+
 {{CSSRef}}
 
 The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.

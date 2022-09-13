@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.use
 ---
+
 {{SVGRef}}
 
 The **`<use>`** element takes nodes from within the SVG document, and duplicates them somewhere else.
@@ -15,7 +16,11 @@ The **`<use>`** element takes nodes from within the SVG document, and duplicates
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

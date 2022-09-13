@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLButtonElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLButtonElement.labels`** read-only property returns a

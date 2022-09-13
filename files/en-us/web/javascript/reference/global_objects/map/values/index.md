@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Map.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new
@@ -21,7 +22,7 @@ order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

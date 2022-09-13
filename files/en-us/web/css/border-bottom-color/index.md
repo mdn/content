@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-bottom-color
 ---
+
 {{CSSRef}}
 
 The **`border-bottom-color`** CSS property sets the color of an element's bottom [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.
@@ -67,13 +68,13 @@ The `border-bottom-color` property is specified as a single value.
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-bottom-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-bottom-color: red;
+  width: auto;
 }
 
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 

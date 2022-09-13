@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.ImageTrack.selected
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`selected`** property of the {{domxref("ImageTrack")}} interface returns `true` if the track is selected for decoding.

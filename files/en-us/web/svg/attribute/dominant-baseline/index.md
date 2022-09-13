@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.dominant-baseline
 ---
+
 {{SVGRef}}
 
 The **`dominant-baseline`** attribute specifies the dominant baseline, which is the baseline used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context.
@@ -34,7 +35,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -90,6 +93,7 @@ text {
     If the computed {{SVGAttr("baseline-shift")}} value actually shifts the baseline, then the baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs, otherwise the baseline-table font-size remains the same as that of the element.
 
     If there is no parent text content element, the scaled-baseline-table value is constructed as above for {{SVGElement("text")}} elements.
+
 - `use-script` {{deprecated_inline}}
   - : The dominant-baseline and the baseline-table components are set by determining the predominant script of the character data content. The {{SVGAttr("writing-mode")}}, whether horizontal or vertical, is used to select the appropriate set of baseline-tables and the dominant baseline is used to select the baseline-table that corresponds to that baseline. The baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs.
 - `no-change` {{deprecated_inline}}

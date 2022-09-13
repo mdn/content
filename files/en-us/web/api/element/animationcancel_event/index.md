@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationcancel event'
+title: "Element: animationcancel event"
 slug: Web/API/Element/animationcancel_event
 tags:
   - API
@@ -13,6 +13,7 @@ tags:
 browser-compat: api.Element.animationcancel_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`animationcancel`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("Element/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
@@ -77,11 +78,11 @@ animated.style.display = 'none';
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 

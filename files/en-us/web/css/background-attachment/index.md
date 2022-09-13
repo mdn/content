@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-attachment
 ---
+
 {{CSSRef}}
 
 The **`background-attachment`** [CSS](/en-US/docs/Web/CSS) property sets whether a background image's position is fixed within the {{glossary("viewport")}}, or scrolls with its containing block.
@@ -106,8 +107,7 @@ This property supports multiple background images. You can specify a different `
 
 ```css
 p {
-  background-image: url("starsolid.gif"),
-      url("startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.CompileError()`** constructor creates a new
@@ -16,7 +17,7 @@ WebAssembly decoding or validation.
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.CompileError()
 new WebAssembly.CompileError(message)
 new WebAssembly.CompileError(message, options)
@@ -32,7 +33,7 @@ new WebAssembly.CompileError(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception.
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}

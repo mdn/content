@@ -17,6 +17,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.caret-color
 ---
+
 {{CSSRef}}
 
 The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
@@ -85,7 +86,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {

@@ -13,6 +13,7 @@ tags:
   - getAllCookieStores
 browser-compat: webextensions.api.cookies.getAllCookieStores
 ---
+
 {{AddonSidebar()}}
 
 The **`getAllCookieStores()`** method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingStores = browser.cookies.getAllCookieStores()
 ```
 

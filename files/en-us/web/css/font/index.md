@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
+
 {{CSSRef}}
 
 The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
@@ -105,21 +106,29 @@ If `font` is specified as a shorthand for several font-related properties, then:
 ```css
 /* Set the font size to 12px and the line height to 14px.
    Set the font family to sans-serif */
-p { font: 12px/14px sans-serif }
+p {
+  font: 12px/14px sans-serif;
+}
 
 /* Set the font size to 80% of the parent element
    or default value (if no parent element present).
    Set the font family to sans-serif */
-p { font: 80% sans-serif }
+p {
+  font: 80% sans-serif;
+}
 
 /* Set the font weight to bold,
    the font-style to italic,
    the font size to large,
    and the font family to serif. */
-p { font: bold italic large serif }
+p {
+  font: bold italic large serif;
+}
 
 /* Use the same font as the status bar of the window */
-p { font: status-bar }
+p {
+  font: status-bar;
+}
 ```
 
 ### Live sample
@@ -220,7 +229,8 @@ p { font: status-bar }
 ```
 
 ```css hidden
-body, input {
+body,
+input {
   font: 14px arial;
   overflow: hidden;
 }
@@ -238,7 +248,8 @@ body, input {
   width: 120px;
 }
 
-.propInputs, .setPropCont {
+.propInputs,
+.setPropCont {
   margin-bottom: 1em;
 }
 

@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: webextensions.api.permissions.request
 ---
+
 {{AddonSidebar()}}
 
 Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let requesting = browser.permissions.request(
   permissions                // Permissions object
 )

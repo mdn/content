@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.placeholder
 ---
+
 {{CSSRef}}
 
 The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the {{htmlattrxref("placeholder","input","placeholder text",1)}} in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.

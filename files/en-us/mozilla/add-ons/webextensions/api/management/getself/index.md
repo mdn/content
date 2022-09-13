@@ -11,6 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getSelf
 ---
+
 {{AddonSidebar()}}
 
 Retrieves an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object containing information about the calling add-on.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSelf = browser.management.getSelf()
 ```
 

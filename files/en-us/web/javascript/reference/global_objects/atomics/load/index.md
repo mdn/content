@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.load
 ---
+
 {{JSRef}}
 
 The static **`Atomics.load()`**
@@ -17,7 +18,7 @@ method returns a value at a given position in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.load(typedArray, index)
 ```
 

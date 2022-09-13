@@ -21,6 +21,7 @@ tags:
   - granted
 browser-compat: api.XRPermissionStatus.granted
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The WebXR Device API's {{domxref("XRPermissionStatus")}}

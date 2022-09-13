@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.image.paint
 ---
+
 {{CSSRef}}
 
 The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
@@ -42,16 +43,16 @@ CSS.paintWorklet.addModule('boxbg.js');
 
 ```css
 li {
-   background-image: paint(boxbg);
-   --boxColor: hsla(55, 90%, 60%, 1.0);
+  background-image: paint(boxbg);
+  --boxColor: hsla(55, 90%, 60%, 1);
 }
 li:nth-of-type(3n) {
-   --boxColor: hsla(155, 90%, 60%, 1.0);
-   --widthSubtractor: 20;
+  --boxColor: hsla(155, 90%, 60%, 1);
+  --widthSubtractor: 20;
 }
-li:nth-of-type(3n+1) {
-   --boxColor: hsla(255, 90%, 60%, 1.0);
-   --widthSubtractor: 40;
+li:nth-of-type(3n + 1) {
+  --boxColor: hsla(255, 90%, 60%, 1);
+  --widthSubtractor: 40;
 }
 ```
 
@@ -94,18 +95,18 @@ You can pass additional arguments via the CSS paint() function. In this example,
 
 ```css
 li {
-   --boxColor: hsla(55, 90%, 60%, 1.0);
-   background-image: paint(hollowHighlights, stroke, 2px);
+  --boxColor: hsla(55, 90%, 60%, 1);
+  background-image: paint(hollowHighlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-   --boxColor: hsla(155, 90%, 60%, 1.0);
-   background-image: paint(hollowHighlights, filled,  3px);
+  --boxColor: hsla(155, 90%, 60%, 1);
+  background-image: paint(hollowHighlights, filled, 3px);
 }
 
-li:nth-of-type(3n+1) {
-   --boxColor: hsla(255, 90%, 60%, 1.0);
-   background-image: paint(hollowHighlights, stroke, 1px);
+li:nth-of-type(3n + 1) {
+  --boxColor: hsla(255, 90%, 60%, 1);
+  background-image: paint(hollowHighlights, stroke, 1px);
 }
 ```
 

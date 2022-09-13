@@ -10,6 +10,7 @@ tags:
   - SVG
 browser-compat: api.SVGAElement.target
 ---
+
 {{APIRef("SVGAElement")}}
 
 {{SeeCompatTable}}

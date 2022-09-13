@@ -13,6 +13,7 @@ tags:
   - transaction
 browser-compat: api.IDBObjectStore.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** read-only property of the

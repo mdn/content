@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Headers`** response header is used in response to a {{glossary("preflight request")}} which includes the {{HTTPHeader("Access-Control-Request-Headers")}} to indicate which HTTP headers can be used during the actual request.

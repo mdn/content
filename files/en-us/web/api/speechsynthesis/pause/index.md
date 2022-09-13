@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.pause
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pause()`** method of the {{domxref("SpeechSynthesis")}}
@@ -20,7 +21,7 @@ interface puts the `SpeechSynthesis` object into a paused state.
 
 ## Syntax
 
-```js
+```js-nolint
 pause()
 ```
 

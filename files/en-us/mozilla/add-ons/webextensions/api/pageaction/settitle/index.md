@@ -13,13 +13,14 @@ tags:
   - setTitle
 browser-compat: webextensions.api.pageAction.setTitle
 ---
+
 {{AddonSidebar()}}
 
 Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.setTitle(
   details // object
 )

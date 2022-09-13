@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.general_sibling
 ---
+
 {{CSSRef("Selectors")}}
 
 The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.

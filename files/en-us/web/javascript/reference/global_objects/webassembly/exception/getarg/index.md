@@ -11,6 +11,7 @@ tags:
   - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
+
 {{JSRef}}
 
 The **`getArg()`** prototype method of the {{jsxref("WebAssembly.Exception", "Exception")}} object can be used to get the value of a specified item in the exception's data arguments.
@@ -23,7 +24,7 @@ Tags that are neither imported into or exported from the WebAssembly code are in
 
 ## Syntax
 
-```js
+```js-nolint
 getArg(exceptionTag, index)
 ```
 

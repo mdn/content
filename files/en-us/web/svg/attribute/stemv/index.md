@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.stemv
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`stemv`** attribute indicates the vertical stem width of the font.

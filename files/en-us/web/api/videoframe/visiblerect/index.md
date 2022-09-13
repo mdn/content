@@ -11,9 +11,10 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame.visibleRect
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
-The **`visibleRect`**  property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
+The **`visibleRect`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
 
 ## Value
 

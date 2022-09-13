@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Element.firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.firstElementChild`** read-only property

@@ -18,6 +18,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
+
 {{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The
@@ -31,7 +32,7 @@ by the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaRecorderErrorEvent(type, options)
 ```
 

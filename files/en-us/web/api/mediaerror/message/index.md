@@ -14,6 +14,7 @@ tags:
   - message
 browser-compat: api.MediaError.message
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.message`** returns a
@@ -82,7 +83,7 @@ The error handler looks like this:
 
 This gets the {{domxref("MediaError")}} object describing the error from the
 {{domxref("HTMLMediaElement.error", "error")}} property on the
-{{domxref("HTMLAudioElement")}} representing the audio player.  The error's
+{{domxref("HTMLAudioElement")}} representing the audio player. The error's
 {{domxref("MediaError.code", "code")}} attribute is checked to determine a generic error
 message to display, and, if `message` is not empty, it's appended to provide
 additional details. Then the resulting text is output to the log.

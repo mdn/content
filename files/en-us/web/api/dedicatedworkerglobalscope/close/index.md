@@ -12,13 +12,14 @@ tags:
   - close
 browser-compat: api.DedicatedWorkerGlobalScope.close
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`close()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface discards any tasks queued in the `DedicatedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

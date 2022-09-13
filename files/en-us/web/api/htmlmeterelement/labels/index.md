@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMeterElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLMeterElement.labels`** read-only property returns a

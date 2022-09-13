@@ -10,6 +10,7 @@ tags:
   - find
 browser-compat: webextensions.api.find
 ---
+
 {{AddonSidebar}}
 
 Finds text in a web page, and highlights matches.

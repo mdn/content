@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransition.transitionProperty
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`transitionProperty`** property of the

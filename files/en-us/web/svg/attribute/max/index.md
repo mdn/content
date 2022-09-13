@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#MaxAttribute
 ---
+
 {{SVGRef}}
 
 The **`max`** attribute specifies the maximum value of the active animation duration.
@@ -21,7 +22,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

@@ -11,6 +11,7 @@ tags:
   - SVG
   - Web
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
@@ -295,7 +296,7 @@ svg {
 
 /* outer petals */
 #outer-petals {
-  opacity: .75;
+  opacity: 0.75;
   --segment-fill-fill: azure;
   --segment-fill-stroke: lightsteelblue;
   --segment-fill-stroke-width: 1;

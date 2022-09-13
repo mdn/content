@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.CreateDetails
 ---
+
 {{AddonSidebar()}}
 
 The `CreateDetails` type is used to describe the properties of a new, bookmark, bookmark folder, or separator when calling the {{WebExtAPIRef("bookmarks.create()")}} method.

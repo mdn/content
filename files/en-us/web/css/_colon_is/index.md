@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.is
 ---
+
 {{CSSRef}}
 
 > **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
@@ -55,7 +56,8 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
 ```css
-:valid, :unsupported {
+:valid,
+:unsupported {
   /* … */
 }
 ```
@@ -143,18 +145,54 @@ The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, t
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
@@ -181,15 +219,30 @@ h1 {
 }
 
 /* Level 1 */
-section h1, article h1, aside h1, nav h1 {
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
 
 /* Level 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1 {
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
 
@@ -209,14 +262,14 @@ h1 {
   font-size: 25px;
 }
 /* Level 2 */
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
   font-size: 20px;
 }
 /* Level 3 */
 :is(section, article, aside, nav)
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+  :is(section, article, aside, nav)
+  :is(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```
