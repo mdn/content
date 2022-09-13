@@ -27,7 +27,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -48,7 +52,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```
@@ -193,7 +197,11 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
 ### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -219,7 +227,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```

@@ -53,7 +53,8 @@ Note that this is functionally no different than:
 #### CSS
 
 ```css
-menu, ul {
+menu,
+ul {
   display: flex;
   list-style: none;
   padding: 0;

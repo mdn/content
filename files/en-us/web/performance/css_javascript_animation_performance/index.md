@@ -153,8 +153,12 @@ function animate(time) {
 }
 
 @keyframes animate {
-  0%   {transform: translateX(0) rotate(0deg) scale(0.6)}
-  100% {transform: translateX(500px) rotate(360deg) scale(1.4);}
+  0% {
+    transform: translateX(0) rotate(0deg) scale(0.6);
+  }
+  100% {
+    transform: translateX(500px) rotate(360deg) scale(1.4);
+  }
 }
 ```
 

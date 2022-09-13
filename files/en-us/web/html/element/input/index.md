@@ -885,13 +885,16 @@ It is possible to target different types of form controls based on their [`type`
 
 ```css
 /* matches a password input */
-input[type="password"] {}
+input[type="password"] {
+}
 
 /* matches a form control whose valid values are limited to a range of values*/
-input[min][max] {}
+input[min][max] {
+}
 
 /* matches a form control with a pattern attribute */
- input[pattern] {}
+input[pattern] {
+}
 ```
 
 ### ::placeholder
@@ -930,7 +933,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif"
+  font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
 

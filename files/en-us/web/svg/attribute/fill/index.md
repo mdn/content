@@ -30,7 +30,11 @@ For animation, these elements are using this attribute: {{SVGElement('animate')}
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -271,7 +271,8 @@ form ol {
   padding-left: 0;
 }
 
-form li, div > p {
+form li,
+div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -290,8 +291,9 @@ form p {
   padding-left: 10px;
 }
 
-form label, form button {
-  background-color: #7F9CCB;
+form label,
+form button {
+  background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px ridge black;
@@ -299,13 +301,15 @@ form label, form button {
   height: auto;
 }
 
-form label:hover, form button:hover {
-  background-color: #2D5BA3;
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
   color: white;
 }
 
-form label:active, form button:active {
-  background-color: #0D3F8F;
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
   color: white;
 }
 ```
