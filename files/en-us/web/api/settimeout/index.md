@@ -22,7 +22,7 @@ piece of code once the timer expires.
 
 ## Syntax
 
-```js
+```js-nolint
 setTimeout(code)
 setTimeout(code, delay)
 

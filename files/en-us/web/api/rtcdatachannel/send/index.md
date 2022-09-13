@@ -35,7 +35,7 @@ the connection is closing or closed.
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 

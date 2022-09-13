@@ -22,7 +22,7 @@ The **`redirect()`** method of the {{domxref("Response")}} interface returns a `
 
 ## Syntax
 
-```js
+```js-nolint
 redirect(url)
 redirect(url, status)
 ```

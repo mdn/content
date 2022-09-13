@@ -21,7 +21,7 @@ interface removes all declarations in the `StylePropertyMap`.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

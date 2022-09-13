@@ -38,7 +38,7 @@ for some more detail on these algorithms.
 
 ## Syntax
 
-```js
+```js-nolint
 deriveBits(algorithm, baseKey, length)
 ```
 

@@ -18,7 +18,7 @@ children of the specified node to the selection. Previous selection is lost.
 
 ## Syntax
 
-```js
+```js-nolint
 selectAllChildren(parentNode)
 ```
 

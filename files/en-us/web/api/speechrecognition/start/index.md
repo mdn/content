@@ -22,7 +22,7 @@ associated with the current {{domxref("SpeechRecognition")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 ```
 

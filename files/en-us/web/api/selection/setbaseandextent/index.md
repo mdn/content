@@ -19,7 +19,7 @@ parts of two specified DOM nodes, and any content located between them.
 
 ## Syntax
 
-```js
+```js-nolint
 setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 ```
 

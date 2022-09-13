@@ -21,7 +21,7 @@ object for the first value of the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 get(property)
 ```
 

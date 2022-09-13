@@ -26,7 +26,7 @@ signature.
 
 ## Syntax
 
-```js
+```js-nolint
 sign(algorithm, key, data)
 ```
 

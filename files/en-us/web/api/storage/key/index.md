@@ -19,7 +19,7 @@ object. The order of keys is user-agent defined, so you should not rely on it.
 
 ## Syntax
 
-```js
+```js-nolint
 key(index)
 ```
 

@@ -18,8 +18,8 @@ peer connection.
 
 ## Syntax
 
-```js
-peerConnection.close();
+```js-nolint
+peerConnection.close()
 ```
 
 _This method has no parameters, and returns nothing._

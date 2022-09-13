@@ -32,8 +32,8 @@ This transport is responsible for receiving the data for the media on the receiv
 
 ## Syntax
 
-```js
-let transport = rtcRtpReceiver.transport;
+```js-nolint
+rtcRtpReceiver.transport
 ```
 
 ### Value

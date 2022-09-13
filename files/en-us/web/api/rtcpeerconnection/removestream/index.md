@@ -32,8 +32,8 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 
 ## Syntax
 
-```js
-RTCPeerConnection.removeStream(mediaStream);
+```js-nolint
+RTCPeerConnection.removeStream(mediaStream)
 ```
 
 ### Parameters

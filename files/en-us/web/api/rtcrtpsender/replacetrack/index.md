@@ -35,8 +35,8 @@ the example [Switching cameras](#switching_cameras) below.
 
 ## Syntax
 
-```js
-trackReplacedPromise = sender.replaceTrack(newTrack);
+```js-nolint
+trackReplacedPromise = sender.replaceTrack(newTrack)
 ```
 
 ### Parameters
