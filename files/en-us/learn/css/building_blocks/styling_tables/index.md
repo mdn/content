@@ -42,7 +42,9 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -98,7 +100,7 @@ Let's work through styling our table example together.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
    ```html
-   <link href="style.css" rel="stylesheet">
+   <link href="style.css" rel="stylesheet" />
    ```
 
 ### Spacing and layout
@@ -159,7 +161,10 @@ First of all, we've found a font on [Google Fonts](https://fonts.google.com/) th
 First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing `<link>` element:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Now add the following CSS into your `style.css` file, below the previous addition:

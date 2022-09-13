@@ -179,8 +179,8 @@ The HTML is typical:
 ```html
 <form id="myForm">
   <label for="myName">Send me your name:</label>
-  <input id="myName" name="name" value="John">
-  <input type="submit" value="Send Me!">
+  <input id="myName" name="name" value="John" />
+  <input type="submit" value="Send Me!" />
 </form>
 ```
 
@@ -243,11 +243,11 @@ In the following example, we use the {{domxref("FileReader")}} API to access bin
 <form id="theForm">
   <p>
     <label for="theText">text data:</label>
-    <input id="theText" name="myText" value="Some text data" type="text">
+    <input id="theText" name="myText" value="Some text data" type="text" />
   </p>
   <p>
     <label for="theFile">file data:</label>
-    <input id="theFile" name="myFile" type="file">
+    <input id="theFile" name="myFile" type="file" />
   </p>
   <button>Send Me!</button>
 </form>

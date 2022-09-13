@@ -54,11 +54,11 @@ To make files talk to one another, you have to provide a file path between them 
    <!DOCTYPE html>
    <html lang="en-US">
      <head>
-       <meta charset="utf-8">
+       <meta charset="utf-8" />
        <title>My test page</title>
      </head>
      <body>
-       <img src="" alt="My test image">
+       <img src="" alt="My test image" />
      </body>
    </html>
    ```

@@ -308,11 +308,12 @@ BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity su
 ```html
 <form class="form form--theme-xmas form--simple">
   <label class="label form__label" for="inputId"></label>
-    <input class="form__input" type="text" id="inputId" />
+  <input class="form__input" type="text" id="inputId" />
 
   <input
     class="form__submit form__submit--disabled"
-    type="submit" value="Submit" />
+    type="submit"
+    value="Submit" />
 </form>
 ```
 
