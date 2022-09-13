@@ -22,7 +22,7 @@ select a directory.
 ## Syntax
 
 ```js-nolint
-const FileSystemDirectoryHandle = window.showDirectoryPicker()
+window.showDirectoryPicker()
 ```
 
 ### Parameters
