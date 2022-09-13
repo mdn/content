@@ -24,7 +24,7 @@ Note that calling `show()` has no effect on a tab with no content loaded.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.show(
   tabId // integer
 )

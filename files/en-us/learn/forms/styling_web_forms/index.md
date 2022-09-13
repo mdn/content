@@ -182,12 +182,12 @@ The HTML is only slightly more involved than the example we used in [the first a
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">

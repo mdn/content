@@ -19,7 +19,7 @@ The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} i
 
 ## Syntax
 
-```js
+```js-nolint
 getTiming()
 ```
 

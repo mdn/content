@@ -31,7 +31,7 @@ The [Browser compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_com
 
 ## Syntax
 
-```js
+```js-nolint
 preventSilentAccess()
 ```
 

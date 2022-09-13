@@ -18,8 +18,8 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 
 ## Syntax
 
-```js
-const composed = Event.composedPath();
+```js-nolint
+const composed = Event.composedPath()
 ```
 
 ### Parameters

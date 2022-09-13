@@ -23,7 +23,7 @@ If the task is immutable, the function call is ignored.
 
 ## Syntax
 
-```js
+```js-nolint
 setPriority(priority)
 ```
 

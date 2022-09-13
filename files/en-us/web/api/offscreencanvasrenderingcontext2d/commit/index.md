@@ -20,7 +20,7 @@ The copy operation is synchronous. Calling this method is not needed for the tra
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 

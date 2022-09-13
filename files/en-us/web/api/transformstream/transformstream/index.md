@@ -16,7 +16,7 @@ The **`TransformStream()`** constructor creates a new {{domxref("TransformStream
 
 ## Syntax
 
-```js
+```js-nolint
 new TransformStream()
 new TransformStream(transformer)
 new TransformStream(transformer, writableStrategy)

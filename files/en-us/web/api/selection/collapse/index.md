@@ -19,7 +19,7 @@ editable, the caret will blink there.
 
 ## Syntax
 
-```js
+```js-nolint
 collapse(node)
 collapse(node, offset)
 ```

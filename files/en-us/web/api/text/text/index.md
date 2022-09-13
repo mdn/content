@@ -15,9 +15,9 @@ with the optional string given in parameter as its textual content.
 
 ## Syntax
 
-```js
-new Text();
-new Text(aString);
+```js-nolint
+new Text()
+new Text(aString)
 ```
 
 ### Parameters

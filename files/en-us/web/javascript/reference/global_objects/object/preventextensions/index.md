@@ -20,7 +20,7 @@ object). It also prevents the object's prototype from being re-assigned.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.preventExtensions(obj)
 ```
 

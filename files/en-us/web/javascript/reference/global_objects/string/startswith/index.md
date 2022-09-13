@@ -20,7 +20,7 @@ The **`startsWith()`** method determines whether a string begins with the charac
 
 ## Syntax
 
-```js
+```js-nolint
 startsWith(searchString)
 startsWith(searchString, position)
 ```

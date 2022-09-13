@@ -19,7 +19,7 @@ The **`exec()`** method executes a search for a match in a specified string and 
 
 ## Syntax
 
-```js
+```js-nolint
 exec(str)
 ```
 

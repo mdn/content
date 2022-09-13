@@ -21,7 +21,7 @@ responses in the {{domxref("Cache")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll()
 matchAll(request)
 matchAll(request, options)

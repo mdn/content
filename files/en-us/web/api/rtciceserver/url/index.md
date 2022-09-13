@@ -28,7 +28,7 @@ property instead.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   url: iceServerUrl,

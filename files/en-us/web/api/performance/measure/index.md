@@ -27,7 +27,7 @@ The `measure` can be retrieved using any of the {{domxref("Performance")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 measure(measureName)
 measure(measureName, MeasureOptions)
 measure(measureName, startMark)

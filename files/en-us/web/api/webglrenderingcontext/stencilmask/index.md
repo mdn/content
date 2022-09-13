@@ -21,7 +21,7 @@ back stencil writemasks to different values.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilMask(mask)
 ```
 

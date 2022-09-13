@@ -23,7 +23,7 @@ The `options.traceStack` property can be set `true` (by default it is `false`) t
 
 ## Syntax
 
-```js
+```js-nolint
 new Exception(tag, payload)
 new Exception(tag, payload, options)
 ```

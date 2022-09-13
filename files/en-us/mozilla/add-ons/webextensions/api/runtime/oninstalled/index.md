@@ -22,7 +22,7 @@ Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.on
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onInstalled.addListener(listener)
 browser.runtime.onInstalled.removeListener(listener)
 browser.runtime.onInstalled.hasListener(listener)

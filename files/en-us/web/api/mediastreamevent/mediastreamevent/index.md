@@ -18,7 +18,7 @@ The **`MediaStreamEvent()`** constructor creates a new {{domxref("MediaStreamEve
 
 ## Syntax
 
-```js
+```js-nolint
  new MediaStreamEvent(type, options)
 ```
 

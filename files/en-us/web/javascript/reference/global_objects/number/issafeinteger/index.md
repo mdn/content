@@ -18,7 +18,7 @@ The **`Number.isSafeInteger()`** method determines whether the provided value is
 
 ## Syntax
 
-```js
+```js-nolint
 Number.isSafeInteger(testValue)
 ```
 

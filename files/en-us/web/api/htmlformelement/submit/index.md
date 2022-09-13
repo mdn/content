@@ -35,7 +35,7 @@ submitted when you do it with original HTML form submit.
 
 ## Syntax
 
-```js
+```js-nolint
 submit()
 ```
 

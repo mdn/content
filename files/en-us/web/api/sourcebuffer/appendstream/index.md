@@ -25,7 +25,7 @@ The **`appendStream()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 appendStream(stream, maxSize)
 ```
 

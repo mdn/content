@@ -21,8 +21,8 @@ in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-nodeList.values();
+```js-nolint
+values()
 ```
 
 ### Return value

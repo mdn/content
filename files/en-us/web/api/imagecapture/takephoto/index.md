@@ -24,7 +24,7 @@ that resolves with a {{domxref("Blob")}} containing the data.
 
 ## Syntax
 
-```js
+```js-nolint
 takePhoto()
 takePhoto(photoSettings)
 ```

@@ -21,7 +21,7 @@ The **`setFieldOfView()`** method of the {{domxref("HMDVRDevice")}} interface ca
 
 ## Syntax
 
-```js
+```js-nolint
 setFieldOfView(leftFOV, rightFOV, zNear, zFar)
 ```
 

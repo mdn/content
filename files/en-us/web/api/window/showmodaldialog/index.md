@@ -23,7 +23,7 @@ created and displayed a modal dialog box containing a specified HTML document.
 
 ## Syntax
 
-```js
+```js-nolint
 showModalDialog(uri)
 showModalDialog(uri, arguments)
 showModalDialog(uri, arguments, options)

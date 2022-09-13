@@ -19,7 +19,7 @@ specified date according to universal time, where 0 represents Sunday.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDay()
 ```
 

@@ -20,7 +20,7 @@ The **`match()`** method retrieves the result of matching a string against a [re
 
 ## Syntax
 
-```js
+```js-nolint
 match(regexp)
 ```
 

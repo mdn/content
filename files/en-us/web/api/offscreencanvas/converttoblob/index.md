@@ -24,7 +24,7 @@ The created image will have a resolution of 96dpi for file formats that support 
 
 ## Syntax
 
-```js
+```js-nolint
 convertToBlob()
 convertToBlob(options)
 ```

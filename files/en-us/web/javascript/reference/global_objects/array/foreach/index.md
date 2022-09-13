@@ -21,7 +21,7 @@ for each array element.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((element) => { /* … */ })
 forEach((element, index) => { /* … */ })

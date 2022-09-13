@@ -26,7 +26,7 @@ If the default values of the properties are acceptable, you can optionally use t
 
 ## Syntax
 
-```js
+```js-nolint
 new OscillatorNode(context, options)
 ```
 

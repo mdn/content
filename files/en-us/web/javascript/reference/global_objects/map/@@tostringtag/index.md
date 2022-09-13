@@ -19,7 +19,7 @@ The **`Map[@@toStringTag]`** property has an initial value of "Map".
 
 ## Syntax
 
-```js
+```js-nolint
 Map[Symbol.toStringTag]
 ```
 

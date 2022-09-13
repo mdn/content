@@ -24,7 +24,7 @@ This a synchronous function.
 
 ## Syntax
 
-```js
+```js-nolint
 let page = browser.extension.getBackgroundPage()
 ```
 

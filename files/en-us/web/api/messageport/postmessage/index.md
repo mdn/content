@@ -22,7 +22,7 @@ transfers ownership of objects to other browsing contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message, transferList)
 ```
 

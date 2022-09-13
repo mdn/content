@@ -32,7 +32,7 @@ descendants of the specified root element with the given class name(s).
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByClassName(names)
 ```
 

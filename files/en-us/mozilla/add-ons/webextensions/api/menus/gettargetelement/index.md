@@ -25,7 +25,7 @@ An extension requires the "menus" permission to use this API.
 
 ## Syntax
 
-```js
+```js-nolint
 let elem = browser.menus.getTargetElement(targetElementId);
 ```
 

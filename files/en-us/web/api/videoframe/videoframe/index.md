@@ -17,7 +17,7 @@ The **`VideoFrame()`** constructor creates a new {{domxref("VideoFrame")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new VideoFrame(image)
 new VideoFrame(image, init)
 new VideoFrame(data, init)

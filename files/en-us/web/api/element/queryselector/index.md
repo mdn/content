@@ -28,7 +28,7 @@ invoked that matches the specified group of selectors.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelector(selectors)
 ```
 

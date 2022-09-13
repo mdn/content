@@ -20,7 +20,7 @@ The **`ReadableStreamBYOBReader()`** constructor creates and returns a `Readable
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStreamBYOBReader(stream)
 ```
 

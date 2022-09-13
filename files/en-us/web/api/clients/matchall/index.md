@@ -23,7 +23,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll()
 matchAll(options)
 ```

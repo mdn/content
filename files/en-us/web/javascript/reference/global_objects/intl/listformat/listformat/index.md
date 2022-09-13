@@ -23,7 +23,7 @@ formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.ListFormat()
 new Intl.ListFormat(locales)
 new Intl.ListFormat(locales, options)

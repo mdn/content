@@ -20,7 +20,7 @@ The user agent will present a permission dialog including a list of connected de
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice(options)
 ```
 

@@ -19,7 +19,7 @@ renderbuffer object's data store.
 
 ## Syntax
 
-```js
+```js-nolint
 renderbufferStorage(target, internalFormat, width, height)
 ```
 

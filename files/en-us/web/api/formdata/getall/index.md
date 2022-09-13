@@ -19,7 +19,7 @@ The **`getAll()`** method of the {{domxref("FormData")}} interface returns all t
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(name)
 ```
 

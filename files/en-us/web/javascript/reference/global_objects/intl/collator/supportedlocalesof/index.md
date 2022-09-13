@@ -24,7 +24,7 @@ having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.Collator.supportedLocalesOf(locales)
 Intl.Collator.supportedLocalesOf(locales, options)
 ```

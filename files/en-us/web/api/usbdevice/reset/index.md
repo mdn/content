@@ -23,7 +23,7 @@ app operations canceled and their promises rejected.
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

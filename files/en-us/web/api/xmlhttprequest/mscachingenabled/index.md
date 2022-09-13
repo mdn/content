@@ -16,7 +16,7 @@ The **`msCachingEnabled()`** method gets the current caching state for an [XMLHt
 
 ## Syntax
 
-```js
+```js-nolint
 msCachingEnabled()
 ```
 

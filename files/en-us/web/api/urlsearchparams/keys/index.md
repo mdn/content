@@ -22,7 +22,7 @@ objects.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

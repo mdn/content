@@ -26,7 +26,7 @@ Freezing an object is the highest integrity level that JavaScript provides.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.freeze(obj)
 ```
 

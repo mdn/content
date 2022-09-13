@@ -23,7 +23,7 @@ The **`Intl.NumberFormat.prototype.format()`** method formats a number according
 
 ## Syntax
 
-```js
+```js-nolint
 format(number)
 ```
 

@@ -21,7 +21,7 @@ specified name from the element.
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttribute(attrName)
 ```
 

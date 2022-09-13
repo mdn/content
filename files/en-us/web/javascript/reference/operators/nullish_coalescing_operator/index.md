@@ -33,7 +33,7 @@ directly lower than `||` and directly higher than the
 
 ## Syntax
 
-```js
+```js-nolint
 leftExpr ?? rightExpr
 ```
 

@@ -20,7 +20,7 @@ The constructor `config` option can be used to customize the sanitizer behavior.
 
 ## Syntax
 
-```js
+```js-nolint
 new Sanitizer()
 new Sanitizer(config)
 ```

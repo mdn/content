@@ -20,7 +20,7 @@ The **`WheelEvent()`** constructor returns a new {{domxref("WheelEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new WheelEvent(type)
 new WheelEvent(type, options)
 ```

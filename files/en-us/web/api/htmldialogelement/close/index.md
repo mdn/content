@@ -20,7 +20,7 @@ argument, updating the `returnValue` of the dialog.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 close(returnValue)
 ```

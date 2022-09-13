@@ -22,7 +22,7 @@ chain as well.)
 
 ## Syntax
 
-```js
+```js-nolint
 Object.values(obj)
 ```
 

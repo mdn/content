@@ -17,7 +17,7 @@ string containing the value of a specified CSS property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyValue(property)
 ```
 

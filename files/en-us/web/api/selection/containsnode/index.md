@@ -18,7 +18,7 @@ specified node is part of the selection.
 
 ## Syntax
 
-```js
+```js-nolint
 containsNode(node)
 containsNode(node)
 containsNode(node, partialContainment)

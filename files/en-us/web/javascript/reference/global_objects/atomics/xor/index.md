@@ -20,7 +20,7 @@ write happens until the modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.xor(typedArray, index, value)
 ```
 

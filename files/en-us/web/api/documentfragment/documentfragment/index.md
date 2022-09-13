@@ -18,7 +18,7 @@ The **`DocumentFragment()`** constructor returns a new, empty
 
 ## Syntax
 
-```js
+```js-nolint
 new DocumentFragment()
 ```
 

@@ -20,7 +20,7 @@ Fired when the page used the [>history API](/en-US/docs/Web/API/History_API/Work
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onHistoryStateUpdated.addListener(
   listener,                   // function
   filter                      // optional object

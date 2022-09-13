@@ -20,7 +20,7 @@ existing push endpoint registrations.
 
 ## Syntax
 
-```js
+```js-nolint
 registrations()
 ```
 

@@ -22,7 +22,7 @@ Enables the browser action for a tab. By default, browser actions are enabled fo
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.enable(
   tabId // optional integer
 )

@@ -21,7 +21,7 @@ the callback.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )

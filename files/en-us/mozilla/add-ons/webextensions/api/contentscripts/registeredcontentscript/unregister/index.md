@@ -17,7 +17,7 @@ Unregisters the content scripts represented by this `RegisteredContentScript` ob
 
 ## Syntax
 
-```js
+```js-nolint
 registered.unregister()
 ```
 

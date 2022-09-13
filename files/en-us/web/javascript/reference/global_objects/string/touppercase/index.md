@@ -19,7 +19,7 @@ converted to uppercase (the value will be converted to a string if it isn't one)
 
 ## Syntax
 
-```js
+```js-nolint
 toUpperCase()
 ```
 

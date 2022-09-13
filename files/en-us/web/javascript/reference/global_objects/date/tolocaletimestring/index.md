@@ -19,7 +19,7 @@ The **`toLocaleTimeString()`** method returns a string with a language-sensitive
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleTimeString()
 toLocaleTimeString(locales)
 toLocaleTimeString(locales, options)

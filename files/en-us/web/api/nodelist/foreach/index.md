@@ -21,9 +21,9 @@ insertion order.
 
 ## Syntax
 
-```js
-someNodeList.forEach(callback);
-someNodeList.forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters

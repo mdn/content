@@ -23,7 +23,7 @@ resolves when the registration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 register(tag, options)
 ```
 

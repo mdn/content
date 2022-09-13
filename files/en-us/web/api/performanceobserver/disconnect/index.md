@@ -23,7 +23,7 @@ events.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

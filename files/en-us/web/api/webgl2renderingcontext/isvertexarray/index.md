@@ -19,7 +19,7 @@ passed object is a valid {{domxref("WebGLVertexArrayObject")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isVertexArray(vertexArray)
 ```
 

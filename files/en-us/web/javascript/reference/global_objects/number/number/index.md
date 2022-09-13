@@ -16,7 +16,7 @@ The **`Number()` constructor** creates a {{jsxref("Number")}} object. When calle
 
 ## Syntax
 
-```js
+```js-nolint
 new Number(value)
 Number(value)
 ```

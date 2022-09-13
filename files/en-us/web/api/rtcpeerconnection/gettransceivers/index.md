@@ -25,7 +25,7 @@ connection.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransceivers()
 ```
 

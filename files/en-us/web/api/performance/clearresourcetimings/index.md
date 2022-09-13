@@ -23,7 +23,7 @@ to zero. To set the size of the browser's performance data buffer, use the
 
 ## Syntax
 
-```js
+```js-nolint
 clearResourceTimings()
 ```
 

@@ -26,7 +26,7 @@ document's elements that match the specified group of selectors.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelectorAll(selectors)
 ```
 

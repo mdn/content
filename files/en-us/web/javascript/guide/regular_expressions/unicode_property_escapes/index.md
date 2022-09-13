@@ -22,7 +22,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 // Non-binary values
 \p{UnicodePropertyValue}
 \p{UnicodePropertyName=UnicodePropertyValue}

@@ -22,7 +22,7 @@ different prototype.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.construct(target, argumentsList)
 Reflect.construct(target, argumentsList, newTarget)
 ```

@@ -33,7 +33,7 @@ observer.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

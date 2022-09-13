@@ -44,7 +44,7 @@ You can cancel a previously scheduled animation by calling
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(animationFrameCallback)
 ```
 

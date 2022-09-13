@@ -20,7 +20,7 @@ The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface 
 
 ## Syntax
 
-```js
+```js-nolint
 fetch(id, requests)
 fetch(id, requests, options)
 ```

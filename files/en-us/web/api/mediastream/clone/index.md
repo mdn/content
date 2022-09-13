@@ -23,7 +23,7 @@ contains clones of every {{domxref("MediaStreamTrack")}} contained by the
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

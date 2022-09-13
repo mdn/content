@@ -22,7 +22,7 @@ document.
 
 ## Syntax
 
-```js
+```js-nolint
 upgrade(root)
 ```
 

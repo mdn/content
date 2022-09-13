@@ -22,7 +22,7 @@ validated as structurally valid language tags.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.getCanonicalLocales(locales)
 ```
 

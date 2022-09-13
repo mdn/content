@@ -26,7 +26,7 @@ The **`anchor()`** method creates a string beginning with an
 
 ## Syntax
 
-```js
+```js-nolint
 anchor(name)
 ```
 

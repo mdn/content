@@ -19,7 +19,7 @@ information of a {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryParameter(query, pname)
 ```
 

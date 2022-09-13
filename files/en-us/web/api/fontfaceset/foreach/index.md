@@ -17,7 +17,7 @@ The **`forEach()`** method of the {{domxref("FontFaceSet")}} interface executes 
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

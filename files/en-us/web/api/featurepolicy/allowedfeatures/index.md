@@ -24,7 +24,7 @@ returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features",
 
 ## Syntax
 
-```js
+```js-nolint
 const allowed = FeaturePolicy.allowedFeatures()
 ```
 

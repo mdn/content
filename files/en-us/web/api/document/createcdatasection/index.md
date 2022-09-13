@@ -17,7 +17,7 @@ and returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createCDATASection(data)
 ```
 

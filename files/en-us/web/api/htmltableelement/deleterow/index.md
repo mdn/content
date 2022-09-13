@@ -19,7 +19,7 @@ specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRow(index)
 ```
 

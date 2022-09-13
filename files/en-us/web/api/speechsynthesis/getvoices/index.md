@@ -23,7 +23,7 @@ current device.
 
 ## Syntax
 
-```js
+```js-nolint
 getVoices()
 ```
 

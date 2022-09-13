@@ -19,7 +19,7 @@ milliseconds since January 1, 1970, 00:00:00 UTC.
 
 ## Syntax
 
-```js
+```js-nolint
 Date.UTC(year)
 Date.UTC(year, month)
 Date.UTC(year, month, day)

@@ -24,7 +24,7 @@ deals with rejected cases only. It behaves the same as calling {{jsxref("Promise
 
 ## Syntax
 
-```js
+```js-nolint
 p.catch(onRejected)
 
 p.catch(function(reason) {

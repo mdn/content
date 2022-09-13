@@ -18,7 +18,7 @@ a getter to the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 __lookupGetter__(sprop)
 ```
 

@@ -18,7 +18,7 @@ The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} 
 
 ## Syntax
 
-```js
+```js-nolint
 new ArrayBuffer(length)
 ```
 

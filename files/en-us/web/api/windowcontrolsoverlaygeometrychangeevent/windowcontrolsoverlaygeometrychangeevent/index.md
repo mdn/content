@@ -17,7 +17,7 @@ The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly
 
 ## Syntax
 
-```js
+```js-nolint
 new WindowControlsOverlayGeometryChangeEvent(type, options)
 ```
 

@@ -24,7 +24,7 @@ The **`Window.find()`** method finds a string in a window sequentially.
 
 ## Syntax
 
-```js
+```js-nolint
 find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog)
 ```
 

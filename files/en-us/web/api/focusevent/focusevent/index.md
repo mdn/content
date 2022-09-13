@@ -20,7 +20,7 @@ set to the other target.
 
 ## Syntax
 
-```js
+```js-nolint
 new FocusEvent(type)
 new FocusEvent(type, options)
 ```

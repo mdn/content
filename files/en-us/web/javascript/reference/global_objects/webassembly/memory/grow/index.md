@@ -18,7 +18,7 @@ The **`grow()`** prototype method of the {{jsxref("WebAssembly.Memory")}} object
 
 ## Syntax
 
-```js
+```js-nolint
 grow(pageIncrease)
 ```
 

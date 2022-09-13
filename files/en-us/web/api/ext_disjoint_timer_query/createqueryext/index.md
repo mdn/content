@@ -20,7 +20,7 @@ a set of GL commands.
 
 ## Syntax
 
-```js
+```js-nolint
 createQueryEXT()
 ```
 

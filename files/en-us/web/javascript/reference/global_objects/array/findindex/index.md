@@ -22,7 +22,7 @@ See also the {{jsxref("Array/find", "find()")}} method, which returns the first 
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findIndex((element) => { /* … */ } )
 findIndex((element, index) => { /* … */ } )

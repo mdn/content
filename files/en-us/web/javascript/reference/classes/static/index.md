@@ -24,7 +24,7 @@ Static methods are often utility functions, such as functions to create or clone
 
 ## Syntax
 
-```js
+```js-nolint
 static methodName() { /* … */ }
 static propertyName [= value];
 

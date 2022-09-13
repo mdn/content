@@ -13,6 +13,16 @@ The following guidelines cover how to write HTML example code for MDN Web Docs.
 
 ## General guidelines for HTML code examples
 
+### Choosing a format
+
+Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
+
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+
+Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
+
+## Complete HTML document
+
 > **Note:** The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
 
 ### Doctype
@@ -147,17 +157,3 @@ There are some rules for writing about HTML elements on MDN Web Docs. Adhering t
   Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does or when it is used for the first time on the page.
 - **Attribute definitions**: Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term. This allows the term definition to be linked from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`).
 - **Attribute values**: Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. For example, "When the `type` attribute of an `<input>` element is set to `email` or `tel` ...".
-
-## Trailing slashes <!--Is this still a valid section to keep?-->
-
-Don't include XHTML-style trailing slashes for empty elements because they're unnecessary and slow things down. They can also break old browsers if you're not careful (although from what we can recall, this hasn't been a problem since Netscape 4). For example:
-
-```html example-good
-<input type="text">
-<hr>
-```
-
-```html example-bad
-<input type="text" />
-<hr />
-```

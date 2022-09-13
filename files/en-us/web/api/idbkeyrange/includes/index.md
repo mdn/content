@@ -24,7 +24,7 @@ range.
 
 ## Syntax
 
-```js
+```js-nolint
 includes(key)
 ```
 

@@ -69,6 +69,7 @@ The following Web APIs are available to workers:
 - {{domxref("Channel_Messaging_API", "Channel Messaging API")}}
 - {{domxref("Console API", "Console API")}}
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) (e.g. {{domxref("Crypto")}})
+- [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API)
 - {{domxref("CustomEvent")}}
 - {{domxref("Encoding_API", "Encoding API")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
 - {{domxref("Fetch_API", "Fetch API")}}

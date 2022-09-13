@@ -18,7 +18,7 @@ The **`new` operator** lets developers create an instance of a user-defined obje
 
 ## Syntax
 
-```js
+```js-nolint
 new constructor
 new constructor()
 new constructor(arg1)

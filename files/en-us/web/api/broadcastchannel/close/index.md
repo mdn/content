@@ -21,8 +21,8 @@ that this channel is not needed anymore.
 
 ## Syntax
 
-```js
-channel.close();
+```js-nolint
+channel.close()
 ```
 
 ## Example

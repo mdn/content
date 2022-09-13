@@ -22,7 +22,7 @@ For more details about media stream destination nodes, check out the {{domxref("
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamDestination()
 ```
 

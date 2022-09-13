@@ -27,7 +27,7 @@ In Firefox, if this method is called from a page that is part of a private brows
 
 ## Syntax
 
-```js
+```js-nolint
 let windows = browser.extension.getViews(
   fetchProperties // optional object
 )

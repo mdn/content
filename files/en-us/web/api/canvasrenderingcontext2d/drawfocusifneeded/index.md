@@ -21,7 +21,7 @@ specified element is focused.
 
 ## Syntax
 
-```js
+```js-nolint
 drawFocusIfNeeded(element)
 drawFocusIfNeeded(path, element)
 ```

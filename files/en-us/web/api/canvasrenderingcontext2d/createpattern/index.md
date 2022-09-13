@@ -25,7 +25,7 @@ applied to any subsequent drawing.
 
 ## Syntax
 
-```js
+```js-nolint
 createPattern(image, repetition)
 ```
 

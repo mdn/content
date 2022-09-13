@@ -18,7 +18,7 @@ left operand is the dividend and the right operand is the divisor.
 
 ## Syntax
 
-```js
+```js-nolint
 x / y
 ```
 

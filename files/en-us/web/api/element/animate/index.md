@@ -24,7 +24,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 animate(keyframes, options)
 ```
 

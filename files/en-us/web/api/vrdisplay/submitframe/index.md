@@ -26,7 +26,7 @@ The frame should subsequently be rendered using the {{domxref("VRPose")}} and ma
 
 ## Syntax
 
-```js
+```js-nolint
 submitFrame()
 ```
 

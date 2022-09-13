@@ -32,7 +32,7 @@ API instead.
 
 ## Syntax
 
-```js
+```js-nolint
 exportKey(format, key)
 ```
 

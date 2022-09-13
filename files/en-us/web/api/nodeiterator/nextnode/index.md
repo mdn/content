@@ -26,7 +26,7 @@ throw.
 
 ## Syntax
 
-```js
+```js-nolint
 nextNode()
 ```
 

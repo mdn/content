@@ -20,7 +20,7 @@ number.
 
 ## Syntax
 
-```js
+```js-nolint
 isFinite(testValue)
 ```
 

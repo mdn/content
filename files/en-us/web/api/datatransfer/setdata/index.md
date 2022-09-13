@@ -26,7 +26,7 @@ Example data types are `text/plain` and `text/uri-list`.
 
 ## Syntax
 
-```js
+```js-nolint
 setData(format, data)
 ```
 

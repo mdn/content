@@ -21,7 +21,7 @@ to {{domxref("Element.scrollIntoView()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollPathIntoView()
 scrollPathIntoView(path)
 ```

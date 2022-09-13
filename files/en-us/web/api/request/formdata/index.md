@@ -19,7 +19,7 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 
 ## Syntax
 
-```js
+```js-nolint
 formData()
 ```
 

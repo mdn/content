@@ -24,7 +24,7 @@ translation of language, region and script display names.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DisplayNames(locales, options)
 ```
 

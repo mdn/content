@@ -23,7 +23,7 @@ resolve.
 
 ## Syntax
 
-```js
+```js-nolint
 select(properties)
 select(properties, options)
 ```

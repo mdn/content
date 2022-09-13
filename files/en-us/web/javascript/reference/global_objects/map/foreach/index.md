@@ -20,7 +20,7 @@ pair in the `Map` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach(() => { /* … */ } )
 forEach((value) => { /* … */ } )

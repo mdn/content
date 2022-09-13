@@ -24,7 +24,7 @@ long vibration, it is truncated: the max length depends on the implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 vibrate(pattern)
 ```
 

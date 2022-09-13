@@ -22,7 +22,7 @@ Template literals are sometimes informally called _template strings_, because th
 
 ## Syntax
 
-```js
+```js-nolint
 `string text`
 
 `string text line 1

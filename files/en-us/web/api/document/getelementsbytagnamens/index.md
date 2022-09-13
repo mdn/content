@@ -20,7 +20,7 @@ The complete document is searched, including the root node.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespace, name)
 ```
 

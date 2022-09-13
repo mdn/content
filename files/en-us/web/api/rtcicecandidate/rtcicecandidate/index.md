@@ -26,7 +26,7 @@ be configured to represent a single {{Glossary("ICE")}} candidate.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCIceCandidate()
 new RTCIceCandidate(candidateInfo)
 ```

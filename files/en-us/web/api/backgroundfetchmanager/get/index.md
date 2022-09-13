@@ -20,7 +20,7 @@ The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 get(id)
 ```
 

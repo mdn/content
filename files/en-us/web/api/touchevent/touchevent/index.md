@@ -21,7 +21,7 @@ The **`TouchEvent()`** constructor creates a new {{domxref("TouchEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new TouchEvent(type)
 new TouchEvent(type, options)
 ```

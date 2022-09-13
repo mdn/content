@@ -25,7 +25,7 @@ another object's prototype chain.
 
 ## Syntax
 
-```js
+```js-nolint
 isPrototypeOf(object)
 ```
 

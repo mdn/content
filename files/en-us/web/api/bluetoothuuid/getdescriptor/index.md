@@ -18,7 +18,7 @@ The **`getDescriptor()`** method of the {{domxref("BluetoothUUID")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 getDescriptor(name)
 ```
 

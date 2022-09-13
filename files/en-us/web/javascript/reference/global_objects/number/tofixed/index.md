@@ -19,7 +19,7 @@ notation.
 
 ## Syntax
 
-```js
+```js-nolint
 toFixed()
 toFixed(digits)
 ```

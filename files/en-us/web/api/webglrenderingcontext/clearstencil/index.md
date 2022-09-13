@@ -21,7 +21,7 @@ This specifies what stencil value to use when calling the
 
 ## Syntax
 
-```js
+```js-nolint
 clearStencil(s)
 ```
 

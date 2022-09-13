@@ -21,7 +21,7 @@ searched backwards, starting at `fromIndex`.
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchElement)
 lastIndexOf(searchElement, fromIndex)
 ```

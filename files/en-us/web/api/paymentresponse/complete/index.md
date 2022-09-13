@@ -27,7 +27,7 @@ the payment request and the {{jsxref("Promise")}} returned by the
 
 ## Syntax
 
-```js
+```js-nolint
 complete()
 complete(result)
 ```

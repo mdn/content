@@ -19,7 +19,7 @@ formatting without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.ListFormat.supportedLocalesOf(locales)
 Intl.ListFormat.supportedLocalesOf(locales, options)
 ```

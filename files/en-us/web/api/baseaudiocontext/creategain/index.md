@@ -28,7 +28,7 @@ overall gain (or volume) of the audio graph.
 
 ## Syntax
 
-```js
+```js-nolint
 createGain()
 ```
 

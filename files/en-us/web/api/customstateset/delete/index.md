@@ -18,7 +18,7 @@ The **`delete()`** method of the {{domxref("CustomStateSet")}} interface deletes
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 

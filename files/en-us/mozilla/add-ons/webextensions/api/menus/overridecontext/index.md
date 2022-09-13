@@ -22,7 +22,7 @@ This interface requires the `menus.overrideContext` [permission](/en-US/docs/Moz
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.overrideContext(
   contextOptions // object
 )

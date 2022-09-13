@@ -25,7 +25,7 @@ call to it will cause an exception.
 
 ## Syntax
 
-```js
+```js-nolint
 Symbol()
 Symbol(description)
 ```

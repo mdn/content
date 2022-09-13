@@ -21,7 +21,7 @@ resolves when the named element is defined.
 
 ## Syntax
 
-```js
+```js-nolint
 whenDefined(name)
 ```
 

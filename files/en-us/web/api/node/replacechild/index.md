@@ -15,8 +15,8 @@ replaces a child node within the given (parent) node.
 
 ## Syntax
 
-```js
-replaceChild(newChild, oldChild);
+```js-nolint
+replaceChild(newChild, oldChild)
 ```
 
 ### Parameters

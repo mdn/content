@@ -25,7 +25,7 @@ The three parameters `x`, `y` and `z` are unitless and describe a direction vect
 
 ## Syntax
 
-```js
+```js-nolint
 setOrientation(x, y, z)
 ```
 

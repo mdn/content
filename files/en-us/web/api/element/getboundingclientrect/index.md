@@ -34,7 +34,7 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 

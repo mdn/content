@@ -22,7 +22,7 @@ queue; it will be spoken when any other utterances queued before it have been sp
 
 ## Syntax
 
-```js
+```js-nolint
 speak(utterance)
 ```
 

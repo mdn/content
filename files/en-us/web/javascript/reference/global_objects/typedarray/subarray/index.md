@@ -23,7 +23,7 @@ offset is **exclusive**. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 subarray()
 subarray(begin)
 subarray(begin, end)

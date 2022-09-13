@@ -19,7 +19,7 @@ to the time represented by a number of milliseconds since January 1, 1970, 00:00
 
 ## Syntax
 
-```js
+```js-nolint
 setTime(timeValue)
 ```
 

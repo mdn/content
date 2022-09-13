@@ -20,7 +20,7 @@ associated stream.
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

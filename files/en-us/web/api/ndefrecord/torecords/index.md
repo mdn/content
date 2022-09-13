@@ -21,8 +21,8 @@ as smart poster and external type records.
 
 ## Syntax
 
-```js
-NDEFRecord.toRecords()
+```js-nolint
+toRecords()
 ```
 
 ### Parameters

@@ -17,7 +17,7 @@ A **block statement** is used to group zero or more statements. The block is del
 
 ## Syntax
 
-```js
+```js-nolint
 {
   StatementList
 }

@@ -35,7 +35,7 @@ object. It is functionally identical to the standard, preferred method
 
 ## Syntax
 
-```js
+```js-nolint
 removeRule(index)
 ```
 

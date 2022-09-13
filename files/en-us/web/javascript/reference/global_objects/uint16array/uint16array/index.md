@@ -17,7 +17,7 @@ array of 16-bit unsigned integers in the platform byte order.
 
 ## Syntax
 
-```js
+```js-nolint
 new Uint16Array()
 new Uint16Array(length)
 new Uint16Array(typedArray)

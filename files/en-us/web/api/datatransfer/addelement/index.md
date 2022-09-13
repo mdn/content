@@ -23,7 +23,7 @@ dragged).
 
 ## Syntax
 
-```js
+```js-nolint
 addElement(element)
 ```
 

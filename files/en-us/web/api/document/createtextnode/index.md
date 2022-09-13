@@ -19,7 +19,7 @@ characters.
 
 ## Syntax
 
-```js
+```js-nolint
 createTextNode(data)
 ```
 

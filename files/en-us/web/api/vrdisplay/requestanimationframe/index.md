@@ -27,7 +27,7 @@ The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 

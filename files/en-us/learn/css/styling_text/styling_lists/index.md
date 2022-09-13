@@ -115,17 +115,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Description list styles */
 
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 

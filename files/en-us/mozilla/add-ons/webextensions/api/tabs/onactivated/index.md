@@ -20,7 +20,7 @@ Fires when the active tab in a window changes. Note that the tab's URL may not b
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)

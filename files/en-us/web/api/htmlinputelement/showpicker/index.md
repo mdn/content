@@ -24,7 +24,7 @@ More generally, this method should ideally display the picker for any input elem
 
 ## Syntax
 
-```js
+```js-nolint
 showPicker()
 ```
 

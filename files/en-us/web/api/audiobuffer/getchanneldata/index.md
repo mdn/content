@@ -17,7 +17,7 @@ The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface 
 
 ## Syntax
 
-```js
+```js-nolint
 getChannelData(channel)
 ```
 

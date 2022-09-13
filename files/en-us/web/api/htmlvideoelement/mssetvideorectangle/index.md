@@ -17,8 +17,8 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-HTMLVideoElement.msSetVideoRectangle();
+```js-nolint
+msSetVideoRectangle()
 ```
 
 ### Parameters

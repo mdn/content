@@ -20,7 +20,7 @@ The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/We
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Segmenter()
 new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)

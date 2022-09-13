@@ -18,7 +18,7 @@ The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues 
 
 ## Syntax
 
-```js
+```js-nolint
 encode(frame)
 encode(frame, options)
 ```

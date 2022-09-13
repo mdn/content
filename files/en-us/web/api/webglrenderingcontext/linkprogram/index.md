@@ -20,7 +20,7 @@ program's fragment and vertex shaders.
 
 ## Syntax
 
-```js
+```js-nolint
 linkProgram(program)
 ```
 

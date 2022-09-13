@@ -17,7 +17,7 @@ The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} I
 
 ## Syntax
 
-```js
+```js-nolint
 getFloatTimeDomainData(array)
 ```
 

@@ -22,7 +22,7 @@ Example data types are `text/plain` and `text/uri-list`.
 
 ## Syntax
 
-```js
+```js-nolint
 getData(format)
 ```
 

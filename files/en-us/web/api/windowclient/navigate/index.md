@@ -21,7 +21,7 @@ interface loads a specified URL into a controlled client page then returns a
 
 ## Syntax
 
-```js
+```js-nolint
 navigate(url)
 ```
 

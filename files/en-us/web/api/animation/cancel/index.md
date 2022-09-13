@@ -22,7 +22,7 @@ The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} i
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

@@ -24,7 +24,7 @@ For compatibility with other browsers, Firefox makes this method available via t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.create(
   createProperties, // object
   () => {/* … */}   // optional function

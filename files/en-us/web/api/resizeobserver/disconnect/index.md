@@ -21,7 +21,7 @@ or {{domxref('SVGElement')}} targets.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

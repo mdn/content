@@ -26,7 +26,7 @@ it, and then returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createCaption()
 ```
 

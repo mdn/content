@@ -21,7 +21,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 prompt(message)
 prompt(message, defaultValue)

@@ -22,7 +22,7 @@ object representing the url pattern defined by the parameters.
 
 ## Syntax
 
-```js
+```js-nolint
 new URLPattern(input)
 new URLPattern(input, baseURL)
 ```

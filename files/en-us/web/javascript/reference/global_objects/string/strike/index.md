@@ -19,7 +19,7 @@ HTML element that causes a string to be displayed as struck-out text.
 
 ## Syntax
 
-```js
+```js-nolint
 strike()
 ```
 

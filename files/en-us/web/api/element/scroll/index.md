@@ -19,7 +19,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 scroll(x-coord, y-coord)
 scroll(options)
 ```

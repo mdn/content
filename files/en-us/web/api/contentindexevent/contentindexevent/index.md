@@ -22,7 +22,7 @@ whose type and other options are configured as specified.
 
 ## Syntax
 
-```js
+```js-nolint
 new ContentIndexEvent(type, options)
 ```
 

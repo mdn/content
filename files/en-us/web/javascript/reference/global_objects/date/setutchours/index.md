@@ -21,7 +21,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCHours(hoursValue)
 setUTCHours(hoursValue, minutesValue)
 setUTCHours(hoursValue, minutesValue, secondsValue)

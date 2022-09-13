@@ -24,7 +24,7 @@ Use this event to handle the user's selection, generally by opening the correspo
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputEntered.addListener(listener)
 browser.omnibox.onInputEntered.removeListener(listener)
 browser.omnibox.onInputEntered.hasListener(listener)

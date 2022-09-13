@@ -18,7 +18,7 @@ stencil test actions.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilOp(fail, zfail, zpass)
 ```
 

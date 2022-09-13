@@ -20,7 +20,7 @@ Fired when the contents of the tab is replaced by a different (usually previousl
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onTabReplaced.addListener(
   listener,                   // function
   filter                      // optional object

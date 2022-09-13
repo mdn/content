@@ -57,7 +57,7 @@ If an extension has the `"webRequest"`, `"webRequestBlocking"`, `"proxy"`, and `
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onAuthRequired.addListener(
   listener,                    // function
   filter,                      //  object

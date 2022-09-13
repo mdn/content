@@ -19,7 +19,7 @@ The **`createQuadLayer()`** method of the {{domxref("XRWebGLBinding")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 createQuadLayer(init)
 ```
 

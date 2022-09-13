@@ -18,7 +18,7 @@ In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** 
 
 ## Syntax
 
-```js
+```js-nolint
 createElement(tagName)
 createElement(tagName, options)
 ```

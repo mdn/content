@@ -22,7 +22,7 @@ the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSPerspective(length)
 ```
 

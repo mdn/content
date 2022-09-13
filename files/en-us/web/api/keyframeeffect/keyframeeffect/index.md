@@ -19,7 +19,7 @@ The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/W
 
 ## Syntax
 
-```js
+```js-nolint
 new KeyframeEffect(target, keyframes)
 new KeyframeEffect(target, keyframes, options)
 new KeyframeEffect(sourceKeyFrames)

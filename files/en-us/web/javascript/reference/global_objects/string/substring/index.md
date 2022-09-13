@@ -18,7 +18,7 @@ The **`substring()`** method returns the part of the `string` between the start 
 
 ## Syntax
 
-```js
+```js-nolint
 substring(indexStart)
 substring(indexStart, indexEnd)
 ```

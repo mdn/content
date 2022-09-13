@@ -21,7 +21,7 @@ defining a periodic waveform that can be used to shape the oscillator's output, 
 
 ## Syntax
 
-```js
+```js-nolint
 setPeriodicWave(wave)
 ```
 

@@ -19,7 +19,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

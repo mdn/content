@@ -20,7 +20,7 @@ The initial value of the **`@@iterator`** property is the same function object a
 
 ## Syntax
 
-```js
+```js-nolint
 myMap[Symbol.iterator]
 ```
 

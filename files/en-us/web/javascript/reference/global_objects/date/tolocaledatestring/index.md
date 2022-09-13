@@ -20,7 +20,7 @@ The **`toLocaleDateString()`** method returns a string with a language-sensitive
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleDateString()
 toLocaleDateString(locales)
 toLocaleDateString(locales, options)

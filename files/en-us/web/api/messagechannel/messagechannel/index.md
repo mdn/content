@@ -21,7 +21,7 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 
 ## Syntax
 
-```js
+```js-nolint
 new MessageChannel()
 ```
 

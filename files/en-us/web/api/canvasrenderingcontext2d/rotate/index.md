@@ -19,7 +19,7 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 
 ## Syntax
 
-```js
+```js-nolint
 rotate(angle)
 ```
 

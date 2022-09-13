@@ -21,7 +21,7 @@ The **`Math.atanh()`** function returns the inverse hyperbolic tangent of a numb
 
 ## Syntax
 
-```js
+```js-nolint
 Math.atanh(x)
 ```
 

@@ -19,7 +19,7 @@ The **`clear()`** method removes all elements from a `Map` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

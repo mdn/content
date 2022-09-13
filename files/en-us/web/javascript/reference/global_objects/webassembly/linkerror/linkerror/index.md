@@ -18,7 +18,7 @@ from the start function).
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.LinkError()
 new WebAssembly.LinkError(message)
 new WebAssembly.LinkError(message, options)

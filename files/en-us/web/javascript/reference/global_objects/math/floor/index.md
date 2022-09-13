@@ -17,7 +17,7 @@ The **`Math.floor()`** function always rounds down and returns the largest integ
 
 ## Syntax
 
-```js
+```js-nolint
 Math.floor(x)
 ```
 

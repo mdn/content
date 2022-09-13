@@ -31,7 +31,7 @@ The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `e
 
 ## Syntax
 
-```js
+```js-nolint
 execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 

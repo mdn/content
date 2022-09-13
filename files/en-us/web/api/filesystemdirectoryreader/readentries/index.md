@@ -24,7 +24,7 @@ Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which rep
 
 ## Syntax
 
-```js
+```js-nolint
 readEntries(successCallback)
 readEntries(successCallback, errorCallback)
 ```

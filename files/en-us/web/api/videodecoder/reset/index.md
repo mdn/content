@@ -18,7 +18,7 @@ The **`reset()`** method of the {{domxref("VideoDecoder")}} interface resets all
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

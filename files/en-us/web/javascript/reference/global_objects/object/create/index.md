@@ -21,7 +21,7 @@ existing object as the prototype of the newly created object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.create(proto)
 Object.create(proto, propertiesObject)
 ```

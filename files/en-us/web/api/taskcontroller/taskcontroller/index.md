@@ -18,7 +18,7 @@ If no priority is set, the signal priority defaults to [`user-visible`](/en-US/d
 
 ## Syntax
 
-```js
+```js-nolint
 new TaskController()
 new TaskController(init)
 ```

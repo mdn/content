@@ -20,7 +20,7 @@ The **`getUint8()`** method gets an unsigned 8-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint8(byteOffset)
 ```
 

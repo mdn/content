@@ -29,7 +29,7 @@ You can access `CacheStorage` through the global
 
 ## Syntax
 
-```js
+```js-nolint
 open(cacheName)
 ```
 

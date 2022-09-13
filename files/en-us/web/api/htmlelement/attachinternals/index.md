@@ -17,7 +17,7 @@ The **`HTMLElement.attachInternals()`** method returns an {{domxref("ElementInte
 
 ## Syntax
 
-```js
+```js-nolint
 attachInternals()
 ```
 

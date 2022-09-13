@@ -33,7 +33,7 @@ WebXR device and the WebGL graphics layer used to render the 3D scene.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRWebGLLayer(session, context)
 new XRWebGLLayer(session, context, layerInit)
 ```

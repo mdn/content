@@ -26,7 +26,7 @@ drawn at twice the normal size.
 
 ## Syntax
 
-```js
+```js-nolint
 scale(x, y)
 ```
 

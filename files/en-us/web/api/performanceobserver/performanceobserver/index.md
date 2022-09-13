@@ -22,7 +22,7 @@ registered, via the {{domxref("PerformanceObserver.observe","observe()")}} metho
 
 ## Syntax
 
-```js
+```js-nolint
 new PerformanceObserver(callback)
 ```
 

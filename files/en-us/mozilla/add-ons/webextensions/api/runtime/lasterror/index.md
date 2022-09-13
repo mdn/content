@@ -31,7 +31,7 @@ If you call an asynchronous function that may set `lastError`, you are expected 
 
 ## Syntax
 
-```js
+```js-nolint
 let myError = browser.runtime.lastError;  // null or Error object
 ```
 

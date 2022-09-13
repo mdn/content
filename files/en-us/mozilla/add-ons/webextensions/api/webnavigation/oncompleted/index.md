@@ -20,7 +20,7 @@ Fired when a document, including the resources it refers to, is completely loade
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onCompleted.addListener(
   listener,                   // function
   filter                      // optional object

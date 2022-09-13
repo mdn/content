@@ -18,7 +18,7 @@ The **`Object.getOwnPropertySymbols()`** method returns an array of all symbol p
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertySymbols(obj)
 ```
 

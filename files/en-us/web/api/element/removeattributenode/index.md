@@ -19,7 +19,7 @@ The **`removeAttributeNode()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttributeNode(attributeNode)
 ```
 

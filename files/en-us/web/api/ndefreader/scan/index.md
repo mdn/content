@@ -17,7 +17,7 @@ The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a readi
 
 ## Syntax
 
-```js
+```js-nolint
 scan(options)
 ```
 

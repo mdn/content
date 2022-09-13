@@ -17,7 +17,7 @@ The **`appendItem()`** method of the {{domxref("SVGPointList")}} interface adds 
 
 ## Syntax
 
-```js
+```js-nolint
 appendItem(obj)
 ```
 

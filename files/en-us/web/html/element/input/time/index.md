@@ -334,7 +334,7 @@ If you try to submit the form with an incomplete time (or with a time outside th
 
 As mentioned, older versions of Safari and a few other, less common, browsers don't support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the `time` picker on Chrome for Android looks like this:
 
-![Phone screen showing modal dialog with 10:21 as a header. the 10 is fully opaque. The 21 is not. the main area has a circle with the numbers 1 - 12 in a ring, and the number 13 -24 on an inner ring. The number 10 is highlighted with a blue circle. The buttons at the bottom are clear, cancel, and set.](chrome-android-time.png)
+![Phone screen showing modal dialog with 10:21 as a header. The 10 is fully opaque. The 21 is not. The main area has a circle with the numbers 1 - 12 in a ring, and the number 13 -24 on an inner ring. The number 10 is highlighted with a blue circle. The buttons at the bottom are clear, cancel, and set.](chrome-android-time.png)
 
 Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 

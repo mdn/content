@@ -21,7 +21,7 @@ operand can be converted to `true`; otherwise, returns `true`.
 
 ## Syntax
 
-```js
+```js-nolint
 !expr
 ```
 

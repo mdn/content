@@ -20,7 +20,7 @@ The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL
 
 ## Syntax
 
-```js
+```js-nolint
 drawArraysInstancedANGLE(mode, first, count, primcount)
 ```
 

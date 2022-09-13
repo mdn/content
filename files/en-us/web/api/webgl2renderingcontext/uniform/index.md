@@ -24,7 +24,7 @@ uniform variables.
 
 ## Syntax
 
-```js
+```js-nolint
 uniform1ui(location, v0)
 uniform2ui(location, v0, v1)
 uniform3ui(location, v0, v1, v2)

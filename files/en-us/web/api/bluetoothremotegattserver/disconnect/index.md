@@ -21,7 +21,7 @@ the script execution environment to disconnect from `this.device`.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

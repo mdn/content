@@ -27,7 +27,7 @@ As the vector controls both the direction of travel and its velocity, the three 
 
 ## Syntax
 
-```js
+```js-nolint
 setVelocity(x, y, z)
 ```
 

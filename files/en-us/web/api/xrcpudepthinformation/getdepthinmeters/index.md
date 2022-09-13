@@ -21,7 +21,7 @@ The **`getDepthInMeters()`** method of the {{DOMxRef("XRCPUDepthInformation")}} 
 
 ## Syntax
 
-```js
+```js-nolint
 getDepthInMeters(x, y)
 ```
 

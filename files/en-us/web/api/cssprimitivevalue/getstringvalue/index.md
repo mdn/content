@@ -27,7 +27,7 @@ value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 getStringValue()
 ```
 

@@ -16,7 +16,7 @@ specified {{jsxref("Error")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

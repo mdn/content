@@ -27,7 +27,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 

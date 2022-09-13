@@ -21,7 +21,7 @@ constantly outputs samples whose values are always the same.
 
 ## Syntax
 
-```js
+```js-nolint
 new ConstantSourceNode(context, options)
 ```
 

@@ -19,7 +19,7 @@ The **`setUint8()`** method stores an unsigned 8-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setUint8(byteOffset, value)
 ```
 

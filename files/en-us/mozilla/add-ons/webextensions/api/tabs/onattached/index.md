@@ -20,7 +20,7 @@ Fired when a tab is attached to a window, for example because it was moved betwe
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onAttached.addListener(listener)
 browser.tabs.onAttached.removeListener(listener)
 browser.tabs.onAttached.hasListener(listener)

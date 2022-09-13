@@ -20,7 +20,7 @@ new HTML {{ domxref("Document") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 createHTMLDocument()
 createHTMLDocument(title)
 ```

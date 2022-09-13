@@ -26,7 +26,7 @@ node_.
 
 ## Syntax
 
-```js
+```js-nolint
 comparePoint(referenceNode, offset)
 ```
 

@@ -21,7 +21,7 @@ a new string.
 
 ## Syntax
 
-```js
+```js-nolint
 setRangeText(replacement)
 setRangeText(replacement, start)
 setRangeText(replacement, start, end)

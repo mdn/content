@@ -17,7 +17,7 @@ WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/ove
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.RuntimeError()
 new WebAssembly.RuntimeError(message)
 new WebAssembly.RuntimeError(message, options)

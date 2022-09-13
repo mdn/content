@@ -20,7 +20,7 @@ argument is provided.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

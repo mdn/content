@@ -17,7 +17,7 @@ The **`item()`** method of the {{domxref("FileList")}} API returns a {{domxref("
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

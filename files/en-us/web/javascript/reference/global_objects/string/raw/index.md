@@ -19,7 +19,7 @@ The static **`String.raw()`** method is a tag function of [template literals](/e
 
 ## Syntax
 
-```js
+```js-nolint
 String.raw(strings, ...substitutions)
 
 String.raw`templateString`

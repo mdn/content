@@ -25,7 +25,7 @@ in the last ten seconds.
 
 ## Syntax
 
-```js
+```js-nolint
 getContributingSources()
 ```
 

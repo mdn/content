@@ -20,7 +20,7 @@ element that causes a string to be displayed as bold.
 
 ## Syntax
 
-```js
+```js-nolint
 bold()
 ```
 

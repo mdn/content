@@ -20,7 +20,7 @@ property from an object (`target[propertyKey]`) as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.get(target, propertyKey)
 Reflect.get(target, propertyKey, receiver)
 ```
