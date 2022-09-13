@@ -19,8 +19,8 @@ Font faces that were added to the set using the CSS {{cssxref("@font-face")}} ru
 
 ## Syntax
 
-```js
-delete font
+```js-nolint
+delete(font)
 ```
 
 ### Parameters
