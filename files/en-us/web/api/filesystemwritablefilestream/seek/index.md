@@ -22,7 +22,7 @@ offset to the position (in bytes) specified when calling the method.
 ## Syntax
 
 ```js-nolint
-FileSystemWritableStream.seek(position).then(/* … */)
+seek(position)
 ```
 
 ### Parameters
