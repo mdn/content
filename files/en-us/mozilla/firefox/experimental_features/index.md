@@ -1065,6 +1065,49 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
   </tbody>
 </table>
 
+
+#### OpenFont COLRv1 fonts
+
+This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
+This enables compression-friendly color vector fonts with gradiants, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
+See {{bug(1740530)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>gfx.font_rendering.colr_v1.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Service Workers
 
 #### Preloading of service worker resources on navigation
