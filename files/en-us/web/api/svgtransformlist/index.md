@@ -377,7 +377,6 @@ In this example we create a function that will apply three different transformat
       function transformMe(evt) {
         // svg root element to access the createSVGTransform() function
         const svgroot = evt.target.parentNode;
-        
         // SVGTransformList of the element that has been clicked on
         const tfmList = evt.target.transform.baseVal;
 
