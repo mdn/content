@@ -117,14 +117,17 @@ A percent-based CSS will look like this:
 
 ```css
 body {
+  /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
   font-size: 100%;
-} /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+}
 h1 {
+  /* twice the size of the body, thus 32 pixels */
   font-size: 200%;
-} /* twice the size of the body, thus 32 pixels */
+}
 span.subheading {
+  /* half the size of the h1, thus 16 pixels to come back to the original size */
   font-size: 50%;
-} /* half the size of the h1, thus 16 pixels to come back to the original size */
+}
 ```
 
 The same problem expressed with ems:
