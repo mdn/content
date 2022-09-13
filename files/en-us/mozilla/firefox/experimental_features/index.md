@@ -1107,7 +1107,6 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
   </tbody>
 </table>
 
-
 #### OpenFont COLRv1 fonts
 
 This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
