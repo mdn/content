@@ -34,7 +34,7 @@ let the local end know this negotiation must occur.
 ## Syntax
 
 ```js-nolint
-pc.removeTrack(sender)
+removeTrack(sender)
 ```
 
 ### Parameters
