@@ -22,7 +22,7 @@ texture to a {{domxref("WebGLFramebuffer")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 framebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex, numViews)
 ```
 

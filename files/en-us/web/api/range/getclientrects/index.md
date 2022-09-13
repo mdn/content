@@ -19,7 +19,7 @@ The **`Range.getClientRects()`** method returns a list of {{
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 

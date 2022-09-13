@@ -25,7 +25,7 @@ certain types or that have certain names, see {{domxref("Performance.getEntriesB
 
 ## Syntax
 
-```js
+```js-nolint
 getEntries()
 ```
 

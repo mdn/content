@@ -18,7 +18,7 @@ The **`start()`** property of the {{domxref("PresentationRequest")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 const promise = presentationRequest.start()
 promise.then((PresentationConnection) => { /* ... */ })
        .catch((error) => { /* ... */ })

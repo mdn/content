@@ -23,7 +23,7 @@ send binary or text data to a presenting browsing context.
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 

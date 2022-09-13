@@ -29,7 +29,7 @@ If you intend to modify the request, you may prefer the {{domxref("Request")}} c
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

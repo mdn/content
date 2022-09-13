@@ -18,7 +18,7 @@ The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _seria
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

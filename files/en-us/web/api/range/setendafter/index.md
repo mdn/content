@@ -19,7 +19,7 @@ The **`Range.setEndAfter()`** method sets the end position of a
 
 ## Syntax
 
-```js
+```js-nolint
 setEndAfter(referenceNode)
 ```
 

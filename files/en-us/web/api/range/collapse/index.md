@@ -21,7 +21,7 @@ see the {{domxref("Range.collapsed")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 collapse()
 collapse(toStart)
 ```

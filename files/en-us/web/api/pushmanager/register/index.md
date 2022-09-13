@@ -20,7 +20,7 @@ a new endpoint for notifications.
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 ```
 

@@ -35,7 +35,7 @@ respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")
 
 ## Syntax
 
-```js
+```js-nolint
 getClientExtensionResults()
 ```
 

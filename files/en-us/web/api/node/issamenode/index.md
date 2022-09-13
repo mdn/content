@@ -19,8 +19,8 @@ That is, it tests whether two nodes are the same
 
 ## Syntax
 
-```js
-isSameNode(otherNode);
+```js-nolint
+isSameNode(otherNode)
 ```
 
 ### Parameters

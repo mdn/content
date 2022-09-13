@@ -33,7 +33,7 @@ The value is set `true` if the stream is closed or cancelled, and `false` otherw
 
 ## Syntax
 
-```js
+```js-nolint
 read(view)
 ```
 

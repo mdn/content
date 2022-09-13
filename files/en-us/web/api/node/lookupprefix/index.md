@@ -17,8 +17,8 @@ When multiple prefixes are possible, the first prefix is returned.
 
 ## Syntax
 
-```js
-lookupPrefix(namespace);
+```js-nolint
+lookupPrefix(namespace)
 ```
 
 ### Parameters
