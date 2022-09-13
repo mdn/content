@@ -108,7 +108,7 @@ article {
   margin: 1em;
   max-width: 60em;
   min-width: 20em;
-  border: 4em solid #880E4F;
+  border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
   font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;

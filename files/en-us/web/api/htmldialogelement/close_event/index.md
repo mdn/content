@@ -49,8 +49,9 @@ A generic {{domxref("Event")}}.
 ```
 
 ```css hidden
-button, div {
-    margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 

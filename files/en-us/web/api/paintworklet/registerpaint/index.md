@@ -94,7 +94,7 @@ CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
 
 ```css
 li {
-   background-image: paint(checkerboard);
+  background-image: paint(checkerboard);
 }
 ```
 

@@ -39,7 +39,7 @@ Lastly, an application may want to style the drop target element to visually ind
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```
