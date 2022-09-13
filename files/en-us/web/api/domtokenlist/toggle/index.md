@@ -16,9 +16,9 @@ If the token doesn't exist it's added and the function returns `true`.
 
 ## Syntax
 
-```js
-toggle(token);
-toggle(token, force);
+```js-nolint
+toggle(token)
+toggle(token, force)
 ```
 
 ### Parameters

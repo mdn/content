@@ -16,8 +16,8 @@ otherwise `false`.
 
 ## Syntax
 
-```js
-contains(token);
+```js-nolint
+contains(token)
 ```
 
 ### Parameters

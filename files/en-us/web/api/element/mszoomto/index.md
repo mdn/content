@@ -22,7 +22,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 msZoomTo(arguments)
 ```
 

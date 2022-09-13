@@ -18,7 +18,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) starts a timer query.
 
 ## Syntax
 
-```js
+```js-nolint
 beginQueryEXT(target, query)
 ```
 

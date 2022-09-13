@@ -19,7 +19,7 @@ target.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryEXT(target, pname)
 ```
 

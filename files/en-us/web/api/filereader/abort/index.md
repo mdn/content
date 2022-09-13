@@ -20,7 +20,7 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

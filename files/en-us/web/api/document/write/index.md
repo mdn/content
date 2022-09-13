@@ -27,7 +27,7 @@ The **`document.write()`** method writes a string of text to a document stream o
 
 ## Syntax
 
-```js
+```js-nolint
 write(markup)
 ```
 

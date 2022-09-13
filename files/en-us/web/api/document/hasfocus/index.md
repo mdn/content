@@ -24,7 +24,7 @@ active element in a document has focus.
 
 ## Syntax
 
-```js
+```js-nolint
 hasFocus()
 ```
 

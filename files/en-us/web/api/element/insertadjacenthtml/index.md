@@ -20,7 +20,7 @@ the resulting nodes into the DOM tree at a specified position.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentHTML(position, text)
 ```
 

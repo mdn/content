@@ -23,7 +23,7 @@ without having to call `document.getElementsByTagName()` again.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagName(name)
 ```
 

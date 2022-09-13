@@ -25,7 +25,7 @@ to this element until the mouse button is released or {{
 
 ## Syntax
 
-```js
+```js-nolint
 setCapture(retargetToElement)
 ```
 

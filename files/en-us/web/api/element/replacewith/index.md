@@ -20,7 +20,7 @@ objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceWith(param1)
 replaceWith(param1, param2)
 replaceWith(param1, param2, /* … ,*/ paramN)

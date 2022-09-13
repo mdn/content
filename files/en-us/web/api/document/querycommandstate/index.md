@@ -17,7 +17,7 @@ The **`queryCommandState()`** method will tell you if the current selection has 
 
 ## Syntax
 
-```js
+```js-nolint
 queryCommandState(command)
 ```
 

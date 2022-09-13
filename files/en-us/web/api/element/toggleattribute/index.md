@@ -18,7 +18,7 @@ present and adding it if it is not present) on the given element.
 
 ## Syntax
 
-```js
+```js-nolint
 toggleAttribute(name)
 toggleAttribute(name, force)
 ```

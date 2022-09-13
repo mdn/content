@@ -15,7 +15,7 @@ The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface par
 
 ## Syntax
 
-```js
+```js-nolint
 parseFromString(string, mimeType)
 ```
 

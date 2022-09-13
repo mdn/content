@@ -16,8 +16,8 @@ The **`EventTarget()`** constructor creates a new {{domxref("EventTarget")}} obj
 
 ## Syntax
 
-```js
-new EventTarget();
+```js-nolint
+new EventTarget()
 ```
 
 ### Parameters

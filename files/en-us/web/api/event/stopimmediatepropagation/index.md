@@ -20,8 +20,8 @@ is invoked during one such call, no remaining listeners will be called.
 
 ## Syntax
 
-```js
-event.stopImmediatePropagation();
+```js-nolint
+event.stopImmediatePropagation()
 ```
 
 ## Specifications

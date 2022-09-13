@@ -19,7 +19,7 @@ query object.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryObjectEXT(query, pname)
 ```
 
