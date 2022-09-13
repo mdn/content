@@ -14,7 +14,7 @@ A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determin
 
 ## Syntax
 
-```js-nolint
+```js
 function FindProxyForURL(url, host) {
   // …
 }
