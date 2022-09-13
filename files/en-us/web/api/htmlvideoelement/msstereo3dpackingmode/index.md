@@ -18,7 +18,7 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js-nolint
-HTMLVideoElement.msStereo3DPackingMode(topbottom, sidebyside, none)
+msStereo3DPackingMode(topbottom, sidebyside, none)
 ```
 
 ## Value
