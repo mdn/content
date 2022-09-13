@@ -21,7 +21,7 @@ each invalid child and validation problems are reported to the user.
 ## Syntax
 
 ```js-nolint
-HTMLFormElement.reportValidity()
+reportValidity()
 ```
 
 ### Return value
