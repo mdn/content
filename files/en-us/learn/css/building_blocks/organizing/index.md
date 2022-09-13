@@ -390,7 +390,10 @@ So, for example, with [partials](https://sass-lang.com/documentation/at-rules/us
 
 ```css
 // foundation/_index.sass
-@use "code" @use "lists" @use "footer" @use "links";
+@use "code";
+@use "lists";
+@use "footer";
+@use "links";
 ```
 
 If the partials are all loaded into an index file, as implied above, you can then load that entire directory into another stylesheet in one go:
