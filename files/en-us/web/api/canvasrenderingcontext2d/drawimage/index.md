@@ -93,9 +93,7 @@ This example draws an image to the canvas using the `drawImage()` method.
 ```html
 <canvas id="canvas"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg"
-       width="300" height="227">
+  <img id="source" src="rhino.jpg" width="300" height="227" />
 </div>
 ```
 

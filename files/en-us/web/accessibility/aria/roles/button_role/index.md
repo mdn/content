@@ -116,11 +116,17 @@ Try the example by adding a name to the text box. The button will cause the name
 #### HTML
 
 ```html
-    <h1>ARIA Button Example</h1>
-    <ul id="nameList"></ul>
-    <label for="newName">Enter your Name: </label>
-    <input type="text" id="newName">
-    <span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)">Add Name</span>
+<h1>ARIA Button Example</h1>
+<ul id="nameList"></ul>
+<label for="newName">Enter your Name: </label>
+<input type="text" id="newName" />
+<span
+  role="button"
+  tabindex="0"
+  onclick="handleCommand(event)"
+  onKeyDown="handleCommand(event)"
+  >Add Name</span
+>
 ```
 
 #### CSS
@@ -182,17 +188,25 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 #### HTML
 
 ```html
-<button type="button" onclick="handleBtnClick(event)" onKeyDown="handleBtnKeyDown(event)">
+<button
+  type="button"
+  onclick="handleBtnClick(event)"
+  onKeyDown="handleBtnKeyDown(event)">
   Mute Audio
 </button>
 
-<span role="button" tabindex="0"
- aria-pressed="false" onclick="handleBtnClick(event)"
- onKeyDown="handleBtnKeyDown(event)">
+<span
+  role="button"
+  tabindex="0"
+  aria-pressed="false"
+  onclick="handleBtnClick(event)"
+  onKeyDown="handleBtnKeyDown(event)">
   Mute Audio
 </span>
 
-<audio id="audio" src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
+<audio
+  id="audio"
+  src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
   Your browser does not support the `audio` element.
 </audio>
 ```

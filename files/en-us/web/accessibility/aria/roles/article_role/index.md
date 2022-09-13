@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: article role'
+title: "ARIA: article role"
 slug: Web/Accessibility/ARIA/Roles/article_role
 tags:
   - ARIA
@@ -23,7 +23,7 @@ The `article` role indicates a section of a page that could easily stand on its 
   <p>Another paragraph.</p>
   Controls to interact with the article, share it, etc.
 </div>
-<div role="article"> … </div>
+<div role="article">…</div>
 ```
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
@@ -39,7 +39,7 @@ Don't use `role="article"`. Instead use the `<article>` element.
   <p>Another paragraph.</p>
   Controls to interact with the article, share it, etc.
 </article>
-<article> … </article>
+<article>…</article>
 ```
 
 ## Description

@@ -59,8 +59,7 @@ then adds the new DOM subtree to the document to be displayed.
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript

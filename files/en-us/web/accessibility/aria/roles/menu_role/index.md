@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menu role'
+title: "ARIA: menu role"
 slug: Web/Accessibility/ARIA/Roles/menu_role
 tags:
   - Accessibility
@@ -89,16 +89,16 @@ Below are two example menu implementations.
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Page Sections">
+    <img src="hamburger.svg" alt="Page Sections" />
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description">
-        Description
-      </a>
+      <a role="menuitem" href="#description"> Description </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#associated_wai-aria_roles_states_and_properties">
+      <a
+        role="menuitem"
+        href="#associated_wai-aria_roles_states_and_properties">
         Associated WAI-ARIA roles, states, and properties
       </a>
     </li>
@@ -108,19 +108,13 @@ Below are two example menu implementations.
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples">
-        Examples
-      </a>
+      <a role="menuitem" href="#examples"> Examples </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications">
-        Specifications
-      </a>
+      <a role="menuitem" href="#specifications"> Specifications </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also">
-        See Also
-      </a>
+      <a role="menuitem" href="#see_also"> See Also </a>
     </li>
   </ul>
 </div>
@@ -136,14 +130,37 @@ The following snippet of code is a popup menu nested in a menubar. It is display
 
 ```html
 <div>
-  <button type="button" aria-haspopup="menu" aria-controls="colormenu" tabindex="0" aria-label="Text Color: purple">
+  <button
+    type="button"
+    aria-haspopup="menu"
+    aria-controls="colormenu"
+    tabindex="0"
+    aria-label="Text Color: purple">
     Purple
     <span></span>
   </button>
   <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
-    <li role="menuitemradio" aria-checked="true" style="color: purple" tabindex="-1">Purple</li>
-    <li role="menuitemradio" aria-checked="false" style="color: magenta" tabindex="-1">Magenta</li>
-    <li role="menuitemradio" aria-checked="false" style="color: black;" tabindex="-1">Black</li>
+    <li
+      role="menuitemradio"
+      aria-checked="true"
+      style="color: purple"
+      tabindex="-1">
+      Purple
+    </li>
+    <li
+      role="menuitemradio"
+      aria-checked="false"
+      style="color: magenta"
+      tabindex="-1">
+      Magenta
+    </li>
+    <li
+      role="menuitemradio"
+      aria-checked="false"
+      style="color: black;"
+      tabindex="-1">
+      Black
+    </li>
   </ul>
 </div>
 ```

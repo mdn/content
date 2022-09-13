@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: contentinfo role'
+title: "ARIA: contentinfo role"
 slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 tags:
   - ARIA
@@ -42,7 +42,6 @@ Each page should only include one `contentinfo` landmark, created by either usin
 
 ```html
 <body>
-
   <!-- other page content -->
 
   <div role="contentinfo">
@@ -53,7 +52,10 @@ Each page should only include one `contentinfo` landmark, created by either usin
       <li><a href="#">About MDN</a></li>
       <li><a href="#">Feedback</a></li>
     </ul>
-    <p>© 2005-2018 Mozilla and individual contributors. Content is available under <a href="#">these licenses</a>.</p>
+    <p>
+      © 2005-2018 Mozilla and individual contributors. Content is available
+      under <a href="#">these licenses</a>.
+    </p>
   </div>
 </body>
 ```
@@ -82,14 +84,16 @@ If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')
 
 ```html
 <body>
-
   …
 
   <article>
     <h2>Everyday Pad Thai</h2>
     <!-- article content -->
     <footer aria-label="Everyday Pad Thai metadata">
-      <p>Posted on <time datetime="2021-09-23 12:17">September 23</time> by <a href="#">Lisa</a>.</p>
+      <p>
+        Posted on <time datetime="2021-09-23 12:17">September 23</time> by
+        <a href="#">Lisa</a>.
+      </p>
     </footer>
   </article>
 

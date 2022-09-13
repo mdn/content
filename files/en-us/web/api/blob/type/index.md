@@ -28,7 +28,7 @@ sure it's one of a given set of image file types.
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">Choose image files…</output>
 ```
 

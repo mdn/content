@@ -129,8 +129,7 @@ Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```

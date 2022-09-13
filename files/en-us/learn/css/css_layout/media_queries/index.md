@@ -274,45 +274,39 @@ We've made no layout changes, however the source of the document is ordered in a
 
 ```html
 <body>
-    <div class="wrapper">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Meet the team</a></li>
-            <li><a href="">Blog</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <article>
-          <div class="content">
-            <h1>Veggies!</h1>
-            <p>
-              …
-            </p>
-          </div>
-          <aside class="related">
-            <p>
-              …
-            </p>
-          </aside>
-        </article>
-
-        <aside class="sidebar">
-          <h2>External vegetable-based links</h2>
-          <ul>
-            <li>
-              …
-            </li>
-          </ul>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Meet the team</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <h1>Veggies!</h1>
+          <p>…</p>
+        </div>
+        <aside class="related">
+          <p>…</p>
         </aside>
-      </main>
+      </article>
 
-      <footer><p>&copy;2019</p></footer>
-    </div>
-  </body>
+      <aside class="sidebar">
+        <h2>External vegetable-based links</h2>
+        <ul>
+          <li>…</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer><p>&copy;2019</p></footer>
+  </div>
+</body>
 ```
 
 This simple layout also works well on mobile. If we view the layout in Responsive Design Mode in DevTools we can see that it works pretty well as a straightforward mobile view of the site.
@@ -379,7 +373,7 @@ If you look at the final example at different widths you can see how the design 
 If you look at the HTML source in the above example, you'll see the following element included in the head of the document:
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 This is the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag) — it exists as a way to control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 980 pixels), and then shrink the rendered result so that it fits in the display.
@@ -398,26 +392,26 @@ This could be achieved using the following:
 
 ```html
 <ul class="grid">
-    <li>
-        <h2>Card 1</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 2</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 3</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 4</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 5</h2>
-        <p>…</p>
-    </li>
+  <li>
+    <h2>Card 1</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 2</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 3</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 4</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 5</h2>
+    <p>…</p>
+  </li>
 </ul>
 ```
 

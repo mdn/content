@@ -81,6 +81,8 @@ When you create a script, whether inline in a `<script>` element or included in 
 
 ```html
 <body onload="console.log('Welcome to my home page!');">
+  …
+</body>
 ```
 
 As it is generally not recommended to mix the structure of the page (written in HTML)
