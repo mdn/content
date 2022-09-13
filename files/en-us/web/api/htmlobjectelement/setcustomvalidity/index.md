@@ -21,7 +21,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(errorMessage)
 ```
 

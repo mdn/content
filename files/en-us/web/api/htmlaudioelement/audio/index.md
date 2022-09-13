@@ -24,7 +24,7 @@ offscreen to manage and play audio.
 
 ## Syntax
 
-```js
+```js-nolint
 new Audio()
 new Audio(url)
 ```

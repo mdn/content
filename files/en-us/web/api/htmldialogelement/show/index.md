@@ -20,7 +20,7 @@ outside of the dialog.
 
 ## Syntax
 
-```js
+```js-nolint
 show()
 ```
 

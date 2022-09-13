@@ -37,7 +37,7 @@ causing the changes to take effect.
 
 ## Syntax
 
-```js
+```js-nolint
 load()
 ```
 

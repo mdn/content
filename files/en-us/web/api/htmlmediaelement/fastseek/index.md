@@ -23,7 +23,7 @@ media to the new time with precision tradeoff.
 
 ## Syntax
 
-```js
+```js-nolint
 fastSeek(time)
 ```
 

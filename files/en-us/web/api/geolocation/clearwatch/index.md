@@ -21,7 +21,7 @@ location/error monitoring handlers previously installed using
 
 ## Syntax
 
-```js
+```js-nolint
 clearWatch(id)
 ```
 

@@ -23,7 +23,7 @@ which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream(frameRate)
 ```
 

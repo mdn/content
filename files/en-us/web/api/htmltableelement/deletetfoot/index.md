@@ -19,7 +19,7 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTFoot()
 ```
 

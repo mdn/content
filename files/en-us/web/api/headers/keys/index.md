@@ -21,7 +21,7 @@ in this object. The keys are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

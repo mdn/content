@@ -20,7 +20,7 @@ The method is expected to return `true` for classic and module scripts, which ar
 
 ## Syntax
 
-```js
+```js-nolint
 supports(type)
 ```
 

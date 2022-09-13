@@ -18,7 +18,7 @@ at the specified index from the options collection for this select element.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(index)
 ```
 

@@ -33,7 +33,7 @@ object. For updating existing records, you should use the
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 add(value, key)
 ```

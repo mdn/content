@@ -25,7 +25,7 @@ The created image data will have a resolution of 96dpi for file formats that sup
 
 ## Syntax
 
-```js
+```js-nolint
 toDataURL()
 toDataURL(type)
 toDataURL(type, encoderOptions)

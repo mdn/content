@@ -19,7 +19,7 @@ given in parameters to be loaded.
 
 ## Syntax
 
-```js
+```js-nolint
 load(font)
 load(font, text)
 ```

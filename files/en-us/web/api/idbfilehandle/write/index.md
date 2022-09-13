@@ -26,7 +26,7 @@ that position by the number of written bytes.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 

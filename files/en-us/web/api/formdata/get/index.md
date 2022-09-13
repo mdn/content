@@ -22,7 +22,7 @@ object. If you expect multiple values and want all of them, use the
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

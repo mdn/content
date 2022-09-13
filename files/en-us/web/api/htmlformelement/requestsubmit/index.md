@@ -23,7 +23,7 @@ that the form be submitted using a specific submit button.
 
 ## Syntax
 
-```js
+```js-nolint
 requestSubmit()
 requestSubmit(submitter)
 ```

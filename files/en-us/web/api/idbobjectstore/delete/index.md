@@ -28,7 +28,7 @@ record — without having to explicitly look up the record's key.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(key)
 ```
 

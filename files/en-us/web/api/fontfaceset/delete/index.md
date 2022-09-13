@@ -17,7 +17,7 @@ The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a 
 
 ## Syntax
 
-```js
+```js-nolint
 delete(font)
 ```
 

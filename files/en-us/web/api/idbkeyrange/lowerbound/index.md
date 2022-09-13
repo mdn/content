@@ -24,7 +24,7 @@ By default, it includes the lower endpoint value and is closed.
 
 ## Syntax
 
-```js
+```js-nolint
 lowerBound(lower)
 lowerBound(lower, open)
 ```

@@ -108,7 +108,7 @@ support the `step` attribute (see the list of supported input types above), or i
 
 ## Syntax
 
-```js
+```js-nolint
 stepDown()
 stepDown(stepDecrement)
 ```

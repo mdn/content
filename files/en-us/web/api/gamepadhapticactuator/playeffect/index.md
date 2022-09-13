@@ -21,7 +21,7 @@ The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interf
 
 ## Syntax
 
-```js
+```js-nolint
 playEffect(type, params)
 ```
 

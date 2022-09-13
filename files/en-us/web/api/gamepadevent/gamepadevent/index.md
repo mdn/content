@@ -17,7 +17,7 @@ The **`GamepadEvent()`** constructor creates a new {{domxref("GamepadEvent")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new GamepadEvent(type, options)
 ```
 
