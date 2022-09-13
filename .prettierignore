@@ -3,6 +3,3 @@ build/
 # Ignore markdown files till full pass is made on each folder
 *.md
 
-# Folders that have been run with prettier
-!files/en-us/games/**/*.md
-!files/en-us/related/**/*.md
