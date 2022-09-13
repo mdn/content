@@ -92,7 +92,7 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 ```css
 p {
   hanging-punctuation: first last;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 ```
 

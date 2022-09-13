@@ -82,15 +82,19 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 20px,
-      black 20px,
-      black 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    black 20px,
+    black 40px
+  );
   /* with multiple color stop lengths */
-  background-image: repeating-linear-gradient(-45deg,
-      transparent 0 20px,
-      black 20px 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
+  );
 }
 ```
 
@@ -107,10 +111,12 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(to bottom,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 ```
 

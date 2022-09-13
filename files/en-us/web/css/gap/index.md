@@ -106,7 +106,6 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 

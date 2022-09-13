@@ -97,7 +97,7 @@ This example uses three classes, one for each possible configuration of the `hyp
 dd {
   width: 55px;
   border: 1px solid black;
- }
+}
 dd.none {
   hyphens: none;
 }

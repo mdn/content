@@ -128,7 +128,9 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

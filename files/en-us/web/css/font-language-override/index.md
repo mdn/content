@@ -21,8 +21,8 @@ The **`font-language-override`** CSS property controls the use of language-speci
 font-language-override: normal;
 
 /* <string> values */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 
 /* Global values */
 font-language-override: inherit;

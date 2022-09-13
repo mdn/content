@@ -55,7 +55,7 @@ The `ime-mode` property is specified using one of the keyword values listed belo
 Unlike Internet Explorer, Firefox's implementation of `ime-mode` allows this property on `<input type="password">`. However, this makes for a bad user experience, and password fields _should not_ enable the IME. Users may correct the inappropriate behavior of sites that don't follow this recommendation by placing the following CSS into their user stylesheet:
 
 ```css
-input[type=password] {
+input[type="password"] {
   ime-mode: auto !important;
 }
 ```

@@ -47,11 +47,22 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 ```
 
 ```css
-div {width: 40px; height: 40px;}
-.c1 { background: #f09}
-.c2 { background: #F09}
-.c3 { background: #ff0099}
-.c4 { background: #FF0099}
+div {
+  width: 40px;
+  height: 40px;
+}
+.c1 {
+  background: #f09;
+}
+.c2 {
+  background: #f09;
+}
+.c3 {
+  background: #ff0099;
+}
+.c4 {
+  background: #ff0099;
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", "450")}}
