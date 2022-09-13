@@ -36,7 +36,7 @@ Using {{cssxref("@property")}} however, we can declare the custom property with 
 
 ```css
 @property --background-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: blue;
 }
