@@ -19,7 +19,7 @@ defined by an `offset` and a `color`, to a given canvas gradient.
 
 ## Syntax
 
-```js
+```js-nolint
 addColorStop(offset, color)
 ```
 

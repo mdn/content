@@ -20,8 +20,8 @@ targeted at each {{domxref("BroadcastChannel")}} bound to the channel.
 
 ## Syntax
 
-```js
-channel.postMessage(message);
+```js-nolint
+channel.postMessage(message)
 ```
 
 ### Parameters

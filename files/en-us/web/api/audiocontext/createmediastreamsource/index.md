@@ -31,7 +31,7 @@ For more details about media stream audio source nodes, check out the {{
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamSource(stream)
 ```
 

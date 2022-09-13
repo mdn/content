@@ -18,7 +18,7 @@ The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```

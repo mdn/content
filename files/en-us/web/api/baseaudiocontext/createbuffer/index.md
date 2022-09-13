@@ -38,7 +38,7 @@ reference page.
 
 ## Syntax
 
-```js
+```js-nolint
 createBuffer(numOfChannels, length, sampleRate)
 ```
 

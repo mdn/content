@@ -25,7 +25,7 @@ waveform. It basically generates a constant tone.
 
 ## Syntax
 
-```js
+```js-nolint
 createOscillator()
 ```
 

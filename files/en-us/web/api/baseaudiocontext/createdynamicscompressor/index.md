@@ -32,7 +32,7 @@ help avoid clipping (distorting) of the audio output.
 
 ## Syntax
 
-```js
+```js-nolint
 createDynamicsCompressor()
 ```
 

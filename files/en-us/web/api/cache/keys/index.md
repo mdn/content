@@ -26,7 +26,7 @@ The requests are returned in the same order that they were inserted.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 keys(request)
 keys(request, options)

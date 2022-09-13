@@ -18,7 +18,7 @@ The **`getService()`** method of the {{domxref("BluetoothUUID")}} interface retu
 
 ## Syntax
 
-```js
+```js-nolint
 getService(name)
 ```
 

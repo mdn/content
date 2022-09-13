@@ -20,7 +20,7 @@ The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface
 
 ## Syntax
 
-```js
+```js-nolint
 getIds()
 ```
 

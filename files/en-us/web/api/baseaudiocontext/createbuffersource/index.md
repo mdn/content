@@ -29,7 +29,7 @@ track.
 
 ## Syntax
 
-```js
+```js-nolint
 createBufferSource()
 ```
 

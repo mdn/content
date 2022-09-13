@@ -47,7 +47,7 @@ fetch(url).then((response) => {
 
 ## Syntax
 
-```js
+```js-nolint
 put(request, response)
 ```
 

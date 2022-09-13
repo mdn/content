@@ -18,7 +18,7 @@ The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues 
 
 ## Syntax
 
-```js
+```js-nolint
 decode(chunk)
 ```
 
