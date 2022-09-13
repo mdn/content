@@ -65,7 +65,7 @@ change the volume of the notes E and G in the chord.</p>
   content: "⏸";
 }
 
-#playButton:not(checked) + label::after{
+#playButton:not(checked) + label::after {
   content: "▶️";
 }
 
@@ -75,7 +75,7 @@ change the volume of the notes E and G in the chord.</p>
 
 #playButton {
   vertical-align: middle;
-  display:none;
+  display: none;
 }
 
 #volumeControl {
