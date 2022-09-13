@@ -51,6 +51,52 @@ Given two points `x` and `y`, the function `atan2(y, x)` calculates and returns 
 ### Formal syntax
 
 {{CSSSyntax}}
+## Example
+
+The `atan2()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
+
+```html hidden
+<div class="box box-1"></div>
+<div class="box box-2"></div>
+<div class="box box-3"></div>
+<div class="box box-4"></div>
+<div class="box box-5"></div>
+```
+
+```css hidden
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+```
+
+```css
+div.box {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(orange, red);
+}
+div.box-1 {
+  transform: rotate(atan2(3, 2));
+}
+div.box-2 {
+  transform: rotate(atan2(3%, -2%));
+}
+div.box-3 {
+  transform: rotate(atan2(-1, 0.5));
+}
+div.box-4 {
+  transform: rotate(atan2(1, 0.5));
+}
+div.box-5 {
+  transform: rotate(atan2(1rem, -0.5rem));
+}
+```
+
+{{EmbedLiveSample('example', '100%', '200px')}}
 
 ## Specifications
 
