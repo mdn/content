@@ -23,7 +23,7 @@ enumerates properties in the prototype chain as well).
 ## Syntax
 
 ```js-nolint
- entries()
+entries()
 ```
 
 ### Parameters
