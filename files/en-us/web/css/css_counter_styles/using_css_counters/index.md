@@ -266,8 +266,8 @@ li::before {
   counter-increment: section; /* Increments only this instance
                                             of the section counter */
   content: counters(section, ".") " "; /* Combines the values of all instances
-                                            of the section counter, separated
-                                            by a period */
+                                          of the section counter, separated
+                                          by a period */
 }
 ```
 
