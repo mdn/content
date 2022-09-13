@@ -257,8 +257,8 @@ Using the {{cssxref("counters", "counters()")}} function, separating text can be
 ```css
 ol {
   counter-reset: section; /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
+                             section counter with each ol
+                             element */
   list-style-type: none;
 }
 
