@@ -41,13 +41,18 @@ The stretch value is also displayed for each case by reading the property.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-ctx.font = '20px serif';
+const fontFile = new FontFace('30px "Inconsolata"', 'url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2) format("woff2")', {stretch: '50% 200%'});
 
+document.fonts.add(fontFile);
+
+document.fonts.load('30px "Inconsolata"').then(() => {
+ctx.font = '30px "Inconsolata"'
 // Default (normal)
 ctx.fillText(`Hello world (default: ${ctx.fontStretch})`, 5, 20);
 
 // Font stretch: ultra-condensed
-ctx.fontStretch = 'ultra-condensed';
+ctx.fontStretch = '60%';
+//ctx.fontStretch = 'ultra-condensed';
 ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 50);
 
 // Font stretch: extra-condensed
@@ -81,6 +86,10 @@ ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 260);
 // Font stretch: ultra-expanded
 ctx.fontStretch = 'ultra-expanded';
 ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 290);
+},
+(err) => {
+  console.error(err);
+});
 ```
 
 ### Result
