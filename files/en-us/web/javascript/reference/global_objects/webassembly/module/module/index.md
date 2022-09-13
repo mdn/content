@@ -21,6 +21,9 @@ synchronously compile given WebAssembly binary code. However, the primary way to
 `Module` is through an asynchronous compilation function like
 {{jsxref("WebAssembly.compile()")}}.
 
+> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+
 ## Syntax
 
 > **Warning:** Since compilation for large modules can be expensive,
@@ -55,23 +58,22 @@ const importObject = {
   imports: {
     imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
 function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then((response) =>
-  response.arrayBuffer()
-).then((bytes) => {
-  const mod = createWasmModule(bytes);
-  WebAssembly.instantiate(mod, importObject)
-  .then((result) =>
-    result.exports.exported_func()
-  );
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    const mod = createWasmModule(bytes);
+    WebAssembly.instantiate(mod, importObject).then((result) =>
+      result.exports.exported_func()
+    );
+  });
 ```
 
 ## Specifications
