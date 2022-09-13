@@ -15,7 +15,7 @@ browser-compat: api.structuredClone
 
 {{APIRef("HTML DOM")}}
 
-The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+The global **`structuredClone()`** method creates a [deep copy](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The method also allows {{Glossary("transferable objects")}} in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
