@@ -105,7 +105,7 @@ If you use viewport length units in your CSS within the iframe document, `1vh` w
 
 ```css
 iframe {
-    width: 50vw;
+  width: 50vw;
 }
 ```
 
@@ -115,9 +115,9 @@ A width-based media query within the iframe document is relative to the iframe's
 
 ```css
 @media screen and (min-width: 500px) {
-    p {
-        color: red;
-    }
+  p {
+    color: red;
+  }
 }
 ```
 

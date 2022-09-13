@@ -95,8 +95,13 @@ The all value requires markup around every piece of horizontal text, but it is c
 #### CSS
 
 ```css
-html { writing-mode: vertical-rl; font: 24px serif }
-.num { text-combine-upright: all }
+html {
+  writing-mode: vertical-rl;
+  font: 24px serif;
+}
+.num {
+  text-combine-upright: all;
+}
 ```
 
 #### Results

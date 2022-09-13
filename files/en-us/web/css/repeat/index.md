@@ -74,8 +74,9 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 
 ```css example-bad
 .wrapper {
-  grid-template-columns:  repeat(auto-fill, 10px)
-                          repeat(2, minmax(min-content, max-content));
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
 }
 ```
 

@@ -39,7 +39,7 @@ The asterisk is optional with simple selectors. For instance, `*.warning` and `.
 ### CSS
 
 ```css
-* [lang^=en] {
+* [lang^="en"] {
   color: green;
 }
 
@@ -52,7 +52,7 @@ The asterisk is optional with simple selectors. For instance, `*.warning` and `.
 }
 
 .floating {
-  float: left
+  float: left;
 }
 
 /* automatically clear the next sibling after a floating element */
@@ -82,7 +82,9 @@ In this example the selector will only match elements in the example namespace.
 
 ```css
 @namespace example url(http://www.example.com);
-example|* { color: blue }
+example|* {
+  color: blue;
+}
 ```
 
 ## Specifications

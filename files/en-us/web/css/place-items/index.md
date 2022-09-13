@@ -175,7 +175,7 @@ values.addEventListener('change', (evt) => {
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;
@@ -287,7 +287,7 @@ values.addEventListener('change', (evt) => {
 
 ```css
 #gridcontainer {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;

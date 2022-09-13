@@ -30,7 +30,9 @@ The following example demonstrates the block-level element's influence:
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('Block-level_elements') }}

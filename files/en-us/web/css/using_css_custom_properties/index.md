@@ -212,7 +212,7 @@ The first argument to the function is the name of the [custom property](https://
 }
 
 .three {
-   /* Invalid: "--my-background, pink" */
+  /* Invalid: "--my-background, pink" */
   background-color: var(--my-var, --my-background, pink);
 }
 ```
