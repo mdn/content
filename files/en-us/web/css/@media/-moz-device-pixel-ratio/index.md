@@ -35,7 +35,7 @@ The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media f
 Example:
 
 ```css
-/* Webkit-based browsers */
+/* First, set for Webkit-based browsers */
 @media (-webkit-min-device-pixel-ratio: 2),
    /* Older Firefox browsers (prior to firefox 16) */
    (min--moz-device-pixel-ratio: 2),
