@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: button role'
+title: "ARIA: button role"
 slug: Web/Accessibility/ARIA/Roles/button_role
 tags:
   - ARIA
@@ -135,11 +135,11 @@ Try the example by adding a name to the text box. The button will cause the name
 [role="button"]:hover,
 [role="button"]:focus,
 [role="button"]:active {
-   background-color: white;
-   color: navy;
+  background-color: white;
+  color: navy;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 ```
 
@@ -202,14 +202,14 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 ```css
 button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+  padding: 3px;
+  border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 ```
 

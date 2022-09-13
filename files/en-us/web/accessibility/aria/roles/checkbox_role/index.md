@@ -103,11 +103,11 @@ The following example creates an otherwise non-semantic checkbox element using C
 
 ```css
 [role="checkbox"] {
-  padding:5px;
+  padding: 5px;
 }
 
 [role="checkbox"]:focus {
-  border: 2px solid #0198E1;
+  border: 2px solid #0198e1;
 }
 
 [aria-checked="true"]::before {

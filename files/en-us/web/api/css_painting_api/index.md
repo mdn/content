@@ -116,18 +116,18 @@ In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties
 
 ```css
 li {
-   background-image: paint(boxbg);
-   --boxColor: hsla(55, 90%, 60%, 1.0);
+  background-image: paint(boxbg);
+  --boxColor: hsla(55, 90%, 60%, 1);
 }
 
 li:nth-of-type(3n) {
-   --boxColor: hsla(155, 90%, 60%, 1.0);
-   --widthSubtractor: 20;
+  --boxColor: hsla(155, 90%, 60%, 1);
+  --widthSubtractor: 20;
 }
 
-li:nth-of-type(3n+1) {
-   --boxColor: hsla(255, 90%, 60%, 1.0);
-   --widthSubtractor: 40;
+li:nth-of-type(3n + 1) {
+  --boxColor: hsla(255, 90%, 60%, 1);
+  --widthSubtractor: 40;
 }
 ```
 

@@ -280,7 +280,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 

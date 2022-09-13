@@ -266,7 +266,8 @@ table {
   font-variant-numeric: tabular-nums;
 }
 
-tbody th, tbody td {
+tbody th,
+tbody td {
   padding: 5px;
 }
 
@@ -280,8 +281,10 @@ tbody td[role="gridcell"] {
   color: #000;
 }
 
-tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
-  background-color: #f6f6f6; outline: 3px solid blue;
+tbody td[role="gridcell"]:hover,
+tbody td[role="gridcell"]:focus {
+  background-color: #f6f6f6;
+  outline: 3px solid blue;
 }
 ```
 

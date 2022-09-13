@@ -78,8 +78,8 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
 
 ```css
-[role=tooltip],
-.hidetooltip.hidetooltip.hidetooltip + [role=tooltip] {
+[role="tooltip"],
+.hidetooltip.hidetooltip.hidetooltip + [role="tooltip"] {
   visibility: hidden;
   position: absolute;
   top: 2rem;
@@ -91,9 +91,9 @@ The tooltip can be instantiated with CSS. Change the class name with JavaScript 
 [aria-describedby]:focus {
   position: relative;
 }
-[aria-describedby]:hover + [role=tooltip],
-[aria-describedby]:focus + [role=tooltip] {
- visibility: visible;
+[aria-describedby]:hover + [role="tooltip"],
+[aria-describedby]:focus + [role="tooltip"] {
+  visibility: visible;
 }
 ```
 
