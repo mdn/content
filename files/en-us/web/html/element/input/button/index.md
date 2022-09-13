@@ -35,8 +35,8 @@ browser-compat: html.elements.input.type_button
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}} and
-        {{htmlattrxref("value", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
