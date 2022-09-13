@@ -58,7 +58,7 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
-receive the module from the main thread. when the module is received, we create an
+receive the module from the main thread. When the module is received, we create an
 instance from it using the {{jsxref("WebAssembly.Instantiate()")}} method, invoke an
 exported function from inside it, then show how we can return information on the
 available exports on a module using `WebAssembly.Module.exports`.

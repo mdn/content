@@ -266,7 +266,7 @@ If `panAngle` is positive, this transform will pan the camera to the right; a ne
 
 ### Tilting (Pitching up or down)
 
-When you **tilt** or **pitch** the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. it's also of course useful for implementing support for a player looking up and down.
+When you **tilt** or **pitch** the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. It's also of course useful for implementing support for a player looking up and down.
 
 ![A diagram showing a camera tilting up and down](camera-tilt.png)
 
