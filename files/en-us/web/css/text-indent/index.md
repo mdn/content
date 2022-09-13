@@ -136,12 +136,12 @@ sed euismod ipsum ullamcorper sed.</p>
 
 ```css
 p {
-    text-align: justify;
-    margin: 1em 0 0 0;
+  text-align: justify;
+  margin: 1em 0 0 0;
 }
 p + p {
-    text-indent: 2em;
-    margin: 0;
+  text-indent: 2em;
+  margin: 0;
 }
 ```
 

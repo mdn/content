@@ -90,7 +90,7 @@ span:last-child {
 It is a pain having to write another rule to achieve this, and it is also not very flexible. Instead, `margin-trim` could fix it:
 
 ```css
- article {
+article {
   margin-trim: in-flow;
   /* … */
 }

@@ -91,23 +91,23 @@ The value name of `flow-root` makes sense when you understand you are creating s
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .5);
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -134,26 +134,26 @@ In the following example, we are using `display:flow-root` and floats to impleme
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    overflow: hidden; /* required by resize:both */
-    resize: both;
-    margin-right:25px;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .75);
-    border: 1px solid black;
-    padding: 10px;
+  float: left;
+  overflow: hidden; /* required by resize:both */
+  resize: both;
+  margin-right: 25px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -179,7 +179,8 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
 #### CSS
 
 ```css
-.blue, .red-inner {
+.blue,
+.red-inner {
   height: 50px;
   margin: 10px 0;
 }

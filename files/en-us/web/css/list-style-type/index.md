@@ -33,7 +33,7 @@ list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
 /* <string> value */
-list-style-type: '-';
+list-style-type: "-";
 
 /* Identifier matching an @counter-style rule */
 list-style-type: custom-counter-style;
@@ -550,7 +550,7 @@ label {
 }
 
 input {
-  margin: .4rem;
+  margin: 0.4rem;
 }
 ```
 

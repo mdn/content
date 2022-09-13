@@ -63,11 +63,15 @@ The "V" symbol will flip vertically when you hover over it, if `d` is supported 
 #### CSS
 
 ```css
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 
 /* This path is displayed on hover*/
 #svg_css_ex1:hover path {
-  d: path("M20,80 L50,20 L80,80")
+  d: path("M20,80 L50,20 L80,80");
 }
 ```
 

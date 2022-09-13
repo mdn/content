@@ -149,7 +149,9 @@ scroll-snap-type: unset;
 
 ```css
 /* setup */
-html, body, .holster {
+html,
+body,
+.holster {
   height: 100%;
 }
 .holster {
@@ -221,11 +223,11 @@ html, body, .holster {
 }
 /* coloration */
 .container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

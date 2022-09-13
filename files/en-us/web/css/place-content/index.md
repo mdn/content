@@ -193,7 +193,7 @@ direction.addEventListener("change", (evt) => {
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;

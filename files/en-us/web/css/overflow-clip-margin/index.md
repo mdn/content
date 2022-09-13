@@ -56,7 +56,7 @@ The `overflow-clip-margin` property is specified as a length, negative values ar
 ```css
 .box {
   border: 3px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
   overflow: clip;
   overflow-clip-margin: 20px;
