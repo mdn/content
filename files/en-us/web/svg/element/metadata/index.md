@@ -25,7 +25,7 @@ The **`<metadata>`** [SVG](/en-US/docs/Web/SVG) element adds metadata to SVG con
 
 ### Specific attributes
 
-_None._
+None.
 
 ## DOM Interface
 
