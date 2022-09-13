@@ -1,5 +1,5 @@
 ---
-title: '@layer'
+title: '@layer: cascade layers'
 slug: Web/CSS/@layer
 tags:
   - At-rule
