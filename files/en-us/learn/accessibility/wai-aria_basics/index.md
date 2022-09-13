@@ -248,7 +248,7 @@ This will cause a screen reader to read out the content as it is updated.
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 
 ```html
-<section aria-live="assertive" aria-atomic="true"></section>
+<section aria-live="assertive" aria-atomic="true">…</section>
 ```
 
 The `aria-atomic="true"` attribute tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated.
