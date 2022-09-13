@@ -20,13 +20,17 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 
 - `<host-source>`
 
-  - : Internet hosts by name or IP address, as well as an optional [URL scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL) and/or port number. The site's address may include an optional leading wildcard (the asterisk character, `'*'`), and you may use a wildcard (again, `'*'`) as the port number, indicating that all legal ports are valid for the source.
+  - : Internet host by name or IP address. The [URL scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), port number, and path are optional.
+    Wildcards (`'*'`) can be used for subdomains, host address, and port number, indicating that all legal values of each are valid.
+    When matching schemes, secure upgrades are allowed (e.g. specifying `http://example.com` will match `https://example.com`).
     Examples:
 
-    - `http://*.example.com`: Matches all attempts to load from any subdomain of example.com using the `http:` URL scheme.
-    - `mail.example.com:443`: Matches all attempts to access port 443 on mail.example.com.
+    - `http://*.example.com`: Matches all attempts to load from any subdomain of example.com. Also matches `https` resources.
+    - `mail.example.com:443`: Matches all attempts to load from port 443 on mail.example.com.
     - `https://store.example.com`: Matches all attempts to access store.example.com using `https:`.
-    - `*.example.com`: Matches all attempts to load from any subdomain of example.com using the current protocol.
+    - `*.example.com`: Matches all attempts to load from any subdomain of example.com.
+    - `https://*.example.com:12/path/to/file.js`: Matches all attempts to load from any subdomain of example.com using `https:` on port 12, and only if the path is `/path/to/file.js`.
+    - `ws://example.com`: Matches all attempts to load from example.com using `ws:`. Also matches `wss` resources.
 
 - `<scheme-source>`
 
