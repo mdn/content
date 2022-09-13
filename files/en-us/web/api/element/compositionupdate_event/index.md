@@ -68,7 +68,7 @@ inputElement.addEventListener('compositionupdate', (event) => {
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -85,12 +85,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {

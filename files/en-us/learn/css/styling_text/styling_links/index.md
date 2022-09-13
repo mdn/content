@@ -130,27 +130,21 @@ To start off with, we'll write out our empty rulesets:
 
 ```css
 a {
-
 }
 
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -181,22 +175,22 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
@@ -380,7 +374,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -389,7 +384,7 @@ a:active {
 }
 
 a[href^="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -432,7 +427,8 @@ First, some HTML:
 And now our CSS:
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -451,7 +447,9 @@ a {
   color: black;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 

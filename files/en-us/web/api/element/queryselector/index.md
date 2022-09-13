@@ -95,14 +95,14 @@ This example uses the {{cssxref(":scope")}} pseudo-class to retrieve direct chil
 #### CSS
 
 ```css
-  span {
-    display:block;
-    margin-bottom: 5px;
-  }
-  .red span {
-    background-color: red;
-    padding:5px;
-  }
+span {
+  display: block;
+  margin-bottom: 5px;
+}
+.red span {
+  background-color: red;
+  padding: 5px;
+}
 ```
 
 #### JavaScript

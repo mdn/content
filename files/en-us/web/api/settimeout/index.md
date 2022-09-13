@@ -407,7 +407,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 

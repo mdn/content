@@ -42,7 +42,7 @@ Try playing the audio, then adjusting the playback rate, then enabling and disab
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 

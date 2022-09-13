@@ -54,8 +54,8 @@ p {
   font-weight: bold;
 }
 a {
-   --color: red;
-   color: var(--color);
+  --color: red;
+  color: var(--color);
 }
 ```
 

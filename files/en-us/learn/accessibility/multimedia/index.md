@@ -59,8 +59,9 @@ We already covered simple text alternatives for HTML images in our [HTML: A good
 For example:
 
 ```html
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 ```
 
 ## Accessible audio and video controls
@@ -73,17 +74,23 @@ HTML video and audio instances even come with a set of inbuilt controls that all
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -117,9 +124,12 @@ First of all, let's look at the HTML for the video player, in the HTML:
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -317,9 +327,9 @@ Here's an example:
 
 ```html
 <video controls>
-  <source src="example.mp4" type="video/mp4">
-  <source src="example.webm" type="video/webm">
-  <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

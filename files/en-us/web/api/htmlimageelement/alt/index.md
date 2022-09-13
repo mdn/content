@@ -97,7 +97,7 @@ p {
 .container {
   width: 100vh;
   height: 95vh;
-  font: 16px Arial,Helvetica,sans-serif;
+  font: 16px Arial, Helvetica, sans-serif;
 }
 
 .left-margin {
@@ -206,15 +206,31 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
   width: 9em;
   padding-right: 1em;
   float: left;
-  clip-path: polygon(100% 0, 100% 50%, 90% 70%, 80% 80%,
-             70% 90%, 50% 100%, 0 100%, 0 0);
-  shape-outside: polygon(100% 0, 100% 50%, 90% 70%, 80% 80%,
-             70% 90%, 50% 100%, 0 100%, 0 0);
+  clip-path: polygon(
+    100% 0,
+    100% 50%,
+    90% 70%,
+    80% 80%,
+    70% 90%,
+    50% 100%,
+    0 100%,
+    0 0
+  );
+  shape-outside: polygon(
+    100% 0,
+    100% 50%,
+    90% 70%,
+    80% 80%,
+    70% 90%,
+    50% 100%,
+    0 100%,
+    0 0
+  );
 }
 
 .contents {
   margin-top: 1em;
-  font: 16px Arial,Helvetica,Verdana,sans-serif;
+  font: 16px Arial, Helvetica, Verdana, sans-serif;
 }
 ```
 

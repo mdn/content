@@ -81,15 +81,15 @@ img.preview {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .example {
   display: grid;
   grid-template-areas:
-              "select  log"
-              "preview log";
+    "select  log"
+    "preview log";
 }
 
 .file-select {
@@ -104,7 +104,7 @@ img.preview {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log > label {
   display: block;
 }
 

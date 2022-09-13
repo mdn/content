@@ -135,7 +135,8 @@ table {
   font-family: sans-serif;
 }
 
-td, th {
+td,
+th {
   border: 1px solid rgb(100, 100, 100);
   padding: 10px 14px;
 }

@@ -122,11 +122,11 @@ In the following example the Geolocation API is used to retrieve the user's lati
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 

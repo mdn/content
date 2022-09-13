@@ -216,8 +216,14 @@ Let's have an example by turning our box into a cloud:
 A more practical example of using pseudo-elements is to build a nice formatting for HTML {{HTMLElement('blockquote')}} elements. So let's see an example with a slightly different HTML snippet (which provide us an opportunity to see how to also handle design localization):
 
 ```html
-<blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-<blockquote lang="fr">L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. <i>Pierre Desproges</i></blockquote>
+<blockquote>
+  People who think they know everything are a great annoyance to those of us who
+  do. <i>Isaac Asimov</i>
+</blockquote>
+<blockquote lang="fr">
+  L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase.
+  <i>Pierre Desproges</i>
+</blockquote>
 ```
 
 So here comes our style:

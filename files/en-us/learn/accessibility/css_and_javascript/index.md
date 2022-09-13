@@ -101,7 +101,9 @@ Inline markup that confers specific emphasis to the text that it wraps:
 ```html
 <p>The water is <em>very hot</em>.</p>
 
-<p>Water droplets collecting on surfaces is called <strong>condensation</strong>.</p>
+<p>
+  Water droplets collecting on surfaces is called <strong>condensation</strong>.
+</p>
 ```
 
 You might want to add some simple coloring to your emphasized text:
@@ -120,7 +122,10 @@ You will however rarely need to style emphasis elements in any significant way. 
 An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:
 
 ```html
-<p>Web content is marked up using Hypertext Markup Language, or <abbr>HTML</abbr>.</p>
+<p>
+  Web content is marked up using Hypertext Markup Language, or
+  <abbr>HTML</abbr>.
+</p>
 ```
 
 Again, you might want to style it in some simple way:
@@ -176,7 +181,7 @@ Elements to allow users to input data into websites:
 ```html
 <div>
   <label for="name">Enter your name</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -265,7 +270,7 @@ We've made this form validation pretty accessible too. We've used {{htmlelement(
 
 ```html
 <label for="name">Enter your name:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 We only do the validation when the form is submitted — this is so that we don't update the UI too often and potentially confuse screen reader (and possibly other) users:
@@ -323,8 +328,7 @@ As a final note, we have used some WAI-ARIA attributes in our demo to help solve
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
