@@ -22,7 +22,7 @@ in this object. The keys are `unsigned integer`.
 ## Syntax
 
 ```js-nolint
-nodeList.keys()
+keys()
 ```
 
 ### Return value
