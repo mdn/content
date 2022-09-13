@@ -21,7 +21,7 @@ constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object inst
 
 ## Syntax
 
-```js
+```js-nolint
 new WritableStreamDefaultWriter(stream)
 ```
 

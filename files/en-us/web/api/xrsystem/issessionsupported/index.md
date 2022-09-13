@@ -31,7 +31,7 @@ to use the XR device, the promise is rejected with an appropriate
 
 ## Syntax
 
-```js
+```js-nolint
 isSessionSupported(mode)
 ```
 

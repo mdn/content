@@ -22,7 +22,7 @@ See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns th
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLastIndex((element) => { /* … */ } )
 findLastIndex((element, index) => { /* … */ } )

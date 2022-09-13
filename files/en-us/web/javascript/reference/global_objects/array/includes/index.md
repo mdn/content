@@ -23,7 +23,7 @@ includes a certain value among its entries, returning `true` or
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```

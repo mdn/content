@@ -19,7 +19,7 @@ at the specified byte offset from the start of the {{jsxref("DataView")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getInt8(byteOffset)
 ```
 

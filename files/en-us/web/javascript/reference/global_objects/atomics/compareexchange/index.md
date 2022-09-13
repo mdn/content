@@ -22,7 +22,7 @@ other write happens until the modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
 ```
 

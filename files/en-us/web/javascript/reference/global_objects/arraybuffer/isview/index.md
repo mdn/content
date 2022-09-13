@@ -21,7 +21,7 @@ or a {{jsxref("DataView")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 ArrayBuffer.isView(value)
 ```
 

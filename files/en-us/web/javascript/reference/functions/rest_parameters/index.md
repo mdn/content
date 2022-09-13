@@ -17,7 +17,7 @@ The **rest parameter** syntax allows a function to accept an indefinite number o
 
 ## Syntax
 
-```js
+```js-nolint
 function f(a, b, ...theArgs) {
   // …
 }

@@ -25,7 +25,7 @@ Array.isArray(undefined);  // false
 
 ## Syntax
 
-```js
+```js-nolint
 Array.isArray(value)
 ```
 

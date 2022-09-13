@@ -24,7 +24,7 @@ If the object is invariant, you might instead represent it using a string, and g
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 groupToMap((element) => { /* … */ } )
 groupToMap((element, index) => { /* … */ } )

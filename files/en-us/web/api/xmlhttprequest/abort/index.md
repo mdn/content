@@ -30,7 +30,7 @@ it has already been sent. When a request is aborted, its
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

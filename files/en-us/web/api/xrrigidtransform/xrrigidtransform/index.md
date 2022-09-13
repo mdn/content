@@ -32,7 +32,7 @@ coordinate systems across spaces.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRRigidTransform()
 new XRRigidTransform(position)
 new XRRigidTransform(position, orientation)

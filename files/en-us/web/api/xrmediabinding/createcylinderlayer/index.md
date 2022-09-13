@@ -19,7 +19,7 @@ The **`createCylinderLayer()`** method of the {{domxref("XRMediaBinding")}} inte
 
 ## Syntax
 
-```js
+```js-nolint
 createCylinderLayer(video, options)
 ```
 

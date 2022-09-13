@@ -23,7 +23,7 @@ implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 // Functionless
 sort()
 

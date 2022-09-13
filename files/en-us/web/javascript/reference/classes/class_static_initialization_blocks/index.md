@@ -25,7 +25,7 @@ This means that static blocks can also be used to share information between clas
 
 ## Syntax
 
-```js
+```js-nolint
 static { /* … */ }
 ```
 

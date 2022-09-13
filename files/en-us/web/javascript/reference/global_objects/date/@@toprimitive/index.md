@@ -19,8 +19,8 @@ object to a primitive value.
 
 ## Syntax
 
-```js
-Date()[Symbol.toPrimitive](hint);
+```js-nolint
+Date()[Symbol.toPrimitive](hint)
 ```
 
 ### Return value

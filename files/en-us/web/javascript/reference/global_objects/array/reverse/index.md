@@ -17,7 +17,7 @@ The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.or
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 

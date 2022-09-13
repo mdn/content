@@ -19,7 +19,7 @@ browser-compat: javascript.functions.method_definitions
 
 ## Syntax
 
-```js
+```js-nolint
 const obj = {
   get property() {},
   set property(value) {},

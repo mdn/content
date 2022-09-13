@@ -18,7 +18,7 @@ specified array and its elements.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
