@@ -48,7 +48,7 @@ And what's even better is that it is being developed as a web standard via the [
 - [WebAssembly JavaScript interface](/en-US/docs/WebAssembly/JavaScript_interface)
   - : This object acts as the namespace for all WebAssembly related functionality.
 - [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global)
-  - : A `WebAssembly.Global` object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.
+  - : A `WebAssembly.Global` object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This allows dynamic linking of multiple modules.
 - [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module)
   - : A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.Instance()`](/en-US/docs/WebAssembly/JavaScript_interface/Instance)

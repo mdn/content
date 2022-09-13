@@ -134,17 +134,6 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 - {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
 
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
-
 ## Statements
 
 [JavaScript statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)

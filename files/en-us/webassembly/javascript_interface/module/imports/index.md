@@ -27,7 +27,7 @@ WebAssembly.Module.imports(module)
 ### Parameters
 
 - `module`
-  - : A {{jsxref("WebAssembly.Module")}} object.
+  - : A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object.
 
 ### Return value
 
@@ -35,7 +35,7 @@ An array containing objects representing the imported functions of the given mod
 
 ### Exceptions
 
-If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
+If module is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object instance, a
 {{jsxref("TypeError")}} is thrown.
 
 ## Examples

@@ -13,14 +13,14 @@ browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 
 The **`WebAssembly.Instance()`** constructor creates a new
 `Instance` object which is a stateful, executable instance of a
-{{jsxref("WebAssembly.Module")}}.
+[`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module).
 
 ## Syntax
 
 > **Warning:** Since instantiation for large modules can be expensive,
 > developers should only use the `Instance()` constructor when synchronous
 > instantiation is absolutely required; the asynchronous
-> {{jsxref("WebAssembly.instantiateStreaming()")}} method should be used at all other
+> [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method should be used at all other
 > times.
 
 ```js
@@ -30,20 +30,20 @@ new WebAssembly.Instance(module, importObject)
 ### Parameters
 
 - `module`
-  - : The {{jsxref("WebAssembly.Module")}} object to be instantiated.
+  - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object to be instantiated.
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
-    `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
+    `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects.
     There must be one matching property for each declared import of `module` or
-    else a {{jsxref("WebAssembly.LinkError")}} is thrown.
+    else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError) is thrown.
 
 #### Exceptions
 
 - If either of the parameters are not of the correct type or structure, a
   {{jsxref("TypeError")}} is thrown.
 - If the operation fails, one of
-  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
-  {{jsxref("WebAssembly.RuntimeError")}} are thrown, depending on the cause of the failure.
+  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError), or
+  [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError) are thrown, depending on the cause of the failure.
 - Some browsers may throw a {{jsxref("RangeError")}}, as they prohibit compilation and instantiation of Wasm with large buffers on the UI thread.
 
 ## Examples
@@ -51,7 +51,7 @@ new WebAssembly.Instance(module, importObject)
 ### Synchronously instantiating a WebAssembly module
 
 The `WebAssembly.Instance()` constructor function can be called to
-synchronously instantiate a given {{jsxref("WebAssembly.Module")}} object, for example:
+synchronously instantiate a given [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object, for example:
 
 ```js
 const importObject = {
@@ -72,7 +72,7 @@ fetch('simple.wasm').then((response) =>
 ```
 
 However, the preferred way to get an `Instance` is through the asynchronous
-{{jsxref("WebAssembly.instantiateStreaming()")}} function, for example like this:
+[`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, for example like this:
 
 ```js
 const importObject = {

@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.WebAssembly.Instance
 
 {{WebAssemblySidebar}}
 
-A **`WebAssembly.Instance`** object is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
+A **`WebAssembly.Instance`** object is a stateful, executable instance of a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module). `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
 
 ## Constructor
 
@@ -20,14 +20,14 @@ A **`WebAssembly.Instance`** object is a stateful, executable instance of a {{js
 
 ## Instance properties
 
-- {{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}
+- [`exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports)
   - : Returns an object containing as its members all the functions exported from the WebAssembly module instance, to allow them to be accessed and used by JavaScript. Read-only.
 
 ## Examples
 
 ### Synchronously instantiating a WebAssembly module
 
-The `WebAssembly.Instance()` constructor function can be called to synchronously instantiate a given {{jsxref("WebAssembly.Module")}} object, for example:
+The `WebAssembly.Instance()` constructor function can be called to synchronously instantiate a given [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object, for example:
 
 ```js
 const importObject = {
@@ -47,7 +47,7 @@ fetch('simple.wasm').then((response) =>
 })
 ```
 
-The preferred way to get an `Instance` is asynchronously, for example using the {{jsxref("WebAssembly.instantiateStreaming()")}} function like this:
+The preferred way to get an `Instance` is asynchronously, for example using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function like this:
 
 ```js
 const importObject = {

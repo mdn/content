@@ -20,15 +20,15 @@ compile and instantiate WebAssembly code. This function has two overloads:
 - The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
   {{jsxref("ArrayBuffer")}}, and performs both compilation and instantiation in one
   step. The returned `Promise` resolves to both a compiled
-  {{jsxref("WebAssembly.Module")}} and its first {{jsxref("WebAssembly.Instance")}}.
-- The secondary overload takes an already-compiled {{jsxref("WebAssembly.Module")}}
+  [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) and its first [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance).
+- The secondary overload takes an already-compiled [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module)
   and returns a `Promise` that resolves to an `Instance` of that
   `Module`. This overload is useful if the `Module` has already
   been compiled.
 
 > **Warning:** This method is not the most efficient way of fetching and
 > instantiating wasm modules. If at all possible, you should use the newer
-> {{jsxref("WebAssembly.instantiateStreaming()")}} method instead, which fetches,
+> [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method instead, which fetches,
 > compiles, and instantiates a module all in one step, directly from the raw bytecode,
 > so doesn't require conversion to an {{jsxref("ArrayBuffer")}}.
 
@@ -45,22 +45,22 @@ WebAssembly.instantiate(bufferSource, importObject);
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
-    compile, or a {{jsxref("WebAssembly.Module")}}.
+    compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module).
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
-    `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
+    `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects.
     There must be one matching property for each declared import of the compiled module or
-    else a {{jsxref("WebAssembly.LinkError")}} is thrown.
+    else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError) is thrown.
 
 #### Return value
 
 A `Promise` that resolves to a `ResultObject` which contains two
 fields:
 
-- `module`: A {{jsxref("WebAssembly.Module")}} object representing the
+- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the
   compiled WebAssembly module. This `Module` can be instantiated again,
   shared via {{domxref("Worker.postMessage", "postMessage()")}} or [cached in IndexedDB](/en-US/docs/WebAssembly/Caching_modules).
-- `instance`: A {{jsxref("WebAssembly.Instance")}} object that contains all
+- `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object that contains all
   the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
@@ -68,8 +68,8 @@ fields:
 - If either of the parameters are not of the correct type or structure,
   the promise rejects with a {{jsxref("TypeError")}}.
 - If the operation fails, the promise rejects with a
-  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
-  {{jsxref("WebAssembly.RuntimeError")}}, depending on the cause of the failure.
+  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError), or
+  [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError), depending on the cause of the failure.
 
 ### Secondary overload — taking a module object instance
 
@@ -80,33 +80,33 @@ WebAssembly.instantiate(module, importObject);
 #### Parameters
 
 - `module`
-  - : The {{jsxref("WebAssembly.Module")}} object to be instantiated.
+  - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object to be instantiated.
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
-    `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
+    `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects.
     There must be one matching property for each declared import of `module` or
-    else a {{jsxref("WebAssembly.LinkError")}} is thrown.
+    else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError) is thrown.
 
 #### Return value
 
-A `Promise` that resolves to an {{jsxref("WebAssembly.Instance")}} object.
+A `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object.
 
 #### Exceptions
 
 - If either of the parameters are not of the correct type or structure, a
   {{jsxref("TypeError")}} is thrown.
 - If the operation fails, the promise rejects with a
-  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
-  {{jsxref("WebAssembly.RuntimeError")}}, depending on the cause of the failure.
+  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError), or
+  [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError), depending on the cause of the failure.
 
 ## Examples
 
-> **Note:** You'll probably want to use {{jsxref("WebAssembly.instantiateStreaming()")}} in most cases, as it is more efficient than `instantiate()`.
+> **Note:** You'll probably want to use [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) in most cases, as it is more efficient than `instantiate()`.
 
 ### First overload example
 
 After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
-module using the {{jsxref("WebAssembly.instantiate()")}} function, importing a
+module using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.
 
@@ -133,7 +133,7 @@ fetch('simple.wasm')
 The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html)
 demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
 compiles the loaded simple.wasm byte code using the
-{{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
+[`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
 {{domxref("Worker.postMessage", "postMessage()")}}.
 
 ```js
@@ -147,7 +147,7 @@ In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
-instance from it using the {{jsxref("WebAssembly.instantiate()")}} method and invoke an
+instance from it using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method and invoke an
 exported function from inside it.
 
 ```js

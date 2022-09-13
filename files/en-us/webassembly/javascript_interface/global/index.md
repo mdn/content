@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.WebAssembly.Global
 
 {{WebAssemblySidebar}}
 
-A **`WebAssembly.Global`** object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.
+A **`WebAssembly.Global`** object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This allows dynamic linking of multiple modules.
 
 ## Constructor
 
@@ -25,7 +25,7 @@ All `Global` instances inherit from the `Global()` constructor's prototype objec
 ### Instance properties
 
 - `Global.prototype.constructor`
-  - : Returns the function that created this object's instance. By default this is the {{jsxref("WebAssembly.Global()")}} constructor.
+  - : Returns the function that created this object's instance. By default this is the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor.
 - `Global.prototype[@@toStringTag]`
   - : The initial value of the [@@toStringTag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the String value "WebAssembly.Global".
 - `Global.prototype.value`

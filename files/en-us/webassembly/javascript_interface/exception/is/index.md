@@ -30,7 +30,7 @@ is(tag)
 ### Parameters
 
 - `tag`
-  - : An {{jsxref("WebAssembly.Tag")}} that can be checked to verify the type of the exception.
+  - : An [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) that can be checked to verify the type of the exception.
 
 ### Return value
 

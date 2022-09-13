@@ -27,7 +27,7 @@ WebAssembly.Module.customSections(module, sectionName)
 ### Parameters
 
 - `module`
-  - : The {{jsxref("WebAssembly.Module")}} object whose custom sections are being
+  - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object whose custom sections are being
     considered.
 - `sectionName`
   - : The string name of the desired custom section.
@@ -38,7 +38,7 @@ A (possibly empty) array containing {{jsxref("ArrayBuffer")}} copies of the cont
 
 ### Exceptions
 
-If `module` is not a {{jsxref("WebAssembly.Module")}} object instance, a
+If `module` is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object instance, a
 {{jsxref("TypeError")}} is thrown.
 
 ## Description

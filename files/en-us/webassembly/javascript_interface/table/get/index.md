@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.get
 {{WebAssemblySidebar}}
 
 The **`get()`** prototype method of
-the {{jsxref("WebAssembly.Table()")}} object retrieves a function reference stored at a
+the [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object retrieves a function reference stored at a
 given index.
 
 ## Syntax
@@ -37,7 +37,7 @@ JavaScript wrapper for an underlying wasm function.
 ### Exceptions
 
 If _index_ is greater than or equal
-to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
+to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a
 {{jsxref("RangeError")}} is thrown.
 
 ## Examples
@@ -47,7 +47,7 @@ to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
 The following example (see [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)
 on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/table.html) also)
 compiles and instantiates the loaded table.wasm byte code using the
-{{jsxref("WebAssembly.instantiateStreaming()")}} method. It then retrieves the
+[`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method. It then retrieves the
 references stored in the exported table.
 
 ```js

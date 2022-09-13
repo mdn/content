@@ -14,9 +14,9 @@ browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 
 {{WebAssemblySidebar}}
 
-The **`getArg()`** prototype method of the {{jsxref("WebAssembly.Exception", "Exception")}} object can be used to get the value of a specified item in the exception's data arguments.
+The **`getArg()`** prototype method of the [`Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) object can be used to get the value of a specified item in the exception's data arguments.
 
-The method passes a {{jsxref("WebAssembly.Tag")}} and will only succeed if the thrown `Exception` was created using the same tag, otherwise it will throw a `TypeError`.
+The method passes a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) and will only succeed if the thrown `Exception` was created using the same tag, otherwise it will throw a `TypeError`.
 This ensures that the exception can only be read if the calling code has access to the tag.
 Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) cannot be queried using this method!
 
@@ -31,7 +31,7 @@ getArg(exceptionTag, index)
 ### Parameters
 
 - `exceptionTag`
-  - : A {{jsxref("WebAssembly.Tag")}} that must match the tag associated with this exception.
+  - : A [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) that must match the tag associated with this exception.
 - `index`
   - : The index of the value in the data arguments to return, 0-indexed.
 
@@ -75,7 +75,7 @@ This imports a tag, which it refers to internally as `$tagname`, and exports a m
 )
 ```
 
-The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tagToImport`.
+The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) named `tagToImport`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
 Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.

@@ -37,7 +37,7 @@ WebAssembly.instantiateStreaming(source, importObject)
     a .wasm module you want to stream, compile, and instantiate.
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
-    `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
+    `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects.
     There must be one matching property for each declared import of the compiled module or
     else a
     [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)
@@ -48,10 +48,10 @@ WebAssembly.instantiateStreaming(source, importObject)
 A `Promise` that resolves to a `ResultObject` which contains two
 fields:
 
-- `module`: A {{jsxref("WebAssembly.Module")}} object representing the
+- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the
   compiled WebAssembly module. This `Module` can be instantiated again or
   shared via [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
-- `instance`: A {{jsxref("WebAssembly.Instance")}} object that contains all
+- `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object that contains all
   the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 ### Exceptions
@@ -59,8 +59,8 @@ fields:
 - If either of the parameters are not of the correct type or structure, a
   {{jsxref("TypeError")}} is thrown.
 - If the operation fails, the promise rejects with a
-  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
-  {{jsxref("WebAssembly.RuntimeError")}}, depending on the cause of the failure.
+  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError), or
+  [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError), depending on the cause of the failure.
 
 ## Examples
 

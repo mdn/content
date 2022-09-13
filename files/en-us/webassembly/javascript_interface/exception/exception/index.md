@@ -31,7 +31,7 @@ new Exception(tag, payload, options)
 ### Parameters
 
 - `tag`
-  - : An {{jsxref("WebAssembly.Tag")}} defining the data types expected for each of the values in the `payload`.
+  - : An [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) defining the data types expected for each of the values in the `payload`.
 - `payload`
   - : An array of one or more data fields comprising the payload of the exception.
     The elements must match the data types of the corresponding elements in the `tag`.

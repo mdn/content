@@ -190,7 +190,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see {{JSxRef("WebAssembly.instantiateStreaming()")}} for more details about the instantiate function.
+> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) for more details about the instantiate function.
 
 ## Exploring fundamentals
 
@@ -244,7 +244,7 @@ WebAssembly has a two-level namespace so the import statement here is saying tha
 
 Imported functions are just like normal functions: they have a signature that WebAssembly validation checks statically, and they are given an index and can be named and called.
 
-JavaScript functions have no notion of signature, so any JavaScript function can be passed, regardless of the import's declared signature. Once a module declares an import, the caller of {{JSxRef("WebAssembly.instantiate()")}} must pass in an import object that has the corresponding properties.
+JavaScript functions have no notion of signature, so any JavaScript function can be passed, regardless of the import's declared signature. Once a module declares an import, the caller of [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) must pass in an import object that has the corresponding properties.
 
 For the above, we need an object (let's call it `importObject`) such that `importObject.console.log` is a JavaScript function.
 
@@ -270,7 +270,7 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 
 ### Declaring globals in WebAssembly
 
-WebAssembly has the ability to create global variable instances, accessible from both JavaScript and importable/exportable across one or more {{JSxRef("WebAssembly.Module")}} instances. This is very useful, as it allows dynamic linking of multiple modules.
+WebAssembly has the ability to create global variable instances, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This is very useful, as it allows dynamic linking of multiple modules.
 
 In WebAssembly text format, it looks something like this (see [global.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat) in our GitHub repo; also see [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) for a live JavaScript example):
 
@@ -287,7 +287,7 @@ In WebAssembly text format, it looks something like this (see [global.wat](https
 
 This looks similar to what we've seen before, except that we specify a global value using the keyword `global`, and we also specify the keyword `mut` along with the value's datatype if we want it to be mutable.
 
-To create an equivalent value using JavaScript, you'd use the {{JSxRef("WebAssembly.Global()")}} constructor:
+To create an equivalent value using JavaScript, you'd use the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor:
 
 ```js
 const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
@@ -301,7 +301,7 @@ From JavaScript's point of view, it's as though memory is all inside one big (re
 
 So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
 
-The key is that JavaScript can create WebAssembly linear memory instances via the {{JSxRef("WebAssembly.Memory()")}} interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
+The key is that JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
 Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
 
@@ -447,7 +447,7 @@ You could also declare the `call_indirect` parameter explicitly during the comma
 
 In a higher level, more expressive language like JavaScript, you could imagine doing the same thing with an array (or probably more likely, object) containing functions. The pseudocode would look something like `tbl[i]()`.
 
-So, back to the typechecking. Since WebAssembly is type checked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn't have a matching signature (say an `f32` is returned instead), a {{JSxRef("WebAssembly.RuntimeError")}} is thrown.
+So, back to the typechecking. Since WebAssembly is type checked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn't have a matching signature (say an `f32` is returned instead), a [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError) is thrown.
 
 So what links the `call_indirect` to the table we are calling? The answer is that there is only one table allowed right now per module instance, and that is what `call_indirect` is implicitly calling. In the future, when multiple tables are allowed, we would also need to specify a table identifier of some kind, along the lines of
 

@@ -62,7 +62,7 @@ const tbl = new WebAssembly.Table({
 });
 ```
 
-We can retrieve the index contents using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}:
+We can retrieve the index contents using [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get):
 
 ```js
 console.log(tbl.length);  // a table with 2 elements
@@ -89,7 +89,7 @@ Next, we load and instantiate a WebAssembly module. The `table2.wasm` module def
 )
 ```
 
-We instantiate `table2.wasm` using the {{jsxref("WebAssembly.instantiateStreaming()")}} method:
+We instantiate `table2.wasm` using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method:
 
 ```js
 const instantiating = WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject);

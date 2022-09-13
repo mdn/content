@@ -14,8 +14,8 @@ browser-compat: javascript.builtins.WebAssembly.compile
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.compile()`** function compiles WebAssembly binary code into a {{jsxref("WebAssembly.Module")}} object.
-This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the {{jsxref("WebAssembly.instantiate()")}} function should be used).
+The **`WebAssembly.compile()`** function compiles WebAssembly binary code into a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object.
+This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function should be used).
 
 > **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
@@ -34,7 +34,7 @@ WebAssembly.compile(bufferSource)
 
 ### Return value
 
-A `Promise` that resolves to a {{jsxref("WebAssembly.Module")}} object
+A `Promise` that resolves to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object
 representing the compiled module.
 
 ### Exceptions
@@ -42,7 +42,7 @@ representing the compiled module.
 - If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("ArrayBuffer")}},
   the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a
-  {{jsxref("WebAssembly.CompileError")}}.
+  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError).
 
 ## Examples
 
@@ -61,7 +61,7 @@ fetch("simple.wasm")
 ```
 
 > **Note:** You'll probably want to use
-> {{jsxref("WebAssembly.compileStreaming()")}} in most cases, as it is more efficient
+> [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) in most cases, as it is more efficient
 > than `compile()`.
 
 ## Specifications

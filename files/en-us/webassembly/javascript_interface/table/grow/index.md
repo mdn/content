@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.grow
 {{WebAssemblySidebar}}
 
 The **`grow()`** prototype method of
-the {{jsxref("WebAssembly.Table")}} object increases the size of the Table instance by a
+the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object increases the size of the Table instance by a
 specified number of elements.
 
 ## Syntax

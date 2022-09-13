@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.WebAssembly.Instance.exports
 {{WebAssemblySidebar}}
 
 The **`exports`** readonly property of the
-{{jsxref("WebAssembly.Instance")}} object prototype returns an object containing as its
+[`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object prototype returns an object containing as its
 members all the functions exported from the WebAssembly module instance, to allow them
 to be accessed and used by JavaScript.
 
@@ -28,7 +28,7 @@ instance.exports
 ### Using exports
 
 After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
-module using the {{jsxref("WebAssembly.instantiateStreaming()")}} function, importing a
+module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.
 

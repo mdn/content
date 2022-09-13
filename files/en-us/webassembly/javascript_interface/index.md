@@ -21,22 +21,22 @@ Unlike most other global objects, `WebAssembly` is not a constructor (it is not 
 
 The primary uses for the `WebAssembly` object are:
 
-- Loading WebAssembly code, using the {{jsxref("WebAssembly.instantiate()")}} function.
-- Creating new memory and table instances via the {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} constructors.
-- Providing facilities to handle errors that occur in WebAssembly via the {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} constructors.
+- Loading WebAssembly code, using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function.
+- Creating new memory and table instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) constructors.
+- Providing facilities to handle errors that occur in WebAssembly via the [`WebAssembly.CompileError()`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError) constructors.
 
 ## Constructor properties
 
 - [`WebAssembly.CompileError()`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError/CompileError)
   - : Indicates an error during WebAssembly decoding or validation.
 - [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global/Global)
-  - : Represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.
+  - : Represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This allows dynamic linking of multiple modules.
 - [`WebAssembly.Instance()`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/Instance)
-  - : Is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}
+  - : Is a stateful, executable instance of a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module)
 - [`WebAssembly.LinkError()`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError/LinkError)
   - : Indicates an error during module instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap) from the start function).
 - [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory)
-  - : An object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable {{jsxref("ArrayBuffer")}} that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
+  - : An object whose [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) property is a resizable {{jsxref("ArrayBuffer")}} that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
 - [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module)
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError/RuntimeError)
@@ -50,15 +50,15 @@ The primary uses for the `WebAssembly` object are:
 
 ## Static methods
 
-- {{jsxref("WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate)
   - : The primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
-- {{jsxref("WebAssembly.instantiateStreaming()")}}
+- [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming)
   - : Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a `Module` and its first `Instance`.
-- {{jsxref("WebAssembly.compile()")}}
-  - : Compiles a {{jsxref("WebAssembly.Module")}} from WebAssembly binary code, leaving instantiation as a separate step.
-- {{jsxref("WebAssembly.compileStreaming()")}}
-  - : compiles a {{jsxref("WebAssembly.Module")}} directly from a streamed underlying source, leaving instantiation as a separate step.
-- {{jsxref("WebAssembly.validate()")}}
+- [`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile)
+  - : Compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) from WebAssembly binary code, leaving instantiation as a separate step.
+- [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming)
+  - : compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source, leaving instantiation as a separate step.
+- [`WebAssembly.validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate)
   - : Validates a given typed array of WebAssembly binary code, returning whether the bytes are valid WebAssembly code (`true`) or not (`false`).
 
 ## Examples

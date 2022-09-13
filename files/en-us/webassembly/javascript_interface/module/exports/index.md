@@ -28,7 +28,7 @@ WebAssembly.Module.exports(module)
 ### Parameters
 
 - `module`
-  - : A {{jsxref("WebAssembly.Module")}} object.
+  - : A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object.
 
 ### Return value
 
@@ -36,7 +36,7 @@ An array containing objects representing the exported functions of the given mod
 
 ### Exceptions
 
-If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
+If module is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object instance, a
 {{jsxref("TypeError")}} is thrown.
 
 ## Examples
@@ -46,7 +46,7 @@ If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
 The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html)
 demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
 compiles the loaded simple.wasm byte code using the
-{{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
+[`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
 
 ```js
 const worker = new Worker("wasm_worker.js");
@@ -59,7 +59,7 @@ In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
-instance from it using the {{jsxref("WebAssembly.Instantiate()")}} method, invoke an
+instance from it using the [`WebAssembly.Instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/Instantiate) method, invoke an
 exported function from inside it, then show how we can return information on the
 available exports on a module using `WebAssembly.Module.exports`.
 

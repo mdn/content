@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.WebAssembly.Exception
 
 The **`WebAssembly.Exception`** object represents a runtime exception thrown from WebAssembly to JavaScript, or thrown from JavaScript to a WebAssembly exception handler.
 
-The [constructor](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception) accepts a {{jsxref("WebAssembly.Tag")}}, an array of values, and an `options` object as arguments.
+The [constructor](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception) accepts a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag), an array of values, and an `options` object as arguments.
 The tag uniquely defines the _type_ of an exception, including the order of its arguments and their data types.
 The same tag that was used to create the `Exception` is required to access the arguments of a thrown exception.
 Methods are provided to test whether an exception matches a particular tag, and also to get a particular value by index (if the exception matches specified tag).
@@ -78,7 +78,7 @@ Consider the following WebAssembly code, which is assumed to be compiled to a fi
 )
 ```
 
-The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) to import the **example.wasm** file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tagToImport`.
+The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) to import the **example.wasm** file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) named `tagToImport`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
 Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.

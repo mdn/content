@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.WebAssembly.Global.Global
 
 {{WebAssemblySidebar}}
 
-A **`WebAssembly.Global()`** constructor creates a new `Global` object representing a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances.
+A **`WebAssembly.Global()`** constructor creates a new `Global` object representing a global variable instance, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances.
 This allows dynamic linking of multiple modules.
 
 ## Syntax
