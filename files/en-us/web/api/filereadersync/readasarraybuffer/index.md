@@ -10,7 +10,7 @@ browser-compat: api.FileReaderSync.readAsArrayBuffer
 ## Syntax
 
 ```js-nolint
-let arrayBuffer = readAsArrayBuffer(blob)
+readAsArrayBuffer(blob)
 ```
 
 ### Parameters
