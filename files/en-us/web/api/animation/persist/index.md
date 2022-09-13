@@ -18,7 +18,7 @@ The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Anima
 
 ## Syntax
 
-```js
+```js-nolint
 persist()
 ```
 

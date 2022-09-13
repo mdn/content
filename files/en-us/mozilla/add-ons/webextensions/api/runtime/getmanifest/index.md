@@ -20,7 +20,7 @@ Get the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manif
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.getManifest()
 ```
 

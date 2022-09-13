@@ -20,7 +20,7 @@ The ID of the extension.
 
 ## Syntax
 
-```js
+```js-nolint
 let myAddonId = browser.runtime.id;
 ```
 

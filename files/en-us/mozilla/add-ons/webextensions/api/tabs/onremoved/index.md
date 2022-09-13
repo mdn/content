@@ -20,7 +20,7 @@ Fired when a tab is closed.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onRemoved.addListener(callback)
 browser.tabs.onRemoved.removeListener(listener)
 browser.tabs.onRemoved.hasListener(listener)

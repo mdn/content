@@ -22,7 +22,7 @@ This event is informational only.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onCompleted.addListener(
   listener,             // function
   filter,               //  object
