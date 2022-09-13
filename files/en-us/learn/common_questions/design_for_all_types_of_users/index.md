@@ -131,14 +131,17 @@ The same problem expressed with ems:
 
 ```css
 body {
+  /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
   font-size: 1em;
-} /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+}
 h1 {
+  /* twice the size of the body, thus 32 pixels */
   font-size: 2em;
-} /* twice the size of the body, thus 32 pixels */
+}
 span.subheading {
+  /* half the size of the h1, thus 16 pixels to come back to the original size */
   font-size: 0.5em;
-} /* half the size of the h1, thus 16 pixels to come back to the original size */
+}
 ```
 
 As you can see, the math quickly gets daunting when you have to keep track of the parent, the parent's parent, the parent's parent's parent, and so on. (Most designs are done in pixel-based software, so the math has to be done by the person coding the CSS).
