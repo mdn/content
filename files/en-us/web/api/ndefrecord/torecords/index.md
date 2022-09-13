@@ -22,7 +22,7 @@ as smart poster and external type records.
 ## Syntax
 
 ```js-nolint
-NDEFRecord.toRecords()
+toRecords()
 ```
 
 ### Parameters
