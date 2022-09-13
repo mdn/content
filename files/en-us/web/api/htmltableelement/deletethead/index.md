@@ -39,9 +39,18 @@ This example uses JavaScript to delete a table's header.
 
 ```html
 <table>
-  <thead><th>Name</th><th>Occupation</th></thead>
-  <tr><td>Bob</td><td>Plumber</td></tr>
-  <tr><td>Jim</td><td>Roofer</td></tr>
+  <thead>
+    <th>Name</th>
+    <th>Occupation</th>
+  </thead>
+  <tr>
+    <td>Bob</td>
+    <td>Plumber</td>
+  </tr>
+  <tr>
+    <td>Jim</td>
+    <td>Roofer</td>
+  </tr>
 </table>
 ```
 

@@ -86,10 +86,11 @@ loadImage(imageUrl);
 
 ```html
 <div class="container">
-  <p>Here's a paragraph. It's a very interesting paragraph. You
-  are captivated by this paragraph. Keep reading this paragraph.
-  Okay, now you can stop reading this paragraph. Thanks for
-  reading me.</p>
+  <p>
+    Here's a paragraph. It's a very interesting paragraph. You are captivated by
+    this paragraph. Keep reading this paragraph. Okay, now you can stop reading
+    this paragraph. Thanks for reading me.
+  </p>
 </div>
 ```
 

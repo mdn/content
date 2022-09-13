@@ -206,11 +206,8 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 <p>Click the "Start" button to begin.</p>
 
 <h3>Constrainable properties available:</h3>
-<ul id="supportedConstraints">
-</ul>
-<div id="startButton" class="button">
-  Start
-</div>
+<ul id="supportedConstraints"></ul>
+<div id="startButton" class="button">Start</div>
 <div class="wrapper">
   <div class="trackrow">
     <div class="leftside">
@@ -233,15 +230,11 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
     </div>
   </div>
 
-  <div class="button" id="applyButton">
-    Apply Constraints
-  </div>
+  <div class="button" id="applyButton">Apply Constraints</div>
 </div>
 <video id="video" autoplay></video>
 
-<div class="button" id="stopButton">
-  Stop Video
-</div>
+<div class="button" id="stopButton">Stop Video</div>
 
 <div id="log"></div>
 ```

@@ -45,7 +45,7 @@ and process the selected files.
 ### HTML
 
 ```html
-<input id="files" type="file" multiple>
+<input id="files" type="file" multiple />
 ```
 
 ### JavaScript

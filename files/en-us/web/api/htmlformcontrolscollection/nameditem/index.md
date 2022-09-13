@@ -45,7 +45,7 @@ namedItem(str)
 
 ```html
 <form>
-  <input id="my-form-control" type="textarea">
+  <input id="my-form-control" type="textarea" />
 </form>
 ```
 
