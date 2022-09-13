@@ -17,7 +17,7 @@ The **`apply()`** method calls the specified function with a given `this` value,
 
 ## Syntax
 
-```js
+```js-nolint
 apply(thisArg)
 apply(thisArg, argsArray)
 ```

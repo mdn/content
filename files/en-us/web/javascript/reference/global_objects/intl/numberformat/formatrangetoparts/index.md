@@ -24,7 +24,7 @@ This makes it possible to provide locale-aware custom formatting ranges of numbe
 
 ## Syntax
 
-```js
+```js-nolint
 formatRangeToParts(startRange, endRange)
 ```
 

@@ -18,7 +18,7 @@ The **`setMonth()`** method sets the month for a specified date according to the
 
 ## Syntax
 
-```js
+```js-nolint
 setMonth(monthValue)
 setMonth(monthValue, dayValue)
 ```

@@ -22,7 +22,7 @@ The **`Math.max()`** function returns the largest of the numbers given as input 
 
 ## Syntax
 
-```js
+```js-nolint
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)

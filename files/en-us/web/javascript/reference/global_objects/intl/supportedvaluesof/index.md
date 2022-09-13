@@ -26,7 +26,7 @@ It can also be used to build UIs that allow users to select their preferred loca
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.supportedValuesOf(key)
 ```
 

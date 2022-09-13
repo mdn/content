@@ -19,7 +19,7 @@ The **`getUTCDate()`** method returns the day of the month (from
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDate()
 ```
 

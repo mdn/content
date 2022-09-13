@@ -20,7 +20,7 @@ Based on [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1
 
 ## Syntax
 
-```js
+```js-nolint
 toUTCString()
 ```
 

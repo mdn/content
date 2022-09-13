@@ -19,7 +19,7 @@ The **`Math.imul()`** function returns the result of the C-like 32-bit multiplic
 
 ## Syntax
 
-```js
+```js-nolint
 Math.imul(a, b)
 ```
 

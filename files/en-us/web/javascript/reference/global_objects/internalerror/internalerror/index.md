@@ -16,7 +16,7 @@ The **`InternalError()`** constructor creates an error that indicates an error t
 
 ## Syntax
 
-```js
+```js-nolint
 new InternalError()
 new InternalError(message)
 new InternalError(message, options)

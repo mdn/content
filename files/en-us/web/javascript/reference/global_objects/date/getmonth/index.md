@@ -20,7 +20,7 @@ month of the year).
 
 ## Syntax
 
-```js
+```js-nolint
 getMonth()
 ```
 

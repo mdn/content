@@ -16,7 +16,7 @@ The **`call()`** method calls the function with a given `this` value and argumen
 
 ## Syntax
 
-```js
+```js-nolint
 call()
 call(thisArg)
 call(thisArg, arg1, /* …, */ argN)

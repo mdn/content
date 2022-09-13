@@ -19,7 +19,7 @@ a specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMilliseconds(millisecondsValue)
 ```
 

@@ -23,7 +23,7 @@ object. This method is functionally equivalent to the {{jsxref("Date/valueof",
 
 ## Syntax
 
-```js
+```js-nolint
 getTime()
 ```
 

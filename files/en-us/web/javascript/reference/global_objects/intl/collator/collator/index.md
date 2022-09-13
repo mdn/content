@@ -24,7 +24,7 @@ comparison.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Collator()
 new Intl.Collator(locales)
 new Intl.Collator(locales, options)

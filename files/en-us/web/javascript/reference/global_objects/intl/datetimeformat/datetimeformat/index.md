@@ -24,7 +24,7 @@ language-sensitive date and time formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DateTimeFormat()
 new Intl.DateTimeFormat(locales)
 new Intl.DateTimeFormat(locales, options)

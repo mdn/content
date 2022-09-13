@@ -23,7 +23,7 @@ The **`eval()`** function evaluates JavaScript code represented as a string and 
 
 ## Syntax
 
-```js
+```js-nolint
 eval(string)
 ```
 

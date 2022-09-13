@@ -24,7 +24,7 @@ number formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.NumberFormat()
 new Intl.NumberFormat(locales)
 new Intl.NumberFormat(locales, options)

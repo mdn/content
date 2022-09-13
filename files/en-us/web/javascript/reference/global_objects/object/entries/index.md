@@ -29,7 +29,7 @@ the array should be sorted first, like
 
 ## Syntax
 
-```js
+```js-nolint
 Object.entries(obj)
 ```
 
