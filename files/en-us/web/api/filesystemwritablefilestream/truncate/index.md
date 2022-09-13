@@ -32,7 +32,7 @@ Changes are typically written to a temporary file instead.
 ## Syntax
 
 ```js-nolint
-FileSystemWritableFileStream.truncate().then(/* … */)
+truncate()
 ```
 
 ### Parameters
