@@ -85,7 +85,7 @@ If we remove the border on all inputs, can we restore the default appearance on 
 input {
   /* This rule turns off the default rendering for the input types that have a border,
      including buttons defined with an input element */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* This does NOT restore the default rendering */

@@ -257,12 +257,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -390,8 +390,8 @@ Now onto the CSS. The most relevant parts of this example are as follows:
 
 ```css
 input[type="text"]:disabled {
-    background: #eee;
-    border: 1px solid #ccc;
+  background: #eee;
+  border: 1px solid #ccc;
 }
 
 .disabled-label {
