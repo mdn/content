@@ -27,7 +27,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -81,7 +85,11 @@ The `butt` value indicates that the stroke for each subpath does not extend beyo
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -115,7 +123,11 @@ The `round` value indicates that at the end of each subpath the stroke will be e
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -149,7 +161,11 @@ The `square` value indicates that at the end of each subpath the stroke will be 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

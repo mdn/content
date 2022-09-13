@@ -15,7 +15,11 @@ The **`<linearGradient>`** element lets authors define linear gradients to apply
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

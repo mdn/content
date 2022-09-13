@@ -17,7 +17,11 @@ The **`<radialGradient>`** element lets authors define radial gradients that can
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

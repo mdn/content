@@ -19,7 +19,11 @@ It supports all attribute types, including those that cannot reasonably be inter
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

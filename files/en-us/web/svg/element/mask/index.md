@@ -15,7 +15,11 @@ The **`<mask>`** element defines an alpha mask for compositing the current objec
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

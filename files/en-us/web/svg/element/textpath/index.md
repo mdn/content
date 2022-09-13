@@ -16,7 +16,11 @@ To render text along the shape of a {{SVGElement("path")}}, enclose the text in 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

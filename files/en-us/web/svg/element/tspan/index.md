@@ -16,7 +16,11 @@ The SVG **`<tspan>`** element defines a subtext within a {{SVGElement('text')}} 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

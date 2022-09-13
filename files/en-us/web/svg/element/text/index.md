@@ -18,7 +18,11 @@ If text is included in SVG not inside of a `<text>` element, it is not rendered.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

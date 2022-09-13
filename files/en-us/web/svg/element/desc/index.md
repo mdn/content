@@ -19,7 +19,11 @@ The hidden text of a `<desc>` element can also be concatenated with the visible 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -53,7 +53,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -119,7 +121,9 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
     - `http://www.w3.org/TR/SVG11/feature#SVG-animation`
     - `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
+
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
+
   - : At least one of the following feature is supported:
 
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-static`
@@ -536,8 +540,8 @@ rect {
   stroke-width: 2px;
 }
 
-text{
-  fill: #FFF;
+text {
+  fill: #fff;
   font: 12px sans-serif;
 }
 ```
