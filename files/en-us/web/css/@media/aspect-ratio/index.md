@@ -45,7 +45,7 @@ Note that, when none of the media query conditions are true, the background will
 /* Maximum aspect ratio */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff;  /* cyan */
+    background: #9ff; /* cyan */
   }
 }
 
@@ -71,8 +71,8 @@ Note that, when none of the media query conditions are true, the background will
 ```
 
 ```css hidden
-iframe{
-  display:block;
+iframe {
+  display: block;
 }
 ```
 

@@ -34,12 +34,14 @@ The `hover` feature is specified as a keyword value chosen from the list below.
 ### CSS
 
 ```css
-a:hover { /* default hover effect */
+/* default hover effect */
+a:hover {
   color: black;
   background: yellow;
 }
 
-@media (hover: hover) { /* when supported */
+/* when supported */
+@media (hover: hover) {
   a:hover {
     color: white;
     background: black;

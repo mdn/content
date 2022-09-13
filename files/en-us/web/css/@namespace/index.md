@@ -56,13 +56,16 @@ In [HTML5](/en-US/docs/Glossary/HTML5), known [foreign elements](https://html.sp
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* This matches all XHTML <a> elements, as XHTML is the default unprefixed namespace */
-a {}
+a {
+}
 
 /* This matches all SVG <a> elements */
-svg|a {}
+svg|a {
+}
 
 /* This matches both XHTML and SVG <a> elements */
-*|a {}
+*|a {
+}
 ```
 
 ## Specifications

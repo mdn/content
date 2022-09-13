@@ -43,7 +43,8 @@ In this example, the `:focus-visible` selector uses the UA's behavior to determi
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
