@@ -599,7 +599,7 @@ The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) propert
 
 CSS [trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) allow for making calculations relating to geometry.
 The functions available are `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()`.
-See {{bug(1787070)}} for more details.
+See {{bug(1774589)}} for more details.
 
 <table>
   <thead>
