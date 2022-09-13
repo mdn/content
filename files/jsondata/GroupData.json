@@ -181,16 +181,9 @@
     },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
-      "interfaces": [
-        "FontFace",
-        "FontFaceSet",
-        "FontFaceSetLoadEvent"
-      ],
+      "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
       "methods": [],
-      "properties": [
-        "Document.fonts",
-        "WorkerGlobalScope.fonts"
-      ],
+      "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
       "events": [
         "FontFaceSet: loading event",
         "FontFaceSet: loadingdone event",
