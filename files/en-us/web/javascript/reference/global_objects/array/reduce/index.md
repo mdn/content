@@ -240,7 +240,7 @@ function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
 
-    return { ...acc, [key]: [...acc[key], obj] };
+    return { ...acc, [key]: [...(acc[key] || []), obj] };
   }, {});
 }
 
