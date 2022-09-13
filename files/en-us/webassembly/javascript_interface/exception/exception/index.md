@@ -11,7 +11,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Exception.Exception
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.Exception()`** constructor is used to create a new [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception).
 

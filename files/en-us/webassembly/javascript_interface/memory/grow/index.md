@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`grow()`** prototype method of the {{jsxref("WebAssembly.Memory")}} object increases the size of the memory instance by a specified number of WebAssembly pages.
 

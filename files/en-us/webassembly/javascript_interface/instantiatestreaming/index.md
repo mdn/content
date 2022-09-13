@@ -14,7 +14,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.instantiateStreaming()`** function compiles
 and instantiates a WebAssembly module directly from a streamed underlying source. This

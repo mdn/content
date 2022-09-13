@@ -10,7 +10,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Module
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 

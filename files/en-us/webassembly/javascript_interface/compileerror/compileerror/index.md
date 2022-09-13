@@ -9,7 +9,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.CompileError()`** constructor creates a new
 WebAssembly `CompileError` object, which indicates an error during

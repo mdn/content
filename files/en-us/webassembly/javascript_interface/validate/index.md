@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.validate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of WebAssembly binary
 code, returning whether the bytes form a valid wasm module (`true`) or not

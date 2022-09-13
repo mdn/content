@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Table.get
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`get()`** prototype method of
 the {{jsxref("WebAssembly.Table()")}} object retrieves a function reference stored at a

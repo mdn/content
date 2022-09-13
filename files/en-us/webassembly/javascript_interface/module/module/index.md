@@ -10,7 +10,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 A **`WebAssembly.Module()`** constructor creates a new Module
 object containing stateless WebAssembly code that has already been compiled by the

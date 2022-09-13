@@ -14,7 +14,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.compileStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.compileStreaming()`** function compiles a {{jsxref("WebAssembly.Module")}} directly from a streamed underlying source.
 This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the {{jsxref("WebAssembly.instantiateStreaming()")}} function should be used).

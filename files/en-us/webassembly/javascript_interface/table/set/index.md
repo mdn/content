@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Table.set
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`set()`** prototype method of
 the {{jsxref("WebAssembly.Table")}} object mutates a reference stored at a given index

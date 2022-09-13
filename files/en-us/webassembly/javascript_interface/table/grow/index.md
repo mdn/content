@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Table.grow
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`grow()`** prototype method of
 the {{jsxref("WebAssembly.Table")}} object increases the size of the Table instance by a

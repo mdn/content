@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.instantiate()`** function allows you to
 compile and instantiate WebAssembly code. This function has two overloads:

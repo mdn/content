@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Instance.exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`exports`** readonly property of the
 {{jsxref("WebAssembly.Instance")}} object prototype returns an object containing as its

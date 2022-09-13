@@ -13,7 +13,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.customSections()`** function returns a copy
 of the contents of all custom sections in the given module with the given string name.

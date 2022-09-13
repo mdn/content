@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.CompileError`** object indicates an error during WebAssembly decoding or validation.
 

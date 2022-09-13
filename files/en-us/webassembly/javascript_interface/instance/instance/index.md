@@ -9,7 +9,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.Instance()`** constructor creates a new
 `Instance` object which is a stateful, executable instance of a

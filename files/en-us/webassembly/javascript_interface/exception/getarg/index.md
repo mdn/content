@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`getArg()`** prototype method of the {{jsxref("WebAssembly.Exception", "Exception")}} object can be used to get the value of a specified item in the exception's data arguments.
 

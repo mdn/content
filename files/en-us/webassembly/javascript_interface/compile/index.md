@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.compile
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.compile()`** function compiles WebAssembly binary code into a {{jsxref("WebAssembly.Module")}} object.
 This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the {{jsxref("WebAssembly.instantiate()")}} function should be used).

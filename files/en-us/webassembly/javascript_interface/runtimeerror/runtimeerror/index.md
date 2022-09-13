@@ -9,7 +9,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.RuntimeError()`** constructor creates a new
 WebAssembly `RuntimeError` object — the type that is thrown whenever

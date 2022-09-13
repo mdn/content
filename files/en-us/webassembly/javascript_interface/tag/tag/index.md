@@ -10,7 +10,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Tag.Tag
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) object.
 

@@ -13,7 +13,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Module.exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.Module.exports()`** function returns an
 array containing descriptions of all the declared exports of the given

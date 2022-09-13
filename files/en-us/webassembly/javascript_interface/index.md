@@ -11,7 +11,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly`** JavaScript object acts as the namespace for all [WebAssembly](/en-US/docs/WebAssembly)-related functionality.
 

@@ -9,7 +9,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Instance
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 A **`WebAssembly.Instance`** object is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
 

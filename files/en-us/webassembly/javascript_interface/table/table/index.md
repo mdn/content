@@ -9,7 +9,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.Table()`** constructor creates a new
 `Table` object of the given size and element type.

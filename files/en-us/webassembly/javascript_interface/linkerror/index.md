@@ -11,7 +11,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.LinkError`** object indicates an error during module instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap) from the start function).
 

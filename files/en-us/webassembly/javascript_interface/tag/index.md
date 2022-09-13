@@ -11,7 +11,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Tag
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.Tag`** object defines a _type_ of a WebAssembly exception that can be thrown to/from WebAssembly code.
 

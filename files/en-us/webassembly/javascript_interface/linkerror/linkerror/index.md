@@ -9,7 +9,7 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.LinkError()`** constructor creates a new
 WebAssembly `LinkError` object, which indicates an error during module
