@@ -226,7 +226,7 @@ Let's look at a specific example:
 
 **Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
-```html example-bad
+```html-nolint example-bad
 <p><a href="https://www.mozilla.org/firefox/">
   Click here
 </a>

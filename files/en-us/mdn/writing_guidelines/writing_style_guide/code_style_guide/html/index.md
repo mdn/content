@@ -73,7 +73,7 @@ You should put all attribute values in double quotes. It is tempting to omit quo
 
 …than this:
 
-```html example-bad
+```html-nolint example-bad
 <img src=images/logo.jpg alt=A circular globe icon class=no-border>
 ```
 
@@ -89,7 +89,7 @@ required
 
 This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
 
-```html example-bad
+```html-nolint example-bad
 required="required"
 ```
 
@@ -101,7 +101,7 @@ Use lowercase for all element names and attribute names/values because it looks 
 <p class="nice">This looks nice and neat</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <P CLASS="WHOA-THERE">Why is my markup shouting?</P>
 ```
 
@@ -113,7 +113,7 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 <p class="editorial-summary">Blah blah blah</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
@@ -125,7 +125,7 @@ Use double quotes for HTML, not single quotes, like so:
 <p class="important">Yes</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <p class='important'>Nope</p>
 ```
 
@@ -141,7 +141,7 @@ As an example, you could just write:
 
 Instead of:
 
-```html example-bad
+```html-nolint example-bad
 <p>&copy; 2018 Me</p>
 ```
 

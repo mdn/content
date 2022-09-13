@@ -55,7 +55,7 @@ valid integrity attribute.
 
 However, scripts without integrity won't load anymore:
 
-```html example-bad
+```html-nolint example-bad
 <script src="https://code.jquery.com/jquery-3.1.1.slim.js"></script>
 ```
 

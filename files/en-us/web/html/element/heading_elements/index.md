@@ -150,7 +150,7 @@ A common navigation technique for users of screen reading software is jumping fr
 
 #### Don't
 
-```html example-bad
+```html-nolint example-bad
 <h1>Heading level 1</h1>
 <h3>Heading level 3</h3>
 <h4>Heading level 4</h4>

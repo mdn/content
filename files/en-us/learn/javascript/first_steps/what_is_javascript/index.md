@@ -310,7 +310,7 @@ function createParagraph() {
 }
 ```
 
-```html example-bad
+```html-nolint example-bad
 <button onclick="createParagraph()">Click me!</button>
 ```
 

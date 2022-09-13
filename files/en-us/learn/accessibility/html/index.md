@@ -126,7 +126,7 @@ We've prepared a version with longer text for you to try out with a screen reade
 
 People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:
 
-```html example-bad
+```html-nolint example-bad
 <span style="font-size: 3em">My heading</span> <br /><br />
 This is the first section of my document.
 <br /><br />
@@ -248,6 +248,7 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
 <!-- Here is our page's main content -->
 <main>
+
   <!-- It contains an article -->
   <article>
     <h2>Article heading</h2>
@@ -260,6 +261,7 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
     <!-- aside content in here -->
   </aside>
+
 </main>
 
 <!-- And here is our main footer that is used across all the pages of our website -->
@@ -336,7 +338,7 @@ This means using links, buttons, form elements, and labels appropriately (includ
 
 However, it is again the case that people sometimes do strange things with HTML. For example, you sometimes see buttons marked up using {{htmlelement("div")}}s, for example:
 
-```html example-bad
+```html-nolint example-bad
 <div data-message="This is from the first button">Click me!</div>
 <div data-message="This is from the second button">Click me too!</div>
 <div data-message="This is from the third button">And me!</div>

@@ -90,7 +90,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 #### Don't
 
-```html example-bad
+```html-nolint example-bad
 <label for="tac">
   <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
@@ -117,7 +117,7 @@ If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a t
 
 #### Don't
 
-```html example-bad
+```html-nolint example-bad
 <label for="your-name">
   <h3>Your name</h3>
   <input id="your-name" name="your-name" type="text" />
