@@ -6,8 +6,7 @@ tags:
   - Glossary
 ---
 
-An immutable {{glossary("object")}} is one whose content cannot be changed.
-An object can be immutable for various reasons, for example:
+An immutable value is one whose content cannot be changed without creating an entirely new value. An {{glossary("object")}} can be immutable for various reasons, for example:
 
 - To improve performance (no planning for the object's future changes)
 - To reduce memory use (make {{glossary("object reference","object references")}} instead of cloning the whole object)
