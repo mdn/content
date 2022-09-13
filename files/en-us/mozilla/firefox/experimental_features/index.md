@@ -595,6 +595,48 @@ The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) propert
   </tbody>
 </table>
 
+### Trigonometric functions
+
+CSS [trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) allow for making calculations relating to geometry.
+The functions available are `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()`.
+See {{bug(1787070)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.trig.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
