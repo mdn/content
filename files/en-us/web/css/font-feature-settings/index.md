@@ -72,7 +72,6 @@ These lead to more effective, predictable, understandable results than `font-fea
 }
 
 /* use zeros with a slash through them to differentiate from "O" */
-
 .nicezero {
   font-feature-settings: "zero";
 }
