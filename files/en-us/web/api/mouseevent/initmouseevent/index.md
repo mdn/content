@@ -103,7 +103,7 @@ None ({{jsxref("undefined")}}).
 ```html
 <div style="background:red; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text">
+  <input type="text" />
 </div>
 ```
 

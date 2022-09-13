@@ -49,8 +49,7 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 ### HTML
 
 ```html
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ### CSS

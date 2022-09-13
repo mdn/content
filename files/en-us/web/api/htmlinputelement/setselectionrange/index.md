@@ -76,7 +76,7 @@ the text box ("zil" in the word "Mozilla").
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Mozilla">
+<input type="text" id="text-box" size="20" value="Mozilla" />
 <button onclick="selectText()">Select text</button>
 ```
 

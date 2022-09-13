@@ -61,7 +61,11 @@ inserted text will be highlighted (selected) afterwards.
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="30" value="This text has NOT been updated.">
+<input
+  type="text"
+  id="text-box"
+  size="30"
+  value="This text has NOT been updated." />
 <button onclick="selectText()">Update text</button>
 ```
 

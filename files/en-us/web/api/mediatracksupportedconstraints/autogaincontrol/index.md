@@ -38,8 +38,7 @@ If the property isn't present, this property is missing from the supported const
 This example displays whether or not your browser supports the `autoGainControl` constraint.
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
