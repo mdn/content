@@ -107,8 +107,7 @@ This property supports multiple background images. You can specify a different `
 
 ```css
 p {
-  background-image: url("starsolid.gif"),
-      url("startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

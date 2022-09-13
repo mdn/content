@@ -20,7 +20,7 @@ spec-urls:
 
 ```css
 /* General structure */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";
@@ -35,8 +35,7 @@ There are several regular at-rules, designated by their identifiers, each with a
 ### Nested
 
 ```css
-@IDENTIFIER (RULE) {
-
+@identifier (RULE) {
 }
 ```
 

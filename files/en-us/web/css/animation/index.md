@@ -124,10 +124,12 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 .cylon_eye {
   background-color: red;
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, .9) 25%,
-      rgba(0, 0, 0, .1) 50%,
-      rgba(0, 0, 0, .9) 75%);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   color: white;
   height: 100%;
   width: 20%;
@@ -136,8 +138,12 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 }
 
 @keyframes move_eye {
-  from { margin-left: -20%; }
-  to { margin-left: 100%; }
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
 }
 ```
 

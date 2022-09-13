@@ -45,15 +45,15 @@ form {
 ```
 
 ```css
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
   transition: 1s;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
@@ -87,25 +87,25 @@ form {
 ```
 
 ```css
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
   transition: 1s;
 }
 
-input[type=file]::-ms-browse:hover {
+input[type="file"]::-ms-browse:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
 
-input[type=file]::-webkit-file-upload-button:hover {
+input[type="file"]::-webkit-file-upload-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
