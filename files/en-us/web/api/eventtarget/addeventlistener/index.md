@@ -384,26 +384,30 @@ also available to the event handler when using an arrow function.
 #### CSS
 
 ```css
-.outer, .middle, .inner1, .inner2 {
+.outer,
+.middle,
+.inner1,
+.inner2 {
   display: block;
-  width:   520px;
+  width: 520px;
   padding: 15px;
-  margin:  15px;
+  margin: 15px;
   text-decoration: none;
 }
 .outer {
   border: 1px solid red;
-  color:  red;
+  color: red;
 }
 .middle {
   border: 1px solid green;
-  color:  green;
-  width:  460px;
+  color: green;
+  width: 460px;
 }
-.inner1, .inner2 {
+.inner1,
+.inner2 {
   border: 1px solid purple;
-  color:  purple;
-  width:  400px;
+  color: purple;
+  width: 400px;
 }
 ```
 

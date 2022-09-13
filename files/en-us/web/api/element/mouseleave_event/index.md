@@ -129,8 +129,8 @@ Styling the `<div>` to make it more visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 

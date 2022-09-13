@@ -116,7 +116,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
