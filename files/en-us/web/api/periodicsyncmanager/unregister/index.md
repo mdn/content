@@ -23,7 +23,7 @@ when unregistration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(tag)
 ```
 

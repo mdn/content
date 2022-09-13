@@ -33,7 +33,7 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onBeforeRequest.addListener(
   listener,             // function
   filter,               //  object

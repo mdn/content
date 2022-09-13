@@ -22,7 +22,7 @@ If locking is supported, then it must work for all the parameter values listed b
 
 ## Syntax
 
-```js
+```js-nolint
 lock(orientation)
 ```
 

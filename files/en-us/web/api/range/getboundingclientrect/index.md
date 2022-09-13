@@ -23,7 +23,7 @@ details on the returned value.
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 

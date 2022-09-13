@@ -16,7 +16,7 @@ The **`CompositionEvent()`** constructor creates a new {{domxref("CompositionEve
 
 ## Syntax
 
-```js
+```js-nolint
 new CompositionEvent(type)
 new CompositionEvent(type, options)
 ```

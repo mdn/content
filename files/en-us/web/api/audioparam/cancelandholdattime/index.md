@@ -23,7 +23,7 @@ made using other methods.
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAndHoldAtTime(cancelTime)
 ```
 

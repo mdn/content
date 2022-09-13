@@ -26,7 +26,7 @@ Because of those differences in behavior, you should no longer use the legacy `s
 
 ## Syntax
 
-```js
+```js-nolint
 setYear(yearValue)
 ```
 

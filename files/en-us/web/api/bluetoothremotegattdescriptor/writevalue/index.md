@@ -23,7 +23,7 @@ an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 writeValue(array)
 ```
 

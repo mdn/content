@@ -23,7 +23,7 @@ enabled).
 
 ## Syntax
 
-```js
+```js-nolint
 enableStyleSheetsForSet(name)
 ```
 

@@ -19,7 +19,7 @@ This object is created with a value indicating the [previous priority](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 new TaskPriorityChangeEvent(type, options)
 ```
 

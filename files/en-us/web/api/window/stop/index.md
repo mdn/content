@@ -24,7 +24,7 @@ objects.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

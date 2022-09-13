@@ -21,7 +21,7 @@ next to these items in the Web console's log.
 
 ## Syntax
 
-```js
+```js-nolint
 info(obj1)
 info(obj1, /* …, */ objN)
 info(msg)

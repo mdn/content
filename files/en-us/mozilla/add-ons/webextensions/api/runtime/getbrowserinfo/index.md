@@ -21,7 +21,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingInfo = browser.runtime.getBrowserInfo()
 ```
 

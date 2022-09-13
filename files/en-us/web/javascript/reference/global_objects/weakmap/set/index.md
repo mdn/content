@@ -19,7 +19,7 @@ and value to a `WeakMap` object.
 
 ## Syntax
 
-```js
+```js-nolint
 set(key, value)
 ```
 

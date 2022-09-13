@@ -21,7 +21,7 @@ new {{domxref("CSSMathInvert")}} object which represents a CSS
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathInvert(arg)
 ```
 

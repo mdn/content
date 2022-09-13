@@ -29,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let results = await browser.scripting.executeScript(
   details             // object
 )

@@ -149,9 +149,17 @@ for (let i = 0; i < ss.length; i++) {
 For a document with a single stylesheet in which the following three rules are defined:
 
 ```css
-body { background-color: darkblue; }
-p { font-family: Arial; font-size: 10pt; margin-left: .125in; }
-#lumpy { display: none; }
+body {
+  background-color: darkblue;
+}
+p {
+  font-family: Arial;
+  font-size: 10pt;
+  margin-left: 0.125in;
+}
+#lumpy {
+  display: none;
+}
 ```
 
 This script outputs the following:

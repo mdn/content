@@ -19,7 +19,7 @@ status of the {{domxref("WebGLFramebuffer")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 checkFramebufferStatus(target)
 ```
 

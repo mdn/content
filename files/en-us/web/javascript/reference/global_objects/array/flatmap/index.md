@@ -21,7 +21,7 @@ The **`flatMap()`** method returns a new array formed by applying a given callba
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 flatMap((currentValue) => { /* … */ } )
 flatMap((currentValue, index) => { /* … */ } )

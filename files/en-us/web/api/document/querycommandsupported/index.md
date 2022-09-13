@@ -21,7 +21,7 @@ whether or not the specified editor command is supported by the browser.
 
 ## Syntax
 
-```js
+```js-nolint
 queryCommandSupported(command)
 ```
 

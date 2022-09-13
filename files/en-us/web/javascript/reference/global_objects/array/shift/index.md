@@ -20,7 +20,7 @@ of the array.
 
 ## Syntax
 
-```js
+```js-nolint
 shift()
 ```
 

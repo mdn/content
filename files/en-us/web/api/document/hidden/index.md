@@ -23,7 +23,7 @@ value indicating if the page is considered hidden or not.
 
 ## Syntax
 
-```js
+```js-nolint
 document.hidden
 ```
 

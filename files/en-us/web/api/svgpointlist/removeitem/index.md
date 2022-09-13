@@ -17,7 +17,7 @@ The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface remov
 
 ## Syntax
 
-```js
+```js-nolint
 removeItem(index)
 ```
 

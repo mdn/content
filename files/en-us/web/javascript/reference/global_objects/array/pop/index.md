@@ -20,7 +20,7 @@ array.
 
 ## Syntax
 
-```js
+```js-nolint
 pop()
 ```
 

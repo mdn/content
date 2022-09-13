@@ -20,8 +20,8 @@ creates a new {{domxref("RTCDataChannelEvent")}} object.
 
 ## Syntax
 
-```js
-new RTCDataChannelEvent(type, options);
+```js-nolint
+new RTCDataChannelEvent(type, options)
 ```
 
 ### Parameters

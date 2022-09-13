@@ -34,7 +34,7 @@ transport when the client calls {{domxref("RTCPeerConnection.setLocalDescription
 
 ## Syntax
 
-```js
+```js-nolint
 getLocalParameters()
 ```
 

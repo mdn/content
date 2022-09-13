@@ -22,7 +22,7 @@ individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSTranslate(x, y)
 new CSSTranslate(x, y, z)
 ```

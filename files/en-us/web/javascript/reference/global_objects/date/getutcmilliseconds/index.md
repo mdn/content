@@ -19,7 +19,7 @@ portion of the time object's value according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMilliseconds()
 ```
 

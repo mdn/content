@@ -20,7 +20,7 @@ The **`Object` constructor** turns the input into an object. Its behavior depend
 
 ## Syntax
 
-```js
+```js-nolint
 new Object(value)
 Object(value)
 ```

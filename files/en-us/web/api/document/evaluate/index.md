@@ -20,7 +20,7 @@ XPath expressions can be evaluated on both HTML and XML documents.
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 

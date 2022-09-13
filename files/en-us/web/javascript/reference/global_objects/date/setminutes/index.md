@@ -19,7 +19,7 @@ date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 setMinutes(minutesValue)
 setMinutes(minutesValue, secondsValue)
 setMinutes(minutesValue, secondsValue, msValue)

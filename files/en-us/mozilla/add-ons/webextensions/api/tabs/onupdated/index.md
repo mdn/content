@@ -24,7 +24,7 @@ You can filter this event, making it only fire for tabs whose URLs match specifi
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onUpdated.addListener(listener[, extraParameters])
 browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)

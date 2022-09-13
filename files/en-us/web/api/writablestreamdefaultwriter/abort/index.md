@@ -25,7 +25,7 @@ rejected promise.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```

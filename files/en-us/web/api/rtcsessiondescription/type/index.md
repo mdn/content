@@ -19,9 +19,9 @@ string value which describes the description's type.
 
 ## Syntax
 
-```js
-const value = sessionDescription.type;
-sessionDescription.type = value;
+```js-nolint
+const value = sessionDescription.type
+sessionDescription.type = value
 ```
 
 ### Value

@@ -21,7 +21,7 @@ executes an XPath expression on the given node or document and returns an
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(expression, contextNode)
 evaluate(expression, contextNode, resolver)
 evaluate(expression, contextNode, resolver, type)

@@ -28,7 +28,7 @@ Although many of the attributes of the returned object are common to the object 
 
 ## Syntax
 
-```js
+```js-nolint
 getComputedTiming()
 ```
 

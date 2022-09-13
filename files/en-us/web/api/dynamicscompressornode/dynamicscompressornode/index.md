@@ -21,7 +21,7 @@ multiple sounds are played and multiplexed together at once.
 
 ## Syntax
 
-```js
+```js-nolint
 new DynamicsCompressorNode(context, options)
 ```
 

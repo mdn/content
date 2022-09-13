@@ -19,7 +19,7 @@ attribute at a given position.
 
 ## Syntax
 
-```js
+```js-nolint
 getVertexAttrib(index, pname)
 ```
 

@@ -19,7 +19,7 @@ DOM nodes can be added to build an offscreen DOM tree.
 
 ## Syntax
 
-```js
+```js-nolint
 createDocumentFragment()
 ```
 

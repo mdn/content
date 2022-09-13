@@ -23,7 +23,7 @@ The **`Intl.NumberFormat.prototype.format()`** method formats a number according
 
 ## Syntax
 
-```js
+```js-nolint
 format(number)
 ```
 
@@ -111,7 +111,7 @@ console.log(numberFormat.format("987654321987654321"));
 ```
 
 We can also use the general "E" exponent syntax for decimal strings: `#.#E#`.
-The code below creates a {{jsxref("BigInt")}},  coerces it to a string with the suffix `E-6`, and then formats it.
+The code below creates a {{jsxref("BigInt")}}, coerces it to a string with the suffix `E-6`, and then formats it.
 
 ```js
 const numberFormat = new Intl.NumberFormat("en-US");

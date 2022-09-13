@@ -20,7 +20,7 @@ Piping a stream will generally [lock](/en-US/docs/Web/API/ReadableStream/locked)
 
 ## Syntax
 
-```js
+```js-nolint
 pipeTo(destination)
 pipeTo(destination, options)
 ```

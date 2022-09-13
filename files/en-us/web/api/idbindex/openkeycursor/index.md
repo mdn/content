@@ -34,7 +34,7 @@ If the key range is not specified or is null, then the range includes all the ke
 
 ## Syntax
 
-```js
+```js-nolint
 openKeyCursor()
 openKeyCursor(range)
 openKeyCursor(range, direction)

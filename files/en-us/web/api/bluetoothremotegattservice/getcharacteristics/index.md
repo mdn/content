@@ -22,7 +22,7 @@ instances for a given universally unique identifier (UUID).
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristics(characteristics)
 ```
 

@@ -18,7 +18,7 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 
 ## Syntax
 
-```js
+```js-nolint
 getSubscriptions()
 ```
 

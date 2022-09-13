@@ -17,7 +17,7 @@ The **`keys()`** method of the {{domxref("FontFaceSet")}} interface is an alias 
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

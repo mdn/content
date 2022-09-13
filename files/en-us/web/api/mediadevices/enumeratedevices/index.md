@@ -21,7 +21,7 @@ The list of returned devices will omit any devices for which the corresponding p
 
 ## Syntax
 
-```js
+```js-nolint
 enumerateDevices()
 ```
 

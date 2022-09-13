@@ -21,7 +21,7 @@ to another location in the same array and returns it without modifying its lengt
 
 ## Syntax
 
-```js
+```js-nolint
 copyWithin(target)
 copyWithin(target, start)
 copyWithin(target, start, end)

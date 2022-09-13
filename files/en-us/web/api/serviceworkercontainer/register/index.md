@@ -31,7 +31,7 @@ service worker can't have a scope broader than its own location, only use the
 
 ## Syntax
 
-```js
+```js-nolint
 register(scriptURL)
 register(scriptURL, options)
 ```

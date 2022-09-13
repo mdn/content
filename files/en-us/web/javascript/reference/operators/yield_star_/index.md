@@ -23,7 +23,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 yield* expression
 ```
 
@@ -92,7 +92,7 @@ console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
 ```
 
-### The value of yield* expression itself
+### The value of yield\* expression itself
 
 `yield*` is an expression, not a statement—so it evaluates to a value.
 

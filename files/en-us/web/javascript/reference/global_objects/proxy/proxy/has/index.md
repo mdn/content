@@ -18,7 +18,7 @@ The **`handler.has()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   has(target, prop) {
   }

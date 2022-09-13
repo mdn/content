@@ -19,7 +19,7 @@ the key does not exist, in the given `Storage` object.
 
 ## Syntax
 
-```js
+```js-nolint
 getItem(keyName)
 ```
 

@@ -18,7 +18,7 @@ The **`fillPoses()`** method of the {{domxref("XRFrame")}} interface populates a
 
 ## Syntax
 
-```js
+```js-nolint
 fillPoses(spaces, baseSpace, transforms)
 ```
 

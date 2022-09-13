@@ -18,7 +18,7 @@ The **`RTCPeerConnectionIceEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnectionIceEvent(type, options)
 ```
 

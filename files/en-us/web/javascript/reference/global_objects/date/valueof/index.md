@@ -19,7 +19,7 @@ The **`valueOf()`** method returns the primitive value of a
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

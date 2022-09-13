@@ -18,7 +18,7 @@ passed {{domxref("WebGLTexture")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isTexture(texture)
 ```
 

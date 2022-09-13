@@ -29,7 +29,7 @@ This function takes one argument, which is a string representing the pane's titl
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )

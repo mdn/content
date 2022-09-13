@@ -268,7 +268,7 @@ function fetchCurrentData() {
 
     // fulfillment value given to user of
     // fetch_current_data().then()
-    return j; 
+    return j;
   });
 }
 ```

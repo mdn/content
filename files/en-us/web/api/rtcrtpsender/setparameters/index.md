@@ -34,7 +34,7 @@ connection.
 
 ## Syntax
 
-```js
+```js-nolint
 setParameters(parameters)
 ```
 

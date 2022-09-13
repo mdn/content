@@ -44,7 +44,7 @@ The basic example will load an XML file and apply a XSL transformation on it. Th
           <xsl:value-of select="/myNS:Article/myNS:Title"/>
         </title>
 
-        <style type="text/css">
+        <style>
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
         </style>
 

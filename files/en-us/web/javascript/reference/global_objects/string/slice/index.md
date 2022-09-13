@@ -19,7 +19,7 @@ returns it as a new string, without modifying the original string.
 
 ## Syntax
 
-```js
+```js-nolint
 slice(indexStart)
 slice(indexStart, indexEnd)
 ```

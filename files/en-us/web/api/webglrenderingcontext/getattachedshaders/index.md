@@ -19,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a list of
 
 ## Syntax
 
-```js
+```js-nolint
 getAttachedShaders(program)
 ```
 

@@ -20,7 +20,7 @@ of the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 
 ## Syntax
 
-```js
+```js-nolint
 deleteVertexArrayOES(arrayObject)
 ```
 

@@ -18,7 +18,7 @@ This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash
   xmlns:svg="http://www.w3.org/2000/svg">
   <head>
   <title>A swarm of motes</title>
-  <style type='text/css'>
+  <style>
   <![CDATA[
     label, input
     {

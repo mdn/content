@@ -20,7 +20,7 @@ The **`Math.acosh()`** function returns the inverse hyperbolic cosine of a numbe
 
 ## Syntax
 
-```js
+```js-nolint
 Math.acosh(x)
 ```
 

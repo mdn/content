@@ -23,7 +23,7 @@ appear in the parameter string multiple times for each value.
 
 ## Syntax
 
-```js
+```js-nolint
 append(name, value)
 ```
 

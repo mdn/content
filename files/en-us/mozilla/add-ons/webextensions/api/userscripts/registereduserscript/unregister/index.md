@@ -20,7 +20,7 @@ The `unregister()` method of the {{WebExtAPIRef("userScripts.RegisteredUserScrip
 
 ## Syntax
 
-```js
+```js-nolint
 const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );

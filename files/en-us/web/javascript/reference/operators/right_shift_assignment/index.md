@@ -19,7 +19,7 @@ of bits to the right and assigns the result to the variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x >>= y // x = x >> y
 ```
 

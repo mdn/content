@@ -23,7 +23,7 @@ for each element. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)

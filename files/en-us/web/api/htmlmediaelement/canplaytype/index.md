@@ -31,7 +31,7 @@ The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likel
 
 ## Syntax
 
-```js
+```js-nolint
 canPlayType(type)
 ```
 

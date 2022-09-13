@@ -20,7 +20,7 @@ specified number of elements.
 
 ## Syntax
 
-```js
+```js-nolint
 grow(number)
 ```
 

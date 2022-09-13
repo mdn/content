@@ -24,7 +24,7 @@ strings according to the sort order of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 compare(string1, string2)
 ```
 

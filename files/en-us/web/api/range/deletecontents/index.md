@@ -20,7 +20,7 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 
 ## Syntax
 
-```js
+```js-nolint
 deleteContents()
 ```
 

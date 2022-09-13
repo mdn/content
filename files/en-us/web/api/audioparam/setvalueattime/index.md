@@ -21,7 +21,7 @@ The `setValueAtTime()` method of the
 
 ## Syntax
 
-```js
+```js-nolint
 setValueAtTime(value, startTime)
 ```
 

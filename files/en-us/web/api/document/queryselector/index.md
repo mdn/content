@@ -28,7 +28,7 @@ selector, or group of selectors. If no matches are found, `null` is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelector(selectors)
 ```
 

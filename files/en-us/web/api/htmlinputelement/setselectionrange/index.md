@@ -38,7 +38,7 @@ method instead.
 
 ## Syntax
 
-```js
+```js-nolint
 setSelectionRange(selectionStart, selectionEnd)
 setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ```

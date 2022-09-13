@@ -19,7 +19,7 @@ the {{jsxref("Date")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

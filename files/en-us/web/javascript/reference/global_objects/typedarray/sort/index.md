@@ -24,7 +24,7 @@ numerically instead of as strings. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Functionless
 sort()
 

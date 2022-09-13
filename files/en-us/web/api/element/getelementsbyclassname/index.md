@@ -25,7 +25,7 @@ on the entire document, starting at the document root.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByClassName(names)
 ```
 

@@ -19,7 +19,7 @@ will be from the anchor to the new focus, regardless of direction.
 
 ## Syntax
 
-```js
+```js-nolint
 extend(node)
 extend(node, offset)
 ```

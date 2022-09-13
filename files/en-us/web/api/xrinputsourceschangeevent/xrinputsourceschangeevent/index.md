@@ -33,7 +33,7 @@ you by the WebXR system.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRInputSourcesChangeEvent(type, options)
 ```
 

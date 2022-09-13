@@ -21,7 +21,7 @@ given element can be found in the array, or -1 if it is not present.
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchElement)
 indexOf(searchElement, fromIndex)
 ```

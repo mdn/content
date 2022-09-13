@@ -14,7 +14,7 @@ The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}} obj
 
 ## Syntax
 
-```js
+```js-nolint
 new CustomEvent(type)
 new CustomEvent(type, options)
 ```

@@ -18,7 +18,7 @@ with the given namespace and name.
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNS(namespace, name, value)
 ```
 

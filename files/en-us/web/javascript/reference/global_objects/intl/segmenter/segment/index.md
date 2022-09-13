@@ -18,7 +18,7 @@ The **`Intl.Segmenter.prototype.segment()`** method segments a string according 
 
 ## Syntax
 
-```js
+```js-nolint
 segment(input)
 ```
 

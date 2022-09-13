@@ -22,7 +22,7 @@ This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clearImmediate(immediateID)
 ```
 

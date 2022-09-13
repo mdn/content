@@ -50,7 +50,7 @@ Applied to the [@font-face](/en-US/docs/Web/CSS/@font-face) rule, the [font-disp
 ```css
 @font-face {
   font-family: someFont;
-  src: url(/path/to/fonts/someFont.woff) format('woff');
+  src: url(/path/to/fonts/someFont.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

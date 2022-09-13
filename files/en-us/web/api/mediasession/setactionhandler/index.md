@@ -23,7 +23,7 @@ These actions let a web app receive notifications when the user engages a device
 
 ## Syntax
 
-```js
+```js-nolint
 setActionHandler(type, callback)
 ```
 

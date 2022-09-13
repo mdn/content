@@ -19,7 +19,7 @@ Private members are not native to the language before this syntax existed. In pr
 
 ## Syntax
 
-```js
+```js-nolint
 class ClassWithPrivateField {
   #privateField;
 }

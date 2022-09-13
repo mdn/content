@@ -117,8 +117,9 @@ p {
 You can target multiple selectors at the same time by separating the selectors with a comma. If you want all paragraphs and all list items to be green, your rule would look like this:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -262,10 +263,12 @@ It is worth noting that you can combine multiple selectors and combinators toget
 
 ```css
 /* selects any <span> that is inside a <p>, which is inside an <article>  */
-article p span { }
+article p span {
+}
 
 /* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
-h1 + ul + p { }
+h1 + ul + p {
+}
 ```
 
 You can combine multiple types together, too. Try adding the following into your code:

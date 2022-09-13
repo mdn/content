@@ -23,7 +23,7 @@ released and the device session has ended.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

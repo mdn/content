@@ -24,7 +24,7 @@ If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitG
 
 ## Syntax
 
-```js
+```js-nolint
 webkitGetAsEntry()
 ```
 

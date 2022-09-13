@@ -20,7 +20,7 @@ assignment operator is possible in order to assign a single value to multiple va
 
 ## Syntax
 
-```js
+```js-nolint
 x = y
 ```
 

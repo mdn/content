@@ -21,7 +21,7 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 
 ## Syntax
 
-```js
+```js-nolint
 const [a, b] = array;
 const [a, , b] = array;
 const [a = aDefault, b] = array;

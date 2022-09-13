@@ -29,7 +29,7 @@ To stop recording call {{domxref("console.profileEnd()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 profile(profileName)
 ```
 

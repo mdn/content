@@ -16,7 +16,7 @@ Shifts focus away from the window.
 
 ## Syntax
 
-```js
+```js-nolint
 blur()
 ```
 

@@ -21,7 +21,7 @@ The **`SyncManager.getTags`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getTags()
 ```
 

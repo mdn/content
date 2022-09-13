@@ -19,7 +19,7 @@ The **`isSameEntry()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 isSameEntry(fileSystemHandle)
 ```
 

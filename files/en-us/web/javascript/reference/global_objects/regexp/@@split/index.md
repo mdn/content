@@ -20,7 +20,7 @@ The **`[@@split]()`** method of a regular expression specifies how [`String.prot
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.split](str[, limit])
 ```
 

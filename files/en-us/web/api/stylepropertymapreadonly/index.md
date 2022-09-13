@@ -55,10 +55,10 @@ We add a touch of CSS with a custom property to better demonstrate the output:
 
 ```css
 p {
-   --someVariable: 1.6em;
-   --someOtherVariable: translateX(33vw);
-   --anotherVariable: 42;
-   line-height: var(--someVariable);
+  --someVariable: 1.6em;
+  --someOtherVariable: translateX(33vw);
+  --anotherVariable: 42;
+  line-height: var(--someVariable);
 }
 ```
 

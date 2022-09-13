@@ -20,7 +20,7 @@ The **`console.groupEnd()`** method exits the current inline group in the [Web c
 
 ## Syntax
 
-```js
+```js-nolint
 groupEnd()
 ```
 

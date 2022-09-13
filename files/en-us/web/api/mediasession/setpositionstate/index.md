@@ -34,7 +34,7 @@ Call this method on the `navigator` object's
 
 ## Syntax
 
-```js
+```js-nolint
 setPositionState()
 setPositionState(stateDict)
 ```

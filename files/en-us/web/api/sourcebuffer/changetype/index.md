@@ -30,7 +30,7 @@ constraints change.
 
 ## Syntax
 
-```js
+```js-nolint
 changeType(type)
 ```
 

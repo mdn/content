@@ -24,7 +24,7 @@ The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns 
 
 ## Syntax
 
-```js
+```js-nolint
 getJointPose(joint, baseSpace)
 ```
 

@@ -17,7 +17,7 @@ The **`Boolean()`** constructor can create {{jsxref("Boolean")}} objects or retu
 
 ## Syntax
 
-```js
+```js-nolint
 new Boolean(value)
 Boolean(value)
 ```

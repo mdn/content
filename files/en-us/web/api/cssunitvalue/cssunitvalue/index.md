@@ -22,7 +22,7 @@ would be represented by a `CSSNumericValue`.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSUnitValue()
 ```
 

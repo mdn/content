@@ -18,7 +18,7 @@ front- or back-facing by setting a winding orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 frontFace(mode)
 ```
 

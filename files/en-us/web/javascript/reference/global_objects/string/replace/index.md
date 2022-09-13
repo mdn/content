@@ -21,7 +21,7 @@ The **`replace()`** method returns a new string with one, some, or all matches o
 
 ## Syntax
 
-```js
+```js-nolint
 replace(pattern, replacement)
 ```
 
@@ -59,7 +59,7 @@ A regexp with the `g` flag is the only case where `replace()` replaces more than
 The replacement string can include the following special replacement patterns:
 
 | Pattern   | Inserts                                                                                        |
-| --------- | -----------------------------------------------------------------------------------------------|
+| --------- | ---------------------------------------------------------------------------------------------- |
 | `$$`      | Inserts a `"$"`.                                                                               |
 | `$&`      | Inserts the matched substring.                                                                 |
 | `` $` ``  | Inserts the portion of the string that precedes the matched substring.                         |

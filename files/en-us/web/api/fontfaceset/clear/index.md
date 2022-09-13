@@ -17,7 +17,7 @@ The **`clear()`** method of the {{domxref("FontFaceSet")}} interface removes all
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

@@ -19,7 +19,7 @@ values for generic vertex attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribI4i(index, v0, v1, v2, v3)
 vertexAttribI4ui(index, v0, v1, v2, v3)
 vertexAttribI4iv(index, value)

@@ -27,7 +27,7 @@ Most elements only have one border box each, but a multiline [inline element](/e
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 
@@ -200,10 +200,15 @@ div {
   display: inline-block;
   width: 150px;
 }
-div p, ol, table {
+div p,
+ol,
+table {
   border: 1px solid blue;
 }
-span, li, th, td {
+span,
+li,
+th,
+td {
   border: 1px solid green;
 }
 ```

@@ -21,7 +21,7 @@ The **`Math.log10()`** function returns the base 10 logarithm of a number. That 
 
 ## Syntax
 
-```js
+```js-nolint
 Math.log10(x)
 ```
 

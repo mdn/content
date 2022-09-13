@@ -18,7 +18,7 @@ Canvas 2D API provides different ways to draw an image onto the canvas.
 
 ## Syntax
 
-```js
+```js-nolint
 drawImage(image, dx, dy)
 drawImage(image, dx, dy, dWidth, dHeight)
 drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)

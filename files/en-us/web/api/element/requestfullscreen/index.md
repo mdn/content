@@ -37,7 +37,7 @@ detached from the original document, then the document receives these events ins
 
 ## Syntax
 
-```js
+```js-nolint
 requestFullscreen()
 requestFullscreen(options)
 ```

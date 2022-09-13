@@ -20,7 +20,7 @@ the context.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransform()
 ```
 

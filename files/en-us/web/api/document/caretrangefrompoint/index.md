@@ -22,7 +22,7 @@ fragment under the specified coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 caretRangeFromPoint(x, y)
 ```
 

@@ -19,7 +19,7 @@ The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 
 ## Syntax
 
-```js
+```js-nolint
 new AnalyserNode(context)
 new AnalyserNode(context, options)
 ```

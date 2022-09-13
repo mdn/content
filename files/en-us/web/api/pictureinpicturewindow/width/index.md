@@ -21,8 +21,8 @@ pixels.
 
 ## Syntax
 
-```js
-let width = pictureInPictureWindow.width;
+```js-nolint
+pictureInPictureWindow.width
 ```
 
 ### Value

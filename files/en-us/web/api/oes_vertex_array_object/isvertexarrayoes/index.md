@@ -20,7 +20,7 @@ the passed object is a {{domxref("WebGLVertexArrayObject")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isVertexArrayOES(arrayObject)
 ```
 

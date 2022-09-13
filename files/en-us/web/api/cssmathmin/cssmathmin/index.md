@@ -21,7 +21,7 @@ new {{domxref("CSSMathMin")}} object which represents the CSS
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathMin(args)
 ```
 

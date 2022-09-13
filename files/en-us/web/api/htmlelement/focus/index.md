@@ -25,7 +25,7 @@ Parameter options are provided to disable the default scrolling and force visibl
 
 ## Syntax
 
-```js
+```js-nolint
 focus()
 focus(options)
 ```

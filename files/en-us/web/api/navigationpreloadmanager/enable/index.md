@@ -21,7 +21,7 @@ The method should be called in the service worker's `activate` event handler, wh
 
 ## Syntax
 
-```js
+```js-nolint
 enable()
 ```
 

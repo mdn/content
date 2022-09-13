@@ -31,7 +31,7 @@ space requested.
 
 ## Syntax
 
-```js
+```js-nolint
 requestReferenceSpace(referenceSpaceType)
 ```
 

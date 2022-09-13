@@ -22,7 +22,7 @@ the directory entry.
 
 ## Syntax
 
-```js
+```js-nolint
 file(successCallback)
 file(successCallback, errorCallback)
 ```

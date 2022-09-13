@@ -27,8 +27,8 @@ specified object.
 
 ## Syntax
 
-```js
-new RTCSessionDescription(rtcSessionDescriptionInit);
+```js-nolint
+new RTCSessionDescription(rtcSessionDescriptionInit)
 ```
 
 ### Values

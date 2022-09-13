@@ -16,7 +16,7 @@ The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_prop
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;` . [By default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.
+> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;`. [By default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.
 
 ## Constituent properties
 

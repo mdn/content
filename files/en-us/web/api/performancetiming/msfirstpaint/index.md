@@ -23,8 +23,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-p = object.msFirstPaint;
+```js-nolint
+p = object.msFirstPaint
 ```
 
 ## Value

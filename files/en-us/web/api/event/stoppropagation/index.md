@@ -20,8 +20,8 @@ see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}.
 
 ## Syntax
 
-```js
-event.stopPropagation();
+```js-nolint
+event.stopPropagation()
 ```
 
 ### Parameters

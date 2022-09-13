@@ -22,7 +22,7 @@ supplied value.
 
 ## Syntax
 
-```js
+```js-nolint
 div(number)
 ```
 

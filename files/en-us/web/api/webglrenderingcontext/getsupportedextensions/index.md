@@ -19,7 +19,7 @@ extensions.
 
 ## Syntax
 
-```js
+```js-nolint
 getSupportedExtensions()
 ```
 

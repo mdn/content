@@ -41,7 +41,7 @@ standard 2D display but can then be transitioned to a 3D immersion system.
 
 ## Syntax
 
-```js
+```js-nolint
 makeXRCompatible()
 ```
 

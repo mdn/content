@@ -128,7 +128,9 @@ navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
 ### CSS
 
 ```css
-li { margin : 1em; }
+li {
+  margin: 1em;
+}
 ```
 
 ### HTML

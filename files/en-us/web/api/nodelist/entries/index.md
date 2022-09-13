@@ -20,8 +20,8 @@ contained in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-list.entries();
+```js-nolint
+entries()
 ```
 
 ### Return value

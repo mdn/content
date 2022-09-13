@@ -25,7 +25,7 @@ The **`requestLightProbe()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 requestLightProbe()
 requestLightProbe(options)
 ```

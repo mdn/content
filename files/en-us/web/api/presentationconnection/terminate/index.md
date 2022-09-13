@@ -23,7 +23,7 @@ When the `terminate()` method is called on a {{domxref("PresentationConnection")
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 

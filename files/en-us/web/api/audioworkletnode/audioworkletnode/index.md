@@ -20,7 +20,7 @@ processing.
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioWorkletNode(context, name)
 new AudioWorkletNode(context, name, options)
 ```

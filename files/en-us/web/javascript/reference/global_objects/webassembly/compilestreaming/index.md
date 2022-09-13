@@ -24,7 +24,7 @@ should be used).
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.compileStreaming(source)
 ```
 

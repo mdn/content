@@ -35,7 +35,7 @@ of import + decrypt.
 
 ## Syntax
 
-```js
+```js-nolint
 wrapKey(format, key, wrappingKey, wrapAlgo)
 ```
 

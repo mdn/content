@@ -18,7 +18,7 @@ The **`findRule()`** method of the {{domxref("CSSKeyframeRule")}} interface find
 
 ## Syntax
 
-```js
+```js-nolint
 findRule(select)
 ```
 

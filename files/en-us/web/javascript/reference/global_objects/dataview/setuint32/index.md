@@ -20,7 +20,7 @@ The **`setUint32()`** method stores an unsigned 32-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setUint32(byteOffset, value)
 setUint32(byteOffset, value, littleEndian)
 ```

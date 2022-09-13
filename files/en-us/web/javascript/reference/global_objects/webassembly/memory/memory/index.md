@@ -19,7 +19,7 @@ Both WebAssembly and JavaScript can create `Memory` objects. If you want to acce
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Memory(memoryDescriptor)
 ```
 

@@ -22,7 +22,7 @@ there is an active notification on it.
 
 ## Syntax
 
-```js
+```js-nolint
 startNotifications()
 ```
 

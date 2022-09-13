@@ -17,8 +17,8 @@ to go through all key/value pairs contained in this object. The values are
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value

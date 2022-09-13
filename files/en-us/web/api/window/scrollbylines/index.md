@@ -19,7 +19,7 @@ the specified number of lines.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollByLines(lines)
 ```
 

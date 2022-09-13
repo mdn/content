@@ -26,7 +26,7 @@ browser and returns a constructor for the new element.
 
 ## Syntax
 
-```js
+```js-nolint
 registerElement(tagName)
 registerElement(tagName, options)
 ```

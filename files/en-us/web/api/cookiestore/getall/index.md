@@ -18,7 +18,7 @@ The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(name)
 getAll(options)
 ```

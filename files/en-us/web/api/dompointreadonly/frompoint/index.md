@@ -28,7 +28,7 @@ You can also create a new `DOMPointReadOnly` object using the
 
 ## Syntax
 
-```js
+```js-nolint
 fromPoint(sourcePoint)
 ```
 

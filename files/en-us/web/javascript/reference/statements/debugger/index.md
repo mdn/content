@@ -16,7 +16,7 @@ this statement has no effect.
 
 ## Syntax
 
-```js
+```js-nolint
 debugger;
 ```
 

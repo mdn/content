@@ -19,7 +19,7 @@ The **`void` operator** evaluates the given
 
 ## Syntax
 
-```js
+```js-nolint
 void expression
 ```
 

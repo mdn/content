@@ -18,7 +18,7 @@ The **`start()`** method of the {{domxref("TimeRanges")}} interface returns the 
 
 ## Syntax
 
-```js
+```js-nolint
 start(index)
 ```
 

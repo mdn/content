@@ -24,7 +24,7 @@ that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event",
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardEvent(type)
 new ClipboardEvent(type, options)
 ```

@@ -203,7 +203,7 @@ form {
   width: 400px;
   /* Form outline */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -260,7 +260,7 @@ textarea {
 button {
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
@@ -342,7 +342,7 @@ form {
 
   /* To see the limits of the form */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -357,7 +357,8 @@ label {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* To make sure that all text field have the same font settings
      By default, textarea are set with a monospace font */
   font: 1em sans-serif;
@@ -366,13 +367,14 @@ input, textarea {
   width: 300px;
 
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
   border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* To give a little highlight on active elements */
   border-color: #000;
 }
@@ -397,7 +399,7 @@ textarea {
 button {
   /* This extra margin represent the same space as the space between
      the labels and their text fields */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 

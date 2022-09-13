@@ -23,7 +23,7 @@ it throws an error.
 
 ## Syntax
 
-```js
+```js-nolint
 readValue()
 ```
 

@@ -23,7 +23,7 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 
 ## Syntax
 
-```js
+```js-nolint
 getElementById(id)
 ```
 

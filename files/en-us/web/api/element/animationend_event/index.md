@@ -92,8 +92,8 @@ animated.onanimationend = () => {
   width: 25rem;
   height: 2rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .animation.active {

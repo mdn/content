@@ -20,7 +20,7 @@ new PresentationRequest.
 
 ## Syntax
 
-```js
+```js-nolint
 new PresentationRequest(url)
 new PresentationRequest(urls)
 ```

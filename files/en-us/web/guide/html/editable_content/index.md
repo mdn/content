@@ -80,7 +80,7 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Rich Text Editor</title>
     <script>
@@ -89,13 +89,13 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
       function initDoc() {
         doc = document.getElementById("textBox");
         defTxt = doc.innerHTML;
-        if (document.compForm.switchMode.checked) { 
+        if (document.compForm.switchMode.checked) {
           setDocMode(true);
         }
       }
 
       function formatDoc(cmd, value) {
-        if (validateMode()) { 
+        if (validateMode()) {
           document.execCommand(cmd, false, value);
           doc.focus();
         }

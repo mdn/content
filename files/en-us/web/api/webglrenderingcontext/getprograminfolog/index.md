@@ -19,7 +19,7 @@ occurred during failed linking or validation of `WebGLProgram` objects.
 
 ## Syntax
 
-```js
+```js-nolint
 getProgramInfoLog(program)
 ```
 

@@ -18,7 +18,7 @@ The **`Selection.addRange()`** method adds a
 
 ## Syntax
 
-```js
+```js-nolint
 addRange(range)
 ```
 

@@ -38,6 +38,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
 - {{htmlattrdef("controls")}}
+
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
 - {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}

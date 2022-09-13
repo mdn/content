@@ -18,7 +18,7 @@ representing one of the ranges currently selected.
 
 ## Syntax
 
-```js
+```js-nolint
 getRangeAt(index)
 ```
 

@@ -39,7 +39,7 @@ instructions.
 
 ## Syntax
 
-```js
+```js-nolint
 populateMatrix(targetMatrix)
 ```
 

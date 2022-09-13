@@ -20,8 +20,8 @@ and `false` if not.
 
 ## Syntax
 
-```js
-isDefaultNamespace(namespaceURI);
+```js-nolint
+isDefaultNamespace(namespaceURI)
 ```
 
 ### Parameters

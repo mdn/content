@@ -26,7 +26,7 @@ in read-only mode, and this method silently does nothing. No exception is thrown
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

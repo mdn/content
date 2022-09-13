@@ -18,7 +18,7 @@ The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a pla
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination, options)
 ```
 

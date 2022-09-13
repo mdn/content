@@ -20,7 +20,7 @@ You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFi
 
 ## Syntax
 
-```js
+```js-nolint
 StreamFilter.resume()
 ```
 

@@ -19,7 +19,7 @@ coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 viewport(x, y, width, height)
 ```
 

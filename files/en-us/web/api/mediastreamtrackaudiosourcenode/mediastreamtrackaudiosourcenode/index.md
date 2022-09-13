@@ -28,7 +28,7 @@ Another way to create a `MediaStreamTrackAudioSourceNode` is to call the {{domxr
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackAudioSourceNode(context, options)
 ```
 

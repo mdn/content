@@ -21,7 +21,7 @@ The **`Math.random()`** function returns a floating-point, pseudo-random number 
 
 ## Syntax
 
-```js
+```js-nolint
 Math.random()
 ```
 

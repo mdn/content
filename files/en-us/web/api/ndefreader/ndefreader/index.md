@@ -21,8 +21,8 @@ field.
 
 ## Syntax
 
-```js
-new NDEFReader();
+```js-nolint
+new NDEFReader()
 ```
 
 ### Parameters

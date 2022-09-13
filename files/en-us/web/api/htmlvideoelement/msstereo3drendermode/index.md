@@ -17,8 +17,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-HTMLVideoElement.msStereo3DRenderMode(mono, stereo);
+```js-nolint
+msStereo3DRenderMode(mono, stereo)
 ```
 
 ## Value

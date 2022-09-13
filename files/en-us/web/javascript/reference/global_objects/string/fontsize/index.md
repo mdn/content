@@ -23,7 +23,7 @@ HTML element that causes a string to be displayed in the specified font size.
 
 ## Syntax
 
-```js
+```js-nolint
 fontsize(size)
 ```
 

@@ -19,7 +19,7 @@ information about varying variables from {{domxref("WebGLTransformFeedback")}} b
 
 ## Syntax
 
-```js
+```js-nolint
 getTransformFeedbackVarying(program, index)
 ```
 

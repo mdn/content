@@ -21,7 +21,7 @@ is destroyed by the garbage collector.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteShader(shader)
 ```
 

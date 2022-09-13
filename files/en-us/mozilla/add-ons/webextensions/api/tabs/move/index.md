@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let moving = browser.tabs.move(
   tabIds,              // integer or integer array
   moveProperties       // object

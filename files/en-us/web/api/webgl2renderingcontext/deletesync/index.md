@@ -18,7 +18,7 @@ The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 deleteSync(sync)
 ```
 

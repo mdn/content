@@ -29,7 +29,7 @@ See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 
 ## Syntax
 
-```js
+```js-nolint
 trace()
 trace(object1, /* …, */ objectN)
 ```

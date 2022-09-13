@@ -39,6 +39,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
+
   - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
 
 - `<scheme>`

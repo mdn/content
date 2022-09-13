@@ -18,7 +18,7 @@ The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.Segmenter.supportedLocalesOf(locales)
 Intl.Segmenter.supportedLocalesOf(locales, options)
 ```

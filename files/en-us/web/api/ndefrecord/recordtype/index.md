@@ -17,7 +17,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of t
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.recordType
 ```
 

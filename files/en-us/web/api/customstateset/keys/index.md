@@ -18,7 +18,7 @@ The **`keys()`** method of the {{domxref("CustomStateSet")}} interface is an ali
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

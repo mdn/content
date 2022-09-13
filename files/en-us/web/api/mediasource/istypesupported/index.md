@@ -26,7 +26,7 @@ If the returned value is `false`, then the user agent is certain that it _cannot
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(type)
 ```
 

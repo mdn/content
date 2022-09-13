@@ -19,7 +19,7 @@ This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interf
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByType(type)
 ```
 

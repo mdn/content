@@ -20,7 +20,7 @@ been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteProgram(program)
 ```
 

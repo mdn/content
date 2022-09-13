@@ -20,7 +20,7 @@ value converted to upper case, according to any locale-specific case mappings.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleUpperCase()
 toLocaleUpperCase(locales)
 ```

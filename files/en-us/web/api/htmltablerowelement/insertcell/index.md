@@ -28,7 +28,7 @@ reference to the cell.
 
 ## Syntax
 
-```js
+```js-nolint
 insertCell()
 insertCell(index)
 ```

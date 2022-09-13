@@ -18,7 +18,7 @@ The **`SerialPort.close()`** method of the {{domxref("SerialPort")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

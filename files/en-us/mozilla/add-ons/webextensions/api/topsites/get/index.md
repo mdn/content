@@ -32,7 +32,7 @@ To use the topSites API you must have the "topSites" [API permission](/en-US/doc
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTopSites = browser.topSites.get(
     options  // object
 )

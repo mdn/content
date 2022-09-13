@@ -27,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingItem = browser.storage.<storageType>.set(
   keys             // object
 )

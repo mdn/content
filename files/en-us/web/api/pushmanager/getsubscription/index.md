@@ -19,7 +19,7 @@ It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscriptio
 
 ## Syntax
 
-```js
+```js-nolint
 getSubscription()
 ```
 

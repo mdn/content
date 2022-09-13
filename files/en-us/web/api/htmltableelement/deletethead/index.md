@@ -19,7 +19,7 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTHead()
 ```
 

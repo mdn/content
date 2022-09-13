@@ -19,7 +19,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ByteLengthQueuingStrategy(highWaterMark)
 ```
 

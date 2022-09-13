@@ -20,7 +20,7 @@ key.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(key)
 ```
 

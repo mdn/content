@@ -25,7 +25,7 @@ session history stack.
 
 ## Syntax
 
-```js
+```js-nolint
 pushState(state, unused)
 pushState(state, unused, url)
 ```

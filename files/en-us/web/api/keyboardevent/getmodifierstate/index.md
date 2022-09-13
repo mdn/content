@@ -20,7 +20,7 @@ current state of the specified modifier key: `true` if the modifier is active
 
 ## Syntax
 
-```js
+```js-nolint
 getModifierState(key)
 ```
 

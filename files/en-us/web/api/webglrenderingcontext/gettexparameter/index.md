@@ -20,7 +20,7 @@ given texture.
 
 ## Syntax
 
-```js
+```js-nolint
 getTexParameter(target, pname)
 ```
 

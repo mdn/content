@@ -17,7 +17,7 @@ The multiplication operator (`*`) produces the product of the operands.
 
 ## Syntax
 
-```js
+```js-nolint
 x * y
 ```
 

@@ -22,23 +22,66 @@ The **`Location`** interface represents the location (URL) of the object it is l
 ```
 
 ```css hidden
-html { display: table; width: 100%; }
+html {
+  display: table;
+  width: 100%;
+}
 
-body { display: table-cell; text-align: center; vertical-align: middle; font-family: Georgia; font-size: 200%; line-height: 1em; white-space: nowrap; }
+body {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Georgia;
+  font-size: 200%;
+  line-height: 1em;
+  white-space: nowrap;
+}
 
-[title] { position: relative; display: inline-block; box-sizing: border-box; line-height: 2em; cursor: pointer; }
+[title] {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 2em;
+  cursor: pointer;
+}
 
-[title]::before { content: attr(title); font-family: monospace; position: absolute; top: 100%; width: 100%; left: 50%; margin-left: -50%; font-size: 40%; line-height: 1.5; background: black; }
+[title]::before {
+  content: attr(title);
+  font-family: monospace;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  font-size: 40%;
+  line-height: 1.5;
+  background: black;
+}
 
-[title]:hover::before, :target::before { background: black; color: yellow; }
+[title]:hover::before,
+:target::before {
+  background: black;
+  color: yellow;
+}
 
-[title] [title]::before { margin-top: 1.5em; }
+[title] [title]::before {
+  margin-top: 1.5em;
+}
 
-[title] [title] [title]::before { margin-top: 3em; }
+[title] [title] [title]::before {
+  margin-top: 3em;
+}
 
-[title] [title] [title] [title]::before { margin-top: 4.5em; }
+[title] [title] [title] [title]::before {
+  margin-top: 4.5em;
+}
 
-[title]:hover, :target { position: relative; z-index: 1; outline: 50em solid rgba(255, 255, 255, .8); }
+[title]:hover,
+:target {
+  position: relative;
+  z-index: 1;
+  outline: 50em solid rgba(255, 255, 255, 0.8);
+}
 ```
 
 ```js hidden

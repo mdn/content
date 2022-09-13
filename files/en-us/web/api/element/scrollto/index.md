@@ -18,7 +18,7 @@ interface scrolls to a particular set of coordinates inside a given element.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollTo(x-coord, y-coord)
 scrollTo(options)
 ```

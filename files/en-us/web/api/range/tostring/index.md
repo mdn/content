@@ -22,7 +22,7 @@ ineffective.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

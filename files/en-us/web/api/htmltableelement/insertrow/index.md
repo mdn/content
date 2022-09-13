@@ -34,7 +34,7 @@ let row = specific_tbody.insertRow(index)
 
 ## Syntax
 
-```js
+```js-nolint
 insertRow()
 insertRow(index)
 ```

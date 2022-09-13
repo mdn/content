@@ -22,7 +22,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

@@ -19,7 +19,7 @@ of a {{jsxref("Number")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

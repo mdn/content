@@ -20,7 +20,7 @@ binding point and writes them to an {{jsxref("ArrayBuffer")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 getBufferSubData(target, srcByteOffset, dstData)
 getBufferSubData(target, srcByteOffset, dstData, dstOffset)
 getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)

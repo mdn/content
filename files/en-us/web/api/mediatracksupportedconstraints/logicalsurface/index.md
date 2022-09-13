@@ -28,8 +28,8 @@ The supported constraints list is obtained by calling {{domxref("MediaDevices.ge
 
 ## Syntax
 
-```js
-isLogicalSurfaceSupported = supportedConstraints.logicalSurface;
+```js-nolint
+isLogicalSurfaceSupported = supportedConstraints.logicalSurface
 ```
 
 ### Value

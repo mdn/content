@@ -18,7 +18,7 @@ restoring the context of a {{domxref("WebGLRenderingContext")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 restoreContext()
 ```
 

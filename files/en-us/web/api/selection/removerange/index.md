@@ -18,7 +18,7 @@ selection.
 
 ## Syntax
 
-```js
+```js-nolint
 removeRange(range)
 ```
 

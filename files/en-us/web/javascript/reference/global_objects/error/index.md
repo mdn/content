@@ -49,9 +49,11 @@ Besides the generic `Error` constructor, there are other core error constructors
 ## Static methods
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
+
   - : A non-standard V8 function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
 
 - `Error.stackTraceLimit` {{non-standard_inline}}
+
   - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
 
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}

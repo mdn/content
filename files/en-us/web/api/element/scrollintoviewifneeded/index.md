@@ -18,7 +18,7 @@ The **`Element.scrollIntoViewIfNeeded()`** method scrolls the current element in
 
 ## Syntax
 
-```js
+```js-nolint
 scrollIntoViewIfNeeded()
 scrollIntoViewIfNeeded(centerIfNeeded)
 ```

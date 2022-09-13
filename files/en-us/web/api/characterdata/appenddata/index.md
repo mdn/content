@@ -15,8 +15,8 @@ adds the provided data to the end of the node's current data.
 
 ## Syntax
 
-```js
-appendData(data);
+```js-nolint
+appendData(data)
 ```
 
 ### Parameters

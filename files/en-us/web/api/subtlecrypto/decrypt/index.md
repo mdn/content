@@ -22,7 +22,7 @@ decrypted data (also known as "plaintext").
 
 ## Syntax
 
-```js
+```js-nolint
 decrypt(algorithm, key, data)
 ```
 

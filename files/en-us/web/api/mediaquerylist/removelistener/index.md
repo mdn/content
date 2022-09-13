@@ -27,7 +27,7 @@ available in the browsers you need to support.
 
 ## Syntax
 
-```js
+```js-nolint
 removeListener(func)
 ```
 

@@ -25,7 +25,7 @@ Firefox makes this event available via the `contextMenus` namespace as well as t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.onHidden.addListener(listener)
 browser.menus.onHidden.removeListener(listener)
 browser.menus.onHidden.hasListener(listener)

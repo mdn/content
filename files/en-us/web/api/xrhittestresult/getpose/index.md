@@ -20,7 +20,7 @@ The **`getPose()`** method of the {{domxref("XRHitTestResult")}} interface retur
 
 ## Syntax
 
-```js
+```js-nolint
 getPose(baseSpace)
 ```
 

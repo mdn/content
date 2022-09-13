@@ -19,7 +19,7 @@ The **`keys()`** method is an alias for the [`values()`](/en-US/docs/Web/JavaScr
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
