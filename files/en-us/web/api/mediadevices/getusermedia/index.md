@@ -64,7 +64,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints)
 ```
 

@@ -19,7 +19,7 @@ This proprietary method is specific to Internet Explorer, and Microsoft Edge ver
 
 ## Syntax
 
-```js
+```js-nolint
 msLaunchUri(uri)
 msLaunchUri(uri, successCallback)
 msLaunchUri(uri, successCallback, noHandlerCallback)

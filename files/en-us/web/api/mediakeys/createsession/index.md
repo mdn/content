@@ -21,7 +21,7 @@ with a content decryption module (CDM).
 
 ## Syntax
 
-```js
+```js-nolint
 createSession()
 createSession(mediaKeySessionType)
 ```

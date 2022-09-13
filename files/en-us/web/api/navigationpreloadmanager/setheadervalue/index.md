@@ -23,7 +23,7 @@ The default directive is set to `true`: this method allows the possibility of co
 
 ## Syntax
 
-```js
+```js-nolint
 setHeaderValue(value)
 ```
 

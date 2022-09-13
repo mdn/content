@@ -21,7 +21,7 @@ not locale-specific.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.lang
 ```
 

@@ -21,7 +21,7 @@ whether to grant the origin access to their idle state. Resolves with
 
 ## Syntax
 
-```js
+```js-nolint
 requestPermission()
 ```
 

@@ -22,7 +22,7 @@ The **`MediaStreamTrack.stop()`** method stops the track.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

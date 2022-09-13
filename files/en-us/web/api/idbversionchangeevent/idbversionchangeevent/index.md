@@ -22,7 +22,7 @@ when a version of the database has changed, as a result of the
 
 ## Syntax
 
-```js
+```js-nolint
 new IDBVersionChangeEvent(type)
 new IDBVersionChangeEvent(type, options)
 ```

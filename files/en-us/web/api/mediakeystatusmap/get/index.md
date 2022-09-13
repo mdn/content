@@ -20,7 +20,7 @@ key, or `undefined` if there is none.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

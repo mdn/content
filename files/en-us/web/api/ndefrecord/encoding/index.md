@@ -19,7 +19,7 @@ a textual payload, or `null` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.encoding
 ```
 

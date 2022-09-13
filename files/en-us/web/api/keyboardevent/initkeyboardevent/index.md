@@ -21,7 +21,7 @@ Web applications should use constructor instead of this if it's available.
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyboardEvent(type, canBubble, cancelable,
                   view,  key, location, ctrlKey,
                   altKey, shiftKey, metaKey)

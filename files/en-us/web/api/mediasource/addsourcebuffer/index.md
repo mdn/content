@@ -26,7 +26,7 @@ given {{Glossary("MIME type")}} and adds it to the `MediaSource`'s
 
 ## Syntax
 
-```js
+```js-nolint
 addSourceBuffer(mimeType)
 ```
 

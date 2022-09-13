@@ -25,7 +25,7 @@ The prompt will not be displayed if the `speaker-selection` permission has not b
 
 ## Syntax
 
-```js
+```js-nolint
 selectAudioOutput()
 selectAudioOutput(options)
 ```

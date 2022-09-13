@@ -17,7 +17,7 @@ This method always returns false.
 
 ## Syntax
 
-```js
+```js-nolint
 javaEnabled()
 ```
 

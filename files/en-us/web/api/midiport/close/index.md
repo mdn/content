@@ -19,7 +19,7 @@ If the port is successfully closed a new {{domxref("MIDIConnectionEvent")}} is q
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

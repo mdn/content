@@ -19,7 +19,7 @@ The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a 
 
 ## Syntax
 
-```js
+```js-nolint
 setAppBadge()
 setAppBadge(contents)
 ```

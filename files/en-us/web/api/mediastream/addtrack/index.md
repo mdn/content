@@ -22,7 +22,7 @@ stream. The track is specified as a parameter of type {{domxref("MediaStreamTrac
 
 ## Syntax
 
-```js
+```js-nolint
 addTrack(track)
 ```
 
