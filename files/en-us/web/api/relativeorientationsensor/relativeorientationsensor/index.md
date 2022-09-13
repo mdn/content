@@ -29,8 +29,8 @@ instructions.
 ## Syntax
 
 ```js-nolint
-new RelativeOrientationSEnsor()
-new RelativeOrientationSEnsor(options)
+new RelativeOrientationSensor()
+new RelativeOrientationSensor(options)
 ```
 
 ### Parameters
