@@ -167,9 +167,7 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>
-      Hang Up
-    </button>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
   </div>
 </div>
 ```

@@ -33,10 +33,9 @@ The following complete HTML example shows how the `visible` property of the
     <meta charset="UTF-8" />
     <title>Various DOM Tests</title>
 
-      <script>
-        const visible = window.locationbar.visible;
-      </script>
-
+    <script>
+      const visible = window.locationbar.visible;
+    </script>
   </head>
   <body>
     <p>Various DOM Tests</p>

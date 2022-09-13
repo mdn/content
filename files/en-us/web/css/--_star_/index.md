@@ -1,5 +1,5 @@
 ---
-title: 'Custom properties (--*): CSS variables'
+title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
 tags:
   - CSS
@@ -39,10 +39,16 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 ### HTML
 
 ```html
-<p id="firstParagraph">This paragraph should have a blue background and yellow text.</p>
-<p id="secondParagraph">This paragraph should have a yellow background and blue text.</p>
+<p id="firstParagraph">
+  This paragraph should have a blue background and yellow text.
+</p>
+<p id="secondParagraph">
+  This paragraph should have a yellow background and blue text.
+</p>
 <div id="container">
-  <p id="thirdParagraph">This paragraph should have a green background and yellow text.</p>
+  <p id="thirdParagraph">
+    This paragraph should have a green background and yellow text.
+  </p>
 </div>
 ```
 
