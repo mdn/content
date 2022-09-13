@@ -18,7 +18,7 @@ The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a 
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 delete(options)
 ```

@@ -36,7 +36,7 @@ example: if options.password exists, then the
 
 ## Syntax
 
-```js
+```js-nolint
 get()
 get(options)
 ```

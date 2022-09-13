@@ -17,7 +17,7 @@ removes a property from a CSS style declaration object.
 
 ## Syntax
 
-```js
+```js-nolint
 removeProperty(property)
 ```
 

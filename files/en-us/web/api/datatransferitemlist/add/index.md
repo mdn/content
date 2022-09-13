@@ -24,7 +24,7 @@ given type. If the item is successfully added to the list, the newly-created
 
 ## Syntax
 
-```js
+```js-nolint
 add(data, type)
 add(file)
 ```

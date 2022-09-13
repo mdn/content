@@ -24,7 +24,7 @@ The **`type()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 type()
 ```
 

@@ -21,7 +21,7 @@ use as part of a CSS selector.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 

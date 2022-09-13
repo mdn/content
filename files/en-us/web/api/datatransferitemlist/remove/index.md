@@ -23,7 +23,7 @@ be changed.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(index)
 ```
 

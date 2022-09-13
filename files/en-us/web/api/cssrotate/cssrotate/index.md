@@ -22,7 +22,7 @@ individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSRotate(x, y, z, angle)
 ```
 

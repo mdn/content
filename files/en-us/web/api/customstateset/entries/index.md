@@ -18,7 +18,7 @@ The **`entries`** method of the {{domxref("CustomStateSet")}} interface returns 
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
