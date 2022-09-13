@@ -26,7 +26,7 @@ for {{domxref("btoa", "btoa()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 atob(encodedData)
 ```
 

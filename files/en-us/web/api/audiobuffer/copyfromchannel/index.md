@@ -29,7 +29,7 @@ channel of the `AudioBuffer` to a specified
 
 ## Syntax
 
-```js
+```js-nolint
 copyFromChannel(destination, channelNumber, startInChannel)
 ```
 

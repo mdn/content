@@ -23,7 +23,7 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 createPeriodicWave(real, imag)
 createPeriodicWave(real, imag, constraints)
 ```

@@ -22,7 +22,7 @@ UI, this method returns the first device matching the criteria.
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice()
 requestDevice(options)
 ```

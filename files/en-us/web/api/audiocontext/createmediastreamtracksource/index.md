@@ -34,7 +34,7 @@ first, lexicographically (alphabetically).
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamTrackSource(track)
 ```
 

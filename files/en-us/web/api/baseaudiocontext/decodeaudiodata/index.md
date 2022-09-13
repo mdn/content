@@ -29,7 +29,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 // Older callback syntax:
 decodeAudioData(arrayBuffer, successCallback)
 decodeAudioData(arrayBuffer, successCallback, errorCallback)

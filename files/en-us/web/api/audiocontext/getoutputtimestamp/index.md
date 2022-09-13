@@ -35,7 +35,7 @@ The two values are as follows:
 
 ## Syntax
 
-```js
+```js-nolint
 getOutputTimestamp()
 ```
 

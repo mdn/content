@@ -23,7 +23,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 

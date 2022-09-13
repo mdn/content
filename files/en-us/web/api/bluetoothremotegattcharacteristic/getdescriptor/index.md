@@ -22,7 +22,7 @@ first {{domxref("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.
 
 ## Syntax
 
-```js
+```js-nolint
 getDescriptor(bluetoothDescriptorUUID)
 ```
 

@@ -20,7 +20,7 @@ with an {{jsxref('Array')}} of detected barcodes within an image.
 
 ## Syntax
 
-```js
+```js-nolint
 detect(imageBitmapSource)
 ```
 

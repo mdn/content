@@ -21,7 +21,7 @@ If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined"
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```

@@ -26,7 +26,7 @@ characters such as ASCII values 0 through 31.
 
 ## Syntax
 
-```js
+```js-nolint
 btoa(stringToEncode)
 ```
 

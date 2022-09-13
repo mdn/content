@@ -21,7 +21,7 @@ from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 
 ## Syntax
 
-```js
+```js-nolint
 registerProcessor(name, processorCtor)
 ```
 

@@ -19,7 +19,7 @@ method of the Canvas 2D API adds an elliptical arc to the current sub-path.
 
 ## Syntax
 
-```js
+```js-nolint
 ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle)
 ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise)
 ```

@@ -21,7 +21,7 @@ The **`BroadcastChannel()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new BroadcastChannel(channelName)
 ```
 

@@ -25,7 +25,7 @@ reverb effects to your audio. See the [spec definition of Convolution](https://w
 
 ## Syntax
 
-```js
+```js-nolint
 createConvolver()
 ```
 

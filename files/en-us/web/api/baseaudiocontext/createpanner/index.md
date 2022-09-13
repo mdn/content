@@ -30,7 +30,7 @@ audio.
 
 ## Syntax
 
-```js
+```js-nolint
 createPanner()
 ```
 
