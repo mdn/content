@@ -23,7 +23,7 @@ If there is no item associated with the given key, this method will do nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 removeItem(keyName)
 ```
 

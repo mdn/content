@@ -26,7 +26,7 @@ identity information.
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 

@@ -23,7 +23,7 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new SensorErrorEvent(type, options)
 ```
 

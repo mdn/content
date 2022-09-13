@@ -22,7 +22,7 @@ The function accepts several import formats: see [Supported formats](#supported_
 
 ## Syntax
 
-```js
+```js-nolint
 importKey(format, keyData, algorithm, extractable, keyUsages)
 ```
 

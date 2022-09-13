@@ -26,8 +26,8 @@ type of {{Glossary("ICE")}} candidate the object represents.
 
 ## Syntax
 
-```js
-candidateType = rtcIceCandidateStats.candidateType;
+```js-nolint
+rtcIceCandidateStats.candidateType
 ```
 
 ### Value

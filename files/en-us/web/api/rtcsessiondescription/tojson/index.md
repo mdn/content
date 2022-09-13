@@ -20,7 +20,7 @@ The **`RTCSessionDescription.toJSON()`** method generates a
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

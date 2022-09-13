@@ -35,7 +35,7 @@ Since `insertDTMF()` replaces the tone buffer, in order to add to the DTMF tones
 
 ## Syntax
 
-```js
+```js-nolint
 insertDTMF(tones)
 insertDTMF(tones, duration)
 insertDTMF(tones, duration, interToneGap)

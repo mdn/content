@@ -20,7 +20,7 @@ that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 

@@ -30,8 +30,8 @@ is sent to the {{domxref("RTCPeerConnection")}} instance.
 
 ## Syntax
 
-```js
-const connectionState = RTCPeerConnection.connectionState;
+```js-nolint
+const connectionState = RTCPeerConnection.connectionState
 ```
 
 ## Value

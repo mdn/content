@@ -24,7 +24,7 @@ This method operates asynchronously, so it returns a {{jsxref("Promise")}} which
 
 ## Syntax
 
-```js
+```js-nolint
 estimate()
 ```
 

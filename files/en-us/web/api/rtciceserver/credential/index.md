@@ -24,7 +24,7 @@ other secret.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   credential: someCredential,

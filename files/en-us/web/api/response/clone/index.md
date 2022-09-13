@@ -36,7 +36,7 @@ In fact, the main reason `clone()` exists is to allow multiple uses of body obje
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

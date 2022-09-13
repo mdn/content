@@ -22,7 +22,7 @@ recognition service from listening to incoming audio, and doesn't attempt to ret
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

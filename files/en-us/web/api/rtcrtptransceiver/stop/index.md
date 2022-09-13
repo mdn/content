@@ -30,7 +30,7 @@ This method does nothing if the transceiver is already stopped.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

@@ -20,7 +20,7 @@ current selection or cursor position, using simple textual commands.
 
 ## Syntax
 
-```js
+```js-nolint
 modify(alter, direction, granularity)
 ```
 

@@ -32,8 +32,8 @@ reports the number of bytes received so far on the described connection.
 
 ## Syntax
 
-```js
-sent = rtcIceCandidatePairStats.bytesSent;
+```js-nolint
+sent = rtcIceCandidatePairStats.bytesSent
 ```
 
 ### Value

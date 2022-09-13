@@ -24,7 +24,7 @@ script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_p
 
 ## Syntax
 
-```js
+```js-nolint
 new SharedWorker(aURL)
 new SharedWorker(aURL, name)
 new SharedWorker(aURL, options)

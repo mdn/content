@@ -22,7 +22,7 @@ recognition service from listening to incoming audio, and attempts to return a
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 
