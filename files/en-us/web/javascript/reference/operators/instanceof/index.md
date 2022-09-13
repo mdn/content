@@ -20,7 +20,7 @@ The **`instanceof` operator** tests to see if the `prototype` property of a cons
 
 ## Syntax
 
-```js
+```js-nolint
 object instanceof constructor
 ```
 

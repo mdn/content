@@ -19,10 +19,10 @@ at least once.
 
 ## Syntax
 
-```js
+```js-nolint
 do
   statement
-while (condition);
+while (condition)
 ```
 
 - `statement`

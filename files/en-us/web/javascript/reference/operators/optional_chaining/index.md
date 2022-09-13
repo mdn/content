@@ -36,7 +36,7 @@ Optional chaining cannot be used on a non-declared root object, but can be used 
 
 ## Syntax
 
-```js
+```js-nolint
 obj.val?.prop
 obj.val?.[expr]
 obj.func?.(args)

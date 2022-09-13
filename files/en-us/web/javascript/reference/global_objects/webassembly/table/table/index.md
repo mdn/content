@@ -16,7 +16,7 @@ The **`WebAssembly.Table()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Table(tableDescriptor)
 ```
 

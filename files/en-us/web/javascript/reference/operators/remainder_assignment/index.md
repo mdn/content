@@ -19,7 +19,7 @@ the right operand and assigns the remainder to the variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x %= y // x = x % y
 ```
 

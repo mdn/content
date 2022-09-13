@@ -18,7 +18,7 @@ operand is divided by a second operand. It always takes the sign of the dividend
 
 ## Syntax
 
-```js
+```js-nolint
 x % y
 ```
 

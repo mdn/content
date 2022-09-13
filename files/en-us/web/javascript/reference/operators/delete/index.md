@@ -22,7 +22,7 @@ The **`delete` operator** removes a property from an object. If the property's v
 
 ## Syntax
 
-```js
+```js-nolint
 delete object.property
 delete object[property]
 ```

@@ -18,7 +18,7 @@ operand but attempts to convert it into a number, if it isn't already.
 
 ## Syntax
 
-```js
+```js-nolint
 +x
 ```
 

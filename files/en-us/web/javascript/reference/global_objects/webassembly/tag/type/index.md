@@ -18,7 +18,7 @@ The **`type()`** prototype method of the [`Tag`](/en-US/docs/Web/JavaScript/Refe
 
 ## Syntax
 
-```js
+```js-nolint
 type()
 ```
 

@@ -24,7 +24,7 @@ You can also define a class using a {{jsxref("Operators/class", "class expressio
 
 ## Syntax
 
-```js
+```js-nolint
 class name [extends otherName] {
   // class body
 }

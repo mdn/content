@@ -20,7 +20,7 @@ statement.
 
 ## Syntax
 
-```js
+```js-nolint
 break;
 break label;
 ```

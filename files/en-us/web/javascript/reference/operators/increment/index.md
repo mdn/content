@@ -18,7 +18,7 @@ returns a value.
 
 ## Syntax
 
-```js
+```js-nolint
 x++
 ++x
 ```
