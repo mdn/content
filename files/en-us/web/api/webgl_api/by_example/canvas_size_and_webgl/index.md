@@ -36,16 +36,16 @@ The effect is clearly visible when using {{domxref("WebGLRenderingContext.scisso
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : inline-block;
-  width : 120px;
-  height : 80px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 

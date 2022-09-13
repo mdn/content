@@ -35,22 +35,22 @@ Note how we embed the {{Glossary("WebGL")}} function calls inside the event hand
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : inline-block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: inline-block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
