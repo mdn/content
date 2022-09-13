@@ -21,7 +21,7 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ## Syntax
 
-```js
+```js-nolint
 showSaveFilePicker()
 ```
 

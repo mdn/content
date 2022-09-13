@@ -22,7 +22,7 @@ The blend equation determines how a new pixel is combined with a pixel already i
 
 ## Syntax
 
-```js
+```js-nolint
 blendEquationSeparate(modeRGB, modeAlpha)
 ```
 

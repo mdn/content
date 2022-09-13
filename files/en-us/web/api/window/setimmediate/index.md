@@ -26,7 +26,7 @@ updates.
 
 ## Syntax
 
-```js
+```js-nolint
 setImmediate(func)
 setImmediate(func, param0)
 setImmediate(func, param0, param1)

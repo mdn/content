@@ -24,7 +24,7 @@ indexing with CSS property names.
 
 ## Syntax
 
-```js
+```js-nolint
 getComputedStyle(element)
 getComputedStyle(element, pseudoElt)
 ```

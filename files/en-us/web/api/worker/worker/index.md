@@ -19,7 +19,7 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 
 ## Syntax
 
-```js
+```js-nolint
 new Worker(aURL)
 new Worker(aURL, options)
 ```

@@ -21,7 +21,7 @@ multiple GL contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 waitSync(sync, flags, timeout)
 ```
 

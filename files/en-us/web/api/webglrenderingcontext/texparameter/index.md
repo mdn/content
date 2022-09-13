@@ -21,7 +21,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 
 ## Syntax
 
-```js
+```js-nolint
 texParameterf(target, pname, param)
 texParameteri(target, pname, param)
 ```

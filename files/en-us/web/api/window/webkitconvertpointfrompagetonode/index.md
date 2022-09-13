@@ -29,7 +29,7 @@ system of the specified DOM {{domxref("Node")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 convertPointFromPageToNode(node, pagePoint)
 ```
 

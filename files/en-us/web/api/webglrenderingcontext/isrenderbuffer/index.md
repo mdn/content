@@ -19,7 +19,7 @@ passed {{domxref("WebGLRenderbuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isRenderbuffer(renderbuffer)
 ```
 

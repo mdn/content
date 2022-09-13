@@ -20,7 +20,7 @@ has already been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteFramebuffer(framebuffer)
 ```
 

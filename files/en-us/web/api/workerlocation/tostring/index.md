@@ -17,7 +17,7 @@ The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLo
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

@@ -19,7 +19,7 @@ parameters. Might return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators
 
 ## Syntax
 
-```js
+```js-nolint
 getContextAttributes()
 ```
 

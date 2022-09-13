@@ -19,7 +19,7 @@ to record in {{domxref("WebGLTransformFeedback")}} buffers.
 
 ## Syntax
 
-```js
+```js-nolint
 transformFeedbackVaryings(program, varyings, bufferMode)
 ```
 
