@@ -37,7 +37,7 @@ want to start processing the messages right away.
 ## Syntax
 
 ```js-nolint
-serviceWorkerContainer.startMessages()
+startMessages()
 ```
 
 ### Parameters
