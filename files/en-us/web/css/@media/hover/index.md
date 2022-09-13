@@ -40,8 +40,8 @@ a:hover {
   background: yellow;
 }
 
-/* when supported */
 @media (hover: hover) {
+  /* when hover is supported */
   a:hover {
     color: white;
     background: black;
