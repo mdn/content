@@ -20,7 +20,7 @@ The **`randomUUID()`** method of the {{domxref("Crypto")}} interface is used to 
 
 ## Syntax
 
-```js
+```js-nolint
 randomUUID()
 ```
 

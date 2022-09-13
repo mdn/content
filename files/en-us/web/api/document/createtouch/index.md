@@ -23,7 +23,7 @@ The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Tou
 
 ## Syntax
 
-```js
+```js-nolint
 createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 ```
 

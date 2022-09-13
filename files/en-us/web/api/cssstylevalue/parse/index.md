@@ -22,7 +22,7 @@ value as a {{domxref('CSSStyleValue')}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 parse(property, cssText)
 ```
 

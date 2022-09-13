@@ -20,7 +20,7 @@ The **`console.error()`** method outputs an error message to the Web console.
 
 ## Syntax
 
-```js
+```js-nolint
 error(obj1)
 error(obj1, /* …, */ objN)
 error(msg)

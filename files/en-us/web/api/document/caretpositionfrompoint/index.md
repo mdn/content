@@ -19,7 +19,7 @@ caret's character offset within that node.
 
 ## Syntax
 
-```js
+```js-nolint
 caretPositionFromPoint(x, y)
 ```
 

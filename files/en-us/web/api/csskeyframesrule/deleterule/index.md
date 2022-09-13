@@ -18,7 +18,7 @@ The **`deleteRule()`** method of the {{domxref("CSSKeyframeRule")}} interface de
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRule(select)
 ```
 

@@ -26,7 +26,7 @@ or more JavaScript objects.
 
 ## Syntax
 
-```js
+```js-nolint
 log(obj1)
 log(obj1, /* …, */ objN)
 log(msg)

@@ -20,7 +20,7 @@ The **`get()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 get(id)
 ```
 

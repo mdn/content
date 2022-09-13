@@ -20,7 +20,7 @@ The **`DeviceMotionEvent()`** constructor creates a new {{DOMxRef("DeviceMotionE
 
 ## Syntax
 
-```js
+```js-nolint
 new DeviceMotionEvent(type)
 new DeviceMotionEvent(type, options)
 ```

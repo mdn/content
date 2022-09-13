@@ -29,7 +29,7 @@ Chrome for Windows.
 
 ## Syntax
 
-```js
+```js-nolint
 openWindow(url)
 ```
 

@@ -22,7 +22,7 @@ in the range from 0 to the number of items minus one, an empty string list is re
 
 ## Syntax
 
-```js
+```js-nolint
 mozTypesAt(index)
 ```
 

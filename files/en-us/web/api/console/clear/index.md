@@ -18,7 +18,7 @@ The **`console.clear()`** method clears the console if the console allows it. A 
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

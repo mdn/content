@@ -23,8 +23,8 @@ and what the default value of the custom property is.
 
 ## Syntax
 
-```js
-CSS.registerProperty(PropertyDefinition);
+```js-nolint
+CSS.registerProperty(PropertyDefinition)
 ```
 
 ### Parameters

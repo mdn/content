@@ -26,7 +26,7 @@ be shown alongside the marker.
 
 ## Syntax
 
-```js
+```js-nolint
 timeStamp(label)
 ```
 

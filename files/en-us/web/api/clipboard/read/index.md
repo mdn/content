@@ -37,7 +37,7 @@ permission.
 
 ## Syntax
 
-```js
+```js-nolint
 read()
 ```
 

@@ -18,7 +18,7 @@ The **`appendRule()`** method of the {{domxref("CSSKeyframeRule")}} interface ap
 
 ## Syntax
 
-```js
+```js-nolint
 appendRule(rule)
 ```
 

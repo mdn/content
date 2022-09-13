@@ -31,7 +31,7 @@ for there still to be an entry with the type `"Files"` left in the object's
 
 ## Syntax
 
-```js
+```js-nolint
 clearData()
 clearData(format)
 ```

@@ -27,7 +27,7 @@ There are two types of custom elements you can create:
 
 ## Syntax
 
-```js
+```js-nolint
 define(name, constructor)
 define(name, constructor, options)
 ```

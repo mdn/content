@@ -21,7 +21,7 @@ other identifiers.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSKeywordValue(val)
 ```
 
