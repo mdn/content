@@ -65,9 +65,9 @@ The following media query will only set the body to 12pt if the page is printed.
 
 ```css
 @media print {
-    body {
-        font-size: 12pt;
-    }
+  body {
+    font-size: 12pt;
+  }
 }
 ```
 
@@ -89,9 +89,9 @@ These features are used to create layouts that respond to different screen sizes
 
 ```css
 @media screen and (width: 600px) {
-    body {
-        color: red;
-    }
+  body {
+    color: red;
+  }
 }
 ```
 
@@ -101,9 +101,9 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 
 ```css
 @media screen and (max-width: 600px) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -119,9 +119,9 @@ One well-supported media feature is `orientation`, which allows us to test for p
 
 ```css
 @media (orientation: landscape) {
-    body {
-        color: rebeccapurple;
-    }
+  body {
+    color: rebeccapurple;
+  }
 }
 ```
 
@@ -135,9 +135,9 @@ As part of the Level 4 specification, the `hover` media feature was introduced. 
 
 ```css
 @media (hover: hover) {
-    body {
-        color: rebeccapurple;
-    }
+  body {
+    color: rebeccapurple;
+  }
 }
 ```
 
@@ -159,9 +159,9 @@ To combine media features you can use `and` in much the same way as we have used
 
 ```css
 @media screen and (min-width: 600px) and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -173,9 +173,9 @@ If you have a set of queries, any of which could match, then you can comma separ
 
 ```css
 @media screen and (min-width: 600px), screen and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -187,9 +187,9 @@ You can negate an entire media query by using the `not` operator. This reverses 
 
 ```css
 @media not all and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -219,54 +219,54 @@ Our starting point is an HTML document with some CSS applied to add background c
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 90%;
-    margin: 2em auto;
-    font: 1em/1.3 Arial, Helvetica, sans-serif;
+  width: 90%;
+  margin: 2em auto;
+  font: 1em/1.3 Arial, Helvetica, sans-serif;
 }
 
 a:link,
 a:visited {
-    color: #333;
+  color: #333;
 }
 
 nav ul,
 aside ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav a:link,
 nav a:visited {
-    background-color: rgba(207, 232, 220, 0.2);
-    border: 2px solid rgb(79, 185, 227);
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    color: #333;
-    font-weight: bold;
+  background-color: rgba(207, 232, 220, 0.2);
+  border: 2px solid rgb(79, 185, 227);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #333;
+  font-weight: bold;
 }
 
 nav a:hover {
-    background-color: rgba(207, 232, 220, 0.7);
+  background-color: rgba(207, 232, 220, 0.7);
 }
 
 .related {
-    background-color: rgba(79, 185, 227, 0.3);
-    border: 1px solid rgb(79, 185, 227);
-    padding: 10px;
+  background-color: rgba(79, 185, 227, 0.3);
+  border: 1px solid rgb(79, 185, 227);
+  padding: 10px;
 }
 
 .sidebar {
-    background-color: rgba(207, 232, 220, 0.5);
-    padding: 10px;
+  background-color: rgba(207, 232, 220, 0.5);
+  padding: 10px;
 }
 
 article {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 ```
 
@@ -327,19 +327,19 @@ From this point, start to drag the Responsive Design Mode view wider until you c
 
 ```css
 @media screen and (min-width: 40em) {
-    article {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
+  article {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
 
-    nav ul {
-        display: flex;
-    }
+  nav ul {
+    display: flex;
+  }
 
-    nav li {
-        flex: 1;
-    }
+  nav li {
+    flex: 1;
+  }
 }
 ```
 
@@ -353,20 +353,20 @@ Let's continue to expand the width until we feel there is enough room for the si
 
 ```css
 @media screen and (min-width: 70em) {
-    main {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
 
-    article {
-        margin-bottom: 0;
-    }
+  article {
+    margin-bottom: 0;
+  }
 
-    footer {
-        border-top: 1px solid #ccc;
-        margin-top: 2em;
-    }
+  footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+  }
 }
 ```
 
@@ -423,17 +423,17 @@ This could be achieved using the following:
 
 ```css
 .grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .grid li {
-    border: 1px solid #666;
-    padding: 10px;
+  border: 1px solid #666;
+  padding: 10px;
 }
 ```
 
