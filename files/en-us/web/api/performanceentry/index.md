@@ -48,7 +48,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, shows their values.
 
 ```html hidden
-<pre id='output'></pre>
+<pre id="output"></pre>
 ```
 
 ```js

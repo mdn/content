@@ -37,7 +37,9 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 
 ```html
 <button>Enable</button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id">
     circle {
       fill: gold;
@@ -91,8 +93,10 @@ The HTML is similar to the previous case, but the SVG definition does not includ
 
 ```html
 <button>Enable</button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle cx="50" cy="50" r="25" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="25" />
 </svg>
 ```
 

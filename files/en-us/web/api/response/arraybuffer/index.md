@@ -101,7 +101,7 @@ function readFile(file) {
 ```
 
 ```html
-<input type="file" onchange="readFile(this.files[0])">
+<input type="file" onchange="readFile(this.files[0])" />
 ```
 
 ## Specifications

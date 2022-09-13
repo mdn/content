@@ -33,7 +33,9 @@ We also define a text area for logging the current title.
 
 ```html
 <textarea id="log" rows="3" cols="50"></textarea>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style title="gold fill style">
     circle {
       fill: gold;
