@@ -360,12 +360,14 @@ article span {
   margin: 1px;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
 
-article, div {
+article,
+div {
   margin: 20px;
 }
 ```
