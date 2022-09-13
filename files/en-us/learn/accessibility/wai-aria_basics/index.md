@@ -238,7 +238,7 @@ WAI-ARIA fortunately provides a useful mechanism to provide these alerts — the
 We'd like you to take a copy of [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) and [quotes.json](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), and update your `<section>` tag as follows:
 
 ```html
-<section aria-live="assertive"></section>
+<section aria-live="assertive">…</section>
 ```
 
 This will cause a screen reader to read out the content as it is updated.
