@@ -28,7 +28,7 @@ Example APIs that require transient activation:
 - [`beforeunload` event](/en-US/docs/Web/API/Window/beforeunload_event)
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
-- {{domxref("Clipboard.writeText()")}} (requires activation in Safari and Firefox, but not in Chromium-based browsers)
+- {{domxref("Clipboard.writeText()")}}
 - {{domxref("Document.requestStorageAccess()")}}
 - {{domxref("Element.requestFullScreen()")}}
 - {{domxref("Element.requestPointerLock()")}}
