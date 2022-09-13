@@ -19,7 +19,7 @@ to a JavaScript module. It contains information about the module, like the modul
 
 ## Syntax
 
-```js
+```js-nolint
 import.meta
 ```
 

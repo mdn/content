@@ -19,7 +19,7 @@ executing the statement.
 
 ## Syntax
 
-```js
+```js-nolint
 while (condition)
   statement
 ```

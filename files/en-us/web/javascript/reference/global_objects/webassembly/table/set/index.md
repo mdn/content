@@ -20,7 +20,7 @@ to a different value.
 
 ## Syntax
 
-```js
+```js-nolint
 set(index, value)
 ```
 

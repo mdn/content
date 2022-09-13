@@ -20,7 +20,7 @@ The resulting binary representation is evaluated as a [two's complement](https:/
 
 ## Syntax
 
-```js
+```js-nolint
 a >> b
 ```
 

@@ -19,7 +19,7 @@ The **`async function*`** keywords can be used to define an asynchronous generat
 
 ## Syntax
 
-```js
+```js-nolint
 async function* (param0) {
   statements
 }

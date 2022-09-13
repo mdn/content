@@ -19,7 +19,7 @@ The **`if`** statement executes a statement if a specified condition is {{Glossa
 
 ## Syntax
 
-```js
+```js-nolint
 if (condition)
   statement1
 

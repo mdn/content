@@ -23,7 +23,7 @@ In most cases, the value of `this` is determined by how a function is called (ru
 
 ## Syntax
 
-```js
+```js-nolint
 this
 ```
 

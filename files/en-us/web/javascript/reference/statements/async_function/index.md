@@ -21,7 +21,7 @@ Async functions may also be defined {{jsxref("Operators/async_function", "as
 
 ## Syntax
 
-```js
+```js-nolint
 async function name(param0) {
   statements
 }

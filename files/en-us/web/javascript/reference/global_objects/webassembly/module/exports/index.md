@@ -21,7 +21,7 @@ array containing descriptions of all the declared exports of the given
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.Module.exports(module)
 ```
 
