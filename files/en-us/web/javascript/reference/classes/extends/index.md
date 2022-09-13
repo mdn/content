@@ -19,7 +19,7 @@ create a class that is a child of another class.
 
 ## Syntax
 
-```js
+```js-nolint
 class ChildClass extends ParentClass { /* … */ }
 ```
 

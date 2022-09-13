@@ -37,7 +37,7 @@ which returns the entire raw header string.
 
 ## Syntax
 
-```js
+```js-nolint
 getResponseHeader(headerName)
 ```
 

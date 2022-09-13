@@ -19,7 +19,7 @@ The **`createCylinderLayer()`** method of the {{domxref("XRWebGLBinding")}} inte
 
 ## Syntax
 
-```js
+```js-nolint
 createCylinderLayer(init)
 ```
 

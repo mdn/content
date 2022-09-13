@@ -17,7 +17,7 @@ The **`return()`** method of an async generator acts as if a `return` statement 
 
 ## Syntax
 
-```js
+```js-nolint
 asyncGeneratorObject.return(value)
 ```
 

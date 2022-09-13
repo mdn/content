@@ -22,7 +22,7 @@ The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

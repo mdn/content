@@ -23,7 +23,7 @@ const AsyncFunction = (async function () {}).constructor;
 
 ## Syntax
 
-```js
+```js-nolint
 new AsyncFunction(functionBody)
 new AsyncFunction(arg0, functionBody)
 new AsyncFunction(arg0, arg1, functionBody)

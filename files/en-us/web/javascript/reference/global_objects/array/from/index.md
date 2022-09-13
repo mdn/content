@@ -19,7 +19,7 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 Array.from(arrayLike, (element) => { /* … */ } )
 Array.from(arrayLike, (element, index) => { /* … */ } )

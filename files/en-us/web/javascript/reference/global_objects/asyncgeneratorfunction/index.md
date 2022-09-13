@@ -23,7 +23,7 @@ const AsyncGeneratorFunction = (async function* () {}).constructor;
 
 ## Syntax
 
-```js
+```js-nolint
 new AsyncGeneratorFunction(functionBody)
 new AsyncGeneratorFunction(arg0, functionBody)
 new AsyncGeneratorFunction(arg0, arg1, functionBody)

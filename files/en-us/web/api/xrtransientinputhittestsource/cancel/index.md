@@ -20,7 +20,7 @@ The **`cancel()`** method of the {{domxref("XRTransientInputHitTestSource")}} in
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

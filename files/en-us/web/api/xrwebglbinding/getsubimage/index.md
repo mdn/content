@@ -19,7 +19,7 @@ The **`getSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 getSubImage(layer, frame)
 getSubImage(layer, frame, eye)
 ```

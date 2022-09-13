@@ -18,7 +18,7 @@ a new {{domxref("WritableStream")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new WritableStream(underlyingSink)
 new WritableStream(underlyingSink, queuingStrategy)
 ```

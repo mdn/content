@@ -19,7 +19,7 @@ the specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getMilliseconds()
 ```
 

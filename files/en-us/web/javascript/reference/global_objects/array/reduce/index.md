@@ -31,7 +31,7 @@ The reducer walks through the array element-by-element, at each step adding the 
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduce((previousValue, currentValue) => { /* … */ } )
 reduce((previousValue, currentValue, currentIndex) => { /* … */ } )

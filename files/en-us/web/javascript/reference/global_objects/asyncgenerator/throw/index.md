@@ -17,7 +17,7 @@ The **`throw()`** method of an async generator acts as if a `throw` statement is
 
 ## Syntax
 
-```js
+```js-nolint
 asyncGeneratorObject.throw(exception)
 ```
 

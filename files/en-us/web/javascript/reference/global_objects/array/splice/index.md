@@ -22,7 +22,7 @@ removing or replacing existing elements and/or adding new elements [in place](ht
 
 ## Syntax
 
-```js
+```js-nolint
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
