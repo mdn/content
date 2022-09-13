@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feTurbulence.seed
 ---
+
 {{SVGRef}}
 
 The **`seed`** attribute represents the starting number for the pseudo random number generator of the {{SVGElement("feTurbulence")}} filter primitive.
@@ -20,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ### Example 1
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/text.html#TextPathElementPathAttribute
   - https://svgwg.org/specs/animations/#AnimateMotionElementPathAttribute
 ---
+
 {{SVGRef}}
 
 The **`path`** attribute has two different meanings, either it defines a text path along which the characters of a text are rendered, or a motion path along which a referenced element is animated.
@@ -20,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

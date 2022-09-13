@@ -7,10 +7,10 @@ tags:
   - Reference
   - Prioritized Task Scheduling API
   - prioritychange
-  - Experimental
 browser-compat: api.TaskSignal.prioritychange_event
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) is changed.
 
@@ -19,9 +19,9 @@ The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [pr
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('prioritychange', event => { });
+addEventListener('prioritychange', (event) => { });
 
-onprioritychange = event => { };
+onprioritychange = (event) => { };
 ```
 
 ## Event type
@@ -61,7 +61,7 @@ if ('scheduler' in this) {
 
   // Listen for 'prioritychange' events on the controller's signal.
   controller.signal.addEventListener('prioritychange',
-    event => {
+    (event) => {
       const previousPriority = event.previousPriority;
       const newPriority = event.target.priority;
       mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
@@ -69,7 +69,7 @@ if ('scheduler' in this) {
 
   // Post task using the controller's signal.
   // The signal priority sets the initial priority of the task
-  scheduler.postTask( ()=>{ mylog('Task 1'); }, {signal: controller.signal} );
+  scheduler.postTask(() => { mylog('Task 1'); }, {signal: controller.signal});
 
   // Change the priority to 'background' using the controller
   controller.setPriority('background');

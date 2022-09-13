@@ -8,6 +8,7 @@ tags:
   - while
 browser-compat: javascript.statements.while
 ---
+
 {{jsSidebar("Statements")}}
 
 The **while statement** creates a loop that executes a specified statement
@@ -18,7 +19,7 @@ executing the statement.
 
 ## Syntax
 
-```js
+```js-nolint
 while (condition)
   statement
 ```
@@ -45,8 +46,8 @@ The following `while` loop iterates as long as `n` is less than
 three.
 
 ```js
-var n = 0;
-var x = 0;
+let n = 0;
+let x = 0;
 
 while (n < 3) {
   n++;
@@ -72,7 +73,9 @@ Consider the following example, which iterates over a document's comments, loggi
 
 ```js example-bad
 const iterator = document.createNodeIterator(
-  document, NodeFilter.SHOW_COMMENT);
+  document,
+  NodeFilter.SHOW_COMMENT,
+);
 let currentNode;
 while (currentNode = iterator.nextNode()) {
   console.log(currentNode.textContent.trim());
@@ -93,11 +96,11 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 
 …and then, when there are no more comment nodes in the document:
 
-1. `iterator.nextNode()` returns [null](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null).
+1. `iterator.nextNode()` returns [null](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Truthy).
 3. So the loop ends.
 
-But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators) such as "`===`", but the "`=`" in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators). So that "`=`" _looks like_ it's a typo for "`===`" — even though it's _not_ actually a typo.
+But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
 
 Therefore, in cases like that one, some [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) and [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint and JSHint — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
 

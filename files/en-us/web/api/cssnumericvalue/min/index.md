@@ -13,6 +13,7 @@ tags:
   - min()
 browser-compat: api.CSSNumericValue.min
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`min()`** method of the
@@ -21,8 +22,8 @@ values passed. The passed values must be of the same type.
 
 ## Syntax
 
-```js
-min(number1, /* ..., */ numberN)
+```js-nolint
+min(number1, /* …, */ numberN)
 ```
 
 ### Parameters

@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#R
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementRAttribute
 ---
+
 {{SVGRef}}
 
 The **`r`** attribute defines the radius of a circle.
@@ -20,7 +21,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -83,7 +88,7 @@ For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `r` is a *Geometry Property* meaning this attribute can also be used as a CSS property for circles.
+> **Note:** Starting with SVG2, `r` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
 
 ## radialGradient
 

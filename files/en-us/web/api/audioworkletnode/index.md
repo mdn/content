@@ -6,12 +6,12 @@ tags:
   - API
   - Audio
   - AudioWorkletNode
-  - Experimental
   - Interface
   - Reference
   - Web Audio API
 browser-compat: api.AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 > **Note:** Although the interface is available outside [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.
@@ -29,9 +29,9 @@ The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/
 
 _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-- {{domxref("AudioWorkletNode.port")}} {{readonlyinline}}
+- {{domxref("AudioWorkletNode.port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the node and its associated {{domxref("AudioWorkletProcessor")}}. The other end is available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the processor.
-- {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
+- {{domxref("AudioWorkletNode.parameters")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying `AudioWorkletProcessor`. If the `AudioWorkletProcessor` has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create `AudioParam` objects on the `AudioWorkletNode`. With this mechanism it is possible to make your own `AudioParam` objects accessible from your `AudioWorkletNode`. You can then use their values in the associated `AudioWorkletProcessor`.
 
 ### Events
@@ -56,7 +56,7 @@ First, we need to define a custom {{domxref("AudioWorkletProcessor")}}, which wi
 class RandomNoiseProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel => {
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
         channel[i] = Math.random() * 2 - 1
       }

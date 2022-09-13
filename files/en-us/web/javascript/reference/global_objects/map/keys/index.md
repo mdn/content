@@ -21,8 +21,8 @@ that contains the keys for each element in the `Map` object in insertion order. 
 
 ## Syntax
 
-```js
-keys();
+```js-nolint
+keys()
 ```
 
 ### Return value

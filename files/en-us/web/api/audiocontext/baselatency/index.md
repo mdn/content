@@ -12,6 +12,7 @@ tags:
   - baseLatency
 browser-compat: api.AudioContext.baseLatency
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`baseLatency`** read-only property of the

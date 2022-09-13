@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.extensions
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.extensions`** read-only property returns the

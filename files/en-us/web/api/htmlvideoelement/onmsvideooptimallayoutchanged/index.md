@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 tags:
   - onMSVideoOptimalLayoutChanged
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

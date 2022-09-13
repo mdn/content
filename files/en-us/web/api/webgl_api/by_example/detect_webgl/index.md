@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
 
 This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.
@@ -29,40 +30,38 @@ Saving the state of the graphics machine within a single context interface is no
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```js
 // Run everything inside window load event handler, to make sure
 // DOM is fully loaded and styled before trying to manipulate it.
-window.addEventListener("load", function() {
-  var paragraph = document.querySelector("p"),
-    button = document.querySelector("button");
+window.addEventListener("load", () => {
+  const paragraph = document.querySelector("p");
+  const button = document.querySelector("button");
+
   // Adding click event handler to button.
   button.addEventListener("click", detectWebGLContext, false);
   function detectWebGLContext () {
     // Create canvas element. The canvas is not added to the
     // document itself, so it is never displayed in the
     // browser window.
-    var canvas = document.createElement("canvas");
+    const canvas = document.createElement("canvas");
+
     // Get WebGLRenderingContext from canvas element.
-    var gl = canvas.getContext("webgl")
-      || canvas.getContext("experimental-webgl");
+    const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+
     // Report the result.
-    if (gl && gl instanceof WebGLRenderingContext) {
-      paragraph.textContent =
-        "Congratulations! Your browser supports WebGL.";
-    } else {
-      paragraph.textContent = "Failed to get WebGL context. "
-        + "Your browser or device may not support WebGL.";
-    }
+    paragraph.textContent = gl instanceof WebGLRenderingContext
+      ? "Congratulations! Your browser supports WebGL."
+      : "Failed. Your browser or device may not support WebGL.";
   }
 }, false);
 ```

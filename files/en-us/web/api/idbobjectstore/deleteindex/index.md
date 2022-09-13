@@ -13,6 +13,7 @@ tags:
   - deleteIndex
 browser-compat: api.IDBObjectStore.deleteIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`deleteIndex()`** method of the
@@ -27,7 +28,7 @@ mode callback. Note that this method synchronously modifies the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteIndex(indexName)
 ```
 
@@ -66,15 +67,15 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
-  db = this.result;
+  db = event.target.result;
 
   // Run the displayData() function to populate the task list with all the to-do list data already in the IDB
   displayData();
@@ -84,10 +85,10 @@ DBOpenRequest.onsuccess = function(event) {
 // Either one has not been created before, or a new version number has been submitted via the
 // window.indexedDB.open line above
 //it is only implemented in recent browsers
-DBOpenRequest.onupgradeneeded = function(event) {
-  let db = this.result;
+DBOpenRequest.onupgradeneeded = (event) => {
+  const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

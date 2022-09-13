@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-repeat
 ---
+
 {{CSSRef}}
 
 The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image).
@@ -72,7 +73,7 @@ The `border-image-repeat` property may be specified using one or two values chos
   padding: 1rem;
   border: 40px solid;
   border-image: url("border.png") 27;
-  border-image-repeat: stretch;  /* Can be changed in the live sample */
+  border-image-repeat: stretch; /* Can be changed in the live sample */
 }
 ```
 
@@ -90,8 +91,8 @@ The `border-image-repeat` property may be specified using one or two values chos
 ```
 
 ```js hidden
-var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
+const repetition = document.getElementById("repetition");
+repetition.addEventListener("change", (evt) => {
   document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
 });
 ```

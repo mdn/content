@@ -10,6 +10,7 @@ tags:
   - omnibox
 browser-compat: webextensions.api.omnibox
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to implement customized behavior when the user types into the browser's address bar.

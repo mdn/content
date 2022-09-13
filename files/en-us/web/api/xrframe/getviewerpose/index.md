@@ -16,9 +16,11 @@ tags:
   - XRFrame
   - getViewerPose
   - pose
+  - Experimental
 browser-compat: api.XRFrame.getViewerPose
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getViewerPose()`** method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object which describes the viewer's pose (position and orientation) relative to the specified reference space.
 
@@ -26,7 +28,7 @@ See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calculat
 
 ## Syntax
 
-```js
+```js-nolint
 getViewerPose(referenceSpace)
 ```
 

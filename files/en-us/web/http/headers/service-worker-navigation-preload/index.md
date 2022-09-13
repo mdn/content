@@ -9,6 +9,7 @@ tags:
   - NavigationPreloadManager
 browser-compat: http.headers.Service-Worker-Navigation-Preload
 ---
+
 {{HTTPSidebar}}
 
 The **`Service-Worker-Navigation-Preload`** request header indicates that the request was the result of a {{domxref("fetch()")}} operation made during service worker navigation preloading.
@@ -33,7 +34,7 @@ For more information see {{domxref("NavigationPreloadManager.setHeaderValue()")}
 
 ## Syntax
 
-```
+```http
 Service-Worker-Navigation-Preload: <value>
 ```
 

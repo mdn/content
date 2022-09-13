@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_color_buffer_half_float
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_color_buffer_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the ability to render to 16-bit floating-point color buffers.
@@ -39,7 +40,7 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_color_buffer_half_float');
+const ext = gl.getExtension('EXT_color_buffer_half_float');
 
 gl.renderbufferStorage(gl.RENDERBUFFER, ext.RBGA16F_EXT, 256, 256);
 ```

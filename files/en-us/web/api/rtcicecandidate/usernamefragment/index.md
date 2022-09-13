@@ -17,6 +17,7 @@ tags:
   - usernameFragment
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`usernameFragment`** property on the {{domxref("RTCIceCandidate")}} interface is a string indicating the
@@ -35,7 +36,7 @@ uniquely identifies a single ongoing ICE interaction, including for any communic
 with the {{Glossary("STUN")}} server. The string may be up to 256 characters long, and
 has no default value.
 
-#### Randomization
+### Randomization
 
 At least 24 bits of the text in the `ufrag` are required to be randomly
 selected by the ICE layer at the beginning of the ICE session. The specifics for which
@@ -80,11 +81,11 @@ from the signaling server that contains an ICE candidate to be added to the
 restart, we can use code like this:
 
 ```js
-const ssNewCandidate = signalMsg => {
+const ssNewCandidate = (signalMsg) => {
   let candidate = new RTCIceCandidate(signalMsg.candidate);
   let receivers = pc.getReceivers();
 
-  receivers.forEach(receiver => {
+  receivers.forEach((receiver) => {
     let parameters = receiver.transport.getParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {

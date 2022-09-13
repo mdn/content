@@ -11,6 +11,7 @@ tags:
   - port
 browser-compat: api.SharedWorker.port
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`port`** property of the {{domxref("SharedWorker")}}
@@ -30,11 +31,11 @@ using the `SharedWorker.port` property — the port is started using its
 `start()` method:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 myWorker.port.start();
 ```
 
-For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
+For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ## Specifications
 
@@ -46,5 +47,4 @@ For a full example, see our [Basic shared worker example](https://github.com/mdn
 
 ## See also
 
-- The {{domxref("SharedWorker")}} interface it belongs to.
-- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)
+- {{domxref("SharedWorker")}}

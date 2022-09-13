@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.getDepthInformation
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getDepthInformation()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRWebGLDepthInformation")}} object containing WebGL depth information.
 
 ## Syntax
 
-```js
+```js-nolint
 getDepthInformation(view)
 ```
 
@@ -59,7 +61,7 @@ const session = navigator.xr.requestSession("immersive-ar", {
 
 const glBinding = new XRWebGLBinding(session, gl);
 
-// ...
+// …
 
 // Obtain depth information in an active and animated frame
 function rafCallback(time, frame) {
@@ -71,7 +73,7 @@ function rafCallback(time, frame) {
       if (depthInformation) {
         // Do something with the depth information
         // gl.bindTexture(gl.TEXTURE_2D, depthInformation.texture);
-        // ...
+        // …
       }
     }
   }

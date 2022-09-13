@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.forward
 ---
+
 {{APIRef("History API")}}
 
 The **`History.forward()`** method causes the browser to move
@@ -22,7 +23,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 
 ## Syntax
 
-```js
+```js-nolint
 forward()
 ```
 
@@ -48,7 +49,7 @@ history.
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', e => {
+document.getElementById('go-forward').addEventListener('click', (e) => {
   window.history.forward();
 })
 ```

@@ -12,14 +12,15 @@ tags:
   - Selector
 browser-compat: api.Element.matches
 ---
+
 {{APIRef("DOM")}}
 
 The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Syntax
 
-```js
-matches(selectorString)
+```js-nolint
+matches(selectors)
 ```
 
 ### Parameters

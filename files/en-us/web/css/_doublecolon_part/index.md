@@ -11,6 +11,7 @@ tags:
   - Selector
 browser-compat: css.selectors.part
 ---
+
 {{CSSRef}}
 
 The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching {{HTMLAttrxRef("part")}} attribute.
@@ -33,7 +34,7 @@ custom-element::part(foo) {
 
 ```html
 <template id="tabbed-custom-element">
-<style type="text/css">
+<style>
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 1rem;

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createAttributeNS
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttributeNS()`** method creates a new attribute node
@@ -19,7 +20,7 @@ added to a particular element in this manner.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttributeNS(namespaceURI, qualifiedName)
 ```
 
@@ -56,8 +57,8 @@ The new {{domxref("Attr")}} node.
 ## Examples
 
 ```js
-var node = document.getElementById("svg");
-var a = document.createAttributeNS("http://www.w3.org/2000/svg", "viewBox");
+const node = document.getElementById("svg");
+const a = document.createAttributeNS("http://www.w3.org/2000/svg", "viewBox");
 a.value = "0 0 100 100";
 node.setAttributeNode(a);
 console.log(node.getAttribute("viewBox")); // "0 0 100 100"

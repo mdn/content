@@ -7,6 +7,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.externally_connectable
 ---
+
 {{AddonSidebar}}{{SeeCompatTable}}
 
 <table class="fullwidth-table standard-table">
@@ -28,18 +29,11 @@ browser-compat: webextensions.manifest.externally_connectable
       <td>
         <pre>
 "externally_connectable": {
-  // List of extension IDs that extension wishes to communicate with
-  // If "browser_action" is specified but "browser_action.ids" is not,
-  // no extensions can communicate with this extension.
-  // To match all extension IDs use "*".
   "ids": [
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
     "cccccccccccccccccccccccccccccccc"
   ],
-  // Regular expression patterns specifying web pages
-  // If "matches" is not specified, no web pages can communicate with
-  // this extension
   "matches": [
     "https://example1.com/*",
     "*://*.example2.com/*"
@@ -61,7 +55,7 @@ Externally connectable allows extension developer to control which other extensi
 
 `matches` enables communication between this extension and the web pages. This is a list of regular expressions for page URLs that you wish to communicate with.
 
-> **Note:** If `browser_action` is not specified, communication among extensions is still allowed as if `browser_action` was `{"ids": ["*"] }`, therefore if you specify `browser_action.matches` don't forget to add `ids` if you still want to communicate with other extensions.
+> **Note:** If `externally_connectable` is not specified, communication among extensions is still allowed as if `externally_connectable` was `{"ids": ["*"] }`, therefore if you specify `externally_connectable.matches` don't forget to add `ids` if you still want to communicate with other extensions.
 
 ## Browser compatibility
 

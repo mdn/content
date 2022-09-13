@@ -7,16 +7,17 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.add
 ---
+
 {{APIRef("DOM")}}
 
 The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given tokens to the list, omitting any that are already present.
 
 ## Syntax
 
-```js
-add(token0);
-add(token0, token1);
-add(token0, token1, /* ... ,*/ tokenN)
+```js-nolint
+add(token0)
+add(token0, token1)
+add(token0, token1, /* … ,*/ tokenN)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ None.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if one of the arguments is the empty string
+  - : Thrown if one of the arguments is an empty string
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if a token contains ASCII whitespace.
 

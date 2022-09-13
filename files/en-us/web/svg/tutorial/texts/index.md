@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 
 When talking about text in SVG we have to differentiate two almost completely separate topics. The one is the inclusion and display of text in an image, and the other are SVG fonts. The latter may be described in a later section of the tutorial, while we will focus completely on the first part: Bringing text into an SVG image.
@@ -51,15 +52,15 @@ This element is used to mark up sub-portions of a larger text. It must be a chil
 
 The `tspan` element has the following custom attributes:
 
-- **`x`**
+- `x`
   - : Set a new absolute `x` coordinate for the containing text. This overwrites the default current text position. The attribute may also contain a list of numbers, that are one by one applied to the single characters of the `tspan` element.
-- **`dx`**
+- `dx`
   - : Start drawing the text with a horizontal offset `dx` from the default current position. Here, too, you may provide a list of values that are applied to consecutive characters, hence piling up the offset over time.
 
     Likewise, there are **`y`** and **`dy`** for vertical displacement.
-- **`rotate`**
+- `rotate`
   - : Rotate all characters by this degree. A list of numbers makes each character rotate to its respective value, with remaining characters rotating according to the last value.
-- **`textLength`**
+- `textLength`
   - : This is a more obscure attribute giving the calculated length of the string. It is meant to allow the rendering engine to fine-tune the positions of the glyphs when its own measured text length doesn't meet the one provided here.
 
 ### textPath

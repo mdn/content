@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`isSameEntry()`** method of the
@@ -18,8 +19,8 @@ The **`isSameEntry()`** method of the
 
 ## Syntax
 
-```js
-var Boolean = FileSystemHandle1.isSameEntry(FileSystemHandle2);
+```js-nolint
+isSameEntry(fileSystemHandle)
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ new array with any matching entries removed.
 ```js
 function removeMatches(fileEntry, entriesArr) {
 
-  let newArr = entriesArr.filter( entry => !fileEntry.isSameEntry(entry) )
+  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry))
 
   return newArr;
 }

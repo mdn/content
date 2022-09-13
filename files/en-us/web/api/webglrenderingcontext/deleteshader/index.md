@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) marks a given
@@ -20,7 +21,7 @@ is destroyed by the garbage collector.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteShader(shader)
 ```
 

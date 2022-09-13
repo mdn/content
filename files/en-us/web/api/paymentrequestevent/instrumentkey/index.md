@@ -4,6 +4,7 @@ slug: Web/API/PaymentRequestEvent/instrumentKey
 page-type: web-api-instance-property
 browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
+
 {{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`instrumentKey`** read-only property of the
@@ -12,13 +13,7 @@ The **`instrumentKey`** read-only property of the
 the user or an empty string if the user has not registered or chosen a payment
 instrument.
 
-## Syntax
-
-```js
-var instrumentKey = paymentRequestEvent.instrumentKey
-```
-
-### Value
+## Value
 
 A `PaymentInstrument` object.
 

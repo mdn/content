@@ -11,9 +11,11 @@ tags:
   - Non-standard
   - Property
   - Window
+  - Deprecated
 browser-compat: api.Screen.top
 ---
-{{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}
+
+{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Returns the distance in pixels from the top side of the current screen.
 

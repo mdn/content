@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRCompositionLayer.chromaticAberrationCorrection
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`chromaticAberrationCorrection`** property of the {{domxref("XRCompositionLayer")}} interface is a boolean enabling the layer's optical chromatic aberration correction.
 
@@ -22,7 +24,7 @@ Chromatic aberration ("color fringing") is an imperfection wherein a lens fails 
 ## Value
 
 A boolean. `true` enables chromatic aberration correction for the layer; `false` disables it.
-If the device doesn't support this feature, `chromaticAberrationCorrection` is {{jsxref("null")}} and setting it will not do anything.
+If the device doesn't support this feature, `chromaticAberrationCorrection` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and setting it will not do anything.
 
 If `chromaticAberrationCorrection` was changed, it will take effect in the next frame.
 

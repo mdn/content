@@ -16,6 +16,7 @@ browser-compat:
   - html.elements.script.crossorigin
   - html.elements.video.crossorigin
 ---
+
 {{HTMLSidebar}}
 
 The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, and {{HTMLElement("video")}} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
@@ -50,7 +51,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>script</code></td>
       <td>
-        Access to error logging via {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} will be limited.
+        Access to error logging via {{domxref('Window.error_event', 'window.onerror')}} will be limited.
       </td>
     </tr>
     <tr>

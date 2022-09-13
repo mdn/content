@@ -11,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.FileSystemHandle.name
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`name`** read-only property of the

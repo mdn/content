@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.closed
 ---
+
 {{APIRef}}
 
 The **`Window.closed`** read-only property indicates whether
@@ -48,7 +49,7 @@ In this example the function `refreshPopupWindow()` calls the
 popup hasn't been opened yet or the user has closed it a new window is opened.
 
 ```js
-const popupWindow = null;
+let popupWindow = null;
 
 function refreshPopupWindow() {
   if (popupWindow && !popupWindow.closed) {

@@ -23,8 +23,8 @@ a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}
 
 ## Syntax
 
-```js
-var receivers = rtcPeerConnection.getReceivers();
+```js-nolint
+getReceivers()
 ```
 
 ### Return value

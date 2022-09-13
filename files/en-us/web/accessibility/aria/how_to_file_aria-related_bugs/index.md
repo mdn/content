@@ -5,9 +5,8 @@ tags:
   - ARIA
   - Bugzilla
 ---
-The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
-> **Note:** When finding a bug, please also update the relevant compatibility tables in the [examples page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases).
+The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
 ### Screen Readers
 

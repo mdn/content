@@ -4,13 +4,13 @@ slug: Web/API/HTMLLinkElement/referrerPolicy
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTMLLinkElement
   - Property
   - Reference
 browser-compat: api.HTMLLinkElement.referrerPolicy
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}
 
 The
 **`HTMLLinkElement.referrerPolicy`**
@@ -57,7 +57,7 @@ A string; one of the following:
 ## Examples
 
 ```js
-var links = document.getElementsByTagName("link");
+const links = document.getElementsByTagName("link");
 links[0].referrerPolicy; // "no-referrer"
 ```
 

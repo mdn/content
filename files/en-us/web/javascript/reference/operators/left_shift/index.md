@@ -9,15 +9,16 @@ tags:
   - Reference
 browser-compat: javascript.operators.left_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 The **left shift operator (`<<`)** shifts the first operand the specified number of bits, modulo 32, to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
 
-{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-left-shift.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 a << b
 ```
 
@@ -27,7 +28,7 @@ This operator shifts the first operand the specified number of bits to the left.
 
 For example, `9 << 2` yields 36:
 
-```js
+```
      9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)

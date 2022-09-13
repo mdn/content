@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.dataTransfer
 ---
+
 {{APIRef("UI Events")}}
 
 The **`dataTransfer`** read-only property of the
@@ -47,9 +48,8 @@ Try copying and pasting some of the content provided to see the effects.
 ```
 
 ```js
-var editable = document.querySelector('p[contenteditable]');
-var result = document.querySelector('.result')
-var dataTransferObj;
+const editable = document.querySelector('p[contenteditable]');
+const result = document.querySelector('.result')
 
 editable.addEventListener('input', (e) => {
   result.textContent = e.dataTransfer.getData('text/html');

@@ -9,9 +9,11 @@ tags:
   - Feature-Policy
   - Reference
   - Property
+  - Experimental
 browser-compat: api.Document.featurePolicy
 ---
-{{APIRef("Feature Policy")}}
+
+{{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
 The **`featurePolicy`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the feature policies applied to a specific document.
 

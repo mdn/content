@@ -11,6 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCDataChannel.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property
@@ -25,13 +26,7 @@ The ability for each channel to have a defined subprotocol lets your app, for ex
 use JSON objects as messages on one channel while another channel is plaintext and
 another is raw binary or even some other format.
 
-## Syntax
-
-```js
-var subProtocol = aDataChannel.protocol;
-```
-
-### Value
+## Value
 
 A string identifying the app-defined subprotocol being used for exchanging data on the
 channel. If none has been established, this is an empty string ("").
@@ -39,8 +34,8 @@ channel. If none has been established, this is an empty string ("").
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel", {
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel", {
            protocol: "json"
 });
 

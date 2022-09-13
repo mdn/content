@@ -13,6 +13,7 @@ tags:
   - onprocessorerror
 browser-compat: api.AudioWorkletNode.processorerror_event
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `processorerror` event fires when the underlying {{domxref("AudioWorkletProcessor")}} behind the node throws an exception in its constructor, the {{domxref("AudioWorkletProcessor.process", "process")}} method, or any user-defined class method.
@@ -24,9 +25,9 @@ Once an exception is thrown, the processor (and thus the node) will output silen
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('processorerror', event => { })
+addEventListener('processorerror', (event) => { })
 
-onprocessorerror = event => { }
+onprocessorerror = (event) => { }
 ```
 
 ## Event type
@@ -38,7 +39,7 @@ A generic {{domxref("Event")}}.
 To be informed when the processor throws an exception, you can add a handler to your {{domxref("AudioWorkletNode")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-whiteNoiseNode.addEventListener("processorerror", function(event) {
+whiteNoiseNode.addEventListener("processorerror", (event) => {
   console.error('There was an error!');
 });
 ```
@@ -46,7 +47,7 @@ whiteNoiseNode.addEventListener("processorerror", function(event) {
 Alternatively, you can use the `onprocessorerror` event handler property to establish a handler for the `processorerror` event:
 
 ```js
-whiteNoiseNode.onprocessorerror = function(event) {
+whiteNoiseNode.onprocessorerror = (event) => {
  console.error('There was an error!');
 }
 ```

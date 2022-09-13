@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.mode
 ---
+
 {{APIRef("Fetch")}}
 
 The **`mode`** read-only property of the {{domxref("Request")}}
@@ -47,7 +48,7 @@ to determine if cross-origin requests lead to valid responses, and which propert
     - `websocket`
       - : A special mode used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
 
-#### Default mode
+### Default mode
 
 Requests can be initiated in a variety of ways, and the mode for a request depends on
 the particular means by which it was initiated.
@@ -73,8 +74,8 @@ In the following snippet, we create a new request using the
 the script), then save the request mode in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myMode = myRequest.mode; // returns "cors" by default
+const myRequest = new Request('flowers.jpg');
+const myMode = myRequest.mode; // returns "cors" by default
 ```
 
 ## Specifications

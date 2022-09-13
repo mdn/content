@@ -7,18 +7,20 @@ tags:
   - Constructor
   - Reference
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.VideoFrame
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`VideoFrame()`** constructor creates a new {{domxref("VideoFrame")}} object representing a frame of a video.
 
 ## Syntax
 
-```js
+```js-nolint
 new VideoFrame(image)
-new VideoFrame(image, init)
-new VideoFrame(data, init)
+new VideoFrame(image, options)
+new VideoFrame(data, options)
 ```
 
 ### Parameters
@@ -33,18 +35,18 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
     an {{domxref("ImageBitmap")}},
     an {{domxref("OffscreenCanvas")}},
     or another {{domxref("VideoFrame")}}.
-- `init`{{Optional_Inline}}
-  - : A dictionary object containing the following:
-    - `duration`{{Optional_Inline}}
+- `options` {{Optional_Inline}}
+  - : An object containing the following:
+    - `duration` {{Optional_Inline}}
       - : An integer representing the duration of the frame in microseconds.
     - `timestamp`
       - : An integer representing the timestamp of the frame in microseconds.
-    - `alpha`{{Optional_Inline}}
+    - `alpha` {{Optional_Inline}}
       - : A string, describing how the user agent should behave when dealing with alpha channels. The default value is "keep".
         - `"keep"`: Indicates that the user agent should preserve alpha channel data.
         - `"discard"`: Indicates that the user agent should ignore or remove alpha channel data.
-    - `visibleRect`{{Optional_Inline}}
-      - : A dictionary representing the visible rectangle of the `VideoFrame`, containing the following:
+    - `visibleRect` {{Optional_Inline}}
+      - : An object representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`
           - : The x-coordinate.
         - `y`
@@ -53,17 +55,17 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
           - : The width of the frame.
         - `height`
           - : The height of the frame.
-    - `displayWidth`{{Optional_Inline}}
+    - `displayWidth` {{Optional_Inline}}
       - : The width of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
-    - `displayHeight`{{Optional_Inline}}
+    - `displayHeight` {{Optional_Inline}}
       - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
 
 The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
 
 - `data`
   - : An {{jsxref("ArrayBuffer")}} containing the data for the new `VideoFrame`.
-- `init`
-  - : A dictionary object containing the following:
+- `options`
+  - : An object containing the following:
     - `format`
       - : A string representing the video pixel format. One of the following strings, which are fully described on the page for the {{domxref("VideoFrame.format","format")}} property:
         - `"I420"`
@@ -81,17 +83,17 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
       - : Height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
     - `timestamp`
       - : An integer representing the timestamp of the frame in microseconds.
-    - `duration`{{Optional_Inline}}
+    - `duration` {{Optional_Inline}}
       - : An integer representing the duration of the frame in microseconds.
-    - `layout`{{Optional_Inline}}
+    - `layout` {{Optional_Inline}}
       - : A list containing the following values for each plane in the `VideoFrame`:
         - `offset`
           - : An integer representing the offset in bytes where the given plane begins.
         - `stride`
           - : An integer representing the number of bytes, including padding, used by each row of the plane.
-        Planes may not overlap. If no `layout` is specified, the planes will be tightly packed.
-    - `visibleRect`{{Optional_Inline}}
-      - : A dictionary representing the visible rectangle of the `VideoFrame`, containing the following:
+            Planes may not overlap. If no `layout` is specified, the planes will be tightly packed.
+    - `visibleRect` {{Optional_Inline}}
+      - : An object representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`
           - : The x-coordinate.
         - `y`
@@ -100,12 +102,12 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
           - : The width of the frame.
         - `height`
           - : The height of the frame.
-    - `displayWidth`{{Optional_Inline}}
+    - `displayWidth` {{Optional_Inline}}
       - : The width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-    - `displayHeight`{{Optional_Inline}}
+    - `displayHeight` {{Optional_Inline}}
       - : The height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
     - `colorSpace`
-      - : A dictionary representing the color space of the `VideoFrame`, containing the following:
+      - : An object representing the color space of the `VideoFrame`, containing the following:
         - `primaries`
           - : A string representing the video color primaries, described on the page for the {{domxref("VideoColorSpace.primaries")}} property.
         - `transfer`
@@ -122,7 +124,7 @@ The following examples are from the article [Video processing with WebCodecs](ht
 ```js
 const cnv = document.createElement('canvas');
 // draw something on the canvas
-…
+// ...
 let frame_from_canvas = new VideoFrame(cnv, { timestamp: 0 });
 ```
 

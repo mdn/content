@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.submit
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.submit()`** method submits a given
@@ -19,8 +20,7 @@ The **`HTMLFormElement.submit()`** method submits a given
 This method is similar, but not identical to, activating a form's submit
 {{HtmlElement("button")}}. When invoking this method directly, however:
 
-- No {{event("submit")}} event is raised. In particular, the form's
-  {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} event handler is not run.
+- No {{domxref("HTMLFormElement/submit_event", "submit")}} event is raised. In particular, the form's `onsubmit` event handler is not run.
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) is not triggered.
 
 The {{domxref("HTMLFormElement.requestSubmit()")}} method is identical to activating a
@@ -35,7 +35,7 @@ submitted when you do it with original HTML form submit.
 
 ## Syntax
 
-```js
+```js-nolint
 submit()
 ```
 

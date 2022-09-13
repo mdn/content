@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-outer-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the outer part of the spinner button of number picker {{htmlelement("input")}} elements.

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getShaderSource()`** method of the
@@ -18,7 +19,7 @@ The **`WebGLRenderingContext.getShaderSource()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderSource(shader)
 ```
 
@@ -34,10 +35,10 @@ A string containing the source code of the shader.
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);
+const source = gl.getShaderSource(shader);
 ```
 
 ## Specifications

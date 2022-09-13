@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioContext.OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -21,7 +22,7 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 
 ## Syntax
 
-```js
+```js-nolint
 new OfflineAudioContext(options)
 
 new OfflineAudioContext(numberOfChannels, length, sampleRate)
@@ -74,7 +75,7 @@ const offlineCtx = new OfflineAudioContext({
   sampleRate: 44100,
 });
 const source = offlineCtx.createBufferSource();
-// etc...
+// …
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)

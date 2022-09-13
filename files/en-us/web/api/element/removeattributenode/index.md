@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.removeAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`removeAttributeNode()`** method of the
@@ -18,7 +19,7 @@ The **`removeAttributeNode()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttributeNode(attributeNode)
 ```
 
@@ -40,8 +41,8 @@ The attribute node that was removed.
 
 ```js
 // Given: <div id="top" align="center" />
-var d = document.getElementById("top");
-var d_align = d.getAttributeNode("align");
+const d = document.getElementById("top");
+const d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
 // align is now removed: <div id="top" />
 ```

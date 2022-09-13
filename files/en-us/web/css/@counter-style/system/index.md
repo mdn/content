@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.system
 ---
+
 {{CSSRef}}
 
 The **`system`** descriptor specifies the algorithm to be used for converting the integer value of a counter to a string representation. It is used in a {{cssxref("@counter-style")}} to define the behavior of the defined style.
@@ -112,13 +113,13 @@ If your browser supports it, this example will render a list like this:
 
 ```css
 @counter-style fisheye {
- system: cyclic;
- symbols: ◉;
- suffix: " ";
+  system: cyclic;
+  symbols: ◉;
+  suffix: " ";
 }
 
 ul {
- list-style: fisheye;
+  list-style: fisheye;
 }
 ```
 
@@ -152,13 +153,13 @@ If your browser supports it, this example will render a list like this:
 
 ```css
 @counter-style circled-digits {
- system: fixed;
- symbols: ➀ ➁ ➂;
- suffix: ' ';
+  system: fixed;
+  symbols: ➀ ➁ ➂;
+  suffix: " ";
 }
 
 ul {
- list-style: circled-digits;
+  list-style: circled-digits;
 }
 ```
 
@@ -198,13 +199,13 @@ bbb. Eight
 
 ```css
 @counter-style abc {
- system: symbolic;
- symbols: a b c;
- suffix: ". ";
+  system: symbolic;
+  symbols: a b c;
+  suffix: ". ";
 }
 
 ul {
- list-style: abc;
+  list-style: abc;
 }
 ```
 
@@ -244,13 +245,13 @@ bb. Seven
 
 ```css
 @counter-style abc {
- system: alphabetic;
- symbols: a b c;
- suffix: ". ";
+  system: alphabetic;
+  symbols: a b c;
+  suffix: ". ";
 }
 
 ul {
- list-style: abc;
+  list-style: abc;
 }
 ```
 
@@ -292,13 +293,13 @@ The first symbol provided in the `symbols` descriptor is interpreted as `0` here
 
 ```css
 @counter-style abc {
- system: numeric;
- symbols: a b c;
- suffix: ". ";
+  system: numeric;
+  symbols: a b c;
+  suffix: ". ";
 }
 
 ul {
- list-style: abc;
+  list-style: abc;
 }
 ```
 
@@ -329,13 +330,13 @@ As shown in the following example, if digits from `0` to `9` are specified as sy
 
 ```css
 @counter-style numbers {
- system: numeric;
- symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
- suffix: ".";
+  system: numeric;
+  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  suffix: ".";
 }
 
 ul {
- list-style: numbers;
+  list-style: numbers;
 }
 ```
 
@@ -363,13 +364,14 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 
 ```css
 @counter-style upper-roman {
- system: additive;
- range: 1 3999;
- additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL, 10 X, 9 IX, 5 V, 4 IV, 1 I;
+  system: additive;
+  range: 1 3999;
+  additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL,
+    10 X, 9 IX, 5 V, 4 IV, 1 I;
 }
 
 ul {
- list-style: upper-roman;
+  list-style: upper-roman;
 }
 ```
 
@@ -397,13 +399,13 @@ This example will use the algorithm, symbols, and other properties of the `lower
 
 ```css
 @counter-style alpha-modified {
- system: extends lower-alpha;
- prefix: "(";
- suffix: ") ";
+  system: extends lower-alpha;
+  prefix: "(";
+  suffix: ") ";
 }
 
 ul {
- list-style: alpha-modified;
+  list-style: alpha-modified;
 }
 ```
 

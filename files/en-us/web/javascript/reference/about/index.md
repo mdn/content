@@ -5,6 +5,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{JsSidebar}}
 
 The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference"). If you're learning JavaScript, or need help understanding some of its capabilities or features, check out the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide).
@@ -13,7 +14,7 @@ The JavaScript language is intended to be used within some larger environment, b
 
 ## Where to find JavaScript information
 
-JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources), for the most part) includes the following:
+JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview), for the most part) includes the following:
 
 - The [JavaScript guide](/en-US/docs/Web/JavaScript/Guide)
 - The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
@@ -33,14 +34,17 @@ In the JavaScript reference you can find the following chapters:
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
   - : Chapter about JavaScript functions.
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-  - : Chapter about JavaScript classes introduced in ECMAScript 2015.
+  - : Chapter about JavaScript classes.
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
   - : Chapter about specific errors, exceptions and warnings thrown by JavaScript.
-- [New in JavaScript](/en-US/docs/Web/JavaScript/New_in_JavaScript)
-  - : Chapter about JavaScript version history.
 
 ### More reference pages
 
-- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

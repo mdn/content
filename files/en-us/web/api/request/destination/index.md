@@ -17,6 +17,7 @@ tags:
   - request
 browser-compat: api.Request.destination
 ---
+
 {{APIRef("Fetch")}}
 
 The **`destination`** read-only
@@ -95,8 +96,8 @@ In the following snippet, we create a new request using the
 directory as the script), then save the request's destination:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myDestination = myRequest.destination; // returns the empty string by default
+const myRequest = new Request('flowers.jpg');
+const myDestination = myRequest.destination; // returns the empty string by default
 ```
 
 ## Specifications

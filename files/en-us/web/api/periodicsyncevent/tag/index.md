@@ -10,9 +10,11 @@ tags:
   - Service Worker
   - Web Periodic Background Synchronization API
   - periodic sync
+  - Experimental
 browser-compat: api.PeriodicSyncEvent.tag
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
@@ -31,7 +33,7 @@ The following example demonstrates listening for a periodic sync event in the se
 worker, and accessing the `tag` property.
 
 ```js
-self.addEventListener('periodicsync', event => {
+self.addEventListener('periodicsync', (event) => {
   console.log(event.tag); // logs the events tag
 });
 ```

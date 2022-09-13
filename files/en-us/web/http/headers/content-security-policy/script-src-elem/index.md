@@ -12,8 +12,9 @@ tags:
   - Security
   - script-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.script-src-elem
+browser-compat: http.headers.Content-Security-Policy.script-src-elem
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-elem`** directive specifies valid sources for JavaScript {{HTMLElement("script")}} elements, but not inline script event handlers like `onclick`.

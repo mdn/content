@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 56 was released on September 28, 2017. This article lists key changes that are useful for web developers.
@@ -53,7 +54,7 @@ _No changes._
 
 #### DOM events
 
-- {{domxref("GlobalEventHandlers.onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
+- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
 
 #### Media and WebRTC
 

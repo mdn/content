@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -17,7 +18,7 @@ passed {{domxref("WebGLBuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isBuffer(buffer)
 ```
 
@@ -35,9 +36,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the buff
 ### Creating a buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
 
 gl.isBuffer(buffer);
 ```

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.last-of-type
 ---
+
 {{CSSRef}}
 
 The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type among a group of sibling elements.
@@ -58,7 +59,7 @@ This example shows how nested elements can also be targeted. Note that the [univ
   <div>This `div` is first.</div>
   <div>This <span>nested `span` is last</span>!</div>
   <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
-  <b>This `b` qualifies!</b>
+  <p>This `p` qualifies!</p>
   <div>This is the final `div`!</div>
 </article>
 ```

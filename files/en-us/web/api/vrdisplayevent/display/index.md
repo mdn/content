@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - display
+  - Non-standard
 browser-compat: api.VRDisplayEvent.display
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`display`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns the {{domxref("VRDisplay")}} associated with this event.
 
@@ -27,8 +29,8 @@ A {{domxref("VRDisplay")}} object.
 ## Examples
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function(e) {
-    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+window.addEventListener('vrdisplaypresentchange', (e) => {
+    console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
   })
 ```
 

@@ -4,7 +4,6 @@ slug: Web/API/PaymentRequest/abort
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Payment Request API
   - PaymentRequest
   - Reference
@@ -12,7 +11,8 @@ tags:
   - abort
 browser-compat: api.PaymentRequest.abort
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
 interface causes the user agent to end the payment request and to remove any user
@@ -20,7 +20,7 @@ interface that might be shown.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 
@@ -38,10 +38,10 @@ The following example sets up a timeout to clear the payment request that might 
 been abandoned or neglected.
 
 ```js
-var request = new PaymentRequest(supportedInstruments, details, options);
+const request = new PaymentRequest(supportedInstruments, details, options);
 
-var paymentTimeout = window.setTimeout(() => {
-  window.clearTimeout(paymentTimeout);
+const paymentTimeout = setTimeout(() => {
+  clearTimeout(paymentTimeout);
   request.abort().then(() => {
     print('Payment timed out after 20 minutes.');
   }).catch(() => {

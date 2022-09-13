@@ -10,6 +10,7 @@ tags:
   - getConfiguration
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getConfiguration()`** method returns
@@ -25,7 +26,7 @@ identity information.
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 
@@ -45,13 +46,13 @@ one in use.
 ```js
 let configuration = myPeerConnection.getConfiguration();
 
-if ((configuration.certificates != undefined) && (!configuration.certificates.length)) {
+if (configuration.certificates?.length === 0) {
    RTCPeerConnection.generateCertificate({
       name: 'RSASSA-PKCS1-v1_5',
       hash: 'SHA-256',
       modulusLength: 2048,
       publicExponent: new Uint8Array([1, 0, 1])
-  }).then(function(cert) {
+  }).then((cert) => {
     configuration.certificates = [cert];
     myPeerConnection.setConfiguration(configuration);
   });

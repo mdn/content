@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createFramebuffer()`** method of
@@ -18,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
 
 ## Syntax
 
-```js
+```js-nolint
 createFramebuffer()
 ```
 
@@ -35,9 +36,9 @@ A {{domxref("WebGLFramebuffer")}} object.
 ### Creating a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const framebuffer = gl.createFramebuffer();
 ```
 
 ## Specifications

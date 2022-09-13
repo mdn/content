@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mix-blend-mode
 ---
+
 {{CSSRef}}
 
 The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
@@ -475,10 +476,11 @@ mix-blend-mode: unset;
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
-  background: #EEE;
+  background: #eee;
 }
 
 .grid {
@@ -503,9 +505,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: center;
 }
@@ -513,8 +515,8 @@ html,body {
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em .5em 0;
-  font: .8em sans-serif;
+  margin: 0.5em 0.5em 0;
+  font: 0.8em sans-serif;
   text-align: left;
   white-space: nowrap;
 }
@@ -525,8 +527,8 @@ html,body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #FFF 100%),
-              linear-gradient(to bottom, #FF0 0%, #F0F 50%, #0FF 100%);
+  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+    linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;
   margin: 0 auto;
@@ -550,7 +552,9 @@ html,body {
   fill: url(#blue);
 }
 
-.isolate .group { isolation: isolate; }
+.isolate .group {
+  isolation: isolate;
+}
 
 .normal .item      { mix-blend-mode: normal; }
 .multiply .item    { mix-blend-mode: multiply; }
@@ -637,13 +641,66 @@ html,body {
 #### CSS
 
 ```css
-circle { mix-blend-mode: screen; }
-.isolate { isolation: isolate; } /* Without isolation, the background color will be taken into account */
+circle {
+  mix-blend-mode: screen;
+}
+.isolate {
+  isolation: isolate;
+} /* Without isolation, the background color will be taken into account */
 ```
 
 #### Result
 
 {{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
+
+### Using mix-blend-mode with text
+
+This example uses `mix-blend-mode` to blend text color with the background color of its parent element.
+
+#### HTML
+
+```html
+<div class="container">
+  <p>Mostly Harmless</p>
+  <p class="multiply">Mostly Harmless</p>
+  <p class="screen">Mostly Harmless</p>
+  <p class="hard-light">Mostly Harmless</p>
+</div>
+```
+
+#### CSS
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+
+.container {
+  background-color: blue;
+}
+
+p {
+  font: 4rem "Rubik Moonrocks", cursive;
+  font-weight: bold;
+  color: orange;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.multiply {
+  mix-blend-mode: multiply;
+}
+
+.screen {
+  mix-blend-mode: screen;
+}
+
+.hard-light {
+  mix-blend-mode: hard-light;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using mix-blend-mode with text", "", "420")}}
 
 ## Specifications
 

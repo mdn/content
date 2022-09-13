@@ -8,9 +8,11 @@ tags:
   - Reference
   - url
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.url
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the initial URL of the resource request when the element is an image.
 
@@ -28,7 +30,7 @@ In this example calling `entry.url` returns `https://example.com/image.jpg`.
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.url);
     }

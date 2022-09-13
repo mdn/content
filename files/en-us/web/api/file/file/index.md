@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.File.File
 ---
+
 {{APIRef("File")}}
 
 The **`File()`** constructor creates a new {{domxref("File")}}
@@ -16,7 +17,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new File(bits, name)
 new File(bits, name, options)
 ```
@@ -24,10 +25,11 @@ new File(bits, name, options)
 ### Parameters
 
 - `bits`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
-    a {{domxref("Blob")}}, string literals or objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("File")}}.
-    Note that strings objects here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+    object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
+    {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
+    or a mix of any of such elements, that will be put inside the {{domxref("File")}}.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
 - `name`
   - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
@@ -37,7 +39,7 @@ new File(bits, name, options)
 
     - `type`
       - : A string representing the MIME type of the
-        content that will be put into the file. Defaults to a value of `"".`
+        content that will be put into the file. Defaults to a value of `""`.
     - `lastModified`
       - : A number representing the number of milliseconds
         between the Unix time epoch and when the file was last modified. Defaults to a

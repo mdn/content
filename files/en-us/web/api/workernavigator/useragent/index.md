@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.WorkerNavigator.userAgent
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`WorkerNavigator.userAgent`** read-only property returns the
@@ -49,7 +50,7 @@ several pieces of info. Each of these pieces of info comes from other navigator
 properties which are also settable by the user. Gecko-based browsers comply with the
 following general structure:
 
-```js
+```
 userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
 Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version

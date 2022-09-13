@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/32
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -58,7 +59,7 @@ Highlights:
 - To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ({{bug(1008719)}})
 - To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ({{bug(979692)}}).
 - The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ({{bug(1004579)}}).
-- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of  `'yes'` or `'no'` ({{bug(887703)}}).
+- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ({{bug(887703)}}).
 - [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ({{bug(998076)}})..
 
 ### MathML
@@ -71,7 +72,7 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`,  have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
 
   ```json
   {

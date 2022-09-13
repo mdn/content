@@ -14,6 +14,7 @@ tags:
   - width
 browser-compat: api.HTMLImageElement.width
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`width`** property of the
@@ -63,10 +64,10 @@ at the moment. This is performed in the window's {{domxref("Window.load_event",
 current width information is always available.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateWidth = event => { output.innerText = clockImage.width; };
+const updateWidth = (event) => { output.innerText = clockImage.width; };
 
 window.addEventListener("load", updateWidth);
 window.addEventListener("resize", updateWidth);
@@ -74,9 +75,9 @@ window.addEventListener("resize", updateWidth);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
+This example may be easier to try out {{LiveSampleLink('Examples', 'in its own window')}}.
 
 ## Specifications
 

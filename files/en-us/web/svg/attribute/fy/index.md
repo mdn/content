@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.radialGradient.fy
 ---
+
 {{SVGRef}}
 
 The **`fy`** attribute defines the y-axis coordinate of the focal point for a radial gradient.
@@ -19,7 +20,9 @@ You can use this attribute with the following SVG elements:
 ### Example 1
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

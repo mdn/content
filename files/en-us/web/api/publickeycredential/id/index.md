@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.id
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`id`** read-only property of the
@@ -31,7 +32,7 @@ A string being the [base64url encoded](/en-US/docs/Glossary/Base64) version of {
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",
@@ -51,14 +52,14 @@ var publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
-    var id = newCredentialInfo.id;
+  .then((newCredentialInfo) => {
+    const id = newCredentialInfo.id;
     // Do something with the id
 
     // send attestation response and client extensions
     // to the server to proceed with the registration
     // of the credential
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```

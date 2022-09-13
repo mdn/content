@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -20,7 +21,7 @@ buffer object and specifies its layout.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 
@@ -43,10 +44,11 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_SHORT`: unsigned 16-bit integer, with values in \[0,
       65535]
     - `gl.FLOAT`: 32-bit IEEE floating point number
+
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
+    - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
 
 - `normalized`
 
@@ -187,15 +189,15 @@ imaginary data structure where the attributes of each vertex are stored interlea
 a length of 20 bytes per vertex:
 
 1. **position:** We need to store the X, Y and Z coordinates. For highest
-    precision, we use 32-bit floats; in total this uses 12 bytes.
+   precision, we use 32-bit floats; in total this uses 12 bytes.
 2. **normal vector:** We need to store the X, Y and Z components of the
-    normal vector, but since precision is not that important, we use 8-bit signed
-    integers. For better performance, we align the data to 32 bits by also storing a
-    fourth zero-valued component, bringing the total size to 4 bytes. Also, we tell WebGL
-    to normalize the values because our normals are always in range \[-1, 1].
+   normal vector, but since precision is not that important, we use 8-bit signed
+   integers. For better performance, we align the data to 32 bits by also storing a
+   fourth zero-valued component, bringing the total size to 4 bytes. Also, we tell WebGL
+   to normalize the values because our normals are always in range \[-1, 1].
 3. **texture coordinate:** We need to store the U and V coordinates; for
-    this 16-bit unsigned integers offer enough precision, the total size is 4 bytes. We
-    also tell WebGL to normalize the values to \[0, 1].
+   this 16-bit unsigned integers offer enough precision, the total size is 4 bytes. We
+   also tell WebGL to normalize the values to \[0, 1].
 
 For example, the following vertex:
 
@@ -218,25 +220,25 @@ First, we dynamically create the array buffer from JSON data using a
 data to be in little-endian.
 
 ```js
-//load geometry with fetch() and Response.json()
+// Load geometry with fetch() and Response.json()
 const response = await fetch('assets/geometry.json');
 const vertices = await response.json();
 
-//Create array buffer
+// Create array buffer
 const buffer = new ArrayBuffer(20 * vertices.length);
-//Fill array buffer
+// Fill array buffer
 const dv = new DataView(buffer);
-for (let i = 0; i < vertices.length; i++) {
-  dv.setFloat32(20 * i, vertices[i].position[0], true);
-  dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
-  dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7F);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7F);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7F);
+vertices.forEach((vertex, i) => {
+  dv.setFloat32(20 * i, vertex.position[0], true);
+  dv.setFloat32(20 * i + 4, vertex.position[1], true);
+  dv.setFloat32(20 * i + 8, vertex.position[2], true);
+  dv.setInt8(20 * i + 12, vertex.normal[0] * 0x7F);
+  dv.setInt8(20 * i + 13, vertex.normal[1] * 0x7F);
+  dv.setInt8(20 * i + 14, vertex.normal[2] * 0x7F);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xFFFF, true);
-}
+  dv.setUint16(20 * i + 16, vertex.texCoord[0] * 0xFFFF, true);
+  dv.setUint16(20 * i + 18, vertex.texCoord[1] * 0xFFFF, true);
+});
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on

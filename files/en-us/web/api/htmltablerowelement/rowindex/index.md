@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement.rowIndex
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableRowElement.rowIndex`** read-only property
@@ -61,7 +62,7 @@ rows.forEach((row) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Browser compatibility
 

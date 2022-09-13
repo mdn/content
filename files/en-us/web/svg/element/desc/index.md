@@ -7,6 +7,7 @@ tags:
   - SVG Descriptive
 browser-compat: svg.elements.desc
 ---
+
 {{SVGRef}}
 
 The **`<desc>`** element provides an accessible, long-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
@@ -18,7 +19,11 @@ The hidden text of a `<desc>` element can also be concatenated with the visible 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

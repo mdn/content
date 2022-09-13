@@ -11,13 +11,14 @@ tags:
   - TimeRanges
 browser-compat: api.TimeRanges.start
 ---
+
 {{APIRef("DOM")}}
 
 The **`start()`** method of the {{domxref("TimeRanges")}} interface returns the time offset at which a specified time range begins.
 
 ## Syntax
 
-```js
+```js-nolint
 start(index)
 ```
 
@@ -41,15 +42,15 @@ A number.
 Given a video element with the ID "myVideo":
 
 ```js
-var v = document.getElementById("myVideo");
+const v = document.getElementById("myVideo");
 
-var buf = v.buffered;
+const buf = v.buffered;
 
-var numRanges = buf.length;
+const numRanges = buf.length;
 
-if (buf.length == 1) {
+if (buf.length === 1) {
   // only one range
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
+  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
     // The one range starts at the beginning and ends at
     // the end of the video, so the whole thing is loaded
   }

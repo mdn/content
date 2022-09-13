@@ -13,6 +13,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX1Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX1Attribute
 ---
+
 {{SVGRef}}
 
 The **`x1`** attribute is used to specify the first x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.
@@ -25,7 +26,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -78,7 +83,11 @@ For {{SVGElement('line')}}, `x1` defines the x coordinate of the starting point 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -93,7 +102,7 @@ html,body,svg { height:100% }
 
 ## linearGradient
 
-For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the starting point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
+For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the starting point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
 <table class="properties">
   <tbody>
@@ -131,7 +140,11 @@ For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the start
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

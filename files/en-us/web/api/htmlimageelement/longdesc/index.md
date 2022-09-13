@@ -16,6 +16,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _deprecated_ property **`longDesc`** on

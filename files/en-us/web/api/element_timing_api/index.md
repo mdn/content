@@ -8,9 +8,11 @@ tags:
   - Performance
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.PerformanceElementTiming
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{DefaultAPISidebar("Element Timing")}}{{SeeCompatTable}}
 
 The **Element Timing API** provides features for monitoring the loading performance of large image elements and text nodes as they appear on screen.
 
@@ -40,7 +42,7 @@ Two entries will be output to the console, the first containing details of the i
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  let entries = list.getEntries().forEach((entry) => {
       console.log(entry);
   });
 });

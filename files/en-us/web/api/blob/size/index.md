@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.size
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's **`size`** property returns
@@ -29,8 +30,8 @@ lengths in bytes.
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
-<output id="output">Choose files...</output>
+<input type="file" id="input" multiple />
+<output id="output">Choose files…</output>
 ```
 
 ```css hidden
@@ -57,7 +58,7 @@ input.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -9,6 +9,7 @@ spec-urls:
   - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
   - https://svgwg.org/specs/animations/#BeginAttribute
 ---
+
 {{SVGRef}}
 
 The **`begin`** attribute defines when an animation should begin or when an element should be discarded.
@@ -50,13 +51,13 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 - `<offset-value>`
   - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("Window/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
-  - : This value defines a *syncbase* and an optional offset from that *syncbase*. The element's animation start time is defined relative to the begin or active end of another animation.
+  - : This value defines a _syncbase_ and an optional offset from that _syncbase_. The element's animation start time is defined relative to the begin or active end of another animation.
 
     A valid syncbase-value consists of an ID reference to another animation element followed by a dot and either `begin` or `end` to identify whether to synchronize with the beginning or active end of the referenced animation element. An optional offset value as defined in `<offset-value>` can be appended.
 - `<event-value>`
   - : This value defines an event and an optional offset that determines the time at which the element's animation should begin. The animation start time is defined relative to the time that the specified event is fired.
 
-    A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are: {{event("focus")}}, {{event("blur")}}, {{event("focusin")}}, {{event("focusout")}}, {{event("activate")}}, {{event("auxclick")}}, {{event("click")}}, {{event("dblclick")}}, {{event("mousedown")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mousemove")}}, {{event("mouseout")}}, {{event("mouseover")}}, {{event("mouseup")}}, {{event("wheel")}}, {{event("beforeinput")}}, {{event("input")}}, {{event("keydown")}}, {{event("keyup")}}, {{event("compositionstart")}}, {{event("compositionupdate")}}, {{event("compositionend")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}, {{event("abort")}}, {{domxref("Element/error_event", "error")}}, {{event("select")}}, {{event("resize")}}, {{event("scroll")}}, {{event("beginEvent")}}, {{event("endEvent")}}, and {{event("repeatEvent")}}. An optional offset value as defined in `<offset-value>` can be appended.
+    A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}, {{domxref("Element/DOMActivate_event", "DOMActivate")}}, {{domxref("Element/auxclick_event", "auxclick")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/wheel_event","wheel")}}, {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}, {{domxref("HTMLElement/input_event", "input")}}, {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}, {{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}, {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}, {{domxref("HTMLMediaElement/abort_event", "abort")}}, {{domxref("Element/error_event", "error")}}, {{domxref("HTMLInputElement/select_event", "select")}}, {{domxref("Window/resize_event", "resize")}}, {{domxref("Element/scroll_event", "scroll")}}, {{domxref("SVGAnimationElement/beginEvent_event", "beginEvent")}}, {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}, and {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}. An optional offset value as defined in `<offset-value>` can be appended.
 - `<repeat-value>`
   - : This value defines a qualified repeat event. The element animation start time is defined relative to the time that the repeat event is raised with the specified iteration value.
 
@@ -319,7 +320,7 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 
 {{EmbedLiveSample('Accesskey_example', '100%', 130)}}
 
-*This example is embed in an iFrame. If you want to activate the key events, you have to click on it first.*
+_This example is embedded in an iFrame. If you want to activate the key events, you have to click on it first._
 
 [begin-5-accesskey.svg](begin-5-accesskey.svg)
 

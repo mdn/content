@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.transformFeedbackVaryings
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.transformFeedbackVaryings()`**
@@ -18,7 +19,7 @@ to record in {{domxref("WebGLTransformFeedback")}} buffers.
 
 ## Syntax
 
-```js
+```js-nolint
 transformFeedbackVaryings(program, varyings, bufferMode)
 ```
 
@@ -41,12 +42,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
-var transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
+const transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
 
-gl.transformFeedbackVaryings(shaderProg, transformFeedbackOutputs,
-                             gl.INTERLEAVED_ATTRIBS);
+gl.transformFeedbackVaryings(
+  shaderProg,
+  transformFeedbackOutputs,
+  gl.INTERLEAVED_ATTRIBS
+);
 gl.linkProgram(shaderProg);
 ```
 

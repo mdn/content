@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.resultType
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`resultType`** property of the
@@ -134,8 +135,8 @@ The following example shows the use of the `resultType` property.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
+const xpath = "//div";
+const result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
 document.querySelector("output").textContent =
   result.resultType >= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &&
   result.resultType <= XPathResult.FIRST_ORDERED_NODE_TYPE;
@@ -143,7 +144,7 @@ document.querySelector("output").textContent =
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

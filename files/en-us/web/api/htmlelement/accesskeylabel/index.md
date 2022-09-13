@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/accessKeyLabel
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.accessKeyLabel`**
@@ -12,7 +13,7 @@ browser-assigned access key (if any); otherwise it returns an empty string.
 
 ## Syntax
 
-```js
+```js-nolint
 label = element.accessKeyLabel
 ```
 
@@ -23,9 +24,9 @@ label = element.accessKeyLabel
 ```js
 const btn = document.getElementById('btn1');
 const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
-btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
+btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
-btn.onclick = function () {
+btn.onclick = () => {
   const feedback = document.createElement('output');
   feedback.textContent = 'Pressed!';
   btn.insertAdjacentElement('afterend', feedback);

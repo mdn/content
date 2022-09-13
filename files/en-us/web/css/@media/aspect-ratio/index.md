@@ -9,6 +9,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.aspect-ratio
 ---
+
 {{CSSRef}}
 
 The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
@@ -44,7 +45,7 @@ Note that, when none of the media query conditions are true, the background will
 /* Maximum aspect ratio */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff;  /* cyan */
+    background: #9ff; /* cyan */
   }
 }
 
@@ -70,21 +71,21 @@ Note that, when none of the media query conditions are true, the background will
 ```
 
 ```css hidden
-iframe{
-  display:block;
+iframe {
+  display: block;
 }
 ```
 
 ```js hidden
-outer.style.width=outer.style.height="165px"
+outer.style.width = outer.style.height = "165px";
 
-w.onchange=w.oninput=function(){
-  outer.style.width=w.value+"px"
-  wf.textContent="width:"+w.value
-}
-h.onchange=h.oninput=function(){
-  outer.style.height=h.value+"px"
-  hf.textContent="height:"+h.value
+w.onchange = w.oninput = () => {
+  outer.style.width = `${w.value}px`;
+  wf.textContent = `width: ${w.value}`;
+};
+h.onchange = h.oninput = () => {
+  outer.style.height = `${h.value}px`;
+  hf.textContent = `height: ${h.value}`;
 }
 ```
 

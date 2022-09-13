@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 The `CSSStyleDeclaration.item()`
@@ -21,7 +22,7 @@ arguments; the empty string is returned if the index is out of range and a
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -37,7 +38,7 @@ A string that is the name of the CSS property at the specified index.
 JavaScript has a special simpler syntax for obtaining an item from a NodeList by index:
 
 ```js
-var propertyName = style[index];
+const propertyName = style[index];
 ```
 
 ### Exceptions
@@ -48,8 +49,8 @@ var propertyName = style[index];
 ## Examples
 
 ```js
-var style = document.getElementById('div1').style;
-var propertyName = style.item(1); // or style[1] - returns the second style listed
+const style = document.getElementById('div1').style;
+const propertyName = style.item(1); // or style[1] - returns the second style listed
 ```
 
 ## Specifications

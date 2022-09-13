@@ -7,6 +7,7 @@ tags:
   - Reference
   - Numeric
 ---
+
 {{WebAssemblySidebar}}
 
 The **`const`** instructions, are used to declare numbers.

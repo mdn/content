@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndex.add
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`add()`** method of the
@@ -21,7 +22,7 @@ The **`add()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 add(contentDescription)
 ```
 
@@ -47,6 +48,7 @@ add(contentDescription)
         HTML document. Needs to be under the scope of the current
         {{domxref('ServiceWorker','service worker')}}.
     - `category` {{Optional_Inline}}
+
       - : A {{jsxref('String')}} defining the
         category of content. Can be:
 
@@ -56,7 +58,8 @@ add(contentDescription)
         - `video`
         - `audio`
 
-    - `icons`  {{Optional_Inline}}
+    - `icons` {{Optional_Inline}}
+
       - : An {{jsxref('Array')}} of image
         resources, defined as an {{jsxref('Object')}} with the following data:
 

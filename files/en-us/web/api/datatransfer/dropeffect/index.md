@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.dropEffect
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.dropEffect`** property controls the
@@ -64,10 +65,16 @@ This example shows the use of the `dropEffect` and
 ```html
 <div>
   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection to move the element.
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
   </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div
+  id="target"
+  ondrop="drop_handler(event);"
+  ondragover="dragover_handler(event);">
+  Drop Zone
+</div>
 ```
 
 ### CSS
@@ -92,7 +99,7 @@ div {
 
 ```js
 function dragstart_handler(ev) {
-  console.log("dragStart: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(`dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
 
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -101,7 +108,7 @@ function dragstart_handler(ev) {
 }
 
 function drop_handler(ev) {
-  console.log("drop: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(`drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
   ev.preventDefault();
 
   // Get the id of the target and add the moved element to the target's DOM
@@ -110,7 +117,7 @@ function drop_handler(ev) {
 }
 
 function dragover_handler(ev) {
-  console.log("dragOver: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(`dragOver: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
   ev.preventDefault();
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move"

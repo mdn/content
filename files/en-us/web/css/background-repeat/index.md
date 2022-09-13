@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-repeat
 ---
+
 {{CSSRef}}
 
 The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
@@ -181,9 +182,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(starsolid.gif);
-    width: 160px;
-    height: 70px;
+  background-image: url(starsolid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* Background repeats */
@@ -208,10 +209,9 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
-  background-repeat: repeat-x,
-                     repeat-y;
+  background-image: url(starsolid.gif),
+    url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
 ```

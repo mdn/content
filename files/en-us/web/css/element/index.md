@@ -4,13 +4,15 @@ slug: Web/CSS/element
 tags:
   - CSS
   - CSS Function
-  - CSS4-images
+  - CSS images
   - Function
   - Layout
   - Reference
   - Web
+  - Experimental
 browser-compat: css.types.image.element
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`element()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated from an arbitrary HTML element. This image is live, meaning that if the HTML element is changed, the CSS properties using the resulting value are automatically updated.
@@ -74,11 +76,11 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 ```css
 #css-result {
-    background: -moz-element(#css-source) no-repeat;
-    width: 256px;
-    height: 32px;
-    background-size: 80%;
-    border: dashed;
+  background: -moz-element(#css-source) no-repeat;
+  width: 256px;
+  height: 32px;
+  background-size: 80%;
+  border: dashed;
 }
 ```
 

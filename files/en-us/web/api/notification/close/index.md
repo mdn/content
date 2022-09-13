@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.Notification.close
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `close()` method of the {{domxref("Notification")}} interface is used to
@@ -27,7 +28,7 @@ close/remove a previously displayed notification.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -49,13 +50,13 @@ notification when the relevant content has been read on the webpage.
 
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
-  var options = {
+  const options = {
     body: theBody,
     icon: theIcon
   };
 
-  var n = new Notification(theTitle,options);
-  document.addEventListener('visibilitychange', function() {
+  const n = new Notification(theTitle, options);
+  document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       // The tab has become visible so clear the now-stale Notification.
       n.close();

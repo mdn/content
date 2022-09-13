@@ -11,6 +11,7 @@ tags:
   - fullscreenerror
 browser-compat: api.Document.fullscreenerror_event
 ---
+
 {{APIRef}}
 
 The `fullscreenerror` event is fired when the browser cannot switch to fullscreen mode.
@@ -26,9 +27,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenerror', event => { });
+addEventListener('fullscreenerror', (event) => { });
 
-onfullscreenerror = event => { };
+onfullscreenerror = (event) => { };
 ```
 
 ## Event type

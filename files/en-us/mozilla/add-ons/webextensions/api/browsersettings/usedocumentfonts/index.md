@@ -12,6 +12,7 @@ tags:
   - useDocumentFonts
 browser-compat: webextensions.api.browserSettings.useDocumentFonts
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
@@ -21,7 +22,7 @@ By default, of course, web pages can specify the fonts they want using CSS prope
 Its underlying value is a boolean:
 
 - `true`: use the fonts specified by the web page. This is the default.
-- `false`:  use the system fonts.
+- `false`: use the system fonts.
 
 ## Browser compatibility
 

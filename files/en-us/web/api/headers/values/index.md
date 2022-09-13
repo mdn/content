@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.values
 ---
+
 {{APIRef}}
 
 The **`Headers.values()`** method returns an
@@ -20,7 +21,7 @@ in this object. The values are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -36,12 +37,12 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
 
 // Display the values
-for (var value of myHeaders.values()) {
+for (const value of myHeaders.values()) {
    console.log(value);
 }
 ```

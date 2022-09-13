@@ -8,9 +8,11 @@ tags:
   - Reference
   - responseReady
   - BackgroundFetchRecord
+  - Experimental
 browser-compat: api.BackgroundFetchRecord.responseReady
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`responseReady`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
 

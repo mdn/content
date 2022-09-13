@@ -5,9 +5,12 @@ page-type: web-api-interface
 tags:
   - API
   - Reference
+  - Non-standard
+  - Deprecated
 browser-compat: api.DirectoryReaderSync
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
@@ -16,38 +19,40 @@ The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
 ## Basic concepts
 
-Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
-#### Example
+### Example
 
-In the following code snippet from [HTML5Rocks](https://web.dev/read-files/), we create Web Workers and pass data from it to the main app.
+In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/filesystem-sync/), we create Web Workers and pass data from it to the main app.
 
 ```js
 // Taking care of the browser-specific prefixes.
-  window.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL ||
-                                     window.webkitResolveLocalFileSystemURL;
+window.resolveLocalFileSystemURL =
+  window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
 
 // Create web workers
-  const worker = new Worker('worker.js');
-  worker.onmessage = function(e) {
-    const urls = e.data.entries;
-    urls.forEach(function(url, i) {
-      window.resolveLocalFileSystemURL(url, function(fileEntry) {
-        // Print out file's name.
-        console.log(fileEntry.name);
-      });
+const worker = new Worker("worker.js");
+worker.onmessage = (e) => {
+  const urls = e.data.entries;
+  urls.forEach((url) => {
+    window.resolveLocalFileSystemURL(url, (fileEntry) => {
+      // Print out file's name.
+      console.log(fileEntry.name);
     });
-  };
+  });
+};
 
-  worker.postMessage({'cmd': 'list'});
+worker.postMessage({cmd: "list"});
 ```
 
-The following is Worker.js code that gets the contents of the directory.
+The following is `worker.js` code that gets the contents of the directory.
 
 ```js
+// worker.js
+
 // Taking care of the browser-specific prefixes.
-self.requestFileSystemSync = self.webkitRequestFileSystemSync ||
-                             self.requestFileSystemSync;
+self.requestFileSystemSync =
+  self.webkitRequestFileSystemSync || self.requestFileSystemSync;
 
 // Global for holding the list of entry file system URLs.
 const paths = [];
@@ -55,7 +60,7 @@ const paths = [];
 function getAllEntries(dirReader) {
   const entries = dirReader.readEntries();
 
-  for (let i = 0, entry; entry = entries[i]; ++i) {
+  for (const entry of entries) {
     // Stash this entry's filesystem in URL
     paths.push(entry.toURL());
 
@@ -68,19 +73,19 @@ function getAllEntries(dirReader) {
 
 // Forward the error to main app.
 function onError(e) {
-  postMessage('ERROR: ' + e.toString());
+  postMessage(`ERROR: ${e.toString()}`);
 }
 
-self.onmessage = function(e) {
-  const data = e.data;
+self.onmessage = (e) => {
+  const cmd = e.data.cmd;
 
   // Ignore everything else except our 'list' command.
-  if (!data.cmd || data.cmd != 'list') {
+  if (!cmd || cmd !== "list") {
     return;
   }
 
   try {
-    const fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);
+    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /*1MB*/);
 
     getAllEntries(fs.root.createReader());
 
@@ -91,31 +96,21 @@ self.onmessage = function(e) {
 };
 ```
 
-## Method overview
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code>
-          EntrySync <a href="#createreader" title="#readEntries">readEntries</a> ();
-        </code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Method
 
 ### readEntries()
 
-Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
+Returns a list of entries from a specific directory. Call this method until an empty array is returned.
+
+#### Syntax
 
 ```
-EntrySync readEntries ();
+readEntries()
 ```
 
-##### Returns
+##### Return value
+
+Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync)
 
 ##### Parameter
 

@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.currentSrc`** property contains the
@@ -29,7 +30,7 @@ if no {{HTMLElement("source")}} element is provided.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.currentSrc); // ""
 ```
 

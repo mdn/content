@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.port`** property is a

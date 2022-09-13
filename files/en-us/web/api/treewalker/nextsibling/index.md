@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.nextSibling
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.nextSibling()`** method moves the current
@@ -18,7 +19,7 @@ is no such node, return `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 nextSibling()
 ```
 
@@ -33,14 +34,14 @@ A {{domxref("Node")}} object or `null`.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 treeWalker.firstChild();
-var node = treeWalker.nextSibling(); // returns null if the first child of the root element has no sibling
+const node = treeWalker.nextSibling(); // returns null if the first child of the root element has no sibling
 ```
 
 ## Specifications

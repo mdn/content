@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.path.d
 ---
+
 {{SVGRef}}
 
 The **`d`** attribute defines a path to be drawn.
@@ -20,7 +21,11 @@ You can use this attribute with the following SVG elements: [`<path>`](#path), [
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -84,7 +89,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
   </tbody>
 </table>
 
-> **Note:** The point of origin (the coordinate `0`,`0`) is usually the *upper left corner* of the context. However the {{SVGElement("glyph")}} element has its origin in the *bottom left corner* of its letterbox.
+> **Note:** The point of origin (the coordinate `0`,`0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
 
 ## missing-glyph
 
@@ -120,11 +125,17 @@ The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
 
 ```css
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 
 /* This path is displayed on hover*/
 #svg_css_ex1:hover path {
-  d: path("M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90")
+  d: path(
+    "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
+  );
 }
 ```
 
@@ -155,17 +166,17 @@ SVG defines 6 types of path commands, for a total of 20 commands:
 - Elliptical Arc Curve: `A`, `a`
 - ClosePath: `Z`, `z`
 
-> **Note:** Commands are *case-sensitive*. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
+> **Note:** Commands are _case-sensitive_. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
 It is always possible to specify a negative value as an argument to a command:
 
 - negative angles will be anti-clockwise;
-- *absolute* negative *x* and *y* values are interpreted as negative coordinates;
-- *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
+- _absolute_ negative _x_ and _y_ values are interpreted as negative coordinates;
+- _relative_ negative _x_ values move to the left, and relative negative _y_ values move upwards.
 
 ### MoveTo path commands
 
-*MoveTo* instructions can be thought of as picking up the drawing instrument, and setting it down somewhere else—in other words, moving the *current point* (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}). There is no line drawn between *P<sub>o</sub>* and the new *current point* (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*}).
+_MoveTo_ instructions can be thought of as picking up the drawing instrument, and setting it down somewhere else—in other words, moving the _current point_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}). There is no line drawn between _P<sub>o</sub>_ and the new _current point_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}).
 
 <table class="no-markdown">
   <tbody>
@@ -230,7 +241,11 @@ It is always possible to specify a negative value as an argument to a command:
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -254,7 +269,7 @@ html,body,svg { height:100% }
 
 ### LineTo path commands
 
-*LineTo* instructions draw a straight line from the *current point* (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}) to the *end point* (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*}), based on the parameters specified. The *end point* (*P<sub>n</sub>*) then becomes the *current point* for the next command (*P<sub>o</sub>′*).
+_LineTo_ instructions draw a straight line from the _current point_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) to the _end point_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}), based on the parameters specified. The _end point_ (_P<sub>n</sub>_) then becomes the _current point_ for the next command (_P<sub>o</sub>′_).
 
 <table class="no-markdown">
   <tbody>
@@ -406,7 +421,11 @@ html,body,svg { height:100% }
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -431,20 +450,20 @@ html,body,svg { height:100% }
 
 ### Cubic Bézier Curve
 
-*Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using four points:
+_Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using four points:
 
 - starting point (current point)
-  - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
+  - : (_P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_})
 - end point
-  - : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
+  - : (_P<sub>n</sub>_ = {_x<sub>n</sub>_, _y<sub>n</sub>_})
 - start control point
-  - : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
+  - : (_P<sub>cs</sub>_ = {_x<sub>cs</sub>_, _y<sub>cs</sub>_})
     (controls curvature near the start of the curve)
 - end control point
-  - : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
+  - : (_P<sub>ce</sub>_ = {_x<sub>ce</sub>_, _y<sub>ce</sub>_})
     (controls curvature near the end of the curve)
 
-After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
+After drawing, the _end point_ (_P<sub>n</sub>_) becomes the _current point_ for the next command (_P<sub>o</sub>′_).
 
 <table class="no-markdown">
   <tbody>
@@ -555,8 +574,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         >. The <em>end control point</em> is specified by
         <code><var>x2</var></code
         >,<code><var>y2</var></code
-        >. The <em>start control point</em> is a reflection of the
-        <em>end control point</em> of the previous curve command. If the
+        >. The <em>start control point</em> is the reflection of the
+        <em>end control point</em> of the previous curve command about the <em>current point</em>. If the
         previous command wasn't a cubic Bézier curve, the
         <em>start control point</em> is the same as the curve starting point
         (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
@@ -581,8 +600,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         <em>end control point</em> is the <em>current point</em> (starting point
         of the curve) shifted by <code><var>dx2</var></code> along the x-axis
         and <code><var>dy2</var></code> along the y-axis. The
-        <em>start control point</em> is a reflection of the
-        <em>end control point</em> of the previous curve command. If the
+        <em>start control point</em> is the reflection of the
+        <em>end control point</em> of the previous curve command about the <em>current point</em>. If the
         previous command wasn't a cubic Bézier curve, the
         <em>start control point</em> is the same as the curve starting point
         (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
@@ -596,7 +615,11 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -644,17 +667,17 @@ html,body,svg { height:100% }
 
 ### Quadratic Bézier Curve
 
-*Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using three points:
+_Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using three points:
 
 - starting point (current point)
-  - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
+  - : _P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_}
 - end point
-  - : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
+  - : _P<sub>n</sub>_ = {_x<sub>n</sub>_, _y<sub>n</sub>_}
 - control point
-  - : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
+  - : _P<sub>c</sub>_ = {_x<sub>c</sub>_, _y<sub>c</sub>_}
     (controls curvature)
 
-After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
+After drawing, the _end point_ (_P<sub>n</sub>_) becomes the _current point_ for the next command (_P<sub>o</sub>′_).
 
 <table class="no-markdown">
   <tbody>
@@ -747,8 +770,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           <em>current point</em> to the <em>end point</em> specified by
           <code><var>x</var></code
           >,<code><var>y</var></code
-          >. The <em>control point</em> is a reflection of the
-          <em>control point</em> of the previous curve command. If the previous
+          >. The <em>control point</em> is the reflection of the
+          <em>control point</em> of the previous curve command about the <em>current point</em>. If the previous
           command wasn't a quadratic Bézier curve, the <em>control point</em> is
           the same as the curve starting point (<em>current point</em>). Any
           subsequent coordinate pair(s) are interpreted as parameter(s) for
@@ -779,8 +802,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           <em>current point</em> to the <em>end point</em>, which is the
           <em>current point</em> shifted by <code><var>dx</var></code> along the
           x-axis and <code><var>dy</var></code> along the y-axis. The
-          <em>control point</em> is a reflection of the
-          <em>control point</em> of the previous curve command. If the previous
+          <em>control point</em> is the reflection of the
+          <em>control point</em> of the previous curve command about the <em>current point</em>. If the previous
           command wasn't a quadratic Bézier curve, the <em>control point</em> is
           the same as the curve starting point (<em>current point</em>). Any
           subsequent coordinate pair(s) are interpreted as parameter(s) for
@@ -806,7 +829,11 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -850,7 +877,7 @@ html,body,svg { height:100% }
 
 ### Elliptical Arc Curve
 
-*Elliptical arc curves* are curves defined as a portion of an ellipse. It is sometimes easier to draw highly regular curves with an elliptical arc than with a Bézier curve.
+_Elliptical arc curves_ are curves defined as a portion of an ellipse. It is sometimes easier to draw highly regular curves with an elliptical arc than with a Bézier curve.
 
 <table class="no-markdown">
   <tbody>
@@ -964,7 +991,11 @@ html,body,svg { height:100% }
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -993,7 +1024,7 @@ html,body,svg { height:100% }
 
 ### ClosePath
 
-*ClosePath* instructions draw a straight line from the *current position* to the first point in the path.
+_ClosePath_ instructions draw a straight line from the _current position_ to the first point in the path.
 
 <table class="no-markdown">
   <tbody>
@@ -1014,12 +1045,16 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** The appearance of a shape closed with *ClosePath* may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.
+> **Note:** The appearance of a shape closed with _ClosePath_ may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.
 
 #### Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

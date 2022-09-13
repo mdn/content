@@ -19,6 +19,7 @@ tags:
   - upload
 browser-compat: api.XMLHttpRequest.responseXML
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.responseXML`** read-only property returns
@@ -56,7 +57,7 @@ data is not XML/HTML.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest;
+const xhr = new XMLHttpRequest;
 xhr.open('GET', '/server');
 
 // If specified, responseType must be empty string or "document"
@@ -65,7 +66,7 @@ xhr.responseType = 'document';
 // Force the response to be parsed as XML
 xhr.overrideMimeType('text/xml');
 
-xhr.onload = function () {
+xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }

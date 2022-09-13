@@ -11,6 +11,7 @@ tags:
   - attr
 browser-compat: css.types.attr
 ---
+
 {{CSSRef}}
 
 > **Note:** The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
@@ -117,7 +118,7 @@ attr(data-something, "default");
 
     - `s`, `ms` {{Experimental_Inline}}
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an{{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an {{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
         Leading and trailing spaces are stripped.
 
         Default value: `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.

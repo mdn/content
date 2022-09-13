@@ -8,6 +8,7 @@ tags:
   - Guide
   - Intermediate
 ---
+
 {{CSSRef}}
 
 [CSS Display Module Level 3](https://drafts.csswg.org/css-display/) describes the two-value syntax for the [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the `display` property.
@@ -109,6 +110,6 @@ So all of the current situations are neatly covered, meaning that we maintain co
 
 ## Can I start to use the two-value syntax?
 
-As demonstrated above, there is not a lot of advantage in using the two-value version right now; if you did, your page would only work in Firefox! Other browsers do not yet implement the two-value versions. Therefore `display: block flex` will only get you flex layout in Firefox, and will be ignored as invalid in Chrome. You can see current support in the **Multi-keyword values** row of the [browser compatibility table for the CSS `display` property](/en-US/docs/Web/CSS/display#browser_compatibility). See also https://bugs.chromium.org/p/chromium/issues/detail?id=804600.
+As demonstrated above, there is not a lot of advantage in using the two-value version right now; if you did, your page would only work in Firefox! Other browsers do not yet implement the two-value versions. Therefore `display: block flex` will only get you flex layout in Firefox and will be ignored as invalid in Chrome. You can see current support in the **Multi-keyword values** row of the [browser compatibility table for the CSS `display` property](/en-US/docs/Web/CSS/display#browser_compatibility). See also the following [Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=804600).
 
 There is value in thinking about the values of `display` in this two-value way however. If you consider the outer and inner values when you change the value of `display`, you will understand immediately what impact the value will have on the box itself, and how it displays and behaves in the layout, and the direct children.

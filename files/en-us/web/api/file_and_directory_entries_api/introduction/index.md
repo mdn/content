@@ -11,6 +11,7 @@ tags:
   - Introduction
 browser-compat: api.FileSystem
 ---
+
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
 The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) simulates a local file system that web apps can navigate around. You can develop apps that can read, write, and create files and directories in a sandboxed, virtual file system.
@@ -38,7 +39,7 @@ The File and Directory Entries API is an important API for the following reasons
 - It lets users of your web app directly edit a binary file that's in their local file directory.
 - It provides a storage API that is already familiar to your users, who are used to working with file systems.
 
-For examples of features you can create with this app, see the [Sample use cases](#sample-use-cases) section.
+For examples of features you can create with this app, see the [Sample use cases](#sample_use_cases) section.
 
 ### The File and Directory Entries API and other storage APIs
 
@@ -104,7 +105,7 @@ Use temporary storage for caching and persistent storage for data that you want 
 
 To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
+How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
 
 ### The File and Directory Entries API has asynchronous and synchronous versions
 
@@ -112,7 +113,7 @@ The File and Directory Entries API comes with asynchronous and synchronous versi
 
 - **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
 - **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
-- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods:  `requestFileSystemSync()` and  `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
+- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 
 The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
 
@@ -146,7 +147,7 @@ For security reasons, browsers impose restrictions on file access. If you ignore
 
 An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
 
-The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in [http://www.example.com/app/](https://www.example.com/app/) can access files from [http://www.example.com/dir/](https://www.example.com/dir/), because they have the same origin, it cannot retrieve files from [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (different port) or <https://www.example.com/dir/> (different protocol).
+The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in `http://www.example.com/app/` can access files from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve files from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol).
 
 ### The File and Directory Entries API does not let you create and rename executable files
 
@@ -158,7 +159,7 @@ Because the file system is sandboxed, a web app cannot access another app's file
 
 ### You cannot run your app from file://
 
-You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.
+You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including Blob and FileReader.
 
 For testing purposes, you can bypass the restriction on Chrome by starting the browser with the `--allow-file-access-from-files` flag. Use this flag only for this purpose.
 
@@ -186,4 +187,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](https://web.dev/read-files/) (HTML5 Rocks)
+- [Read files in JavaScript](https://web.dev/read-files/) (web.dev)

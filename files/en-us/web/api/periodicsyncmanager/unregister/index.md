@@ -10,9 +10,11 @@ tags:
   - PeriodicSyncManager
   - Service Worker
   - Web Periodic Background Synchronization API
+  - Experimental
 browser-compat: api.PeriodicSyncManager.unregister
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
@@ -21,7 +23,7 @@ when unregistration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(tag)
 ```
 
@@ -44,7 +46,7 @@ The following example removes a periodic sync to stop syncing articles in the
 background.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.unregister('get-latest-news');
 });
 ```

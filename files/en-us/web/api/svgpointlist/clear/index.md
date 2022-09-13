@@ -10,13 +10,14 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.clear
 ---
+
 {{APIRef("SVG")}}
 
 The **`clear()`** method of the {{domxref("SVGPointList")}} interface removes all items from the list.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -30,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

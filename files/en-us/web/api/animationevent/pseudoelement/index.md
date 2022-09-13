@@ -12,6 +12,7 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent.pseudoElement
 ---
+
 {{APIRef("Web Animations API")}}
 
 ## Summary

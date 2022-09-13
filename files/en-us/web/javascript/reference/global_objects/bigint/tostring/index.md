@@ -9,6 +9,7 @@ tags:
   - toString()
 browser-compat: javascript.builtins.BigInt.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,14 +19,14 @@ specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the strin
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 toString(radix)
 ```
 
 ### Parameters
 
-- `radix`{{optional_inline}}
+- `radix` {{optional_inline}}
   - : Optional. An integer in the range 2 through 36 specifying the base to use for
     representing numeric values.
 

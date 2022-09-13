@@ -15,6 +15,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
@@ -26,7 +27,7 @@ Most elements only have one border box each, but a multiline [inline element](/e
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 
@@ -199,10 +200,15 @@ div {
   display: inline-block;
   width: 150px;
 }
-div p, ol, table {
+div p,
+ol,
+table {
   border: 1px solid blue;
 }
-span, li, th, td {
+span,
+li,
+th,
+td {
   border: 1px solid green;
 }
 ```
@@ -217,30 +223,29 @@ function addClientRectsOverlay(elt) {
   /* Absolutely position a div over each client rect so that its border width
      is the same as the rectangle's width.
      Note: the overlays will be out of place if the user resizes or zooms. */
-  var rects = elt.getClientRects();
-  for (var i = 0; i != rects.length; i++) {
-    var rect = rects[i];
-    var tableRectDiv = document.createElement('div');
+  const rects = elt.getClientRects();
+  for (const rect of rects) {
+    const tableRectDiv = document.createElement('div');
     tableRectDiv.style.position = 'absolute';
     tableRectDiv.style.border = '1px solid red';
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
     tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+    tableRectDiv.style.top = `${rect.top + scrollTop}px`;
+    tableRectDiv.style.left = `${rect.left + scrollLeft}px`;
     // We want rect.width to be the border width, so content width is 2px less.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    tableRectDiv.style.width = `${rect.width - 2}px`;
+    tableRectDiv.style.height = `${rect.height - 2}px`;
     document.body.appendChild(tableRectDiv);
   }
 }
 
-(function() {
+(() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  var elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (var i = 0; i < elt.length; i++) {
-    addClientRectsOverlay(elt[i]);
+  const elts = document.getElementsByClassName('withClientRectsOverlay');
+  for (const elt of elts) {
+    addClientRectsOverlay(elt);
   }
 })();
 ```

@@ -11,41 +11,40 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-The **`toGMTString()`** method converts a date to a string,
-using Internet Greenwich Mean Time (GMT) conventions. The exact format of the value
-returned by `toGMTString()` varies according to the platform and browser, in
-general it should represent a human readable date string.
+The **`toGMTString()`** method converts a date to a string, using Internet Greenwich Mean Time (GMT) conventions. In practice, it's an alias for {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.
 
-> **Note:** `toGMTString()` is deprecated and should no longer
-> be used. It remains implemented only for backward compatibility; please use
-> {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.
+> **Warning:** `toGMTString()` is deprecated and should no longer be used. It remains implemented only for backward compatibility; please use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.
 
 ## Syntax
 
-```js
+```js-nolint
 toGMTString()
 ```
 
 ### Return value
 
-A string representing the given date following the Internet Greenwich Mean Time (GMT)
-convention.
+The same return value as {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.
 
 ## Examples
 
 ### Simple example
 
-In this example, the `toGMTString()` method converts the date to GMT (UTC)
-using the operating system's time-zone offset and returns a string value that is similar
-to the following form. The exact format depends on the platform.
+In this example, the `toGMTString()` method interprets the `today` timestamp as a UTC date and formats it using GMT conventions.
 
 ```js
 const today = new Date();
-const str = today.toGMTString();  // deprecated! use toUTCString()
+const str = today.toGMTString(); // deprecated! use toUTCString()
 
-console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
+console.log(str); // Mon, 18 Dec 1995 17:28:35 GMT
+```
+
+`toGMTString` is just an alias for `toUTCString`, kept for compatibility reasons.
+
+```js
+console.log(Date.prototype.toGMTString === Date.prototype.toUTCString); // true
 ```
 
 ## Specifications

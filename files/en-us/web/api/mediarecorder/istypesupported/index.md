@@ -15,6 +15,7 @@ tags:
   - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The
@@ -24,7 +25,7 @@ should be able to successfully record.
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(mimeType)
 ```
 
@@ -44,16 +45,18 @@ specified format.
 ## Examples
 
 ```js
-var types = ["video/webm",
-             "audio/webm",
-             "video/webm\;codecs=vp8",
-             "video/webm\;codecs=daala",
-             "video/webm\;codecs=h264",
-             "audio/webm\;codecs=opus",
-             "video/mpeg"];
+const types = [
+  "video/webm",
+  "audio/webm",
+  "video/webm;codecs=vp8",
+  "video/webm;codecs=daala",
+  "video/webm;codecs=h264",
+  "audio/webm;codecs=opus",
+  "video/mpeg",
+];
 
-for (var i in types) {
-  console.log( "Is " + types[i] + " supported? " + (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("));
+for (const type of types) {
+  console.log(`Is ${type} supported? ${MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("}`);
 }
 ```
 

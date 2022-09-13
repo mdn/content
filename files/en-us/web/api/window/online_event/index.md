@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.online_event
 ---
+
 {{APIRef}}
 
 The **`online`** event of the {{domxref("Window")}} interface is fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to `true`.
@@ -21,8 +22,8 @@ The **`online`** event of the {{domxref("Window")}} interface is fired when the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('online', event => { });
-ononline = event => { };
+addEventListener('online', (event) => { });
+ononline = (event) => { };
 ```
 
 ## Event type

@@ -11,6 +11,7 @@ tags:
   - UI Selector
 browser-compat: css.selectors.out-of-range
 ---
+
 {{CSSRef}}
 
 The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
@@ -71,11 +72,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'okay.';
+  content: "okay.";
 }
 
 input:out-of-range + label::after {
-  content: 'out of range!';
+  content: "out of range!";
 }
 ```
 

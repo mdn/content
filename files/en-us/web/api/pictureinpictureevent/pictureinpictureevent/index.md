@@ -5,9 +5,10 @@ page-type: web-api-constructor
 tags:
   - Reference
   - API
-  - Constructor 
+  - Constructor
 browser-compat: api.PictureInPictureEvent.PictureInPictureEvent
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The **`PictureInPictureEvent()`** constructor returns a new {{domxref("PictureInPictureEvent")}} object with an optional {{domxref("EventTarget")}}.
@@ -15,7 +16,7 @@ When the event has both a source and a destination, the `relatedTarget` value mu
 
 ## Syntax
 
-```js
+```js-nolint
 new PictureInPictureEvent(type, options)
 ```
 

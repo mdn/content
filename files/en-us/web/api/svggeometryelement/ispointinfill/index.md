@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInFill
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.isPointInFill()`** method determines
@@ -21,7 +22,7 @@ interpreted as a point in the local coordinate system of the element.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInFill(point)
 ```
 
@@ -61,8 +62,7 @@ try {
 
   // Point is inside
   console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));
-  
-} catch(e) {
+} catch (e) {
   // for the browsers that still support the deprecated interface SVGPoint
   const svg = document.getElementsByTagName('svg')[0];
   const point = svg.createSVGPoint();

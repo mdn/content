@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.pathname
 ---
+
 {{ApiRef("Location")}}
 
 The **`pathname`** property of the {{domxref("Location")}}
@@ -22,8 +23,8 @@ A string.
 
 ```js
 // Let's an <a id="myAnchor" href="/en-US/docs/Location.pathname"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.pathname; // Returns:'/en-US/docs/Location.pathname'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.pathname; // Returns:'/en-US/docs/Location.pathname'
 ```
 
 ## Specifications

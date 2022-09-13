@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.audioend_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`audioend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has finished capturing audio for speech recognition.
@@ -17,9 +18,9 @@ The **`audioend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('audioend', event => { })
+addEventListener('audioend', (event) => { })
 
-onaudioend = event => { }
+onaudioend = (event) => { }
 ```
 
 ## Event type
@@ -31,9 +32,9 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `audioend` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('audioend', function() {
+recognition.addEventListener('audioend', () => {
   console.log('Audio capturing ended');
 });
 ```
@@ -41,7 +42,7 @@ recognition.addEventListener('audioend', function() {
 Or use the `onaudioend` event handler property:
 
 ```js
-recognition.onaudioend = function() {
+recognition.onaudioend = () => {
   console.log('Audio capturing ended');
 }
 ```

@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setStart
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStart()`** method sets the start position of a
@@ -25,7 +26,7 @@ collapsed range with the start and end points both set to the specified start po
 
 ## Syntax
 
-```js
+```js-nolint
 setStart(startNode, startOffset)
 ```
 
@@ -73,7 +74,7 @@ const address = document.getElementById('address');
 const log = document.getElementById('log');
 
 // Log info
-address.childNodes.forEach(node => {
+address.childNodes.forEach((node) => {
   const li = document.createElement('li');
   li.textContent = `${node.nodeName}, ${node.nodeValue}`;
   log.appendChild(li);

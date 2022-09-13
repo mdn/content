@@ -11,6 +11,7 @@ tags:
   - digest
 browser-compat: api.SubtleCrypto.digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`digest()`** method of the {{domxref("SubtleCrypto")}}
@@ -24,7 +25,7 @@ digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the dige
 
 ## Syntax
 
-```js
+```js-nolint
 digest(algorithm, data)
 ```
 
@@ -125,7 +126,7 @@ async function digestMessage(message) {
 }
 
 digestMessage(text)
-  .then(digestBuffer => console.log(digestBuffer.byteLength));
+  .then((digestBuffer) => console.log(digestBuffer.byteLength));
 ```
 
 ### Converting a digest to a hex string
@@ -141,12 +142,12 @@ async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
   return hashHex;
 }
 
 digestMessage(text)
-  .then(digestHex => console.log(digestHex));
+  .then((digestHex) => console.log(digestHex));
 ```
 
 ## Specifications

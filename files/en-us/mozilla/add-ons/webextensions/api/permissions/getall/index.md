@@ -11,6 +11,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.permissions.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieve a {{WebExtAPIRef("permissions.Permissions")}} object containing all the permissions currently granted to the extension.
@@ -19,7 +20,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAll = browser.permissions.getAll()
 ```
 

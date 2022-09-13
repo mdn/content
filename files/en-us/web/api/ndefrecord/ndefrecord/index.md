@@ -6,9 +6,11 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.NDEFRecord
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`NDEFRecord()`**
 constructor of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) returns a
@@ -17,8 +19,8 @@ read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
 
 ## Syntax
 
-```js
-writer = new NDEFRecord(options);
+```js-nolint
+new NDEFRecord(options)
 ```
 
 ### Parameters

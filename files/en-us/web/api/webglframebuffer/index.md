@@ -8,6 +8,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLFramebuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents a collection of buffers that serve as a rendering destination.
@@ -28,9 +29,9 @@ The `WebGLFramebuffer` object does not define any methods or properties of its o
 ### Creating a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createFramebuffer();
 ```
 
 ## Specifications

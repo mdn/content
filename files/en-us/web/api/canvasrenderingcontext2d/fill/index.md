@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.fill
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ method of the Canvas 2D API fills the current or given path with the current
 
 ## Syntax
 
-```js
+```js-nolint
 fill()
 fill(path)
 fill(fillRule)
@@ -34,9 +35,11 @@ fill(path, fillRule)
     region.
     Possible values:
 
-    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
-    - **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+        Default rule.
+    - `evenodd`
+      - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to fill.

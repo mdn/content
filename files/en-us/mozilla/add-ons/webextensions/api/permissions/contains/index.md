@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.permissions.contains
 ---
+
 {{AddonSidebar()}}
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getContains = browser.permissions.contains(
   permissions                // Permissions object
 )

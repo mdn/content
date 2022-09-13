@@ -10,6 +10,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
 ---
+
 {{SVGRef}}
 
 The **`operator`** attribute has two meanings based on the context it's used in. Either it defines the compositing or morphing operation to be performed.
@@ -22,7 +23,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
   font: 20px Arial, Helvetica, sans-serif;
 }
@@ -88,7 +91,7 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
     `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`
 
     where:
-    `i1` and `i2` indicate the corresponding pixel channel values of the input image, which map to `in` and `in2` respectively, and {{SVGAttr("k1")}},{{SVGAttr("k2")}},{{SVGAttr("k3")}},and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.
+    `i1` and `i2` indicate the corresponding pixel channel values of the input image, which map to `in` and `in2` respectively, and {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.
 
 ## feMorphology
 

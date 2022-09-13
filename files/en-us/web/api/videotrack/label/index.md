@@ -17,6 +17,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.label
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrack")}}**
@@ -42,12 +43,12 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "alternative", "commentary"
   ];
 
-  el.videoTracks.forEach(function(track) {
+  el.videoTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,

@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.AudioTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrackList")}}**
@@ -37,8 +38,8 @@ element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
   "querySelector()")}}.
 
 ```js
-var videoElem = document.querySelector("video");
-var numAudioTracks = 0;
+const videoElem = document.querySelector("video");
+let numAudioTracks = 0;
 
 if (videoElem.audioTracks) {
   numAudioTracks = videoElem.audioTracks.length;

@@ -7,9 +7,11 @@ tags:
   - Interface
   - Reference
   - ContactAddress
+  - Experimental
 browser-compat: api.ContactAddress
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+
+{{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
 
 The **`ContactAddress`** interface of the {{domxref('contact_picker_api','Contact Picker API','','true')}} represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactManager.getProperties()")}}.
 

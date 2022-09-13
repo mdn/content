@@ -10,13 +10,14 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScript
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createScript(input)
 createScript(input, args)
 ```
@@ -25,7 +26,7 @@ createScript(input, args)
 
 - `input`
   - : A string containing the string to be sanitized by the policy.
-- `args`{{optional_inline}}
+- `args` {{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
 ### Return value

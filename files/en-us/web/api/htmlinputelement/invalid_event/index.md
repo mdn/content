@@ -12,34 +12,28 @@ tags:
   - invalid
 browser-compat: api.HTMLInputElement.invalid_event
 ---
+
 {{APIRef}}
 
 The **`invalid`** event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.oninvalid")}}</td>
-    </tr>
-  </tbody>
-</table>
-
-This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, `invalid` events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner {{HtmlElement("form")}}, or after the [`checkValidity()`](/en-US/docs/Learn/Forms#constraint_validation_api) method of the element or its owner `<form>` is called.
+This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, `invalid` events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner {{HtmlElement("form")}}, or after the [`checkValidity()`](/en-US/docs/Web/API/HTMLInputElement/checkValidity) method of the element or its owner `<form>` is called.
 
 It is not checked on {{domxref("Element/blur_event", "blur")}}.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('invalid', (event) => {});
+
+oninvalid = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

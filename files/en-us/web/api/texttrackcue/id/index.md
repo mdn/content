@@ -10,6 +10,7 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.id
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`id`** property of the {{domxref("TextTrackCue")}} interface returns and sets the identifier for this cue.

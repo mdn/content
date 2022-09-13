@@ -9,9 +9,12 @@ tags:
   - SharedWorkerGlobalScope
   - Web Workers
   - applicationCache
+  - Deprecated
+  - Non-standard
 browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
-{{Deprecated_Header}}{{securecontext_header}}{{APIRef("Web Workers API")}}
+
+{{APIRef("Web Workers API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`applicationCache`** read-only property of the {{domxref("SharedWorkerGlobalScope")}} interface returns the {{domxref("ApplicationCache")}} object for the worker.
 

@@ -12,6 +12,7 @@ tags:
   - messaging
 browser-compat: api.MessageEvent.data
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`data`** read-only property of the
@@ -24,7 +25,7 @@ The data sent by the message emitter; this can be any data type.
 ## Examples
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
 };

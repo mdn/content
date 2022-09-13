@@ -9,6 +9,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} objects.
@@ -17,9 +18,9 @@ An `SVGPointList` can be designated as read-only, which means that attempts to m
 
 ## Properties
 
-- {{domxref("SVGPointList.length")}}{{ReadOnlyInline}}
+- {{domxref("SVGPointList.length")}} {{ReadOnlyInline}}
   - : Returns the number of points in the list.
-- {{domxref("SVGPointList.numberOfItems")}}{{ReadOnlyInline}}
+- {{domxref("SVGPointList.numberOfItems")}} {{ReadOnlyInline}}
   - : Returns the number of points in the list.
 
 ## Methods

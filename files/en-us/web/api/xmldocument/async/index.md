@@ -14,6 +14,7 @@ tags:
   - async
 browser-compat: api.XMLDocument.async
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}
 
 `document.async` can be set to indicate whether a {{DOMxRef("XMLDocument.load()")}} call should be an asynchronous or synchronous request. `true` is the default value, indicating that documents should be loaded asynchronously.
@@ -31,7 +32,7 @@ function loadXMLData(e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
 }
 
-var xmlDoc = document.implementation.createDocument("", "test", null);
+const xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;

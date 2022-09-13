@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.altKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.altKey`** read-only property is a boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not when a given mouse event occurs.
@@ -27,7 +28,7 @@ A boolean value, where `true` indicates that the key is pressed, and `false` ind
 
 ## Examples
 
-This example logs the `altKey` property when you trigger a {{Event("click")}} event.
+This example logs the `altKey` property when you trigger a {{domxref("Element/click_event", "click")}} event.
 
 ### HTML
 
@@ -49,7 +50,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

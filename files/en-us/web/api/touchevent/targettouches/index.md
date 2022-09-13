@@ -14,9 +14,10 @@ tags:
   - touch
 browser-compat: api.TouchEvent.targetTouches
 ---
+
 {{ APIRef("Touch Events") }}
 
-The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{event("touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.
+The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{domxref("Element/touchstart_event", "touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.
 
 ## Value
 
@@ -32,7 +33,7 @@ In following code snippet, the function compares the length of the `touches` lis
 function touches_in_target(ev) {
   // Return true if all of the touches are within the target element;
   // otherwise return false.
-  return (ev.touches.length == ev.targetTouches.length ? true : false);
+  return ev.touches.length === ev.targetTouches.length;
 }
 ```
 

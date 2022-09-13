@@ -10,6 +10,7 @@ tags:
   - pointerlockerror
 browser-compat: api.Document.pointerlockerror_event
 ---
+
 {{APIRef}}
 
 The `pointerlockerror` event is fired when locking the pointer failed (for technical reasons or because the permission was denied).
@@ -21,9 +22,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerlockerror', event => { });
+addEventListener('pointerlockerror', (event) => { });
 
-onpointerlockerror = event => { };
+onpointerlockerror = (event) => { };
 ```
 
 ## Event type

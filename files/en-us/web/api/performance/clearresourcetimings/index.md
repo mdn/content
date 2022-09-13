@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearResourceTimings
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`clearResourceTimings()`** method removes all
@@ -22,7 +23,7 @@ to zero. To set the size of the browser's performance data buffer, use the
 
 ## Syntax
 
-```js
+```js-nolint
 clearResourceTimings()
 ```
 
@@ -38,7 +39,7 @@ none
 
 ```js
 function load_resource() {
-  var image = new Image();
+  const image = new Image();
   image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
 }
 function clear_performance_timings() {
@@ -49,7 +50,7 @@ function clear_performance_timings() {
   // Create a resource timing performance entry by loading an image
   load_resource();
 
-  var supported = typeof performance.clearResourceTimings == "function";
+  const supported = typeof performance.clearResourceTimings === "function";
   if (supported) {
     console.log("Run: performance.clearResourceTimings()");
     performance.clearResourceTimings();
@@ -58,11 +59,12 @@ function clear_performance_timings() {
     return;
   }
   // getEntries should now return zero
-  var p = performance.getEntriesByType("resource");
-  if (p.length == 0)
-    console.log("... Performance data buffer cleared");
-  else
-    console.log("... Performance data buffer NOT cleared!");
+  const p = performance.getEntriesByType("resource");
+  if (p.length === 0) {
+    console.log("… Performance data buffer cleared");
+  } else {
+    console.log("… Performance data buffer NOT cleared!");
+  }
 }
 ```
 

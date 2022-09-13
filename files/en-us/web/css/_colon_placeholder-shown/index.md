@@ -9,16 +9,12 @@ tags:
   - Selector
 browser-compat: css.selectors.placeholder-shown
 ---
+
 {{CSSRef}}
 
 The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder).
 
-```css
-/* Selects any element with an active placeholder */
-:placeholder-shown {
-  border: 2px solid silver;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
 
 ## Syntax
 
@@ -109,7 +105,7 @@ The following example highlights the Branch and ID code fields with a custom sty
 
 ```css
 input {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   color: black;
 }
 

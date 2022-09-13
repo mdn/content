@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
 ---
+
 {{SVGRef}}
 
 The **`kernelMatrix`** attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.
@@ -20,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -34,9 +37,9 @@ html, body, svg {
     <feConvolveMatrix kernelMatrix="-1 0 0 0 0 0 0 0 1"/>
   </filter>
 
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
       style="filter:url(#convolveMatrix1);"/>
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
       style="filter:url(#convolveMatrix2); transform:translateX(220px);"/>
 </svg>
 ```

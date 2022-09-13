@@ -13,7 +13,8 @@ tags:
   - URL
 browser-compat: api.PresentationConnection.url
 ---
-{{SeeCompatTable}}{{APIRef("Presentation API")}}
+
+{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
 The **`url`** readonly property of the
 {{domxref("PresentationConnection")}} interface returns the URL used to create or

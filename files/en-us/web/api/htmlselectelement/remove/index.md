@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.remove
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.remove()`** method removes the element
@@ -17,7 +18,7 @@ at the specified index from the options collection for this select element.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(index)
 ```
 

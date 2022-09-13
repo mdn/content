@@ -7,11 +7,12 @@ tags:
   - Location
   - Property
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: api.Location.username
 ---
-{{APIRef("HTML DOM")}}
 
-{{deprecated_header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`username`** property of the {{domxref("Location")}}
 interface is a string containing the username specified before the
@@ -25,8 +26,8 @@ A string.
 
 ```js
 // Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/Location.username"> be in the document
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.username; // Returns:'anonymous'
+const anchor = document.getElementByID("myAnchor");
+const result = anchor.username; // Returns:'anonymous'
 ```
 
 ## Browser compatibility

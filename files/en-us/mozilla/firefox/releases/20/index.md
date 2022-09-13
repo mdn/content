@@ -7,6 +7,7 @@ tags:
   - Gecko
   - Mozilla
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
@@ -21,10 +22,10 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 ### JavaScript
 
-- Support for the `WeakMap.prototype.clear()` method, recently added to the Harmony (EcmaScript 2015) draft proposal has been added ({{bug("814562")}}).
-- Support for the [`Math.imul()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul) method, a C-style 32-bit multiplication function. Though proposed for Harmony (EcmaScript 2015) it has not yet accepted and still is non-standard ({{bug("808148")}}).
+- Support for the `WeakMap.prototype.clear()` method, recently added to the Harmony (ECMAScript 2015) draft proposal has been added ({{bug("814562")}}).
+- Support for the [`Math.imul()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul) method, a C-style 32-bit multiplication function. Though proposed for Harmony (ECMAScript 2015) it has not yet accepted and still is non-standard ({{bug("808148")}}).
 - Web apps using draggable text with Kinetic 3.x are working, even when using the Cairo canvas backend ({{bug("835064")}}).
-- The [`for each…in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) statement has been deprecated and should not be used. Consider using the new [`for…of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement ({{Bug("804834")}}).
+- The [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) statement has been deprecated and should not be used. Consider using the new [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement ({{Bug("804834")}}).
 - Support for the {{jsxref("Map.prototype.keys()")}}, {{jsxref("Map.prototype.values()")}}, and {{jsxref("Map.prototype.entries()")}} has been added ({{bug("817368")}}).
 
 ### CSS
@@ -50,7 +51,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 - The third, optional, `transfer` argument of {{domxref("Window.postMessage")}} is now supported. It allows to transfer a sequence of {{domxref("Transferable")}} objects to the destination ({{bug("822094")}}).
 - The non-standard {{domxref("Window.sizeToContent()")}} method now clamps the minimal size: the window cannot be forced anymore to small sizes preventing the user to interact with ({{bug(764240)}}).
 - Blend modes, such as `overlay`, `color-burn`, `hue`, etc. have been added to the Canvas {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} property ({{bug(748433)}}).
-- The prefixed version of [`window.indexedDB`](/en-US/docs/Web/API/indexedDB) — `window.mozIndexedDB` — was reintroduced to Gecko, so that bad cross-browser prefixing code (such as `var indexedDB = window.indexedDB || window.webkitIndexedDB ...`) doesn't break in Firefox. A better approach is `window.indexedDB = window.indexedDB || window.webkitIndexedDB ...` (see {{bug("770844")}}.)
+- The prefixed version of [`window.indexedDB`](/en-US/docs/Web/API/indexedDB) — `window.mozIndexedDB` — was reintroduced to Gecko, so that bad cross-browser prefixing code (such as `var indexedDB = window.indexedDB || window.webkitIndexedDB …`) doesn't break in Firefox. A better approach is `window.indexedDB = window.indexedDB || window.webkitIndexedDB …` (see {{bug("770844")}}.)
 
 ### SVG
 

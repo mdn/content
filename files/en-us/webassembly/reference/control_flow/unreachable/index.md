@@ -8,9 +8,10 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
-**`unreachable`** is used to denote a point in code that should not be reachable. In the case where an `unreachable` is reached it throws an unrecoverable error.
+**`unreachable`** is used to denote a point in code that should not be reachable. `unreachable` is an unconditional trap: in the case where an `unreachable` is reached and executed, the instruction traps.
 
 {{EmbedInteractiveExample("pages/wat/unreachable.html", "tabbed-shorter")}}
 

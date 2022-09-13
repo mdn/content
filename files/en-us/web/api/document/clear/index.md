@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.Document.clear
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`Document.clear()`** method does nothing, but doesn't raise any error.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

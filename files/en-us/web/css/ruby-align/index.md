@@ -7,9 +7,11 @@ tags:
   - CSS Ruby
   - Reference
   - recipe:css-property
+  - Experimental
 browser-compat: css.properties.ruby-align
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`ruby-align`** CSS property defines the distribution of the different ruby elements over the base.
 

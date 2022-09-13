@@ -29,7 +29,7 @@ This element is unsupported and thus implements the {{domxref("HTMLUnknownElemen
 
 ### Result (toned down!)
 
-![](htmlblinkelement.gif)
+![Text "why would somebody use this" flashing on and off.](htmlblinkelement.gif)
 
 ## CSS polyfill
 
@@ -37,21 +37,7 @@ If you really do need a polyfill, then you can use the following CSS polyfill. W
 
 ```css
 blink {
-  -webkit-animation: 2s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
   animation: 2s linear infinite condemned_blink_effect;
-}
-
-/* for Safari 4.0 - 8.0 */
-@-webkit-keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
 }
 
 @keyframes condemned_blink_effect {

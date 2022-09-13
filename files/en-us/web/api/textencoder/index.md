@@ -5,12 +5,12 @@ page-type: web-api-interface
 tags:
   - API
   - Encoding
-  - Experimental
   - Interface
   - Reference
   - TextEncoder
 browser-compat: api.TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder`** interface takes a stream of code points as input and emits a stream of UTF-8 bytes.
@@ -34,7 +34,7 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
 
 _The `TextEncoder` interface doesn't inherit any property._
 
-- {{DOMxRef("TextEncoder.prototype.encoding")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextEncoder.prototype.encoding")}} {{ReadOnlyInline}}
   - : Always returns "`utf-8`".
 
 ## Methods

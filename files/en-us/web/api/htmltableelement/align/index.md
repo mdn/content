@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.align
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLTableElement.align`** property represents the
@@ -30,7 +31,7 @@ One of the following string values:
 
 ```js
 // Set the alignment of a table
-var t = document.getElementById('TableA');
+const t = document.getElementById('TableA');
 t.align = 'center';
 ```
 

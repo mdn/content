@@ -14,6 +14,7 @@ tags:
   - width
 browser-compat: svg.attributes.textLength
 ---
+
 {{SVGRef}}
 
 The **`textLength`** attribute, available on SVG {{SVGElement("text")}} and {{SVGElement("tspan")}} elements, lets you specify the width of the space into which the text will draw. The {{glossary("user agent")}} will ensure that the text does not extend farther than that distance, using the method or methods specified by the {{SVGAttr("lengthAdjust")}} attribute. By default, only the spacing between characters is adjusted, but the glyph size can also be adjusted if you change `lengthAdjust`.
@@ -30,7 +31,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -128,7 +131,7 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 
 widthSlider.value = baseLength;
 
-widthSlider.addEventListener("input", function(event) {
+widthSlider.addEventListener("input", (event) => {
   textElement.textLength.baseVal.newValueSpecifiedUnits(
       SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber);
   widthDisplay.innerText = widthSlider.value;
@@ -137,7 +140,7 @@ widthSlider.addEventListener("input", function(event) {
 widthSlider.dispatchEvent(new Event("input"));
 ```
 
-After fetching the element references, an {{domxref("EventListener")}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{event("input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.
+After fetching the element references, an {{domxref("EventListener")}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{domxref("HTMLElement/input_event", "input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.
 
 When an `"input"` event occurs, we call `newValueSpecifiedUnits()` to set the value of `textLength` to the slider's new value, using the `SVGLength` interface's `SVG_LENGTHTYPE_PX` unit type to indicate that the value represents pixels. Note that we have to dive into `textLength` to get its `baseVal` property; `textLength` is stored as an {{domxref("SVGLength")}} object, so we can't treat it like a plain number.
 

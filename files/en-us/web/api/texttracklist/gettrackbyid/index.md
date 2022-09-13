@@ -19,6 +19,7 @@ tags:
   - track
 browser-compat: api.TextTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("TextTrackList")}}** method
@@ -30,7 +31,7 @@ string.
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 

@@ -12,6 +12,7 @@ tags:
   - getBattery
 browser-compat: api.Navigator.getBattery
 ---
+
 {{ ApiRef("Battery API") }}
 
 The **`getBattery()`** method provides information about the
@@ -24,7 +25,7 @@ documentation for additional details, a guide to using the API, and sample code.
 
 ## Syntax
 
-```js
+```js-nolint
 getBattery()
 ```
 
@@ -57,16 +58,16 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
 ## Examples
 
 This example fetches the current charging state of the battery and establishes a
-handler for the {{Event("chargingchange")}} event, so that the charging state is
+handler for the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event, so that the charging state is
 recorded whenever it changes.
 
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener('chargingchange', () => {
     batteryIsCharging = battery.charging;
   });
 });

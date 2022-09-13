@@ -12,7 +12,8 @@ tags:
   - register
 browser-compat: api.SyncManager.register
 ---
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncManager.register`** method of the
 {{domxref("SyncManager")}} interface returns a {{jsxref("Promise")}} that resolves to a
@@ -20,7 +21,7 @@ The **`SyncManager.register`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 register(options)
 ```

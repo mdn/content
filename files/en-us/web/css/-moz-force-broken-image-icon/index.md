@@ -7,9 +7,11 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.-moz-force-broken-image-icon
 ---
-{{Non-standard_header}}{{CSSRef}}
+
+{{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
 
 The **`-moz-force-broken-image-icon`** extended CSS property can be used to force the broken image icon to be shown even when a broken image has an `alt` attribute.
 

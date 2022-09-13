@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Firefox 7
 ---
+
 {{FirefoxSidebar}}
 
 This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.
@@ -49,7 +50,7 @@ The new `Components.utils.unload()` method lets you unload JavaScript code modul
 
 ### Inline preferences
 
-You can now have [preference options inline](/en-US/docs/Extensions/Inline_Options) in the Add-on Manager window, which lets users configure your add-on without having to open a separate preference dialog box. There are limits to what types of configuration controls can be provided, but this is still very helpful -- plus it works for [restartless (bootstrapped) extensions](/en-US/docs/Extensions/Bootstrapped_extensions).
+You can now have [preference options inline](/en-US/docs/Extensions/Inline_Options) in the Add-on Manager window, which lets users configure your add-on without having to open a separate preference dialog box. There are limits to what types of configuration controls can be provided, but this is still very helpful — plus it works for [restartless (bootstrapped) extensions](/en-US/docs/Extensions/Bootstrapped_extensions).
 
 ## See also
 

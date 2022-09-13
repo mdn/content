@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -55,7 +56,7 @@ function getAvailableLanguages(el) {
     "main", "translation"
   ];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,

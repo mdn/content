@@ -9,6 +9,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -16,8 +17,8 @@ The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering co
 To get an object of this interface, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl2" as the argument:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl2');
+const canvas = document.getElementById('myCanvas');
+const gl = canvas.getContext('webgl2');
 ```
 
 > **Note:** WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.

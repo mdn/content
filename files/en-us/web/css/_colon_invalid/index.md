@@ -10,16 +10,12 @@ tags:
   - Web
 browser-compat: css.selectors.invalid
 ---
+
 {{CSSRef}}
 
 The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation).
 
-```css
-/* Selects any invalid <input> */
-input:invalid {
-  background-color: pink;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
 
 This pseudo-class is useful for highlighting field errors for the user.
 
@@ -126,7 +122,7 @@ In this example we use `:invalid` along with `~`, the [general sibling combinato
 
 ```css
 /* Hide the fieldset after an invalid fieldset */
-fieldset:invalid~fieldset {
+fieldset:invalid ~ fieldset {
   display: none;
 }
 
@@ -136,10 +132,11 @@ form:invalid button {
   pointer-events: none;
 }
 
-input, textarea {
+input,
+textarea {
   box-sizing: border-box;
   width: 100%;
-  font-family:monospace;
+  font-family: monospace;
   padding: 0.25em 0.5em;
 }
 

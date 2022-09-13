@@ -11,6 +11,7 @@ tags:
   - maxDecibels
 browser-compat: api.AnalyserNode.maxDecibels
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`maxDecibels`** property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
@@ -36,7 +37,7 @@ const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 
-  ...
+// …
 
 analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;
@@ -57,10 +58,10 @@ function draw() {
   let barHeight;
   let x = 0;
 
-  for(let i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
     canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
     x += barWidth + 1;

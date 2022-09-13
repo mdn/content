@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.tFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tFoot`** property represents the
@@ -23,8 +24,8 @@ A {{HTMLElement("tfoot")}} element or `null`.
 ## Examples
 
 ```js
-if (table.tFoot == my_foot) {
-  // ...
+if (table.tFoot === my_foot) {
+  // …
 }
 ```
 

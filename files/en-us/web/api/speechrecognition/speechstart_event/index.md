@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.speechstart_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speechstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when sound recognized by the speech recognition service as speech has been detected.
@@ -17,9 +18,9 @@ The **`speechstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Spee
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('speechstart', event => { })
+addEventListener('speechstart', (event) => { })
 
-onspeechstart = event => { }
+onspeechstart = (event) => { }
 ```
 
 ## Event type
@@ -31,9 +32,9 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `speechstart` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('speechstart', function() {
+recognition.addEventListener('speechstart', () => {
   console.log('Speech has been detected');
 });
 ```
@@ -41,7 +42,7 @@ recognition.addEventListener('speechstart', function() {
 Or use the `onspeechstart` event handler property:
 
 ```js
-recognition.onspeechstart = function() {
+recognition.onspeechstart = () => {
   console.log('Speech has been detected');
 }
 ```

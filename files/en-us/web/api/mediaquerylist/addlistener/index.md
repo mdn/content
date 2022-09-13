@@ -10,8 +10,10 @@ tags:
   - Method
   - Reference
   - addListener
+  - Deprecated
 browser-compat: api.MediaQueryList.addListener
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The deprecated **`addListener()`** method of the
@@ -26,7 +28,7 @@ available in the browsers you need to support.
 
 ## Syntax
 
-```js
+```js-nolint
 addListener(func)
 ```
 
@@ -43,8 +45,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var paragraph = document.querySelector('p');
-var mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector('p');
+const mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {

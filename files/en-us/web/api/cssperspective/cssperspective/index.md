@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSPerspective()`** constructor creates
@@ -21,7 +22,7 @@ the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSPerspective(length)
 ```
 

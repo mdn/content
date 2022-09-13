@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.content_security_policy
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -108,116 +109,117 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 
 Require that all types of content should be packaged with the extension:
 
-**Manifest V2**
+- Manifest V2
 
-```json
-"content_security_policy": "default-src 'self'"
-```
+  ```json
+  "content_security_policy": "default-src 'self'"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "default-src 'self'"
-} 
-```
+  ```json
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'"
+  }
+  ```
 
 Allow remote scripts from "https://example.com":
 
-**Manifest V2**
+- Manifest V2:
 
-```json
-"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
-```
+  ```json
+  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "script-src 'self' https://example.com; object-src 'self'"
-} 
-```
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://example.com; object-src 'self'"
+  }
+  ```
 
 Allow remote scripts from any subdomain of "jquery.com":
 
-**Manifest V2**
+- Manifest V2
 
-```json
-"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
-```
+  ```json
+  "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "script-src 'self' https://*.jquery.com; object-src 'self'"
-} 
-```
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://*.jquery.com; object-src 'self'"
+  }
+  ```
 
 Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends):
 
-**Manifest V2**
+- Manifest V2
 
-```json
-"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
-```
+  ```json
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "script-src 'self' 'unsafe-eval'; object-src 'self';"
-} 
-```
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+  }
+  ```
 
 Allow the inline script: `"<script>alert('Hello, world.');</script>"`:
 
-**Manifest V2**
+- Manifest V2
 
-```json
-"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
-```
+  ```json
+  "content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
-} 
-```
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
+  }
+  ```
 
 Keep the rest of the policy, but also require that images should be packaged with the extension:
 
-**Manifest V2**
+- Manifest V2
 
-```json
-"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
-```
+  ```json
+  "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "script-src 'self'; object-src 'self'; img-src 'self'"
-} 
-```
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self'"
+  }
+  ```
 
 Enable the use of [WebAssembly](/en-US/docs/WebAssembly):
 
-**Manifest V2**
+- Manifest V2
 
-For backward compatibility, Manifest V2 extensions can use WebAssembly without the use of `'wasm-unsafe-eval'`. However, if the extension uses WebAssembly, the inclusion of `'wasm-unsafe-eval'` is recommended. See [WebAssembly](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#webassembly) on the Content Security Policy page for more information.
+  For backward compatibility, Manifest V2 extensions can use WebAssembly without the use of `'wasm-unsafe-eval'`. However, if the extension uses WebAssembly, the inclusion of `'wasm-unsafe-eval'` is recommended. See [WebAssembly](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#webassembly) on the Content Security Policy page for more information.
 
-```json
-"content_security_policy": "script-src 'self' 'wasm-unsafe-eval'"
-```
+  ```json
+  "content_security_policy": "script-src 'self' 'wasm-unsafe-eval'"
+  ```
 
-**Manifest V3**
+- Manifest V3
 
-```json
-"content_security_policy": {
-  "extension_page": "script-src 'self' 'wasm-unsafe-eval'"
-} 
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'"
+  }
+  ```
 
 ### Invalid examples
 

@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-decoration-style
 ---
+
 {{CSSRef}}
 
 The **`text-decoration-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the lines specified by {{ cssxref("text-decoration-line") }}. The style applies to all lines that are set with `text-decoration-line`.
@@ -50,7 +51,7 @@ text-decoration-style: unset;
   - : Draws a dashed line.
 - wavy
   - : Draws a wavy line.
-- \-moz-none{{ non-standard_inline }}
+- \-moz-none {{ non-standard_inline }}
   - : Draws no line. Use {{ cssxref("text-decoration-line") }}`: none` instead.
 
 ## Formal definition

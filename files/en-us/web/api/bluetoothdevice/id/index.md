@@ -12,6 +12,7 @@ tags:
   - id
 browser-compat: api.BluetoothDevice.id
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothDevice.id`** read-only property returns a

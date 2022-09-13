@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.keys
 ---
+
 {{APIRef}}
 
 The **`Headers.keys()`** method returns an
@@ -20,7 +21,7 @@ in this object. The keys are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -36,12 +37,12 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
 
 // Display the keys
-for(var key of myHeaders.keys()) {
+for (const key of myHeaders.keys()) {
    console.log(key);
 }
 ```

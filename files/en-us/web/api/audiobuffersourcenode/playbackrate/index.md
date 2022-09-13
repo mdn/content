@@ -11,6 +11,7 @@ tags:
   - playbackRate
 browser-compat: api.AudioBufferSourceNode.playbackRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`playbackRate`** property of
@@ -46,7 +47,13 @@ the `playbackRate` property value on the fly.
 > **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)). Play the song and alter the playback rate for some fun results.
 
 ```html
-<input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
+<input
+  class="playback-rate-control"
+  type="range"
+  min="0.25"
+  max="3"
+  step="0.05"
+  value="1" />
 <span class="playback-rate-value">1.0</span>
 ```
 
@@ -59,10 +66,10 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -70,7 +77,7 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
+      (e) => console.error(`Error with decoding audio data: ${e.err}`));
 
   }
 
@@ -79,20 +86,20 @@ function getData() {
 
 // wire up buttons to stop and play audio, and range slider control
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
   playbackControl.removeAttribute('disabled');
 }
 
-stop.onclick = function() {
+stop.onclick = () => {
   source.stop(0);
   play.removeAttribute('disabled');
   playbackControl.setAttribute('disabled', 'disabled');
 }
 
-playbackControl.oninput = function() {
+playbackControl.oninput = () => {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
 }

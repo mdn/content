@@ -5,10 +5,10 @@ tags:
   - '-webkit-line-clamp'
   - CSS
   - CSS Property
-  - Non-standard
   - recipe:css-property
 browser-compat: css.properties.-webkit-line-clamp
 ---
+
 {{CSSRef}}
 
 The **`-webkit-line-clamp`** CSS property allows limiting of the contents of a {{Glossary("block container")}} to the specified number of lines.

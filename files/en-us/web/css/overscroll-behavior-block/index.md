@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-block
 ---
+
 {{CSSRef}}
 
 The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
@@ -79,7 +80,12 @@ main {
   height: 3000px;
   width: 500px;
   background-color: white;
-  background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 main > div {
@@ -96,12 +102,17 @@ div > div {
   height: 1500px;
   width: 100%;
   background-color: yellow;
-  background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255,0,0,0.5);
+  background-color: rgba(255, 0, 0, 0.5);
   margin: 0;
   width: 340px;
   position: relative;

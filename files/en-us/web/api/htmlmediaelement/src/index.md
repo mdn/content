@@ -11,6 +11,7 @@ tags:
   - src
 browser-compat: api.HTMLMediaElement.src
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.src`** property reflects the value of
@@ -33,7 +34,7 @@ attribute.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.src); // ""
 ```
 

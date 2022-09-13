@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`icegatheringstatechange`** event is sent to the `onicegatheringstatechange` event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.
@@ -34,9 +35,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('iceconnectionstatechange', event => { });
+addEventListener('iceconnectionstatechange', (event) => { });
 
-oniceconnectionstatechange = event => { };
+oniceconnectionstatechange = (event) => { };
 ```
 
 ## Event type
@@ -48,7 +49,7 @@ A generic {{domxref("Event")}}.
 This example creates a handler for `icegatheringstatechange` events.
 
 ```js
-pc.onicegatheringstatechange = ev => {
+pc.onicegatheringstatechange = (ev) => {
   let connection = ev.target;
 
   switch(connection.iceGatheringState) {
@@ -65,7 +66,7 @@ pc.onicegatheringstatechange = ev => {
 Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add a listener for `icegatheringstatechange` events:
 
 ```js
-pc.addEventListener("icegatheringstatechange", ev => {
+pc.addEventListener("icegatheringstatechange", (ev) => {
   let connection = ev.target;
 
   switch(connection.iceGatheringState) {

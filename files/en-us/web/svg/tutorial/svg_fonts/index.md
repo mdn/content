@@ -7,13 +7,14 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 When SVG was specified, support for web fonts was not widespread in browsers. Since accessing the correct font file is however crucial for rendering text correctly, a font description technology was added to SVG to provide this ability. It was not meant for compatibility with other formats like PostScript or OTF, but rather as a simple means of embedding glyph information into SVG when rendered.
 
 > **Note:** SVG Fonts are currently supported only in Safari and Android Browser.
 >
-> Internet Explorer [hasn't considered implementing this](https://arstechnica.com/information-technology/2010/03/platform-preview-gives-web-developers-first-taste-of-ie9/), the functionality has been [removed from Chrome 38](https://chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox has [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools however like the [Adobe SVG Viewer](https://www.adobe.com/devnet/svg.html) plugin, Batik and parts of Inkscape support SVG font embedding.
+> Internet Explorer [hasn't considered implementing this](https://arstechnica.com/information-technology/2010/03/platform-preview-gives-web-developers-first-taste-of-ie9/), the functionality has been [removed from Chrome 38](https://chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox has [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools however like Batik and parts of Inkscape support SVG font embedding.
 
 The base for defining an SVG font is the {{ SVGElement("font") }} element.
 
@@ -78,7 +79,7 @@ You can use `@font-face` to reference remote (and not so remote) fonts:
   <!-- and so on -->
 </font>
 
-<style type="text/css">
+<style>
 @font-face {
   font-family: "Super Sans";
   src: url(#Super_Sans);

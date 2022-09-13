@@ -15,6 +15,7 @@ tags:
   - estimate
 browser-compat: api.StorageManager.estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
@@ -23,7 +24,7 @@ This method operates asynchronously, so it returns a {{jsxref("Promise")}} which
 
 ## Syntax
 
-```js
+```js-nolint
 estimate()
 ```
 
@@ -66,7 +67,7 @@ In this example, we obtain the usage estimates and present the percentage of sto
 ### JavaScript content
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
+navigator.storage.estimate().then((estimate) => {
   document.getElementById("percent").value =
       (estimate.usage / estimate.quota * 100).toFixed(2);
 });

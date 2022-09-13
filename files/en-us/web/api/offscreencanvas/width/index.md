@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.width
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`width`** property returns and sets the width of an
@@ -24,7 +25,7 @@ Creating a new offscreen canvas and returning or setting the width of the offscr
 canvas:
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
+const offscreen = new OffscreenCanvas(256, 256);
 offscreen.width; // 256
 offscreen.width = 512;
 ```

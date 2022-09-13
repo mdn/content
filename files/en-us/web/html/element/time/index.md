@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML text-level semantics
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Phrasing content
@@ -21,7 +20,7 @@ The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific peri
 It may represent one of the following:
 
 - A time on a 24-hour clock.
-- A precise date in the {{interwiki("wikipedia", "Gregorian calendar")}} (with optional time and timezone information).
+- A precise date in the [Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) (with optional time and timezone information).
 - [A valid time duration](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}

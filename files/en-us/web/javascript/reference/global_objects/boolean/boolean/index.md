@@ -8,34 +8,38 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean.Boolean
 ---
+
 {{JSRef}}
 
-The **`Boolean()`** constructor is used to create
-{{jsxref("Boolean")}} objects.
+The **`Boolean()`** constructor can create {{jsxref("Boolean")}} objects or return primitive values of type boolean.
 
 {{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Boolean(value)
 Boolean(value)
 ```
+
+> **Note:** `Boolean()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 
 - `value`
   - : The initial value of the `Boolean` object.
 
-## Description
+### Return value
 
-When `Boolean` is called as a function, it coerces the parameter to a boolean primitive. When `Boolean` is called as a constructor (with `new`), it creates a {{jsxref("Boolean")}} object, which is **not** a primitive.
+When `Boolean()` is called as a constructor (with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it creates a {{jsxref("Boolean")}} object, which is **not** a primitive.
+
+When `Boolean()` is called as a function (without `new`), it coerces the parameter to a boolean primitive.
 
 > **Warning:** You should rarely find yourself using `Boolean` as a constructor.
 
 ## Examples
 
-### Creating `Boolean` objects with an initial value of `false`
+### Creating Boolean objects with an initial value of false
 
 ```js
 const bZero = new Boolean(0);

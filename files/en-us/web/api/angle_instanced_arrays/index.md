@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows to draw the same object, or groups of similar objects multiple times, if they share the same vertex data, primitive count and type.
@@ -40,6 +41,7 @@ This extension exposes three new methods.
 ## Examples
 
 The following example shows how to draw a given geometry multiple times with a single draw call.
+
 > **Warning:** The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use.
 
 ```js

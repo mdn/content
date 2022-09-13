@@ -20,9 +20,9 @@ browser-compat: html.elements.a
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
-Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
+Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -94,23 +94,23 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ### Deprecated attributes
 
-- {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
 
-- {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
 
   - : The shape of the hyperlink's region in an image map.
 
@@ -241,7 +241,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Result
@@ -325,8 +328,8 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
+const canvas = document.querySelector('canvas');
+const c = canvas.getContext('2d');
 c.fillStyle = 'hotpink';
 
 function draw(x, y) {
@@ -338,13 +341,13 @@ function draw(x, y) {
   }
 }
 
-canvas.addEventListener('mousemove', event =>
+canvas.addEventListener('mousemove', (event) =>
   draw(event.offsetX, event.offsetY)
 );
 canvas.addEventListener('mousedown', () => isDrawing = true);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 
-document.querySelector('a').addEventListener('click', event =>
+document.querySelector('a').addEventListener('click', (event) =>
   event.target.href = canvas.toDataURL()
 );
 ```

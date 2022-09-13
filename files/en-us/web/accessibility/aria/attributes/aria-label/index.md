@@ -1,5 +1,5 @@
 ---
-title: 'aria-label'
+title: "aria-label"
 slug: Web/Accessibility/ARIA/Attributes/aria-label
 tags:
   - Accessibility
@@ -15,13 +15,22 @@ The `aria-label` attribute defines a string value that labels an interactive ele
 
 ## Description
 
-Sometimes the default [accessible name](https://w3c.github.io/aria/#dfn-accessible-name) of an element is missing, or does not accurately describe its contents, and there is no content visible in the DOM that can be associated with the object to give it meaning. A common example is a button containing an SVG or [icon font (which you shouldn't be using)](https://www.youtube.com/watch?v=9xXBYcWgCHA) without any text.
+Sometimes the default [accessible name](https://w3c.github.io/accname/#dfn-accessible-name) of an element is missing, or does not accurately describe its contents, and there is no content visible in the DOM that can be associated with the object to give it meaning. A common example is a button containing an SVG or [icon font (which you shouldn't be using)](https://www.youtube.com/watch?v=9xXBYcWgCHA) without any text.
 
 In cases where an interactive element has no accessible name, or an accessible name that isn't accurate, and there is no content visible in the DOM that can be referenced via the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, the `aria-label` attribute can be used to define a string that labels the interactive element on which it is set. This provides the element with its accessible name.
 
 ```html
 <button aria-label="Close" onclick="myDialog.close()">
-  <svg aria-hidden="true" focusable="false" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z" fill="#000"/></svg>
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    width="17"
+    height="17"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z"
+      fill="#000" />
+  </svg>
 </button>
 ```
 

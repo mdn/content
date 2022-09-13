@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.endOffset
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.endOffset`** read-only property returns a number
@@ -31,7 +32,7 @@ A number.
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);

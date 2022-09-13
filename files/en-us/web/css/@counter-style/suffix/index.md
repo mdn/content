@@ -10,9 +10,10 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.suffix
 ---
+
 {{CSSRef}}
 
-The **`suffix`** descriptor of the{{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
+The **`suffix`** descriptor of the {{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
 
 ## Syntax
 

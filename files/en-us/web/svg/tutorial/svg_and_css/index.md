@@ -11,6 +11,7 @@ tags:
   - SVG
   - Web
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
@@ -295,7 +296,7 @@ svg {
 
 /* outer petals */
 #outer-petals {
-  opacity: .75;
+  opacity: 0.75;
   --segment-fill-fill: azure;
   --segment-fill-stroke: lightsteelblue;
   --segment-fill-stroke-width: 1;
@@ -457,4 +458,4 @@ See below how the structure then looks like.
 
 ## What next?
 
-In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML and XUL documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML introduction](/en-US/docs/Web/XML/XML_introduction)
+In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML introduction](/en-US/docs/Web/XML/XML_introduction)

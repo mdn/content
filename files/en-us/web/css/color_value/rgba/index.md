@@ -12,9 +12,12 @@ tags:
 browser-compat:
   - css.types.color.rgba
 ---
+
 {{CSSRef}}
 
 The **`rgba()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
+
+{{EmbedInteractiveExample("pages/css/function-rgba.html")}}
 
 > **Note:** CSS Colors Level 4 allows for space-separated in addition to comma-separated values.
 

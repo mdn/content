@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.replace
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`replace()`** method of the {{DOMXref("Location")}}
@@ -30,7 +31,7 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
+```js-nolint
 replace(url)
 ```
 

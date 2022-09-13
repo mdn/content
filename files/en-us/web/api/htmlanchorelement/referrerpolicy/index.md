@@ -10,6 +10,7 @@ tags:
   - Referrer Policy
 browser-compat: api.HTMLAnchorElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The
@@ -54,13 +55,13 @@ A string; one of the following:
 ## Examples
 
 ```js
-var elt = document.createElement("a");
-var linkText = document.createTextNode("My link");
+const elt = document.createElement("a");
+const linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
 elt.href = "https://developer.mozilla.org/en-US/";
 elt.referrerPolicy = "no-referrer";
 
-var div = document.getElementById("divAround");
+const div = document.getElementById("divAround");
 div.appendChild(elt); // When clicked, the link will not send a referrer header.
 ```
 

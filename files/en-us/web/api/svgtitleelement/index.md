@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTitleElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTitleElement`** interface corresponds to the {{SVGElement("title")}} element.

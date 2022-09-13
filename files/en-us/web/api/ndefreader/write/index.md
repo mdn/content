@@ -7,17 +7,19 @@ tags:
   - Reference
   - Web NFC
   - Method
+  - Experimental
 browser-compat: api.NDEFReader.write
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The `write()` method of the {{DOMxRef("NDEFReader")}} interface attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Syntax
 
-```js
-NDEFReader.write(message);
-  NDEFReader.write(message, options);
+```js-nolint
+write(message)
+write(message, options)
 ```
 
 ### Parameters
@@ -103,7 +105,7 @@ ndef.write(
   "Hello World"
 ).then(() => {
   console.log("Message written.");
-}).catch(error => {
+}).catch((error) => {
   console.log(`Write failed :-( try again: ${error}.`);
 });
 ```
@@ -137,7 +139,7 @@ function write(data, { timeout } = {}) {
     ctlr.signal.onabort = () => reject("Time is up, bailing out!");
     setTimeout(() => ctlr.abort(), timeout);
 
-    ndef.addEventListener("reading", event => {
+    ndef.addEventListener("reading", (event) => {
       ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
     }, { once: true });
   });
@@ -147,7 +149,7 @@ await ndef.scan();
 try {
   // Let's wait for 5 seconds only.
   await write("Hello World", { timeout: 5_000 });
-} catch(err) {
+} catch (err) {
   console.error("Something went wrong", err);
 } finally {
   console.log("We wrote to a tag!");

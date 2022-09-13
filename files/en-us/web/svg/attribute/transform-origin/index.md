@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.transform-origin
 ---
+
 {{SVGRef()}}
 
 The **`transform-origin`** SVG attribute sets the origin for an item's transformations.
@@ -168,27 +169,27 @@ The fourth image shows how to do the transformation in browsers that don't suppo
 ### CSS
 
 ```css
-    h4 {
-      font-family: sans-serif;
-    }
+h4 {
+  font-family: sans-serif;
+}
 
-    figure {
-      border: thin #c0c0c0 solid;
-      display: inline-flex;
-      flex-flow: column;
-      padding: 5px;
-      max-width: 200px;
-      margin: auto;
-    }
+figure {
+  border: thin #c0c0c0 solid;
+  display: inline-flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 200px;
+  margin: auto;
+}
 
-    figcaption {
-      margin-top: 5px;
-      background-color: #222;
-      color: #fff;
-      font: smaller sans-serif;
-      padding: 3px;
-      text-align: center;
-    }
+figcaption {
+  margin-top: 5px;
+  background-color: #222;
+  color: #fff;
+  font: smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
 ```
 
 ### Result

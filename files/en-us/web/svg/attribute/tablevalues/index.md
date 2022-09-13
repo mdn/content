@@ -4,8 +4,9 @@ slug: Web/SVG/Attribute/tableValues
 tags:
   - SVG
   - SVG Attribute
-spec-urls: https://drafts.fxtf.org/filter-effects//#element-attrdef-fecomponenttransfer-tablevalues
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-tablevalues
 ---
+
 {{SVGRef}}
 
 The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a color component transfer function.
@@ -20,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

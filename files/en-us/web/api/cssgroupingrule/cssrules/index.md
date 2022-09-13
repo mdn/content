@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule.cssRules
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`cssRules`** property of the

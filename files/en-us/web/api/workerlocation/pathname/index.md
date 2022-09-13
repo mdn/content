@@ -10,6 +10,7 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.pathname
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`pathname`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.pathname", "pathname")}} part of the worker's location.
@@ -22,7 +23,7 @@ A string.
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
-var result = location.pathname; // Returns '/en-US/docs/Web'
+const result = location.pathname; // Returns '/en-US/docs/Web'
 ```
 
 ## Specifications

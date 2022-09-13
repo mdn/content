@@ -22,6 +22,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePairStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC **`RTCIceCandidatePairStats`** dictionary reports statistics which provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
@@ -77,16 +78,16 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
 
 The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the [compatibility table](#browser_compatibility) for details on which browsers support them and in which versions.
 
-- {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{deprecated_inline}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{Deprecated_Inline}} {{optional_inline}}
   - : An integer value indicating the candidate pair's priority.
-- {{domxref("RTCIceCandidatePairStats.readable", "readable")}} {{deprecated_inline}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats.readable", "readable")}} {{Deprecated_Inline}} {{optional_inline}} {{Non-standard_Inline}}
   - : A Boolean value indicating whether or not data can be sent over the connection described by the candidate pair.
-- {{domxref("RTCIceCandidatePairStats.writable", "writable")}} {{deprecated_inline}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats.writable", "writable")}} {{Deprecated_Inline}} {{optional_inline}} {{Non-standard_Inline}}
   - : A Boolean value indicating whether or not data can be received on the connection described by the candidate pair.
 
 ### Non-standard properties
 
-- {{domxref("RTCIceCandidatePairStats.selected", "selected")}} {{non-standard_inline}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats.selected", "selected")}} {{Non-standard_Inline}} {{optional_inline}}
   - : A Firefox-specific Boolean value which is `true` if the candidate pair described by this object is the one currently in use. The spec-compliant way to determine the selected candidate pair is to look for a stats object of type `transport`, which is an {{domxref("RTCTransportStats")}} object. That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.
 
 ## Usage notes
@@ -104,7 +105,7 @@ if (rtcStats && rtcStats.type === "candidate-pair") {
   let elapsed = (rtcStats.lastRequestTimestamp - rtcStats.firstRequestTimestamp)
                   / rtcStats.requestsSent;
 
-  log("Average time between ICE connectivity checks: " + elapsed + " ms.");
+  log(`Average time between ICE connectivity checks: ${elapsed} ms.`);
 }
 ```
 

@@ -13,6 +13,7 @@ tags:
   - Response
 browser-compat: api.Response.formData
 ---
+
 {{APIRef("Fetch")}}
 
 The **`formData()`** method of the {{domxref("Response")}} interface
@@ -26,7 +27,7 @@ that resolves with a {{domxref("FormData")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 formData()
 ```
 

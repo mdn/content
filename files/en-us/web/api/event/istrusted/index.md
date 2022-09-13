@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.isTrusted
 ---
+
 {{APIRef("DOM")}}
 
 The **`isTrusted`** read-only property of the

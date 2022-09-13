@@ -6,8 +6,10 @@ tags:
   - HTTP
   - Network Error Logging
   - Reference
+  - Experimental
 browser-compat: http.headers.NEL
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 Network Error Logging is a mechanism that can be configured via the {{HTTPHeader("NEL")}} HTTP _[response header](/en-US/docs/Glossary/Response_header)_. This experimental header allows web sites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers.
@@ -18,7 +20,7 @@ Reports are sent to a reporting group defined within a {{HTTPHeader("Report-To")
 
 Web applications opt in to this behavior with the NEL header, which is a _[JSON-encoded](/en-US/docs/Glossary/Response_header)_ object:
 
-```
+```http
 NEL: { "report_to": "nel",
        "max_age": 31556952 }
 ```
@@ -40,7 +42,7 @@ The following object keys can be specified in the NEL header:
 
 The reporting group referenced above is defined in the usual manner within the {{HTTPHeader("Report-To")}} header, for example:
 
-```
+```http
 Report-To: { "group": "nel",
              "max_age": 31556952,
              "endpoints": [
@@ -55,7 +57,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 ### HTTP 400 (Bad Request) response
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -79,7 +81,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 Note that the phase is set to `dns` in this report and no `server_ip` is available to include.
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",

@@ -11,6 +11,7 @@ tags:
   - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a [Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (FFT) to get frequency domain data.
@@ -34,7 +35,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
 const bufferLength = analyser.frequencyBinCount;
@@ -45,40 +46,39 @@ analyser.getByteTimeDomainData(dataArray);
 
 function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray);
+  analyser.getByteTimeDomainData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.beginPath();
+  canvasCtx.beginPath();
 
-      const sliceWidth = WIDTH * 1.0 / bufferLength;
-      let x = 0;
+  const sliceWidth = (WIDTH * 1.0) / bufferLength;
+  let x = 0;
 
-      for(let i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
+    const v = dataArray[i] / 128.0;
+    const y = (v * HEIGHT) / 2;
 
-        const v = dataArray[i] / 128.0;
-        const y = v * HEIGHT/2;
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+    x += sliceWidth;
+  }
 
-        x += sliceWidth;
-      }
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
+  canvasCtx.stroke();
+}
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
+draw();
 ```
 
 ## Specifications

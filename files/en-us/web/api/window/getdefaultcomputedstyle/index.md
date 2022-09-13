@@ -7,9 +7,11 @@ tags:
   - CSS
   - Method
   - Reference
+  - Non-standard
 browser-compat: api.Window.getDefaultComputedStyle
 ---
-{{APIRef("CSSOM")}} {{Non-standard_header}}
+
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 The **`getDefaultComputedStyle()`** method gives the default [computed values](/en-US/docs/Web/CSS/computed_value) of all the CSS
 properties of an element, ignoring author styling. That is, only user-agent and user
@@ -17,7 +19,7 @@ styles are taken into account.
 
 ## Syntax
 
-```js
+```js-nolint
 getDefaultComputedStyle(element)
 getDefaultComputedStyle(element, pseudoElt)
 ```
@@ -42,8 +44,8 @@ user rules.
 ### Simple example
 
 ```js
-var elem1 = document.getElementById("elemId");
-var style = window.getDefaultComputedStyle(elem1);
+const elem1 = document.getElementById("elemId");
+const style = window.getDefaultComputedStyle(elem1);
 ```
 
 ### Longer example
@@ -62,8 +64,8 @@ var style = window.getDefaultComputedStyle(elem1);
 <div id="output"></div>
 
 <script>
-  var elem = document.getElementById("elem-container");
-  var theCSSprop = window.getDefaultComputedStyle(elem).position;
+  const elem = document.getElementById("elem-container");
+  const theCSSprop = window.getDefaultComputedStyle(elem).position;
   document.getElementById("output").innerHTML = theCSSprop; // Will output "static"
 </script>
 ```
@@ -83,8 +85,8 @@ pseudo-elements (e.g., {{cssxref("::before")}} or {{cssxref("::after")}}).
 <h3>generated content</h3>
 
 <script>
-  var h3       = document.querySelector('h3'),
-      result   = getDefaultComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector('h3');
+  const result = getDefaultComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns 'none'
 </script>

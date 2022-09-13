@@ -19,6 +19,7 @@ tags:
   - lwb
 browser-compat: css.types.color
 ---
+
 {{CSSRef}}
 
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
@@ -47,19 +48,11 @@ The `<color>` data type is specified using one of the options listed below.
 
 > **Note:** Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
 
-### Color keywords
+### Named colors
 
-Color keywords are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the names used.
+Named colors are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the names used.
 
-The complete list of such keywords is available [here](/en-US/docs/Web/CSS/color_value/color_keywords).
-
-### transparent keyword
-
-The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
-
-> **Note:** To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
-
-> **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
+The complete list of such keywords is available [here](/en-US/docs/Web/CSS/named-color).
 
 ### currentcolor keyword
 
@@ -115,7 +108,7 @@ As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in th
 
 HWB colors are expressed through the functional `hwb()` notation.
 
-> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
+> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions.
 
 - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
@@ -166,6 +159,10 @@ In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 
 Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast) for more information.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Color value tester
@@ -209,7 +206,7 @@ function validTextColor(stringToTest) {
 }
 
 inputElem.addEventListener('change', () => {
-  if(validTextColor(inputElem.value)) {
+  if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
     divElem.textContent = '';
   } else {

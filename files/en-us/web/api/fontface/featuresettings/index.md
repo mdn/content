@@ -13,12 +13,12 @@ tags:
   - featureSettings
 browser-compat: api.FontFace.featureSettings
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`featureSettings`** property of the
-{{domxref("FontFace")}} interface retrieves or sets infrequently used font features that
-are not available from a font's variant properties. It is equivalent to the
-{{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
+The **`featureSettings`** property of the {{domxref("FontFace")}} interface retrieves or sets infrequently used font features that are not available from a font's variant properties.
+
+This property is equivalent to the {{cssxref("font-feature-settings")}} descriptor.
 
 ## Value
 

@@ -12,6 +12,7 @@ tags:
   - createConvolver
 browser-compat: api.BaseAudioContext.createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
@@ -24,7 +25,7 @@ reverb effects to your audio. See the [spec definition of Convolution](https://w
 
 ## Syntax
 
-```js
+```js-nolint
 createConvolver()
 ```
 
@@ -50,7 +51,7 @@ For applied examples/information, check out our [Voice-change-O-matic demo](http
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
@@ -60,18 +61,18 @@ ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
-ajaxRequest.onload = function() {
+ajaxRequest.onload = () => {
   const audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
+  audioCtx.decodeAudioData(audioData, (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+    }, (e) => console.error(`Error with decoding audio data: ${e.err}`));
 }
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.buffer = concertHallBuffer;
 ```

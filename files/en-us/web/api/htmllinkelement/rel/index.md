@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement.rel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLinkElement.rel`** property reflects the
@@ -29,10 +30,9 @@ A string.
 ## Examples
 
 ```js
-var links = document.getElementsByTagName('link');
-var length = links.length;
-for (var i = 0; i < length; i++) {
-  alert(links[i]);
+const links = document.getElementsByTagName('link');
+for (const link of links) {
+  console.log(link);
 }
 ```
 

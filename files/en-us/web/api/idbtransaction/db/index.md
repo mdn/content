@@ -13,6 +13,7 @@ tags:
   - db
 browser-compat: api.IDBTransaction.db
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`db`** read-only property of the {{domxref("IDBTransaction")}} interface returns the database connection
@@ -33,10 +34,15 @@ failure. At the end, we return the associated database connection using `db`.
 For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)/p>
 
 ```js
+const note = document.getElementById('notifications');
+
+// an instance of a db object for us to store the IDB data in
+let db;
+
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -55,11 +61,11 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = event => {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = event => {
+  transaction.onerror = (event) => {
     note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
@@ -69,7 +75,7 @@ function addData() {
   // add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = event => {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';

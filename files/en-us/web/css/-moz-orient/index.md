@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`-moz-orient`** [CSS](/en-US/docs/Web/CSS) property specifies the orientation of the element to which it's applied.
@@ -34,7 +35,10 @@ The `-moz-orient` property is specified as one of the keyword values chosen from
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-orient =
+  inline | block | horizontal | vertical
+```
 
 ## Examples
 

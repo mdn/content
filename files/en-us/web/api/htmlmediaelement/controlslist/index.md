@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.HTMLMediaElement.controlsList
 ---
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}
 
 The **`controlsList`** property of the
 {{domxref("HTMLMediaElement")}} interface returns a DOMTokenList that helps the user

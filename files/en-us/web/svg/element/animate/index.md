@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animate
 ---
+
 {{SVGRef}}
 
 The SVG **`<animate>`** element provides a way to animate an attribute of an element over time.
@@ -14,7 +15,13 @@ The SVG **`<animate>`** element provides a way to animate an attribute of an ele
 ## Example
 
 ```css hidden
-html,body,svg { height:100%; margin:0; padding:0; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html

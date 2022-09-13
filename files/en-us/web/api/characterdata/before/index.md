@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.before
 ---
+
 {{APIRef("DOM")}}
 
 The **`before()`** method of the {{domxref("CharacterData")}} interface
@@ -17,8 +18,8 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
-before(... nodes)
+```js-nolint
+before(...nodes)
 ```
 
 ### Parameters
@@ -41,10 +42,10 @@ The `before()` method allows you to insert new nodes before a
 `CharacterData` node leaving the current node's data unchanged.
 
 ```js
-const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+const h1TextNode = document.querySelector("h1").firstChild;
 h1TextNode.before("h1# ");
 
-h1TextNode.parentElement.childNodes
+h1TextNode.parentElement.childNodes;
 // NodeList [#text "h1# ", #text "CharacterData.before()"]
 
 h1TextNode.data;

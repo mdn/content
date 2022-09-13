@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-transform
 ---
+
 {{CSSRef}}
 
 The **`text-transform`** CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
@@ -88,10 +89,10 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: none
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -99,7 +100,9 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 span {
   text-transform: none;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates no text transformation.
@@ -110,10 +113,10 @@ This demonstrates no text transformation.
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: capitalize
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -121,7 +124,9 @@ This demonstrates no text transformation.
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates text capitalization.
@@ -143,7 +148,9 @@ This demonstrates text capitalization.
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how initial punctuations of a word are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
@@ -165,7 +172,9 @@ This demonstrates how initial punctuations of a word are ignored. The keyword ta
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how initial symbols are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
@@ -187,7 +196,9 @@ This demonstrates how initial symbols are ignored. The keyword target the first 
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how the Dutch _ij_ digraph must be handled like one single letter.
@@ -198,10 +209,10 @@ This demonstrates how the Dutch _ij_ digraph must be handled like one single let
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: uppercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -209,7 +220,9 @@ This demonstrates how the Dutch _ij_ digraph must be handled like one single let
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates transforming the text to uppercase.
@@ -231,7 +244,9 @@ This demonstrates transforming the text to uppercase.
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how Greek vowels except disjunctive _eta_ should have no accent, and the accent on the first vowel of a vowel pair becomes a diaeresis on the second vowel.
@@ -242,10 +257,10 @@ This demonstrates how Greek vowels except disjunctive _eta_ should have no accen
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: lowercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -253,7 +268,9 @@ This demonstrates how Greek vowels except disjunctive _eta_ should have no accen
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates transforming the text to lowercase.
@@ -275,7 +292,9 @@ This demonstrates transforming the text to lowercase.
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how the Greek character sigma (`Σ`) is transformed into the regular lowercase sigma (`σ`) or the word-final variant (`ς`), according the context.
@@ -297,7 +316,9 @@ This demonstrates how the Greek character sigma (`Σ`) is transformed into the r
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot when transformed to lowercase.
@@ -319,7 +340,10 @@ This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot whe
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 Some characters exist in two formats: normal width and a full-width, with different Unicode code points. The full-width version is used to mix them smoothly with Asian ideographic characters.
@@ -341,7 +365,10 @@ Some characters exist in two formats: normal width and a full-width, with differ
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 The Japanese half-width katakana was used to represent katakana in 8-bit character codes. Unlike regular (full-width) katakana characters, a letter with dakuten (voiced sound mark) is represented as two code points, the body of letter and dakuten. The `full-width` combines these into a single code point when converting these characters into full-width.

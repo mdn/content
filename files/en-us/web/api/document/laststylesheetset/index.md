@@ -12,9 +12,11 @@ tags:
   - Stylesheets
   - lastStyleSheetSet
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.lastStyleSheetSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.lastStyleSheetSet`** property returns the last enabled style sheet set. This property's
 value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
@@ -36,7 +38,7 @@ if (!lastSheetSet) {
   lastSheetSet = 'Style sheet not yet changed';
 }
 else {
-  console.log('The last style sheet set is: ' + lastSheetSet);
+  console.log(`The last style sheet set is: ${lastSheetSet}`);
 }
 ```
 

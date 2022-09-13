@@ -10,8 +10,9 @@ tags:
   - action
   - form
   - form-action
-browser-compat: http.headers.csp.Content-Security-Policy.form-action
+browser-compat: http.headers.Content-Security-Policy.form-action
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** directive restricts the URLs which can be used as the target of form submissions from a given context.

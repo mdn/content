@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.add
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`add()`** method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the value, and stores the cloned value in the object store. This is for adding new records to an object store.
@@ -32,7 +33,7 @@ object. For updating existing records, you should use the
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 add(value, key)
 ```
@@ -70,8 +71,8 @@ one of the following types:
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an insert operation failed because the primary key constraint was
-        violated (due to an already existing record with the same primary key
-        value).
+    violated (due to an already existing record with the same primary key
+    value).
 
 ## Examples
 
@@ -84,7 +85,7 @@ event of success or failure. For a full working example, see our [To-do Notifica
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -103,11 +104,11 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed.</li>';
   };
 
-  transaction.onerror = function(event) {
+  transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
@@ -117,7 +118,7 @@ function addData() {
   // Make a request to add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
   };

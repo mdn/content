@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.whatToShow
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.whatToShow`** read-only property returns a
@@ -118,15 +119,15 @@ A bitmask.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const treeWalker = document.createTreeWalker(
+  document.body,
+  NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT },
+  false,
 );
-if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
-    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
-    // treeWalker will show comments
+if ((treeWalker.whatToShow === NodeFilter.SHOW_ALL) ||
+    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2)) >= NodeFilter.SHOW_COMMENT) {
+  // treeWalker will show comments
 }
 ```
 

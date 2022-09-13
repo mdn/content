@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 The {{SVGElement('path')}} element is the most powerful element in the SVG library of [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). It can be used to create lines, curves, arcs, and more.
@@ -18,7 +19,7 @@ The shape of a `<path>` element is defined by one parameter: {{ SVGAttr("d") }}.
 
 Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`,`10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
 
-All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., *move 10px up and 7px to the left from the last point*).
+All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., _move 10px up and 7px to the left from the last point_).
 
 Coordinates in the `d` parameter are **always unitless** and hence in the user coordinate system. Later, we will learn how paths can be transformed to suit other needs.
 
@@ -26,7 +27,7 @@ Coordinates in the `d` parameter are **always unitless** and hence in the user c
 
 There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes two parameters, a coordinate (`x`) and coordinate (`y`) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
 
-```html
+```
 M x y
 (or)
 m dx dy
@@ -49,7 +50,7 @@ In the following example there's only a point at (`10`,`10`). Note, though, that
 
 There are three commands that draw lines. The most generic is the "Line To" command, called with `L`. `L` takes two parameters—x and y coordinates—and draws a line from the current position to a new position.
 
-```html
+```
  L x y
  (or)
  l dx dy
@@ -57,7 +58,7 @@ There are three commands that draw lines. The most generic is the "Line To" comm
 
 There are two abbreviated forms for drawing horizontal and vertical lines. `H` draws a horizontal line, and `V` draws a vertical line. Both commands only take one parameter since they only move in one direction.
 
-```html
+```
  H x
  (or)
  h dx
@@ -87,7 +88,7 @@ An easy place to start is by drawing a shape. We will start with a rectangle (th
 
 We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
 
-```html
+```
  Z
  (or)
  z
@@ -117,7 +118,7 @@ There are three different commands that can be used to create smooth curves. Two
 
 The cubic curve, `C`, is the slightly more complex curve. Cubic Béziers take in two control points for each point. Therefore, to create a cubic Bézier, three sets of coordinates need to be specified.
 
-```html
+```
  C x1 y1, x2 y2, x y
  (or)
  c dx1 dy1, dx2 dy2, dx dy
@@ -147,7 +148,7 @@ The example above creates nine cubic Bézier curves. As the curves move toward t
 
 Several Bézier curves can be strung together to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, a shortcut version of the cubic Bézier can be used, designated by the command `S` (or `s`).
 
-```html
+```
  S x2 y2, x y
  (or)
  s dx2 dy2, dx dy
@@ -169,7 +170,7 @@ The other type of Bézier curve, the quadratic curve called with `Q`, is actuall
 
 > **Note:** The co-ordinate deltas for `q` are both relative to the previous point (that is, `dx` and `dy` are not relative to `dx1` and `dy1`).
 
-```html
+```
  Q x1 y1, x y
  (or)
  q dx1 dy1, dx dy
@@ -185,7 +186,7 @@ The other type of Bézier curve, the quadratic curve called with `Q`, is actuall
 
 As with the cubic Bézier curve, there is a shortcut for stringing together multiple quadratic Béziers, called with `T`.
 
-```html
+```
  T x y
  (or)
  t dx dy
@@ -213,7 +214,7 @@ For a given x-radius and y-radius, there are two ellipses that can connect any t
 
 Because of that, arcs require quite a few parameters:
 
-```html
+```
  A rx ry x-axis-rotation large-arc-flag sweep-flag x y
  a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```

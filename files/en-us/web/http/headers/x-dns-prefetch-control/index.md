@@ -6,9 +6,11 @@ tags:
   - HTTP
   - X-DNS-Prefetch-Control
   - header
+  - Non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{Non-standard_header}}
 
 The **`X-DNS-Prefetch-Control`** HTTP response header controls
 DNS prefetching, a feature by which browsers proactively perform domain name resolution
@@ -34,7 +36,7 @@ latency when the user clicks a link.
 
 ## Syntax
 
-```
+```http
 X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
 ```

@@ -10,6 +10,7 @@ tags:
   - Referrer Policy
 browser-compat: api.HTMLAreaElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The
@@ -60,12 +61,12 @@ A string; one of the following:
 ```
 
 ```js
-var elt = document.createElement("area");
+const elt = document.createElement("area");
 elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";
 elt.coords = "0,0,100,100";
-var map = document.getElementById("myMap");
+const map = document.getElementById("myMap");
 
 map.appendChild(elt);
 // When clicked, the area's link will not send a referrer header.

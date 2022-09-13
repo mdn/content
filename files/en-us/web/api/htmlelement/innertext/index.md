@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.innerText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`innerText`** property of the {{domxref("HTMLElement")}} interface represents the rendered text content of a node and its descendants.
@@ -36,15 +37,21 @@ Note how `innerText` is aware of things like {{htmlElement("br")}} elements, and
 ```html
 <h3>Source element:</h3>
 <p id="source">
-  <style>#source { color: red;  } #text { text-transform: uppercase; }</style>
-<span id=text>Take a look at<br>how this text<br>is interpreted
-       below.</span>
+  <style>
+    #source {
+      color: red;
+    }
+    #text {
+      text-transform: uppercase;
+    }
+  </style>
+  <span id="text">Take a look at<br />how this text<br />is interpreted below.</span>
   <span style="display:none">HIDDEN TEXT</span>
 </p>
 <h3>Result of textContent:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
 <h3>Result of innerText:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
 ```
 
 ### JavaScript
@@ -60,7 +67,7 @@ innerTextOutput.value = source.innerText;
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 450)}}
 
 ## Specifications
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.name
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.name`** property represents the name of
@@ -28,9 +29,9 @@ A string.
 ## Examples
 
 ```js
-var form1name = document.getElementById('form1').name;
+const form1name = document.getElementById('form1').name;
 
-if (form1name != document.form.form1) {
+if (form1name !== document.form.form1) {
   // Browser doesn't support this form of reference
 }
 ```

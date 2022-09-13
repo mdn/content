@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overflow-block
 ---
+
 {{CSSRef}}
 
 The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows the block start and block end edges of a box. This may be nothing, a scroll bar, or the overflow content.
@@ -93,14 +94,26 @@ The `overflow-block` property is specified as a single keyword chosen from the l
 #div3,
 #div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
 }
 
-#div1 { overflow-block: hidden; margin-bottom: 120px;}
-#div2 { overflow-block: scroll; margin-bottom: 120px;}
-#div3 { overflow-block: visible; margin-bottom: 120px;}
-#div4 { overflow-block: auto; margin-bottom: 120px;}
+#div1 {
+  overflow-block: hidden;
+  margin-bottom: 120px;
+}
+#div2 {
+  overflow-block: scroll;
+  margin-bottom: 120px;
+}
+#div3 {
+  overflow-block: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-block: auto;
+  margin-bottom: 120px;
+}
 ```
 
 ### Result

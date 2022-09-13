@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
+
 {{ APIRef("Mountain View APIRef Project") }}
 
 The **`getByteTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
@@ -18,7 +19,7 @@ If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, ex
 
 ## Syntax
 
-```js
+```js-nolint
 getByteTimeDomainData(array)
 ```
 
@@ -40,7 +41,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
 const bufferLength = analyser.fftSize;
@@ -62,14 +63,15 @@ function draw() {
   let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 
-    if(i === 0)
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
-    else
+    } else {
       canvasCtx.lineTo(x, y);
+    }
 
     x += sliceWidth;
   }

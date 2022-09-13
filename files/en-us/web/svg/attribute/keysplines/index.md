@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#KeySplinesAttribute
 ---
+
 {{SVGRef}}
 
 The **`keySplines`** attribute defines a set of [Bézier curve](/en-US/docs/Glossary/Bezier_curve) control points associated with the {{SVGAttr("keyTimes")}} list, defining a cubic Bézier function that controls interval pacing.
@@ -24,7 +25,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

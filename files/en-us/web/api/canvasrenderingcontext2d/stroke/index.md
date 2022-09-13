@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.stroke
 ---
+
 {{APIRef}}
 
 The
@@ -25,7 +26,7 @@ means that path intersections will still get filled.
 
 ## Syntax
 
-```js
+```js-nolint
 stroke()
 stroke(path)
 ```

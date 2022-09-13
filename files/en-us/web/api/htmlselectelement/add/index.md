@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.add
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement.add()`** method adds an element to the
@@ -17,7 +18,7 @@ collection of `option` elements for this `select` element.
 
 ## Syntax
 
-```js
+```js-nolint
 add(item)
 add(item, before)
 ```
@@ -47,9 +48,9 @@ None ({{jsxref("undefined")}}).
 ### Creating Elements from Scratch
 
 ```js
-var sel = document.createElement("select");
-var opt1 = document.createElement("option");
-var opt2 = document.createElement("option");
+const sel = document.createElement("select");
+const opt1 = document.createElement("option");
+const opt2 = document.createElement("option");
 
 opt1.value = "1";
 opt1.text = "Option: Value 1";
@@ -73,18 +74,16 @@ sel.add(opt2, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt1);
 sel.add(opt2);
-...
 ```
 
 ### Append to an Existing Collection
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 
@@ -111,17 +110,15 @@ sel.add(opt, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt);
-...
 ```
 
 ### Inserting to an Existing Collection
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 

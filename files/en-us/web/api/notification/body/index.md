@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Notification.body
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`body`** read-only property of the
@@ -27,11 +28,11 @@ A string.
 
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
-  var options = {
+  const options = {
       body: theBody,
       icon: theIcon
   }
-  var n = new Notification(theTitle, options);
+  const n = new Notification(theTitle, options);
 
   console.log(n.body);
 }

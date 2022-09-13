@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState.stepMismatch
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`stepMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's `step` attribute.
@@ -22,7 +23,7 @@ Given the following:
 <input type="number" min="20" max="40" step="2"/>
 ```
 
-if `(value - min) % 2 != 0`, `stepMismatch` will be true.
+if `(value - min) % 2 !== 0`, `stepMismatch` will be true.
 
 If true, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 

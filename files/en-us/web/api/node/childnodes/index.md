@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.childNodes
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`childNodes`** property of the {{domxref("Node")}} interface returns a live
@@ -41,14 +42,14 @@ A live {{domxref("NodeList")}} containing the children of the node.
 ### Simple usage
 
 ```js
-// parg is an object reference to a <p> element
+// Note that parg is an object reference to a <p> element
 
 // First check that the element has child nodes
 if (parg.hasChildNodes()) {
   let children = parg.childNodes;
 
-  for (let i = 0; i < children.length; i++) {
-    // do something with each child as children[i]
+  for (const node of children) {
+    // Do something with each child as children[i]
     // NOTE: List is live! Adding or removing children will change the list's `length`
   }
 }
@@ -59,7 +60,6 @@ if (parg.hasChildNodes()) {
 ```js
 // This is one way to remove all children from a node
 // box is an object reference to an element
-
 while (box.firstChild) {
     //The list is LIVE so it will re-index each call
     box.removeChild(box.firstChild);

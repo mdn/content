@@ -14,6 +14,7 @@ tags:
   - perspective
   - rotation
 ---
+
 {{CSSRef}}
 
 By modifying the coordinate space, **CSS transforms** change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
@@ -232,8 +233,10 @@ The CSS establishes classes that can be used to set the perspective to different
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -525,7 +528,7 @@ This example shows cubes with popular `perspective-origin` values.
 
 /* Make the layout a little nicer */
 section {
-  background-color: #EEE;
+  background-color: #eee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -542,6 +545,6 @@ Once you have done this, you can work on the element in the 3D space.
 
 ## See also
 
-- [Using device orientation with 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
+- [Using device orientation with 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)
 - [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

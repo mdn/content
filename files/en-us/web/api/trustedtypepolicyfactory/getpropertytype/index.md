@@ -10,13 +10,14 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element's property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyType(tagName, property)
 getPropertyType(tagName, property, elementNS)
 ```
@@ -27,7 +28,7 @@ getPropertyType(tagName, property, elementNS)
   - : A string containing the name of an HTML tag.
 - `property`
   - : A string containing a property, for example `"innerHTML"`.
-- `elementNS`{{optional_inline}}
+- `elementNS` {{optional_inline}}
   - : A string containing a namespace, if empty defaults to the HTML namespace.
 
 ### Return value

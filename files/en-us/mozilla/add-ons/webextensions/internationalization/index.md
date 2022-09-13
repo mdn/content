@@ -12,6 +12,7 @@ tags:
   - placeholders
   - predefined messages
 ---
+
 {{AddonSidebar}}
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
@@ -247,19 +248,19 @@ Take the following example:
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "color", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, ...}`
+        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
 

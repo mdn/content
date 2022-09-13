@@ -8,6 +8,7 @@ tags:
   - Window
 browser-compat: api.Window.beforeunload_event
 ---
+
 {{APIRef}}
 
 The **`beforeunload`** event is fired when the window, the document and its resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
@@ -25,13 +26,13 @@ The HTML specification states that calls to {{domxref("window.alert()")}}, {{dom
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeunload', event => { });
-onbeforeunload = event => { };
+addEventListener('beforeunload', (event) => { });
+onbeforeunload = (event) => { };
 ```
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("BeforeUnloadEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event handler aliases
 

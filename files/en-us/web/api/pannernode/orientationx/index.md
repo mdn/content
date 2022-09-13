@@ -10,6 +10,7 @@ tags:
   - orientationX
 browser-compat: api.PannerNode.orientationX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`orientationX`** property of the {{
@@ -61,7 +62,7 @@ It's more useful to offset the angle by -90°, which means the {{domxref("Panner
 ```js
 // this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
-const yRotationToVector = degrees => {
+const yRotationToVector = (degrees) => {
   // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
   // using cosine and sine here ensures the output values are always normalized
@@ -87,16 +88,16 @@ const panner = new PannerNode(context);
 panner.panningModel = 'HRTF';
 ```
 
-Next, we set up the *cone* of our spatialized sound, determining the area in
+Next, we set up the _cone_ of our spatialized sound, determining the area in
 which it can be heard:
 
 ```js
 // this value determines the size of the area in which the sound volume is constant
-// if coneInnerAngle == 30, it means that when the sound is rotated
+// if coneInnerAngle === 30, it means that when the sound is rotated
 // by at most 15 (30/2) degrees either direction, the volume won't change
 panner.coneInnerAngle = 30;
 // this value determines the size of the area in which the sound volume decreases gradually
-// if coneOuterAngle == 45 and coneInnerAngle == 30, it means that when the sound is rotated
+// if coneOuterAngle === 45 and coneInnerAngle === 30, it means that when the sound is rotated
 // by between 15 (30/2) and 22.5 (45/2) degrees either direction,
 // the volume will decrease gradually
 panner.coneOuterAngle = 45;

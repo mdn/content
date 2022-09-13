@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRWebGLSubImage.colorTexture
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`colorTexture`** property of the {{domxref("XRWebGLSubImage")}} interface represents the color {{domxref("WebGLTexture")}} object for the {{domxref("XRCompositionLayer")}} to render.
 
@@ -25,7 +27,7 @@ An opaque {{domxref("WebGLTexture")}}. See [WebXR opaque textures](/en-US/docs/W
 
 ### Using `colorTexture`
 
-The `colorTexture` property can be passed to {{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}}  to attach the color texture to a framebuffer.
+The `colorTexture` property can be passed to {{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}} to attach the color texture to a framebuffer.
 
 ```js
 const xrGlBinding = new XRWebGLBinding(xrSession, gl);
@@ -39,11 +41,11 @@ function onXRFrame(time, xrFrame) {
   xrSession.requestAnimationFrame(onXRFrame);
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-  let viewport = xrGlBinding.getSubImage(layer, xrFrame).viewport;
+  const viewport = xrGlBinding.getSubImage(layer, xrFrame).viewport;
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
-  for (let view in xrViewerPose.views) {
-    let subImage = xrGlBinding.getViewSubImage(layer, view);
+  for (const view in xrViewerPose.views) {
+    const subImage = xrGlBinding.getViewSubImage(layer, view);
     gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
       subImage.colorTexture, 0, subImage.imageIndex);
     gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,

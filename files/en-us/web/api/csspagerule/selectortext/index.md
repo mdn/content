@@ -10,6 +10,7 @@ tags:
   - CSSPageRule
 browser-compat: api.CSSPageRule.selectorText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets and sets the selectors associated with the `CSSPageRule`.

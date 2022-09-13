@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.append
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.append()`** method
@@ -30,10 +31,10 @@ Differences from {{domxref("Node.appendChild()")}}:
 
 ## Syntax
 
-```js
+```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* ... ,*/ paramN)
+append(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

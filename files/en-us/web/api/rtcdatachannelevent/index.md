@@ -11,6 +11,7 @@ tags:
   - datachannel
 browser-compat: api.RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent`** interface
@@ -35,7 +36,7 @@ _Also inherits properties from {{DOMxRef("Event")}}._
 In this example, the `datachannel` event handler is set up to save the data channel reference and set up handlers for the events which need to be monitored. The {{domxref("RTCDataChannelEvent.channel", "channel")}} property provides the {{domxref("RTCDataChannel")}} representing the connection to the other peer.
 
 ```js
-pc.ondatachannel = function(event) {
+pc.ondatachannel = (event) => {
   inboundDataChannel = event.channel;
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;

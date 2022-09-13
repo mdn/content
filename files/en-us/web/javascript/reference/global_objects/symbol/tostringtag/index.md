@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.toStringTag
 ---
+
 {{JSRef}}
 
 The **`Symbol.toStringTag`** well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.
@@ -68,7 +69,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 Due to a [WebIDL spec change](https://github.com/whatwg/webidl/pull/357) in mid-2020, browsers are adding a `Symbol.toStringTag` property to all DOM prototype objects. For example, to access the `Symbol.toStringTag` property on {{domxref("HTMLButtonElement")}}:
 
 ```js
-let test = document.createElement('button');
+const test = document.createElement('button');
 test.toString(); // Returns [object HTMLButtonElement]
 test[Symbol.toStringTag];  // Returns HTMLButtonElement
 ```

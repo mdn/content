@@ -34,7 +34,7 @@ There are a few steps involved to allow-list an inline script using the nonce me
 From your web server, generate a random base64-encoded string of at least 128 bits of data from a cryptographically secure
 random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:
 
-```css
+```js
 const crypto = require('crypto');
 crypto.randomBytes(16).toString('base64');
 // '8IBTHwOdqNKAWeKl7plt8g=='
@@ -54,7 +54,7 @@ Finally, you'll need to send the nonce value in a
 [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) header
 (prepend `nonce-`):
 
-```
+```http
 Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
 ```
 
@@ -76,7 +76,7 @@ Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms
 from content attributes like this:
 
 ```css example-bad
-script[nonce~=whatever] {
+script[nonce~="whatever"] {
   background: url("https://evil.com/nonce?whatever");
 }
 ```

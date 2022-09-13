@@ -12,6 +12,7 @@ tags:
   - scrollY
 browser-compat: api.Window.scrollY
 ---
+
 {{APIRef("CSSOM View")}}
 
 The read-only **`scrollY`** property
@@ -25,12 +26,12 @@ pixels the document is scrolled horizontally from the {{domxref("Window.scrollX"
 
 ## Value
 
-In practice, the returned value is a double-precision floating-point value indicating
-the number of pixels the document is currently scrolled vertically from the origin,
-where a positive value means the content is scrolled to upward. If the document is
-rendered on a subpixel-precise device, then the returned value is also subpixel-precise
-and may contain a decimal component. If the document isn't scrolled at all up or down,
-then `scrollY` is 0.
+In practice, the returned value is a double-precision floating-point value with the range of
+2^(-1022) to 2^(+1023). It indicates the number of pixels the document is currently scrolled
+vertically from the origin, where a positive value means the content is scrolled to upward.
+If the document is rendered on a subpixel-precise device, then the returned value is also
+subpixel-precise and may contain a decimal component. If the document isn't scrolled at all
+up or down, then `scrollY` is 0.
 
 > **Note:** If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
 
@@ -61,19 +62,6 @@ property:
 
 ```js
 window.pageYOffset === window.scrollY; // always true
-```
-
-For cross-browser compatibility, use `window.pageYOffset` instead of
-`window.scrollY`. **Additionally**, older versions of Internet
-Explorer (< 9) do not support either property and must be worked around by checking
-other non-standard properties. A fully compatible example:
-
-```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 ```
 
 ## Specifications

@@ -4,6 +4,7 @@ slug: Web/Guide/AJAX/Community
 tags:
   - AJAX
 ---
+
 If you know of useful mailing lists, newsgroups, forums, or other communities related to AJAX, please link to them here.
 
 ## Ajax Resources
@@ -15,4 +16,4 @@ If you know of useful mailing lists, newsgroups, forums, or other communities re
 - [community.tableau.com](https://community.tableau.com/search.jspa?q=ajax): Community support forum and courses available for Ajax
 - [codementor.io](https://www.codementor.io/community/search?q=ajax): Social platform with Ajax forums and tutorials
 - [LinkedIn Learning](https://www.linkedin.com/learning/search?keywords=ajax): Tutorials available for learning the fundamentals of Ajax
-- [Ajax Interview Questions and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/) Interwiki links
+- [Ajax Interview Questions and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)

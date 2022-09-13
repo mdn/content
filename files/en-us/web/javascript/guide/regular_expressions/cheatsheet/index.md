@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RegExp
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
@@ -23,6 +24,63 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>
+        <code>[xyz]<br />[a-c]</code>
+      </td>
+      <td>
+        <p>
+          A character class. Matches any one of the enclosed characters. You can
+          specify a range of characters by using a hyphen, but if the hyphen
+          appears as the first or last character enclosed in the square brackets,
+          it is taken as a literal hyphen to be included in the character class
+          as a normal character.
+        </p>
+        <p>
+          For example, <code>[abcd]</code> is the same as <code>[a-d]</code>.
+          They match the "b" in "brisket", and the "a" or the "c" in "arch",
+          but not the "-" (hyphen) in "non-profit".
+        </p>
+        <p>
+          For example, <code>[abcd-]</code> and <code>[-abcd]</code> match the
+          "b" in "brisket", the "a" or the "c" in "arch", and the "-" (hyphen)
+          in "non-profit".
+        </p>
+        <p>
+          For example, <code>[\w-]</code> is the same as
+          <code>[A-Za-z0-9_-]</code>. They both match any of the characters in
+          "no_reply@example-server.com" except for the "@" and the ".".
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <code>[^xyz]<br />[^a-c]</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          A negated or complemented character class. That is, it matches
+          anything that is not enclosed in the brackets. You can specify a range
+          of characters by using a hyphen, but if the hyphen appears as the
+          first or last character enclosed in the square brackets, it is taken as
+          a literal hyphen to be included in the character class as a normal
+          character. For example, <code>[^abc]</code> is the same as
+          <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in
+          "chop".
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> The ^ character may also indicate the
+            <a
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+              >beginning of input</a
+            >.
+          </p>
+        </div>
+      </td>
+    </tr>
     <tr>
       <td><code>.</code></td>
       <td>
@@ -46,7 +104,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           including newlines.
         </p>
         <p>
-          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
+          The <code>s</code> "dotAll" flag allows the dot to
           also match line terminators.
         </p>
       </td>
@@ -246,6 +304,23 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         </div>
       </td>
     </tr>
+    <tr>
+      <td>
+        <code><em>x</em>|<em>y</em></code>
+      </td>
+      <td>
+        <p>
+          <strong>Disjunction: </strong>Matches either "x" or "y". Each component, separated by a pipe (<code>|</code>), is called an <em>alternative</em>. For example,
+          <code>/green|red/</code> matches "green" in "green apple" and "red" in
+          "red apple".
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> A disjunction is another way to specify "a set of choices", but it's not a character class. Disjunctions are not atoms — you need to use a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">group</a> to make it part of a bigger pattern. <code>[abc]</code> is functionally equivalent to <code>(?:a|b|c)</code>.
+          </p>
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -277,8 +352,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
             <strong>Note:</strong> This character has a different meaning when
             it appears at the start of a
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
-              >group</a
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+              >character class</a
             >.
           </p>
         </div>
@@ -417,9 +492,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
   </tbody>
 </table>
 
-## Groups and ranges
+## Groups and backreferences
 
-[Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) indicate groups and ranges of expression characters.
+[Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) indicate groups of expression characters.
 
 <table class="standard-table">
   <thead>
@@ -429,75 +504,6 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
-        <code><em>x</em>|<em>y</em></code>
-      </td>
-      <td>
-        <p>
-          Matches either "x" or "y". For example,
-          <code>/green|red/</code> matches "green" in "green apple" and "red" in
-          "red apple".
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>[xyz]<br />[a-c]</code>
-      </td>
-      <td>
-        <p>
-          A character class. Matches any one of the enclosed characters. You can
-          specify a range of characters by using a hyphen, but if the hyphen
-          appears as the first or last character enclosed in the square brackets
-          it is taken as a literal hyphen to be included in the character class
-          as a normal character.
-        </p>
-        <p>
-          For example, <code>[abcd]</code> is the same as <code>[a-d]</code>.
-          They match the "b" in "brisket", and the "a" or the "c" in "arch",
-          but not the "-" (hyphen) in "non-profit".
-        </p>
-        <p>
-          For example, <code>[abcd-]</code> and <code>[-abcd]</code> match the
-          "b" in "brisket", the "a" or the "c" in "arch", and the "-" (hyphen)
-          in "non-profit".
-        </p>
-        <p>
-          For example, <code>[\w-]</code> is the same as
-          <code>[A-Za-z0-9_-]</code>. They both match any of the characters in
-          "no_reply@example-server.com" except for the "@" and the ".".
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          <code>[^xyz]<br />[^a-c]</code>
-        </p>
-      </td>
-      <td>
-        <p>
-          A negated or complemented character class. That is, it matches
-          anything that is not enclosed in the brackets. You can specify a range
-          of characters by using a hyphen, but if the hyphen appears as the
-          first or last character enclosed in the square brackets it is taken as
-          a literal hyphen to be included in the character class as a normal
-          character. For example, <code>[^abc]</code> is the same as
-          <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in
-          "chop".
-        </p>
-        <div class="notecard note">
-          <p>
-            <strong>Note:</strong> The ^ character may also indicate the
-            <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
-              >beginning of input</a
-            >.
-          </p>
-        </div>
-      </td>
-    </tr>
     <tr>
       <td><code>(<em>x</em>)</code></td>
       <td>
@@ -513,9 +519,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           usually just the order of the capturing groups themselves. This
           becomes important when capturing groups are nested. Matches are
           accessed using the index of the result's elements (<code
-            >[1], ..., [n]</code
+            >[1], …, [n]</code
           >) or from the predefined <code>RegExp</code> object's properties
-          (<code>$1, ..., $9</code>).
+          (<code>$1, …, $9</code>).
         </p>
         <p>
           Capturing groups have a performance penalty. If you don't need the
@@ -526,7 +532,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
+              >String.prototype.match()</a
             ></code
           >
           won't return groups if the <code>/.../g</code> flag is set. However,
@@ -534,11 +540,36 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
+              >String.prototype.matchAll()</a
             ></code
           >
           to get all matches.
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>(?&#x3C;Name>x)</code></td>
+      <td>
+        <p>
+          <strong>Named capturing group: </strong>Matches "x" and stores it on
+          the groups property of the returned matches under the name specified
+          by <code>&#x3C;Name></code>. The angle brackets (<code>&#x3C;</code>
+          and <code>></code>) are required for group name.
+        </p>
+        <p>
+          For example, to extract the United States area code from a phone
+          number, we could use <code>/\((?&#x3C;area>\d\d\d)\)/</code>. The
+          resulting number would appear under <code>matches.groups.area</code>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>(?:<em>x</em>)</code></td>
+      <td>
+        <strong>Non-capturing group: </strong>Matches "x" but does not remember
+        the match. The matched substring cannot be recalled from the resulting
+        array's elements (<code>[1], …, [n]</code>) or from the predefined
+        <code>RegExp</code> object's properties (<code>$1, …, $9</code>).
       </td>
     </tr>
     <tr>
@@ -575,31 +606,6 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         </div>
       </td>
     </tr>
-    <tr>
-      <td><code>(?&#x3C;Name>x)</code></td>
-      <td>
-        <p>
-          <strong>Named capturing group: </strong>Matches "x" and stores it on
-          the groups property of the returned matches under the name specified
-          by <code>&#x3C;Name></code>. The angle brackets (<code>&#x3C;</code>
-          and <code>></code>) are required for group name.
-        </p>
-        <p>
-          For example, to extract the United States area code from a phone
-          number, we could use <code>/\((?&#x3C;area>\d\d\d)\)/</code>. The
-          resulting number would appear under <code>matches.groups.area</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>(?:<em>x</em>)</code></td>
-      <td>
-        <strong>Non-capturing group: </strong>Matches "x" but does not remember
-        the match. The matched substring cannot be recalled from the resulting
-        array's elements (<code>[1], ..., [n]</code>) or from the predefined
-        <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).
-      </td>
-    </tr>
   </tbody>
 </table>
 
@@ -607,7 +613,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
-> **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
 
 <table class="standard-table">
   <thead>
@@ -739,20 +745,20 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 ```js
 // Non-binary values
-\p{UnicodePropertyValue}
-\p{UnicodePropertyName=UnicodePropertyValue}
+/\p{UnicodePropertyValue}/
+/\p{UnicodePropertyName=UnicodePropertyValue}/
 
 // Binary and non-binary values
-\p{UnicodeBinaryPropertyName}
+/\p{UnicodeBinaryPropertyName}/
 
 // Negation: \P is negated \p
-\P{UnicodePropertyValue}
-\P{UnicodeBinaryPropertyName}
+/\P{UnicodePropertyValue}/
+/\P{UnicodeBinaryPropertyName}/
 ```
 
-- UnicodeBinaryPropertyName
+- `UnicodeBinaryPropertyName`
   - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) for more info.
-- UnicodePropertyName
+- `UnicodePropertyName`
 
   - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
 
@@ -762,7 +768,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
     See also [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
-- UnicodePropertyValue
-  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the *`UnicodePropertyName`* part and equals sign may be omitted. If a *`UnicodePropertyName`* is specified, the value must correspond to the property type given.
+- `UnicodePropertyValue`
+  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the `UnicodePropertyName` part and equals sign may be omitted. If a `UnicodePropertyName` is specified, the value must correspond to the property type given.
 
-> **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples
+> **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples.

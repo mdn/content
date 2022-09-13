@@ -13,6 +13,7 @@ tags:
   - cmp
 browser-compat: api.IDBFactory.cmp
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`cmp()`** method of the {{domxref("IDBFactory")}}
@@ -30,7 +31,7 @@ operations, such as storing and iterating.
 
 ## Syntax
 
-```js
+```js-nolint
 cmp(first, second)
 ```
 
@@ -60,10 +61,10 @@ possible values and their meanings:
 ## Examples
 
 ```js
-var a = 1;
-var b = 2;
-var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+const a = 1;
+const b = 2;
+const result = window.indexedDB.cmp(a, b);
+console.log(`Comparison results: ${result}`);
 ```
 
 ## Specifications

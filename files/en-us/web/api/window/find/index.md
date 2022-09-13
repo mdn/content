@@ -14,6 +14,7 @@ tags:
   - find
 browser-compat: api.Window.find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
 > **Note:** Support for `Window.find()` might change in future
@@ -23,7 +24,7 @@ The **`Window.find()`** method finds a string in a window sequentially.
 
 ## Syntax
 
-```js
+```js-nolint
 find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog)
 ```
 
@@ -52,7 +53,7 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 
 ```js
 function findString(text) {
-  document.querySelector("#output").textContent="String found? " + window.find(text);
+  document.querySelector("#output").textContent=`String found? ${window.find(text)}`;
 }
 ```
 

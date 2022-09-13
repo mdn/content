@@ -15,6 +15,7 @@ tags:
   - messaging
 browser-compat: api.ServiceWorkerGlobalScope.push_event
 ---
+
 {{APIRef("Push API")}}
 
 The **`push`** event is sent to a service worker's global scope (represented by the {{domxref("ServiceWorkerGlobalScope")}} interface) when the service worker has received a push message.
@@ -26,14 +27,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('periodicsync', event => { });
+addEventListener('periodicsync', (event) => { });
 
-onperiodicsync = event => { };
+onperiodicsync = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PushEvent")}}
 
@@ -41,7 +42,7 @@ An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its parent, {{domxref("PushEvent")}}. Additional properties:_
 
-- {{domxref("PushEvent.data")}} {{readonlyinline}}
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
 ## Example
@@ -49,7 +50,7 @@ _Inherits properties from its parent, {{domxref("PushEvent")}}. Additional prope
 This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.
 
 ```js
-self.addEventListener("push", event => {
+self.addEventListener("push", (event) => {
   let message = event.data.json();
 
   switch(message.type) {

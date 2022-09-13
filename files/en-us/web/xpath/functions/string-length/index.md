@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `string-length` function returns a number equal to the number of characters in a given string.
@@ -17,7 +18,7 @@ string-length( [string] )
 
 ### Arguments
 
-- _`string`_(optional)
+- `string` (optional)
   - : The string to evaluate. If omitted, string used will be the same as the context node converted to a string.
 
 ### Returns

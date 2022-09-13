@@ -6,7 +6,6 @@ tags:
   - Element
   - HTML
   - HTML embedded content
-  - HTML5
   - HTML:Embedded content
   - HTML:Flow content
   - HTML:Phrasing content
@@ -17,6 +16,7 @@ tags:
   - sound
 browser-compat: html.elements.audio
 ---
+
 {{HTMLRef}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
@@ -38,7 +38,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
 - {{htmlattrdef("controls")}}
+
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
+
+- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
+
+  - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
+
+    The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
+
 - {{htmlattrdef("crossorigin")}}
 
   - : This enumerated attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
@@ -52,7 +60,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
 
-  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
+  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     > **Note:** In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
@@ -90,7 +98,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("audioprocess")}}</td>
+      <td>{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}}</td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
         ready to be processed.
@@ -116,7 +124,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       </td>
     </tr>
     <tr>
-      <td>{{Event("complete")}}</td>
+      <td>{{domxref("OfflineAudioContext/complete_event", "complete")}}</td>
       <td>
         The rendering of an {{DOMxRef("OfflineAudioContext")}} is
         terminated.
@@ -243,8 +251,8 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 <audio controls>
   <source src="myAudio.mp3" type="audio/mpeg">
   <source src="myAudio.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is
-     a <a href="myAudio.mp3">link to the audio</a> instead.</p>
+  <p>Download <a href="myAudio.mp3">MP3</a> or
+     <a href="myAudio.ogg">OGG</a> audio.</p>
 </audio>
 ```
 
@@ -273,7 +281,7 @@ To get a consistent look and feel across browsers, you'll need to create custom 
 
 ### Detecting addition and removal of tracks
 
-You can detect when tracks are added to and removed from an `<audio>` element using the {{event("addtrack")}} and {{event("removetrack")}} events. However, these events aren't sent directly to the `<audio>` element itself. Instead, they're sent to the track list object within the `<audio>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
+You can detect when tracks are added to and removed from an `<audio>` element using the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events. However, these events aren't sent directly to the `<audio>` element itself. Instead, they're sent to the track list object within the `<audio>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
@@ -287,20 +295,20 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
 ```js
-var elem = document.querySelector("audio");
+const elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{event("addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events.
 
 ## Examples
 
@@ -313,7 +321,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 <audio
   src="AudioTest.ogg"
   autoplay>
-  Your browser does not support the <code>audio</code> element.
+  <a href="AudioTest.ogg">Download OGG audio</a>.
 </audio>
 ```
 
@@ -326,7 +334,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 ```html
 <audio controls>
   <source src="foo.wav" type="audio/wav">
-  Your browser does not support the <code>audio</code> element.
+  <a href="foo.wav">Download WAV audio</a>.
 </audio>
 ```
 
@@ -373,8 +381,7 @@ Also it's a good practice to provide some content (such as the direct download l
   <source src="myAudio.mp3" type="audio/mpeg">
   <source src="myAudio.ogg" type="audio/ogg">
   <p>
-    Your browser doesn't support HTML5 audio.
-    Here is a <a href="myAudio.mp3">link to download the audio</a> instead.
+    Download <a href="myAudio.mp3">MP3</a> or <a href="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```

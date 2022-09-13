@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transition-duration
 ---
+
 {{CSSRef}}
 
 The **`transition-duration`** [CSS](/en-US/docs/Web/CSS) property sets the length of time a transition animation should take to complete. By default, the value is `0s`, meaning that no animation will occur.
@@ -54,13 +55,13 @@ transition-duration: unset;
 #### HTML
 
 ```html
-  <div class="box duration-1">0.5 seconds</div>
+<div class="box duration-1">0.5 seconds</div>
 
-  <div class="box duration-2">2 seconds</div>
+<div class="box duration-2">2 seconds</div>
 
-  <div class="box duration-3">4 seconds</div>
+<div class="box duration-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS
@@ -105,7 +106,7 @@ transition-duration: unset;
 ```js
 function change() {
   const elements = document.querySelectorAll("div.box");
-  for (let element of elements) {
+  for (const element of elements) {
     element.classList.toggle("transformed-state");
   }
 }

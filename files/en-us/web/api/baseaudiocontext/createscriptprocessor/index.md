@@ -10,8 +10,10 @@ tags:
   - Reference
   - Web Audio API
   - createScriptProcessor
+  - Deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
@@ -21,7 +23,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
@@ -92,20 +94,20 @@ function getData() {
   request = new XMLHttpRequest();
   request.open('GET', 'viper.ogg', true);
   request.responseType = 'arraybuffer';
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
       myBuffer = buffer;
       source.buffer = myBuffer;
     },
-    function(e){"Error with decoding audio data" + e.err});
+    (e) => console.error(`Error with decoding audio data: ${e.err}`));
   }
   request.send();
 }
 
 // Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // The input buffer is the song we loaded earlier
   const inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -131,14 +133,14 @@ scriptNode.onaudioprocess = function(audioProcessingEvent) {
 getData();
 
 // wire up play button
-playButton.onclick = function() {
+playButton.onclick = () => {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
 }
 
 // When the buffer source stops playing, disconnect everything
-source.onended = function() {
+source.onended = () => {
   source.disconnect(scriptNode);
   scriptNode.disconnect(audioCtx.destination);
 }

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
   - Method
   - Reference
   - Web Components
@@ -13,6 +12,7 @@ tags:
   - get
 browser-compat: api.CustomElementRegistry.get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`get()`** method of the
@@ -21,7 +21,7 @@ previously-defined custom element.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

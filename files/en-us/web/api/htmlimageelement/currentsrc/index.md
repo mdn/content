@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: api.HTMLImageElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
@@ -48,20 +49,18 @@ document.
 ### JavaScript
 
 ```js
-var clockImage = document.querySelector("img");
-let p = document.createElement("p");
+const clockImage = document.querySelector("img");
+const p = document.createElement("p");
 
-if (!clockImage.currentSrc.endsWith("200px.png")) {
-  p.innerText = "Using the 200px image.";
-} else {
-  p.innerText = "Using the 400px image!";
-}
+p.textContent = clockImage.currentSrc.endsWith("200px.png")
+  ? "Using the 400px image!"
+  : "Using the 200px image.";
 document.body.appendChild(p);
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 370)}}
+{{EmbedLiveSample("Examples", 640, 370)}}
 
 ## Specifications
 

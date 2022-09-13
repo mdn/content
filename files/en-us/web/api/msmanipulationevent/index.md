@@ -12,6 +12,7 @@ tags:
   - Non-standard
   - Reference
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_Header}}
 
 **`MSManipulationEvent`** provides contextual information when contact is made to the screen and an element is manipulated.
@@ -20,7 +21,7 @@ This proprietary method is specific to Internet Explorer.
 
 ### Events
 
-{{Event("MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.
+{{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.
 
 ### Methods
 
@@ -28,16 +29,16 @@ This proprietary method is specific to Internet Explorer.
 
 ### Properties
 
-| Property                                      | Description                                                                          |
-| --------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `currentState`{{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
-| `inertiaDestinationX`{{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
-| `inertiaDestinationY`{{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |
-| `lastState`{{ReadOnlyInline}}           | Returns the last state after a manipulation change event.                            |
+| Property                                 | Description                                                                          |
+| ---------------------------------------- | ------------------------------------------------------------------------------------ |
+| `currentState` {{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
+| `inertiaDestinationX` {{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
+| `inertiaDestinationY` {{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |
+| `lastState` {{ReadOnlyInline}}           | Returns the last state after a manipulation change event.                            |
 
 ## Example
 
-```js
+```
 interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;
@@ -58,5 +59,5 @@ interface MSManipulationEvent extends UIEvent {
 ## See also
 
 - {{DOMxRef("TouchEvent")}}
-- {{Event("MSManipulationStateChanged")}}
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}
 - [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

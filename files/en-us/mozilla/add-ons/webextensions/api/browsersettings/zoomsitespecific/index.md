@@ -11,11 +11,12 @@ tags:
   - zoomSiteSpecific
 browser-compat: webextensions.api.browserSettings.zoomSiteSpecific
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
-This property sets the [configuration setting](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) `browser.zoom.siteSpecific`,  which controls how zoom settings are applied to sites and tabs.
+This property sets the [configuration setting](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) `browser.zoom.siteSpecific`, which controls how zoom settings are applied to sites and tabs.
 
 If `browser.zoom.siteSpecific` is true, zoom operations apply to all pages from the same site so that:
 

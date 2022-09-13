@@ -11,6 +11,7 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.register
 ---
+
 {{AddonSidebar}}
 
 This method enables user scripts to be registered from an extension's pages (such as the background page).
@@ -21,11 +22,11 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
-….
+// …
 await registeredUserScript.unregister();
 ```
 
@@ -42,7 +43,7 @@ await registeredUserScript.unregister();
     - `allFrames` {{Optional_Inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `cookieStoreId` {{optional_inline}}
-      - : An array of cookie store ID strings or a string containing a cookie store ID. Registers the user script in the tabs that belong to the cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if extensions are enabled in private browsing), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these.
+      - : An array of cookie store ID strings or a string containing a cookie store ID. Registers the user script in the tabs that belong to the cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if the [extension is enabled in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing)), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these.
     - `excludeGlobs` {{Optional_Inline}}
       - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `excludeMatches` {{Optional_Inline}}

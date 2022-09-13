@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorResponse.clientDataJSON
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`clientDataJSON`** property of the
@@ -66,8 +67,8 @@ function arrayBufferToStr(buf) {
 }
 
 // pk is a PublicKeyCredential that is the result of a create() or get() Promise
-var clientDataStr = arrayBufferToStr(pk.clientDataJSON);
-var clientDataObj = JSON.parse(clientDataStr);
+const clientDataStr = arrayBufferToStr(pk.clientDataJSON);
+const clientDataObj = JSON.parse(clientDataStr);
 
 console.log(clientDataObj.type);      // "webauthn.create" or "webauthn.get"
 console.log(clientDataObj.challenge); // base64 encoded String containing the original challenge

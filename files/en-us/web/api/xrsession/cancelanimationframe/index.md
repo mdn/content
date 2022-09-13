@@ -17,7 +17,8 @@ tags:
   - cancelAnimationFrame()
 browser-compat: api.XRSession.cancelAnimationFrame
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`cancelAnimationFrame()`** method of
 the {{domxref("XRSession")}} interface cancels an animation frame which was previously
@@ -26,7 +27,7 @@ requested by calling {{DOMxRef("XRSession.requestAnimationFrame",
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(handle)
 ```
 

@@ -12,14 +12,15 @@ tags:
   - Reference
 browser-compat: api.BlobEvent.BlobEvent
 ---
-{{APIRef("Media Capture and Streams")}}
+
+{{APIRef("Media Recorder API")}}
 
 The **`BlobEvent()`** constructor returns a newly created
 {{domxref("BlobEvent")}} object with an associated {{domxref("Blob")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new BlobEvent(type, options)
 ```
 

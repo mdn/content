@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.isContentEditable`** read-only property
@@ -43,7 +44,7 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 

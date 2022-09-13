@@ -15,7 +15,7 @@ browser-compat: html.global_attributes.itemscope
 
 **`itemscope`** is a boolean [global attribute](/en-US/docs/Web/HTML/Global_attributes) that defines the scope of associated metadata. Specifying the **`itemscope`** attribute for an element creates a new item, which results in a number of name-value pairs that are associated with the element.
 
-A related attribute, {{htmlattrxref("itemtype")}}, is used to specify the valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context. In each of the following examples, the vocabulary is from [schema.org](https://schema.org/).
+A related attribute, [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype), is used to specify the valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context. In each of the following examples, the vocabulary is from [schema.org](https://schema.org/).
 
 Every HTML element may have an `itemscope` attribute specified. An `itemscope` element that does not have an associated `itemtype` must have an associated `itemref`.
 
@@ -77,7 +77,7 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
 
 ### Representing structured data for a recipe
 
-There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, http\://schema.org/Recipe.
+There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, `http://schema.org/Recipe`.
 
 <table class="standard-table">
   <tbody>
@@ -229,13 +229,13 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
     Ingredients:<br>
     <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
     <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
-    ...
+    …
   </p>
   Directions: <br>
   <div itemprop="recipeInstructions">
     1. Cut and peel apples<br>
     2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
-    ...
+    …
   </div>
 </div>
 ```
@@ -255,9 +255,9 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
 ## See also
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- Other, microdata related, global attributes:
+- Other microdata related global attributes:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)

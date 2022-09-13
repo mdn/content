@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetLeft`** read-only property returns the number of pixels that the _upper left corner_ of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.
@@ -47,7 +48,7 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 <div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10">
 </div>
 
-<script type="text/javascript">
+<script>
   const box = document.getElementById("box");
   const longspan = document.getElementById("longspan");
   box.style.left = longspan.offsetLeft + document.body.scrollLeft + "px";

@@ -20,9 +20,11 @@ tags:
   - augmented
   - getViewport
   - viewport
+  - Experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the
@@ -34,7 +36,7 @@ represented by the view.
 
 ## Syntax
 
-```js
+```js-nolint
 getViewport(view)
 ```
 
@@ -75,23 +77,24 @@ article --->>>**
 
 ```js
 function drawFrame(time, frame) {
-  let session = frame.session;
+  const session = frame.session;
 
-  let pose = frame.getViewerPose(mainReferenceSpace);
+  const pose = frame.getViewerPose(mainReferenceSpace);
 
   if (pose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     gl.clearColor(0, 0, 0, 1.0);
     gl.clearDepth(1.0);
     gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_COLOR_BIT);
 
-    for (let view of pose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of pose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
       /* Render the scene now */
+    }
   }
 }
 ```

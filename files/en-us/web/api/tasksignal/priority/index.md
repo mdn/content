@@ -7,10 +7,10 @@ tags:
   - Property
   - Reference
   - priority
-  - Experimental
 browser-compat: api.TaskSignal.priority
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The read-only **`priority`** property of the {{domxref("TaskSignal")}} interface indicates the signal [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
 
@@ -28,7 +28,7 @@ This will be one of: `"user-blocking"`, `"user-visible"`, `"background"`.
 ## Examples
 
 The `priority` is most commonly used by developers to determine the new priority following [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) events.
-See [TaskSignal: prioritychange event](http://localhost:5042/en-US/docs/Web/API/TaskSignal/prioritychange_event#examples) for a live example.
+See [TaskSignal: prioritychange event](/en-US/docs/Web/API/TaskSignal/prioritychange_event#examples) for a live example.
 
 ## Specifications
 

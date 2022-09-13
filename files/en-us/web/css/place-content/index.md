@@ -10,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.place-content
 ---
+
 {{CSSRef}}
 
 The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
@@ -165,22 +166,24 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```
 
 ```js hidden
-var update = function () {
-   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
+function update() {
+  document.getElementById("container").style.placeContent = `${document.getElementById("alignContentAlignment").value} `
+    + `${document.getElementById("justifyContentAlignment").value}`;
 }
 
-var alignContentAlignment = document.getElementById("alignContentAlignment");
+const alignContentAlignment = document.getElementById("alignContentAlignment");
 alignContentAlignment.addEventListener("change",  update);
 
-var justifyContentAlignment = document.getElementById("justifyContentAlignment");
+const justifyContentAlignment = document.getElementById("justifyContentAlignment");
 justifyContentAlignment.addEventListener("change", update);
 
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
+const writingM = document.getElementById("writingMode");
+writingM.addEventListener("change", (evt) => {
    document.getElementById("container").style.writingMode = evt.target.value;
 });
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
+
+const direction = document.getElementById("direction");
+direction.addEventListener("change", (evt) => {
    document.getElementById("container").style.direction = evt.target.value;
 });
 ```
@@ -190,7 +193,7 @@ direction.addEventListener("change", function (evt) {
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;

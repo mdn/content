@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Instance()`** constructor creates a new
@@ -36,6 +37,15 @@ new WebAssembly.Instance(module, importObject)
     There must be one matching property for each declared import of `module` or
     else a {{jsxref("WebAssembly.LinkError")}} is thrown.
 
+#### Exceptions
+
+- If either of the parameters are not of the correct type or structure, a
+  {{jsxref("TypeError")}} is thrown.
+- If the operation fails, one of
+  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
+  {{jsxref("WebAssembly.RuntimeError")}} are thrown, depending on the cause of the failure.
+- Some browsers may throw a {{jsxref("RangeError")}}, as they prohibit compilation and instantiation of Wasm with large buffers on the UI thread.
+
 ## Examples
 
 ### Synchronously instantiating a WebAssembly module
@@ -46,17 +56,17 @@ synchronously instantiate a given {{jsxref("WebAssembly.Module")}} object, for e
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }
 };
 
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
+).then((bytes) => {
+  const mod = new WebAssembly.Module(bytes);
+  const instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
 })
 ```
@@ -67,14 +77,14 @@ However, the preferred way to get an `Instance` is through the asynchronous
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }
 };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+.then((obj) => obj.instance.exports.exported_func());
 ```
 
 ## Specifications

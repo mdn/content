@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Promise.reject
 ---
+
 {{JSRef}}
 
 The **`Promise.reject()`** method returns a
@@ -18,8 +19,8 @@ The **`Promise.reject()`** method returns a
 
 ## Syntax
 
-```js
-Promise.reject(reason);
+```js-nolint
+Promise.reject(reason)
 ```
 
 ### Parameters
@@ -42,11 +43,14 @@ rejected. For debugging purposes and selective error catching, it is useful to m
 ### Using the static Promise.reject() method
 
 ```js
-Promise.reject(new Error('fail')).then(function() {
-  // not called
-}, function(error) {
-  console.error(error); // Stacktrace
-});
+Promise.reject(new Error("fail")).then(
+  () => {
+    // not called
+  },
+  (error) => {
+    console.error(error); // Stacktrace
+  },
+);
 ```
 
 ## Specifications

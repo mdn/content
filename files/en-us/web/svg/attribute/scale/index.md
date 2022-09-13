@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDisplacementMap.scale
 ---
+
 {{SVGRef}}
 
 The **`scale`** attribute defines the displacement scale factor to be used on a {{SVGElement("feDisplacementMap")}} filter primitive. The amount is expressed in the coordinate system established by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
@@ -18,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

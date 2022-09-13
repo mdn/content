@@ -11,6 +11,7 @@ tags:
   - Event
 browser-compat: api.SVGAnimationElement.repeatEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`repeatEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
@@ -24,14 +25,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('repeatEvent', event => { });
+addEventListener('repeatEvent', (event) => { });
 
-onrepeat = event => { };
+onrepeat = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
@@ -86,8 +87,8 @@ animateElem.addEventListener('beginEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
-    msg += '; repeat number: ' + e.detail;
+  if (e.detail) {
+    msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);

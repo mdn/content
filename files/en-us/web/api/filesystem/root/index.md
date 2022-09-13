@@ -13,6 +13,7 @@ tags:
   - root
 browser-compat: api.FileSystem.root
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`root`** property of the

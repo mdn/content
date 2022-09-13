@@ -4,7 +4,6 @@ slug: Web/API/VideoPlaybackQuality
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Frames
   - HTML DOM
   - Interface
@@ -18,6 +17,7 @@ tags:
   - VideoPlaybackQuality
 browser-compat: api.VideoPlaybackQuality
 ---
+
 {{APIRef("HTML DOM")}}
 
 A **`VideoPlaybackQuality`** object is returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method and contains metrics that can be used to determine the playback quality of a video.
@@ -26,18 +26,18 @@ A **`VideoPlaybackQuality`** object is returned by the {{domxref("HTMLVideoEleme
 
 _The `VideoPlaybackQuality` interface doesn't inherit properties from any other interfaces._
 
-- {{domxref("VideoPlaybackQuality.creationTime", "creationTime")}} {{readonlyInline}}
+- {{domxref("VideoPlaybackQuality.creationTime", "creationTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} containing the time in milliseconds between the start of the navigation and the creation of the object.
-- {{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} {{readonlyInline}}
+- {{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} {{ReadOnlyInline}}
   - : An `unsigned long` giving the number of video frames dropped since the creation of the associated {{domxref("HTMLVideoElement")}}.
-- {{domxref("VideoPlaybackQuality.totalVideoFrames", "totalVideoFrames")}} {{readonlyInline}}
+- {{domxref("VideoPlaybackQuality.totalVideoFrames", "totalVideoFrames")}} {{ReadOnlyInline}}
   - : An `unsigned long` giving the number of video frames created and dropped since the creation of the associated {{domxref("HTMLVideoElement")}}.
 
 ### Obsolete properties
 
-- {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} {{readonlyInline}}
+- {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : An `unsigned long` giving the number of video frames corrupted since the creation of the associated {{domxref("HTMLVideoElement")}}. A corrupted frame may be created or dropped.
-- {{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{ReadOnlyInline}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : A `double` containing the sum of the frame delay since the creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the difference between a frame's theoretical presentation time and its effective display time.
 
 ## Methods

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 The global property **`Infinity`** is a numeric value representing infinity.
@@ -22,8 +23,6 @@ The global property **`Infinity`** is a numeric value representing infinity.
 The initial value of `Infinity` is {{jsxref("Number.POSITIVE_INFINITY")}}. The value `Infinity` (positive infinity) is greater than any other number.
 
 This value behaves slightly differently than mathematical infinity; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
-
-As defined by the ECMAScript 5 specification, `Infinity` is read-only (implemented in JavaScript 1.8.5 / Firefox 4).
 
 ## Examples
 

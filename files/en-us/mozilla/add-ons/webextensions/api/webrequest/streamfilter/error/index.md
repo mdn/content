@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.error
 ---
+
 {{AddonSidebar()}}
 
 A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.
@@ -27,7 +28,7 @@ This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror"
 function listener(details) {
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event => {
+  filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
   }
 

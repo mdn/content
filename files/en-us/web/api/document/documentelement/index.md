@@ -11,6 +11,7 @@ tags:
   - root
 browser-compat: api.Document.documentElement
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.documentElement`** returns the

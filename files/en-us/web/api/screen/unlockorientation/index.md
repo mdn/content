@@ -11,6 +11,7 @@ tags:
   - Screen Orientation
 browser-compat: api.Screen.unlockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 The **`Screen.unlockOrientation()`** method removes all the
@@ -24,7 +25,7 @@ method should be used instead.
 
 ## Syntax
 
-```js
+```js-nolint
 unlockOrientation()
 ```
 
@@ -40,7 +41,7 @@ Returns `true` if the orientation was successfully unlocked or
 ## Examples
 
 ```js
-var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
+const unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
 
 if (unlockOrientation()) {
   // orientation was unlocked

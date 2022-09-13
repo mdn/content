@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Element.setCapture
 ---
+
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
@@ -24,7 +25,7 @@ to this element until the mouse button is released or {{
 
 ## Syntax
 
-```js
+```js-nolint
 setCapture(retargetToElement)
 ```
 
@@ -44,10 +45,13 @@ In this example, the current mouse coordinates are drawn while you mouse around 
 clicking and holding down on an element.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Mouse Capture Example</title>
-  <style type="text/css">
+  <style>
     #myButton {
       border: solid black 1px;
       color: black;
@@ -56,9 +60,9 @@ clicking and holding down on an element.
     }
   </style>
 
-  <script type="text/javascript">
+  <script>
     function init() {
-      var btn = document.getElementById("myButton");
+      const btn = document.getElementById("myButton");
       if (btn.setCapture) {
         btn.addEventListener("mousedown", mouseDown, false);
         btn.addEventListener("mouseup", mouseUp, false);
@@ -78,7 +82,7 @@ clicking and holding down on an element.
     }
 
     function mouseMoved(e) {
-      var output = document.getElementById("output");
+      const output = document.getElementById("output");
       output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
     }
   </script>

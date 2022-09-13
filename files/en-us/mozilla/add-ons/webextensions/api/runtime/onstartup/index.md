@@ -13,13 +13,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onStartup
 ---
+
 {{AddonSidebar()}}
 
 Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing/incognito profile is started, even if this extension is operating in 'split' incognito mode.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onStartup.addListener(listener)
 browser.runtime.onStartup.removeListener(listener)
 browser.runtime.onStartup.hasListener(listener)
@@ -67,7 +68,8 @@ browser.runtime.onStartup.addListener(handleStartup);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +96,4 @@ browser.runtime.onStartup.addListener(handleStartup);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

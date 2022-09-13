@@ -14,6 +14,7 @@ tags:
   - web console
 browser-compat: api.console.profile
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 The **`console.profile()`** starts recording a performance profile (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
@@ -28,7 +29,7 @@ To stop recording call {{domxref("console.profileEnd()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 profile(profileName)
 ```
 

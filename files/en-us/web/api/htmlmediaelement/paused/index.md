@@ -10,6 +10,7 @@ tags:
   - Read-only
 browser-compat: api.HTMLMediaElement.paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLMediaElement.paused`** property
@@ -23,7 +24,7 @@ paused.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.paused); // true
 ```
 

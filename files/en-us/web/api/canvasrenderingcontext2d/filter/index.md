@@ -6,10 +6,10 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
+
 {{APIRef}}
 
 The
@@ -126,8 +126,7 @@ photo of a rhino.
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg">
+  <img id="source" src="rhino.jpg" />
 </div>
 ```
 
@@ -138,7 +137,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
-image.addEventListener('load', e => {
+image.addEventListener('load', (e) => {
   // Draw unfiltered image
   ctx.drawImage(image, 0, 0, image.width * .6, image.height * .6);
 

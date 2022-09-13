@@ -11,6 +11,7 @@ tags:
   - XPathExpression
 browser-compat: api.XPathExpression.evaluate
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`evaluate()`** method of the
@@ -19,7 +20,7 @@ returns an {{domxref("XPathResult")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(contextNode)
 evaluate(contextNode, type)
 evaluate(contextNode, type, result)
@@ -87,10 +88,10 @@ The following example shows the use of the `evaluate()` method.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression("//div");
-var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const xpath = "//div";
+const evaluator = new XPathEvaluator();
+const expression = evaluator.createExpression("//div");
+const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

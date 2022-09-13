@@ -11,6 +11,7 @@ tags:
   - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
+
 {{JSRef}}
 
 The **`is()`** prototype method of the [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) object can be used to test if the `Exception` matches a given tag.
@@ -22,7 +23,7 @@ It can be used on tags created in JavaScript or created in WebAssembly code and 
 
 ## Syntax
 
-```js
+```js-nolint
 is(tag)
 ```
 
@@ -45,7 +46,7 @@ const tag1 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
 const exception1 = new WebAssembly.Exception(tag1, [42, 42.3]);
 
 // Verify that "tag1" matches this exception
-console.log(`Tag1: ${ exception1.is(tag1) }`);
+console.log(`Tag1: ${exception1.is(tag1)}`);
 
 // Log output:
 // Tag1: true
@@ -56,7 +57,7 @@ We can also demonstrate that this exception will not match another tag even if t
 ```js
 // Create a new tag (with same parameters) and verify it does not match the exception
 const tag2 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
-console.log(`Tag2: ${ exception1.is(tag2) }`);
+console.log(`Tag2: ${exception1.is(tag2)}`);
 
 // Log output:
 // Tag2: false

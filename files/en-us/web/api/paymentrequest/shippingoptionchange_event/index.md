@@ -14,9 +14,12 @@ tags:
   - onshippingoptionchange
   - payment
   - shippingoptionchange
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingoptionchange_event
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 For payment requests that request shipping information, and for which shipping options are offered, the **`shippingoptionchange`** event is sent to the {{domxref("PaymentRequest")}} whenever the user chooses a shipping option from the list of available options.
 
@@ -29,14 +32,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('shippingoptionchange', event => { });
+addEventListener('shippingoptionchange', (event) => { });
 
-onshippingoptionchange = event => { };
+onshippingoptionchange = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
@@ -49,7 +52,7 @@ _Provides only the properties inherited from {{domxref("Event")}}._
 This code snippet sets up a handler for the `shippingoptionchange` event. The code recalculates the total charge for the payment based on the selected shipping option. For example, if there are three options (such as "Free ground shipping", "2-day air", and "Next day"), each time the user chooses one of those options, this event handler is called to recalculate the total based on the changed shipping option.
 
 ```js
-paymentRequest.addEventListener("shippingoptionchange", event => {
+paymentRequest.addEventListener("shippingoptionchange", (event) => {
   const value = calculateNewTotal(paymentRequest.shippingOption);
   const total = {
     currency: "EUR",
@@ -65,7 +68,7 @@ After calling a custom function, `calculateNewTotal()`, to compute the updated t
 You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, `onshippingoptionchange`:
 
 ```js
-paymentRequest.onshippingoptionchange = event => {
+paymentRequest.onshippingoptionchange = (event) => {
   const value = calculateNewTotal(paymentRequest.shippingOption);
   const total = {
     currency: "EUR",

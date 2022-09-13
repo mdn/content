@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-overflow-scrolling
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls whether or not touch devices use momentum-based scrolling for a given element.
@@ -28,7 +29,10 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-overflow-scrolling =
+  auto | touch
+```
 
 ## Examples
 

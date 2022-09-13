@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.pointer-events
 ---
+
 {{SVGRef}}
 
 The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
@@ -41,7 +42,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -69,14 +74,14 @@ html,body,svg { height:100% }
 ```js
 window.addEventListener('mouseup', (e) => {
   // Let's pick a random color between #000000 and #FFFFFF
-  const color = Math.round(Math.random() * 0xFFFFFF)
+  const color = Math.round(Math.random() * 0xFFFFFF);
 
   // Let's format the color to fit CSS requirements
-  const fill = '#' + color.toString(16).padStart(6,'0')
+  const fill = `#${color.toString(16).padStart(6, '0')}`;
 
   // Let's apply our color in the
   // element we actually clicked on
-  e.target.style.fill = fill
+  e.target.style.fill = fill;
 })
 ```
 
@@ -106,7 +111,7 @@ window.addEventListener('mouseup', (e) => {
   </tbody>
 </table>
 
-*For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation.*
+_For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation._
 
 ## Specifications
 

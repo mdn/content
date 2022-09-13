@@ -12,6 +12,7 @@ tags:
   - text-indent
 browser-compat: css.properties.text-indent
 ---
+
 {{CSSRef}}
 
 The **`text-indent`** CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
@@ -50,9 +51,9 @@ text-indent: unset;
   - : Indentation is specified as an absolute {{cssxref("&lt;length&gt;")}}. Negative values are allowed. See {{cssxref("&lt;length&gt;")}} values for possible units.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Indentation is a {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
-- `each-line` {{experimental_inline}}
+- `each-line`
   - : Indentation affects the first line of the block container as well as each line after a _forced line break_, but does not affect lines after a _soft wrap break_.
-- `hanging` {{experimental_inline}}
+- `hanging`
   - : Inverts which lines are indented. All lines _except_ the first line will be indented.
 
 ## Formal definition
@@ -135,12 +136,12 @@ sed euismod ipsum ullamcorper sed.</p>
 
 ```css
 p {
-    text-align: justify;
-    margin: 1em 0 0 0;
+  text-align: justify;
+  margin: 1em 0 0 0;
 }
 p + p {
-    text-indent: 2em;
-    margin: 0;
+  text-indent: 2em;
+  margin: 0;
 }
 ```
 

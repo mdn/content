@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-slice
 ---
+
 {{CSSRef}}
 
 The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's [border image](/en-US/docs/Web/CSS/border-image).
@@ -156,7 +157,7 @@ const sliceOutput = document.getElementById('slice-output');
 const divElem = document.querySelector('div > div');
 
 widthSlider.addEventListener('input', () => {
-  const newValue = widthSlider.value + 'px';
+  const newValue = `${widthSlider.value}px`;
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
 })

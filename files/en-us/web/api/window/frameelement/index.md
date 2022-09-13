@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.frameElement
 ---
+
 {{ApiRef}}
 
 The **`Window.frameElement`** property
@@ -24,7 +25,7 @@ in which the window is embedded.
 
 The element which the window is embedded into. If the window isn't embedded into
 another document, or if the document into which it's embedded has a different
-{{glossary("origin")}}, the value is {{jsxref("null")}} instead.
+{{glossary("origin")}}, the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) instead.
 
 ## Examples
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.URL
 ---
+
 {{APIRef("DOM")}}
 
 The **`URL`** read-only property of the {{domxref("Document")}}
@@ -31,14 +32,14 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL goes here</span>
 </p>
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormControlsCollection.namedItem
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormControlsCollection.namedItem()`** method returns
@@ -24,7 +25,7 @@ equivalent to `collection.namedItem("value")`.
 
 ## Syntax
 
-```js
+```js-nolint
 namedItem(str)
 // or collection[str]
 ```
@@ -36,7 +37,7 @@ namedItem(str)
 ### Return value
 
 - `item` is a {{domxref("RadioNodeList")}} , {{domxref("Element")}}, or
-  {{jsxref("null")}}.
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

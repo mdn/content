@@ -11,6 +11,7 @@ tags:
   - frequencyBinCount
 browser-compat: api.AnalyserNode.frequencyBinCount
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface is an unsigned integer half that of the {{domxref("AnalyserNode.fftSize")}}. This generally equates to the number of data values you will have to play with for the visualization.
@@ -31,7 +32,7 @@ const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 
-  ...
+// …
 
 analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;
@@ -52,10 +53,10 @@ function draw() {
   let barHeight;
   let x = 0;
 
-  for(let i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
     canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
     x += barWidth;

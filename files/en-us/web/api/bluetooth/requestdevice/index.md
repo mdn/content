@@ -9,8 +9,10 @@ tags:
   - Reference
   - Web Bluetooth API
   - requestDevice
+  - Experimental
 browser-compat: api.Bluetooth.requestDevice
 ---
+
 {{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth.requestDevice()`** method of the
@@ -20,7 +22,7 @@ UI, this method returns the first device matching the criteria.
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice()
 requestDevice(options)
 ```
@@ -81,13 +83,11 @@ let options = {
   optionalServices: ['battery_service']
 }
 
-navigator.bluetooth.requestDevice(options).then(function(device) {
-  console.log('Name: ' + device.name);
+navigator.bluetooth.requestDevice(options).then((device) => {
+  console.log(`Name: ${device.name}`);
   // Do something with the device.
 })
-.catch(function(error) {
-  console.log("Something went wrong. " + error);
-});
+.catch((error) => console.error(`Something went wrong. ${error}`));
 ```
 
 [Detailed examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.

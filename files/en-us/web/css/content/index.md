@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
@@ -143,9 +144,9 @@ q::after {
 }
 
 h1::before {
-  content: "Chapter ";  /* The trailing space creates separation
-                           between the added content and the
-                           rest of the content */
+  content: "Chapter "; /* The trailing space creates separation
+                          between the added content and the
+                          rest of the content */
 }
 ```
 
@@ -167,7 +168,8 @@ This example inserts an image before the link. If the image is not found, it ins
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
@@ -197,9 +199,9 @@ This example inserts additional text after special items in a list.
 
 ```css
 .new-entry::after {
-  content: " New!";  /* The leading space creates separation
-                        between the added content and the
-                        rest of the content */
+  content: " New!"; /* The leading space creates separation
+                       between the added content and the
+                       rest of the content */
   color: red;
 }
 ```
@@ -269,7 +271,8 @@ This example replaces an element's content with an image. You can replace the co
   content: url("mdn.svg");
 }
 
-#replaced::after { /* will not show if element replacement is supported */
+/* will not show if element replacement is supported */
+#replaced::after {
   content: " (" attr(id) ")";
 }
 ```
@@ -292,5 +295,6 @@ This example replaces an element's content with an image. You can replace the co
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("url", "url()")}} function

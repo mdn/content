@@ -8,15 +8,17 @@ tags:
   - Reference
   - configure
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the video encoder for encoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -26,13 +28,13 @@ configure(config)
   - : A dictionary object containing the following members:
     - `codec`
       - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
-    - `width`{{Optional_Inline}}
+    - `width` {{optional_inline}}
       - : An integer representing the width of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
-    - `height`{{Optional_Inline}}
+    - `height` {{optional_inline}}
       - : An integer representing the height of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
-    - `displayWidth`{{Optional_Inline}}
+    - `displayWidth` {{optional_inline}}
       - : An integer representing the intended display width of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
-    - `displayHeight`{{Optional_Inline}}
+    - `displayHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
     - `hardwareAcceleration`
       - : A hint that configures the hardware acceleration method of this codec. One of:

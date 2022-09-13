@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.IDBObjectStore.delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the
@@ -27,7 +28,7 @@ record — without having to explicitly look up the record's key.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(key)
 ```
 
@@ -90,10 +91,10 @@ function deleteItem(event) {
   let request = transaction.objectStore("toDoList").delete(dataTask);
 
   // report that the data item has been deleted
-  transaction.oncomplete = function() {
+  transaction.oncomplete = () => {
     // delete the parent of the button, which is the list item, so it no longer is displayed
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
-    note.innerHTML += '<li>Task \"' + dataTask + '\" deleted.</li>';
+    note.innerHTML += `<li>Task "${dataTask}" deleted.</li>`;
   };
 };
 ```

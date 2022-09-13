@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.setPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`setPointerCapture()`** method of the
@@ -38,7 +39,7 @@ moves off the element (such as by scrolling or panning).
 
 ## Syntax
 
-```js
+```js-nolint
 setPointerCapture(pointerId)
 ```
 
@@ -60,7 +61,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example sets pointer capture on a {{HtmlElement("div")}} when you press down on
-it. This lets you slide the element horizontally, even when you pointer moves outside of
+it. This lets you slide the element horizontally, even when your pointer moves outside of
 its boundaries.
 
 ### HTML

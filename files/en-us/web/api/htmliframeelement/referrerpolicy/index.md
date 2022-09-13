@@ -10,6 +10,7 @@ tags:
   - Referrer Policy
 browser-compat: api.HTMLIFrameElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The
@@ -55,10 +56,10 @@ resource.
 ## Examples
 
 ```js
-var iframe = document.createElement("iframe");
+const iframe = document.createElement("iframe");
 iframe.src = "/";
 iframe.referrerPolicy = "unsafe-url";
-var body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 body.appendChild(iframe); // Fetch the image using the complete URL as the referrer
 ```
 

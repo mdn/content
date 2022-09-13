@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.create
 ---
+
 {{JSRef}}
 
 The **`Object.create()`** method creates a new object, using an
@@ -20,7 +21,7 @@ existing object as the prototype of the newly created object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.create(proto)
 Object.create(proto, propertiesObject)
 ```
@@ -44,7 +45,7 @@ A new object with the specified prototype object and properties.
 
 The `proto` parameter has to be either
 
-- {{jsxref("null")}} or
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
 - an {{jsxref("Object")}} excluding [primitive wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
 
 If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
@@ -59,8 +60,8 @@ For example, the lack of [`Object.prototype.toString()`](/en-US/docs/Web/JavaScr
 const normalObj = {};   // create a normal object
 const nullProtoObj = Object.create(null); // create an object with "null" prototype
 
-console.log("normalObj is: " + normalObj); // shows "normalObj is: [object Object]"
-console.log("nullProtoObj is: " + nullProtoObj); // throws error: Cannot convert object to primitive value
+console.log(`normalObj is: ${normalObj}`); // shows "normalObj is: [object Object]"
+console.log(`nullProtoObj is: ${nullProtoObj}`); // throws error: Cannot convert object to primitive value
 
 alert(normalObj); // shows [object Object]
 alert(nullProtoObj); // throws error: Cannot convert object to primitive value
@@ -85,7 +86,7 @@ We can add the `toString` method back to the null-prototype object by simply ass
 nullProtoObj.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
 
 console.log(nullProtoObj.toString()); // shows "[object Object]"
-console.log("nullProtoObj is: " + nullProtoObj); // shows "nullProtoObj is: [object Object]"
+console.log(`nullProtoObj is: ${nullProtoObj}`); // shows "nullProtoObj is: [object Object]"
 ```
 
 Unlike normal objects, in which `toString()` is on the object's prototype, the `toString()` method here is an own property of `nullProtoObj`. This is because `nullProtoObj` has no (`null`) prototype.
@@ -131,7 +132,7 @@ Object.prototype.authenticated = true;
 
 // Unexpectedly allowing unauthenticated user to pass through
 if (user.authenticated) {
-  // access confidential data...
+  // access confidential data
 }
 ```
 
@@ -201,15 +202,10 @@ o = Object.create(Object.prototype, {
   // bar is a getter-and-setter (accessor) property
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) {
-      console.log('Setting `o.bar` to', value);
-    }
-/* with ES2015 Accessors our code can look like this
     get() { return 10; },
     set(value) {
       console.log('Setting `o.bar` to', value);
-    } */
+    }
   }
 });
 
@@ -240,7 +236,7 @@ for (const prop in o) {
 delete o.p;
 // false
 
-// to specify an ES3 property
+// to specify a property with the same attributes as in an initializer
 o2 = Object.create({}, {
   p: {
     value: 42,
@@ -249,9 +245,9 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-/* is not equivalent to:
-This will create an object with prototype : {p: 42 }
-o2 = Object.create({p: 42}) */
+// This is not equivalent to:
+// o2 = Object.create({ p: 42 })
+// which will create an object with prototype { p: 42 }
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - scrollingElement
 browser-compat: api.Document.scrollingElement
 ---
+
 {{APIRef("DOM")}}
 
 The **`scrollingElement`** read-only property of the
@@ -27,7 +28,7 @@ The {{domxref("Element")}} that scrolls the document, usually the root element (
 ## Examples
 
 ```js
-var scrollElm = document.scrollingElement;
+const scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 

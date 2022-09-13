@@ -15,6 +15,7 @@ tags:
   - close
 browser-compat: api.RTCDataChannel.close
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannel.close()`** method closes the
@@ -29,21 +30,21 @@ The sequence of events which occurs in response to this method being called:
 
 1. {{domxref("RTCDataChannel.readyState")}} is set to `closing`.
 2. A background task is established to handle the remainder of the steps below, and
-    `close()` returns to the caller.
+   `close()` returns to the caller.
 3. The transport layer deals with any buffered messages; the protocol layer decides
-    whether to send them or discard them.
+   whether to send them or discard them.
 4. The underlying data transport is closed.
 5. The {{domxref("RTCDataChannel.readyState")}} property is set to
-    `closed`.
+   `closed`.
 6. If the transport was closed with an error,
-    the `RTCDataChannel` is sent
-    an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
-    with its {{DOMxRef("DOMException.name", "name")}} set to `NetworkError`.
+   the `RTCDataChannel` is sent
+   an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
+   with its {{DOMxRef("DOMException.name", "name")}} set to `NetworkError`.
 7. A {{domxref("RTCDataChannel.close_event", "close")}} event is sent to the channel.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -62,23 +63,23 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+dc.onmessage = (event) => {
+  console.log(`received: ${event.data}`);
   dc.close(); // We decided to close after the first received message
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function (
+dc.onclose = () => {
   console.log("datachannel close");
 };
 
-// Now negotiate the connection and so forth...
+// Now negotiate the connection and so forth…
 ```
 
 ## Specifications

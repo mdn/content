@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaLevel
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects the value of the `aria-level` attribute, which defines the hierarchical level of an element within a structure.
@@ -27,7 +28,9 @@ A string containing an integer.
 In this example the `aria-level` attribute on the element with an ID of `main-heading` is set to "1". Using `ariaLevel` we update the value to "2".
 
 ```html
-<div role="heading" id="main-heading" aria-level="1">This is a main page heading</div>
+<div role="heading" id="main-heading" aria-level="1">
+  This is a main page heading
+</div>
 ```
 
 ```js

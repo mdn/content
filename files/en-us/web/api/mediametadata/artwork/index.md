@@ -14,7 +14,8 @@ tags:
   - artwork
 browser-compat: api.MediaMetadata.artwork
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`artwork`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets an array of
@@ -45,6 +46,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML sections
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Sectioning content
@@ -13,6 +12,7 @@ tags:
   - Web
 browser-compat: html.elements.aside
 ---
+
 {{HTMLRef}}
 
 The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
@@ -113,7 +113,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     </p>
   </aside>
   <p>
-    More info about the movie...
+    More info about the movie…
   </p>
 </article>
 ```

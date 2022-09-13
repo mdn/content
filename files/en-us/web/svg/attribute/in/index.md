@@ -6,8 +6,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/filters.html#FilterPrimitiveInAttribute
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
 ---
+
 {{SVGRef}}
 
 The **`in`** attribute identifies input for the given filter primitive.

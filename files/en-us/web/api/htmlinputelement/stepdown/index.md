@@ -11,6 +11,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepDown
 ---
+
 {{APIRef("HTML DOM")}}
 
 The
@@ -27,7 +28,7 @@ defaults to 1 if not specified, and
 default value for `step` if not specified.
 
 Valid on all numeric, date, and time input types that support the step attribute,
-including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
+including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},
 {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.
@@ -107,7 +108,7 @@ support the `step` attribute (see the list of supported input types above), or i
 
 ## Syntax
 
-```js
+```js-nolint
 stepDown()
 stepDown(stepDecrement)
 ```
@@ -116,7 +117,7 @@ stepDown(stepDecrement)
 
 - `stepDecrement` {{optional_inline}}
 
-  - : A numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
+  - : A numeric value. If no parameter is passed, _stepDecrement_ defaults to 1.
 
     If the value is a float, the value will decrement as if
     [`Math.floor(stepDecrement)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
@@ -153,17 +154,17 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 ```js
 /* make the button call the function */
 let button = document.getElementById('theButton');
-button.addEventListener('click', function() {
-  stepondown();}
-);
+button.addEventListener('click', () => {
+  stepondown();
+});
 
 function stepondown() {
   let input = document.getElementById('theNumber');
   let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
+  if (val) {  // decrement with a parameter
     input.stepDown(val);
-  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
+  } else {    // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
 }

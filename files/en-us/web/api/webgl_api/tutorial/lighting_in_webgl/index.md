@@ -16,6 +16,7 @@ tags:
   - lighting
   - vertices
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 As should be clear by now, WebGL doesn't have much built-in knowledge. It just runs two functions you supply — a vertex shader and a fragment shader — and expects you to write creative functions to get the results you want. In other words, if you want lighting you have to calculate it yourself. Fortunately, it's not all that hard to do, and this article will cover some of the basics.
@@ -34,7 +35,7 @@ There are three basic types of lighting:
 
 **Point light** is light that is being emitted from a point, radiating in all directions. This is how many real-world light sources usually work. A light bulb emits light in all directions, for example.
 
-For our purposes, we're going to simplify the lighting model by only considering simple directional and ambient lighting; we won't have any {{interwiki("wikipedia", "specular highlights")}} or point light sources in this scene. Instead, we'll have our ambient lighting plus a single directional light source, aimed at the rotating cube from the [previous demo](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+For our purposes, we're going to simplify the lighting model by only considering simple directional and ambient lighting; we won't have any [specular highlights](https://en.wikipedia.org/wiki/Specular_highlights) or point light sources in this scene. Instead, we'll have our ambient lighting plus a single directional light source, aimed at the rotating cube from the [previous demo](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 Once you drop out the concept of point sources and specular lighting, there are two pieces of information we'll need in order to implement our directional lighting:
 
@@ -92,7 +93,7 @@ The first thing we need to do is generate the array of normals for all the verti
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertexNormals),
                 gl.STATIC_DRAW);
 
-...
+  // …
 
   return {
     position: positionBuffer,
@@ -135,7 +136,7 @@ Finally, we need to update the code that builds the uniform matrices to generate
   mat4.invert(normalMatrix, modelViewMatrix);
   mat4.transpose(normalMatrix, normalMatrix);
 
-...
+  // …
 
   gl.uniformMatrix4fv(
       programInfo.uniformLocations.normalMatrix,
@@ -230,9 +231,9 @@ The only thing left is to look up the location of the `aVertexNormal` attribute 
 
 And that's it!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample7/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## Exercises for the reader
 

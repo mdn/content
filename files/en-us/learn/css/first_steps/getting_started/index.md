@@ -12,6 +12,7 @@ tags:
   - Syntax
   - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 In this article, we will take a simple HTML document and apply CSS to it, learning some practical things about the language along the way.
@@ -116,8 +117,9 @@ p {
 You can target multiple selectors at the same time by separating the selectors with a comma. If you want all paragraphs and all list items to be green, your rule would look like this:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -251,7 +253,7 @@ We have removed the underline on our link on hover. You could remove the underli
 
 > **Note:** you will often see mention of [accessibility](/en-US/docs/Learn/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.
 >
-> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
+> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screen reader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
 >
 > A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.
 
@@ -261,10 +263,12 @@ It is worth noting that you can combine multiple selectors and combinators toget
 
 ```css
 /* selects any <span> that is inside a <p>, which is inside an <article>  */
-article p span { ... }
+article p span {
+}
 
 /* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
-h1 + ul + p { ... }
+h1 + ul + p {
+}
 ```
 
 You can combine multiple types together, too. Try adding the following into your code:

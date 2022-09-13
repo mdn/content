@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.LinearAccelerationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`LinearAccelerationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes, but without the contribution of gravity.
@@ -49,10 +50,10 @@ Linear acceleration is typically read in the {{domxref('Sensor.reading_event', '
 ```js
 let laSensor = new LinearAccelerationSensor({frequency: 60});
 
-laSensor.addEventListener('reading', e => {
-  console.log("Linear acceleration along the X-axis " + laSensor.x);
-  console.log("Linear acceleration along the Y-axis " + laSensor.y);
-  console.log("Linear acceleration along the Z-axis " + laSensor.z);
+laSensor.addEventListener('reading', (e) => {
+  console.log(`Linear acceleration along the X-axis ${laSensor.x}`);
+  console.log(`Linear acceleration along the Y-axis ${laSensor.y}`);
+  console.log(`Linear acceleration along the Z-axis ${laSensor.z}`);
 });
 laSensor.start();
 ```

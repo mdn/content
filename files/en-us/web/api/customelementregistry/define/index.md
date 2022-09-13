@@ -12,6 +12,7 @@ tags:
   - define
 browser-compat: api.CustomElementRegistry.define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`define()`** method of the
@@ -26,7 +27,7 @@ There are two types of custom elements you can create:
 
 ## Syntax
 
-```js
+```js-nolint
 define(name, constructor)
 define(name, constructor, options)
 ```
@@ -100,15 +101,8 @@ class PopUpInfo extends HTMLElement {
     info.textContent = text;
 
     // Insert icon
-    let imgUrl;
-    if(this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
-    } else {
-      imgUrl = 'img/default.png';
-    }
-
     const img = document.createElement('img');
-    img.src = imgUrl;
+    img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
     icon.appendChild(img);
 
     // Create some CSS to apply to the shadow dom
@@ -156,7 +150,9 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card.">
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
 ```
 
 > **Note:** Constructors for autonomous custom elements must extend
@@ -179,7 +175,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
@@ -195,7 +191,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);
@@ -212,7 +208,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ### Creating an element which disables the ability to attach a shadow root
 
-If the class used for the element contains the static property `disabledFeatures` returning the string \`shadow\` this will cause {{domxref("Element.attachShadow()")}} to return a {{domxref("DOMException")}} `NotSupportedError`.
+If the class used for the element contains the static property `disabledFeatures` returning the string \`shadow\` this will cause {{domxref("Element.attachShadow()")}} to return a `NotSupportedError` {{domxref("DOMException")}}.
 
 ```js
 class PopUpInfo extends HTMLElement {
@@ -225,7 +221,6 @@ class PopUpInfo extends HTMLElement {
     // this will cause an error to be thrown when the element is defined.
   }
 }
-
 ```
 
 ## Specifications

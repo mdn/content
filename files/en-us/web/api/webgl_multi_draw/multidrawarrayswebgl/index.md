@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw.multiDrawArraysWEBGL()`** method of the
@@ -20,8 +21,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawArraysWEBGL(mode,
+```js-nolint
+multiDrawArraysWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     drawCount);
@@ -76,14 +77,14 @@ None.
   `countsList` are negative,
   a `gl.INVALID_VALUE` error is thrown.
 - if `gl.CURRENT_PROGRAM` is
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples
 
 ```js
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
 ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
 ```
 

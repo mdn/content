@@ -16,6 +16,7 @@ tags:
   - origin
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
@@ -119,7 +120,7 @@ output {
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## Specifications
 

@@ -17,6 +17,7 @@ tags:
   - fromPoint
 browser-compat: api.DOMPoint.fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The static **{{domxref("DOMPoint")}}** method
@@ -31,7 +32,7 @@ the properties within may be changed at will.
 
 ## Syntax
 
-```js
+```js-nolint
 fromPoint(sourcePoint)
 ```
 
@@ -65,7 +66,7 @@ If you have a {{domxref("DOMPointReadOnly")}} object, you can easily create a mu
 copy of that point:
 
 ```js
-var mutablePoint = DOMPoint.fromPoint(readOnlyPoint);
+const mutablePoint = DOMPoint.fromPoint(readOnlyPoint);
 ```
 
 ### Creating a 2D point
@@ -76,7 +77,7 @@ use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y
 values (0 and 1 respectively).
 
 ```js
-var center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});
+const center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});
 ```
 
 ## Specifications

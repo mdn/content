@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseFloat()`** function parses
@@ -17,17 +18,14 @@ point number.
 
 ## Syntax
 
-```js
+```js-nolint
 parseFloat(string)
 ```
 
 ### Parameters
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one
-    using the
-    [`ToString`](https://tc39.es/ecma262/#sec-tostring) abstract
-    operation. Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
@@ -61,7 +59,7 @@ Consider {{jsxref("Number", "Number(value)")}} for stricter parsing, which conve
 {{jsxref("NaN")}} for arguments with invalid characters anywhere.
 
 `parseFloat` will parse non-string objects if they have a
-{{jsxref("Object.toString", "toString")}} or {{jsxref("Object.valueOf", "valueOf")}}
+{{jsxref("Object/toString", "toString")}} or {{jsxref("Object/valueOf", "valueOf")}}
 method. The returned value is the same as if `parseFloat` had been called
 on the result of those methods.
 
@@ -78,7 +76,7 @@ parseFloat('  3.14  ');
 parseFloat('314e-2');
 parseFloat('0.0314E+2');
 parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat({ toString() { return "3.14" } });
 ```
 
 ### `parseFloat` returning `NaN`
@@ -121,5 +119,4 @@ parseFloat('900719925474099267n');
 - {{jsxref("parseInt", "parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("Number.prototype.toFixed()")}}

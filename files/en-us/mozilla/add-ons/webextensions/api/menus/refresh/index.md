@@ -12,6 +12,7 @@ tags:
   - refresh
 browser-compat: webextensions.api.menus.refresh
 ---
+
 {{AddonSidebar()}}
 
 Refreshes a menu that's being shown.
@@ -26,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.refresh()
 ```
 
@@ -54,7 +55,7 @@ function updateMenuItem(linkHostname) {
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

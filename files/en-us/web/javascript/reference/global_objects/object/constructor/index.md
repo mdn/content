@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.constructor
 ---
+
 {{JSRef}}
 
 The **`constructor`** property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
@@ -47,7 +48,7 @@ function Tree(name) {
 }
 
 const theTree = new Tree('Redwood');
-console.log('theTree.constructor is ' + theTree.constructor);
+console.log(`theTree.constructor is ${theTree.constructor}`);
 ```
 
 This example displays the following output:
@@ -105,7 +106,7 @@ Every function constructor will have a `prototype` property, which will become t
 However, if `ConstructorFunction.prototype` is re-assigned, the `constructor` property will be lost. For example, the following is a common way to create an inheritance pattern:
 
 ```js
-function Parent() { /* ... */ }
+function Parent() { /* … */ }
 Parent.prototype.parentMethod = function parentMethod() {}
 
 function Child() {
@@ -118,7 +119,7 @@ Child.prototype = Object.create(Parent.prototype);
 The `constructor` of instances of `Child` will be `Parent` due to `Child.prototype` being re-assigned. Ensuring that `Child.prototype.constructor` always points to `Child` itself is crucial when you are using `constructor` to access the original class from an instance. Take the following case: the object has the `create()` method to create itself.
 
 ```js
-function Parent() { /* ... */ }
+function Parent() { /* … */ }
 function CreatedConstructor() {
   Parent.call(this);
 }
@@ -135,8 +136,8 @@ new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor
 In the example above, an exception is thrown, since the `constructor` links to `Parent`. To avoid this, just assign the necessary constructor you are going to use.
 
 ```js
-function Parent() { /* ... */ }
-function CreatedConstructor() { /* ... */ }
+function Parent() { /* … */ }
+function CreatedConstructor() { /* … */ }
 
 CreatedConstructor.prototype = Object.create(Parent.prototype);
 // Return original constructor to Child
@@ -152,8 +153,8 @@ new CreatedConstructor().create().create(); // it's pretty fine
 However, even better, do not re-assign `ConstructorFunction.prototype` — instead, use [`Object.setPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) to manipulate the prototype chain.
 
 ```js
-function Parent() { /* ... */ }
-function CreatedConstructor() { /* ... */ }
+function Parent() { /* … */ }
+function CreatedConstructor() { /* … */ }
 
 Object.setPrototypeOf(CreatedConstructor.prototype, Parent.prototype);
 
@@ -184,7 +185,7 @@ Child.prototype.constructor = Child;
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
   const position = this.position;
   // Using this.constructor, in hope that getStartPosition exists as a static method
-  const startPosition = this.constructor.getStartPosition(); 
+  const startPosition = this.constructor.getStartPosition();
 
   return {
     offsetX: startPosition.x - position.x,
@@ -200,11 +201,11 @@ new Child(1, 1).getOffsetByInitialPosition();
 For this example to work properly, we can reassign the `Parent`'s static properties to `Child`:
 
 ```js
-// ...
-Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create(...) a prototype below
+// …
+Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create() a prototype below
 Child.prototype = Object.create(ParentWithStatic.prototype);
 Child.prototype.constructor = Child;
-// ...
+// …
 ```
 
 But even better, we can make the constructor functions themselves extend each other, as classes' [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) do.
@@ -226,8 +227,8 @@ Object.setPrototypeOf(Child.prototype, ParentWithStatic.prototype);
 Object.setPrototypeOf(Child, ParentWithStatic);
 
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  let position = this.position;
-  let startPosition = this.constructor.getStartPosition(); 
+  const position = this.position;
+  const startPosition = this.constructor.getStartPosition();
 
   return {
     offsetX: startPosition.x - position.x,

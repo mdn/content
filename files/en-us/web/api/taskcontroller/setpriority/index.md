@@ -7,10 +7,10 @@ tags:
   - Method
   - Reference
   - setPriority
-  - Experimental
 browser-compat: api.TaskController.setPriority
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`setPriority()`** method of the {{domxref("TaskController")}} interface can be called to set a new [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) for this controller's [`signal`](/en-US/docs/Web/API/TaskController#taskcontroller.signal).
 If a prioritized task is [configured](/en-US/docs/Web/API/Scheduler/postTask#signal) to use the signal, this will also change the task priority.
@@ -23,7 +23,7 @@ If the task is immutable, the function call is ignored.
 
 ## Syntax
 
-```js
+```js-nolint
 setPriority(priority)
 ```
 
@@ -57,9 +57,9 @@ Then we pass the controller's signal to the [`Scheduler.postTask()`](/en-US/docs
 ```js
 // Post task passing the controller's signal.
 // The signal priority sets the initial priority of the task
-scheduler.postTask( ()=>{ return 'Task execute'; }, {signal: controller.signal} )
-  .then( (taskResult) => { console.log(`${taskResult}`); }) // Run on success)
-  .catch( (error) => { console.log(`Catch error: ${error}`); });  // Run on fail
+scheduler.postTask(() => 'Task execute', {signal: controller.signal})
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Run on success)
+  .catch((error) => { console.log(`Catch error: ${error}`); });  // Run on fail
 ```
 
 The controller can then be used to change the priority

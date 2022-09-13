@@ -13,6 +13,7 @@ tags:
   - equals()
 browser-compat: api.CSSNumericValue.equals
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`equals()`** method of the
@@ -23,7 +24,7 @@ equality to be tested quickly.
 
 ## Syntax
 
-```js
+```js-nolint
 equals(number)
 ```
 

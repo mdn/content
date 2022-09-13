@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.magnetometer
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `magnetometer` directive controls whether the current document is allowed to gather information about the orientation of the device through the {{domxref("Magnetometer")}} interface.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: magnetometer <allowlist>;
 ```
 

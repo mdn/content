@@ -12,6 +12,7 @@ tags:
   - ended
 browser-compat: api.HTMLMediaElement.ended
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.ended`** indicates whether the media
@@ -29,7 +30,7 @@ If the source of the media is a {{domxref("MediaStream")}}, this value is
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.ended); // false
 ```
 

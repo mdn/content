@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_float_linear
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_texture_float_linear`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows linear filtering with floating-point pixel types for textures.
@@ -29,7 +30,7 @@ With the help of this extension, you can now set the magnification or minificati
 gl.getExtension('OES_texture_float');
 gl.getExtension('OES_texture_float_linear');
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);

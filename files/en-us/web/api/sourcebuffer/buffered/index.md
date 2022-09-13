@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Property
@@ -15,7 +14,8 @@ tags:
   - buffered
 browser-compat: api.SourceBuffer.buffered
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`buffered`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns the time ranges that are currently

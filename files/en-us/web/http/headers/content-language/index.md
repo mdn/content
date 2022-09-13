@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Language
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Language`** {{Glossary("representation header")}} is used to **describe the language(s) intended for the audience**, so users can differentiate it according to their own preferred language.
@@ -46,7 +47,7 @@ If no `Content-Language` is specified, the default is that the content is intend
 
 ## Syntax
 
-```
+```http
 Content-Language: de-DE
 Content-Language: en-US
 Content-Language: de-DE, en-CA
@@ -80,7 +81,7 @@ Do **not** use this meta element like this for stating a document language:
 
 The `Content-Language` header is used to specify the **page's intended audience** and can indicate that this is more than one language.
 
-```
+```http
 Content-Language: de, en
 ```
 

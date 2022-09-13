@@ -7,6 +7,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the
@@ -17,9 +18,10 @@ is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_proto
 
 ## Message
 
-```js
-TypeError: 'x' is not iterable (Firefox, Chrome)
-TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
+TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator)) (V8-based)
+TypeError: x is not iterable (Firefox)
+TypeError: undefined is not a function (near '...[x]...') (Safari)
 ```
 
 ## Error type
@@ -58,9 +60,9 @@ Therefore, you cannot use [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_an
 to iterate over the properties of an object.
 
 ```js example-bad
-var obj = { 'France': 'Paris', 'England': 'London' };
-for (let p of obj) { // TypeError: obj is not iterable
-    // …
+const obj = { France: 'Paris', England: 'London' };
+for (const p of obj) { // TypeError: obj is not iterable
+  // …
 }
 ```
 
@@ -68,34 +70,37 @@ Instead you have to use {{jsxref("Object.keys")}} or {{jsxref("Object.entries")}
 iterate over the properties or entries of an object.
 
 ```js example-good
-var obj = { 'France': 'Paris', 'England': 'London' };
+const obj = { France: 'Paris', England: 'London' };
 // Iterate over the property names:
-for (let country of Object.keys(obj)) {
-    var capital = obj[country];
-    console.log(country, capital);
+for (const country of Object.keys(obj)) {
+  const capital = obj[country];
+  console.log(country, capital);
 }
 
-for (const [country, capital] of Object.entries(obj))
-    console.log(country, capital);
+for (const [country, capital] of Object.entries(obj)) {
+  console.log(country, capital);
+}
 ```
 
 Another option for this use case might be to use a {{jsxref("Map")}}:
 
 ```js example-good
-var map = new Map;
+const map = new Map;
 map.set('France', 'Paris');
 map.set('England', 'London');
 // Iterate over the property names:
-for (let country of map.keys()) {
-    let capital = map[country];
-    console.log(country, capital);
+for (const country of map.keys()) {
+  const capital = map.get(country);
+  console.log(country, capital);
 }
 
-for (let capital of map.values())
-    console.log(capital);
+for (const capital of map.values()) {
+  console.log(capital);
+}
 
-for (const [country, capital] of map.entries())
-    console.log(country, capital);
+for (const [country, capital] of map.entries()) {
+  console.log(country, capital);
+}
 ```
 
 ### Iterating over a generator
@@ -109,8 +114,9 @@ function* generate(a, b) {
   yield b;
 }
 
-for (let x of generate) // TypeError: generate is not iterable
-    console.log(x);
+for (const x of generate) { // TypeError: generate is not iterable
+  console.log(x);
+}
 ```
 
 When they are not called, the {{jsxref("Function")}} object corresponding to the
@@ -120,12 +126,13 @@ generator.
 
 ```js example-good
 function* generate(a, b) {
-    yield a;
-    yield b;
+  yield a;
+  yield b;
 }
 
-for (let x of generate(1,2))
-    console.log(x);
+for (const x of generate(1, 2)) {
+  console.log(x);
+}
 ```
 
 ### Iterating over a custom iterable
@@ -136,9 +143,9 @@ returns an object which is an iterator, which is to say it must have a next meth
 
 ```js example-bad
 const myEmptyIterable = {
-    [Symbol.iterator]() {
-        return [] // [] is iterable, but it is not an iterator -- it has no next method.
-    }
+  [Symbol.iterator]() {
+    return []; // [] is iterable, but it is not an iterator — it has no next method.
+  }
 }
 
 Array.from(myEmptyIterable);  // TypeError: myEmptyIterable is not iterable
@@ -148,9 +155,9 @@ Here is a correct implementation:
 
 ```js example-good
 const myEmptyIterable = {
-    [Symbol.iterator]() {
-        return [][Symbol.iterator]()
-    }
+  [Symbol.iterator]() {
+    return [][Symbol.iterator]()
+  }
 }
 
 Array.from(myEmptyIterable);  // []
@@ -163,4 +170,4 @@ Array.from(myEmptyIterable);  // []
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
 - [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
-- [for…of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [for...of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

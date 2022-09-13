@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.ETag
 ---
+
 {{HTTPSidebar}}
 
 The **`ETag`** (or **entity tag**) HTTP response header is an identifier for a
@@ -37,7 +38,7 @@ tracking server.
 
 ## Syntax
 
-```
+```http
 ETag: W/"<etag_value>"
 ETag: "<etag_value>"
 ```
@@ -61,7 +62,7 @@ ETag: "<etag_value>"
 
 ## Examples
 
-```
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"
 ```
@@ -74,7 +75,7 @@ can detect mid-air edit collisions.
 For example, when editing a wiki, the current wiki content may be hashed
 and put into an `Etag` header in the response:
 
-```
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
@@ -82,7 +83,7 @@ When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} re
 will contain the {{HTTPHeader("If-Match")}} header containing the `ETag`
 values to check freshness against.
 
-```
+```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
@@ -96,7 +97,7 @@ unchanged. If a user visits a given URL again (that has an `ETag` set), and
 it is _stale_ (too old to be considered usable), the client will send the value
 of its `ETag` along in an {{HTTPHeader("If-None-Match")}} header field:
 
-```
+```http
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 

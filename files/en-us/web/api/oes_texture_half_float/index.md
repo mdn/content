@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_half_float
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_texture_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds texture formats with 16- (aka half float) and 32-bit floating-point components.
@@ -41,9 +42,9 @@ This extension implicitly enables the {{domxref("EXT_color_buffer_half_float")}}
 ## Examples
 
 ```js
-var ext = gl.getExtension('OES_texture_half_float');
+const ext = gl.getExtension('OES_texture_half_float');
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, ext.HALF_FLOAT_OES, image);

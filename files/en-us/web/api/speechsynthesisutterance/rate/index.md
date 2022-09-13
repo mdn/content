@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`rate`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the utterance will be spoken at.

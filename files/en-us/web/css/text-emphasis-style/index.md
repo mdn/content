@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-emphasis-style
 ---
+
 {{CSSRef}}
 
 The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.
@@ -22,11 +23,11 @@ The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appea
 text-emphasis-style: none; /* No emphasis marks */
 
 /* <string> values */
-text-emphasis-style: 'x';
-text-emphasis-style: '点';
-text-emphasis-style: '\25B2';
-text-emphasis-style: '*';
-text-emphasis-style: 'foo'; /* Should NOT be used. It may be computed to or rendered as 'f' only */
+text-emphasis-style: "x";
+text-emphasis-style: "点";
+text-emphasis-style: "\25B2";
+text-emphasis-style: "*";
+text-emphasis-style: "foo"; /* Should NOT be used. It may be computed to or rendered as 'f' only */
 
 /* Keyword values */
 text-emphasis-style: filled;

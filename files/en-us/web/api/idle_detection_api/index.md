@@ -7,9 +7,11 @@ tags:
   - IdleDetector
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.IdleDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+
+{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}{{SeeCompatTable}}
 
 The Idle Detection API provides a means to detect the user's idle status, active, idle, and locked, specifically, and to be notified of changes to idle status without polling from a script.
 
@@ -19,7 +21,7 @@ Native applications and browser extensions use idle detection base user experien
 
 ## Interfaces
 
-- {{domxref("IdleDetector")}}
+- {{domxref("IdleDetector")}} {{Experimental_Inline}}
   - : Provides methods and events for detecting user activity on a device or screen.
 
 ## Examples
@@ -33,7 +35,7 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

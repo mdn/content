@@ -4,6 +4,7 @@ slug: Web/API/IDBRequest/success_event
 page-type: web-api-event
 browser-compat: api.IDBRequest.success_event
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `success` event is fired when an `IDBRequest` succeeds.
@@ -15,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('success', event => { });
+addEventListener('success', (event) => { });
 
-onsuccess = event => { };
+onsuccess = (event) => { };
 ```
 
 ## Event type

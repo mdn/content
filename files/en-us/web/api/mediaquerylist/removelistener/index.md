@@ -10,8 +10,10 @@ tags:
   - Method
   - Reference
   - removeListener
+  - Deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`removeListener()`** method of the
@@ -25,7 +27,7 @@ available in the browsers you need to support.
 
 ## Syntax
 
-```js
+```js-nolint
 removeListener(func)
 ```
 
@@ -42,8 +44,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var paragraph = document.querySelector('p');
-var mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector('p');
+const mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {

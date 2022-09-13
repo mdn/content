@@ -11,6 +11,7 @@ tags:
   - start
 browser-compat: api.MessagePort.start
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`start()`** method of the {{domxref("MessagePort")}}
@@ -22,7 +23,7 @@ when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 ```
 

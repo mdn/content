@@ -5,13 +5,14 @@ page-type: web-api-instance-property
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Property
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.pseudoElement
 ---
+
 {{ apiref("CSSOM") }}
 
 The **`TransitionEvent.pseudoElement`** read-only property is a

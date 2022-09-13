@@ -8,8 +8,10 @@ tags:
   - Reference
   - Web Bluetooth API
   - Property
+  - Experimental
 browser-compat: api.Bluetooth.referringDevice
 ---
+
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth.referringDevice`**

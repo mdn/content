@@ -13,6 +13,7 @@ tags:
   - WebVR
   - leftBounds
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`leftBounds`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.

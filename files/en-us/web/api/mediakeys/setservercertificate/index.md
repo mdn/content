@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - Media
   - MediaKeys
   - Method
@@ -13,14 +12,15 @@ tags:
   - setServerCertificate
 browser-compat: api.MediaKeys.setServerCertificate
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeys.setServerCertificate()`** method provides a
 server certificate to be used to encrypt messages to the license server.
 
 ## Syntax
 
-```js
+```js-nolint
 setServerCertificate(serverCertificate)
 ```
 

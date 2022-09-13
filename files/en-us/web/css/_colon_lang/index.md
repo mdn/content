@@ -10,16 +10,12 @@ tags:
   - Web
 browser-compat: css.selectors.lang
 ---
+
 {{CSSRef}}
 
 The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the language they are determined to be in.
 
-```css
-/* Selects any <p> in English (en) */
-p:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019';
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
 > **Note:** In HTML, the language is determined by a combination of the {{htmlattrxref("lang")}} attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
@@ -51,9 +47,15 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039""\203A";
+}
 ```
 
 ### Result

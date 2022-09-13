@@ -9,6 +9,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy
   - https://svgwg.org/svg2-draft/text.html#TextElementDYAttribute
 ---
+
 {{SVGRef}}
 
 The **`dy`** attribute indicates a shift along the y-axis on the position of an element or its content.
@@ -26,7 +27,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -47,7 +52,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```
@@ -192,7 +197,11 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
 ### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -218,7 +227,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```

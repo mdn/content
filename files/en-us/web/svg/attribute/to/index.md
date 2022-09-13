@@ -9,6 +9,7 @@ spec-urls:
   - https://svgwg.org/specs/animations/#SetElementToAttribute
   - https://svgwg.org/specs/animations/#ToAttribute
 ---
+
 {{SVGRef}}
 
 The **`to`** attribute indicates the final value of the attribute that will be modified during the animation.
@@ -26,7 +27,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

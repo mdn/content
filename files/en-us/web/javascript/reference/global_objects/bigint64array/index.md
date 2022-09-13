@@ -11,6 +11,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.BigInt64Array
 ---
+
 {{JSRef}}
 
 The **`BigInt64Array`** typed array represents an array of 64-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0n`. Once established, you can reference elements in the array using the object's methods, or by using standard array index syntax (that is, using bracket notation).
@@ -25,7 +26,7 @@ The **`BigInt64Array`** typed array represents an array of 64-bit signed integer
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of a `BigInt64Array`.
 - {{jsxref("TypedArray.name", "BigInt64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `BigInt64Array` type, this is "`BigInt64Array`".
+  - : Returns the string value of the constructor name. In the case of the `BigInt64Array` type, this is `"BigInt64Array"`.
 
 ## Static methods
 
@@ -106,29 +107,30 @@ The **`BigInt64Array`** typed array represents an array of 64-bit signed integer
 
 ```js
 // From a length
-let bigint64 = new BigInt64Array(2);
+const bigint64 = new BigInt64Array(2);
 bigint64[0] = 42n;
 console.log(bigint64[0]); // 42n
 console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-const arr = new BigInt64Array([21n,31n]);
-console.log(arr[1]); // 31n
+const x = new BigInt64Array([21n, 31n]);
+console.log(x[1]); // 31n
 
 // From another TypedArray
-const x = new BigInt64Array([21n, 31n]);
 const y = new BigInt64Array(x);
 console.log(y[0]); // 21n
 
 // From an ArrayBuffer
-const buffer = new ArrayBuffer(32);
-const z = new BigInt64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(64);
+const z = new BigInt64Array(buffer, 8, 4);
+console.log(z.byteOffset); // 8
 
 // From an iterable
-const iterable = function*(){ yield* [1n, 2n, 3n]; }();
-const bigint64 = new BigInt64Array(iterable);
-// BigInt64Array[1n, 2n, 3n]
+const iterable = function*() { yield* [1n, 2n, 3n]; }();
+const bigint64FromIterable = new BigInt64Array(iterable);
+console.log(bigint64FromIterable);
+// BigInt64Array [1n, 2n, 3n]
 ```
 
 ## Specifications

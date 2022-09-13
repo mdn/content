@@ -10,6 +10,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Tag
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Tag`** object defines a _type_ of a WebAssembly exception that can be thrown to/from WebAssembly code.
@@ -40,24 +41,30 @@ You can also export a tag defined in a module and use it to inspect exceptions t
 This code snippet creates a new `Tag` instance.
 
 ```js
-const tag_to_import = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
+const tagToImport = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
 ```
 
 The snippet below shows how we might pass it to a module **example.wasm** during instantiation, using an "import object".
 
 ```js
-const importObject = { "extmod": {"exttag": tag_to_import} }
-WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject )
-  .then(obj => {
-    ...
+const importObject = {
+  "extmod": {
+    "exttag": tagToImport
+  }
+};
+
+WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
+  .then((obj) => {
+    // …
+  });
 ```
 
 The WebAssembly module might then import the tag as shown below:
 
 ```wasm
 (module
-
-  (import "extmod" "exttag" (tag $tagname (param i32 f32)) )
+  (import "extmod" "exttag" (tag $tagname (param i32 f32))
+)
 ```
 
 If the tag was used to throw an exception that propagated to JavaScript, we could use the tag to inspect its values.

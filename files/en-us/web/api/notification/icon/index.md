@@ -12,6 +12,7 @@ tags:
   - icon
 browser-compat: api.Notification.icon
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`icon`** read-only property of the
@@ -30,7 +31,7 @@ constructor to fire a notification, passing it arguments to specify the body, ic
 title we want.
 
 ```js
-var notification = new Notification('To do list', {
+const notification = new Notification('To do list', {
   body: text,
   icon: img
 });

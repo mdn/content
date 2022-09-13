@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.name
 ---
+
 {{APIRef("File API")}}
 
 Returns the name of the file represented by a {{domxref("File")}} object. For security
@@ -51,7 +52,7 @@ filepicker.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

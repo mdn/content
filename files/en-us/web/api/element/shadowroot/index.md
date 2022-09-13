@@ -11,6 +11,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The `Element.shadowRoot` read-only property
@@ -37,14 +38,16 @@ You'll see that we are passing it `this` (the custom element itself) as a
 parameter.
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  connectedCallback() {
+    console.log('Custom square element added to page.');
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log('Custom square element attributes changed.');
+    updateStyle(this);
+  }
 }
 ```
 
@@ -58,7 +61,7 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
+  childNodes.forEach((childNode) => {
     if (childNode.nodeName === 'STYLE') {
       childNode.textContent = `
         div {

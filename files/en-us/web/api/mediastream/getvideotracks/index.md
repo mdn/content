@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getVideoTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getVideoTracks()`** method of the
@@ -24,7 +25,7 @@ The **`getVideoTracks()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoTracks()
 ```
 
@@ -48,15 +49,16 @@ has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
 ## Examples
 
-The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses `getVideoTracks()` to
+The following example, extracted from [Chrome's
+Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses `getVideoTracks()` to
 retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
   "ImageCapture()")}} constructor.
 
 ```js
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];

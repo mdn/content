@@ -11,6 +11,7 @@ tags:
   - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`deleteFromDocument()`** method of the
@@ -18,7 +19,7 @@ The **`deleteFromDocument()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteFromDocument()
 ```
 

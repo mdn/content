@@ -9,9 +9,12 @@ tags:
   - Offline
   - Reference
   - filesystem
+  - Non-standard
+  - Deprecated
 browser-compat: api.DirectoryEntrySync
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
@@ -22,7 +25,7 @@ The `DirectoryEntrySync` interface represents a directory in a file system. It i
 
 If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.
 
-#### Example
+### Example
 
 The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
 
@@ -38,39 +41,10 @@ const dirEntry = fs.root.getDirectory('project_dir', {create: true});
 
 ## Method overview
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <td>
-        <code>DirectoryReaderSync <a href="#createreader">createReader</a> ();</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>
-          <a href="/en-US/docs/Web/API/FileEntrySync">FileEntrySync</a>
-          <a href="#getfile">getFile</a> (in DOMString <em>path</em>, in
-          optional Flags <em>options</em>);
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>
-          DirectoryEntrySync <a href="#getdirectory">getDirectory</a> (in
-          DOMString path, in optional Flags <em>options</em>);
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>
-          void <a href="#removerecursively">removeRecursively</a> ();
-        </code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- <a href="#createreader">createReader()</a>
+- <a href="#getfile">getFile()</a>
+- <a href="#getdirectory">getDirectory()</a>
+- <a href="#removerecursively">removeRecursively()</a>
 
 ## Methods
 
@@ -78,8 +52,10 @@ const dirEntry = fs.root.getDirectory('project_dir', {create: true});
 
 Creates a new `DirectoryReaderSync` to read entries from this directory.
 
+#### Syntax
+
 ```
-DirectoryReaderSync createReader ();
+createReader()
 ```
 
 ##### Returns
@@ -104,18 +80,19 @@ This method can raise a {{domxref("DOMException")}} with the following codes:
 
 Depending on how you've set the `options` parameter, the method either creates a file or looks up an existing file.
 
+#### Syntax
+
 ```
-void getFile (
-  in DOMString path, in optional Flags options
-);
+getFile(path)
+getFile(path, options)
 ```
 
 ##### Parameter
 
-- path
+- `path`
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
-- options
-  - : An object literal describing the behavior of the method. If the file does not exist, it is created.
+- `options`
+  - : (optional) An object literal describing the behavior of the method. If the file does not exist, it is created.
 
 <table class="no-markdown">
   <thead>
@@ -183,18 +160,19 @@ This method can raise a {{domxref("DOMException")}} with the following codes:
 
 Creates or looks up a directory. The method is similar to `getFile()` with DirectoryEntrySync being passed.
 
+#### Syntax
+
 ```
-void getDirectory (
-  in DOMString path, in optional Flags options
-);
+getDirectory(path)
+getDirectory(path, options)
 ```
 
 ##### Parameter
 
-- path
+- `path`
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
-- options
-  - : An object literal describing the behavior of the method if the file does not exist.
+- `options`
+  - : (optional) An object literal describing the behavior of the method if the file does not exist.
 
 <table class="no-markdown">
   <thead>
@@ -266,8 +244,10 @@ Deletes a directory and all of its contents. You cannot delete the root director
 
 If you delete a directory that contains a file that cannot be removed or if an error occurs while the deletion is in progress, some of the contents might not be deleted. Catch these cases with error callbacks and retry the deletion.
 
+#### Syntax
+
 ```
-void removeRecursively ();
+removeRecursively()
 ```
 
 ##### Parameter
@@ -322,7 +302,7 @@ This method can raise a {{domxref("DOMException")}} with the following codes:
 ## Specifications
 
 This feature is not part of any current specification. It is no longer on track to become a standard.
-Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries API) instead.
+Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Browser compatibility
 

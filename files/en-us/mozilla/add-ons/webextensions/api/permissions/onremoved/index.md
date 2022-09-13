@@ -11,13 +11,14 @@ tags:
   - onRemoved
 browser-compat: webextensions.api.permissions.onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when some permissions are removed from the extension.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.permissions.onRemoved.addListener(listener)
 browser.permissions.onRemoved.removeListener(listener)
 browser.permissions.onRemoved.hasListener(listener)

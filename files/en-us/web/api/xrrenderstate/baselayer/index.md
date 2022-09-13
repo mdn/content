@@ -17,7 +17,8 @@ tags:
   - baseLayer
 browser-compat: api.XRRenderState.baseLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`baseLayer`** property of the
 {{domxref("XRRenderState")}} interface returns the {{domxref("XRWebGLLayer")}} instance
@@ -53,7 +54,7 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl);
+    baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 };
 ```

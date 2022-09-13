@@ -8,10 +8,10 @@ tags:
   - scheduler
   - Window
   - WorkerGlobalScope
-  - Experimental
 browser-compat: api.scheduler
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The global read-only **`scheduler`** property is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
@@ -34,18 +34,18 @@ It demonstrates how to check that the property exists and then posts a task that
 if ('scheduler' in this) {
 
   // Callback function - "the task"
-  function myTask() { return 'Task 1: user-visible'; }
+  const myTask = () => 'Task 1: user-visible';
 
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler.postTask( myTask )
+  scheduler
+    .postTask(myTask)
     // Handle resolved value
-    .then( (taskResult) => { console.log(`${taskResult}`); }) 
+    .then((taskResult) => console.log(`${taskResult}`))
     // Handle error or abort
-    .catch( (error) => { console.log(`Error: ${error}`); }); 
-  }
-  else {
-    console.log('Feature: NOT Supported');
+    .catch((error) => console.log(`Error: ${error}`));
+} else {
+  console.log('Feature: NOT Supported');
 }
 ```
 

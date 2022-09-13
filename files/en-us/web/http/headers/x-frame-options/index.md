@@ -10,13 +10,14 @@ tags:
   - nginx
 browser-compat: http.headers.X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking) attacks, by ensuring that their content is not embedded into other sites.
 
 The added security is provided only if the user accessing the document is using a browser that supports `X-Frame-Options`.
 
-> **Note:** The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which [obsoletes](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) this header for supporting browsers.
+> **Note:** The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which [obsoletes](https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options) this header for supporting browsers.
 
 <table class="properties">
   <tbody>
@@ -47,9 +48,9 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
 - `DENY`
   - : The page cannot be displayed in a frame, regardless of the site attempting to do so.
 - `SAMEORIGIN`
-  - : The page can only be displayed in a frame on the same origin as the page itself. The spec leaves it up to browser vendors to decide whether this option applies to the top level, the parent, or the whole chain, although it is argued that the option is not very useful unless all ancestors are also in the same origin (see {{bug(725490)}}). Also see [Browser compatibility](#browser_compatibility) for support details.
-- `ALLOW-FROM uri` {{deprecated_inline}}
-  - : This is an obsolete directive that no longer works in modern browsers. Don't use it. In supporting legacy browsers, a page can be displayed in a frame only on the specified origin _uri_. Note that in the legacy Firefox implementation this still suffered from the same problem as `SAMEORIGIN` did — it doesn't check the frame ancestors to see if they are in the same origin. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.
+  - : The page can only be displayed if all ancestor frames are same origin to the page itself.
+- `ALLOW-FROM=url` {{deprecated_inline}}
+  - : This is an obsolete directive that no longer works in modern browsers. (Using it will give the same behavior as omitting the header.) Don't use it. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.
 
 ## Examples
 
@@ -83,7 +84,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
 
 ```xml
 <system.webServer>
-  ...
+  …
 
   <httpProtocol>
     <customHeaders>
@@ -91,7 +92,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
     </customHeaders>
   </httpProtocol>
 
-  ...
+  …
 </system.webServer>
 ```
 
@@ -139,6 +140,5 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}
-- [HTTP Header Field X-Frame-Options - RFC 7034](https://datatracker.ietf.org/doc/html/rfc7034)
-- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

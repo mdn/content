@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.createImageData()`** method of
@@ -18,7 +19,7 @@ specified dimensions. All of the pixels in the new object are transparent black.
 
 ## Syntax
 
-```js
+```js-nolint
 createImageData(width, height)
 createImageData(imagedata)
 ```

@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isFrozen
 ---
+
 {{JSRef}}
 
 The **`Object.isFrozen()`** determines if an object is
@@ -17,7 +18,7 @@ The **`Object.isFrozen()`** determines if an object is
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isFrozen(obj)
 ```
 
@@ -61,8 +62,7 @@ Object.isFrozen(oneProp); // === false
 Object.preventExtensions(oneProp);
 Object.isFrozen(oneProp); // === false
 
-// ...but then deleting that property makes the object
-// vacuously frozen.
+// Deleting that property makes the object vacuously frozen.
 delete oneProp.p;
 Object.isFrozen(oneProp); // === true
 
@@ -104,8 +104,7 @@ const accessor = { get food() { return 'yum'; } };
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
-// ...but make that property non-configurable
-// and it becomes frozen.
+// When we make that property non-configurable it becomes frozen.
 Object.defineProperty(accessor, 'food', {
   configurable: false
 });
@@ -125,11 +124,9 @@ Object.isExtensible(frozen); // === false
 Object.isSealed(frozen); // === true
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a frozen ordinary object, return `true`.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, it will return `true` without any errors if a non-object argument is passed, since primitives are, by definition, immutable.
 
 ```js
 Object.isFrozen(1);

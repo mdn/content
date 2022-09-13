@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntries()`** method returns a list of all
@@ -24,7 +25,7 @@ certain types or that have certain names, see {{domxref("Performance.getEntriesB
 
 ## Syntax
 
-```js
+```js-nolint
 getEntries()
 ```
 
@@ -42,11 +43,11 @@ None.
 ## Examples
 
 ```js
-function use_PerformanceEntry_methods() {
-  console.log("PerformanceEntry tests ...");
+function usePerformanceEntryMethods() {
+  console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    console.log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported");
     return;
   }
 
@@ -61,27 +62,42 @@ function use_PerformanceEntry_methods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  let p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    console.log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
-  }
+  performance.getEntries()
+    .forEach((entry, i) => {
+      console.log(`Entry[${i}]`);
+      checkPerformanceEntry(entry);
+    });
 
   // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
-    console.log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
-  }
+  performance.getEntriesByType("mark")
+    .forEach((entry, i) => {
+      console.log(`Mark only entry[${i}]:`);
+      checkPerformanceEntry(entry);
+    });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
-    console.log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
-  }
+  performance.getEntriesByName("Begin", "mark")
+    .forEach((entry, i) => {
+      console.log(`Mark and Begin entry[${i}]:`);
+      checkPerformanceEntry(entry);
+    });
+}
+
+function checkPerformanceEntry(obj) {
+  const properties = ["name", "entryType", "startTime", "duration"];
+  const methods = ["toJSON"];
+
+  // Check each property
+  properties.forEach((property) => {
+    const supported = property in obj;
+    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
+  });
+
+  // Check each method
+  methods.forEach((method) => {
+    const supported = typeof obj[method] === "function";
+    console.log(`…${method} = ${supported ? JSON.stringify(obj[method]()) : "Not supported"}`);
+  });
 }
 ```
 

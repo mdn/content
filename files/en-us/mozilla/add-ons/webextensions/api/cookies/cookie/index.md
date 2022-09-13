@@ -13,6 +13,7 @@ tags:
   - cookie
 browser-compat: webextensions.api.cookies.Cookie
 ---
+
 {{AddonSidebar()}}
 
 The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.
@@ -23,7 +24,7 @@ Values of this type are objects, which can contain the following properties:
 
 - `domain`
   - : A `string` representing the domain the cookie belongs to (e.g. "www\.google.com", "example.com").
-- `expirationDate`{{optional_inline}}
+- `expirationDate` {{optional_inline}}
   - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
@@ -33,7 +34,7 @@ Values of this type are objects, which can contain the following properties:
   - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts), or `false` otherwise.
 - `name`
   - : A `string` representing the name of the cookie.
-- `partitionKey`{{optional_inline}}
+- `partitionKey` {{optional_inline}}
 
   - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
 
@@ -83,7 +84,8 @@ gettingAll.then(logCookies);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +112,4 @@ gettingAll.then(logCookies);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

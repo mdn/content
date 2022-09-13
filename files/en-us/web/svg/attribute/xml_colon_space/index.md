@@ -4,8 +4,10 @@ slug: Web/SVG/Attribute/xml:space
 tags:
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.attributes.core.xml_space
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 SVG supports the built-in XML **`xml:space`** attribute to handle whitespace characters inside elements. Child elements inside an element may also have an `xml:space` attribute that overrides the parent's one.
@@ -19,7 +21,9 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

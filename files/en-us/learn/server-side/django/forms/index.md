@@ -12,6 +12,7 @@ tags:
   - django
   - server side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).
@@ -53,7 +54,7 @@ First, a brief overview of [HTML Forms](/en-US/docs/Learn/Forms). Consider a sim
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
-The form is defined in HTML as a collection of elements inside `<form>...</form>` tags, containing at least one `input` element of `type="submit"`.
+The form is defined in HTML as a collection of elements inside `<form>…</form>` tags, containing at least one `input` element of `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">
@@ -91,17 +92,17 @@ Based on the diagram above, the main things that Django's form handling does are
 
 1. Display the default form the first time it is requested by the user.
 
-    - The form may contain blank fields if you're creating a new record, or it may be pre-populated with initial values (for example, if you are changing a record, or have useful default initial values).
-    - The form is referred to as _unbound_ at this point, because it isn't associated with any user-entered data (though it may have initial values).
+   - The form may contain blank fields if you're creating a new record, or it may be pre-populated with initial values (for example, if you are changing a record, or have useful default initial values).
+   - The form is referred to as _unbound_ at this point, because it isn't associated with any user-entered data (though it may have initial values).
 
 2. Receive data from a submit request and bind it to the form.
 
-    - Binding data to the form means that the user-entered data and any errors are available when we need to redisplay the form.
+   - Binding data to the form means that the user-entered data and any errors are available when we need to redisplay the form.
 
 3. Clean and validate the data.
 
-    - Cleaning the data performs sanitization of the input fields, such as removing invalid characters that might be used to send malicious content to the server, and converts them into consistent Python types.
-    - Validation checks that the values are appropriate for the field (for example, that they are in the right date range, aren't too short or too long, etc.)
+   - Cleaning the data performs sanitization of the input fields, such as removing invalid characters that might be used to send malicious content to the server, and converts them into consistent Python types.
+   - Validation checks that the values are appropriate for the field (for example, that they are in the right date range, aren't too short or too long, etc.)
 
 4. If any data is invalid, re-display the form, this time with any user populated values and error messages for the problem fields.
 5. If all data is valid, perform required actions (such as save the data, send an email, return the result of a search, upload a file, and so on).
@@ -243,7 +244,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -306,7 +307,7 @@ if request.method == 'POST':
         book_instance.save()
 
         # redirect to a new URL:
-        return HttpResponseRedirect(reverse('all-borrowed') )
+        return HttpResponseRedirect(reverse('all-borrowed'))
 
 context = {
     'form': form,
@@ -357,7 +358,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -435,7 +436,7 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 
 #### Other ways of using form template variable
 
-Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}` ) or as a paragraph (using `\{{ form.as_p }}`).
+Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}`) or as a paragraph (using `\{{ form.as_p }}`).
 
 It is also possible to have complete control over the rendering of each part of the form, by indexing its properties using dot notation. So, for example, we can access a number of separate items for our `renewal_date` field:
 
@@ -462,15 +463,15 @@ You can alternatively manually construct a test URL like this — `http://127.0.
 
 If you are successful, the default form will look like this:
 
-![](forms_example_renew_default.png)
+![Default form which displays the book details, due date, renewal date and a submit button appears in case the link works successfully](forms_example_renew_default.png)
 
 The form with an invalid value entered will look like this:
 
-![](forms_example_renew_invalid.png)
+![Same form as above with an error message: invalid date - renewal in the past](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 
-![](forms_example_renew_allbooks.png)
+![Displays list of all renewed books along with their details. Past due is in red.](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -581,9 +582,9 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 
 ### Templates
 
-The "create" and "update" views use the same template by default, which will be named after your model: *model_name*\_**form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example `template_name_suffix = '_other_suffix'`)
+The "create" and "update" views use the same template by default, which will be named after your model: `model_name_form.html` (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example, `template_name_suffix = '_other_suffix'`)
 
-Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
+Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -601,7 +602,7 @@ Create the template file **locallibrary/catalog/templates/catalog/author_form.ht
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format *model_name*\_**confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
+The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -648,17 +649,17 @@ Then navigate to the author create page, `http://127.0.0.1:8000/catalog/author/c
 
 Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot because it looks just like the "create" page!
 
-Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
+Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
 
-![](forms_example_delete_author.png)
+![Form with option to delete author](forms_example_delete_author.png)
 
 ## Challenge yourself
 
 Create some forms to create, edit, and delete `Book` records. You can use exactly the same structure as for `Authors`. If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
 
-![](forms_example_create_book.png)
+![Screenshot displaying various fields in the form like title, author, summary, ISBN, genre and language](forms_example_create_book.png)
 
 ## Summary
 

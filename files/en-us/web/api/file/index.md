@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.File
 ---
+
 {{APIRef("File API")}}
 
 The **`File`** interface provides information about files and allows JavaScript in a web page to access their content.
@@ -31,11 +32,11 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
 
 - {{DOMxRef("File.prototype.lastModified")}} {{ReadOnlyInline}}
   - : Returns the last modified time of the file, in millisecond since the UNIX epoch (January 1st, 1970 at Midnight).
-- {{DOMxRef("File.prototype.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("File.prototype.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the last modified {{JSxRef("Date")}} of the file referenced by the `File` object.
-- {{DOMxRef("File.prototype.name")}}{{ReadOnlyInline}}
+- {{DOMxRef("File.prototype.name")}} {{ReadOnlyInline}}
   - : Returns the name of the file referenced by the `File` object.
-- {{DOMxRef("File.prototype.webkitRelativePath")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("File.prototype.webkitRelativePath")}} {{ReadOnlyInline}}
   - : Returns the path the URL of the {{DOMxRef("File")}} is relative to.
 
 `File` implements {{DOMxRef("Blob")}}, so it also has the following properties available to it:

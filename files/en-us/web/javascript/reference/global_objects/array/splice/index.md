@@ -12,6 +12,7 @@ tags:
   - splice
 browser-compat: javascript.builtins.Array.splice
 ---
+
 {{JSRef}}
 
 The **`splice()`** method changes the contents of an array by
@@ -21,7 +22,7 @@ removing or replacing existing elements and/or adding new elements [in place](ht
 
 ## Syntax
 
-```js
+```js-nolint
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
@@ -50,7 +51,8 @@ splice(start, deleteCount, item1, item2, itemN)
     If `deleteCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
-- `item1, item2, ...` {{optional_inline}}
+- `item1`, …, `itemN` {{optional_inline}}
+
   - : The elements to add to the array, beginning from `start`.
 
     If you do not specify any elements, `splice()` will only remove elements from the array.
@@ -72,8 +74,8 @@ If the specified number of elements to insert differs from the number of element
 ### Remove 0 (zero) elements before index 2, and insert "drum"
 
 ```js
-let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
-let removed = myFish.splice(2, 0, 'drum')
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const removed = myFish.splice(2, 0, 'drum');
 
 // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed is [], no elements removed
@@ -82,8 +84,8 @@ let removed = myFish.splice(2, 0, 'drum')
 ### Remove 0 (zero) elements before index 2, and insert "drum" and "guitar"
 
 ```js
-let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
-let removed = myFish.splice(2, 0, 'drum', 'guitar')
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const removed = myFish.splice(2, 0, 'drum', 'guitar');
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed is [], no elements removed
@@ -92,8 +94,8 @@ let removed = myFish.splice(2, 0, 'drum', 'guitar')
 ### Remove 1 element at index 3
 
 ```js
-let myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon']
-let removed = myFish.splice(3, 1)
+const myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+const removed = myFish.splice(3, 1);
 
 // myFish is ["angel", "clown", "drum", "sturgeon"]
 // removed is ["mandarin"]
@@ -102,8 +104,8 @@ let removed = myFish.splice(3, 1)
 ### Remove 1 element at index 2, and insert "trumpet"
 
 ```js
-let myFish = ['angel', 'clown', 'drum', 'sturgeon']
-let removed = myFish.splice(2, 1, 'trumpet')
+const myFish = ['angel', 'clown', 'drum', 'sturgeon'];
+const removed = myFish.splice(2, 1, 'trumpet');
 
 // myFish is ["angel", "clown", "trumpet", "sturgeon"]
 // removed is ["drum"]
@@ -112,8 +114,8 @@ let removed = myFish.splice(2, 1, 'trumpet')
 ### Remove 2 elements from index 0, and insert "parrot", "anemone" and "blue"
 
 ```js
-let myFish = ['angel', 'clown', 'trumpet', 'sturgeon']
-let removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue')
+const myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+const removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed is ["angel", "clown"]
@@ -122,8 +124,8 @@ let removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue')
 ### Remove 2 elements, starting from index 2
 
 ```js
-let myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon']
-let removed = myFish.splice(2, 2)
+const myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+const removed = myFish.splice(2, 2);
 
 // myFish is ["parrot", "anemone", "sturgeon"]
 // removed is ["blue", "trumpet"]
@@ -132,8 +134,8 @@ let removed = myFish.splice(2, 2)
 ### Remove 1 element from index -2
 
 ```js
-let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
-let removed = myFish.splice(-2, 1)
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const removed = myFish.splice(-2, 1);
 
 // myFish is ["angel", "clown", "sturgeon"]
 // removed is ["mandarin"]
@@ -142,8 +144,8 @@ let removed = myFish.splice(-2, 1)
 ### Remove all elements, starting from index 2
 
 ```js
-let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
-let removed = myFish.splice(2)
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const removed = myFish.splice(2);
 
 // myFish is ["angel", "clown"]
 // removed is ["mandarin", "sturgeon"]

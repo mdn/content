@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Background
-  - Experimental
   - Houdini
   - Method
   - Multiprocessor
@@ -16,7 +15,8 @@ tags:
   - addModule
 browser-compat: api.Worklet.addModule
 ---
-{{APIRef("Worklets")}}{{SeeCompatTable}}
+
+{{APIRef("Worklets")}}
 
 The **`addModule()`** method of the
 {{domxref("Worklet")}} interface loads the module in the given JavaScript file and
@@ -24,7 +24,7 @@ adds it to the current `Worklet`.
 
 ## Syntax
 
-```js
+```js-nolint
 addModule(moduleURL)
 addModule(moduleURL, options)
 ```
@@ -84,7 +84,7 @@ can be used to include the image created by the worklet:
 ```css
 @supports (background-image: paint(id)) {
   h1 {
-      background-image: paint(hollowHighlights, filled, 3px);
+    background-image: paint(hollowHighlights, filled, 3px);
   }
 }
 ```

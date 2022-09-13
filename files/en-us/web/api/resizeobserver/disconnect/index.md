@@ -12,6 +12,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver.disconnect
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`disconnect()`** method of the
@@ -20,7 +21,7 @@ or {{domxref('SVGElement')}} targets.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

@@ -14,6 +14,7 @@ browser-compat:
   - api.SpeechRecognition
   - api.SpeechSynthesis
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.
@@ -72,7 +73,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 
 ## Examples
 
-The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/master/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/main/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Specifications
 
@@ -87,4 +88,3 @@ The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/master/we
 - [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
 - [HTML5Rocks article](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)
-- [Demo](https://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

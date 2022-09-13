@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerRegistration/showNotification
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - NeedsExample
   - Reference
@@ -14,6 +13,7 @@ tags:
   - showNotification
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `showNotification()` method of the
@@ -24,7 +24,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 showNotification(title)
 showNotification(title, options)
 ```
@@ -38,7 +38,8 @@ showNotification(title, options)
   - : An object that allows configuring the notification. It can have the following
     properties:
 
-    - `actions`
+    - `actions` {{experimental_inline}}
+
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
         - `action`
@@ -51,7 +52,7 @@ showNotification(title, options)
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
-    - `badge`
+    - `badge` {{experimental_inline}}
       - : a string containing the URL of an image
         to represent the notification when there is not enough space to display the
         notification itself such as for example, the Android Notification Bar. On Android
@@ -60,28 +61,28 @@ showNotification(title, options)
     - `body`
       - : A string representing an extra content to display within the
         notification.
-    - `data`
+    - `data` {{experimental_inline}}
       - : Arbitrary data that you want to be associated with the
         notification. This can be of any data type.
     - `dir`
-      - : The direction of the notification; it can be `auto`,  `ltr` or `rtl`.
+      - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
     - `icon`
       - : a string containing the URL of an image to
         be used as an icon by the notification.
-    - `image`
+    - `image` {{experimental_inline}}
       - : a string containing the URL of an image to
         be displayed in the notification.
     - `lang`
       - : Specify the lang used within the notification. This string
         must be a valid language tag according to
         {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-    - `renotify`
+    - `renotify` {{experimental_inline}}
       - : A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a `tag` value.
-        If *options*'s `renotify` is true
-        and *options*'s `tag` is the empty string a TypeError will be
+        If _options_'s `renotify` is true
+        and _options_'s `tag` is the empty string a TypeError will be
         thrown. The default is `false`.
-    - `requireInteraction`
+    - `requireInteraction` {{experimental_inline}}
       - : Indicates that on devices with sufficiently
         large screens, a notification should remain active until the user clicks or
         dismisses it. If this value is absent or false, the desktop version of Chrome will
@@ -89,8 +90,8 @@ showNotification(title, options)
         is `false`.
     - `silent`
       - : When set indicates that no sounds or vibrations should be
-        made. If *options*'s `silent` is true
-        and *options*'s `vibrate` is present a TypeError exception
+        made. If _options_'s `silent` is true
+        and _options_'s `vibrate` is present a TypeError exception
         will be thrown. The default value is `false`.
     - `tag`
       - : An ID for a given notification that allows you to find,
@@ -101,7 +102,7 @@ showNotification(title, options)
         notification is actual. For example, this could be in the past when a notification
         is used for a message that couldn't immediately be delivered because the device
         was offline, or in the future for a meeting that is about to start.
-    - `vibrate`
+    - `vibrate` {{experimental_inline}}
       - : A vibration pattern to run with the display of the
         notification. A vibration pattern can be an array with as few as one member. The
         values are times in milliseconds where the even indices (0, 2, 4, etc.) indicate
@@ -119,9 +120,9 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 navigator.serviceWorker.register('sw.js');
 
 function showNotification() {
-  Notification.requestPermission(function(result) {
+  Notification.requestPermission((result) => {
     if (result === 'granted') {
-      navigator.serviceWorker.ready.then(function(registration) {
+      navigator.serviceWorker.ready.then((registration) => {
         registration.showNotification('Vibration Sample', {
           body: 'Buzz! Buzz!',
           icon: '../images/touch/chrome-touch-icon-192x192.png',

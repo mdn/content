@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: css.properties.hyphenate-character
 ---
+
 {{CSSRef}}
 
 The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the character (or string) used at the end of a line before a hyphenation break.
@@ -45,7 +46,7 @@ This example shows two identical blocks of text that have {{cssxref("hyphens")}}
 The first block has the value of the hyphen changed to the equals symbol ("`=`").
 The second block has no hyphenate-character set, which is equivalent to `hyphenate-character: auto` for user agents that support this property.
 
-#### HTML
+### HTML
 
 ```html
 <dl>
@@ -56,7 +57,7 @@ The second block has no hyphenate-character set, which is equivalent to `hyphena
 </dl>
 ```
 
-#### CSS
+### CSS
 
 ```css
 dd {
@@ -71,7 +72,7 @@ dd#string {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Examples", "100%", 350)}}
 

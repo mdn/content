@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLDetailsElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLDetailsElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-right-color
 ---
+
 {{CSSRef}}
 
 The **`border-right-color`** CSS property sets the color of an element's right [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-right")}}.
@@ -67,13 +68,13 @@ The `border-right-color` property is specified as a single value.
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-right-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-right-color: red;
+  width: auto;
 }
 
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 

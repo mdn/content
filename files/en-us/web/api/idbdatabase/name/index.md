@@ -13,6 +13,7 @@ tags:
   - name
 browser-compat: api.IDBDatabase.name
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`name`** read-only property of the
@@ -31,19 +32,19 @@ This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
 then being logged. For a full example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
- app ([view example live](https://mdn.github.io/to-do-notifications/)).
+app ([view example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being
 // opened successfully, or not
-DBOpenRequest.onerror = event => {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below

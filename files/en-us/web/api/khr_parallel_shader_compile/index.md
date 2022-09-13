@@ -11,6 +11,7 @@ tags:
   - parallel shader compile
 browser-compat: api.KHR_parallel_shader_compile
 ---
+
 {{APIRef("WebGL")}}
 
 The **`KHR_parallel_shader_compile`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables a non-blocking poll operation, so that compile/link status availability (`COMPLETION_STATUS_KHR`) can be queried without potentially incurring stalls. In other words you can check the status of your shaders compiling without blocking the runtime.
@@ -27,7 +28,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 Enable the extension:
 
 ```js
-var ext = gl.getExtension('KHR_parallel_shader_compile');
+const ext = gl.getExtension('KHR_parallel_shader_compile');
 ```
 
 In general, best practice with or without the extension is:
@@ -50,7 +51,7 @@ function* linkingProgress(programs) {
     let todo = programs.slice();
     while (todo.length) {
         if (ext) {
-            todo = todo.filter(x => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR));
+            todo = todo.filter((x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR));
         } else {
             const x = todo.pop();
             gl.getProgramParameter(x, gl.LINK_STATUS);

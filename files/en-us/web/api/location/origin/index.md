@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.origin
 ---
+
 {{APIRef("Location")}}
 
 The **`origin`** read-only property of
@@ -36,7 +37,7 @@ A string.
 
 ```js
 // On this page, returns the origin
-var result = window.location.origin; // Returns:'https://developer.mozilla.org'
+const result = window.location.origin; // Returns:'https://developer.mozilla.org'
 ```
 
 ## Specifications

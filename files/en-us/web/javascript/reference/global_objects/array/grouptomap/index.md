@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Array.groupToMap
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`groupToMap()`** method groups the elements of the calling array using the values returned by a provided testing function.
@@ -23,21 +24,21 @@ If the object is invariant, you might instead represent it using a string, and g
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-groupToMap((element) => { /* ... */ } )
-groupToMap((element, index) => { /* ... */ } )
-groupToMap((element, index, array) => { /* ... */ } )
+groupToMap((element) => { /* … */ } )
+groupToMap((element, index) => { /* … */ } )
+groupToMap((element, index, array) => { /* … */ } )
 
 // Callback function
 groupToMap(callbackFn)
 groupToMap(callbackFn, thisArg)
 
 // Inline callback function
-groupToMap(function(element) { /* ... */ })
-groupToMap(function(element, index) { /* ... */ })
-groupToMap(function(element, index, array){ /* ... */ })
-groupToMap(function(element, index, array) { /* ... */ }, thisArg)
+groupToMap(function(element) { /* … */ })
+groupToMap(function(element, index) { /* … */ })
+groupToMap(function(element, index, array){ /* … */ })
+groupToMap(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -58,10 +59,11 @@ groupToMap(function(element, index, array) { /* ... */ }, thisArg)
     The value ({{Glossary("object")}} or {{Glossary("primitive")}}) returned from the callback indicates the group of the current element.
 
 - `thisArg` {{optional_inline}}
+
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
 
-     The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
-     Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+    The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
+    Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Return value
 
@@ -132,7 +134,7 @@ The returned `result` object is a `Map` so we need to call `get()` with the key 
 ```js
 const restock  = { restock: true };
 const sufficient = { restock: false };
-const result = inventory.groupToMap( ({ quantity }) => quantity < 6 ? restock : sufficient );
+const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 ```

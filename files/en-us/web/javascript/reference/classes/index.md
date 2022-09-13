@@ -11,6 +11,7 @@ tags:
   - JavaScript
 browser-compat: javascript.classes
 ---
+
 {{JsSidebar("Classes")}}
 
 Classes are a template for creating objects.
@@ -53,7 +54,7 @@ This occurs because while the class is {{Glossary("Hoisting", "hoisted")}} its v
 A **class expression** is another way to define a class.
 Class expressions can be named or unnamed.
 The name given to a named class expression is local to the class's body.
-However, it can be accessed via the {{jsxref("Function.name", "name")}} property.
+However, it can be accessed via the {{jsxref("Function/name", "name")}} property.
 
 ```js
 // unnamed
@@ -67,7 +68,7 @@ console.log(Rectangle.name);
 // output: "Rectangle"
 
 // named
-let Rectangle = class Rectangle2 {
+Rectangle = class Rectangle2 {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -138,7 +139,7 @@ class Polygon {
   }
   // Method
   *getSides() {
-    for(const side of this.sides){
+    for (const side of this.sides) {
       yield side;
     }
   }
@@ -197,13 +198,13 @@ class Animal {
   }
 }
 
-let obj = new Animal();
+const obj = new Animal();
 obj.speak(); // the Animal object
-let speak = obj.speak;
+const speak = obj.speak;
 speak(); // undefined
 
 Animal.eat() // class Animal
-let eat = Animal.eat;
+const eat = Animal.eat;
 eat(); // undefined
 ```
 
@@ -213,19 +214,19 @@ In strict mode, autobinding will not happen; the value of `this` remains as pass
 ```js
 function Animal() { }
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
 }
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
 }
 
-let obj = new Animal();
-let speak = obj.speak;
+const obj = new Animal();
+const speak = obj.speak;
 speak(); // global object (in non–strict mode)
 
-let eat = Animal.eat;
+const eat = Animal.eat;
 eat(); // global object (in non-strict mode)
 ```
 
@@ -316,7 +317,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Mitzie');
+const d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
 ```
 
@@ -325,7 +326,7 @@ If there is a constructor present in the subclass, it needs to first call super(
 One may also extend traditional function-based "classes":
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 
@@ -339,7 +340,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Mitzie');
+const d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
 
 // For similar methods, the child's method takes precedence over parent's method
@@ -364,7 +365,7 @@ class Dog {
 // If you do not do this you will get a TypeError when you invoke speak
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-let d = new Dog('Mitzie');
+const d = new Dog('Mitzie');
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -373,7 +374,7 @@ d.speak(); // Mitzie makes a noise.
 You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`.
 The species pattern lets you override default constructors.
 
-For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object.
+For example, when using methods such as {{jsxref("Array.prototype.map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object.
 The {{jsxref("Symbol.species")}} symbol lets you do this:
 
 ```js
@@ -382,8 +383,8 @@ class MyArray extends Array {
   static get [Symbol.species]() { return Array; }
 }
 
-let a = new MyArray(1,2,3);
-let mapped = a.map(x => x * x);
+const a = new MyArray(1, 2, 3);
+const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array);   // true
@@ -412,7 +413,7 @@ class Lion extends Cat {
   }
 }
 
-let l = new Lion('Fuzzy');
+const l = new Lion('Fuzzy');
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
@@ -427,11 +428,11 @@ The functionality must be provided by the superclass.
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:
 
 ```js
-let calculatorMixin = Base => class extends Base {
+const calculatorMixin = (Base) => class extends Base {
   calc() { }
 };
 
-let randomizerMixin = Base => class extends Base {
+const randomizerMixin = (Base) => class extends Base {
   randomize() { }
 };
 ```

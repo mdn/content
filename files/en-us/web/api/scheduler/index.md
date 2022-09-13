@@ -6,10 +6,10 @@ tags:
   - Interface
   - Reference
   - Scheduler
-  - Experimental
 browser-compat: api.Scheduler
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`Scheduler`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides the {{domxref('Scheduler.postTask()')}} method that can be used for adding prioritized tasks to be scheduled.
 
@@ -37,9 +37,10 @@ The code also shows a `catch` block, which would be required in more complex cod
 if ('scheduler' in this) {
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler.postTask( ()=>{ return 'Task executing'; } )
-    .then( (taskResult) => { console.log(`${taskResult}`); }) // Log result
-    .catch( (error) => { console.log(`Error: ${error}`); });  // Log errors
+  scheduler
+    .postTask(() => 'Task executing')
+    .then((taskResult) => console.log(`${taskResult}`)) // Log result
+    .catch((error) => console.error(`Error: ${error}`)); // Log errors
 }
 ```
 

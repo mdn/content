@@ -7,6 +7,7 @@ tags:
   - Gecko
   - Guide
 ---
+
 {{ ApiRef() }}
 
 It's easy to get confused about which event target to examine when writing an event handler. This article should clarify the use of the target properties.
@@ -88,8 +89,7 @@ There are five targets to consider:
           ></code
         >
       </td>
-      <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+      <td><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} If the event was retargeted for
@@ -112,7 +112,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original target of the event,
@@ -127,7 +127,7 @@ There are five targets to consider:
     <tr>
       <td>event.composedTarget</td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original non-native target of
@@ -145,7 +145,7 @@ There are five targets to consider:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

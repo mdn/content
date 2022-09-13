@@ -11,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozTypesAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{deprecated_header}}{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozTypesAt()`** method returns a list of
 the format types that are stored for an item at the specified index. If the index is not
@@ -23,7 +22,7 @@ in the range from 0 to the number of items minus one, an empty string list is re
 
 ## Syntax
 
-```js
+```js-nolint
 mozTypesAt(index)
 ```
 
@@ -36,8 +35,8 @@ mozTypesAt(index)
 ### Return value
 
 A list of data formats (which are strings). If the index
-    is not in the range from 0 to the number of items minus one, an empty string list is
-    returned.
+is not in the range from 0 to the number of items minus one, an empty string list is
+returned.
 
 ## Examples
 
@@ -49,16 +48,16 @@ function drop_handler(event)
 {
   const dt = event.dataTransfer;
   const count = dt.mozItemCount;
-  output("Items: " + count + "\n");
+  output(`Items: ${count}\n`);
 
   for (let i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
+    output(` Item ${i}:\n`);
     const types = dt.mozTypesAt(i);
     for (let t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
+      output(`  ${types[t]}: `);
       try {
         const data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
+        output(`(${typeof data}) : <${data}>\n`);
       } catch (ex) {
         output("<>\n");
         dump(ex);

@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all key/value pairs contained in the {{domxref("FormData")}}. The key of each pair is a string object, and the value is either a string or a {{domxref("Blob")}}.
@@ -19,7 +20,7 @@ The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -38,7 +39,7 @@ formData.append('key1', 'value1');
 formData.append('key2', 'value2');
 
 // Display the key/value pairs
-for(const pair of formData.entries()) {
+for (const pair of formData.entries()) {
   console.log(`${pair[0]}, ${pair[1]}`);
 }
 ```

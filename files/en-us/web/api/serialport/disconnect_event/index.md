@@ -7,9 +7,11 @@ tags:
   - Event
   - Reference
   - SerialPort
+  - Experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
-{{securecontext_header}}{{APIRef("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port has disconnected from the device. This event is only fired for ports associated with removable devices such as those connected via USB.
 
@@ -20,9 +22,9 @@ This event bubbles to the instance of {{domxref("Serial")}} that returned this i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', event => { });
+addEventListener('disconnect', (event) => { });
 
-ondisconnect = event => { };
+ondisconnect = (event) => { };
 ```
 
 ## Event type
@@ -42,7 +44,7 @@ For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScr
 Here the event listener is installed on a specific {{domxref("SerialPort")}} object.
 
 ```js
-port.addEventListener('disconnect', event => {
+port.addEventListener('disconnect', (event) => {
   // notify that the port has become unavailable
 });
 ```
@@ -52,7 +54,7 @@ port.addEventListener('disconnect', event => {
 The `disconnect` event bubbles up to the {{domxref("Serial")}} object where you can listen for any ports that become unavailable.
 
 ```js
-navigator.serial.addEventListener('disconnect', event => {
+navigator.serial.addEventListener('disconnect', (event) => {
   // notify that a port has become unavailable
   // use `event.target` to refer to the unavailable port
 });

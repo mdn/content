@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`italics()`** method creates an {{HTMLElement("i")}} HTML
@@ -18,7 +19,7 @@ element that causes a string to be italic.
 
 ## Syntax
 
-```js
+```js-nolint
 italics()
 ```
 
@@ -35,7 +36,7 @@ The `italics()` method embeds a string in an `<i>` element:
 
 ### Using italics()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
 const worldString = 'Hello, world';

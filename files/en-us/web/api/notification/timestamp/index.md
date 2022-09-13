@@ -10,9 +10,11 @@ tags:
   - Property
   - Reference
   - timeStamp
+  - Experimental
 browser-compat: api.Notification.timestamp
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`timestamp`** read-only property of the
 {{domxref("Notification")}} interface returns a {{domxref("DOMTimeStamp")}}, as
@@ -36,14 +38,14 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var dts = Math.floor(Date.now());
+const dts = Math.floor(Date.now());
 
-var options = {
+const options = {
   body: 'Do you like my body?',
   timestamp: dts
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.timestamp) // should log original timestamp
 ```

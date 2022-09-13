@@ -7,6 +7,7 @@ tags:
   - Guide
   - Understanding_CSS_z-index
 ---
+
 {{CSSRef}}
 
 « [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
@@ -35,10 +36,13 @@ To better understand the situation, this is the stacking context hierarchy:
 ## Example source code
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head><style type="text/css">
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Stacking context demo</title>
+<style>
 
 div { font: 12px Arial; }
 

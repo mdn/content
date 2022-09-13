@@ -14,6 +14,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.angle
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`angle`** property of the

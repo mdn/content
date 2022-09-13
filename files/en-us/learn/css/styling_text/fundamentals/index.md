@@ -15,6 +15,7 @@ tags:
   - spacing
   - weight
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 In this article we'll start you on your journey towards mastering text styling with {{glossary("CSS")}}. Here we'll go through all the basic fundamentals of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
@@ -61,7 +62,7 @@ Let's move straight on to look at properties for styling fonts. In this example,
 ```html
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -90,7 +91,7 @@ This will cause the paragraphs to become red, rather than the standard browser d
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -310,7 +311,7 @@ This gives us the following result:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -352,7 +353,7 @@ Our new result is like so:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -420,7 +421,7 @@ Our new result is like so:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -474,8 +475,7 @@ You can apply multiple shadows to the same text by including multiple shadow val
 
 ```css
 h1 {
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
 }
 ```
 
@@ -484,7 +484,7 @@ If we applied this to the {{htmlelement("h1")}} element in our Tommy The Cat exa
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -521,7 +521,7 @@ p {
 
 ## Text layout
 
-With basic font properties out the way, let's have a look at properties we can use to affect text layout.
+With basic font properties out of the way, let's have a look at properties we can use to affect text layout.
 
 ### Text alignment
 
@@ -537,7 +537,7 @@ If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example,
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -555,8 +555,7 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
   text-align: center;
 }
 
@@ -588,7 +587,7 @@ Applying this to the {{htmlelement("p")}} elements in our example would give us 
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -606,8 +605,7 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
   text-align: center;
 }
 
@@ -643,7 +641,7 @@ This renders our HTML as:
 ```html hidden
 <h1>Tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Well I remember it as though it were a meal ago…</p>
 
 <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
  may have nestled its way into his mighty throat. Many a fat alley rat
@@ -661,8 +659,7 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -775,7 +772,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

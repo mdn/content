@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getActiveUniforms
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getActiveUniforms()`** method of
@@ -18,7 +19,7 @@ active uniforms within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniforms(program, uniformIndices, pname)
 ```
 
@@ -64,8 +65,8 @@ Depends on which information is requested using the `pname` parameter.
 ## Examples
 
 ```js
-var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
-var uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
+const uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
+const uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
 ```
 
 ## Specifications

@@ -11,7 +11,8 @@ tags:
   - has()
 browser-compat: api.MediaKeyStatusMap.has
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`has`** property of the
 {{domxref("MediaKeyStatusMap")}} interface returns a {{jsxref('Boolean')}}, asserting
@@ -19,7 +20,7 @@ whether a value has been associated with the given key.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

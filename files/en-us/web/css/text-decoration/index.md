@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.text-decoration
 ---
+
 {{CSSRef}}
 
 The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
@@ -24,7 +25,7 @@ This property is a shorthand for the following CSS properties:
 - [`text-decoration-color`](/en-US/docs/Web/CSS/text-decoration-color)
 - [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line)
 - [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness)
+- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness) {{Non-standard_Inline}}
 
 ## Syntax
 

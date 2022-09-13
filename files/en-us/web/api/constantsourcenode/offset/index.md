@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConstantSourceNode.offset
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The read-only `offset` property of the {{ domxref("ConstantSourceNode") }}
@@ -59,7 +60,7 @@ to match the gain on the two nodes. Then we create a new
 {{domxref("GainNode.gain")}} values. Each of those values is also an
 {{domxref("AudioParam")}}.
 
-Let's say we have an event handler (for {{event("click")}} events, in this case) which
+Let's say we have an event handler (for {{domxref("Element/click_event", "click")}} events, in this case) which
 needs to respond by altering the value of the two gain nodes. With the linkage above in
 place, that can be done using this simple event handler:
 

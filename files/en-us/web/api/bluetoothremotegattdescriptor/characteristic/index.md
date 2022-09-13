@@ -14,19 +14,14 @@ tags:
   - characteristic
 browser-compat: api.BluetoothRemoteGATTDescriptor.characteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.characteristic`**
 read-only property returns the {{domxref("BluetoothRemoteGATTCharacteristic")}} this
 descriptor belongs to.
 
-## Syntax
-
-```js
-var characteristic = BluetoothRemoteGATTCharacteristic.characteristic
-```
-
-### Returns
+## Value
 
 An instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}.
 

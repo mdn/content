@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRWebGLSubImage.textureHeight
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`textureHeight`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the height in pixels of the GL attachment.
 

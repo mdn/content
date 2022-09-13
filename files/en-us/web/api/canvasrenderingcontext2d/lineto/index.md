@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -24,7 +25,7 @@ anything. To draw the path onto a canvas, you can use the
 
 ## Syntax
 
-```js
+```js-nolint
 lineTo(x, y)
 ```
 

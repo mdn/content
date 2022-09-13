@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.bold
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`bold()`** method creates a {{HTMLElement("b")}} HTML
@@ -19,7 +20,7 @@ element that causes a string to be displayed as bold.
 
 ## Syntax
 
-```js
+```js-nolint
 bold()
 ```
 
@@ -36,7 +37,7 @@ The `bold()` method embeds a string in a `<b>` element:
 
 ### Using bold()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
 const worldString = 'Hello, world';

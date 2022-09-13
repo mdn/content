@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.parent
 ---
+
 {{APIRef}}
 
 The **`Window.parent`** property is a reference to the parent
@@ -30,7 +31,7 @@ A `Window` or {{htmlelement("iframe")}} object.
 ## Examples
 
 ```js
-if (window.parent != window.top) {
+if (window.parent !== window.top) {
   // We're deeper than one down
 }
 ```

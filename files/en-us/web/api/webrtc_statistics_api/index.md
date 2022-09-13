@@ -15,13 +15,14 @@ tags:
   - WebRTC Statistics API
 browser-compat: api.RTCStatsReport
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The WebRTC API has a vast array of statistics available, covering the entire breadth of the WebRTC connectivity system, from sender to receiver and peer to peer.
 
 ## Collecting statistics
 
-You can collect statistics at various levels throughout the WebRTC hierarchy of objects. Most broadly, you can call {{domxref("RTCPeerConnection.getStats", "getStats()")}} on an {{domxref("RTCPeerConnection")}} to get statistics for the connection overall. In this example, a new {{domxref("RTCPeerConnection")}} is created, and then {{domxref( "setInterval()")}} is used to set the function `getConnectionStats()` to be called every second.
+You can collect statistics at various levels throughout the WebRTC hierarchy of objects. Most broadly, you can call {{domxref("RTCPeerConnection.getStats", "getStats()")}} on an {{domxref("RTCPeerConnection")}} to get statistics for the connection overall. In this example, a new {{domxref("RTCPeerConnection")}} is created, and then {{domxref("setInterval()")}} is used to set the function `getConnectionStats()` to be called every second.
 
 That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()")}} to obtain statistics for the connection and to make use of that data.
 
@@ -29,19 +30,19 @@ That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()
 try {
   myPeerConnection = new RTCPeerConnection(pcOptions);
 
-  statsInterval = window.setInterval(getConnectionStats, 1000);
-  /* add event handlers, etc */
-} catch(err) {
-  console.error("Error creating RTCPeerConnection: " + err);
+  statsInterval = setInterval(getConnectionStats, 1000);
+  /* add event handlers, etc. */
+} catch (err) {
+  console.error(`Error creating RTCPeerConnection: ${err}`);
 }
 
 function getConnectionStats() {
-  myPeerConnection.getStats(null).then(stats => {
-    var statsOutput = "";
+  myPeerConnection.getStats(null).then((stats) => {
+    let statsOutput = "";
 
-    stats.forEach(report => {
+    stats.forEach((report) => {
       if (report.type === "inbound-rtp" && report.kind === "video") {
-        Object.keys(report).forEach(statName => {
+        Object.keys(report).forEach((statName) => {
           statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
         });
       }

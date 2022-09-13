@@ -10,40 +10,26 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.loadeddata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The **`loadeddata`** event is fired when the frame at the current playback position of the media has finished loading; often the first frame.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onloadeddata")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 > **Note:** This event will not fire in mobile/tablet devices if data-saver is on in browser settings.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('loadeddata', (event) => {});
+
+onloadeddata = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

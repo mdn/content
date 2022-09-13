@@ -7,15 +7,17 @@ tags:
   - Constructor
   - Reference
   - AudioEncoder
+  - Experimental
 browser-compat: api.AudioEncoder.AudioEncoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`AudioEncoder()`** constructor creates a new {{domxref("AudioEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("AudioEncoder.state")}} set to `"unconfigured"`.
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioEncoder(init)
 ```
 
@@ -31,7 +33,7 @@ new AudioEncoder(init)
           - : An integer representing the number of frame samples per second.
         - `numberOfChannels`
           - : An integer representing the number of audio channels.
-        - `description`{{Optional_Inline}}
+        - `description` {{optional_inline}}
           - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `error`
       - : A callback which takes an {{jsxref("Error")}} object as its only argument.

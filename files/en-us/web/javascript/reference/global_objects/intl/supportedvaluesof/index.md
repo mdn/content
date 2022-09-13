@@ -10,6 +10,7 @@ tags:
   - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.supportedValuesOf()`** method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
@@ -19,13 +20,13 @@ Duplicates are omitted and the array is sorted in ascending alphabetic order (or
 The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if necessary.
 It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.
 
-{{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.supportedValuesOf(key)
 ```
 
@@ -33,7 +34,7 @@ Intl.supportedValuesOf(key)
 
 - `key`
   - : A key string indicating the category of values to be returned.
-      This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 
@@ -52,7 +53,7 @@ You can check that the method is supported by comparing to `undefined`:
 
 ```js
 if (typeof Intl.supportedValuesOf !== 'undefined') {
-  //method is supported
+  // method is supported
 }
 ```
 
@@ -62,8 +63,8 @@ To get the supported values for calendar you call the method with the key `"cale
 You can then iterate through the returned array as shown below:
 
 ```js
-Intl.supportedValuesOf("calendar").forEach(function(calendar) {
-   // "buddhist", "chinese", "coptic", "dangi", ...
+Intl.supportedValuesOf("calendar").forEach((calendar) => {
+  // "buddhist", "chinese", "coptic", "dangi", etc.
 });
 ```
 
@@ -72,24 +73,24 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
 The other values are all obtained in the same way:
 
 ```js
-Intl.supportedValuesOf("collation").forEach(function(collation) {
-   // "big5han", "compat", "dict", "emoji", ...
+Intl.supportedValuesOf("collation").forEach((collation) => {
+  // "big5han", "compat", "dict", "emoji", etc.
 });
 
-Intl.supportedValuesOf("currency").forEach(function(currency) {
-   // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
+Intl.supportedValuesOf("currency").forEach((currency) => {
+  // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", etc.
 });
 
-Intl.supportedValuesOf("numberingSystem").forEach(function(numberingSystem) {
-   // "adlm", "ahom", "arab", "arabext", "bali", ...
+Intl.supportedValuesOf("numberingSystem").forEach((numberingSystem) => {
+  // "adlm", "ahom", "arab", "arabext", "bali", etc.
 });
 
-Intl.supportedValuesOf("timeZone").forEach(function(timeZone) {
-   // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
+Intl.supportedValuesOf("timeZone").forEach((timeZone) => {
+  // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", etc.
 });
 
-Intl.supportedValuesOf("unit").forEach(function(unit) {
-   // "acre", "bit", "byte", "celsius", "centimeter", ...
+Intl.supportedValuesOf("unit").forEach((unit) => {
+  // "acre", "bit", "byte", "celsius", "centimeter", etc.
 });
 ```
 
@@ -114,4 +115,4 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-- [A polyfill of `Intl.supportedValuesOf` in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
+- [A polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)

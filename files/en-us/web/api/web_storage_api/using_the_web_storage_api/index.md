@@ -13,6 +13,7 @@ browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 The Web Storage API provides mechanisms by which browsers can securely store key/value pairs.
@@ -33,8 +34,8 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 The two mechanisms within Web Storage are as follows:
 
-- **`sessionStorage`** maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
-- **`localStorage`** does the same thing, but persists even when the browser is closed and reopened.
+- `sessionStorage` maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
+- `localStorage` does the same thing, but persists even when the browser is closed and reopened.
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, in supporting browsers the `Window` object implements the `WindowLocalStorage` and `WindowSessionStorage` objects, which the `localStorage` and `sessionStorage` properties are members of) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved, and removed. A different Storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
@@ -56,15 +57,15 @@ Here is a function that detects whether localStorage is both supported and avail
 
 ```js
 function storageAvailable(type) {
-    var storage;
+    let storage;
     try {
         storage = window[type];
-        var x = '__storage_test__';
+        const x = '__storage_test__';
         storage.setItem(x, x);
         storage.removeItem(x);
         return true;
     }
-    catch(e) {
+    catch (e) {
         return e instanceof DOMException && (
             // everything except Firefox
             e.code === 22 ||
@@ -106,14 +107,14 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 
 ![](event-output.png)
 
-> **Note:** As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> **Note:** As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/main/web-storage).
 
 ### Testing whether your storage has been populated
 
-To start with, in [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), we test whether the storage object has already been populated (i.e., the page was previously accessed):
+To start with, in [main.js](https://github.com/mdn/dom-examples/blob/main/web-storage/main.js), we test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -133,15 +134,15 @@ For example:
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem('bgcolor');
+  const currentFont = localStorage.getItem('font');
+  const currentImage = localStorage.getItem('image');
 
   document.getElementById('bgcolor').value = currentColor;
   document.getElementById('font').value = currentFont;
   document.getElementById('image').value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
 }
@@ -179,10 +180,10 @@ imageForm.onchange = populateStorage;
 
 The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object (note that this event is not fired for sessionStorage changes). This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 
-On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) the only JavaScript is as follows:
+On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/main/web-storage/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', function(e) {
+window.addEventListener('storage', (e) => {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;

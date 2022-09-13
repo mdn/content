@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.fenceSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.fenceSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates a new
@@ -17,7 +18,7 @@ The **`WebGL2RenderingContext.fenceSync()`** method of the [WebGL 2 API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 fenceSync(condition, flags)
 ```
 
@@ -40,7 +41,7 @@ A {{domxref("WebGLSync")}} object.
 objects are not available in WebGL 1.
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 ```
 
 ## Specifications

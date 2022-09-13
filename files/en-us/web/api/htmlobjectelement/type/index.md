@@ -12,6 +12,7 @@ tags:
   - Type
 browser-compat: api.HTMLObjectElement.type
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`type`** property of the

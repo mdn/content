@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector.detect
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
@@ -19,7 +20,7 @@ with an {{jsxref('Array')}} of detected barcodes within an image.
 
 ## Syntax
 
-```js
+```js-nolint
 detect(imageBitmapSource)
 ```
 
@@ -62,11 +63,11 @@ given image. These are iterated over and the barcode data is logged to the conso
 
 ```js
 barcodeDetector.detect(imageEl)
-  .then(barcodes => {
-    barcodes.forEach(barcode => console.log(barcode.rawData));
-  }
-  .catch(err => {
-    console.log(err);
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawData));
+  })
+  .catch((err) => {
+    console.error(err);
   })
 ```
 

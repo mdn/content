@@ -15,6 +15,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
 ---
+
 {{CSSRef}}
 
 The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
@@ -44,7 +45,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* top | left and right | bottom */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* top | right | bottom | left */
 border-color: red yellow green blue;

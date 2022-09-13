@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Instance`** object is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
@@ -31,17 +32,17 @@ The `WebAssembly.Instance()` constructor function can be called to synchronously
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }
 };
 
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
+).then((bytes) => {
+  const mod = new WebAssembly.Module(bytes);
+  const instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
 })
 ```
@@ -51,14 +52,14 @@ The preferred way to get an `Instance` is asynchronously, for example using the 
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }
 };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+.then((obj) => obj.instance.exports.exported_func());
 ```
 
 This also demonstrates how the `exports` property is used to access exported functions.

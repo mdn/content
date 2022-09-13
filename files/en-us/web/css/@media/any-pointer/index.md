@@ -9,6 +9,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.any-pointer
 ---
+
 {{CSSRef}}
 
 The **`any-pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has _any_ pointing device (such as a mouse), and if so, how accurate it is.
@@ -48,8 +49,6 @@ input[type="checkbox"]:checked {
 
 @media (any-pointer: fine) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
@@ -59,8 +58,6 @@ input[type="checkbox"]:checked {
 
 @media (any-pointer: coarse) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     width: 30px;
     height: 30px;

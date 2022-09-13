@@ -11,8 +11,9 @@ tags:
   - Security
   - manifest-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
+browser-compat: http.headers.Content-Security-Policy.manifest-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP

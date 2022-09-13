@@ -9,36 +9,41 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toTimeString
 ---
+
 {{JSRef}}
 
-The **`toTimeString()`** method returns the time portion of a
-{{jsxref("Date")}} object in human readable form in English.
+The **`toTimeString()`** method returns the time portion of a {{jsxref("Date")}} object interpreted in the local timezone in English.
 
 {{EmbedInteractiveExample("pages/js/date-totimestring.html","shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toTimeString()
 ```
 
 ### Return value
 
-A string representing the time portion of the given date in human readable form in
-English.
+A string representing the time portion of the given date in human readable form in English.
 
 ## Description
 
-{{jsxref("Date")}} instances refer to a specific point in time. Calling
-{{jsxref("Date.prototype.toString()", "toString()")}} will return the date formatted in
-a human readable form in English. Sometimes it is desirable to obtain a string of the time
-portion; such a thing can be accomplished with the `toTimeString()` method.
+{{jsxref("Date")}} instances refer to a specific point in time. `toTimeString()` interprets the date in the local timezone and formats the _time_ part in English. It always uses the format of `hh:mm:ss GMT±xxxx (TZ)`, where:
 
-The `toTimeString()` method is especially useful because compliant engines
-implementing [ECMA-262](/en-US/docs/Web/JavaScript/Language_Resources) may
-differ in the string obtained from {{jsxref("Date.prototype.toString()", "toString()")}}
-for {{jsxref("Date")}} objects, as the format is implementation-dependent; simple string
-slicing approaches may not produce consistent results across multiple engines.
+| Format String | Description                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------- |
+| `hh`          | Hour, as two digits with leading zero if required                                                     |
+| `mm`          | Minute, as two digits with leading zero if required                                                   |
+| `ss`          | Seconds, as two digits with leading zero if required                                                  |
+| `±xxxx`       | The local timezone's offset — two digits for hours and two digits for minutes (e.g. `-0500`, `+0800`) |
+| `TZ`          | The timezone's name (e.g. `PDT`, `PST`)                                                               |
+
+For example: "04:42:04 GMT+0000 (Coordinated Universal Time)".
+
+- If you want to get the _date_ part, use [`toDateString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString).
+- If you want to get both the date and time, use [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString).
+- If you want to make the date interpreted as UTC instead of local timezone, use [`toUTCString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString).
+- If you want to format the date in a more user-friendly format (e.g. localization), use [`toLocaleTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString).
 
 ## Examples
 

@@ -6,8 +6,9 @@ tags:
   - Guide
   - Introduction
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 This chapter introduces JavaScript and discusses some of its fundamental concepts.
@@ -39,7 +40,7 @@ JavaScript contains a standard library of objects, such as `Array`, `Date`, and 
 - _Client-side JavaScript_ extends the core language by supplying objects to control a browser and its _Document Object Model_ (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
 - _Server-side JavaScript_ extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
 
-This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests from code written in the browser.
+This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests sent by code executed in the browser.
 
 ## JavaScript and Java
 
@@ -58,8 +59,6 @@ In contrast, JavaScript descends in spirit from a line of smaller, dynamically t
 | Object-oriented. No distinction between types of objects. Inheritance is through the prototype mechanism, and properties and methods can be added to any object dynamically. | Class-based. Objects are divided into classes and instances with all inheritance through the class hierarchy. Classes and instances cannot have properties or methods added dynamically. |
 | Variable data types are not declared (dynamic typing, loosely typed).                                                                                                        | Variable data types must be declared (static typing, strongly typed).                                                                                                                    |
 | Cannot automatically write to hard disk.                                                                                                                                     | Can automatically write to hard disk.                                                                                                                                                    |
-
-For more information on the differences between JavaScript and Java, see the chapter [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
 
 ## JavaScript and the ECMAScript specification
 
@@ -91,7 +90,7 @@ To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Window
 
 The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:
 
-![](2019-04-04_00-15-29.png)
+![A browser window with the web console open at the bottom, containing two lines of input and output. Text can be entered below that.](2019-04-04_00-15-29.png)
 
 The console works the exact same way as `eval`: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by `console.log` around `eval`, like so:
 
@@ -112,7 +111,7 @@ To get started with writing JavaScript, open the Web Console in multi-line mode,
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
-    alert('Hello ' + yourName);
+    alert(`Hello ${yourName}`);
   }
 
   greetMe('World');

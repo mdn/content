@@ -10,13 +10,14 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.appendItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`appendItem()`** method of the {{domxref("SVGPointList")}} interface adds a {{domxref("SVGPoint","point")}} to the end of the list.
 
 ## Syntax
 
-```js
+```js-nolint
 appendItem(obj)
 ```
 
@@ -31,7 +32,7 @@ The {{domxref("SVGPoint")}} object that was appended.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

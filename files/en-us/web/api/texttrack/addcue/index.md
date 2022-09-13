@@ -10,13 +10,14 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.addCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`addCue()`** method of the {{domxref("TextTrack")}} interface adds a new cue to the list of cues.
 
 ## Syntax
 
-```js
+```js-nolint
 addCue(cue)
 ```
 

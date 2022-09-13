@@ -8,6 +8,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderbuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents a buffer that can contain an image, or that can be a source or target of a rendering operation.
@@ -28,9 +29,9 @@ The `WebGLRenderbuffer` object does not define any methods or properties of its 
 ### Creating a render buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createRenderbuffer();
 ```
 
 ## Specifications

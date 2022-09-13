@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.hostname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.hostname`** property is a string containing the domain of the URL.
@@ -38,8 +39,8 @@ const area1 = document.getElementById("area1");
 const area2 = document.getElementById("area2");
 
 const log = document.getElementById("log");
-log.textContent = `area1 hostname: ${ area1.hostname } \n`; // 'developer.mozilla.org'
-log.textContent += `area2 hostname: ${ area2.hostname }`;  // 'coolexample.com'
+log.textContent = `area1 hostname: ${area1.hostname} \n`; // 'developer.mozilla.org'
+log.textContent += `area2 hostname: ${area2.hostname}`;  // 'coolexample.com'
 ```
 
 {{EmbedLiveSample("Examples")}}

@@ -16,6 +16,7 @@ tags:
   - Method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -27,7 +28,7 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 
 ## Syntax
 
-```js
+```js-nolint
 addTransceiver(trackOrKind)
 addTransceiver(trackOrKind, init)
 ```
@@ -51,11 +52,12 @@ addTransceiver(trackOrKind, init)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the media data.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
+
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
 - {{jsxref("RangeError")}}

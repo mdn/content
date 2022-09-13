@@ -10,8 +10,9 @@ tags:
   - Reference
   - Web
   - paste
-browser-compat: api.HTMLElement.paste_event
+browser-compat: api.Element.paste_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
@@ -21,9 +22,9 @@ The **`paste`** event fires when the user initiates a paste action through the b
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', event => { });
+addEventListener('paste', (event) => { });
 
-onpaste = event => { };
+onpaste = (event) => { };
 ```
 
 ## Event type
@@ -36,7 +37,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
@@ -57,11 +58,11 @@ This example logs every copy and paste attempt to the {{htmlElement("textarea")}
 
 ```js
 function logCopy(event) {
-  log.innerText = 'Copied!\n' + log.innerText;
+  log.innerText = `Copied!\n${log.innerText}`;
 }
 
 function logPaste(event) {
-  log.innerText = 'Pasted!\n' + log.innerText;
+  log.innerText = `Pasted!\n${log.innerText}`;
 }
 
 const editor = document.getElementById('editor');

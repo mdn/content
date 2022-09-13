@@ -5,9 +5,11 @@ tags:
   - Manifest
   - Web
   - related_applications
+  - Experimental
 browser-compat: html.manifest.related_applications
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

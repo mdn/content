@@ -11,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozClearDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozClearDataAt()`** method removes the data
 associated with the given format for an item at the specified index. The index must be
@@ -31,7 +30,7 @@ entirely, shifting the remaining items down and changing their indices.
 
 ## Syntax
 
-```js
+```js-nolint
 mozClearDataAt(index)
 mozClearDataAt(type, index)
 ```

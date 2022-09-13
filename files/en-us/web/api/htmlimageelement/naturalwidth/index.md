@@ -16,6 +16,7 @@ tags:
   - width
 browser-compat: api.HTMLImageElement.naturalWidth
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} interface's read-only

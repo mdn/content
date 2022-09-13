@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.
@@ -39,7 +40,7 @@ The example will render a rectangle, translated to the point (30,40) instead of 
 
 {{ EmbedLiveSample('Translation', '', '100') }}
 
-If the second value is not given, it is assumed to be *0*.
+If the second value is not given, it is assumed to be _0_.
 
 ## Rotation
 
@@ -73,7 +74,7 @@ To make a rhombus out of our rectangle, the `skewX()` and `skewY()` transformati
 
 ## Scaling
 
-`scale()` changes the size of an element. It takes two numbers, the first being the *x* scale factor and the second being the *y* scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, *0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first.*
+`scale()` changes the size of an element. It takes two numbers, the first being the _x_ scale factor and the second being the _y_ scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, _0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first._
 
 ## Complex transformations with `matrix()`
 

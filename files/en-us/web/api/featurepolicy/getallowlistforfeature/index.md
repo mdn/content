@@ -7,8 +7,10 @@ tags:
   - Feature Policy
   - Feature-Policy
   - Reference
+  - Experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`getAllowlistForFeature()`**
@@ -17,8 +19,8 @@ specific feature for the current Feature Policy.
 
 ## Syntax
 
-```js
-const allowlist = FeaturePolicy.getAllowlistForFeature(<feature>)
+```js-nolint
+const allowlist = FeaturePolicy.getAllowlistForFeature(feature)
 ```
 
 ### Parameter
@@ -29,7 +31,7 @@ A specific feature name must be specified.
 
 ### Return value
 
-An [Allow list](Web/HTTP/Feature_Policy/Using_Feature_Policy) for the
+An [Allow list](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for the
 specified feature.
 
 ## Errors

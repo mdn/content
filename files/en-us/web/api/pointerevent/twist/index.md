@@ -12,6 +12,7 @@ tags:
   - twist
 browser-compat: api.PointerEvent.twist
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`twist`** read-only property of the
@@ -31,8 +32,8 @@ When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fire
 depending on the value of the event's `twist` property.
 
 ```js
-someElement.addEventListener('pointerdown', function(event) {
-  if (event.twist == 0) {
+someElement.addEventListener('pointerdown', (event) => {
+  if (event.twist === 0) {
     // No twist
     process_no_twist(event);
   } else {

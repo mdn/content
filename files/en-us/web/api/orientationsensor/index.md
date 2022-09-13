@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.OrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it.
@@ -53,8 +54,8 @@ sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-   if (event.error.name == 'NotReadableError') {
+sensor.addEventListener('error', (error) => {
+   if (event.error.name === 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
@@ -70,10 +71,10 @@ const sensor = new AbsoluteOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "magnetometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
+       .then((results) => {
+         if (results.every((result) => result.state === "granted")) {
            sensor.start();
-           ...
+           // …
          } else {
            console.log("No permissions to use AbsoluteOrientationSensor.");
          }

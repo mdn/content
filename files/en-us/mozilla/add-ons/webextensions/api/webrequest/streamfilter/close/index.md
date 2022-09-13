@@ -10,6 +10,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.close
 ---
+
 {{AddonSidebar()}}
 
 Closes the request. After this is called, no further response data will be passed to the browser's rendering engine and no more filter events will be given to the extension.
@@ -22,7 +23,7 @@ You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFi
 
 ## Syntax
 
-```js
+```js-nolint
 filter.close()
 ```
 
@@ -46,7 +47,7 @@ This example will replace the page content with "replacement text":
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));

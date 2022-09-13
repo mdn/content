@@ -7,16 +7,18 @@ tags:
   - DOM
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.queryCommandState
 ---
-{{ApiRef("DOM")}}{{deprecated_header}}
+
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`queryCommandState()`** method will tell you if the current selection has a certain {{domxref("Document.execCommand()")}} command applied.
 
 ## Syntax
 
-```js
-queryCommandState(String command)
+```js-nolint
+queryCommandState(command)
 ```
 
 ### Parameters
@@ -35,13 +37,14 @@ queryCommandState(String command)
 <div contenteditable="true">Select a part of this text!</div>
 <button onclick="makeBold();">Test the state of the 'bold' command</button>
 
-<hr>
+<hr />
 
 <div id="output"></div>
 ```
 
 ```css hidden
-hr, button {
+hr,
+button {
   margin: 1rem 0;
 }
 ```

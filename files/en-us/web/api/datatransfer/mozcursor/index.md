@@ -8,11 +8,11 @@ tags:
   - Property
   - Reference
   - drag and drop
+  - Experimental
 browser-compat: api.DataTransfer.mozCursor
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}
+{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozCursor`** property returns or sets the
 drag cursor's state. This is primarily used to control the cursor during tab drags.
@@ -45,7 +45,7 @@ This example shows the use of the `mozCursor` property.
 function drop_handler(event)
 {
   const dragData = event.dataTransfer;
-  console.log("mozCursor = " + dragData.mozCursor);
+  console.log(`mozCursor = ${dragData.mozCursor}`);
 }
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.putImageData()`**
@@ -25,7 +26,7 @@ manipulation of canvas contents in the article [Pixel manipulation with canvas](
 
 ## Syntax
 
-```js
+```js-nolint
 putImageData(imageData, dx, dy)
 putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 ```
@@ -95,10 +96,8 @@ function putImageData(ctx, imageData, dx, dy,
   for (let y = dirtyY; y < limitBottom; y++) {
     for (let x = dirtyX; x < limitRight; x++) {
       const pos = y * width + x;
-      ctx.fillStyle = 'rgba(' + data[pos*4+0]
-                        + ',' + data[pos*4+1]
-                        + ',' + data[pos*4+2]
-                        + ',' + (data[pos*4+3]/255) + ')';
+      ctx.fillStyle =
+        `rgba(${data[pos*4+0]}, ${data[pos*4+1]}, ${data[pos*4+2]}, ${data[pos*4+3]/255})`;
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }
@@ -156,15 +155,6 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting in Gecko 10.0 {{ geckoRelease("10.0") }}, non-finite values to any of these
-  parameters cause the call to `putImageData()` to be silently ignored,
-  rather than throwing an exception.
-- To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}},
-  a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now
-  throw an error ({{bug(762657)}}).
 
 ## See also
 

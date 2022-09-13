@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.textPath.spacing
 ---
+
 {{SVGRef}}
 
 The **`spacing`** attribute indicates how the user agent should determine the spacing between typographic characters that are to be rendered along a path.

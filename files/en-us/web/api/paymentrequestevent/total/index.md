@@ -10,8 +10,10 @@ tags:
   - Reference
   - payment
   - total
+  - Experimental
 browser-compat: api.PaymentRequestEvent.total
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`total`** readonly property of the

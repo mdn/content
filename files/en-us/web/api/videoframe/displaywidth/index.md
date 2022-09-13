@@ -8,9 +8,11 @@ tags:
   - Reference
   - displayWidth
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.displayWidth
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`displayWidth`** property of the {{domxref("VideoFrame")}} interface returns the width of the `VideoFrame` after applying aspect ratio adjustments.
 

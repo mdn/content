@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.signature
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`signature`** read-only property of the
@@ -48,15 +49,14 @@ const options = {
 };
 
 navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
+  .then((assertionPKCred) => {
     const signature = assertionPKCred.response.signature;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
 
-}).catch(function (err) {
-   console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

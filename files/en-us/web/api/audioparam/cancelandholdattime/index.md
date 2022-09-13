@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - AudioParam
-  - Experimental
   - Method
   - Reference
   - Web Audio API
@@ -14,6 +13,7 @@ tags:
   - cancelValuesAndHoldAtTime
 browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`cancelAndHoldAtTime()`** property of the
@@ -23,7 +23,7 @@ made using other methods.
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAndHoldAtTime(cancelTime)
 ```
 

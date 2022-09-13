@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTimeElement.dateTime
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The
@@ -162,7 +163,7 @@ A string.
 ```js
 // Assumes there is <time id="t"> element in the HTML
 
-var t = document.getElementById("t");
+const t = document.getElementById("t");
 t.dateTime = "6w 5h 34m 5s";
 ```
 

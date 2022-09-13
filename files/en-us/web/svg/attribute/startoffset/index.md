@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.textPath.startOffset
 ---
+
 {{SVGRef}}
 
 The **`startOffset`** attribute defines an offset from the start of the path for the initial current text position along the path after converting the path to the {{SVGElement("textPath")}} element's coordinate system.
@@ -17,7 +18,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
