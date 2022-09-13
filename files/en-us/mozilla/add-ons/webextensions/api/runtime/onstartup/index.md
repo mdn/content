@@ -20,7 +20,7 @@ Fired when a profile that has this extension installed first starts up. This eve
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onStartup.addListener(listener)
 browser.runtime.onStartup.removeListener(listener)
 browser.runtime.onStartup.hasListener(listener)

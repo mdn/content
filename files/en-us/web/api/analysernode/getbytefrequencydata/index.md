@@ -23,7 +23,7 @@ If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCou
 
 ## Syntax
 
-```js
+```js-nolint
 getByteFrequencyData(array)
 ```
 

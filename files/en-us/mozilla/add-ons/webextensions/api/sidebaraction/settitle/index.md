@@ -29,7 +29,7 @@ If you set a new title using `setTitle()`, and omit both the `tabId` and `window
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.setTitle(
   details // object
 )

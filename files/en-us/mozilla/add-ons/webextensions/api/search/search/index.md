@@ -24,7 +24,7 @@ To get the installed search engines, use {{WebExtAPIRef("search.get()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.search.search(
   searchProperties       // object
 )

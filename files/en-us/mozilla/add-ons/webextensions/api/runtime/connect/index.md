@@ -27,7 +27,7 @@ Note that you can't use this function to connect an extension to its content scr
 
 ## Syntax
 
-```js
+```js-nolint
 let port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object

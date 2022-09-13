@@ -21,7 +21,7 @@ If you need higher performance and don't care about precision, you can use {{dom
 
 ## Syntax
 
-```js
+```js-nolint
 getFloatFrequencyData(array)
 ```
 

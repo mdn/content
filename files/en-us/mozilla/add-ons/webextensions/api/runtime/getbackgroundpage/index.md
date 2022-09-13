@@ -36,7 +36,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPage = browser.runtime.getBackgroundPage()
 ```
 

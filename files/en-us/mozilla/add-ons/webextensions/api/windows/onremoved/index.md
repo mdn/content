@@ -20,7 +20,7 @@ Fired when a window is closed.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.windows.onRemoved.addListener(listener)
 browser.windows.onRemoved.removeListener(listener)
 browser.windows.onRemoved.hasListener(listener)
