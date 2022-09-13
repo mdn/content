@@ -26,7 +26,7 @@ this is automatically done; an explicit call only allows to anticipate the need.
 ## Syntax
 
 ```js-nolint
-pc.getIdentityAssertion()
+getIdentityAssertion()
 ```
 
 _There is neither parameter nor return value for this method._
