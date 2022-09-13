@@ -102,7 +102,7 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
   <img
     src="diagram.png"
     alt="diagram showing the four layers of awesome and their relative priority order —
-       music, cats, nature, and ice cream" />
+         music, cats, nature, and ice cream" />
   <pre>
 `
     let awesome = ['music', 'cats', 'nature', 'ice cream'];
