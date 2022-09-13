@@ -22,7 +22,7 @@ select a directory.
 ## Syntax
 
 ```js-nolint
-window.showDirectoryPicker()
+showDirectoryPicker()
 ```
 
 ### Parameters
