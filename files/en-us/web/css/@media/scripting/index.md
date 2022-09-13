@@ -44,7 +44,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 

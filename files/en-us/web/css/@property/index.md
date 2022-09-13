@@ -22,7 +22,7 @@ The `@property` rule represents a custom property registration directly in a sty
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -51,7 +51,7 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

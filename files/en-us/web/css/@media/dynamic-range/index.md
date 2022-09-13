@@ -31,15 +31,15 @@ The `dynamic-range` feature is specified as a keyword value chosen from the list
 
 ```css
 @media (dynamic-range: standard) {
-    p {
-        color: red;
-    }
+  p {
+    color: red;
+  }
 }
 
 @media (dynamic-range: high) {
-    p {
-        color: green;
-    }
+  p {
+    color: green;
+  }
 }
 ```
 

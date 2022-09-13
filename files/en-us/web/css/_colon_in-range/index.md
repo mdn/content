@@ -69,11 +69,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'okay.';
+  content: "okay.";
 }
 
 input:out-of-range + label::after {
-  content: 'out of range!';
+  content: "out of range!";
 }
 ```
 
