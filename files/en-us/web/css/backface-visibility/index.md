@@ -177,8 +177,10 @@ This example shows a cube with transparent faces, and one with opaque faces.
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;

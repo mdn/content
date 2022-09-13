@@ -34,7 +34,7 @@ The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 ### CSS
 
 ```css
-input[type=range]::-moz-range-progress {
+input[type="range"]::-moz-range-progress {
   background-color: green;
   height: 1em;
 }

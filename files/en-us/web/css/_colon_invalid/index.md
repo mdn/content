@@ -122,7 +122,7 @@ In this example we use `:invalid` along with `~`, the [general sibling combinato
 
 ```css
 /* Hide the fieldset after an invalid fieldset */
-fieldset:invalid~fieldset {
+fieldset:invalid ~ fieldset {
   display: none;
 }
 
@@ -132,10 +132,11 @@ form:invalid button {
   pointer-events: none;
 }
 
-input, textarea {
+input,
+textarea {
   box-sizing: border-box;
   width: 100%;
-  font-family:monospace;
+  font-family: monospace;
   padding: 0.25em 0.5em;
 }
 

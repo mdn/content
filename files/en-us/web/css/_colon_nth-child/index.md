@@ -143,9 +143,9 @@ div em {
   margin-bottom: 3px;
 }
 
-.first span:nth-child(2n+1),
-.second span:nth-child(2n+1),
-.third span:nth-of-type(2n+1) {
+.first span:nth-child(2n + 1),
+.second span:nth-child(2n + 1),
+.third span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```

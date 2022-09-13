@@ -53,7 +53,8 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
 ```css
-:valid, :unsupported {
+:valid,
+:unsupported {
   /* … */
 }
 ```

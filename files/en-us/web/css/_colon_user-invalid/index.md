@@ -46,7 +46,7 @@ input:user-invalid {
 }
 
 input:user-invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 ```

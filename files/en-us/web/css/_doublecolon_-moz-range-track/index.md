@@ -34,7 +34,7 @@ The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ### CSS
 
 ```css
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background-color: green;
 }
 ```
