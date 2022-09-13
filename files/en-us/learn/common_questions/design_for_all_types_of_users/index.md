@@ -99,17 +99,16 @@ Here is the HTML we're using:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-    <h1>This is our main heading
-        <span class="subheading">This is our subheading</span>
+  </head>
+  <body>
+    <h1>
+      This is our main heading
+      <span class="subheading">This is our subheading</span>
     </h1>
-
-</body>
+  </body>
 </html>
 ```
 
@@ -192,21 +191,20 @@ To achieve this, you can specify a size for your text's container. Let's conside
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-<div class="container">
-    <h1>This is our main heading
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        This is our main heading
         <span class="subheading">This is our subheading</span>
-    </h1>
+      </h1>
 
-    <p>[lengthy text that spans many lines]</p>
-</div>
-
-</body>
+      <p>[lengthy text that spans many lines]</p>
+    </div>
+  </body>
 </html>
 ```
 

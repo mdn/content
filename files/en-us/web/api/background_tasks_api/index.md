@@ -68,7 +68,8 @@ In order to be oriented about what we're trying to accomplish, let's have a look
   <button class="button" id="startButton">Start</button>
 
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
