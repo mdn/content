@@ -365,7 +365,7 @@ occasion such as this that he did.</p>
 
 ```css
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 h1 {
