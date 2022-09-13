@@ -165,9 +165,9 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 
 ```html
 <div class="wrapper">
-    <div class="box1">One</div>
-    <div class="box2">Two</div>
-    <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
@@ -206,12 +206,12 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
 
 ```html
 <div class="wrapper">
-    <div class="box1">One</div>
-    <div class="box2">Two</div>
-    <div class="box3">Three</div>
-    <div class="box4">Four</div>
-    <div class="box5">Five</div>
-    <div class="box6">Six</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+  <div class="box5">Five</div>
+  <div class="box6">Six</div>
 </div>
 ```
 
@@ -259,9 +259,9 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 ```html
 <div class="wrapper">
-    <div class="box1">One</div>
-    <div class="box2">Two</div>
-    <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
@@ -309,7 +309,17 @@ p {
 
 <div class="box">Float</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css
@@ -484,19 +494,25 @@ For this example, our HTML contains three paragraphs of text so that we can scro
 
 <div class="positioned">Fixed</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis
-orci, pulvinar id metus ut, rutrum luctus orci.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci.
+</p>
 
-<p> Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.
-Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
-orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
-ex malesuada et.</p>
+<p>
+  Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+  auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+  vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex
+  malesuada et.
+</p>
 
-<p> In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo
-et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+  turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas
+  augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id
+  ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -531,13 +547,41 @@ Sticky positioning is the final positioning method that we have at our disposal.
 ```html hidden
 <h1>Sticky positioning</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Sticky</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -582,15 +626,15 @@ Let's look at an example. First, some simple markup that creates an HTML form. E
   <p>First of all, tell us your name and age.</p>
   <div>
     <label for="fname">First name:</label>
-    <input type="text" id="fname">
+    <input type="text" id="fname" />
   </div>
   <div>
     <label for="lname">Last name:</label>
-    <input type="text" id="lname">
+    <input type="text" id="lname" />
   </div>
   <div>
     <label for="age">Age:</label>
-    <input type="text" id="age">
+    <input type="text" id="age" />
   </div>
 </form>
 ```
@@ -656,25 +700,28 @@ In the below example, we start with a block of HTML inside a containing `<div>` 
 
 ```html
 <div class="container">
+  <h1>Multi-column Layout</h1>
 
- <h1>Multi-column Layout</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+  </p>
 
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
- luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
- pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
- ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem.
+  </p>
 
- <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
- malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
- facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam
- lorem.</p>
-
- <p>Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris
- ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus
- viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum
- sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
- mus.</p>
-
+  <p>
+    Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris
+    ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus
+    viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum
+    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+    mus.
+  </p>
 </div>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: searchbox role'
+title: "ARIA: searchbox role"
 slug: Web/Accessibility/ARIA/Roles/searchbox_role
 tags:
   - Accessibility
@@ -31,14 +31,19 @@ The screen reader will announce "search box", "search edit", or "search field" p
 While the above is valid, it is simpler, more concise, and less redundant to the screen reader user to write:
 
 ```html
-<input type="search">
+<input type="search" />
 ```
 
 The following is a search form with a searchbox and button, ARIA live region, and container for search results.
 
 ```html
 <form role="search">
-  <input type="search" role="searchbox" aria-description="search results will appear below" id="search" value="">
+  <input
+    type="search"
+    role="searchbox"
+    aria-description="search results will appear below"
+    id="search"
+    value="" />
   <label for="search">Search this site</label>
   <button>Submit search</button>
 </form>
@@ -51,7 +56,11 @@ The following is a search form with a searchbox and button, ARIA live region, an
 Including `role="searchbox"` when the form is a `search` and the label indicates the element is a search may result in assistive technology announcing something along the lines of "search search this site search box", which is redundant. The inclusion of `role="searchbox"` is not necessary:
 
 ```html
-<input type="search" aria-description="search results will appear below" id="search" value="">
+<input
+  type="search"
+  aria-description="search results will appear below"
+  id="search"
+  value="" />
 ```
 
 ## Specifications

@@ -1,5 +1,5 @@
 ---
-title: 'aria-labelledby'
+title: "aria-labelledby"
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 tags:
   - Accessibility
@@ -32,7 +32,11 @@ The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARI
 The following example uses `aria-labelledby` to provide an accessible name for a checkbox input by using the text content of a sibling element:
 
 ```html
-<span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="tac"></span>
+<span
+  role="checkbox"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="tac"></span>
 <span id="tac">I agree to the Terms and Conditions.</span>
 ```
 
@@ -42,12 +46,10 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 ```html
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the Terms and Conditions.
 </label>
-<p>
-  <a href="tac.html">Read our Terms and Conditions</a>.
-</p>
+<p><a href="tac.html">Read our Terms and Conditions</a>.</p>
 ```
 
 ### Benefits (and drawbacks)
@@ -65,7 +67,8 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
-   <p>There are over 50 ARIA states and properties, but 13 of them stand out…
+   <p>
+     There are over 50 ARIA states and properties, but 13 of them stand out…
      <a href="13.html" id="rm13" aria-labelledby="rm13 attr">read more</a>
    </p>
    ```

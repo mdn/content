@@ -30,7 +30,7 @@ lengths in bytes.
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">Choose files…</output>
 ```
 

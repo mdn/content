@@ -21,9 +21,12 @@ Instead of converting long role descriptions to Braille, the `aria-braillerolede
 Basically, the value of `aria-brailleroledescription` is an abbreviated version of the `aria-roledescription` attribute to be converted into Braille.
 
 ```html
-<article aria-roledescription="slide" aria-brailleroledescription="sld" aria-labelledby="slide1heading">
+<article
+  aria-roledescription="slide"
+  aria-brailleroledescription="sld"
+  aria-labelledby="slide1heading">
   <h1 id="slide1heading">Welcome to my talk</h1>
-  <img alt="Me" src="images/me.jpg">
+  <img alt="Me" src="images/me.jpg" />
 </article>
 ```
 

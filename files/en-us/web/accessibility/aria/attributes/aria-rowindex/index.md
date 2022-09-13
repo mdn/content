@@ -56,8 +56,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
     <div role="row" aria-rowindex="9">
       <span role="gridcell">Ashlyn</span>
       <span role="gridcell">Harris</span>
-      <span role="gridcell" aria-rowspan="2"
-            aria-rowindex="9">Goalkeeper</span>
+      <span role="gridcell" aria-rowspan="2" aria-rowindex="9">Goalkeeper</span>
     </div>
     <div role="row" aria-rowindex="10">
       <span role="gridcell">Alyssa</span>

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: tab role'
+title: "ARIA: tab role"
 slug: Web/Accessibility/ARIA/Roles/tab_role
 tags:
   - ARIA
@@ -15,7 +15,9 @@ spec-urls:
 The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
 
 ```html
-<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
+<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">
+  Tab label
+</button>
 ```
 
 ## Description
@@ -79,15 +81,30 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
 ```html
 <div class="tabs">
   <div role="tablist" aria-label="Sample Tabs">
-    <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
-          First Tab
-        </button>
-    <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
-          Second Tab
-        </button>
-    <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
-          Third Tab
-        </button>
+    <button
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-1"
+      id="tab-1"
+      tabindex="0">
+      First Tab
+    </button>
+    <button
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-2"
+      id="tab-2"
+      tabindex="-1">
+      Second Tab
+    </button>
+    <button
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-3"
+      id="tab-3"
+      tabindex="-1">
+      Third Tab
+    </button>
   </div>
   <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
     <p>Content for the first panel</p>

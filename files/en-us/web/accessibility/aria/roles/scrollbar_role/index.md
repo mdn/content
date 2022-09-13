@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: scrollbar role'
+title: "ARIA: scrollbar role"
 slug: Web/Accessibility/ARIA/Roles/scrollbar_role
 tags:
   - Accessibility
@@ -143,7 +143,7 @@ CSS could have been used to ensure the overflowing value of PI had a native scro
 ```html
 <h3 id="PI">Pi</h3>
 <p class="pi" tabindex="0" aria-labelledby="PI">
-3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 </p>
 ```
 

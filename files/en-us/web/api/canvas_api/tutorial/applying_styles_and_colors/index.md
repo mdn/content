@@ -412,11 +412,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label for="miterLimit">Miter limit</label>
-        <input type="number" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="number" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>

@@ -1,5 +1,5 @@
 ---
-title: 'aria-valuemax'
+title: "aria-valuemax"
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemax
 tags:
   - Accessibility
@@ -29,7 +29,13 @@ The code below shows a simple slider with a maximum value of 9.
 
 ```html
 <div id="dimesLabel">Dimes</div>
-<div role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="9" aria-labelledby="dimesLabel" id="dimes"></div>
+<div
+  role="slider"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax="9"
+  aria-labelledby="dimesLabel"
+  id="dimes"></div>
 ```
 
 ## Values
