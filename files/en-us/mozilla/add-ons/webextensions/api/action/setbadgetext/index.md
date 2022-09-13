@@ -24,7 +24,7 @@ Tabs without an specific badge text will inherit the global badge text, which is
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeText(
   details // object
 )

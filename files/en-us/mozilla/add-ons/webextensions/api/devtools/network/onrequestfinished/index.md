@@ -23,7 +23,7 @@ Note that although your extension can add a listener at any time, it will only s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)

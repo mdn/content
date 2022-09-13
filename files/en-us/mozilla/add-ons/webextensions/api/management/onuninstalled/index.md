@@ -20,7 +20,7 @@ This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.onUninstalled.addListener(listener)
 browser.management.onUninstalled.removeListener(listener)
 browser.management.onUninstalled.hasListener(listener)

@@ -19,7 +19,7 @@ You can only call this function from inside the handler for a [user action](/en-
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.openPopup()
 ```
 

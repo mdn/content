@@ -22,7 +22,7 @@ The example below shows the Markdown code for a typical Syntax section (for a Ja
 ````
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

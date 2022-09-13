@@ -21,7 +21,7 @@ Sets the browser action's title. The title is displayed in a tooltip over the br
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setTitle(
   details // object
 )

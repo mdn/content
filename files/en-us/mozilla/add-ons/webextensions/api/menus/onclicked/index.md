@@ -22,7 +22,7 @@ For compatibility with other browsers, Firefox makes this event available via th
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.onClicked.addListener(listener)
 browser.menus.onClicked.removeListener(listener)
 browser.menus.onClicked.hasListener(listener)
