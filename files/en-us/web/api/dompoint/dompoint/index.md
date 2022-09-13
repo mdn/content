@@ -27,7 +27,7 @@ You can also create a `DOMPoint` by calling the
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMPoint()
 new DOMPoint(x)
 new DOMPoint(x, y)

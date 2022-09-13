@@ -25,7 +25,7 @@ This does come with some side effects. For example:
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 

@@ -27,7 +27,7 @@ Most elements only have one border box each, but a multiline [inline element](/e
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 

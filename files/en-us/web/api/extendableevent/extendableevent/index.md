@@ -18,7 +18,7 @@ The **`ExtendableEvent()`** constructor creates a new {{domxref("ExtendableEvent
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableEvent(type)
 new ExtendableEvent(type, options)
 ```

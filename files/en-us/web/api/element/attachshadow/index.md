@@ -45,7 +45,7 @@ The following is a list of elements you **can** attach a shadow root to:
 
 ## Syntax
 
-```js
+```js-nolint
 attachShadow(options)
 ```
 

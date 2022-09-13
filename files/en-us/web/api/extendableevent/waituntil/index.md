@@ -42,7 +42,7 @@ settle.
 
 ## Syntax
 
-```js
+```js-nolint
 waitUntil(promise)
 ```
 

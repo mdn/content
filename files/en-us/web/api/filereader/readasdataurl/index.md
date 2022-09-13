@@ -29,7 +29,7 @@ file's data as a base64 encoded string.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsDataURL(blob)
 ```
 

@@ -24,7 +24,7 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 computedStyleMap()
 ```
 

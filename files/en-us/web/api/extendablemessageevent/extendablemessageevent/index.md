@@ -17,7 +17,7 @@ The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("Extendab
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableMessageEvent(type)
 new ExtendableMessageEvent(type, options)
 ```

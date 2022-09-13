@@ -21,7 +21,7 @@ The **`FetchEvent()`** constructor creates a new {{domxref("FetchEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new FetchEvent(type, options)
 ```
 

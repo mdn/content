@@ -20,8 +20,8 @@ containing the keys for each item in `FileSystemDirectoryHandle`.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.keys();
+```js-nolint
+FileSystemDirectoryHandle.keys()
 ```
 
 ### Parameters

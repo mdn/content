@@ -17,7 +17,7 @@ The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface 
 
 ## Syntax
 
-```js
+```js-nolint
 setValidity(flags)
 setValidity(flags, message)
 setValidity(flags, message, anchor)

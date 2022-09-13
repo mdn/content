@@ -27,7 +27,7 @@ target elements are descendants of the document. This array includes [CSS Animat
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 ```
 
