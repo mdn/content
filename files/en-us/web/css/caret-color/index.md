@@ -86,7 +86,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {

@@ -55,7 +55,7 @@ div {
 }
 
 p {
-  margin: .4rem 0 1.2rem 0;
+  margin: 0.4rem 0 1.2rem 0;
   background: yellow;
 }
 ```

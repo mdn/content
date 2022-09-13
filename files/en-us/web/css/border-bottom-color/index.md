@@ -68,13 +68,13 @@ The `border-bottom-color` property is specified as a single value.
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-bottom-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-bottom-color: red;
+  width: auto;
 }
 
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 

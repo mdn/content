@@ -17,7 +17,7 @@ The **column combinator** (`||`) is placed between two CSS selectors. It matches
 
 ```css
 /* Table cells that belong to the "selected" column */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
@@ -25,7 +25,7 @@ col.selected || td {
 ## Syntax
 
 ```css
-column-selector || cell-selector {
+column-selector||cell-selector {
   /* style properties */
 }
 ```
@@ -61,7 +61,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;

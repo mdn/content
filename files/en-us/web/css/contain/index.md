@@ -243,7 +243,7 @@ CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/co
 
 ```css
 body {
-  quotes: "«" "»" "‹" "›"
+  quotes: "«" "»" "‹" "›";
 }
 .open-quote:before {
   content: open-quote;
