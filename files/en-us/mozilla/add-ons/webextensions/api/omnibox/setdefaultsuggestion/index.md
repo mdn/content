@@ -21,7 +21,7 @@ Once the user has entered your keyword and started interacting with your extensi
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.setDefaultSuggestion(
   suggestion            // object
 )

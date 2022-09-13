@@ -20,7 +20,7 @@ The listener is passed the command's name. This matches the name given to the co
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.onCommand.addListener(listener)
 browser.commands.onCommand.removeListener(listener)
 browser.commands.onCommand.hasListener(listener)

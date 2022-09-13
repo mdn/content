@@ -20,7 +20,7 @@ Boolean value, `true` for content scripts running inside private browsing tabs a
 
 ## Syntax
 
-```js
+```js-nolint
 let isPrivate = browser.extension.inIncognitoContext;  // true or false
 ```
 

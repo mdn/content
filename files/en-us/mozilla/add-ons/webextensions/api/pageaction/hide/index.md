@@ -22,7 +22,7 @@ Hides the page action for a given tab.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.hide(
   tabId // integer
 )

@@ -22,7 +22,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Syntax
 
-```js
+```js-nolint
 browser.i18n.getUILanguage()
 ```
 
