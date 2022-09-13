@@ -2,7 +2,7 @@
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
 tags:
-  - '105'
+  - "105"
   - Firefox
   - Mozilla
   - Release

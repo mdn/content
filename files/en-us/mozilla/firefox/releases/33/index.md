@@ -48,8 +48,8 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ({{bug(1014712)}}). Example:
 
   ```html
-  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png"/>
-    <meta name="msapplication-TileColor" content="#d83434"/>
+  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />
+  <meta name="msapplication-TileColor" content="#d83434" />
   ```
 
 ### JavaScript

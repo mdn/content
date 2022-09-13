@@ -2,7 +2,7 @@
 title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
 tags:
-  - '2009'
+  - "2009"
   - Firefox
 ---
 

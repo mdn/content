@@ -76,15 +76,15 @@ _No change._
 
   ```json
   {
-    mandatory: {
-      width: { min: 640 },
-      height: { min: 480 }
+    "mandatory": {
+      "width": { "min": 640 },
+      "height": { "min": 480 }
     },
-    optional: [
-      { width: 650 },
-      { width: { min: 650 }},
-      { frameRate: 60 },
-      { width: { max: 800 }},
+    "optional": [
+      { "width": 650 },
+      { "width": { "min": 650 } },
+      { "frameRate": 60 },
+      { "width": { "max": 800 } }
     ]
   }
   ```

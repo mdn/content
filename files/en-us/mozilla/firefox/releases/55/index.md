@@ -2,7 +2,7 @@
 title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
 tags:
-  - '55'
+  - "55"
   - Firefox
   - Release Notes
 ---

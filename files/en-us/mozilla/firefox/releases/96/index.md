@@ -2,7 +2,7 @@
 title: Firefox 96 for developers
 slug: Mozilla/Firefox/Releases/96
 tags:
-  - '96'
+  - "96"
   - Firefox
   - Mozilla
   - Release

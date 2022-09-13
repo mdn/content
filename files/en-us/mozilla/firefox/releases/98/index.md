@@ -2,7 +2,7 @@
 title: Firefox 98 for developers
 slug: Mozilla/Firefox/Releases/98
 tags:
-  - '98'
+  - "98"
   - Firefox
   - Mozilla
   - Release

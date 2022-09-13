@@ -2,7 +2,7 @@
 title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
 tags:
-  - '73'
+  - "73"
   - Firefox
   - Mozilla
   - Release

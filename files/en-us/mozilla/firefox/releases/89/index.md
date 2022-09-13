@@ -2,7 +2,7 @@
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
 tags:
-  - '89'
+  - "89"
   - Firefox
   - Mozilla
   - Release

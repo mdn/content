@@ -2,7 +2,7 @@
 title: Firefox 81 for developers
 slug: Mozilla/Firefox/Releases/81
 tags:
-  - '81'
+  - "81"
   - Firefox
   - Mozilla
   - Release

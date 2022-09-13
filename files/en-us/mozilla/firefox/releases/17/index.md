@@ -2,7 +2,7 @@
 title: Firefox 17 for developers
 slug: Mozilla/Firefox/Releases/17
 tags:
-  - '17'
+  - "17"
   - Firefox
 ---
 

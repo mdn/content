@@ -2,7 +2,7 @@
 title: Firefox 77 for developers
 slug: Mozilla/Firefox/Releases/77
 tags:
-  - '77'
+  - "77"
   - Firefox
   - Mozilla
   - Releases
