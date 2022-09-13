@@ -23,8 +23,8 @@ iterator object that contains the key/value pairs for each index in the array.
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value

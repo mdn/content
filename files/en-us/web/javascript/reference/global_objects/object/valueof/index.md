@@ -18,7 +18,7 @@ specified object.
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

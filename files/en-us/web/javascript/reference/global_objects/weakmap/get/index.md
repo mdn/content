@@ -19,7 +19,7 @@ The **`get()`** method returns a specified element from a
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

@@ -20,7 +20,7 @@ The **`values()`** method returns a new _array iterator_ object that contains th
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

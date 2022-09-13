@@ -20,7 +20,7 @@ element that causes a string to be displayed in fixed-pitch font.
 
 ## Syntax
 
-```js
+```js-nolint
 fixed()
 ```
 

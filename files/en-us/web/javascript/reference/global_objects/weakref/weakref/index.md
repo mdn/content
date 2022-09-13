@@ -16,7 +16,7 @@ object referring to a given target object.
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakRef(targetObject)
 ```
 

@@ -17,7 +17,7 @@ The **`WeakSet`** constructor lets you create
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakSet()
 new WeakSet(iterable)
 ```

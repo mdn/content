@@ -20,7 +20,7 @@ The **`[@@matchAll]()`** method of a regular expression specifies how [`String.p
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.matchAll](str)
 ```
 

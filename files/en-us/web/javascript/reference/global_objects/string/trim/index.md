@@ -23,7 +23,7 @@ no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
 
 ## Syntax
 
-```js
+```js-nolint
 trim()
 ```
 

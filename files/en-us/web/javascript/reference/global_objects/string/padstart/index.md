@@ -24,7 +24,7 @@ current string.
 
 ## Syntax
 
-```js
+```js-nolint
 padStart(targetLength)
 padStart(targetLength, padString)
 ```

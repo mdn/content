@@ -20,7 +20,7 @@ HTML element that causes a string to be displayed in a small font.
 
 ## Syntax
 
-```js
+```js-nolint
 small()
 ```
 

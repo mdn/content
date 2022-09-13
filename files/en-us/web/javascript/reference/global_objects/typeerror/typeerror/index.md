@@ -17,7 +17,7 @@ the expected type.
 
 ## Syntax
 
-```js
+```js-nolint
 new TypeError()
 new TypeError(message)
 new TypeError(message, options)

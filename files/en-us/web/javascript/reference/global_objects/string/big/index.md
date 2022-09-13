@@ -23,7 +23,7 @@ element that causes a string to be displayed in a big font.
 
 ## Syntax
 
-```js
+```js-nolint
 big()
 ```
 

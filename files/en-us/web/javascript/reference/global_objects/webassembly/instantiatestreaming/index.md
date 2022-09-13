@@ -22,7 +22,7 @@ is the most efficient, optimized way to load wasm code.
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.instantiateStreaming(source, importObject)
 ```
 

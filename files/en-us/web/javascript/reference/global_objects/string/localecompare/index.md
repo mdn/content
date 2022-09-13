@@ -19,7 +19,7 @@ The **`localeCompare()`** method returns a number indicating whether a reference
 
 ## Syntax
 
-```js
+```js-nolint
 localeCompare(compareString)
 localeCompare(compareString, locales)
 localeCompare(compareString, locales, options)

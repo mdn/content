@@ -15,7 +15,7 @@ when a value is not in the set or range of allowed values.
 
 ## Syntax
 
-```js
+```js-nolint
 new RangeError()
 new RangeError(message)
 new RangeError(message, options)

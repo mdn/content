@@ -20,7 +20,7 @@ The **`at()`** method takes an integer value and returns a new {{jsxref('String'
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 

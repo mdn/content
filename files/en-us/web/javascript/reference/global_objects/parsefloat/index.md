@@ -18,7 +18,7 @@ point number.
 
 ## Syntax
 
-```js
+```js-nolint
 parseFloat(string)
 ```
 
