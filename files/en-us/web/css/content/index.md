@@ -200,8 +200,8 @@ This example inserts additional text after special items in a list.
 ```css
 .new-entry::after {
   content: " New!"; /* The leading space creates separation
-                        between the added content and the
-                        rest of the content */
+                       between the added content and the
+                       rest of the content */
   color: red;
 }
 ```
