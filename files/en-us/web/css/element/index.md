@@ -89,7 +89,7 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 ### Emulating -webkit-box-reflect
 
-Firefox does not support -webkit-box-reflect. You can emulate it -to some extent- using element. 
+In browsers not supporting {{cssxref("-webkit-box-reflect")}}, you can achieve the same outcome using `element`. 
 
 #### HTML for WebKit
 
