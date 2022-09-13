@@ -22,7 +22,7 @@ Whitespace is any string of text composed only of spaces, tabs or line breaks (t
 
 In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
-```html-nolint
+```html
 <!DOCTYPE html>
 
   <h1>      Hello      World!     </h1>
@@ -45,7 +45,7 @@ Any whitespace characters that are outside of HTML elements in the original docu
 
 Take the following document, for example:
 
-```html-nolint
+```html
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -77,7 +77,7 @@ Let's take another example. To make it easier, we've added a comment that shows 
 
 This example:
 
-```html-nolint
+```html
 <h1>   Hello
         <span> World!</span>   </h1>
 
@@ -105,14 +105,14 @@ Inside this context, whitespace character processing can be summarized as follow
 
 1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
 
-   ```html-nolint
+   ```html
    <h1>◦◦◦Hello⏎
    <span>◦World!</span>⇥◦◦</h1>
    ```
 
 2. Next, all tab characters are handled as space characters, so the example becomes:
 
-   ```html-nolint
+   ```html
    <h1>◦◦◦Hello⏎
    <span>◦World!</span>◦◦◦</h1>
    ```
@@ -151,7 +151,7 @@ Let's take a look at an example to explain how. We've marked the whitespace char
 
 We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
 
-```html-nolint
+```html
 <body>
   <div>  Hello  </div>
 
@@ -227,7 +227,7 @@ Consider this example (again, we've included an HTML comment that shows the whit
 }
 ```
 
-```html-nolint
+```html
 <ul class="people-list">
 
     <li></li>
@@ -313,7 +313,7 @@ li {
 
 You can also solve this problem by putting your list items all on the same line in the source, which causes the whitespace nodes to not be created in the first place:
 
-```html-nolint
+```html
 <li></li><li></li><li></li><li></li><li></li>
 ```
 
