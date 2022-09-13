@@ -1,8 +1,8 @@
 ---
-title: ':left'
+title: ":left"
 slug: Web/CSS/:left
 tags:
-  - '@page'
+  - "@page"
   - CSS
   - Layout
   - Pseudo-class

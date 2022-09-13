@@ -46,20 +46,25 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### CSS
 
 ```css
-a:link { /* Unvisited links */
+a:link {
+  /* Unvisited links */
   color: blue;
 }
-a:visited { /* Visited links */
+a:visited {
+  /* Visited links */
   color: purple;
 }
-a:hover { /* Hovered links */
+a:hover {
+  /* Hovered links */
   background: yellow;
 }
-a:active { /* Active links */
+a:active {
+  /* Active links */
   color: red;
 }
 
-p:active { /* Active paragraphs */
+p:active {
+  /* Active paragraphs */
   background: #eee;
 }
 ```

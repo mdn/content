@@ -1,8 +1,8 @@
 ---
-title: ':is()'
+title: ":is()"
 slug: Web/CSS/:is
 tags:
-  - ':is'
+  - ":is"
   - CSS
   - Pseudo-class
   - Reference

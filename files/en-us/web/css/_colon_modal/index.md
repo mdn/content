@@ -1,5 +1,5 @@
 ---
-title: ':modal'
+title: ":modal"
 slug: Web/CSS/:modal
 tags:
   - CSS

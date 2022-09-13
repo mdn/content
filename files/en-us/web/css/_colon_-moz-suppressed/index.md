@@ -1,5 +1,5 @@
 ---
-title: ':-moz-suppressed'
+title: ":-moz-suppressed"
 slug: Web/CSS/:-moz-suppressed
 tags:
   - CSS
@@ -20,7 +20,7 @@ The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 ## Syntax
 
 ```css
-:-moz-suppressed
+:-moz-suppressed ;
 ```
 
 ## Examples

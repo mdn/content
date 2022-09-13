@@ -1,9 +1,9 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 tags:
-  - ':focus'
-  - ':focus-visible'
+  - ":focus"
+  - ":focus-visible"
   - CSS
   - Layout
   - Pseudo-class

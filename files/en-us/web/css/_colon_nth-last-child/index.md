@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child()'
+title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 tags:
   - CSS

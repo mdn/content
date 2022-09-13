@@ -1,8 +1,8 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
 tags:
-  - ':indeterminate'
+  - ":indeterminate"
   - CSS
   - Layout
   - Pseudo-class

@@ -1,5 +1,5 @@
 ---
-title: ':-moz-user-disabled'
+title: ":-moz-user-disabled"
 slug: Web/CSS/:-moz-user-disabled
 tags:
   - CSS
@@ -20,7 +20,7 @@ The **`:-moz-user-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 ## Syntax
 
 ```css
-:-moz-user-disabled
+:-moz-user-disabled ;
 ```
 
 ## Examples

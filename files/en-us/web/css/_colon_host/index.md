@@ -1,8 +1,8 @@
 ---
-title: ':host'
+title: ":host"
 slug: Web/CSS/:host
 tags:
-  - ':host'
+  - ":host"
   - CSS
   - DOM
   - Layout

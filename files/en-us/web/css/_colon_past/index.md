@@ -1,5 +1,5 @@
 ---
-title: ':past'
+title: ":past"
 slug: Web/CSS/:past
 browser-compat: css.selectors.past
 ---

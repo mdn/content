@@ -1,5 +1,5 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
 tags:
   - CSS
