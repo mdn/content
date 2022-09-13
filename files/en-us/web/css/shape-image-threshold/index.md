@@ -83,10 +83,8 @@ This example creates a {{HTMLElement("div")}} block with a gradient background i
   width: 150px;
   height: 150px;
   float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%,
-      transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%,
-      transparent);
+  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
+  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
   shape-image-threshold: 0.2;
 }
 ```

@@ -24,7 +24,7 @@ The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 
 ```css
 /* property: sign(expression) */
-top: sign( --value );
+top: sign(--value);
 ```
 
 The `sign()` function takes only one expression as its argument.

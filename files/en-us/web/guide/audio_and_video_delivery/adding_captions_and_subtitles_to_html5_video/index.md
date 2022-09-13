@@ -286,7 +286,7 @@ If the WebVTT file uses [voice spans](https://w3c.github.io/webvtt/#dfn-webvtt-c
 Then this specific 'voice' will be stylable like so:
 
 ```css
-::cue(v[voice='Test']) {
+::cue(v[voice="Test"]) {
   color: #fff;
   background: #0095dd;
 }

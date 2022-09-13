@@ -73,7 +73,9 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
 ```
 
 ```css hidden
-input:invalid {border: red solid 3px;}
+input:invalid {
+  border: red solid 3px;
+}
 ```
 
 If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.

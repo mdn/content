@@ -119,9 +119,15 @@ Reverting effectively removes the value for the element you select with some rul
 #### CSS
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.
