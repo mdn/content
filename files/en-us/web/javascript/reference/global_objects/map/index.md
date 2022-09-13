@@ -287,7 +287,7 @@ console.log(contacts.size) // 1
   - : Returns the value associated to the `key`, or `undefined` if there is
     none.
 - {{jsxref("Map.prototype.has()")}}
-  - : Returns a boolean asserting whether a value has been associated to the
+  - : Returns a boolean asserting whether a value has been associated to a passed
     `key` in the `Map` object or not.
 - {{jsxref("Map.prototype.set()")}}
   - : Sets the `value` for the `key` in the `Map` object. Returns the `Map`
