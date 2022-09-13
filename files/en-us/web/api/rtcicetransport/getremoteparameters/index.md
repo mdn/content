@@ -19,7 +19,7 @@ transport when the client calls
 ## Syntax
 
 ```js-nolint
-parameters = RTCIceTransport.getRemoteParameters()
+getRemoteParameters()
 ```
 
 ### Parameters
