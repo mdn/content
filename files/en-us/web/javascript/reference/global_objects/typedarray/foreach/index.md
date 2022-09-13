@@ -85,7 +85,7 @@ observable by `callbackFn` is determined according to
 The range of elements processed by `forEach()` is set before the first
 invocation of `callbackFn`. Elements that are appended to the typed array after
 the call to `forEach()` begins will not be visited by
-`callbackFn` . If the values of existing elements of the typed array
+`callbackFn`. If the values of existing elements of the typed array
 are changed, the value passed to `callbackFn` will be the value at
 the time `forEach()` visits them; elements that are deleted before being
 visited are not visited.
