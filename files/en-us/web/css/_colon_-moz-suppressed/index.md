@@ -20,7 +20,7 @@ The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 ## Syntax
 
 ```css
-:-moz-suppressed ;
+:-moz-suppressed
 ```
 
 ## Examples
