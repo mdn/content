@@ -25,7 +25,7 @@ The **`getImmediatePose()`** method of the {{domxref("VRDisplay")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 getImmediatePose()
 ```
 

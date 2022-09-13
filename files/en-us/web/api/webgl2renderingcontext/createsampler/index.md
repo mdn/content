@@ -19,7 +19,7 @@ The **`WebGL2RenderingContext.createSampler()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 createSampler()
 ```
 

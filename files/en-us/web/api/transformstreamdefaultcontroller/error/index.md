@@ -17,7 +17,7 @@ The **`error()`** method of the {{domxref("TransformStreamDefaultController")}} 
 
 ## Syntax
 
-```js
+```js-nolint
 error(reason)
 ```
 

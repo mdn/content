@@ -19,7 +19,7 @@ of attachments in a framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 invalidateFramebuffer(target, attachments)
 ```
 

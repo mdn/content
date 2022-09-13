@@ -20,7 +20,7 @@ new {{domxref("URLSearchParams")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new URLSearchParams()
 new URLSearchParams(init)
 ```

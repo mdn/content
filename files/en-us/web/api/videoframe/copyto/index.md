@@ -18,7 +18,7 @@ The **`copyTo()`** method of the {{domxref("VideoFrame")}} interface copies the 
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination)
 copyTo(destination, options)
 ```

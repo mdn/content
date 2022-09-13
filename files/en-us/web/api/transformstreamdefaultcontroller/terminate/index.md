@@ -17,7 +17,7 @@ The **`terminate()`** method of the {{domxref("TransformStreamDefaultController"
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 

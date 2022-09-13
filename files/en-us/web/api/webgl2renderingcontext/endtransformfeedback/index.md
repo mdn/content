@@ -19,7 +19,7 @@ operation.
 
 ## Syntax
 
-```js
+```js-nolint
 endTransformFeedback()
 ```
 

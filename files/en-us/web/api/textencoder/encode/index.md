@@ -21,7 +21,7 @@ for that {{domxref("TextEncoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(string)
 ```
 

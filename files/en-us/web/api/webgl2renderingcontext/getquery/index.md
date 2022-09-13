@@ -18,7 +18,7 @@ The **`WebGL2RenderingContext.getQuery()`** method of the [WebGL 2 API](/en-US/d
 
 ## Syntax
 
-```js
+```js-nolint
 getQuery(target, pname)
 ```
 

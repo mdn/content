@@ -18,7 +18,7 @@ The **`decode()`** method of the {{domxref("VideoDecoder")}} interface enqueues 
 
 ## Syntax
 
-```js
+```js-nolint
 decode(chunk)
 ```
 

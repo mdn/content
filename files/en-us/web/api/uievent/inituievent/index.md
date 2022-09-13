@@ -28,7 +28,7 @@ dispatched, it doesn't do anything anymore.
 
 ## Syntax
 
-```js
+```js-nolint
 initUIEvent(type, canBubble, cancelable, view, detail)
 ```
 

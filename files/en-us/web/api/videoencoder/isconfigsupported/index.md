@@ -18,7 +18,7 @@ The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} i
 
 ## Syntax
 
-```js
+```js-nolint
 isConfigSupported(config)
 ```
 

@@ -23,7 +23,7 @@ the requested interface is claimed for exclusive access.
 
 ## Syntax
 
-```js
+```js-nolint
 claimInterface(interfaceNumber)
 ```
 
