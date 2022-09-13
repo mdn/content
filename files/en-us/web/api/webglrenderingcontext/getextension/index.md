@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.getExtension()`** method enables a
 
 ## Syntax
 
-```js
+```js-nolint
 getExtension(name)
 ```
 

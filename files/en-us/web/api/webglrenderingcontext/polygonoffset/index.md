@@ -22,7 +22,7 @@ into the depth buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 polygonOffset(factor, units)
 ```
 

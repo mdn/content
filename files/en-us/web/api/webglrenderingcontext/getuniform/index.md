@@ -18,7 +18,7 @@ variable at a given location.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniform(program, location)
 ```
 

@@ -22,7 +22,7 @@ and back stencil writemasks to one value at the same time.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilMaskSeparate(face, mask)
 ```
 

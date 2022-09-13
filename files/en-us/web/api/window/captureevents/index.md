@@ -17,7 +17,7 @@ capture all events of the specified type.
 
 ## Syntax
 
-```js
+```js-nolint
 captureEvents(eventType)
 ```
 

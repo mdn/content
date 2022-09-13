@@ -19,7 +19,7 @@ back-facing stencil test actions.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilOpSeparate(face, fail, zfail, zpass)
 ```
 

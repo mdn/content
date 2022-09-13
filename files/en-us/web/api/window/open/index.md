@@ -18,7 +18,7 @@ The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface 
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 open(url)
 open(url, target)

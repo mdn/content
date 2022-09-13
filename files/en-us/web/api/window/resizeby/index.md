@@ -19,7 +19,7 @@ by a specified amount.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeBy(xDelta, yDelta)
 ```
 

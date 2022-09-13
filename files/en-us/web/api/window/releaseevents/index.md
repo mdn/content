@@ -20,7 +20,7 @@ Releases the window from trapping events of a specific type.
 
 ## Syntax
 
-```js
+```js-nolint
 releaseEvents(eventType)
 ```
 

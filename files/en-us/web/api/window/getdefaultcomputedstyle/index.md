@@ -19,7 +19,7 @@ styles are taken into account.
 
 ## Syntax
 
-```js
+```js-nolint
 getDefaultComputedStyle(element)
 getDefaultComputedStyle(element, pseudoElt)
 ```

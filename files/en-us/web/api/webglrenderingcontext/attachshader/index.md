@@ -15,8 +15,8 @@ vertex {{domxref("WebGLShader")}} to a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
-void gl.attachShader(program, shader);
+```js-nolint
+void gl.attachShader(program, shader)
 ```
 
 ### Parameters

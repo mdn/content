@@ -17,7 +17,7 @@ window by the given amount.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollBy(x-coord, y-coord)
 scrollBy(options)
 ```

@@ -21,7 +21,7 @@ buffer object and specifies its layout.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 

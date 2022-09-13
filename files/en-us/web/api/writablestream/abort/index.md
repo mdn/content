@@ -18,7 +18,7 @@ The **`abort()`** method of the {{domxref("WritableStream")}} interface aborts t
 
 ## Syntax
 
-```js
+```js-nolint
 abort(reason)
 ```
 

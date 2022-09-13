@@ -24,7 +24,7 @@ adds it to the current `Worklet`.
 
 ## Syntax
 
-```js
+```js-nolint
 addModule(moduleURL)
 addModule(moduleURL, options)
 ```

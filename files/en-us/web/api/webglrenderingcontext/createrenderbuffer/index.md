@@ -19,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
 
 ## Syntax
 
-```js
+```js-nolint
 createRenderbuffer()
 ```
 

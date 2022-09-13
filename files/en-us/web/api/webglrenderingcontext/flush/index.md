@@ -18,7 +18,7 @@ causing all commands to be executed as quickly as possible.
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

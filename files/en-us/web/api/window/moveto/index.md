@@ -22,7 +22,7 @@ interface moves the current window to the specified coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(x, y)
 ```
 

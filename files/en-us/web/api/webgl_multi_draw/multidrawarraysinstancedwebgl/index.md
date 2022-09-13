@@ -22,7 +22,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 void ext.multiDrawArraysInstancedWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,

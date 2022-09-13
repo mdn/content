@@ -19,7 +19,7 @@ formats and locations of vertex attributes in a vertex attributes array.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribIPointer(index, size, type, stride, offset)
 ```
 
