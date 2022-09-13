@@ -26,7 +26,12 @@ A string.
 In this example the `aria-description` attribute on the element with an ID of `close-button` is set to the string "A longer description of the function of this element". Using `ariaDescription` we can update the value.
 
 ```html
-<button aria-label="Close" aria-description="A longer description of the function of this element" id="close-button">X</button>
+<button
+  aria-label="Close"
+  aria-description="A longer description of the function of this element"
+  id="close-button">
+  X
+</button>
 ```
 
 ```js

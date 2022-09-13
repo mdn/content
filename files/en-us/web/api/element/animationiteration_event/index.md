@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationiteration event'
+title: "Element: animationiteration event"
 slug: Web/API/Element/animationiteration_event
 tags:
   - API
@@ -78,11 +78,11 @@ animated.onanimationiteration = () => {
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 

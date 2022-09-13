@@ -1,5 +1,5 @@
 ---
-title: 'Document: fullscreenchange event'
+title: "Document: fullscreenchange event"
 slug: Web/API/Document/fullscreenchange_event
 page-type: web-api-event
 tags:
@@ -49,10 +49,10 @@ What that means to the example code is that, if an element is currently in fulls
 ### HTML
 
 ```html
- <h1>fullscreenchange event example</h1>
- <div id="fullscreen-div">
-   <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
- </div>
+<h1>fullscreenchange event example</h1>
+<div id="fullscreen-div">
+  <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
+</div>
 ```
 
 ### JavaScript

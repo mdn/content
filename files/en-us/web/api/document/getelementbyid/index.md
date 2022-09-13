@@ -78,7 +78,7 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Document</title>
   </head>
   <body>
