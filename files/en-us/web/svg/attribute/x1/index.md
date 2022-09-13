@@ -26,7 +26,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -79,7 +83,11 @@ For {{SVGElement('line')}}, `x1` defines the x coordinate of the starting point 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -132,7 +140,11 @@ For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the start
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

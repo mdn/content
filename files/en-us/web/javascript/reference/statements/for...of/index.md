@@ -19,7 +19,7 @@ The **`for...of` statement** executes a loop that operates on a sequence of valu
 
 ## Syntax
 
-```js
+```js-nolint
 for (variable of iterable)
   statement
 ```

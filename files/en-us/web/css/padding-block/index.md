@@ -26,8 +26,8 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* <length> values */
-padding-block: 10px 20px;  /* An absolute length */
-padding-block: 1em 2em;   /* relative to the text size */
+padding-block: 10px 20px; /* An absolute length */
+padding-block: 1em 2em; /* relative to the text size */
 padding-block: 10px; /* sets both start and end values */
 
 /* <percentage> values */

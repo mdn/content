@@ -21,7 +21,7 @@ the specified shader numeric format.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderPrecisionFormat(shaderType, precisionType)
 ```
 

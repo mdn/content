@@ -19,7 +19,7 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) set
 
 ## Syntax
 
-```js
+```js-nolint
 samplerParameteri(sampler, pname, param)
 samplerParameterf(sampler, pname, param)
 ```

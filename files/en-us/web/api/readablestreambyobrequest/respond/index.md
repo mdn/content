@@ -20,7 +20,7 @@ After this method is called, the {{domxref("ReadableStreamBYOBRequest/view","vie
 
 ## Syntax
 
-```js
+```js-nolint
 respond(bytesWritten)
 ```
 

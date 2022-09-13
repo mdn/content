@@ -18,7 +18,7 @@ texture image.
 
 ## Syntax
 
-```js
+```js-nolint
 texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
 texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
 texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)

@@ -18,7 +18,7 @@ incoming pixel depth to the current depth buffer value.
 
 ## Syntax
 
-```js
+```js-nolint
 depthFunc(func)
 ```
 

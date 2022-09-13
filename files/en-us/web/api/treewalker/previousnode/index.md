@@ -21,7 +21,7 @@ construction, returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 previousNode()
 ```
 

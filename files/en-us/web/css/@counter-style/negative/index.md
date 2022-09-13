@@ -18,8 +18,8 @@ When defining custom counter styles, the **`negative`** descriptor lets you alte
 
 ```css
 /* <symbol> values */
-negative: "-";       /* Prepends '-' if value is negative */
-negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
+negative: "-"; /* Prepends '-' if value is negative */
+negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
 ```
 
 ### Values

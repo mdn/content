@@ -22,7 +22,7 @@ source for pixels for subsequent calls to
 
 ## Syntax
 
-```js
+```js-nolint
 readBuffer(source)
 ```
 

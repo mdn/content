@@ -13,7 +13,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 set:leading(nodeSet1, nodeSet2)
 ```
 

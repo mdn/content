@@ -30,7 +30,7 @@ Be aware that you can't call `update()` (or
 
 ## Syntax
 
-```js
+```js-nolint
 update(value)
 ```
 

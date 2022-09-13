@@ -40,7 +40,9 @@ As a presentation attribute, it can be applied to any element, but as noted abov
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

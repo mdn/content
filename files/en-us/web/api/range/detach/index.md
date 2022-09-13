@@ -18,7 +18,7 @@ resources. The method has been kept for compatibility.
 
 ## Syntax
 
-```js
+```js-nolint
 detach()
 ```
 

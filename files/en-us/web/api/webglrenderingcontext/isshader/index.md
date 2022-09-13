@@ -18,7 +18,7 @@ passed {{domxref("WebGLShader")}} is valid, `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isShader(shader)
 ```
 

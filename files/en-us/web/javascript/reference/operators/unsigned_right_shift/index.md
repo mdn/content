@@ -18,7 +18,7 @@ The **unsigned right shift operator (`>>>`)** (zero-fill right shift) evaluates 
 
 ## Syntax
 
-```js
+```js-nolint
 a >>> b
 ```
 

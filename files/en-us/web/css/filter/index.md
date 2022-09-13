@@ -125,18 +125,20 @@ filter: blur(5px)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida, Arial, Helvetica, sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter:blur(5px); }
+  width: 100%;
+  height: auto;
+  filter: blur(5px);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -157,11 +159,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -227,24 +229,26 @@ filter: brightness(2)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter:brightness(2); }
+  width: 100%;
+  height: auto;
+  filter: brightness(2);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
   border-spacing: 0px;
   margin: 0px 0px 1.286em;
-  height:100%;
+  height: 100%;
   width: 85%;
 }
 table.standard-table th {
@@ -259,11 +263,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -321,18 +325,20 @@ filter: contrast(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter:contrast(200%); }
+  width: 100%;
+  height: auto;
+  filter: contrast(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -353,11 +359,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -458,23 +464,24 @@ filter: drop-shadow(16px 16px 10px black)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width:100%;
-  height:auto;
-  filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -499,12 +506,13 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
-#img3, #img13 {
-  width:100%;
-  height:auto;
+#img3,
+#img13 {
+  width: 100%;
+  height: auto;
 }
 ```
 
@@ -550,18 +558,20 @@ filter: grayscale(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter:grayscale(100%); }
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -582,11 +592,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -629,18 +639,20 @@ filter: hue-rotate(90deg)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter:hue-rotate(90deg); }
+  width: 100%;
+  height: auto;
+  filter: hue-rotate(90deg);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -661,11 +673,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -719,18 +731,20 @@ filter: invert(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter: invert(100%); }
+  width: 100%;
+  height: auto;
+  filter: invert(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -751,11 +765,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -799,18 +813,20 @@ filter: opacity(50%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter: opacity(50%); }
+  width: 100%;
+  height: auto;
+  filter: opacity(50%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -831,11 +847,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -878,18 +894,20 @@ filter: saturate(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter: saturate(200%); }
+  width: 100%;
+  height: auto;
+  filter: saturate(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -910,11 +928,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -960,18 +978,20 @@ filter: sepia(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  filter: sepia(100%); }
+  width: 100%;
+  height: auto;
+  filter: sepia(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -992,11 +1012,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -1031,17 +1051,18 @@ filter: contrast(175%) brightness(103%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
+    Arial, Helvetica, sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   filter: contrast(175%) brightness(103%);
 }
 table.standard-table {
@@ -1064,11 +1085,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 

@@ -27,7 +27,7 @@ surrogate pair_ for the code point. If you want the entire code point value, use
 
 ## Syntax
 
-```js
+```js-nolint
 charCodeAt(index)
 ```
 

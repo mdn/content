@@ -376,7 +376,7 @@ button {
 }
 
 @media only screen and (min-resolution: 192dpi),
-       only screen and (min-resolution: 2dppx) {
+  only screen and (min-resolution: 2dppx) {
   button {
     background: url(images/high-res-header.jpg) 1rem center;
   }

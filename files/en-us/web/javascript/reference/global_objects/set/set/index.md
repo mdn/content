@@ -20,7 +20,7 @@ references.
 
 ## Syntax
 
-```js
+```js-nolint
 new Set()
 new Set(iterable)
 ```

@@ -19,7 +19,7 @@ currently bound framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearBufferfv(buffer, drawbuffer, values)
 clearBufferfv(buffer, drawbuffer, values, srcOffset)
 

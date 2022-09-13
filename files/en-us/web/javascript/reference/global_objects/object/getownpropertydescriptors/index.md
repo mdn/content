@@ -18,7 +18,7 @@ own property descriptors of a given object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertyDescriptors(obj)
 ```
 

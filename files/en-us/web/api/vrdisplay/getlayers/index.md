@@ -25,7 +25,7 @@ The **`getLayers()`** method of the {{domxref("VRDisplay")}} interface returns t
 
 ## Syntax
 
-```js
+```js-nolint
 getLayers()
 ```
 

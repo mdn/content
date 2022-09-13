@@ -22,7 +22,7 @@ When the track is disassociated from its source, the label is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 const label = track.label
 ```
 

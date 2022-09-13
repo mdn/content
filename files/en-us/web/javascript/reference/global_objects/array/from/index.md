@@ -19,7 +19,7 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 Array.from(arrayLike, (element) => { /* … */ } )
 Array.from(arrayLike, (element, index) => { /* … */ } )
@@ -101,7 +101,7 @@ Array.from(mapper.keys());
 
 ```js
 // Create an array based on a property of DOM Elements
-const images = document.getElementsByTagName('img');
+const images = document.querySelectorAll('img');
 const sources = Array.from(images, (image) => image.src);
 const insecureSources = sources.filter((link) => link.startsWith('http://'));
 ```

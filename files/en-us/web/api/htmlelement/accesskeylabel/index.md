@@ -13,7 +13,7 @@ browser-assigned access key (if any); otherwise it returns an empty string.
 
 ## Syntax
 
-```js
+```js-nolint
 label = element.accessKeyLabel
 ```
 

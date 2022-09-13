@@ -20,7 +20,7 @@ the samples to the specified channel of the `AudioBuffer`, from the source array
 
 ## Syntax
 
-```js
+```js-nolint
 copyToChannel(source, channelNumber)
 copyToChannel(source, channelNumber, startInChannel)
 ```

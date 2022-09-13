@@ -19,7 +19,7 @@ The **`getLightEstimate()`** method of the {{domxref("XRFrame")}} interface retu
 
 ## Syntax
 
-```js
+```js-nolint
 getLightEstimate(lightProbe)
 ```
 

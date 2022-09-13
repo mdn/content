@@ -17,7 +17,7 @@ The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyType(tagName, property)
 getPropertyType(tagName, property, elementNS)
 ```

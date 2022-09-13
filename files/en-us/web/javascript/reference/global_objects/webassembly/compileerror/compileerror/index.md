@@ -17,7 +17,7 @@ WebAssembly decoding or validation.
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.CompileError()
 new WebAssembly.CompileError(message)
 new WebAssembly.CompileError(message, options)

@@ -19,7 +19,7 @@ The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUt
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechSynthesisUtterance(text)
 ```
 

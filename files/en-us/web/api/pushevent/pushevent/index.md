@@ -21,7 +21,7 @@ service worker context.
 
 ## Syntax
 
-```js
+```js-nolint
 new PushEvent(type)
 new PushEvent(type, options)
 ```

@@ -19,7 +19,7 @@ The **`delete()`** method removes the specified element from a
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 

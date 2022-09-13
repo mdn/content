@@ -19,7 +19,7 @@ specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the strin
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 toString(radix)
 ```

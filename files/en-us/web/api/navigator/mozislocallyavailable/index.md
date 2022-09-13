@@ -20,7 +20,7 @@ add-ons to determine whether or not a given resource is available.
 
 ## Syntax
 
-```js
+```js-nolint
 mozIsLocallyAvailable(uri, ifOffline)
 ```
 

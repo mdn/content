@@ -25,7 +25,7 @@ available configuration options.
 
 ## Syntax
 
-```js
+```js-nolint
 getPhotoCapabilities()
 ```
 

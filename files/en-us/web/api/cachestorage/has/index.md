@@ -23,7 +23,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 has(cacheName)
 ```
 

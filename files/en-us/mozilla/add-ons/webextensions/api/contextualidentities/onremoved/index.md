@@ -19,7 +19,7 @@ Fired when a new contextual identity is removed. Contextual identities may be re
 
 ## Syntax
 
-```js
+```js-nolint
 browser.contextualIdentities.onRemoved.addListener(listener)
 browser.contextualIdentities.onRemoved.removeListener(listener)
 browser.contextualIdentities.onRemoved.hasListener(listener)

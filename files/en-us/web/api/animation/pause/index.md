@@ -19,7 +19,7 @@ The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Ani
 
 ## Syntax
 
-```js
+```js-nolint
 animation.pause();
 ```
 

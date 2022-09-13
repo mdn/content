@@ -21,7 +21,7 @@ You can also define functions using the {{jsxref("Function")}} constructor and a
 
 ## Syntax
 
-```js
+```js-nolint
 function name(param0) {
   statements
 }

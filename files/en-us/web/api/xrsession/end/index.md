@@ -26,7 +26,7 @@ the session has fully shut down.
 
 ## Syntax
 
-```js
+```js-nolint
 end()
 ```
 

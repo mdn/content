@@ -34,7 +34,7 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ### CSS
 
 ```css
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   background-color: green;
 }
 ```

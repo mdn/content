@@ -161,9 +161,10 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -374,7 +375,7 @@ The CSS establishes a size for the box and some basic styling for appearances. T
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
 }
 ```
 

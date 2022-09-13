@@ -110,7 +110,7 @@ This can be fixed using our friend `appearance: none;`, which disables the defau
 
 ```css
 input[type="search"] {
-    appearance: none;
+  appearance: none;
 }
 ```
 
@@ -137,13 +137,13 @@ For example, consider this simple test case:
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
 input[type="checkbox"] {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -266,7 +266,7 @@ This example has the following CSS applied to it:
 
 ```css
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -291,7 +291,12 @@ select {
   position: absolute;
 }
 
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -302,7 +307,10 @@ button, label, input, select, progress, meter {
   height: 30px;
 }
 
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -326,7 +334,12 @@ As you can see, we've done fairly well at getting these to look uniform across m
 We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:
 
 ```css
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -341,7 +354,10 @@ button, label, input, select, progress, meter {
 We also added some uniform shadow and rounded corners to the controls on which it made sense:
 
 ```css
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }

@@ -19,7 +19,7 @@ using standard array index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Uint8Array()
 new Uint8Array(length)
 new Uint8Array(typedArray)

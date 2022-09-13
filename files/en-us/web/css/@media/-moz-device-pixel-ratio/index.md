@@ -35,10 +35,14 @@ The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media f
 Example:
 
 ```css
-@media (-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
-       (min--moz-device-pixel-ratio: 2),    /* Older Firefox browsers (prior to Firefox 16) */
-       (min-resolution: 2dppx),             /* The standard way */
-       (min-resolution: 192dpi)             /* dppx fallback */
+/* First, set for Webkit-based browsers */
+@media (-webkit-min-device-pixel-ratio: 2),
+   /* Older Firefox browsers (prior to firefox 16) */
+   (min--moz-device-pixel-ratio: 2),
+   /* The standard way */
+   (min-resolution: 2dppx),
+   /* dppx fallback */
+   (min-resolution: 192dpi);
 ```
 
 > **Note:** See this [CSSWG article](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) for compatibility good practices regarding `resolution` and `dppx`.

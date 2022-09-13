@@ -23,7 +23,7 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduceRight((accumulator, currentValue) => { /* … */ } )
 reduceRight((accumulator, currentValue, index) => { /* … */ } )

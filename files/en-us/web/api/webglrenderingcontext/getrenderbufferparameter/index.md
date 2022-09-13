@@ -19,7 +19,7 @@ about the renderbuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 getRenderbufferParameter(target, pname)
 ```
 

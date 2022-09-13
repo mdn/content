@@ -19,7 +19,7 @@ This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), the consumpti
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```

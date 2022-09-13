@@ -20,7 +20,7 @@ The **`search()`** method executes a search for a match between a regular expres
 
 ## Syntax
 
-```js
+```js-nolint
 search(regexp)
 ```
 

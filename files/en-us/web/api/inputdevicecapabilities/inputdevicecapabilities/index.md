@@ -11,7 +11,7 @@ device responsible for generating a touch event.
 
 ## Syntax
 
-```js
+```js-nolint
 new InputDeviceCapabilities()
 new InputDeviceCapabilities(InputDeviceCapabilitiesInit)
 ```

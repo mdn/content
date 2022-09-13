@@ -23,7 +23,7 @@ when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 ```
 

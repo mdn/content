@@ -2,7 +2,7 @@
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
 tags:
-  - '102'
+  - "102"
   - Firefox
   - Mozilla
   - Release
@@ -35,6 +35,11 @@ No notable changes.
 
 - [Readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) are now supported, allowing efficient zero-byte transfer of data from an underlying byte source to a consumer (bypassing the stream's internal queues).
   The new interfaces are {{domxref("ReadableStreamBYOBReader")}}, {{domxref("ReadableByteStreamController")}} and {{domxref("ReadableStreamBYOBRequest")}} ({{bug(1767342)}}).
+
+### Security
+
+- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
+  A document with a CSP that restricts scripts will no longer load and execute WebAssembly unless the CSP uses `'wasm-unsafe-eval'` or the existing `'unsafe-eval'` keyword ({{bug(1740263)}}).
 
 #### DOM
 

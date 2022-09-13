@@ -22,7 +22,7 @@ to some user action.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceState(stateObj, unused)
 replaceState(stateObj, unused, url)
 ```

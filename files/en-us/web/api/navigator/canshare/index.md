@@ -27,7 +27,7 @@ The **`canShare()`** method will return `false` if the permission is supported b
 
 ## Syntax
 
-```js
+```js-nolint
 canShare()
 canShare(data)
 ```

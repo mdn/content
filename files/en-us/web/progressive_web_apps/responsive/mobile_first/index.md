@@ -189,7 +189,7 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
   }
 
   nav li a {
-    border-right: 1px solid #AD66D5;
+    border-right: 1px solid #ad66d5;
     border-bottom: none;
     display: inline-block;
     padding: 0 5px;
@@ -211,7 +211,11 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
     width: 600px;
     height: inherit;
     margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(
+        to bottom,
+        #fff,
+        #eee
+      );
   }
 
   .main > p {

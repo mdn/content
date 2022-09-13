@@ -28,7 +28,7 @@ the negotiation process.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnswer()
 createAnswer(options)
 

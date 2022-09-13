@@ -21,7 +21,7 @@ details.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNS(namespace, name)
 ```
 

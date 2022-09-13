@@ -19,7 +19,7 @@ The **`closest()`** method of the {{domxref("Element")}} interface traverses the
 
 ## Syntax
 
-```js
+```js-nolint
 closest(selectors)
 ```
 

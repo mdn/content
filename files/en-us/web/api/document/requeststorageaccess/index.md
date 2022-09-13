@@ -85,7 +85,7 @@ To make testing easier, we have added two preferences in `about:config` that con
 
 ## Syntax
 
-```js
+```js-nolint
 requestStorageAccess()
 ```
 

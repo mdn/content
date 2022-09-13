@@ -12,7 +12,7 @@ tags:
   - Same-origin policy
   - Security
   - XMLHttpRequest
-  - l10n:priority
+  - "l10n:priority"
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 

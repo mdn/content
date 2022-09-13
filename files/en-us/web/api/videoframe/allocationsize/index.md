@@ -18,7 +18,7 @@ The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface ret
 
 ## Syntax
 
-```js
+```js-nolint
 allocationSize()
 allocationSize(options)
 ```

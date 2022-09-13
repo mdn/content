@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial: The Local Library website'
+title: "Express Tutorial: The Local Library website"
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 tags:
   - Beginner
@@ -22,21 +22,14 @@ The first article in our practical tutorial series explains what you'll learn, a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Read the
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
-          >Express Introduction</a
-        >. For the following articles you'll also need to have
-        <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
-          >set up a Node development environment</a
-        >.
+        Read the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express Introduction</a>.
+        For the following articles you'll also need to have <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">set up a Node development environment</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To introduce the example application used in this tutorial, and allow
-        readers to understand what topics will be covered.
+        To introduce the example application used in this tutorial, and allow readers to understand what topics will be covered.
       </td>
     </tr>
   </tbody>

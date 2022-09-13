@@ -20,7 +20,7 @@ be different.
 
 ## Syntax
 
-```js
+```js-nolint
 x !== y
 ```
 

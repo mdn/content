@@ -19,7 +19,7 @@ The **`endsWith()`** method determines whether a string ends with the characters
 
 ## Syntax
 
-```js
+```js-nolint
 endsWith(searchString)
 endsWith(searchString, endPosition)
 ```

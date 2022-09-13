@@ -28,7 +28,7 @@ shorthand property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyCSSValue(property)
 ```
 

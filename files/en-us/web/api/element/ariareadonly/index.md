@@ -34,8 +34,13 @@ In this example the `aria-readonly` attribute on the element with an ID of `txtB
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel" aria-readonly="true"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-readonly="true"></div>
 ```
 
 ```js

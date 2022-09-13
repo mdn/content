@@ -22,7 +22,7 @@ Sent to the event page just before it is unloaded. This gives the extension an o
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onSuspend.addListener(listener)
 browser.runtime.onSuspend.removeListener(listener)
 browser.runtime.onSuspend.hasListener(listener)

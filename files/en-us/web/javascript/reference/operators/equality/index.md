@@ -20,7 +20,7 @@ it attempts to convert and compare operands that are of different types.
 
 ## Syntax
 
-```js
+```js-nolint
 x == y
 ```
 

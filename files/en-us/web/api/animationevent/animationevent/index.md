@@ -18,7 +18,7 @@ The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")
 
 ## Syntax
 
-```js
+```js-nolint
 new AnimationEvent(type)
 new AnimationEvent(type, options)
 ```

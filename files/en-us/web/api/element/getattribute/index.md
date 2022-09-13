@@ -22,7 +22,7 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 
 ## Syntax
 
-```js
+```js-nolint
 getAttribute(attributeName)
 ```
 

@@ -20,7 +20,7 @@ new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathNegate(arg)
 ```
 

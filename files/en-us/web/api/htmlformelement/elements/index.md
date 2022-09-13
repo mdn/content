@@ -58,9 +58,9 @@ In this example, we see how to obtain the list of form controls as well as how t
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 

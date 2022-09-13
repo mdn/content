@@ -29,7 +29,7 @@ contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsArrayBuffer(blob)
 ```
 

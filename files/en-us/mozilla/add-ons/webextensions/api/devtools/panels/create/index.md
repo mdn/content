@@ -21,7 +21,7 @@ This function takes: a title, a URL to an icon file, and a URL to an HTML file. 
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.devtools.panels.create(
   title,       // string
   iconPath,    // string

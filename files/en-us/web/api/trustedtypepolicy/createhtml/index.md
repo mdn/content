@@ -17,7 +17,7 @@ The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface 
 
 ## Syntax
 
-```js
+```js-nolint
 createHTML(input)
 createHTML(input, args)
 ```

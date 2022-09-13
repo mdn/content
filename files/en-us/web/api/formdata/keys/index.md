@@ -20,7 +20,7 @@ The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScrip
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

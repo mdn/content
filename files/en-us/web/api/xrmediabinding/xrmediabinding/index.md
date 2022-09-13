@@ -18,7 +18,7 @@ The **`XRMediaBinding()`** constructor creates and returns a new {{domxref("XRMe
 
 ## Syntax
 
-```js
+```js-nolint
 new XRMediaBinding(session)
 ```
 

@@ -20,7 +20,7 @@ CDM, and then returns a {{jsxref('Promise')}} .
 
 ## Syntax
 
-```js
+```js-nolint
 update(response)
 ```
 

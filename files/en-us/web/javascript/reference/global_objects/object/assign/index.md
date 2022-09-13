@@ -23,7 +23,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.assign(target, ...sources)
 ```
 

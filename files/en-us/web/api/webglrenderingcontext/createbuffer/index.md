@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.createBuffer()`** method of the [WebGL API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 createBuffer()
 ```
 

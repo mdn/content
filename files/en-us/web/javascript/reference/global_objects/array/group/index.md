@@ -23,7 +23,7 @@ If you need to group elements using a key that is some arbitrary value, use {{js
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 group((element) => { /* … */ } )
 group((element, index) => { /* … */ } )

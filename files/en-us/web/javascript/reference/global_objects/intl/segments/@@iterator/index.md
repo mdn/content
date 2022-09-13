@@ -18,7 +18,7 @@ The **`[@@iterator]()`** method is part of [the iterable protocol](/en-US/docs/W
 
 ## Syntax
 
-```js
+```js-nolint
 segments[Symbol.iterator]
 ```
 

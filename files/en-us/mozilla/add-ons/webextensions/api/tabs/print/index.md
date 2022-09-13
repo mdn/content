@@ -19,7 +19,7 @@ Call this function to print the contents of the active tab. If this function is 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.print()
 ```
 

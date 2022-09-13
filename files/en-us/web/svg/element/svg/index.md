@@ -19,7 +19,11 @@ The `svg` element is a container that defines a new coordinate system and [viewp
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

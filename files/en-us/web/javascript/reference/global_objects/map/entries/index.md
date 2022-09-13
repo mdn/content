@@ -24,7 +24,7 @@ is used, it returns a function that, when invoked, returns this iterator itself.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

@@ -19,7 +19,7 @@ The **`Promise.reject()`** method returns a
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.reject(reason)
 ```
 

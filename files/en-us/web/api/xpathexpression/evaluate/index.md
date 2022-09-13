@@ -20,7 +20,7 @@ returns an {{domxref("XPathResult")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(contextNode)
 evaluate(contextNode, type)
 evaluate(contextNode, type, result)

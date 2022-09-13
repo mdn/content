@@ -18,7 +18,7 @@ passed {{domxref("WebGLSampler")}} object to the texture unit at the passed inde
 
 ## Syntax
 
-```js
+```js-nolint
 bindSampler(unit, sampler)
 ```
 

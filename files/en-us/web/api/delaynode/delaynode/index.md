@@ -23,7 +23,7 @@ its propagation to the output.
 
 ## Syntax
 
-```js
+```js-nolint
 new DelayNode(context)
 new DelayNode(context, options)
 ```

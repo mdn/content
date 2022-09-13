@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 bindBuffer(target, buffer)
 ```
 

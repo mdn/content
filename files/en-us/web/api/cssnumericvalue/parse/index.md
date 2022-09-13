@@ -22,7 +22,7 @@ members are value and the units.
 
 ## Syntax
 
-```js
+```js-nolint
 parse(cssText)
 ```
 

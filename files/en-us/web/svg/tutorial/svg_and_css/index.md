@@ -296,7 +296,7 @@ svg {
 
 /* outer petals */
 #outer-petals {
-  opacity: .75;
+  opacity: 0.75;
   --segment-fill-fill: azure;
   --segment-fill-stroke: lightsteelblue;
   --segment-fill-stroke-width: 1;

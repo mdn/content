@@ -20,7 +20,7 @@ The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ```
 

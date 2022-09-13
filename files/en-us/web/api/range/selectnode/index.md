@@ -19,7 +19,7 @@ the parent of the _referenceNode_.
 
 ## Syntax
 
-```js
+```js-nolint
 selectNode(referenceNode)
 ```
 

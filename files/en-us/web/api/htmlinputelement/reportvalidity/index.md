@@ -20,7 +20,7 @@ The **`reportValidity()`** method of the {{domxref('HTMLInputElement')}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 reportValidity()
 ```
 

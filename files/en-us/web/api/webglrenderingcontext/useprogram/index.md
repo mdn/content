@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.useProgram()`** method of the [WebGL API](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 useProgram(program)
 ```
 

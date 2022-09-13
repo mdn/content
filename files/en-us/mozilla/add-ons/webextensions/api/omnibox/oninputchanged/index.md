@@ -24,7 +24,7 @@ This is the event you'll use to populate the address bar's drop-down list with s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputChanged.addListener(listener)
 browser.omnibox.onInputChanged.removeListener(listener)
 browser.omnibox.onInputChanged.hasListener(listener)

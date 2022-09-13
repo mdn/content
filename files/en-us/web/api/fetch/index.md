@@ -42,7 +42,7 @@ rather than the directive of the resources it's retrieving.
 
 ## Syntax
 
-```js
+```js-nolint
 fetch(resource)
 fetch(resource, options)
 ```

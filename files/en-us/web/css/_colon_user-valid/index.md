@@ -53,7 +53,7 @@ input:user-valid {
 }
 
 input:user-valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```

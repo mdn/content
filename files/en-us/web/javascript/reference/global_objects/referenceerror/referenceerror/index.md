@@ -16,7 +16,7 @@ non-existent variable is referenced.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReferenceError()
 new ReferenceError(message)
 new ReferenceError(message, options)

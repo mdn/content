@@ -14,9 +14,9 @@ The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the giv
 
 ## Syntax
 
-```js
-add(token0);
-add(token0, token1);
+```js-nolint
+add(token0)
+add(token0, token1)
 add(token0, token1, /* … ,*/ tokenN)
 ```
 

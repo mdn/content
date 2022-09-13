@@ -22,7 +22,7 @@ current subscription is successfully unsubscribed.
 
 ## Syntax
 
-```js
+```js-nolint
 unsubscribe()
 ```
 

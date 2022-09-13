@@ -198,7 +198,7 @@ The HTML snippet below actually handles displaying the media itself.
 
 ```html
 <video controls autoplay src="video.webm">
- <track default src="track.vtt">
+  <track default src="track.vtt" />
 </video>
 ```
 
@@ -244,8 +244,12 @@ Transcrit par Célestes™
 ```
 
 ```css
-::cue(#\31) { color: lime; }
-::cue(#crédit\ de\ transcription) { color: red; }
+::cue(#\31) {
+  color: lime;
+}
+::cue(#crédit\ de\ transcription) {
+  color: red;
+}
 ```
 
 Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):

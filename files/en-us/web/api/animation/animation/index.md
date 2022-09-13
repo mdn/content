@@ -18,7 +18,7 @@ The **`Animation()`** constructor of the [Web Animations API](/en-US/docs/Web/AP
 
 ## Syntax
 
-```js
+```js-nolint
 new Animation()
 new Animation(effect)
 new Animation(effect, timeline)

@@ -23,7 +23,7 @@ an iterable list of content index entries.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 ```
 

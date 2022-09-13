@@ -26,7 +26,7 @@ callback will return any reports. The associated observer will no longer be acti
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

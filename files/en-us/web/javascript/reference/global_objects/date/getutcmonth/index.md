@@ -20,7 +20,7 @@ of the year).
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMonth()
 ```
 

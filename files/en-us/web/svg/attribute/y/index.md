@@ -64,7 +64,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1185,7 +1189,11 @@ If it contains multiple values, `y` defines the y coordinate of each individual 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1215,7 +1223,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1295,7 +1303,11 @@ If it contains multiple values, `y` defines the y coordinate of each individual 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1327,7 +1339,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```

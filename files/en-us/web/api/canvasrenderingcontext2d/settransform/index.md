@@ -24,7 +24,7 @@ method. This lets you scale, rotate, translate (move), and skew the context.
 
 ## Syntax
 
-```js
+```js-nolint
 setTransform(a, b, c, d, e, f)
 setTransform(matrix)
 ```

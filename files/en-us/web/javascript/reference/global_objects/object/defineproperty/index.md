@@ -20,7 +20,7 @@ returns the object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.defineProperty(obj, prop, descriptor)
 ```
 

@@ -19,7 +19,7 @@ You can also, optionally, specify an error handling callback function.
 
 ## Syntax
 
-```js
+```js-nolint
 watchPosition(success)
 watchPosition(success, error)
 watchPosition(success, error, options)

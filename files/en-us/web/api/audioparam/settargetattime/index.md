@@ -21,7 +21,7 @@ envelopes.
 
 ## Syntax
 
-```js
+```js-nolint
 setTargetAtTime(target, startTime, timeConstant)
 ```
 

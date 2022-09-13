@@ -20,7 +20,7 @@ The **`[@@replace]()`** method of a regular expression specifies how [`String.pr
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.replace](str, replacement)
 ```
 

@@ -66,8 +66,8 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
    <defs>
      <style>
      rect {
-       fill:#cccccc; 
-       stroke: #666; 
+       fill:#cccccc;
+       stroke: #666;
        transform-origin: top;
      }
      </style>

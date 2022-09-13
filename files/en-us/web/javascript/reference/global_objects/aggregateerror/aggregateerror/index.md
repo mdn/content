@@ -15,7 +15,7 @@ The **`AggregateError()`** constructor creates an error for several errors that 
 
 ## Syntax
 
-```js
+```js-nolint
 new AggregateError(errors)
 new AggregateError(errors, message)
 new AggregateError(errors, message, options)

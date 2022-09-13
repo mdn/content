@@ -19,7 +19,7 @@ To create an element without specifying a namespace URI, use the
 
 ## Syntax
 
-```js
+```js-nolint
 createElementNS(namespaceURI, qualifiedName)
 createElementNS(namespaceURI, qualifiedName, options)
 ```

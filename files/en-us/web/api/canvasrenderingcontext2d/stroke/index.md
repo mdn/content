@@ -26,7 +26,7 @@ means that path intersections will still get filled.
 
 ## Syntax
 
-```js
+```js-nolint
 stroke()
 stroke(path)
 ```

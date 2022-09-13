@@ -45,7 +45,9 @@ You can use the following pseudo-elements to customize various parts of the scro
 ### CSS
 
 ```css
-.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;

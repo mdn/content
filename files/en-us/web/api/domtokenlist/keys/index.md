@@ -16,8 +16,8 @@ The keys are unsigned integers.
 
 ## Syntax
 
-```js
-keys();
+```js-nolint
+keys()
 ```
 
 ### Parameters

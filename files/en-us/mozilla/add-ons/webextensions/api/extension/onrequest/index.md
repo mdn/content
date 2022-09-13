@@ -22,7 +22,7 @@ Fired when a request is sent from either an extension process or a content scrip
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.extension.onRequest.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender

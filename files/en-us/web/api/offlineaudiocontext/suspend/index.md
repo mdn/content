@@ -29,7 +29,7 @@ precise suspension.
 
 ## Syntax
 
-```js
+```js-nolint
 suspend(suspendTime)
 ```
 

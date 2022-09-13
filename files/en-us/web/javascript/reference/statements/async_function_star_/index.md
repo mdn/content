@@ -20,7 +20,7 @@ You can also define async generator functions using the {{jsxref("AsyncGenerator
 
 ## Syntax
 
-```js
+```js-nolint
 async function* name(param0) {
   statements
 }

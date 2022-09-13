@@ -200,7 +200,8 @@ table {
   border: 2px solid black;
 }
 
-th, td {
+th,
+td {
   padding: 5px;
   border: 1px solid black;
 }
@@ -289,13 +290,14 @@ This should result in a table that looks something like the following:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 {{EmbedLiveSample("Result")}}
@@ -347,13 +349,14 @@ Now let's turn our attention to table headers — special cells that go at the s
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 Now the actual rendered table:
@@ -415,13 +418,14 @@ The initial markup looks like this:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 But the output doesn't give us quite what we want:
@@ -467,13 +471,14 @@ Take the following simple example:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 Which gives us the following result:

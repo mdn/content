@@ -64,10 +64,11 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 #### HTML
 
 ```html
-<p>This example creates a typed array containing the ASCII codes
-   for the space character through the letter Z, then converts it
-   to an object URL. A link to open that object URL is created.
-   Click the link to see the decoded object URL.</p>
+<p>
+  This example creates a typed array containing the ASCII codes for the space
+  character through the letter Z, then converts it to an object URL. A link to
+  open that object URL is created. Click the link to see the decoded object URL.
+</p>
 ```
 
 #### JavaScript

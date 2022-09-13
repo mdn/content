@@ -19,7 +19,7 @@ The **`getCueById()`** method of the {{domxref("TextTrackCueList")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 getCueById(id)
 ```
 

@@ -23,7 +23,7 @@ the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Type
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 filter((element) => { /* ... */ } )
 filter((element, index) => { /* ... */ } )

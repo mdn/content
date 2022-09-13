@@ -71,7 +71,7 @@ Phasellus eget velit sagittis.
 ```css
 body {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
   margin: 0;
   padding: 0;
@@ -92,8 +92,15 @@ blockquote {
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
 {{EmbedLiveSample("a._no_all_property", "200", "125")}}
@@ -107,9 +114,18 @@ This is the scenario in which no `all` property is set inside the `blockquote` r
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: initial;
+}
 ```
 
 {{EmbedLiveSample("b._all_initial", "200", "125")}}
@@ -123,9 +139,18 @@ With the `all` property set to `initial` in the `blockquote` rule, the {{HTMLEle
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: inherit;
+}
 ```
 
 {{EmbedLiveSample("c._all_inherit", "200", "125")}}
@@ -139,9 +164,18 @@ In this case, the {{HTMLElement("blockquote")}} element doesn't use the browser 
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: unset;
+}
 ```
 
 {{EmbedLiveSample("d._all_unset", "200", "125")}}
@@ -155,9 +189,18 @@ When the `unset` value is applied to the `all` property in the `blockquote` rule
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: revert; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: revert;
+}
 ```
 
 {{EmbedLiveSample("e._all_revert", "200", "125")}}
@@ -171,9 +214,18 @@ When the `all` property is set to `revert` in the `blockquote` rule, the `blockq
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: revert-layer; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: revert-layer;
+}
 ```
 
 {{EmbedLiveSample("f._all_revert-layer", "200", "125")}}

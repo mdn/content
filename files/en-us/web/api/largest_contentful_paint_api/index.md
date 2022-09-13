@@ -41,8 +41,8 @@ The Largest Contentful Paint metric provides the render time of the largest imag
 The following example shows an image and a large paragraph of text. An observer is registered to get the largest contentful paint while the page is loading.
 
 ```html
-<img src="large_image.jpg">
-<p id='large-paragraph'>This is large body of text.</p>
+<img src="large_image.jpg" />
+<p id="large-paragraph">This is large body of text.</p>
 ```
 
 ```js

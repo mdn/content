@@ -20,7 +20,7 @@ The static **`Reflect.defineProperty()`** method is like
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.defineProperty(target, propertyKey, attributes)
 ```
 

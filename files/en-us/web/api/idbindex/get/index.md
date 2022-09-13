@@ -29,7 +29,7 @@ with.
 
 ## Syntax
 
-```js
+```js-nolint
 get()
 get(key)
 ```

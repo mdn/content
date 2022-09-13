@@ -23,7 +23,7 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 
 ## Syntax
 
-```js
+```js-nolint
 initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 ```
 

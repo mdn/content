@@ -21,7 +21,7 @@ The **`observe()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 observe(target)
 observe(target, options)
 ```

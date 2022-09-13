@@ -20,7 +20,7 @@ object's properties.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

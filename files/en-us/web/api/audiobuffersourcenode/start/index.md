@@ -23,7 +23,7 @@ to begin playback immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 start(when)
 start(when, offset)
 start(when, offset, duration)

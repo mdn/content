@@ -24,7 +24,7 @@ The **`border-block-end-color`** [CSS](/en-US/docs/Web/CSS) property defines the
 
 ```css
 border-block-end-color: yellow;
-border-block-end-color: #F5F6F7;
+border-block-end-color: #f5f6f7;
 
 /* Global values */
 border-block-end-color: inherit;

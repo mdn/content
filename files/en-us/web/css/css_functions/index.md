@@ -24,7 +24,7 @@ spec-urls:
 
 ```css
 selector {
-  property: functional-notation( [argument]? [, argument]! );
+  property: functional-notation([argument]? [, argument]!);
 }
 ```
 

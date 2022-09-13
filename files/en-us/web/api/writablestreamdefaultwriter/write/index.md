@@ -26,7 +26,7 @@ destination.
 
 ## Syntax
 
-```js
+```js-nolint
 write(chunk)
 ```
 

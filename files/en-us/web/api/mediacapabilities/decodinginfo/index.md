@@ -21,7 +21,7 @@ This contains the three boolean properties `supported`, `smooth`, and `powereffi
 
 ## Syntax
 
-```js
+```js-nolint
 decodingInfo(configuration)
 ```
 

@@ -27,7 +27,7 @@ This method is commonly used for making rounded corners.
 
 ## Syntax
 
-```js
+```js-nolint
 arcTo(x1, y1, x2, y2, radius)
 ```
 
@@ -194,8 +194,8 @@ arc changes.
 ```html
 <div>
   <label for="radius">Radius: </label>
-  <input name="radius"  type="range" id="radius" min=0 max=100 value=50>
-  <label for="radius"  id="radius-output">50</label>
+  <input name="radius" type="range" id="radius" min="0" max="100" value="50" />
+  <label for="radius" id="radius-output">50</label>
 </div>
 <canvas id="canvas"></canvas>
 ```

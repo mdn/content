@@ -19,7 +19,7 @@ The **`RTCDTMFToneChangeEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCDTMFToneChangeEvent(type)
 new RTCDTMFToneChangeEvent(type, options)
 ```

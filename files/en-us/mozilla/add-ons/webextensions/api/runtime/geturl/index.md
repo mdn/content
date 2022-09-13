@@ -22,7 +22,7 @@ This function does _not_ check that the resource actually exists at that URL.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.getURL(
   path // string
 )

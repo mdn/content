@@ -24,7 +24,7 @@ _previous_ event, follows a linear ramp to the new value given in the
 
 ## Syntax
 
-```js
+```js-nolint
 linearRampToValueAtTime(value, endTime)
 ```
 

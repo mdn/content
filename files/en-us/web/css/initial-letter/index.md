@@ -24,8 +24,8 @@ initial-letter: normal;
 
 /* Numeric values */
 initial-letter: 1.5;    /* Initial letter occupies 1.5 lines */
-initial-letter: 3.0;    /* Initial letter occupies 3 lines */
-initial-letter: 3.0 2;  /* Initial letter occupies 3 lines and
+initial-letter: 3;      /* Initial letter occupies 3 lines */
+initial-letter: 3 2;    /* Initial letter occupies 3 lines and
                            sinks 2 lines */
 
 /* Global values */
@@ -83,8 +83,8 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 }
 
 .three::first-letter {
-  -webkit-initial-letter: 3.0;
-  initial-letter: 3.0;
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
 }
 ```
 

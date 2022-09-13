@@ -21,8 +21,8 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 
 ## Syntax
 
-```js
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
 ```
 
 - `nameN`

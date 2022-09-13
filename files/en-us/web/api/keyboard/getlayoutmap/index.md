@@ -24,7 +24,7 @@ functions for retrieving the strings associated with specific physical keys.
 
 ## Syntax
 
-```js
+```js-nolint
 getLayoutMap()
 ```
 

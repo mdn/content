@@ -20,7 +20,7 @@ the context.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransform()
 ```
 
@@ -64,8 +64,7 @@ on it.
 ### HTML
 
 ```html
-<canvas width="240"></canvas>
-<canvas width="240"></canvas>
+<canvas width="240"></canvas> <canvas width="240"></canvas>
 ```
 
 ### CSS

@@ -21,7 +21,7 @@ configuration.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertyDescriptor(obj, prop)
 ```
 

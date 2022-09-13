@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: treeitem role'
+title: "ARIA: treeitem role"
 slug: Web/Accessibility/ARIA/Roles/treeitem_role
 tags:
   - Accessibility
@@ -185,48 +185,46 @@ The following is how one might mark up a directory listing of web development co
 
 ```html
 <div>
-<h3 id="treeLabel">
-  Developer Learning Path
-</h3>
-<ul role="tree" aria-labelledby="treeLabel">
-  <li role="treeitem" aria-expanded="true">
-    <span>Web</span>
-    <ul role="group">
-      <li role="treeitem" aria-expanded="false">
-        <span>Languages</span>
-        <ul role="group">
-          <li role="treeitem" aria-expanded="false">
-            <span>HTML</span>
-            <ul role="group">
-              <li role="treeitem">Document structure</li>
-              <li role="treeitem">Head elements</li>
-              <li role="treeitem">Semantic elements</li>
-              <li role="treeitem">Attributes</li>
-              <li role="treeitem">Web forms</li>
-            </ul>
-          </li>
-          <li role="treeitem">CSS</li>
-          <li role="treeitem">JavaScript</li>
-        </ul>
-      </li>
-      <li role="treeitem" aria-expanded="false">
-        <span>Accessibility</span>
-        <ul role="group">
-          <li role="treeitem" aria-label="accessibility object model">AOM</li>
-          <li role="treeitem">WCAG</li>
-          <li role="treeitem">ARIA</li>
-        </ul>
-      </li>
-      <li role="treeitem" aria-expanded="false">
-        <span>Web Performance</span>
-        <ul role="group">
-          <li role="treeitem">Load time</li>
-        </ul>
-      </li>
-      <li role="treeitem">APIs</li>
-    </ul>
-  </li>
-</ul>
+  <h3 id="treeLabel">Developer Learning Path</h3>
+  <ul role="tree" aria-labelledby="treeLabel">
+    <li role="treeitem" aria-expanded="true">
+      <span>Web</span>
+      <ul role="group">
+        <li role="treeitem" aria-expanded="false">
+          <span>Languages</span>
+          <ul role="group">
+            <li role="treeitem" aria-expanded="false">
+              <span>HTML</span>
+              <ul role="group">
+                <li role="treeitem">Document structure</li>
+                <li role="treeitem">Head elements</li>
+                <li role="treeitem">Semantic elements</li>
+                <li role="treeitem">Attributes</li>
+                <li role="treeitem">Web forms</li>
+              </ul>
+            </li>
+            <li role="treeitem">CSS</li>
+            <li role="treeitem">JavaScript</li>
+          </ul>
+        </li>
+        <li role="treeitem" aria-expanded="false">
+          <span>Accessibility</span>
+          <ul role="group">
+            <li role="treeitem" aria-label="accessibility object model">AOM</li>
+            <li role="treeitem">WCAG</li>
+            <li role="treeitem">ARIA</li>
+          </ul>
+        </li>
+        <li role="treeitem" aria-expanded="false">
+          <span>Web Performance</span>
+          <ul role="group">
+            <li role="treeitem">Load time</li>
+          </ul>
+        </li>
+        <li role="treeitem">APIs</li>
+      </ul>
+    </li>
+  </ul>
 </div>
 ```
 

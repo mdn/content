@@ -24,7 +24,7 @@ device.
 
 ## Syntax
 
-```js
+```js-nolint
 transferIn(endpointNumber, length)
 ```
 

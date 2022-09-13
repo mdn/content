@@ -19,7 +19,7 @@ The **`createCubeLayer()`** method of the {{domxref("XRWebGLBinding")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 createCubeLayer(init)
 ```
 

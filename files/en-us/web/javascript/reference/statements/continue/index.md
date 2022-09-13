@@ -18,7 +18,7 @@ execution of the loop with the next iteration.
 
 ## Syntax
 
-```js
+```js-nolint
 continue;
 continue label;
 ```

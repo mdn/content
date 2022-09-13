@@ -19,7 +19,7 @@ The **`deleteFromDocument()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteFromDocument()
 ```
 

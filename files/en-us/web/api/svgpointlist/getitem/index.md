@@ -17,7 +17,7 @@ The **`getItem()`** method of the {{domxref("SVGPointList")}} interface gets one
 
 ## Syntax
 
-```js
+```js-nolint
 getItem(index)
 ```
 

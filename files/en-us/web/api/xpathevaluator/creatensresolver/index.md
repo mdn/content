@@ -27,7 +27,7 @@ called, also correctly resolving the implicit `xml` prefix.
 
 ## Syntax
 
-```js
+```js-nolint
 createNSResolver(nodeResolver)
 ```
 

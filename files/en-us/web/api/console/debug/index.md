@@ -28,7 +28,7 @@ level might correspond to the \`Debug\` or \`Verbose\` log level.
 
 ## Syntax
 
-```js
+```js-nolint
 debug(obj1)
 debug(obj1, /* …, */ objN)
 debug(msg)

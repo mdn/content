@@ -20,7 +20,7 @@ This should only be used to transfer data to the queue when {{domxref("ReadableB
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

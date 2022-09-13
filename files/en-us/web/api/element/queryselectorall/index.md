@@ -26,7 +26,7 @@ the method was called.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelectorAll(selectors)
 ```
 

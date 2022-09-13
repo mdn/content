@@ -29,9 +29,9 @@ You can access `CacheStorage` through the global
 
 ## Syntax
 
-```js
-match(request);
-match(request, options);
+```js-nolint
+match(request)
+match(request, options)
 ```
 
 ### Parameters

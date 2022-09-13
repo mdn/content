@@ -58,7 +58,7 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```

@@ -20,7 +20,7 @@ Piping a stream will generally lock it for the duration of the pipe, preventing 
 
 ## Syntax
 
-```js
+```js-nolint
 pipeThrough(transformStream)
 pipeThrough(transformStream, options)
 ```

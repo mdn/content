@@ -23,7 +23,7 @@ It operates in a similar way to the {{domxref("Document.elementFromPoint",
 
 ## Syntax
 
-```js
+```js-nolint
 elementsFromPoint(x, y)
 ```
 

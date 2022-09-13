@@ -29,7 +29,7 @@ values, which are scaled to fit into the given interval starting at
 
 ## Syntax
 
-```js
+```js-nolint
 setValueCurveAtTime(values, startTime, duration)
 ```
 

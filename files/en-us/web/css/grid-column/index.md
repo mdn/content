@@ -31,7 +31,7 @@ grid-column: auto;
 /* with line numbers */
 grid-column: 1;
 grid-column: 1 / 3;
-grid-column: 1 /  span 2;
+grid-column: 1 / span 2;
 
 /* with line names */
 grid-column: main-start;

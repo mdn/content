@@ -22,7 +22,7 @@ somewhere within the directory subtree rooted at the directory on which it's cal
 
 ## Syntax
 
-```js
+```js-nolint
 getDirectory()
 getDirectory(path)
 getDirectory(path, options)

@@ -52,8 +52,12 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {

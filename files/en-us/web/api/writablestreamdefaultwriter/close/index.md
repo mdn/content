@@ -24,7 +24,7 @@ invoking the close behavior. During this time any further attempts to write will
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

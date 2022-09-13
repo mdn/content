@@ -57,7 +57,7 @@ border-image-source: unset;
 
 ```css
 .box {
-  border-image-source: url('image.png');
+  border-image-source: url("image.png");
 }
 ```
 

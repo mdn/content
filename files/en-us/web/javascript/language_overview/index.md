@@ -761,7 +761,7 @@ fs.readFile(filename, (err, content) => {
     throw err;
   }
   console.log(content);
-}));
+});
 // Code here will be executed while the file is waiting to be read
 
 // Promise-based
@@ -771,7 +771,7 @@ fs.readFile(filename)
     console.log(content);
   }).catch((err) => {
     throw err;
-  }));
+  });
 // Code here will be executed while the file is waiting to be read
 
 // Async/await

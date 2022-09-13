@@ -21,7 +21,7 @@ index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new BigInt64Array()
 new BigInt64Array(length)
 new BigInt64Array(typedArray)

@@ -23,7 +23,7 @@ If an utterance is currently being spoken, speaking will stop immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

@@ -28,7 +28,7 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 
 ## Syntax
 
-```js
+```js-nolint
 addTransceiver(trackOrKind)
 addTransceiver(trackOrKind, init)
 ```

@@ -18,7 +18,7 @@ The **`MediaQueryListEvent()`** constructor creates a new {{domxref("MediaQueryL
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaQueryListEvent(type)
 new MediaQueryListEvent(type, options)
 ```

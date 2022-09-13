@@ -18,7 +18,7 @@ The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

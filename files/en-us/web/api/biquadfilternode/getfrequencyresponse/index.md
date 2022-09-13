@@ -27,7 +27,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
@@ -84,9 +84,8 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>Biquad filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>Biquad filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js

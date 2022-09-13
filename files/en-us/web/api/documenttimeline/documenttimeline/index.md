@@ -20,7 +20,7 @@ The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs
 
 ## Syntax
 
-```js
+```js-nolint
 new DocumentTimeline(options)
 ```
 

@@ -44,8 +44,7 @@ The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/do
     </nav>
   </aside>
 
-  <main>
-  </main>
+  <main>…</main>
 </div>
 ```
 
@@ -470,22 +469,22 @@ function loadRandomAd(replaceBox) {
   const ads = [
     {
       bgcolor: "#cec",
-      title: "Eat Green Beans",
+      title: 'Eat Green Beans',
       body: "Make your mother proud—they're good for you!"
     },
     {
       bgcolor: "aquamarine",
-      title: "MillionsOfFreeBooks.whatever",
+      title: 'MillionsOfFreeBooks.whatever',
       body: "Read classic literature online free!"
     },
     {
       bgcolor: "lightgrey",
-      title: "3.14 Shades of Gray: A novel",
+      title: '3.14 Shades of Gray: A novel',
       body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",
-      title: "Flexbox Florist",
+      title: 'Flexbox Florist',
       body: "When life's layout gets complicated, send flowers."
     }
   ];

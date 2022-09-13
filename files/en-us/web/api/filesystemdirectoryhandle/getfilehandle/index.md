@@ -20,7 +20,7 @@ directory the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 getFileHandle(name)
 getFileHandle(name, options)
 ```

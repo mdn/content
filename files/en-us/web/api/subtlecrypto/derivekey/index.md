@@ -27,7 +27,7 @@ different characteristics and are appropriate in quite different situations. See
 
 ## Syntax
 
-```js
+```js-nolint
 deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 ```
 

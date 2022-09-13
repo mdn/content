@@ -19,7 +19,7 @@ compile information.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderInfoLog(shader)
 ```
 

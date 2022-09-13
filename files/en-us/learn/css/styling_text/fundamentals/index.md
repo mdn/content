@@ -475,8 +475,7 @@ You can apply multiple shadows to the same text by including multiple shadow val
 
 ```css
 h1 {
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
 }
 ```
 
@@ -556,8 +555,7 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
   text-align: center;
 }
 
@@ -607,8 +605,7 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
   text-align: center;
 }
 
@@ -662,8 +659,7 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
+  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
   text-align: center;
   letter-spacing: 2px;
 }

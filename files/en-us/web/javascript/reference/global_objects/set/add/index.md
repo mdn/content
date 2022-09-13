@@ -19,7 +19,7 @@ The **`add()`** method inserts a new element with a specified value in to a `Set
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 

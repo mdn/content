@@ -23,7 +23,7 @@ It can be used on tags created in JavaScript or created in WebAssembly code and 
 
 ## Syntax
 
-```js
+```js-nolint
 is(tag)
 ```
 

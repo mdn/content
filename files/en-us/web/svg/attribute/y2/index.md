@@ -21,7 +21,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -74,7 +78,11 @@ For {{SVGElement('line')}}, `y2` defines the y coordinate of the ending point of
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -127,7 +135,11 @@ For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the endin
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

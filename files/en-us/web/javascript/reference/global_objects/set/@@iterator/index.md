@@ -22,7 +22,7 @@ function object as the initial value of the {{jsxref("Set.prototype.values()",
 
 ## Syntax
 
-```js
+```js-nolint
 mySet[Symbol.iterator]
 ```
 

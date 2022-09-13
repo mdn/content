@@ -29,7 +29,7 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 
 ## Syntax
 
-```js
+```js-nolint
 requestPictureInPicture()
 ```
 

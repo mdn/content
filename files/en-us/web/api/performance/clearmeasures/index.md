@@ -22,7 +22,7 @@ removed from the performance entry buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearMeasures()
 clearMeasures(name)
 ```

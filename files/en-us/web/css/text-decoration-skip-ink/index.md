@@ -81,7 +81,7 @@ p {
   text-decoration-skip-ink: none;
 }
 
-.skip-ink-all{
+.skip-ink-all {
   text-decoration-skip-ink: all;
 }
 ```

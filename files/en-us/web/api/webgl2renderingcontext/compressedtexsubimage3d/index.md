@@ -19,7 +19,7 @@ three-dimensional sub-rectangle for a texture image in a compressed format.
 
 ## Syntax
 
-```js
+```js-nolint
 compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset)
 
 compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData)

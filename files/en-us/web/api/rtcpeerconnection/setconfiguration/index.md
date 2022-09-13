@@ -35,7 +35,7 @@ this might be done:
 
 ## Syntax
 
-```js
+```js-nolint
 setConfiguration(configuration)
 ```
 

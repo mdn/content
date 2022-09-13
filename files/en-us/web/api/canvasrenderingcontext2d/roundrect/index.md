@@ -23,7 +23,7 @@ To draw the rounded rectangle onto a canvas, you can use the {{domxref("CanvasRe
 
 ## Syntax
 
-```js
+```js-nolint
 roundRect(x, y, width, height, radii)
 ```
 

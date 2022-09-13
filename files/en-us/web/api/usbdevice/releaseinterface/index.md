@@ -23,7 +23,7 @@ claimed interface is released from exclusive access.
 
 ## Syntax
 
-```js
+```js-nolint
 releaseInterface(interfaceNumber)
 ```
 

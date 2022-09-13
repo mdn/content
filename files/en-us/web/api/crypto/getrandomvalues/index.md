@@ -31,7 +31,7 @@ The pseudo-random number generator algorithm (PRNG) may vary across {{Glossary("
 
 ## Syntax
 
-```js
+```js-nolint
 getRandomValues(typedArray)
 ```
 

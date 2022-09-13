@@ -19,7 +19,7 @@ feedback operation.
 
 ## Syntax
 
-```js
+```js-nolint
 beginTransformFeedback(primitiveMode)
 ```
 

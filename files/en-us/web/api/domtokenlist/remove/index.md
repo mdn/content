@@ -19,7 +19,7 @@ removes the specified _tokens_ from the list.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(token1)
 remove(token1, token2)
 remove(token1, token2, /* … ,*/ tokenN)

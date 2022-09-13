@@ -25,7 +25,7 @@ different drawing context object on a given canvas element.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType)
 getContext(contextType, contextAttributes)
 ```

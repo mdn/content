@@ -19,7 +19,7 @@ Output from `dump()` is _not_ sent to the browser's developer tools console. To 
 
 ## Syntax
 
-```js
+```js-nolint
 dump(message)
 ```
 

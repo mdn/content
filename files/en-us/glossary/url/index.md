@@ -4,7 +4,7 @@ slug: Glossary/URL
 tags:
   - Glossary
   - Infrastructure
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 **Uniform Resource Locator** (**URL**) is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet.

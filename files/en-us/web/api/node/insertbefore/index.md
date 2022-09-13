@@ -30,8 +30,8 @@ node.
 
 ## Syntax
 
-```js
-insertBefore(newNode, referenceNode);
+```js-nolint
+insertBefore(newNode, referenceNode)
 ```
 
 ### Parameters

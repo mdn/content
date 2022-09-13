@@ -18,7 +18,7 @@ currently being represented by the selection object, i.e. the currently selected
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

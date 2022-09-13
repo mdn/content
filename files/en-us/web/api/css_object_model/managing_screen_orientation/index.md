@@ -31,7 +31,12 @@ Let's have an example with the following HTML code
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 CSS relies on the orientation media query to handle specific styles based on the screen orientation

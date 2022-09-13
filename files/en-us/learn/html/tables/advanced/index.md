@@ -264,13 +264,14 @@ The following markup shows a simple nested table:
 The output of which looks something like this:
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 {{EmbedLiveSample("Nesting_Tables")}}

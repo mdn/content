@@ -17,7 +17,14 @@ The SVG **`<animateMotion>`** element provides a way to define how an element mo
 ## Example
 
 ```css hidden
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```html

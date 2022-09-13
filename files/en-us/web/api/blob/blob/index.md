@@ -19,7 +19,7 @@ of the values given in the parameter `array`.
 
 ## Syntax
 
-```js
+```js-nolint
 new Blob(array)
 new Blob(array, options)
 ```

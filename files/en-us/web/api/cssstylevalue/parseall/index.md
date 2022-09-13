@@ -23,7 +23,7 @@ supplied values.
 
 ## Syntax
 
-```js
+```js-nolint
 parseAll(property, value)
 ```
 

@@ -233,8 +233,10 @@ The CSS establishes classes that can be used to set the perspective to different
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -526,7 +528,7 @@ This example shows cubes with popular `perspective-origin` values.
 
 /* Make the layout a little nicer */
 section {
-  background-color: #EEE;
+  background-color: #eee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

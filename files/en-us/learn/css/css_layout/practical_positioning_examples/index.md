@@ -158,7 +158,8 @@ Add the following CSS:
 Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -401,7 +402,7 @@ There's a lot going on here — let's discuss it bit by bit:
 There is one final bit of CSS to add — put the following at the bottom of your CSS:
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```

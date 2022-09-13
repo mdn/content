@@ -16,7 +16,7 @@ The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Tag(type)
 ```
 

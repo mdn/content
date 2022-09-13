@@ -20,7 +20,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 confirm(message)
 ```
 

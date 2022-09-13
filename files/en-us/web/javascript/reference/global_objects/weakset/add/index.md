@@ -19,7 +19,7 @@ The **`add()`** method appends a new object to the end of a
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 

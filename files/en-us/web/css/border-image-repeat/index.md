@@ -73,7 +73,7 @@ The `border-image-repeat` property may be specified using one or two values chos
   padding: 1rem;
   border: 40px solid;
   border-image: url("border.png") 27;
-  border-image-repeat: stretch;  /* Can be changed in the live sample */
+  border-image-repeat: stretch; /* Can be changed in the live sample */
 }
 ```
 

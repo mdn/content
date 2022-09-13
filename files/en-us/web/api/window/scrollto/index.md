@@ -18,7 +18,7 @@ coordinates in the document.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollTo(x-coord, y-coord)
 scrollTo(options)
 ```

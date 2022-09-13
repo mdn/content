@@ -30,7 +30,7 @@ or {{domxref("IDBKeyRange")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

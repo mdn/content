@@ -83,7 +83,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255,0,0,1);
+  background: rgba(255, 0, 0, 1);
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -91,7 +91,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255,0,0,0);
+  background: rgba(255, 0, 0, 0);
 }
 ```
 

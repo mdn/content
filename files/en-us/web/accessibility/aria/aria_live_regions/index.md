@@ -47,7 +47,10 @@ A website specializing in providing information about planets provides a dropdow
   <p id="planetDescription">Select a planet to view its description</p>
 </div>
 
-<p><small>Information courtesy <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System">Wikipedia</a></small></p>
+<p>
+  <small>Information from
+    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a></small>
+</p>
 ```
 
 ```js
@@ -196,18 +199,15 @@ One way around this would be to first clear all the contents of the live region 
 `aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true">
-  …
-</div>
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
 ```
 
 Another example of `aria-atomic` - an update/notification made as a result of a user action.
 
 ```html
 <div id="date-input">
-  <label>Year:
-    <input type="text" id="year" value="1990" onblur="change(event)"/>
-  </label>
+  <label for="year">Year:</label>
+  <input type="text" id="year" value="1990" onblur="change(event)" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">

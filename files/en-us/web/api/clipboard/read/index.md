@@ -37,7 +37,7 @@ permission.
 
 ## Syntax
 
-```js
+```js-nolint
 read()
 ```
 
@@ -69,8 +69,8 @@ The example will check or ask for permission to read the clipboard, then fetch t
 #### HTML
 
 ```html
-<img id="source" src="butterfly.jpg" alt="A butterfly">
-<img id="destination">
+<img id="source" src="butterfly.jpg" alt="A butterfly" />
+<img id="destination" />
 ```
 
 #### CSS

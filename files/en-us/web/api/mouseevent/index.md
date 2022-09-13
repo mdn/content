@@ -110,8 +110,12 @@ Event state (canceled or not) is then determined with the return value of method
 ### HTML
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label></p>
-<p><button id="button">Click me to send a MouseEvent to the checkbox</button></p>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p>
+  <button id="button">Click me to send a MouseEvent to the checkbox</button>
+</p>
 ```
 
 ### JavaScript

@@ -22,7 +22,7 @@ Fired when a bookmark or folder is moved to a different parent folder or positio
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onMoved.addListener(listener)
 browser.bookmarks.onMoved.removeListener(listener)
 browser.bookmarks.onMoved.hasListener(listener)

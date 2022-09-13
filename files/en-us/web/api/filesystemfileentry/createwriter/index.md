@@ -23,7 +23,7 @@ which can be used to write data into the file represented by the directory entry
 
 ## Syntax
 
-```js
+```js-nolint
 createWriter(successCallback)
 createWriter(successCallback, errorCallback)
 ```

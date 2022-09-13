@@ -20,7 +20,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 after(param1)
 after(param1, param2)
 after(param1, param2, /* … ,*/ paramN)

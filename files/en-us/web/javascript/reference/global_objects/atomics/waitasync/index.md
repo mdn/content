@@ -19,7 +19,7 @@ Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on t
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.waitAsync(typedArray, index, value)
 Atomics.waitAsync(typedArray, index, value, timeout)
 ```

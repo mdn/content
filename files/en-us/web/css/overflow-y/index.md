@@ -101,14 +101,26 @@ If {{cssxref("overflow-x")}} is `hidden`, `scroll` or `auto` and this property i
 #div3,
 #div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
 }
 
-#div1 { overflow-y: hidden; margin-bottom: 12px;}
-#div2 { overflow-y: scroll; margin-bottom: 12px;}
-#div3 { overflow-y: visible; margin-bottom: 120px;}
-#div4 { overflow-y: auto; margin-bottom: 120px;}
+#div1 {
+  overflow-y: hidden;
+  margin-bottom: 12px;
+}
+#div2 {
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+#div3 {
+  overflow-y: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-y: auto;
+  margin-bottom: 120px;
+}
 ```
 
 #### Result

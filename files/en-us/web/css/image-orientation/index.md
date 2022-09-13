@@ -66,7 +66,7 @@ The following image has been rotated through 180 degrees, and the `image-orienta
 
 ```css hidden
 img {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 label {

@@ -19,7 +19,7 @@ The **`json()`** method of the {{domxref("PushMessageData")}} interface extracts
 
 ## Syntax
 
-```js
+```js-nolint
 json()
 ```
 

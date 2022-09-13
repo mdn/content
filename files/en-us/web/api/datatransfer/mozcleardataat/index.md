@@ -30,7 +30,7 @@ entirely, shifting the remaining items down and changing their indices.
 
 ## Syntax
 
-```js
+```js-nolint
 mozClearDataAt(index)
 mozClearDataAt(type, index)
 ```

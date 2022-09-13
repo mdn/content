@@ -81,7 +81,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-block-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

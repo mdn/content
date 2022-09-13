@@ -20,7 +20,7 @@ purposes.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 ```
 

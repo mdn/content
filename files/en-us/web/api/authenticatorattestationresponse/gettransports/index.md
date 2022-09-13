@@ -31,7 +31,7 @@ not removable from the device).
 
 ## Syntax
 
-```js
+```js-nolint
 getTransports()
 ```
 

@@ -25,7 +25,9 @@ the instance.
 The following gets the number of explicitly set styles on the following HTML element:
 
 ```html
-<div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
+<div
+  id="div1"
+  style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
 ```
 
 JavaScript code:

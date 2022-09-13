@@ -25,7 +25,7 @@ This is most easily demonstrated with a simple example. First, some simple CSS t
 
 ```css
 .highlight {
-  background-color:#ee3;
+  background-color: #ee3;
 }
 ```
 
@@ -49,7 +49,7 @@ body {
 }
 
 .highlight {
-  background-color:#ee3;
+  background-color: #ee3;
 }
 ```
 
@@ -73,7 +73,7 @@ body {
 }
 
 .highlight {
-  background-color:#ee3;
+  background-color: #ee3;
 }
 ```
 

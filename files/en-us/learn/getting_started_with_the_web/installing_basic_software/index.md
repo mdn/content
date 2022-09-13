@@ -8,7 +8,7 @@ tags:
   - Setup
   - Tools
   - WebMechanics
-  - l10n:priority
+  - "l10n:priority"
   - text editor
 ---
 

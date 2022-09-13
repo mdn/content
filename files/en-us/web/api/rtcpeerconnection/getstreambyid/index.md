@@ -27,7 +27,7 @@ stream matches, it returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 getStream(id)
 ```
 

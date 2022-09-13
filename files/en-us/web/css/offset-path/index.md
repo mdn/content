@@ -35,7 +35,7 @@ offset-path: url(#path);
 offset-path: circle(50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
-offset-path: path('M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200');
+offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
 /* Geometry Boxes */
 offset-path: margin-box;
@@ -134,15 +134,17 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 
 ```css
 .scissorHalf {
-  offset-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
+  offset-path: path(
+    "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
+  );
   animation: followpath 4s linear infinite;
 }
 
 @keyframes followpath {
-   to {
-     motion-offset: 100%;
-     offset-distance: 100%;
-   }
+  to {
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
 }
 ```
 

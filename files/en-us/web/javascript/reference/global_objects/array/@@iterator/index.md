@@ -28,7 +28,7 @@ function object as the initial value of the {{jsxref("Array.prototype.values()",
 
 ## Syntax
 
-```js
+```js-nolint
 [Symbol.iterator]()
 ```
 

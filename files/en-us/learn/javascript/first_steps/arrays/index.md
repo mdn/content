@@ -11,7 +11,7 @@ tags:
   - Learn
   - Pop
   - Push
-  - l10n:priority
+  - "l10n:priority"
   - shift
   - split
   - unshift

@@ -19,7 +19,7 @@ information.
 
 ## Syntax
 
-```js
+```js-nolint
 createQuery()
 ```
 
