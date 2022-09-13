@@ -21,7 +21,7 @@ file handle.
 ## Syntax
 
 ```js-nolint
-requestPermission(FileSystemHandlePermissionDescriptor)
+requestPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters
