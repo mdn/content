@@ -15,11 +15,11 @@ This is the third example that explain [how to build custom form widgets](/en-US
 ```html
 <form class="no-widget">
   <select name="myFruit" tabindex="-1">
-      <option>Cherry</option>
-      <option>Lemon</option>
-      <option>Banana</option>
-      <option>Strawberry</option>
-      <option>Apple</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
   </select>
 
   <div class="select" tabindex="0">

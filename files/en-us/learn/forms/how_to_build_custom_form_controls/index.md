@@ -94,7 +94,6 @@ Now that the control's basic functionality has been decided upon, it's time to s
      The tabindex attribute is what allows the user to focus the control.
      We'll see later that it's better to set it through JavaScript. -->
 <div class="select" tabindex="0">
-
   <!-- This container will be used to display the current value of the control -->
   <span class="value">Cherry</span>
 
@@ -109,7 +108,6 @@ Now that the control's basic functionality has been decided upon, it's time to s
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -368,7 +366,6 @@ First, we need to add a regular {{HTMLElement("select")}} element before each in
       </ul>
     </div>
   </form>
-
 </body>
 ```
 

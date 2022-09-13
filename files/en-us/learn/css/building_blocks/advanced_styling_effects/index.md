@@ -53,7 +53,10 @@ Let's look at a simple example to get things started. First, some HTML:
 
 ```html
 <article class="simple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -99,7 +102,10 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -214,10 +220,8 @@ You can find a lot more examples than are available here in our [blend-modes.htm
 Again, let's look at some examples so we can understand this better. First, {{cssxref("background-blend-mode")}} — here we'll show a couple of simple {{htmlelement("div")}}s, so you can compare the original with the blended version:
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 Now some CSS — we are adding to the `<div>` one background image and a green background color:
@@ -249,20 +253,14 @@ Now let's look at {{cssxref("mix-blend-mode")}}. Here we'll present the same two
 ```html
 <article>
   No mix blend mode
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Multiply mix
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 

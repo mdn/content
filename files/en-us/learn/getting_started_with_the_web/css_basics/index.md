@@ -32,7 +32,7 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 1. Open your `index.html` file. Paste the following line in the head (between the {{HTMLElement("head")}} and `</head>` tags):
 
    ```html
-   <link href="styles/style.css" rel="stylesheet">
+   <link href="styles/style.css" rel="stylesheet" />
    ```
 
 2. Save `index.html` and load it in your browser. You should see something like this:
@@ -157,7 +157,9 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 1. First, find the [output from Google Fonts](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
 
    ```html
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link
+     href="https://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet" />
    ```
 
    This code links your page to a style sheet that loads the Open Sans font family with your webpage.
