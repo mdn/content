@@ -8,6 +8,9 @@ tags:
 
 An immutable value is one whose content cannot be changed without creating an entirely new value.
 
+In {{glossary("JavaScript")}}, {{Glossary("primitive", "primitive values")}} are immutable — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned another value.
+By contrast, {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable by default — their properties and elements can be changed without reassigning a new value.
+
 It can be beneficial to use immutable objects for several reasons:
 
 - To improve performance (no planning for the object's future changes)
