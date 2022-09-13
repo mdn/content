@@ -137,10 +137,8 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label
-    >Enter a number between 0 and 400 that is divisible by 5:
-    <input type="number" step="5" id="theNumber" min="0" max="400" />
-  </label>
+  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
   <label
