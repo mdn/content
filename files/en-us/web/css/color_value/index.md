@@ -282,11 +282,7 @@ rgba(51 170 51 / 40%)    /*  40% opaque green */
 
 /* Functional syntax with floats value */
 rgba(51, 170, 51.6, 1)
-rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)    /*  40% opaque green */
-
-/* Functional syntax with floats value */
-rgba(51, 170, 51.6, 1)
-rgba(5.1e1, 1.7e2, 5.1e1, 1e2%);
+rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
 ```
 
 ### HSL syntax variations
