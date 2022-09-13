@@ -18,7 +18,7 @@ The **`persist()`** method of the {{domxref("StorageManager")}} interface reques
 ## Syntax
 
 ```js-nolint
-navigator.storage.persist()
+persist()
 ```
 
 ### Parameters
