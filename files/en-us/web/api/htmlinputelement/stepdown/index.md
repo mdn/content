@@ -141,11 +141,10 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label
-    >Enter how many values of step you would like to decrement by or leave it
-    blank:
-    <input type="number" step="1" id="decrementer" min="-2" max="15" />
+  <label for="decrementer">
+    Enter how many values of step you would like to decrement by or leave it blank:
   </label>
+  <input type="number" step="1" id="decrementer" min="-2" max="15" />
 </p>
 <input type="button" value="Decrement" id="theButton" />
 ```
