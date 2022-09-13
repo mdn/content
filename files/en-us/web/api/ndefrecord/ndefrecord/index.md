@@ -20,7 +20,7 @@ read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
 ## Syntax
 
 ```js-nolint
-writer = new NDEFRecord(options)
+new NDEFRecord(options)
 ```
 
 ### Parameters
