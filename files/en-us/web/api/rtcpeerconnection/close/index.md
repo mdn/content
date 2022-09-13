@@ -19,7 +19,7 @@ peer connection.
 ## Syntax
 
 ```js-nolint
-peerConnection.close()
+close()
 ```
 
 _This method has no parameters, and returns nothing._
