@@ -17,7 +17,7 @@ The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clear
 
 ## Syntax
 
-```js
+```js-nolint
 initialize(obj)
 ```
 

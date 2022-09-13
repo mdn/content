@@ -24,7 +24,7 @@ The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops t
 
 ## Syntax
 
-```js
+```js-nolint
 exitPresent()
 ```
 

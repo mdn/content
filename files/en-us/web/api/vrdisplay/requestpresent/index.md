@@ -24,7 +24,7 @@ The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface star
 
 ## Syntax
 
-```js
+```js-nolint
 requestPresent(layers)
 ```
 

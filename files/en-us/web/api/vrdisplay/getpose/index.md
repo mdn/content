@@ -26,7 +26,7 @@ The **`getPose()`** method of the {{domxref("VRDisplay")}} interface returns a {
 
 ## Syntax
 
-```js
+```js-nolint
 getPose()
 ```
 

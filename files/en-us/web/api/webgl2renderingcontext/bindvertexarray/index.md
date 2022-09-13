@@ -19,7 +19,7 @@ passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 bindVertexArray(vertexArray)
 ```
 

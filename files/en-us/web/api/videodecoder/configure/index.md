@@ -18,7 +18,7 @@ The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueu
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 

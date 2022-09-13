@@ -25,7 +25,7 @@ terminology) to clear that condition. See the for details.
 
 ## Syntax
 
-```js
+```js-nolint
 clearHalt(direction, endpointNumber)
 ```
 

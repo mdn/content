@@ -18,7 +18,7 @@ The **`TextEncoder()`** constructor returns a newly created
 
 ## Syntax
 
-```js
+```js-nolint
 new TextEncoder()
 ```
 

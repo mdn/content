@@ -17,7 +17,7 @@ The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new VideoEncoder(init)
 ```
 

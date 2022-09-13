@@ -24,7 +24,7 @@ transmitted to the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 controlTransferOut(setup, data)
 ```
 

@@ -19,7 +19,7 @@ portions of the contents of attachments in a framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 invalidateSubFramebuffer(target, attachments, x, y, width, height)
 ```
 

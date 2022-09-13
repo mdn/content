@@ -19,7 +19,7 @@ number of uniforms within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformIndices(program, uniformNames)
 ```
 

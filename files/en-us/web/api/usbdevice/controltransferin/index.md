@@ -24,7 +24,7 @@ been received from the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 controlTransferIn(setup, length)
 ```
 

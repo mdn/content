@@ -23,7 +23,7 @@ the specified configuration is selected.
 
 ## Syntax
 
-```js
+```js-nolint
 selectConfiguration(configurationValue)
 ```
 

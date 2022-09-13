@@ -20,7 +20,7 @@ If the value for _utfLabel_ is unknown, or is one of the two values leading to a
 
 ## Syntax
 
-```js
+```js-nolint
 new TextDecoder()
 new TextDecoder(utfLabel)
 new TextDecoder(utfLabel, options)
