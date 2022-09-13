@@ -147,11 +147,11 @@ Click the button in this example to increment the {{HTMLElement("input/number",
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label
-    >Enter how many values of step you would like to increment by or leave it
+  <label>
+    Enter how many values of step you would like to increment by or leave it
     blank:
-    <input type="number" step="1" id="incrementor" min="0" max="25" />
   </label>
+  <input type="number" step="1" id="incrementor" min="0" max="25" />
 </p>
 <input type="button" value="Increment" id="theButton" />
 ```
