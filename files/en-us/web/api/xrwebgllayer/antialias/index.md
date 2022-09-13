@@ -38,7 +38,7 @@ the web site or web app.
 ## Syntax
 
 ```js-nolint
-let antialiasingSupported = xrWebGLLayer.antialias
+xrWebGLLayer.antialias
 ```
 
 ### Value
