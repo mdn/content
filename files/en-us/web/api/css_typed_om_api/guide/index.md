@@ -247,21 +247,22 @@ Let's examine a CSS example with several custom properties, transforms, `calc()`
 
 ```css
 :root {
-    --mainColor: hsl(198, 43%, 42%);
-    --black: hsl(0, 0%, 16%);
-    --white: hsl(0,0%,97%);
-    --unit: 1.2rem;
+  --mainColor: hsl(198, 43%, 42%);
+  --black: hsl(0, 0%, 16%);
+  --white: hsl(0, 0%, 97%);
+  --unit: 1.2rem;
 }
 
 button {
   --mainColor: hsl(198, 100%, 66%);
   display: inline-block;
-  padding: var(--unit) calc(var(--unit)*2);
+  padding: var(--unit) calc(var(--unit) * 2);
   width: calc(30% + 20px);
   background: no-repeat 5% center url(magicwand.png) var(--mainColor);
   border: 4px solid var(--mainColor);
   border-radius: 2px;
-  font-size: calc(var(--unit)*2); color: var(--white);
+  font-size: calc(var(--unit) * 2);
+  color: var(--white);
   cursor: pointer;
   transform: scale(0.95);
 }

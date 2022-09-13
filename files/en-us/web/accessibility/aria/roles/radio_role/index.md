@@ -158,17 +158,17 @@ The following example uses ARIA to modify otherwise generic elements to be expos
 
 ```css
 [role="radio"] {
-    padding: 5px;
+  padding: 5px;
 }
 
 [role="radio"][aria-checked="true"]::before {
-    content: "(x)";
-    font-family: monospace;
+  content: "(x)";
+  font-family: monospace;
 }
 
 [role="radio"][aria-checked="false"]::before {
-    content: "( )";
-    font-family: monospace;
+  content: "( )";
+  font-family: monospace;
 }
 ```
 
