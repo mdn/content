@@ -18,7 +18,7 @@ The **`CSSNamespaceRule`** interface describes an object representing a single C
 
 ## Properties
 
-_Inherits methods from its ancestor {{domxref("CSSRule")}}._
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSNamespaceRule.namespaceURI")}}
   - : Returns a string containing the text of the URI of the given namespace.
