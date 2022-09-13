@@ -39,7 +39,7 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 
 > **Note:** While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > //  DON'T DO THIS
 >
 > //  logs "foo string"

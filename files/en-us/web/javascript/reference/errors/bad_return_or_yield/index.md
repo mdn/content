@@ -41,7 +41,7 @@ execution and specify a value to be returned to the function caller.
 
 ### Missing curly brackets
 
-```js example-bad
+```js-nolint example-bad
 function cheer(score) {
   if (score === 147)
     return 'Maximum!';

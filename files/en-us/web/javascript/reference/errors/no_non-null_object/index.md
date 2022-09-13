@@ -43,7 +43,7 @@ When methods like {{jsxref("Object.create()")}} or
 used, the optional descriptor parameter expects a property descriptor object. Providing
 no object (like just a number), will throw an error:
 
-```js example-bad
+```js-nolint example-bad
 Object.defineProperty({}, 'key', 1);
 // TypeError: 1 is not a non-null object
 
@@ -62,7 +62,7 @@ Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object keys. You can't
 use other types as keys.
 
-```js example-bad
+```js-nolint example-bad
 const ws = new WeakSet();
 ws.add('foo');
 // TypeError: "foo" is not a non-null object

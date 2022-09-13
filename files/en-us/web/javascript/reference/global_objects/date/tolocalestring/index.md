@@ -168,7 +168,7 @@ dates, so the output text will flow properly when concatenated with other text.
 For this reason, you cannot expect to be able to compare the results of
 `toLocaleString()` to a static value:
 
-```js example-bad
+```js-nolint example-bad
 "1/1/2019, 01:00:00" === new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
 // true in Firefox and others
 // false in IE and Edge

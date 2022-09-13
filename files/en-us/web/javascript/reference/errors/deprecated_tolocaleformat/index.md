@@ -37,7 +37,7 @@ Firefox 58+**.
 The `Date.prototype.toLocaleFormat()` method is deprecated and will be
 removed (no cross-browser support, available in Firefox only).
 
-```js example-bad
+```js-nolint example-bad
 const today = new Date();
 const date = today.toLocaleFormat("%A, %e. %B %Y");
 
@@ -94,7 +94,7 @@ dates.forEach((date) => console.log(dateFormatter.format(date)));
 
 The {{jsxref("Date")}} object offers several methods to build a custom date string.
 
-```js example-bad
+```js-nolint example-bad
 new Date().toLocaleFormat("%Y%m%d");
 // "20170310"
 ```

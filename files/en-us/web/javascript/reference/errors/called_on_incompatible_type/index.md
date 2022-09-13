@@ -49,7 +49,7 @@ force the `this` argument to the expected object.
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 const mySet = new Set;
 ['bar', 'baz'].forEach(mySet.add);
 // mySet.add is a function, but "mySet" is not captured as this.

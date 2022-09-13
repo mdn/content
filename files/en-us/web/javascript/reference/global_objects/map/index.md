@@ -227,7 +227,7 @@ considerable confusion.
 
 Therefore, this appears to work in a way:
 
-```js example-bad
+```js-nolint example-bad
 const wrongMap = new Map();
 wrongMap['bla'] = 'blaa';
 wrongMap['bla2'] = 'blaaa2';
@@ -239,7 +239,7 @@ But that way of setting a property does not interact with the Map data
 structure. It uses the feature of the generic object. The value of 'bla' is not
 stored in the Map for queries. Other operations on the data fail:
 
-```js example-bad
+```js-nolint example-bad
 wrongMap.has('bla')    // false
 wrongMap.delete('bla') // false
 console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }

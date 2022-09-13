@@ -44,7 +44,7 @@ attempting to add new properties to a non-extensible object throws a
 `TypeError`. In sloppy mode, the addition of the "x" property is silently
 ignored.
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 
 const obj = {};
@@ -58,7 +58,7 @@ In both, [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and
 sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding a new
 property to a non-extensible object.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { };
 Object.preventExtensions(obj);
 

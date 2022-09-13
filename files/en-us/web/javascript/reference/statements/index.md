@@ -115,7 +115,7 @@ else
 
 If you use a declaration instead of a statement, it would be a {{jsxref("SyntaxError")}}. For example, a [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declaration is not a statement, so you can't use it in its bare form as the body of an `if` statement.
 
-```js example-bad
+```js-nolint example-bad
 if (condition)
   let i = 0; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
@@ -131,7 +131,7 @@ You can see declarations as "binding identifiers to values", and statements as "
 
 As another example, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) can only be attached to statements.
 
-```js example-bad
+```js-nolint example-bad
 label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 

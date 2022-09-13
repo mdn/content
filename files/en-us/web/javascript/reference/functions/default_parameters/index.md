@@ -81,7 +81,7 @@ This means that earlier parameters can be referred to in the initializers of lat
 
 For example, the following function will throw a `ReferenceError` when invoked, because the default parameter value does not have access to the child scope of the function body:
 
-```js example-bad
+```js-nolint example-bad
 function f(a = go()) {
   function go() {
     return ":P";
@@ -93,7 +93,7 @@ f(); // ReferenceError: go is not defined
 
 This function will print the value of the _parameter_ `a`, because the variable `var a` is hoisted only to the top of the scope created for the function body, not the parent scope created for the parameter list, so its value is not visible to `b`.
 
-```js example-bad
+```js-nolint example-bad
 function f(a, b = () => console.log(a)) {
   var a = 1;
   b();

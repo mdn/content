@@ -161,7 +161,7 @@ Promise.resolve(thenable)
 
 > **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
 
-```js example-bad
+```js-nolint example-bad
 const thenable = {
   then(onFulfilled, onRejected) {
     onFulfilled(thenable);

@@ -321,7 +321,7 @@ const obj = new Derived();
 
 You may also see some legacy code using [`Object.create`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). However, because this re-assigns the `prototype` property, it's a bad practice, for the reasons previously described here.
 
-```js example-bad
+```js-nolint example-bad
 function Base() {}
 function Derived() {}
 // Re-assigns `Derived.prototype` to a new object

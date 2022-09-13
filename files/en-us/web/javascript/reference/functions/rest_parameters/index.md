@@ -47,14 +47,14 @@ myFun("one", "two", "three", "four", "five", "six");
 
 A function definition can have only one `...`_restParam_.
 
-```js example-bad
+```js-nolint example-bad
 foo(...one, ...wrong, ...wrong)
 ```
 
 The rest parameter must be the last parameter in the function
 definition.
 
-```js example-bad
+```js-nolint example-bad
 foo(...wrong, arg2, arg3)
 ```
 

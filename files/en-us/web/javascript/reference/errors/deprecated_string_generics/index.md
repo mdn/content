@@ -57,7 +57,7 @@ applied to any object.
 
 ### Deprecated syntax
 
-```js example-bad
+```js-nolint example-bad
 const num = 15;
 String.replace(num, /5/, '2');
 ```

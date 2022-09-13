@@ -99,7 +99,7 @@ console.log(
 
 ### Two kinds of exceptions
 
-```js example-bad
+```js-nolint example-bad
 const obj = {};
 const p = new Proxy(obj, {
   getPrototypeOf(target) {

@@ -40,7 +40,7 @@ You can't search in strings, or in numbers, or other primitive types.
 Unlike in other programming languages (e.g. Python), you can't search in strings using
 the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 
-```js example-bad
+```js-nolint example-bad
 "Hello" in "Hello World";
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
 ```
@@ -57,7 +57,7 @@ Instead you will need to use {{jsxref("String.prototype.includes()")}}, for exam
 Make sure the object you are inspecting isn't actually [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
 {{jsxref("undefined")}}.
 
-```js example-bad
+```js-nolint example-bad
 const foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo' (Chrome)

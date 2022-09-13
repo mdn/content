@@ -51,7 +51,7 @@ delete object[property]
 
 The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
 
-```js example-bad
+```js-nolint example-bad
 delete identifier;
 delete object.#privateProperty;
 ```
@@ -60,7 +60,7 @@ Because [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are automaticall
 
 While other expressions are accepted, they don't lead to meaningful behaviors:
 
-```js example-bad
+```js-nolint example-bad
 delete console.log(1);
 // Logs 1, returns true, but nothing deleted
 ```

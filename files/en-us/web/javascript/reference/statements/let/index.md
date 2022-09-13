@@ -52,7 +52,7 @@ Many issues with `let` variables can be avoided by declaring them at the top of 
 
 Unlike `var`, `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-```js example-bad
+```js-nolint example-bad
 if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
@@ -98,7 +98,7 @@ console.log(this.y); // undefined
 
 Redeclaring the same variable within the same function or block scope raises a {{jsxref("SyntaxError")}}.
 
-```js example-bad
+```js-nolint example-bad
 if (x) {
   let foo;
   let foo; // SyntaxError thrown.
@@ -107,7 +107,7 @@ if (x) {
 
 You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements because there is only one block.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 switch(x) {
   case 0:
@@ -148,7 +148,7 @@ If no initial value was specified with the variable declaration, it will be init
 This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
 The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
-```js example-bad
+```js-nolint example-bad
 { // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
@@ -176,7 +176,7 @@ For example, the code below works because, even though the function that uses th
 
 Using the `typeof` operator for a `let` variable in its TDZ will throw a {{jsxref("ReferenceError")}}:
 
-```js example-bad
+```js-nolint example-bad
 // results in a 'ReferenceError'
 console.log(typeof i);
 let i = 10;
@@ -193,7 +193,7 @@ console.log(typeof undeclaredVariable);
 
 The following code results in a `ReferenceError` at the line shown:
 
-```js example-bad
+```js-nolint example-bad
 function test() {
   var foo = 33;
   if (foo) {
@@ -213,7 +213,7 @@ So, the identifier `n.a` is resolved to the property '`a`' of the '`n`' object l
 
 This is still in the temporal dead zone as its declaration statement has not been reached and terminated.
 
-```js example-bad
+```js-nolint example-bad
 function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
@@ -250,7 +250,7 @@ console.log(b); // 2
 However, this combination of **`var`** and **`let`** declaration below is a {{jsxref("SyntaxError")}} due to **`var`** being hoisted to the top of the block.
 This results in an implicit re-declaration of the variable.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 {

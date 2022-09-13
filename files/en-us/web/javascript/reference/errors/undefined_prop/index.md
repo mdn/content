@@ -38,7 +38,7 @@ ways to access properties; see the {{jsxref("Operators/Property_Accessors", "pro
 In this case, the property `bar` is an undefined property, so a
 `ReferenceError` will occur.
 
-```js example-bad
+```js-nolint example-bad
 const foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
 ```

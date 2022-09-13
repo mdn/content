@@ -281,7 +281,7 @@ underlying `ArrayBuffer` could be mutated through another
 `TypedArray` view of the buffer. This would mean that the object
 would never genuinely be frozen.
 
-```js example-bad
+```js-nolint example-bad
 const i8 = Int8Array.of(1, 2, 3);
 Object.freeze(i8);
 // TypeError: Cannot freeze array buffer views with elements
@@ -294,7 +294,7 @@ When constructing a `TypedArray` as a view onto an
 element size; in other words, the offset must be a multiple of
 `BYTES_PER_ELEMENT`.
 
-```js example-bad
+```js-nolint example-bad
 const i32 = new Int32Array(new ArrayBuffer(4), 1);
 // RangeError: start offset of Int32Array should be a multiple of 4
 ```
@@ -309,7 +309,7 @@ Like the `byteOffset` parameter, the `byteLength` property of an
 `ArrayBuffer` passed to a `TypedArray`'s constructor
 must be a multiple of the constructor's `BYTES_PER_ELEMENT`.
 
-```js example-bad
+```js-nolint example-bad
 const i32 = new Int32Array(new ArrayBuffer(3));
 // RangeError: byte length of Int32Array should be a multiple of 4
 ```

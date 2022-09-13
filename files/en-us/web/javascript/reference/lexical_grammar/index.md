@@ -154,7 +154,7 @@ console.log(\u4f60\u597d); // Hello
 
 Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
 
-```js example-bad
+```js-nolint example-bad
 function import() {} // Illegal: import is a reserved word.
 ```
 
@@ -175,7 +175,7 @@ Some keywords are _reserved_, meaning that cannot be used as an identifier for v
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 const els\u{65} = 1;
 // `els\u{65}` encodes the same identifier as `else`
 ```
@@ -371,7 +371,7 @@ The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a n
 
 Note that legacy octal numbers with just a leading zero won't work for `BigInt`:
 
-```js example-bad
+```js-nolint example-bad
 0755n
 // SyntaxError: invalid BigInt syntax
 ```
@@ -408,7 +408,7 @@ To improve readability for numeric literals, underscores (`_`, `U+005F`) can be 
 
 Note these limitations:
 
-```js example-bad
+```js-nolint example-bad
 // More than one underscore in a row is not allowed
 100__000; // SyntaxError
 
@@ -599,7 +599,7 @@ a + b;
 
 Note that ASI would only be triggered if a line break separates tokens that would otherwise produce invalid syntax. If the next token can be parsed as part of a valid structure, semicolons would not be inserted. For example:
 
-```js example-bad
+```js-nolint example-bad
 const a = 1
 (1).toString()
 
@@ -609,7 +609,7 @@ const b = 1
 
 Because `()` can be seen as a function call, it would usually not trigger ASI. Similarly, `[]` may be a member access. The code above is equivalent to:
 
-```js example-bad
+```js-nolint example-bad
 const a = 1(1).toString()
 
 const b = 1[1, 2, 3].forEach(console.log)
@@ -619,7 +619,7 @@ Therefore, you would get errors like "1 is not a function" and "Cannot read prop
 
 Within classes, class fields and generator methods can be a pitfall as well.
 
-```js example-bad
+```js-nolint example-bad
 class A {
   a = 1
   *gen() {}
@@ -628,7 +628,7 @@ class A {
 
 It is seen as:
 
-```js example-bad
+```js-nolint example-bad
 class A {
   a = 1 * gen() {}
 }

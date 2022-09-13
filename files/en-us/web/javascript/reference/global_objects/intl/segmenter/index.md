@@ -40,7 +40,7 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 
 If we were to use [`String.prototype.split(" ")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to segment a text in words, we would not get the correct result if the locale of the text does not use whitespaces between words (which is the case for Japanese, Chinese, Thai, Lao, Khmer, Myanmar, etc.).
 
-```js example-bad
+```js-nolint example-bad
 const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']

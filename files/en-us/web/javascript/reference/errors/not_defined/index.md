@@ -37,7 +37,7 @@ declared, or you need to make sure it is available in your current script or [sc
 
 ### Variable not declared
 
-```js example-bad
+```js-nolint example-bad
 foo.substring(1); // ReferenceError: foo is not defined
 ```
 
@@ -56,7 +56,7 @@ inside a [function](/en-US/docs/Web/JavaScript/Reference/Functions) cannot be
 accessed from anywhere outside the function, because the variable is defined only in the
 scope of the function
 
-```js example-bad
+```js-nolint example-bad
 function numbers() {
   const num1 = 2;
   const num2 = 3;

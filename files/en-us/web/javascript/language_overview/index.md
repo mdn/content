@@ -170,7 +170,7 @@ console.log(Pi); // 3.14
 
 A variable declared with `const` cannot be reassigned.
 
-```js example-bad
+```js-nolint example-bad
 const Pi = 3.14;
 Pi = 1; // will throw an error because you cannot change a constant variable.
 ```

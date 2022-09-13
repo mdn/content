@@ -50,7 +50,7 @@ initialized to 0.
 {{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer`
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
-```js example-bad
+```js-nolint example-bad
 const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden

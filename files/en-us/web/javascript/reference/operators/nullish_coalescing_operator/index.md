@@ -129,7 +129,7 @@ It is not possible to combine both the AND (`&&`) and OR operators
 [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
 will be thrown in such cases.
 
-```js example-bad
+```js-nolint example-bad
 null || undefined ?? "foo"; // raises a SyntaxError
 true || undefined ?? "foo"; // raises a SyntaxError
 ```

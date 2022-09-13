@@ -67,7 +67,7 @@ Here is an example showing use of only correct flags.
 
 Below is an example showing the use of some invalid flags `b`, `a` and `r`:
 
-```js example-bad
+```js-nolint example-bad
 /foo/bar;
 
 // SyntaxError: invalid regular expression flag "b"
@@ -75,7 +75,7 @@ Below is an example showing the use of some invalid flags `b`, `a` and `r`:
 
 The code below is incorrect, because `W`, `e` and `b` are not valid flags.
 
-```js example-bad
+```js-nolint example-bad
 const obj = {
   url: /docs/Web,
 };

@@ -123,7 +123,7 @@ For example:
 const greeting = "I'm a good example";
 ```
 
-```js example-bad
+```js-nolint example-bad
 const greeting = "I'm a bad example";
 ```
 ````
@@ -134,7 +134,7 @@ These will be rendered as:
 const greeting = "I'm a good example";
 ```
 
-```js example-bad
+```js-nolint example-bad
 const greeting = "I'm a bad example";
 ```
 

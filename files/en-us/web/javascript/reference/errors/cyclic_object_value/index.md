@@ -45,7 +45,7 @@ circularReference.myself = circularReference;
 
 {{jsxref("JSON.stringify()")}} will fail
 
-```js example-bad
+```js-nolint example-bad
 JSON.stringify(circularReference);
 // TypeError: cyclic object value
 ```

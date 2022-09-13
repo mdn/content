@@ -77,7 +77,7 @@ console.log(Object.isExtensible(p)); // "called"
 
 The following code violates the invariant.
 
-```js example-bad
+```js-nolint example-bad
 const p = new Proxy({}, {
   isExtensible(target) {
     return false;

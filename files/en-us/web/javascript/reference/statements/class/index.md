@@ -71,7 +71,7 @@ class FilledRectangle extends Rectangle {
 
 Re-declaring a class using the class declaration throws a {{jsxref("SyntaxError")}}.
 
-```js example-bad
+```js-nolint example-bad
 class Foo {};
 class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
@@ -79,7 +79,7 @@ class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declare
 The same error is thrown when a class has been defined before using the class
 expression.
 
-```js example-bad
+```js-nolint example-bad
 let Foo = class {};
 class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```

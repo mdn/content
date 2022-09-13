@@ -792,7 +792,7 @@ const d = 8n >>> 2n; // TypeError: BigInts have no unsigned right shift, use >> 
 
 BigInts and numbers are not mutually replaceable — you cannot mix them in calculations.
 
-```js example-bad
+```js-nolint example-bad
 const a = 1n + 2; // TypeError: Cannot mix BigInt and other types
 ```
 

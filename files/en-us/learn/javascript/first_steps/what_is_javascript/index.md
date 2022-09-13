@@ -304,7 +304,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 Note that sometimes you'll come across bits of actual JavaScript code living inside HTML.
 It might look something like this:
 
-```js example-bad
+```js-nolint example-bad
 function createParagraph() {
   const para = document.createElement('p');
   para.textContent = 'You clicked the button!';

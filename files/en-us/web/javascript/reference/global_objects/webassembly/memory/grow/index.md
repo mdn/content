@@ -65,7 +65,7 @@ Every call to `grow` will detach any references to the old `buffer`, even for `g
 Detachment means that the {{jsxref("ArrayBuffer")}}'s `byteLength` becomes zero, and it no longer has bytes accessible to JavaScript.
 Accessing the `buffer` property after calling `grow`, will yield an `ArrayBuffer` with the correct length.
 
-```js example-bad
+```js-nolint example-bad
 const memory = new WebAssembly.Memory({
   initial: 1
 });

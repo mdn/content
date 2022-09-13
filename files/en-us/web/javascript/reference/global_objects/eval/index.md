@@ -141,7 +141,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 
 In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{jsxref("SyntaxError")}}.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode

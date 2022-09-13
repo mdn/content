@@ -34,7 +34,7 @@ closing bracket (`]`) or a comma (`,`) missing.
 
 ### Incomplete array initializer
 
-```js example-bad
+```js-nolint example-bad
 const list = [1, 2,
 
 const instruments = [

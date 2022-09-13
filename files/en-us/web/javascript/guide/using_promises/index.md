@@ -114,7 +114,7 @@ doSomething()
 
 **Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions, `() => x` is short for `() => { return x; }`). If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
 
-```js example-bad
+```js-nolint example-bad
 doSomething()
   .then((url) => {
     // I forgot to return this
@@ -130,7 +130,7 @@ doSomething()
 
 This may be worse if you have race conditions — if the promise from the last handler is not returned, the next `then` handler will be called early, and any value it reads may be incomplete.
 
-```js example-bad
+```js-nolint example-bad
 const listOfIngredients = [];
 
 doSomething()
@@ -441,7 +441,7 @@ The inner neutralizing `catch` statement only catches failures from `doSomething
 
 Here are some common mistakes to watch out for when composing promise chains. Several of these mistakes manifest in the following example:
 
-```js example-bad
+```js-nolint example-bad
 // Bad example! Spot 3 mistakes!
 
 doSomething()

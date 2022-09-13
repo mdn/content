@@ -80,7 +80,7 @@ text will flow properly when concatenated with other text.
 For this reason you cannot expect to be able to compare the results of
 `format()` to a static value:
 
-```js example-bad
+```js-nolint example-bad
 let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
   year: 'numeric',

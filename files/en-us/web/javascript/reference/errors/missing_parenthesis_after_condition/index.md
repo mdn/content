@@ -47,7 +47,7 @@ if (condition) {
 
 It might just be an oversight, carefully check all you parenthesis in your code.
 
-```js example-bad
+```js-nolint example-bad
 if (Math.PI < 3 {
   console.log("wait what?");
 }
@@ -68,7 +68,7 @@ if (Math.PI < 3) {
 If you are coming from another programming language, it is also easy to add keywords
 that don't mean the same or have no meaning at all in JavaScript.
 
-```js example-bad
+```js-nolint example-bad
 if (done is true) {
  console.log("we are done!");
 }

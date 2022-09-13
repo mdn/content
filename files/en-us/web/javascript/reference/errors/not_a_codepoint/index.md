@@ -40,7 +40,7 @@ Unicode codespace; that is, the range of integers from `0` to
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 String.fromCodePoint('_');      // RangeError
 String.fromCodePoint(Infinity); // RangeError
 String.fromCodePoint(-1);       // RangeError

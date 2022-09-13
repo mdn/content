@@ -41,7 +41,7 @@ Usually, properties in an object created by an
 The {{jsxref("Object.defineProperty()")}} creates non-configurable properties if you
 haven't specified them as configurable.
 
-```js example-bad
+```js-nolint example-bad
 const obj = Object.create({});
 Object.defineProperty(obj, "foo", {value: "bar"});
 

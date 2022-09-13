@@ -51,7 +51,7 @@ In non-strict code, they are silently ignored.
 
 In this case, the variable "bar" is an undeclared variable.
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   'use strict';
   bar = true;

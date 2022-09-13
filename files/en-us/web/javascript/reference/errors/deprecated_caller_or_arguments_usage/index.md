@@ -42,7 +42,7 @@ non-standard, hard to optimize and potentially a performance-harmful feature.
 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 are deprecated (see the reference articles for more information).
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 
 function myFunc() {
@@ -62,7 +62,7 @@ myFunc();
 {{jsxref("Function.prototype.arguments")}} is deprecated (see the reference article for more
 information).
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 
 function f(n) { g(n - 1); }

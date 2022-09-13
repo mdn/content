@@ -448,7 +448,7 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 >
 > To give a trivial example, suppose the content script code that receives the message does something like this:
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > // content-script.js
 >
 > window.addEventListener("message", (event) => {
@@ -528,7 +528,7 @@ The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInter
 >
 > The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > // page.js redefines console.log
 >
 > let original = console.log;
@@ -538,7 +538,7 @@ The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInter
 > }
 > ```
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > // content-script.js calls the redefined version
 >
 > window.eval('console.log(false)');

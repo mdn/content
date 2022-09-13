@@ -69,7 +69,7 @@ See also [Planned changes to shared memory](/en-US/docs/Web/JavaScript/Reference
 
 `SharedArrayBuffer` objects must be constructed with the {{jsxref("Operators/new", "new")}} operator. Calling `SharedArrayBuffer()` as a function without using `new` will throw a {{jsxref("TypeError")}}.
 
-```js example-bad
+```js-nolint example-bad
 const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden

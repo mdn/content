@@ -87,7 +87,7 @@ For more information about how regex properties (especially the [sticky](/en-US/
 
 When using a regular expression search value, it must be global. This won't work:
 
-```js example-bad
+```js-nolint example-bad
 'aabbcc'.replaceAll(/b/, '.');
 // TypeError: replaceAll must be called with a global RegExp
 ```

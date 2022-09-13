@@ -42,7 +42,7 @@ This error only happens in [strict mode code](/en-US/docs/Web/JavaScript/Referen
 
 Attempting to delete a plain variable, doesn't work in JavaScript and it throws an error in strict mode:
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 
 var x;

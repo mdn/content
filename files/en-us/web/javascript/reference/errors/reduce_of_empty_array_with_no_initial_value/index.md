@@ -47,7 +47,7 @@ This problem appears frequently when combined with a filter
 which will remove all elements of the list. Thus leaving none to be used as the initial
 value.
 
-```js example-bad
+```js-nolint example-bad
 const ints = [0, -1, -2, -3, -4, -5];
 ints.filter((x) => x > 0)       // removes all elements
   .reduce((x, y) => x + y)    // no more elements to use for the initial value.
@@ -56,7 +56,7 @@ ints.filter((x) => x > 0)       // removes all elements
 Similarly, the same issue can happen if there is a typo in a selector, or an unexpected
 number of elements in a list:
 
-```js example-bad
+```js-nolint example-bad
 const names = document.getElementsByClassName("names");
 const name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
 ```

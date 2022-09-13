@@ -206,7 +206,7 @@ Avoid infinite loops. Make sure the condition in a loop eventually becomes
 following `while` loop execute forever because the condition never becomes
 `false`:
 
-```js example-bad
+```js-nolint example-bad
 // Infinite loops are bad!
 while (true) {
   console.log('Hello, world!');

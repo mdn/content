@@ -40,7 +40,7 @@ In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), however, a `
 
 This example throws a `SyntaxError`:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 
 for (const i = 0 in obj) {

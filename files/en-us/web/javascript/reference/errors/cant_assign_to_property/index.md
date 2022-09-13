@@ -39,7 +39,7 @@ that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is ex
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 
 const foo = "my string";

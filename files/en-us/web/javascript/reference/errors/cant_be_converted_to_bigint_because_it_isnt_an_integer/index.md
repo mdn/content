@@ -31,7 +31,7 @@ When using the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 const a = BigInt(1.5);
 // RangeError: The number 1.5 cannot be converted to a BigInt because it is not an integer
 const b = BigInt(NaN);

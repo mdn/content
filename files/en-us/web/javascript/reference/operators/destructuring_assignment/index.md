@@ -119,7 +119,7 @@ const obj = { a: 1, b: 2 };
 
 Note that the equivalent _binding pattern_ of the code above is not valid syntax:
 
-```js example-bad
+```js-nolint example-bad
 const numbers = [];
 const obj = { a: 1, b: 2 };
 const { a: numbers[0], b: numbers[1] } = obj;
@@ -162,7 +162,7 @@ console.log(others2); // [2, 3]
 
 The rest property must be the last in the pattern, and must not have a trailing comma.
 
-```js example-bad
+```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
@@ -290,7 +290,7 @@ console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
 
 On the other hand, object destructuring can only have an identifier as the rest property.
 
-```js example-bad
+```js-nolint example-bad
 const { a, ...{ b } } = { a: 1, b: 2 };
 // SyntaxError: `...` must be followed by an identifier in declaration contexts
 
@@ -332,7 +332,7 @@ console.log(a, b); // [1, 2] [3, 4]
 
 Non-iterables cannot be destructured as arrays.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { 0: "a", 1: "b", length: 2 };
 const [a, b] = obj;
 // TypeError: obj is not iterable

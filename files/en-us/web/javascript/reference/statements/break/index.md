@@ -110,7 +110,7 @@ generates a `SyntaxError` because its `break` statement is within
 `block1` but references `block2`. A `break` statement
 must always be nested within any label it references.
 
-```js example-bad
+```js-nolint example-bad
 block1: {
   console.log('1');
   break block2; // SyntaxError: label not found
@@ -127,7 +127,7 @@ block2: {
 `break` statements within functions that are nested within a loop, or labeled
 block that the `break` statements are intended to break out of.
 
-```js example-bad
+```js-nolint example-bad
 function testBreak(x) {
   let i = 0;
 
@@ -146,7 +146,7 @@ function testBreak(x) {
 testBreak(1); // SyntaxError: Illegal break statement
 ```
 
-```js example-bad
+```js-nolint example-bad
 block_1: {
   console.log('1');
   (function () {

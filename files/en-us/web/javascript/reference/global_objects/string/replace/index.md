@@ -178,7 +178,7 @@ Given `styleHyphenFormat('borderTop')`, this returns `'border-top'`.
 
 Because we want to further transform the _result_ of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.
 
-```js example-bad
+```js-nolint example-bad
 const newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // won't work
 ```
 
@@ -211,7 +211,7 @@ console.log("abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) 
 
 However, this replacer would be hard to generalize if we want it to work with any regex pattern. The replacer is _variadic_ — the number of arguments it receives depends on the number of capturing groups present. We can use [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), but it would also collect `offset`, `string`, etc. into the array. The fact that `groups` may or may not be passed depending on the identity of the regex would also make it hard to generically know which argument corresponds to the `offset`.
 
-```js example-bad
+```js-nolint example-bad
 function addOffset(match, ...args) {
   const offset = args.at(-2);
   return `${match} (${offset}) `;

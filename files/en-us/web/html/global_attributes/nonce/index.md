@@ -62,7 +62,7 @@ Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
 
 For security reasons, the `nonce` content attribute is hidden (an empty string will be returned).
 
-```js example-bad
+```js-nolint example-bad
 script.getAttribute('nonce'); // returns empty string
 ```
 

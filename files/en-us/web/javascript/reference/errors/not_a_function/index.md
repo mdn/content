@@ -52,7 +52,7 @@ provide a function in order to have these methods working properly:
 
 In this case, which happens way too often, there is a typo in the method name:
 
-```js example-bad
+```js-nolint example-bad
 const x = document.getElementByID('foo');
 // TypeError: document.getElementByID is not a function
 ```
@@ -69,7 +69,7 @@ For certain methods, you have to provide a (callback) function and it will work 
 specific objects only. In this example, {{jsxref("Array.prototype.map()")}} is used,
 which will work with {{jsxref("Array")}} objects only.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 13, b: 37, c: 42 };
 
 obj.map(function (num) {
@@ -96,7 +96,7 @@ numbers.map(function (num) {
 Sometimes when making a class, you may have a property and a function with the same
 name. Upon calling the function, the compiler thinks that the function ceases to exist.
 
-```js example-bad
+```js-nolint example-bad
 function Dog() {
   this.age = 11;
   this.color = "black";
@@ -138,7 +138,7 @@ In math, you can write 2 × (3 + 5) as 2\*(3 + 5) or just 2(3 + 5).
 
 Using the latter will throw an error:
 
-```js example-bad
+```js-nolint example-bad
 const sixteen = 2(3 + 5);
 console.log(`2 x (3 + 5) is ${sixteen}`);
 // Uncaught TypeError: 2 is not a function

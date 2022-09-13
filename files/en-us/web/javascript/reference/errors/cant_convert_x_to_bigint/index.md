@@ -34,7 +34,7 @@ Some operations, like [`BigInt.asIntN`](/en-US/docs/Web/JavaScript/Reference/Glo
 
 ### Using BigInt() on invalid values
 
-```js example-bad
+```js-nolint example-bad
 const a = BigInt(null);
 // TypeError: can't convert null to BigInt
 const b = BigInt(undefined);
@@ -54,7 +54,7 @@ const d = BigInt(Symbol("1").description);
 
 ### Passing a number to a function expecting a BigInt
 
-```js example-bad
+```js-nolint example-bad
 const a = BigInt.asIntN(4, 8);
 // TypeError: can't convert 8 to BigInt
 const b = new BigInt64Array(3).fill(3);

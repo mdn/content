@@ -65,7 +65,7 @@ and will throw this error if incorrect syntax was encountered.
 
 Both lines will throw a SyntaxError:
 
-```js example-bad
+```js-nolint example-bad
 JSON.parse('[1, 2, 3, 4,]');
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
@@ -83,7 +83,7 @@ JSON.parse('{"foo": 1}');
 
 You cannot use single-quotes around properties, like 'foo'.
 
-```js example-bad
+```js-nolint example-bad
 JSON.parse("{'foo': 1}");
 // SyntaxError: JSON.parse: expected property name or '}'
 // at line 1 column 2 of the JSON data
@@ -100,7 +100,7 @@ JSON.parse('{"foo": 1}');
 You cannot use leading zeros, like 01, and decimal points must be followed by at least
 one digit.
 
-```js example-bad
+```js-nolint example-bad
 JSON.parse('{"foo": 01}');
 // SyntaxError: JSON.parse: expected ',' or '}' after property value
 // in object at line 1 column 2 of the JSON data

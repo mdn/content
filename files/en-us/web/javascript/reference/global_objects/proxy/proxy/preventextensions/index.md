@@ -75,7 +75,7 @@ console.log(Object.preventExtensions(p)); // "called"
 
 The following code violates the invariant.
 
-```js example-bad
+```js-nolint example-bad
 const p = new Proxy({}, {
   preventExtensions(target) {
     return true;

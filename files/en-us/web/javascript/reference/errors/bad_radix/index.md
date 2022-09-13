@@ -51,7 +51,7 @@ The most common radixes:
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 (42).toString(0);
 (42).toString(1);
 (42).toString(37);

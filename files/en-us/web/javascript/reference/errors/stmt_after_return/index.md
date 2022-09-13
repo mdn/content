@@ -53,7 +53,7 @@ Warnings will not be shown for semicolon-less returns if these statements follow
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 function f() {
   let x = 3;
   x += 4;

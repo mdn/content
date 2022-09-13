@@ -96,7 +96,7 @@ You can use other control-flow statements to replace `break`, such as a [`return
 
 The `case` and `default` clauses are like [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label): they indicate possible places that control flow may jump to. However, they don't create lexical [scopes](/en-US/docs/Glossary/Scope) themselves (neither do they automatically break out — as demonstrated above). For example:
 
-```js example-bad
+```js-nolint example-bad
 const action = 'say_hello';
 switch (action) {
   case 'say_hello':

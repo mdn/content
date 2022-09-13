@@ -32,7 +32,7 @@ When using the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 const a = BigInt("1.5");
 const b = BigInt("1n");
 const c = BigInt.asIntN(4, "8n");

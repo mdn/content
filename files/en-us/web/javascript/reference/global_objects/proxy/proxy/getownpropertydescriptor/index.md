@@ -79,7 +79,7 @@ console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
 
 The following code violates an invariant.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 10 };
 Object.preventExtensions(obj);
 const p = new Proxy(obj, {

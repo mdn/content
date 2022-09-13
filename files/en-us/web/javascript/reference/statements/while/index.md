@@ -71,7 +71,7 @@ In some cases, it can make sense to use an assignment as a condition — but whe
 
 Consider the following example, which iterates over a document's comments, logging them to the console.
 
-```js example-bad
+```js-nolint example-bad
 const iterator = document.createNodeIterator(
   document,
   NodeFilter.SHOW_COMMENT,
@@ -84,7 +84,7 @@ while (currentNode = iterator.nextNode()) {
 
 That's not completely a good-practice example, due to the following line specifically:
 
-```js example-bad
+```js-nolint example-bad
 while (currentNode = iterator.nextNode()) {
 ```
 

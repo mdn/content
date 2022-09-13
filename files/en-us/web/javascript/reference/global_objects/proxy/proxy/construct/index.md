@@ -76,7 +76,7 @@ console.log(new p(1).value); // "called: 1"
 
 The following code violates the invariant.
 
-```js example-bad
+```js-nolint example-bad
 const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
     return 1;
@@ -88,7 +88,7 @@ new p(); // TypeError is thrown
 
 The following code improperly initializes the proxy. The `target` in Proxy initialization must itself be a valid constructor for the {{jsxref("Operators/new", "new")}} operator.
 
-```js example-bad
+```js-nolint example-bad
 const p = new Proxy({}, {
   construct(target, argumentsList, newTarget) {
     return {};

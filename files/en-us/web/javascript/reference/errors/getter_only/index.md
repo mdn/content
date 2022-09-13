@@ -42,7 +42,7 @@ It doesn't specify a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set
 property to `30`. For more details see also the
 {{jsxref("Object.defineProperty()")}} page.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 function Archiver() {

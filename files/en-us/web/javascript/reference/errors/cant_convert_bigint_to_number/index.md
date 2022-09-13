@@ -36,7 +36,7 @@ The error can also happen if the [unsigned right shift operator (`>>>`)](/en-US/
 
 ### Mixing numbers and BigInts in operations
 
-```js example-bad
+```js-nolint example-bad
 const sum = 1n + 1;
 // TypeError: can't convert BigInt to number
 ```
@@ -50,7 +50,7 @@ const sum2 = Number(1n) + 1;
 
 ### Using unsigned right shift on BigInts
 
-```js example-bad
+```js-nolint example-bad
 const a = 4n >>> 2n;
 // TypeError: can't convert BigInt to number
 ```

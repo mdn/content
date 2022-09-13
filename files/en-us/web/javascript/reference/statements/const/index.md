@@ -61,7 +61,7 @@ A constant cannot share its name with a function or a variable in the same scope
 
 Unlike `var`, `const` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-```js example-bad
+```js-nolint example-bad
 if (true) const a = 1; // SyntaxError: Unexpected token 'const'
 ```
 
@@ -116,7 +116,7 @@ console.log('my favorite number is ' + MY_FAV);
 
 ### const needs to be initialized
 
-```js example-bad
+```js-nolint example-bad
 // throws an error
 // Uncaught SyntaxError: Missing initializer in const declaration
 
@@ -127,7 +127,7 @@ const FOO;
 
 `const` also works on objects and arrays. Attempting to overwrite the object throws an error "Assignment to constant variable".
 
-```js example-bad
+```js-nolint example-bad
 const MY_OBJECT = { key: 'value' };
 MY_OBJECT = { OTHER_KEY: 'value' };
 ```
@@ -142,7 +142,7 @@ You would need to use [`Object.freeze()`](/en-US/docs/Web/JavaScript/Reference/G
 
 The same applies to arrays. Assigning a new array to the variable throws an error "Assignment to constant variable".
 
-```js example-bad
+```js-nolint example-bad
 const MY_ARRAY = [];
 MY_ARRAY = ['B'];
 ```

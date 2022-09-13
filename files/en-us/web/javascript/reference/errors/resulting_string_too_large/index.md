@@ -43,7 +43,7 @@ differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size 
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 'abc'.repeat(Infinity); // RangeError
 'a'.repeat(2**30);      // RangeError
 ```

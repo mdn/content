@@ -34,7 +34,7 @@ The [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operato
 
 However, the precedence _between_ `??` and `&&`/`||` is intentionally undefined, because the short circuiting behavior of logical operators can make the expression's evaluation counter-intuitive. Therefore, the following combinations are all syntax errors, because the language doesn't know how to parenthesize the operands:
 
-```js example-bad
+```js-nolint example-bad
 a ?? b || c
 a || b ?? c
 a ?? b && c
@@ -52,7 +52,7 @@ a ?? (b && c)
 
 When migrating legacy code that uses `||` and `&&` for guarding against `null` or `undefined`, you may often convert it partially:
 
-```js example-bad
+```js-nolint example-bad
 function getId(user, fallback) {
   // Previously: user && user.id || fallback
   return user && user.id ?? fallback; // SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions

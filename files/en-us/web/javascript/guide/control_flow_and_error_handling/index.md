@@ -139,7 +139,7 @@ if (condition) {
 
 In general it's good practice to not have an `if...else` with an assignment like `x = y` as a condition:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   /* statements here */
 }

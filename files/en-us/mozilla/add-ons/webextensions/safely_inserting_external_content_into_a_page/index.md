@@ -40,7 +40,7 @@ This approach is safe because the use of `.textContent` automatically escapes an
 
 However, beware, you can use native methods that aren't safe. Take the following code:
 
-```js example-bad
+```js-nolint example-bad
 let data = JSON.parse(responseText);
 addonElement.innerHTML = `<div class='${data.className}'>Your favorite color is now ${data.color}</div>`;
 ```

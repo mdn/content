@@ -52,7 +52,7 @@ using it as argument of the constructor.
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 new Array(Math.pow(2, 40))
 new Array(-1)
 new ArrayBuffer(Math.pow(2, 32)) // 32-bit system

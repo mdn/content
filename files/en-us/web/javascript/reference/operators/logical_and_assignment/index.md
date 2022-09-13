@@ -46,7 +46,7 @@ x && (x = y);
 
 And not equivalent to the following which would always perform an assignment:
 
-```js example-bad
+```js-nolint example-bad
 x = x && y;
 ```
 

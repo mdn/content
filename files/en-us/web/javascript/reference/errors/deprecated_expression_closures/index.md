@@ -37,7 +37,7 @@ scripts using it will throw a {{jsxref("SyntaxError")}} in newer versions of Fir
 Expression closures omit curly braces or return statements from function declarations
 or from method definitions in objects.
 
-```js example-bad
+```js-nolint example-bad
 var x = function () 1;
 
 var obj = {
@@ -70,7 +70,7 @@ const x = () => 1;
 
 Expression closures can also be found with getter and setter, like this:
 
-```js example-bad
+```js-nolint example-bad
 var obj = {
   get x() 1,
   set x(v) this.v = v

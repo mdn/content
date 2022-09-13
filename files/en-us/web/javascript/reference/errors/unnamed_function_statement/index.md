@@ -38,7 +38,7 @@ You'll need to check how functions are defined and if you need to provide a name
 A _[function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)_ (or _function declaration_) requires a name.
 This won't work:
 
-```js example-bad
+```js-nolint example-bad
 function () {
   return 'Hello world';
 }
@@ -66,7 +66,7 @@ If your function is intended to be an [IIFE](https://en.wikipedia.org/wiki/Immed
 If you are using function [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label), you will still need to provide a function name after the `function` keyword.
 This doesn't work:
 
-```js example-bad
+```js-nolint example-bad
 function Greeter() {
   german: function () {
     return "Moin";
@@ -111,7 +111,7 @@ const greeter = {
 Also, check your syntax when using callbacks.
 Brackets and commas can quickly get confusing.
 
-```js example-bad
+```js-nolint example-bad
 promise.then(
   function () {
     console.log("success");

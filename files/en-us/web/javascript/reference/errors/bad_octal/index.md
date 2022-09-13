@@ -42,7 +42,7 @@ for more information.
 
 ### Invalid octal numbers
 
-```js example-bad
+```js-nolint example-bad
 08;
 09;
 // SyntaxError: 08 is not a legal ECMA-262 octal constant

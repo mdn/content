@@ -36,7 +36,7 @@ access.
 
 ### null and undefined have no properties
 
-```js example-bad
+```js-nolint example-bad
 null.foo;
 // TypeError: null has no properties
 

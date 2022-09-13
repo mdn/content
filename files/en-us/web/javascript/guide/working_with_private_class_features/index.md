@@ -18,7 +18,7 @@ Private class features deliver truly private fields and methods, with that priva
 
 To understand how private fields work, let's first consider a class that has only public fields, but uses the constructor to encapsulate data—a somewhat common technique, even if it is a bit of a hack. The following class creates a basic count that accepts a starting number, allows that number to be increased or decreased, and can be reset to the original starting value or any other value.
 
-```js example-bad
+```js-nolint example-bad
 class PublicCounter {
   constructor(start = 0) {
     let _count = start;
@@ -68,7 +68,7 @@ Having declared the private fields, they act as we saw in the public example. Th
 
 You **cannot** read a private value directly from code outside the class object. Consider:
 
-```js example-bad
+```js-nolint example-bad
 const score = new PrivateCounter(); // #count and #init are now both 0
 console.log(score.#count);
   // output:
@@ -79,7 +79,7 @@ If you wish to read private data from outside a class, you must first invent a m
 
 What are the other restrictions around private fields? For one, you can't refer to a private field you didn't previously define. You might be used to inventing new fields on the fly in JavaScript, but that just won't fly with private fields.
 
-```js example-bad
+```js-nolint example-bad
 class BadIdea {
   constructor(arg) {
     this.#init = arg;  // syntax error occurs here
@@ -90,7 +90,7 @@ class BadIdea {
 
 You can't define the same name twice in a single class, and you can't delete private fields.
 
-```js example-bad
+```js-nolint example-bad
 class BadIdeas {
   #firstName;
   #firstName; // syntax error occurs here
@@ -113,7 +113,7 @@ const planet = {
 
 If you try to include a private class feature when doing this, an error will be thrown.
 
-```js example-bad
+```js-nolint example-bad
 const planet = {
   name: 'Terra',
   radiusKm: 6371,

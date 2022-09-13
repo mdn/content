@@ -91,7 +91,7 @@ format should be allowed.
 
 For example:
 
-```js example-bad
+```js-nolint example-bad
 const clearKeyOptions = [
   {
     initDataTypes: ['keyids', 'webm'],

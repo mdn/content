@@ -86,7 +86,7 @@ if (condition) {
 
 For example, this is not great:
 
-```js example-bad
+```js-nolint example-bad
 let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';
 ```
 

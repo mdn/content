@@ -39,7 +39,7 @@ There was an out of range precision argument in one of these methods:
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 77.1234.toExponential(-1);  // RangeError
 77.1234.toExponential(101); // RangeError
 

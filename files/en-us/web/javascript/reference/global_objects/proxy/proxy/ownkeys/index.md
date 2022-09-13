@@ -84,7 +84,7 @@ console.log(Object.getOwnPropertyNames(p)); // "called"
 
 The following code violates an invariant.
 
-```js example-bad
+```js-nolint example-bad
 const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,

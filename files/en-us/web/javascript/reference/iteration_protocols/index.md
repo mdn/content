@@ -241,7 +241,7 @@ If an iterable's `@@iterator` method doesn't return an iterator object, then it'
 
 Using one is likely to result in runtime errors or buggy behavior:
 
-```js example-bad
+```js-nolint example-bad
 const nonWellFormedIterable = {};
 nonWellFormedIterable[Symbol.iterator] = () => 1;
 [...nonWellFormedIterable]; // TypeError: [Symbol.iterator]() returned a non-object value

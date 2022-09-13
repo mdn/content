@@ -32,7 +32,7 @@ The exponent of an [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operato
 
 ### Using a negative BigInt as exponent
 
-```js example-bad
+```js-nolint example-bad
 const a = 1n;
 const b = -1n;
 const c = a ** b;

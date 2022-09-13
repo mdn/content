@@ -33,7 +33,7 @@ The head of a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...o
 
 ### Invalid for-of loop
 
-```js example-bad
+```js-nolint example-bad
 const iterable = [10, 20, 30];
 
 for (const value = 50 of iterable) {

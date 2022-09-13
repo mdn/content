@@ -310,7 +310,7 @@ JSON.stringify([obj]);
 
 Since the [JSON format](https://www.json.org/) doesn't support object references (although an [IETF draft exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an object with circular references.
 
-```js example-bad
+```js-nolint example-bad
 const circularReference = {};
 circularReference.myself = circularReference;
 

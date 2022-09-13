@@ -44,7 +44,7 @@ const obj = { propertyKey: 'value' };
 This code fails, as the equal sign can't be used this way in this object initializer
 syntax.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { propertyKey = 'value' };
 // SyntaxError: missing : after property id
 ```
@@ -66,7 +66,7 @@ obj['propertyKey'] = 'value';
 If you create a property key from an expression, you need to use square brackets.
 Otherwise the property name can't be computed:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { 'b'+'ar': 'foo' };
 // SyntaxError: missing : after property id
 ```

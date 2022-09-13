@@ -48,7 +48,7 @@ are configurable. However, for example, when using
 The {{jsxref("Object.defineProperty()")}} creates non-configurable properties by
 default if you haven't specified them as configurable.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const arr = [];
 Object.defineProperty(arr, 0, { value: 0 });
@@ -74,7 +74,7 @@ arr.length = 1;
 The {{jsxref("Object.seal()")}} function marks all existing elements as
 non-configurable.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const arr = [1, 2, 3];
 Object.seal(arr);

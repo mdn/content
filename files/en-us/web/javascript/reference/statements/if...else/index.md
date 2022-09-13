@@ -79,7 +79,7 @@ if (condition) {
 
 Not using blocks may lead to confusing behavior, especially if the code is hand-formatted. For example:
 
-```js example-bad
+```js-nolint example-bad
 function checkValue(a, b) {
   if (a === 1)
     if (b === 2)
@@ -154,7 +154,7 @@ if (x > 50) {
 
 You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   /* do something */
 }

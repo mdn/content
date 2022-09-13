@@ -52,7 +52,7 @@ loop(0);
 
 Setting this condition to an extremely high value, won't work:
 
-```js example-bad
+```js-nolint example-bad
 function loop(x) {
   if (x >= 1000000000000)
     return;
@@ -67,7 +67,7 @@ loop(0);
 This recursive function is missing a base case. As there is no exit condition, the
 function will call itself infinitely.
 
-```js example-bad
+```js-nolint example-bad
 function loop(x) {
   // The base case is missing
   loop(x + 1); // Recursive call
@@ -80,7 +80,7 @@ loop(0);
 
 ### Class error: too much recursion
 
-```js example-bad
+```js-nolint example-bad
 class Person {
   constructor() {}
   set name(name) {
@@ -99,7 +99,7 @@ In this example when the setter is triggered, it is told to do the same thing ag
 
 This issue also appears if the same variable is used in the getter.
 
-```js example-bad
+```js-nolint example-bad
 class Person {
   get name() {
     return this.name; // Recursive call

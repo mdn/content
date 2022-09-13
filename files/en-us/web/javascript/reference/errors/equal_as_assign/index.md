@@ -40,7 +40,7 @@ It is advisable to not use simple assignments in a conditional expression (such 
 because the assignment can be confused with equality when glancing over the code. For
 example, do not use the following code:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // do the right thing
 }

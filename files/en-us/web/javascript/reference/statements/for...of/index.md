@@ -61,7 +61,7 @@ You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destr
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
 
-```js example-bad
+```js-nolint example-bad
 let async;
 for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
 ```
@@ -301,7 +301,7 @@ for (const value of iterator) {
 
 Generators implement the [`return()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) method, which causes the generator function to early return when the loop exits. This makes generators not reusable between loops.
 
-```js example-bad
+```js-nolint example-bad
 function* source() {
   yield 1;
   yield 2;

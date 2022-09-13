@@ -41,7 +41,7 @@ The `toString()` method will throw a {{jsxref("TypeError")}} exception
 ("Function.prototype.toString called on incompatible object"), if its
 `this` value object is not a `Function` object.
 
-```js example-bad
+```js-nolint example-bad
 Function.prototype.toString.call('foo'); // throws TypeError
 ```
 

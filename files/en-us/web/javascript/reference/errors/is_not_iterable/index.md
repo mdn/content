@@ -42,7 +42,7 @@ an object implementing the [iterable protocol](/en-US/docs/Web/JavaScript/Refere
 
 ### Array destructuring a non-iterable
 
-```js example-bad
+```js-nolint example-bad
 const myobj = { arrayOrObjProp1: {}, arrayOrObjProp2: [42] };
 
 const { arrayOrObjProp1: [value1], arrayOrObjProp2: [value2] } = myobj; // TypeError: object is not iterable
@@ -59,7 +59,7 @@ the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 Therefore, you cannot use [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 to iterate over the properties of an object.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { France: 'Paris', England: 'London' };
 for (const p of obj) { // TypeError: obj is not iterable
   // …
@@ -108,7 +108,7 @@ for (const [country, capital] of map.entries()) {
 [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
 are functions you call to produce an iterable object.
 
-```js example-bad
+```js-nolint example-bad
 function* generate(a, b) {
   yield a;
   yield b;
@@ -141,7 +141,7 @@ Custom iterables can be created by implementing the
 {{jsxref("Symbol.iterator")}} method. You must be certain that your iterator method
 returns an object which is an iterator, which is to say it must have a next method.
 
-```js example-bad
+```js-nolint example-bad
 const myEmptyIterable = {
   [Symbol.iterator]() {
     return []; // [] is iterable, but it is not an iterator — it has no next method.

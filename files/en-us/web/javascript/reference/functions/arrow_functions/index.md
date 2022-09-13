@@ -454,7 +454,7 @@ const func2 = (x, y) => { return x + y; };
 Keep in mind that returning object literals using the concise body syntax
 `(params) => {object:literal}` will not work as expected.
 
-```js example-bad
+```js-nolint example-bad
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
@@ -478,7 +478,7 @@ const func = () => ({ foo: 1 });
 
 An arrow function cannot contain a line break between its parameters and its arrow.
 
-```js example-bad
+```js-nolint example-bad
 const func = (a, b, c)
   => 1;
 // SyntaxError: Unexpected token '=>'
@@ -516,7 +516,7 @@ special parsing rules that interact differently with
 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 compared to regular functions.
 
-```js example-bad
+```js-nolint example-bad
 let callback;
 
 callback = callback || () => {};

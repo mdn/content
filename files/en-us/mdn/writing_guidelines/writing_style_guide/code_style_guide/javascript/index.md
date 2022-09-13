@@ -45,7 +45,7 @@ const visitedCities = [];
 
 Don't do this while creating arrays:
 
-```js example-bad
+```js-nolint example-bad
 const visitedCities = new Array(length);
 ```
 
@@ -65,7 +65,7 @@ pets.push("cat");
 
 Don't add items to the array like this:
 
-```js example-bad
+```js-nolint example-bad
 pets[pets.length] = "cat";
 ```
 
@@ -95,7 +95,7 @@ Comments are critical to writing good code examples. They clarify the intent of 
 
   On the other hand, restating the code in prose is not a good use of comments:
 
-  ```js example-bad
+  ```js-nolint example-bad
   let total = 0;
 
   // For loop from 1 to 4
@@ -113,7 +113,7 @@ Comments are critical to writing good code examples. They clarify the intent of 
 
   Don't write:
 
-  ```js example-bad
+  ```js-nolint example-bad
   closeConnection(); // Closing the connection
   ```
 
@@ -155,7 +155,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
 
   Don't write:
 
-  ```js example-bad
+  ```js-nolint example-bad
   function exampleFunc(fruitBasket) {
     // Logs: ['banana', 'mango', 'orange']
     console.log(fruitBasket);
@@ -185,7 +185,7 @@ Short comments are usually better, so try to keep them in one line of 60–80 ch
 
 Don't use `/* … */`:
 
-```js example-bad
+```js-nolint example-bad
 /* This is an example of a multi-line comment.
   The imaginary function that follows has some unusual
   limitations that I want to call out.
@@ -210,7 +210,7 @@ function exampleFunc() {
 
 Don't use ellipses (…) like this:
 
-```js example-bad
+```js-nolint example-bad
 function exampleFunc() {
   …
 }
@@ -244,7 +244,7 @@ function sayHello() {
 
 Don't use function names like these:
 
-```js example-bad
+```js-nolint example-bad
 function SayHello() {
   console.log("Hello!");
 }
@@ -268,7 +268,7 @@ function doIt() {
 
   This is not a good way to define a function:
 
-  ```js example-bad
+  ```js-nolint example-bad
   let sum = function (a, b) {
     return a + b;
   };
@@ -285,7 +285,7 @@ function doIt() {
 
   Instead of this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   const array1 = [1, 2, 3, 4];
   const sum = array1.reduce(function (a, b) {
     return a + b;
@@ -302,7 +302,7 @@ function doIt() {
 
   Don't do:
 
-  ```js example-bad
+  ```js-nolint example-bad
   const x = () => {
     // …
   };
@@ -316,7 +316,7 @@ function doIt() {
 
   And not:
 
-  ```js example-bad
+  ```js-nolint example-bad
   arr.map((e) => {
     return e.id;
   });
@@ -350,7 +350,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
 
   Do not use `for (;;)` — not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
 
-  ```js example-bad
+  ```js-nolint example-bad
   const dogs = ["Rex", "Lassie"];
   for (let i = 0; i < dogs.length; i++) {
     console.log(dogs[i]);
@@ -372,7 +372,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
 
   The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode):
 
-  ```js example-bad
+  ```js-nolint example-bad
   const cats = ["Athena", "Luna"];
   for (i of cats) {
     console.log(i);
@@ -390,7 +390,7 @@ When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
 
   Do not write:
 
-  ```js example-bad
+  ```js-nolint example-bad
   const gerbils = ["Zoé", "Chloé"];
   for (let i = 0; i < gerbils.length; i++) {
     console.log(`Gerbil #${i}: ${gerbils[i]}`);
@@ -420,7 +420,7 @@ if (test) {
 
 Do not write:
 
-```js example-bad
+```js-nolint example-bad
 if (test) {
   // Perform something if test is true
   // …
@@ -443,7 +443,7 @@ for (const car of storedCars) {
 
 Don't write:
 
-```js example-bad
+```js-nolint example-bad
 for (const car of storedCars) car.paint("red");
 ```
 
@@ -468,7 +468,7 @@ Switch statements can be a little tricky.
 
   If you add a `break` statement, it will be unreachable. Do not write:
 
-  ```js example-bad
+  ```js-nolint example-bad
   switch (species) {
     case "chicken":
       return farm.shed;
@@ -554,7 +554,7 @@ const object = {};
 
 Don't create a general object like this:
 
-```js example-bad
+```js-nolint example-bad
 const object = new Object();
 ```
 
@@ -603,7 +603,7 @@ const obj = {
 
 Instead of:
 
-```js example-bad
+```js-nolint example-bad
 const obj = {
   foo: function () {
     // …
@@ -627,7 +627,7 @@ const obj = {
 
   Don't write:
 
-  ```js example-bad
+  ```js-nolint example-bad
   function createObject(name, age) {
     return { name: name, age: age };
   }
@@ -647,7 +647,7 @@ const x = condition ? 1 : 2;
 
 Do not write:
 
-```js example-bad
+```js-nolint example-bad
 let x;
 if (condition) {
   x = 1;
@@ -671,7 +671,7 @@ age !== 25;
 
 Don't use the loose equality and inequality operators, as shown below:
 
-```js example-bad
+```js-nolint example-bad
 name == "Chris";
 age != 25;
 ```
@@ -699,7 +699,7 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 
   Don't concatenate strings like this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   const name = "Chris";
   console.log("Hi! I'm" + name + "!"); // Hi! I'mChris!
   ```
@@ -727,7 +727,7 @@ Good variable names are essential to understanding code.
 
   Don't name variables like this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   const thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
   const s = d / t;
   ```
@@ -755,14 +755,14 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
 - The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
 
-  ```js example-bad
+  ```js-nolint example-bad
   let name = "Chris";
   console.log(myName);
   ```
 
 - The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
 
-  ```js example-bad
+  ```js-nolint example-bad
   const age = 40;
   age++;
   console.log("Happy birthday!");
@@ -770,7 +770,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
 - The example below uses `var`, polluting the global scope:
 
-  ```js example-bad
+  ```js-nolint example-bad
   var age = 40;
   var name = "Chris";
   ```
@@ -786,7 +786,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   let var1, var2;
   let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
   ```
@@ -809,7 +809,7 @@ class Person {
 
 Don't write:
 
-```js example-bad
+```js-nolint example-bad
 class Person {
   #name;
   #birthYear;
@@ -835,7 +835,7 @@ const context = new AudioContext();
 
 Avoid the added complexity of prefixes. Don't write:
 
-```js example-bad
+```js-nolint example-bad
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const context = new AudioContext();
 ```
@@ -865,7 +865,7 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
 
   Don't use `innerHTML` to insert _pure text_ into DOM nodes.
 
-  ```js example-bad
+  ```js-nolint example-bad
   const text = "Hello to all you good people";
   const para = document.createElement("p");
   para.innerHTML = text;

@@ -86,7 +86,7 @@ However, you need to be careful here — in this case, the second block of code 
 
 As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
-```js example-bad
+```js-nolint example-bad
 if (condition) /* code to run if condition is true */
 else /* run some other code instead */
 ```
@@ -266,7 +266,7 @@ if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
 
 A common mistake when using the logical OR operator in conditional statements is to try to state the variable whose value you are checking once, and then give a list of values it could be to return true, separated by `||` (OR) operators. For example:
 
-```js example-bad
+```js-nolint example-bad
 if (x === 5 || 7 || 10 || 20) {
   // run my code
 }

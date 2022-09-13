@@ -93,7 +93,7 @@ straightforward property of the global object. JavaScript has automatic memory
 management, and it would make no sense to be able to use the `delete`
 operator on a global variable.
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 var x = 1;
 Object.hasOwn(globalThis, 'x'); // true

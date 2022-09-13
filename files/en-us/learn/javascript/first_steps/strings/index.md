@@ -57,7 +57,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 2. If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const badString1 = This is a test;
    const badString2 = 'This is a test;
    const badString3 = This is a test';
@@ -87,7 +87,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 2. There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const badQuotes = 'What on earth?";
    ```
 
@@ -102,7 +102,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 4. However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const bigmouth = 'I've got no right to take my place…';
    ```
 

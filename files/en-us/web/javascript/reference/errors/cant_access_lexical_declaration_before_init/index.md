@@ -42,7 +42,7 @@ Note also that this issue does not occur for variables declared using `var`, bec
 In this case, the variable `foo` is accessed before it is declared.
 At this point is has not been initialized with a value, so accessing the variable throws a reference error.
 
-```js example-bad
+```js-nolint example-bad
 function test() {
   // Accessing the 'const' variable foo before it's declared
   console.log(foo);       // ReferenceError: foo is not initialized

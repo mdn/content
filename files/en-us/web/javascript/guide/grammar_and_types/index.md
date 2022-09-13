@@ -47,7 +47,7 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 
 You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
 
-```js example-bad
+```js-nolint example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
 ```
 
@@ -249,7 +249,7 @@ In the following example, the variable name `baz` is hoisted — due to [variabl
 
 Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _"baz is not a function"_, because the function assigned to `baz` isn't hoisted — while the `console.log(baz)` call doesn't throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn't. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
 
-```js example-bad
+```js-nolint example-bad
 // Doesn't throw ReferenceError
 console.log(baz) // undefined
 
@@ -286,7 +286,7 @@ The scope rules for constants are the same as those for `let` block-scope variab
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js example-bad
+```js-nolint example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {};
 const f = 5;
@@ -569,7 +569,7 @@ Object property names can be any string, including the empty string. If the prop
 
 Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js example-bad
+```js-nolint example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'

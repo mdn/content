@@ -40,7 +40,7 @@ The source map specification changed the syntax due to a conflict with IE whenev
 
 Syntax with the "@" sign is deprecated.
 
-```js example-bad
+```js-nolint example-bad
 //@ sourceMappingURL=http://example.com/path/to/your/sourcemap.map
 ```
 

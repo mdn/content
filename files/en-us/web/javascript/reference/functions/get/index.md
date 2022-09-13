@@ -51,7 +51,7 @@ Note the following when working with the `get` syntax:
   for more information);
 - It must not appear in an object literal with another `get` e.g. the following is forbidden
 
-  ```js example-bad
+  ```js-nolint example-bad
   {
     get x() { }, get x() { }
   }
@@ -59,7 +59,7 @@ Note the following when working with the `get` syntax:
 
 - It must not appear with a data entry for the same property e.g. the following is forbidden
 
-  ```js example-bad
+  ```js-nolint example-bad
   {
     x: /* … */, get x() { /* … */ }
   }

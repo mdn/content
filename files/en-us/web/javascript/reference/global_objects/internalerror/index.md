@@ -61,7 +61,7 @@ loop(0);
 
 Setting this condition to an extremely high value, may not work:
 
-```js example-bad
+```js-nolint example-bad
 function loop(x) {
   if (x >= 1000000000000)
     return;

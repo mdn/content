@@ -91,7 +91,7 @@ Events have three functions:
 
     > **Note:** If you pass an async function to `addListener()`, the listener will return a Promise for every message it receives, preventing other listeners from responding:
     >
-    > ```js example-bad
+    > ```js-nolint example-bad
     > // don't do this
     > browser.runtime.onMessage.addListener(
     >   async (data, sender) => {

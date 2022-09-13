@@ -43,7 +43,7 @@ object.$1 = "foo";
 console.log(object.$1); // 'foo'
 ```
 
-```js example-bad
+```js-nolint example-bad
 const object = {};
 object.1 = 'bar'; // SyntaxError
 console.log(object.1); // SyntaxError

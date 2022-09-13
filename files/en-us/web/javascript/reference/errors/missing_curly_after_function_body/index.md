@@ -36,7 +36,7 @@ a bit nicer might also help you to see through the jungle.
 
 Oftentimes, there is a missing curly bracket in your function code:
 
-```js example-bad
+```js-nolint example-bad
 const charge = function () {
   if (sunny) {
     useSolarCells();
@@ -60,7 +60,7 @@ const charge = function () {
 It can be more obscure when using [IIFE](/en-US/docs/Glossary/IIFE), [Closures](/en-US/docs/Web/JavaScript/Closures), or other constructs that use
 a lot of different parenthesis and curly brackets, for example.
 
-```js example-bad
+```js-nolint example-bad
 (function () { if (true) { return false; } );
 ```
 

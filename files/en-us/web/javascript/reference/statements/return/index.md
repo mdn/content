@@ -58,7 +58,7 @@ The `return` statement is affected by
 [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion).
 No line terminator is allowed between the `return` keyword and the expression.
 
-```js example-bad
+```js-nolint example-bad
 return
 a + b;
 ```

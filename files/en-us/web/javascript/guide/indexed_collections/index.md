@@ -581,7 +581,7 @@ Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) 
 
 Array methods cannot be called directly on array-like objects.
 
-```js example-bad
+```js-nolint example-bad
 function printArguments() {
   arguments.forEach((item) => { // TypeError: arguments.forEach is not a function
     console.log(item);

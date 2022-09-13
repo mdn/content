@@ -50,14 +50,14 @@ The following are only reserved when they are found in strict mode code:
 
 The `enum` identifier is generally reserved.
 
-```js example-bad
+```js-nolint example-bad
 const enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
 ```
 
 In strict mode code, more identifiers are reserved.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier

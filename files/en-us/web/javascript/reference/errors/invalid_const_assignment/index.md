@@ -40,7 +40,7 @@ keyword.
 
 Assigning a value to the same constant name in the same block-scope will throw.
 
-```js example-bad
+```js-nolint example-bad
 const COLUMNS = 80;
 
 // …
@@ -100,7 +100,7 @@ identifier cannot be reassigned. For instance, in case the content is an object,
 means the object itself can still be altered. This means that you can't mutate the value
 stored in a variable:
 
-```js example-bad
+```js-nolint example-bad
 const obj = {foo: 'bar'};
 obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
 ```

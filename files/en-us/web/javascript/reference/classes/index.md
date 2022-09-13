@@ -41,7 +41,7 @@ class Rectangle {
 An important difference between **function declarations** and **class declarations** is that while functions can be called in code that appears before they are defined, classes must be defined before they can be constructed.
 Code like the following will throw a {{jsxref("ReferenceError")}}:
 
-```js example-bad
+```js-nolint example-bad
 const p = new Rectangle(); // ReferenceError
 
 class Rectangle {}

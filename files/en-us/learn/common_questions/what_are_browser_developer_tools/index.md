@@ -199,15 +199,15 @@ document.querySelector('h1').appendChild(myWordmark);
 
 Now try entering the following incorrect versions of the code and see what you get.
 
-```js example-bad
+```js-nolint example-bad
 alert('hello!);
 ```
 
-```js example-bad
+```js-nolint example-bad
 document.cheeseSelector('html').style.backgroundColor = 'purple';
 ```
 
-```js example-bad
+```js-nolint example-bad
 const myWordmark = document.createElement('img');
 myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
 document.querySelector('h1').appendChild(myWordmark);

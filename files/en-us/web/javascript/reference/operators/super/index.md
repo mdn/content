@@ -31,7 +31,7 @@ The `super` keyword can be used in two ways: as a "function call" (`super(...arg
 
 > **Note:** `super` is a keyword and these are special syntactic constructs. `super` is not a variable that points to the prototype object. Attempting to read `super` itself is a {{jsxref("SyntaxError")}}.
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > const child = {
 >   myParent() {
 >     console.log(super); // SyntaxError: 'super' keyword unexpected here
@@ -125,7 +125,7 @@ class Extended extends Base {
 
 Note that instance fields are set on the instance instead of the constructor's `prototype`, so you can't use `super` to access the instance field of a superclass.
 
-```js example-bad
+```js-nolint example-bad
 class Base {
   baseField = 10;
 }
@@ -269,7 +269,7 @@ console.log(Object.hasOwn(b, "x")); // true
 
 This means that while methods that _get_ `super.prop` are usually not susceptible to changes in the `this` context, those that _set_ `super.prop` are.
 
-```js example-bad
+```js-nolint example-bad
 /* Reusing same declarations as above */
 
 const b2 = new B();

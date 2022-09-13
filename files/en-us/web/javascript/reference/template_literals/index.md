@@ -116,7 +116,7 @@ In certain cases, nesting a template is the easiest (and perhaps more readable) 
 
 For example, without template literals, if you wanted to return a certain value based on a particular condition, you could do something like the following:
 
-```js example-bad
+```js-nolint example-bad
 let classes = "header";
 classes += isLargeScreen()
   ? ""
@@ -127,7 +127,7 @@ classes += isLargeScreen()
 
 With a template literal but without nesting, you could do this:
 
-```js example-bad
+```js-nolint example-bad
 const classes = `header ${
   isLargeScreen() ? "" : item.isCollapsed ? "icon-expander" : "icon-collapser"
 }`;
@@ -196,14 +196,14 @@ console.log(`Hello``World`); // TypeError: "Hello" is not a function
 
 The only exception is optional chaining, which will throw a syntax error.
 
-```js example-bad
+```js-nolint example-bad
 console.log?.`Hello`; // SyntaxError: Invalid tagged template on optional chain
 console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
 Note that these two expressions are still parsable. This means they would not be subject to [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), which will only insert semicolons to fix code that's otherwise unparsable.
 
-```js example-bad
+```js-nolint example-bad
 // Still a syntax error
 const a = console?.log
 `Hello`
@@ -349,7 +349,7 @@ latex`\unicode`;
 
 Note that the escape-sequence restriction is only dropped from _tagged_ templates, but not from _untagged_ template literals:
 
-```js example-bad
+```js-nolint example-bad
 const bad = `bad escape sequence: \unicode`;
 ```
 

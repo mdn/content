@@ -38,7 +38,7 @@ Although the syntax looks the same, they come with slightly different semantics.
 
 Only [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) objects, like {{jsxref("Array")}}, can be spread in array and function parameters. Many objects are not iterable, including all [plain objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that lack a [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { key1: 'value1' };
 const array = [...obj]; // TypeError: obj is not iterable
 ```
@@ -124,7 +124,7 @@ arr2.push(4);
 
 > **Note:** Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone.
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > const a = [[1], [2], [3]];
 > const b = [...a];
 >

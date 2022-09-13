@@ -38,7 +38,7 @@ There is an error with how a function is called. More arguments need to be provi
 The {{jsxref("Object.create()")}} method requires at least one argument and the
 {{jsxref("Object.setPrototypeOf()")}} method requires at least two arguments:
 
-```js example-bad
+```js-nolint example-bad
 const obj = Object.create();
 // TypeError: Object.create requires at least 1 argument, but only 0 were passed
 

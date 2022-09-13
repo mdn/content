@@ -177,7 +177,7 @@ The scope of a function is the function in which it is declared (or the entire p
 >
 > This means that function hoisting only works with function _declarations_—not with function _expressions_.
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > console.log(square); // ReferenceError: Cannot access 'square' before initialization
 > const square = function (n) {
 >   return n * n;
@@ -519,7 +519,7 @@ getCode();    // Returns the apiCode
 >
 > If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
-> ```js example-bad
+> ```js-nolint example-bad
 > const createPet = function (name) {  // The outer function defines a variable called "name".
 >   return {
 >     setName(name) {    // The enclosed function also defines a variable called "name".

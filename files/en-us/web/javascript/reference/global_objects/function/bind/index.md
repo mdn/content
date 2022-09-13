@@ -70,7 +70,7 @@ new BoundBase(3, 4); // true, [1, 2, 3, 4]
 
 However, because a bound function does not have the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property, it cannot be used as a base class for [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends).
 
-```js example-bad
+```js-nolint example-bad
 class Derived extends class {}.bind(null) {}
 // TypeError: Class extends value does not have valid prototype property undefined
 ```

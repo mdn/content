@@ -79,7 +79,7 @@ For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
 sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
-```js example-bad
+```js-nolint example-bad
 let nonce =  script.getAttribute('nonce');
 // returns empty string
 ```

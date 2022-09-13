@@ -89,7 +89,7 @@ with (character) {
 
 To preserve backward compatibility, you decided to add an `@@unscopables` property when adding more properties to `character`. You may naïvely do it like:
 
-```js example-bad
+```js-nolint example-bad
 const character = {
   name: "Yoda",
   toString: function () {

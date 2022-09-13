@@ -40,7 +40,7 @@ They can't start with a digit! Only subsequent characters can be digits (0-9).
 
 Variable names can't start with numbers in JavaScript. The following fails:
 
-```js example-bad
+```js-nolint example-bad
 const 1life = 'foo';
 // SyntaxError: identifier starts immediately after numeric literal
 

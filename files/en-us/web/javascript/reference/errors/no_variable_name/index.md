@@ -35,7 +35,7 @@ When declaring multiple variables at the same time, make sure that the previous 
 
 ### Missing a variable name
 
-```js example-bad
+```js-nolint example-bad
 const = "foo";
 ```
 
@@ -50,7 +50,7 @@ const description = "foo";
 There are a few variable names that are [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 You can't use these. Sorry :(
 
-```js example-bad
+```js-nolint example-bad
 const debugger = "whoop";
 // SyntaxError: missing variable name
 ```
@@ -61,7 +61,7 @@ Pay special attention to commas when declaring multiple variables.
 Is there an excess comma, or did you use commas instead of semicolons?
 Did you remember to assign values for all your `const` variables?
 
-```js example-bad
+```js-nolint example-bad
 let x, y = "foo",
 const z, = "foo"
 
@@ -86,7 +86,7 @@ const second = document.getElementById('two');
 {{jsxref("Array")}} literals in JavaScript need square brackets around the values.
 This won't work:
 
-```js example-bad
+```js-nolint example-bad
 const arr = 1,2,3,4,5;
 // SyntaxError: missing variable name
 ```

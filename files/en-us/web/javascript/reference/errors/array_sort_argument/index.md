@@ -32,7 +32,7 @@ The argument of {{jsxref("Array.prototype.sort()")}} is expected to be either {{
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 [1, 3, 2].sort(5);  // TypeError
 
 const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };

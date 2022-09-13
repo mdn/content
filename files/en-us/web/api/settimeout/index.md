@@ -80,7 +80,7 @@ To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 
 If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
 
-```js example-bad
+```js-nolint example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
 }, "1000")
@@ -88,7 +88,7 @@ setTimeout(() => {
 
 But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
 
-```js example-bad
+```js-nolint example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
 }, "1 second")
@@ -219,7 +219,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
 Passing a string instead of a function to `setTimeout()` has the same problems as using
 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
-```js example-bad
+```js-nolint example-bad
 // Don't do this
 setTimeout("console.log('Hello World!');", 500);
 ```

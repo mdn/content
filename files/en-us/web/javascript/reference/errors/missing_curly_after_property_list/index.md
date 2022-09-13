@@ -39,7 +39,7 @@ also help you to see through the jungle.
 
 Oftentimes, there is a missing comma in your object initializer code:
 
-```js example-bad
+```js-nolint example-bad
 const obj = {
   a: 1,
   b: { myProp: 2 }

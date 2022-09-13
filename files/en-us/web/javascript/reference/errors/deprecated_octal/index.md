@@ -41,7 +41,7 @@ letter "O" (`0o` or `0O`).
 
 ### "0"-prefixed octal literals
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 03;
@@ -51,7 +51,7 @@ letter "O" (`0o` or `0O`).
 
 ### Octal escape sequences
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 "\251";

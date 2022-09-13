@@ -221,7 +221,7 @@ for (const link of links) {
 
 If the newly opened browsing context does not share the same [origin](/en-US/docs/Glossary/Origin), the opening script will not be able to interact (reading or writing) with the browsing context's content.
 
-```js example-bad
+```js-nolint example-bad
 // Script from example.com
 const otherOriginContext = window.open("https://example.org");
 // example.com and example.org are not the same origin

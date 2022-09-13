@@ -97,7 +97,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 
 ### JSON.parse() does not allow trailing commas
 
-```js example-bad
+```js-nolint example-bad
 // both will throw a SyntaxError
 JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
@@ -105,7 +105,7 @@ JSON.parse('{"foo" : 1, }');
 
 ### JSON.parse() does not allow single quotes
 
-```js example-bad
+```js-nolint example-bad
 // will throw a SyntaxError
 JSON.parse("{'foo': 1}");
 ```

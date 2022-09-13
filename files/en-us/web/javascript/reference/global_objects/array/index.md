@@ -568,7 +568,7 @@ Results in
 
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
 
-```js example-bad
+```js-nolint example-bad
 console.log(arr.0); // a syntax error
 ```
 

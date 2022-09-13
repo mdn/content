@@ -152,7 +152,7 @@ const obj4 = {
 Methods cannot be constructors! They will throw a {{jsxref("TypeError")}} if you try to
 instantiate them.
 
-```js example-bad
+```js-nolint example-bad
 const objA = {
   method() {}
 }

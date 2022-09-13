@@ -37,7 +37,7 @@ While a single `=` sign assigns a value to a variable, the `==` or `===` operato
 
 ### Typical invalid assignments
 
-```js example-bad
+```js-nolint example-bad
 if (Math.PI + 1 = 3 || Math.PI + 1 = 4) {
   console.log('no way!');
 }

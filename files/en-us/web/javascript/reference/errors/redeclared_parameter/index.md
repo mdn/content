@@ -39,7 +39,7 @@ allowed in JavaScript.
 
 In this case, the variable "arg" redeclares the argument.
 
-```js example-bad
+```js-nolint example-bad
 function f(arg) {
   let arg = 'foo';
 }

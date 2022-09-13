@@ -41,7 +41,7 @@ escape sequences representing the UTF-8 encoding of the character. An
 {{jsxref("URIError")}} will be thrown if there is an attempt to encode a surrogate which
 is not part of a high-low pair, for example:
 
-```js example-bad
+```js-nolint example-bad
 encodeURI('\uD800');
 // "URIError: malformed URI sequence"
 
@@ -61,7 +61,7 @@ encodeURI('\uD800\uDFFF');
 Decoding replaces each escape sequence in the encoded URI component with the character
 that it represents. If there isn't such a character, an error will be thrown:
 
-```js example-bad
+```js-nolint example-bad
 decodeURIComponent('%E0%A4%A');
 // "URIError: malformed URI sequence"
 ```

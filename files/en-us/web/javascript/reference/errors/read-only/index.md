@@ -41,7 +41,7 @@ non-strict code, the assignment is silently ignored.
 Read-only properties are not super common, but they can be created using
 {{jsxref("Object.defineProperty()")}} or {{jsxref("Object.freeze()")}}.
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 const obj = Object.freeze({ name: 'Elsa', score: 157 });
 obj.score = 0;  // TypeError
@@ -58,7 +58,7 @@ frozenArray[0]++;  // TypeError
 There are also a few read-only properties built into JavaScript. Maybe you tried to
 redefine a mathematical constant.
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 Math.PI = 4;  // TypeError
 ```
@@ -68,7 +68,7 @@ Sorry, you can't do that.
 The global variable `undefined` is also read-only, so you can't silence the
 infamous "undefined is not a function" error by doing this:
 
-```js example-bad
+```js-nolint example-bad
 'use strict';
 undefined = function() {};  // TypeError: "undefined" is read-only
 ```

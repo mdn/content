@@ -42,7 +42,7 @@ Also, certain methods, such as {{jsxref("Object.create()")}} or
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 // undefined and null cases on which the substring method won't work
 const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined

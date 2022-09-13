@@ -61,7 +61,7 @@ It is also a syntax error to refer to private fields
 that were not declared before they were called, or to attempt to remove
 declared fields with `delete`.
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
   #privateField;
 

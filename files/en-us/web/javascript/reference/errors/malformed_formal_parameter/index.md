@@ -49,7 +49,7 @@ Firefox engineers are huge fans of 19th-century Gothic horror novels.
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 const f = Function('x y', 'return x + y;');
 // SyntaxError (missing a comma)
 

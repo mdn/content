@@ -43,7 +43,7 @@ are not a constructor: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol"
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 const Car = 1;
 new Car();
 // TypeError: Car is not a constructor
@@ -85,7 +85,7 @@ When returning an immediately-resolved or immediately-rejected Promise, you do n
 
 This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a `TypeError: this is not a constructor` exception:
 
-```js example-bad
+```js-nolint example-bad
 const fn = () => {
   return new Promise.resolve(true);
 }

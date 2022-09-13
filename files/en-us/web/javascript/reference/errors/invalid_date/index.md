@@ -39,7 +39,7 @@ strings usually return {{jsxref("NaN")}}. However, depending on the implementati
 non–conforming ISO format strings, may also throw `RangeError: invalid date`,
 like the following cases in Firefox:
 
-```js example-bad
+```js-nolint example-bad
 new Date('foo-bar 2014');
 new Date('2014-25-23').toISOString();
 new Date('foo-bar 2014').toString();
@@ -47,7 +47,7 @@ new Date('foo-bar 2014').toString();
 
 This, however, returns {{jsxref("NaN")}} in Firefox:
 
-```js example-bad
+```js-nolint example-bad
 Date.parse('foo-bar 2014'); // NaN
 ```
 

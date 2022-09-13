@@ -61,7 +61,7 @@ that's why you rarely want to use the String constructor at all.
 
 `String()` is the only case where a symbol can be converted to a string without throwing, because it's very explicit.
 
-```js example-bad
+```js-nolint example-bad
 const sym = Symbol("example");
 `${sym}`; // TypeError: Cannot convert a Symbol value to a string
 "" + sym; // TypeError: Cannot convert a Symbol value to a string

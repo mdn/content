@@ -83,7 +83,7 @@ console.log('a' in p); // "called: a"
 
 The following code violates an invariant.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 10 };
 Object.preventExtensions(obj);
 

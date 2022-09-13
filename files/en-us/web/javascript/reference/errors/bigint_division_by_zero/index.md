@@ -32,7 +32,7 @@ The divisor of a [division](/en-US/docs/Web/JavaScript/Reference/Operators/Divis
 
 ### Division by 0n
 
-```js example-bad
+```js-nolint example-bad
 const a = 1n;
 const b = 0n;
 const quotient = a / b;

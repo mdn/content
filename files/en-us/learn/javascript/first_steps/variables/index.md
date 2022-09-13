@@ -77,7 +77,7 @@ To understand why this is so useful, let's think about how we'd write this examp
 <h3 id="heading_B"></h3>
 ```
 
-```js example-bad
+```js-nolint example-bad
 const buttonB = document.querySelector('#button_B');
 const headingB = document.querySelector('#heading_B');
 
@@ -193,7 +193,7 @@ var myName = 'Bob';
 
 But the following would throw an error on the second line:
 
-```js example-bad
+```js-nolint example-bad
 let myName = 'Chris';
 let myName = 'Bob';
 ```
@@ -384,7 +384,7 @@ let count;
 
 If you try to do this using `const` you will see an error:
 
-```js example-bad
+```js-nolint example-bad
 const count;
 ```
 
@@ -397,7 +397,7 @@ count = 2;
 
 If you try to do this using `const` you will see an error:
 
-```js example-bad
+```js-nolint example-bad
 const count = 1;
 count = 2;
 ```
