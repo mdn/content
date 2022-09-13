@@ -116,7 +116,6 @@ For example, we could rewrite our previous example to use `@supports` — see [`
 
 ```css
 @supports (flex-flow: row) and (flex: 1) {
-
   main {
     display: flex;
   }
@@ -129,7 +128,6 @@ For example, we could rewrite our previous example to use `@supports` — see [`
   main div:last-child {
     padding-right: 0;
   }
-
 }
 ```
 
@@ -139,9 +137,7 @@ This at-rule block applies the CSS rule within only if the current browser suppo
 
 ```css
 @supports not (flex-flow: row) and (flex: 1) {
-
   /* rules in here */
-
 }
 ```
 
