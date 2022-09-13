@@ -84,7 +84,7 @@ For compatibility reasons, `page-break-before` should be treated by browsers as 
 ```css
 /* avoid page break before div elements of class note */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 

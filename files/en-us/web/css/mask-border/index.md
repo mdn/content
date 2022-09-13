@@ -29,16 +29,16 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* source | slice */
-mask-border: url('border-mask.png') 25;
+mask-border: url("border-mask.png") 25;
 
 /* source | slice | repeat */
-mask-border: url('border-mask.png') 25 space;
+mask-border: url("border-mask.png") 25 space;
 
 /* source | slice | width */
-mask-border: url('border-mask.png') 25 / 35px;
+mask-border: url("border-mask.png") 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
-mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
+mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 
 /* Global values */
 mask-border: inherit;
