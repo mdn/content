@@ -28,12 +28,12 @@ specified object.
 ## Syntax
 
 ```js-nolint
-new RTCSessionDescription(rtcSessionDescriptionInit)
+new RTCSessionDescription(options)
 ```
 
 ### Values
 
-- `rtcSessionDescriptionInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing the default values for the session description; the object
     conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has

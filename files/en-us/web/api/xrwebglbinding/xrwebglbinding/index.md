@@ -35,7 +35,7 @@ new XRWebGLBinding(session, context)
 
 ### Return value
 
-A newly-created {{domxref("XRWebGLBinding")}}.
+A new {{domxref("XRWebGLBinding")}}.
 
 ### Exceptions
 
