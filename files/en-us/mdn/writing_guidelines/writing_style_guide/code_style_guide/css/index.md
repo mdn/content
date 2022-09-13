@@ -209,11 +209,7 @@ p {
 ```
 
 ```css example-bad
-p {
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
+p { color: white; background-color: black; padding: 1rem; }
 ```
 
 ## Value to turn off properties
