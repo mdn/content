@@ -21,7 +21,7 @@ In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like 
 ## Syntax
 
 ```js-nolint
-const item = collection.namedItem(key)
+namedItem(key)
 ```
 
 ### Parameters
