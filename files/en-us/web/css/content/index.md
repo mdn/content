@@ -145,8 +145,8 @@ q::after {
 
 h1::before {
   content: "Chapter "; /* The trailing space creates separation
-                           between the added content and the
-                           rest of the content */
+                          between the added content and the
+                          rest of the content */
 }
 ```
 
