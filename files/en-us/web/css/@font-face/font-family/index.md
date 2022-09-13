@@ -20,7 +20,7 @@ The **`font-family`** CSS descriptor allows authors to specify the font family f
 ```css
 /* <string> values */
 font-family: "font family";
-font-family: 'another font family';
+font-family: "another font family";
 
 /* <custom-ident> value */
 font-family: examplefont;
@@ -52,7 +52,7 @@ font-family: examplefont;
 ```css
 @font-face {
   font-family: examplefont;
-  src: url('examplefont.ttf');
+  src: url("examplefont.ttf");
 }
 ```
 

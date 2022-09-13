@@ -20,10 +20,10 @@ The **`unicode-range`** CSS descriptor sets the specific range of characters to 
 
 ```css
 /* <unicode-range> values */
-unicode-range: U+26;               /* single codepoint */
+unicode-range: U+26; /* single codepoint */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;        /* codepoint range */
-unicode-range: U+4??;              /* wildcard range */
+unicode-range: U+0025-00FF; /* codepoint range */
+unicode-range: U+4??; /* wildcard range */
 unicode-range: U+0025-00FF, U+4??; /* multiple values */
 ```
 
@@ -68,8 +68,8 @@ In the CSS we are in effect defining a completely separate {{cssxref("@font-face
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 
