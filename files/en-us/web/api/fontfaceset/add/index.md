@@ -17,7 +17,7 @@ The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new fo
 
 ## Syntax
 
-```js
+```js-nolint
 add(font)
 ```
 

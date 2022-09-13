@@ -22,7 +22,7 @@ If the `source` for the font face was specified as binary data, or the font {{do
 
 ## Syntax
 
-```js
+```js-nolint
 load()
 ```
 

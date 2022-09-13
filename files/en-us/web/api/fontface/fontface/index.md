@@ -20,7 +20,7 @@ The **`FontFace()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new FontFace(family, source)
 new FontFace(family, source, descriptors)
 ```

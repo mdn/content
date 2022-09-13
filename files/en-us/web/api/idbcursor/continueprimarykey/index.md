@@ -35,7 +35,7 @@ from an object store will throw an error.
 
 ## Syntax
 
-```js
+```js-nolint
 continuePrimaryKey(key, primaryKey)
 ```
 

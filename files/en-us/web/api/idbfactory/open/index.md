@@ -27,7 +27,7 @@ May trigger `upgradeneeded`, `blocked` or `versionchange` events.
 
 ## Syntax
 
-```js
+```js-nolint
 open(name)
 open(name, version)
 ```

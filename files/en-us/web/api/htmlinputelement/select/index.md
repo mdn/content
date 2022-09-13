@@ -20,7 +20,7 @@ that includes a text field.
 
 ## Syntax
 
-```js
+```js-nolint
 select()
 ```
 

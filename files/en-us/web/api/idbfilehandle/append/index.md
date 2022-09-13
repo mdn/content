@@ -27,7 +27,7 @@ and actually sets the value of this property to `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 append(data)
 ```
 

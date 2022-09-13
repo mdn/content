@@ -25,7 +25,7 @@ the value of `src` and `href` attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 toURL()
 toURL(mimeType)
 ```

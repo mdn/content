@@ -20,7 +20,7 @@ The **`HTMLInputElement.setCustomValidity()`** method sets a custom validity mes
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(message)
 ```
 

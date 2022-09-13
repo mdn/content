@@ -40,7 +40,7 @@ happens.
 
 ## Syntax
 
-```js
+```js-nolint
 seekToNextFrame()
 ```
 

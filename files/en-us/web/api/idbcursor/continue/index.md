@@ -25,7 +25,7 @@ advances to the immediate next position, based on its direction.
 
 ## Syntax
 
-```js
+```js-nolint
 continue()
 continue(key)
 ```

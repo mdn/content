@@ -22,7 +22,7 @@ In JavaScript, using `selectElt.namedItem('value')` is equivalent to `selectElt.
 
 ## Syntax
 
-```js
+```js-nolint
 namedItem(str)
 ```
 

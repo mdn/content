@@ -23,7 +23,7 @@ If the `flatten` option is set to `true`, it returns a sequence of both the elem
 
 ## Syntax
 
-```js
+```js-nolint
 assignedElements()
 assignedElements(options)
 ```

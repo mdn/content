@@ -21,8 +21,8 @@ offset to the position (in bytes) specified when calling the method.
 
 ## Syntax
 
-```js
-FileSystemWritableStream.seek(position).then(/* … */);
+```js-nolint
+FileSystemWritableStream.seek(position).then(/* … */)
 ```
 
 ### Parameters

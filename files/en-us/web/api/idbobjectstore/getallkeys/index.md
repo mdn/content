@@ -33,7 +33,7 @@ method provides a cursor if the record exists, and no cursor if it does not.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)

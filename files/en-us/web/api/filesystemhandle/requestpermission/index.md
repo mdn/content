@@ -20,7 +20,7 @@ file handle.
 
 ## Syntax
 
-```js
+```js-nolint
 requestPermission(FileSystemHandlePermissionDescriptor)
 ```
 

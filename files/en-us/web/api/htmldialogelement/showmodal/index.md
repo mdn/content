@@ -22,7 +22,7 @@ the content outside it is rendered inert.
 
 ## Syntax
 
-```js
+```js-nolint
 showModal()
 ```
 

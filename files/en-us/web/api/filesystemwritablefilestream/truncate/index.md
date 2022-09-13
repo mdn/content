@@ -31,8 +31,8 @@ Changes are typically written to a temporary file instead.
 
 ## Syntax
 
-```js
-FileSystemWritableFileStream.truncate().then(/* … */);
+```js-nolint
+FileSystemWritableFileStream.truncate().then(/* … */)
 ```
 
 ### Parameters

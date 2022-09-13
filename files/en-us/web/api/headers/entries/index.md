@@ -22,7 +22,7 @@ contained in this object. The both the key and value of each pairs are
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

@@ -21,7 +21,7 @@ nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteCaption()
 ```
 

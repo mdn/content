@@ -20,7 +20,7 @@ The **`HTMLInputElement.checkValidity()`** method returns a boolean value which 
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

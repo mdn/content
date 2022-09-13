@@ -25,7 +25,7 @@ equivalent to `collection.namedItem("value")`.
 
 ## Syntax
 
-```js
+```js-nolint
 namedItem(str)
 // or collection[str]
 ```

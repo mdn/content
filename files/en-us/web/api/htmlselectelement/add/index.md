@@ -18,7 +18,7 @@ collection of `option` elements for this `select` element.
 
 ## Syntax
 
-```js
+```js-nolint
 add(item)
 add(item, before)
 ```

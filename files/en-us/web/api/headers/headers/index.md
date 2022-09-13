@@ -17,7 +17,7 @@ The **`Headers()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Headers()
 new Headers(init)
 ```

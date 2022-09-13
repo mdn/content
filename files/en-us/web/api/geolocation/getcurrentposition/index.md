@@ -21,7 +21,7 @@ the current position of the device.
 
 ## Syntax
 
-```js
+```js-nolint
 getCurrentPosition(success)
 getCurrentPosition(success, error)
 getCurrentPosition(success, error, options)

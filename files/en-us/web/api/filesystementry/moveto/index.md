@@ -37,7 +37,7 @@ restrictions on what you can do:
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(newParent, newName)
 moveTo(newParent, newName, successCallback)
 moveTo(newParent, newName, successCallback, errorCallback)
