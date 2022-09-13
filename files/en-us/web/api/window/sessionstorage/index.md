@@ -60,7 +60,7 @@ session storage space.
     may have their browser configured to deny permission to persist data for the specified
     origin.
 - `Uncaught DOMException`
-  - : The request is blocked by user's browser privacy settings. In some browsers, blocking cookies results in disabling many APIs that persist user session data such as localStorage and [sessionStorage](/en-us/web/api/window/localStorage).
+  - : The request is blocked by user's browser privacy settings. In some browsers, blocking cookies results in disabling many APIs that persist user session data such as [localStorage](/en-us/web/api/window/localStorage) and sessionStorage.
 
 ## Examples
 
