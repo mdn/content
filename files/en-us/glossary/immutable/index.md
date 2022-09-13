@@ -6,7 +6,7 @@ tags:
   - Glossary
 ---
 
-An immutable value is one whose content cannot be changed without creating an entirely new value. 
+An immutable value is one whose content cannot be changed without creating an entirely new value.
 
 It can be beneficial to use immutable objects for several reasons:
 
