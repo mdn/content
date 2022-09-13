@@ -454,7 +454,6 @@ h1 {
 }
 
 /* Handle specific elements nested in the DOM  */
-/* -------------------------------------------------------------------------------------------- */
 div p,
 #id:first-line {
   background-color: red;
