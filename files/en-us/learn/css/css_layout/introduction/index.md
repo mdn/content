@@ -110,11 +110,13 @@ The HTML markup below gives us a containing element with a class of `wrapper`, i
 However, if we add `display: flex` to the parent, the three items now arrange themselves into columns. This is due to them becoming _flex items_ and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row because the property {{cssxref("flex-direction")}} of the parent element has an initial value of `row`. They all appear to stretch in height because the property {{cssxref("align-items")}} of their parent element has an initial value of `stretch`. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
@@ -142,22 +144,22 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 
 ```css hidden
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 ```css
 .wrapper {
-    display: flex;
+  display: flex;
 }
 
 .wrapper > div {
-    flex: 1;
+  flex: 1;
 }
 ```
 
@@ -183,22 +185,22 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
 
 ```css hidden
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  gap: 10px;
 }
 ```
 
@@ -221,37 +223,37 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 ```css hidden
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  gap: 10px;
 }
 
 .box1 {
-    grid-column: 2 / 4;
-    grid-row: 1;
+  grid-column: 2 / 4;
+  grid-row: 1;
 }
 
 .box2 {
-    grid-column: 1;
-    grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
 .box3 {
-    grid-row: 2;
-    grid-column: 3;
+  grid-row: 2;
+  grid-column: 3;
 }
 ```
 
@@ -284,21 +286,21 @@ In the example below, we float a `<div>` left and give it a {{cssxref("margin")}
 
 ```css hidden
 body {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 p {
-    line-height: 2;
-    word-spacing: 0.1rem;
+  line-height: 2;
+  word-spacing: 0.1rem;
 }
 
 .box {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -312,10 +314,10 @@ p {
 
 ```css
 .box {
-    float: left;
-    width: 150px;
-    height: 150px;
-    margin-right: 30px;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
 }
 ```
 
@@ -358,11 +360,11 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -401,19 +403,19 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css hidden
 .positioned {
   position: relative;
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   top: 30px;
   left: 30px;
 }
@@ -452,18 +454,18 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css hidden
 .positioned {
-    background: rgba(255,84,104,.3);
-    border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
 }
 ```
 
@@ -499,24 +501,24 @@ et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
 ```css hidden
 body {
-    width: 500px;
-    margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .positioned {
-    background: rgba(255,84,104,.3);
-    border: 2px solid rgb(255,84,104);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
-    position: fixed;
-    top: 30px;
-    left: 30px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
 }
 ```
 
@@ -545,8 +547,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -611,7 +613,8 @@ form div {
   display: table-row;
 }
 
-form label, form input {
+form label,
+form input {
   display: table-cell;
   margin-bottom: 10px;
 }
@@ -678,12 +681,15 @@ In the below example, we start with a block of HTML inside a containing `<div>` 
 We're using a `column-width` of 200 pixels on that container, causing the browser to create as many 200 pixel columns as will fit. Whatever space is left between the columns will be shared.
 
 ```css hidden
-body { max-width: 800px; margin: 0 auto; }
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
 ```
 
 ```css
 .container {
-    column-width: 200px;
+  column-width: 200px;
 }
 ```
 

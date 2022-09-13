@@ -68,7 +68,7 @@ To define a grid we use the `grid` value of the {{cssxref("display")}} property.
 
 ```css
 .container {
-    display: grid;
+  display: grid;
 }
 ```
 
@@ -78,8 +78,8 @@ To see something that looks more grid-like, we'll need to add some columns to th
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
 }
 ```
 
@@ -90,14 +90,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -123,8 +123,8 @@ Change your track listing to the following definition, creating three `1fr` trac
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
@@ -132,8 +132,8 @@ You should now see that you have flexible tracks. The `fr` unit distributes spac
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 ```
 
@@ -144,14 +144,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -177,9 +177,9 @@ To create gaps between tracks we use the properties {{cssxref("column-gap")}} fo
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
 }
 ```
 
@@ -190,14 +190,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -219,10 +219,10 @@ body {
 >
 > ```css
 > .container {
->     display: grid;
->     grid-template-columns: 2fr 1fr 1fr;
->     grid-gap: 20px;
->     gap: 20px;
+>   display: grid;
+>   grid-template-columns: 2fr 1fr 1fr;
+>   grid-gap: 20px;
+>   gap: 20px;
 > }
 > ```
 
@@ -233,9 +233,9 @@ Change your track listing to the following:
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 ```
 
@@ -252,14 +252,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -294,10 +294,10 @@ The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
 }
 ```
 
@@ -314,14 +314,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -395,25 +395,25 @@ footer {
 ```
 
 ```css hidden
-  body {
-    width: 90%;
-    max-width: 900px;
-    margin: 2em auto;
-    font: .9em/1.2 Arial, Helvetica, sans-serif;
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -452,9 +452,9 @@ Remove the line-based positioning from the last example (or re-download the file
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
@@ -483,15 +483,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -560,12 +560,12 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -573,8 +573,8 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
