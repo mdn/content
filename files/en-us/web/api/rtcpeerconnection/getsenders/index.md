@@ -27,7 +27,7 @@ track's data.
 ## Syntax
 
 ```js-nolint
-const senders = rtcPeerConnection.getSenders()
+getSenders()
 ```
 
 ### Return value
