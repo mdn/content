@@ -21,7 +21,7 @@ contained in this object. The values are {{domxref("Node")}} objects.
 ## Syntax
 
 ```js-nolint
-list.entries()
+entries()
 ```
 
 ### Return value
