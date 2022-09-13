@@ -25,7 +25,7 @@ If the file on disk changes or is removed after this method is called, the retur
 ## Syntax
 
 ```js-nolint
-const filePromise = FileSystemFileHandle.getFile()
+getFile()
 ```
 
 ### Parameters
