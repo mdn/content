@@ -28,7 +28,7 @@ the temporary file when the writable filestream is closed.
 ## Syntax
 
 ```js-nolint
-const fileStreamPromise = FileSystemFileHandle.createWritable()
+createWritable()
 ```
 
 ### Parameters
