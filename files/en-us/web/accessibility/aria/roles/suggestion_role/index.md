@@ -20,8 +20,7 @@ When you've got a content change that involves an insertion _and_ a deletion, th
   Freida's pet is a
   <span role="suggestion">
     <span role="deletion">black Cat called Luna</span>
-    <span role="insertion">purple Tyrannosaurus Rex called Tiny</span> </span
-  >.
+    <span role="insertion">purple T. Rex called Tiny</span> </span>.
 </p>
 ```
 
