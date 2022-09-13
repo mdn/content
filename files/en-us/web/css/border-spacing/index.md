@@ -81,7 +81,7 @@ This example applies a spacing of `.5em` vertically and `1em` horizontally betwe
 
 ```css
 table {
-  border-spacing: 1em .5em;
+  border-spacing: 1em 0.5em;
   padding: 0 2em 1em 0;
   border: 1px solid orange;
 }

@@ -40,7 +40,9 @@ clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
 clip-path: ellipse(50px 60px at 0 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-clip-path: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
+clip-path: path(
+  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
+);
 
 /* Box and shape values combined */
 clip-path: padding-box circle(50px at 0 100px);
@@ -402,10 +404,11 @@ The `clip-path` property is specified as one or a combination of the values list
 ```
 
 ```css
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
-  background: #EEE;
+  background: #eee;
 }
 
 .grid {
@@ -427,9 +430,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: center;
   flex: 1;
@@ -438,8 +441,8 @@ html,body {
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em .5em 0;
-  font: .8em sans-serif;
+  margin: 0.5em 0.5em 0;
+  font: 0.8em sans-serif;
   text-align: left;
   white-space: nowrap;
 }
@@ -455,28 +458,28 @@ html,body {
 }
 
 .container::before {
-  content: 'margin';
+  content: "margin";
   position: absolute;
   top: 2px;
   left: 2px;
-  font: italic .6em sans-serif;
+  font: italic 0.6em sans-serif;
 }
 
 .view-box {
-  box-shadow: 1rem 1rem 0 #EFEFEF inset, -1rem -1rem 0 #EFEFEF inset;
+  box-shadow: 1rem 1rem 0 #efefef inset, -1rem -1rem 0 #efefef inset;
 }
 
 .container.view-box::after {
-  content: 'view-box';
+  content: "view-box";
   position: absolute;
   left: 1.1rem;
   top: 1.1rem;
-  font: italic .6em sans-serif;
+  font: italic 0.6em sans-serif;
 }
 
 .cell span {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 p {
@@ -489,9 +492,17 @@ p {
   width: 6em;
 }
 
-.none { clip-path: none; }
-.svg  { clip-path: url(#myPath); }
-.svg2 { clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z');}
+.none {
+  clip-path: none;
+}
+.svg {
+  clip-path: url(#myPath);
+}
+.svg2 {
+  clip-path: path(
+    "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
+  );
+}
 .shape1 { clip-path: circle(25%); }
 .shape2 { clip-path: circle(25% at 25% 25%); }
 .shape3 { clip-path: fill-box    circle(25% at 25% 25%); }
@@ -508,7 +519,9 @@ p {
   margin: 0;
 }
 
-pre { margin-bottom: 0; }
+pre {
+  margin-bottom: 0;
+}
 
 svg {
   margin: 1em;

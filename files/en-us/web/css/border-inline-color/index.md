@@ -22,7 +22,7 @@ The border color in the other dimension can be set with {{cssxref("border-block-
 
 ```css
 border-inline-color: yellow;
-border-inline-color: #F5F6F7;
+border-inline-color: #f5f6f7;
 
 /* Global values */
 border-inline-color: inherit;
