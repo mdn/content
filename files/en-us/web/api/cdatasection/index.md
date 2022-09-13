@@ -24,7 +24,9 @@ In XML, a CDATA section looks like:
 For example:
 
 ```html
-<foo>Here is a CDATA section: <![CDATA[ < > & ]]> with all kinds of unescaped text.</foo>
+<foo>
+  Here is a CDATA section: <![CDATA[ < > & ]]> with all kinds of unescaped text.
+</foo>
 ```
 
 The only sequence which is not allowed within a CDATA section is the closing sequence

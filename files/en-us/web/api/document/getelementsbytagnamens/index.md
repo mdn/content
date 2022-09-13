@@ -116,11 +116,13 @@ extension.
 
     <button onclick="getAllParaElems();">
       show all p elements in document
-    </button><br />
+    </button>
+    <br />
 
     <button onclick="div1ParaElems();">
       show all p elements in div1 element
-    </button><br />
+    </button>
+    <br />
 
     <button onclick="div2ParaElems();">
       show all p elements in div2 element

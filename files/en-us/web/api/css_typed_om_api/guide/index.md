@@ -31,7 +31,7 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -93,7 +93,7 @@ Instead of getting _all_ the properties, we create an array of properties of int
 
 ```html hidden
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
