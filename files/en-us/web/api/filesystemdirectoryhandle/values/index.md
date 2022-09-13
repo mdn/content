@@ -22,7 +22,7 @@ object.
 ## Syntax
 
 ```js-nolint
-FileSystemDirectoryHandle.values()
+values()
 ```
 
 ### Parameters
