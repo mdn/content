@@ -21,7 +21,7 @@ The **`Math.tanh()`** function returns the hyperbolic tangent of a number. That 
 
 ## Syntax
 
-```js
+```js-nolint
 Math.tanh(x)
 ```
 

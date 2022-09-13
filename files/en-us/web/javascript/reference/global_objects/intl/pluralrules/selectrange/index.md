@@ -21,7 +21,7 @@ The **`Intl.PluralRules.prototype.selectRange()`** method receives two values an
 
 ## Syntax
 
-```js
+```js-nolint
 selectRange(startRange, endRange)
 ```
 

@@ -15,7 +15,7 @@ The **`Error()`** constructor creates an error object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Error()
 new Error(message)
 new Error(message, options)

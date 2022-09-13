@@ -25,7 +25,7 @@ computed during initialization of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

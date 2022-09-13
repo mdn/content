@@ -18,7 +18,7 @@ The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

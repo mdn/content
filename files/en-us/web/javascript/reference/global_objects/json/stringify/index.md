@@ -20,7 +20,7 @@ The **`JSON.stringify()`** method converts a JavaScript value to a JSON string, 
 
 ## Syntax
 
-```js
+```js-nolint
 JSON.stringify(value)
 JSON.stringify(value, replacer)
 JSON.stringify(value, replacer, space)

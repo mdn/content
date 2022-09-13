@@ -19,7 +19,7 @@ The **`toLocaleString()`** method returns a string with a language-sensitive rep
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)

@@ -17,7 +17,7 @@ The **`toString()`** method returns a string representing the source code of the
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

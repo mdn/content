@@ -21,7 +21,7 @@ If the property is inherited, or does not exist, the method returns `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwn(instance, prop)
 ```
 

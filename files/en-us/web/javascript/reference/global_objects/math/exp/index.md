@@ -19,7 +19,7 @@ The **`Math.exp()`** function returns [e](/en-US/docs/Web/JavaScript/Reference/G
 
 ## Syntax
 
-```js
+```js-nolint
 Math.exp(x)
 ```
 

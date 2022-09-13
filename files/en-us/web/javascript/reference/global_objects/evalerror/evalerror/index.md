@@ -14,7 +14,7 @@ The **`EvalError()`** constructor creates a new {{jsxref("EvalError")}} instance
 
 ## Syntax
 
-```js
+```js-nolint
 new EvalError()
 new EvalError(message)
 new EvalError(message, options)

@@ -20,7 +20,7 @@ specified key exists or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

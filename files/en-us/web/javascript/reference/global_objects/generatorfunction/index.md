@@ -21,7 +21,7 @@ const GeneratorFunction = (function* () {}).constructor;
 
 ## Syntax
 
-```js
+```js-nolint
 new GeneratorFunction(functionBody)
 new GeneratorFunction(arg0, functionBody)
 new GeneratorFunction(arg0, arg1, functionBody)

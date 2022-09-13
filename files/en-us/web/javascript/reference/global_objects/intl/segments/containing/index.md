@@ -18,7 +18,7 @@ The **`Intl.Segments.prototype.containing()`** method returns an object describi
 
 ## Syntax
 
-```js
+```js-nolint
 containing(codeUnitIndex)
 ```
 

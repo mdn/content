@@ -19,7 +19,7 @@ date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMonth(monthValue)
 setUTCMonth(monthValue, dayValue)
 ```

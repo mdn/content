@@ -23,7 +23,7 @@ The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new obj
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

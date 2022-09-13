@@ -19,8 +19,8 @@ key-value pairs into an object.
 
 ## Syntax
 
-```js
-Object.fromEntries(iterable);
+```js-nolint
+Object.fromEntries(iterable)
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ options computed during initialization of this {{jsxref("Intl.PluralRules")}} ob
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

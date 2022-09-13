@@ -16,7 +16,7 @@ The **`Map()` constructor** creates {{jsxref("Map")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new Map()
 new Map(iterable)
 ```

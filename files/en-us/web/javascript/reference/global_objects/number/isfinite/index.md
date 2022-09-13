@@ -18,7 +18,7 @@ The **`Number.isFinite()`** method determines whether the passed value is a fini
 
 ## Syntax
 
-```js
+```js-nolint
 Number.isFinite(value)
 ```
 
