@@ -20,7 +20,7 @@ For an introduction to regular expressions, read the [Regular Expressions chapte
 
 ## Syntax
 
-```js
+```js-nolint
 new RegExp(pattern)
 new RegExp(pattern, flags)
 RegExp(pattern)

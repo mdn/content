@@ -18,7 +18,7 @@ The **`handler.deleteProperty()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   deleteProperty(target, property) {
   }

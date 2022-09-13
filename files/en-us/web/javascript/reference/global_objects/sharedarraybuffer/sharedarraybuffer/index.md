@@ -25,7 +25,7 @@ data buffer, similar to the {{jsxref("ArrayBuffer")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new SharedArrayBuffer()
 new SharedArrayBuffer(length)
 ```

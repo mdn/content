@@ -28,7 +28,7 @@ of text (with capture groups).
 
 ## Syntax
 
-```js
+```js-nolint
 test(str)
 ```
 

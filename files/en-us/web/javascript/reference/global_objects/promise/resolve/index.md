@@ -20,7 +20,7 @@ This function flattens nested layers of promise-like objects (e.g. a promise tha
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.resolve(value)
 ```
 

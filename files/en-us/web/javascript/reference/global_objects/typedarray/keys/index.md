@@ -23,7 +23,7 @@ that contains the keys for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

@@ -21,7 +21,7 @@ The **`replace()`** method returns a new string with one, some, or all matches o
 
 ## Syntax
 
-```js
+```js-nolint
 replace(pattern, replacement)
 ```
 

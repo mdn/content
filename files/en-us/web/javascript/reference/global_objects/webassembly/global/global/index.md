@@ -16,7 +16,7 @@ This allows dynamic linking of multiple modules.
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Global(descriptor, value)
 ```
 

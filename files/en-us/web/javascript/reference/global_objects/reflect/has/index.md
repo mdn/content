@@ -20,7 +20,7 @@ as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.has(target, propertyKey)
 ```
 

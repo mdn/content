@@ -22,7 +22,7 @@ per array element. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((element) => { /* ... */ } )
 forEach((element, index) => { /* ... */ } )

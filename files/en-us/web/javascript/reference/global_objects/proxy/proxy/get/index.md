@@ -18,7 +18,7 @@ value.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   get(target, property, receiver) {
   }

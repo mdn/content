@@ -19,7 +19,7 @@ element that causes a string to be italic.
 
 ## Syntax
 
-```js
+```js-nolint
 italics()
 ```
 

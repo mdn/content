@@ -21,7 +21,7 @@ value of the internal `[[Prototype]]` property) of the specified object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getPrototypeOf(target)
 ```
 

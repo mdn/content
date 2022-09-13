@@ -20,7 +20,7 @@ with arguments as specified.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.apply(target, thisArgument, argumentsList)
 ```
 

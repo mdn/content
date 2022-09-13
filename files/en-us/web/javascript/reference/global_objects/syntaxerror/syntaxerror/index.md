@@ -16,7 +16,7 @@ that represents an error when trying to interpret syntactically invalid code.
 
 ## Syntax
 
-```js
+```js-nolint
 new SyntaxError()
 new SyntaxError(message)
 new SyntaxError(message, options)

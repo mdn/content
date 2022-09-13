@@ -16,7 +16,7 @@ URI handling function was used in a wrong way.
 
 ## Syntax
 
-```js
+```js-nolint
 new URIError()
 new URIError(message)
 new URIError(message, options)

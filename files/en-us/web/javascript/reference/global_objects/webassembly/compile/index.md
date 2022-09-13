@@ -21,7 +21,7 @@ it is necessary to a compile a module before it can be instantiated (otherwise, 
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.compile(bufferSource)
 ```
 

@@ -20,7 +20,7 @@ The **`replaceAll()`** method returns a new string with all matches of a `patter
 
 ## Syntax
 
-```js
+```js-nolint
 replaceAll(pattern, replacement)
 ```
 

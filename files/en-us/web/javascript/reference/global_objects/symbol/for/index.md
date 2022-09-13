@@ -19,8 +19,8 @@ a new symbol gets created in the global symbol registry with this key.
 
 ## Syntax
 
-```js
-Symbol.for(key);
+```js-nolint
+Symbol.for(key)
 ```
 
 ### Parameters

@@ -24,7 +24,7 @@ _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 map((currentValue) => { /* ... */ } )
 map((currentValue, index) => { /* ... */ } )

@@ -23,7 +23,7 @@ as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.deleteProperty(target, propertyKey)
 ```
 

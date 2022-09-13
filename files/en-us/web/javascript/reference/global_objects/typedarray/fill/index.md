@@ -23,7 +23,7 @@ algorithm as {{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)
