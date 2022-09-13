@@ -22,7 +22,7 @@ An `SVGPoint` represents a 2D or 3D point in the SVG coordinate system.
 ## Syntax
 
 ```js-nolint
-retObject = SVGSVGElement.createSVGPoint()
+createSVGPoint()
 ```
 
 ### Value
