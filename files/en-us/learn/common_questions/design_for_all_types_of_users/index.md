@@ -147,14 +147,17 @@ Enter `rem`. This unit is relative to the root element's size and not to any oth
 
 ```css
 body {
+  /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
   font-size: 1em;
-} /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+}
 h1 {
+  /* twice the size of the body, thus 32 pixels */
   font-size: 2rem;
-} /* twice the size of the body, thus 32 pixels */
+}
 span.subheading {
+  /* original size */
   font-size: 1rem;
-} /* original size */
+}
 ```
 
 Easier, isn't it? This works as of [Internet Explorer 9 and in every other current browser](https://caniuse.com/#search=rem), so please feel free to use this unit.
