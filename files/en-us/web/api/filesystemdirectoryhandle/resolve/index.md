@@ -21,7 +21,7 @@ the child entry as the last array item.
 ## Syntax
 
 ```js-nolint
-const pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant)
+resolve(possibleDescendant)
 ```
 
 ### Parameters
