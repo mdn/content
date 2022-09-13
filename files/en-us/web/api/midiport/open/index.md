@@ -21,7 +21,7 @@ If the port is already open when this method is called, then the promise will re
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 

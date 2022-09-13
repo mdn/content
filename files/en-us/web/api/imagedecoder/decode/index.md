@@ -18,7 +18,7 @@ The **`decode()`** method of the {{domxref("ImageDecoder")}} interface enqueues 
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 decode(options)
 ```

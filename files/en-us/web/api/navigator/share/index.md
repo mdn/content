@@ -22,7 +22,7 @@ On Windows this happens when the share popup is launched, while on Android the p
 
 ## Syntax
 
-```js
+```js-nolint
 navigator.share(data)
 ```
 

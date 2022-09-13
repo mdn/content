@@ -18,7 +18,7 @@ The **`MessageEvent()`** constructor creates a new {{domxref("MessageEvent")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new MessageEvent(type)
 new MessageEvent(type, options)
 ```

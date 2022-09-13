@@ -20,8 +20,8 @@ You can access the supported constraints dictionary by calling
 
 ## Syntax
 
-```js
-widthConstraintSupported = supportedConstraintsDictionary.width;
+```js-nolint
+widthConstraintSupported = supportedConstraintsDictionary.width
 ```
 
 ### Value

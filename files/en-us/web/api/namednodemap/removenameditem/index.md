@@ -15,8 +15,8 @@ removes the {{domxref("Attr")}} corresponding to the given name from the map.
 
 ## Syntax
 
-```js
-removeNamedItem(attrName);
+```js-nolint
+removeNamedItem(attrName)
 ```
 
 ### Parameters

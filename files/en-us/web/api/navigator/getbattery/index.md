@@ -25,7 +25,7 @@ documentation for additional details, a guide to using the API, and sample code.
 
 ## Syntax
 
-```js
+```js-nolint
 getBattery()
 ```
 

@@ -24,7 +24,7 @@ If it is called on a transaction that is not active, it throws an `InvalidStateE
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 

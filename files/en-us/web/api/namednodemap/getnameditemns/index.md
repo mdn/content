@@ -14,8 +14,8 @@ The **`getNamedItemNS()`** method of the {{domxref("NamedNodeMap")}} interface r
 
 ## Syntax
 
-```js
-getNamedItemNS(namespace, localName);
+```js-nolint
+getNamedItemNS(namespace, localName)
 ```
 
 ### Parameters

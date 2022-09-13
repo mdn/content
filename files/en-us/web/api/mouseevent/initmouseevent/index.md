@@ -29,7 +29,7 @@ before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,

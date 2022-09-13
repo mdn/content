@@ -17,9 +17,9 @@ The `write()` method of the {{DOMxRef("NDEFReader")}} interface attempts to writ
 
 ## Syntax
 
-```js
-NDEFReader.write(message);
-  NDEFReader.write(message, options);
+```js-nolint
+NDEFReader.write(message)
+  NDEFReader.write(message, options)
 ```
 
 ### Parameters

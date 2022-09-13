@@ -29,7 +29,7 @@ Note that the status of the microphone is not tracked in the {{domxref("MediaSes
 
 ## Syntax
 
-```js
+```js-nolint
 setMicrophoneActive(active)
 ```
 

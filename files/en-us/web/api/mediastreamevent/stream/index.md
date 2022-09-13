@@ -20,8 +20,8 @@ the {{domxref("MediaStream")}} associated with the event.
 
 ## Syntax
 
-```js
- const stream = event.stream;
+```js-nolint
+event.stream
 ```
 
 ## Example

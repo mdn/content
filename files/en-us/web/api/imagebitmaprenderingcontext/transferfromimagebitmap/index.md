@@ -24,7 +24,7 @@ a spec change. The old name is being kept as an alias to avoid code breakage.
 
 ## Syntax
 
-```js
+```js-nolint
 transferFromImageBitmap(bitmap)
 ```
 

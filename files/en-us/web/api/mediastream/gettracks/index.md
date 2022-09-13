@@ -23,7 +23,7 @@ regardless of {{domxref("MediaStreamTrack.kind")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getTracks()
 ```
 

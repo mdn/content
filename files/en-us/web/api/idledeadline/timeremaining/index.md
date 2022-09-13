@@ -28,7 +28,7 @@ should return control to the user agent's event loop.
 
 ## Syntax
 
-```js
+```js-nolint
 timeRemaining()
 ```
 

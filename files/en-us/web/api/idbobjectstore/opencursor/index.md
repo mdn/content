@@ -28,7 +28,7 @@ To determine if the add operation has completed successfully, listen for the res
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(query)
 openCursor(query, direction)

@@ -19,7 +19,7 @@ The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clear
 
 ## Syntax
 
-```js
+```js-nolint
 clearAppBadge()
 ```
 

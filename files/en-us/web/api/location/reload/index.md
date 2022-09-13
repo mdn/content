@@ -23,7 +23,7 @@ information.
 
 ## Syntax
 
-```js
+```js-nolint
 reload()
 ```
 

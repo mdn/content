@@ -31,7 +31,7 @@ in [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_A
 
 ## Syntax
 
-```js
+```js-nolint
 applyConstraints()
 applyConstraints(constraints)
 ```

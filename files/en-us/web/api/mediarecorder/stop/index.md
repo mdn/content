@@ -32,8 +32,8 @@ following steps:
 
 ## Syntax
 
-```js
-stop();
+```js-nolint
+stop()
 ```
 
 ### Parameters
