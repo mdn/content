@@ -98,7 +98,7 @@ In browsers not supporting {{cssxref("-webkit-box-reflect")}}, you can achieve t
      src="pictureToReflect.jpg">
 ```
 
-#### CSS for webkit
+#### CSS for WebKit
 
 ```css
 #pictureWReflection {
