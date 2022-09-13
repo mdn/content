@@ -23,7 +23,7 @@ method.
 ## Syntax
 
 ```js-nolint
-void ext.multiDrawElementsWEBGL(mode,
+multiDrawElementsWEBGL(mode,
     countsList, countsOffset,
     type,
     firstsList, firstsOffset,
