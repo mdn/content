@@ -2,7 +2,7 @@
 title: grid
 slug: Web/CSS/@media/grid
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

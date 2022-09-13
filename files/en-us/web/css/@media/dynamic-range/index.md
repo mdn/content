@@ -2,7 +2,7 @@
 title: dynamic-range
 slug: Web/CSS/@media/dynamic-range
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

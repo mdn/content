@@ -2,7 +2,7 @@
 title: monochrome
 slug: Web/CSS/@media/monochrome
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

@@ -2,7 +2,7 @@
 title: negative
 slug: Web/CSS/@counter-style/negative
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

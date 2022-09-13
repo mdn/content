@@ -1,8 +1,8 @@
 ---
-title: '-moz-device-pixel-ratio'
+title: "-moz-device-pixel-ratio"
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Deprecated
   - Non-standard
@@ -37,12 +37,9 @@ Example:
 ```css
 /* First, set for Webkit-based browsers */
 @media (-webkit-min-device-pixel-ratio: 2),
-   /* Older Firefox browsers (prior to firefox 16) */
-   (min--moz-device-pixel-ratio: 2),
-   /* The standard way */
-   (min-resolution: 2dppx),
-   /* dppx fallback */
-   (min-resolution: 192dpi);
+  /* Older Firefox browsers (prior to firefox 16) */ (min--moz-device-pixel-ratio: 2),
+  /* The standard way */ (min-resolution: 2dppx),
+  /* dppx fallback */ (min-resolution: 192dpi);
 ```
 
 > **Note:** See this [CSSWG article](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) for compatibility good practices regarding `resolution` and `dppx`.

@@ -2,7 +2,7 @@
 title: font-display
 slug: Web/CSS/@font-face/font-display
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

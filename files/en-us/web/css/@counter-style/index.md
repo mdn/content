@@ -1,5 +1,5 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
 tags:
   - At-rule

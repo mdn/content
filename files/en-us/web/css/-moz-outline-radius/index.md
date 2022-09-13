@@ -1,5 +1,5 @@
 ---
-title: '-moz-outline-radius'
+title: "-moz-outline-radius"
 slug: Web/CSS/-moz-outline-radius
 tags:
   - CSS

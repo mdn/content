@@ -2,7 +2,7 @@
 title: prefix
 slug: Web/CSS/@counter-style/prefix
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles

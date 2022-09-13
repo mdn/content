@@ -2,7 +2,7 @@
 title: orientation
 slug: Web/CSS/@media/orientation
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - NeedsBrowserCompatibility
