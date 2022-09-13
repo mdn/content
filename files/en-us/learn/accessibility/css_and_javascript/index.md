@@ -79,7 +79,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -106,7 +107,8 @@ Inline markup that confers specific emphasis to the text that it wraps:
 You might want to add some simple coloring to your emphasized text:
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -146,7 +148,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }

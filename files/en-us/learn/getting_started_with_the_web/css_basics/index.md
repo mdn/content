@@ -77,7 +77,9 @@ p {
 You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
 
 ```css
-p, li, h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -180,7 +182,8 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
      text-align: center;
    }
 
-   p, li {
+   p,
+   li {
      font-size: 16px;
      line-height: 2;
      letter-spacing: 1px;
@@ -221,7 +224,7 @@ To continue, let's add more CSS. Keep adding these new rules at the bottom of `s
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -233,7 +236,7 @@ This rule sets a background color for the entire page. Change the color code to 
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -253,7 +256,7 @@ There are several declarations for the {{htmlelement("body")}} element. Let's go
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```

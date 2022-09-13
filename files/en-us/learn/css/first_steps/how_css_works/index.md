@@ -96,7 +96,9 @@ This is how a browser interprets the previous HTML snippet — it renders the ab
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Applying CSS to the DOM

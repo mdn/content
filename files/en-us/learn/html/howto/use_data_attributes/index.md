@@ -58,10 +58,10 @@ article::before {
 You can also use the [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in CSS to change styles according to the data:
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```
