@@ -85,7 +85,8 @@ This example provides a simple graphic, along with a select menu to allow you to
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    no-repeat center;
 }
 
 li {
@@ -96,7 +97,7 @@ li {
 }
 
 input {
-  width: 60%
+  width: 60%;
 }
 
 output {

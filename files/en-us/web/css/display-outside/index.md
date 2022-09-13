@@ -45,8 +45,8 @@ In the following example, span elements (normally displayed as inline elements) 
 
 ```css
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 

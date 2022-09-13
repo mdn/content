@@ -76,11 +76,11 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 ```css
 #css-result {
-    background: -moz-element(#css-source) no-repeat;
-    width: 256px;
-    height: 32px;
-    background-size: 80%;
-    border: dashed;
+  background: -moz-element(#css-source) no-repeat;
+  width: 256px;
+  height: 32px;
+  background-size: 80%;
+  border: dashed;
 }
 ```
 
