@@ -147,13 +147,13 @@ Next, let's look at our button icons:
 
 ```css
 @font-face {
-   font-family: 'HeydingsControlsRegular';
-   src: url('fonts/heydings_controls-webfont.eot');
-   src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/heydings_controls-webfont.woff') format('woff'),
-        url('fonts/heydings_controls-webfont.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+  font-family: "HeydingsControlsRegular";
+  src: url("fonts/heydings_controls-webfont.eot");
+  src: url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.woff") format("woff"),
+    url("fonts/heydings_controls-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 button:before {
@@ -191,7 +191,7 @@ Last but not least, let's look at the CSS for the timer:
 
 .timer div {
   position: absolute;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   left: 0;
   top: 0;
   width: 0;

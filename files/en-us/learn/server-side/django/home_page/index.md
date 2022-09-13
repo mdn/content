@@ -259,9 +259,9 @@ The base template also references a local CSS file (**styles.css**) that provide
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

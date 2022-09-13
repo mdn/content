@@ -79,16 +79,24 @@ Initially CSS didn't provide a "default" keyword and the only way to restore the
 
 ```css
 /* Heading default color is black */
-h1 { color: red; }
-h1 { color: black; }
+h1 {
+  color: red;
+}
+h1 {
+  color: black;
+}
 ```
 
 This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ```css
 /* Heading default color is black */
-h1 { color: red; }
-h1 { color: initial; }
+h1 {
+  color: red;
+}
+h1 {
+  color: initial;
+}
 ```
 
 ## How do I derive one style from another?
@@ -121,8 +129,13 @@ Style rules that are syntactically correct may not apply in certain situations. 
 The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.
 
 ```css
-.news { color: black; }
-.corpName { font-weight: bold; color: red; }
+.news {
+  color: black;
+}
+.corpName {
+  font-weight: bold;
+  color: red;
+}
 ```
 
 ```html
@@ -139,12 +152,18 @@ In case of complex HTML hierarchies, if a rule seems to be ignored, check if the
 In CSS stylesheets, order **is** important. If you define a rule and then you re-define the same rule, the last definition is used.
 
 ```css
-#stockTicker { font-weight: bold; }
-.stockSymbol { color: red; }
+#stockTicker {
+  font-weight: bold;
+}
+.stockSymbol {
+  color: red;
+}
 /*  other rules             */
 /*  other rules             */
 /*  other rules             */
-.stockSymbol { font-weight: normal; }
+.stockSymbol {
+  font-weight: normal;
+}
 ```
 
 ```html
@@ -161,8 +180,15 @@ To avoid this kind of error, try to define rules only once for a certain selecto
 Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to their default values. This means that a previous rule for a single attribute could be implicitly overridden.
 
 ```css
-#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-.stockSymbol { font: 14px Arial; color: red; }
+#stockTicker {
+  font-size: 12px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+.stockSymbol {
+  font: 14px Arial;
+  color: red;
+}
 ```
 
 ```html
@@ -175,8 +201,8 @@ In the previous example the problem occurred on rules belonging to different ele
 
 ```css
 #stockTicker {
-    font-weight: bold;
-    font: 12px Verdana;  /* font-weight is now set to normal */
+  font-weight: bold;
+  font: 12px Verdana; /* font-weight is now set to normal */
 }
 ```
 
@@ -185,10 +211,18 @@ In the previous example the problem occurred on rules belonging to different ele
 The `*` wildcard selector refers to any element, and it has to be used with particular care.
 
 ```css
-body * { font-weight: normal; }
-#stockTicker { font: 12px Verdana; }
-.corpName { font-weight: bold; }
-.stockUp { color: red; }
+body * {
+  font-weight: normal;
+}
+#stockTicker {
+  font: 12px Verdana;
+}
+.corpName {
+  font-weight: bold;
+}
+.stockUp {
+  color: red;
+}
 ```
 
 ```html
@@ -206,9 +240,15 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
 
 ```css
-div { color: black; }
-#orange { color: orange; }
-.green { color: green; }
+div {
+  color: black;
+}
+#orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
 ```
 
 ```html
