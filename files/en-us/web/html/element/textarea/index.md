@@ -123,7 +123,7 @@ textarea:invalid {
 }
 
 textarea:valid {
-   border: 2px solid lime;
+  border: 2px solid lime;
 }
 ```
 

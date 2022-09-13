@@ -21,7 +21,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -68,7 +72,11 @@ For {{SVGElement('polyline')}}, `points` defines a list of points, each represen
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -105,7 +113,11 @@ For {{SVGElement('polygon')}}, `points` defines a list of points, each represent
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

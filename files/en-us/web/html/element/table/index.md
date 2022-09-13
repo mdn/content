@@ -255,15 +255,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```
 
 ```css hidden
-table
-{
-border-collapse: collapse;
-border-spacing: 0px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
-table, th, td
-{
-padding: 5px;
-border: 1px solid black;
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
 ```
 
@@ -565,44 +565,44 @@ To keep the table headers on the page while scrolling down we've set {{cssxref("
 table,
 th,
 td {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 table {
-    width: 100%;
-    max-width: 400px;
-    height: 240px;
-    margin: 0 auto;
-    display: block;
-    overflow-x: auto;
-    border-spacing: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 0;
 }
 
 tbody {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 th,
 td {
-    padding: 5px 10px;
-    border-top-width: 0;
-    border-left-width: 0;
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
 }
 
 th {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    vertical-align: bottom;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  vertical-align: bottom;
 }
 
 th:last-child,
 td:last-child {
-    border-right-width: 0;
+  border-right-width: 0;
 }
 
 tr:last-child td {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 }
 ```
 
