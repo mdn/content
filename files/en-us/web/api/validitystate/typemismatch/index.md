@@ -32,15 +32,15 @@ Given the following:
 
 ```html
 <p>
- <label>
+  <label>
     Enter an email address:
-    <input type="email" value="example.com"/>
- </label>
+    <input type="email" value="example.com" />
+  </label>
 </p>
 <p>
- <label>
-     Enter a URL:
-     <input type="url" value="example.com"/>
+  <label>
+    Enter a URL:
+    <input type="url" value="example.com" />
   </label>
 </p>
 ```

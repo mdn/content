@@ -1,5 +1,5 @@
 ---
-title: 'Window: load event'
+title: "Window: load event"
 slug: Web/API/Window/load_event
 page-type: web-api-event
 tags:
@@ -64,7 +64,12 @@ window.onload = (event) => {
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 

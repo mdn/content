@@ -190,10 +190,10 @@ function end_handler(ev) {
 The application uses {{HTMLElement("div")}} elements for the touch areas and provides buttons to enable logging and clear the log.
 
 ```html
-<div id="target1"> Tap, Hold or Swipe me 1</div>
-<div id="target2"> Tap, Hold or Swipe me 2</div>
-<div id="target3"> Tap, Hold or Swipe me 3</div>
-<div id="target4"> Tap, Hold or Swipe me 4</div>
+<div id="target1">Tap, Hold or Swipe me 1</div>
+<div id="target2">Tap, Hold or Swipe me 2</div>
+<div id="target3">Tap, Hold or Swipe me 3</div>
+<div id="target4">Tap, Hold or Swipe me 4</div>
 
 <!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
