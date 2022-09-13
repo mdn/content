@@ -52,12 +52,13 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 

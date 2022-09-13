@@ -43,7 +43,8 @@ queryCommandState(command)
 ```
 
 ```css hidden
-hr, button {
+hr,
+button {
   margin: 1rem 0;
 }
 ```
