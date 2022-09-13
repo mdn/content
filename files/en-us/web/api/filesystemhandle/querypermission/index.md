@@ -21,7 +21,7 @@ current handle.
 ## Syntax
 
 ```js-nolint
-queryPermission(FileSystemHandlePermissionDescriptor)
+queryPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters
