@@ -21,7 +21,7 @@ The **`getCoalescedEvents()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getCoalescedEvents()
 ```
 

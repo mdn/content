@@ -17,8 +17,8 @@ specific feature and this feature is supported by the specific node.
 
 ## Syntax
 
-```js
-isSupported(feature, version);
+```js-nolint
+isSupported(feature, version)
 ```
 
 ### Parameters

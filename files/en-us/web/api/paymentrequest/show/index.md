@@ -54,7 +54,7 @@ to wait asynchronously while results are validated and so forth.
 
 ## Syntax
 
-```js
+```js-nolint
 show()
 show(detailsPromise)
 ```

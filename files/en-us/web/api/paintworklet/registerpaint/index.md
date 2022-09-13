@@ -25,7 +25,7 @@ image where a CSS property expects a file.
 
 ## Syntax
 
-```js
+```js-nolint
 registerPaint(name, classRef)
 ```
 

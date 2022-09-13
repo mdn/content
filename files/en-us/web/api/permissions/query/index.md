@@ -16,7 +16,7 @@ The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface
 
 ## Syntax
 
-```js
+```js-nolint
 query(permissionDescriptor)
 ```
 

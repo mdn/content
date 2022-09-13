@@ -20,7 +20,7 @@ unregister and delete the specified endpoint.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(pushEndpoint)
 ```
 

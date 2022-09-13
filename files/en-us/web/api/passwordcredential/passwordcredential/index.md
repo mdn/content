@@ -22,7 +22,7 @@ from the `init` object for global {{domxref('fetch()')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new PasswordCredential(passwordCredentialData)
 new PasswordCredential(htmlFormElement)
 ```

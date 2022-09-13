@@ -22,7 +22,7 @@ copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/
 
 ## Syntax
 
-```js
+```js-nolint
 new Path2D()
 new Path2D(path)
 new Path2D(d)

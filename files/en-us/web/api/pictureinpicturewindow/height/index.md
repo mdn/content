@@ -21,8 +21,8 @@ in pixels.
 
 ## Syntax
 
-```js
-let height = pictureInPictureWindow.height;
+```js-nolint
+pictureInPictureWindow.height
 ```
 
 ### Value

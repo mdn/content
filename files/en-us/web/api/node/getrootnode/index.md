@@ -16,9 +16,9 @@ which optionally includes the shadow root if it is available.
 
 ## Syntax
 
-```js
-getRootNode();
-getRootNode(options);
+```js-nolint
+getRootNode()
+getRootNode(options)
 ```
 
 ### Parameters

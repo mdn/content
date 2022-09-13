@@ -21,7 +21,7 @@ Calling this method signals a loss of interest in the stream by a consumer.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```

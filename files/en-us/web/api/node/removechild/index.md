@@ -24,8 +24,8 @@ Unlike {{domxref("Node.cloneNode()")}} the return value preserves the {{domxref(
 
 ## Syntax
 
-```js
-removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
 ### Parameters

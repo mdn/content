@@ -23,7 +23,7 @@ collapsed range with the start and end points both set to the specified end posi
 
 ## Syntax
 
-```js
+```js-nolint
 setEnd(endNode, endOffset)
 ```
 

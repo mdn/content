@@ -23,7 +23,7 @@ object yourself.
 
 ## Syntax
 
-```js
+```js-nolint
 respondWith(promise)
 ```
 

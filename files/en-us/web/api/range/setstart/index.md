@@ -26,7 +26,7 @@ collapsed range with the start and end points both set to the specified start po
 
 ## Syntax
 
-```js
+```js-nolint
 setStart(startNode, startOffset)
 ```
 

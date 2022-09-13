@@ -23,7 +23,7 @@ The `setPosition()` method's default value of the position is `(0,` `0,` `0)`.
 
 ## Syntax
 
-```js
+```js-nolint
 setPosition(x, y, z)
 ```
 

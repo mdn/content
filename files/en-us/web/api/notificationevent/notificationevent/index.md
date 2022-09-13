@@ -18,7 +18,7 @@ The **`NotificationEvent()`** constructor creates a new {{domxref("NotificationE
 
 ## Syntax
 
-```js
+```js-nolint
 new NotificationEvent(type, options)
 ```
 

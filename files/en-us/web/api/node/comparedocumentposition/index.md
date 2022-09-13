@@ -15,8 +15,8 @@ reports the position of its argument node relative to the node on which it is ca
 
 ## Syntax
 
-```js
-compareDocumentPosition(otherNode);
+```js-nolint
+compareDocumentPosition(otherNode)
 ```
 
 ### Parameters

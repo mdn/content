@@ -23,7 +23,7 @@ used. The browser creates these objects itself and provides them to
 
 ## Syntax
 
-```js
+```js-nolint
 new PeriodicSyncEvent(type, options)
 ```
 
