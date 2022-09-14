@@ -88,8 +88,8 @@ One of the most basic concepts with regards to client-side form validation is wh
       <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email"
-        >Email address (include if you want a response):
+      <label for="email">
+        Email address (include if you want a response):
       </label>
       <input id="email" name="email" type="email" />
     </div>
@@ -375,14 +375,14 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
-      <label for="address2" class="billing-label disabled-label"
-        >Address:
+      <label for="address2" class="billing-label disabled-label">
+        Address:
       </label>
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label"
-        >Zip/postal code:
+      <label for="pcode2" class="billing-label disabled-label">
+        Zip/postal code:
       </label>
       <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>

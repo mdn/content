@@ -130,8 +130,8 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 My short story I am a statistician and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea
->
+My legs are made of cardboard and I am married to a fish.
+</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -323,8 +323,8 @@ Try editing the live sample below to create your very own HTML unordered list.
 milk
 eggs
 bread
-hummus</textarea
->
+hummus
+</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -478,8 +478,8 @@ Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea
->
+The school is on your right, 300 meters up the road
+</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />

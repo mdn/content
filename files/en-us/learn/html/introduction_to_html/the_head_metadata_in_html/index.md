@@ -183,7 +183,7 @@ For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Face
   property="og:description"
   content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML Apps. It also documents Mozilla products, like Firefox OS." />
+and HTML Apps." />
 <meta property="og:title" content="Mozilla Developer Network" />
 ```
 

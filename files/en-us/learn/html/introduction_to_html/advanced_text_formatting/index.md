@@ -748,9 +748,9 @@ The basic example above just provides a simple machine readable date, but there 
 <!-- Date and time -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- Date and time with timezone offset -->
-<time datetime="2016-01-20T19:30+01:00"
-  >7.30pm, 20 January 2016 is 8.30pm in France</time
->
+<time datetime="2016-01-20T19:30+01:00">
+  7.30pm, 20 January 2016 is 8.30pm in France
+</time>
 <!-- Calling out a specific week number -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```

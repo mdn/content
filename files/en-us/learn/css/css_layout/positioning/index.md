@@ -111,7 +111,7 @@ If you now save and refresh, you'll get a result something like this:
 </p>
 
 <p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
+  Inline elements <span>like this one</span> and <span>this one</span> sit on
   the same line as one another, and adjacent text nodes, if there is space on
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
