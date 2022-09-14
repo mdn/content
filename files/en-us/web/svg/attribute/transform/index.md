@@ -188,7 +188,7 @@ svg {
     width="40"
     height="40"
     fill="yellow"
-    transform="translate(50,50)" />
+    transform="translate(50 50)" />
 </svg>
 ```
 
