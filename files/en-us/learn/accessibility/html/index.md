@@ -127,7 +127,8 @@ We've prepared a version with longer text for you to try out with a screen reade
 People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:
 
 ```html-nolint example-bad
-<span style="font-size: 3em">My heading</span> <br /><br />
+<span style="font-size: 3em">My heading</span>
+<br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.
@@ -248,7 +249,6 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
 <!-- Here is our page's main content -->
 <main>
-
   <!-- It contains an article -->
   <article>
     <h2>Article heading</h2>
@@ -261,7 +261,6 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
     <!-- aside content in here -->
   </aside>
-
 </main>
 
 <!-- And here is our main footer that is used across all the pages of our website -->
@@ -371,8 +370,7 @@ While the above addition allows us to tab to the buttons, it does not allow us t
 
 ```js
 document.onkeydown = (e) => {
-  // The Enter/Return key
-  if (e.key === "Enter") {
+  if (e.key === "Enter") { // The Enter/Return key
     document.activeElement.click();
   }
 };
@@ -401,18 +399,15 @@ Make sure your labels make sense out of context, read on their own, as well as i
 
 but this is bad link text:
 
-```html example-bad
-<p>
-  Whales are really awesome creatures. To find out more about whales,
-  <a href="whales.html">click here</a>.
-</p>
+```html-nolint example-bad
+<p>Whales are really awesome creatures. To find out more about whales, <a href="whales.html">click here</a>.</p>
 ```
 
 > **Note:** You can find a lot more about link implementation and best practices in our [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article. You can also see some good and bad examples at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) and [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:
 
-```html example-bad
+```html-nolint example-bad
 Fill in your name: <input type="text" id="name" name="name" />
 ```
 
