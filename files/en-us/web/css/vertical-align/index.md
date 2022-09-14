@@ -114,10 +114,25 @@ Negative values are allowed.
 #### HTML
 
 ```html
-<div>An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
-<div>An <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
-<div>An <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
-<div>An <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+<div>
+  An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with
+  a default alignment.
+</div>
+<div>
+  An
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-top alignment.
+</div>
+<div>
+  An
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-bottom alignment.
+</div>
+<div>
+  An
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a middle alignment.
+</div>
 ```
 
 #### CSS
@@ -197,10 +212,14 @@ p {
     <td style="vertical-align: middle">middle</td>
     <td style="vertical-align: bottom">bottom</td>
     <td>
-      <p>There is a theory which states that if ever anyone discovers exactly
-      what the Universe is for and why it is here, it will instantly disappear and
-      be replaced by something even more bizarre and inexplicable.</p>
-      <p>There is another theory which states that this has already happened.</p>
+      <p>
+        There is a theory which states that if ever anyone discovers exactly
+        what the Universe is for and why it is here, it will instantly disappear
+        and be replaced by something even more bizarre and inexplicable.
+      </p>
+      <p>
+        There is another theory which states that this has already happened.
+      </p>
     </td>
   </tr>
 </table>

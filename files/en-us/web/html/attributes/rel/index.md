@@ -65,23 +65,41 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
       ```html
       <!-- a persistent style sheet -->
-      <link rel="stylesheet" href="default.css">
+      <link rel="stylesheet" href="default.css" />
       <!-- alternate style sheets -->
-      <link rel="alternate stylesheet" href="highcontrast.css" title="High contrast">
+      <link
+        rel="alternate stylesheet"
+        href="highcontrast.css"
+        title="High contrast" />
       ```
 
     - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) attribute that differs from the document language, it indicates a translation.
     - With the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute, it indicates that the referenced document is the same content in a different format. For example, with `type="application/rss+xml"` it creates a hyperlink referencing a syndication feed.
 
       ```html
-      <link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog">
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        href="posts.xml"
+        title="Blog" />
       ```
 
     - Both the [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) and [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attributes specify links to versions of the document in an alternative format and language, intended for other media:
 
       ```html
-      <link rel="alternate" href="/fr/html/print" hreflang="fr" type="text/html" media="print" title="French HTML (for printing)">
-      <link rel="alternate" href="/fr/pdf" hreflang="fr" type="application/pdf" title="French PDF">
+      <link
+        rel="alternate"
+        href="/fr/html/print"
+        hreflang="fr"
+        type="text/html"
+        media="print"
+        title="French HTML (for printing)" />
+      <link
+        rel="alternate"
+        href="/fr/pdf"
+        hreflang="fr"
+        type="application/pdf"
+        title="French PDF" />
       ```
 
     > **Note:** The obsolete `rev="made"` is treated as `rel="alternate"`
@@ -105,7 +123,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     The most common use for the `icon` value is the favicon:
 
     ```html
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     ```
 
     If there are multiple `<link rel="icon">`s, the browser uses their [`media`](media) attribute, [`type`](/en-US/docs/Web/HTML/Element/link#attr-type), and [`sizes`](sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
@@ -122,7 +140,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the `license` value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.
 
     ```html
-    <link rel="license" href="#license">
+    <link rel="license" href="#license" />
     ```
 
     > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.

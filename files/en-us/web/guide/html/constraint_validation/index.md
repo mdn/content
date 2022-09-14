@@ -296,16 +296,16 @@ As an example, we will add a script checking the constraint validation for this 
 
 ```html
 <form>
-    <label for="ZIP">ZIP : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">Country : </label>
-    <select id="Country">
-      <option value="ch">Switzerland</option>
-      <option value="fr">France</option>
-      <option value="de">Germany</option>
-      <option value="nl">The Netherlands</option>
-    </select>
-    <input type="submit" value="Validate">
+  <label for="ZIP">ZIP : </label>
+  <input type="text" id="ZIP" />
+  <label for="Country">Country : </label>
+  <select id="Country">
+    <option value="ch">Switzerland</option>
+    <option value="fr">France</option>
+    <option value="de">Germany</option>
+    <option value="nl">The Netherlands</option>
+  </select>
+  <input type="submit" value="Validate" />
 </form>
 ```
 
@@ -365,7 +365,7 @@ Here is the HTML part:
 
 ```html
 <label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS">
+<input type="file" id="FS" />
 ```
 
 This displays:

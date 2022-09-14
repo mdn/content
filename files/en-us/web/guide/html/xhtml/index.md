@@ -22,7 +22,7 @@ The following example shows an HTML document and corresponding "XHTML" document,
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML</title>
   </head>
   <body>
