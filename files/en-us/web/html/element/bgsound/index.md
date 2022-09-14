@@ -33,7 +33,7 @@ The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets 
 ## Example
 
 ```html
-<bgsound src="sound1.mid">
+<bgsound src="sound1.mid"></bgsound>
   <bgsound src="sound2.au" loop="infinite"></bgsound>
 ```
 
