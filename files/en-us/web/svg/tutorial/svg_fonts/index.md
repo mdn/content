@@ -42,9 +42,8 @@ There are some ingredients required for embedding a font in SVG. Let's show an e
     </font-face-src>
   </font-face>
   <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"
-    ><!-- Outline of exclamation point glyph --></glyph
-  >
+  <!-- Outline of exclamation point glyph -->
+  <glyph unicode="!" horiz-adv-x="300"></glyph>
   <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
   <!-- more glyphs -->
 </font>
