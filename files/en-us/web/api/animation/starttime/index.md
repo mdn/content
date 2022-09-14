@@ -29,10 +29,12 @@ A floating-point number representing the current time in milliseconds, or `null`
 In the [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
 
 ```js
-const catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+const catRunning = document
+  .getElementById("withWAAPI")
+  .animate(keyframes, timing);
 
 /* A function that makes new cats. */
-function addCat(){
+function addCat() {
   const newCat = document.createElement("div");
   newCat.classList.add("cat");
   return newCat;

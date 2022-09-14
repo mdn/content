@@ -115,7 +115,7 @@ The HTML is fairly simple here. The switch is implemented as a {{HTMLElement("bu
 This JavaScript code defines and applies a function to handle click events on switch widgets. The function changes the `aria-checked` attribute from `true` to `false`, or vice versa.
 
 ```js
-document.querySelectorAll(".switch").forEach(function(theSwitch) {
+document.querySelectorAll(".switch").forEach(function (theSwitch) {
   theSwitch.addEventListener("click", handleClickEvent, false);
 });
 
@@ -123,9 +123,9 @@ function handleClickEvent(evt) {
   let el = evt.target;
 
   if (el.getAttribute("aria-checked") === "true") {
-      el.setAttribute("aria-checked", "false");
+    el.setAttribute("aria-checked", "false");
   } else {
-      el.setAttribute("aria-checked", "true");
+    el.setAttribute("aria-checked", "true");
   }
 }
 ```
