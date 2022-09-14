@@ -49,8 +49,8 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 ```html
 <h3>Play with this text area:</h3>
 <textarea id="editor" rows="3">
-Try copying and pasting text into this field!</textarea
->
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>

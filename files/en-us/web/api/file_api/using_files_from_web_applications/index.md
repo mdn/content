@@ -84,7 +84,9 @@ The following example shows a possible use of the `size` property:
     <form name="uploadForm">
       <div>
         <input id="uploadInput" type="file" multiple />
-        selected files: <output id="fileNum">0</output>; total size:
+        <label for="fileNum">Selected files:</label>
+        <output id="fileNum">0</output>;
+        <label for="fileSize">Total size:</label>
         <output id="fileSize">0</output>
       </div>
       <div><input type="submit" value="Send file" /></div>

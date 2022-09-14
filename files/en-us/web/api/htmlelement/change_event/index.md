@@ -47,8 +47,8 @@ A generic {{domxref("Event")}}.
 #### HTML
 
 ```html
-<label
-  >Choose an ice cream flavor:
+<label>
+  Choose an ice cream flavor:
   <select class="ice-cream" name="ice-cream">
     <option value="">Select One …</option>
     <option value="chocolate">Chocolate</option>
