@@ -70,17 +70,21 @@ The `caption-side` property is specified as one of the keyword values listed bel
 
 ```html
 <table class="top">
-  <caption>Caption ABOVE the table</caption>
+  <caption>
+    Caption ABOVE the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="bottom">
-  <caption>Caption BELOW the table</caption>
+  <caption>
+    Caption BELOW the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>

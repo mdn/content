@@ -178,14 +178,11 @@ This allows you to compare and contrast the effect of different length units.
 <div class="outer">
   <div class="input-container">
     <label for="length">Enter width:</label>
-    <input type="text" id="length">
+    <input type="text" id="length" />
   </div>
-  <div class="inner">
-
-  </div>
+  <div class="inner"></div>
 </div>
-<div class="results">
-</div>
+<div class="results"></div>
 ```
 
 #### CSS
