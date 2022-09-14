@@ -75,8 +75,7 @@ However, we don't want this. Instead, we want it to contain the TodoMVC app stru
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
-    autofocus
-  >
+    autofocus />
 </section>
 ```
 
@@ -95,11 +94,10 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
-    autofocus
-  >
+    autofocus />
 
   <section class="main">
-    <input id="mark-all-complete" class="toggle-all" type="checkbox">
+    <input id="mark-all-complete" class="toggle-all" type="checkbox" />
     <label for="mark-all-complete">Mark all as complete</label>
 
     <ul class="todo-list">
@@ -108,17 +106,15 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
-            type="checkbox"
-          >
+            type="checkbox" />
           <label>Buy Movie Tickets</label>
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"
-          ></button>
+            title="Remove this todo"></button>
         </div>
 
-        <input autofocus class="edit" value="Todo Text">
+        <input autofocus class="edit" value="Todo Text" />
       </li>
 
       <li>
@@ -126,25 +122,21 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
-            type="checkbox"
-          >
+            type="checkbox" />
           <label>Go to Movie</label>
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"
-           ></button>
+            title="Remove this todo"></button>
         </div>
 
-        <input autofocus class="edit" value="Todo Text">
+        <input autofocus class="edit" value="Todo Text" />
       </li>
     </ul>
   </section>
 
   <footer class="footer">
-    <span class="todo-count">
-      <strong>0</strong> todos left
-    </span>
+    <span class="todo-count"> <strong>0</strong> todos left </span>
 
     <ul class="filters">
       <li>
@@ -154,9 +146,7 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
       </li>
     </ul>
 
-    <button type="button" class="clear-completed">
-      Clear Completed
-    </button>
+    <button type="button" class="clear-completed">Clear Completed</button>
   </footer>
 </section>
 ```
@@ -241,15 +231,14 @@ Now that we have all of our component structure files, we can cut and paste the 
      class="new-todo"
      aria-label="What needs to be done?"
      placeholder="What needs to be done?"
-     autofocus
-   >
+     autofocus />
    ```
 
 2. `todo-list.hbs` should be updated to contain this chunk of code:
 
    ```html
    <section class="main">
-     <input id="mark-all-complete" class="toggle-all" type="checkbox">
+     <input id="mark-all-complete" class="toggle-all" type="checkbox" />
      <label for="mark-all-complete">Mark all as complete</label>
 
      <ul class="todo-list">
@@ -269,17 +258,12 @@ Now that we have all of our component structure files, we can cut and paste the 
        <input
          aria-label="Toggle the completion of this todo"
          class="toggle"
-         type="checkbox"
-       >
+         type="checkbox" />
        <label>Buy Movie Tickets</label>
-       <button
-         type="button"
-         class="destroy"
-         title="Remove this todo"
-       ></button>
+       <button type="button" class="destroy" title="Remove this todo"></button>
      </div>
 
-     <input autofocus class="edit" value="Todo Text">
+     <input autofocus class="edit" value="Todo Text" />
    </li>
    ```
 
@@ -287,9 +271,7 @@ Now that we have all of our component structure files, we can cut and paste the 
 
    ```html
    <footer class="footer">
-     <span class="todo-count">
-       <strong>0</strong> todos left
-     </span>
+     <span class="todo-count"> <strong>0</strong> todos left </span>
 
      <ul class="filters">
        <li>
@@ -299,9 +281,7 @@ Now that we have all of our component structure files, we can cut and paste the 
        </li>
      </ul>
 
-     <button type="button" class="clear-completed">
-       Clear Completed
-     </button>
+     <button type="button" class="clear-completed">Clear Completed</button>
    </footer>
    ```
 

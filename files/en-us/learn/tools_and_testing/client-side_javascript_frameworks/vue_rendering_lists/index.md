@@ -138,7 +138,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
    ```html
    <ul>
      <li v-for="item in ToDoItems" :key="item.id">
-        <to-do-item :label="item.label" :done="item.done"></to-do-item>
+       <to-do-item :label="item.label" :done="item.done"></to-do-item>
      </li>
    </ul>
    ```
@@ -181,7 +181,10 @@ Now, over in your `App.vue` component, pass `item.id` as a prop to the `ToDoItem
     <h1>My To-Do List</h1>
     <ul>
       <li v-for="item in ToDoItems" :key="item.id">
-        <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+        <to-do-item
+          :label="item.label"
+          :done="item.done"
+          :id="item.id"></to-do-item>
       </li>
     </ul>
   </div>
