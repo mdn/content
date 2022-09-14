@@ -108,8 +108,8 @@ When form controls are disabled, many browsers will display them in a lighter, g
 <fieldset disabled>
   <legend>Disabled fieldset</legend>
   <p>
-    <label
-      >Name: <input type="name" name="radio" value="regular" /> Regular
+    <label>
+      Name: <input type="name" name="radio" value="regular" /> Regular
     </label>
   </p>
   <p>
