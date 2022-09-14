@@ -163,8 +163,8 @@ You could also apply a color matrix:
     <feColorMatrix
       values="0.3333 0.3333 0.3333 0 0
               0.3333 0.3333 0.3333 0 0
-                           0.3333 0.3333 0.3333 0 0
-                           0      0      0      1 0" />
+              0.3333 0.3333 0.3333 0 0
+             0      0      0      1 0" />
   </filter>
 </svg>
 ```
