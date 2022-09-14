@@ -48,17 +48,21 @@ browser.menus.overrideContext(
 Open the tab context menu on your custom UI, in this case :
 
 ```js
-document.addEventListener('contextmenu', (event) => {
-  const foo = event.target.closest('.foo');
-  if (foo) {
-    // When the context menu is opened on an element with the foo class
-    // set the context to "opening a tab context menu".
-    browser.menus.overrideContext({
-      context: 'tab',
-      tabId: parseInt(foo.dataset.tabId)
-    });
-  }
-}, { capture: true });
+document.addEventListener(
+  "contextmenu",
+  (event) => {
+    const foo = event.target.closest(".foo");
+    if (foo) {
+      // When the context menu is opened on an element with the foo class
+      // set the context to "opening a tab context menu".
+      browser.menus.overrideContext({
+        context: "tab",
+        tabId: parseInt(foo.dataset.tabId),
+      });
+    }
+  },
+  { capture: true }
+);
 ```
 
 See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.

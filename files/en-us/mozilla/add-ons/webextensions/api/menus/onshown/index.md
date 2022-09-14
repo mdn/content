@@ -57,7 +57,7 @@ Note that it is possible to call menus API functions synchronously, and in this 
 ```js
 browser.menus.onShown.addListener(async (info, tab) => {
   browser.menus.update(menuId /*, …*/);
-   // Note: Not waiting for returned promise.
+  // Note: Not waiting for returned promise.
   browser.menus.refresh();
 });
 ```
@@ -126,7 +126,7 @@ This example listens for the context menu to be shown over a link, then updates 
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
