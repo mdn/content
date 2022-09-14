@@ -172,7 +172,7 @@ The only way to override inline styles is by using `!important`.
 Many JavaScript frameworks and libraries add inline styles. Using `!important` with a very targeted selector, such as an attribute selector using the inline style, is one way to override these inline styles.
 
 ```html
-<p style="color: purple"></p>
+<p style="color: purple">…</p>
 ```
 
 ```css
