@@ -48,8 +48,7 @@ Loops are all about doing the same thing over and over again. Often, the code wi
 Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<button>Update</button>
-<canvas></canvas>
+<button>Update</button> <canvas></canvas>
 ```
 
 ```css hidden
@@ -383,7 +382,7 @@ First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -440,10 +439,10 @@ The HTML is basically the same as the last example — a simple text input, and 
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text">
+<input id="number" type="text" />
 <button>Generate integer squares</button>
 
-<p>Output: </p>
+<p>Output:</p>
 ```
 
 The JavaScript is mostly the same too, although the loop itself is a bit different:
@@ -595,12 +594,12 @@ If you get really stuck, press "Show solution" to see a solution.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
 output.innerHTML = '';
@@ -613,8 +612,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -772,7 +771,9 @@ If you get really stuck, press "Show solution" to see a solution.
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -789,8 +790,8 @@ refused.textContent = 'Refuse: ';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 

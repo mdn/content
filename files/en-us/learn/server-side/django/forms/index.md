@@ -58,9 +58,13 @@ The form is defined in HTML as a collection of elements inside `<form>…</form>
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -409,8 +413,13 @@ All that's left is the `\{{ form }}` template variable, which we passed to the t
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required>
-    <br>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
+    <br />
     <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
   </td>
 </tr>
@@ -423,14 +432,19 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-    <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required>
-      <br>
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+  </td>
 </tr>
 ```
 
@@ -595,7 +609,7 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
     <table>
     \{{ form.as_table }}
     </table>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
   </form>
 {% endblock %}
 ```
@@ -615,7 +629,7 @@ The "delete" view expects to find a template named with the format \_`model_name
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Yes, delete.">
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}

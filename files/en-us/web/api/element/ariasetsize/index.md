@@ -26,7 +26,14 @@ A string containing an integer.
 In this example the `aria-setsize` attribute on the element with an ID of `tab-id` is set to "3", to inform a device that there are currently 3 tabs in the group. Using `ariaSetSize` we update the value to "4".
 
 ```html
-<button role="tab" aria-selected="true" aria-setsize="3" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
+<button
+  role="tab"
+  aria-selected="true"
+  aria-setsize="3"
+  aria-controls="tabpanel-id"
+  id="tab-id">
+  Tab label
+</button>
 ```
 
 ```js

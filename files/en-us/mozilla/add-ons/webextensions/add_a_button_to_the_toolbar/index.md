@@ -122,8 +122,8 @@ So now we need to create that popup. Create a directory called "popup" then crea
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
   <body>
     <div class="page-choice">developer.mozilla.org</div>
