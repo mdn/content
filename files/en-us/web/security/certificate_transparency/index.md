@@ -28,7 +28,7 @@ The specification states that compliant servers _must_ provide a number of these
 - A TLS extension of type `signed_certificate_timestamp` sent during the handshake
 - OCSP stapling (that is, the `status_request` TLS extension) and providing a `SignedCertificateTimestampList` with one or more SCTs
 
-With the X.509 certificate extension, the included SCTs are decided by the issuing CA. There should be no need for web servers to be modified if this mechanism is used.
+With the X.509 certificate extension, the included SCTs are decided by the issuing CA. Since June 2021, most acively used and valid publicly-trusted certificates contain transparency data embedded in this extension. This method should not require web servers to be modified.
 
 With the latter methods, servers will need to be updated to send the required data. The advantage is that the server operator can customize the CT log sources providing the SCTs sent via the TLS extension/stapled OCSP response.
 
@@ -40,4 +40,4 @@ Apple [requires](https://support.apple.com/en-gb/HT205280) a varying number of S
 
 Firefox [does not](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469) currently check or require the use of CT logs for sites that users visit.
 
-The [Expect-CT header](/en-US/docs/Web/HTTP/Headers/Expect-CT) can be used to request that a browser _always_ enforces the requirement for certificate transparency (e.g. in Chrome, even if the certificate was issued with a notBefore date prior to April).
+The [Expect-CT header](/en-US/docs/Web/HTTP/Headers/Expect-CT) allowed sites opt in to reporting and/or enforcement of Certificate Transparency requirements before they were enforced by default (e.g. in Chrome, even if the certificate was issued with a notBefore date prior to 30 April 2018).
