@@ -54,8 +54,7 @@ In the following example, `toggleAttribute()` is used to toggle the
 ### HTML
 
 ```html
-<input value="text">
-<button>toggleAttribute("disabled")</button>
+<input value="text" /> <button>toggleAttribute("disabled")</button>
 ```
 
 ### JavaScript

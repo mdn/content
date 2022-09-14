@@ -51,7 +51,7 @@ This example logs the value whenever you change the value of the {{HtmlElement("
 ### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="values"></p>
 ```
 
