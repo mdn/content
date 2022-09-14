@@ -123,10 +123,10 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
 <h1>6</h1>
 <p>
   According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/"
-    >Individuals must have the ability to shape the Internet and their own
-    experiences on the Internet.</q
-  >
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.
+  </q>
   Therefore, we can infer that contributing to the open web can protect our own
   individual experiences on it.
 </p>
