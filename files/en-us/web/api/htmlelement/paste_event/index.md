@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: paste event'
+title: "HTMLElement: paste event"
 slug: Web/API/HTMLElement/paste_event
 page-type: web-api-event
 tags:
@@ -48,7 +48,9 @@ This example logs every copy and paste attempt to the {{htmlElement("textarea")}
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>

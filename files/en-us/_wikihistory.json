@@ -41223,10 +41223,6 @@
       "markg"
     ]
   },
-  "Web/API/HTMLMediaElement/onerror": {
-    "modified": "2020-10-15T21:52:40.332Z",
-    "contributors": ["mfluehr", "fscholz", "Sheppy"]
-  },
   "Web/API/HTMLMediaElement/pause": {
     "modified": "2020-10-15T21:51:31.814Z",
     "contributors": ["chrisdavidmills", "fscholz", "Jedipedia", "sgiles"]

@@ -72,9 +72,15 @@ new row. (To be valid HTML, a `<tr>` must have at least one
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 

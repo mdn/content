@@ -27,16 +27,18 @@ In this example, we have an {{HTMLElement("audio")}} element, a range control th
 Try playing the audio, then adjusting the playback rate, then enabling and disabling the checkbox.
 
 ```html
-<audio controls src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
+<audio
+  controls
+  src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
 
 <div>
   <label for="rate">Adjust playback rate:</label>
-  <input id="rate" type="range" min="0.25" max="3" step="0.05" value="1">
+  <input id="rate" type="range" min="0.25" max="3" step="0.05" value="1" />
 </div>
 
 <div>
   <label for="pitch">Preserve pitch:</label>
-  <input type="checkbox" id="pitch" name="pitch" checked>
+  <input type="checkbox" id="pitch" name="pitch" checked />
 </div>
 ```
 

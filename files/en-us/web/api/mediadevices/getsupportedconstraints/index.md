@@ -47,8 +47,7 @@ This example outputs a list of the constraints supported by your browser.
 ```html hidden
 <p>The following media constraints are supported by your browser:</p>
 
-<ul id="constraintList">
-</ul>
+<ul id="constraintList"></ul>
 ```
 
 ```css hidden

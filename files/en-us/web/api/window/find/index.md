@@ -62,7 +62,9 @@ function findString(text) {
 ```html
 <p>Apples, Bananas, and Oranges.</p>
 <button type="button" onClick='findString("Apples")'>Search for Apples</button>
-<button type="button" onClick='findString("Bananas")'>Search for Bananas</button>
+<button type="button" onClick='findString("Bananas")'>
+  Search for Bananas
+</button>
 <button type="button" onClick='findString("Orange")'>Search for Orange</button>
 
 <p id="output"></p>
