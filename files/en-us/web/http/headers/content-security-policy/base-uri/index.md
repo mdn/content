@@ -72,7 +72,7 @@ add_header Content-Security-Policy "base-uri 'self';"
 
 Since your domain isn't `example.com`, a {{HTMLElement("base")}} element with its `href` set to `https://example.com` will result in a CSP violation.
 
-```html-nolint example-bad
+```html example-bad
 <meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 <base href="https://example.com/" />
 

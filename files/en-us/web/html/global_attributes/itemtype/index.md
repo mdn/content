@@ -150,7 +150,8 @@ This example uses microdata attributes to represent structured data for a produc
     height="50"
     alt="Executive Anvil logo" /><br />
 
-  <span itemprop="description">Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the
+  <span itemprop="description">
+    Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the
     business traveler looking for something to drop from a height.
     <br />
   </span>

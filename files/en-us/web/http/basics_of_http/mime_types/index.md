@@ -261,9 +261,9 @@ The following `<form>`:
   enctype="multipart/form-data">
   <label>Name: <input name="myTextField" value="Test" /></label>
   <label><input type="checkbox" name="myCheckBox" /> Check</label>
-  <label
-    >Upload file: <input type="file" name="myFile" value="test.txt"
-  /></label>
+  <label>
+    Upload file: <input type="file" name="myFile" value="test.txt"/>
+  </label>
   <button>Send the file</button>
 </form>
 ```
