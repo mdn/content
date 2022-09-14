@@ -52,24 +52,44 @@ svg {
   </clipPath>
 
   <!-- Top-left: Apply a custom defined clipping path -->
-  <rect x="1" y="1" width="8" height="8" stroke="green"
-        clip-path="url(#myClip)" />
+  <rect
+    x="1"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="url(#myClip)" />
 
   <!-- Top-right: Apply a CSS basic shape on a fill-box
        geometry. This is the same as having a custom clipping
        path with a clipPathUnits set to objectBoundingBox -->
-  <rect x="11" y="1" width="8" height="8" stroke="green"
-        clip-path="circle() fill-box" />
+  <rect
+    x="11"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() fill-box" />
 
   <!-- Bottom-left -->
-  <rect x="1" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() stroke-box" />
+  <rect
+    x="1"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() stroke-box" />
 
   <!-- Bottom-right: Apply a CSS basic shape on a view-box
        geometry. This is the same as having a custom clipping
        path with a clipPathUnits set to userSpaceOnUse -->
-  <rect x="11" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() view-box" />
+  <rect
+    x="11"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() view-box" />
 </svg>
 ```
 
