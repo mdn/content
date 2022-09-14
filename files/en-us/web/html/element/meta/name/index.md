@@ -117,7 +117,7 @@ The HTML specification defines the following set of standard metadata names:
   For example, to indicate that a document prefers dark mode but does render functionally in light mode as well:
 
   ```html
-  <meta name="color-scheme" content="dark light">
+  <meta name="color-scheme" content="dark light" />
   ```
 
   This works at the document level in the same way that the CSS {{cssxref("color-scheme")}} property lets individual elements specify their preferred and accepted color schemes. Your styles can adapt to the current color scheme using the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} CSS media feature.

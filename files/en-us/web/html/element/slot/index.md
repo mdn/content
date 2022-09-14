@@ -93,8 +93,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```html
 <template id="element-details-template">
   <style>
-    details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
-    .name {font-weight: bold; color: #217ac0; font-size: 120% }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
     h4 {
       margin: 10px 0 -8px 0;
       background: #217ac0;
@@ -103,12 +109,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       border: 1px solid #cee9f9;
       border-radius: 4px;
     }
-    .attributes { margin-left: 22px; font-size: 90% }
-    .attributes p { margin-left: 16px; font-style: italic }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
-      <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+      <code class="name"
+        >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+      >
       <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
     </summary>
     <div class="attributes">
@@ -116,7 +130,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 

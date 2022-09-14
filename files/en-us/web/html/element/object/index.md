@@ -106,11 +106,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Embed a YouTube Video
 
 ```html
-<object type="video/mp4"
-    data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
-    width="1280"
-    height="720">
-</object>
+<object
+  type="video/mp4"
+  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+  width="1280"
+  height="720"></object>
 ```
 
 Note that a `type` field is normally specified, but is not needed for youtube videos.
