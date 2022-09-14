@@ -111,9 +111,9 @@ The HTML in the file `index.html` creates the structure of the app. The parts th
   <body>
     <header>
       <p>
-        <a class="logo" href="http://js13kgames.com"
-          ><img src="img/js13kgames.png" alt="js13kGames"
-        /></a>
+        <a class="logo" href="http://js13kgames.com">
+          <img src="img/js13kgames.png" alt="js13kGames" />
+        </a>
       </p>
     </header>
     <main>
@@ -124,8 +124,7 @@ The HTML in the file `index.html` creates the structure of the app. The parts th
         <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
         You can
         <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
-          fork js13kPWA on GitHub</a
-        >
+          fork js13kPWA on GitHub</a>
         to check its source code.
       </p>
       <button id="notifications">Request dummy notifications</button>

@@ -107,9 +107,7 @@ From the HTML point of view, the app shell is everything outside the content sec
         <a href="https://js13kgames.com/aframe">A-Frame category</a> in the
         <a href="https://2017.js13kgames.com">js13kGames 2017</a> competition.
         You can
-        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
-          >fork js13kPWA on GitHub</a
-        >
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a>
         to check its source code.
       </p>
       <button id="notifications">Request dummy notifications</button>

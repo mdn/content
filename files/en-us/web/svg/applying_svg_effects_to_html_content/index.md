@@ -162,7 +162,7 @@ You could also apply a color matrix:
   <filter id="f2">
     <feColorMatrix
       values="0.3333 0.3333 0.3333 0 0
-                           0.3333 0.3333 0.3333 0 0
+              0.3333 0.3333 0.3333 0 0
                            0.3333 0.3333 0.3333 0 0
                            0      0      0      1 0" />
   </filter>
