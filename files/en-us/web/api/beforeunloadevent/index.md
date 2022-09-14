@@ -60,9 +60,10 @@ WebKit-derived browsers don't follow the spec for the dialog box. An almost-cros
 window.addEventListener("beforeunload", (e) => {
   const confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
-  return confirmationMessage;                                /* Safari, Chrome, and other
-                                                              * WebKit-derived browsers */
+  (e || window.event).returnValue = confirmationMessage; // Gecko + IE
+  return confirmationMessage;
+  /* Safari, Chrome, and other
+   * WebKit-derived browsers */
 });
 ```
 

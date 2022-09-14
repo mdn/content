@@ -53,7 +53,7 @@ A new {{domxref("Blob")}} object containing the specified data.
 
 ```js
 const array = ['<q id="a"><span id="b">hey!</span></q>']; // an array consisting of a single string
-const blob = new Blob(array, {type : 'text/html'}); // the blob
+const blob = new Blob(array, { type: "text/html" }); // the blob
 ```
 
 ## Specifications

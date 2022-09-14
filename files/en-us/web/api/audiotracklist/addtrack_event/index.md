@@ -1,5 +1,5 @@
 ---
-title: 'AudioTrackList: addtrack event'
+title: "AudioTrackList: addtrack event"
 slug: Web/API/AudioTrackList/addtrack_event
 page-type: web-api-event
 tags:
@@ -26,7 +26,7 @@ The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
+```js-nolint
 addEventListener('addtrack', (event) => { })
 
 onaddtrack = (event) => { }
