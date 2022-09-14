@@ -25,7 +25,11 @@ A string.
 In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) is `big-image`. Calling `entry.identifier` therefore returns the string `big-image`.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
