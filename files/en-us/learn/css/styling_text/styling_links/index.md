@@ -236,8 +236,7 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>There are several browsers available, such as <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p></textarea
-  >
+<a href="#">Microsoft Edge</a>.</p></textarea>
 
   <h2>CSS Input</h2>
   <textarea

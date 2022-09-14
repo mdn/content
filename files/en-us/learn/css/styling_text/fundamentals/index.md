@@ -764,8 +764,7 @@ If you make a mistake, you can always reset it using the _Reset_ button.
 p {
 
 }
-</textarea
-  >
+</textarea>
 
   <h2>Output</h2>
   <div
