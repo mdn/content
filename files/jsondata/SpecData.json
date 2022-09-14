@@ -546,7 +546,7 @@
   },
   "CSS Flexbox": {
     "name": "CSS Flexible Box Layout Module",
-    "url": "https://drafts.csswg.org/css-flexbox-1/",
+    "url": "https://www.w3.org/TR/css-flexbox-1/",
     "status": "CR"
   },
   "CSS Font Rendering": {
