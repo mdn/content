@@ -18,11 +18,19 @@ Much like the img element in HTML SVG has an `image` element to serve the same p
 The embedded picture becomes a normal SVG element. This means, that you can use clips, masks, filters, rotations and all other tools of SVG on the content:
 
 ```html
-<svg version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="200" height="200">
-  <image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-     xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200">
+  <image
+    x="90"
+    y="-65"
+    width="128"
+    height="146"
+    transform="rotate(45)"
+    xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
 </svg>
 ```
 

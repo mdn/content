@@ -59,9 +59,9 @@ If changes to a rendered widget would create a state where the widget is missing
 ```
 
 ```js
-let el = document.getElementById('clock');
+const el = document.getElementById("clock");
 console.log(el.ariaBusy); // false
-el.ariaBusy = "true"
+el.ariaBusy = "true";
 console.log(el.ariaBusy); // true
 ```
 

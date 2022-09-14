@@ -31,20 +31,21 @@ to the visible property of any of the bars on an existing window.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Various DOM Tests</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Various DOM Tests</title>
 
-<script>
-// changing bar states on the existing window
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.statusbar.visible=!window.statusbar.visible;
-</script>
-
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+    <script>
+      // changing bar states on the existing window
+      netscape.security.PrivilegeManager.enablePrivilege(
+        "UniversalBrowserWrite"
+      );
+      window.statusbar.visible = !window.statusbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

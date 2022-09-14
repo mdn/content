@@ -73,8 +73,10 @@ Color alone should not be used to convey meaning. For example, change of text an
 ### Basic example
 
 ```html
-<p>This paragraph has <s>some erroneous text</s>
-    inside it that I want to call attention to.</p>
+<p>
+  This paragraph has <s>some erroneous text</s> inside it that I want to call
+  attention to.
+</p>
 ```
 
 ```css

@@ -48,7 +48,7 @@ This is good for accessibility and search engines, helps with localizing content
 You should also define your document's characterset like so:
 
 ```html example-good
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
@@ -58,7 +58,7 @@ Use UTF-8 unless you have a very good reason not to; it will cover all character
 Finally, you should always add the viewport meta tag into your HTML {{HTMLElement("head")}} to give the code example a better chance of working on mobile devices. You should include at least the following in your document, which can be modified later on as the need arises:
 
 ```html example-good
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 ```
 
 See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag) for further details.
@@ -68,7 +68,7 @@ See [Using the viewport meta tag to control layout on mobile browsers](/en-US/do
 You should put all attribute values in double quotes. It is tempting to omit quotes since HTML5 allows this, but markup is neater and easier to read if you do include them. For example, this is better:
 
 ```html example-good
-<img src="images/logo.jpg" alt="A circular globe icon" class="no-border">
+<img src="images/logo.jpg" alt="A circular globe icon" class="no-border" />
 ```
 
 …than this:

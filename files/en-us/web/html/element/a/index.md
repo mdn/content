@@ -221,9 +221,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Result
@@ -255,9 +253,7 @@ a {
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">
-  Jump to the heading below
-</a></p>
+<p><a href="#Section_further_down"> Jump to the heading below </a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -300,7 +296,8 @@ To save a {{HTMLElement("canvas")}} element's contents as an image, you can crea
 ##### HTML
 
 ```html
-<p>Paint by holding down the mouse button and moving it.
+<p>
+  Paint by holding down the mouse button and moving it.
   <a href="" download="my_painting.png">Download my painting</a>
 </p>
 
@@ -373,9 +370,7 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_t
 A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
-<p>
-  Learn more about our products <a href="/products">here</a>.
-</p>
+<p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
 #### Strong link text
@@ -383,9 +378,7 @@ A sadly common mistake is to only link the words "click here" or "here":
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
-<p>
-  Learn more <a href="/products">about our products</a>.
-</p>
+<p>Learn more <a href="/products">about our products</a>.</p>
 ```
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
@@ -415,9 +408,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 Annual Report (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
@@ -425,12 +416,12 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg">
+  <img alt="(opens in new tab)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg">
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -447,12 +438,10 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 <body>
   <a href="#content" class="skip-link">Skip to main content</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> </main> <!-- The skip link jumps to here -->
-
+  <main id="content"></main>
+  <!-- The skip link jumps to here -->
 </body>
 ```
 

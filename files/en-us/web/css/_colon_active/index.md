@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 tags:
   - CSS
@@ -36,7 +36,8 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### HTML
 
 ```html
-<p>This paragraph contains a link:
+<p>
+  This paragraph contains a link:
   <a href="#">This link will turn red while you click on it.</a>
   The paragraph will get a gray background while you click on it or the link.
 </p>

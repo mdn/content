@@ -91,7 +91,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 This example logs the {{domxref("KeyboardEvent.code")}} value whenever you release a key inside the {{HtmlElement("input")}} element.
 
 ```html
-<input placeholder="Click here, then press and release a key." size="40">
+<input placeholder="Click here, then press and release a key." size="40" />
 <p id="log"></p>
 ```
 

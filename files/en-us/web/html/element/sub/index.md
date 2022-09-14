@@ -119,9 +119,10 @@ Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 Traditional footnotes are denoted using numbers which are rendered in subscript. This is a common use case for `<sub>`:
 
 ```html
-<p>According to the computations by Nakamura, Johnson, and
-Mason<sub>1</sub> this will result in the complete annihilation
-of both particles.</p>
+<p>
+  According to the computations by Nakamura, Johnson, and Mason<sub>1</sub> this
+  will result in the complete annihilation of both particles.
+</p>
 ```
 
 The resulting output looks like this:
@@ -133,8 +134,10 @@ The resulting output looks like this:
 In mathematics, families of variables related to the same concept (such as distances along the same axis) are represented using the same variable name with a subscript following. For example:
 
 ```html
-<p>The horizontal coordinates' positions along the X-axis are
-represented as <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.</p>
+<p>
+  The horizontal coordinates' positions along the X-axis are represented as
+  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
+</p>
 ```
 
 The resulting output:
@@ -148,9 +151,11 @@ When writing a chemical formula, such as H<sub>2</sub>0, the number of atoms of 
 Another example:
 
 ```html
-<p>Almost every developer's favorite molecule is
-C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
-commonly known as "caffeine."</p>
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is commonly known
+  as "caffeine."
+</p>
 ```
 
 The output:

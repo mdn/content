@@ -32,9 +32,11 @@ The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) 
 ### HTML
 
 ```html
-<p>Newlines in <code>title</code> should be taken into account,
-like <span title="This is a
-multiline title">example</span>.</p>
+<p>
+  Newlines in <code>title</code> should be taken into account, like
+  <span title="This is a
+multiline title" >example</span>.
+</p>
 ```
 
 ### Result

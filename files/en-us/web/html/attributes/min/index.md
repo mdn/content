@@ -132,7 +132,7 @@ input:invalid {
 Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
 ```
 
 Because `step` defaults to 1, valid values include `7.2`, `8.2`, `9.2`, and so on. The value 8 is not valid. As we included an invalid value, supporting browsers will show the value as invalid.

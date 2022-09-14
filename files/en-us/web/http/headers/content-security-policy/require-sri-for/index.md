@@ -47,9 +47,10 @@ Content-Security-Policy: require-sri-for script style
 valid integrity attribute.
 
 ```html example-good
-<script src="https://code.jquery.com/jquery-3.1.1.slim.js"
-        integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
-        crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.js"
+  integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
+  crossorigin="anonymous"></script>
 ```
 
 However, scripts without integrity won't load anymore:

@@ -101,21 +101,22 @@ Multiple files will be received during a drop as multiple items in the data tran
 The following example shows how to create an area for receiving dropped files:
 
 ```html
-<listbox ondragenter="return checkDrag(event)"
-         ondragover="return checkDrag(event)"
-         ondrop="doDrop(event)"/>
+<listbox
+  ondragenter="return checkDrag(event)"
+  ondragover="return checkDrag(event)"
+  ondrop="doDrop(event)" />
 
 <script>
-function checkDrag(event) {
-  return event.dataTransfer.types.contains("application/x-moz-file");
-}
-
-function doDrop(event) {
-  const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
-  if (file instanceof Components.interfaces.nsIFile) {
-    event.currentTarget.appendItem(file.leafName);
+  function checkDrag(event) {
+    return event.dataTransfer.types.contains("application/x-moz-file");
   }
-}
+
+  function doDrop(event) {
+    const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
+    if (file instanceof Components.interfaces.nsIFile) {
+      event.currentTarget.appendItem(file.leafName);
+    }
+  }
 </script>
 ```
 

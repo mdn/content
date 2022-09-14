@@ -26,7 +26,7 @@ In this example calling `entry.element` will log to the console
 `<img src="image.jpg" alt="a nice image" elementtiming="big-image">`.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image">
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" />
 ```
 
 ```js

@@ -87,7 +87,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 ```html
 <div id="justone">
   <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -95,7 +96,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -103,7 +105,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -111,7 +114,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

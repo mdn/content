@@ -20,7 +20,10 @@ This the example for a basic payment form for the article [How to structure an H
 ```html
 <form method="post">
   <h1>Payment form</h1>
-  <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
+  <p>
+    Required fields are followed by
+    <strong><span aria-label="required">*</span></strong>.
+  </p>
   <section>
     <h2>Contact information</h2>
     <fieldset>
@@ -28,19 +31,19 @@ This the example for a basic payment form for the article [How to structure an H
       <ul>
         <li>
           <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="A">
+            <input type="radio" id="title_1" name="title" value="A" />
             Ace
           </label>
         </li>
         <li>
           <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="K" >
+            <input type="radio" id="title_2" name="title" value="K" />
             King
           </label>
         </li>
         <li>
           <label for="title_3">
-            <input type="radio" id="title_3" name="title" value="Q">
+            <input type="radio" id="title_3" name="title" value="Q" />
             Queen
           </label>
         </li>
@@ -51,21 +54,21 @@ This the example for a basic payment form for the article [How to structure an H
         <span>Name: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="text" id="name" name="username">
+      <input type="text" id="name" name="username" />
     </p>
     <p>
       <label for="mail">
         <span>E-mail: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="email" id="mail" name="usermail">
+      <input type="email" id="mail" name="usermail" />
     </p>
     <p>
       <label for="pwd">
         <span>Password: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="password" id="pwd" name="password">
+      <input type="password" id="pwd" name="password" />
     </p>
   </section>
   <section>
@@ -85,18 +88,23 @@ This the example for a basic payment form for the article [How to structure an H
         <span>Card number:</span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="tel" id="number" name="cardnumber">
+      <input type="tel" id="number" name="cardnumber" />
     </p>
     <p>
       <label for="expiration">
         <span>Expiration date:</span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+      <input
+        type="text"
+        id="expiration"
+        required="true"
+        placeholder="MM/YY"
+        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
     </p>
   </section>
   <section>
-    <p> <button type="submit">Validate the payment</button> </p>
+    <p><button type="submit">Validate the payment</button></p>
   </section>
 </form>
 ```

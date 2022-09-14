@@ -36,11 +36,21 @@ Some things to note:
 
 ```html
 <p>The bottom margin of this paragraph is collapsed …</p>
-<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
+<p>
+  … with the top margin of this paragraph, yielding a margin of
+  <code>1.2rem</code> in between.
+</p>
 
-<div>This parent element contains two paragraphs!
-  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
-  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+<div>
+  This parent element contains two paragraphs!
+  <p>
+    This paragraph has a <code>.4rem</code> margin between it and the text
+    above.
+  </p>
+  <p>
+    My bottom margin collapses with my parent, yielding a bottom margin of
+    <code>2rem</code>.
+  </p>
 </div>
 
 <p>I am <code>2rem</code> below the element above.</p>

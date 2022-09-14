@@ -145,25 +145,32 @@ background-repeat: unset;
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="one"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="two"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="three"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="four"></div>
   </li>
-  <li>space
+  <li>
+    space
     <div class="five"></div>
   </li>
-  <li>round
+  <li>
+    round
     <div class="six"></div>
   </li>
-  <li>repeat-x, repeat-y (multiple images)
+  <li>
+    repeat-x, repeat-y (multiple images)
     <div class="seven"></div>
   </li>
 </ol>

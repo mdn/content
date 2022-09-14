@@ -75,8 +75,14 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 
 <main>
   <ul>
-    <li><p>This is my first</p><p>list item</p></li>
-    <li><p>This is my second</p><p>list item</p></li>
+    <li>
+      <p>This is my first</p>
+      <p>list item</p>
+    </li>
+    <li>
+      <p>This is my second</p>
+      <p>list item</p>
+    </li>
   </ul>
 </main>
 
@@ -111,18 +117,26 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 let matchedItems;
 
 try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
+  matchedItems = document.querySelectorAll(":is(header, main, footer) p");
 } catch (e) {
   try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
+    matchedItems = document.querySelectorAll(
+      ":matches(header, main, footer) p"
+    );
   } catch (e) {
     try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
+      matchedItems = document.querySelectorAll(
+        ":-webkit-any(header, main, footer) p"
+      );
     } catch (e) {
       try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
+        matchedItems = document.querySelectorAll(
+          ":-moz-any(header, main, footer) p"
+        );
       } catch (e) {
-        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
+        console.log(
+          "Your browser doesn't support :is(), :matches(), or :any()"
+        );
       }
     }
   }
@@ -131,7 +145,7 @@ try {
 matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
-  elem.addEventListener('click', (e) => {
+  elem.addEventListener("click", (e) => {
     alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
   });
 }

@@ -47,7 +47,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.length);
-}
+};
 ```
 
 ## Specifications

@@ -61,19 +61,22 @@ The `list-style-position` property is specified as one of the keyword values lis
 #### HTML
 
 ```html
-<ul class="inside">List 1
+<ul class="inside">
+  List 1
   <li>List Item 1-1</li>
   <li>List Item 1-2</li>
   <li>List Item 1-3</li>
   <li>List Item 1-4</li>
 </ul>
-<ul class="outside">List 2
+<ul class="outside">
+  List 2
   <li>List Item 2-1</li>
   <li>List Item 2-2</li>
   <li>List Item 2-3</li>
   <li>List Item 2-4</li>
 </ul>
-<ul class="inside-img">List 3
+<ul class="inside-img">
+  List 3
   <li>List Item 3-1</li>
   <li>List Item 3-2</li>
   <li>List Item 3-3</li>

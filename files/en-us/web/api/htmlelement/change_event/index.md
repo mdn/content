@@ -47,7 +47,8 @@ A generic {{domxref("Event")}}.
 #### HTML
 
 ```html
-<label>Choose an ice cream flavor:
+<label>
+  Choose an ice cream flavor:
   <select class="ice-cream" name="ice-cream">
     <option value="">Select One …</option>
     <option value="chocolate">Chocolate</option>
@@ -96,7 +97,7 @@ For some elements, including `<input type="text">`, the `change` event doesn't f
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="log"></p>
 ```
 

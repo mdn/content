@@ -48,8 +48,15 @@ This element implements the {{domxref("SVGFEOffsetElement")}} interface.
     </filter>
   </defs>
 
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green"/>
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" filter="url(#offset)"/>
+  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    stroke="black"
+    fill="green"
+    filter="url(#offset)" />
 </svg>
 ```
 

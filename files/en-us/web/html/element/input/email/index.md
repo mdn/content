@@ -149,7 +149,7 @@ It's important, however, to note that this is not enough to ensure that the spec
 Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. The specification does, however, allow browsers latitude on this. For example, the element could be integrated with the user's device's built-in address book to allow picking e-mail addresses from that list. In its most basic form, an `email` input can be implemented like this:
 
 ```html
-<input id="emailAddress" type="email">
+<input id="emailAddress" type="email" />
 ```
 
 {{ EmbedLiveSample('A_simple_email_input', 600, 40) }}
@@ -161,7 +161,7 @@ Notice that it's considered valid when empty and when a single validly-formatted
 By adding the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean attribute, the input can be configured to accept multiple e-mail addresses.
 
 ```html
-<input id="emailAddress" type="email" multiple>
+<input id="emailAddress" type="email" multiple />
 ```
 
 {{ EmbedLiveSample('Allowing_multiple_e-mail_addresses', 600, 40) }}
@@ -192,7 +192,7 @@ Sometimes it's helpful to offer an in-context hint as to what form the input dat
 Here, we have an `email` input with the placeholder `sophie@example.com`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
-<input type="email" placeholder="sophie@example.com">
+<input type="email" placeholder="sophie@example.com" />
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -206,7 +206,7 @@ You can control not only the physical length of the input box, but also the mini
 The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example the `email` edit box is 15 characters wide:
 
 ```html
-<input type="email" size="15">
+<input type="email" size="15" />
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -218,7 +218,7 @@ The `size` is separate from the length limitation on the entered e-mail address 
 The example below creates a 32 character-wide e-mail address entry box, requiring that the contents be no shorter than 3 characters and no longer than 64 characters.
 
 ```html
-<input type="email" size="32" minlength="3" maxlength="64">
+<input type="email" size="32" minlength="3" maxlength="64" />
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -230,7 +230,7 @@ The example below creates a 32 character-wide e-mail address entry box, requirin
 As always, you can provide a default value for an `email` input box by setting its {{htmlattrxref("value", "input")}} attribute:
 
 ```html
-<input type="email" value="default@example.com">
+<input type="email" value="default@example.com" />
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -240,14 +240,14 @@ As always, you can provide a default value for an `email` input box by setting i
 Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used e-mail addresses more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the email entry box.
 
 ```html
-<input type="email" size="40" list="defaultEmails">
+<input type="email" size="40" list="defaultEmails" />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 
@@ -305,19 +305,29 @@ label::after {
 
 ```html
 <form>
- <div class="emailBox">
-   <label for="emailAddress">Your e-mail address</label><br>
-   <input id="emailAddress" type="email" size="64" maxLength="64" required
-          placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com"
-          title="Please provide only a Best Startup Ever corporate e-mail address">
- </div>
+  <div class="emailBox">
+    <label for="emailAddress">Your e-mail address</label><br />
+    <input
+      id="emailAddress"
+      type="email"
+      size="64"
+      maxlength="64"
+      required
+      placeholder="username@beststartupever.com"
+      pattern=".+@beststartupever\.com"
+      title="Please provide only a Best Startup Ever corporate e-mail address" />
+  </div>
 
- <div class="messageBox">
-   <label for="message">Request</label><br>
-   <textarea id="message" cols="80" rows="8" required
-             placeholder="My shoes are too tight, and I have forgotten how to dance."></textarea>
- </div>
-  <input type="submit" value="Send Request">
+  <div class="messageBox">
+    <label for="message">Request</label><br />
+    <textarea
+      id="message"
+      cols="80"
+      rows="8"
+      required
+      placeholder="My shoes are too tight, and I have forgotten how to dance."></textarea>
+  </div>
+  <input type="submit" value="Send Request" />
 </form>
 ```
 
@@ -350,16 +360,22 @@ Here we have an email input with the ID `emailAddress` which is allowed to be up
 As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its {{htmlattrxref("for", "label")}} attribute referencing the `emailAddress` ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.
 
 ```html
-<label for="emailAddress">Email</label><br/>
-<input id="emailAddress" type="email" placeholder="user@example.gov"
-       list="defaultEmails" size="64" maxlength="256" multiple>
+<label for="emailAddress">Email</label><br />
+<input
+  id="emailAddress"
+  type="email"
+  placeholder="user@example.gov"
+  list="defaultEmails"
+  size="64"
+  maxlength="256"
+  multiple />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 

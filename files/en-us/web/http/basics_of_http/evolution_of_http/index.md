@@ -37,7 +37,7 @@ The response was extremely simple, too: it only consisted of the file itself.
 
 ```html
 <html>
-A very simple HTML page
+  A very simple HTML page
 </html>
 ```
 

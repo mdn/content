@@ -71,13 +71,8 @@ Having a set of rules you always follow reduces the amount of mental overhead ne
 There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
 
 ```css
-.box {
-  background-color: #567895;
-}
-h2 {
-  background-color: black;
-  color: white;
-}
+.box { background-color: #567895; }
+h2 { background-color: black; color: white; }
 ```
 
 Other developers prefer to break everything onto a new line:

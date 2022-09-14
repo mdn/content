@@ -65,26 +65,26 @@ For example, let's take the following controls:
 <form>
   <p>
     <label for="search">search: </label>
-    <input id="search" name="search" type="search">
+    <input id="search" name="search" type="search" />
   </p>
   <p>
     <label for="text">text: </label>
-    <input id="text" name="text" type="text">
+    <input id="text" name="text" type="text" />
   </p>
   <p>
     <label for="date">date: </label>
-    <input id="date" name="date" type="datetime-local">
+    <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
     <label for="radio">radio: </label>
-    <input id="radio" name="radio" type="radio">
+    <input id="radio" name="radio" type="radio" />
   </p>
   <p>
     <label for="checkbox">checkbox: </label>
-    <input id="checkbox" name="checkbox" type="checkbox">
+    <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit"></p>
-  <p><input type="button" value="button"></p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
@@ -169,19 +169,19 @@ As we showed before, you can remove the default appearance of a checkbox or radi
 
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="cherry">
+        <input type="checkbox" name="fruit" value="cherry" />
         I like cherry
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="banana" disabled>
+        <input type="checkbox" name="fruit" value="banana" disabled />
         I can't like banana
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="strawberry">
+        <input type="checkbox" name="fruit" value="strawberry" />
         I like strawberry
       </label>
     </p>

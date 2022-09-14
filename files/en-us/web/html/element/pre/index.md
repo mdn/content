@@ -107,7 +107,8 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
                   ||     ||
   </pre>
   <figcaption id="cow-caption">
-    A cow saying, "I'm an expert in my field." The cow is illustrated using preformatted text characters.
+    A cow saying, "I'm an expert in my field." The cow is illustrated using
+    preformatted text characters.
   </figcaption>
 </figure>
 ```

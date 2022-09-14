@@ -58,11 +58,14 @@ When optical sizing is used, small text sizes are often rendered with thicker st
 ### Disabling optical sizing
 
 ```html
-<p class="optical-sizing">This paragraph is optically sized.
- This is the default across browsers.</p>
+<p class="optical-sizing">
+  This paragraph is optically sized. This is the default across browsers.
+</p>
 
-<p class="no-optical-sizing">This paragraph is not optically sized.
- You should see a difference in supporting browsers.</p>
+<p class="no-optical-sizing">
+  This paragraph is not optically sized. You should see a difference in
+  supporting browsers.
+</p>
 ```
 
 ```css

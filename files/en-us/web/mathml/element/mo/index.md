@@ -59,23 +59,22 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ```html
 <math>
-
-<mrow>
-  <mn>5</mn>
-  <mo>+</mo>
-  <mn>5</mn>
-</mrow>
-
-<mrow>
-  <mo>[</mo> <!-- default form value: prefix -->
   <mrow>
-    <mn>0</mn>
-    <mo>;</mo> <!-- default form value: infix -->
-    <mn>1</mn>
+    <mn>5</mn>
+    <mo>+</mo>
+    <mn>5</mn>
   </mrow>
-  <mo>)</mo> <!-- default form value: postfix -->
-</mrow>
 
+  <mrow>
+    <mo>[</mo> <!-- default form value: prefix -->
+
+    <mrow>
+      <mn>0</mn>
+      <mo>;</mo> <!-- default form value: infix -->
+      <mn>1</mn>
+    </mrow>
+    <mo>)</mo> <!-- default form value: postfix -->
+  </mrow>
 </math>
 ```
 

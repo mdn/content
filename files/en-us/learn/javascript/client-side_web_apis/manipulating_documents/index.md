@@ -63,14 +63,19 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -217,7 +222,10 @@ The first way is to add inline styles directly onto elements you want to dynamic
 2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you'll see that these lines are indeed adding inline styles to the document:
 
    ```html
-   <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
+   <p
+     style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
+     We hope you enjoyed the ride.
+   </p>
    ```
 
 > **Note:** Notice how the JavaScript property versions of the CSS styles are written in lower camel case whereas the CSS versions are hyphenated (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
@@ -229,13 +237,13 @@ There is another common way to dynamically manipulate styles on your document, w
 
    ```html
    <style>
-   .highlight {
-     color: white;
-     background-color: black;
-     padding: 10px;
-     width: 250px;
-     text-align: center;
-   }
+     .highlight {
+       color: white;
+       background-color: black;
+       padding: 10px;
+       width: 250px;
+       text-align: center;
+     }
    </style>
    ```
 

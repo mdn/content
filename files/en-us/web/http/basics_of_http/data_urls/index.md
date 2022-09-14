@@ -86,13 +86,14 @@ bash$ echo -n hello | base64
 This section describes problems that commonly occur when creating and using `data` URLs.
 
 ```
-data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val
+data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 
 This represents an HTML resource whose contents are:
 
 ```html
-lots of text…<p><a name="bottom">bottom</a>?arg=val
+lots of text…
+<p><a name="bottom">bottom</a>?arg=val</p>
 ```
 
 - Syntax

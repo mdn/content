@@ -23,11 +23,9 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ```html
 <math>
-
   <mtext>Theorem of Pythagoras</mtext>
 
   <mtext>/* comment here */</mtext>
-
 </math>
 ```
 

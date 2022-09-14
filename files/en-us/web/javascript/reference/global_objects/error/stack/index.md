@@ -31,27 +31,27 @@ Different browsers set this value at different times. For example, Firefox sets 
 The following HTML markup demonstrates the use of `stack` property.
 
 ```html
-<!DOCTYPE HTML>
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>
-<script>
-function trace() {
-  try {
-    throw new Error('myError');
-  }
-  catch (e) {
-    alert(e.stack);
-  }
-}
-function b() {
-  trace();
-}
-function a() {
-  b(3, 4, '\n\n', undefined, {});
-}
-a('first call, firstarg');
-</script>
+  <script>
+    function trace() {
+      try {
+        throw new Error("myError");
+      } catch (e) {
+        alert(e.stack);
+      }
+    }
+    function b() {
+      trace();
+    }
+    function a() {
+      b(3, 4, "\n\n", undefined, {});
+    }
+    a("first call, firstarg");
+  </script>
+</body>
 ```
 
 Assuming the above markup is saved as `C:\example.html` on a Windows file system it produces an alert message box with the following text:

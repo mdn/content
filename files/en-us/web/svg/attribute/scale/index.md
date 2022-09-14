@@ -29,16 +29,25 @@ svg {
 ```html
 <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
   <filter id="displacementFilter" x="-20%" y="-20%" width="140%" height="140%">
-    <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5"/>
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="2"
+      result="turbulence" />
+    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" />
   </filter>
   <filter id="displacementFilter2" x="-20%" y="-20%" width="140%" height="140%">
-    <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50"/>
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="2"
+      result="turbulence" />
+    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" />
   </filter>
 
   <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter);""/>
-  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter2); transform: translateX(240px);""/>
+  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter2);
+  transform: translateX(240px);""/>
 </svg>
 ```
 
@@ -64,6 +73,7 @@ svg {
 </table>
 
 - `<number>`
+
   - : This value defines the scale factor for the displacement.
 
     When the value of this attribute is `0`, this operation has no effect on the source image.

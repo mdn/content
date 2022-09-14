@@ -15,7 +15,7 @@ Using the File API, web content can ask the user to select local files and then 
 Consider this HTML:
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 ```
 
 The File API makes it possible to access a {{DOMxRef("FileList")}} containing {{DOMxRef("File")}} objects representing the files selected by the user.
@@ -76,43 +76,62 @@ The following example shows a possible use of the `size` property:
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>File(s) size</title>
   </head>
 
   <body>
     <form name="uploadForm">
       <div>
-        <input id="uploadInput" type="file" multiple>
-        selected files: <output id="fileNum">0</output>;
-        total size: <output id="fileSize">0</output>
+        <input id="uploadInput" type="file" multiple />
+        <label for="fileNum">Selected files:</label>
+        <output id="fileNum">0</output>;
+        <label for="fileSize">Total size:</label>
+        <output id="fileSize">0</output>
       </div>
-      <div><input type="submit" value="Send file"></div>
+      <div><input type="submit" value="Send file" /></div>
     </form>
 
     <script>
       const uploadInput = document.getElementById("uploadInput");
-      uploadInput.addEventListener("change", () => {
-        // Calculate total size
-        let numberOfBytes = 0;
-        for (const file of uploadInput.files) {
-          numberOfBytes += file.size;
-        }
+      uploadInput.addEventListener(
+        "change",
+        () => {
+          // Calculate total size
+          let numberOfBytes = 0;
+          for (const file of uploadInput.files) {
+            numberOfBytes += file.size;
+          }
 
-        // Approximate to the closest prefixed unit
-        const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-        const exponent = Math.min(
-          Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-          units.length - 1,
-        );
-        const approx = numberOfBytes / 1024 ** exponent;
-        const output = exponent === 0
-          ? `${numberOfBytes} bytes`
-          : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
+          // Approximate to the closest prefixed unit
+          const units = [
+            "B",
+            "KiB",
+            "MiB",
+            "GiB",
+            "TiB",
+            "PiB",
+            "EiB",
+            "ZiB",
+            "YiB",
+          ];
+          const exponent = Math.min(
+            Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+            units.length - 1
+          );
+          const approx = numberOfBytes / 1024 ** exponent;
+          const output =
+            exponent === 0
+              ? `${numberOfBytes} bytes`
+              : `${approx.toFixed(3)} ${
+                  units[exponent]
+                } (${numberOfBytes} bytes)`;
 
-        document.getElementById("fileNum").textContent = fileList.length;
-        document.getElementById("fileSize").textContent = output;
-      }, false);
+          document.getElementById("fileNum").textContent = fileList.length;
+          document.getElementById("fileSize").textContent = output;
+        },
+        false
+      );
     </script>
   </body>
 </html>
@@ -125,7 +144,12 @@ You can hide the admittedly ugly file {{HTMLElement("input")}} element and prese
 Consider this HTML:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none" />
 <button id="fileSelect">Select some files</button>
 ```
 
@@ -151,7 +175,12 @@ To allow opening the file picker without using JavaScript (the click() method), 
 Consider this HTML:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  class="visually-hidden" />
 <label for="fileElem">Select some files</label>
 ```
 
@@ -272,7 +301,12 @@ This example uses object URLs to display image thumbnails. In addition, it displ
 The HTML that presents the interface looks like this:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none" />
 <a href="#" id="fileSelect">Select some files</a>
 <div id="fileList">
   <p>No files selected!</p>
@@ -493,7 +527,7 @@ Object URLs can be used for other things than just images! They can be used to d
 In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference `pdfjs.disabled` must be set to `false` {{non-standard_inline()}}.
 
 ```html
-<iframe id="viewer">
+<iframe id="viewer"></iframe>
 ```
 
 And here is the change of the `src` attribute:

@@ -46,11 +46,11 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-const anotherArray = new Float32Array;
+const anotherArray = new Float32Array();
 // Copy channel data from second channel of myArrayBuffer.
-myArrayBuffer.copyFromChannel(anotherArray,1,0);
+myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 // Copy data from anotherArray to first channel of myArrayBuffer. Both channels have the same data now.
-myArrayBuffer.copyToChannel (anotherArray,0,0);
+myArrayBuffer.copyToChannel(anotherArray, 0, 0);
 ```
 
 ## Specifications

@@ -25,12 +25,10 @@ Rendering in your browser: <math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
 
 ```html
 <math>
-
- <mroot>
+  <mroot>
     <mi>x</mi>
     <mn>3</mn>
- </mroot>
-
+  </mroot>
 </math>
 ```
 

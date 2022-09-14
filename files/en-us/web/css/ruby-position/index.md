@@ -106,7 +106,7 @@ ruby {
 
 ```html
 <ruby>
-  <rb>A<rb>B<rb>C</rb>
+  <rb>A</rb><rb>B</rb><rb>C</rb>
   <rtc>Above</rtc>
   <rtc>Below</rtc>
 </ruby>

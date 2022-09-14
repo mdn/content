@@ -47,8 +47,8 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Image preview" />
 ```
 
 ### JavaScript
@@ -79,7 +79,7 @@ function previewFile() {
 ### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 

@@ -28,16 +28,16 @@ You can do this either for an entire form, or for specific input elements in a f
 
 ```html
 <form method="post" action="/form" autocomplete="off">
-[…]
+  …
 </form>
 ```
 
 ```html
 <form method="post" action="/form">
-  […]
+  …
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```

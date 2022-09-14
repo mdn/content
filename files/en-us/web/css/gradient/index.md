@@ -111,7 +111,7 @@ Simple repeating linear and radial gradient examples.
 
 ```html hidden
 <div class="linear-repeat">Repeating linear gradient</div>
-<br>
+<br />
 <div class="radial-repeat">Repeating radial gradient</div>
 ```
 

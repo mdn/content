@@ -68,13 +68,13 @@ This example shows how this feature can be used for `color` and `file` input pic
 
 ```html
 <p>
-<input type="color">
-<button id ="color">Show the color picker</button>
+  <input type="color" />
+  <button id="color">Show the color picker</button>
 </p>
 
 <p>
-<input type="file">
-<button id ="file">Show the file picker</button>
+  <input type="file" />
+  <button id="file">Show the file picker</button>
 </p>
 ```
 
@@ -109,14 +109,15 @@ First we define a `<datalist>` in HTML consisting of a number of internet browse
 
 ```html
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
-<input type="text" list="browsers">
+
+<input type="text" list="browsers" />
 <button>Select browser</button>
 ```
 
@@ -142,8 +143,7 @@ The code below adds an event listener that calls `showPicker()` when the button 
 Here we define an input that takes an autocomplete option of "name".
 
 ```html
-<input autocomplete="name">
-<button>Show autocomplete options</button>
+<input autocomplete="name" /> <button>Show autocomplete options</button>
 ```
 
 The code below shows the picker for the input when the button is clicked.

@@ -111,10 +111,9 @@ When animating between one `<basic-shape>` and a second, the rules below are app
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link. Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```

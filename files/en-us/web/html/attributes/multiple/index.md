@@ -18,7 +18,7 @@ Depending on the type, the form control may have a different appearance if the `
 When `multiple` is set on the {{HTMLElement("input/email", "email")}} input type, the user can include zero (if not also [`required`](/en-US/docs/Web/HTML/Attributes/required)), one or more comma-separated email addresses.
 
 ```html
-<input type="email" multiple name="emails" id="emails">
+<input type="email" multiple name="emails" id="emails" />
 ```
 
 If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
@@ -26,7 +26,7 @@ If and only if the `multiple` attribute is specified, the value can be a list of
 When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).
 
 ```html
-<input type="file" multiple name="uploads" id="uploads">
+<input type="file" multiple name="uploads" id="uploads" />
 ```
 
 When the attribute is omitted, the user can only select a single file per `<input>`.
@@ -59,7 +59,14 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
 
 ```html
 <label for="emails">Who do you want to email?</label>
-<input type="email" multiple name="emails" id="emails" list="dwarf-emails" required size="64">
+<input
+  type="email"
+  multiple
+  name="emails"
+  id="emails"
+  list="dwarf-emails"
+  required
+  size="64" />
 
 <datalist id="dwarf-emails">
   <option value="grumpy@woodworkers.com">Grumpy</option>
@@ -91,17 +98,20 @@ When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, 
 ```html
 <form method="post" enctype="multipart/form-data">
   <p>
-    <label for="uploads">
-       Choose the images you want to upload:
-    </label>
-    <input type="file" id="uploads" name="uploads" accept=".jpg, .jpeg, .png, .svg, .gif" multiple>
+    <label for="uploads"> Choose the images you want to upload: </label>
+    <input
+      type="file"
+      id="uploads"
+      name="uploads"
+      accept=".jpg, .jpeg, .png, .svg, .gif"
+      multiple />
   </p>
   <p>
     <label for="text">Pick a text file to upload: </label>
-    <input type="file" id="text" name="text" accept=".txt">
- </p>
+    <input type="file" id="text" name="text" accept=".txt" />
+  </p>
   <p>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
   </p>
 </form>
 ```
@@ -118,33 +128,33 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 
 ```html
 <form method="get" action="#">
-<p>
- <label for="dwarfs">Select the dwarf woodsman you like:</label>
-  <select multiple name="dwarfs" id="dwarfs">
-    <option>grumpy@woodworkers.com</option>
-    <option>happy@woodworkers.com</option>
-    <option>sleepy@woodworkers.com</option>
-    <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
-    <option>dopey@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
- <label for="favoriteOnly">Select your favorite:</label>
-  <select name="favoriteOnly" id="favoriteOnly">
-    <option>grumpy@woodworkers.com</option>
-    <option>happy@woodworkers.com</option>
-    <option>sleepy@woodworkers.com</option>
-    <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
-    <option>dopey@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
-  <input type="submit" value="Submit">
-</p>
+  <p>
+    <label for="dwarfs">Select the dwarf woodsman you like:</label>
+    <select multiple name="dwarfs" id="dwarfs">
+      <option>grumpy@woodworkers.com</option>
+      <option>happy@woodworkers.com</option>
+      <option>sleepy@woodworkers.com</option>
+      <option>bashful@woodworkers.com</option>
+      <option>sneezy@woodworkers.com</option>
+      <option>dopey@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <label for="favoriteOnly">Select your favorite:</label>
+    <select name="favoriteOnly" id="favoriteOnly">
+      <option>grumpy@woodworkers.com</option>
+      <option>happy@woodworkers.com</option>
+      <option>sleepy@woodworkers.com</option>
+      <option>bashful@woodworkers.com</option>
+      <option>sneezy@woodworkers.com</option>
+      <option>dopey@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <input type="submit" value="Submit" />
+  </p>
 </form>
 ```
 
