@@ -119,21 +119,20 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```
 
 ```html hidden
-<code>writing-mode:</code
-><select id="writingMode">
+<code>writing-mode:</code><select id="writingMode">
   <option value="horizontal-tb" selected>horizontal-tb</option>
   <option value="vertical-rl">vertical-rl</option>
   <option value="vertical-lr">vertical-lr</option>
   <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option></select
-><code>;</code><br />
-<code>direction:</code
-><select id="direction">
+  <option value="sideways-lr">sideways-lr</option>
+</select><code>;</code><br />
+
+<code>direction:</code><select id="direction">
   <option value="ltr" selected>ltr</option>
   <option value="rtl">rtl</option></select
 ><code>;</code><br />
-<code>place-content:</code
-><select id="alignContentAlignment">
+
+<code>place-content:</code><select id="alignContentAlignment">
   <option value="normal">normal</option>
   <option value="first baseline">first baseline</option>
   <option value="last baseline">last baseline</option>
@@ -164,8 +163,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option></select
-><code>;</code>
+  <option value="unsafe">unsafe</option></select><code>;</code>
 ```
 
 ```js hidden
