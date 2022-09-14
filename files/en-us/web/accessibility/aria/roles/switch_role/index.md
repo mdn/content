@@ -120,7 +120,7 @@ document.querySelectorAll(".switch").forEach((theSwitch) => {
 });
 
 function handleClickEvent(evt) {
-  let el = evt.target;
+  const el = evt.target;
 
   if (el.getAttribute("aria-checked") === "true") {
     el.setAttribute("aria-checked", "false");
