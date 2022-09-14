@@ -41,8 +41,8 @@ Given the following:
 
 ```html
 <p>
-  <label
-    >Enter your phone number in the format (123) - 456 - 7890 (<input
+  <label>
+    Enter your phone number in the format (123) - 456 - 7890 (<input
       name="tel1"
       type="tel"
       pattern="[0-9]{3}"
