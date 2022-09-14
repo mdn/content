@@ -188,8 +188,8 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 /* basic JavaScript to update the clock */
 function updateClock() {
   const now = new Date();
-  document.getElementById("clock-hours").innerHTML = now.getHours();
-  document.getElementById("clock-mins").innerHTML =
+  document.getElementById("clock-hours").textContent = now.getHours();
+  document.getElementById("clock-mins").textContent =
     `0${now.getMinutes()}`.substr(-2);
 }
 
