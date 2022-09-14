@@ -105,7 +105,7 @@ We can however use two attributes — {{htmlattrxref("srcset", "img")}} and {{ht
 <img
   srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
   sizes="(max-width: 600px) 480px,
-            800px"
+         800px"
   src="elva-fairy-800w.jpg"
   alt="Elva dressed as a fairy" />
 ```
