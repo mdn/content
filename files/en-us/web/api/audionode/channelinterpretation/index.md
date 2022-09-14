@@ -40,7 +40,7 @@ const gainNode = audioCtx.createGain();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-oscillator.channelInterpretation = 'discrete';
+oscillator.channelInterpretation = "discrete";
 ```
 
 ## Specifications

@@ -55,7 +55,11 @@ None ({{jsxref("undefined")}}).
 The following example configures the `AudioDecoder` with the `opus` codec.
 
 ```js
-AudioDecoder.configure({ codec: 'opus', sampleRate: 44100, numberOfChannels: 2 });
+AudioDecoder.configure({
+  codec: "opus",
+  sampleRate: 44100,
+  numberOfChannels: 2,
+});
 ```
 
 ## Specifications

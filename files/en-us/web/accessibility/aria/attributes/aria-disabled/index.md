@@ -68,14 +68,14 @@ function onClick(event) {
 function toggleDisabled(element, status, update) {
   if (status) {
     //element.input.disabled = false;
-    element.setAttribute('aria-disabled', 'false');
-    update.textContent = 'The element is now enabled.';
-    element.addEventListener('click', onClick);
+    element.setAttribute("aria-disabled", "false");
+    update.textContent = "The element is now enabled.";
+    element.addEventListener("click", onClick);
   } else {
     //element.input.disabled = true;
-    element.setAttribute('aria-disabled', 'true');
-    update.textContent = 'The element is now disabled.';
-    element.removeEventListener('click', onClick);
+    element.setAttribute("aria-disabled", "true");
+    update.textContent = "The element is now disabled.";
+    element.removeEventListener("click", onClick);
   }
 }
 ```

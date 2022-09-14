@@ -40,14 +40,12 @@ In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ
 // Setting up the tear animations
 
 tears.forEach((el) => {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // randomized for each tear
-      duration: getRandomMsRange(2000, 6000), // randomized for each tear
-      iterations: Infinity,
-      easing: 'cubic-bezier(0.6, 0.04, 0.98, 0.335)'
-    });
+  el.animate(tearsFalling, {
+    delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+    duration: getRandomMsRange(2000, 6000), // randomized for each tear
+    iterations: Infinity,
+    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+  });
   el.pause();
 });
 

@@ -153,29 +153,33 @@ ul {
 
 ```js
 function handleCommand(event) {
-    // Handles both mouse clicks and keyboard
-    // activate with Enter or Space
+  // Handles both mouse clicks and keyboard
+  // activate with Enter or Space
 
-    // Keypresses other then Enter and Space should not trigger a command
-    if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
-        return;
-    }
+  // Keypresses other then Enter and Space should not trigger a command
+  if (
+    event instanceof KeyboardEvent &&
+    event.key !== "Enter" &&
+    event.key !== " "
+  ) {
+    return;
+  }
 
-    // Get the new name value from the input element
-    let newNameInput = document.getElementById('newName');
-    let name = newNameInput.value;
-    newNameInput.value = ''; // clear the text field
-    newNameInput.focus();  // give the text field focus to enable entering and additional name.
+  // Get the new name value from the input element
+  const newNameInput = document.getElementById("newName");
+  const name = newNameInput.value;
+  newNameInput.value = ""; // clear the text field
+  newNameInput.focus(); // give the text field focus to enable entering and additional name.
 
-    // Don't add blank entries to the list.
-    if (name.length > 0) {
-        listItem = document.createElement('li');
-        listItem.appendChild(document.createTextNode(name));
+  // Don't add blank entries to the list.
+  if (name.length > 0) {
+    const listItem = document.createElement("li");
+    listItem.appendChild(document.createTextNode(name));
 
-        // Add the new name to the list.
-        let list = document.getElementById('nameList');
-        list.appendChild(listItem);
-    }
+    // Add the new name to the list.
+    const list = document.getElementById("nameList");
+    list.appendChild(listItem);
+  }
 }
 ```
 
@@ -236,7 +240,8 @@ function handleBtnClick(event) {
 
 function handleBtnKeyDown(event) {
   // Check to see if space or enter were pressed
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+  // "Spacebar" for IE11 support
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
     // Prevent the default action to stop scrolling when space is pressed
     event.preventDefault();
     toggleButton(event.target);
@@ -244,7 +249,7 @@ function handleBtnKeyDown(event) {
 }
 
 function toggleButton(element) {
-  const audio = document.getElementById('audio');
+  const audio = document.getElementById("audio");
 
   // Check to see if the button is pressed
   const pressed = element.getAttribute("aria-pressed") === "true";
@@ -254,9 +259,9 @@ function toggleButton(element) {
 
   // Toggle the play state of the audio file
   if (pressed) {
-     audio.pause();
+    audio.pause();
   } else {
-     audio.play();
+    audio.play();
   }
 }
 ```

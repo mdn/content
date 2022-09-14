@@ -162,7 +162,7 @@ This is the second example that explain [how to build custom form widgets](/en-U
 
 ```js
 window.addEventListener("load", () => {
-  const form = document.querySelector('form');
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");

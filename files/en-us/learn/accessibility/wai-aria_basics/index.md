@@ -337,18 +337,19 @@ which is hidden from view using absolute positioning. When this is checked/unche
 
 ```js
 function toggleMusician(bool) {
-  const instruItem = formItems[formItems.length-1];
+  const instruItem = formItems[formItems.length - 1];
   if (bool) {
     instruItem.input.disabled = false;
-    instruItem.label.style.color = '#000';
-    instruItem.input.setAttribute('aria-disabled', 'false');
-    hiddenAlert.textContent = 'Instruments played field now enabled; use it to tell us what you play.';
+    instruItem.label.style.color = "#000";
+    instruItem.input.setAttribute("aria-disabled", "false");
+    hiddenAlert.textContent =
+      "Instruments played field now enabled; use it to tell us what you play.";
   } else {
     instruItem.input.disabled = true;
-    instruItem.label.style.color = '#999';
-    instruItem.input.setAttribute('aria-disabled', 'true');
-    instruItem.input.removeAttribute('aria-label');
-    hiddenAlert.textContent = 'Instruments played field now disabled.';
+    instruItem.label.style.color = "#999";
+    instruItem.input.setAttribute("aria-disabled", "true");
+    instruItem.input.removeAttribute("aria-label");
+    hiddenAlert.textContent = "Instruments played field now disabled.";
   }
 }
 ```

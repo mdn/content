@@ -48,7 +48,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.sampleRate);
-}
+};
 ```
 
 ## Specifications

@@ -27,7 +27,7 @@ The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener('addtrack', (event) => { })
+addEventListener("addtrack", (event) => { })
 
 onaddtrack = (event) => { }
 ```

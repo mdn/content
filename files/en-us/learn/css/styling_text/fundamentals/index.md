@@ -788,8 +788,8 @@ let htmlCode = htmlInput.value;
 let cssCode = cssInput.value;
 const output = document.querySelector(".output");
 
-const styleElem = document.createElement('style');
-const headElem = document.querySelector('head');
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {

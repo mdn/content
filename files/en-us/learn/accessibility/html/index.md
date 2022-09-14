@@ -369,7 +369,8 @@ While the above addition allows us to tab to the buttons, it does not allow us t
 
 ```js
 document.onkeydown = (e) => {
-  if (e.key === "Enter") { // The Enter/Return key
+  // The Enter/Return key
+  if (e.key === "Enter") {
     document.activeElement.click();
   }
 };
