@@ -19,7 +19,7 @@ The **`::-webkit-inner-spin-button`** CSS pseudo-element is used to style the in
 ## Syntax
 
 ```css
-::-webkit-inner-spin-button ;
+::-webkit-inner-spin-button
 ```
 
 ## Examples
