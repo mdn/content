@@ -87,7 +87,7 @@ You can use this attribute with the following SVG elements:
   <!-- fixed-->
   <path
     vector-effect="non-scaling-stroke"
-    transform="translate(300,0) scale(4,1)"
+    transform="translate(300, 0) scale(4, 1)"
     d="M10,20 L40,100 L39,200 z"
     stroke="black"
     stroke-width="2px"
