@@ -71,11 +71,13 @@ blockquote {
 
 ```html
 <blockquote>
-<p>This paragraph is in English but incorrectly goes right to left.<p>
+  <p>This paragraph is in English but incorrectly goes right to left.</p>
+  <p></p>
 </blockquote>
 
 <blockquote>
-<p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.<p>
+  <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
+  <p></p>
 </blockquote>
 ```
 

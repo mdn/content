@@ -58,10 +58,11 @@ The `column-rule-width` property is specified as a single `<'border-width'>` val
 #### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-width` property is used to change
-   the width of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-width`
+  property is used to change the width of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 #### CSS

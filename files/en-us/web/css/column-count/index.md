@@ -59,9 +59,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `column-count` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `column-count`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 

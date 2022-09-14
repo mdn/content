@@ -52,25 +52,25 @@ A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no vi
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -107,25 +107,25 @@ li::before {
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```

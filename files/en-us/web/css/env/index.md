@@ -135,11 +135,10 @@ The below example makes use of the optional second parameter of `env()`, which a
 
 ```html
 <p>
-  If the <code>env()</code> function is supported in your browser,
-  this paragraph's text will have 50px of padding between it and
-  the left border — but not the top, right and bottom.
-  This is because the accompanying CSS is the equivalent of
-  <code>padding: 0 0 0 50px</code>, because, unlike other CSS
+  If the <code>env()</code> function is supported in your browser, this
+  paragraph's text will have 50px of padding between it and the left border —
+  but not the top, right and bottom. This is because the accompanying CSS is the
+  equivalent of <code>padding: 0 0 0 50px</code>, because, unlike other CSS
   properties, user agent property names are case-sensitive.
 </p>
 ```

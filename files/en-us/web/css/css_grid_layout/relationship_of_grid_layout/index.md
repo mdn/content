@@ -358,7 +358,9 @@ In the below example I have a wrapper containing four child items. Item three is
   <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">
-   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
+    This block is absolutely positioned. In this example the grid container is
+    the containing block and so the absolute positioning offset values are
+    calculated in from the outer edges of the area it has been placed into.
   </div>
   <div class="box4">Four</div>
 </div>
@@ -427,9 +429,12 @@ I have given `.box3` position relative and then positioned the sub-item with the
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
+      This block is absolutely positioned. In this example the grid area is the
+      containing block and so the absolute positioning offset values are
+      calculated in from the outer edges of the grid area.
     </div>
   </div>
   <div class="box4">Four</div>
