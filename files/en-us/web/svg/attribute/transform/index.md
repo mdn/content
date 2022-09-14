@@ -254,7 +254,7 @@ svg {
     width="10"
     height="10"
     fill="green"
-    transform="rotate(100,10,10)" />
+    transform="rotate(100, 10, 10)" />
 </svg>
 ```
 
