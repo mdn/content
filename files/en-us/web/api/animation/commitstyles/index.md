@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 const divElem = document.querySelector("div");
 
 document.body.addEventListener("mousemove", (evt) => {
-  let anim = divElem.animate(
+  const anim = divElem.animate(
     { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: "forwards" }
   );
