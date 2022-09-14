@@ -187,12 +187,12 @@ One problem with sliders is that they don't offer any kind of visual feedback as
 To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:
 
 ```js
-const price = document.querySelector('#price');
-const output = document.querySelector('.price-output');
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
 output.textContent = price.value;
 
-price.addEventListener('input', () => {
+price.addEventListener("input", () => {
   output.textContent = price.value;
 });
 ```

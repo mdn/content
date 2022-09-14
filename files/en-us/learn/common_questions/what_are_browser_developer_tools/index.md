@@ -184,17 +184,20 @@ This will give you a window like the following:
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 Now try entering the following incorrect versions of the code and see what you get.
@@ -204,13 +207,16 @@ alert('hello!);
 ```
 
 ```js example-bad
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!

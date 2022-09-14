@@ -117,7 +117,7 @@ That just leaves our darken/lighten `<button>` — we've already provided a line
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

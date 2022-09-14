@@ -64,7 +64,7 @@ Next, create "background.js" in the extension's root directory, and give it the 
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -169,7 +169,7 @@ document.addEventListener("click", (event) => {
 
   const chosenPage = `https://${event.target.textContent}`;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
 });
 ```
