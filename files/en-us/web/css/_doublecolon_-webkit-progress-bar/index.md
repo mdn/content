@@ -19,7 +19,7 @@ The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 ## Syntax
 
 ```css
-::-webkit-progress-bar
+::-webkit-progress-bar ;
 ```
 
 ## Examples
@@ -39,7 +39,7 @@ progress {
 ### HTML content
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Result

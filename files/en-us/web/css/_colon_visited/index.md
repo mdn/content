@@ -44,7 +44,7 @@ Properties that would otherwise have no color or be transparent cannot be modifi
 ### HTML
 
 ```html
-<a href="#test-visited-link">Have you visited this link yet?</a><br>
+<a href="#test-visited-link">Have you visited this link yet?</a><br />
 <a href="">You've already visited this link.</a>
 ```
 

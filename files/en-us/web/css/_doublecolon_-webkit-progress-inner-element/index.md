@@ -19,7 +19,7 @@ The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-el
 ## Syntax
 
 ```css
-::-webkit-progress-inner-element
+::-webkit-progress-inner-element ;
 ```
 
 ## Examples
@@ -33,7 +33,7 @@ In this example, a 2px black border is added around the progress bar.
 #### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 #### CSS

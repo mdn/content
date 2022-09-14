@@ -180,7 +180,10 @@ attr(data-something, "default");
 #### HTML
 
 ```html
-<div class="background" data-background="lime">background expected to be red if your browser does not support advanced usage of attr()</div>
+<div class="background" data-background="lime">
+  background expected to be red if your browser does not support advanced usage
+  of attr()
+</div>
 ```
 
 #### CSS

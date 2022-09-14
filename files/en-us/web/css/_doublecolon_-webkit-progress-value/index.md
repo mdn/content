@@ -19,7 +19,7 @@ The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/
 ## Syntax
 
 ```css
-::-webkit-progress-value
+::-webkit-progress-value ;
 ```
 
 ## Examples
@@ -29,7 +29,7 @@ This example will only work in browsers based on Blink or WebKit.
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### CSS

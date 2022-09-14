@@ -17,7 +17,7 @@ The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the ou
 ## Syntax
 
 ```css
-::-webkit-outer-spin-button
+::-webkit-outer-spin-button ;
 ```
 
 ## Examples
@@ -31,7 +31,7 @@ This example uses `input::-webkit-outer-spin-button` to find {{HTMLElement("inpu
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS
