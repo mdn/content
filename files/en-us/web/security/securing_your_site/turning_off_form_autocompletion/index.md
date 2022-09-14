@@ -28,7 +28,7 @@ You can do this either for an entire form, or for specific input elements in a f
 
 ```html
 <form method="post" action="/form" autocomplete="off">
-  <!-- … -->
+  …
 </form>
 ```
 
