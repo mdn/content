@@ -87,7 +87,7 @@ If the element is in the original source code when the page loads, the screen re
 This snippet dynamically creates an element with an alert role and adds it to the document structure.
 
 ```js
-let myAlert = document.createElement("p");
+const myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
 let myAlertText = document.createTextNode(
   "You must agree with our terms of service to create an account."
