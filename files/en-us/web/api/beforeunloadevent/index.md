@@ -62,7 +62,7 @@ window.addEventListener("beforeunload", (e) => {
 
   // Gecko + IE
   (e || window.event).returnValue = confirmationMessage;
-  
+
   // Safari, Chrome, and other WebKit-derived browsers
   return confirmationMessage;
 });
