@@ -189,7 +189,7 @@ A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and
 
 ## Accessibility concerns
 
-Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. To learn more about this and potential workarounds, see `{{cssxref("list-style", "", "#accessibility_concerns")}}`.
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
 
 ## Formal definition
 
