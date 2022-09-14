@@ -23,7 +23,7 @@ The syntax is simple. Any attribute on any element whose attribute name starts w
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-…
+  …
 </article>
 ```
 
