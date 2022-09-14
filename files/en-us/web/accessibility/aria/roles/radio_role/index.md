@@ -207,7 +207,7 @@ A lot of JavaScript is required to make radio buttons out of non-semantic HTML.
 ```js
 // initialize all the radio role elements
 
-let radioGroups = document.querySelectorAll('[role="radiogroup"]');
+const radioGroups = document.querySelectorAll('[role="radiogroup"]');
 
 for (let i = 0, groups = radioGroups.length; i < groups; i++) {
   let radios = radioGroups[i].querySelectorAll("[role=radio]");
