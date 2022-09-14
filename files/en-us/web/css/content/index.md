@@ -112,10 +112,10 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
 <h1>5</h1>
 <p>
   According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"
-    >I was lucky enough to invent the Web at the time when the Internet already
-    existed - and had for a decade and a half.</q
-  >
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.
+  </q>
   We must understand that there is nothing fundamentally wrong with building on
   the contributions of others.
 </p>
