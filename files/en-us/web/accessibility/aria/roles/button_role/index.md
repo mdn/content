@@ -240,8 +240,8 @@ function handleBtnClick(event) {
 
 function handleBtnKeyDown(event) {
   // Check to see if space or enter were pressed
+  // "Spacebar" for IE11 support
   if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-    // "Spacebar" for IE11 support
     // Prevent the default action to stop scrolling when space is pressed
     event.preventDefault();
     toggleButton(event.target);
