@@ -115,9 +115,11 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ## Examples
 >
 > ### Using the fetch API
+>
 > Example of Fetch
 >
 > ### More examples
+>
 > Links to more examples on other pages
 > ```
 >
@@ -126,10 +128,9 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
 > ```md
->  ## Examples
+> ## Examples
 >
->  For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
 > ```
 
 ## Specifications

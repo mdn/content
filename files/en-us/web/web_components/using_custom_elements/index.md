@@ -117,7 +117,9 @@ customElements.define('popup-info', PopUpInfo);
 It is now available to use on our page. Over in our HTML, we use it like so:
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -173,9 +175,7 @@ Using the built-in element in a web document also looks somewhat different:
 
 ```html
 <ul is="expanding-list">
-
-  ...
-
+  …
 </ul>
 ```
 
