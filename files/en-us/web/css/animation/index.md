@@ -97,55 +97,235 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Examples
 
-### Cylon Eye
+### Naive Sun Rise
 
 ```html
-<div class="view_port">
-  <div class="polling_message">Listening for dispatches</div>
-  <div class="cylon_eye"></div>
-</div>
+<div class="sun"></div>
 ```
 
 ```css
-.polling_message {
-  color: white;
-  float: left;
-  margin-right: 2%;
+:root {
+ overflow: hidden;
+ background-color: lightblue;
+ display: flex;
+ justify-content: center;
 }
 
-.view_port {
-  background-color: black;
-  height: 25px;
-  width: 100%;
-  overflow: hidden;
+.sun {
+ background-color: yellow;
+ border-radius: 50%;
+ height: 100vh;
+ aspect-ratio: 1 / 1;
+ animation:
+  4s linear 0s infinite alternate
+  naive-sun-rise;
 }
 
-.cylon_eye {
-  background-color: red;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
-  );
-  color: white;
-  height: 100%;
-  width: 20%;
-
-  animation: 4s linear 0s infinite alternate move_eye;
-}
-
-@keyframes move_eye {
-  from {
-    margin-left: -20%;
-  }
-  to {
-    margin-left: 100%;
-  }
+/* 
+ animating CPU dependent properties is possible but
+ unrecommended due to potential performance issues 
+*/
+@keyframes naive-sun-rise {
+ from {
+  /* all box model properties are CPU dependent */
+  margin-top: 110vh;
+ }
+ to {
+  margin-top: 0%;
+ }
 }
 ```
 
-{{EmbedLiveSample('Cylon_Eye')}}
+{{EmbedLiveSample('Naive_Sun_Rise')}}
+
+### Effecient Sun Rise
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+ overflow: hidden;
+ background-color: lightblue;
+ display: flex;
+ justify-content: center;
+}
+
+.sun {
+ background-color: yellow;
+ border-radius: 50%;
+ height: 100vh;
+ aspect-ratio: 1 / 1;
+ animation:
+  4s linear 0s infinite alternate
+  effecient-sun-rise;
+}
+
+/*
+ the same effect as before but now utilizing the GPU
+*/
+@keyframes effecient-sun-rise {
+ from {
+  transform: translateY(110vh);
+ }
+ to {
+  transform: translateY(0);
+ }
+}
+```
+
+{{EmbedLiveSample('Effecient_Sun_Rise')}}
+
+### Animating Multiple Properties
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+ overflow: hidden;
+ background-color: lightblue;
+ display: flex;
+ justify-content: center;
+}
+
+.sun {
+ background-color: yellow;
+ border-radius: 50%;
+ height: 100vh;
+ aspect-ratio: 1 / 1;
+ animation:
+  4s linear 0s infinite alternate
+  animating-multiple-properties;
+}
+
+/*
+ it is possible to animate mulitple properties
+ in a single animation
+*/
+@keyframes animating-multiple-properties {
+ from {
+  transform: translateY(110vh);
+  background-color: red;
+  filter: brightness(75%);
+ }
+ to {
+  transform: translateY(0);
+  background-color: orange;
+  /*
+   unset properties i.e. 'filter'
+   will revert to default values
+  */
+ }
+}
+```
+
+{{EmbedLiveSample('Animating Multiple Properties')}}
+
+### Applying Multiple Animations
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+ overflow: hidden;
+ background-color: lightblue;
+ display: flex;
+ justify-content: center;
+}
+
+.sun {
+ background-color: yellow;
+ border-radius: 50%;
+ height: 100vh;
+ aspect-ratio: 1 / 1;
+ /* multiple animations are seperated by commas */
+ animation:
+  4s linear 0s infinite alternate
+  rise,
+  /* animation parameters are set independently */
+  24s linear 0s infinite
+  psychedelic;
+}
+
+@keyframes rise {
+ from {
+  transform: translateY(110vh);
+ }
+ to {
+  transform: translateY(0);
+ }
+}
+
+@keyframes psychedelic {
+ from {
+  filter: hue-rotate(0deg);
+ }
+ to {
+  filter: hue-rotate(360deg);
+ }
+}
+```
+
+{{EmbedLiveSample('Applying Multiple Animations')}}
+
+### Cascading Multiple Animations
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+ overflow: hidden;
+ background-color: lightblue;
+ display: flex;
+ justify-content: center;
+}
+
+.sun {
+ background-color: yellow;
+ border-radius: 50%;
+ height: 100vh;
+ aspect-ratio: 1 / 1;
+ /*
+  animations declared later in the cascade will
+  override the properties of previously
+  declared animations
+ */
+ animation:
+  4s linear 0s infinite alternate
+  rise,
+  /* run 'overwrites' the transform set by rise */
+  4s linear 0s infinite alternate
+  run;
+  /* hence the sun only moves horizontally */
+}
+
+@keyframes rise {
+ from {
+  transform: translateY(110vh);
+ }
+ to {
+  transform: translateY(0);
+ }
+}
+
+@keyframes run {
+ from {
+  transform: translateX(-50vw);
+ }
+ to {
+  transform: translateX(50vw);
+ }
+}
+```
+
+{{EmbedLiveSample('Cascading Multiple Animations')}}
 
 See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples) for additional examples.
 
