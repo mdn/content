@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
 The **Insertable Streams for MediaStreamTrack API** provides a method of adding new components to a {{domxref("MediaStreamTrack")}}.

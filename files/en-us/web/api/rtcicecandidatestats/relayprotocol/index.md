@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

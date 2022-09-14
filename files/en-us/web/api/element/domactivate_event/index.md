@@ -16,6 +16,7 @@ tags:
   - onactivate
 browser-compat: api.Element.DOMActivate_event
 ---
+
 {{APIRef}}{{Deprecated_Header}}
 
 The **`DOMActivate`** event is fired at an element when it becomes active, such as when it is clicked on using the mouse or a keypress is used to navigate to it.
@@ -43,14 +44,18 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 ## Examples
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
-     xmlns:ev="http://www.w3.org/2001/xml-events"
-     width="6cm" height="5cm" viewBox="0 0 600 500">
-
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.2"
+  baseProfile="tiny"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  width="6cm"
+  height="5cm"
+  viewBox="0 0 600 500">
   <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>
 
   <!-- ECMAScript to change the radius -->
-  <script type="application/ecmascript"><![CDATA[
+ <script type="application/ecmascript"><![CDATA[
     function change(evt) {
       const circle = evt.target;
       const currentRadius = circle.getFloatTrait("r");
@@ -64,10 +69,17 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
   <!-- Act on each DOMActivate event -->
   <circle cx="300" cy="225" r="100" fill="red">
-    <handler type="application/ecmascript" ev:event="DOMActivate"> change(evt); </handler>
+    <handler type="application/ecmascript" ev:event="DOMActivate">
+      change(evt);
+    </handler>
   </circle>
 
-  <text x="300" y="480" font-family="Verdana" font-size="35" text-anchor="middle">
+  <text
+    x="300"
+    y="480"
+    font-family="Verdana"
+    font-size="35"
+    text-anchor="middle">
     Activate the circle to change its size
   </text>
 </svg>

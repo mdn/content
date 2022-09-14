@@ -10,6 +10,7 @@ tags:
   - MediaKeySession
 browser-compat: api.MediaKeySession.keystatuseschange_event
 ---
+
 {{APIRef("Encrypted Media Extensions")}}
 
 The **`keystatuseschange`** event of the {{domxref("MediaKeySession")}} API fires when there has been a change in the keys or their statuses within a session.

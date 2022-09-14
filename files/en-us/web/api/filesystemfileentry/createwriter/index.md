@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
+
 {{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method
@@ -22,7 +23,7 @@ which can be used to write data into the file represented by the directory entry
 
 ## Syntax
 
-```js
+```js-nolint
 createWriter(successCallback)
 createWriter(successCallback, errorCallback)
 ```

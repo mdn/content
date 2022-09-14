@@ -19,6 +19,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCRtpSender
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCRtpSender`** interface provides the ability to control and obtain details about how a particular {{domxref("MediaStreamTrack")}} is encoded and sent to a remote peer.

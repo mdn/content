@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.mark
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`mark()`** method creates a
@@ -28,7 +29,7 @@ The `mark()'s` stores its data internally as
 
 ## Syntax
 
-```js
+```js-nolint
 mark(name)
 mark(name, markOptions)
 ```
@@ -36,12 +37,14 @@ mark(name, markOptions)
 ### Parameters
 
 - `name`
+
   - : A string representing the name of the mark. If the
     `name` given to this method already exists in the
     {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
     thrown.
 
 - `markOptions` {{optional_inline}}
+
   - : An object for specifying a timestamp and additional metadata for the mark.
 
     - `detail`

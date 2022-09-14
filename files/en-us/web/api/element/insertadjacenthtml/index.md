@@ -11,6 +11,7 @@ tags:
   - insertAdjacentHTML
 browser-compat: api.Element.insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentHTML()`** method of the
@@ -19,7 +20,7 @@ the resulting nodes into the DOM tree at a specified position.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentHTML(position, text)
 ```
 
@@ -97,7 +98,9 @@ content as HTML, but instead inserts it as raw text.
 <button id="insert">Insert HTML</button>
 <button id="reset">Reset</button>
 
-<p>Some text, with a <code id="subject">code-formatted element</code> inside it.</p>
+<p>
+  Some text, with a <code id="subject">code-formatted element</code> inside it.
+</p>
 ```
 
 #### CSS

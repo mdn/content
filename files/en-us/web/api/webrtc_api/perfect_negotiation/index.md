@@ -16,6 +16,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{APIRef("WebRTC")}}
 
 This article introduces WebRTC **perfect negotiation**, describing how it works and why it's the recommended way to negotiate a WebRTC connection between peers, and provides sample code to demonstrate the technique.
@@ -306,7 +307,7 @@ signaler.onmessage = async ({data: { description, candidate }}) => {
 
 Since rollback works by postponing changes until the next negotiation (which will begin immediately after the current one is finished), the polite peer needs to know when it needs to throw away a received offer if it's currently waiting for a reply to an offer it's already sent.
 
-The code checks to see if the message is an offer, and if so, if the local signaling state isn't `stable`. If it's not stable, _and_ the local peer is the polite one, we need to trigger rollback so we can replace the outgoing offer with the new incoming one. and these must both be completed before we can proceed with handling the received offer.
+The code checks to see if the message is an offer, and if so, if the local signaling state isn't `stable`. If it's not stable, _and_ the local peer is the polite one, we need to trigger rollback so we can replace the outgoing offer with the new incoming one. And these must both be completed before we can proceed with handling the received offer.
 
 Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously _sent_ offer with the newly _received_ offer. The impolite peer has now become the callee instead of the caller.
 

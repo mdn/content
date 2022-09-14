@@ -10,6 +10,7 @@ tags:
   - has
 browser-compat: api.Headers.has
 ---
+
 {{APIRef("Fetch")}}
 
 The **`has()`** method of the {{domxref("Headers")}} interface
@@ -22,7 +23,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 has(name)
 ```
 

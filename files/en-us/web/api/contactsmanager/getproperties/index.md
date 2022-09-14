@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.ContactsManager.getProperties
 ---
+
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`getProperties()`** method of the
@@ -21,7 +22,7 @@ properties are available.
 
 ## Syntax
 
-```js
+```js-nolint
 getProperties()
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaChecked
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaChecked`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
@@ -36,8 +37,14 @@ A string with one of the following values:
 In this example the `aria-checked` attribute on the element with an ID of `checkBoxInput` is set to "false" indicating that this input is currently unchecked. Using `ariaChecked` we update the value to "true".
 
 ```html
-<span role="checkbox" id="checkBoxInput" aria-checked="false" tabindex="0" aria-labelledby="chk1-label">
-</span> <label id="chk1-label">Remember my preferences</label>
+<span
+  role="checkbox"
+  id="checkBoxInput"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="chk1-label">
+</span>
+<label id="chk1-label">Remember my preferences</label>
 ```
 
 ```js

@@ -12,6 +12,7 @@ tags:
   - mode
 browser-compat: api.TextTrack.mode
 ---
+
 {{APIRef("WebVTT")}}
 
 The {{domxref("TextTrack")}} interface's

@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-sort
 ---
+
 The `aria-sort` attribute indicates if items in a table or grid are sorted in ascending or descending order.
 
 ## Description
@@ -32,23 +33,15 @@ This table loads with the last name column sorted in ascending order.
   <thead>
     <tr>
       <th>
-        <button>
-          First Name
-        </button>
+        <button>First Name</button>
       </th>
       <th aria-sort="ascending">
-        <button>
-          Last Name
-        </button>
+        <button>Last Name</button>
       </th>
       <th>
-        <button>
-          Company
-        </button>
+        <button>Company</button>
       </th>
-      <th>
-        Email
-      </th>
+      <th>Email</th>
     </tr>
   </thead>
   <tbody>

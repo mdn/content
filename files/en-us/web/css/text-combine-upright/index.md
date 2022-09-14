@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-combine-upright
 ---
+
 {{CSSRef}}
 
 The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
@@ -86,16 +87,24 @@ The all value requires markup around every piece of horizontal text, but it is c
 #### HTML
 
 ```html
-<p lang="zh-Hant">民國<span class="num">105</span
->年<span class="num">4</span
->月<span class="num">29</span>日</p>
+<p lang="zh-Hant">
+  民國<span class="num">105</span>年<span class="num">4</span>月<span
+    class="num"
+    >29</span
+  >日
+</p>
 ```
 
 #### CSS
 
 ```css
-html { writing-mode: vertical-rl; font: 24px serif }
-.num { text-combine-upright: all }
+html {
+  writing-mode: vertical-rl;
+  font: 24px serif;
+}
+.num {
+  text-combine-upright: all;
+}
 ```
 
 #### Results

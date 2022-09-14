@@ -4,6 +4,7 @@ slug: Web/HTTP/Session
 tags:
   - HTTP
 ---
+
 {{HTTPSidebar}}
 
 In client-server protocols, like HTTP, sessions consist of three phases:
@@ -28,8 +29,8 @@ Once the connection is established, the user-agent can send the request (a user-
 
 1. The first line contains a request method followed by its parameters:
 
-    - the path of the document, as an absolute URL without the protocol or domain name
-    - the HTTP protocol version
+   - the path of the document, as an absolute URL without the protocol or domain name
+   - the HTTP protocol version
 
 2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (for example, what language, what MIME types), or other data altering its behavior (for example, not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
 3. The final block is an optional data block, which may contain further data mainly used by the POST method.

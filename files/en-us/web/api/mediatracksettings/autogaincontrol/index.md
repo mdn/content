@@ -14,6 +14,7 @@ tags:
   - autoGainControl
 browser-compat: api.MediaTrackSettings.autoGainControl
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's

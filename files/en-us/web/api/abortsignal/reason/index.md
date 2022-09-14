@@ -10,6 +10,7 @@ tags:
   - reason
 browser-compat: api.AbortSignal.reason
 ---
+
 {{APIRef("DOM")}}
 
 The **`reason`** read-only property returns a JavaScript value that indicates the abort reason.
@@ -37,10 +38,10 @@ if (signal.aborted) {
   if (signal.reason) {
     console.log(`Request aborted with reason: ${signal.reason}`);
   } else {
-    console.log('Request aborted but no reason was given.');
+    console.log("Request aborted but no reason was given.");
   }
 } else {
-  console.log('Request not aborted');
+  console.log("Request not aborted");
 }
 ```
 

@@ -14,6 +14,7 @@ tags:
   - size
 browser-compat: css.properties.min-height
 ---
+
 {{CSSRef}}
 
 The **`min-height`** [CSS](/en-US/docs/Web/CSS) property sets the minimum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("height")}} property from becoming smaller than the value specified for `min-height`.
@@ -72,9 +73,13 @@ min-height: unset;
 ### Setting min-height
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Specifications

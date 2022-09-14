@@ -11,6 +11,7 @@ tags:
   - borders
   - color
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.
@@ -48,8 +49,12 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background: linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat, url(big-star.png) center
+      no-repeat, rebeccapurple;
 }
 ```
 
@@ -182,7 +187,8 @@ When you do this you may end up with background images overlapping each other. T
 The other `background-*` properties can also have comma-separated values in the same way as `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px, top right;
 ```

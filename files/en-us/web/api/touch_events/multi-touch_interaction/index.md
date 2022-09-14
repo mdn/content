@@ -7,6 +7,7 @@ tags:
   - TouchEvent
   - touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
@@ -189,10 +190,10 @@ function end_handler(ev) {
 The application uses {{HTMLElement("div")}} elements for the touch areas and provides buttons to enable logging and clear the log.
 
 ```html
-<div id="target1"> Tap, Hold or Swipe me 1</div>
-<div id="target2"> Tap, Hold or Swipe me 2</div>
-<div id="target3"> Tap, Hold or Swipe me 3</div>
-<div id="target4"> Tap, Hold or Swipe me 4</div>
+<div id="target1">Tap, Hold or Swipe me 1</div>
+<div id="target2">Tap, Hold or Swipe me 2</div>
+<div id="target3">Tap, Hold or Swipe me 3</div>
+<div id="target4">Tap, Hold or Swipe me 4</div>
 
 <!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>

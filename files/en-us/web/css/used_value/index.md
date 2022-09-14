@@ -7,6 +7,7 @@ tags:
   - Reference
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#used-value
 ---
+
 {{CSSRef}}
 
 The **used value** of a [CSS](/en-US/docs/Web/CSS) property is its value after all calculations have been performed on the [computed value](/en-US/docs/Web/CSS/computed_value).

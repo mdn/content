@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose {{jsxref("WebAssembly/Memory/buffer", "buffer")}} property is a resizable {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that holds the raw bytes of memory accessed by a {{jsxref("WebAssembly.Instance")}}.
@@ -18,7 +19,7 @@ Both WebAssembly and JavaScript can create `Memory` objects. If you want to acce
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Memory(memoryDescriptor)
 ```
 

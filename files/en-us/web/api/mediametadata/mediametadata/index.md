@@ -14,6 +14,7 @@ tags:
   - artwork
 browser-compat: api.MediaMetadata.MediaMetadata
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`MediaMetadata()`** constructor creates a new
@@ -21,7 +22,7 @@ The **`MediaMetadata()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaMetadata()
 new MediaMetadata(metadata)
 ```

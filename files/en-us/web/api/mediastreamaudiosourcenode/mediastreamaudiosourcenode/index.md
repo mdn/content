@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
@@ -24,7 +25,7 @@ the first audio track of a given {{domxref("MediaStream")}} as its source.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamAudioSourceNode(context, options)
 ```
 

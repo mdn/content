@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.repeat
 ---
+
 {{APIRef("UI Events")}}
 
 The **`repeat`** read-only property of the

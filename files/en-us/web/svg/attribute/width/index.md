@@ -11,6 +11,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#Sizing
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
 ---
+
 {{SVGRef}}
 
 The **`width`** attribute defines the horizontal length of an element in the user coordinate system.
@@ -46,15 +47,19 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
   <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect x="0" y="0" width="0" height="90"/>
-  <rect x="0" y="100" width="60" height="90"/>
-  <rect x="0" y="200" width="100%" height="90"/>
+  <rect x="0" y="0" width="0" height="90" />
+  <rect x="0" y="100" width="60" height="90" />
+  <rect x="0" y="200" width="100%" height="90" />
 </svg>
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-inner-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-inner-spin-button`** CSS pseudo-element is used to style the inner part of the spinner button of number picker input elements.
@@ -32,13 +33,13 @@ In this example, the CSS {{cssxref("cursor")}} is changed to `pointer` whenever 
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS
 
 ```css
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
 }
 ```

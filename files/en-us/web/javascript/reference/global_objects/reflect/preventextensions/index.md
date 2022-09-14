@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.preventExtensions
 ---
+
 {{JSRef}}
 
 The static **`Reflect.preventExtensions()`** method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
@@ -18,7 +19,7 @@ The static **`Reflect.preventExtensions()`** method prevents new properties from
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.preventExtensions(target)
 ```
 

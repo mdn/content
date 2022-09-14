@@ -12,6 +12,7 @@ tags:
   - Video
   - effects
 ---
+
 {{CanvasSidebar}}
 
 By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/video) element with a [`canvas`](/en-US/docs/Web/HTML/Element/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
@@ -26,12 +27,12 @@ The HTML document used to render this content is shown below.
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Video test page</title>
     <style>
       body {
         background: black;
-        color: #CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(media/foo.png);
@@ -39,23 +40,27 @@ The HTML document used to render this content is shown below.
       }
       div {
         float: left;
-        border : 1px solid #444444;
+        border: 1px solid #444444;
         padding: 10px;
         margin: 10px;
-        background: #3B3B3B;
+        background: #3b3b3b;
       }
     </style>
   </head>
 
   <body>
     <div>
-      <video id="video" src="media/video.mp4" controls="true" crossorigin="anonymous"/>
+      <video
+        id="video"
+        src="media/video.mp4"
+        controls="true"
+        crossorigin="anonymous" />
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
       <canvas id="c2" width="160" height="96"></canvas>
     </div>
-  <script src="processor.js"></script>
+    <script src="processor.js"></script>
   </body>
 </html>
 ```

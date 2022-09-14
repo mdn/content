@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.VideoEncoder.reset
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`reset()`** method of the {{domxref("VideoEncoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

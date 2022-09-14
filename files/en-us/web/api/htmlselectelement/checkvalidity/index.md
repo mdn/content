@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.checkValidity()`** method checks
@@ -20,7 +21,7 @@ element, and then returns `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - clear
 ---
+
 {{AddonSidebar}}
 
 Use `BrowserSetting.clear()` to clear any changes the extension has made to the browser setting. The browser setting will revert to its previous value.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let clearing = setting.clear(
   details     // object
 )

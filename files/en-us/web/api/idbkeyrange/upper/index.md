@@ -13,6 +13,7 @@ tags:
   - upper
 browser-compat: api.IDBKeyRange.upper
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`upper`** read-only property of the

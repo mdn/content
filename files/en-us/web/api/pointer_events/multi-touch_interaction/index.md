@@ -7,6 +7,7 @@ tags:
   - Pointer Events
   - touch
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 Pointer events extend DOM input events to support various pointing input devices such as pen/stylus and touch screens as well as mouse. The _pointer_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites, applications and provide a good user experience regardless of the user's hardware.
@@ -151,15 +152,15 @@ To prevent the browser's default touch behavior from overriding this application
 
 ```html
 <body onload="init();" style="touch-action:none">
- <div id="target1"> Tap, Hold or Swipe me 1</div>
- <div id="target2"> Tap, Hold or Swipe me 2</div>
- <div id="target3"> Tap, Hold or Swipe me 3</div>
+  <div id="target1">Tap, Hold or Swipe me 1</div>
+  <div id="target2">Tap, Hold or Swipe me 2</div>
+  <div id="target3">Tap, Hold or Swipe me 3</div>
 
- <!-- UI for logging/debugging -->
- <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
- <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
- <p></p>
- <output></output>
+  <!-- UI for logging/debugging -->
+  <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
+  <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
+  <p></p>
+  <output></output>
 </body>
 ```
 

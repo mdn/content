@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.title
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given SVG style element.
@@ -32,7 +33,9 @@ We also define a text area for logging the current title.
 
 ```html
 <textarea id="log" rows="3" cols="50"></textarea>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style title="gold fill style">
     circle {
       fill: gold;

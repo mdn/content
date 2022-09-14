@@ -10,6 +10,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.state
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.

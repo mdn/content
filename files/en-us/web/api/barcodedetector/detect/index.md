@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector.detect
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
@@ -19,7 +20,7 @@ with an {{jsxref('Array')}} of detected barcodes within an image.
 
 ## Syntax
 
-```js
+```js-nolint
 detect(imageBitmapSource)
 ```
 

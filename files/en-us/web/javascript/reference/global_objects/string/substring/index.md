@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.substring
 ---
+
 {{JSRef}}
 
 The **`substring()`** method returns the part of the `string` between the start and end indexes, or to the end of the string.
@@ -17,7 +18,7 @@ The **`substring()`** method returns the part of the `string` between the start 
 
 ## Syntax
 
-```js
+```js-nolint
 substring(indexStart)
 substring(indexStart, indexEnd)
 ```

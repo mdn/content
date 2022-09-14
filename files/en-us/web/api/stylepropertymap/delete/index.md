@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.StylePropertyMap.delete
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the
@@ -21,7 +22,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(property)
 ```
 

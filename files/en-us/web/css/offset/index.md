@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.offset
 ---
+
 {{CSSRef}}
 
 The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the properties required for animating an element along a defined path.
@@ -35,7 +36,7 @@ offset: none;
 
 /* Offset path */
 offset: ray(45deg closest-side);
-offset: path('M 100 100 L 300 100 L 200 300 z');
+offset: path("M 100 100 L 300 100 L 200 300 z");
 offset: url(arc.svg);
 
 /* Offset path with distance and/or rotation */

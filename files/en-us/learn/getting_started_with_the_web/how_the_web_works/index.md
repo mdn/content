@@ -11,8 +11,9 @@ tags:
   - Learn
   - Server
   - TCP
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 _How the web works_ provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.

@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.getTitle
 ---
+
 {{AddonSidebar()}}
 
 Gets the sidebar's title.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTitle = browser.sidebarAction.getTitle(
   details               // object
 )

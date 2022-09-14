@@ -11,6 +11,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting
 ---
+
 {{AddonSidebar}}
 
 Inserts JavaScript and CSS into websites. This API offers two approaches to inserting content:

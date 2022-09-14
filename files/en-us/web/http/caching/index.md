@@ -63,7 +63,7 @@ Managed caches are explicitly deployed by service developers to offload the orig
 
 The characteristics of managed caches vary depending on the product deployed. In most cases, you can control the cache's behavior through the `Cache-Control` header and your own configuration files or dashboards.
 
-For example, the HTTP Caching specification essentially does not define a way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts,  and so on. That allows for a more proactive caching strategy.
+For example, the HTTP Caching specification essentially does not define a way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts, and so on. That allows for a more proactive caching strategy.
 
 It is also possible to ignore the standard HTTP Caching spec protocols in favor of explicit manipulation. For example, the following can be specified to opt-out of a private cache or proxy cache, while using your own strategy to cache only in a managed cache.
 
@@ -554,8 +554,8 @@ Some commonly-used cache-header values are shown below.
 
 ```
 36 cache-control max-age=0
-37 cache-control max-age=2592000
-38 cache-control max-age=604800
+37 cache-control max-age=604800
+38 cache-control max-age=2592000
 39 cache-control no-cache
 40 cache-control no-store
 41 cache-control public, max-age=31536000
@@ -574,7 +574,7 @@ The `public` value has the effect of making the response storable even if the `A
 > **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
 > It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
 
-So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
+So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `38` (1 month).
 
 ```http
 # response for bundle.v123.js

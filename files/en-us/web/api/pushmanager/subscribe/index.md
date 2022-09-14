@@ -11,6 +11,7 @@ tags:
   - subscribe
 browser-compat: api.PushManager.subscribe
 ---
+
 {{ApiRef("Push API")}}
 
 The **`subscribe()`** method of the {{domxref("PushManager")}}
@@ -22,7 +23,7 @@ the current service worker does not have an existing subscription.
 
 ## Syntax
 
-```js
+```js-nolint
 subscribe(options)
 ```
 

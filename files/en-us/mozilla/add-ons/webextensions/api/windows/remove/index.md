@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: webextensions.api.windows.remove
 ---
+
 {{AddonSidebar()}}
 
 Closes a window and all the tabs inside it, given the window's ID.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.windows.remove(
   windowId        // integer
 )

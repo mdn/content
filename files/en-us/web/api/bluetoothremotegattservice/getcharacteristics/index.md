@@ -13,6 +13,7 @@ tags:
   - getCharacteristics()
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristics
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.getCharacteristics()`** method
@@ -21,7 +22,7 @@ instances for a given universally unique identifier (UUID).
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristics(characteristics)
 ```
 

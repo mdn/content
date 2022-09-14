@@ -12,6 +12,7 @@ tags:
   - messaging
 browser-compat: api.MessageEvent.data
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`data`** read-only property of the

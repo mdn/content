@@ -12,6 +12,7 @@ tags:
   - SVGSymbolElement
 browser-compat: api.SVGSymbolElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSymbolElement`** interface corresponds to the {{SVGElement("symbol")}} element.

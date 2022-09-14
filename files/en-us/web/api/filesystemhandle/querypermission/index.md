@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemHandle.queryPermission
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
@@ -19,8 +20,8 @@ current handle.
 
 ## Syntax
 
-```js
-queryPermission(FileSystemHandlePermissionDescriptor)
+```js-nolint
+queryPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters

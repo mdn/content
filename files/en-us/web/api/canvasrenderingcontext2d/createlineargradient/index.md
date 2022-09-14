@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient
 ---
+
 {{APIRef}}
 
 The
@@ -31,7 +32,7 @@ the gradient must first be assigned to the
 
 ## Syntax
 
-```js
+```js-nolint
 createLinearGradient(x0, y0, x1, y1)
 ```
 

@@ -6,6 +6,7 @@ tags:
   - Contribute
   - MDN
 ---
+
 {{MDNSidebar}}
 
 This document provides a record of MDN content processes, constructs, and best practices that have changed, and when they changed. It is useful to allow regular contributors to check in and see what has changed about the process of creating content for MDN.

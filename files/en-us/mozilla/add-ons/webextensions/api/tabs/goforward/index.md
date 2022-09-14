@@ -12,6 +12,7 @@ tags:
   - goForward
 browser-compat: webextensions.api.tabs.goForward
 ---
+
 {{AddonSidebar()}}
 
 Navigate to the next page in tab's history, if available.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let goingForward = browser.tabs.goForward(
   tabId,                       // optional integer
   callback                       // optional function

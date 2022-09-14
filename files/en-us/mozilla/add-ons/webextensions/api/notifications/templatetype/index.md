@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.TemplateType
 ---
+
 {{AddonSidebar()}}
 
 This is a string, and represents the type of notification to create. There are four types of notification: "basic", "image", "list", "progress".

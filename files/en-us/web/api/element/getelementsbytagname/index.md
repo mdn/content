@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 The
@@ -35,7 +36,7 @@ elements that are descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagName(tagName)
 ```
 

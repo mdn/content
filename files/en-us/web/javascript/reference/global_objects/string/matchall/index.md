@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.matchAll
 ---
+
 {{JSRef}}
 
 The **`matchAll()`** method returns an iterator of all results matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
@@ -19,7 +20,7 @@ The **`matchAll()`** method returns an iterator of all results matching a string
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll(regexp)
 ```
 

@@ -12,6 +12,7 @@ tags:
   - getBadgeTextColor
 browser-compat: webextensions.api.browserAction.getBadgeTextColor
 ---
+
 {{AddonSidebar()}}
 
 Gets the text color for the browser action's badge.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.getBadgeTextColor(
   details // object
 )

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader
 ---
+
 {{APIRef("File API")}}
 
 The **`FileReader`** object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using {{domxref("File")}} or {{domxref("Blob")}} objects to specify the file or data to read.

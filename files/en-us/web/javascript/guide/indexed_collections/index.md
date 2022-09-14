@@ -4,8 +4,9 @@ slug: Web/JavaScript/Guide/Indexed_collections
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.

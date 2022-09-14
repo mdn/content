@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.test
 ---
+
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`test()`** method of the {{domxref("URLPattern")}} interface takes a URL or
@@ -22,7 +23,7 @@ the current pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 test(input)
 test(input, baseURL)
 ```

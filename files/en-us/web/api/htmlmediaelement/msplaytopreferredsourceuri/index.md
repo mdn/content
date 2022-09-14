@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Property
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -33,8 +34,9 @@ a _PlayTo_ device. This is done to conform to URI standards.
 ## Example
 
 ```html
-  <video src="http://www.contoso.com/videos/video.mp4"
-       msPlayToPreferredSourceUri="http://www.contoso.com/catalogid=1234" />
+<video
+  src="http://www.contoso.com/videos/video.mp4"
+  msPlayToPreferredSourceUri="http://www.contoso.com/catalogid=1234" />
 ```
 
 ```js

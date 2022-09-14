@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Attr.name
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`name`** property of the {{domxref("Attr")}} interface returns the _qualified name_ of an attribute, that is the name of the attribute, with the namespace prefix, if any, in front of it. For example, if the local name is `lang` and the namespace prefix is `xml`, the returned qualified name is `xml:lang`.

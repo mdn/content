@@ -9,6 +9,7 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
@@ -20,7 +21,7 @@ A constructed stylesheet can be shared between a document and its shadow DOM sub
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSStyleSheet()
 new CSSStyleSheet(options)
 ```

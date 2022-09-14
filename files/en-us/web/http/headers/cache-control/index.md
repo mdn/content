@@ -380,7 +380,7 @@ For example:
 ```html
 <!-- index.html -->
 <script src="/assets/react.min.js"></script>
-<img src="/assets/hero.png" width="900" height="400">
+<img src="/assets/hero.png" width="900" height="400" />
 ```
 
 The React library version will change when you update the library, and `hero.png` will also change when you edit the picture. So those are hard to store in a cache with `max-age`.
@@ -390,7 +390,7 @@ In such a case, you could address the caching needs by using a specific, numbere
 ```html
 <!-- index.html -->
 <script src="/assets/react.0.0.0min.js"></script>
-<img src="/assets/hero.png?hash=deadbeef" width="900" height="400">
+<img src="/assets/hero.png?hash=deadbeef" width="900" height="400" />
 ```
 
 You can add a long `max-age` value and `immutable` because the content will never change.

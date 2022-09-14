@@ -23,6 +23,7 @@ tags:
   - XR
   - augmented
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
 
 Assuming you're already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.
@@ -128,7 +129,7 @@ Of course, you can simplify this depending on your needs; since your app is prob
 
 ### Permissions and security
 
-There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking`  [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
+There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
 
 For more specifics about securing WebXR activities and usage, see the article [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 

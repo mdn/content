@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.SVGCursorElement
 ---
+
 {{APIRef("SVG")}}{{Deprecated_Header}}
 
 The **`SVGCursorElement`** interface provides access to the properties of {{ SVGElement("cursor") }} elements, as well as methods to manipulate them.

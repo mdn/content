@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.format()`** method formats
@@ -24,7 +25,7 @@ a date according to the locale and formatting options of this
 
 ## Syntax
 
-```js
+```js-nolint
 format(date)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Range.intersectsNode
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.intersectsNode()`** method returns a boolean
@@ -17,7 +18,7 @@ indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range
 
 ## Syntax
 
-```js
+```js-nolint
 intersectsNode(referenceNode)
 ```
 

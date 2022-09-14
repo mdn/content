@@ -11,6 +11,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.id
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation.id`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets a string used to identify the animation.

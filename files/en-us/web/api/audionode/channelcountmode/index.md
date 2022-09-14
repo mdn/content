@@ -11,6 +11,7 @@ tags:
   - channelCountMode
 browser-compat: api.AudioNode.channelCountMode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `channelCountMode` property of the {{ domxref("AudioNode") }} interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
@@ -86,7 +87,7 @@ const gainNode = audioCtx.createGain();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-oscillator.channelCountMode = 'explicit';
+oscillator.channelCountMode = "explicit";
 ```
 
 ## Specifications

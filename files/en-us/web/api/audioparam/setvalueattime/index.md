@@ -11,6 +11,7 @@ tags:
   - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setValueAtTime()` method of the
@@ -20,7 +21,7 @@ The `setValueAtTime()` method of the
 
 ## Syntax
 
-```js
+```js-nolint
 setValueAtTime(value, startTime)
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Web Accessibility: Understanding Colors and Luminance'
+title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
 tags:
   - accessibility
@@ -372,12 +372,12 @@ function sRGBtoLin(colorChannel) {
   if (colorChannel <= 0.04045) {
     return colorChannel / 12.92;
   } else {
-    return Math.pow(((colorChannel + 0.055) / 1.055), 2.4);
+    return Math.pow((colorChannel + 0.055) / 1.055, 2.4);
   }
 }
 ```
 
-> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to  0.04045 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
+> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to 0.04045 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
 
 #### Step three: Spectrally Weighted Luminance
 

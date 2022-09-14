@@ -9,6 +9,7 @@ tags:
   - Deprecated
 browser-compat: svg.elements.filter.filterRes
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`filterRes`** attribute indicates the width and height of the intermediate images in pixels of a filter primitive.

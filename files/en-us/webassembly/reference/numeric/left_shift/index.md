@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
 The **`shl`** instructions, short for _shift-left_, are used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.

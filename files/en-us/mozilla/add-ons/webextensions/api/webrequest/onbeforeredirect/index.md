@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onBeforeRedirect
 ---
+
 {{AddonSidebar()}}
 
 Fired when a server-initiated redirect is about to occur.
@@ -21,7 +22,7 @@ Note that you can't pass `"blocking"` for this event, so you can't modify or can
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onBeforeRedirect.addListener(
   listener,             // function
   filter,               //  object

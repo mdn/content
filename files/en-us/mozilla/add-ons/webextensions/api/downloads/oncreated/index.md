@@ -13,6 +13,7 @@ tags:
   - onCreated
 browser-compat: webextensions.api.downloads.onCreated
 ---
+
 {{AddonSidebar()}}
 
 The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e. when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
@@ -21,7 +22,7 @@ The listener is passed the {{WebExtAPIRef('downloads.DownloadItem')}} object in 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onCreated.addListener(listener)
 browser.downloads.onCreated.removeListener(listener)
 browser.downloads.onCreated.hasListener(listener)

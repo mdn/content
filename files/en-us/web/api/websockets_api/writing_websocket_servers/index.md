@@ -13,6 +13,7 @@ tags:
   - WebSocket API
   - WebSockets
 ---
+
 {{APIRef("Websockets API")}}
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.

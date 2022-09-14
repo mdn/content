@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.disabled
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`disabled`** property of the

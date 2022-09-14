@@ -13,6 +13,7 @@ tags:
   - test
 browser-compat: api.console
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 The Console API provides functionality to allow developers to perform debugging tasks, such as logging messages or the values of variables at set points in your code, or timing how long an operation takes to complete.

@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.BiquadFilterNode.Q
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `Q` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](https://en.wikipedia.org/wiki/Q_factor), or _quality factor_.

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether all elements in the
@@ -22,7 +23,7 @@ of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/T
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* ... */ } )
 every((element, index) => { /* ... */ } )

@@ -19,6 +19,7 @@ tags:
   - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The {{domxref("MediaDevices")}} interface's
@@ -33,7 +34,7 @@ See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_
 
 ## Syntax
 
-```js
+```js-nolint
 getDisplayMedia(constraints)
 ```
 

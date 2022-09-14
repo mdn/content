@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.Element.animate
 ---
+
 {{APIRef("Web Animations API")}}
 
 {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
@@ -23,74 +24,74 @@ There are two different ways to format keyframes:
 
 1. An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
 
-    ```js
-    element.animate([
-      { // from
-        opacity: 0,
-        color: "#fff"
-      },
-      { // to
-        opacity: 1,
-        color: "#000"
-      }
-    ], 2000);
-    ```
+   ```js
+   element.animate([
+     { // from
+       opacity: 0,
+       color: "#fff"
+     },
+     { // to
+       opacity: 1,
+       color: "#000"
+     }
+   ], 2000);
+   ```
 
-    Offsets for each keyframe can be specified by providing an `offset` value.
+   Offsets for each keyframe can be specified by providing an `offset` value.
 
-    ```js
-    element.animate([ { opacity: 1 },
-                      { opacity: 0.1, offset: 0.7 },
-                      { opacity: 0 } ],
-                    2000);
-    ```
+   ```js
+   element.animate([ { opacity: 1 },
+                     { opacity: 0.1, offset: 0.7 },
+                     { opacity: 0 } ],
+                   2000);
+   ```
 
-    > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
+   > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
 
-    It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.
+   It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.
 
-    The easing to apply between keyframes can be specified by providing an `easing` value as illustrated below.
+   The easing to apply between keyframes can be specified by providing an `easing` value as illustrated below.
 
-    ```js
-    element.animate([ { opacity: 1, easing: 'ease-out' },
-                      { opacity: 0.1, easing: 'ease-in' },
-                      { opacity: 0 } ],
-                    2000);
-    ```
+   ```js
+   element.animate([ { opacity: 1, easing: 'ease-out' },
+                     { opacity: 0.1, easing: 'ease-in' },
+                     { opacity: 0 } ],
+                   2000);
+   ```
 
-    In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any `easing` value specified on the `options` argument, however, applies across a single iteration of the animation — for the entire duration.
+   In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any `easing` value specified on the `options` argument, however, applies across a single iteration of the animation — for the entire duration.
 
 2. An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
 
-    ```js
-    element.animate({
-      opacity: [ 0, 1 ],          // [ from, to ]
-      color:   [ "#fff", "#000" ] // [ from, to ]
-    }, 2000);
-    ```
+   ```js
+   element.animate({
+     opacity: [ 0, 1 ],          // [ from, to ]
+     color:   [ "#fff", "#000" ] // [ from, to ]
+   }, 2000);
+   ```
 
-    Using this format, the number of elements in each array does not need to be equal. The provided values will be spaced out independently.
+   Using this format, the number of elements in each array does not need to be equal. The provided values will be spaced out independently.
 
-    ```js
-    element.animate({
-      opacity: [ 0, 1 ], // offset: 0, 1
-      backgroundColor: [ "red", "yellow", "green" ], // offset: 0, 0.5, 1
-    }, 2000);
-    ```
+   ```js
+   element.animate({
+     opacity: [ 0, 1 ], // offset: 0, 1
+     backgroundColor: [ "red", "yellow", "green" ], // offset: 0, 0.5, 1
+   }, 2000);
+   ```
 
-    The special keys `offset`, `easing`, and `composite` (described below) may be specified alongside the property values.
+   The special keys `offset`, `easing`, and `composite` (described below) may be specified alongside the property values.
 
-    ```js
-    element.animate({
-      opacity: [ 0, 0.9, 1 ],
-      offset: [ 0, 0.8 ], // Shorthand for [ 0, 0.8, 1 ]
-      easing: [ 'ease-in', 'ease-out' ],
-    }, 2000);
-    ```
+   ```js
+   element.animate({
+     opacity: [ 0, 0.9, 1 ],
+     offset: [ 0, 0.8 ], // Shorthand for [ 0, 0.8, 1 ]
+     easing: [ 'ease-in', 'ease-out' ],
+   }, 2000);
+   ```
 
-    After generating a suitable set of keyframes from the property value lists, each supplied offset is applied to the corresponding keyframe. If there are insufficient values, or if the list contains `null` values, the keyframes without specified offsets will be evenly spaced as with the array format described above.
+   After generating a suitable set of keyframes from the property value lists, each supplied offset is applied to the corresponding keyframe. If there are insufficient values, or if the list contains `null` values, the keyframes without specified offsets will be evenly spaced as with the array format described above.
 
-    If there are too few `easing` or `composite` values, the corresponding list will be repeated as needed.
+   If there are too few `easing` or `composite` values, the corresponding list will be repeated as needed.
 
 ### Implicit to/from keyframes
 

@@ -17,6 +17,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePair.remote
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`remote`** property of the

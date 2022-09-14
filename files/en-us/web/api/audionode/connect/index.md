@@ -13,6 +13,7 @@ tags:
   - connect
 browser-compat: api.AudioNode.connect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `connect()` method of the {{ domxref("AudioNode") }} interface lets
@@ -23,7 +24,7 @@ change the value of that parameter over time.
 
 ## Syntax
 
-```js
+```js-nolint
 connect(destination)
 connect(destination, outputIndex)
 connect(destination, outputIndex, inputIndex)

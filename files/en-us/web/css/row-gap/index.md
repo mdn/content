@@ -11,6 +11,7 @@ tags:
   - row-gap
 browser-compat: css.properties.row-gap
 ---
+
 {{CSSRef}}
 
 The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows.

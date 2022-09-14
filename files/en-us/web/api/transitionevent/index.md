@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.TransitionEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).

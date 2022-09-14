@@ -17,6 +17,7 @@ tags:
   - hierarchy
 browser-compat: api.HTMLElement
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
@@ -333,7 +334,7 @@ nameField.addEventListener("input", (event) => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`.  With these, we can access the properties and methods that provide information about and grant control over these elements.
+This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
 
 The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
 
@@ -350,13 +351,13 @@ The HTML for the form looks like this:
 <form action="" method="get">
   <p>
     <label for="userName" required>Your name:</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
     <label for="email">Email:</label>
-    <input type="email" id="userEmail">
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="Send" id="sendButton">
+  <input type="submit" value="Send" id="sendButton" />
 </form>
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The remainder assignment operator (`%=`) divides a variable by the value of
@@ -18,7 +19,7 @@ the right operand and assigns the remainder to the variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x %= y // x = x % y
 ```
 

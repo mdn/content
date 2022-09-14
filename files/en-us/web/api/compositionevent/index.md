@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CompositionEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The DOM **`CompositionEvent`** represents events that occur due to the user indirectly entering text.

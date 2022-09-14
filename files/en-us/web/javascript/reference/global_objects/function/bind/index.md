@@ -19,7 +19,7 @@ The **`bind()`** method creates a new function that, when called, has its `this`
 
 ## Syntax
 
-```js
+```js-nolint
 bind(thisArg)
 bind(thisArg, arg1)
 bind(thisArg, arg1, arg2)

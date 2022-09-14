@@ -13,6 +13,7 @@ tags:
   - getBackgroundPage
 browser-compat: webextensions.api.extension.getBackgroundPage
 ---
+
 {{AddonSidebar()}}
 
 Returns the [Window](/en-US/docs/Web/API/Window) of the background page if the background script is running. If the script is not running, null is returned.
@@ -23,7 +24,7 @@ This a synchronous function.
 
 ## Syntax
 
-```js
+```js-nolint
 let page = browser.extension.getBackgroundPage()
 ```
 

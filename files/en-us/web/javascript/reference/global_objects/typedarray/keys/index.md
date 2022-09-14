@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new _array iterator_ object
@@ -22,7 +23,7 @@ that contains the keys for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

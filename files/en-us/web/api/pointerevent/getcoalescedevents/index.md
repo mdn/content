@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.getCoalescedEvents
 ---
+
 {{APIRef("Pointer Events")}}
 
 The **`getCoalescedEvents()`** method of the
@@ -20,7 +21,7 @@ The **`getCoalescedEvents()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getCoalescedEvents()
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Security
 browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -87,7 +88,7 @@ where `<value>` can optionally be one of the following values:
   - : Lets the resource navigate the top-level browsing context, but only if initiated by
     a user gesture.
 - `allow-top-navigation-to-custom-protocols`
-  - :  Allows navigations toward non-fetch schemes to be handed off to external software.
+  - : Allows navigations toward non-fetch schemes to be handed off to external software.
 
 ## Examples
 

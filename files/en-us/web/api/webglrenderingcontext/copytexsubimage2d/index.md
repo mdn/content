@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexSubImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.copyTexSubImage2D()`** method of
@@ -19,7 +20,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
 
 ## Syntax
 
-```js
+```js-nolint
 copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ```
 

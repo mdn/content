@@ -11,13 +11,14 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.getLastChecked
 ---
+
 {{AddonSidebar()}}
 
 Returns the time since the last request was completed.
 
 ## Syntax
 
-```js
+```js-nolint
 let state = browser.captivePortal.getLastChecked()
 ```
 

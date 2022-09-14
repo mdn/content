@@ -6,6 +6,7 @@ tags:
   - Reference
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1
 ---
+
 {{HTTPSidebar}}
 
 The **`Accept-Patch`** response HTTP header advertises which media-type the server is able to understand in a PATCH request.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.shift
 ---
+
 {{JSRef}}
 
 The **`shift()`** method removes the **first**
@@ -19,7 +20,7 @@ of the array.
 
 ## Syntax
 
-```js
+```js-nolint
 shift()
 ```
 

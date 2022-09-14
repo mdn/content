@@ -14,6 +14,7 @@ tags:
   - getBytesInUse
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
 ---
+
 {{AddonSidebar()}}
 
 Gets the amount of storage space, in bytes, used one or more items being stored in the storage area.
@@ -26,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSpace = browser.storage.<storageType>.getBytesInUse(
   keys                      // null, string, or array of strings
 )

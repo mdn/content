@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCHours
 ---
+
 {{JSRef}}
 
 The **`getUTCHours()`** method returns the hours in the
@@ -18,7 +19,7 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCHours()
 ```
 

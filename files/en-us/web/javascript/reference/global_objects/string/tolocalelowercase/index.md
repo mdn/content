@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLocaleLowerCase()`** method returns the calling string
@@ -19,7 +20,7 @@ value converted to lower case, according to any locale-specific case mappings.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleLowerCase()
 toLocaleLowerCase(locales)
 ```

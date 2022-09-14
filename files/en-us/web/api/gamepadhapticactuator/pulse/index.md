@@ -12,13 +12,14 @@ tags:
   - pulse
 browser-compat: api.GamepadHapticActuator.pulse
 ---
+
 {{APIRef("Gamepad")}}
 
 The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware pulse at a certain intensity for a specified duration.
 
 ## Syntax
 
-```js
+```js-nolint
 pulse(value, duration)
 ```
 

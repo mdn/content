@@ -12,6 +12,7 @@ tags:
   - copy
 browser-compat: api.Element.copy_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
@@ -47,7 +48,9 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>

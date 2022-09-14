@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.lastStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.lastStyleSheetSet`** property returns the last enabled style sheet set. This property's

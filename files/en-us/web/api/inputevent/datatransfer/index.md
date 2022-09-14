@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.dataTransfer
 ---
+
 {{APIRef("UI Events")}}
 
 The **`dataTransfer`** read-only property of the
@@ -36,12 +37,17 @@ Try copying and pasting some of the content provided to see the effects.
 
 ```html
 <p><span style="font-weight: bold; color: blue">Whoa, bold blue text!</span></p>
-<p><span style="font-style: italic; color: red">Exciting: italic red text!</span></p>
+<p>
+  <span style="font-style: italic; color: red">Exciting: italic red text!</span>
+</p>
 <p>Boring normal text ;-(</p>
 
-<hr>
+<hr />
 
-<p contenteditable="true">Go on, try pasting some content into this editable paragraph and see what happens!</p>
+<p contenteditable="true">
+  Go on, try pasting some content into this editable paragraph and see what
+  happens!
+</p>
 
 <p class="result"></p>
 ```

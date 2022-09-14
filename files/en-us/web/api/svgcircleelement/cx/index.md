@@ -11,6 +11,7 @@ tags:
   - cx
 browser-compat: api.SVGCircleElement.cx
 ---
+
 {{APIRef("SVG")}}
 
 The **`cx`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("cx")}} attribute of a {{SVGElement("circle")}} element and by that defines the x-coordinate of the circle's center.<
@@ -26,8 +27,12 @@ An {{domxref("SVGAnimatedLength")}} representing the x-coordinate of the circle'
 ### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-  <circle cx="50" cy="50" r="50" fill="gold" id="circle"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  width="200"
+  height="200">
+  <circle cx="50" cy="50" r="50" fill="gold" id="circle" />
 </svg>
 ```
 

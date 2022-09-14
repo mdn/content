@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.redirectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`redirectEnd`** read-only property returns a

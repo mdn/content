@@ -11,6 +11,7 @@ tags:
   - Reference
   - Non Standard
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
@@ -29,7 +30,7 @@ this way must have been created with the
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyEvent (type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)

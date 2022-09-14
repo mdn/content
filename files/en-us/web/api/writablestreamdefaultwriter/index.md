@@ -11,6 +11,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStreamDefaultWriter
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) is the object returned by {{domxref("WritableStream.getWriter()")}} and once created locks the writer to the `WritableStream` ensuring that no other streams can write to the underlying sink.

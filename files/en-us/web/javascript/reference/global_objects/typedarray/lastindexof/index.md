@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.lastIndexOf
 ---
+
 {{JSRef}}
 
 The **`lastIndexOf()`** method returns the last index at which
@@ -23,7 +24,7 @@ one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objec
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchElement)
 lastIndexOf(searchElement, fromIndex)
 ```

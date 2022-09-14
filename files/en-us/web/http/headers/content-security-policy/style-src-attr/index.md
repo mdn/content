@@ -15,6 +15,7 @@ tags:
   - style-src-attr
 browser-compat: http.headers.Content-Security-Policy.style-src-attr
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

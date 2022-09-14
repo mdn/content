@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid-area
 ---
+
 {{CSSRef}}
 
 The **`grid-area`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid", "grid")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
@@ -48,8 +49,8 @@ grid-area: some-grid-area;
 grid-area: some-grid-area / another-grid-area;
 
 /* <integer> && <custom-ident>? values */
-grid-area:  4 some-grid-area;
-grid-area:  4 some-grid-area / 2 another-grid-area;
+grid-area: 4 some-grid-area;
+grid-area: 4 some-grid-area / 2 another-grid-area;
 
 /* span && [ <integer> || <custom-ident> ] values */
 grid-area: span 3;

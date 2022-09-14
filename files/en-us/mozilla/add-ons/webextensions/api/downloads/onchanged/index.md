@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.downloads.onChanged
 ---
+
 {{AddonSidebar()}}
 
 The **`onChanged()`** event of the {{WebExtAPIRef("downloads")}} API is fired when any of a {{WebExtAPIRef('downloads.DownloadItem')}}'s properties changes (except for `bytesReceived`).
@@ -21,7 +22,7 @@ The listener is passed a `downloadDelta` as a parameter — an object containing
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onChanged.addListener(listener)
 browser.downloads.onChanged.removeListener(listener)
 browser.downloads.onChanged.hasListener(listener)

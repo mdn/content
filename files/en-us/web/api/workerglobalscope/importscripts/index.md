@@ -11,13 +11,14 @@ tags:
   - importScripts
 browser-compat: api.WorkerGlobalScope.importScripts
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the worker's scope.
 
 ## Syntax
 
-```js
+```js-nolint
 importScripts(path0)
 importScripts(path0, path1)
 importScripts(path0, path1, /* … ,*/ pathN)

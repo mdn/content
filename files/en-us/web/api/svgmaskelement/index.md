@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMaskElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMaskElement`** interface provides access to the properties of {{SVGElement("mask")}} elements, as well as methods to manipulate them.

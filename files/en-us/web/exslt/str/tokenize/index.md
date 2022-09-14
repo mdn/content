@@ -6,6 +6,7 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:tokenize()` splits a string using a set of characters as delimiters that determine where the splits should occur, returning a node-set containing the resulting strings.

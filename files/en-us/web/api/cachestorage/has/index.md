@@ -12,6 +12,7 @@ tags:
   - has
 browser-compat: api.CacheStorage.has
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`has()`** method of the {{domxref("CacheStorage")}}
@@ -22,7 +23,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 has(cacheName)
 ```
 

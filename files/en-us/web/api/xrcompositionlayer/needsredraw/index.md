@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRCompositionLayer.needsRedraw
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`needsRedraw`** property of the {{domxref("XRCompositionLayer")}} interface is a boolean signaling that the layer should be re-rendered in the next frame.

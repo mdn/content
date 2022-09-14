@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilMaskSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.stencilMaskSeparate()`** method of
@@ -21,7 +22,7 @@ and back stencil writemasks to one value at the same time.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilMaskSeparate(face, mask)
 ```
 

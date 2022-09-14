@@ -24,6 +24,7 @@ tags:
   - Polyfill
 browser-compat: api.queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`queueMicrotask()`** method,
@@ -48,7 +49,7 @@ final cleanup or other just-before-rendering tasks.
 
 ## Syntax
 
-```js
+```js-nolint
 queueMicrotask(() => {/* ... */})
 ```
 

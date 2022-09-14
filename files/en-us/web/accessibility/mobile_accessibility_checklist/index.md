@@ -8,6 +8,7 @@ tags:
   - Mobile
   - checklist
 ---
+
 This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.
 
 ## Color
@@ -64,9 +65,9 @@ This document provides a concise checklist of accessibility requirements for mob
 
   ```html
   <h1>Top level heading</h1>
-    <h2>Secondary heading</h2>
-    <h2>Another secondary heading</h2>
-      <h3>Low level heading</h3>
+  <h2>Secondary heading</h2>
+  <h2>Another secondary heading</h2>
+  <h3>Low level heading</h3>
   ```
 
 - [ARIA Landmark Roles](https://www.washington.edu/accessibility/websites/regions/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.

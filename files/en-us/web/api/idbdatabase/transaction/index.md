@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately
@@ -23,7 +24,7 @@ object store.
 
 ## Syntax
 
-```js
+```js-nolint
 transaction(storeNames)
 transaction(storeNames, mode)
 transaction(storeNames, mode, options)

@@ -6,6 +6,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.

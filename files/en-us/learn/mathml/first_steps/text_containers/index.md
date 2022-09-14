@@ -6,6 +6,7 @@ tags:
   - MathML
   - Landing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
 
 Now that you get a better idea of MathML, we move focus on text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
@@ -54,8 +55,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
     <title>My page with math characters</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
@@ -86,8 +86,7 @@ Below is a more complex example, which says that the absolute value of a real nu
     <title>My page with math characters</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -253,8 +252,7 @@ Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let'
     <title>My page with math characters</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
@@ -330,8 +328,7 @@ The operator dictionary defines a default _stretchy_ property as well as corresp
     <title>My page with stretchy operators</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">

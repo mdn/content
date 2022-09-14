@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCFullYear
 ---
+
 {{JSRef}}
 
 The **`getUTCFullYear()`** method returns the year in the
@@ -18,7 +19,7 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCFullYear()
 ```
 

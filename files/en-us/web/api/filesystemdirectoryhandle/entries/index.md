@@ -11,6 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.entries
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`entries()`** method of the
@@ -21,8 +22,8 @@ enumerates properties in the prototype chain as well).
 
 ## Syntax
 
-```js
- entries()
+```js-nolint
+entries()
 ```
 
 ### Parameters

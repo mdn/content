@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`columnNumber`** property contains the column number in the line of the file that raised this error.

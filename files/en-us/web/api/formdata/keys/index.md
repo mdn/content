@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.keys
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all keys contained in the {{domxref("FormData")}}. The keys are strings.
@@ -19,7 +20,7 @@ The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScrip
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

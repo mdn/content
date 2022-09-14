@@ -13,6 +13,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBAlternateInterface
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBAlternateInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of an interface provided by the USB device. An interface includes one or more alternate settings which can configure a set of endpoints based on the operating mode of the device.

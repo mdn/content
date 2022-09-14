@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.test
 ---
+
 {{JSRef}}
 
 The **`test()`** method executes a search for a match between a
@@ -27,7 +28,7 @@ of text (with capture groups).
 
 ## Syntax
 
-```js
+```js-nolint
 test(str)
 ```
 

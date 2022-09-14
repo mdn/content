@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.composed
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The read-only **`composed`** property of the
@@ -100,9 +101,9 @@ When you click on the `<open-shadow>` element and then the
 `<closed-shadow>` element, you'll notice two things.
 
 1. The `composed` property returns `true` because the
-    `click` event is always able to propagate across shadow boundaries.
+   `click` event is always able to propagate across shadow boundaries.
 2. A difference in the value of `composedPath` for the two
-    elements.
+   elements.
 
 The `<open-shadow>` element's composed path is this:
 

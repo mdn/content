@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`encodedBodySize`** read-only property represents the

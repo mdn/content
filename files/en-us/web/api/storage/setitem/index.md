@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`setItem()`** method of the {{domxref("Storage")}}
@@ -18,7 +19,7 @@ interface, when passed a key name and value, will add that key to the given
 
 ## Syntax
 
-```js
+```js-nolint
 setItem(keyName, keyValue)
 ```
 

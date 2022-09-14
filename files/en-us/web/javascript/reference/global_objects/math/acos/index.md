@@ -19,7 +19,7 @@ The **`Math.acos()`** function returns the inverse cosine (in radians) of a numb
 
 ## Syntax
 
-```js
+```js-nolint
 Math.acos(x)
 ```
 

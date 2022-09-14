@@ -8,6 +8,7 @@ tags:
   - Tools
   - Web
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
 Measuring performance provides an important metric to help you asses the success of your app, site, or web service.

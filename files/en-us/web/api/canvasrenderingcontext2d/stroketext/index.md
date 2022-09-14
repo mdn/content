@@ -17,6 +17,7 @@ tags:
   - strokeText
 browser-compat: api.CanvasRenderingContext2D.strokeText
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -36,7 +37,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 strokeText(text, x, y)
 strokeText(text, x, y, maxWidth)
 ```

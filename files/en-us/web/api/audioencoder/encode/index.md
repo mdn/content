@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder.encode
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`encode()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to encode a given {{domxref("AudioData")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(data)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Routing
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -168,7 +169,7 @@ In this file, change
 To
 
 ```hbs
-<TodoList @todos=\{{ @model.allTodos }}/>
+<TodoList @todos=\{{ @model.allTodos }} />
 ```
 
 ### The completed route model
@@ -205,7 +206,7 @@ In this file, change
 To
 
 ```hbs
-<TodoList @todos=\{{ @model.completedTodos }}/>
+<TodoList @todos=\{{ @model.completedTodos }} />
 ```
 
 ### The active route model
@@ -242,7 +243,7 @@ In this file, change
 To
 
 ```html
-<TodoList @todos=\{{ @model.activeTodos }}/>
+<TodoList @todos=\{{ @model.activeTodos }} />
 ```
 
 Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, `this.todos.completed`). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.
@@ -262,9 +263,9 @@ Go back to `todomvc/app/components/footer.hbs`, and find the following bit of ma
 Update it to
 
 ```html
-<LinkTo @route='index'>All</LinkTo>
-<LinkTo @route='active'>Active</LinkTo>
-<LinkTo @route='completed'>Completed</LinkTo>
+<LinkTo @route="index">All</LinkTo>
+<LinkTo @route="active">Active</LinkTo>
+<LinkTo @route="completed">Completed</LinkTo>
 ```
 
 `<LinkTo>` is a built-in Ember component that handles all the state changes when navigating routes, as well as setting an "active" class on any link that matches the URL, in case there is a desire to style it differently from inactive links.

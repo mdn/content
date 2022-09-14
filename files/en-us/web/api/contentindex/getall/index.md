@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndex.getAll
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
@@ -22,7 +23,7 @@ an iterable list of content index entries.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 ```
 
@@ -50,7 +51,7 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
       HTML document. Needs to be under the scope of the current
       {{domxref('ServiceWorker','service worker')}}.
     - `category` {{Optional_Inline}}: A {{jsxref('String')}} defining the
-        category of content. Can be:
+      category of content. Can be:
 
       - `''` An empty {{jsxref('String')}}, this is the default.
       - `homepage`
@@ -59,16 +60,16 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
       - `audio`
 
     - `icons` {{Optional_Inline}}: An {{jsxref('Array')}} of image
-        resources, defined as an {{jsxref('Object')}} with the following data:
+      resources, defined as an {{jsxref('Object')}} with the following data:
 
       - `src`
         - : A URL {{jsxref('String')}} of the source image.
       - `sizes` {{Optional_Inline}}
         - : A {{jsxref('String')}}
-            representation of the image size.
+          representation of the image size.
       - `type` {{Optional_Inline}}
         - : The {{Glossary("MIME type")}} of the
-            image.
+          image.
 
 ### Exceptions
 

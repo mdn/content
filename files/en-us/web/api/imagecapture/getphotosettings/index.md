@@ -15,6 +15,7 @@ tags:
   - getPhotoSettings
 browser-compat: api.ImageCapture.getPhotoSettings
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`getPhotoSettings()`** method of
@@ -24,7 +25,7 @@ configuration settings.
 
 ## Syntax
 
-```js
+```js-nolint
 getPhotoSettings()
 ```
 
@@ -37,7 +38,7 @@ None.
 A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object
 containing the following properties:
 
-- `fillLightMode`:  The flash setting of the capture device, one of
+- `fillLightMode`: The flash setting of the capture device, one of
   `"auto"`, `"off"`, or `"on"`.
 - `imageHeight`: The desired image height as an integer. The user agent
   selects the closest width value to this setting if it only supports discrete heights.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMinutes
 ---
+
 {{JSRef}}
 
 The **`getMinutes()`** method returns the minutes in the
@@ -18,7 +19,7 @@ specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getMinutes()
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationstart event'
+title: "Element: animationstart event"
 slug: Web/API/Element/animationstart_event
 tags:
   - API
@@ -12,6 +12,7 @@ tags:
 browser-compat: api.Element.animationstart_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
@@ -71,11 +72,11 @@ animated.onanimationstart = () => {
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 

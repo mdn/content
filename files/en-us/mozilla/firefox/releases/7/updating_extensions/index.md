@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Firefox 7
 ---
+
 {{FirefoxSidebar}}
 
 This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.

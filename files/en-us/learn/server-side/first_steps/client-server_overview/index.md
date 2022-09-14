@@ -10,6 +10,7 @@ tags:
   - Server
   - Server-side programming
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Now that you know the purpose and potential benefits of server-side programming we're going to examine in detail what happens when a server receives a "dynamic request" from a browser. As most website server-side code handles requests and responses in similar ways, this will help you understand what you need to do when writing most of your own code.
@@ -295,7 +296,7 @@ def junior(request):
     return render(request, 'best/index.html', context)
 ```
 
-After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The  `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
+After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
 
 Obviously web frameworks can help you with a lot of other tasks. We discuss a lot more benefits and some popular web framework choices in the next article.
 

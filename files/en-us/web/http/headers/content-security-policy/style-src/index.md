@@ -14,6 +14,7 @@ tags:
   - style-src
 browser-compat: http.headers.Content-Security-Policy.style-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directive specifies valid sources for stylesheets.
@@ -69,7 +70,9 @@ the following stylesheets are blocked and won't load:
 <link href="https://not-example.com/styles/main.css" rel="stylesheet" />
 
 <style>
-#inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <style>
@@ -118,7 +121,9 @@ The above Content Security Policy will allow inline styles like the {{HTMLElemen
 
 ```html
 <style>
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <div style="display:none">Foo</div>
@@ -134,7 +139,9 @@ You will have to set the same nonce on the {{HTMLElement("style")}} element:
 
 ```html
 <style nonce="2726c7f26c">
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 ```
 
@@ -153,7 +160,11 @@ Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6t
 When generating the hash, don't include the {{HTMLElement("style")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
 ```html
-<style>#inline-style { background: red; }</style>
+<style>
+  #inline-style {
+    background: red;
+  }
+</style>
 ```
 
 ### Unsafe style expressions

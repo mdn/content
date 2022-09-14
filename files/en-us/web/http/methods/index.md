@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: http.methods
 ---
+
 {{HTTPSidebar}}
 
 HTTP defines a set of **request methods** to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.

@@ -13,6 +13,7 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes.ImageDetails
 ---
+
 {{AddonSidebar()}}
 
 Details about the format, quality, area and scale of a captured image.

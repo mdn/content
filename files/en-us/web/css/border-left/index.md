@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-left
 ---
+
 {{CSSRef}}
 
 The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
@@ -80,9 +81,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the left side.
-</div>
+<div>This box has a border on the left side.</div>
 ```
 
 #### CSS

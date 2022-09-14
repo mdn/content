@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,7 +19,7 @@ specified Boolean object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.of
 ---
+
 {{JSRef}}
 
 The **`TypedArray.of()`** method creates a new
@@ -20,7 +21,7 @@ The **`TypedArray.of()`** method creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 TypedArray.of(element0)
 TypedArray.of(element0, element1)
 TypedArray.of(element0, element1, /* ... ,*/ elementN)

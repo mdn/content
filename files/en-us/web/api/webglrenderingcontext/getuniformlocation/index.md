@@ -15,6 +15,7 @@ tags:
   - getUniformLocation
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
+
 {{APIRef("WebGL")}}
 
 Part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
@@ -45,7 +46,7 @@ The uniform itself is declared in the shader program using GLSL.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformLocation(program, name)
 ```
 

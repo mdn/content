@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.setZoom
 ---
+
 {{AddonSidebar()}}
 
 Zooms the specified tab.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let zooming = browser.tabs.setZoom(
   tabId,           // optional integer
   zoomFactor       // number

@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.CompositionEvent.locale
 ---
+
 {{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
 
 The **`locale`** read-only property of the

@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-repeat-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-x` property specifies whether and how a mask image is repeated (tiled) horizontally.
@@ -62,12 +63,12 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
 ```
@@ -78,7 +79,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
 ```

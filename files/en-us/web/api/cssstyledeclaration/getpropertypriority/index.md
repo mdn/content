@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyPriority
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.getPropertyPriority()** method interface returns
@@ -17,7 +18,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyPriority(property)
 ```
 

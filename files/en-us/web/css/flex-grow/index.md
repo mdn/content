@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-grow
 ---
+
 {{CSSRef}}
 
 The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor of a flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).
@@ -88,12 +89,12 @@ The remaining space is the size of the flex container minus the size of all flex
 
 .box {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 2;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 

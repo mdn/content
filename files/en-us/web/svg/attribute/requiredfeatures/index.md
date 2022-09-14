@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: svg.attributes.conditional_processing.requiredFeatures
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`requiredFeatures`** attribute takes a list of feature strings, with the individual strings separated by white space. It determines whether or not all of the named features are supported by the browser; if all of them are supported, the attribute evaluates to `true` end the element is rendered; otherwise, the attribute evaluates to `false` and the current element and its children are skipped and thus will not be rendered. This provides a way to design SVG that gracefully falls back when features aren't available.
@@ -52,7 +53,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -118,7 +121,9 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
     - `http://www.w3.org/TR/SVG11/feature#SVG-animation`
     - `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
+
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
+
   - : At least one of the following feature is supported:
 
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-static`
@@ -246,275 +251,521 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 
 ```html
 <svg width="450" height="1170" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG -->
   <rect class="ko" x="10" y="10" height="25" width="430" />
-  <rect class="ok" x="10" y="10" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG" />
+  <rect
+    class="ok"
+    x="10"
+    y="10"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG" />
   <text x="20" y="27">http://www.w3.org/TR/SVG11/feature#SVG</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM -->
   <rect class="ko" x="10" y="35" height="25" width="430" />
-  <rect class="ok" x="10" y="35" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM" />
+  <rect
+    class="ok"
+    x="10"
+    y="35"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM" />
   <text x="20" y="52">http://www.w3.org/TR/SVG11/feature#SVGDOM</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-static -->
   <rect class="ko" x="10" y="60" height="25" width="430" />
-  <rect class="ok" x="10" y="60" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-static" />
+  <rect
+    class="ok"
+    x="10"
+    y="60"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-static" />
   <text x="20" y="77">http://www.w3.org/TR/SVG11/feature#SVG-static</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-static -->
   <rect class="ko" x="10" y="85" height="25" width="430" />
-  <rect class="ok" x="10" y="85" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-static" />
+  <rect
+    class="ok"
+    x="10"
+    y="85"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-static" />
   <text x="20" y="102">http://www.w3.org/TR/SVG11/feature#SVGDOM-static</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-animation -->
   <rect class="ko" x="10" y="110" height="25" width="430" />
-  <rect class="ok" x="10" y="110" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-animation" />
+  <rect
+    class="ok"
+    x="10"
+    y="110"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-animation" />
   <text x="20" y="127">http://www.w3.org/TR/SVG11/feature#SVG-animation</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-animation -->
   <rect class="ko" x="10" y="135" height="25" width="430" />
-  <rect class="ok" x="10" y="135" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-animation" />
-  <text x="20" y="152">http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</text>
+  <rect
+    class="ok"
+    x="10"
+    y="135"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-animation" />
+  <text x="20" y="152">
+    http://www.w3.org/TR/SVG11/feature#SVGDOM-animation
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-dynamic -->
   <rect class="ko" x="10" y="160" height="25" width="430" />
-  <rect class="ok" x="10" y="160" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-dynamic" />
+  <rect
+    class="ok"
+    x="10"
+    y="160"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-dynamic" />
   <text x="20" y="177">http://www.w3.org/TR/SVG11/feature#SVG-dynamic</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic -->
   <rect class="ko" x="10" y="185" height="25" width="430" />
-  <rect class="ok" x="10" y="185" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic" />
+  <rect
+    class="ok"
+    x="10"
+    y="185"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic" />
   <text x="20" y="202">http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#CoreAttribute -->
   <rect class="ko" x="10" y="210" height="25" width="430" />
-  <rect class="ok" x="10" y="210" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#CoreAttribute" />
+  <rect
+    class="ok"
+    x="10"
+    y="210"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#CoreAttribute" />
   <text x="20" y="227">http://www.w3.org/TR/SVG11/feature#CoreAttribute</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Structure -->
   <rect class="ko" x="10" y="235" height="25" width="430" />
-  <rect class="ok" x="10" y="235" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Structure" />
+  <rect
+    class="ok"
+    x="10"
+    y="235"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Structure" />
   <text x="20" y="252">http://www.w3.org/TR/SVG11/feature#Structure</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicStructure -->
   <rect class="ko" x="10" y="260" height="25" width="430" />
-  <rect class="ok" x="10" y="260" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicStructure" />
+  <rect
+    class="ok"
+    x="10"
+    y="260"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicStructure" />
   <text x="20" y="277">http://www.w3.org/TR/SVG11/feature#BasicStructure</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#ContainerAttribute -->
   <rect class="ko" x="10" y="285" height="25" width="430" />
-  <rect class="ok" x="10" y="285" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#ContainerAttribute" />
-  <text x="20" y="302">http://www.w3.org/TR/SVG11/feature#ContainerAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="285"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#ContainerAttribute" />
+  <text x="20" y="302">
+    http://www.w3.org/TR/SVG11/feature#ContainerAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#ConditionalProcessing -->
   <rect class="ko" x="10" y="310" height="25" width="430" />
-  <rect class="ok" x="10" y="310" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#ConditionalProcessing" />
-  <text x="20" y="327">http://www.w3.org/TR/SVG11/feature#ConditionalProcessing</text>
+  <rect
+    class="ok"
+    x="10"
+    y="310"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#ConditionalProcessing" />
+  <text x="20" y="327">
+    http://www.w3.org/TR/SVG11/feature#ConditionalProcessing
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Image -->
   <rect class="ko" x="10" y="335" height="25" width="430" />
-  <rect class="ok" x="10" y="335" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Image" />
+  <rect
+    class="ok"
+    x="10"
+    y="335"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Image" />
   <text x="20" y="352">http://www.w3.org/TR/SVG11/feature#Image</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Style -->
   <rect class="ko" x="10" y="360" height="25" width="430" />
-  <rect class="ok" x="10" y="360" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Style" />
+  <rect
+    class="ok"
+    x="10"
+    y="360"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Style" />
   <text x="20" y="377">http://www.w3.org/TR/SVG11/feature#Style</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#ViewportAttribute -->
   <rect class="ko" x="10" y="385" height="25" width="430" />
-  <rect class="ok" x="10" y="385" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#ViewportAttribute" />
-  <text x="20" y="402">http://www.w3.org/TR/SVG11/feature#ViewportAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="385"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#ViewportAttribute" />
+  <text x="20" y="402">
+    http://www.w3.org/TR/SVG11/feature#ViewportAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Shape -->
   <rect class="ko" x="10" y="410" height="25" width="430" />
-  <rect class="ok" x="10" y="410" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Shape" />
+  <rect
+    class="ok"
+    x="10"
+    y="410"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Shape" />
   <text x="20" y="427">http://www.w3.org/TR/SVG11/feature#Shape</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Text -->
   <rect class="ko" x="10" y="435" height="25" width="430" />
-  <rect class="ok" x="10" y="435" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Text" />
+  <rect
+    class="ok"
+    x="10"
+    y="435"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Text" />
   <text x="20" y="452">http://www.w3.org/TR/SVG11/feature#Text</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicText -->
   <rect class="ko" x="10" y="460" height="25" width="430" />
-  <rect class="ok" x="10" y="460" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicText" />
+  <rect
+    class="ok"
+    x="10"
+    y="460"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicText" />
   <text x="20" y="477">http://www.w3.org/TR/SVG11/feature#BasicText</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#PaintAttribute -->
   <rect class="ko" x="10" y="485" height="25" width="430" />
-  <rect class="ok" x="10" y="485" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#PaintAttribute" />
+  <rect
+    class="ok"
+    x="10"
+    y="485"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#PaintAttribute" />
   <text x="20" y="502">http://www.w3.org/TR/SVG11/feature#PaintAttribute</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute -->
   <rect class="ko" x="10" y="510" height="25" width="430" />
-  <rect class="ok" x="10" y="510" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute" />
-  <text x="20" y="527">http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="510"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute" />
+  <text x="20" y="527">
+    http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#OpacityAttribute -->
   <rect class="ko" x="10" y="535" height="25" width="430" />
-  <rect class="ok" x="10" y="535" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#OpacityAttribute" />
-  <text x="20" y="552">http://www.w3.org/TR/SVG11/feature#OpacityAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="535"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#OpacityAttribute" />
+  <text x="20" y="552">
+    http://www.w3.org/TR/SVG11/feature#OpacityAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#GraphicsAttribute -->
   <rect class="ko" x="10" y="560" height="25" width="430" />
-  <rect class="ok" x="10" y="560" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicsAttribute" />
-  <text x="20" y="577">http://www.w3.org/TR/SVG11/feature#GraphicsAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="560"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicsAttribute" />
+  <text x="20" y="577">
+    http://www.w3.org/TR/SVG11/feature#GraphicsAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute -->
   <rect class="ko" x="10" y="585" height="25" width="430" />
-  <rect class="ok" x="10" y="585" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute" />
-  <text x="20" y="602">http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="585"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute" />
+  <text x="20" y="602">
+    http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Marker -->
   <rect class="ko" x="10" y="610" height="25" width="430" />
-  <rect class="ok" x="10" y="610" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Marker" />
+  <rect
+    class="ok"
+    x="10"
+    y="610"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Marker" />
   <text x="20" y="627">http://www.w3.org/TR/SVG11/feature#Marker</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#ColorProfile -->
   <rect class="ko" x="10" y="635" height="25" width="430" />
-  <rect class="ok" x="10" y="635" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#ColorProfile" />
+  <rect
+    class="ok"
+    x="10"
+    y="635"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#ColorProfile" />
   <text x="20" y="652">http://www.w3.org/TR/SVG11/feature#ColorProfile</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Gradient -->
   <rect class="ko" x="10" y="660" height="25" width="430" />
-  <rect class="ok" x="10" y="660" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Gradient" />
+  <rect
+    class="ok"
+    x="10"
+    y="660"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Gradient" />
   <text x="20" y="677">http://www.w3.org/TR/SVG11/feature#Gradient</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Pattern -->
   <rect class="ko" x="10" y="685" height="25" width="430" />
-  <rect class="ok" x="10" y="685" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Pattern" />
+  <rect
+    class="ok"
+    x="10"
+    y="685"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Pattern" />
   <text x="20" y="702">http://www.w3.org/TR/SVG11/feature#Pattern</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Clip -->
   <rect class="ko" x="10" y="710" height="25" width="430" />
-  <rect class="ok" x="10" y="710" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Clip" />
+  <rect
+    class="ok"
+    x="10"
+    y="710"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Clip" />
   <text x="20" y="727">http://www.w3.org/TR/SVG11/feature#Clip</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicClip -->
   <rect class="ko" x="10" y="735" height="25" width="430" />
-  <rect class="ok" x="10" y="735" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicClip" />
+  <rect
+    class="ok"
+    x="10"
+    y="735"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicClip" />
   <text x="20" y="752">http://www.w3.org/TR/SVG11/feature#BasicClip</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Mask -->
   <rect class="ko" x="10" y="760" height="25" width="430" />
-  <rect class="ok" x="10" y="760" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Mask" />
+  <rect
+    class="ok"
+    x="10"
+    y="760"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Mask" />
   <text x="20" y="777">http://www.w3.org/TR/SVG11/feature#Mask</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Filter -->
   <rect class="ko" x="10" y="785" height="25" width="430" />
-  <rect class="ok" x="10" y="785" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Filter" />
+  <rect
+    class="ok"
+    x="10"
+    y="785"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Filter" />
   <text x="20" y="802">http://www.w3.org/TR/SVG11/feature#Filter</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicFilter -->
   <rect class="ko" x="10" y="810" height="25" width="430" />
-  <rect class="ok" x="10" y="810" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFilter" />
+  <rect
+    class="ok"
+    x="10"
+    y="810"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFilter" />
   <text x="20" y="827">http://www.w3.org/TR/SVG11/feature#BasicFilter</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute -->
   <rect class="ko" x="10" y="835" height="25" width="430" />
-  <rect class="ok" x="10" y="835" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute" />
-  <text x="20" y="852">http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="835"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute" />
+  <text x="20" y="852">
+    http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute -->
   <rect class="ko" x="10" y="860" height="25" width="430" />
-  <rect class="ok" x="10" y="860" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute" />
-  <text x="20" y="877">http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="860"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute" />
+  <text x="20" y="877">
+    http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute -->
   <rect class="ko" x="10" y="885" height="25" width="430" />
-  <rect class="ok" x="10" y="885" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute" />
-  <text x="20" y="902">http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</text>
+  <rect
+    class="ok"
+    x="10"
+    y="885"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute" />
+  <text x="20" y="902">
+    http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute
+  </text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Cursor -->
   <rect class="ko" x="10" y="910" height="25" width="430" />
-  <rect class="ok" x="10" y="910" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Cursor" />
+  <rect
+    class="ok"
+    x="10"
+    y="910"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Cursor" />
   <text x="20" y="927">http://www.w3.org/TR/SVG11/feature#Cursor</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Hyperlinking -->
   <rect class="ko" x="10" y="935" height="25" width="430" />
-  <rect class="ok" x="10" y="935" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Hyperlinking" />
+  <rect
+    class="ok"
+    x="10"
+    y="935"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Hyperlinking" />
   <text x="20" y="952">http://www.w3.org/TR/SVG11/feature#Hyperlinking</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#XlinkAttribute -->
   <rect class="ko" x="10" y="960" height="25" width="430" />
-  <rect class="ok" x="10" y="960" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#XlinkAttribute" />
+  <rect
+    class="ok"
+    x="10"
+    y="960"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#XlinkAttribute" />
   <text x="20" y="977">http://www.w3.org/TR/SVG11/feature#XlinkAttribute</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#View -->
   <rect class="ko" x="10" y="1010" height="25" width="430" />
-  <rect class="ok" x="10" y="1010" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#View" />
+  <rect
+    class="ok"
+    x="10"
+    y="1010"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#View" />
   <text x="20" y="1027">http://www.w3.org/TR/SVG11/feature#View</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Script -->
   <rect class="ko" x="10" y="1035" height="25" width="430" />
-  <rect class="ok" x="10" y="1035" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Script" />
+  <rect
+    class="ok"
+    x="10"
+    y="1035"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Script" />
   <text x="20" y="1052">http://www.w3.org/TR/SVG11/feature#Script</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Animation -->
   <rect class="ko" x="10" y="1060" height="25" width="430" />
-  <rect class="ok" x="10" y="1060" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Animation" />
+  <rect
+    class="ok"
+    x="10"
+    y="1060"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Animation" />
   <text x="20" y="1077">http://www.w3.org/TR/SVG11/feature#Animation</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Font -->
   <rect class="ko" x="10" y="1085" height="25" width="430" />
-  <rect class="ok" x="10" y="1085" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Font" />
+  <rect
+    class="ok"
+    x="10"
+    y="1085"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Font" />
   <text x="20" y="1102">http://www.w3.org/TR/SVG11/feature#Font</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicFont -->
   <rect class="ko" x="10" y="1110" height="25" width="430" />
-  <rect class="ok" x="10" y="1110" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFont" />
+  <rect
+    class="ok"
+    x="10"
+    y="1110"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFont" />
   <text x="20" y="1127">http://www.w3.org/TR/SVG11/feature#BasicFont</text>
 
   <!-- Testing : http://www.w3.org/TR/SVG11/feature#Extensibility -->
   <rect class="ko" x="10" y="1135" height="25" width="430" />
-  <rect class="ok" x="10" y="1135" height="25" width="430"
-        requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" />
+  <rect
+    class="ok"
+    x="10"
+    y="1135"
+    height="25"
+    width="430"
+    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" />
   <text x="20" y="1152">http://www.w3.org/TR/SVG11/feature#Extensibility</text>
 </svg>
 ```
@@ -535,8 +786,8 @@ rect {
   stroke-width: 2px;
 }
 
-text{
-  fill: #FFF;
+text {
+  fill: #fff;
   font: 12px sans-serif;
 }
 ```

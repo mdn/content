@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
+
 {{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`appendBufferAsync()`** method
@@ -27,7 +28,7 @@ It returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been a
 
 ## Syntax
 
-```js
+```js-nolint
 appendBufferAsync(source)
 ```
 

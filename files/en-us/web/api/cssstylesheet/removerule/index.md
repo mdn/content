@@ -21,6 +21,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} method
@@ -34,7 +35,7 @@ object. It is functionally identical to the standard, preferred method
 
 ## Syntax
 
-```js
+```js-nolint
 removeRule(index)
 ```
 

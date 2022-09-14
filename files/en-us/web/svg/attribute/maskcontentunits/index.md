@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.mask.maskContentUnits
 ---
+
 {{SVGRef}}
 
 The **`maskContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("mask") }} element.
@@ -17,26 +18,30 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <mask id="myMask1" maskContentUnits="userSpaceOnUse">
-    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+    <rect fill="black" x="0" y="0" width="100%" height="100%" />
     <circle fill="white" cx="50" cy="50" r="35" />
   </mask>
 
   <mask id="myMask2" maskContentUnits="objectBoundingBox">
-    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+    <rect fill="black" x="0" y="0" width="100%" height="100%" />
     <circle fill="white" cx=".5" cy=".5" r=".35" />
   </mask>
 
   <!-- Some reference rect to materialized the mask -->
-  <rect id="r1" x="0"  y="0"  width="45" height="45" />
-  <rect id="r2" x="0"  y="55" width="45" height="45" />
+  <rect id="r1" x="0" y="0" width="45" height="45" />
+  <rect id="r2" x="0" y="55" width="45" height="45" />
   <rect id="r3" x="55" y="55" width="45" height="45" />
-  <rect id="r4" x="55" y="0"  width="45" height="45" />
+  <rect id="r4" x="55" y="0" width="45" height="45" />
 
   <!-- The first 3 rect are masked with useSpaceOnUse units -->
   <use mask="url(#myMask1)" xlink:href="#r1" fill="red" />

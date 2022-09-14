@@ -12,6 +12,7 @@ tags:
   - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
+
 {{DefaultAPISidebar("Background Tasks")}}
 
 The **Cooperative Scheduling of Background Tasks API** (also referred to as the Background Tasks API or the `requestIdleCallback()` API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.
@@ -67,7 +68,8 @@ In order to be oriented about what we're trying to accomplish, let's have a look
   <button class="button" id="startButton">Start</button>
 
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
@@ -88,7 +90,7 @@ body {
 #logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;

@@ -12,6 +12,7 @@ tags:
   - createDynamicsCompressor
 browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createDynamicsCompressor()` method of the {{
@@ -31,7 +32,7 @@ help avoid clipping (distorting) of the audio output.
 
 ## Syntax
 
-```js
+```js-nolint
 createDynamicsCompressor()
 ```
 

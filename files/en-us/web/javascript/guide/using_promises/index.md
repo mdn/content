@@ -8,8 +8,9 @@ tags:
   - Promise
   - Promises
   - asynchronous
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.

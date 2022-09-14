@@ -10,6 +10,7 @@ tags:
   - getHAR
 browser-compat: webextensions.api.devtools.network.getHAR
 ---
+
 {{AddonSidebar()}}
 
 Get a [HAR log](http://www.softwareishard.com/blog/har-12-spec/#log) for the page loaded in the current tab.
@@ -18,7 +19,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.devtools.network.getHAR()
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toTimeString
 ---
+
 {{JSRef}}
 
 The **`toTimeString()`** method returns the time portion of a {{jsxref("Date")}} object interpreted in the local timezone in English.
@@ -17,7 +18,7 @@ The **`toTimeString()`** method returns the time portion of a {{jsxref("Date")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toTimeString()
 ```
 

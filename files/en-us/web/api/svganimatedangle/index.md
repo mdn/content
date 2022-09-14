@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedAngle
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated angle interface

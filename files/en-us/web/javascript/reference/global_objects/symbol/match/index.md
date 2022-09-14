@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.match
 ---
+
 {{JSRef}}
 
 The **`Symbol.match`** well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.

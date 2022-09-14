@@ -1,5 +1,5 @@
 ---
-title: 'Document: DOMContentLoaded event'
+title: "Document: DOMContentLoaded event"
 slug: Web/API/Document/DOMContentLoaded_event
 page-type: web-api-event
 tags:
@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.Document.DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 The **`DOMContentLoaded`** event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
@@ -48,13 +49,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM fully loaded and parsed");
   });
 
   for (let i = 0; i < 1_000_000_000; i++);
-   // This synchronous script is going to delay parsing of the DOM,
-   // so the DOMContentLoaded event is going to launch later.
+  // This synchronous script is going to delay parsing of the DOM,
+  // so the DOMContentLoaded event is going to launch later.
 </script>
 ```
 
@@ -85,7 +86,12 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="leventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="leventLog"></textarea>
 </div>
 ```
 

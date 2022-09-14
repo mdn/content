@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

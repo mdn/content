@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.start_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when the utterance has begun to be spoken.

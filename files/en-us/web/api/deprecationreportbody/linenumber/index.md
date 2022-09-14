@@ -11,6 +11,7 @@ tags:
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.lineNumber
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.

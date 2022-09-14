@@ -15,6 +15,7 @@ tags:
   - querySelector
 browser-compat: api.Document.querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelector()`**
@@ -27,7 +28,7 @@ selector, or group of selectors. If no matches are found, `null` is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelector(selectors)
 ```
 
@@ -77,15 +78,15 @@ JavaScript, if you are entering a literal string, you must escape it _twice_
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-  document.querySelector('#foo\bar');    // Does not match anything
+  console.log("#foo\bar"); // "#fooar" (\b is the backspace control character)
+  document.querySelector("#foo\bar"); // Does not match anything
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar'); // Match the first div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // Match the first div
 
-  document.querySelector('#foo:bar');    // Does not match anything
-  document.querySelector('#foo\\:bar');  // Match the second div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 

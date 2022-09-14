@@ -14,6 +14,7 @@ tags:
   - dragleave
 browser-compat: api.HTMLElement.dragleave_event
 ---
+
 {{APIRef}}
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.
@@ -57,9 +58,7 @@ Note though that in this partial example we haven't implemented dropping: for a 
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```

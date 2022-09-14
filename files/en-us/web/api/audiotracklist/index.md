@@ -15,6 +15,7 @@ tags:
   - list
 browser-compat: api.AudioTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`AudioTrackList`** interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate {{domxref("AudioTrack")}} object in the list.

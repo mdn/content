@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translate
 ---
+
 {{CSSRef}}
 
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element in the horizontal and/or vertical
@@ -156,7 +157,10 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  /* Equal to: translateX(10px) or translate(10px, 0) */
+  transform: translate(
+    10px
+  );
   background-color: pink;
 }
 ```

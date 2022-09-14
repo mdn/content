@@ -16,6 +16,7 @@ tags:
   - textTracks
 browser-compat: api.HTMLMediaElement.textTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`textTracks`**
@@ -57,18 +58,18 @@ children
 
 ```html
 <video controls poster="/images/sample.gif">
-  <source src="sample.mp4" type="video/mp4">
-  <source src="sample.ogv" type="video/ogv">
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en">
-  <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1">
-  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2">
-  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3">
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
 </video>
 ```
 

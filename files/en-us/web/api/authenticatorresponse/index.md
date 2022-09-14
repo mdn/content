@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`AuthenticatorResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is the base interface for interfaces that provide a cryptographic root of trust for a key pair. The child interfaces include information from the browser such as the challenge origin and either may be returned from {{domxref("PublicKeyCredential.response")}}.

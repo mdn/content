@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionErrorEvent.message
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`message`** read-only property of the

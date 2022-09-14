@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The static **`Reflect.getPrototypeOf()`** method is almost the
@@ -20,7 +21,7 @@ value of the internal `[[Prototype]]` property) of the specified object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getPrototypeOf(target)
 ```
 

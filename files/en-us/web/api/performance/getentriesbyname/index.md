@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.getEntriesByName
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntriesByName()`** method returns a list of
@@ -21,7 +22,7 @@ _marks_ or _measures_ (for example by calling the
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByName(name)
 getEntriesByName(name, type)
 ```
@@ -37,11 +38,11 @@ getEntriesByName(name, type)
 ### Return value
 
 A list of {{domxref("PerformanceEntry")}} objects that have the specified
-    `name` and `type`. If the `type` argument is not
-    specified, only the `name` will be used to determine the entries to return.
-    The items will be in chronological order based on the entries'
-    {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects meet the
-    specified criteria, an empty list is returned.
+`name` and `type`. If the `type` argument is not
+specified, only the `name` will be used to determine the entries to return.
+The items will be in chronological order based on the entries'
+{{domxref("PerformanceEntry.startTime","startTime")}}. If no objects meet the
+specified criteria, an empty list is returned.
 
 ## Examples
 

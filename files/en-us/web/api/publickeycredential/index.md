@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.

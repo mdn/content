@@ -23,6 +23,7 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent.frame
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourceEvent")}} property

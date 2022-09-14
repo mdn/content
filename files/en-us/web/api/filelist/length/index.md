@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileList.length
 ---
+
 {{APIRef("File API")}}
 
 The read-only {{domxref("FileList")}} **`length`** property returns the number of files in the `FileList`.
@@ -27,7 +28,7 @@ In this example, we use `length` to find the number of items in the `FileList`.
 #### HTML
 
 ```html
-<input type="file" multiple>
+<input type="file" multiple />
 <div class="output"></div>
 ```
 

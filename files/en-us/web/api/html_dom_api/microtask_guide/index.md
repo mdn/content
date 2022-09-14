@@ -18,6 +18,7 @@ tags:
   - asynchronous
   - queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/EventLoop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
@@ -190,8 +191,7 @@ The server will receive the JSON string, then will presumably decode it and proc
 In this simple example, we see that enqueueing a microtask causes the microtask's callback to run after the body of this top-level script is done running.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
@@ -220,8 +220,7 @@ log("After enqueueing the microtask");
 In this example, a timeout is scheduled to fire after zero milliseconds (or "as soon as possible"). This demonstrates the difference between what "as soon as possible" means when scheduling a new task (such as by using `setTimeout()`) versus using a microtask.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
@@ -257,8 +256,7 @@ Note that the output logged from the main program body appears first, followed b
 This example expands slightly on the previous one by adding a function that does some work. This function uses `queueMicrotask()` to schedule a microtask. The important thing to take away from this one is that the microtask isn't processed when the function exits, but when the main program exits.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript

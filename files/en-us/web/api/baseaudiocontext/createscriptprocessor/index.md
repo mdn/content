@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
@@ -22,7 +23,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 

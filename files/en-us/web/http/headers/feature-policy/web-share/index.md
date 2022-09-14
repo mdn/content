@@ -8,6 +8,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.web-share
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader('Feature-Policy')}} header `web-share` directive controls whether the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} method of the Web Share API to share text, links, images, and other content to arbitrary destinations of the user's choice.

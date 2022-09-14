@@ -13,6 +13,7 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and relative time formatting options computed during initialization of this {{jsxref("Intl.RelativeTimeFormat")}} object.
@@ -23,7 +24,7 @@ The **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** method returns a n
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

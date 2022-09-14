@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector.getSupportedFormats
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`getSupportedFormats()`** static method
@@ -19,8 +20,8 @@ fulfills with an {{jsxref('Array')}} of supported barcode format types.
 
 ## Syntax
 
-```js
-getSupportedFormats();
+```js-nolint
+getSupportedFormats()
 ```
 
 ### Parameters

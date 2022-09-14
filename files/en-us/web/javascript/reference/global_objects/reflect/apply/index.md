@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.apply
 ---
+
 {{JSRef}}
 
 The static **`Reflect.apply()`** method calls a target function
@@ -19,7 +20,7 @@ with arguments as specified.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.apply(target, thisArgument, argumentsList)
 ```
 

@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.copyTexImage2D()`** method of the
@@ -19,7 +20,7 @@ The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ```
 

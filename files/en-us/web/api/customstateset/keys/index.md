@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet.keys
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`keys()`** method of the {{domxref("CustomStateSet")}} interface is an alias for {{domxref("CustomStateSet.values")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font.vert-origin-x
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`vert-origin-x`** attribute indicates the x-coordinate in the font coordinate system of the origin of a {{Glossary("glyph")}} to be used when drawing vertically oriented text.

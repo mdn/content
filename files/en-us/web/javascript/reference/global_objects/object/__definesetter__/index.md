@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineSetter
 ---
+
 {{JSRef}}{{Deprecated_Header}}
 
 > **Warning:** This feature is deprecated in favor of defining setters using the
@@ -24,7 +25,7 @@ a function to be called when an attempt is made to set that property.
 
 ## Syntax
 
-```js
+```js-nolint
 __defineSetter__(prop, fun)
 ```
 

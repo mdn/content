@@ -17,6 +17,7 @@ tags:
   - tcpType
 browser-compat: api.RTCIceCandidate.tcpType
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`tcpType`** property is included on TCP candidates to provide additional details about the candidate type.

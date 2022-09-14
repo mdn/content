@@ -9,6 +9,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`handler.setPrototypeOf()`** method is a trap for
@@ -18,7 +19,7 @@ The **`handler.setPrototypeOf()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   setPrototypeOf(target, prototype) {
   }

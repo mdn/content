@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onResponseStarted
 ---
+
 {{AddonSidebar()}}
 
 Fired when the first byte of the response body is received.
@@ -21,7 +22,7 @@ This event is informational only.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onResponseStarted.addListener(
   listener,             // function
   filter,               //  object

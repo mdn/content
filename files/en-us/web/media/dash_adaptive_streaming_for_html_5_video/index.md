@@ -5,6 +5,7 @@ tags:
   - Guide
   - HTML
 ---
+
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 
 ## Browser Support
@@ -94,8 +95,8 @@ You'll want to modify your web page to point to the DASH manifest first, instead
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Your browser does not support the video tag.
 </video>
 ```

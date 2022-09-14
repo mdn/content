@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.scroll-snap-type-y
 ---
+
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-type-y`** [CSS](/en-US/docs/Web/CSS) property defines how strictly snap points are enforced on the vertical axis of the scroll container in case there is one.

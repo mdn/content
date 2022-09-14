@@ -11,6 +11,7 @@ tags:
   - uninstall
 browser-compat: webextensions.api.management.uninstall
 ---
+
 {{AddonSidebar()}}
 
 Uninstalls an add-on, given its ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let uninstalling = browser.management.uninstall(
   id,                  // string
   options              // object

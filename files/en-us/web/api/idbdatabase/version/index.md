@@ -13,6 +13,7 @@ tags:
   - version
 browser-compat: api.IDBDatabase.version
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`version`** property of the {{domxref("IDBDatabase")}}

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.Blob
 ---
+
 {{APIRef("File API")}}
 
 The **`Blob()`** constructor returns a
@@ -18,7 +19,7 @@ of the values given in the parameter `array`.
 
 ## Syntax
 
-```js
+```js-nolint
 new Blob(array)
 new Blob(array, options)
 ```
@@ -26,6 +27,7 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
+
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,

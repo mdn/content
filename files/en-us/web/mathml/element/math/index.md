@@ -7,6 +7,7 @@ tags:
   - MathML:Element
 browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 The `<math>` element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) is permitted.
@@ -31,29 +32,30 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 This example contains two MathML formula. The first one is rendered in its own centered block, taking as much space as needed. The second one is rendered inside the paragraph of text, with reduced size and spacing in order to minimize its height.
 
 ```html
-<p>The infinite sum
+<p>
+  The infinite sum
   <math display="block">
-   <mrow>
-     <munderover>
-       <mo>∑</mo>
-       <mrow>
-         <mi>n</mi>
-         <mo>=</mo>
-         <mn>1</mn>
-       </mrow>
-       <mrow>
-         <mo>+</mo>
-         <mn>∞</mn>
-       </mrow>
-     </munderover>
-     <mfrac>
-       <mn>1</mn>
-       <msup>
-         <mi>n</mi>
-         <mn>2</mn>
-       </msup>
-     </mfrac>
-   </mrow>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>n</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mo>+</mo>
+          <mn>∞</mn>
+        </mrow>
+      </munderover>
+      <mfrac>
+        <mn>1</mn>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+      </mfrac>
+    </mrow>
   </math>
   is equal to the real number
   <math display="inline">
@@ -64,7 +66,8 @@ This example contains two MathML formula. The first one is rendered in its own c
       </msup>
       <mn>6</mn>
     </mfrac>
-  </math>.</p>
+  </math>.
+</p>
 ```
 
 ## Specifications

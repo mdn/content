@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.orphans
 ---
+
 {{CSSRef}}
 
 The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
@@ -53,8 +54,14 @@ In typography, an _orphan_ is the first line of a paragraph that appears alone a
 ```html
 <div>
   <p>This is the first paragraph containing some text.</p>
-  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how orphans work.</p>
-  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+  <p>
+    This is the second paragraph containing some more text than the first one.
+    It is used to demonstrate how orphans work.
+  </p>
+  <p>
+    This is the third paragraph. It has a little bit more text than the first
+    one.
+  </p>
 </div>
 ```
 

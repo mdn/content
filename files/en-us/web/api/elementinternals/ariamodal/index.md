@@ -12,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaModal
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaModal`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.

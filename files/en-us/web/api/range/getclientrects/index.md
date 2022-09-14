@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Range.getClientRects
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.getClientRects()`** method returns a list of {{
@@ -18,7 +19,7 @@ The **`Range.getClientRects()`** method returns a list of {{
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 

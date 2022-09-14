@@ -9,6 +9,7 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 In the most basic cases, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional, because text, images, and other elements are arranged on the page without overlapping. In this case, there is a single rendering flow, and all elements are aware of the space taken by others. The {{cssxref("z-index")}} attribute lets you adjust the order of the layering of objects when rendering content.

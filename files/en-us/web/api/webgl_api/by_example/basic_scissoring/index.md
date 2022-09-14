@@ -12,6 +12,7 @@ tags:
   - WebGL
   - scissor
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
 
 In this example, we see how to draw simple rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
@@ -34,22 +35,21 @@ The scissoring stage of the pipeline is disabled by default. We enable it here u
 
 ```html
 <p>Result of scissoring.</p>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 

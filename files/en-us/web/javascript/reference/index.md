@@ -11,9 +11,10 @@ tags:
   - Landing page
   - Reference
   - es
-  - l10n:priority
+  - "l10n:priority"
   - programming
 ---
+
 {{JsSidebar}}
 
 This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more [about this reference](/en-US/docs/Web/JavaScript/Reference/About).

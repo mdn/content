@@ -24,13 +24,18 @@ The following example demonstrates the block-level element's influence:
 ### HTML
 
 ```html
-<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+<p>
+  This paragraph is a block-level element; its background has been colored to
+  display the paragraph's parent element.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('Block-level_elements') }}

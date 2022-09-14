@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames.prototype.resolvedOptions()`** method
@@ -21,7 +22,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MessageChannel.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}
@@ -20,7 +21,7 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 
 ## Syntax
 
-```js
+```js-nolint
 new MessageChannel()
 ```
 

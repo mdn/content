@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.hasFocus
 ---
+
 {{APIRef}}
 
 The **`hasFocus()`** method of the {{domxref("Document")}}
@@ -23,7 +24,7 @@ active element in a document has focus.
 
 ## Syntax
 
-```js
+```js-nolint
 hasFocus()
 ```
 

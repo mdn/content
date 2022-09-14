@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozSetDataAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSetDataAt()`** method is used to add
@@ -35,7 +36,7 @@ or number type (which will be converted into a string) or an `nsISupports`.
 
 ## Syntax
 
-```js
+```js-nolint
 mozSetDataAt(data, index)
 mozSetDataAt(type, data, index)
 ```

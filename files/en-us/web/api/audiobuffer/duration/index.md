@@ -11,6 +11,7 @@ tags:
   - duration
 browser-compat: api.AudioBuffer.duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`duration`** property of the {{ domxref("AudioBuffer")
@@ -46,7 +47,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.duration);
-}
+};
 ```
 
 ## Specifications

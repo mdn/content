@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.ReadableStreamDefaultController.close
 ---
+
 {{APIRef("Streams")}}
 
 The **`close()`** method of the
@@ -24,7 +25,7 @@ rid of the stream and discard any enqueued chunks, you'd use
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

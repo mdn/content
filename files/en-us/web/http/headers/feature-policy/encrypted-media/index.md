@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.encrypted-media
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `encrypted-media` directive controls whether the current document is allowed to use the [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) API (EME). When this policy is enabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.

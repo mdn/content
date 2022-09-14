@@ -12,6 +12,7 @@ tags:
   - removeAttribute
 browser-compat: api.Element.removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 The {{domxref("Element")}} method
@@ -20,7 +21,7 @@ specified name from the element.
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttribute(attrName)
 ```
 

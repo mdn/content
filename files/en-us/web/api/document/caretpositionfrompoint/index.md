@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
+
 {{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
@@ -18,7 +19,7 @@ caret's character offset within that node.
 
 ## Syntax
 
-```js
+```js-nolint
 caretPositionFromPoint(x, y)
 ```
 
@@ -82,10 +83,12 @@ for (const paragraph of paragraphs) {
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 ## Specifications

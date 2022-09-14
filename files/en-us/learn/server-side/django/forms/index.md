@@ -12,6 +12,7 @@ tags:
   - django
   - server side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).
@@ -57,9 +58,13 @@ The form is defined in HTML as a collection of elements inside `<form>…</form>
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -91,17 +96,17 @@ Based on the diagram above, the main things that Django's form handling does are
 
 1. Display the default form the first time it is requested by the user.
 
-    - The form may contain blank fields if you're creating a new record, or it may be pre-populated with initial values (for example, if you are changing a record, or have useful default initial values).
-    - The form is referred to as _unbound_ at this point, because it isn't associated with any user-entered data (though it may have initial values).
+   - The form may contain blank fields if you're creating a new record, or it may be pre-populated with initial values (for example, if you are changing a record, or have useful default initial values).
+   - The form is referred to as _unbound_ at this point, because it isn't associated with any user-entered data (though it may have initial values).
 
 2. Receive data from a submit request and bind it to the form.
 
-    - Binding data to the form means that the user-entered data and any errors are available when we need to redisplay the form.
+   - Binding data to the form means that the user-entered data and any errors are available when we need to redisplay the form.
 
 3. Clean and validate the data.
 
-    - Cleaning the data performs sanitization of the input fields, such as removing invalid characters that might be used to send malicious content to the server, and converts them into consistent Python types.
-    - Validation checks that the values are appropriate for the field (for example, that they are in the right date range, aren't too short or too long, etc.)
+   - Cleaning the data performs sanitization of the input fields, such as removing invalid characters that might be used to send malicious content to the server, and converts them into consistent Python types.
+   - Validation checks that the values are appropriate for the field (for example, that they are in the right date range, aren't too short or too long, etc.)
 
 4. If any data is invalid, re-display the form, this time with any user populated values and error messages for the problem fields.
 5. If all data is valid, perform required actions (such as save the data, send an email, return the result of a search, upload a file, and so on).
@@ -408,8 +413,13 @@ All that's left is the `\{{ form }}` template variable, which we passed to the t
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required>
-    <br>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
+    <br />
     <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
   </td>
 </tr>
@@ -422,14 +432,19 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-    <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required>
-      <br>
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+  </td>
 </tr>
 ```
 
@@ -594,14 +609,14 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
     <table>
     \{{ form.as_table }}
     </table>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
   </form>
 {% endblock %}
 ```
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format _`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
+The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -614,7 +629,7 @@ The "delete" view expects to find a template named with the format _`model_name_
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Yes, delete.">
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}

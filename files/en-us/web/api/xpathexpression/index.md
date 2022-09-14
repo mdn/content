@@ -14,6 +14,7 @@ tags:
   - XPathExpression
 browser-compat: api.XPathExpression
 ---
+
 {{APIRef("DOM")}}
 
 This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its {{Glossary("DOM")}} tree.

@@ -13,6 +13,7 @@ tags:
   - onStateChanged
 browser-compat: webextensions.api.idle.onStateChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when the system changes to an active, idle or locked state. The event listener is passed a string that has one of three values:
@@ -23,7 +24,7 @@ Fired when the system changes to an active, idle or locked state. The event list
 
 ## Syntax
 
-```js
+```js-nolint
 browser.idle.onStateChanged.addListener(listener)
 browser.idle.onStateChanged.removeListener(listener)
 browser.idle.onStateChanged.hasListener(listener)

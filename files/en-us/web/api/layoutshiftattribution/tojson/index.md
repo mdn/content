@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.LayoutShiftAttribution.toJSON
 ---
+
 {{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("LayoutShiftAttribution")}} interface is a _serializer_ that returns a JSON representation of the `LayoutShiftAttribution` object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

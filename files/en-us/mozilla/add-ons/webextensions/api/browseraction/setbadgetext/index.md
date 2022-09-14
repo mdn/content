@@ -13,6 +13,7 @@ tags:
   - setBadgeText
 browser-compat: webextensions.api.browserAction.setBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
@@ -21,7 +22,7 @@ Tabs without an specific badge text will inherit the global badge text, which is
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setBadgeText(
   details // object
 )
@@ -67,7 +68,7 @@ Add a badge indicating how many times the user clicked the button:
 let clicks = 0;
 
 function increment() {
-  browser.browserAction.setBadgeText({text: (++clicks).toString()});
+  browser.browserAction.setBadgeText({ text: (++clicks).toString() });
 }
 
 browser.browserAction.onClicked.addListener(increment);

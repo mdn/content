@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getTransformFeedbackVarying
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getTransformFeedbackVarying()`**
@@ -18,7 +19,7 @@ information about varying variables from {{domxref("WebGLTransformFeedback")}} b
 
 ## Syntax
 
-```js
+```js-nolint
 getTransformFeedbackVarying(program, index)
 ```
 

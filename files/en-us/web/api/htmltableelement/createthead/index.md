@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTHead()`** method of
@@ -25,7 +26,7 @@ method creates it, and then returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createTHead()
 ```
 

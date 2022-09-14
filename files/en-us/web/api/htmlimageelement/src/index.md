@@ -17,6 +17,7 @@ tags:
   - Property
 browser-compat: api.HTMLImageElement.src
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
@@ -56,9 +57,10 @@ corresponding {{htmlattrxref("sizes", "img")}} content attribute) _and_
 #### HTML
 
 ```html
-<img src="grapefruit-slice-332-332.jpg"
-     width="160"
-     alt="Slices of grapefruit, looking yummy.">
+<img
+  src="grapefruit-slice-332-332.jpg"
+  width="160"
+  alt="Slices of grapefruit, looking yummy." />
 ```
 
 #### Result

@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValue.cssText
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`cssText`** property of the {{domxref("CSSValue")}}

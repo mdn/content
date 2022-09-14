@@ -20,7 +20,7 @@ The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/We
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Segmenter()
 new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
@@ -35,7 +35,7 @@ new Intl.Segmenter(locales, options)
 - `options` {{optional_inline}}
   - : An object with some or all of the following properties:
     - `granularity` {{optional_inline}}
-      - : A string.  Possible values are:
+      - : A string. Possible values are:
         - `"grapheme"` (default)
           - : Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.
         - `"word"`

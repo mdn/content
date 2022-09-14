@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.
@@ -14,10 +15,10 @@ Now we're ready to start distorting our beautiful images. But first, let's forma
 
 ```html
 <svg width="30" height="10">
-    <g fill="red">
-        <rect x="0" y="0" width="10" height="10" />
-        <rect x="20" y="0" width="10" height="10" />
-    </g>
+  <g fill="red">
+    <rect x="0" y="0" width="10" height="10" />
+    <rect x="20" y="0" width="10" height="10" />
+  </g>
 </svg>
 ```
 
@@ -31,7 +32,7 @@ It may be necessary to move an element around, even though you can position it w
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+  <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
@@ -47,7 +48,7 @@ Rotating an element is quite a common task. Use the `rotate()` transformation fo
 
 ```html
 <svg width="31" height="31">
-    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
 </svg>
 ```
 
@@ -61,7 +62,12 @@ Transformations can be concatenated easily just by separating them with spaces. 
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" />
+  <rect
+    x="0"
+    y="0"
+    width="10"
+    height="10"
+    transform="translate(30,40) rotate(45)" />
 </svg>
 ```
 
@@ -89,9 +95,9 @@ When using transformations you establish a new coordinate system inside the elem
 
 ```html
 <svg width="100" height="100">
-    <g transform="scale(2)">
-        <rect width="50" height="50" />
-    </g>
+  <g transform="scale(2)">
+    <rect width="50" height="50" />
+  </g>
 </svg>
 ```
 

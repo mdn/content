@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.Document.visibilityState
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Document.visibilityState`**
@@ -40,7 +41,7 @@ minimized.
 
 ## Syntax
 
-```js
+```js-nolint
 document.visibilityState
 ```
 

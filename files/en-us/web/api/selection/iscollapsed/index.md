@@ -12,6 +12,7 @@ tags:
   - Selection
 browser-compat: api.Selection.isCollapsed
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.isCollapsed`** read-only property returns a

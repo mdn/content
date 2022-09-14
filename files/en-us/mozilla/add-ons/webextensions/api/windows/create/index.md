@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new window.
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.windows.create(
   createData            // optional object
 )

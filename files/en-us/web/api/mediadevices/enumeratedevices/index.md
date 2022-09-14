@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices.enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.
@@ -20,7 +21,7 @@ The list of returned devices will omit any devices for which the corresponding p
 
 ## Syntax
 
-```js
+```js-nolint
 enumerateDevices()
 ```
 

@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.toJSON
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCSessionDescription.toJSON()`** method generates a
@@ -19,7 +20,7 @@ The **`RTCSessionDescription.toJSON()`** method generates a
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

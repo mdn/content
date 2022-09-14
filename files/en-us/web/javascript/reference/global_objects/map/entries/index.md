@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Map.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new
@@ -23,7 +24,7 @@ is used, it returns a function that, when invoked, returns this iterator itself.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

@@ -12,13 +12,14 @@ tags:
   - remove
 browser-compat: api.MediaKeySession.remove
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after removing any session data associated with the current object.
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 

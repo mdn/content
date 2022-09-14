@@ -10,20 +10,21 @@ tags:
   - Experimental
 browser-compat: api.VideoDecoder.VideoDecoder
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`VideoDecoder()`** constructor creates a new {{domxref("VideoDecoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("VideoDecoder.state")}} set to `"unconfigured"`.
 
 ## Syntax
 
-```js
-new VideoDecoder(init)
+```js-nolint
+new VideoDecoder(options)
 ```
 
 ### Parameters
 
-- `init`
-  - : A dictionary object containing two callbacks.
+- `options`
+  - : An object containing two callbacks.
     - `output`
       - : A callback which takes a {{domxref("VideoFrame")}} object as its only argument.
     - `error`

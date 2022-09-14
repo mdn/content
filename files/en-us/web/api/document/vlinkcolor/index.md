@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Document.vlinkColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`Document.vlinkColor`** property gets/sets the color of

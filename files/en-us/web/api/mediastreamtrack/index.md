@@ -15,6 +15,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack`** interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.

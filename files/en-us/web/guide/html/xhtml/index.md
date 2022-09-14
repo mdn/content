@@ -9,6 +9,7 @@ tags:
   - Web Standards
   - XML
 ---
+
 **XHTML** is a term that was historically used to describe [HTML](/en-US/docs/Web/HTML) documents written to conform with {{Glossary("XML")}} syntax rules.
 
 The following example shows an HTML document and corresponding "XHTML" document, and the accompanying {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} headers they should be served with.
@@ -21,7 +22,7 @@ The following example shows an HTML document and corresponding "XHTML" document,
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML</title>
   </head>
   <body>

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttribOffset
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getVertexAttribOffset()`** method
@@ -18,7 +19,7 @@ specified vertex attribute.
 
 ## Syntax
 
-```js
+```js-nolint
 getVertexAttribOffset(index, pname)
 ```
 

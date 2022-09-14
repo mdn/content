@@ -13,6 +13,7 @@ tags:
   - getChildren
 browser-compat: webextensions.api.bookmarks.getChildren
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getChildren()`** retrieves all the immediate children of a given bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingChildren = browser.bookmarks.getChildren(
   id                     // string
 )

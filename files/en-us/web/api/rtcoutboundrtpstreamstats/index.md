@@ -17,6 +17,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCOutboundRtpStreamStats`** dictionary is the {{domxref("RTCStats")}}-based object which provides metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an {{domxref("RTCRtpSender")}}.

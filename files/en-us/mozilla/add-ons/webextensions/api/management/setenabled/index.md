@@ -11,6 +11,7 @@ tags:
   - setEnabled
 browser-compat: webextensions.api.management.setEnabled
 ---
+
 {{AddonSidebar()}}
 
 Enables or disables the given add-on.
@@ -25,7 +26,7 @@ The function allows enabling/disabling of theme addons, but will return an error
 
 ## Syntax
 
-```js
+```js-nolint
 let settingEnabled = browser.management.setEnabled(
   id,              // string
   enabled         // boolean

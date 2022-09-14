@@ -15,6 +15,7 @@ tags:
   - scrolling
 browser-compat: api.Window.pageYOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 The read-only {{domxref("Window")}} property **`pageYOffset`**
@@ -106,11 +107,9 @@ that contains the document we're going to scroll, and a {{HTMLElement("div")}} i
 which we'll output the value of `pageYOffset` when we've finished the scroll.
 
 ```html
-<iframe id="frame">
-</iframe>
+<iframe id="frame"> </iframe>
 
-<div id="info">
-</div>
+<div id="info"></div>
 ```
 
 ### JavaScript

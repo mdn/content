@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.

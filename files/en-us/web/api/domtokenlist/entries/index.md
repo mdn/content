@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`entries()`** method of the {{domxref("DOMTokenList")}} interface
@@ -16,8 +17,8 @@ to go through all key/value pairs contained in this object. The values are
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value

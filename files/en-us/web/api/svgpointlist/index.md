@@ -9,6 +9,7 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} objects.
@@ -45,8 +46,12 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline
+    id="example"
+    stroke="black"
+    fill="none"
+    points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
 ```
 
 ```js

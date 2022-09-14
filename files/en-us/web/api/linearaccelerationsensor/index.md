@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.LinearAccelerationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`LinearAccelerationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes, but without the contribution of gravity.

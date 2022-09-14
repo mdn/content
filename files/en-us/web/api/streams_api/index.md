@@ -13,6 +13,7 @@ browser-compat:
   - api.ReadableStream
   - api.WritableStream
 ---
+
 {{DefaultAPISidebar("Streams")}}
 
 The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
@@ -76,7 +77,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### Extensions to other APIs
 
 - {{domxref("Request")}}
-  - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary.  This `Request` could then be passed to a {{domxref("fetch()")}} to commence fetching the stream.
+  - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary. This `Request` could then be passed to a {{domxref("fetch()")}} to commence fetching the stream.
 - {{domxref("Response.body")}}
   - : The response body returned by a successful [fetch request](/en-US/docs/Web/API/fetch) is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.
 

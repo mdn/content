@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat()`** constructor creates
@@ -22,7 +23,7 @@ formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.ListFormat()
 new Intl.ListFormat(locales)
 new Intl.ListFormat(locales, options)
@@ -42,6 +43,7 @@ new Intl.ListFormat(locales, options)
       - : The locale-matching algorithm to use. Possible values:
         - `"best fit"` (default)
         - `"lookup"`
+
         For information about this option, see the
         {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}}
         page.

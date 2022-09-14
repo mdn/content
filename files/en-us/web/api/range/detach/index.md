@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.detach
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.detach()`** method does nothing. It used to
@@ -17,7 +18,7 @@ resources. The method has been kept for compatibility.
 
 ## Syntax
 
-```js
+```js-nolint
 detach()
 ```
 

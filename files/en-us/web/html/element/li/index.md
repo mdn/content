@@ -109,9 +109,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -121,9 +121,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ```html
 <ol type="I">
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 
@@ -133,9 +133,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 

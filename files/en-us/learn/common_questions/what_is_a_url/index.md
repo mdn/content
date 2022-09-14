@@ -8,6 +8,7 @@ tags:
   - resources
   - urls
 ---
+
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
 <table>

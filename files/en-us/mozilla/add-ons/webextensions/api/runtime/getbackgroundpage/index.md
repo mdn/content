@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getBackgroundPage
 ---
+
 {{AddonSidebar()}}
 
 Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension. If the background page is non-persistent (an event page) and it is not running, the background page is started.
@@ -35,7 +36,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPage = browser.runtime.getBackgroundPage()
 ```
 

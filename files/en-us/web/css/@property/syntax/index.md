@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: css.at-rules.property.syntax
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and describes the allowable syntax for the property.
@@ -19,13 +20,13 @@ The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using th
 The following are all valid syntax strings:
 
 ```css
-syntax: '<color>'; /* accepts a color */
+syntax: "<color>"; /* accepts a color */
 
-syntax: '<length> | <percentage>'; /* accepts lengths or percentages but not calc expressions with a combination of the two */
+syntax: "<length> | <percentage>"; /* accepts lengths or percentages but not calc expressions with a combination of the two */
 
-syntax: 'small | medium | large'; /* accepts one of these values set as custom idents. */
+syntax: "small | medium | large"; /* accepts one of these values set as custom idents. */
 
-syntax: '*'; /* any valid token */
+syntax: "*"; /* any valid token */
 ```
 
 ## Values
@@ -79,7 +80,7 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

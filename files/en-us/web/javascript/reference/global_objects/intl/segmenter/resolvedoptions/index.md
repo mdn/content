@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and granularity options computed during the initialization of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
@@ -17,7 +18,7 @@ The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

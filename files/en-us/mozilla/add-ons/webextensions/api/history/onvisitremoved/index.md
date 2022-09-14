@@ -13,6 +13,7 @@ tags:
   - onVisitRemoved
 browser-compat: webextensions.api.history.onVisitRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a page is removed completely from the browser history.
@@ -23,7 +24,7 @@ Fired when a page is removed completely from the browser history.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.history.onVisitRemoved.addListener(listener)
 browser.history.onVisitRemoved.removeListener(listener)
 browser.history.onVisitRemoved.hasListener(listener)

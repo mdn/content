@@ -12,6 +12,7 @@ tags:
   - XRBoundedReferenceSpace
   - space
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Among the various reference spaces available in the WebXR set of APIs, the **`bounded-floor` reference space** is somewhat unique. Not only is it represented by a unique subclass, {{domxref("XRBoundedReferenceSpace")}}, but it's the only one which restricts movement based not upon virtual restrictions but upon limitations imposed by the real world. This article examines bounded reference spaces as represented by `XRBoundedReferenceSpace`, describing what they are and how they're used.

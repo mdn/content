@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.lastError
 ---
+
 {{AddonSidebar()}}
 
 This value is used to report an error message from an asynchronous API, when the asynchronous API is given a callback. This is useful for extensions that are using the callback-based version of the WebExtension APIs.
@@ -30,7 +31,7 @@ If you call an asynchronous function that may set `lastError`, you are expected 
 
 ## Syntax
 
-```js
+```js-nolint
 let myError = browser.runtime.lastError;  // null or Error object
 ```
 

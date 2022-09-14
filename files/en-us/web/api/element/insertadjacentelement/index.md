@@ -12,6 +12,7 @@ tags:
   - insertAdjacentElement
 browser-compat: api.Element.insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentElement()`** method of the
@@ -20,7 +21,7 @@ relative to the element it is invoked upon.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentElement(position, element)
 ```
 

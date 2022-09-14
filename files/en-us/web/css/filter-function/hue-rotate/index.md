@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.hue-rotate
 ---
+
 {{CSSRef}}
 
 The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.

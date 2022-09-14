@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.collation
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.collation`** property is an accessor property that returns the [collation type](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) for the `Locale`, which is used to order strings according to the locale's rules.

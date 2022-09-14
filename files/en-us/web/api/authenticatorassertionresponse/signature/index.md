@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.signature
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`signature`** read-only property of the

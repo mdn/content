@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.pop
 ---
+
 {{JSRef}}
 
 The **`pop()`** method removes the **last**
@@ -19,7 +20,7 @@ array.
 
 ## Syntax
 
-```js
+```js-nolint
 pop()
 ```
 

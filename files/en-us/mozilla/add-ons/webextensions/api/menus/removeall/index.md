@@ -14,6 +14,7 @@ tags:
   - removeAll
 browser-compat: webextensions.api.menus.removeAll
 ---
+
 {{AddonSidebar()}}
 
 Removes all menu items added by the extension.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.menus.removeAll()
 ```
 
@@ -52,13 +53,13 @@ function onRemoved() {
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-all",
   title: "Remove all!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {

@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.userHandle
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`userHandle`** read-only property of the

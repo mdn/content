@@ -18,6 +18,7 @@ tags:
   - web animations api
 browser-compat: api.Element.getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 The `getAnimations()` method of the {{domxref("Element")}} interface
@@ -30,7 +31,7 @@ elements too.
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 getAnimations(options)
 ```

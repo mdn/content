@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.sheet
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.sheet`** read-only property returns the {{domxref("CSSStyleSheet")}} corresponding to the given SVG style element, or `null` if there is none.
@@ -28,7 +29,9 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 
 ```html
 <textarea id="log" rows="3" cols="50"></textarea>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <circle cx="50" cy="50" r="25" />
 </svg>
 ```

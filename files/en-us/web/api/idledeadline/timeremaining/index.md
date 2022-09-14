@@ -11,6 +11,7 @@ tags:
   - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
+
 {{APIRef("Background Tasks")}}
 
 The **`timeRemaining()`** method
@@ -27,7 +28,7 @@ should return control to the user agent's event loop.
 
 ## Syntax
 
-```js
+```js-nolint
 timeRemaining()
 ```
 

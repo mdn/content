@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.parse
 ---
+
 {{JSRef}}
 
 The **`Date.parse()`** method parses a string representation of
@@ -21,7 +22,7 @@ Only the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format)
 
 ## Syntax
 
-```js
+```js-nolint
 Date.parse(dateString)
 ```
 

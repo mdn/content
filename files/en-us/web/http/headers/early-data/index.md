@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Early-Data
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 The **`Early-Data`** header is set by

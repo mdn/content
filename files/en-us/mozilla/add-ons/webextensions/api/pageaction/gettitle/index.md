@@ -13,6 +13,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.getTitle
 ---
+
 {{AddonSidebar()}}
 
 Gets the title of the page action.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTitle = browser.pageAction.getTitle(
   details // object
 )

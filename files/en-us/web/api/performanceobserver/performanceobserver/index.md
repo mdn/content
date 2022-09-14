@@ -10,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceObserver()`** constructor creates a new
@@ -21,7 +22,7 @@ registered, via the {{domxref("PerformanceObserver.observe","observe()")}} metho
 
 ## Syntax
 
-```js
+```js-nolint
 new PerformanceObserver(callback)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - JavaScript
   - Web
 ---
+
 Whether you're just getting started with Web development, or are just expanding your horizons into new realms of Web awesomeness, the links here should help you get started.
 
 For another (overlapping) set of links to learning resources, see the [MDN Learning](/en-US/docs/Learn) pages.
@@ -18,7 +19,7 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 ### HTML
 
-- [The basics of Hypertext Mark-up Language (HTML)](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
+- [The basics of Hypertext Markup Language (HTML)](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
 - [Basic structure of a web page](https://www.sitepoint.com/basic-structure-of-a-web-page/) — the doctype and document 'tree'
 - [HTML beginners tutorial](https://htmldog.com/guides/html/beginner/) — a tutorial and exercise that recap and take you through the basics you've learned above.
 - [HTML elements reference guide](/en-US/docs/Web/HTML/Element) — a comprehensive guide to HTML elements with details on how browsers support them

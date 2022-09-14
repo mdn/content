@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel.release
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`release()`** method of the
@@ -22,7 +23,7 @@ once the sentinel has been successfully released.
 
 ## Syntax
 
-```js
+```js-nolint
 release()
 ```
 

@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.isochronousTransferIn
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`isochronousTransferIn()`** method of the
@@ -23,7 +24,7 @@ transmitted received from the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 isochronousTransferIn(endpointNumber, packetLengths)
 ```
 

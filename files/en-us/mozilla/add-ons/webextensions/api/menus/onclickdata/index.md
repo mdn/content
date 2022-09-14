@@ -13,6 +13,7 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.OnClickData
 ---
+
 {{AddonSidebar()}}
 
 Information passed to the {{WebExtAPIRef("menus.onClicked")}} event listener when a menu item is clicked.

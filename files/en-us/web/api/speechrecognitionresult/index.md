@@ -12,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionResult`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.

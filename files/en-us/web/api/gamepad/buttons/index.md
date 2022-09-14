@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.buttons
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.buttons`** property of the {{domxref("Gamepad")

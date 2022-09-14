@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.OnInstalledReason
 ---
+
 {{AddonSidebar()}}
 
 The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.

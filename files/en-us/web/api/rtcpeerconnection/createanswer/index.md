@@ -14,6 +14,7 @@ tags:
   - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createAnswer()`** method on the
@@ -27,7 +28,7 @@ the negotiation process.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnswer()
 createAnswer(options)
 

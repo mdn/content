@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.resizeTo
 ---
+
 {{APIRef}}
 
 The **`Window.resizeTo()`** method dynamically resizes the
@@ -17,7 +18,7 @@ window.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeTo(width, height)
 ```
 

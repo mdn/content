@@ -14,6 +14,7 @@ tags:
   - removeTrack
 browser-compat: api.RTCPeerConnection.removeTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The
@@ -32,8 +33,8 @@ let the local end know this negotiation must occur.
 
 ## Syntax
 
-```js
-pc.removeTrack(sender);
+```js-nolint
+removeTrack(sender)
 ```
 
 ### Parameters

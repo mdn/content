@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 105 that will affect developers. Firefox 105 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [September 20, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
@@ -38,6 +39,8 @@ This article provides information about the changes in Firefox 105 that will aff
 ### APIs
 
 #### DOM
+
+- The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces, part of the [Encoding API](/en-US/docs/Web/API/Encoding_API), are now supported ({{bug(1486949)}}).
 
 #### Media, WebRTC, and Web Audio
 

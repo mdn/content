@@ -5,8 +5,9 @@ tags:
   - CodingScripting
   - Glossary
   - HTML
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 **HTML** (HyperText Markup Language) is a descriptive language that specifies webpage structure.
 
 ## Brief history

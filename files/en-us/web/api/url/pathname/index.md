@@ -10,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.pathname
 ---
+
 {{ApiRef("URL API")}}
 
 The **`pathname`** property of the {{domxref("URL")}} interface is a string containing an initial `/` followed by the path of the URL, not including the query string or fragment (or the empty string if there is no path).

@@ -8,6 +8,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.@@species
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer[@@species]`** accessor property returns the `ArrayBuffer` constructor.

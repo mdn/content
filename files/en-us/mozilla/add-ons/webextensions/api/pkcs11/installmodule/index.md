@@ -12,6 +12,7 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11.installModule
 ---
+
 {{AddonSidebar()}}
 
 Installs the named PKCS #11 module, making it available to Firefox.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let installing = browser.pkcs11.installModule(
   name,              // string
   flags              // integer
