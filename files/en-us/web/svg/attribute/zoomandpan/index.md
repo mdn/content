@@ -32,14 +32,22 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" zoomAndPan="disable">
+<svg
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  zoomAndPan="disable">
   <filter id="diffuseLighting" x="0" y="0" width="100%" height="100%">
     <feDiffuseLighting in="SourceGraphic" zoomAndPan="1">
       <fePointLight x="60" y="60" z="20" />
     </feDiffuseLighting>
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#diffuseLighting);" />
 </svg>
 ```
 

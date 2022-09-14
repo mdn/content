@@ -38,36 +38,51 @@ svg {
 ```html
 <svg viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg">
   <!-- Impact of the default miter limit -->
-  <path stroke="black" fill="none" stroke-linejoin="miter" id="p1"
-        d="M1,9 l7   ,-3 l7   ,3
-           m2,0 l3.5 ,-3 l3.5 ,3
-           m2,0 l2   ,-3 l2   ,3
-           m2,0 l0.75,-3 l0.75,3
-           m2,0 l0.5 ,-3 l0.5 ,3" />
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    id="p1"
+    d="M1,9 l7   ,-3 l7   ,3
+       m2,0 l3.5 ,-3 l3.5 ,3
+       m2,0 l2   ,-3 l2   ,3
+       m2,0 l0.75,-3 l0.75,3
+       m2,0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Impact of the smallest miter limit (1) -->
-  <path stroke="black" fill="none" stroke-linejoin="miter"
-        stroke-miterlimit="1" id="p2"
-        d="M1,19 l7   ,-3 l7   ,3
-           m2, 0 l3.5 ,-3 l3.5 ,3
-           m2, 0 l2   ,-3 l2   ,3
-           m2, 0 l0.75,-3 l0.75,3
-           m2, 0 l0.5 ,-3 l0.5 ,3" />
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    stroke-miterlimit="1"
+    id="p2"
+    d="M1,19 l7   ,-3 l7   ,3
+       m2, 0 l3.5 ,-3 l3.5 ,3
+       m2, 0 l2   ,-3 l2   ,3
+       m2, 0 l0.75,-3 l0.75,3
+       m2, 0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Impact of a large miter limit (8) -->
-  <path stroke="black" fill="none" stroke-linejoin="miter"
-        stroke-miterlimit="8" id="p3"
-        d="M1,29 l7   ,-3 l7   ,3
-           m2, 0 l3.5 ,-3 l3.5 ,3
-           m2, 0 l2   ,-3 l2   ,3
-           m2, 0 l0.75,-3 l0.75,3
-           m2, 0 l0.5 ,-3 l0.5 ,3" />
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    stroke-miterlimit="8"
+    id="p3"
+    d="M1,29 l7   ,-3 l7   ,3
+       m2, 0 l3.5 ,-3 l3.5 ,3
+       m2, 0 l2   ,-3 l2   ,3
+       m2, 0 l0.75,-3 l0.75,3
+       m2, 0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- the following pink lines highlight the position of the path for each stroke -->
-  <path stroke="pink" fill="none" stroke-width="0.05"
-        d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
-           M1,19 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
-           M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" />
+  <path
+    stroke="pink"
+    fill="none"
+    stroke-width="0.05"
+    d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
+      M1,19 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
+      M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" />
 </svg>
 ```
 

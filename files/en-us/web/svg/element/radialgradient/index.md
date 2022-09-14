@@ -25,8 +25,10 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="myGradient">
       <stop offset="10%" stop-color="gold" />
