@@ -62,7 +62,7 @@ For example, with the following HTML:
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 

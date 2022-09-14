@@ -77,7 +77,7 @@ HTTP redirects are the best way to create redirections, but sometimes you don't 
 
 ```html
 <head>
-  <meta http-equiv="Refresh" content="0; URL=https://example.com/">
+  <meta http-equiv="Refresh" content="0; URL=https://example.com/" />
 </head>
 ```
 
@@ -150,8 +150,7 @@ The [`mod_alias`](https://httpd.apache.org/docs/current/mod/mod_alias.html) modu
 
 ```html
 <VirtualHost *:443>
-  ServerName example.com
-  Redirect / https://www.example.com
+  ServerName example.com Redirect / https://www.example.com
 </VirtualHost>
 ```
 

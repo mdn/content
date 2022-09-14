@@ -28,7 +28,7 @@ However, this mechanism is not so good for pages that are optimized for narrow s
 A typical mobile-optimized site contains something like the following:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 Not all devices are the same width; you should make sure that your pages work well in a large variation of screen sizes and orientations.
@@ -65,7 +65,7 @@ Sites can set their viewport to a specific size. For example, the definition `"w
 For pages that set an initial or maximum scale, this means the `width` property actually translates into a _minimum_ viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
 
 ```html
-<meta name="viewport" content="width=500, initial-scale=1">
+<meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
 Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
