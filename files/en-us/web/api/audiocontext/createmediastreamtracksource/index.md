@@ -74,11 +74,11 @@ navigator.mediaDevices
       audio.muted = true;
     };
 
-    let audioCtx = new AudioContext();
-    let audioTracks = stream.getAudioTracks();
-    let source = audioCtx.createMediaStreamTrackSource(audioTracks[0]);
+    const audioCtx = new AudioContext();
+    const audioTracks = stream.getAudioTracks();
+    const source = audioCtx.createMediaStreamTrackSource(audioTracks[0]);
 
-    let biquadFilter = audioCtx.createBiquadFilter();
+    const biquadFilter = audioCtx.createBiquadFilter();
     biquadFilter.type = "lowshelf";
     biquadFilter.frequency.value = 3000;
     biquadFilter.gain.value = 20;
