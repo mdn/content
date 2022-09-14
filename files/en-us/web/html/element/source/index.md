@@ -140,9 +140,9 @@ This example demonstrates how to offer a video in Ogg format for users whose bro
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   I'm sorry; your browser doesn't support HTML video.
 </video>
 ```
@@ -155,9 +155,9 @@ In this example, two `<source>` elements are included within the {{HTMLElement("
 
 ```html
 <picture>
-   <source srcset="mdn-logo-wide.png" media="(min-width: 800px)">
-   <source srcset="mdn-logo-medium.png" media="(min-width: 600px)">
-   <img src="mdn-logo-narrow.png" alt="MDN Web Docs">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
 </picture>
 ```
 

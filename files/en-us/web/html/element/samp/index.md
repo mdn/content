@@ -101,9 +101,11 @@ samp {
 In this simple example, a paragraph includes an example of the output of a program.
 
 ```html
-<p>When the process is complete, the utility will output the text
-<samp>Scan complete. Found <em>N</em> results.</samp> You can then
-proceed to the next step.</p>
+<p>
+  When the process is complete, the utility will output the text
+  <samp>Scan complete. Found <em>N</em> results.</samp> You can then proceed to
+  the next step.
+</p>
 ```
 
 The resulting output looks like this:

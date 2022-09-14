@@ -32,8 +32,8 @@ This example uses the obsolete `<big>` element to increase the size of some text
 
 ```html
 <p>
-  This is the first sentence. <big>This whole
-  sentence is in bigger letters.</big>
+  This is the first sentence.
+  <big>This whole sentence is in bigger letters.</big>
 </p>
 ```
 
@@ -57,8 +57,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 
 ```html
 <p>
-  This is the first sentence. <span class="bigger">This whole
-  sentence is in bigger letters.</span>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
 ```
 

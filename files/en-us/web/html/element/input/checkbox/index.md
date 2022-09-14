@@ -66,7 +66,11 @@ A string representing the value of the checkbox. This is not displayed on the cl
 ```html
 <form>
   <div>
-    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+    <input
+      type="checkbox"
+      id="subscribeNews"
+      name="subscribe"
+      value="newsletter" />
     <label for="subscribeNews">Subscribe to newsletter?</label>
   </div>
   <div>
@@ -109,11 +113,11 @@ For example, in the following demo we include multiple checkboxes to allow the u
 <fieldset>
   <legend>Choose your interests</legend>
   <div>
-    <input type="checkbox" id="coding" name="interest" value="coding">
+    <input type="checkbox" id="coding" name="interest" value="coding" />
     <label for="coding">Coding</label>
   </div>
   <div>
-    <input type="checkbox" id="music" name="interest" value="music">
+    <input type="checkbox" id="music" name="interest" value="music" />
     <label for="music">Music</label>
   </div>
 </fieldset>
@@ -131,11 +135,11 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 <fieldset>
   <legend>Choose your interests</legend>
   <div>
-    <input type="checkbox" id="coding" name="interest" value="coding" checked>
+    <input type="checkbox" id="coding" name="interest" value="coding" checked />
     <label for="coding">Coding</label>
   </div>
   <div>
-    <input type="checkbox" id="music" name="interest" value="music">
+    <input type="checkbox" id="music" name="interest" value="music" />
     <label for="music">Music</label>
   </div>
 </fieldset>
@@ -219,31 +223,31 @@ The following example is an extended version of the "multiple checkboxes" exampl
 ```html
 <form>
   <fieldset>
-  <legend>Choose your interests</legend>
+    <legend>Choose your interests</legend>
     <div>
-      <input type="checkbox" id="coding" name="interest" value="coding">
+      <input type="checkbox" id="coding" name="interest" value="coding" />
       <label for="coding">Coding</label>
     </div>
     <div>
-      <input type="checkbox" id="music" name="interest" value="music">
+      <input type="checkbox" id="music" name="interest" value="music" />
       <label for="music">Music</label>
     </div>
     <div>
-      <input type="checkbox" id="art" name="interest" value="art">
+      <input type="checkbox" id="art" name="interest" value="art" />
       <label for="art">Art</label>
     </div>
     <div>
-      <input type="checkbox" id="sports" name="interest" value="sports">
+      <input type="checkbox" id="sports" name="interest" value="sports" />
       <label for="sports">Sports</label>
     </div>
     <div>
-      <input type="checkbox" id="cooking" name="interest" value="cooking">
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
       <label for="cooking">Cooking</label>
     </div>
     <div>
-      <input type="checkbox" id="other" name="interest" value="other">
+      <input type="checkbox" id="other" name="interest" value="other" />
       <label for="other">Other</label>
-      <input type="text" id="otherValue" name="other">
+      <input type="text" id="otherValue" name="other" />
     </div>
     <div>
       <button type="submit">Submit form</button>

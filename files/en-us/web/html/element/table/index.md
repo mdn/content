@@ -230,8 +230,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 <p>Table with colgroup and col</p>
 <table>
   <colgroup>
-    <col style="background-color: #0f0">
-    <col span="2">
+    <col style="background-color: #0f0" />
+    <col span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -247,7 +247,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 <p>Simple table with caption</p>
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -629,7 +631,9 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>
