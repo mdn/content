@@ -76,7 +76,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Embedded content
 
-Embedded content is a subset of flow content that imports another resource or inserts content from another mark-up language or namespace into the document, and can be used everywhere flow content is expected. Elements that belong to this category include: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("picture")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.
+Embedded content is a subset of flow content that imports another resource or inserts content from another markup language or namespace into the document, and can be used everywhere flow content is expected. Elements that belong to this category include: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("picture")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.
 
 ### Interactive content
 
