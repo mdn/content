@@ -163,7 +163,6 @@ The table below demonstrates the effect of supplying various different percentag
 
 #### Result
 
-The result is:
 
 {{EmbedLiveSample('Font_face_selection')}}
 
